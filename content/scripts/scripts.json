@@ -1,0 +1,22 @@
+{
+  "scripts": [
+    {
+      "id": "entry-hall-look",
+      "hook": "OnLook",
+      "when": { "roomId": 1 },
+      "body": "emit('Dust motes drift lazily in the torchlight.')"
+    },
+    {
+      "id": "training-yard-enter",
+      "hook": "OnEnterRoom",
+      "when": { "roomId": 2 },
+      "body": "emit('You hear distant clangs of steel.')"
+    },
+    {
+      "id": "entry-hall-say",
+      "hook": "OnSay",
+      "when": { "roomId": 1 },
+      "body": "if text:find('hello') then emit('An unseen voice whispers back.') end"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mobs": [
+    {
+      "id": 1001,
+      "name": "training dummy",
+      "shortDescription": "a worn training dummy",
+      "longDescription": "A worn training dummy stands here.",
+      "description": "Stuffed with straw and stitched roughly.",
+      "level": 1,
+      "race": "Human",
+      "class": "Warrior",
+      "flags": ["Sentinel"],
+      "stats": {
+        "strength": 10,
+        "dexterity": 10,
+        "intelligence": 10,
+        "wisdom": 10,
+        "constitution": 10,
+        "charisma": 10
+      },
+      "resistances": [],
+      "skills": []
+    }
+  ]
+}

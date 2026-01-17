@@ -1,0 +1,20 @@
+{
+  "objects": [
+    {
+      "id": 2001,
+      "name": "practice sword",
+      "shortDescription": "a practice sword",
+      "longDescription": "A practice sword rests here.",
+      "description": "Blunted steel with a wrapped grip.",
+      "type": "Weapon",
+      "wearSlots": ["Wield"],
+      "flags": ["NoDrop"],
+      "values": {
+        "damageDice": "1d4",
+        "damageType": "Slash"
+      },
+      "weight": 3,
+      "cost": 10
+    }
+  ]
+}

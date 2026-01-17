@@ -1,0 +1,28 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "The Entry Hall",
+      "description": "A simple stone hall with torchlight flickering along the walls.",
+      "sector": "Inside",
+      "flags": ["Indoors"],
+      "exits": [
+        { "direction": "North", "targetId": 2, "flags": ["IsDoor"], "keyId": null }
+      ],
+      "extraDescriptions": [
+        { "keywords": ["torch", "light"], "description": "The torches burn steadily." }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "The Training Yard",
+      "description": "An open yard with worn practice dummies and sand underfoot.",
+      "sector": "Field",
+      "flags": [],
+      "exits": [
+        { "direction": "South", "targetId": 1, "flags": [], "keyId": null }
+      ],
+      "extraDescriptions": []
+    }
+  ]
+}

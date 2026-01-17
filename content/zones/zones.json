@@ -1,0 +1,13 @@
+{
+  "zones": [
+    {
+      "id": 10,
+      "name": "Training Grounds",
+      "roomRange": { "min": 1, "max": 99 },
+      "resetMode": "ResetAlways",
+      "resetCommands": [
+        { "type": "LoadMob", "mobId": 1001, "roomId": 2, "maxExisting": 1 }
+      ]
+    }
+  ]
+}
