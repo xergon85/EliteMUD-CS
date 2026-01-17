@@ -1,4 +1,4 @@
-namespace EliteMud.Server.Commands.Shared;
+namespace EliteMud.Server.Adapters.Commands.Shared;
 
 internal enum CommandOutcome
 {

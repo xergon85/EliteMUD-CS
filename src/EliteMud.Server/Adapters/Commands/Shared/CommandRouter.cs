@@ -1,6 +1,6 @@
 using EliteMud.Application.Commands.Shared;
 
-namespace EliteMud.Server.Commands.Shared;
+namespace EliteMud.Server.Adapters.Commands.Shared;
 
 internal sealed class CommandRouter
 {

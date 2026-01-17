@@ -4,17 +4,8 @@ using System.Net.Sockets;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Session;
 using EliteMud.Application.Session.Login;
-using EliteMud.Application.World;
 using EliteMud.Game;
-using EliteMud.Scripting;
-using EliteMud.Server.Commands.Look;
-using EliteMud.Server.Commands.Move;
-using EliteMud.Server.Commands.NoOp;
-using EliteMud.Server.Commands.Quit;
-using EliteMud.Server.Commands.ResetZone;
-using EliteMud.Server.Commands.Say;
-using EliteMud.Server.Commands.Shared;
-using EliteMud.Server.Commands.Who;
+using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server;
 
@@ -27,28 +18,21 @@ internal sealed class TelnetServer
     private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
 
-    public TelnetServer(IPAddress address, int port, IWorldState worldState, IScriptEngine scriptEngine)
+    private readonly ConnectionRegistry _connectionRegistry;
+
+    public TelnetServer(
+        IPAddress address,
+        int port,
+        CommandCatalog catalog,
+        PromptCatalog promptCatalog,
+        CommandRouter commandRouter,
+        ConnectionRegistry connectionRegistry)
     {
         _listener = new TcpListener(address, port);
-        _catalog = new CommandCatalog();
-        _promptCatalog = new PromptCatalog();
-        var services = new TelnetCommandServices(
-            worldState,
-            scriptEngine,
-            _catalog,
-            () => _connections.Values);
-        var registrations = new ICommandRegistration[]
-        {
-            new NoOpCommandRegistration(),
-            new QuitCommandRegistration(),
-            new LookCommandRegistration(),
-            new WhoCommandRegistration(),
-            new ResetZoneCommandRegistration(),
-            new SayCommandRegistration(),
-            new MoveCommandRegistration()
-        };
-        var handlerRegistry = new CommandHandlerRegistry(registrations);
-        _commandRouter = new CommandRouter(handlerRegistry.BuildHandlers(services));
+        _catalog = catalog;
+        _promptCatalog = promptCatalog;
+        _commandRouter = commandRouter;
+        _connectionRegistry = connectionRegistry;
     }
 
     public async Task RunAsync(CancellationToken cancellationToken)
@@ -92,6 +76,7 @@ internal sealed class TelnetServer
             var player = new PlayerState(connectionId, name, 1);
             context = new ConnectionContext(connectionId, session, player);
             _connections[context.Id] = context;
+            _connectionRegistry.SetProvider(() => _connections.Values);
 
             var entryCommand = new CommandRequest(CommandKind.Look, null, null);
             await _commandRouter.HandleAsync(entryCommand, context, cancellationToken);

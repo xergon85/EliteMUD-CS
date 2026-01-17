@@ -1,7 +1,7 @@
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Server.Commands.Shared;
+using EliteMud.Server.Adapters.Commands.Shared;
 
-namespace EliteMud.Server.Commands.NoOp;
+namespace EliteMud.Server.Adapters.Commands.NoOp;
 
 internal sealed class NoOpCommandHandler : ICommandHandler
 {

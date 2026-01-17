@@ -1,7 +1,7 @@
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Server.Commands.Shared;
+using EliteMud.Server.Adapters.Commands.Shared;
 
-namespace EliteMud.Server.Commands.Quit;
+namespace EliteMud.Server.Adapters.Commands.Quit;
 
 internal sealed class QuitCommandHandler : ICommandHandler
 {
