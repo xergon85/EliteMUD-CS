@@ -1,4 +1,4 @@
-namespace EliteMud.Application;
+namespace EliteMud.Application.Session.Login;
 
 public sealed class LoginResult
 {

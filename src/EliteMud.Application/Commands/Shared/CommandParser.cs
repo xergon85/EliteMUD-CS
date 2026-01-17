@@ -1,6 +1,7 @@
+using EliteMud.Application.World;
 using EliteMud.Game;
 
-namespace EliteMud.Application;
+namespace EliteMud.Application.Commands.Shared;
 
 public enum CommandKind
 {

@@ -1,4 +1,4 @@
-namespace EliteMud.Application;
+namespace EliteMud.Application.Commands.Shared;
 
 public sealed record MoveResult(bool Moved, string? Message)
 {

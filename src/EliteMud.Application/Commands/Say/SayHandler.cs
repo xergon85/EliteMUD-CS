@@ -1,6 +1,7 @@
+using EliteMud.Application.Commands.Shared;
 using EliteMud.Game;
 
-namespace EliteMud.Application;
+namespace EliteMud.Application.Commands.Say;
 
 public sealed class SayHandler
 {

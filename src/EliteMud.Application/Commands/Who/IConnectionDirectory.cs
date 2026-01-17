@@ -1,4 +1,4 @@
-namespace EliteMud.Application;
+namespace EliteMud.Application.Commands.Who;
 
 public interface IConnectionDirectory
 {

@@ -1,6 +1,6 @@
 using EliteMud.Game;
 
-namespace EliteMud.Application;
+namespace EliteMud.Application.World;
 
 public sealed record MobInstance(int InstanceId, MobDefinition Definition);
 

@@ -1,6 +1,6 @@
-using EliteMud.Application;
+using EliteMud.Application.World;
 using EliteMud.Game;
-using MobInstance = EliteMud.Application.MobInstance;
+using MobInstance = EliteMud.Application.World.MobInstance;
 
 namespace EliteMud.Server;
 

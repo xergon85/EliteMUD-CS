@@ -1,4 +1,4 @@
-namespace EliteMud.Application;
+namespace EliteMud.Application.Commands.Shared;
 
 public sealed class CommandCatalog
 {

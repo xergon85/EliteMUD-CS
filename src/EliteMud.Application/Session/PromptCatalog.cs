@@ -1,4 +1,4 @@
-namespace EliteMud.Application;
+namespace EliteMud.Application.Session;
 
 public sealed class PromptCatalog
 {

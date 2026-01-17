@@ -1,4 +1,6 @@
-namespace EliteMud.Application;
+using EliteMud.Application.Commands.Shared;
+
+namespace EliteMud.Application.Commands.Who;
 
 public sealed class WhoHandler
 {

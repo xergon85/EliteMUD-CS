@@ -1,6 +1,8 @@
+using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.World;
 using EliteMud.Game;
 
-namespace EliteMud.Application;
+namespace EliteMud.Application.Commands.Move;
 
 public sealed class MoveHandler
 {
