@@ -53,7 +53,13 @@ public sealed class LegacyContentImporter
 
         if (importOptions.IncludeObjects)
         {
-            var objects = LoadObjects(Path.Combine(worldPath, "obj"));
+            var objPath = Path.Combine(worldPath, "obj");
+            if (!Directory.Exists(objPath))
+            {
+                objPath = Path.Combine(worldPath, "objects");
+            }
+
+            var objects = LoadObjects(objPath);
             Directory.CreateDirectory(Path.Combine(outputContentPath, "objects"));
             await WriteAsync(Path.Combine(outputContentPath, "objects", "objects.json"), new ObjectsFile(objects), cancellationToken);
         }
