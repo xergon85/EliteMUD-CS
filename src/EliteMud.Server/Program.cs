@@ -55,8 +55,9 @@ internal static class Program
         var zones = ContentLoader.LoadZones(contentRoot);
         Console.WriteLine($"Loaded {mobs.Count} mobs, {objects.Count} objects, {zones.Count} zones from {contentRoot}.");
 
+        var worldState = BuildWorldState(world, mobs, zones);
         var scriptEngine = BuildScriptEngine(scripts);
-        var server = new TelnetServer(IPAddress.Any, port, world, scriptEngine);
+        var server = new TelnetServer(IPAddress.Any, port, worldState, scriptEngine);
         Console.WriteLine($"EliteMUD Telnet server listening on {port}.");
         await server.RunAsync(cancellationTokenSource.Token);
     }
@@ -145,21 +146,85 @@ internal static class Program
                 1)
         };
     }
+
+    private static WorldState BuildWorldState(
+        WorldDefinition world,
+        IReadOnlyList<MobDefinition> mobs,
+        IReadOnlyList<ZoneDefinition> zones)
+    {
+        var mobIndex = new Dictionary<int, MobDefinition>();
+        foreach (var mob in mobs)
+        {
+            mobIndex[mob.Id] = mob;
+        }
+
+        var roomMobs = new Dictionary<int, List<MobInstance>>();
+        foreach (var roomId in world.Rooms.Keys)
+        {
+            roomMobs[roomId] = new List<MobInstance>();
+        }
+
+        var nextMobInstanceId = 1;
+        foreach (var zone in zones)
+        {
+            foreach (var reset in zone.ResetCommands)
+            {
+                if (!string.Equals(reset.Type, "LoadMob", StringComparison.OrdinalIgnoreCase))
+                {
+                    continue;
+                }
+
+                if (!reset.MobId.HasValue || !reset.RoomId.HasValue)
+                {
+                    continue;
+                }
+
+                if (!mobIndex.TryGetValue(reset.MobId.Value, out var mobDefinition))
+                {
+                    continue;
+                }
+
+                if (!roomMobs.TryGetValue(reset.RoomId.Value, out var list))
+                {
+                    list = new List<MobInstance>();
+                    roomMobs[reset.RoomId.Value] = list;
+                }
+
+                var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
+                var existing = 0;
+                foreach (var instance in list)
+                {
+                    if (instance.Definition.Id == mobDefinition.Id)
+                    {
+                        existing++;
+                    }
+                }
+
+                var toSpawn = desiredCount - existing;
+                for (var i = 0; i < toSpawn; i++)
+                {
+                    list.Add(new MobInstance(nextMobInstanceId++, mobDefinition));
+                }
+            }
+        }
+
+        return new WorldState(world, mobIndex, roomMobs);
+    }
 }
 
 
 internal sealed class TelnetServer
 {
     private readonly TcpListener _listener;
-    private readonly WorldDefinition _world;
+    private readonly WorldState _worldState;
     private readonly IScriptEngine _scriptEngine;
     private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
 
-    public TelnetServer(IPAddress address, int port, WorldDefinition world, IScriptEngine scriptEngine)
+    public TelnetServer(IPAddress address, int port, WorldState worldState, IScriptEngine scriptEngine)
     {
         _listener = new TcpListener(address, port);
-        _world = world;
+        _worldState = worldState;
         _scriptEngine = scriptEngine;
     }
 
@@ -327,7 +392,7 @@ internal sealed class TelnetServer
 
     private async ValueTask MoveAsync(ConnectionContext context, Direction direction, CancellationToken cancellationToken)
     {
-        if (!_world.TryMove(context.Player.RoomId, direction, out var targetRoomId))
+        if (!_worldState.World.TryMove(context.Player.RoomId, direction, out var targetRoomId))
         {
             await context.Session.SendLineAsync("You cannot go that way.", cancellationToken);
             return;
@@ -353,9 +418,20 @@ internal sealed class TelnetServer
 
     private async ValueTask RenderRoomAsync(ConnectionContext context, CancellationToken cancellationToken)
     {
-        var room = _world.GetRoom(context.Player.RoomId);
+        var room = _worldState.World.GetRoom(context.Player.RoomId);
         await context.Session.SendLineAsync(room.Name, cancellationToken);
         await context.Session.SendLineAsync(room.Description, cancellationToken);
+        foreach (var mob in _worldState.GetMobsInRoom(room.Id))
+        {
+            var line = string.IsNullOrWhiteSpace(mob.Definition.LongDescription)
+                ? mob.Definition.ShortDescription
+                : mob.Definition.LongDescription.TrimEnd();
+            if (!string.IsNullOrWhiteSpace(line))
+            {
+                await context.Session.SendLineAsync(line, cancellationToken);
+            }
+        }
+
         await context.Session.SendLineAsync(BuildExitLine(room), cancellationToken);
         await ExecuteHookAsync(context, ScriptHook.OnLook, null, cancellationToken);
     }
@@ -366,7 +442,7 @@ internal sealed class TelnetServer
         string? text,
         CancellationToken cancellationToken)
     {
-        var room = _world.GetRoom(context.Player.RoomId);
+        var room = _worldState.World.GetRoom(context.Player.RoomId);
         var scriptContext = new ScriptContext(context.Player, room, text);
         await _scriptEngine.ExecuteAsync(hook, scriptContext, cancellationToken);
         foreach (var output in scriptContext.Outputs)
@@ -459,6 +535,35 @@ internal sealed class ConnectionContext
 
     public PlayerState Player { get; }
 }
+
+internal sealed class WorldState
+{
+    private readonly IReadOnlyDictionary<int, MobDefinition> _mobDefinitions;
+    private readonly IReadOnlyDictionary<int, List<MobInstance>> _roomMobs;
+
+    public WorldState(
+        WorldDefinition world,
+        IReadOnlyDictionary<int, MobDefinition> mobDefinitions,
+        IReadOnlyDictionary<int, List<MobInstance>> roomMobs)
+    {
+        World = world;
+        _mobDefinitions = mobDefinitions;
+        _roomMobs = roomMobs;
+    }
+
+    public WorldDefinition World { get; }
+
+    public IReadOnlyDictionary<int, MobDefinition> MobDefinitions => _mobDefinitions;
+
+    public IReadOnlyList<MobInstance> GetMobsInRoom(int roomId)
+    {
+        return _roomMobs.TryGetValue(roomId, out var mobs)
+            ? mobs
+            : Array.Empty<MobInstance>();
+    }
+}
+
+internal sealed record MobInstance(int InstanceId, MobDefinition Definition);
 
 internal sealed class TelnetSession
 {
