@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\EliteMud.Game\EliteMud.Game.csproj" />
+    <ProjectReference Include="..\EliteMud.Data\EliteMud.Data.csproj" />
+    <ProjectReference Include="..\EliteMud.Legacy\EliteMud.Legacy.csproj" />
+    <ProjectReference Include="..\EliteMud.Scripting\EliteMud.Scripting.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
