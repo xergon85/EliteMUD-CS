@@ -28,11 +28,26 @@ internal static class Program
         };
 
         var contentRoot = ResolveContentRoot();
-        var world = ContentLoader.LoadWorld(contentRoot) ?? BuildBootstrapWorld();
+        var world = ContentLoader.LoadWorld(contentRoot);
+        if (world is null)
+        {
+            Console.WriteLine($"Content not found under {contentRoot}; using bootstrap world.");
+            world = BuildBootstrapWorld();
+        }
+        else
+        {
+            Console.WriteLine($"Loaded {world.Rooms.Count} rooms from {contentRoot}.");
+        }
+
         var scripts = ContentLoader.LoadScripts(contentRoot);
         if (scripts.Count == 0)
         {
+            Console.WriteLine($"No scripts found under {contentRoot}; using bootstrap scripts.");
             scripts = BuildBootstrapScriptDefinitions();
+        }
+        else
+        {
+            Console.WriteLine($"Loaded {scripts.Count} scripts from {contentRoot}.");
         }
 
         var scriptEngine = BuildScriptEngine(scripts);
