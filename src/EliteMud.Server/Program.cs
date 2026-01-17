@@ -208,7 +208,9 @@ internal static class Program
             }
         }
 
-        return new WorldState(world, mobIndex, roomMobs);
+        var worldState = new WorldState(world, mobIndex, roomMobs, zones);
+        worldState.ResetAllZones();
+        return worldState;
     }
 }
 
@@ -299,6 +301,21 @@ internal sealed class TelnetServer
                     continue;
                 }
 
+                if (line.Equals("zreset", StringComparison.OrdinalIgnoreCase)
+                    || line.Equals("reset", StringComparison.OrdinalIgnoreCase))
+                {
+                    await ResetZoneAsync(context, null, cancellationToken);
+                    continue;
+                }
+
+                if (line.StartsWith("zreset ", StringComparison.OrdinalIgnoreCase)
+                    || line.StartsWith("reset ", StringComparison.OrdinalIgnoreCase))
+                {
+                    var idText = line[(line.IndexOf(' ') + 1)..].Trim();
+                    await ResetZoneAsync(context, idText, cancellationToken);
+                    continue;
+                }
+
                 if (line.StartsWith("say ", StringComparison.OrdinalIgnoreCase))
                 {
                     var message = line[4..].Trim();
@@ -325,7 +342,7 @@ internal sealed class TelnetServer
                     continue;
                 }
 
-                await context.Session.SendLineAsync("Unknown command. Try 'look', 'who', 'say', 'north', or 'go north'.", cancellationToken);
+                await context.Session.SendLineAsync("Unknown command. Try 'look', 'who', 'say', 'zreset', 'north', or 'go north'.", cancellationToken);
             }
         }
         finally
@@ -346,6 +363,37 @@ internal sealed class TelnetServer
         {
             await context.Session.SendLineAsync($" - {connection.Player.Name}", cancellationToken);
         }
+    }
+
+    private async ValueTask ResetZoneAsync(ConnectionContext context, string? idText, CancellationToken cancellationToken)
+    {
+        if (!string.IsNullOrWhiteSpace(idText))
+        {
+            if (!int.TryParse(idText, out var zoneId))
+            {
+                await context.Session.SendLineAsync("Usage: zreset [zoneId]", cancellationToken);
+                return;
+            }
+
+            if (!_worldState.ResetZone(zoneId))
+            {
+                await context.Session.SendLineAsync("Zone not found.", cancellationToken);
+                return;
+            }
+
+            await context.Session.SendLineAsync($"Zone {zoneId} reset.", cancellationToken);
+            await RenderRoomAsync(context, cancellationToken);
+            return;
+        }
+
+        if (!_worldState.ResetZoneForRoom(context.Player.RoomId, out var currentZoneId))
+        {
+            await context.Session.SendLineAsync("You are not in a zone with resets.", cancellationToken);
+            return;
+        }
+
+        await context.Session.SendLineAsync($"Zone {currentZoneId} reset.", cancellationToken);
+        await RenderRoomAsync(context, cancellationToken);
     }
 
     private async ValueTask<string?> PromptForNameAsync(TelnetSession session, CancellationToken cancellationToken)
@@ -538,17 +586,21 @@ internal sealed class ConnectionContext
 
 internal sealed class WorldState
 {
-    private readonly IReadOnlyDictionary<int, MobDefinition> _mobDefinitions;
-    private readonly IReadOnlyDictionary<int, List<MobInstance>> _roomMobs;
+    private readonly Dictionary<int, MobDefinition> _mobDefinitions;
+    private readonly Dictionary<int, List<MobInstance>> _roomMobs;
+    private readonly IReadOnlyList<ZoneDefinition> _zones;
+    private int _nextMobInstanceId;
 
     public WorldState(
         WorldDefinition world,
-        IReadOnlyDictionary<int, MobDefinition> mobDefinitions,
-        IReadOnlyDictionary<int, List<MobInstance>> roomMobs)
+        Dictionary<int, MobDefinition> mobDefinitions,
+        Dictionary<int, List<MobInstance>> roomMobs,
+        IReadOnlyList<ZoneDefinition> zones)
     {
         World = world;
         _mobDefinitions = mobDefinitions;
         _roomMobs = roomMobs;
+        _zones = zones;
     }
 
     public WorldDefinition World { get; }
@@ -560,6 +612,111 @@ internal sealed class WorldState
         return _roomMobs.TryGetValue(roomId, out var mobs)
             ? mobs
             : Array.Empty<MobInstance>();
+    }
+
+    public void ResetAllZones()
+    {
+        foreach (var zone in _zones)
+        {
+            ResetZone(zone.Id);
+        }
+    }
+
+    public bool ResetZoneForRoom(int roomId, out int zoneId)
+    {
+        foreach (var zone in _zones)
+        {
+            if (roomId >= zone.RoomRange.Min && roomId <= zone.RoomRange.Max)
+            {
+                zoneId = zone.Id;
+                return ResetZone(zone.Id);
+            }
+        }
+
+        zoneId = 0;
+        return false;
+    }
+
+    public bool ResetZone(int zoneId)
+    {
+        var zone = FindZone(zoneId);
+        if (zone is null)
+        {
+            return false;
+        }
+
+        ClearZoneRooms(zone);
+        ApplyZoneResets(zone);
+        return true;
+    }
+
+    private ZoneDefinition? FindZone(int zoneId)
+    {
+        foreach (var zone in _zones)
+        {
+            if (zone.Id == zoneId)
+            {
+                return zone;
+            }
+        }
+
+        return null;
+    }
+
+    private void ClearZoneRooms(ZoneDefinition zone)
+    {
+        foreach (var roomId in _roomMobs.Keys)
+        {
+            if (roomId < zone.RoomRange.Min || roomId > zone.RoomRange.Max)
+            {
+                continue;
+            }
+
+            _roomMobs[roomId].Clear();
+        }
+    }
+
+    private void ApplyZoneResets(ZoneDefinition zone)
+    {
+        foreach (var reset in zone.ResetCommands)
+        {
+            if (!string.Equals(reset.Type, "LoadMob", StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            if (!reset.MobId.HasValue || !reset.RoomId.HasValue)
+            {
+                continue;
+            }
+
+            if (!_mobDefinitions.TryGetValue(reset.MobId.Value, out var mobDefinition))
+            {
+                continue;
+            }
+
+            if (!_roomMobs.TryGetValue(reset.RoomId.Value, out var list))
+            {
+                list = new List<MobInstance>();
+                _roomMobs[reset.RoomId.Value] = list;
+            }
+
+            var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
+            var existing = 0;
+            foreach (var instance in list)
+            {
+                if (instance.Definition.Id == mobDefinition.Id)
+                {
+                    existing++;
+                }
+            }
+
+            var toSpawn = desiredCount - existing;
+            for (var i = 0; i < toSpawn; i++)
+            {
+                list.Add(new MobInstance(_nextMobInstanceId++, mobDefinition));
+            }
+        }
     }
 }
 
