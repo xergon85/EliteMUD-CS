@@ -10,6 +10,7 @@ namespace EliteMud.Server;
 internal sealed class TelnetServer
 {
     private readonly TcpListener _listener;
+    private readonly CommandCatalog _catalog;
     private readonly TelnetCommandHandler _commandHandler;
     private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
@@ -17,9 +18,11 @@ internal sealed class TelnetServer
     public TelnetServer(IPAddress address, int port, IWorldState worldState, IScriptEngine scriptEngine)
     {
         _listener = new TcpListener(address, port);
+        _catalog = new CommandCatalog();
         _commandHandler = new TelnetCommandHandler(
             worldState,
             scriptEngine,
+            _catalog,
             () => _connections.Values);
     }
 
@@ -69,7 +72,6 @@ internal sealed class TelnetServer
             await _commandHandler.HandleAsync(entryCommand, context, cancellationToken);
 
             var dispatcher = new CommandParser();
-            var catalog = new CommandCatalog();
             while (!cancellationToken.IsCancellationRequested)
             {
                 var line = await context.Session.ReadLineAsync(cancellationToken);
@@ -87,7 +89,7 @@ internal sealed class TelnetServer
 
                 if (outcome == CommandOutcome.Unknown)
                 {
-                    await context.Session.SendLineAsync(catalog.GetUnknownCommandMessage(), cancellationToken);
+                    await context.Session.SendLineAsync(_catalog.GetUnknownCommandMessage(), cancellationToken);
                 }
             }
         }

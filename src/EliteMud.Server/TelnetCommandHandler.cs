@@ -15,6 +15,7 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
 {
     private readonly IWorldState _worldState;
     private readonly IScriptEngine _scriptEngine;
+    private readonly CommandCatalog _catalog;
     private readonly LookHandler _lookHandler;
     private readonly MoveHandler _moveHandler;
     private readonly ResetZoneHandler _resetZoneHandler;
@@ -25,10 +26,12 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
     public TelnetCommandHandler(
         IWorldState worldState,
         IScriptEngine scriptEngine,
+        CommandCatalog catalog,
         Func<IEnumerable<ConnectionContext>> connections)
     {
         _worldState = worldState;
         _scriptEngine = scriptEngine;
+        _catalog = catalog;
         _connections = connections;
         _lookHandler = new LookHandler(worldState);
         _moveHandler = new MoveHandler(worldState);
@@ -101,7 +104,7 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
         {
             if (!int.TryParse(idText, out var parsedId))
             {
-                await context.Session.SendLineAsync("Usage: zreset [zoneId]", cancellationToken);
+                await context.Session.SendLineAsync(_catalog.GetResetUsage(), cancellationToken);
                 return;
             }
 
