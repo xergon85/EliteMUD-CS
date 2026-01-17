@@ -50,6 +50,11 @@ internal static class Program
             Console.WriteLine($"Loaded {scripts.Count} scripts from {contentRoot}.");
         }
 
+        var mobs = ContentLoader.LoadMobs(contentRoot);
+        var objects = ContentLoader.LoadObjects(contentRoot);
+        var zones = ContentLoader.LoadZones(contentRoot);
+        Console.WriteLine($"Loaded {mobs.Count} mobs, {objects.Count} objects, {zones.Count} zones from {contentRoot}.");
+
         var scriptEngine = BuildScriptEngine(scripts);
         var server = new TelnetServer(IPAddress.Any, port, world, scriptEngine);
         Console.WriteLine($"EliteMUD Telnet server listening on {port}.");
