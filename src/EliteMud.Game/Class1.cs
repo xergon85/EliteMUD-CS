@@ -17,7 +17,7 @@ public sealed record ExitDefinition(Direction Direction, int TargetRoomId);
 
 public sealed record RoomDefinition(int Id, string Name, string Description, IReadOnlyList<ExitDefinition> Exits);
 
-public sealed record ScriptDefinition(string Id, string Hook, string Body);
+public sealed record ScriptDefinition(string Id, string Hook, string Body, int? RoomId);
 
 public sealed class PlayerState
 {

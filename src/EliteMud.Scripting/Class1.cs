@@ -78,6 +78,11 @@ public sealed class LuaScriptEngine : IScriptEngine, IScriptRegistry
 
         foreach (var scriptDefinition in scripts)
         {
+            if (scriptDefinition.RoomId.HasValue && scriptDefinition.RoomId != context.Room.Id)
+            {
+                continue;
+            }
+
             ExecuteScript(scriptDefinition, context);
         }
 

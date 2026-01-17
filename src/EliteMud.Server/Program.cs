@@ -2,6 +2,7 @@ using System;
 using System.Buffers;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -26,8 +27,15 @@ internal static class Program
             cancellationTokenSource.Cancel();
         };
 
-        var world = BuildBootstrapWorld();
-        var scriptEngine = BuildBootstrapScripts();
+        var contentRoot = ResolveContentRoot();
+        var world = ContentLoader.LoadWorld(contentRoot) ?? BuildBootstrapWorld();
+        var scripts = ContentLoader.LoadScripts(contentRoot);
+        if (scripts.Count == 0)
+        {
+            scripts = BuildBootstrapScriptDefinitions();
+        }
+
+        var scriptEngine = BuildScriptEngine(scripts);
         var server = new TelnetServer(IPAddress.Any, port, world, scriptEngine);
         Console.WriteLine($"EliteMUD Telnet server listening on {port}.");
         await server.RunAsync(cancellationTokenSource.Token);
@@ -68,30 +76,45 @@ internal static class Program
         return new WorldDefinition(rooms);
     }
 
-    private static IScriptEngine BuildBootstrapScripts()
+    private static string ResolveContentRoot()
+    {
+        return Path.Combine(Environment.CurrentDirectory, "content");
+    }
+
+    private static IScriptEngine BuildScriptEngine(IReadOnlyList<ScriptDefinition> scripts)
     {
         var engine = new LuaScriptEngine();
-        engine.RegisterAsync(
-            new ScriptDefinition(
-                "entry-hall-look",
-                "OnLook",
-                "if room.id == 1 then emit('Dust motes drift lazily in the torchlight.') end"),
-            CancellationToken.None);
-        engine.RegisterAsync(
-            new ScriptDefinition(
-                "training-yard-enter",
-                "OnEnterRoom",
-                "if room.id == 2 then emit('You hear distant clangs of steel.') end"),
-            CancellationToken.None);
-        engine.RegisterAsync(
-            new ScriptDefinition(
-                "entry-hall-say",
-                "OnSay",
-                "if room.id == 1 and text:find('hello') then emit('An unseen voice whispers back.') end"),
-            CancellationToken.None);
+        foreach (var script in scripts)
+        {
+            engine.RegisterAsync(script, CancellationToken.None);
+        }
+
         return engine;
     }
+
+    private static IReadOnlyList<ScriptDefinition> BuildBootstrapScriptDefinitions()
+    {
+        return new List<ScriptDefinition>
+        {
+            new(
+                "entry-hall-look",
+                "OnLook",
+                "emit('Dust motes drift lazily in the torchlight.')",
+                1),
+            new(
+                "training-yard-enter",
+                "OnEnterRoom",
+                "emit('You hear distant clangs of steel.')",
+                2),
+            new(
+                "entry-hall-say",
+                "OnSay",
+                "if text:find('hello') then emit('An unseen voice whispers back.') end",
+                1)
+        };
+    }
 }
+
 
 internal sealed class TelnetServer
 {
