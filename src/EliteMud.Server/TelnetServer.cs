@@ -7,14 +7,7 @@ using EliteMud.Application.Session.Login;
 using EliteMud.Application.World;
 using EliteMud.Game;
 using EliteMud.Scripting;
-using EliteMud.Server.Commands.Look;
-using EliteMud.Server.Commands.Move;
-using EliteMud.Server.Commands.NoOp;
-using EliteMud.Server.Commands.Quit;
-using EliteMud.Server.Commands.ResetZone;
-using EliteMud.Server.Commands.Say;
 using EliteMud.Server.Commands.Shared;
-using EliteMud.Server.Commands.Who;
 
 namespace EliteMud.Server;
 
@@ -37,16 +30,9 @@ internal sealed class TelnetServer
             scriptEngine,
             _catalog,
             () => _connections.Values);
-        _commandRouter = new CommandRouter(new ICommandHandler[]
-        {
-            new NoOpCommandHandler(),
-            new QuitCommandHandler(),
-            new LookCommandHandler(services),
-            new WhoCommandHandler(services),
-            new ResetZoneCommandHandler(services),
-            new SayCommandHandler(services),
-            new MoveCommandHandler(services)
-        });
+        var registry = new CommandRegistry();
+        var handlerRegistry = new CommandHandlerRegistry(registry);
+        _commandRouter = new CommandRouter(handlerRegistry.BuildHandlers(services));
     }
 
     public async Task RunAsync(CancellationToken cancellationToken)
