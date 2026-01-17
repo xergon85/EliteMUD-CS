@@ -78,6 +78,18 @@ internal static class Program
 
     private static string ResolveContentRoot()
     {
+        var directory = new DirectoryInfo(Environment.CurrentDirectory);
+        while (directory is not null)
+        {
+            var candidate = Path.Combine(directory.FullName, "content");
+            if (Directory.Exists(candidate))
+            {
+                return candidate;
+            }
+
+            directory = directory.Parent;
+        }
+
         return Path.Combine(Environment.CurrentDirectory, "content");
     }
 
