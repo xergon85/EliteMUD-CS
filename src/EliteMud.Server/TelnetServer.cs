@@ -85,6 +85,7 @@ internal sealed class TelnetServer : IConnectionDirectory
             await ExecuteHookAsync(context, ScriptHook.OnEnterRoom, null, cancellationToken);
             await RenderRoomAsync(context, cancellationToken);
 
+            var dispatcher = new CommandDispatcher();
             while (!cancellationToken.IsCancellationRequested)
             {
                 var line = await context.Session.ReadLineAsync(cancellationToken);
@@ -93,63 +94,36 @@ internal sealed class TelnetServer : IConnectionDirectory
                     break;
                 }
 
-                if (line.Equals("quit", StringComparison.OrdinalIgnoreCase))
+                var command = dispatcher.Dispatch(line);
+                switch (command.Kind)
                 {
-                    await context.Session.SendLineAsync("Goodbye!", cancellationToken);
-                    break;
-                }
+                    case CommandKind.None:
+                        continue;
+                    case CommandKind.Quit:
+                        await context.Session.SendLineAsync("Goodbye!", cancellationToken);
+                        return;
+                    case CommandKind.Look:
+                        await RenderRoomAsync(context, cancellationToken);
+                        continue;
+                    case CommandKind.Who:
+                        await ShowWhoAsync(context, cancellationToken);
+                        continue;
+                    case CommandKind.ResetZone:
+                        await ResetZoneAsync(context, command.Argument, cancellationToken);
+                        continue;
+                    case CommandKind.Say:
+                        await SayAsync(context, command.Argument ?? string.Empty, cancellationToken);
+                        continue;
+                    case CommandKind.Move:
+                        if (command.Direction.HasValue)
+                        {
+                            await MoveAsync(context, command.Direction.Value, cancellationToken);
+                            continue;
+                        }
 
-                if (line.Equals("look", StringComparison.OrdinalIgnoreCase))
-                {
-                    await RenderRoomAsync(context, cancellationToken);
-                    continue;
-                }
-
-                if (line.Equals("who", StringComparison.OrdinalIgnoreCase))
-                {
-                    await ShowWhoAsync(context, cancellationToken);
-                    continue;
-                }
-
-                if (line.Equals("zreset", StringComparison.OrdinalIgnoreCase)
-                    || line.Equals("reset", StringComparison.OrdinalIgnoreCase))
-                {
-                    await ResetZoneAsync(context, null, cancellationToken);
-                    continue;
-                }
-
-                if (line.StartsWith("zreset ", StringComparison.OrdinalIgnoreCase)
-                    || line.StartsWith("reset ", StringComparison.OrdinalIgnoreCase))
-                {
-                    var idText = line[(line.IndexOf(' ') + 1)..].Trim();
-                    await ResetZoneAsync(context, idText, cancellationToken);
-                    continue;
-                }
-
-                if (line.StartsWith("say ", StringComparison.OrdinalIgnoreCase))
-                {
-                    var message = line[4..].Trim();
-                    await SayAsync(context, message, cancellationToken);
-                    continue;
-                }
-
-                if (line.Equals("say", StringComparison.OrdinalIgnoreCase))
-                {
-                    await context.Session.SendLineAsync("Say what?", cancellationToken);
-                    continue;
-                }
-
-                if (TryParseDirection(line, out var direction))
-                {
-                    await MoveAsync(context, direction, cancellationToken);
-                    continue;
-                }
-
-                if (line.StartsWith("go ", StringComparison.OrdinalIgnoreCase)
-                    && TryParseDirection(line[3..], out direction))
-                {
-                    await MoveAsync(context, direction, cancellationToken);
-                    continue;
+                        break;
+                    default:
+                        break;
                 }
 
                 await context.Session.SendLineAsync(
