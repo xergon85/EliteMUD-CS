@@ -1,0 +1,1358 @@
+<html>
+
+<head>
+
+<title>Common Code</title>
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333"
+alink="#FF3333"><table border="0" cellpadding="0"
+cellspacing="0" width="100%"><tr><td><font face=
+"trebuchet ms, arial, helvetica">
+
+<p align="center"><font size="6"><strong></strong></font><br>
+</p>
+
+<p align="center">&nbsp;</p>
+</font></td></tr></table><!--
+msnavigation--><table border="0" cellpadding="0" cellspacing="0" width=
+"100%"><tr><td valign="top"><font face=
+"trebuchet ms, arial, helvetica">
+
+<h1><font color="#FF0000"><big><big>Common code</big></big></font></h1>
+
+<p>These codes are common to all types of mobs, although they may appear
+in different
+places.</p>
+
+<p><font color="#FF0000"><big><strong><big><a name="VIRTUAL NUMBER">
+Virtual Number</a></big></strong></big>
+(VNUM)</font> <br>
+The mob's vnum starts with the zone number and ends with a unique
+number. Mobs are listed
+in the mob file in order. So ... for zone #99,&nbsp; the first mob is
+#9900, the second is
+#9901, etc. (See <a href="mobsampf.html">sample mob file</a>)</p>
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> </p>
+
+<p><br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><font color="#FF0000"><a name="ALIAS LIST"><big><big>Alias List
+</big></big></a></font></strong>&nbsp;
+<br>
+list of keywords, separated by spaces, used to interact with the mob, as
+in <br>
+&quot;kill &lt;alias&gt;&quot;. Example:</p>
+
+<p><font face="Lucida Console">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fido
+beastly~&nbsp;&nbsp; </font></p>
+
+<p>&nbsp;</p>
+
+</font><table border="0" width="100%">
+  <tr>
+          <td width="18%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/howling_wolf.GIF" alt=
+"WB00782_.gif (814 bytes)" align="center" WIDTH="48" HEIGHT="63"><!--
+mstheme--></font></td>
+    <td width="82%"><font face=
+"trebuchet ms, arial, helvetica">&nbsp;</font><!--
+msthemelist--><table border="0" cellpadding="0" cellspacing="0" width=
+"100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">make sure the spelling matches the room
+description.</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">don't put &quot;a&quot; or &quot;
+an&quot; or &quot;the&quot; in the alias list </font><!--
+msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">don't add a common alias for every mob
+in your zonet</font><!--msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;</p>
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> </p>
+
+<p><br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><font color="#FF0000"><a name="SHORT DESCRIPTION"><big><big>Short
+Description</big></big></a></font></strong></p>
+
+<p>This is the description that the mud uses when the mob DOES something
+<br>
+(e.g. attacks you.) It should start with a capital and end with a ~ <br>
+</p>
+
+<p>Example: <br>
+&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font
+face="Lucida Console">The beastly fido~ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Harold~ </font></p>
+
+<p>&nbsp;</p>
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+</p>
+
+      <p><img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><big><a name="LONG DESCRIPTION"><font color="#FF0000"><big>Room
+Description</big></font></a></big></strong>
+<br>
+This is the &quot;room description&quot; of the mob. It should end with
+a period <br>
+and be followed by a ~ ON THE NEXT LINE. </p>
+
+</font><table border="0" width="100%">
+  <tr>
+          <td width="19%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/howling_wolf.GIF" alt=
+"WB00782_.gif (814 bytes)" align="center" WIDTH="48" HEIGHT="63"><!--
+mstheme--></font></td>
+    <td width="81%"><font face=
+"trebuchet ms, arial, helvetica"></font><!--msthemelist-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000FF">DO NOT use &quot;
+is here&quot; in any way shape or form.</font>
+        You will be asked to rewrite your mob if you do. &quot;The
+bloodthirsty vampire is
+        here.&quot; is overused and not nearly as interesting as &quot;
+The bloodthirsty vampire
+        looks yearningly at your neck.&quot; </font><!--
+msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Descriptions must fit on one line,
+about 72 characters (not including color codes.) This
+        helps keep the room from looking cluttered.&nbsp; An occasional
+exception to this rule is
+        ok. </font><!--msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>If your mob is HIDDEN, the long description won't be seen unless it
+is attacked and the
+attacker flees ... </p>
+
+<p>A discrete use of color can add some excitement. For example, dark
+red is the color of
+tell. Coding it into the long description makes it seem as if the mob is
+speaking directly
+to the player, for example: <br>
+&nbsp; <br>
+<font color="#FF0000">The vampire tells you, 'Mmmm! Fresh blood! You
+look tasty!'</font> </p>
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+<br>
+        <img src="images/red_rule.GIF" width="709" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><font color="#FF0000"><a name="DETAILED DESCRIPTION"><big><big>
+Long Description</big></big></a></font></strong>
+<br>
+When a player <strong>looks</strong> at your mob, this is what they see.
+<br>
+</p>
+
+<p><font color="#FF0000">General rules:</font> <br>
+</p>
+
+</font><table border="0" width="100%">
+  <tr>
+          <td width="21%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/howling_wolf.GIF" alt=
+"WB00782_.gif (814 bytes)" align="center" WIDTH="48" HEIGHT="63"><!--
+mstheme--></font></td>
+    <td width="79%"><font face=
+"trebuchet ms, arial, helvetica"></font><!--msthemelist-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Three lines minimum. 
+</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Show details about the mob such as its
+age, what clothes it is wearing. You can use the
+        description to hint about the difficulty.
+</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Follow the long description with a
+tilde (~) <em><font color="#FF0000">ON A SEPARATE
+        LINE</font></em>. <br>
+        &nbsp; <br>
+        <font color="#FF0000">Example:</font> <br>
+        The king is the ruler of this land. You are to obey him without
+<br>
+        question, for he has got a lot of power. As he looks at you with
+his <br>
+        icecold gaze, you get the feeling you shouldn't be here at all.
+<br>
+        ~ <br>
+      </font><!--msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;</p>
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+</p>
+
+      <p><img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><a name="RACES"><big><big><font color="#FF0000">Races</font>
+</big></big></a></strong><br>
+</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">0 </font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+undefined</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+bearbeast</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">10</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+illusion</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">15</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">water
+</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+humanoid</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">6</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">bird</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">11</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+mount_fly</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">16</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">earth
+</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">undead
+</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">7</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">mount</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">12</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">demon</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">17</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">air
+</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+catbeast</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">8</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">giant</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">13</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+flybeast </font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">18</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">dragon
+</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">4</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">hound</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">9</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">dwarf</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">14</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">fire
+</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p><br>
+The mob's race affects its resistances and the type of attack.. <br>
+Undead mobs are resistant to piercing. Fire and water mobs are resistant
+to fireball, and
+demons are resistant to fear. <br>
+Animals (mounts) bite, dragons whip, etc.</p>
+
+<p><br>
+        <img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a> - <a
+href="mob_styp.html">S type</a> - <a href="mob_over.html">Overview</a> - <a href="mob_comm.html"> 
+        Top</a> <br>
+</p>
+
+      <p><img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><a name="Classes"><font color="#FF0000"><big><big>Classes</big>
+</big></font></a></strong><br>
+This will affect the default skills list for the mob, and the default
+may not be what you
+expect! <br>
+</p>
+</font><div align="center"><center><font face="trebuchet ms, arial, helvetica">
+
+</font><table border="0" width="198">
+  <tr>
+    <td width="23" align="right"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+    <td width="163"><font face=
+"trebuchet ms, arial, helvetica">Normal </font></td>
+  </tr>
+  <tr>
+    <td width="23" align="right"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+    <td width="163"><font face=
+"trebuchet ms, arial, helvetica">Magic User </font></td>
+  </tr>
+  <tr>
+    <td width="23" align="right"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+    <td width="163"><font face=
+"trebuchet ms, arial, helvetica">Cleric </font></td>
+  </tr>
+  <tr>
+    <td width="23" align="right"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+    <td width="163"><font face=
+"trebuchet ms, arial, helvetica">Thief </font></td>
+  </tr>
+  <tr>
+    <td width="23" align="right"><font face=
+"trebuchet ms, arial, helvetica">4</font></td>
+    <td width="163"><font face=
+"trebuchet ms, arial, helvetica">Warrior</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+</font></center></div><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;<br>
+Warriors get 2nd, 3rd and 4th attack at 100%, track and scout at 95%,
+kick and bash at 60%
+and disarm foe at 75%. <br>
+Thieves just get 2nd attack at 100% and track and scout at 95% (no other
+skills). <br>
+All others get 2-4th attack, tumble, parry, dodge, and martial arts at
+100%, track and
+scout at 95%. <br>
+<strong><font color="#004080">So why code anything other than &quot;
+Normal&quot; ?</font></strong>
+<br>
+So to avoid local lag you should try to make the mob Warrior if you intend to have the mob use the skills kick, bash and/or disarm as an attack.<br>
+        <img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a> - <a
+href="mob_styp.html">S type</a> - <a href="mob_over.html">Overview</a> - <a href="mob_comm.html"> 
+        Top</a> <br>
+</p>
+
+      <p><img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><font color="#FF0000"><big><big><a name="ACTION">Action</a> </big
+></big></font></strong><br>
+Simply code the letters and let the mud do the work. For example, to
+make a mob sentinel,
+scavenger and a helper, code <font color="#004080">bcm</font> <br>
+</p>
+
+</font>
+      <table border="0" width="100%">
+        <tr>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica"><strong>Action</strong>
+</font></td>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica"><strong>code</strong>
+</font></td>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica"><strong>Effect</strong>
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">spec </font></td>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">a</font></td>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">spec-proc to be called if it exists<!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">
+sentinel</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">b<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+prefers to stay in its room </font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">
+scavenger&nbsp; </font></td>
+    <td><font face="trebuchet ms, arial, helvetica">c<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">pick
+up stuff lying around</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">isnpc</font></td>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">d</font></td>
+    <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">internal use only: don't set <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">
+nice_thief </font></td>
+    <td><font face="trebuchet ms, arial, helvetica">e<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">set if
+thief should not be killed</font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">
+aggressive </font></td>
+    <td><font face="trebuchet ms, arial, helvetica">f<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">set if
+automatic attack on npc's. If a special aggressive on an alignment only
+is
+    selected, then this needs to be selected too. </font>
+</td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">
+stay_zone </font></td>
+    <td><font face="trebuchet ms, arial, helvetica">g<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">mob
+must stay inside its own zone </font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">wimpy
+</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">h<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">mob
+will flee when injured. If it's aggressive, it will only attack sleeping
+players </font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">
+aggressive_evil </font></td>
+    <td><font face="trebuchet ms, arial, helvetica">i<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+attacks evil-alignment players IF &quot;f&quot; is also selected <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">
+aggressive_good </font></td>
+    <td><font face="trebuchet ms, arial, helvetica">j<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+attacks good-alignment players IF &quot;f&quot; is also selected<!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">
+aggressive_neutral </font></td>
+    <td><font face="trebuchet ms, arial, helvetica">k<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+attacks neutral-alignment players IF &quot;f&quot; is also selected<!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica">memory
+</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">l<!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+remembers if struck first and will hunt pc </font></td>
+  </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><font face=
+"trebuchet ms, arial, helvetica">helper </font></td>
+          <td><font face=
+"trebuchet ms, arial, helvetica">m</font></td>
+          <td><font face=
+"trebuchet ms, arial, helvetica">if a player is fighting a mob, the helper will 
+            join the attack against the player.&nbsp;
+          </td>
+  </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><font face=
+"trebuchet ms, arial, helvetica">hidden </font></td>
+          <td><font face=
+"trebuchet ms, arial, helvetica">p</font></td>
+          <td><font face=
+"trebuchet ms, arial, helvetica">The mob is hidden and will not be seen at all (no blankline  no alignment  etc).&nbsp;
+          </td>
+  </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><font face=
+"trebuchet ms, arial, helvetica">NoTrack </font></td>
+          <td><font face=
+"trebuchet ms, arial, helvetica">q</font></td>
+          <td><font face=
+"trebuchet ms, arial, helvetica">Mob can not be tracked.&nbsp;
+          </td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;</p>
+
+</font><table border="0" width="100%">
+  <tr>
+          <td width="22%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/howling_wolf.GIF" alt=
+"WB00782_.gif (814 bytes)" align="center" WIDTH="48" HEIGHT="63"><!--
+mstheme--></font></td>
+    <td width="78%"><font face=
+"trebuchet ms, arial, helvetica"></font><!--msthemelist-->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <!--msthemelist--> <!--msthemelist-->
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">If you want your mob to attack evil or good players, 
+                  you must also code &quot;f&quot;, the &quot;aggressive&quot; 
+                  flag </font><!--
+msthemelist--></td>
+              </tr>
+              <!--msthemelist-->
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">DO NOT code <font color="#0000FF">a </font> or 
+                  <font color="#0000FF">d </font></font><!--
+msthemelist--></td>
+              </tr>
+              <!--msthemelist-->
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">DO NOT make a shopkeeper or similarly difficult 
+                  mob a scavenger.&nbsp; This will make him grab corpses and will 
+                  make corpse retrieval unnecessarily painful. </font><!--msthemelist--></td>
+              </tr>
+              <!--msthemelist-->
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">stay_zone</font> is useful 
+                  unless you wish your mob to be roaming nearby&nbsp; zones. The 
+                  midnight black wolf from the Elysium Faire, for example, frequently 
+                  wanders the Northern Road, the zone at the entrance to the Faire. 
+                  Aggro mobs should probably be stay_zone. Powerful aggro mobs 
+                  should probably not have memory, or they are likely to kill 
+                  innocent newbies in their efforts to track down their attacker. 
+                  Recent example of this was the aquamarine dragon (who had to 
+                  have a lobotomy). </font><!--msthemelist--></td>
+              </tr>
+              <!--msthemelist-->
+            </table>
+            <font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><a name="AFFECTION"><font color="#FF0000"><big><big>Affection
+</big></big></font></a></strong><small>&nbsp;
+</small></p>
+
+<p>Affections make a mob easier or harder to kill, and more or less
+dangerous.&nbsp; Many
+(those marked in yellow) should NOT be used and are not included in the
+affection table on
+the cheat sheet.&nbsp; Choose the letter symbol(s) you wish to use, or
+code a 0 if there
+are no affections.&nbsp; Examples follow the table.<br>
+<br>
+</p>
+</font><div align="center"><center><font face="trebuchet ms, arial, helvetica">
+
+</font><table border="0" width="498" height="751">
+  <tr>
+    <td height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">a</font></td>
+    <td height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">BLIND</font></td>
+    <td height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">Mob is blind. 
+</font></td>
+  </tr>
+  <tr>
+    <td height="22" width="31"><font face=
+"trebuchet ms, arial, helvetica">b</font></td>
+    <td height="22" width="154"><font face=
+"trebuchet ms, arial, helvetica">INVISIBLE</font></td>
+    <td height="22" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob is invisible till it attacks. <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">c</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">DETECT_ALIGN</font>
+</td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">* No effect for mob - all can look
+for align
+    </font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">d</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">DETECT_INVISIBLE</font>
+</td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Sees invisible chars and objects <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">e</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">DETECT_MAGIC</font>
+</td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">* No effect for mob 
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">f</font></td>
+    <td bgcolor="#FFFFFF" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">SENSE_LIFE</font>
+</td>
+    <td bgcolor="#FFFFFF" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">Sees hidden characters <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">g</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">HOLD</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">* Not Imped yet! 
+</font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">h</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">SANCTUARY</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Halves all damage received <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">i</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">GROUP</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">INTERNAL USE ONLY: mob is grouped
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">j</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">CURSE</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">* Mob is cursed like spell <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">k</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">LIGHT</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob sees in the dark 
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">l</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">POISON</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">* Mob is poisoned like spell <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">m</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">PROTECT_EVIL</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">An extra AC point vs Evil players. </font>
+</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">n</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">PARALYSIS</font></td
+>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">* Not Imped yet! 
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">o</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">INSANITY</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">* Not Imped yet! 
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">p</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">FL_WPN</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">Not Imped yet! 
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">q</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">SLEEP</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">* Mob is slept like spell <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">r</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">DODGE</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob can dodge like skill 
+</font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">s</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">SNEAK</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob doesn't have entry/exit msg
+displayed </font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">t</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">HIDE</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob is hidden like skill 
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">u</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">FEAR</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">Not Imped yet! 
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">v</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">CHARM</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">INTERNAL USE ONLY: mob is charmed
+</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">w</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">FOLLOWING</font></td
+>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">INTERNAL USE ONLY: mob is
+following </font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFF80" height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">x</font></td>
+    <td bgcolor="#FFFF80" height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">WIMPY</font></td>
+    <td bgcolor="#FFFF80" height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">INTERNAL USE ONLY: Wimpy set <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">y</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">INFRARED</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob has infravision like spell <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">z</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">BERZERK</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob is berserked like skill <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">A</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">HOVER</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob is levitating like the spell Mob
+&quot;hovers&quot;</font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">B</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">FLY</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob flies (all flying creatures must
+have this flag on). </font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font
+face="trebuchet ms, arial, helvetica">C</font></td>
+    <td height="21" width="154"><font
+face="trebuchet ms, arial, helvetica">BREATH_WATER</font>
+</td>
+    <td height="21" width="301"><font
+face="trebuchet ms, arial, helvetica">The mob will not take damage from being underwater. 
+</font></td>
+  </tr>
+  <tr>
+    <td height="21" width="31"><font face=
+"trebuchet ms, arial, helvetica">D</font></td>
+    <td height="21" width="154"><font face=
+"trebuchet ms, arial, helvetica">REGENERATION</font></td>
+    <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Mob regenerates hit points like the
+spell </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+</font></center></div><font face="trebuchet ms, arial, helvetica">
+
+<p>This is the gremlin in Ultima.&nbsp; He can see in the dark, and when
+he flees, you
+don't see him leave the room, because he is sneaking.&nbsp; Players tend
+to find this very
+annoying.</p>
+
+<p><small><font face="Lucida Console">#2633<br>
+gremlin~<br>
+the gremlin~<br>
+This little creature sneaks around and steals your food.<br>
+~<br>
+He seems to be just a head with little hands and feet sticking<br>
+out of it. It does not seem like these things could hurt you,<br>
+but your money pouch seems much lighter.<br>
+~<br>
+12 3 ch ks -300 S<br>
+48 -4 -16 2d72+576<br>
+408 500 100 3d10+12 -1<br>
+-1<br>
+-1<br>
+0 225000 8 8 0<br>
+</font></small></p>
+
+<p>&nbsp; </p>
+
+</font><table border="0" width="100%">
+  <tr>
+          <td width="18%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/howling_wolf.GIF" alt=
+"WB00782_.gif (814 bytes)" align="center" WIDTH="48" HEIGHT="63"><!--
+mstheme--></font></td>
+    <td width="82%"><font face=
+"trebuchet ms, arial, helvetica"></font><!--msthemelist-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Wimpy+sneak = mobs like the ogres. They flee and you do not know where they
+        fled to without scout. </font><!--msthemelist-->
+</td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">All dragons, birds and other flying
+creatures should have the fly affection. </font><!--
+msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Shopkeepers who do not have &quot;
+light&quot; will not trade at night since they cannot
+        &quot;see&quot; their customer. (so bring light to him/Eg.) </font><!--
+msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Don't overuse sanctuary. &nbsp; <!--
+mstheme--></font><!--msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><br>
+<strong><big><big><font color="#FF0000"><a name="ALIGNMENT">Alignment</a
+></font></big></big></strong><br>
+A number from -1000 to 1000 representing the mob's alignment. <br>
+&nbsp; <br>
+</p>
+</font><div align="center"><center><font face="trebuchet ms, arial, helvetica">
+
+</font><table border="0" width="271">
+  <tr>
+    <td width="199" align="right"><font face=
+"trebuchet ms, arial, helvetica">-1000</font></td>
+    <td width="185" align="center"><font face=
+"trebuchet ms, arial, helvetica">Evil</font></td>
+    <td width="184" align="right"><font face=
+"trebuchet ms, arial, helvetica">-350 </font></td>
+  </tr>
+  <tr>
+    <td width="199" align="right"><font face=
+"trebuchet ms, arial, helvetica">-349</font></td>
+    <td width="185" align="center"><font face=
+"trebuchet ms, arial, helvetica">Neutral</font></td>
+    <td width="184" align="right"><font face=
+"trebuchet ms, arial, helvetica">349 </font></td>
+  </tr>
+  <tr>
+    <td width="199" align="right"><font face=
+"trebuchet ms, arial, helvetica">350</font></td>
+    <td width="185" align="center"><font face=
+"trebuchet ms, arial, helvetica">Good</font></td>
+    <td width="184" align="right"><font face=
+"trebuchet ms, arial, helvetica">1000 </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+</font></center></div><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;</p>
+
+</font><table border="0" width="100%">
+  <tr>
+          <td width="21%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/howling_wolf.GIF" alt=
+"WB00782_.gif (814 bytes)" align="center" WIDTH="48" HEIGHT="63"><!--
+mstheme--></font></td>
+    <td width="79%"><font face=
+"trebuchet ms, arial, helvetica"></font><!--msthemelist-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Players mob alignment to balance their
+own alignment and govern what they can wear. </font><!--
+msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Mobs play by the same rules as far as
+eq goes. A &quot;good&quot; mob cannot wear
+        equipment that is &quot;anti-good&quot;.
+</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Alignment can be used to make a densely
+populated zone such as Tynstri or the new drow
+        zone less easy to clear. <br>
+      </font><!--msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><a name="Level"><font color="#FF0000"><big><big>Level</big></big>
+</font></a></strong></p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="50%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">For S type mobs, level affects:<!--
+mstheme--></font><!--msthemelist--><table border="0" cellpadding="0"
+cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">default resistance to summon, charm and
+sleep</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">hitroll (see also <a href=
+"mob_styp.html#Thac0">thac0</a>)</font><!--msthemelist-->
+</td></tr>
+    <td width="50%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">For A type mobs, level affects:<!--
+mstheme--></font><!--msthemelist--><table border="0" cellpadding="0"
+cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">hitroll and
+thac0</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">AC (armor
+class)</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">hit points</font><!--
+msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">experience
+points</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">gold</font><!--
+msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">type of attack (bite, whip, stab)<!--
+mstheme--></font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">how hard the mob hits
+</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">resistance to summon, charm and
+sleep
+</font><!--msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><a name="Gender"><font color="#FF0000"><big><big>Gender</big>
+</big></font></a></strong>
+</p>
+
+<p>The gender (sex) of your mob will determine which pronouns (he/she/it
+him/her/it
+his/hers/its) the mud uses when referring to the mob.&nbsp; Please make
+them logical ...
+i.e. a human named Bob should probably be coded as a male.</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+Neutral (it/its)</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Male
+(he/him/his)</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Female
+(she/her/hers)</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><a name="Extra Descriptions"><font color="#FF0000"><big><big>
+Extra Descriptions</big></big></font></a></strong></p>
+
+<p>Extra descriptions are not required, but are a very nice
+addition.&nbsp; They can give
+more information about the zone, the difficulty of the mob, hidden
+treasure, etc. &nbsp;
+They are coded for mobs in the same way as for objects and room.&nbsp;
+An E on a line by
+itself is followed by an alias list (a list of keywords) ending in a
+tilde <strong><big>~
+&nbsp; </big></strong>The description follows, starting on the next
+line, and is followed
+by a tilde on a line by itself.&nbsp; Here is one example.&nbsp; There
+are more in the
+sample mob file.</p>
+
+Have not gotten this to work at all - Glob. <br>
+<p>E<br>
+hair~<br>
+The dryad's golden hair floats about her head like a giant halo.<br>
+~</p>
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a
+> - <a href="mob_styp.html">S type</a> - <a href="mob_over.html"> Overview</a> 
+        -<a href="mob_comm.html"> Top</a> <br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><font color="#FF0000"><br>
+</font><strong><a name="Mob Actions"><font color="#FF0000"><big><big>Mob
+Actions</big></big></font></a></strong></p>
+
+      <p>Mob action strings are an easy way to add more life to a mob. They are<br>
+        specified as percentage chances, in the following way: <br>
+        <br>
+        %%&lt;percentage&gt; &lt;action&gt;;%&lt;percentage&gt; &lt;action&gt;; 
+        ....~<br>
+        <br>
+        Action strings may be any social or emote that a character can do. An<br
+>
+        example of what a entry might look like is:<br>
+        <br>
+        <font face="Lucida Console">A<small><br>
+        %%10 cackle;<br>
+        </small></font><font face="Lucida Console"><small>%20 say 
+        Puny Mortals! Keep an eye on them, guards!;<br>
+        %15 emote stares directly into your eyes. You feel a strong urge to<br>
+        run.<br>
+        ~</small></font><br>
+        <br>
+      </p>
+      </font><table border="0" width="100%">
+  <tr>
+          <td width="20%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/howling_wolf.GIF" alt=
+"WB00782_.gif (814 bytes)" align="center" WIDTH="48" HEIGHT="63"><!--
+mstheme--></font></td>
+    <td width="80%"><font face=
+"trebuchet ms, arial, helvetica">First entry begins with a double
+percent sign %%<br>
+    Every entry except the last one ends with a semi-colon ;<br>
+    The entire section ends with a tilde ~<br>
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+      <p><img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <a href="mob_atyp.html">A type</a> - <a
+href="mob_styp.html">S type</a> - <a href="mob_over.html">Overview</a> - <a href="mob_comm.html"> 
+        Top</a> <br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><a name="Zone Coding"><font color="#FF0000"><big><big>Zone Coding
+</big></big></font></a></strong></p>
+
+<p>The zone command to load a mob is:</p>
+
+<p>M &lt;if flag&gt; &lt;<a href="mob_comm.html#VIRTUAL NUMBER">mob vnum
+</a>&gt; &lt;<a href="mob_comm.html#max-existing">max-existing</a>&gt;
+&lt;<a href="mob_comm.html#load room">load
+room</a>&gt;</p>
+
+<p><font color="#FF0000">if-flag</font> - this is a 1 or a 0.&nbsp; If
+the flag is set to
+1, the mob will not load unless the previous command executed
+successfully.&nbsp; This is
+normally a 0 for mobs.</p>
+
+<p><a name="max-existing"><font color="#FF0000">max-existing</font></a>
+- the maximum
+number of copies of this mob allowed to exist in the mud.&nbsp; An
+immortal may continue
+to load more copies of the mob (for example for a quest), but the zone
+reset code will not
+load this mob if that would cause this number to be exceeded.</p>
+
+</font><table border="0" width="100%">
+  <tr>
+          <td width="16%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/howling_wolf.GIF" alt=
+"WB00782_.gif (814 bytes)" align="center" WIDTH="48" HEIGHT="63"><!--
+mstheme--></font></td>
+    <td width="84%"><font face=
+"trebuchet ms, arial, helvetica">Since the max-existing is a max-per-
+mud, not a max-per-room, the exact
+    location a mob will be loaded is only predictable at reboot
+time.&nbsp; Example:<p><font face="Lucida Console"><small>M 0 4351 6
+4310 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load #1
+    peasant in pub</small><br>
+    <small>M 0 4351 6 4310&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Load #2 peasant in pub</small><br>
+    <small>M 0 4351 6 4320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Load #3 peasant in park</small><br>
+    <small>M 0 4351 6 4320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Load #4 peasant in park</small><br>
+    <small>M 0 4351 6 4330&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Load #5 peasant in woods</small><br>
+    <small>M 0 4351 6 4330&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Load #6 peasant in woods</small><br>
+    </font></p>
+    <p>If you load 2 peasants at the pub, two in the park, and two in
+the woods, that's a
+    max-existing number of 6.&nbsp; The zone commands are executed in
+the order given in the
+    zone command file.&nbsp; If the peasants in the park are killed
+(peasants #3 and #4), but
+    not the ones in the pub, the next time the zone resets you will
+discover there are now 4
+    peasants in the pub and none in the woods.&nbsp; This is
+particularly annoying for
+    sentinel (stationery, non-wandering) mobs, and in zones which are
+not frequently cleared.</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p><font color="#FF0000"><a name="load room">load room</a> </font><font
+color="#000000">-
+the vnum of the room where the mob will pop.</font></p>
+
+<p><font color="#000000">A number of the newer zones have incorporated a
+concept called
+&quot;mob chutes&quot;.&nbsp; These are rooms with no entrances, only
+exits. &nbsp;
+Non-sentinel mobs loaded into these rooms will wander randomly into one
+of the six
+possible exits.&nbsp; This means not all mobs are in a room at zone
+reset time, and the
+room where the mob will first &quot;pop&quot;&nbsp; is unpredictable.
+</font></p>
+</font></td></tr>
+</table></body>
+</html>

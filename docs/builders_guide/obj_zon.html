@@ -1,0 +1,549 @@
+<html>
+
+<head>
+<title>Object Zone Commands</title>
+
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333"
+alink="#FF3333"><font face=
+"trebuchet ms, arial, helvetica">
+
+<h1><font color="#008000">Object Zone Commands</font></h1>
+
+<p>(See also<font color="#008000"><em> <a href="zon_fram.html">Zone
+Section</a></em></font>
+in this guide)</p>
+
+<p>There are several commands used with objects:</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="7%"><font face=
+"trebuchet ms, arial, helvetica"><strong><font color="#008000">E</font>
+</strong></font></td>
+    <td width="32%"><font face=
+"trebuchet ms, arial, helvetica">equip a mob with an object<!--mstheme--
+></font></td>
+    <td width="61%"><font face=
+"trebuchet ms, arial, helvetica">E &lt;<a href="obj_zon.html#If flags">
+if-flag</a>&gt; &lt;<a href="obj_over.html#VIRTUAL NUMBER">obj vnum</a>
+&gt; &lt;<a href="obj_zon.html#%repop">%repop</a>&gt;
+    &lt;<a href="obj_zon.html#Equipment Position">equipment position</a>
+&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="7%"><font face=
+"trebuchet ms, arial, helvetica"><strong><font color="#008000">G</font>
+</strong></font></td>
+    <td width="32%"><font face=
+"trebuchet ms, arial, helvetica">give an object to a mob (it will be in
+its inventory)</font></td>
+    <td width="61%"><font face=
+"trebuchet ms, arial, helvetica">G &lt;<a href="obj_zon.html#If flags">
+if-flag</a>&gt; &lt;<a href="obj_over.html#VIRTUAL NUMBER">obj vnum</a>
+&gt; &lt;<a href="obj_zon.html#%repop">%repop</a>&gt;
+</font></td>
+  </tr>
+  <tr>
+    <td width="7%"><font face=
+"trebuchet ms, arial, helvetica"><strong><font color="#008000">O</font>
+</strong></font></td>
+    <td width="32%"><font face=
+"trebuchet ms, arial, helvetica">load an object onto the ground<!--
+mstheme--></font></td>
+    <td width="61%"><font face=
+"trebuchet ms, arial, helvetica">O &lt;<a href="obj_zon.html#If flags">
+if-flag</a>&gt; &lt;<a href="obj_over.html#VIRTUAL NUMBER">obj vnum</a>
+&gt; &lt;<a href="obj_zon.html#%repop">%repop</a>&gt;
+    &lt;room vnum&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="7%"><font face=
+"trebuchet ms, arial, helvetica"><strong><font color="#008000">P</font>
+</strong></font></td>
+    <td width="32%"><font face=
+"trebuchet ms, arial, helvetica">put an object inside another (already
+loaded) object</font></td>
+    <td width="61%"><font face=
+"trebuchet ms, arial, helvetica">P &lt;<a href="obj_zon.html#If flags">
+if-flag</a>&gt; &lt;<a href="obj_over.html#VIRTUAL NUMBER">obj vnum</a>
+&gt; &lt;<a href="obj_zon.html#%repop">%repop</a>&gt;
+    &lt;container vnum&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="7%"><font face=
+"trebuchet ms, arial, helvetica"><strong><font color="#008000">L</font>
+</strong></font></td>
+    <td width="32%"><font face=
+"trebuchet ms, arial, helvetica">Load a portal</font></td>
+    <td width="61%"><font face=
+"trebuchet ms, arial, helvetica">L &lt;<a href="obj_zon.html#If flags">
+if-flag</a>&gt;&lt;<a href="obj_zon.html#load room">load room vnum</a>
+&gt;&lt;<a href="obj_over.html#VIRTUAL NUMBER">portal obj vnum</a>&gt;
+&lt;<a href="obj_over.html#VIRTUAL NUMBER">destination room vnum</a>&gt;
+</font></td>
+  </tr>
+  <tr>
+    <td width="7%"><font face=
+"trebuchet ms, arial, helvetica"><strong><font color="#008000">A</font>
+</strong></font></td>
+    <td width="32%"><font face=
+"trebuchet ms, arial, helvetica">Activate a portal</font>
+</td>
+    <td width="61%"><font face=
+"trebuchet ms, arial, helvetica">A&lt;<a href="obj_zon.html#If flags">
+if-flag</a>&gt;&lt;<a href="obj_zon.html#load room">load room vnum</a>
+&gt; &lt;<a href="obj_zon.html#door state">door
+    state</a>&gt; &lt;<a href="obj_zon.html#key vnum">key
+vnum</a>&gt;</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;</p>
+
+<p><a name="If flags"><font color="#008000"><strong><big><big>If flags
+</big></big></strong></font></a></p>
+
+<p><font color="#000000">There are two possible values here, 0 and 1.
+</font></p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="9%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"><font color="#008000"><big><big>0</big>
+</big></font></font></td>
+    <td width="91%"><font face=
+"trebuchet ms, arial, helvetica">Do this command whether or not any
+previous commands have successfully
+    completed</font></td>
+  </tr>
+  <tr>
+    <td width="9%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"><font color="#008000"><strong><big><big
+>1</big></big></strong></font></font></td>
+    <td width="91%"><font face=
+"trebuchet ms, arial, helvetica">This command will only be performed if
+a previous command completed
+    successfully.&nbsp; Which command the mud looks at depends on the
+type of command being
+    attempted.</font><!--msthemelist--><table border="0"
+cellpadding="0" cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><strong>Give</strong> and <strong>Equip
+</strong> are only performed if the preceding <strong>Mobload</strong>
+        command was successful.&nbsp; <br>
+        Example:&nbsp; <br>
+        <font face="Lucida Console"><br>
+        <small>M 0 6710 1 6714&nbsp; Load 1 copy of Henrietta
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        E 1 6709 1 5&nbsp;&nbsp;&nbsp;&nbsp; Henrietta's favorite&nbsp;
+&nbsp;&nbsp; dress
+        &nbsp;&nbsp;&nbsp; <br>
+        E 1 6745 50 8&nbsp;&nbsp;&nbsp; black velvet slippers&nbsp;
+&nbsp;&nbsp; <br>
+        G 1 6647 100&nbsp;&nbsp;&nbsp;&nbsp; Recall scroll to sell
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; <br>
+        G 1 6695 100&nbsp;&nbsp;&nbsp;&nbsp; Potion to sell
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; <br>
+        G 1 6739 100&nbsp;&nbsp;&nbsp;&nbsp; Potion to sell
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; <br>
+        G 1 6740 100 </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <font face="Lucida Console">Potion to sell</font>
+&nbsp;&nbsp;&nbsp;&nbsp; </small><br clear="left">
+        <small><br>
+        </small>If Henrietta was successfully loaded (which will happen
+only if there isn't
+        already a Henrietta around somewhere), then there is a 1% chance
+she will be equipped with
+        her dress, a 50% chance she will get to wear her slippers, and a
+100% chance she will be
+        given the things that she sells.&nbsp; If she is not loaded,
+none of those other items
+        will be loaded.</font><!--msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font><!--msthemelist--><table border="0"
+cellpadding="0" cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Put depends on the previous<strong> O
+</strong>bjectLoad command.&nbsp; If if didn't load
+        the container, then the Put command will not be executed.&nbsp;
+If the container is marked
+        with the &quot;nosweep&quot; command, then in effect, the item
+has a one time chance of
+        being loaded into the container ... at reboot.&nbsp; (be sure to
+read <a href="obj_zon.html#%repop">%repop</a> below)<br>
+      </font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">ObjectLoad ... I don't know what the if
+flag depends on for the O command.&nbsp; Most
+        likely the previous command, whatever it was, if anything.<!--
+mstheme--></font><!--msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p><a name="%repop"><strong><font color="#008000"><big><big>%repop</big>
+</big></font></strong></a>
+</p>
+
+<p>Percent repop needs some discussion, as the concept can be confusing.
+</p>
+
+<p>Every zone has a certain lifespan.&nbsp; (See the <a href=
+"zon_fram.html" target="_top">Zone
+Docs</a>.)&nbsp; When the lifespan has completed, it is reset.&nbsp; A
+piece of code
+called the Zone Sweeper goes through the zone room by room, cleaning up,
+then the zone
+commands contained in the zone file are executed one by one.</p>
+
+<p>The zone sweeper will remove every <strong>object</strong> in the
+zone except: </p>
+
+</font><!--msthemelist--><table border="0" cellpadding="0"
+cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">objects in the same room as a player at
+the time of the sweep</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">objects marked with the &quot;<a href=
+"obj_over.html#Object Flags">no sweep</a>&quot;
+    flag</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">objects <strong>in</strong> containers
+marked with the &quot;<a href="obj_over.html#Object Flags">no sweep</a>
+&quot; flag</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">player corpses (which are automatically
+marked with the &quot;<a href="obj_over.html#Object Flags">no sweep</a>
+&quot; flag)</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">objects <strong>in</strong> player
+corpses</font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+
+<p>After the zone sweeper is complete, each zone command is executed one
+by one.&nbsp; </p>
+
+<p>If you have a rare item that is to be equipped by your mob
+infrequently, let's see how
+the load commands affect the availability.</p>
+
+<p>Example:</p>
+
+<p><font face="Lucida Console"><small>M 0 6717 3 6700
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gold dragon #1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+E 1 6718 3 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ornate gold ring
+&nbsp;&nbsp;&nbsp; <br>
+E 1 6761 100 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dragon
+crown 50mr</small><br>
+<small>M 0 6717 3 6701&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gold
+dragon #2<br>
+E 1 6761 100 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dragon
+crown 50mr <br>
+M 0 6717 3 6702&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gold dragon #3
+<br>
+E 1 6761 100 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dragon
+crown 50mr<br>
+</small></font></p>
+
+<p>The above code loads 3 gold dragons in 3 different rooms.&nbsp; They
+will all wander
+around their home stomping ground.&nbsp; Each will wear a dragon crown
+100% of the time.
+&nbsp; Three percent of the time, the first dragon loaded will be given
+a gold ring to
+wear as well.&nbsp; If any of the dragons are killed, the first mob load
+command will
+succeed, and the dragon has a 3% chance of being loaded with the ring.
+</p>
+
+<p>Let's look at a different scenario.</p>
+
+<p><font face="Lucida Console"><small>M 0 6717 3 6700
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gold dragon #1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+E 1 6761 100 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dragon
+crown 50mr</small><br>
+<small>M 0 6717 3 6701&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gold
+dragon #2<br>
+E 1 6761 100 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dragon
+crown 50mr <br>
+M 0 6717 3 6702&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gold dragon #3
+<br>
+E 1 6718 3 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ornate gold ring
+&nbsp;&nbsp;&nbsp; <br>
+E 1 6761 100 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dragon
+crown 50mr</small></font></p>
+
+<p>In this case, it's the last dragon loaded who gets the opportunity to
+wear the ring.
+&nbsp; All three of the dragons have to have been killed for this dragon
+to be loaded,
+making the item potentially much more rare.</p>
+
+<p>Rare items should be coded 5%, average items (e.g. potions that
+contain spells one can
+have cast by a bot) should be 100%, keys should be 100%, other items may
+be 50 or 100%.
+This value will be reviewed by the EQ group before a zone is
+implemented. </p>
+
+<p><a name="ZRESET"><font color="#008000"><strong><big><big>ZRESET</big>
+</big></strong></font></a></p>
+
+<p><font color="#000000">This immortal command is very useful in
+testing.&nbsp; It is
+unknown whether it invokes the zone sweeper, however it will reset the
+zone as if %repop
+for EVERY ITEM were 100%.&nbsp; When you are ready to test your zone,
+zreset it, then
+check every object to be sure it loaded correctly.&nbsp; </font></p>
+
+</font><!--msthemelist--><table border="0" cellpadding="0"
+cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000000">Did you load the
+right object?&nbsp; (it's easy to mistype a vnum)</font>
+</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000000">Did you load the
+object in the right position? (The mud won't
+    check wear flags)</font></font><!--msthemelist--></td>
+</tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000000">Are there any
+alignment problems preventing the mob from wearing
+    the item?</font></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+
+<p>&nbsp;<br>
+<font color="#008000"><strong><big><big><a name="Equipment Position">
+Equipment Position</a></big></big></strong></font>
+&nbsp; <br>
+<br>
+Think of these as zone wear flags.</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica"><font color="#008000"><strong>code
+</strong></font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica"><font
+color="#008000"><strong>position</strong></font></font>
+</td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica"><font color="#008000"><strong>code
+</strong></font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica"><font
+color="#008000"><strong>position</strong></font></font>
+</td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica"><font color="#008000"><strong>code
+</strong></font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica"><font
+color="#008000"><strong>position</strong></font></font>
+</td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Light</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">6</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Head</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">12</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Body</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Right
+finger</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">7</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Legs</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">13</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Waist</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Left
+finger</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">8</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Feet</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">14</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Right
+wrist</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Neck
+(1)</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">9</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Hands</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">15</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Left
+wrist</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">4</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Neck
+(2)</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">10</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Arms</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">16</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Weapon
+</font></td>
+  </tr>
+  <tr>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Body</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">11</font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Shield
+</font></td>
+    <td align="right"><font face=
+"trebuchet ms, arial, helvetica">17</font></td>
+    <td><font face="trebuchet ms, arial,
+helvetica">Held</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p><a name="Portals"><font color="#008000"><big><big>Portals</big></big>
+</font></a></p>
+
+<p><br>
+The two zone commands should be used together.</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="19%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"><a name="load room">load room</a><!--
+mstheme--></font></td>
+    <td width="81%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Room where the portal will be
+dropped.&nbsp; Remember to add
+    the &quot;nosweep&quot; flag for the portal.&nbsp; Unless you want
+to make the room on the
+    other side of the portal only occasionally available ...<!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="19%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"><a name="destination room">destination
+room</a></font></td>
+    <td width="81%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">The room on the other side of the
+portal</font></td>
+  </tr>
+  <tr>
+    <td width="19%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"><a name="door state">door state</a><!--
+mstheme--></font></td>
+    <td width="81%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"></font><table border="0"
+width="100%">
+      <tr>
+        <td width="7%" align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+        <td width="93%"><font face=
+"trebuchet ms, arial, helvetica">open</font></td>
+      </tr>
+      <tr>
+        <td width="7%" align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+        <td width="93%"><font face=
+"trebuchet ms, arial, helvetica">closed</font></td>
+      </tr>
+      <tr>
+        <td width="7%" align="center"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+        <td width="93%"><font face=
+"trebuchet ms, arial, helvetica">closed &amp; locked</font
+></td>
+      </tr>
+    </table><font face="trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+  <tr>
+    <td width="19%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"><a name="key vnum">key vnum</a><!--
+mstheme--></font></td>
+    <td width="81%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">the vnum of the object that will unlock
+the portal</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;</p>
+
+<p>The portal will&nbsp; load with the values set in these commands
+regardless of what is
+in the OBJ file,&nbsp; so be sure that they correspond (unless the
+intention is to have
+otherwise!). <br>
+<br>
+<br>
+</p>
+</font></body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<title>The World File Format</title>
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333"
+alink="#FF3333"><table border="0" cellpadding="0"
+cellspacing="0" width="100%"><tr><td><font face=
+"trebuchet ms, arial, helvetica">
+
+<p align="center"><font size="6"><strong></strong></font><br>
+</p>
+
+<p align="center">&nbsp;</p>
+</font></td></tr></table><!--
+msnavigation--><table border="0" cellpadding="0" cellspacing="0" width=
+"100%"><tr><td valign="top"><font face=
+"trebuchet ms, arial, helvetica">
+
+<h1>The World</h1>
+
+<p align="center">&lt;room 00&gt;<br>
+&lt;room 01&gt;<br>
+&lt;room 02&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&lt;room n&gt;<br>
+#99999<br>
+$~&lt;<a href="presentr.html">cr</a>&gt;</p>
+
+<p>The world file describes the room and links it to other rooms.&nbsp;
+It is what shapes
+what the players see of the world itself.&nbsp; Customarily at Elite,
+zones are parceled
+into 100 room blocks starting from 00 and running to 99.&nbsp;&nbsp; If
+a zone needs more
+than 100 rooms, the zone number will remain the same, but the first part
+of the room
+number will not reflect the zone number.</p>
+
+<p>For example, Tynstri is 200 rooms, starting with 6600 and ending with
+6799.&nbsp; It is
+all still in zone 66.&nbsp; This means there is just one zone file, and
+the zone number in
+every room in the zone is 66, even for those rooms whose room number
+begins with 67.&nbsp;
+If this doesn't make a lot of sense yet, don't worry.&nbsp; There are
+very few zones over
+100 rooms, and if you are writing one it will become clear long before
+you get to your
+101st room!</p>
+
+<p><a href="mailto:builders@world.elitemud.com">Comments?</a></p>
+</font></td></tr>
+</table></body>
+</html>

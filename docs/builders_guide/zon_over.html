@@ -1,0 +1,359 @@
+<html>
+
+<head>
+<title>Zone Overview</title>
+
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333"
+alink="#FF3333"><font face=
+"trebuchet ms, arial, helvetica">
+
+<h1><font color="#FF0080">Zone Overview</font></h1>
+
+<p><a href="zon_file.html" target="main">The File&nbsp; - Header
+information</a></p>
+
+<p>Rooms - Doors and Portals</p>
+
+<p><a href="obj_zon.html">Loading Objects</a></p>
+
+<p><a href="mob_comm.html#Zone Coding">Loading Mobs</a><br>
+<br>
+The general format of zone commands is:</p>
+
+<p>&lt;command type&gt; &lt;if-flag&gt; &lt;some other arguments
+.....&gt;</p>
+
+<p><font color="#FF0080"><a name="if flag"><strong><big><big>if flag
+</big></big></strong></a></font></p>
+
+<p><br>
+Every zone command has an if-flag. This flag is a 1 or a 0, and tells
+the mud when to
+execute the command.&nbsp; <br>
+</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="7%"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+    <td width="93%"><font face=
+"trebuchet ms, arial, helvetica">Always execute this command<!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="7%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+    <td width="93%"><font face=
+"trebuchet ms, arial, helvetica">Only execute this command if a previous
+command succeeded.&nbsp; Normally
+    this is the command JUST BEFORE THIS ONE in the zone file, but for
+objects given to or
+    equipped by mobs, the command depends on the success of the previous
+mob-load command.
+    &nbsp; <font color="#FF0080"><em>This MAY be true for multiple
+objects placed in
+    containers (we haven't tested this yet).</em></font>
+</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;<br>
+Here's an example:<br>
+<br>
+<small><font face="Lucida Console">&nbsp;&nbsp;&nbsp; M 0 21319 1
+21342&nbsp;&nbsp;&nbsp;
+* load Tuta<br>
+&nbsp;&nbsp;&nbsp; E 1 21323 25 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+equip moonstone
+ring on right finger<br>
+&nbsp;&nbsp;&nbsp; M 1 21327 1 21342&nbsp;&nbsp;&nbsp; * load the
+priestess <br>
+</font></small>&nbsp;&nbsp;&nbsp; <br>
+In this example, Tuta will always load <strong>as long as</strong> there
+is not already a
+Tuta loaded. If Tuta loads, there is a 25% chance that her ring will
+load.&nbsp; If the
+ring loads, then the priestess will also load.&nbsp; This can work
+nicely when you need a
+&quot;guard&quot; situation - a mob that guards another mob's personal
+belongings :)
+Removing the command to equip the ring would set up a situation where
+the priestess only
+loads if Tuta loads.<br>
+<br>
+If you're still confused, don't worry as it will get clearer as you work
+on your zone.<br>
+&nbsp; <br>
+Max existing and %repop are explained in the sections dealing with <a
+href="mob_comm.html#Zone Coding">mob zone commands</a> and <a href=
+"obj_zon.html">object
+zone</a> commands.<br>
+</p>
+
+<p><a name="Doors"><font color="#FF0080"><strong><big><big>Doors</big>
+</big></strong></font></a></p>
+
+<p>You must set both sides of all doors in your zone using the <font
+color="#FF0080">D </font>command.
+&nbsp; Closing the north exit of one room does not automatically close
+the south exit of
+the room on the other side of the door.</p>
+
+<p><font color="#FF0080">D</font>: set the state of a door<br>
+<font color="#FF0080">Format</font>: D &lt;<a href="#if flag">if-flag</a
+>&gt; &lt;room
+vnum&gt; &lt;<a href="#Exit">exit num</a>&gt; &lt;<a href="#State">state
+</a>&gt;<br>
+<br>
+<a name="Room vnum"><font color="#FF0080">Room vnum</font></a> is the
+virtual number of
+the room with the door to be<br>
+set.</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="50%"><font face=
+"trebuchet ms, arial, helvetica"><big><strong><a name="Exit">Exit</a>
+num</strong></big></font></td>
+    <td width="50%"><font face=
+"trebuchet ms, arial, helvetica"><a name="State"><big><strong>State
+</strong></big></a></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#FF0080">0 North<br>
+    1 East<br>
+    2 South<br>
+    3 West<br>
+    4 Up<br>
+    5 Down</font> </font></td>
+    <td width="50%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#FF0080">0 Open<br>
+    1 Closed<br>
+    2 Closed and locked</font><br>
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;</p>
+
+<p><a name="Randomizer"><font color="#FF0080"><strong><big><big>
+Randomizer</big></big></strong></font></a><br>
+R: Randomizes exits from a room. This command is used in the Ultima
+mazes as well as the
+Shadow Guardian forest to make the maze different every time. This also
+has the effect of
+making the zone feel larger.&nbsp; Use this command with caution, as
+players hate it.</p>
+
+<p>Syntax: <br>
+<br>
+R &lt;<a href="#if flag">if-flag</a>&gt; &lt;room vnum&gt; 4<br>
+<br>
+We have no documentation on this command.&nbsp; Apparently it takes the
+defined exits for
+the room and switches them so that, for example, if you intend to go
+south you may really
+be going north. </p>
+
+<p>Example:</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="33%" align="right"><font face=
+"trebuchet ms, arial, helvetica">#101</font></td>
+    <td width="33%" align="center"><font face=
+"trebuchet ms, arial, helvetica">#102</font></td>
+    <td width="34%"><font face=
+"trebuchet ms, arial, helvetica">#103</font></td>
+  </tr>
+  <tr>
+    <td width="33%" align="right"><font face=
+"trebuchet ms, arial, helvetica">#104</font></td>
+    <td width="33%" align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#FF0080">#105</font><!--
+mstheme--></font></td>
+    <td width="34%"><font face=
+"trebuchet ms, arial, helvetica">#106</font></td>
+  </tr>
+  <tr>
+    <td width="33%" align="right"><font face=
+"trebuchet ms, arial, helvetica">#107</font></td>
+    <td width="33%" align="center"><font face=
+"trebuchet ms, arial, helvetica">#108</font></td>
+    <td width="34%"><font face=
+"trebuchet ms, arial, helvetica">#109</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>The above diagram shows room #105 as it is defined in the WLD
+file.&nbsp; It exits
+north to 102, east to 106, south to 108 and west to 104.&nbsp; Assuming
+this command in
+the zone file:</p>
+
+<p><font color="#FF0080">R 0 105 4</font></p>
+
+<p>If you stand in the room and type &quot;Exits&quot;, you may see that
+this is the
+current configuration:</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="33%" align="right"><font face=
+"trebuchet ms, arial, helvetica">#101</font></td>
+    <td width="33%" align="center"><font face=
+"trebuchet ms, arial, helvetica">#108</font></td>
+    <td width="34%"><font face=
+"trebuchet ms, arial, helvetica">#103</font></td>
+  </tr>
+  <tr>
+    <td width="33%" align="right"><font face=
+"trebuchet ms, arial, helvetica">#102</font></td>
+    <td width="33%" align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#FF0080">#105</font><!--
+mstheme--></font></td>
+    <td width="34%"><font face=
+"trebuchet ms, arial, helvetica">#104</font></td>
+  </tr>
+  <tr>
+    <td width="33%" align="right"><font face=
+"trebuchet ms, arial, helvetica">#107</font></td>
+    <td width="33%" align="center"><font face=
+"trebuchet ms, arial, helvetica">#106</font></td>
+    <td width="34%"><font face=
+"trebuchet ms, arial, helvetica">#109</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>With each zone reset, the arrangement of rooms around 105
+changes.&nbsp; If you'd like
+to experiment, feel free to do so using either 3.wld/3.zon or your own
+wld and zone files.
+Please let the World group leader know if you plan to do this.<br>
+<br>
+<a name="Style to use"><font color="#FF0080"><strong><big><big>Style to
+use<br>
+</big></big></strong></font></a></p>
+
+<p>There are two separate styles used in Elite Zone files, when
+organizing them. Choose
+one and stay with it for the zone you do.&nbsp; The first is to organize
+by room. The
+second is to organize by type.<br>
+<br>
+<font color="#FF0080">Organizing by room<br>
+</font>When organizing by room, you load everything together for each
+room and adjust your
+door in that room. This allows a builder fast reference when you are
+looking for something
+and you know where it's supposed to be loaded.<br>
+<br>
+<font color="#FF0080">Organizing by type<br>
+</font>The second method means that you load all of one type at the same
+time, so you know
+where everything is. You load all the mob of one type first with all of
+their stuff on
+them. You load all the remaining equipment that is not loaded on mobs --
+by type (all the
+fountains, all the containers, all the weapons, etc.). The last thing is
+open/close all
+the doors two by two, which means, you do both sides to the door
+together.<br>
+<br>
+Regardless which method you use, <font color="#FF0080">comment what it
+is you are loading
+or doing in English so that others may help fix or update the zone</font
+>. If the zone
+file can't be easily figured out, one solution is to write another and
+throw the old one
+away. </p>
+
+<p>If you wish to put any special zone information (such as your name
+and the date you
+wrote the zone), please do it at the top of the command list so it
+follows the header
+information.&nbsp; This is so anyone needing the information can find it
+in the same spot.
+If you have anything special that one needs to know, this is also a good
+spot for it.<br>
+<br>
+It is very important that your comments do not come between the name of
+your zone and the
+top room number! Doing this will cause errors in your zone.<br>
+<br>
+Comments may follow the zone command after a few spaces, e.g. :<br>
+<br>
+<small><font face="Lucida Console">M 0 6646 10 6797&nbsp;&nbsp;&nbsp;
+The wicked gremlin
+in the queen's parlor</font></small><br>
+<em><br>
+</em><br>
+<font color="#FF0080"><strong><big><big><a name="Zone Rules and Helps">
+Zone Rules and
+Helps</a></big></big></strong></font></p>
+
+</font><!--msthemelist--><table border="0" cellpadding="0"
+cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Use Excel or a similar spreadsheet
+program to set up your zone file ... you can then
+    sort to your heart's content by room or by mob.&nbsp; When you add
+objects, add a row of
+    numbers along the far left (or right) so you can get the rows back
+in the right order.</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">If you don't have Excel, use TextPad
+and set it to block mode. You can sort the zone by
+    mob or by room ... until you add objects :)</font><!--
+msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Open all doors at the top of the file,
+then lock them the line after the key is loaded.
+    &nbsp; Use an if-flag of 1 here ... if the key was loaded, then lock
+the door.</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Remember, a functioning door is a door
+from both sides, and needs to be closed from both
+    sides. Thus, 2 door commands for each door.</font><!--
+msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">The 'P' command gets confused if you
+try to load multiple objects into multiple
+    containers IF the containers are all the same object. The solution
+is to copy the
+    container over into the .obj file with a different vnum.<!--
+mstheme--></font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Comment your zone files as much as
+possible. Doing this makes it much easier to debug
+    your zone file if there happens to be an error in it. If you do not
+comment your zone
+    file, it will be up to you to fix any problems that may come up, and
+if this is your first
+    area, that may be a very difficult task! Don't just put your
+comments at the top of the
+    zone command list, make comments following the actual commands also. Just make sure the comment do not cause a linewrap as plain text, without the necessary *-marker will cause the file to fail.
+<br>
+    &nbsp;&nbsp;&nbsp; <br>
+  </font><!--msthemelist--></td></tr>
+<!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+</font></body>
+</html>

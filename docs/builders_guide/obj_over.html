@@ -1,0 +1,3766 @@
+<html>
+
+<head>
+
+<title>Objects ... Overview</title>
+
+<meta name="Microsoft Border" content="t, default"></head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333"
+alink="#FF3333">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica"> 
+      <p align="center"><br>
+      </p>
+      <p align="center">&nbsp;</p>
+      </font></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td valign="top"><font face="trebuchet ms, arial, helvetica"> <font size="+7">Objects&nbsp; 
+      ... <a name="Top">Overview</a></font> 
+      <h1>&nbsp;</h1>
+      <p><br>
+        An object is any item in the game, be it unmovable rock, the fountain 
+        in market square, or that nice sword Everyman the Barbarian has. Everything 
+        the mud needs to know about objects can be found in the .obj file, except 
+        for where they actually are.<br>
+        <br>
+        Each object is laid out like this:<br>
+        <br>
+        #&lt;<a href="obj_over.html#VIRTUAL NUMBER">Virtual Number</a> &gt;<br>
+        &lt;<a href="obj_over.html#ALIAS LIST">Alias List</a>&gt;<strong
+>~</strong><br>
+        &lt;<a href="obj_over.html#SHORT DESCRIPTION">Short Description </a>&gt;<strong>~</strong><br>
+        &lt;<a href="obj_over.html#RoomDescription">Room Description</a
+>&gt;<big><strong>~<br>
+        ~</strong></big><br>
+        &lt;<a href="obj_over.html#Type">type</a>&gt; &lt;<a href=
+"obj_over.html#Min Lvl">min lvl</a>&gt; &lt;<a href="obj_over.html#Anti Class Flags">anti- 
+        class flags</a>&gt; &lt;<a href="obj_over.html#Object Flags">obj flags</a>&gt; 
+        &lt; <a href="obj_over.html#Wear Flags">wear flags</a>&gt;<br>
+        &lt;<a href="obj_over.html#Object Values">Object value list</a> &gt; {6 
+        values}<br>
+        &lt;<a href="obj_over.html#Weight">weight</a>&gt; &lt;<a href=
+"obj_over.html#Value">Value</a>&gt; &lt;<a href="obj_over.html#Rent">rent</a>&gt;<br>
+        E<br>
+        &lt;extra description alias list&gt;<big><strong>~</strong></big
+><br>
+        <a href="obj_over.html#DETAILED DESCRIPTION">Extra description. </a><br>
+        <big><strong>~<br>
+        </strong></big>[&lt;<a href="obj_over.html#A Applies">Applies &quot;A&quot;</a>&gt;] 
+        {0-4 possible}<br>
+        [&lt;<a href="obj_over.html#B Affection">Affection &quot;B&quot; </a>&gt;] 
+        {0-1 possible}<br>
+        <br>
+      </p>
+      <p><font color="#008000"><big><strong><a name="VIRTUAL NUMBER"> Virtual 
+        Number</a></strong></big> (VNUM) </font><br>
+        The obj's vnum starts with the zone number and ends with a unique number. 
+        Objectss are listed in theobj file in order. So ... for zone #99,&nbsp; 
+        the first object is #9900, the second is #9901, etc. (See <a
+href="mobsampf.html">sample obj file</a>)</p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> </p>
+      <p><br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><strong><font color="#FF0000"><br>
+        </font><font color="#008000"><a name="ALIAS LIST"><big>Alias List</big></a></font></strong><font color="#008000">&nbsp; 
+        </font><br>
+        list of keywords, separated by spaces, used to interact with the object, 
+        as in <br>
+        &quot;put &lt;alias&gt; in backpack&quot;. Example:</p>
+      <p><font face="Lucida Console">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; sword 
+        weapon~&nbsp;&nbsp; </font></p>
+      <p>&nbsp;</p>
+      </font> 
+      <table border="0" width="100%">
+        <tr> 
+          <td width="46%"><font face="trebuchet ms, arial, helvetica"> <img src="images/cactus.GIF" alt="images/WB00773_.gif (624 bytes)" WIDTH="36"
+HEIGHT="66"></font></td>
+          <td width="190%"> 
+            <table border="0" cellpadding="0" cellspacing="0" width=
+"100%">
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">make
+                  sure the spelling matches the room description. </font
+></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">don't
+                  put &quot;a&quot; or &quot;an&quot; or &quot;the&quot;
+in the
+                  alias list </font></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Be careful with what you set as the first of the aliases as that sometimes show up alone when handling the object.</font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" width="25" height="25"> 
+      <p> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> </a> </p>
+      <p><br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><strong><font color="#FF0000"><br>
+        </font><font color="#008000"><a name="SHORT DESCRIPTION"><big> Short Description</big></a></font></strong></p>
+      <p>This is the description that the mud uses when something happens to the 
+        object (e.g. you drop it).&nbsp;&nbsp; It should end with a ~ <br>
+      </p>
+      <p>Example: <br>
+        &nbsp; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <font face="Lucida Console">the 
+        leather backpack~ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the teardrop necklace~ </font></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+      </p>
+      <p><img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><strong><font color="#FF0000"><br>
+        </font><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font face="trebuchet ms, arial, helvetica"><strong><font color="#008000"><big><a name="RoomDescription"></a></big></font></strong></font></strong></font></strong></font></strong></font></strong></font></strong></font></strong></font></strong></font><font color="#008000"></font></strong></font></strong></font></strong></font></strong></font><font color="#008000"></font></strong></font></strong></font></strong></font></strong> 
+        <b><font color="#008000"> Room Description</font></b><br>
+        This is the &quot;room description&quot; of the mob. It should end with 
+        a period <br>
+        and be followed by a ~ ON THE NEXT LINE. </p>
+      </font> 
+      <table border="0" width="100%">
+        <tr> 
+          <td width="19%"><font face="trebuchet ms, arial, helvetica"> <img src="images/cactus.GIF" alt="images/WB00773_.gif (624 bytes)" width="36"
+height="66"></font></td>
+          <td width="81%"><font face="trebuchet ms, arial, helvetica">
+<font color="#0000FF">DO
+            NOT use &quot;is here&quot; in any way shape or form.</font>
+You will
+            be asked to rewrite your object if you do. &quot;The golden
+crown
+            is lying here.&quot; is incredibly boring, tells you nothing
+of interest
+            about the item, and adds a touch of sloppy writing to your
+zone.&nbsp;
+            Use instead something like &quot;The golden crown sits in a
+corner,
+            radiating an aura of power.&quot; </font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>A discrete use of color can add some excitement, and can make an object 
+        look like a mob and vice versa.</p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><strong><font color="#FF0000"><br>
+        </font><font face="trebuchet ms, arial, helvetica"><strong><font color="#008000"><a name="DETAILED DESCRIPTION"></a></font></strong></font><font color="#008000"><a name="DETAILED DESCRIPTION"><big
+>Extra Description</big></a></font></strong> <br>
+        When a player <strong>looks</strong> at your object, this is what they 
+        see. </p>
+      <p><font color="#008000">General rules: <br>
+        </font></p>
+      </font> 
+      <table border="0" width="100%">
+        <tr> 
+          <td width="21%"><font face="trebuchet ms, arial, helvetica"> <img src="images/cactus.GIF" alt="images/WB00773_.gif (624 bytes)" WIDTH="36"
+HEIGHT="66"></font></td>
+          <td width="79%"> 
+            <table border="0" cellpadding="0" cellspacing="0" width=
+"100%">
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Three
+                  lines minimum. </font></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#008000"><strong>Required
+</strong></font>
+                  for every object for all new zones. </font></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Show
+                  details about the object such as its size, age,
+condition.&nbsp;
+                  You can use this to hint at its history and value.
+</font></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Follow
+                  the extra description with a tilde (~) <font color=
+"#008000"><em>ON
+                  A SEPARATE LINE</em>. </font></font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;</p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><a name="Type"><font color="#008000"><big>Type
+</big></font></a></p>
+      </font>
+      <table border="0" width="100%" height="655">
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">1
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Light</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Allows players
+            to see in a room</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">2
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Scroll</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Cast spell
+            device affects target (1 use)</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">3
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Wand</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Cast spell
+            device affects target (multiple uses)</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">4
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Staff</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Cast spell
+            device affects all in room but caster </font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">5
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Weapon</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Wielded
+            or held (If dual skill) melee damage dealer</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">6
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Fireweapon</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Not yet
+            implemented: non-melee damage dealer</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">7
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Missile</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Not yet
+            implemented: non-melee damage dealer</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">8
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Treasure</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Valuable
+            Item that can be sold for money</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">9
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Armor</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Equipped
+            item that adds to Armor Class</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">10
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Potion</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Cast spell
+            device affects caster (1 use)</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">11
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Worn</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Mostly useless
+            item that only gains from applies</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">12
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Other</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Mostly useless
+            item that only gains from applies </font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">13
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Trash</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Mostly useless
+            item that only gains from applies</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">14
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Trap</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Not yet
+            implemented</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">15
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Container</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Holds stuff
+            in it</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">16
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Note</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Something
+            that can have writing on it</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">17
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Drinkcon</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Holds drinkable
+            fluids as defined in values section</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">18
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Key</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Used for
+            opening locks on this mud</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">19
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Food</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Eatable
+            item ending hunger</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">20
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Money</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+When picked
+            upturns in to gold pieces in score</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">21
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Pen</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Used for
+            writing information on a note</font></td>
+        </tr>
+        <tr> 
+          <td height="26"><font face="trebuchet ms, arial, helvetica">22
+</font></td>
+          <td height="26"><font face="trebuchet ms, arial, helvetica"><a
+href="obj_over.html#Boat">Boat</a></font></td>
+          <td height="26"><font face="trebuchet ms, arial, helvetica">
+Used for
+            moving on water (swimable and non-swimable)</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">23
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica"><a
+href="obj_over.html#Fountain">Fountain</a></font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Non-moving
+            large drink container</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80" height="21"><font face=
+"trebuchet ms, arial, helvetica">24</font></td>
+          <td bgcolor="#FFFF80" height="21"><font face=
+"trebuchet ms, arial, helvetica">Bomb</font></td>
+          <td bgcolor="#FFFF80" height="21"><font face=
+"trebuchet ms, arial, helvetica">Not
+            yet implemented: exploding area effect damage</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80" height="21"><font face=
+"trebuchet ms, arial, helvetica">25</font></td>
+          <td bgcolor="#FFFF80" height="21"><font face=
+"trebuchet ms, arial, helvetica"><a href="obj_over.html#Rawfood">Rawfood
+</a></font></td>
+          <td bgcolor="#FFFF80" height="21"><font face=
+"trebuchet ms, arial, helvetica">Not
+            yet implemented</font></td>
+        </tr>
+        <tr> 
+          <td height="21"><font face="trebuchet ms, arial, helvetica">26
+</font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica"><a
+href="obj_over.html#Portal">Portal</a></font></td>
+          <td height="21"><font face="trebuchet ms, arial, helvetica">
+Entry moves
+            player to another room</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> </p>
+      <p><img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><a name="Min Lvl"><font color="#008000"><big>Min
+Lvl</big></font></a>
+        (minimum level)<br>
+        <br>
+        This is the minimum level a character can get/equip/use the
+item. It<br>
+        prevents a first level from having a major nasty weapon, for
+example,<br>
+        and spreads out the equipment throughout the different level
+groups. </p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+        <a name="Anti Class Flags"><font color="#008000"><big>Anti Class
+Flags</big></font></a><br>
+        <br>
+        The anti-class flags list which classes DO NOT get to use the
+item for
+        equipment.<br>
+        <br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="14%"><font face="trebuchet ms, arial, helvetica"> <img src="images/cactus.GIF" alt="images/WB00773_.gif (624 bytes)" WIDTH="36"
+HEIGHT="66"></font></td>
+          <td width="86%"> 
+            <table border="0" cellpadding="0" cellspacing="0" width=
+"100%">
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">don't
+                  give clerics (or monks or druids) backstab weapons
+</font></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">dont
+                  give Cavaliers and Knights wands, staffs, spells
+</font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;</p>
+      </font>
+      <table border="0" width="522">
+        <tr> 
+          <td align="center" width="43"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>Code</strong> </font></td>
+          <td width="490"><font face="trebuchet ms, arial, helvetica"
+color="#008000"> 
+            <p align="left"><strong>Class</strong> 
+            </font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"> 
+            <p align="center"><strong>Code</strong> 
+            </font></td>
+          <td width="567"><font face="trebuchet ms, arial, helvetica"
+color="#008000"> 
+            <p align="left"><strong>Class</strong> 
+            </font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"> 
+            <p align="center"><strong>Code</strong> 
+            </font></td>
+          <td width="531"><font face="trebuchet ms, arial, helvetica"
+color="#008000"> 
+            <p align="left"><strong>Class</strong> 
+            </font></td>
+        </tr>
+        <tr> 
+          <td align="center" width="43"><font face=
+"trebuchet ms, arial, helvetica">a</font></td>
+          <td width="490"><font face="trebuchet ms, arial, helvetica"> Magic-User</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">g</font></td>
+          <td width="567"><font face="trebuchet ms, arial, helvetica"> Bard</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">l</font></td>
+          <td width="531"><font face="trebuchet ms, arial, helvetica"> Ranger</font></td>
+        </tr>
+        <tr> 
+          <td align="center" width="43"><font face=
+"trebuchet ms, arial, helvetica">b</font></td>
+          <td width="490"><font face="trebuchet ms, arial, helvetica"> Cleric</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">h</font></td>
+          <td width="567"><font face="trebuchet ms, arial, helvetica"> Knight</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">m</font></td>
+          <td width="531"><font face="trebuchet ms, arial, helvetica"> Illusionist</font></td>
+        </tr>
+        <tr> 
+          <td align="center" width="43"><font face=
+"trebuchet ms, arial, helvetica">c</font></td>
+          <td width="490"><font face="trebuchet ms, arial, helvetica"> Thief</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">i</font></td>
+          <td width="567"><font face="trebuchet ms, arial, helvetica"> Wizard</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">n</font></td>
+          <td width="531"><font face="trebuchet ms, arial, helvetica"> Paladin</font></td>
+        </tr>
+        <tr> 
+          <td align="center" width="43"><font face=
+"trebuchet ms, arial, helvetica">d</font></td>
+          <td width="490"><font face="trebuchet ms, arial, helvetica"> Warrior</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">j</font></td>
+          <td width="567"><font face="trebuchet ms, arial, helvetica"> Druid</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">o</font></td>
+          <td width="531"><font face="trebuchet ms, arial, helvetica"> Mariner</font></td>
+        </tr>
+        <tr> 
+          <td align="center" width="43"><font face=
+"trebuchet ms, arial, helvetica">e</font></td>
+          <td width="490"><font face="trebuchet ms, arial, helvetica"> Psionicist</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">k</font></td>
+          <td width="567"><font face="trebuchet ms, arial, helvetica"> Assassin</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">p</font></td>
+          <td width="531"><font face="trebuchet ms, arial, helvetica"> Cavalier</font></td>
+        </tr>
+        <tr> 
+          <td align="center" width="43"><font face=
+"trebuchet ms, arial, helvetica">f</font></td>
+          <td width="490"><font face="trebuchet ms, arial, helvetica"> Monk</font></td>
+          <td align="center" width="1"><font face=
+"trebuchet ms, arial, helvetica">s</font></td>
+          <td width="567"><font face="trebuchet ms, arial, helvetica"> Ninja</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+        <a name="Object Flags"><font color="#008000"><strong><big>Object
+Flags</big></strong></font></a><br>
+        <br>
+        Many of these flags are strictly &quot;for show&quot;.&nbsp;
+Some have
+        not been implemented.&nbsp; These have been colored yellow.</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">a</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Glow</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">You can see it
+in the
+            dark. (GLOWING)</font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">b</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Hum</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">effect only
+(HUMMING)</font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">c</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Dark</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">effect only
+(DARK)</font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">d</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Lock</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">effect only
+(LOCK)</font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">e</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Evil</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">adds 3d6 to
+damage when
+            fighting a good-aligned character</font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">f</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Invisible
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">makes object
+invisible
+            </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">g</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Magic</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">(MAGIC)</font>
+</td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">h</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Nodrop
+(cursed)</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">not able to
+remove from
+            inventory</font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">i</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Bless</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">adds 3d6 to
+damage when
+            fighting an evil-aligned character</font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">j</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">AG (anti-good)
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">not usable by
+good align
+            people </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">k</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">AE (anti-evil)
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">not usable by
+evil align
+            people </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">l</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">AN (anti-
+neutral)</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">not usable by
+neutral
+            align people </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">m</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Norent</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">doesn't save
+</font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">n</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Nodonate</font
+></td>
+          <td><font face="trebuchet ms, arial, helvetica">can't donate
+the item
+            </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">o</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Noinvis</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">not allowed to
+cast
+            invis on </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">p</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Hidden</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">Hidden in room
+or in
+            corpse </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">q</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Broken</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">Item is broken
+</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">r</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Chaotic</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Not
+            Implemented: Vampiric damage </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">s</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Arena</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">special item
+for arena
+            only </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">t</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Donated</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">DONATED
+ITEM/can't be
+            sold </font></td>
+        </tr>
+        <tr> 
+          <td><font face="trebuchet ms, arial, helvetica">u</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Flame</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">Flaming
+weapon: +3d6
+            dam if target not save </font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">v</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Nolocate</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Not
+            Implemented: Can't locate object by spell </font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">w</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Nobreak</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Not
+            Implemented: Can't break </font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">x</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Noremove</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Not
+            Implemented: Can't remove from wear </font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><font face=
+"trebuchet ms, arial, helvetica">y</font></td>
+          <td bgcolor="#FFFFFF"><font face=
+"trebuchet ms, arial, helvetica">quest</font></td>
+          <td bgcolor="#FFFFFF"><font face=
+"trebuchet ms, arial, helvetica">Item
+            is quest equipment</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><font face=
+"trebuchet ms, arial, helvetica">z</font></td>
+          <td bgcolor="#FFFFFF"><font face=
+"trebuchet ms, arial, helvetica">Nosweep</font></td>
+          <td bgcolor="#FFFFFF"><font face=
+"trebuchet ms, arial, helvetica">Item
+            won't be touched by the sweeper in the zone reset process
+</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+        <a name="Wear Flags"><font color="#008000"><strong><big>Wear
+Flags</big></strong></font></a><br>
+        <br>
+        This is pretty self explanatory, except for take and wield and hold ... 
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="11%"><font face="trebuchet ms, arial, helvetica"> <img src="images/cactus.GIF" alt="images/WB00773_.gif (624 bytes)" width="36"
+height="66"></font></td>
+          <td width="89%"> 
+            <table border="0" cellpadding="0" cellspacing="0" width=
+"100%">
+              <tr> 
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Anything that can be wielded can also be held, 
+                  whether that is specifically coded or not. </font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Any item which is to be worn MUST have TAKE as 
+                  well as any other flags.&nbsp; If you can't TAKE the item, you 
+                  can't wear it ...<br>
+                  </font></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face="Trebuchet MS">Any item 
+                  which has another wear position must not be able to be held 
+                  as well, whether it makes sense for the mob to be able to hold 
+                  it or not.</font></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face="Trebuchet MS">Items can have more than one wear location, but be aware that it is very hard to balance out a item that can be used in several slots.</font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;</p>
+      </font>
+      <table border="0" width="100%" height="497">
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">a
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+take</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">**
+Allows
+            the item to be picked up (NEED)</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">b
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Finger</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Rings, finger
+            cap, sting, fingernail</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">c
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Neck</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Necklaces,
+            capes, charms</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">d
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Body</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Breastplates,
+            hauberks, shirt</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">e
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Head</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Helmet,
+            cap, hat, eye-patch, crown, glasses</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">f
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Legs</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Greaves,
+            pants, skirts</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">g
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Feet</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Shoes, boots,
+            sandals</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">h
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Hands</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Gloves,
+            gauntlets, mitts, cestus</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">i
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Arms</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Vambraces,
+            sleeves, arm rings, bands,tattoos</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">j
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Shield</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Shield (viking,
+            round, kite, buckler,heater)</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">k
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+About Body</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Cloak, coat,
+            backpack, auras, circling stones</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">l
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Waist</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Girdle,
+            belt, loincloth</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">m
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Wrist</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Bracelet,
+            charm, bracer, buckler, wristlet</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">n
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Wield</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Weapon</font></td>
+        </tr>
+        <tr> 
+          <td height="19"><font face="trebuchet ms, arial, helvetica">o
+</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Hold</font></td>
+          <td height="19"><font face="trebuchet ms, arial, helvetica">
+Anything</font></td>
+        </tr>
+        <tr> 
+          <td height="19" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">p</font></td>
+          <td height="19" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Throw</font></td>
+          <td height="19" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Not
+            implemented</font></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="19"><font face=
+"trebuchet ms, arial, helvetica">q</font></td>
+          <td height="19"><font face=
+"trebuchet ms, arial, helvetica">Wield_2H</font></td>
+          <td height="19"><font face=
+"trebuchet ms, arial, helvetica">Implemented. Need hold to work.</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+        <a name="Object Values"><font color="#008000"><strong><big>
+Object Values</big></strong></font></a>
+        {6 values}<br>
+      </p>
+      <p>Each type of object has 6 possible values which further define
+it.&nbsp;
+        You must code all 6.&nbsp; Leave no blanks.&nbsp; If there is
+nothing
+        defined yet for that value for that object type, code a 0.</p>
+      <p>For example, object type 1 is a light source.&nbsp; The third
+value is
+        the number of hours (tics) the light may be used.&nbsp; The
+runic scepter
+        from Gigantia is good for 150 ticks.&nbsp; Here is the code that
+makes
+        the scepter possible:<br>
+      </p>
+      <p><strong><font face="Lucida Console" color="#008000"><small>
+#7503<br>
+        runic scepter stick~<br>
+        a runic scepter~<br>
+        A long thin stick covered in strange designs of another
+language.~<br>
+        ~<br>
+        1 40 l ag ao<br>
+        0 0 150 0 0 0<br>
+        3 1000 0<br>
+        A<br>
+        18 2<br>
+        A<br>
+        19 2</small></font></strong></p>
+      <p>(- = Not used at this time):<br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Light"><font color="#008000"><strong><big>Light </big>
+</strong></font></a>(1)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%" valign="top">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%" valign="top">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Number
+            of hours the light can be used for. Zero hours means that
+the light
+            has gone out. A negative number will create an eternal light
+source.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%" valign="top">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%" valign="top">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%" valign="top">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        <a name="Scroll"><font color="#008000"><strong><big>Scroll</big>
+</strong></font></a>
+        (2)</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Level of
+            the spell on the scroll.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Which spell</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Which spell&nbsp;
+            or -1 if unused.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Which spell
+            or -1 if unused.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;</p>
+      <img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" width="25" height="25"> 
+      <p> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> </a> <br>
+        <a name="Wand"><font color="#008000"><strong><big>Wand</big> </strong></font></a> 
+        (3)</p>
+      </font> 
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Level of
+            spell in wand.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Max Charges
+            (1..X)</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Charges
+            Left</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Which spell
+            in wand (see list somewhere around the end of file)</font>
+</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <br>
+        <a name="Staff"><font color="#008000"><strong><big>Staff</big>
+</strong></font></a>
+        (4)</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Level of
+            spell in staff.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Max Charges
+            (1..X)</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Charges
+            Left</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Which <a href="speltabl.html">spell</a>
+            in staff</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Weapon"><font color="#008000"><strong><big>Weapon</big>
+</strong></font></a>
+        (5)</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Minimum
+            level to use</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Number of
+            dice to roll for damage</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Size of
+            dice to roll for damage</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+The weapon
+            type.&nbsp; New types can be added as needed.</font>
+            <table border="0" width="703">
+              <tr> 
+                <td width="63"><font face=
+"trebuchet ms, arial, helvetica"><strong>Number</strong></font></td>
+                <td width="63"><font face=
+"trebuchet ms, arial, helvetica">
+                  <p align="center"><strong>type</strong>
+                  </font></td>
+                <td width="632"><font face=
+"trebuchet ms, arial, helvetica"><strong>Message
+                  </strong></font></td>
+              </tr>
+              <tr> 
+                <td width="63" align="right"><font face=
+"trebuchet ms, arial, helvetica">2
+                  </font></td>
+                <td width="63" align="center"><font face=
+"trebuchet ms, arial, helvetica">Slash</font></td>
+                <td width="632"><font face=
+"trebuchet ms, arial, helvetica">whip/whips</font></td>
+              </tr>
+              <tr> 
+                <td width="63" align="right"><font face=
+"trebuchet ms, arial, helvetica">3
+                  </font></td>
+                <td width="63" align="center"><font face=
+"trebuchet ms, arial, helvetica">Slash</font></td>
+                <td width="632"><font face=
+"trebuchet ms, arial, helvetica">slash/slashes</font></td>
+              </tr>
+              <tr> 
+                <td width="63" align="right"><font face=
+"trebuchet ms, arial, helvetica">6
+                  </font></td>
+                <td width="63" align="center"><font face=
+"trebuchet ms, arial, helvetica">Bludgeon</font></td>
+                <td width="632"><font face=
+"trebuchet ms, arial, helvetica">crush/crushes</font></td>
+              </tr>
+              <tr> 
+                <td width="63" align="right"><font face=
+"trebuchet ms, arial, helvetica">7
+                  </font></td>
+                <td width="63" align="center"><font face=
+"trebuchet ms, arial, helvetica">Bludgeon
+                  </font></td>
+                <td width="632"><font face=
+"trebuchet ms, arial, helvetica">pound/pounds</font></td>
+              </tr>
+              <tr> 
+                <td width="63" align="right"><font face=
+"trebuchet ms, arial, helvetica">8
+                  </font></td>
+                <td width="63" align="center"><font face=
+"trebuchet ms, arial, helvetica">Blast</font></td>
+                <td width="632"><font face=
+"trebuchet ms, arial, helvetica">blast/blasts&nbsp;&nbsp;&nbsp;
+                  </font></td>
+              </tr>
+              <tr> 
+                <td width="63" align="right"><font face=
+"trebuchet ms, arial, helvetica">11
+                  </font></td>
+                <td width="63" align="center"><font face=
+"trebuchet ms, arial, helvetica">Pierce</font></td>
+                <td width="632"><font face=
+"trebuchet ms, arial, helvetica">pierce/pierces</font></td>
+              </tr>
+              <tr> 
+                <td width="63" align="right"><font face=
+"trebuchet ms, arial, helvetica">12
+                  </font></td>
+                <td width="63" align="center"><font face=
+"trebuchet ms, arial, helvetica">Pierce</font></td>
+                <td width="632"><font face=
+"trebuchet ms, arial, helvetica">no
+                  backstab pierce/pierces</font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Fireweapon"><strong><font color="#008000"><big>
+Fireweapon</big></font></strong></a>
+        (6)</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Minimum
+            level to use</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Missile"><font color="#008000"><strong><big>Missile
+</big></strong></font></a>
+        (7)</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Minimum
+            level to use</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Treasure"><font color="#008000"><strong><big>Treasure
+</big></strong></font></a>
+        (8)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Armor"><strong><font color="#008000"><big>Armor</big>
+</font></strong></a>
+        (9)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+The effective
+            AC. &gt;0 enhances the armor class. &lt;0 reduces the<br>
+            the armor class (cursed armor for example).</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Minimum
+            level to use</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Potion"><font color="#008000"><strong><big>Potion</big>
+</strong></font></a>
+        (10)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Level of
+            the spell in the potion</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%" rowspan="3"><font face=
+"trebuchet ms, arial, helvetica">The
+            values(2-4) are three (or fewer) different spells, mixed in
+the potion.<br>
+            Unused spells should be set to -1.&nbsp; Example:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><font face="Lucida Console">30 27 17 -1 0 0</font>
+</strong><br>
+            (Level 30 potion of harm and curse.)</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Worn"><font color="#008000"><strong><big>Worn</big>
+</strong></font></a>
+        (11)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Minimum
+            level to use</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Other"><font color="#008000"><strong><big>Other</big>
+</strong></font></a>
+        (12)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Minimum
+            level to use</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Trash"><font color="#008000"><strong><big>Trash</big>
+</strong></font></a>
+        (13)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Trap"><font color="#008000"><strong><big>Trap</big>
+</strong></font></a>
+        (14) - Not in use<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Container"><font color="#008000"><strong><big>Container
+</big></strong></font></a>
+        (15)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <th width="10%"><font color="#008000"><strong>Value</strong>
+</font></th>
+          <th width="90%"><font color="#008000"><strong>Meaning</strong>
+</font></th>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Maximum
+            weight the container can contain (max includes own weight/Eg).</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Container
+            flags (Bitvector) (starting position):<br>
+            </font>
+            <table border="0" width="100%">
+              <tr> 
+                <th width="33%"><strong>STATE</strong></th>
+                <th width="11%"><strong>letter</strong></th>
+                <th width="56%"><strong>Notes</strong></th>
+              </tr>
+              <tr> 
+                <td width="33%"><font face=
+"trebuchet ms, arial, helvetica">Closeable</font></td>
+                <td width="11%"><font face=
+"trebuchet ms, arial, helvetica">a</font></td>
+                <td width="56%">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="33%"><font face=
+"trebuchet ms, arial, helvetica">Pickproof</font></td>
+                <td width="11%"><font face=
+"trebuchet ms, arial, helvetica">b</font></td>
+                <td width="56%">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="33%"><font face=
+"trebuchet ms, arial, helvetica">Closed</font></td>
+                <td width="11%"><font face=
+"trebuchet ms, arial, helvetica">c</font></td>
+                <td width="56%">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="33%"><font face=
+"trebuchet ms, arial, helvetica">Locked</font></td>
+                <td width="11%"><font face=
+"trebuchet ms, arial, helvetica">d</font></td>
+                <td width="56%">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="33%" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Trap</font></td>
+                <td width="11%" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">e</font></td>
+                <td width="56%" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Not
+                  in use</font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+The item-number
+            of the object which can open the object. -1 means no
+lockability.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Internal
+            use for Corpses that must &quot;rot&quot;</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Note"><font color="#008000"><strong><big>Note</big>
+</strong></font></a>
+        (16)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Tongue
+            (language of writing). Not yet used.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Drink Container"><font color="#008000"><strong><big>
+Drink Container</big></strong></font></a>
+        (17)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Maximum
+            drink-units the drink-container can contain.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Number of
+            drink-units that are left in the container.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+The type
+            of liquid in the drink-container, one of:<br>
+            </font>
+            <table border="0" width="100%">
+              <tr> 
+                <th>Type</th>
+                <th>code</th>
+                <th>Drunkness</th>
+                <th>Fullness</th>
+                <th>Thirst</th>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Water
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">10</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Beer
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Wine
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Ale
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Darkale
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">4</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Whisky
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">6</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">4</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Lemonade
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">6</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">8</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Firebrt
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">7</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">10</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Localspc
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">8</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Slime
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">9</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">4</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">-8</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Milk
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">10</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">6</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Tea
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">11</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">6</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Coffe
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">12</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">6</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">Blood
+</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">13</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">-1</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">
+Saltwater</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">14</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">-2</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">
+Clearwater</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">15</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">13</font></td>
+              </tr>
+              <tr> 
+                <td><font face="trebuchet ms, arial, helvetica">
+Champagne</font></td>
+                <td align="center"><font face=
+"trebuchet ms, arial, helvetica">16</font></td>
+                <td align="center">&nbsp;</td>
+              </tr>
+            </table>
+            <font face="trebuchet ms, arial, helvetica"> 
+            <p><br>
+              <br>
+              The above values for drunkness/fullness/thirst are used
+per four
+              &quot;units&quot; drunk. The values are expressed in game
+HOURS!<br>
+              Example:<br>
+              Dragon empties a bottle (say 7 units) of saltwater.<br>
+              His Drunkness is not changed ((7/4)*0)<br>
+              His Fullness increases by ((7/4)*1) hours<br>
+              His Thirst increases by ((7/4)*-2) hours, thus making him
+more thirsty.<br>
+              <br>
+              The hours above are numbers between 0 and 24. 24 hours is
+maximum
+              for drunkness/fullness/thirst. When hours are zero for any
+drunkness/fullness/thirst
+              the person will be sober, hungry, or thirsty respectively.
+            </font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">if
+this
+            value is non-zero, then the drink is poisoned.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Key"><font color="#008000"><strong><big>Key</big>
+</strong></font></a>
+        (18)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+The key-type.
+            This value must match the lock-type the door<br>
+            that the key can open. </font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+USED BY
+            SYSTEM (count down timer till gone)</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Time out
+            in Zone ticks (Clock minutes) Needs to be &gt;10,<br>
+            SHOULD BE twice the zone rest time to 255</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Food"><font color="#008000"><strong><big>Food</big>
+</strong></font></a>
+        (19)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+The number
+            of hours, that this food will fill the stomach</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">If
+this
+            value is non-zero, the food is poisoned.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Money"><font color="#008000"><strong><big>Money</big>
+</strong></font></a>
+        (20)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+The number
+            of gold coins &quot;in the pile of coins&quot;.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        <a name="Pen"><font color="#008000"><strong><big>Pen</big>
+</strong></font></a>
+        (21)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Boat"><font color="#008000"><strong><big>Boat</big>
+</strong></font></a>
+        (22)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <a name="Fountain"><font color="#008000"><strong><big>Fountain
+</big></strong></font></a>
+        (23)<br>
+        <br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Maximum
+            drink-units the drink-container can contain.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Number of
+            drink-units that are left in the container.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+The type
+            of liquid in the drink-container; definitions<br>
+            are the same as for ITEM_DRINKCON.</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica">
+Drink is
+            poisoned if non-zero</font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><a name="Bomb"><font color="#008000"><strong><big>Bomb</big>
+</strong></font></a></p>
+      <p>&nbsp;</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><font color="#008000"><strong><big><a name="Rawfood">Rawfood</a
+></big></strong></font><br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="10%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="90%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="90%">&nbsp;</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        <strong><a name="Portal"><font color="#008000"><big>Portal</big>
+</font></a></strong>
+        (26)<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="12%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Value</strong></font></td>
+          <td width="88%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Meaning</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>1</strong>
+</font></td>
+          <td width="88%"><font face="trebuchet ms, arial, helvetica">
+destination</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>2</strong>
+</font></td>
+          <td width="88%"><font face="trebuchet ms, arial, helvetica">
+portal info
+            (closed, locked...)</font>
+            <table border="0" width="100%">
+              <tr> 
+                <td width="6%"><font face=
+"trebuchet ms, arial, helvetica">a </font></td>
+                <td width="94%"><font face=
+"trebuchet ms, arial, helvetica">Portal
+                  is closed</font></td>
+              </tr>
+              <tr> 
+                <td width="6%"><font face=
+"trebuchet ms, arial, helvetica">b</font></td>
+                <td width="94%"><font face=
+"trebuchet ms, arial, helvetica">Portal
+                  is locked</font></td>
+              </tr>
+              <tr> 
+                <td width="6%" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">c</font></td>
+                <td width="94%" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Portal
+                  has random destination - not implemented yet</font>
+</td>
+              </tr>
+              <tr> 
+                <td width="6%" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">d</font></td>
+                <td width="94%" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Portal
+                  has special effect - not implemented yet</font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>3</strong>
+</font></td>
+          <td width="88%"><font face="trebuchet ms, arial, helvetica">
+lock object,
+            (-1 = no locking)</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>4</strong>
+</font></td>
+          <td width="88%"><font face="trebuchet ms, arial, helvetica">
+min level
+            (-1 for none)</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>5</strong>
+</font></td>
+          <td width="88%"><font face="trebuchet ms, arial, helvetica">
+max level
+            (-1 for none)</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>6</strong>
+</font></td>
+          <td width="88%"><font face="trebuchet ms, arial, helvetica">
+duration
+            in number of ticks (-1 = permanent)</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+        <font color="#008000"><big><strong><a name="Which spells">Which
+spells</a>
+        can be attached to scrolls?&nbsp; wands? potions? staves ?
+</strong></big></font></p>
+      <p>Not all spells can be incorporated into potions, scrolls, wands or staffs.&nbsp; 
+        The table below shows which ones you can make.&nbsp; Note especially the 
+        Min Lev column. According to the original docs, violating this restriction 
+        could lead to a crash.&nbsp; </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="14%"><font face="trebuchet ms, arial, helvetica"> <img src="images/cactus.GIF" alt="images/WB00773_.gif (624 bytes)" WIDTH="36"
+HEIGHT="66"></font></td>
+          <td width="86%"> 
+            <table border="0" cellpadding="0" cellspacing="0" width=
+"100%">
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">If
+                  your item is lower than the min lev allowed for that
+spell,
+                  the mud will crash </font></td>
+              </tr>
+              <tr>
+                <td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">If the spell object holds more than one spell to be released at once (potion/scroll) make sure that the first spell/s can not harm the target in any way as it might lead to a crash. </font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p> <br>
+      </p>
+      </font> <a href="obj_over.html#Top"> </a> <br>
+      <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+      </strong></font><br>
+      <a name="Weight"><font color="#008000"><strong><big>Weight<br>
+      </big></strong></font></a><br>
+      This is how heavy the item is. This is important as characters are only 
+      able to carry so much in weight. Weapons also require a set amount of strength 
+      to wield them based on their weight. Note: for every 8 pounds, a weapon 
+      takes 1 move to swing. Anything under 8 pounds is a no_move weapon. The maximum weight that can be used in the wield slot is 40 pounds.<font face="trebuchet ms, arial, helvetica">
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+        <a name="Value"><font color="#008000"><big><strong>Value</strong
+></big></font></a><br>
+        <br>
+        When sold, this is how much the base value is worth. The more
+powerful
+        this item is for its minimum level, the more valuable it should
+be.&nbsp;
+      </p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+        <strong><a name="Rent"><font color="#008000"><big>Rent</big>
+</font></a><br>
+        </strong><br>
+        This is the cost per real time day to store the object. This
+value is
+        currently not used as Elite is a non-renting mud.</p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="643" height="7" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        <br>
+        </strong></font><br>
+        <a name="A Applies"><font color="#008000"><strong><big>A Applies
+</big></strong></font></a>
+        {0-4 possible}<br>
+        <br>
+        This adds up to four additional effects for an object as
+described<br>
+        below. This is an optional field defined by the following
+format:<br>
+        <br>
+        A<br>
+        &lt;type&gt; &lt;value&gt;<br>
+        <br>
+        The &quot;A&quot; identifies this as an apply, while the TYPE is
+the value
+        found on the below table. The value is how much is applied to
+the type,
+        such as I make a holy defender weapon that needs to add some to
+HIT, some
+        to DAM, some to AC, and some to MAGIC SAVE. I determine how much
+then
+        follow the rent value on the next line (or the last extra field
+if one
+        exists) with four apply fields:<br>
+        A<br>
+        18 5<br>
+        A<br>
+        19 5<br>
+        A<br>
+        17 -10<br>
+        A<br>
+        24 10<br>
+        <br>
+        The above makes the&nbsp; holy defender, +5/+5, 10/10 AC
+improvement,
+        and +10 save/magic.<br>
+        <br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000">
+            <p align="center"><strong>Code</strong>
+            </font></td>
+          <td><font face="trebuchet ms, arial, helvetica" color=
+"#008000"><strong>Affect</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica" color=
+"#008000"><strong>Comments</strong></font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>0</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">NONE</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">No apply being
+added
+            (space filler)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>1</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">STR</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">Adds&nbsp; STR
+up to
+            racial max (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>2</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">DEX</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">Adds&nbsp; to
+DEX up
+            to racial max (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>3</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">INT</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to INT up
+to racial
+            max (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>4</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">WIS</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to WIS up
+to racial
+            max (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>5</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">CON</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to CON up
+to racial
+            max (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>6</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">CHA</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to CHA up
+to racial
+            max (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>7</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">APPLY</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to magic
+armor
+            class apply (- = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>8</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">LEVEL</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>9</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">AGE</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">Adds age,
+which&nbsp;
+            helps in HP regeneration (+ = older)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>10</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">CHAR_WEIGHT
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">NOT NOTICED OR
+SHOWN
+            IN EFFECT</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>11</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">CHAR_HEIGHT
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">NOT NOTICED OR
+SHOWN
+            IN EFFECT</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>12</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">MANA</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds Mana to
+character
+            (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>13</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">HIT</font></td
+>
+          <td><font face="trebuchet ms, arial, helvetica">Adds Hit
+Points to Character
+            (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>14</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">MOVE</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds Movement
+to Character
+            (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>15</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">GOLD</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>16</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">EXP</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>17</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">AC (Armor)
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds physical
+armor
+            class to Character (- = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>18</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">HITROLL</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to
+hitroll (+ =
+            easier to hit target)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>19</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">DAMROLL</font>
+</td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to
+damroll (+ =
+            does more damage)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>20</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">SAVING_vs_PHYSICAL
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to Save
+against
+            physical [not fully imped/Eg] (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>21</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">SAVING_vs_MENTAL
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to Save
+against
+            mental [not fully imped/Eg] (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>22</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">SAVING_vs_MAGIC
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to Save
+against
+            magic [not fully imped/Eg] (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>23</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">SAVING_vs_POISON
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to Save
+against
+            poison [not fully imped/Eg] (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>24</strong></font></td>
+          <td><font face="trebuchet ms, arial, helvetica">MAGIC_RESISTANCE
+</font></td>
+          <td><font face="trebuchet ms, arial, helvetica">Adds to Magic Resistance (MR) (+ = good)</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>25</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">JUMP</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>26</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">STEAL</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>27</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">SNEAK</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>28</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">TRACK</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>29</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">ARCHERY</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>30</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">THROW</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>31</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">SWIM</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+        <tr> 
+          <td align="right" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong>32</strong>
+</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DIVE</font></td>
+          <td bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DO
+            NOT USE</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+        <a name="B Affection"><font color="#008000"><big><strong>B
+Affection</strong></big></font></a>
+        {0-1 possible}<br>
+        <br>
+        These are also used on mobs (See the mob section of the
+builders' docs.)&nbsp;
+        Not all possible affections may be used.&nbsp; Some are not yet
+implemented,
+        some simply don't work when attached to an object and worn
+.&nbsp; This
+        is an optional field.&nbsp; Here are the format and an example
+followed
+        by a list of the codes:<br>
+      </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="11%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Format:
+            </strong></font></td>
+          <td width="89%"><font face="trebuchet ms, arial, helvetica">B
+&lt;list
+            of affection codes&gt;</font></td>
+        </tr>
+        <tr> 
+          <td width="11%"><font face="trebuchet ms, arial, helvetica"
+color="#008000"><strong>Example:</strong></font></td>
+          <td width="89%"><font face="trebuchet ms, arial, helvetica">B
+hB</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;</p>
+      </font>
+      <div align="center">
+        <center>
+          <table border="0" width="100%" height="100">
+            <tr> 
+              <td bgcolor="#FFFFFF" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong><big>Code</big>
+</strong></font></td>
+              <td bgcolor="#FFFFFF" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong><big>Effect
+</big></strong></font></td>
+              <td bgcolor="#FFFFFF" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica" color="#008000"><strong><big>Effect
+                on player wearing the item</big></strong></font></td>
+            </tr>
+            <tr> 
+              <td height="18" width="33"><font face=
+"trebuchet ms, arial, helvetica">a</font></td>
+              <td height="18" width="156"><font face=
+"trebuchet ms, arial, helvetica">BLIND</font></td>
+              <td height="18" width="301"><font face=
+"trebuchet ms, arial, helvetica">Player
+                is blind.</font></td>
+            </tr>
+            <tr> 
+              <td height="22" width="33"><font face=
+"trebuchet ms, arial, helvetica">b</font></td>
+              <td height="22" width="156"><font face=
+"trebuchet ms, arial, helvetica">INVISIBLE</font></td>
+              <td height="22" width="301"><font face=
+"trebuchet ms, arial, helvetica">Player
+                is invisible until he/she attacks</font></td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">c</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">DETECT_ALIGN</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica"> </font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">d</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">DETECT_INVISIBLE</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Player
+                can see invisible chars and objects </font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">e</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">DETECT_MAGIC</font></td>
+              <td height="21" width="301">&nbsp;</td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">f</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">SENSE_LIFE</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Player
+                can sense the presence of hidden mobs. </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">g</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">HOLD</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">*
+                Not Imped yet! </font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">h</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">SANCTUARY</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Halves
+                all damage received (doesn't work for equipment ?)</font
+></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">i</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">GROUP</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">INTERNAL
+                USE ONLY: mob is grouped </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">j</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">CURSE</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">You
+                are cursed (-1 DAM, I think)</font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">k</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">LIGHT</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Object
+                is a light source (Stanneg mining helmet is an example
+of this.)</font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">l</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">POISON</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">You
+                are poisoned.</font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">m</font></td>
+              <td height="21" width="156" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">PROTECT_EVIL</font></td>
+              <td height="21" width="301" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Not
+                Imped yet! </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">n</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">PARALYSIS</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">*
+                Not Imped yet! </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">o</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">INSANITY</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">*
+                Not Imped yet! </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">p</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">FL_WPN</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Not
+                Imped yet! </font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">q</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">SLEEP</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Better
+                than a pill</font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">r</font></td>
+              <td height="21" width="156" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">DODGE</font></td>
+              <td height="21" width="301" bgcolor="#FFFF80"><font face=
+"trebuchet ms, arial, helvetica">Does
+                not appear to work</font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">s</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">SNEAK</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Player
+                doesn't have entry/exit msg displayed </font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">t</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">HIDE</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Player
+                is hidden (like the skill).&nbsp; Green skirt in Tynstri
+village
+                has this quality.&nbsp; I think you have to have the
+skill, though.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">u</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">FEAR</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Not
+                Imped yet! </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">v</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">CHARM</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">INTERNAL
+                USE ONLY: mob is charmed </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">w</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">FOLLOWING</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">INTERNAL
+                USE ONLY: mob is following </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFF80" height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">x</font></td>
+              <td bgcolor="#FFFF80" height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">WIMPY</font></td>
+              <td bgcolor="#FFFF80" height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">INTERNAL
+                USE ONLY: Wimpy set </font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">y</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">INFRARED</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Gives
+                player infravision like the spell.</font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">z</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">BERZERK</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">If
+                you wear it, you -are- berzerking. You cant even move
+from one
+                room to another or cast spells or even attack a mob!
+However,
+                once you kill something (which would have to be
+aggressive, the
+                berzerk flag disappears, and doesnt appear to re-appear
+until
+                next time you wear the item (tick doesn nothing)<br>
+                </font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">A</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">HOVER</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Player
+                is levitating.</font></td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">B</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">FLY</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Gives
+                player ability to fly without spells.. </font></td>
+            </tr>
+            <tr bgcolor="#FFFFFF"> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">C</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">BREATH_WATER</font></td>
+              <td height="21" width="301">&nbsp;</td>
+            </tr>
+            <tr> 
+              <td height="21" width="33"><font face=
+"trebuchet ms, arial, helvetica">D</font></td>
+              <td height="21" width="156"><font face=
+"trebuchet ms, arial, helvetica">REGENERATION</font></td>
+              <td height="21" width="301"><font face=
+"trebuchet ms, arial, helvetica">Player
+                regenerates hp faster, like the spell</font></td>
+            </tr>
+          </table>
+          </center>
+      </div>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><br>
+        &nbsp;<img src="images/small_black_arrow.GIF" alt="images/WB01570_.GIF (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="obj_over.html">Top</a><a href="obj_over.html#Top"> 
+        </a> <br>
+        <img src="images/green_rule.GIF" width="542" height="6" alt=
+"WB00849_.GIF (281 bytes)"><font color="#FF0000"><strong><br>
+        </strong></font><br>
+      </p>
+      </font></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,678 @@
+<html>
+
+<head>
+
+<title>S Type Mobs are Special</title>
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333"
+alink="#FF3333"><table border="0" cellpadding="0"
+cellspacing="0" width="100%"><tr><td><font face=
+"trebuchet ms, arial, helvetica">
+
+<p align="center"><font size="6"><strong></strong></font><br>
+</p>
+
+<p align="center">&nbsp;</p>
+</font></td></tr></table><!--
+msnavigation--><table border="0" cellpadding="0" cellspacing="0" width=
+"100%"><tr><td valign="top"><font face=
+"trebuchet ms, arial, helvetica">
+
+<h1><font color="#FF0000">S Type Mobs</font></h1>
+
+<p>The S type mob offers lots of opportunities to make the mob an
+individual.&nbsp; Here's
+the prototype and a sample mob.</p>
+</font><div align="left"><font face=
+"trebuchet ms, arial, helvetica">
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="50%" valign="top" align="center"><font
+face="trebuchet ms, arial, helvetica"><p align="left"><big><big>
+Prototype</big></big></font></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+              <p><font face=
+"trebuchet ms, arial, helvetica">#<a href="mob_comm.html#VIRTUAL NUMBER"
+>VNUM</a><br>
+                <a href="mob_comm.html#ALIAS LIST">alias list</a>~<br>
+                <a href="mob_comm.html#SHORT DESCRIPTION">short description</a>~<br>
+                <a href="mob_comm.html#LONG DESCRIPTION">Room description</a>.<br>
+                ~<br>
+                <a href="mob_comm.html#DETAILED DESCRIPTION">Detailed Description</a
+>.<br>
+                ~<br>
+                &lt;<a href="mob_comm.html#RACES">race</a>&gt; &lt;<a href=
+"mob_comm.html#CLASSES">class</a>&gt; &lt;<a href="mob_comm.html#ACTION">action</a>&gt; 
+                &lt;<a href=
+"mob_comm.html#AFFECTION">affection</a>&gt; &lt;<a href="mob_comm.html#ALIGNMENT">alignment</a>&gt; 
+                S <br>
+                &lt;<a href="mob_comm.html#Level">level</a>&gt; &lt;<a href=
+"mob_styp.html#Thac0">thac0</a>&gt; &lt;<a href="mob_styp.html#ARMOR CLASS">AC</a>&gt; 
+                &lt;<a href=
+"mob_styp.html#HIT POINTS">hit points in format xdy+z</a>&gt;<br>
+                &lt;<a href="mob_styp.html">attacks</a>&gt; -1<br>
+                &lt;<a href="mob_styp.html#ATTACKS">skill list</a>&gt; -1<br>
+                &lt;<a href="mob_styp.html#RESISTANCE LIST">resistance list</a>&gt; 
+                -1<br>
+                &lt;<a href="mob_styp.html#Gold">gold</a>&gt; &lt;<a href=
+"mob_styp.html#Experience">experience*3</a>&gt; &lt;<a href="mob_styp.html#Load Position">position 
+                #1</a>&gt; &lt;<a
+href="mob_styp.html#Load Position">position#2</a>&gt; &lt;<a href=
+"mob_comm.html#Gender">gender</a>&gt; </font><font face=
+"trebuchet ms, arial, helvetica"><br>
+                A<br>
+                <a href="mob_comm.html#Mob Actions">%%5 action1</a>;%5 action2~<br>
+                R</font><br>
+                <a href="mob_styp.html#MagicResistance">&lt;1&gt; &lt;2&gt; &lt;3&gt; 
+                &lt;4&gt; &lt;5&gt;</a></p>
+              <p><font face=
+"trebuchet ms, arial, helvetica"><!--
+mstheme--></font></p>
+              </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"><big><big>Sample</big></big><!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><font face=
+"trebuchet ms, arial, helvetica"><small><font face="Lucida Console">
+#18041<br>
+    tinker~<br>
+    The tinker~<br>
+    The tinker offers to turn your helmet into a cooking pot.<br>
+    ~<br>
+    After all, you'll not be needing armor in this land of peace! This
+<br>
+    tinker has travelled the length and breadth of the kingdom and seen
+the changes wrought
+    first by war then the coming of peace. He can fix almost anything
+metallic for you.<br>
+    ~<br>
+    1 0 bg 0 0 A 95 1<br>
+    A<br>
+    %%1 yell Pots from your helmets! Bring me your helmets!~</font>
+</small></font></td>
+  </tr>
+</table>
+</div><font face="trebuchet ms, arial, helvetica">
+
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_over.html">Overview </a> -<a href="mob_styp.html"> 
+        Top</a><img src="images/red_rule.GIF"
+width="711" height="7" alt="WB00852_.GIF (317 bytes)"><strong><font
+color="#FF0000"><br>
+</font><a name="Thac0"><font color="#FF0000"><big><big>Thac0</big></big>
+</font></a></strong></p>
+
+<p><br>
+&quot;To Hit Armor Class 0&quot; -- The mud automatically calculates
+hitroll for mobs
+based on the thac0 you code.&nbsp; The thac0 is added to some calculated
+base HR for the
+&nbsp; mob.<br>
+        <img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <a href="mob_over.html">Overview</a> - <a href="mob_styp.html"> 
+        Top</a><br>
+        <img src="images/red_rule.GIF" width="709" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><font color="#FF0000"><a name="ARMOR CLASS"><big><big>Armor Class
+</big></big></a></font></strong><br>
+The ability of the monster to avoid damage. Range is from 10 to -200,
+with lower values
+indicating better armor. Roughly, the scale is:</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica">10</font></td>
+    <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Naked person (100/10)
+</font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+    <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Lightly armored person 
+</font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica">-25</font></td>
+    <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Lord Simon, a hard level 63 Mob <!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica">-50</font></td>
+    <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">A very powerful level 109 Player Knight
+</font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica">-79</font></td>
+    <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Hades (almost unhittable to normal
+mortals)</font></td>
+  </tr>
+  <tr>
+    <td width="12%" align="right"><font face=
+"trebuchet ms, arial, helvetica">-200</font></td>
+    <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Armored Battle Tank (-200/10 which is
+the lowest a mob&nbsp; is allowed in
+    the code for combat calculations, and&nbsp;&nbsp; players simply
+cannot hit this; it's a
+    shopkeeper ac)</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p><br>
+Note on THAC0 and Armor Class (AC): When an attacker is trying to hit a
+victim, the
+attacker's THAC0 and the victim's AC, plus a random roll of the dice,
+determines whether
+or not the attacker can hit the victim. (If a hit occurs, a different
+formula determines
+how much damage is done.) An attacker with a low THAC0 is theoretically
+just as likely to
+hit a victim with a low AC as an attacker with a high THAC0 is to hit a
+victim with a high
+AC. Lower attacker THAC0's and higher victim AC's favor the attacker;
+higher attacker
+THAC0's and lower victim AC's favor the victim. HITROLL is also used in
+the computation. <br>
+        <img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <a href="mob_over.html">Overview</a> - <a href="mob_styp.html"> 
+        Top</a><br>
+        <img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><strong><font color="#FF0000"><br>
+</font><font color="#FF0000"><a name="HIT POINTS"><big><big>Hit Points
+</big></big></a></font></strong><br>
+</p>
+
+<p>Each time a mob is created, the mud computes the number of hit points
+that mob will
+have based on a dice roll.&nbsp; You code the number and size of the
+dice, and you can
+code a constant to be added to the results.&nbsp; For example:</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="22%"><font face=
+"trebuchet ms, arial, helvetica"><big><strong><font face=
+"Lucida Console">4d6+10</font></strong></big></font></td>
+    <td width="78%"><font face=
+"trebuchet ms, arial, helvetica">means to roll 4 6-sided dice, add up
+the results, and add 10 to that.</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>HP are always coded in the format xdy+z, where x, y and z are always
+whole numbers
+(integers).&nbsp; Because it's a dice roll, each time a mob is loaded,
+it's hp may be
+slightly different.&nbsp; If you want the results to always be the same,
+code the number
+of dice to 0.&nbsp; For example:</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="21%"><font face=
+"trebuchet ms, arial, helvetica"><font face="Lucida Console"><strong>
+<big>1d0+100</big></strong></font></font></td>
+    <td width="79%"><font face=
+"trebuchet ms, arial, helvetica">would give a mob who always had 100 hp.
+</font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp; <br>
+<br>
+Note that all three numbers, the 'd' and the '+' must always appear,
+even if some of the
+numbers are 0. <br>
+<br>
+Generally speaking, mobs have more hp at a given level than a player
+would. Their way of
+making up for a lack of your creativity and foresight (and ability to
+change kits!)</p>
+
+<p>Once you know what level you are building for and you have decided
+you need to code
+&quot;S&quot; type mobs, get an idea of the HP, Thac0, gold, exp and dam
+for your mob from
+doing a &quot;vstat mob mob#&quot; or &quot;stat mob&quot; of your
+favorite mobs of a
+similar difficulty on the test site. Or ask one of the world-imms to do
+this for you!</p>
+
+<p>The <a href="mob_valu.html">sample mob stats</a> file has a guideline
+for coding all of
+the S type mob stats.&nbsp; Part of the approval process will be to
+compare your mobs
+against this standard.<br>
+<br>
+</p>
+
+      <h1><img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <small><small><small><a href=
+"mob_over.html">Overview</a> -<a href="mob_styp.html"> Top</a></small> </small></small><img src="images/red_rule.GIF" width="711" height="7"
+alt="WB00852_.GIF (317 bytes)"><br>
+<a name="ATTACKS"><font color="#FF0000">Attacks</font></a></h1>
+
+<p>There are three kinds of attacks:&nbsp; hit attacks, spell attacks
+and attacks based on
+skills.&nbsp; The coding for each is slightly different, and listed in
+great detail below.
+&nbsp;&nbsp; Two things to remember:&nbsp; You must start with a
+physical (4xx) attack,
+and the %chosen for all attacks must add up to 100.</p>
+
+<p><font color="#FF0000"><a name="DamRoll">DamRoll</a></font> (DR) is
+not directly coded
+for mobs since it has no effect.&nbsp; The amount of damage done with
+each attack is
+specified precisely in this section.</p>
+
+<p><strong><big><big><a name="Physical attacks"><font color="#FF0000">
+Physical attacks</font></a></big></big></strong></p>
+
+      <p><br>
+        Every mob must have a physical attack coded first, before any spell or 
+        skill type attack. &nbsp;&nbsp; You cannot code more than 10 attacks per 
+        mob (physical + magical), however.</p>
+      <p>This is the general format of the attack: </p>
+
+<p>&nbsp;&nbsp; &lt;<a href="mob_styp.html#Hit type">hit type</a>&gt;
+500 &lt;<a href="mob_styp.html#Percent Chosen">percent chosen</a>&gt;
+&lt;<a href="mob_styp.html#Damage Dice">damage dice</a>&gt;</p>
+
+<p><big><strong><a name="Hit type">Hit type</a></strong></big></p>
+
+<p>The type of damage message you see depends on the type of hit.</p>
+
+</font><table border="0" width="63%">
+  <tr>
+    <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">400</font></td>
+    <td width="31%"><font face=
+"trebuchet ms, arial, helvetica">hit</font></td>
+    <td width="7%" align="right"><font face=
+"trebuchet ms, arial, helvetica">401</font></td>
+    <td width="55%"><font face=
+"trebuchet ms, arial, helvetica">bludgeon</font></td>
+  </tr>
+  <tr>
+    <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">402</font></td>
+    <td width="31%"><font face=
+"trebuchet ms, arial, helvetica">pierce (backstab)</font>
+</td>
+    <td width="7%" align="right"><font face=
+"trebuchet ms, arial, helvetica">403</font></td>
+    <td width="55%"><font face=
+"trebuchet ms, arial, helvetica">slash</font></td>
+  </tr>
+  <tr>
+    <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">404</font></td>
+    <td width="31%"><font face=
+"trebuchet ms, arial, helvetica">blast</font></td>
+    <td width="7%" align="right"><font face=
+"trebuchet ms, arial, helvetica">405</font></td>
+    <td width="55%"><font face=
+"trebuchet ms, arial, helvetica">whip</font></td>
+  </tr>
+  <tr>
+    <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">406</font></td>
+    <td width="31%"><font face=
+"trebuchet ms, arial, helvetica">no_bs pierce</font></td>
+    <td width="7%" align="right"><font face=
+"trebuchet ms, arial, helvetica">407</font></td>
+    <td width="55%"><font face=
+"trebuchet ms, arial, helvetica">claw</font></td>
+  </tr>
+  <tr>
+    <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">408</font></td>
+    <td width="31%"><font face=
+"trebuchet ms, arial, helvetica">bite</font></td>
+    <td width="7%" align="right"><font face=
+"trebuchet ms, arial, helvetica">409</font></td>
+    <td width="55%"><font face=
+"trebuchet ms, arial, helvetica">sting</font></td>
+  </tr>
+  <tr>
+    <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">410</font></td>
+    <td width="31%"><font face=
+"trebuchet ms, arial, helvetica">crush</font></td>
+    <td width="7%"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+    <td width="55%"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p><strong><big><a name="Damage Dice">Damage Dice</a></big></strong><br>
+<br>
+The random number of damage the mob gives must be defined in the form
+&quot;xdy+z&quot;
+where x, y, and z are integers. For example, 4d6+10 would mean sum 4
+rolls of a 6 sided
+die and add 10 to the result. Note that all three numbers, the 'd' and
+the '+' must always
+appear, even if some of the numbers are 0. For example, if you want
+every copy of a mob to
+always hit for exactly 100 you would code =&gt; 1d0+100<br>
+<br>
+<br>
+Example - this mob ALWAYS bites, doing 13-158 hp damage each time: <br>
+</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+        <small><font face="Lucida Console">408 500 100 5d30+8 -1 </font></small><br>
+        <br>
+        <strong><a name="Spell attack:"><font color="#FF0000"><big><big>Spell 
+        attack:</big></big></font></a><br>
+        </strong>Code at least one physical attack first. Frail as he may be, 
+        the mob<br>
+        still can hit! </p>
+      <p>You can't code more than 10 attacks (physical + magical).<br>
+        <br>
+        &nbsp;&nbsp;&nbsp; &lt;<a href="speltabl.html">spell number</a>&gt; 0 
+        &lt;<a href="mob_styp.html#Percent Chosen">percent chosen</a>&gt; &lt; 
+        spell dice&gt;<br>
+        <br>
+        Spell&nbsp; dice:<br>
+        <br>
+        The format for the spell dice is <strong><big>x</big></strong>d<strong> 
+        <big>0</big></strong>+<strong><big>z</big></strong></p>
+
+<p>The first number&nbsp; is the target of the spell:</p>
+
+<p>1 - Offensive spell, cast on enemies<br>
+2 - Defensive spell, cast on self<br>
+</p>
+
+<p>The second number, determines the SKILL to which the mob has the
+spell, or how
+frequently the mob successfully casts it.&nbsp; <br>
+For example:</p>
+
+<p>28 0 50 2d0+75</p>
+
+<p>This mob casts heal (spell #28) 50% of the time.&nbsp; He casts it on
+himself, and 75%
+of the time, the spell works.<br>
+<br>
+<br>
+In the example below, the mob will cast the &quot;harm&quot; spell
+(spell #27) 50% of the
+time at the player, with a 95% chance of the spell being cast
+successfully. (even mobs
+&quot;lose concentration&quot; sometimes!):<br>
+&nbsp;&nbsp;&nbsp; <br>
+27 0 50 1d0+95<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<br>
+<strong><big><big><font color="#FF0000"><a name="Percent Chosen">Percent
+Chosen</a></font></big></big><br>
+</strong><br>
+This number is the percent this line is chosen. When all the attacks
+(physical AND spell
+AND skill) have been entered, <font color="#004080"><em>this column
+needs to add up to 100</em></font>.
+If you have one entry, it is 100. If you have two or more entries, then
+you have to decide
+how often one is used over the other normally. For example, Bob the mob
+fighter is armed
+with a dagger (off hand) and a sword, on hand so you want Bob to hit
+with the sword maybe
+85% of the time and the dagger 15% of the time. This is a trade off you
+have to make. Of
+course since you assign damage, you may want to simulate a different
+type of sword, where
+it pierces for more damage 10% of the time and slashes the remaining 75%
+. All three
+entries still comes up to 100%.<br>
+<br>
+<br>
+<br>
+<a name="Skill Attacks"><big><big><strong><font color="#FF0000">Skill
+Attacks</font></strong></big></big></a>
+<br>
+<br>
+Skill attacks are similar to spell attacks. </p>
+
+<p>&lt;<a href="skills.html">skill number</a>&gt; 0 &lt;<a href=
+"mob_styp.html#Percent Chosen">percent chosen</a>&gt; 0d0+0</p>
+
+<p>Useful skills to code? </p>
+
+<p>&nbsp;</p>
+
+</font><table border="0" width="90%">
+  <tr>
+    <td width="6%" align="right"><font face=
+"trebuchet ms, arial, helvetica">323</font></td>
+    <td width="11%"><font face=
+"trebuchet ms, arial, helvetica">kick</font></td>
+    <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">373</font></td>
+    <td width="13%"><font face=
+"trebuchet ms, arial, helvetica">pugilism</font></td>
+    <td width="9%" align="right"><font face=
+"trebuchet ms, arial, helvetica">324</font></td>
+    <td width="53%"><font face=
+"trebuchet ms, arial, helvetica">bash (only works if you give the mob a
+shield)</font></td>
+  </tr>
+  <tr>
+    <td width="6%" align="right"><font face=
+"trebuchet ms, arial, helvetica">345</font></td>
+    <td width="11%"><font face=
+"trebuchet ms, arial, helvetica">disarm foe</font></td>
+    <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+    <td width="13%"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+    <td width="9%" align="right"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+    <td width="53%"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+  </tr>
+</table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <a href="mob_over.html">Overview</a> - <a href="mob_styp.html"> 
+        Top</a><img src="images/red_rule.GIF" width=
+"711" height="7" alt="WB00852_.GIF (317 bytes)"><font color="#FF0000"> <br>
+        </font><a name="Skills"><font color="#FF0000"><big><big>Skills</big> </big></font></a></p>
+      <p>After the attacks, you may list the innate skills the mobs have and to 
+        what degree they have them (seen as a percentage). The mob will be given 
+        many skills based on their level, class and race, however you can also 
+        specify skills such as parry and unfair_fight. &nbsp;&nbsp;&nbsp; <em>If 
+        you code a skill attack such as kick, you must also code it in this section.</em></p>
+      <p>The format for the &quot;non-fighting list&quot;, or skill set, is <br>
+        <br>
+        &lt;<a href="skills.html">skill number</a>&gt; &lt;% effective&gt; &lt; 
+        skill number&gt; &lt;%effective&gt; .... -1</p>
+      <p>You are limited to 10 skills. <br>
+      Please note that a mob with many skills will cause local lag, <br>
+      especially if there are several of them in the same room. <br>
+      So use the set skills to a minimal extent. &nbsp;&nbsp;&nbsp; <br>
+        <br>
+        <img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <a href="mob_over.html">Overview</a> - <a href="mob_styp.html"> 
+        Top</a><img src="images/red_rule.GIF" width=
+"711" height="7" alt="WB00852_.GIF (317 bytes)"><br>
+        <big><font color="#FF0000"><big><a name="RESISTANCE LIST">Resistances</a
+></big></font><br>
+        You can code resistances to damage-causing spells such as dragonbreath 
+        or magic missile. These are coded in the same way you code skills in the 
+        section above. For example:</big></p>
+      <p>32 100 -1</p>
+      <p>would give 100% resistance to magic missile. There are two cautions, 
+        however:</p>
+      <p>1) You cannot provide resistance to more passive spells, such as blindness.<br>
+        2) When you code these resistances, the ones the mud gives the mob by 
+        default (charm, summon and sleep) are removed.<br>
+        3) You are limited to 10 spell resistances.</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_over.html">Overview </a> -<a href="mob_styp.html"> 
+        Top</a><img src="images/red_rule.GIF"
+width="711" height="7" alt="WB00852_.GIF (317 bytes)"><font color=
+"#FF0000"><br>
+        </font><a name="Gold"><font color="#FF0000"><big><big><b>Gold</b></big></big> 
+        </font></a><br>
+        You <b>must</b> give mobs at least 1 gold coin.&nbsp; The amount should 
+        depend on the mob, not his level or difficulty.&nbsp; A nobleman would, 
+        for example, have more gold than a peasant.<br>
+      </p>
+      <p><img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)" align=
+"middle" WIDTH="25" HEIGHT="25"> <a href="mob_over.html">Overview</a> - <a href="mob_styp.html"> 
+        Top</a><img src="images/red_rule.GIF" width=
+"711" height="7" alt="WB00852_.GIF (317 bytes)"><br>
+        <a name="Experience"><big><big><font color="#FF0000"><b>Experience</b></font> 
+        </big></big></a><br>
+        Generally, this number is three times the amount of experience points 
+        the mob is worth. &nbsp; A mob worth 100,000 experience points (to the 
+        player) is coded with 300,000.<br>
+      </p>
+      <p>&nbsp;<img src="images/small_black_arrow.GIF" alt="WB01570_.gif (184 bytes)"
+align="middle" WIDTH="25" HEIGHT="25"> <a href="mob_over.html">Overview </a> -<a href="mob_styp.html"> 
+        Top</a> </p>
+      <p><img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"><font color="#FF0000"><br>
+        </font><a name="Load Position"><font color="#FF0000"><big><big><b>Position</b> 
+        </big></big></font></a><br>
+        <br>
+        Load position is the position the mob is in when loaded.&nbsp; Default 
+        position is the one he goes back to after a battle.&nbsp; The room description 
+        is only displayed when the mob is standing ...</p>
+      </font> 
+      <table border="0" width="100%" height="226">
+  <tr>
+    <td width="5%" align="right" height="21"><font face=
+"trebuchet ms, arial, helvetica">0</font></td>
+    <td width="22%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Dead</font></td>
+    <td width="73%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Reserved for internal use. Do not
+set.</font></td>
+  </tr>
+  <tr>
+    <td width="5%" align="right" height="21"><font face=
+"trebuchet ms, arial, helvetica">1</font></td>
+    <td width="22%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Mortally Wounded</font>
+</td>
+    <td width="73%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Reserved for internal use. Do not
+set.</font></td>
+  </tr>
+  <tr>
+    <td width="5%" align="right" height="21"><font face=
+"trebuchet ms, arial, helvetica">2</font></td>
+    <td width="22%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Incapacitated</font></td>
+    <td width="73%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Reserved for internal use. Do not
+set.</font></td>
+  </tr>
+  <tr>
+          <td width="5%" align="right" height="27"><font face=
+"trebuchet ms, arial, helvetica">3</font></td>
+          <td width="22%" height="27"><font face=
+"trebuchet ms, arial, helvetica">Stunned</font></td>
+          <td width="73%" height="27"><font face=
+"trebuchet ms, arial, helvetica">Reserved for internal use. Do not set.</font></td>
+  </tr>
+  <tr>
+    <td width="5%" align="right" height="21"><font face=
+"trebuchet ms, arial, helvetica">4</font></td>
+    <td width="22%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Sleeping</font></td>
+    <td width="73%" height="21"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+  </tr>
+  <tr>
+    <td width="5%" align="right" height="21"><font face=
+"trebuchet ms, arial, helvetica">5</font></td>
+    <td width="22%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Resting</font></td>
+    <td width="73%" height="21"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+  </tr>
+  <tr>
+    <td width="5%" align="right" height="21"><font face=
+"trebuchet ms, arial, helvetica">6</font></td>
+    <td width="22%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Sitting</font></td>
+    <td width="73%" height="21"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+  </tr>
+  <tr>
+    <td width="5%" align="right" height="21"><font face=
+"trebuchet ms, arial, helvetica">7</font></td>
+    <td width="22%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Fighting</font></td>
+    <td width="73%" height="21"><font face=
+"trebuchet ms, arial, helvetica">Reserved for internal use. Do not
+set.</font></td>
+  </tr>
+  <tr>
+    <td width="5%" align="right" height="22"><font face=
+"trebuchet ms, arial, helvetica">8</font></td>
+    <td width="22%" height="22"><font face=
+"trebuchet ms, arial, helvetica">Standing</font></td>
+    <td width="73%" height="22"><font face=
+"trebuchet ms, arial, helvetica"></font></td>
+  </tr>
+</table>
+      <font face="trebuchet ms, arial, helvetica"> </font>
+      <p></p>
+      <p><font face="trebuchet ms, arial, helvetica"><img src="images/red_rule.GIF" width="711" height="7" alt=
+"WB00852_.GIF (317 bytes)"></font></p>
+      <font face="trebuchet ms, arial, helvetica"><a name="MagicResistance"><font color="#FF0000"><big><big><b>Magic 
+      Resistance</b> </big></big></font></a><br>
+      <br>
+      &lt;1&gt; &lt;2&gt; &lt;3&gt; &lt;4&gt; &lt;5&gt;<br>
+      <p>Magic Resistance is currently added in a similar way to mob actions. 
+        You must add two lines just AFTER any mob actions, of the following form: 
+        R <1> <2> <3> <4> <5> where 1,2,3,4+5 are the different resistances. Currently 
+        1-4 do not work and should be set to -1. This tells the mud to set them 
+        to default levels. 5 is <font color="#996633"><b>magic resistance</b></font> 
+        which works the same way it does for mortals, i.e. it is a percentage 
+        chance of taking effect. If it happens, damage caused by magic is halved. 
+        If you don't want to add any magic resistance just leave this section 
+        out.</p>
+      <p><a href="mob_comm.html">Top</a><br>
+        <br>
+      </p>
+      </font></td>
+  </tr>
+</table></body>
+</html>

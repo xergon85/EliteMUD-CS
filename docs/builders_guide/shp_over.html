@@ -1,0 +1,549 @@
+<html>
+
+<head>
+
+<title>Shop Overview</title>
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333"
+alink="#FF3333"><font face=
+"trebuchet ms, arial, helvetica">
+
+<h1><font color="#000080">Shop Overview</font></h1>
+
+<p><font color="#000080"><a href="shp_file.html">The File</a><br>
+</font><br>
+The .shp file contains all the information necessary to make a working
+shop in a mud. It
+seems to be the most difficult type of file.<br>
+<br>
+Below you will find first an archetype with comments, an example,
+explanations, a
+&quot;clean&quot; archetype, and finally comments, tips, and
+suggestions.<br>
+</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><a href="shp_over.html#SHOP VNUM"><font
+color="#000080">#vnum~ </font></a></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">any
+number appears to work</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><a href="shp_over.html#ITEMS FOR SALE">
+<font color="#000080">&lt;item
+    sold vnum 1&gt;</font></a></font></td>
+    <td rowspan="4"><font face=
+"trebuchet ms, arial, helvetica">Be sure to GIVE one of each of the
+items to the shopkeeper in the zone
+    file.<br>
+Items not given but listed will only be sold after the shopkeeper has it in his possession, while given but not listed will only be sold once.</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;item sold
+vnum 2&gt;</font></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;item sold
+vnum 3&gt;</font></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;item sold
+vnum 4&gt;</font></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;item sold
+vnum n&gt;</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Max of
+about 10 different items to stock</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">-1</font><!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Note:
+-1 tells mud code &quot;End of list&quot;</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><a href=
+"shp_over.html#PRICE VS. BUYING"><font color="#000080">&lt;multiple
+    for selling items&gt;</font></a></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">This
+is the &quot;mark up&quot;.&nbsp; If the value of an item is 10 and the
+markup is
+    1.2, the item will sell for 12 coins.</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;multiple for
+buying items&gt;</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">This
+is the discount.&nbsp; If the value of an item is 10 and the discount is
+.8, the
+    shopkeeper will pay a player 8 coins for the item.
+</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><a href="shp_over.html#ITEMS BOUGHT">
+<font color="#000080">&lt;item type
+    bought 1&gt;</font></a></font></td>
+    <td rowspan="5"><font face=
+"trebuchet ms, arial, helvetica">Note: the &quot;type&quot; refers to the <a href="obj_fram.html">object 
+      type</a> as in the .obj file weapons are 5 potions are 10<!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;item type
+bought 2&gt;</font></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;item type
+bought 3&gt;</font></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;item type
+bought 4&gt;</font></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">&lt;item type
+bought n&gt;</font></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">-1</font><!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">(End
+of list)</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><a href="shp_over.html#MESSAGES"><font
+color="#000080">%s&lt;message
+    1&gt;~</font></a></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Out of
+stock</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">%s&lt;message
+2&gt;~</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Player
+trying to sell item he doesn't have </font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">%s&lt;message
+3&gt;~</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+Shopkeeper doesn't buy item type </font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">%s&lt;message
+4&gt;~</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">
+Shopkeeper out of cash </font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">%s&lt;message
+5&gt;~</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Player
+not enough gold</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#000080">%s&lt;message
+6&gt;~</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Sells
+player something</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">%s&lt;message
+7&gt;~</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Buys
+from player</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><a href="shp_over.html#Tempers"><font
+color="#0000A0">&lt;temper 1&gt;</font></a></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Player
+can't afford (1=calm 0=fight)</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">&lt;temper 2&gt;
+</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Player
+attacks shopkeeper</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">&lt;<a href=
+"shp_over.html#SHOPKEEPER">shopkeeper
+    vnum</a>&gt;</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica"><!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">0</font><!--
+mstheme--></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Always
+a 0 (zero)</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><a href="shp_over.html#Location"><font
+color="#0000A0">&lt;room vnum&gt;</font></a></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">Your
+mob will <strong>only </strong>sell in this room.</font>
+</td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><a href="shp_over.html#HOURS"><font
+color="#0000A0">&lt;open 1&gt;</font></a></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">&lt;close 1&gt;
+</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica"><!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">&lt;open 2&gt;
+</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">&lt;close 2&gt;
+</font></font></td>
+    <td><font face="trebuchet ms, arial, helvetica">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<!--
+mstheme--></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">#99999</font><!--
+mstheme--></font></td>
+    <td rowspan="2"><font face=
+"trebuchet ms, arial, helvetica">These two lines go at the end of the
+entire file.<p>&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font face=
+"trebuchet ms, arial, helvetica"><font color="#0000A0">$~</font><!--
+mstheme--></font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<br>
+Here's the example from the original docs:<br>
+<br>
+---example follows this line---<br>
+<a href="shp_over.html#SHOP VNUM">#2000~</a><br>
+2000<br>
+2001<br>
+2002<br>
+-1<br>
+1.2<br>
+0.8<br>
+5<br>
+9<br>
+-1<br>
+%s I don't have any of those!~<br>
+%s Are you sure you have one?~<br>
+%s Sorry--I don't buy those!~<br>
+%s I can't afford that... sorry.~<br>
+%s You can't quite afford that yet... sorry.~<br>
+%s That will be %d coins.~<br>
+%s Here's %d coins for that.~<br>
+1<br>
+0<br>
+2000<br>
+0<br>
+2000<br>
+8<br>
+12<br>
+13<br>
+17<br>
+---example precedes this line---<br>
+<br>
+The explanation:<br>
+<font color="#000080">************************** <a name="SHOP VNUM">
+SHOP VNUM</a>
+********************************<br>
+</font>#2000~<br>
+<br>
+The vnum of the shop. This number is not used by the mud for any<br>
+purpose, however.<br>
+&nbsp;&nbsp;&nbsp; <br>
+<font color="#000080">************************** <a name=
+"ITEMS FOR SALE">ITEMS FOR SALE</a>
+VNUMS *********************<br>
+</font>2000<br>
+...<br>
+-1<br>
+<br>
+These are the vnums of the particular items the shop sells. A -1 tells
+the mud to stop
+reading this part of the file. Vnums are of course from your .obj file.
+The shopkeeper can
+only stock 10 items from start<br><br>
+<br>
+<font color="#000080">***************** SELLING <a name=
+"PRICE VS. BUYING">PRICE VS.
+BUYING</a> PRICE MULTIPLIER **********</font><br>
+<br>
+1.2<br>
+0.8<br>
+<br>
+The first number is the multiple of the markup in price for selling, the
+second the
+multiple for buying from the players. With the above values, if you
+defined an object as
+being worth 100, the player will be able to sell it to a willing
+shopkeeper for 80, and
+the next player can buy it for 120.<br>
+<br>
+<font color="#000080">*********************** <a name="ITEMS BOUGHT">
+ITEMS BOUGHT</a>
+*********************************<br>
+</font>5<br>
+9<br>
+-1<br>
+<br>
+These are the item <strong>types</strong> the shop buys. (See list of <a
+href="obj_over.html#Type">object types</a>.) This example shop buys
+weapons and armor). A
+-1 tells the mud to stop reading this part of the file. The shop doesn't
+have to buy
+anything. The -1 is required even in this case to tell the mud this
+value has been read.<br>
+<br>
+<br>
+<br>
+<font color="#000080">********************** SHOPKEEPER'S <a name=
+"MESSAGES">MESSAGES</a>
+TO PLAYER ************<br>
+</font><br>
+%s I don't have any of those!~<br>
+%s Are you sure you have one?~<br>
+%s Sorry--I don't buy those!~<br>
+%s I can't afford that... sorry.~<br>
+%s You can't quite afford that yet... sorry.~<br>
+%s That will be %d coins.~<br>
+%s Here's %d coins for that.~<br>
+<br>
+<br>
+These are all the messages the shopkeeper will say in particular
+situations. There are
+seven different slots for messages. They range as follows (in order):<br
+>
+<br>
+What the shopkeeper says when...<br>
+<br>
+1)... he doesn't have that object to sell.<br>
+2)... the player doesn't have that object to sell.<br>
+3)... he doesn't buy that type of item.<br>
+4)... he doesn't have enough money to buy an object.<br>
+5)... the player doesn't have enough money to buy an object.<br>
+6)... he sells an object.<br>
+7)... he buys an object.<br>
+<br>
+%s should precede the message (for say), and %d may also be used for the
+price of an
+object. Note each message ends with a tilde (~).<br>
+<br>
+<font color="#000080">*********************** <a name="Tempers">Tempers
+</a>
+******************************<br>
+</font><br>
+1<br>
+0<br>
+<br>
+A shop keeper's temper is controlled by two fields, the first for when
+the player can't
+afford the item, the second for when a player is attempting to kill the
+shopkeeper.<br>
+<br>
+Temper 1:<br>
+Value [0] The shopkeeper spits at the player<br>
+Value [1] The shopkeeper smokes a joint.<br>
+<br>
+Temper 2:<br>
+Value [0] The shopkeeper warns the player, and attacks!<br>
+Value [1] The shopkeeper insults the player, and no combat takes<br>
+place.<br>
+<br>
+<br>
+<font color="#000080">*********************** <a name="SHOPKEEPER">
+Shopkeeper</a>
+******************************<br>
+</font><br>
+2200<br>
+<br>
+The vnum of the shopkeeper. You CANNOT use the same shopkeeper VNUM in
+two different shops
+... But you CAN duplicate the mob in the mob file and give the second
+one a different
+VNUM, so that to the player, it will seem like the same shopkeeper. You
+can also have more
+than one instance of a particular mob, and only one of them will be the
+shopkeeper. For
+example, in the Elysium Faire zone, there are two &quot;Ribbon
+Sellers&quot; near the
+entrance to the Faire, but only one of them actually sells ribbons. Both
+may be killed. <br>
+<br>
+Shopkeepers don't <strong>have</strong> to be stationary (SENTINEL),
+however they will
+ONLY sell their items when they are in the room identified as their
+shop. Otherwise, the
+shop is closed!<br>
+&nbsp;&nbsp;&nbsp; <br>
+<font color="#000080">*********************** <a name="ZERO">ZERO</a>
+*************************************&nbsp;&nbsp;&nbsp; <br>
+</font><br>
+0<br>
+<br>
+This field is unused at present. Merely place a zero here.<br>
+<br>
+<font color="#000080">**************************** SHOP<a name=
+"Location"> Location</a>*******************************<br>
+</font><br>
+2200<br>
+<br>
+The vnum of the room the shop will be.<br>
+You can <strong>not</strong> have two shops in the same room.<br>
+<br>
+<font color="#000080">**************************** SHOP <a name="HOURS">
+HOURS</a> OF
+OPERATION *************<br>
+</font><br>
+8<br>
+12<br>
+13<br>
+17<br>
+<br>
+The hours fields are fairly simple. The first two are the opening and
+closing hours of the
+shop, in 24 hour time. The third and fourth are ALSO the opening and
+closing times of the
+shop. Thus, a shop can open and close more than once each day, as in our
+example:<br>
+<br>
+8<br>
+12<br>
+13<br>
+17<br>
+<br>
+(the example shop opens at 8 am, closes at noon -- lunch? -- reopens at
+1 pm, and closes
+at 5 pm).<br>
+<br>
+<br>
+<br>
+<font color="#000080">***************** <a name="TIPS and OBSERVATIONS">
+TIPS and
+OBSERVATIONS</a>****************<br>
+</font><br>
+* Any stationary mob can be a shopkeeper... this can advance the plot of
+a particular area
+no end if used cleverly. The shopkeeper doesn't have to be indoors, in a
+&quot;shop&quot;.<br>
+* Shopkeepers don't <strong>have</strong> to buy anything. Or sell
+anything...<br>
+* If you make shopkeepers very hard to kill, please don't make them
+aggressive or
+scavengers.</p>
+
+</font><table border="0" width="100%">
+  <tr>
+    <td width="21%"><font face=
+"trebuchet ms, arial, helvetica"><img src="images/ladybug.GIF" alt=
+"WB00711_.gif (889 bytes)" WIDTH="45" HEIGHT="46">
+<p>If it
+    doesn't work check the following:</font></td>
+    <td width="79%"><font face=
+"trebuchet ms, arial, helvetica"></font><!--msthemelist-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><a name="Bugs">Does every message begin
+with %s and end with ~</a></font><!--msthemelist--></td>
+</tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">The shopkeeper VNUM (from the mob file)
+comes first, then the shop<br>
+        location VNUM (from the wld file)</font><!--
+msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Did you give each shopkeeper one each
+of each of their items that<br>
+        they sell?</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Is the shopkeeper's vn unique? (for
+example, you can have two<br>
+        beer-sellers, but each must have his own number)
+</font><!--msthemelist--></td></tr>
+      <!--msthemelist--><tr><td valign="baseline" width="42"><img src=
+"images/artbul1a.gif" width="20" height="20" hspace="11"></td><td
+valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Shops can handle a max of about 10
+items in regular stock (i.e. in<br>
+        the .shp file) although they can handle a lot more if players
+sell them<br>
+        or give them to them to sell.</font><!--
+msthemelist--></td></tr>
+    <!--msthemelist--></table><font face=
+"trebuchet ms, arial, helvetica">
+    </font></td>
+  </tr>
+</table><font face="trebuchet ms, arial, helvetica">
+
+<p><br>
+<br>
+</p>
+</font></body>
+</html>

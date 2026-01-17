@@ -1,0 +1,125 @@
+<html>
+
+<head>
+<title>The File</title>
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333"
+alink="#FF3333">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td><font face="trebuchet ms, arial, helvetica"> 
+      <p align="center"><br>
+      </p>
+      <p align="center">&nbsp;</p>
+      </font></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td valign="top"><font face="trebuchet ms, arial, helvetica"> 
+      <h1><font color="#FF0080">The File</font></h1>
+      <p>The zone file is like The Force for zones -- It combines and
+relates
+        the files and binds them into one.&nbsp; The zone file tells the
+mud where
+        everything goes, when to refresh the zone, and what the limits
+are on
+        mobs and objects. </p>
+      <p>The zone file starts off with basic information about the
+zone.&nbsp;
+        Without a zone file the mud may not even load your .wld file ...
+<br>
+        <br>
+        #&lt;<a href="zon_file.html#Zone number">zone number</a>&gt;<br>
+        &lt;<a href="zon_file.html#Zone name">zone name</a>&gt;~<br>
+        &lt;<a href="zon_file.html#Top room number">top room number</a>
+&gt; &lt;<a href="zon_file.html#Lifespan">lifespan</a>&gt;
+        &lt;<a href="zon_file.html#Reset Mode">reset mode</a>&gt;<br>
+        &lt;<a href="zon_over.html">Zone Command</a>&gt; <font color=
+"#FF0080">{zero
+        or more zone commands}</font><br>
+        S<br>
+        #99999<br>
+        $~<br>
+        <br>
+        Lines starting with '*' are considered comments and ignored by
+the mud,
+        but not by those having to find mistakes. Zone commands
+themselves may
+        also be followed by comments. The file then ends with a capital
+letter
+        'S'.</p>
+      <p><a name="Zone number"><font color="#FF0080"><strong><big>Zone
+number</big></strong></font></a>
+      </p>
+      <p>This is the <strong>2 or 3 digit number</strong> assigned to
+you by the
+        world group leader.</p>
+      <p><a name="Zone name"><strong><font color="#FF0080"><big>Zone
+name</big></font></strong></a></p>
+      <p>A short descriptive name for your zone.&nbsp; When an imm does
+the &quot;show
+        zones&quot; command, this is what will show up.</p>
+      <p><a name="Top room number"><font color="#FF0080"><strong><big>
+Top room
+        number</big></strong></font></a></p>
+      <p>This is the highest numbered room in your .wld file.&nbsp; For
+example
+        if you had zone 30 and the last room you wrote was #3036, you
+would put
+        3036 here.</p>
+      <p><font color="#FF0080"><strong><big><a name="Lifespan">Lifespan
+</a> </big></strong></font></p>
+      <p>The length of time, in ticks, between zone resets.&nbsp; This
+varies
+        a LOT from zone to zone, and should be roughly the amount of
+time it takes
+        a player who can clear the zone to do so.&nbsp; Hell and the
+Elysium Faire
+        are 180, Tynstri is 220, lowlevel zones are much shorter.&nbsp;
+Show zones
+        will give you this information.&nbsp; The lifespan of the zone
+is a function
+        of both the level of the zone and the size.&nbsp; We have 18
+room level
+        70 zones with the same lifespan as a 100 room level 20 zone.</p>
+      <p><a name="Reset Mode"><font color="#FF0080"><strong><big>Reset
+Mode</big></strong></font></a></p>
+      <p>There are three possible codes here:</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="5%"><font face="trebuchet ms, arial, helvetica">0
+</font></td>
+          <td width="95%"><font face="trebuchet ms, arial, helvetica">
+Zone never
+            resets (clan zones, quest zones, godrooms)</font></td>
+        </tr>
+        <tr> 
+          <td width="5%"><font face="trebuchet ms, arial, helvetica">1
+</font></td>
+          <td width="95%"><font face="trebuchet ms, arial, helvetica">
+Zone only
+            resets when there are no players (or imms) in it.</font></td
+>
+        </tr>
+        <tr> 
+          <td width="5%"><font face="trebuchet ms, arial, helvetica">2
+</font></td>
+          <td width="95%"><font face="trebuchet ms, arial, helvetica">
+Zone resets
+            whether or not there are players in it.&nbsp; Most Elite
+zones are
+            this way now.</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><a href="zon_over.html">Zone commands</a></p>
+      </font></td>
+  </tr>
+</table>
+</body>
+</html>

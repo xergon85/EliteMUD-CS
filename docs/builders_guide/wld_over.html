@@ -1,0 +1,1637 @@
+<html>
+
+<head>
+
+<title>World Overview</title>
+
+<style type=
+"text/css">
+<!--
+a:active {  color: #CC3399; text-decoration: none; font-weight: bold;
+font-family: Verdana, Arial, Helvetica, sans-serif}
+a:hover {  color: #CC3399; text-decoration: none; font-weight: bold;
+font-family: Verdana, Arial, Helvetica, sans-serif}
+a:link { color: #FF0033; text-decoration: none ; font-family: Verdana,
+Arial, Helvetica, sans-serif}
+a:visited { color: #FF0000; text-decoration: none ; font-weight:
+normal; font-variant: normal; font-family: "Trebuchet MS"}
+-->
+</style>
+<style type="text/css">
+<!--
+td {  font-family: "Trebuchet MS"}
+-->
+</style>
+</head>
+<body
+bgcolor="#FFFFFF" text="#000000" link="#CC0000" vlink="#333333" alink=
+"#FF3333">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr> 
+    <td><font face="trebuchet ms, arial, helvetica"> 
+      <p align="center"><br>
+      </p>
+      <p align="center">&nbsp; 
+      </font></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr> 
+    <td valign="top"><font face=
+"trebuchet ms, arial, helvetica"> 
+      <h1><font
+    face="trebuchet ms, arial, helvetica" color="#800000">World Overview </font></h1>
+      <p>The world file describes the room and links it to other rooms.&nbsp; 
+        It shapes what the players see of the world itself.&nbsp; Customarily 
+        at Elite, zones are parceled into 100 room blocks starting from 00 and 
+        running to 99.&nbsp;&nbsp; If a zone needs more than 100 rooms, the zone 
+        number will remain the same, but the first part of the room number will 
+        not reflect the zone number.</p>
+      <p>For example, Tynstri is 200 rooms, starting with 6600 and ending with 
+        6799.&nbsp; It is all still in zone 66.&nbsp; This means there is just 
+        one zone file, and the zone number in every room in the zone is 66, even 
+        for those rooms whose room number begins with 67.&nbsp; If this doesn't 
+        make <a name="A room"></a>a lot of sense yet, don't worry.&nbsp; There 
+        are very few zones over 100 rooms, and if you are writing one it will 
+        become clear long before you get to your 101st room!</p>
+      </font> 
+      <pre><a name="A room">A room</a>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #
+&lt;<a href="wld_over.html#Room Number">Room Number</a>&gt;
+&lt;<a href="wld_over.html#Room Name">Room Name</a>&gt;~
+&lt;<a href="wld_over.html#Room Description">Room Description</a>&gt; 
+<big><strong><font face="Verdana, Arial, Helvetica, sans-serif"><b><em><font size="+1">~</font></em></b></font></strong></big>
+&lt;<a href="wld_over.html#Zone Number">zone #</a>&gt; 
+&lt;<a href= "wld_over.html#Room Flags">room flags</a>&gt; 
+&lt;<a href="wld_over.html#Sector Type">terrain</a>&gt;
+[&lt;<a href="wld_over.html#Exits">Exits</a>&gt;]{0-6 possible}
+[&lt;<a
+href="wld_over.html#Exit Description">Extra descriptions</a>&gt;] {0+ possible}
+<em><b><font face="Verdana, Arial, Helvetica, sans-serif" size="+1">&gt;</font></b></em><a href="wld_over.html#RoomProcs">room proc</a> (if any)<strong><font face="Verdana, Arial, Helvetica, sans-serif"><b><em><font size="+1">~</font></em></b></font></strong>
+<br>Room proc message
+<strong><b><font face="Verdana, Arial, Helvetica, sans-serif" size="+1">~</font></b><font size="+1"><b><font face="Verdana, Arial, Helvetica, sans-serif">
+</font></b></font><big><font face="Verdana, Arial, Helvetica, sans-serif" size="+1">S</font></big></strong> <font face="Verdana, Arial, Helvetica, sans-serif" size="+1">&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;{End of Record Mark}</pre>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Each of these fields have their own
+formats
+        as described below:</p>
+      <p><a name="Room Number"><font color="#800000"><strong><big>Room
+Number</big></strong></font></a>
+        (VNUM)</p>
+      <p>Format:&nbsp; #&lt;number&gt;&lt;<a href="presentr.html">cr</a>
+&gt;</p>
+      <p>This is the room's unique identifying number.&nbsp; The first
+room in
+        a zone normally ends in &quot;00&quot;.&nbsp; For example in
+zone 3, the
+        first room would be 300. &nbsp; The rooms must appear in the
+file in numeric
+        order, but there may be gaps.&nbsp; If you are missing room
+number 310,
+        for example, the zone will still load and function normally.</p>
+      <p>&nbsp;</p>
+      <p><font color="#800000"><strong><big><a name="Room Name">Room
+Name </a>~</big></strong></font></p>
+      <p>Format:&nbsp; &lt;name&gt;~</p>
+      <p>This is the name of the room and should be descriptive! It is
+all that
+        is seen when: </p>
+      </font>
+      <table border="0" cellpadding="0"
+cellspacing="0" width="100%">
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">a player has toggled &quot;brief&quot; </font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">a player types &quot;cast &quot;locate object&quot; 
+            pcorpse</font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">an immortal types &quot; rlist &lt; start room&gt; 
+            &lt;end room&gt;&quot;</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;</p>
+      <p>It should begin with a capital letter and end with a tilde (~) .&nbsp; 
+        You may choose to capitalize all the important words ... or not! </p>
+      <p>&nbsp;</p>
+      </font>
+      <table border="0" width="101%">
+        <tr> 
+          <td width="103%" colspan="2"><font face=
+"trebuchet ms, arial, helvetica" color="#800000"> 
+            <p align=
+"center"><a
+        name="Roolz for Room Names"><strong>Roolz for Room Names</strong
+></a> 
+            </font></td>
+        </tr>
+        <tr> 
+          <td width="67%"> 
+            <table border="0"
+        cellpadding="0" cellspacing="0" width="100%">
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace="11"
+></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Room names are capitalized and <strong>
+uncolored</strong>.</font>
+                </td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace="11"
+></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Do not end with punctuation</font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">The room name should summarize the room
+itself.&nbsp;
+                  </font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Several rooms can have the same name if
+they
+                  are part of a grouped area or maze, but generally
+should have
+                  slightly different names to make the player feel they
+have moved.</font>
+                </td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Keep it short and sweet (under 72
+characters)
+                  </font></td>
+              </tr>
+            </table>
+            
+          </td>
+          <td width="36%"><font face=
+"trebuchet ms, arial, helvetica"><img src=
+"images/donkey.gif"
+        alt="donkey.wmf (5078 bytes)" width="267"
+height="220"></font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><a
+    name="Room Description"><font color="#800000"><strong><big>Room
+Description</big></strong></font></a></p>
+      <p>Format:&nbsp; &lt;3 space indentation&gt;&lt;3 lines of
+description&gt;&lt;<strong>cr</strong>&gt;~</p>
+      <p>(Note:&nbsp; &lt;cr&gt; stands for &quot;carriage return&quot;
+and just
+        means you hit the enter key right there.)</p>
+      <p>When you walk into a room or type &quot;look&quot; when you are
+in a
+        room, this is what you see.&nbsp; It should give you a feeling
+that you
+        are actually IN the room, and shouldn't assume that you came
+into the
+        room from any particular direction.&nbsp; You should descrbe
+obvious exits
+        to the room.</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="100%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000"> 
+            <p align=
+"center"><strong>Guidelines and Standards for Room Descriptions</strong> 
+            </font></td>
+        </tr>
+        <tr> 
+          <td width="91%"> 
+            <table border="0"
+        cellpadding="0" cellspacing="0" width="100%">
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">The room description <strong>must
+</strong> begin
+                  with a <strong>3 space indentation</strong> and be
+<strong>
+                  at least</strong> <strong>3 lines long</strong>.&nbsp;
+Follow
+                  it with a tilde (<strong>~ </strong>) on a line by
+itself.&nbsp;</font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Use color sparingly. </font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Stick to a medieval way of describing what a 
+                  player sees in a room.&nbsp; All items should be from a fantasy 
+                  story, not something contemporary or science fiction.&nbsp; 
+                  There are no guns, but maybe you might find an arquebus.&nbsp; 
+                  No bathrooms, but privies and chamber pots. The description 
+                  sets the stage for the action.&nbsp; Your role is to help the 
+                  player visualize the room. </font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Describe what a character sees
+REGARDLESS of
+                  where they entered or are pointed. Use compass
+directions (East,
+                  west, south, north) instead of pointing directions
+(left, right,
+                  ahead, behind).</font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Extra descriptions help focus attention
+to things
+                  that may or may not be important. &nbsp; Use them!
+</font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Do not refer to mobs or items in the
+description
+                  or room name as the mob might be dead, or charmed and
+following
+                  someone else.&nbsp; An item might be taken or
+sacrificed.&nbsp;
+                  It is okay to refer to a mob in the description as if
+they aren't
+                  here, like &quot;the long wooden bar is where the
+bartender
+                  serves drinks when he is on duty.&quot;</font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">don't make a hard reference to time
+related events,
+                  such as weather, moon or sunrise, seasons, etc.</font>
+</td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Don't refer to special Elite landmarks as within 
+                  sight.&nbsp; They may move or be removed, or your zone may go 
+                  in somewhere other than where you expect. </font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Do not use directions (north, south,
+up, etc)
+                  as keywords for extra descriptions. &nbsp; The mud
+will check
+                  the direction instead of the extra description..&nbsp;
+&nbsp;&nbsp;&nbsp;
+                  </font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">If you want to hide mob from scouting,
+you need
+                  to have ups and downs (stairs, ladders, etc) to block
+players
+                  with scout. </font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="17%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000"><a name=
+"Death Traps"><big>Death Traps</big></a></font></td>
+          <td width="83%"> 
+            <table border="0"
+        cellpadding="0" cellspacing="0" width="100%">
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Death Traps (DTs) don't always give
+time to be
+                  read, so make them short and sweet, but let the player
+know
+                  why they died there.</font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Do <strong>not</strong
+> overuse death traps. </font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">When making a DT (deathtrap -- a room
+with a
+                  death flag) make exits back to the rooms that lead to
+it...
+                  so people in those rooms can hear the scream. </font>
+</td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Make a DT room light, so the title
+shows up,
+                  making it look innocent.</font></td>
+              </tr>
+              <tr> 
+                <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+            src="images/artbul1a.gif" width="20" height="20" hspace=
+"11"></font></td>
+                <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">You can track through a Death
+trap.&nbsp; If
+                  you want to prevent players from auto-tracking a mob,
+you can
+                  put a DT in the path ... or you can put the mob in a
+room marked
+                  no_track.</font></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><font
+    color="#800000"><strong><big><a name="Zone Number">Zone Number</a>
+</big></strong></font></p>
+      <p>This is the 2 or 3 digit number that the mud will use to refer
+to all
+        the rooms in your zone.&nbsp; If your zone is 100 rooms or less,
+this
+        is the number you were given when you began writing.&nbsp; If
+your zone
+        is more than 100 rooms, this is the lowest number you were
+given.</p>
+      <p><a name="Room Flags"><font color="#800000"><strong><big>Room
+Flags</big></strong></font></a></p>
+      <p>These are a series of letters give the room special
+characteristics.&nbsp;
+        This, for example, is the way we create a death trap.&nbsp; Not
+all of
+        the flags listed below have been implemented.&nbsp; As with
+other tables
+        you will find in the guide, options which do not work or should
+not be
+        chosen for some other reason have been marked with pale yellow.
+</p>
+      <p>&nbsp;</p>
+      </font>
+      <table border="0" width="100%">
+        <caption><font color="#800000">Room Flags</font></caption>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Name</font></td>
+          <td width="15" valign="top"><font face=
+"trebuchet ms, arial, helvetica">code </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Notes </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Dark</font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">a </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Can't see without light. </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Death </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">b </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Death Trap.&nbsp; You enter.&nbsp; You
+die.</font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">No mob </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">c </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">No mob chooses to enter unless they are
+tracking
+            down someone who attacked them (!).&nbsp; If they do enter
+when tracking
+            a player, they lose the track. </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Indoors </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">d </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">No outdoor msg effects </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Lawfull <small>(<em>sic
+</em>)</small></font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">e </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">No steal/aggressing/summon , like
+temple.&nbsp;
+            Charm does work, though</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80" width="110" valign="top"> <font face=
+"trebuchet ms, arial, helvetica" color="#800000">Neutral
+            </font></td>
+          <td bgcolor="#FFFF80" width="15" align="center"
+valign="top"><font
+        face="trebuchet ms, arial, helvetica">f</font></td>
+          <td bgcolor="#FFFF80" width="461" valign="top"> <font face=
+"trebuchet ms, arial, helvetica">To
+            be defined </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Chaotic </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">g </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Leave random exit regardless of
+direction.&nbsp;
+            Annoying, but it can make a small area seem huge.</font></td
+>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">No magic </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">h </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">No spells castable in room </font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80" width="110" valign="top"> <font face=
+"trebuchet ms, arial, helvetica" color="#800000">Tunnel
+            </font></td>
+          <td bgcolor="#FFFF80" width="15" align="center"
+valign="top"><font
+        face="trebuchet ms, arial, helvetica">i</font></td>
+          <td bgcolor="#FFFF80" width="461" valign="top"> <font face=
+"trebuchet ms, arial, helvetica">To
+            be defined: One person in at a time </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Private </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">j </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">If 2+ people in no scry or magical
+entry.&nbsp;
+            (You can walk in but you can't trans in.&nbsp; You also
+can't<strong>
+            tell</strong> to someone in a private room ...)</font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Godroom </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">k </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">No mortal entry wo/transing, no track
+through</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF80" width="110" valign="top"> <font face=
+"trebuchet ms, arial, helvetica" color="#800000">BFS
+            mark </font></td>
+          <td bgcolor="#FFFF80" width="15" align="center"
+valign="top"><font
+        face="trebuchet ms, arial, helvetica">l </font></td>
+          <td bgcolor="#FFFF80" width="461" valign="top"> <font face=
+"trebuchet ms, arial, helvetica">Not
+            defined:Breath for sec mark (holdbreath) </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Zero Mana </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">m </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Removes all mana &amp; puts player to
+sleep</font></td>
+        </tr>
+        <tr> 
+          <td width="110" bgcolor="#FFFFFF" valign="top"> <font face=
+"trebuchet ms, arial, helvetica" color="#800000">Dispell
+            <small> (<em>sic</em>)</small></font></td>
+          <td width="15" bgcolor="#FFFFFF" align="center"
+valign="top"><font
+        face="trebuchet ms, arial, helvetica">n</font></td>
+          <td width="461" bgcolor="#FFFFFF" valign="top"> <font face=
+"trebuchet ms, arial, helvetica">Removes noninnate player affects </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000"> Silent&nbsp;</font>
+</td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">o </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">&nbsp;Only qs,&nbsp; say, wizline work
+in here
+            </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">In Air </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">p </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">&nbsp;In air movement only (fly) </font
+></td>
+        </tr>
+        <tr> 
+          <td width="110" bgcolor="#FFFF80" valign="top"> <font face=
+"trebuchet ms, arial, helvetica" color="#800000">OCS
+            </font></td>
+          <td width="15" bgcolor="#FFFF80" align="center"
+valign="top"><font
+        face="trebuchet ms, arial, helvetica">q</font></td>
+          <td width="461" bgcolor="#FFFF80" valign="top"> <font face=
+"trebuchet ms, arial, helvetica">INTERNAL
+            ONLY:Changed in OCS mark </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">PKOK</font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">r </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">PK allowed in the room wo/KILLER
+Flag.&nbsp;
+            Room is also no-summon</font></td>
+        </tr>
+        <tr> 
+          <td width="110" bgcolor="#FFFFFF" valign="top"> <font face=
+"trebuchet ms, arial, helvetica" color="#800000">Arena
+            </font></td>
+          <td width="15" bgcolor="#FFFFFF" align="center"
+valign="top"><font
+        face="trebuchet ms, arial, helvetica">s</font></td>
+          <td width="461" bgcolor="#FFFFFF" valign="top"> <font face=
+"trebuchet ms, arial, helvetica">Not
+            defined: No penalty fighting </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Regen </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">t </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Faster HP growth </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">No teleport</font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">u </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">No random teleporting into </font></td>
+        </tr>
+        <tr> 
+          <td width="110" bgcolor="#FFFF80" valign="top"> <font face=
+"trebuchet ms, arial, helvetica" color="#800000">No
+            Scry </font></td>
+          <td width="15" bgcolor="#FFFF80" align="center"
+valign="top"><font
+        face="trebuchet ms, arial, helvetica">v</font></td>
+          <td width="461" bgcolor="#FFFF80" valign="top"> <font face=
+"trebuchet ms, arial, helvetica">(not
+            working) Can't see in by spell/skill.&nbsp; Scout will not
+allow you
+            to see into this room. </font></td>
+        </tr>
+        <tr> 
+          <td width="110" bgcolor="#FFFF80" valign="top"> <font face=
+"trebuchet ms, arial, helvetica" color="#800000">No
+            Flee </font></td>
+          <td width="15" bgcolor="#FFFF80" align="center"
+valign="top"><font
+        face="trebuchet ms, arial, helvetica">w</font></td>
+          <td width="461" bgcolor="#FFFF80" valign="top"> <font face=
+"trebuchet ms, arial, helvetica">Not
+            working:Can't wimp/flee in room </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Damage </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">x </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Lose a token set of hitpoints while in
+room </font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">No Track </font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">y </font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">No track.&nbsp; You can't track
+anything FROM
+            this room, and anyone tracking something from outside this
+room will
+            not be &quot;routed&quot; through this room.</font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top" height="40"><font
+face="Trebuchet MS" color="#800000">NoSweep </font></td>
+          <td width="15" align="center" valign="top" height="40"><font
+        face="trebuchet ms, arial, helvetica">z</font></td
+>
+          <td width="461" valign="top" height="40"><font
+face="trebuchet ms, arial, helvetica">NoSweep. Objects left lying on the
+ground
+            in this room will remain on the ground.</font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">NoScout</font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">A</font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Can't scout into the room</font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">NoSleep</font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">B</font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Can't sleep in the room</font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">NoSummon</font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">C</font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Can't summon mob or player from room
+</font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">NoQuit</font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">D</font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Player can not quit in the room
+</font></td>
+        </tr>
+        <tr> 
+          <td width="110" valign="top"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">NoDrop</font></td>
+          <td width="15" align="center" valign="top"><font
+face="trebuchet ms, arial, helvetica">E</font></td>
+          <td width="461" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Player can not drop item in room
+</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><a
+    name="Sector Type"><font color="#800000"><strong><big>Terrain
+(Sector type)</big></strong></font></a></p>
+      <p>The terrain, or sector type, tells the mud how many moves it
+should cost
+        the player to move in the room.&nbsp; It is much more difficult
+to climb
+        up a mountain than it is to walk across your room, and this is
+the mud's
+        way to reflect that effort.&nbsp; Some types of terrain require
+special
+        skills, for example climbing, swimming, or under water
+breathing.&nbsp;
+        Remember, though, that a player who is flying does not need to
+be able
+        to climb or swim.</p>
+      </font>
+      <table border="0" width="100%" height=
+"338">
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">0</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Inside </font></td
+>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">No movement cost</font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">1</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">City</font></td>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">Inside a town, village, city</font
+></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">2</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Field </font></td>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">Fields, scrub, caves</font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">3</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Forest </font></td
+>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">Woods, jungle</font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">4</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Hills </font></td>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">Rough caves, canyons, hard terrain </font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">5</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Mountain </font> </td>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">Climbing skill or flight required </font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">6</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Water_swim </font> </td>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">Swimming skill or boat (or flight) required</font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right" bgcolor=
+"#FFFF80"><font
+        face="trebuchet ms, arial, helvetica">7</font></td>
+          <td width="14%" height="19" valign="top" bgcolor="#FFFF80"> <font
+        face="trebuchet ms, arial, helvetica" color="#800000"> Water_noswim</font></td>
+          <td width="81%" height="19" valign="top" bgcolor="#FFFF80"> <font
+        face="trebuchet ms, arial, helvetica">Boat required (Note: I don't think 
+            this works yet)</font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="57" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">8</font></td>
+          <td width="14%" height="57" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Underwater </font> </td>
+          <td width="81%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">Dive skill (Not yet implemented) or underwater 
+            breathing (semi-implemented) required. If you don't have them, you 
+            take token drowning damage while here.</font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">9</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Air </font></td>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">Flight required</font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right" bgcolor=
+"#FFFF80"><font
+        face="trebuchet ms, arial, helvetica">10</font></td>
+          <td width="14%" height="19" valign="top" bgcolor="#FFFF80"> <font
+        face="trebuchet ms, arial, helvetica" color="#800000">Void</font
+></td>
+          <td width="81%" height="19" valign="top" bgcolor="#FFFF80"> <font
+        face="trebuchet ms, arial, helvetica">Don't code </font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right"><font
+        face="trebuchet ms, arial, helvetica">11</font></td>
+          <td width="14%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica" color="#800000">Desert </font></td
+>
+          <td width="81%" height="19" valign="top"><font
+face="trebuchet ms, arial, helvetica">Costs an extra thirst point while here</font></td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right">12</td>
+          <td width="14%" height="19" valign="top"><font color="#800000"> Frozen 
+            Waste </font></td
+>
+          <td width="81%" height="19" valign="top">Effects uncertain. Like field 
+            but with cold damage/slipping</td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right">13</td>
+          <td width="14%" height="19" valign="top"><font color="#800000">Frozen 
+            Mountains </font></td
+>
+          <td width="81%" height="19" valign="top">Effects uncertain. Like mountains, 
+            but with cold damage/slipping</td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right">14</td>
+          <td width="14%" height="19" valign="top"><font color="#800000">Frozen 
+            Underwater </font></td
+>
+          <td width="81%" height="19" valign="top">Dive or U/W breath required. 
+            Plus damage from cold.</td>
+        </tr>
+        <tr> 
+          <td width="5%" height="19" valign="top" align="right">15</td>
+          <td width="14%" height="19" valign="top"><font color="#800000">Frozen 
+            Ocean </font></td
+>
+          <td width="81%" height="19" valign="top">Cold damage as above, boat 
+            required.</td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>&nbsp;</p>
+      <p><a name="Exits"><font color="#800000"><big>Exits</big></font>
+</a> </p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="50%" valign="top"> 
+            <pre><small>D&lt;
+<a
+href="wld_over.html#Direction Codes:">direction</a>&gt;
+&lt;Exit description&gt;
+~
+&lt;door keywords&gt;
+~
+&lt;door flag&gt; &lt;key VNUM&gt; &lt;exit room&gt;</small>
+</pre>
+            
+          </td>
+          <td width="50%" valign="top"><font face=
+"Lucida Console"><small>D3</small><br>
+            <small>Through the bars of the gate, you can see the
+splendors of
+            Rome.</small><br>
+            <small>~</small><br>
+            <small>gate gates</small><br>
+            <small>~</small><br>
+            <small>1 -1 12011</small></font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>This exit has an unlocked gate leading west into Rome.</p>
+      <p><a name="Direction Codes:"><font color="#800000"><strong><big>
+Direction
+        Codes:</big></strong></font></a></p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">0 </font></td>
+          <td width="92%"><font face=
+"trebuchet ms, arial, helvetica">North </font></td>
+        </tr>
+        <tr> 
+          <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">1 </font></td>
+          <td width="92%"><font face=
+"trebuchet ms, arial, helvetica">East </font></td>
+        </tr>
+        <tr> 
+          <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">2 </font></td>
+          <td width="92%"><font face=
+"trebuchet ms, arial, helvetica">South </font></td>
+        </tr>
+        <tr> 
+          <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">3 </font></td>
+          <td width="92%"><font face=
+"trebuchet ms, arial, helvetica">West </font></td>
+        </tr>
+        <tr> 
+          <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">4 </font></td>
+          <td width="92%"><font face=
+"trebuchet ms, arial, helvetica">Up </font></td>
+        </tr>
+        <tr> 
+          <td width="8%" align="right"><font face=
+"trebuchet ms, arial, helvetica">5 </font></td>
+          <td width="92%"><font face=
+"trebuchet ms, arial, helvetica">Down </font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><a
+    name="Exit Description"><font color="#800000"><strong><big>Exit
+Description</big></strong></font></a></p>
+      <p>The exit description is what is shown when the the player looks
+that
+        direction, i.e., look &lt;direction&gt;, like, look north.</p>
+      <p><strong><a name="Door Keywords"><font color="#800000"><big>Door
+Keywords</big></font></a></strong></p>
+      <p>This is another &quot;alias list&quot;.&nbsp; You will see many
+of these
+        throughout the file.&nbsp; It is a short list of words that the
+player
+        can use to interact with something (a door, in this case).&nbsp;
+The player
+        will use one of these words to <strong><font
+    color="#800000">open</font>, <font color="#800000">close</font>,
+<font color="#800000">lock</font>,
+        <font color="#800000">bash</font>, <font color="#800000">pick
+</font> </strong>,
+        and <font
+    color="#800000"><strong>unlock</strong></font> a door.&nbsp; The
+first alias
+        is the one the mud will use when responding to a player.&nbsp;
+In the
+        example below, if a player enters:&nbsp; <font color="#800000">
+<strong>Open
+        oak</strong></font> &nbsp; the mud will respond with <font
+color="#800000"><strong>You
+        open the door. </strong></font>&nbsp; Alias lists always end
+with a tilde
+        (<font color="#800000"><strong><big>~ </big></strong></font>).
+</p>
+      <p>door oak~&nbsp; </p>
+      <p>If more than one door leads off from a room, give each a
+different alias.&nbsp;
+        If you have exits leading north and east, each with a door and
+each using
+        the alias &quot;door&quot;, the mud will always assume you are
+referring
+        to the door to the north, and the player will have to use
+door+direction
+        to open/close/unlock the door to the east.</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="13%"><font face=
+"trebuchet ms, arial, helvetica"><img src=
+"images/leaf.GIF"
+        alt="WB00700_.gif (2148 bytes)" WIDTH="49"
+HEIGHT="46"></font></td>
+          <td width="87%"><font face=
+"trebuchet ms, arial, helvetica"><font color="#800000"> <strong>Key
+names: </strong></font>Be
+            sure <strong>not</strong> to name the doors and the keys
+with the
+            same aliases.&nbsp; For example, if you have a large iron
+gate with
+            the door keywords &quot;iron gate&quot;, you must <strong>
+not </strong>use
+            the keywords &quot;iron&quot; or &quot;gate&quot; to
+describe the
+            key.&nbsp; Otherwise you will get the message back from the
+mud &quot;You
+            can't open that!&quot; (because, of course you <strong>can't
+</strong>
+            open a key).</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><a
+    name="Door Flag"><font color="#800000"><strong><big>Door Flag</big>
+</strong></font></a>
+        &nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p>The door flag is coded as a bitvector.&nbsp; This means that
+there are
+        many possible values, and you choose the number(s) associated
+with the
+        value(s) you want, and add them up.&nbsp; There are several
+examples below.</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="12%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000"><strong> Number</strong
+></font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000"><strong> Value</strong>
+</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">0 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">There is no door.&nbsp; This would be
+the normal
+            case in open terrain or for an archway or other unrestricted
+exit.&nbsp;
+            All other choices below require doors!</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">1 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">There is a door (gate, window, etc)
+that can
+            be opened and closed..&nbsp; </font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">2 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Closed.&nbsp; This is actually
+controlled in
+            the zone file, and I'm not sure it has any real meaning
+here. </font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">4 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Locked.&nbsp; Requires you to also code
+1.&nbsp;
+            A code of 1 (door) +2 (closed) + 4 (locked), with the proper
+zone
+            file coding, results in a door that is closed and locked
+when the
+            zone resets.</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">8 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Unused? </font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">16 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Unused? </font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">32 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Pickproof.&nbsp; Requires you to also
+code 1,
+            and it doesn't make sense without 4.</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">64 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Trap, part 1.&nbsp; Traps do not
+require doors
+            to go off.&nbsp; They have a 40% chance of going off any
+time a player
+            walks through them, and they cause random loss of hp to the
+player,
+            from 1 to 10% of the player's maximum hitpoints.</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">128 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Unused? </font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">256 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Bashproof.&nbsp; Requires you to also
+code 1
+            (so it's a door).</font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">512 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Unused? </font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">1024 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica" color="#800000">Unused? </font></td>
+        </tr>
+        <tr> 
+          <td width="12%" align="right" valign="top"><font
+face="trebuchet ms, arial, helvetica">2048 </font></td>
+          <td width="88%"><font face=
+"trebuchet ms, arial, helvetica">Trap, part 2.&nbsp; (see Trap, part 1)
+</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>Please see <a href="rome.html">the example .wld</a> file for
+examples
+        of these codes in use.</p>
+      <p>The initial state of all doors is open, but doors can be
+opened, closed,
+        and locked automatically when zones reset (see <a href=
+"zon_fram.html">the
+        zone file documentation</a> for details).</p>
+      <p><a name="Key Vnum"><font color="#800000"><strong><big>Key Vnum
+</big></strong></font></a>
+      </p>
+      <p>The virtual number of the key required to lock and unlock the
+door in
+        the direction given.&nbsp; A value of -1 means that there is no
+keyhole;
+        i.e., no key will open this door.&nbsp; If the Door Flag for
+this door
+        is 0, the Key Number is ignored.&nbsp; The key virtual number
+(VNUM) is
+        the same as the key's virtual number that unlocks this
+door.&nbsp; If
+        there is no door, use -1 for this value.</p>
+      <p><a name="Exit Room"><font color="#800000"><strong><big>Exit
+Room </big></strong></font></a>
+      </p>
+      <p>The vnum of the room that this exit leads you to.&nbsp; If this
+number
+        is -1, the exit will not actually lead anywhere.&nbsp; This is a
+sneaky
+        way to get the exit to show up on 'exits', or to add a
+description for
+        'look &lt;direction&gt;' without actually adding an exit in that
+direction.&nbsp;
+        The mud will not check for how &quot; logical&quot; your exit
+is, so you
+        can also code the room to exit back into itself.</p>
+      <p><a name="Extra descriptions"><font color="#800000"><big><strong
+> Extra
+        descriptions</strong></big></font> </a></p>
+      <p>are used to make rooms more interesting, and make them more
+interactive.&nbsp;
+        Extra descriptions are accessed by players when they type &quot;
+look &lt;
+        thing&gt;&quot;, where &lt;thing&gt; is any word you choose.
+&nbsp; For
+        example, you might write a room description which includes the
+tantalizing
+        sentence, &quot;The wall looks strangely soft.&quot;&nbsp; Using
+extra
+        descriptions, players could then see additional detail by typing
+&quot;look
+        wall&quot;.&nbsp; There can be a large number of Extra
+Descriptions in
+        each room.</p>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="23%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">E<br>
+            &lt;keyword list&gt;~<br>
+            &lt;description&gt;<br>
+            ~</font></td>
+          <td width="77%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">E<br>
+            table oak~<br>
+            A large shining oak table sits squarely in the middle of the
+room.&nbsp;
+            It looks like there may be some papers on it.<br>
+            ~ <br>
+            E<br>
+            papers~<br>
+            Upon closer inspection, you see a map.&nbsp; Perhaps it is a
+treasure
+            map!<br>
+            ~</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><font
+    color="#800000"><strong><big>Keyword list</big></strong></font></p>
+      <p>This is the same concept that you will see used throughout the mud to 
+        provide a word for players to use to interact with a mob, an object or 
+        a room.&nbsp; It is an alias list. &nbsp; It should be fairly obvious 
+        from the room description, or the player will never discover it. </p>
+      <p>Extra descriptions are wonderful for describing things seen in the room's 
+        description which don't need an actual object in the room.&nbsp; Examples 
+        are for pictures, signs, notes, special furniture pieces, and people who 
+        are there (if you don't want the people to be killed by players) .&nbsp; 
+        This is a good way to hint at hidden exits, such as a fireplace that opens.</p>
+      <p><font color="#800000"><strong><big>Description</big></strong> </font></p>
+      <p>The text that will be displayed when a player types &quot;look &lt;keyword&gt;&quot;.</p>
+      </font>
+      <p><a name="RoomProcs"></a><font face="trebuchet ms, arial, helvetica" color="#800000"><strong><big>Room 
+        procs</big></strong></font></p>
+      <p> We now have special procedures that you can attach to rooms to added 
+        some extra versatility. Currently, we have only three available - %trans, 
+        %echo and %push, however, helm has coded these in such a way that we can 
+        add more procedures as and when we need them. They are added to the .wld 
+        file -after- the room Extra descriptions, before the end of record mark 
+        ("S"). The exact syntax varies for each one: </p>
+      <p> <font color="#CC6633"><b><font color="#804040">%trans</font></b></font> 
+        This allows you to have a certain percentage chance that instead of leaving 
+        a room by the normal exits, a player will be transferred to another location 
+        of your choice. You can specify a message to display on the players screen 
+        in order to explain the sudden change in location. For example, in a maze, 
+        you could have a 5% chance that the player will find a shortcut to the 
+        centre, or discover a hidden treasure room, or a sudden death trap!. There 
+        are two different trans_procs, which trigger in slightly different circumstances. 
+        These are coded as follows:- </p>
+      <p>>trans <percentage chance> <target room> <direction>&lt;percent chance&gt; 
+        &lt;destination room vnum&gt; &lt;direction&gt;~<br>
+        message to player <br>
+        ~ </p>
+      <p>The MUD will check the trans proc whenever a person attempts to -leave- 
+        the room in the given direction (0 - north, 1 - east etc as for doors). 
+        Putting -1 for the direction tells the mud to check when a person attempts 
+        to leave by -any- exit. </p>
+      <p>>ttrans <percent chance> <target room>&lt;percent chance&gt; &lt;destination 
+        room vnum&gt;~ <br>
+        message to player <br>
+        ~ </p>
+      <p>The mud will check the % chance on a zone pulse (about 10 seconds). </p>
+      <p> <b><font color="#804040">%echo</font></b> The %echo_proc allows you 
+        to add atmosphere to a room, by sending descriptive messages to players. 
+        The mud checks approximately six times per tick (every zone pulse) whether 
+        the %echo_proc triggers, you can add as many as you like to each room, 
+        but be wary of adding too many! </p>
+      <p>>echo <percentage chance>&lt;percent chance&gt; ~ <br>
+        message to player <br>
+        ~ </p>
+      <p> <b><font color="#804040">%push</font></b> The %push_proc is checked 
+        on a zone pulse, like %echo. When triggered, it pushes all players within 
+        the room in a specified direction. This can be used to make rooms 'flow' 
+        The direction is entered as a value in the same way as exits are written. 
+        ie. O for north, 1 for east etc. Just make sure there is a exit that way or else the push-proc will fail.</p>
+      <p>>push <percentage chance> <direction>&lt;percent chance&gt; &lt;direction&gt;~<br>
+        message to player <br>
+        ~ </p>
+      <p>>pushall &lt;percent chance&gt;<percentage chance> &lt;direction&gt;<direction>~<br>
+        message to player <br>
+        ~ </p>
+      <p>The pushall proc will push players -and- mobs in the specified direction.
+ 
+      </p>
+      <p><b><font color="#804040">Glob : Special notes on room progs.</font></b><br>
+ # If using multiple room progs in the same room the TRANS must be written first in the .wld file or the other progs will not be executed.<br>
+ # The mud will have the in the .wld file listed room progs in reversed order, so if you want to split a exit into two using TRANS to randomize if the player goes to either of the rooms, the .wld file must have the 100% chance before the 50% chance, as the example below shows.<br>
+ # The mud does not care about other hinders when transing or pushing people around. So if you PushAll into a NoMob room the mobs will come too. Push into DTs works well too. 
+      </p>
+      <font face="trebuchet ms, arial, helvetica"><p>&nbsp;</p>
+      <p><a name="Example of a room"><font color="#800000"><strong><big> Example 
+        of a room</big></strong></font></a></p>
+      </font> 
+      <pre>#2300 
+First Room~
+   Snazzy descriptions are all well and good, but it is so much nicer
+to just have the room say what is needed.&nbsp; This doesn't mean your
+rooms should be poorly written, however. 
+~
+23 cd 1 
+D2
+You see the exit.  It is a locked, pickproof, bashproof door.
+~
+door~
+295 -1 2302
+E
+exit~
+This is the way out!
+~
+S</pre>
+      <pre>#2301
+Second Room~
+   Snazzier descriptions have a tendency to become oversnazzy, so be
+restrictive and do not use superlatives all the time.
+~
+23 eg 8
+D2
+You see the exit.
+~
+~
+0 -1 2302
+E
+exit~
+This is the way in!
+~
+>trans 80 2303 2~
+There is a 40% chance each time you move south that you get transferred
+to room 2303!
+~
+>trans 50 2304 2~
+There is a 50% chance each time you move south that you get transferred
+to room 2304!
+~
+>echo 5~
+Every 10 seconds(a zone pulse) there is a 5% chance that this message
+will appear in room 2301!
+~
+S</pre>
+
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><a
+    name="Style"><font color="#800000"><strong><big>Style</big></strong>
+</font></a>
+      </p>
+      </font>
+      <table border="0" cellpadding="0"
+cellspacing="0" width="100%">
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><a href=
+"wld_over.html#Room Name">Room names</a></font></td
+>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Describe the door as well as what you
+see when
+            you look in that direction</font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">For a working door, the rooms on each
+side must
+            have matching doors.&nbsp; Generally speaking they will also
+have
+            matching doorflags.</font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Terrain - don't be a slave to the
+terrain name.&nbsp;
+            Use one that makes sense. &nbsp;Remember:&nbsp; terrain
+(sector) is
+            a means of controlling movement cost for players. </font>
+</td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">All indoors should have the &quot;
+indoors&quot;
+            roomflag.&nbsp; Caves should be dark, unless lit by torches
+along
+            the walls (or unless there is some other source of
+illumination).&nbsp;
+            Regen should not normally be found in a zone.&nbsp; Use the
+other
+            flags where they make sense.</font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Don't overuse <a href=
+"#Death Traps">death traps</a>.&nbsp; There should be some hint that the
+room
+            may be dangerous, such as &quot;You are standing at the edge
+of a
+            high cliff.&nbsp; Ahead you see only air.&quot; </font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Don't use flags marked as &quot;to be
+defined&quot;
+            or &quot;INTERNAL ONLY&quot; </font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica"><strong>No_teleport </strong> is useful
+for blocking
+            someone from entering a special room just by accident.&nbsp;
+Do not
+            make a whole zone of <strong>no_teleport</strong> rooms.
+</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p><a
+    name="Ideas"><font color="#800000"><big>Ideas</big></font></a></p>
+      <p>Confusing subareas can be done several ways.&nbsp; </p>
+      </font>
+      <table border="0" cellpadding="0"
+cellspacing="0" width="100%">
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">You can skew the exits so those coming
+from the
+            east, may go somewhere else when backtracking west, for
+example.&nbsp;
+            </font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">You can use the <strong> chaotic
+</strong> room
+            flag. The chaotic flag sometimes has the player leave in a
+different
+            direction then they think they did, and they get a message
+&quot;You
+            are disoriented.&quot;.</font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Keep the room names and descriptions in
+maze
+            like areas the same, provided the rooms DO look the same.
+&nbsp; </font></td>
+        </tr>
+        <tr> 
+          <td valign="baseline" width="42"><font face=
+"trebuchet ms, arial, helvetica"><img
+        src="images/artbul1a.gif" width="20" height="20"
+hspace="11"></font></td>
+          <td valign="top" width="100%"><font face=
+"trebuchet ms, arial, helvetica">Use the &quot;R&quot; zone command,
+which will
+            randomize the exits to affected rooms each time the zone
+resets. </font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>To make an area appear larger then it is, wrap the west most
+exit to
+        the east most room and the east most exit to the west most room.
+This
+        makes a circular set of rooms that repeat as you continually go
+east or
+        west, (Like summer reruns) making the path appear longer then it
+really
+        is. </p>
+      <p>Hidden doors can be disguised as many different types of
+things, bookshelves,&nbsp;
+        fireplaces, trap doors, rugs, and other common objects, like
+walls.&nbsp;
+        Some are noticeable in the description, but players don't always
+think
+        to try them. </p>
+      <p>Intermediary rooms can be used to show a time related event.</p
+>
+      </font>
+      <table border="0" width="100%">
+        <tr> 
+          <td width="18%"> 
+            <pre>X04&lt;--&gt;
+X05
+ ^      |
+ |      |
+ v      v
+X07&lt;--&gt;X06                         </pre>
+            
+          </td>
+          <td width="82%" valign="top"><font face=
+"trebuchet ms, arial, helvetica">This means you can enter X05 from X04
+and go
+            to either X04 or X06 from X05, but can't return to X05 from
+X06.&nbsp;
+            To get back to X04 from X06, you go through room X07.&nbsp;
+</font></td>
+        </tr>
+      </table>
+      <font face="trebuchet ms, arial, helvetica"> 
+      <p>Now, X05 and X07 are the same &quot;room&quot;, but at
+different times,
+        like a ferry crossing a river. X05 is the ferry going eastward
+across
+        the river, while X07 is the ferry moving west.&nbsp; They can
+have different
+        mob or slightly different descriptions or special
+procedures.&nbsp; It
+        can give the illusion of something changed. </p
+>
+      <p><a href="index.html" target="_top">The Guide</a> 
+      </font></td>
+  </tr>
+</table>
+</body>
+</html>
