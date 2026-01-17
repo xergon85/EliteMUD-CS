@@ -1,5 +1,6 @@
 namespace EliteMud.Application.Commands.Shared;
 
+[Obsolete("Use per-command registrations in the server layer.")]
 public sealed class CommandRegistry
 {
     private static readonly CommandKind[] DefaultCommands =
