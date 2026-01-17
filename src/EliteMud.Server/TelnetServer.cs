@@ -175,9 +175,10 @@ internal sealed class TelnetServer : IConnectionDirectory
         }
     }
 
-    private static async ValueTask<string?> PromptForNameAsync(TelnetSession session,
+    private async ValueTask<string?> PromptForNameAsync(TelnetSession session,
         CancellationToken cancellationToken)
     {
+        var validator = new PlayerNameValidator();
         while (!cancellationToken.IsCancellationRequested)
         {
             await session.SendLineAsync("Enter your name:", cancellationToken);
@@ -188,7 +189,7 @@ internal sealed class TelnetServer : IConnectionDirectory
             }
 
             var name = line.Trim();
-            if (IsValidName(name))
+            if (validator.IsValid(name))
             {
                 return name;
             }
@@ -197,24 +198,6 @@ internal sealed class TelnetServer : IConnectionDirectory
         }
 
         return null;
-    }
-
-    private static bool IsValidName(string name)
-    {
-        if (name.Length is < 3 or > 16)
-        {
-            return false;
-        }
-
-        foreach (var character in name)
-        {
-            if (!char.IsLetter(character))
-            {
-                return false;
-            }
-        }
-
-        return true;
     }
 
     private async ValueTask MoveAsync(ConnectionContext context, Direction direction,
