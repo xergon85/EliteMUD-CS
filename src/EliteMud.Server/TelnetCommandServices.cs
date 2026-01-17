@@ -4,26 +4,19 @@ using EliteMud.Scripting;
 
 namespace EliteMud.Server;
 
-internal enum CommandOutcome
-{
-    Continue,
-    Disconnect,
-    Unknown
-}
-
-internal sealed class TelnetCommandHandler : IConnectionDirectory
+internal sealed class TelnetCommandServices : IConnectionDirectory
 {
     private readonly IWorldState _worldState;
     private readonly IScriptEngine _scriptEngine;
     private readonly CommandCatalog _catalog;
+    private readonly Func<IEnumerable<ConnectionContext>> _connections;
     private readonly LookHandler _lookHandler;
     private readonly MoveHandler _moveHandler;
     private readonly ResetZoneHandler _resetZoneHandler;
     private readonly SayHandler _sayHandler;
     private readonly WhoHandler _whoHandler;
-    private readonly Func<IEnumerable<ConnectionContext>> _connections;
 
-    public TelnetCommandHandler(
+    public TelnetCommandServices(
         IWorldState worldState,
         IScriptEngine scriptEngine,
         CommandCatalog catalog,
@@ -40,44 +33,6 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
         _whoHandler = new WhoHandler(this);
     }
 
-    public async ValueTask<CommandOutcome> HandleAsync(
-        CommandRequest command,
-        ConnectionContext context,
-        CancellationToken cancellationToken)
-    {
-        switch (command.Kind)
-        {
-            case CommandKind.None:
-                return CommandOutcome.Continue;
-            case CommandKind.Quit:
-                await context.Session.SendLineAsync("Goodbye!", cancellationToken);
-                return CommandOutcome.Disconnect;
-            case CommandKind.Look:
-                await RenderRoomAsync(context, cancellationToken);
-                return CommandOutcome.Continue;
-            case CommandKind.Who:
-                await ShowWhoAsync(context, cancellationToken);
-                return CommandOutcome.Continue;
-            case CommandKind.ResetZone:
-                await ResetZoneAsync(context, command.Argument, cancellationToken);
-                return CommandOutcome.Continue;
-            case CommandKind.Say:
-                await SayAsync(context, command.Argument ?? string.Empty, cancellationToken);
-                return CommandOutcome.Continue;
-            case CommandKind.Move:
-                if (command.Direction.HasValue)
-                {
-                    await MoveAsync(context, command.Direction.Value, cancellationToken);
-                    return CommandOutcome.Continue;
-                }
-
-                return CommandOutcome.Unknown;
-            case CommandKind.Unknown:
-            default:
-                return CommandOutcome.Unknown;
-        }
-    }
-
     public IReadOnlyList<string> GetPlayerNames()
     {
         return _connections()
@@ -86,7 +41,7 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
             .ToList();
     }
 
-    private async ValueTask ShowWhoAsync(ConnectionContext context, CancellationToken cancellationToken)
+    public async ValueTask ShowWhoAsync(ConnectionContext context, CancellationToken cancellationToken)
     {
         var result = _whoHandler.Handle();
         await context.Session.SendLineAsync("Players:", cancellationToken);
@@ -96,7 +51,7 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
         }
     }
 
-    private async ValueTask ResetZoneAsync(ConnectionContext context, string? idText,
+    public async ValueTask ResetZoneAsync(ConnectionContext context, string? idText,
         CancellationToken cancellationToken)
     {
         int? zoneId = null;
@@ -119,7 +74,7 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
         }
     }
 
-    private async ValueTask MoveAsync(ConnectionContext context, Direction direction,
+    public async ValueTask MoveAsync(ConnectionContext context, Direction direction,
         CancellationToken cancellationToken)
     {
         var result = _moveHandler.Handle(context.Player, direction);
@@ -133,7 +88,7 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
         await RenderRoomAsync(context, cancellationToken);
     }
 
-    private async ValueTask SayAsync(ConnectionContext context, string message, CancellationToken cancellationToken)
+    public async ValueTask SayAsync(ConnectionContext context, string message, CancellationToken cancellationToken)
     {
         var result = _sayHandler.Handle(context.Player, message);
         await context.Session.SendLineAsync(result.Message, cancellationToken);
@@ -146,7 +101,7 @@ internal sealed class TelnetCommandHandler : IConnectionDirectory
         await BroadcastRoomAsync(context, result.BroadcastMessage, cancellationToken);
     }
 
-    private async ValueTask RenderRoomAsync(ConnectionContext context, CancellationToken cancellationToken)
+    public async ValueTask RenderRoomAsync(ConnectionContext context, CancellationToken cancellationToken)
     {
         var view = _lookHandler.Handle(context.Player);
         await context.Session.SendLineAsync(view.Name, cancellationToken);

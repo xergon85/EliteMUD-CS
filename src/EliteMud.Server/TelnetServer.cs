@@ -12,7 +12,7 @@ internal sealed class TelnetServer
     private readonly TcpListener _listener;
     private readonly CommandCatalog _catalog;
     private readonly PromptCatalog _promptCatalog;
-    private readonly TelnetCommandHandler _commandHandler;
+    private readonly CommandRouter _commandRouter;
     private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
 
@@ -21,11 +21,21 @@ internal sealed class TelnetServer
         _listener = new TcpListener(address, port);
         _catalog = new CommandCatalog();
         _promptCatalog = new PromptCatalog();
-        _commandHandler = new TelnetCommandHandler(
+        var services = new TelnetCommandServices(
             worldState,
             scriptEngine,
             _catalog,
             () => _connections.Values);
+        _commandRouter = new CommandRouter(new ICommandHandler[]
+        {
+            new NoOpCommandHandler(),
+            new QuitCommandHandler(),
+            new LookCommandHandler(services),
+            new WhoCommandHandler(services),
+            new ResetZoneCommandHandler(services),
+            new SayCommandHandler(services),
+            new MoveCommandHandler(services)
+        });
     }
 
     public async Task RunAsync(CancellationToken cancellationToken)
@@ -71,7 +81,7 @@ internal sealed class TelnetServer
             _connections[context.Id] = context;
 
             var entryCommand = new CommandRequest(CommandKind.Look, null, null);
-            await _commandHandler.HandleAsync(entryCommand, context, cancellationToken);
+            await _commandRouter.HandleAsync(entryCommand, context, cancellationToken);
 
             var dispatcher = new CommandParser();
             while (!cancellationToken.IsCancellationRequested)
@@ -83,7 +93,7 @@ internal sealed class TelnetServer
                 }
 
                 var command = dispatcher.Parse(line);
-                var outcome = await _commandHandler.HandleAsync(command, context, cancellationToken);
+                var outcome = await _commandRouter.HandleAsync(command, context, cancellationToken);
                 if (outcome == CommandOutcome.Disconnect)
                 {
                     return;
