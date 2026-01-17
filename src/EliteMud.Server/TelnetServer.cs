@@ -69,6 +69,7 @@ internal sealed class TelnetServer
             await _commandHandler.HandleAsync(entryCommand, context, cancellationToken);
 
             var dispatcher = new CommandParser();
+            var catalog = new CommandCatalog();
             while (!cancellationToken.IsCancellationRequested)
             {
                 var line = await context.Session.ReadLineAsync(cancellationToken);
@@ -86,9 +87,7 @@ internal sealed class TelnetServer
 
                 if (outcome == CommandOutcome.Unknown)
                 {
-                    await context.Session.SendLineAsync(
-                        "Unknown command. Try 'look', 'who', 'say', 'zreset', 'north', or 'go north'.",
-                        cancellationToken);
+                    await context.Session.SendLineAsync(catalog.GetUnknownCommandMessage(), cancellationToken);
                 }
             }
         }
