@@ -11,6 +11,7 @@ internal sealed class TelnetServer
 {
     private readonly TcpListener _listener;
     private readonly CommandCatalog _catalog;
+    private readonly PromptCatalog _promptCatalog;
     private readonly TelnetCommandHandler _commandHandler;
     private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
@@ -19,6 +20,7 @@ internal sealed class TelnetServer
     {
         _listener = new TcpListener(address, port);
         _catalog = new CommandCatalog();
+        _promptCatalog = new PromptCatalog();
         _commandHandler = new TelnetCommandHandler(
             worldState,
             scriptEngine,
@@ -57,7 +59,7 @@ internal sealed class TelnetServer
 
         try
         {
-            await session.SendLineAsync("Welcome to EliteMUD (rewrite in progress).", cancellationToken);
+            await session.SendLineAsync(_promptCatalog.GetWelcomeMessage(), cancellationToken);
             var name = await PromptForNameAsync(session, cancellationToken);
             if (name is null)
             {
@@ -110,7 +112,7 @@ internal sealed class TelnetServer
         var loginHandler = new LoginHandler();
         while (!cancellationToken.IsCancellationRequested)
         {
-            await session.SendLineAsync("Enter your name:", cancellationToken);
+            await session.SendLineAsync(_promptCatalog.GetNamePrompt(), cancellationToken);
             var line = await session.ReadLineAsync(cancellationToken);
             if (line is null)
             {
