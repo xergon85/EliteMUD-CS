@@ -68,7 +68,7 @@ internal sealed class TelnetServer
             var entryCommand = new CommandRequest(CommandKind.Look, null, null);
             await _commandHandler.HandleAsync(entryCommand, context, cancellationToken);
 
-            var dispatcher = new CommandDispatcher();
+            var dispatcher = new CommandParser();
             while (!cancellationToken.IsCancellationRequested)
             {
                 var line = await context.Session.ReadLineAsync(cancellationToken);
@@ -77,7 +77,7 @@ internal sealed class TelnetServer
                     break;
                 }
 
-                var command = dispatcher.Dispatch(line);
+                var command = dispatcher.Parse(line);
                 var outcome = await _commandHandler.HandleAsync(command, context, cancellationToken);
                 if (outcome == CommandOutcome.Disconnect)
                 {

@@ -1,8 +1,8 @@
 using EliteMud.Game;
 
-namespace EliteMud.Server;
+namespace EliteMud.Application;
 
-internal enum CommandKind
+public enum CommandKind
 {
     None,
     Quit,
@@ -14,11 +14,11 @@ internal enum CommandKind
     Unknown
 }
 
-internal sealed record CommandRequest(CommandKind Kind, string? Argument, Direction? Direction);
+public sealed record CommandRequest(CommandKind Kind, string? Argument, Direction? Direction);
 
-internal sealed class CommandDispatcher
+public sealed class CommandParser
 {
-    public CommandRequest Dispatch(string line)
+    public CommandRequest Parse(string line)
     {
         var trimmed = line.Trim();
         if (trimmed.Length == 0)
