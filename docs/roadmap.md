@@ -4,7 +4,8 @@
 - Preserve gameplay parity with the legacy C codebase.
 - Target .NET 10 on Linux with classic Telnet compatibility.
 - Introduce Lua scripting for extensibility and safe iteration.
-- Use SQLite as the canonical data store with legacy adapters.
+- Store world content (rooms, mobs, objects, zones, scripts) as versioned files.
+- Use SQLite for runtime/player data (players, mail, logs).
 
 ## Phase 1: Core Loop + World Skeleton
 **Milestone:** Minimal playable loop
@@ -16,10 +17,11 @@
 
 ## Phase 2: Data Layer + Legacy Adapters
 **Milestone:** Legacy rooms loadable in C#
-- SQLite schema v1 (rooms, exits, mobs, objects, scripts, players)
-- Import pipeline: legacy `wld/zon/obj/mob` → SQLite
-- Runtime loads from SQLite by default
+- File-based content schema v1 (rooms, exits, mobs, objects, scripts, zones)
+- Import pipeline: legacy `wld/zon/obj/mob` → file storage
+- Runtime loads world content from files by default
 - Preserve raw legacy IDs for parity
+- SQLite schema v1 for player/runtime data
 
 ## Phase 3: Character System
 **Milestone:** Playable persistent characters
@@ -27,6 +29,7 @@
 - Inventory/equipment slots
 - Affects/status (buffs/debuffs)
 - Save/load players to SQLite
+- Mail, boards, logs stored in SQLite
 - Permission system for immortals
 
 ## Phase 4: Combat + Skills
@@ -64,8 +67,9 @@
 - `boards.c`, `mail.c`, `clan.c` → Feature services
 
 ## Next Execution Checklist
-1) Finalize SQLite schema v1 + repositories
-2) Implement legacy room/exit loader
-3) Persist player records with login flow
-4) Add combat service skeleton
-5) Expand Lua hooks for triggers
+1) Define file-based world content schema v1
+2) Implement legacy room/exit loader to file format
+3) Finalize SQLite schema for players/mail/logs
+4) Persist player records with login flow
+5) Add combat service skeleton
+6) Expand Lua hooks for triggers
