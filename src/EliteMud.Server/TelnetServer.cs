@@ -106,7 +106,7 @@ internal sealed class TelnetServer
     private async ValueTask<string?> PromptForNameAsync(TelnetSession session,
         CancellationToken cancellationToken)
     {
-        var validator = new PlayerNameValidator();
+        var loginHandler = new LoginHandler();
         while (!cancellationToken.IsCancellationRequested)
         {
             await session.SendLineAsync("Enter your name:", cancellationToken);
@@ -116,13 +116,13 @@ internal sealed class TelnetServer
                 return null;
             }
 
-            var name = line.Trim();
-            if (validator.IsValid(name))
+            var result = loginHandler.ValidateName(line);
+            if (result.Success)
             {
-                return name;
+                return line.Trim();
             }
 
-            await session.SendLineAsync("Names must be 3-16 letters.", cancellationToken);
+            await session.SendLineAsync(result.Message, cancellationToken);
         }
 
         return null;
