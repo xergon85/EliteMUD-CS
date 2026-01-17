@@ -72,10 +72,11 @@ content/
 ```
 
 ### Notes
-- `zoneId` maps to the legacy zone table index; use the zone number from the `.zon` header.
+- `zoneId` is the legacy zone number (from the `.zon` header), not the table index.
 - `sector` maps to the legacy `SECT_*` enums.
 - `flags` maps to legacy `room_flags` bits.
 - `exitFlags` maps to legacy `EX_*` bits.
+- `targetId` and `keyId` are legacy vnums (not rnums).
 
 ## Mobs (NPCs)
 **File:** `content/mobs/mobs.json`
@@ -125,6 +126,7 @@ content/
       "gold": 0,
       "experience": 0,
       "defaultPosition": "Standing",
+      "sex": "Neutral",
       "actionScript": null,
       "specialProc": null,
       "programs": []
@@ -207,6 +209,7 @@ content/
 ### Notes
 - `resetMode` maps to legacy 0/1/2 values.
 - `resetCommands` preserves the legacy tuple; loader can translate into typed actions.
+- Optional `expanded` data can be added later for readability while keeping raw tuples.
 
 ## Scripts
 **File:** `content/scripts/scripts.json`
