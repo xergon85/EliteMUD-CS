@@ -1,24 +1,43 @@
 using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
+using EliteMud.Application;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
 namespace EliteMud.Server;
 
-internal sealed class TelnetServer
+internal sealed class TelnetServer : IConnectionDirectory
 {
     private readonly TcpListener _listener;
-    private readonly WorldState _worldState;
+    private readonly IWorldState _worldState;
     private readonly IScriptEngine _scriptEngine;
+    private readonly LookHandler _lookHandler;
+    private readonly MoveHandler _moveHandler;
+    private readonly ResetZoneHandler _resetZoneHandler;
+    private readonly SayHandler _sayHandler;
+    private readonly WhoHandler _whoHandler;
     private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
 
-    public TelnetServer(IPAddress address, int port, WorldState worldState, IScriptEngine scriptEngine)
+    public IReadOnlyList<string> GetPlayerNames()
+    {
+        return _connections.Values
+            .Select(connection => connection.Player.Name)
+            .OrderBy(name => name, StringComparer.OrdinalIgnoreCase)
+            .ToList();
+    }
+
+    public TelnetServer(IPAddress address, int port, IWorldState worldState, IScriptEngine scriptEngine)
     {
         _listener = new TcpListener(address, port);
         _worldState = worldState;
         _scriptEngine = scriptEngine;
+        _lookHandler = new LookHandler(worldState);
+        _moveHandler = new MoveHandler(worldState);
+        _resetZoneHandler = new ResetZoneHandler(worldState);
+        _sayHandler = new SayHandler();
+        _whoHandler = new WhoHandler(this);
     }
 
     public async Task RunAsync(CancellationToken cancellationToken)
@@ -151,43 +170,35 @@ internal sealed class TelnetServer
 
     private async ValueTask ShowWhoAsync(ConnectionContext context, CancellationToken cancellationToken)
     {
+        var result = _whoHandler.Handle();
         await context.Session.SendLineAsync("Players:", cancellationToken);
-        foreach (var connection in _connections.Values)
+        foreach (var name in result.Names)
         {
-            await context.Session.SendLineAsync($" - {connection.Player.Name}", cancellationToken);
+            await context.Session.SendLineAsync($" - {name}", cancellationToken);
         }
     }
 
     private async ValueTask ResetZoneAsync(ConnectionContext context, string? idText,
         CancellationToken cancellationToken)
     {
+        int? zoneId = null;
         if (!string.IsNullOrWhiteSpace(idText))
         {
-            if (!int.TryParse(idText, out var zoneId))
+            if (!int.TryParse(idText, out var parsedId))
             {
                 await context.Session.SendLineAsync("Usage: zreset [zoneId]", cancellationToken);
                 return;
             }
 
-            if (!_worldState.ResetZone(zoneId))
-            {
-                await context.Session.SendLineAsync("Zone not found.", cancellationToken);
-                return;
-            }
-
-            await context.Session.SendLineAsync($"Zone {zoneId} reset.", cancellationToken);
-            await RenderRoomAsync(context, cancellationToken);
-            return;
+            zoneId = parsedId;
         }
 
-        if (!_worldState.ResetZoneForRoom(context.Player.RoomId, out var currentZoneId))
+        var result = _resetZoneHandler.Handle(context.Player, zoneId);
+        await context.Session.SendLineAsync(result.Message, cancellationToken);
+        if (result.Success)
         {
-            await context.Session.SendLineAsync("You are not in a zone with resets.", cancellationToken);
-            return;
+            await RenderRoomAsync(context, cancellationToken);
         }
-
-        await context.Session.SendLineAsync($"Zone {currentZoneId} reset.", cancellationToken);
-        await RenderRoomAsync(context, cancellationToken);
     }
 
     private static async ValueTask<string?> PromptForNameAsync(TelnetSession session,
@@ -235,47 +246,41 @@ internal sealed class TelnetServer
     private async ValueTask MoveAsync(ConnectionContext context, Direction direction,
         CancellationToken cancellationToken)
     {
-        if (!_worldState.World.TryMove(context.Player.RoomId, direction, out var targetRoomId))
+        var result = _moveHandler.Handle(context.Player, direction);
+        if (!result.Moved)
         {
-            await context.Session.SendLineAsync("You cannot go that way.", cancellationToken);
+            await context.Session.SendLineAsync(result.Message ?? "You cannot go that way.", cancellationToken);
             return;
         }
 
-        context.Player.RoomId = targetRoomId;
         await ExecuteHookAsync(context, ScriptHook.OnEnterRoom, null, cancellationToken);
         await RenderRoomAsync(context, cancellationToken);
     }
 
     private async ValueTask SayAsync(ConnectionContext context, string message, CancellationToken cancellationToken)
     {
-        if (string.IsNullOrWhiteSpace(message))
+        var result = _sayHandler.Handle(context.Player, message);
+        await context.Session.SendLineAsync(result.Message, cancellationToken);
+        if (!result.Success || string.IsNullOrWhiteSpace(result.BroadcastMessage))
         {
-            await context.Session.SendLineAsync("Say what?", cancellationToken);
             return;
         }
 
-        await context.Session.SendLineAsync($"You say, '{message}'.", cancellationToken);
         await ExecuteHookAsync(context, ScriptHook.OnSay, message, cancellationToken);
-        await BroadcastRoomAsync(context, $"{context.Player.Name} says, '{message}'.", cancellationToken);
+        await BroadcastRoomAsync(context, result.BroadcastMessage, cancellationToken);
     }
 
     private async ValueTask RenderRoomAsync(ConnectionContext context, CancellationToken cancellationToken)
     {
-        var room = _worldState.World.GetRoom(context.Player.RoomId);
-        await context.Session.SendLineAsync(room.Name, cancellationToken);
-        await context.Session.SendLineAsync(room.Description, cancellationToken);
-        foreach (var mob in _worldState.GetMobsInRoom(room.Id))
+        var view = _lookHandler.Handle(context.Player);
+        await context.Session.SendLineAsync(view.Name, cancellationToken);
+        await context.Session.SendLineAsync(view.Description, cancellationToken);
+        foreach (var line in view.MobLines)
         {
-            var line = string.IsNullOrWhiteSpace(mob.Definition.LongDescription)
-                ? mob.Definition.ShortDescription
-                : mob.Definition.LongDescription.TrimEnd();
-            if (!string.IsNullOrWhiteSpace(line))
-            {
-                await context.Session.SendLineAsync(line, cancellationToken);
-            }
+            await context.Session.SendLineAsync(line, cancellationToken);
         }
 
-        await context.Session.SendLineAsync(BuildExitLine(room), cancellationToken);
+        await context.Session.SendLineAsync(view.ExitLine, cancellationToken);
         await ExecuteHookAsync(context, ScriptHook.OnLook, null, cancellationToken);
     }
 
@@ -311,22 +316,6 @@ internal sealed class TelnetServer
 
             await connection.Session.SendLineAsync(message, cancellationToken);
         }
-    }
-
-    private static string BuildExitLine(RoomDefinition room)
-    {
-        if (room.Exits.Count == 0)
-        {
-            return "Exits: none.";
-        }
-
-        var names = new List<string>(room.Exits.Count);
-        foreach (var exit in room.Exits)
-        {
-            names.Add(exit.Direction.ToString().ToLowerInvariant());
-        }
-
-        return $"Exits: {string.Join(", ", names)}.";
     }
 
     private static bool TryParseDirection(string input, out Direction direction)

@@ -1,6 +1,8 @@
 using System.Net;
+using EliteMud.Application;
 using EliteMud.Game;
 using EliteMud.Scripting;
+using MobInstance = EliteMud.Application.MobInstance;
 
 namespace EliteMud.Server;
 
@@ -41,7 +43,7 @@ internal static class ServerBootstrap
 
         var worldState = BuildWorldState(world, mobs, zones);
         var scriptEngine = BuildScriptEngine(scripts);
-        return new TelnetServer(IPAddress.Any, port, worldState, scriptEngine);
+        return new TelnetServer(IPAddress.Any, port, (IWorldState)worldState, scriptEngine);
     }
 
     public static int? TryParsePort(string[] args)

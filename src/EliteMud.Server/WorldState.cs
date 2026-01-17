@@ -1,8 +1,10 @@
+using EliteMud.Application;
 using EliteMud.Game;
+using MobInstance = EliteMud.Application.MobInstance;
 
 namespace EliteMud.Server;
 
-internal sealed class WorldState
+internal sealed class WorldState : IWorldState
 {
     private readonly Dictionary<int, MobDefinition> _mobDefinitions;
     private readonly Dictionary<int, List<MobInstance>> _roomMobs;
@@ -137,5 +139,3 @@ internal sealed class WorldState
         }
     }
 }
-
-internal sealed record MobInstance(int InstanceId, MobDefinition Definition);

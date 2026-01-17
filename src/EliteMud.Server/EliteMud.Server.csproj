@@ -1,6 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\EliteMud.Application\EliteMud.Application.csproj" />
     <ProjectReference Include="..\EliteMud.Game\EliteMud.Game.csproj" />
     <ProjectReference Include="..\EliteMud.Data\EliteMud.Data.csproj" />
     <ProjectReference Include="..\EliteMud.Legacy\EliteMud.Legacy.csproj" />
