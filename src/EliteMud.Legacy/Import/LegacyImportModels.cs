@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace EliteMud.Legacy.Import;
 
 internal sealed class RoomsFile
@@ -125,24 +127,85 @@ internal sealed class ObjectsFile
     public List<ObjectContent> objects { get; }
 }
 
-internal sealed record ObjectContent(
-    int Id,
-    string Name,
-    string ShortDescription,
-    string Description,
-    string ActionDescription,
-    string Type,
-    int Level,
-    string AntiClass,
-    IReadOnlyList<string> ExtraFlags,
-    IReadOnlyList<string> WearFlags,
-    IReadOnlyList<int> Values,
-    int Weight,
-    int Cost,
-    int CostPerDay,
-    IReadOnlyList<ExtraDescriptionContent> ExtraDescriptions,
-    IReadOnlyList<ObjectAffectContent> Affects,
-    IReadOnlyList<string> Bitvectors,
-    string? SpecialProc);
+internal sealed class ObjectContent
+{
+    public int Id { get; init; }
+    public string Name { get; init; } = string.Empty;
+    public string ShortDescription { get; init; } = string.Empty;
+    public string Description { get; init; } = string.Empty;
+    public string ActionDescription { get; init; } = string.Empty;
+    public string Type { get; init; } = string.Empty;
+    public int Level { get; init; }
+    public string AntiClass { get; init; } = string.Empty;
+    public IReadOnlyList<string> ExtraFlags { get; init; } = new List<string>();
+    public IReadOnlyList<string> WearFlags { get; init; } = new List<string>();
+    public IReadOnlyList<int> Values { get; init; } = new List<int>();
+    public ObjectDetailsContent? Details { get; init; }
+    public int Weight { get; init; }
+    public int Cost { get; init; }
+    public int CostPerDay { get; init; }
+    public IReadOnlyList<ExtraDescriptionContent> ExtraDescriptions { get; init; } = new List<ExtraDescriptionContent>();
+    public IReadOnlyList<ObjectAffectContent> Affects { get; init; } = new List<ObjectAffectContent>();
+    public IReadOnlyList<string> Bitvectors { get; init; } = new List<string>();
+    public string? SpecialProc { get; init; }
+}
+
+internal sealed class ObjectDetailsContent
+{
+    public ObjectLightContent? Light { get; init; }
+    public ObjectSpellContainerContent? SpellContainer { get; init; }
+    public ObjectWandStaffContent? Charges { get; init; }
+    public ObjectWeaponContent? Weapon { get; init; }
+    public ObjectMissileContent? Missile { get; init; }
+    public ObjectArmorContent? Armor { get; init; }
+    public ObjectTrapContent? Trap { get; init; }
+    public ObjectContainerContent? Container { get; init; }
+    public ObjectDrinkContent? Drink { get; init; }
+    public ObjectNoteContent? Note { get; init; }
+    public ObjectKeyContent? Key { get; init; }
+    public ObjectFoodContent? Food { get; init; }
+    public ObjectMoneyContent? Money { get; init; }
+    public ObjectPortalContent? Portal { get; init; }
+}
+
+internal sealed record ObjectLightContent(int Color, int Type, int Hours);
+
+internal sealed record ObjectSpellContainerContent(int Level, IReadOnlyList<int> SpellIds);
+
+internal sealed record ObjectWandStaffContent(int SpellId, int Level, int Charges, int ChargesRemaining);
+
+internal sealed record ObjectWeaponContent(int DiceCount, int DiceSides, int DamageType, int HitPoints);
+
+internal sealed record ObjectMissileContent(int Damage, int DamageType);
+
+internal sealed record ObjectArmorContent(int ArmorClass, int HitPoints);
+
+internal sealed record ObjectTrapContent(int SpellId, int HitPoints);
+
+internal sealed record ObjectContainerContent(
+    int Capacity,
+    IReadOnlyList<string> Flags,
+    int KeyId,
+    int CorpseType,
+    int CorpseBlood,
+    int CorpseLevel);
+
+internal sealed record ObjectDrinkContent(int Capacity, int Amount, int Liquid, bool Poisoned);
+
+internal sealed record ObjectNoteContent(int Language);
+
+internal sealed record ObjectKeyContent(int KeyType, int Timer, int TimerSet);
+
+internal sealed record ObjectFoodContent(int Filling, bool Poisoned);
+
+internal sealed record ObjectMoneyContent(int Amount);
+
+internal sealed record ObjectPortalContent(
+    int Destination,
+    IReadOnlyList<string> Flags,
+    int LockItem,
+    int MinLevel,
+    int MaxLevel,
+    int Duration);
 
 internal sealed record ObjectAffectContent(string Location, int Modifier);

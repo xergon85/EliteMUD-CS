@@ -149,6 +149,10 @@ internal static class LegacyImportLookup
 
     public static IReadOnlyList<string> ItemExtraFlags(int value) => FlagsFromBits(value, ItemExtraFlagNames);
 
+    public static IReadOnlyList<string> ContainerFlags(int value) => FlagsFromBits(value, ContainerFlagNames);
+
+    public static IReadOnlyList<string> PortalFlags(int value) => FlagsFromBits(value, PortalFlagNames);
+
     public static IReadOnlyList<string> RoomFlags(int value) => FlagsFromBits(value, RoomFlagNames);
 
     public static IReadOnlyList<string> ExitFlags(int value) => FlagsFromBits(value, ExitFlagNames);
@@ -395,5 +399,22 @@ internal static class LegacyImportLookup
         "Quest",
         "NoSweep",
         "Killer"
+    };
+
+    private static List<string> ContainerFlagNames => new()
+    {
+        "Closeable",
+        "PickProof",
+        "Closed",
+        "Locked",
+        "Trap"
+    };
+
+    private static List<string> PortalFlagNames => new()
+    {
+        "Closed",
+        "Locked",
+        "Random",
+        "Effect"
     };
 }

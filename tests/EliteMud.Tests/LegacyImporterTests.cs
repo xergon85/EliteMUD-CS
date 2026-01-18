@@ -5,6 +5,18 @@ namespace EliteMud.Tests;
 
 public class LegacyImporterTests
 {
+    private static JsonElement? FindObjectById(JsonElement objects, int id)
+    {
+        foreach (var item in objects.EnumerateArray())
+        {
+            if (item.TryGetProperty("Id", out var itemId) && itemId.GetInt32() == id)
+            {
+                return item;
+            }
+        }
+
+        return null;
+    }
     [Fact]
     public async Task ImportAsync_WritesRoomData()
     {
@@ -238,7 +250,13 @@ public class LegacyImporterTests
             Assert.True(baseObject.HasValue);
             var obj = baseObject.Value;
             Assert.True(obj.TryGetProperty("Id", out var objId) && objId.GetInt32() == 0);
-            Assert.True(obj.TryGetProperty("Name", out var name) && name.GetString() == "bug");
+            Assert.True(obj.TryGetProperty("Name", out var name) && name.GetString() == "practice sword");
+            Assert.True(obj.TryGetProperty("Details", out var details));
+            Assert.True(details.TryGetProperty("Weapon", out var weapon));
+            Assert.True(weapon.TryGetProperty("DiceCount", out var diceCount) && diceCount.GetInt32() == 2);
+            Assert.True(weapon.TryGetProperty("DiceSides", out var diceSides) && diceSides.GetInt32() == 4);
+            Assert.True(weapon.TryGetProperty("DamageType", out var damageType) && damageType.GetInt32() == 11);
+            Assert.True(weapon.TryGetProperty("HitPoints", out var hitPoints) && hitPoints.GetInt32() == 12);
 
             JsonElement? rich = null;
             foreach (var item in objects.EnumerateArray())
@@ -253,16 +271,85 @@ public class LegacyImporterTests
             Assert.True(rich.HasValue);
             var richObject = rich.Value;
             Assert.True(richObject.TryGetProperty("Id", out var richId) && richId.GetInt32() == 1);
-            Assert.True(richObject.TryGetProperty("Name", out var richName) && richName.GetString() == "cracked shell");
-            Assert.True(richObject.TryGetProperty("ExtraDescriptions", out var extras) && extras.GetArrayLength() > 0);
-            Assert.True(extras[0].TryGetProperty("Keywords", out var extraKeywords) && extraKeywords.GetArrayLength() > 0);
-            Assert.True(extras[0].TryGetProperty("Description", out var extraDescription) && extraDescription.GetString() == "The crack runs along the edge.");
-            Assert.True(richObject.TryGetProperty("Affects", out var affects) && affects.GetArrayLength() > 0);
-            Assert.True(affects[0].TryGetProperty("Location", out var affectLocation) && affectLocation.GetString() == "Dexterity");
-            Assert.True(affects[0].TryGetProperty("Modifier", out var affectModifier) && affectModifier.GetInt32() == 5);
-            Assert.True(richObject.TryGetProperty("Bitvectors", out var bitvectors) && bitvectors.GetArrayLength() > 0);
-            Assert.True(bitvectors[0].GetString() == "Bitvector_3");
-            Assert.True(richObject.TryGetProperty("SpecialProc", out var special) && special.GetString() == "guard_object");
+            Assert.True(richObject.TryGetProperty("Name", out var richName) && richName.GetString() == "waterskin");
+            Assert.True(richObject.TryGetProperty("Details", out var richDetails));
+            Assert.True(richDetails.TryGetProperty("Drink", out var drinkDetails));
+            Assert.True(drinkDetails.TryGetProperty("Capacity", out var capacity) && capacity.GetInt32() == 10);
+            Assert.True(drinkDetails.TryGetProperty("Amount", out var amount) && amount.GetInt32() == 6);
+            Assert.True(drinkDetails.TryGetProperty("Liquid", out var liquid) && liquid.GetInt32() == 2);
+            Assert.True(drinkDetails.TryGetProperty("Poisoned", out var poisoned) && poisoned.GetBoolean());
+
+            var portal = FindObjectById(objects, 3);
+            Assert.True(portal.HasValue);
+            Assert.True(portal.Value.TryGetProperty("Details", out var portalDetails));
+            Assert.True(portalDetails.TryGetProperty("Portal", out var portalInfo));
+            Assert.True(portalInfo.TryGetProperty("Destination", out var destination) && destination.GetInt32() == 3001);
+            Assert.True(portalInfo.TryGetProperty("Flags", out var portalFlags) && portalFlags.GetArrayLength() == 2);
+            Assert.True(portalInfo.TryGetProperty("LockItem", out var lockItem) && lockItem.GetInt32() == 2002);
+            Assert.True(portalInfo.TryGetProperty("MinLevel", out var minLevel) && minLevel.GetInt32() == 5);
+            Assert.True(portalInfo.TryGetProperty("MaxLevel", out var maxLevel) && maxLevel.GetInt32() == 30);
+            Assert.True(portalInfo.TryGetProperty("Duration", out var duration) && duration.GetInt32() == 60);
+
+            var wand = FindObjectById(objects, 4);
+            Assert.True(wand.HasValue);
+            Assert.True(wand.Value.TryGetProperty("Details", out var wandDetails));
+            Assert.True(wandDetails.TryGetProperty("Charges", out var wandCharges));
+            Assert.True(wandCharges.TryGetProperty("SpellId", out var wandSpell) && wandSpell.GetInt32() == 900);
+            Assert.True(wandCharges.TryGetProperty("Level", out var wandLevel) && wandLevel.GetInt32() == 10);
+            Assert.True(wandCharges.TryGetProperty("Charges", out var wandChargesTotal) && wandChargesTotal.GetInt32() == 12);
+            Assert.True(wandCharges.TryGetProperty("ChargesRemaining", out var wandChargesRemaining) && wandChargesRemaining.GetInt32() == 7);
+
+            var scroll = FindObjectById(objects, 5);
+            Assert.True(scroll.HasValue);
+            Assert.True(scroll.Value.TryGetProperty("Details", out var scrollDetails));
+            Assert.True(scrollDetails.TryGetProperty("SpellContainer", out var spellContainer));
+            Assert.True(spellContainer.TryGetProperty("Level", out var scrollLevel) && scrollLevel.GetInt32() == 8);
+            Assert.True(spellContainer.TryGetProperty("SpellIds", out var spellIds) && spellIds.GetArrayLength() == 3);
+            Assert.True(spellIds[0].GetInt32() == 900);
+            Assert.True(spellIds[1].GetInt32() == 901);
+            Assert.True(spellIds[2].GetInt32() == 902);
+
+            var potion = FindObjectById(objects, 6);
+            Assert.True(potion.HasValue);
+            Assert.True(potion.Value.TryGetProperty("Details", out var potionDetails));
+            Assert.True(potionDetails.TryGetProperty("SpellContainer", out var potionContainer));
+            Assert.True(potionContainer.TryGetProperty("Level", out var potionLevel) && potionLevel.GetInt32() == 12);
+            Assert.True(potionContainer.TryGetProperty("SpellIds", out var potionSpells) && potionSpells.GetArrayLength() == 3);
+            Assert.True(potionSpells[0].GetInt32() == 910);
+            Assert.True(potionSpells[1].GetInt32() == 0);
+            Assert.True(potionSpells[2].GetInt32() == 0);
+
+            var container = FindObjectById(objects, 2);
+            Assert.True(container.HasValue);
+            Assert.True(container.Value.TryGetProperty("Details", out var containerDetails));
+            Assert.True(containerDetails.TryGetProperty("Container", out var containerInfo));
+            Assert.True(containerInfo.TryGetProperty("Capacity", out var containerCapacity) && containerCapacity.GetInt32() == 50);
+            Assert.True(containerInfo.TryGetProperty("Flags", out var containerFlags) && containerFlags.GetArrayLength() == 2);
+            Assert.True(containerInfo.TryGetProperty("KeyId", out var containerKey) && containerKey.GetInt32() == 2001);
+            Assert.True(containerInfo.TryGetProperty("CorpseType", out var corpseType) && corpseType.GetInt32() == 1);
+            Assert.True(containerInfo.TryGetProperty("CorpseBlood", out var corpseBlood) && corpseBlood.GetInt32() == 3);
+            Assert.True(containerInfo.TryGetProperty("CorpseLevel", out var corpseLevel) && corpseLevel.GetInt32() == 12);
+
+            var armor = FindObjectById(objects, 7);
+            Assert.True(armor.HasValue);
+            Assert.True(armor.Value.TryGetProperty("Details", out var armorDetails));
+            Assert.True(armorDetails.TryGetProperty("Armor", out var armorInfo));
+            Assert.True(armorInfo.TryGetProperty("ArmorClass", out var armorClass) && armorClass.GetInt32() == 25);
+            Assert.True(armorInfo.TryGetProperty("HitPoints", out var armorHp) && armorHp.GetInt32() == 40);
+
+            var light = FindObjectById(objects, 8);
+            Assert.True(light.HasValue);
+            Assert.True(light.Value.TryGetProperty("Details", out var lightDetails));
+            Assert.True(lightDetails.TryGetProperty("Light", out var lightInfo));
+            Assert.True(lightInfo.TryGetProperty("Color", out var lightColor) && lightColor.GetInt32() == 2);
+            Assert.True(lightInfo.TryGetProperty("Type", out var lightType) && lightType.GetInt32() == 4);
+            Assert.True(lightInfo.TryGetProperty("Hours", out var lightHours) && lightHours.GetInt32() == 12);
+
+            var money = FindObjectById(objects, 9);
+            Assert.True(money.HasValue);
+            Assert.True(money.Value.TryGetProperty("Details", out var moneyDetails));
+            Assert.True(moneyDetails.TryGetProperty("Money", out var moneyInfo));
+            Assert.True(moneyInfo.TryGetProperty("Amount", out var amountValue) && amountValue.GetInt32() == 250);
         }
         finally
         {

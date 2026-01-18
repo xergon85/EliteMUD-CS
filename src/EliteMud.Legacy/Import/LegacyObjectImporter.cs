@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace EliteMud.Legacy.Import;
 
@@ -62,6 +63,8 @@ internal static class LegacyObjectImporter
                 var cost = parser.ReadNumber();
                 var costPerDay = parser.ReadNumber();
 
+                var details = BuildObjectDetails(LegacyImportLookup.ItemTypeFromIndex(type), values);
+
                 var extras = new List<ExtraDescriptionContent>();
                 var affects = new List<ObjectAffectContent>();
                 var bitvectors = new List<string>();
@@ -69,29 +72,126 @@ internal static class LegacyObjectImporter
 
                 ParseObjectExtensions(parser, extras, affects, bitvectors, ref specialProc);
 
-                objects.Add(new ObjectContent(
-                    vnum,
-                    name,
-                    shortDesc,
-                    description,
-                    actionDesc,
-                    LegacyImportLookup.ItemTypeFromIndex(type),
-                    level,
-                    LegacyImportLookup.AntiClassFromIndex(antiClass),
-                    LegacyImportLookup.ItemExtraFlags(extraFlags),
-                    LegacyImportLookup.ItemWearFlags(wearFlags),
-                    values,
-                    weight,
-                    cost,
-                    costPerDay,
-                    extras,
-                    affects,
-                    bitvectors,
-                    specialProc));
+                var typeName = LegacyImportLookup.ItemTypeFromIndex(type);
+
+                objects.Add(new ObjectContent
+                {
+                    Id = vnum,
+                    Name = name,
+                    ShortDescription = shortDesc,
+                    Description = description,
+                    ActionDescription = actionDesc,
+                    Type = typeName,
+                    Level = level,
+                    AntiClass = LegacyImportLookup.AntiClassFromIndex(antiClass),
+                    ExtraFlags = LegacyImportLookup.ItemExtraFlags(extraFlags),
+                    WearFlags = LegacyImportLookup.ItemWearFlags(wearFlags),
+                    Values = values,
+                    Details = details,
+                    Weight = weight,
+                    Cost = cost,
+                    CostPerDay = costPerDay,
+                    ExtraDescriptions = extras,
+                    Affects = affects,
+                    Bitvectors = bitvectors,
+                    SpecialProc = specialProc
+                });
             }
         }
 
         return objects;
+    }
+
+    private static ObjectDetailsContent? BuildObjectDetails(string typeName, IReadOnlyList<int> values)
+    {
+        return typeName switch
+        {
+            "Light" => new ObjectDetailsContent
+            {
+                Light = new ObjectLightContent(values[0], values[1], values[2])
+            },
+            "Scroll" => new ObjectDetailsContent
+            {
+                SpellContainer = new ObjectSpellContainerContent(values[0], new[] { values[1], values[2], values[3] })
+            },
+            "Potion" => new ObjectDetailsContent
+            {
+                SpellContainer = new ObjectSpellContainerContent(values[0], new[] { values[1], values[2], values[3] })
+            },
+            "Wand" => new ObjectDetailsContent
+            {
+                Charges = new ObjectWandStaffContent(values[3], values[0], values[1], values[2])
+            },
+            "Staff" => new ObjectDetailsContent
+            {
+                Charges = new ObjectWandStaffContent(values[3], values[0], values[1], values[2])
+            },
+            "Weapon" => new ObjectDetailsContent
+            {
+                Weapon = new ObjectWeaponContent(values[1], values[2], values[3], values[5])
+            },
+            "FireWeapon" => new ObjectDetailsContent
+            {
+                Weapon = new ObjectWeaponContent(values[1], values[2], values[3], values[5])
+            },
+            "Missile" => new ObjectDetailsContent
+            {
+                Missile = new ObjectMissileContent(values[1], values[3])
+            },
+            "Armor" => new ObjectDetailsContent
+            {
+                Armor = new ObjectArmorContent(values[0], values[5])
+            },
+            "Trap" => new ObjectDetailsContent
+            {
+                Trap = new ObjectTrapContent(values[0], values[1])
+            },
+            "Container" => new ObjectDetailsContent
+            {
+                Container = new ObjectContainerContent(
+                    values[0],
+                    LegacyImportLookup.ContainerFlags(values[1]),
+                    values[2],
+                    values[3],
+                    values[4],
+                    values[5])
+            },
+            "DrinkContainer" => new ObjectDetailsContent
+            {
+                Drink = new ObjectDrinkContent(values[0], values[1], values[2], values[3] != 0)
+            },
+            "Fountain" => new ObjectDetailsContent
+            {
+                Drink = new ObjectDrinkContent(values[0], values[1], values[2], values[3] != 0)
+            },
+            "Note" => new ObjectDetailsContent
+            {
+                Note = new ObjectNoteContent(values[0])
+            },
+            "Key" => new ObjectDetailsContent
+            {
+                Key = new ObjectKeyContent(values[0], values[4], values[5])
+            },
+            "Food" => new ObjectDetailsContent
+            {
+                Food = new ObjectFoodContent(values[0], values[3] != 0)
+            },
+            "Money" => new ObjectDetailsContent
+            {
+                Money = new ObjectMoneyContent(values[0])
+            },
+            "Portal" => new ObjectDetailsContent
+            {
+                Portal = new ObjectPortalContent(
+                    values[0],
+                    LegacyImportLookup.PortalFlags(values[1]),
+                    values[2],
+                    values[3],
+                    values[4],
+                    values[5])
+            },
+            _ => null
+        };
     }
 
     private static void ParseObjectExtensions(
