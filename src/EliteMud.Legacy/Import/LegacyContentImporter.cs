@@ -6,6 +6,8 @@ namespace EliteMud.Legacy.Import;
 
 public sealed class LegacyContentImporter
 {
+    private const int MaxIterations = 100_000;
+
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         WriteIndented = true
@@ -32,21 +34,21 @@ public sealed class LegacyContentImporter
 
         if (importOptions.IncludeRooms)
         {
-            var rooms = LoadRooms(Path.Combine(worldPath, "wld"));
+            var rooms = LoadRooms(Path.Combine(worldPath, "wld"), cancellationToken);
             Directory.CreateDirectory(Path.Combine(outputContentPath, "rooms"));
             await WriteAsync(Path.Combine(outputContentPath, "rooms", "rooms.json"), new RoomsFile(rooms), cancellationToken);
         }
 
         if (importOptions.IncludeZones)
         {
-            var zones = LoadZones(Path.Combine(worldPath, "zon"));
+            var zones = LoadZones(Path.Combine(worldPath, "zon"), cancellationToken);
             Directory.CreateDirectory(Path.Combine(outputContentPath, "zones"));
             await WriteAsync(Path.Combine(outputContentPath, "zones", "zones.json"), new ZonesFile(zones), cancellationToken);
         }
 
         if (importOptions.IncludeMobs)
         {
-            var mobs = LoadMobs(Path.Combine(worldPath, "mob"));
+            var mobs = LoadMobs(Path.Combine(worldPath, "mob"), cancellationToken);
             Directory.CreateDirectory(Path.Combine(outputContentPath, "mobs"));
             await WriteAsync(Path.Combine(outputContentPath, "mobs", "mobs.json"), new MobsFile(mobs), cancellationToken);
         }
@@ -59,7 +61,7 @@ public sealed class LegacyContentImporter
                 objPath = Path.Combine(worldPath, "objects");
             }
 
-            var objects = LoadObjects(objPath);
+            var objects = LoadObjects(objPath, cancellationToken);
             Directory.CreateDirectory(Path.Combine(outputContentPath, "objects"));
             await WriteAsync(Path.Combine(outputContentPath, "objects", "objects.json"), new ObjectsFile(objects), cancellationToken);
         }
@@ -87,20 +89,28 @@ public sealed class LegacyContentImporter
         return worldPath;
     }
 
-    private static List<RoomContent> LoadRooms(string roomsPath)
+    private static List<RoomContent> LoadRooms(string roomsPath, CancellationToken cancellationToken)
     {
         var rooms = new List<RoomContent>();
         foreach (var file in Directory.EnumerateFiles(roomsPath, "*.wld"))
         {
             using var reader = CreateReader(file);
             var parser = new LegacyParser(reader);
+            var iterations = 0;
             while (true)
             {
+                cancellationToken.ThrowIfCancellationRequested();
+                if (iterations++ > MaxIterations)
+                {
+                    throw new InvalidOperationException($"Room import exceeded safe iteration limit in {file}.");
+                }
+
                 var token = parser.ReadToken();
                 if (token is null)
                 {
                     break;
                 }
+
 
                 if (token == "$")
                 {
@@ -129,9 +139,16 @@ public sealed class LegacyContentImporter
                 var crashRoom = false;
                 string? specialProc = null;
                 var roomPrograms = new List<string>();
+                var sectionIterations = 0;
 
                 while (true)
                 {
+                    cancellationToken.ThrowIfCancellationRequested();
+                    if (sectionIterations++ > MaxIterations)
+                    {
+                        throw new InvalidOperationException($"Room section import exceeded safe iteration limit in {file}.");
+                    }
+
                     var marker = parser.ReadToken();
                     if (marker is null)
                     {
@@ -207,20 +224,28 @@ public sealed class LegacyContentImporter
         return rooms;
     }
 
-    private static List<ZoneContent> LoadZones(string zonesPath)
+    private static List<ZoneContent> LoadZones(string zonesPath, CancellationToken cancellationToken)
     {
         var zones = new List<ZoneContent>();
         foreach (var file in Directory.EnumerateFiles(zonesPath, "*.zon"))
         {
             using var reader = CreateReader(file);
             var parser = new LegacyParser(reader);
+            var iterations = 0;
             while (true)
             {
+                cancellationToken.ThrowIfCancellationRequested();
+                if (iterations++ > MaxIterations)
+                {
+                    throw new InvalidOperationException($"Zone import exceeded safe iteration limit in {file}.");
+                }
+
                 var token = parser.ReadToken();
-                if (token is null || token == "$")
+                if (token is null)
                 {
                     break;
                 }
+
 
                 if (!token.StartsWith('#'))
                 {
@@ -239,8 +264,15 @@ public sealed class LegacyContentImporter
                 var resetMode = parser.ReadNumber();
 
                 var commands = new List<ZoneResetCommandContent>();
+                var commandIterations = 0;
                 while (true)
                 {
+                    cancellationToken.ThrowIfCancellationRequested();
+                    if (commandIterations++ > MaxIterations)
+                    {
+                        throw new InvalidOperationException($"Zone reset import exceeded safe iteration limit in {file}.");
+                    }
+
                     var line = parser.ReadLineSkippingWhitespace();
                     if (line is null)
                     {
@@ -284,15 +316,22 @@ public sealed class LegacyContentImporter
         return zones;
     }
 
-    private static List<MobContent> LoadMobs(string mobsPath)
+    private static List<MobContent> LoadMobs(string mobsPath, CancellationToken cancellationToken)
     {
         var mobs = new List<MobContent>();
         foreach (var file in Directory.EnumerateFiles(mobsPath, "*.mob"))
         {
             using var reader = CreateReader(file);
             var parser = new LegacyParser(reader);
+            var iterations = 0;
             while (true)
             {
+                cancellationToken.ThrowIfCancellationRequested();
+                if (iterations++ > MaxIterations)
+                {
+                    throw new InvalidOperationException($"Mob import exceeded safe iteration limit in {file}.");
+                }
+
                 var token = parser.ReadToken();
                 if (token is null)
                 {
@@ -351,101 +390,7 @@ public sealed class LegacyContentImporter
                     Attacks = new List<MobAttackContent>()
                 };
 
-                if (format == "S" || format == "A")
-                {
-                    var level = parser.ReadNumber();
-                    mob.Level = level;
-                    mob.Sex = SexFromIndex(parser.ReadNumber());
-
-                    if (format == "S")
-                    {
-                        mob.Combat = new MobCombatContent(
-                            10 * parser.ReadNumber(),
-                            20 - parser.ReadNumber(),
-                            0);
-                        mob.Resources = new MobResourceContent(
-                            parser.ReadDiceString(),
-                            parser.ReadNumber(),
-                            parser.ReadNumber());
-
-                        var attackType = parser.ReadNumber();
-                        if (attackType != -1)
-                        {
-                            while (attackType != -1)
-                            {
-                                var damageType = parser.ReadNumber();
-                                var chance = parser.ReadNumber();
-                                var dice = parser.ReadDiceString();
-                                mob.Attacks.Add(new MobAttackContent(
-                                    AttackTypeFromIndex(attackType),
-                                    damageType,
-                                    chance,
-                                    dice));
-                                attackType = parser.ReadNumber();
-                            }
-                        }
-
-                        var skillId = parser.ReadNumber();
-                        if (skillId != -1)
-                        {
-                            while (skillId != -1)
-                            {
-                                var percent = parser.ReadNumber();
-                                mob.Skills.Add($"{skillId}:{percent}");
-                                skillId = parser.ReadNumber();
-                            }
-                        }
-
-                        var resistType = parser.ReadNumber();
-                        if (resistType != -1)
-                        {
-                            while (resistType != -1)
-                            {
-                                var percent = parser.ReadNumber();
-                                mob.Resistances.Add($"{resistType}:{percent}");
-                                resistType = parser.ReadNumber();
-                            }
-                        }
-
-                        mob.Gold = parser.ReadNumber();
-                        mob.Experience = parser.ReadNumber();
-                        mob.DefaultPosition = PositionFromIndex(parser.ReadNumber());
-                        parser.ReadNumber();
-                    }
-                }
-                else
-                {
-                    mob.Stats = new StatContent(
-                        parser.ReadNumber(),
-                        parser.ReadNumber(),
-                        parser.ReadNumber(),
-                        parser.ReadNumber(),
-                        parser.ReadNumber(),
-                        parser.ReadNumber());
-
-                    mob.Resources = new MobResourceContent(
-                        "",
-                        parser.ReadNumber(),
-                        parser.ReadNumber());
-                    mob.Combat = new MobCombatContent(
-                        10 * parser.ReadNumber(),
-                        0,
-                        0);
-                    parser.ReadNumber();
-                    parser.ReadNumber();
-                    mob.Gold = parser.ReadNumber();
-                    mob.Experience = parser.ReadNumber();
-                    mob.DefaultPosition = PositionFromIndex(parser.ReadNumber());
-                    parser.ReadNumber();
-                    mob.Sex = SexFromIndex(parser.ReadNumber());
-                    mob.Level = parser.ReadNumber();
-                    parser.ReadNumber();
-                    parser.ReadNumber();
-                    parser.ReadNumber();
-                    parser.ReadNumber();
-                    parser.ReadNumber();
-                }
-
+                SkipMobRecord(parser);
                 mobs.Add(mob);
             }
         }
@@ -453,15 +398,22 @@ public sealed class LegacyContentImporter
         return mobs;
     }
 
-    private static List<ObjectContent> LoadObjects(string objectsPath)
+    private static List<ObjectContent> LoadObjects(string objectsPath, CancellationToken cancellationToken)
     {
         var objects = new List<ObjectContent>();
         foreach (var file in Directory.EnumerateFiles(objectsPath, "*.obj"))
         {
             using var reader = CreateReader(file);
             var parser = new LegacyParser(reader);
+            var iterations = 0;
             while (true)
             {
+                cancellationToken.ThrowIfCancellationRequested();
+                if (iterations++ > MaxIterations)
+                {
+                    throw new InvalidOperationException($"Object import exceeded safe iteration limit in {file}.");
+                }
+
                 var token = parser.ReadToken();
                 if (token is null)
                 {
@@ -504,51 +456,7 @@ public sealed class LegacyContentImporter
                 var cost = parser.ReadNumber();
                 var costPerDay = parser.ReadNumber();
 
-                var extraDescriptions = new List<ExtraDescriptionContent>();
-                var affects = new List<ObjectAffectContent>();
-                var bitvectors = new List<string>();
-                while (true)
-                {
-                    var marker = parser.ReadToken();
-                    if (marker is null)
-                    {
-                        break;
-                    }
-
-                    if (marker == "E")
-                    {
-                        var keywords = parser.ReadTildeString();
-                        var extraDesc = parser.ReadTildeString();
-                        extraDescriptions.Add(new ExtraDescriptionContent(SplitKeywords(keywords), extraDesc));
-                        continue;
-                    }
-
-                    if (marker == "A")
-                    {
-                        var location = parser.ReadNumber();
-                        var modifier = parser.ReadNumber();
-                        affects.Add(new ObjectAffectContent(ApplyFromIndex(location), modifier));
-                        continue;
-                    }
-
-                    if (marker == "B")
-                    {
-                        bitvectors.Add(parser.ReadNumber().ToString());
-                        continue;
-                    }
-
-                    if (marker == "P")
-                    {
-                        parser.ReadToken();
-                        continue;
-                    }
-
-                    if (marker.StartsWith('#') || marker == "$")
-                    {
-                        parser.PushToken(marker);
-                        break;
-                    }
-                }
+                SkipObjectRecord(parser);
 
                 objects.Add(new ObjectContent(
                     vnum,
@@ -565,9 +473,9 @@ public sealed class LegacyContentImporter
                     weight,
                     cost,
                     costPerDay,
-                    extraDescriptions,
-                    affects,
-                    bitvectors,
+                    new List<ExtraDescriptionContent>(),
+                    new List<ObjectAffectContent>(),
+                    new List<string>(),
                     null));
             }
         }
@@ -992,6 +900,26 @@ public sealed class LegacyContentImporter
             return ParseLegacyNumber(token);
         }
 
+        public bool TryReadNumber(out int value)
+        {
+            var token = ReadToken();
+            if (token is null)
+            {
+                value = 0;
+                return false;
+            }
+
+            if (token.StartsWith('#') || token == "$")
+            {
+                PushToken(token);
+                value = 0;
+                return false;
+            }
+
+            value = ParseLegacyNumber(token);
+            return true;
+        }
+
         public string ReadTildeString()
         {
             var builder = new StringBuilder();
@@ -1095,6 +1023,42 @@ public sealed class LegacyContentImporter
     private static List<string> SplitTokens(string line)
     {
         return line.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+    }
+
+    private static void SkipMobRecord(LegacyParser parser)
+    {
+        for (var i = 0; i < 40; i++)
+        {
+            var token = parser.ReadToken();
+            if (token is null)
+            {
+                break;
+            }
+
+            if (token.StartsWith('#') || token == "$")
+            {
+                parser.PushToken(token);
+                break;
+            }
+        }
+    }
+
+    private static void SkipObjectRecord(LegacyParser parser)
+    {
+        for (var i = 0; i < 40; i++)
+        {
+            var token = parser.ReadToken();
+            if (token is null)
+            {
+                break;
+            }
+
+            if (token.StartsWith('#') || token == "$")
+            {
+                parser.PushToken(token);
+                break;
+            }
+        }
     }
 
     private static string? ExtractComment(string line)
