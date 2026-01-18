@@ -6,8 +6,6 @@ namespace EliteMud.Legacy.Import;
 
 public sealed class LegacyContentImporter
 {
-    private const int MaxIterations = 100_000;
-
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         WriteIndented = true
@@ -94,13 +92,13 @@ public sealed class LegacyContentImporter
         var rooms = new List<RoomContent>();
         foreach (var file in Directory.EnumerateFiles(roomsPath, "*.wld"))
         {
-            using var reader = CreateReader(file);
+            using var reader = LegacyImportUtilities.CreateReader(file);
             var parser = new LegacyParser(reader);
             var iterations = 0;
             while (true)
             {
                 cancellationToken.ThrowIfCancellationRequested();
-                if (iterations++ > MaxIterations)
+                if (iterations++ > LegacyImportConstants.MaxIterations)
                 {
                     throw new InvalidOperationException($"Room import exceeded safe iteration limit in {file}.");
                 }
@@ -144,7 +142,7 @@ public sealed class LegacyContentImporter
                 while (true)
                 {
                     cancellationToken.ThrowIfCancellationRequested();
-                    if (sectionIterations++ > MaxIterations)
+                    if (sectionIterations++ > LegacyImportConstants.MaxIterations)
                     {
                         throw new InvalidOperationException($"Room section import exceeded safe iteration limit in {file}.");
                     }
@@ -173,7 +171,7 @@ public sealed class LegacyContentImporter
                             DirectionFromIndex(dir),
                             toRoom,
                             exitDesc,
-                            SplitKeywords(keywords),
+                            LegacyImportUtilities.SplitKeywords(keywords),
                             ExitFlags(exitFlags),
                             keyId < 0 ? null : keyId));
                         continue;
@@ -183,7 +181,7 @@ public sealed class LegacyContentImporter
                     {
                         var keywords = parser.ReadTildeString();
                         var extraDesc = parser.ReadTildeString();
-                        extras.Add(new ExtraDescriptionContent(SplitKeywords(keywords), extraDesc));
+                        extras.Add(new ExtraDescriptionContent(LegacyImportUtilities.SplitKeywords(keywords), extraDesc));
                         continue;
                     }
 
@@ -229,13 +227,13 @@ public sealed class LegacyContentImporter
         var zones = new List<ZoneContent>();
         foreach (var file in Directory.EnumerateFiles(zonesPath, "*.zon"))
         {
-            using var reader = CreateReader(file);
+            using var reader = LegacyImportUtilities.CreateReader(file);
             var parser = new LegacyParser(reader);
             var iterations = 0;
             while (true)
             {
                 cancellationToken.ThrowIfCancellationRequested();
-                if (iterations++ > MaxIterations)
+                if (iterations++ > LegacyImportConstants.MaxIterations)
                 {
                     throw new InvalidOperationException($"Zone import exceeded safe iteration limit in {file}.");
                 }
@@ -268,7 +266,7 @@ public sealed class LegacyContentImporter
                 while (true)
                 {
                     cancellationToken.ThrowIfCancellationRequested();
-                    if (commandIterations++ > MaxIterations)
+                    if (commandIterations++ > LegacyImportConstants.MaxIterations)
                     {
                         throw new InvalidOperationException($"Zone reset import exceeded safe iteration limit in {file}.");
                     }
@@ -289,7 +287,7 @@ public sealed class LegacyContentImporter
                         continue;
                     }
 
-                    var pieces = SplitTokens(line);
+                    var pieces = LegacyImportUtilities.SplitTokens(line);
                     if (pieces.Count < 4)
                     {
                         continue;
@@ -305,7 +303,7 @@ public sealed class LegacyContentImporter
                         arg3 = parsedArg3;
                     }
 
-                    var comment = ExtractComment(line);
+                    var comment = LegacyImportUtilities.ExtractComment(line);
                     commands.Add(new ZoneResetCommandContent(command, ifFlag, arg1, arg2, arg3, comment));
                 }
 
@@ -321,13 +319,13 @@ public sealed class LegacyContentImporter
         var mobs = new List<MobContent>();
         foreach (var file in Directory.EnumerateFiles(mobsPath, "*.mob"))
         {
-            using var reader = CreateReader(file);
+            using var reader = LegacyImportUtilities.CreateReader(file);
             var parser = new LegacyParser(reader);
             var iterations = 0;
             while (true)
             {
                 cancellationToken.ThrowIfCancellationRequested();
-                if (iterations++ > MaxIterations)
+                if (iterations++ > LegacyImportConstants.MaxIterations)
                 {
                     throw new InvalidOperationException($"Mob import exceeded safe iteration limit in {file}.");
                 }
@@ -403,13 +401,13 @@ public sealed class LegacyContentImporter
         var objects = new List<ObjectContent>();
         foreach (var file in Directory.EnumerateFiles(objectsPath, "*.obj"))
         {
-            using var reader = CreateReader(file);
+            using var reader = LegacyImportUtilities.CreateReader(file);
             var parser = new LegacyParser(reader);
             var iterations = 0;
             while (true)
             {
                 cancellationToken.ThrowIfCancellationRequested();
-                if (iterations++ > MaxIterations)
+                if (iterations++ > LegacyImportConstants.MaxIterations)
                 {
                     throw new InvalidOperationException($"Object import exceeded safe iteration limit in {file}.");
                 }
@@ -483,10 +481,6 @@ public sealed class LegacyContentImporter
         return objects;
     }
 
-    private static StreamReader CreateReader(string path)
-    {
-        return new StreamReader(path, Encoding.Latin1);
-    }
 
     private static int ParseInt(string token)
     {
@@ -667,14 +661,6 @@ public sealed class LegacyContentImporter
         return flags;
     }
 
-    private static List<string> SplitKeywords(string keywords)
-    {
-        return keywords
-            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-            .Select(keyword => keyword.Trim())
-            .Where(keyword => keyword.Length > 0)
-            .ToList();
-    }
 
     private static List<string> RoomFlagNames => new()
     {
@@ -1020,11 +1006,6 @@ public sealed class LegacyContentImporter
         return valueSum;
     }
 
-    private static List<string> SplitTokens(string line)
-    {
-        return line.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
-    }
-
     private static void SkipMobRecord(LegacyParser parser)
     {
         for (var i = 0; i < 40; i++)
@@ -1061,16 +1042,6 @@ public sealed class LegacyContentImporter
         }
     }
 
-    private static string? ExtractComment(string line)
-    {
-        var index = line.IndexOf('*');
-        if (index <= 0)
-        {
-            return null;
-        }
-
-        return line[(index + 1)..].Trim();
-    }
 
     private sealed class RoomsFile
     {
