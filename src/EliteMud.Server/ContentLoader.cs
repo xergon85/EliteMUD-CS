@@ -178,15 +178,6 @@ internal static class ContentLoader
         var objects = new List<ObjectDefinition>();
         foreach (var obj in file.Objects)
         {
-            var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-            if (obj.Values is not null)
-            {
-                foreach (var pair in obj.Values)
-                {
-                    values[pair.Key] = JsonElementToString(pair.Value);
-                }
-            }
-
             objects.Add(new ObjectDefinition(
                 obj.Id,
                 obj.Name ?? string.Empty,
@@ -196,7 +187,8 @@ internal static class ContentLoader
                 obj.Type ?? string.Empty,
                 obj.WearSlots ?? new List<string>(),
                 obj.Flags ?? new List<string>(),
-                values,
+                obj.Details,
+                obj.Values ?? new List<int>(),
                 obj.Weight,
                 obj.Cost));
         }
@@ -352,7 +344,8 @@ internal static class ContentLoader
         public string? Type { get; set; }
         public List<string>? WearSlots { get; set; }
         public List<string>? Flags { get; set; }
-        public Dictionary<string, JsonElement>? Values { get; set; }
+        public List<int>? Values { get; set; }
+        public ObjectDetails? Details { get; set; }
         public int Weight { get; set; }
         public int Cost { get; set; }
     }

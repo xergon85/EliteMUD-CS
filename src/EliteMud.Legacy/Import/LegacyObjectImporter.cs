@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using EliteMud.Game;
 
 namespace EliteMud.Legacy.Import;
 
@@ -102,53 +103,53 @@ internal static class LegacyObjectImporter
         return objects;
     }
 
-    private static ObjectDetailsContent? BuildObjectDetails(string typeName, IReadOnlyList<int> values)
+    private static ObjectDetails? BuildObjectDetails(string typeName, IReadOnlyList<int> values)
     {
         return typeName switch
         {
-            "Light" => new ObjectDetailsContent
+            "Light" => new ObjectDetails
             {
-                Light = new ObjectLightContent(values[0], values[1], values[2])
+                Light = new ObjectLight(values[0], values[1], values[2])
             },
-            "Scroll" => new ObjectDetailsContent
+            "Scroll" => new ObjectDetails
             {
-                SpellContainer = new ObjectSpellContainerContent(values[0], new[] { values[1], values[2], values[3] })
+                SpellContainer = new ObjectSpellContainer(values[0], new[] { values[1], values[2], values[3] })
             },
-            "Potion" => new ObjectDetailsContent
+            "Potion" => new ObjectDetails
             {
-                SpellContainer = new ObjectSpellContainerContent(values[0], new[] { values[1], values[2], values[3] })
+                SpellContainer = new ObjectSpellContainer(values[0], new[] { values[1], values[2], values[3] })
             },
-            "Wand" => new ObjectDetailsContent
+            "Wand" => new ObjectDetails
             {
-                Charges = new ObjectWandStaffContent(values[3], values[0], values[1], values[2])
+                Charges = new ObjectWandStaff(values[3], values[0], values[1], values[2])
             },
-            "Staff" => new ObjectDetailsContent
+            "Staff" => new ObjectDetails
             {
-                Charges = new ObjectWandStaffContent(values[3], values[0], values[1], values[2])
+                Charges = new ObjectWandStaff(values[3], values[0], values[1], values[2])
             },
-            "Weapon" => new ObjectDetailsContent
+            "Weapon" => new ObjectDetails
             {
-                Weapon = new ObjectWeaponContent(values[1], values[2], values[3], values[5])
+                Weapon = new ObjectWeapon(values[1], values[2], values[3], values[5])
             },
-            "FireWeapon" => new ObjectDetailsContent
+            "FireWeapon" => new ObjectDetails
             {
-                Weapon = new ObjectWeaponContent(values[1], values[2], values[3], values[5])
+                Weapon = new ObjectWeapon(values[1], values[2], values[3], values[5])
             },
-            "Missile" => new ObjectDetailsContent
+            "Missile" => new ObjectDetails
             {
-                Missile = new ObjectMissileContent(values[1], values[3])
+                Missile = new ObjectMissile(values[1], values[3])
             },
-            "Armor" => new ObjectDetailsContent
+            "Armor" => new ObjectDetails
             {
-                Armor = new ObjectArmorContent(values[0], values[5])
+                Armor = new ObjectArmor(values[0], values[5])
             },
-            "Trap" => new ObjectDetailsContent
+            "Trap" => new ObjectDetails
             {
-                Trap = new ObjectTrapContent(values[0], values[1])
+                Trap = new ObjectTrap(values[0], values[1])
             },
-            "Container" => new ObjectDetailsContent
+            "Container" => new ObjectDetails
             {
-                Container = new ObjectContainerContent(
+                Container = new ObjectContainer(
                     values[0],
                     LegacyImportLookup.ContainerFlags(values[1]),
                     values[2],
@@ -156,33 +157,33 @@ internal static class LegacyObjectImporter
                     values[4],
                     values[5])
             },
-            "DrinkContainer" => new ObjectDetailsContent
+            "DrinkContainer" => new ObjectDetails
             {
-                Drink = new ObjectDrinkContent(values[0], values[1], values[2], values[3] != 0)
+                Drink = new ObjectDrink(values[0], values[1], values[2], values[3] != 0)
             },
-            "Fountain" => new ObjectDetailsContent
+            "Fountain" => new ObjectDetails
             {
-                Drink = new ObjectDrinkContent(values[0], values[1], values[2], values[3] != 0)
+                Drink = new ObjectDrink(values[0], values[1], values[2], values[3] != 0)
             },
-            "Note" => new ObjectDetailsContent
+            "Note" => new ObjectDetails
             {
-                Note = new ObjectNoteContent(values[0])
+                Note = new ObjectNote(values[0])
             },
-            "Key" => new ObjectDetailsContent
+            "Key" => new ObjectDetails
             {
-                Key = new ObjectKeyContent(values[0], values[4], values[5])
+                Key = new ObjectKey(values[0], values[4], values[5])
             },
-            "Food" => new ObjectDetailsContent
+            "Food" => new ObjectDetails
             {
-                Food = new ObjectFoodContent(values[0], values[3] != 0)
+                Food = new ObjectFood(values[0], values[3] != 0)
             },
-            "Money" => new ObjectDetailsContent
+            "Money" => new ObjectDetails
             {
-                Money = new ObjectMoneyContent(values[0])
+                Money = new ObjectMoney(values[0])
             },
-            "Portal" => new ObjectDetailsContent
+            "Portal" => new ObjectDetails
             {
-                Portal = new ObjectPortalContent(
+                Portal = new ObjectPortal(
                     values[0],
                     LegacyImportLookup.PortalFlags(values[1]),
                     values[2],

@@ -7,19 +7,26 @@ namespace EliteMud.Server;
 internal sealed class WorldState : IWorldState
 {
     private readonly Dictionary<int, MobDefinition> _mobDefinitions;
+    private readonly Dictionary<int, ObjectDefinition> _objectDefinitions;
     private readonly Dictionary<int, List<MobInstance>> _roomMobs;
+    private readonly Dictionary<int, List<ObjectInstance>> _roomObjects;
     private readonly IReadOnlyList<ZoneDefinition> _zones;
     private int _nextMobInstanceId;
+    private int _nextObjectInstanceId;
 
     public WorldState(
         WorldDefinition world,
         Dictionary<int, MobDefinition> mobDefinitions,
+        Dictionary<int, ObjectDefinition> objectDefinitions,
         Dictionary<int, List<MobInstance>> roomMobs,
+        Dictionary<int, List<ObjectInstance>> roomObjects,
         IReadOnlyList<ZoneDefinition> zones)
     {
         World = world;
         _mobDefinitions = mobDefinitions;
+        _objectDefinitions = objectDefinitions;
         _roomMobs = roomMobs;
+        _roomObjects = roomObjects;
         _zones = zones;
     }
 
@@ -27,11 +34,20 @@ internal sealed class WorldState : IWorldState
 
     public IReadOnlyDictionary<int, MobDefinition> MobDefinitions => _mobDefinitions;
 
+    public IReadOnlyDictionary<int, ObjectDefinition> ObjectDefinitions => _objectDefinitions;
+
     public IReadOnlyList<MobInstance> GetMobsInRoom(int roomId)
     {
         return _roomMobs.TryGetValue(roomId, out var mobs)
             ? mobs
             : Array.Empty<MobInstance>();
+    }
+
+    public IReadOnlyList<ObjectInstance> GetObjectsInRoom(int roomId)
+    {
+        return _roomObjects.TryGetValue(roomId, out var objects)
+            ? objects
+            : Array.Empty<ObjectInstance>();
     }
 
     public void ResetAllZones()
@@ -94,47 +110,111 @@ internal sealed class WorldState : IWorldState
 
             _roomMobs[roomId].Clear();
         }
+
+        var objectDefsWithMaxLimit = new HashSet<int>();
+        foreach (var reset in zone.ResetCommands)
+        {
+            if (string.Equals(reset.Type, "LoadObject", StringComparison.OrdinalIgnoreCase) 
+                && reset.MobId.HasValue 
+                && reset.MaxExisting.HasValue)
+            {
+                objectDefsWithMaxLimit.Add(reset.MobId.Value);
+            }
+        }
+
+        foreach (var roomId in _roomObjects.Keys)
+        {
+            if (roomId < zone.RoomRange.Min || roomId > zone.RoomRange.Max)
+            {
+                continue;
+            }
+
+            if (objectDefsWithMaxLimit.Count == 0)
+            {
+                _roomObjects[roomId].Clear();
+            }
+            else
+            {
+                _roomObjects[roomId].RemoveAll(obj => !objectDefsWithMaxLimit.Contains(obj.Definition.Id));
+            }
+        }
     }
 
     private void ApplyZoneResets(ZoneDefinition zone)
     {
+        MobInstance? lastMob = null;
+
         foreach (var reset in zone.ResetCommands)
         {
-            if (!string.Equals(reset.Type, "LoadMob", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(reset.Type, "LoadMob", StringComparison.OrdinalIgnoreCase))
             {
-                continue;
-            }
-
-            if (!reset.MobId.HasValue || !reset.RoomId.HasValue)
-            {
-                continue;
-            }
-
-            if (!_mobDefinitions.TryGetValue(reset.MobId.Value, out var mobDefinition))
-            {
-                continue;
-            }
-
-            if (!_roomMobs.TryGetValue(reset.RoomId.Value, out var list))
-            {
-                list = new List<MobInstance>();
-                _roomMobs[reset.RoomId.Value] = list;
-            }
-
-            var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
-            var existing = 0;
-            foreach (var instance in list)
-            {
-                if (instance.Definition.Id == mobDefinition.Id)
+                if (!reset.MobId.HasValue || !reset.RoomId.HasValue)
                 {
-                    existing++;
+                    continue;
+                }
+
+                if (!_mobDefinitions.TryGetValue(reset.MobId.Value, out var mobDefinition))
+                {
+                    continue;
+                }
+
+                if (!_roomMobs.TryGetValue(reset.RoomId.Value, out var list))
+                {
+                    list = new List<MobInstance>();
+                    _roomMobs[reset.RoomId.Value] = list;
+                }
+
+                var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
+                var existing = 0;
+                foreach (var instance in list)
+                {
+                    if (instance.Definition.Id == mobDefinition.Id)
+                    {
+                        existing++;
+                    }
+                }
+
+                var toSpawn = desiredCount - existing;
+                for (var i = 0; i < toSpawn; i++)
+                {
+                    var mob = new MobInstance(_nextMobInstanceId++, mobDefinition);
+                    list.Add(mob);
+                    lastMob = mob;
                 }
             }
-
-            var toSpawn = desiredCount - existing;
-            for (var i = 0; i < toSpawn; i++)
+            else if (string.Equals(reset.Type, "LoadObject", StringComparison.OrdinalIgnoreCase))
             {
-                list.Add(new MobInstance(_nextMobInstanceId++, mobDefinition));
+                if (!reset.MobId.HasValue || !reset.RoomId.HasValue)
+                {
+                    continue;
+                }
+
+                if (!_objectDefinitions.TryGetValue(reset.MobId.Value, out var objectDefinition))
+                {
+                    continue;
+                }
+
+                if (!_roomObjects.TryGetValue(reset.RoomId.Value, out var list))
+                {
+                    list = new List<ObjectInstance>();
+                    _roomObjects[reset.RoomId.Value] = list;
+                }
+
+                var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
+                var existing = 0;
+                foreach (var instance in list)
+                {
+                    if (instance.Definition.Id == objectDefinition.Id)
+                    {
+                        existing++;
+                    }
+                }
+
+                var toSpawn = desiredCount - existing;
+                for (var i = 0; i < toSpawn; i++)
+                {
+                    list.Add(new ObjectInstance(_nextObjectInstanceId++, objectDefinition));
+                }
             }
         }
     }

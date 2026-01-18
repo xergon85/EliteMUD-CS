@@ -1,5 +1,12 @@
 namespace EliteMud.Application.Commands.Shared;
 
+
+public sealed record CommandResult(bool Success, string Message)
+{
+    public static CommandResult Ok(string message) => new(true, message);
+    public static CommandResult Fail(string message) => new(false, message);
+}
+
 public sealed record MoveResult(bool Moved, string? Message)
 {
     public static MoveResult Success() => new(true, null);

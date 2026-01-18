@@ -46,7 +46,7 @@ internal static class ServerBootstrap
         Console.WriteLine(
             $"Loaded {mobs.Count} mobs, {objects.Count} objects, {zones.Count} zones from {contentRoot}.");
 
-        var worldState = BuildWorldState(world, mobs, zones);
+        var worldState = BuildWorldState(world, mobs, objects, zones);
         var scriptEngine = BuildScriptEngine(scripts);
 
         var services = new ServiceCollection()
@@ -151,21 +151,30 @@ internal static class ServerBootstrap
     private static WorldState BuildWorldState(
         WorldDefinition world,
         IReadOnlyList<MobDefinition> mobs,
+        IReadOnlyList<ObjectDefinition> objects,
         IReadOnlyList<ZoneDefinition> zones)
     {
-        var mobIndex = new Dictionary<int, MobDefinition>();
+        var mobDefinitions = new Dictionary<int, MobDefinition>();
         foreach (var mob in mobs)
         {
-            mobIndex[mob.Id] = mob;
+            mobDefinitions[mob.Id] = mob;
+        }
+
+        var objectDefinitions = new Dictionary<int, ObjectDefinition>();
+        foreach (var obj in objects)
+        {
+            objectDefinitions[obj.Id] = obj;
         }
 
         var roomMobs = new Dictionary<int, List<MobInstance>>();
+        var roomObjects = new Dictionary<int, List<ObjectInstance>>();
         foreach (var roomId in world.Rooms.Keys)
         {
             roomMobs[roomId] = new List<MobInstance>();
+            roomObjects[roomId] = new List<ObjectInstance>();
         }
 
-        var worldState = new WorldState(world, mobIndex, roomMobs, zones);
+        var worldState = new WorldState(world, mobDefinitions, objectDefinitions, roomMobs, roomObjects, zones);
         worldState.ResetAllZones();
         return worldState;
     }

@@ -1,3 +1,4 @@
+using EliteMud.Application.Commands.ImportLegacy;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Server.Adapters.Commands.Shared;
 using Microsoft.Extensions.DependencyInjection;

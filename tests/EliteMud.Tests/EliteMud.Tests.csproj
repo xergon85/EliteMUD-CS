@@ -21,6 +21,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\EliteMud.Game\EliteMud.Game.csproj" />
     <ProjectReference Include="..\..\src\EliteMud.Legacy\EliteMud.Legacy.csproj" />
+    <ProjectReference Include="..\..\src\EliteMud.Application\EliteMud.Application.csproj" />
+    <ProjectReference Include="..\..\src\EliteMud.Server\EliteMud.Server.csproj" />
   </ItemGroup>
 
   <ItemGroup>

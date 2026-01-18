@@ -47,7 +47,8 @@ public sealed record ObjectDefinition(
     string Type,
     IReadOnlyList<string> WearSlots,
     IReadOnlyList<string> Flags,
-    IReadOnlyDictionary<string, string> Values,
+    ObjectDetails? Details,
+    IReadOnlyList<int> Values,
     int Weight,
     int Cost);
 
