@@ -1,7 +1,10 @@
+using EliteMud.Application.Commands.ImportLegacy;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
 using EliteMud.Application.Session;
+using EliteMud.Legacy.Import;
 using EliteMud.Scripting;
+using EliteMud.Server.Adapters.Commands.ImportLegacy;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Move;
 using EliteMud.Server.Adapters.Commands.ResetZone;
@@ -20,6 +23,9 @@ internal static class CommandServiceCollectionExtensions
         return services
             .AddSingleton<CommandCatalog>()
             .AddSingleton<PromptCatalog>()
+            .AddSingleton<LegacyContentImporter>()
+            .AddSingleton<ImportLegacyHandler>()
+            .AddSingleton<ImportLegacyCommandHandler>()
             .AddSingleton<LookCommandHandler>()
             .AddSingleton<MoveCommandHandler>()
             .AddSingleton<SayCommandHandler>(provider => new SayCommandHandler(

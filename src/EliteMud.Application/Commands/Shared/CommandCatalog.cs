@@ -18,4 +18,9 @@ public sealed class CommandCatalog
     {
         return "Usage: zreset [zoneId]";
     }
+
+    public string GetImportLegacyUsage()
+    {
+        return "Usage: import-legacy [path-to-legacy-lib]";
+    }
 }

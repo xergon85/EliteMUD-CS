@@ -12,6 +12,7 @@ public enum CommandKind
     ResetZone,
     Say,
     Move,
+    ImportLegacy,
     Unknown
 }
 
@@ -64,6 +65,17 @@ public sealed class CommandParser
         if (trimmed.Equals("say", StringComparison.OrdinalIgnoreCase))
         {
             return new CommandRequest(CommandKind.Say, string.Empty, null);
+        }
+
+        if (trimmed.Equals("import-legacy", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.ImportLegacy, null, null);
+        }
+
+        if (trimmed.StartsWith("import-legacy ", StringComparison.OrdinalIgnoreCase))
+        {
+            var argument = trimmed[14..].Trim();
+            return new CommandRequest(CommandKind.ImportLegacy, argument, null);
         }
 
         if (TryParseDirection(trimmed, out var direction))

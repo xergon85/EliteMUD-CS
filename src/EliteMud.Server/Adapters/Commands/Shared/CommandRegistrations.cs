@@ -1,3 +1,4 @@
+using EliteMud.Server.Adapters.Commands.ImportLegacy;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Move;
 using EliteMud.Server.Adapters.Commands.NoOp;
@@ -21,7 +22,8 @@ internal static class CommandRegistrations
             new WhoCommandModule(),
             new ResetZoneCommandModule(),
             new SayCommandModule(),
-            new MoveCommandModule()
+            new MoveCommandModule(),
+            new ImportLegacyCommandModule()
         };
     }
 }
