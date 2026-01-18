@@ -27,7 +27,7 @@ elitemud-import import <legacy-path> <output-path> [options]
 
 ### Arguments
 
-- `<legacy-path>` - Path to legacy EliteMUD world directory (containing wld, mob, obj, zon folders)
+- `<legacy-path>` - Path to legacy EliteMUD root directory (tool will automatically find `lib/world` subdirectory) or direct path to world directory (containing wld, mob, obj, zon folders)
 - `<output-path>` - Path to output JSON content directory
 
 ### Options
@@ -39,9 +39,15 @@ elitemud-import import <legacy-path> <output-path> [options]
 
 ## Examples
 
-### Import all content
+### Import all content from EliteMUD installation
 ```bash
-dotnet run --project src/EliteMud.Cli -- import ../EliteMUD/lib ./content
+dotnet run --project src/EliteMud.Cli -- import ../EliteMUD ./content
+```
+
+The tool automatically finds the `lib/world` subdirectory. Alternatively, you can specify the world directory directly:
+
+```bash
+dotnet run --project src/EliteMud.Cli -- import ../EliteMUD/lib/world ./content
 ```
 
 ### Import only mobs and objects
@@ -87,3 +93,4 @@ The importer supports the following legacy EliteMUD formats:
 - All numeric IDs are preserved from the legacy format
 - Unmapped flags/enums are converted to numeric labels (e.g., `Skill_304`, `Resist_1`)
 - Output JSON is formatted with indentation for readability
+- The tool can import large worlds: tested successfully with 7,000+ rooms, 2,600+ mobs, 2,800+ objects, 100+ zones
