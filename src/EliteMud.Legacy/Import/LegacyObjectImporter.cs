@@ -1,3 +1,5 @@
+using System;
+
 namespace EliteMud.Legacy.Import;
 
 internal static class LegacyObjectImporter
@@ -60,7 +62,12 @@ internal static class LegacyObjectImporter
                 var cost = parser.ReadNumber();
                 var costPerDay = parser.ReadNumber();
 
-                SkipObjectRecord(parser);
+                var extras = new List<ExtraDescriptionContent>();
+                var affects = new List<ObjectAffectContent>();
+                var bitvectors = new List<string>();
+                string? specialProc = null;
+
+                ParseObjectExtensions(parser, extras, affects, bitvectors, ref specialProc);
 
                 objects.Add(new ObjectContent(
                     vnum,
@@ -77,19 +84,24 @@ internal static class LegacyObjectImporter
                     weight,
                     cost,
                     costPerDay,
-                    new List<ExtraDescriptionContent>(),
-                    new List<ObjectAffectContent>(),
-                    new List<string>(),
-                    null));
+                    extras,
+                    affects,
+                    bitvectors,
+                    specialProc));
             }
         }
 
         return objects;
     }
 
-    private static void SkipObjectRecord(LegacyImportParser parser)
+    private static void ParseObjectExtensions(
+        LegacyImportParser parser,
+        List<ExtraDescriptionContent> extras,
+        List<ObjectAffectContent> affects,
+        List<string> bitvectors,
+        ref string? specialProc)
     {
-        for (var i = 0; i < 40; i++)
+        while (true)
         {
             var token = parser.ReadToken();
             if (token is null)
@@ -101,6 +113,42 @@ internal static class LegacyObjectImporter
             {
                 parser.PushToken(token);
                 break;
+            }
+
+            if (token == "E")
+            {
+                var keywords = parser.ReadTildeString();
+                var extraDesc = parser.ReadTildeString();
+                extras.Add(new ExtraDescriptionContent(LegacyImportUtilities.SplitKeywords(keywords), extraDesc));
+                continue;
+            }
+
+            if (token == "A")
+            {
+                var location = parser.ReadNumber();
+                var modifier = parser.ReadNumber();
+                affects.Add(new ObjectAffectContent(LegacyImportLookup.ApplyFromIndex(location), modifier));
+                continue;
+            }
+
+            if (token == "B")
+            {
+                var bitvector = parser.ReadNumber();
+                bitvectors.Add(LegacyImportLookup.BitvectorLabel(bitvector));
+                continue;
+            }
+
+            if (token.StartsWith("P", StringComparison.Ordinal))
+            {
+                specialProc = token.Length > 1 ? token[1..] : parser.ReadToken();
+                if (specialProc is not null)
+                {
+                    specialProc = specialProc.Trim();
+                    if (specialProc.StartsWith("(", StringComparison.Ordinal) && specialProc.EndsWith(")", StringComparison.Ordinal))
+                    {
+                        specialProc = specialProc[1..^1];
+                    }
+                }
             }
         }
     }

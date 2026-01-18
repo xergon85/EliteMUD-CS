@@ -36,16 +36,35 @@ internal static class LegacyImportLookup
     public static string PositionFromIndex(int value) => value switch
     {
         0 => "Dead",
+        1 => "MortallyWounded",
+        2 => "Incapacitated",
+        3 => "Stunned",
         4 => "Sleeping",
         5 => "Resting",
         6 => "Sitting",
+        7 => "Fighting",
         8 => "Standing",
+        10 => "Swimming",
+        11 => "Diving",
+        12 => "Hovering",
+        13 => "Flying",
         _ => $"Position_{value}"
     };
 
     public static string AttackTypeFromIndex(int value) => value switch
     {
-        500 => "Hit",
+        400 => "Hit",
+        401 => "Bludgeon",
+        402 => "Pierce",
+        403 => "Slash",
+        404 => "Blast",
+        405 => "Whip",
+        406 => "NoBsPierce",
+        407 => "Claw",
+        408 => "Bite",
+        409 => "Sting",
+        410 => "Crush",
+        411 => "Ama",
         _ => $"Attack_{value}"
     };
 
@@ -58,6 +77,33 @@ internal static class LegacyImportLookup
         4 => "Wisdom",
         5 => "Constitution",
         6 => "Charisma",
+        7 => "Class",
+        8 => "Level",
+        9 => "Age",
+        10 => "Weight",
+        11 => "Height",
+        12 => "Mana",
+        13 => "Hit",
+        14 => "Move",
+        15 => "Gold",
+        16 => "Experience",
+        17 => "Armor",
+        18 => "Hitroll",
+        19 => "Damroll",
+        20 => "SavingPhysical",
+        21 => "SavingMental",
+        22 => "SavingMagic",
+        23 => "SavingPoison",
+        24 => "MagicResistance",
+        25 => "Jump",
+        26 => "Steal",
+        27 => "Sneak",
+        28 => "Track",
+        29 => "Archery",
+        30 => "Throw",
+        31 => "Swim",
+        32 => "Dive",
+        33 => "Bitvector2",
         _ => $"Apply_{value}"
     };
 
@@ -166,6 +212,12 @@ internal static class LegacyImportLookup
         4 => "Warrior",
         _ => $"Class_{value}"
     };
+
+    public static string SkillLabel(int value) => $"Skill_{value}";
+
+    public static string ResistanceLabel(int value) => $"Resist_{value}";
+
+    public static string BitvectorLabel(int value) => $"Bitvector_{value}";
 
     public static IReadOnlyList<string> FlagsFromBits(int value, IReadOnlyList<string> names)
     {
