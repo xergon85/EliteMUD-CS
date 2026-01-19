@@ -1,0 +1,1755 @@
+{
+  "Zone": {
+    "Id": 284,
+    "Name": "Clans",
+    "TopRoomId": 28499,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 41,
+        "Arg2": 100,
+        "Arg3": 28400,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 18038,
+        "Arg2": 2,
+        "Arg3": 28404,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 28400,
+      "Name": "#bThe Artemisian's Sanctuary#N",
+      "Description": "\n   Before you lies the golden temple of the Artemisian Order.  Behind \nthe door you hear the faint whispers of the sisterhood within.  Above\nthe door you see the words \"Boethia Uber Allelon,\" the Artemisian \nCredo. Although these lovely women are more than happy to help those \nin need, they are not too fond of unwanted guests!",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28401,
+          "Description": "The Great Hall of Artemis.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3802,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28401,
+      "Name": "#bThe Great Hall of Artemis#N",
+      "Description": "\n   As you enter this holy temple, you become aware that you are being \nwatched...but by whom?  You hear the echoes of footsteps, but see no \none as you turn to look.  This room smells of the wild flowers that \nare growing from the floor.  Somehow, sunlight filters through the \narched ceiling, making you feel as if you are still in the forest \noutside.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28402,
+          "Description": "The Altar Room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28400,
+          "Description": "the Temple Entrance",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28402,
+      "Name": "#bThe Altar Room#N",
+      "Description": "\n   A large statue of the goddess Artemis greets you as you enter the\nroom.  She stands before a bloodstained altar upon which the unjust \nare slain in her honor.  Several smaller statues of the Goddesses \nstand guard at her side.  As you move about this room, you can feel \nthe watchful eyes of the sisterhood upon you.  Perhaps you will \nbecome the next to lose your life upon their altar?",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28403,
+          "Description": "Adelphean's Room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28407,
+          "Description": "Hallway of Secrets",
+          "Keywords": [
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28401,
+          "Description": "Great Hall of Artemis",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28411,
+          "Description": "Hallway of Immortality",
+          "Keywords": [
+            "artemis"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28405,
+          "Description": "Amazon's Training Room",
+          "Keywords": [
+            "altar"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "altar",
+            "bloodstained"
+          ],
+          "Description": "\nThe altar is stained with the blood of the men and the beasts \nsacrificed to Artemis.  You notice that the stones at the base do not \nquite fit into the floor...perhaps something is beneath it?"
+        },
+        {
+          "Keywords": [
+            "melody",
+            "2.goddess"
+          ],
+          "Description": "\nDark brown hair with just a tint of auburn flows life-like behind the\nstatue of Melody.  She stands poised, her lithe body ready to pounce\ninto action in an instant.  As you move around the room you notice \nher hypnotic gaze following you around the room... like a huntress\nwatching her prey.  Armed only with her claws, you know this\nArtemisian goddess would make a formidable adversary as well as a\nfaithful ally."
+        },
+        {
+          "Keywords": [
+            "kaleen",
+            "1.goddess"
+          ],
+          "Description": "\nKaleen grins back at you as you gaze upon her statue.  The petite \nratwoman is the adopted daughter of Lovely and Drogg, and can call \nmany of the Artemisians her sisters and brothers.  Her statue is \nadorned with a wreath of laurel leaves, a bow, and a quiver of \narrows.  She wears the mark of the Artemisians on her left arm as a \nsymbol of her allegiance to her proud heritage."
+        },
+        {
+          "Keywords": [
+            "artemis",
+            "goddess"
+          ],
+          "Description": "\nThe maiden Goddess Artemis is strong and tall.  She wears only a \nwreath of flowers and a quiver of arrows.  In one hand she holds a \ngolden bow, and in the other, a double-headed axe...dripping with \nblood."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28403,
+      "Name": "#bThe Adelpheans' Room#N",
+      "Description": "\n   The Artemisian Adelpheans are skilled in the arts of healing and \nmagic. They assist the High Priestesses with the preperations of \nrituals and sacrifices.  You see a large pool here, built for the \nritual bathing of the victims before they are sacrificed.  Most men \nwill come here willingly with a beautiful Adelphean, but leave here \nweeping when they realize what is to be done to them.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28404,
+          "Description": "The Maiden's Room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28402,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pool",
+            "shimmering"
+          ],
+          "Description": "\nThe shimmering pool is quite inviting, but the only souls allowed \ninside are the Artemisians, and those they are to sacrifice."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28404,
+      "Name": "#bThe Maiden's Sanctuary#N",
+      "Description": "\n   Before an Artemisian may become an Amazon, she must endure a \nperiod of intense training as a Maiden.  The Maidens are trained in \nthe arts of war, as well as the lore of the forest.  This room is \nwhere the maidens spend much of their time studying and practicing \ntheir skills.  The walls are covered with murals of the Artemisian \nhunt, during which Artemis transforms herself into a white doe, which \nthe Maidens must capture alive.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28403,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28405,
+      "Name": "#bThe Amazon's Training Room#N",
+      "Description": "\n   This room is where the mighty Amazon warriors of the Artemisian\nOrder practice their deadly skills.  the Amazons are skilled hunters,\ncapable of dispatching man or beast with eerie efficiency.  The walls \nare covered with murals of the many battles fought for the Order \nbefore Artemis.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28421,
+          "Description": "",
+          "Keywords": [
+            "relm"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28406,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "armory"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28402,
+          "Description": "",
+          "Keywords": [
+            "altar"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28406,
+      "Name": "#bThe Amazon's Armory#N",
+      "Description": "\n   This is where the Amazons keep the spoils of their hard fought \nbattles.  The treasure in this room is for all of the Artemisians to \nshare.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28405,
+          "Description": "Training Room",
+          "Keywords": [
+            "door",
+            "training"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28407,
+      "Name": "#bHallway of Secrets#N",
+      "Description": "\n   This hidden hallway is where the private chambers of the Order's  \nleaders can be found.  The floor here is covered with a thick blue  \ncarpet, just right for walking barefoot on.  You can barely hear the\nnoise from the Altar through the thick wooden door.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28409,
+          "Description": "Bronwyn's Chamber",
+          "Keywords": [
+            "bronwyn"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28413,
+          "Description": "Hallway",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28408,
+          "Description": "BigBird's Chamber",
+          "Keywords": [
+            "bigbird"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28402,
+          "Description": "Altar Room",
+          "Keywords": [
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28408,
+      "Name": "#bBigBird's Chambers#N",
+      "Description": "\n   You have entered the private chambers of BigBird.  BigBird has\ndecided to decorate the room with a dungeon motif.  An Iron Maiden \nlies against one wall, and various instruments of torture are \nscattered around the room.  The blood of her latest victim is \ndripping on the floor.  In one corner is a large bookshelf, piled \nhigh with stuffed animals!?!?!?  Well, perhaps BigBird has a nice \nside after all ...(?)",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "PkOk",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28407,
+          "Description": "Hallway of Secrets",
+          "Keywords": [
+            "door",
+            "hallway",
+            "north"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shelf",
+            "animals"
+          ],
+          "Description": "\nThis shelf is full of cute and fuzzy stuffed animals.  Among them, \nyou can see a few bunnies, a couple of bears, and Barney, the purple \ndinosaur."
+        },
+        {
+          "Keywords": [
+            "iron",
+            "maiden"
+          ],
+          "Description": "\nThis pain inflicting device is from the late 1800's.  Although aged \nand less used now adays, it still proves as a worthwhile method of  \ndistributing pain and extracting valuable information."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28409,
+      "Name": "#bBronwyn's Chambers#N",
+      "Description": "\n   You have entered Bronwyn's Chamber. As you look around, all you\ncan do is smile. Bronwyn may be a grown woman, but looking around, \nyou'd think she was a child. You look to the left of the room and you \nsee a pile of stuffed bunnies everywhere! As you continue to look \naround the room, straight ahead you see an antique four-poster bed, \nwith a handmade comforter on it, probably fifty or more years old \nitself, along with some other antique furniture around the room.  Off \nto the side of the bed, on the nightstand, is a picture in an elegant \nframe. To the right of the bed is a large bay window with a \npicturesque view of Midgaard. Bronwyn can often be found resting in \nher window seat, thinking about what life has in store for her.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28407,
+          "Description": "Hallway of Secrets",
+          "Keywords": [
+            "bronwyn"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bunnies"
+          ],
+          "Description": "\nAs you look at the pile of bunnies, you get the urge to go and jump \ninto them like a child would, but you suppress it for now."
+        },
+        {
+          "Keywords": [
+            "picture"
+          ],
+          "Description": "\nAs you look at this portrait you see Bronwyn and her sexy, loving \nhusband Fresh, her sister Madison and Madison's adorable husband \nSmilex. They all look so cute!"
+        },
+        {
+          "Keywords": [
+            "window"
+          ],
+          "Description": "\nOutside the window, you can see people shuffling about the town. Off \nto the east, you can see Harold the Undertaker doing busineses with a \nbloody person whom you cannot make out at this point."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28410,
+      "Name": "#bMystic's #yL#mo#rv#ge #bS#yh#ga#wc#mk#N",
+      "Description": "\n   As you push aside the beads hanging in the doorway, you feast your\neyes on a vibrantly decorated room.  In the very center of the room, \nis a soft, comfy looking bed that has seen many happy nights.  There \nare pictures completely covering the walls of her VERY extended \nfamily.  There is a soft breeze coming from the balcony, where Mystic \ncan often be seen reading or just thinking.  There are several old \nbean bag chairs scattered about the room.  Scattered around the room \nare lava lamp in every color imaginable.  This room would be peaceful \nand calm.  That is if the party girlie would turn down the music.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28413,
+          "Description": "Hallway",
+          "Keywords": [
+            "mystic"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "music"
+          ],
+          "Description": "\nWhat music is she playing??? #yL#mo#rv#ge #bS#yh#ga#wc#mk#N,\nof course!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28411,
+      "Name": "#bHallway of Immortality#N",
+      "Description": "\n   This hallway is dark, lit only by the cracks of light escaping \nfrom underneath four doors.  The northern door looks oddly enough \nlike a visor, you can't begin to fathom how to operate it... The door \nto the east and west are small and are located several feet off the \nground.  The door to the south appears to be made of stout oak.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1257,
+          "Description": "The light eminating from the crack is #bc#ro#mo#gl#yi#we#cs#N!",
+          "Keywords": [
+            "bri"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof",
+            "BashProof",
+            "MagicProof"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1242,
+          "Description": "Drogg's Chambers",
+          "Keywords": [
+            "drogg"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1261,
+          "Description": "Kaleen's Chambers",
+          "Keywords": [
+            "kaleen"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28402,
+          "Description": "The Altar Room",
+          "Keywords": [
+            "artemis"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28412,
+      "Name": "#bKarli's Choklit Paradise#N",
+      "Description": "\n   This relatively small room is approximately 20 by 20 feet and made \nof pure solid milk chocolate.  Little Oompa Loompas run about mixing \nchocolate, and creating candies for the kiddie winks.  Chocolate \nkisses line the ceiling, waiting to be eaten.  Many buckets (made of \nchocolate also) are scattered about the room, all marked and \ncontaining a different kind of scrumdidilyumptious candy.  In a \nspecial section of the room, several pictures float in mid-air... one \ndepicting her beautiful daughter, Medea... one of her whip-mistress \nmommy, Lovely...one of her lovely Goddess and sister, Brigantia... \nand one of the WHOLE Artemisian clan! Whips of all sort lie on the \nground just beneath the pictures (seemingly used veeeery frequently).  \nA great portrait of the Goddess Artemis is carved into the chocolate \nof the back wall.\n\nWelcome to Karli's Choklit Paradise...",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28413,
+          "Description": "Hallway",
+          "Keywords": [
+            "karli"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28413,
+      "Name": "#bHallway of Secrets#N",
+      "Description": "\n   This hidden hallway is where the private chambers of the Order's\nleaders can be found.  The floor here is covered with a thick blue\ncarpet, just right for walking barefoot on.  You can barely hear the\nnoise from the Altar through the thick wooden door.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28412,
+          "Description": "Karli's Chambers",
+          "Keywords": [
+            "karli"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28420,
+          "Description": "Hallway of Secrets",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28410,
+          "Description": "You hear loud music making you want to dance.  A large neon sign \nreads \"#bMystic's #yL#mo#rv#ge #bS#yh#ga#wc#mk#N...#gThe #bCooliest \n#mPlace #yin #gElite#w!!!#N\"",
+          "Keywords": [
+            "mystic"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28407,
+          "Description": "Hallway",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28415,
+          "Description": "The Basement...where the bugs live!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28414,
+      "Name": "#bJesse's #gHideaway#N",
+      "Description": "\n   As you enter this abode the first thing you feel is the soft plush\ngreen carpeting beneath your feet and at the same time you hear the \nsongs of dolphins (which is coming from the small pool in the floor). \nThe room is decorated in soft Earth tones which gives it a sort of \ncozy, homey feeling.  On the far wall of the room there is a large \noverstuffed green couch with pillows thrown about and from which one \ncan watch their favorite football game on the large screen TV, \ncomplete with stero on top of it for easy listening or a kick butt \nparty tune.  (It's no secret this girl likes to party!)  On the side \nwall there is a loft bed complete with a dark green comforter and \npillows galore.  The final thing you notice is the computer desk \nstrewn with papers and books the only hint that this girl is not as \norganized as she looks.  One the desk there is also a photo album \nthat contains pictures of the good times in her life.  There is also\na small plaque here.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28420,
+          "Description": "Hallway",
+          "Keywords": [
+            "jesse"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pool"
+          ],
+          "Description": "\nYou see Jesse's only pet, a baby dolphin named 'Sasha'."
+        },
+        {
+          "Keywords": [
+            "stero"
+          ],
+          "Description": "\nYou notice it is a 3 disc changer with Jesse's favorite tunes in for \nthe playing '101 Great drinking songs', 'Club Mix Galore', and \n'Celine Dion'"
+        },
+        {
+          "Keywords": [
+            "desk"
+          ],
+          "Description": "\nLots and lots of school books there.(not to mention the occasional \nromance novel *wink*)"
+        },
+        {
+          "Keywords": [
+            "album"
+          ],
+          "Description": "\nYou see Jesse in pics with her daughter Claudette and other members \nof her family and friends."
+        },
+        {
+          "Keywords": [
+            "plaque"
+          ],
+          "Description": "\n\"Good friends and Good times always welcome, sit and take a load  \noff!\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28415,
+      "Name": "#bHallway of Philos#N",
+      "Description": "\n   This is the hallway upon which you will find the room of the\nleaders of the Gargareans, the Philos. The floor here is covered with \na thick blue carpet, just right for walking barefoot on.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28416,
+          "Description": "",
+          "Keywords": [
+            "spellie"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28418,
+          "Description": "",
+          "Keywords": [
+            "asil"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28417,
+          "Description": "",
+          "Keywords": [
+            "smilex"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28419,
+          "Description": "",
+          "Keywords": [
+            "zagreus"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28413,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28416,
+      "Name": "#bSpellbinder's Chamber#N",
+      "Description": "\nSpellie needs to re-decorate.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28415,
+          "Description": "",
+          "Keywords": [
+            "spellie"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28417,
+      "Name": "#bSmilex's Rockin Room#N",
+      "Description": "\n   As you enter this spacious abode, the smell of burning incense\novercomes you.  The room is very dark, with candles glowing all \naround, and black lights on the ceiling, giving a florescent glow to \nthe posters on the wall.  In the center of the room, there are two \ncomputers set up, one next to the other, obviously where Smilex and \nMadison sit and play with the internet.  There is a speaker in each \nof the four corners, and the music of Boyz II Men is playing softly.  \nThe entertainment center is placed so that it can be operated and \nviewed from while sitting at the computers.  On one of the screens \nthe words \"I love Madison\" are moving slowly across, and on the other \nit reads \"I love Smilex\".  There is a futon in front of the \nentertainment center, to sit on while watching TV, and if you listen \nquietly, you can hear the squeaking of a mouse. Perhaps this is \nRoger, Smilex's pet.  The walls seem to glow, making you think you \nare protected.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28415,
+          "Description": "",
+          "Keywords": [
+            "smilex"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "futon"
+          ],
+          "Description": "\nIt's white, kind of dirty, but looks very comfortable.  Have a seat,\nrelax."
+        },
+        {
+          "Keywords": [
+            "computer",
+            "computers"
+          ],
+          "Description": "\nNot much to say, they are computers, they look like computers, they \nsound like computers.  The screen savers announce Smilex's and \nMadison's true love for one another."
+        },
+        {
+          "Keywords": [
+            "mouse",
+            "roger"
+          ],
+          "Description": "\nRoger is a small mouse, about 3 inches long plus a tail.  He is grey \nand fuzzy, and very cute.  He won't hurt you.  You can even pet him \nif you wish.  He answers to Roger and Rog."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28418,
+      "Name": "#bThe Ristorante D'Asilasilab#N",
+      "Description": "\n   Welcome to the Ristorante D'Asilasilab! Please come in, make \nyourself comfortable, and enjoy dining at EliteMUD's first Italian \nrestaurant. Sample our fine food while swooning to the styling sounds \nof Johnny \"Pibbman\" Powell (tips accepted at the door). Our specials \ntoday are listed on the sign to your right. Here is your menu.\nEnjoy!",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28415,
+          "Description": "",
+          "Keywords": [
+            "asil"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "menu"
+          ],
+          "Description": "\nTHE RISTORANTE D'ASILASILAB\n \nOmlette of Suun Lu...........................45 gold pieces\nOgreburger with pitch black coke.............60 gold pieces\nOnion Rings of the Universe..................25 gold pieces\nFroboz Frappe...............................100 gold pieces\nCaesar salad (fresh from Rome)...............25 gold pieces\nKatrina's Humble Pie.........................45 gold pieces\n \nAll entrees served with hot bread and your choice of\nDragon Hatchling Stew or our famous Moria Veggie Medley"
+        },
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nPlease seat yourself.\n \nOur specials today are:\nSpellbinder's Mexican Fido Gumbo....75 gold pieces\nMystic's Black Olive Delight........60 gold pieces\nChicken a la Pibbman................65 gold pieces"
+        },
+        {
+          "Keywords": [
+            "big",
+            "tony",
+            "Big",
+            "Tony"
+          ],
+          "Description": "\nAs you gaze at this large Italian man you get the feeling that you \nshould just ignore whatever is going on behind the door he is \nguarding. If you have \"business\" to discuss, then this is the place \nto go. Just make sure that you show the proper respect to the Family."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28419,
+      "Name": "#YZagreus' #bHideaway#N",
+      "Description": "\n   You have entered Zagreus' cluttered study - clearly belonging to a\nman of solitary habits.  The candles perched on odd scraps of clear \nspace provide only a meager amount of light,  but enough to reveal \nwalls lined with floor to  ceiling oak bookcases stuffed with \nmanuscripts, scrolls, and bound leather volumes.  A quick scan of \nvisible titles reveals subjects ranging from metaphysics, philosophy \nand the occult to histories, folklore, astronomy and scattered \ntreatises on sexual practices.  To the right a large desk struggles \nunder an deluge of notebooks, spilt containers of ink, puddles of \ncandle wax, and small mountains of  books and scrolls.  Behind the \ndesk sits a very large comfy chair, worn and ragged but sturdy.  In a \nfar, dark corner you catch a glimpse of a large couch covered in \nblankets and pillows causing it to resemble an unmade comfortable \nbed.  A number of simple wooden chairs scattered about the \nroom have been put to use holding books and papers,  but are still \navailable for guests willing to clear them. Although cluttered and \ndusty, the room tempts you to spend a moment of quiet time, to read \nor engage in casual conversation.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28415,
+          "Description": "",
+          "Keywords": [
+            "zagreus"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28420,
+      "Name": "#bHallway of Secrets#N",
+      "Description": "\n   This hidden hallway is where the private chambers of the Order's\nleaders can be found.  The floor here is covered with a thick blue\ncarpet, just right for walking barefoot on.  You can barely hear the\nnoise from the Altar through the thick wooden door.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28414,
+          "Description": "Jesse's Chambers",
+          "Keywords": [
+            "jesse"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28421,
+          "Description": "Urd's Chambers",
+          "Keywords": [
+            "urd"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28413,
+          "Description": "Hallway",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28421,
+      "Name": "#bUrd's Lounge#N",
+      "Description": "\n   You come into a more dimly illuminated room and you find yourself\nhaving to adjust to the dim lighting for a few seconds. On a far side \nof the room you see a the light of a small candle burning over a book \nwhich glows in it's own distinct way. As you come further into the \nroom you catch the aroma of sweet spring flowers drifting in the air \nand you instantly feel relieved. You can now perceive a small desk on \na wall on which there appears to be little more then some old scrolls \nand a portrait. And on a wall on the opposite side of the room you \nsee a comfortable looking sofa with nice big pillows in it.",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28420,
+          "Description": "Hallway of Secrets",
+          "Keywords": [
+            "urd"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "portrait"
+          ],
+          "Description": "\nA family picture of Urd, her parents (daddy Xenos and mama Chani), \nand her grandparents (Helm and Brigantia)."
+        },
+        {
+          "Keywords": [
+            "candle"
+          ],
+          "Description": "\nYou notice it has a magical air about it, it's flame doesn't seem to\nbe affected by the small turbulence in the air. It reads \"I am the \nlight that shines in the darkness.\""
+        },
+        {
+          "Keywords": [
+            "sofa"
+          ],
+          "Description": "\nIt's not a particularly beautiful sofa but it looks comfortable in a\nstrange way with all the big many colored pillows in it. A small \nheart shaped pillow sits tucked away among the other pillows."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28421,
+      "Name": "#bRelm's #gTropical #mParadise#N",
+      "Description": "\n   You are surrounded by luscious ferns and tall vine-covered trees,\ndeep in a tropical jungle.  The air is hot and humid, making you \nsweat. Large exotic flowers bloom throughout the dense foliage in \nstriking colors of bright orange, red, and purple.  You can hear \nvarious animals and birds calling and whistling, forming strange \nmelodies that are making you uneasy.  As you look around, you spot \nmysterious cat-like tracks sunk in the rich damp soil.  A small \nstream runs by your feet, glistening in the scattered sunlight that \ntries to break through the dense canopy. Under the darkest shadows, \nyou sense that you can see glowing eyes and the glistening of sharp \nteeth, but they disappear quickly, maybe moving in for a closer look\nat you, the stranger.  You get a feeling of awe and respect for \nwhatever find its home here, living in such beauty, and uncertain \ndanger as well..\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28405,
+          "Description": "",
+          "Keywords": [
+            "relm"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28422,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28423,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28424,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28425,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28426,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28427,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28428,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28429,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28430,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28431,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28432,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28433,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28434,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28435,
+      "Name": "#cNot In Use#N",
+      "Description": "\n   This is a free room.  No charge for changing desc.\n§N",
+      "ZoneId": 284,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 0,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 18038,
+      "Name": "hunter warrior woman Arts",
+      "ShortDescription": "\nThe warrior woman",
+      "LongDescription": "\nThe woman #bhunter#Y stands aloof from the games of knights.",
+      "Description": "\nAlthough invited to participate in the Knight's games - the jousting,\nwrestling and other forms of hand to hand combat, the woman scoffed at\nthem as \"boys' games\".  She chose instead to continue her work\nprotecting the children and her own society of women.  She is secure in\nher knowledge of her own strength and feels no need to constantly prove\nherself.  On her tunic you see the emblem of the clan #bArtemisian#N.",
+      "Level": 100,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "8d60+2500",
+        "Mana": 1100,
+        "Move": 1580
+      },
+      "Combat": {
+        "Armor": -450,
+        "Hitroll": 50,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d18+50"
+        },
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d18+50"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 800,
+      "Experience": 1200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 41,
+      "Name": "statue artemisians",
+      "ShortDescription": "\nthe statue of an Artemisian Amazon Warrior",
+      "Description": "\nAn Amazon warrior weeps over the remains of her clan.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28400,
+        0,
+        0,
+        0,
+        110,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "statue",
+            "artemisians",
+            "amazon",
+            "warrior"
+          ],
+          "Description": "\nThis deserted clanhouse was once the home of the Artemisians\nclan. For a time, no man was safe and the sisterhood ruled\nas far as the eye can see. But no more -- a great clan is\ngone but never forgotten."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    }
+  ]
+}

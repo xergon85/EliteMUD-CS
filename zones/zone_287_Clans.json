@@ -1,0 +1,1970 @@
+{
+  "Zone": {
+    "Id": 287,
+    "Name": "Clans",
+    "TopRoomId": 28799,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 39,
+        "Arg2": 100,
+        "Arg3": 28704,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3087,
+        "Arg2": 100,
+        "Arg3": 28705,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 40,
+        "Arg2": 100,
+        "Arg3": 28701,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28700,
+        "Arg2": 100,
+        "Arg3": 28700,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 28700,
+        "Arg2": 1,
+        "Arg3": 28706,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28701,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28702,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28703,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28704,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28705,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 28702,
+        "Arg2": 1,
+        "Arg3": 28700,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28714,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28715,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28716,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28717,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 28701,
+        "Arg2": 1,
+        "Arg3": 28702,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28706,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28707,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28708,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28709,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28710,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28711,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28712,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28713,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 28700,
+      "Name": "The Pub",
+      "Description": "\n   Through the smoke and noise, you can see what appears to be a seedy\ntavern.  The bar, while well-stocked, looks to be in some disrepair,\nburn marks and scuffs abound.  Several tables, which appear to have been\nbroken and fixed many times, fill the center of the room, and booths\nwith high walls ensure privacy for those looking to transact the\noccasional shady deal.  Behind the bar hangs a sign: \n\n                       #yAll alcohol must be paid for \n                   Water is self-serve... the management#N",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28701,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28703,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28701,
+      "Name": "The Guild Hall",
+      "Description": "\n   Here is the gathering place of the guild.  The long hall is filled with\nbenches enough to accommodate a small army.  At the end of the hall is a\ntall chair made entirely of bones, several of which you can not\nidentify... those you can sending shivers through your body.  Above the\nchair lies a simple plaque:  \n \n                          #yDisce doce#N",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28702,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28704,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28700,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plaque"
+          ],
+          "Description": "\nIn English:\n \n                      #yTo Learn and Teach#N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28702,
+      "Name": "The Grill",
+      "Description": "\n   A fantastic smell greets you as you enter the room. The grill is \nfilled with tables.  At one end is a counter upon which a variety of \nfood is laid out ready for you. It looks delicious! \nYour mouth is watering.",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28705,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28701,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 0,
+          "Description": "Room",
+          "Keywords": [
+            "Most",
+            "of",
+            "what",
+            "can",
+            "be",
+            "found",
+            "here",
+            "is",
+            "second-hand",
+            "equipment.",
+            "It",
+            "has",
+            "been\nused",
+            "hard",
+            "and",
+            "then",
+            "given",
+            "away",
+            "to",
+            "someone",
+            "who",
+            "might",
+            "need",
+            "it.",
+            "That\nsomeone",
+            "is",
+            "you.",
+            "While",
+            "the",
+            "majority",
+            "of",
+            "it",
+            "is",
+            "common,",
+            "and",
+            "therefore",
+            "worth",
+            "little,",
+            "you",
+            "might",
+            "get",
+            "lucky",
+            "and",
+            "find",
+            "something",
+            "really",
+            "valuable.",
+            "You",
+            "might",
+            "want",
+            "to",
+            "look",
+            "at",
+            "the",
+            "advice",
+            "board",
+            "before",
+            "you",
+            "change",
+            "your",
+            "kit."
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "ResetClosed",
+            "ResetLocked",
+            "BashProof"
+          ],
+          "KeyId": 51380232
+        },
+        {
+          "Direction": "North",
+          "TargetId": 28700,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28704,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28706,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28704,
+      "Name": "The Entrance to the Four Winds",
+      "Description": "\n   What was once a grand tavern has fallen to disrepair.  When Midgaard was\nnew and prosperous, The Four Winds was the finest inn in all the lands,\nthe only one allowed to build upon the temple complex itself.  When the\ncreatures and beasts invaded the kingdom, it fell on hard times, until\nwhat had become a sleazy brothel and bar was finally boarded up,\nforgotten by all.  Not so anymore!  Now it has been reopened, and is\nslowly becoming grand again.  No longer a tavern, the four stone\nguardians watch the comings and goings of the guild members of the\nAdventurer's Guild.",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28701,
+          "Description": "Before you is a statue, dedicated to the North Wind.  Lord of the\nstorms, he is both the guardian of sailors and the harbinger of doom.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28705,
+          "Description": "Before you is a statue in homage to the East Wind.  Lord of the tides,\nhe is a fickle guardian, protecting when he sees fit, leaving as he\nchooses.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28707,
+          "Description": "Before you is the South Wind, cast in stone.  His visage is kind and\ngentle, but a deeper look shows an iciness and violence that leaves you\ncold.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28703,
+          "Description": "Before you, a statue dedicated to the West Wind rises majestically.\nMost favored of the Winds, he is constant and kind, driving storms away\nand guiding sailors' home.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3000,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28705,
+      "Name": "The Board Room",
+      "Description": "\n   This quiet room is dedicated to the study and research it takes to\nsurvive in the violent world around us.  Scrolls and tomes litter the\ntables.  Many have been left sitting open, as foolish recruits often\nrace off to try a new technique without finishing the lesson.  Will \nyou be so foolish?  Will your body feed some fell beast?  Look to the \nboards for the keys to survival!",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28702,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28708,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28704,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28706,
+      "Name": "The Mad Prophet's Chamber",
+      "Description": "\n   Here lives a madman.  A man whose mind was torn apart by the forces of\nMagic, and the responsibility of controlling it.  He has spent millennia\nrecovering from the damage done to his mind, and has once again decided\nto try and help mankind.  By spending his life dedicated to helping the\nweak he hopes to make amends for his sins.  Wise in the way of the\nworld, his mad ravings contain secrets you would do well to learn.",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28703,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28707,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28707,
+      "Name": "The Tavern Commons",
+      "Description": "\n   Here sleeping space has been provided for those in need of a rest.  The\nbunks are uncomfortable, the room chilly, and the bedding sparse.  But\nthen... what do you want for free?  The guild sponsors hope to one day\nimprove the conditions of the Four Winds, but they have only so much\nmoney.",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28704,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28708,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28706,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28708,
+      "Name": "The Overseers Office",
+      "Description": "\n   Here is where the Overseers can be found.  While they may often be out\nhelping a recruit, they return here to settle disputes, give sage\nadvice, and generally avoid everyone but their guild.  In the corner you\nsee a trap door heading down.  A small sign on it reads: \n       \n                #g One Way Passage to The Zoo#N",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Tunnel",
+        "Private",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28705,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 28717
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28707,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 28717
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 23702,
+          "Description": "",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 28700,
+      "Name": "mad prophet",
+      "ShortDescription": "\nthe mad prophet",
+      "LongDescription": "\nThe prophet swings his staff wildly at you, muttering arcane phrases.",
+      "Description": "\nHis robes are neat, though threadbare, and his hair and beard are both\nlong and ragged, showing both the order of his mind, and the chaos of\nhis thoughts.  He rambles what seems nonsense, and yet at times speaks\nwith both a strong voice and clarity of thought that frightens.  Perhaps\nhe will impart some ancient wisdom upon you... or tell you of his pet\ndragon when he was a boy.  Who can say?",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 80,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 50000,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 emote waves his arms about, wildly shouting at you to, \"Get out there and kill something!!\";\n%5 emote stares at you, moving his eyes slowly up from your toes to your head, and sneers, \"WHERE did you get THAT and WHY would you wear it ?\";\n%20 rem staff;\n%20 hold armor;\n%20 hold sanctified;\n%20 hold healing;\n%5 hold mystic;\n%20 use staff",
+      "SpecialProc": "roc(mu_guild)",
+      "Programs": []
+    },
+    {
+      "Id": 28701,
+      "Name": "cook",
+      "ShortDescription": "\nthe guild cook",
+      "LongDescription": "\nThe guild cook snarls at you as he prepares your meal.",
+      "Description": "\nSmall and hairy, this man wishes he were anywhere but here.  Working over \na hot stove all day does not appeal to him.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 80,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 50000,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 say Aye, an' what d'YE want?;\n%5 say An' I be supposin' ye want food, too?;\n%5 say Make 'em food 'e says.  So I makes 'em food.  Do I get paid for it ?",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 28702,
+      "Name": "Meagan barmaid",
+      "ShortDescription": "\nMeagan",
+      "LongDescription": "\nThe barmaid, Meagan, greets you with an inviting smile.",
+      "Description": "\nAs you look over, the bar maid comes walking up to you, her hips\nswaying nicely.  She smiles and presses up against you, asking if \nthere is anything, anything at all, that you need.  You'd feel a \nlittle more special if she didn't keep looking at your money pouch.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 80,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 50000,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%05 say Hey there, sexy.  What can I do ye for?",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 39,
+      "Name": "statue four winds statues",
+      "ShortDescription": "\nthe four winds",
+      "Description": "\nEach exit is guarded by one of the four winds.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28704,
+        15,
+        100,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "northwind",
+            "statue"
+          ],
+          "Description": "\nBefore you is a statue, dedicated to the North Wind.  Lord of the\nstorms, he is both the guardian of sailors and the harbinger of doom."
+        },
+        {
+          "Keywords": [
+            "eastwind",
+            "2.statue"
+          ],
+          "Description": "\nBefore you is a statue in homage to the East Wind.  Lord of the\ntides,\nhe is a fickle guardian, protecting when he sees fit, leaving as he\nchooses."
+        },
+        {
+          "Keywords": [
+            "Westwind",
+            "statue",
+            "3.statue"
+          ],
+          "Description": "\nBefore you, a statue dedicated to the West Wind rises majestically.\nMost favored of the Winds, he is constant and kind, driving storms\naway\nand guiding sailors' home."
+        },
+        {
+          "Keywords": [
+            "South",
+            "statue",
+            "4.statue"
+          ],
+          "Description": "\nBefore you is the South Wind, cast in stone.  His visage is kind and\ngentle, but a deeper look shows an iciness and violence that leaves\nyou\ncold."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 40,
+      "Name": "board bulletin elite",
+      "ShortDescription": "\nan Adventurer's Guild bulletin board",
+      "Description": "\nThe Adventurer's Guild bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28700,
+      "Name": "barrel water",
+      "ShortDescription": "\na large cold barrel",
+      "Description": "\nCold clear water fills a large barrel made from oak.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        9999,
+        9999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 9999,
+          "Amount": 9999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "barrel"
+          ],
+          "Description": "\nThe innkeeper keeps this barrel filled with cold clear water.  One can't\nhelp but wonder at the source, as you have seen no streams nearby.  In\ntruth, the innkeeper has the water brought in by travelers passing\nthrough the Stanneg Mountains."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28701,
+      "Name": "staff armor",
+      "ShortDescription": "\nstaff of student armor",
+      "Description": "\nA strange staff is laying here.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 50,
+      "AntiClass": "327679",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        9999,
+        9999,
+        1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 1,
+          "Level": 50,
+          "Charges": 9999,
+          "ChargesRemaining": 9999
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 7000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28702,
+      "Name": "blessed staff",
+      "ShortDescription": "\na blessed staff",
+      "Description": "\nA staff of blessing is used by the prophet.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 50,
+      "AntiClass": "327679",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        9999,
+        9999,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 3,
+          "Level": 50,
+          "Charges": 9999,
+          "ChargesRemaining": 9999
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28703,
+      "Name": "healing staff",
+      "ShortDescription": "\na healing staff",
+      "Description": "\nA staff of healing is used by the prophet.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 50,
+      "AntiClass": "327679",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        9999,
+        9999,
+        28,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 28,
+          "Level": 50,
+          "Charges": 9999,
+          "ChargesRemaining": 9999
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28704,
+      "Name": "mystic mystical staff",
+      "ShortDescription": "\na mystical staff",
+      "Description": "\nA mystical staff is used by the prophet.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 50,
+      "AntiClass": "327679",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        9999,
+        9999,
+        71,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 71,
+          "Level": 50,
+          "Charges": 9999,
+          "ChargesRemaining": 9999
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28705,
+      "Name": "sanctified staff",
+      "ShortDescription": "\na sanctified staff",
+      "Description": "\nA sanctified staff is used by the prophet.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 50,
+      "AntiClass": "327679",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        9999,
+        9999,
+        36,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 36,
+          "Level": 50,
+          "Charges": 9999,
+          "ChargesRemaining": 9999
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28706,
+      "Name": "vegetable stew",
+      "ShortDescription": "\na plate of vegetable stew",
+      "Description": "\nA steaming plate of vegetable stew looks very appetising.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 15,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 8,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "vegetable",
+            "stew"
+          ],
+          "Description": "\nIts packed full of chunky vegetables, in a thick gravy, and it \nsmells fantastic! \n\nYour mouth begins to water."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28707,
+      "Name": "roast lamb",
+      "ShortDescription": "\na plate of roast lamb",
+      "Description": "\nA delicious plate of roast lamb reminds you how hungry you are.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        13,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 13,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 5,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "roast",
+            "lamb"
+          ],
+          "Description": "\nThick slices of beautiful lean lamb, cooked to perfection and \nstill slightly pink in the middle. The plate is piled high \nwith lamb and vegetables and covered in a rich gravy that \nsmells of rosemary.\n\nYour stomach cries out for you to feed it!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28708,
+      "Name": "whole roast chicken",
+      "ShortDescription": "\na whole roast chicken",
+      "Description": "\nA whole roast chicken smells fantastic.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 24,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 9,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "roast",
+            "chicken"
+          ],
+          "Description": "\nA lovely chicken, roasted with garlic until its a lovely \ngolden brown.  It smells divine! You think you might go insane \nif you don't eat it right now!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28709,
+      "Name": "steak kidney pie",
+      "ShortDescription": "\na huge steak and kidney pie",
+      "Description": "\nA huge steak and kidney pie is covered with thick gravy.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        14,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 14,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 13,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "steak",
+            "kidney",
+            "pie"
+          ],
+          "Description": "\nLarge chunks of steak and kidney, in delicious gravy, and \ntopped with golden flakey pastry. *drool*"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28710,
+      "Name": "pudding dessert bread butter",
+      "ShortDescription": "\na tasty bread and butter pudding",
+      "Description": "\nA creamy bread and butter pudding is a feast for you eyes.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 15,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pudding",
+            "dessert",
+            "bread",
+            "butter"
+          ],
+          "Description": "\nA traditional favourite, its probably very fattening, but \nyou'll soon work it off when you're out adventuring."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28711,
+      "Name": "death chocolate dessert",
+      "ShortDescription": "\ndeath by chocolate",
+      "Description": "\nAn amazing and elaborate chocolate dessert makes your mouth water.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 20,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "death",
+            "chocolate",
+            "dessert"
+          ],
+          "Description": "\nIncredible! How can it possibly be self-supporting! Layers of \nchocolate, and chocolate ice-cream, chocolate sauce, and \ntopped with (you guessed it) chocolate sprinkles. *drool*"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28712,
+      "Name": "damn fine cherry pie",
+      "ShortDescription": "\na damn fine cherry pie",
+      "Description": "\nA plate of pie, covered in cream, makes your stomach rumble.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 15,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "damn",
+            "fine",
+            "cherry",
+            "pie"
+          ],
+          "Description": "\nA quick taste comfirms that this is indeed the finest slice of\ncherry pie you have ever tasted."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28713,
+      "Name": "ice cream",
+      "ShortDescription": "\na bowl of ice cream",
+      "Description": "\nA bowl of ice cream is starting to melt.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 15,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 8,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "ice",
+            "cream"
+          ],
+          "Description": "\nNo matter what fantastic desserts are on offer, someone always wants ice \ncream.  Not exactly the adventurous type are you?  Maybe you're not cut \nout for adventuring."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28714,
+      "Name": "flagon real ale darkale",
+      "ShortDescription": "\na flagon of real ale",
+      "Description": "\nA flagon of some dark liquid has been carefully placed here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        20,
+        20,
+        4,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 20,
+          "Amount": 20,
+          "Liquid": 4,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28715,
+      "Name": "juice measure calan's knockout",
+      "ShortDescription": "\na measure of Calan's knockout juice",
+      "Description": "\nA measure of some brightly coloured liquid gently sparkles here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        5,
+        5,
+        5,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 5,
+          "Amount": 5,
+          "Liquid": 5,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 15,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28716,
+      "Name": "mug coffee",
+      "ShortDescription": "\na huge mug",
+      "Description": "\nObviously no one wants a mug of coffee.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        5,
+        5,
+        12,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 5,
+          "Amount": 5,
+          "Liquid": 12,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 5,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28717,
+      "Name": "key",
+      "ShortDescription": "\nthe key to the Overseer's office",
+      "Description": "\nA shiny brass is for sale from the barman.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        28717,
+        0,
+        0,
+        0,
+        1,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 28717,
+          "Timer": 1,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3087,
+      "Name": "board bulletin newbie",
+      "ShortDescription": "\na newbie advice board",
+      "Description": "\nA newbie advice bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

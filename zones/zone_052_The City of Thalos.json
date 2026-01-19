@@ -1,0 +1,5158 @@
+{
+  "Zone": {
+    "Id": 52,
+    "Name": "The City of Thalos",
+    "TopRoomId": 5299,
+    "Lifespan": 15,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5200,
+        "Arg2": 1,
+        "Arg3": 5250,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5252,
+        "Arg2": 100,
+        "Arg3": 14,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5217,
+        "Arg2": 20,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5208,
+        "Arg2": 20,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5223,
+        "Arg2": 20,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5209,
+        "Arg2": 25,
+        "Arg3": 5234,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5235,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5232,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5209,
+        "Arg2": 25,
+        "Arg3": 5229,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5236,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5237,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5209,
+        "Arg2": 25,
+        "Arg3": 5240,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5242,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5218,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5209,
+        "Arg2": 25,
+        "Arg3": 5216,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5219,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5220,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5209,
+        "Arg2": 25,
+        "Arg3": 5221,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5225,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5226,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5209,
+        "Arg2": 25,
+        "Arg3": 5224,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5203,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5204,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5209,
+        "Arg2": 25,
+        "Arg3": 5205,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5206,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5201,
+        "Arg2": 25,
+        "Arg3": 5208,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5209,
+        "Arg2": 25,
+        "Arg3": 5209,
+        "Comment": "nod* -je)"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5202,
+        "Arg2": 1,
+        "Arg3": 5229,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5214,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5203,
+        "Arg2": 1,
+        "Arg3": 5226,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 5215,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5204,
+        "Arg2": 1,
+        "Arg3": 5219,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 5218,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5205,
+        "Arg2": 1,
+        "Arg3": 5238,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5214,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5206,
+        "Arg2": 1,
+        "Arg3": 5236,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5222,
+        "Arg2": 100,
+        "Arg3": 12,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5207,
+        "Arg2": 4,
+        "Arg3": 5232,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5207,
+        "Arg2": 4,
+        "Arg3": 5217,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5207,
+        "Arg2": 4,
+        "Arg3": 5227,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5207,
+        "Arg2": 4,
+        "Arg3": 5244,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5208,
+        "Arg2": 3,
+        "Arg3": 5247,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5224,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5200,
+        "Arg2": 100,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5208,
+        "Arg2": 3,
+        "Arg3": 5246,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5226,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5208,
+        "Arg2": 3,
+        "Arg3": 5248,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5221,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5225,
+        "Arg2": 100,
+        "Arg3": 5231,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5215,
+        "Arg2": 100,
+        "Arg3": 5225,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5216,
+        "Arg2": 100,
+        "Arg3": 5225,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5227,
+        "Arg2": 100,
+        "Arg3": 5233,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5201,
+        "Arg2": 20,
+        "Arg3": 5227,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5202,
+        "Arg2": 20,
+        "Arg3": 5227,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5203,
+        "Arg2": 20,
+        "Arg3": 5227,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5204,
+        "Arg2": 20,
+        "Arg3": 5227,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5205,
+        "Arg2": 20,
+        "Arg3": 5227,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5206,
+        "Arg2": 20,
+        "Arg3": 5227,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5228,
+        "Arg2": 100,
+        "Arg3": 5242,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5219,
+        "Arg2": 20,
+        "Arg3": 5217,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5220,
+        "Arg2": 100,
+        "Arg3": 5234,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5207,
+        "Arg2": 20,
+        "Arg3": 5229,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5210,
+        "Arg2": 10,
+        "Arg3": 5238,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5211,
+        "Arg2": 20,
+        "Arg3": 5238,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5213,
+        "Arg2": 20,
+        "Arg3": 5238,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5217,
+        "Arg2": 20,
+        "Arg3": 5230,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5250,
+        "Arg2": 20,
+        "Arg3": 5230,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5251,
+        "Arg2": 20,
+        "Arg3": 5230,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5230,
+        "Arg2": 5,
+        "Arg3": 5202,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5231,
+        "Arg2": 5,
+        "Arg3": 5205,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5232,
+        "Arg2": 5,
+        "Arg3": 5208,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5233,
+        "Arg2": 5,
+        "Arg3": 5211,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5234,
+        "Arg2": 5,
+        "Arg3": 5214,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5235,
+        "Arg2": 5,
+        "Arg3": 5217,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5236,
+        "Arg2": 5,
+        "Arg3": 5220,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5237,
+        "Arg2": 5,
+        "Arg3": 5224,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5238,
+        "Arg2": 5,
+        "Arg3": 5227,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5239,
+        "Arg2": 5,
+        "Arg3": 5230,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5240,
+        "Arg2": 5,
+        "Arg3": 5234,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5241,
+        "Arg2": 5,
+        "Arg3": 5238,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5242,
+        "Arg2": 5,
+        "Arg3": 5241,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5243,
+        "Arg2": 5,
+        "Arg3": 5246,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5244,
+        "Arg2": 5,
+        "Arg3": 5250,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 5200,
+      "Name": "The Grand Gate of Thalos",
+      "Description": "\n   You stand in the archway of a gigantic stone archway. The two steel gates\nhave been forced open and have rusted in place. A hollow gust of wind blows by\nyou into the deserted, and seemingly destroyed, city.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5044,
+          "Description": "The desert sands stretch on for miles and miles.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5201,
+          "Description": "You see devastation everywhere. Houses lie in ruin and skeletons litter the\nstreets. You see strange beasts stalking the shadows.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5201,
+      "Name": "Main Street",
+      "Description": "\n   This was once a magnificent street, but now is in total ruin. The streets\nare barren and windswept and the silence is unending. To the south you see a\nruined cottage while north leads into a dark back alley. Howls and screams echo\nthrough the deserted city.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5239,
+          "Description": "It's a dark alley.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5200,
+          "Description": "The entrance to the city lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5235,
+          "Description": "A ruined shack lies to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5202,
+          "Description": "Main Street lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5202,
+      "Name": "Main Street",
+      "Description": "\n   This was once a magnificent street, but now is in total ruin. The streets\nare barren and windswept and the silence is unending. On one side is a\ncollapsed house while on the other is the entrance to a large ruined mansion.\nEerie sounds echo within the mansion. Near the center of town you see a large\ndomed building, relatively intact.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5236,
+          "Description": "The remnants of a store lie this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5201,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5232,
+          "Description": "It looks like what used to be the main building in the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5203,
+          "Description": "A withered garden path lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5203,
+      "Name": "A garden path",
+      "Description": "\n   A circular path surrounds a magnificent domed temple in the center of the\ncity. Flowers have withered away and the once lush trees are bare. Vines and\nivy snake up the sides of the temple and entangle themselves around your feet.\nA sudden volley of howls pierces the air.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5204,
+          "Description": "The garden path continues around the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5202,
+          "Description": "This is the main street leading to the city's entrance",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5206,
+          "Description": "The garden path continues around the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5250,
+          "Description": "Inside the temple, small patches of light shoot through each doorway as well as\na few holes in the ceiling.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5204,
+      "Name": "A garden path",
+      "Description": "\n   A circular path surrounds a magnificent domed temple in the center of the\ncity. Flowers have withered away and the once lush trees are bare. Vines and\nivy snake up the sides of the temple and entangle themselves around your feet.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5211,
+          "Description": "A side street leads of to the northern half of the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5203,
+          "Description": "The garden path continues around the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5250,
+          "Description": "Inside the temple, small patches of light shoot through each doorway as well as\na few holes in the ceiling.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5205,
+          "Description": "The garden path continues around the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5205,
+      "Name": "A garden path",
+      "Description": "\n   A circular path surrounds a magnificent domed temple in the center of the\ncity. Flowers have withered away and the once lush trees are bare. Vines and\nivy creep up the sides of the temple and entangle themselves around your feet.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5204,
+          "Description": "The garden path continues around the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5250,
+          "Description": "Inside the temple, small patches of light shoot through each doorway as well as\na few cracks in the ceiling.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5206,
+          "Description": "The garden path continues around the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5207,
+          "Description": "What looks like a market place lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5206,
+      "Name": "A garden path",
+      "Description": "\n   A circular path surrounds a magnificent domed temple in the center of the\ncity. Flowers have withered away and the once lush trees are bare. Vines and\nivy creep up the sides of the temple and entangle themselves around your feet.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5250,
+          "Description": "Inside the temple, small patches of light shoot through each doorway as well as\na few cracks in the ceiling.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5203,
+          "Description": "The garden path continues around the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5212,
+          "Description": "A small side street leads to the southern half of the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5205,
+          "Description": "The garden path continues around the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5207,
+      "Name": "The market place",
+      "Description": "\n   You stand in the middle of a large square lined on each side with baskets,\ncarts, and stands of all shapes and sizes. Abandoned, these little shops still\ncontain some of their goods once sold to a demanding public.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5225,
+          "Description": "A small table has been toppled over, spilling fine jewelry and gems onto the\nground.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5205,
+          "Description": "A small garden path encircles a large domed temple in the center of the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5220,
+          "Description": "Rotted remains of fruits and vegetables lie strewn about.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5208,
+          "Description": "The market place continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5208,
+      "Name": "The market place",
+      "Description": "\n   You stand at the end of the market square. Stands and carts line each side,\nfilled with remnants of fine foods and exquisite goods. A small hole in the\nwestern wall of the city leads back out into the desert.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5222,
+          "Description": "Tattered carpets and ruined bales of silk sit idly by a run down stand.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5207,
+          "Description": "The center of the market lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5217,
+          "Description": ">From the massive stench, this must have been a meat and poultry stand. It lies\ntotally bare.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5209,
+      "Name": "A side street",
+      "Description": "\n   This small side street leads east and west into back alleys while to the\nsouth you see the temple. The incessant howling tears at your mind.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5243,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5210,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5228,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5210,
+      "Name": "A side street",
+      "Description": "\n   You are in the common section of the city. Ruined buildings made of clay and\nstone is all the view has to offer. Most of these homes are nothing but piles\nof rubble, but some look almost safe enough to venture into. The street\ncontinues north and south and buildings line the street.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5209,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5244,
+          "Description": "A small doorway leads into a partially collapsed house.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5211,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5226,
+          "Description": "A small clay dwelling sits here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5211,
+      "Name": "A side street",
+      "Description": "\n   This small side street leads away from the garden path to the south. Around\nyou stand large piles or rubble where the houses of commoners used to be. A\nlone howl makes you worry greatly about your safety here.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5210,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5237,
+          "Description": "An unusually tall dwelling stands looming over you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5204,
+          "Description": "A garden path circles around the temple.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5227,
+          "Description": "Here lies a small stone house with a thatched roof.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5212,
+      "Name": "A side street",
+      "Description": "\n   This small side street leads south away from the temple into the business\nsection of town. The destruction that leveled this city was not biased; these\nimportant looking buildings have been almost totally destroyed. There is a hole\nin the wall of a very large structure to the east.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5206,
+          "Description": "A small garden path encircles the temple.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5232,
+          "Description": "This possibly could be the city hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5213,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5221,
+          "Description": "Inside the building you see long pieces of metal, an oven, and some anvils.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5213,
+      "Name": "A side street",
+      "Description": "\n   This small side street is lined with the remains of once great buildings. To\nthe north is a dark, foreboding structure while to the south lies the entrance\nto a small tavern. The street continues north and south.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5212,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5230,
+          "Description": ">From the looks of it, this was once a two story abode. The entire second floor\nhas collapsed leaving a very little part of the bar still free from debris.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5214,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5219,
+          "Description": "This seems to be the only guild house in the entire city. It's dark nature\nmakes you wonder about its' origins.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5214,
+      "Name": "A side street",
+      "Description": "\n   You are at the end of a long street leading to the center of the city. A\nlong dark alley runs east and west.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5213,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5229,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5218,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5215,
+      "Name": "Under a ruined watchtower",
+      "Description": "\n   You stand at the base of a tall watchtower built to protect the city from\ninvaders. From the looks of things, it did not do a good job.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5216,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5218,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5247,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5216,
+      "Name": "A back alley",
+      "Description": "\n   This alley leads to the rear of what used to be a meat stand. You wince at\nthe stench. South is one of the city watchtowers.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5217,
+          "Description": "You see the back-side of the market place meat stand.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5215,
+          "Description": "A tall watchtower stands a silent vigil over the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5217,
+      "Name": "The meat stand",
+      "Description": "\n   A large stand has been set up here with metal hooks and wooden racks in the\nbackground. Hanging on the hooks are very small scraps of meat and other game.\nThis stand is relatively empty, and a sudden burst of howling and screaming\nmakes you realize why this is so.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5208,
+          "Description": "The market place lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5220,
+          "Description": "This is a cart full of rotted vegetables and fruits.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5216,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5218,
+      "Name": "A back alley",
+      "Description": "\n   A narrow alley leads east to a wider street and west to one of the city\nwatchtowers.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5214,
+          "Description": "A small side street greets you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5215,
+          "Description": "A tall watchtower stands a silent vigil over the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5219,
+      "Name": "The guild house",
+      "Description": "\n   You are standing in what once was this city's ONLY guild house. Tables and\nchairs have been smashed and broken weapons lie strewn about the floor as if\nsome massive battle had taken place here. Draped along the back wall is a\ntattered, jet-black banner with the symbol of the Darkside set upon it.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5213,
+          "Description": "A small side street runs past the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5220,
+      "Name": "The produce stand",
+      "Description": "\n   A large cart sits here carrying rotted fruit and vegetables. Flies swarm all\nabout what seems to be the last remaining bits of food left in the city.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5207,
+          "Description": "The market place is deserted.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5217,
+          "Description": "A strong stench emanates from the meat stand next to you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5221,
+      "Name": "The smithy",
+      "Description": "\n   In here you find tools and anvils used to make various weapons and items.\nThe walls have been stripped clean and only a few incomplete pieces of armor\nand weaponry are left.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5212,
+          "Description": "A small side street runs past the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5222,
+      "Name": "The tapestry stand",
+      "Description": "\n   Tattered and torn tapestries and rugs lie heaped in piles. Fancy robes and\nvarious articles of clothing are now just rags. You stare at the strange piles\nfor a long time until a piercing howl makes you think these might be beds.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5223,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5225,
+          "Description": "A fine jewelry stand lies in ruin next to you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5208,
+          "Description": "The market place is deserted.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5223,
+      "Name": "A back alley",
+      "Description": "\n   A narrow alley leads north to one of the city watchtowers while to the south\nthere lies a market stand full of torn clothes and rugs.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5224,
+          "Description": "A tall watchtower stands a silent vigil over the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5222,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5224,
+      "Name": "Under the watchtower",
+      "Description": "\n   You stand under one of the city watchtowers built to protect the city from\ninvaders. Obviously, it failed.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5228,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5223,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5246,
+          "Description": "Above you looms a tall watchtower.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5225,
+      "Name": "The jewelry stand",
+      "Description": "\n   A table has been tipped over, spilling fine jewelry and gems across the\nmarket place. Most of these trinkets are battered and tarnished and few would\nhave any value anymore.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5207,
+          "Description": "The market place is deserted.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5222,
+          "Description": "Next to you is a stand full of ruined clothes and rugs.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5226,
+      "Name": "A ruined clay dwelling",
+      "Description": "\n   This was once a very plain house with nothing more than a few chairs and a\nbed. A cold fireplace suggests that the city has been abandoned for quite a\nwhile. Almost nothing remains of this humble abode.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5210,
+          "Description": "Outside is a small side street.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5227,
+      "Name": "A collapsed stone dwelling",
+      "Description": "\n   This small house has completely collapsed upon itself leaving piles of\ndebris here and there. A few rafters still stand with thatched straw hanging\ndown and a hot wind gusts through the hollow dwelling.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5211,
+          "Description": "A small side street runs past the house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5228,
+      "Name": "A back alley",
+      "Description": "\n   A narrow alley leads east to one of the city watchtowers and west to a small\nside street.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5209,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5224,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5229,
+      "Name": "An abandoned shop",
+      "Description": "\n   From the outside this place looks like an ordinary pile of rubble, but\ninside these cramped quarters you discover what used to be a shop filled with\narmor, weapons, and various other goods. A small sign flutters in the wind.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5214,
+          "Description": "A small side street runs past the shop.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5230,
+      "Name": "The Tavern of the Sun",
+      "Description": "\n   A glorious place in it's prime, this tavern now lies in ruin; tables and\nchairs are broken scattered, bottles and glasses shattered, and a small\nperformance stage crushed. Musical instruments and personal belongings lie\nunder the rubble, but the people they once belonged to are not with them.\nLooking up you see that the entire second floor and roof has fallen in, leaving\na gaping hole above.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5213,
+          "Description": "A small side street runs past the tavern.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5231,
+      "Name": "South wing of the city hall",
+      "Description": "\n   You stand in a large room attached to this end of the hallway which leads\nback north to the reception area. Pedestals and columns have fallen and most of\nthe valuable items have been taken, leaving worthless debris. A few chairs have\nsurvived, as well as a large curved desk. To the east is a vine-covered archway\nleading out into a private courtyard.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5232,
+          "Description": "The long hallway leads back to the main reception area of the city hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5234,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5232,
+      "Name": "The city hall",
+      "Description": "\n   This is the main reception area of Thalos' city hall. The walls have been\ncharred and scored massively and debris is spread from wall to wall. A large\ngaping hole in the west wall allows you to see out to one of the city's side\nstreets. Obviously no one will be seeing you through today. Hallways lead south\nand east.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5202,
+          "Description": "Main street runs past the city hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5233,
+          "Description": "A hallway leads to the east wing of the city hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5231,
+          "Description": "A hallway leads to the south wing of the city hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5212,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5233,
+      "Name": "East wing of the city hall",
+      "Description": "\n   Here lies the remnants of a fancy office, possibly the mayor's. A few\nwithered plants and broken pieces of furniture make this place anything but\nfancy, though. The only thing remaining intact here is a large glass cabinet. A\nlong hallway leads west back to the reception area and an ivy-covered archway\nleads south into a private courtyard.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5234,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5232,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5234,
+      "Name": "The private gardens and courtyard of Thalos",
+      "Description": "\n   What a shame that this mass destruction also touched this once beautiful\nplace. The temple's garden path has nothing on this garden. Flowers and trees\nhave been smashed into the ground and lawn benches thrown through walls. A\nlarge marble fountain in the center of the courtyard still stands, though,\ndefying any attempts to destroy its beauty. Above stands the remnants of one of\nthe watchtowers. Archways north and west lead back into the city hall.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5233,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5231,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5235,
+      "Name": "A small guard house",
+      "Description": "\n   This was once the barracks for Thalos' Cityguards. Now just an empty shell,\nthis small shack still stands guarding the entrance both to the city and to the\ncity hall.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5201,
+          "Description": "Main street runs by this building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5236,
+      "Name": "A collapsed home",
+      "Description": "\n   All that's left of this house is a few scattered piles of rubble and a very\nlarge blast crater. Obviously someone or something important was once housed\nhere. A shrieking howl chills your blood.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5202,
+          "Description": "Main street runs past this ruined home.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5237,
+      "Name": "A tall dwelling",
+      "Description": "\n   This seems to be the tallest structure remaining in the city. At one time\nthis could have been an inn of some sort, but now it's just a mess. The back\nwall as been completely knocked down revealing an entrance into another\nbuilding through yet another collapsed wall. Between the two buildings are a\nfew blast craters and boulders. An old set of wooden steps leads up to a\ncreaking second floor.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5238,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5211,
+          "Description": "A small side street winds past the dwelling.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5245,
+          "Description": "The stairs and even the entire second floor itself looks very unsafe for\ntravel. Gusts of wind make them creak and shudder.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5238,
+      "Name": "A small shack",
+      "Description": "\n   This cramped dwelling could not have housed more than one person. Now with\nthe back wall missing, it could hold many more. Looking around you find broken\nshelves and workbenches with various vials and pouches spilling contents all\nacross the floor. This was possibly the magic shop of the city. The doorway to\nthe east is blocked, making the only exit back west.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5237,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5239,
+      "Name": "A back alley",
+      "Description": "\n   A narrow back alley goes south to main street and north towards a\nwatchtower. A mass of howls catches you of guard.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5240,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5201,
+          "Description": "Main street runs past here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5240,
+      "Name": "A back alley",
+      "Description": "\n   A narrow back alley leads north to one of the city watchtowers and south\ntowards main street. To the west is a doorway to a small house blocked by\ndebris.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5241,
+          "Description": "A tall watchtower stands a silent vigil over the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5239,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5241,
+      "Name": "Under a watchtower",
+      "Description": "\n   You stand under a tall watchtower. Narrow back alleys lead west and south\nand a very weak looking ladder leads up into the tower. Above you, you hear the\nscreams of tens of starving lamias! Beware!",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5240,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5243,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5248,
+          "Description": "Winds howl high above your head in the tower above. You hear the screams of\ntens of howling lamias above you!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5242,
+      "Name": "A bath house",
+      "Description": "\n   This was once the bath house for the commoners of the city. Hot steamy water\nstill wells up from a hole in the floor. Obviously there is a hot spring\nlocated under the city (making the decision to put a city here seem much more\nreasonable). Closer inspection of the water yields a dead body floating around\nin it, skin melted away from months of floating in there. The west wall has\ncollapsed revealing another collapsed house.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5243,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5244,
+          "Description": "The wall has collapsed on the adjoining house, creating a new opening in it.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5243,
+      "Name": "A back alley",
+      "Description": "\n   A narrow back alley leads west to a small side street and east to one of the\ncity watchtowers. Great amounts of steam issue forth from the building to the\nsouth.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5241,
+          "Description": "A watchtower stands a silent vigil over the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5242,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5209,
+          "Description": "A side street runs by here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5244,
+      "Name": "An upright house",
+      "Description": "\n   This home is practically the only one around that is still standing. Except\nfor the massive hole in the east wall, everything else looks intact, including\nthe windows. Great amounts of steam issue forth from the hole in the east wall.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5242,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5210,
+          "Description": "A small side street runs past the house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5245,
+      "Name": "On the second floor",
+      "Description": "\n   The minute you step off onto this floor you realize it was a mistake. The\nold rotted floorboards suddenly give way and you fall down, impaling yourself\non jagged boards below.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5246,
+      "Name": "The north-west watchtower",
+      "Description": "\n   You stand atop one of the city watchtowers. The view is magnificent from\nhere and you can see all the way to the western mountains. No wonder this place\nstood for so long.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 5224,
+          "Description": "The city lies below.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5247,
+      "Name": "The south-west watchtower",
+      "Description": "\n   You stand atop one of the city watchtowers. The view is magnificent from\nhere and you can see all the way to the western mountains. To the south the\ndesert stretches to the horizon. No wonder this place stood for so long.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 5215,
+          "Description": "The city lies below.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5248,
+      "Name": "The north-east watchtower",
+      "Description": "\n   You stand atop one of the city watchtowers. The view is magnificent from\nhere and you can see a great floating pyramid to the north-east. Desert sand\nstretches to the horizon. No wonder this place stood for so long. The ladder\nleading down seems rotted in some places!",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 5249,
+          "Description": "The city lies below.... far, far below.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5249,
+      "Name": "Under a watchtower",
+      "Description": "\n   As you descend the ladder, the rotted rungs break, sending you quickly to\nyour demise far below on the city street. Splat.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5250,
+      "Name": "The Temple of Thalos",
+      "Description": "\n   You stand within one of the most holy places in the realm. This stunning\ndomed temple once housed the city's worshipers en masse. Unfortunately, it\nsuccumbed to the destruction brought on this city. Long benches lie toppled and\nthe altar desecrated. Large chunks of stone have fallen from the walls and\nroof, sending sunlight streaming in on you. A few books lie about, conveying to\nyou a holy message in a strange tongue. Wind gusts through the four archways\nand howls and screams can be heard from all parts of the city.",
+      "ZoneId": 52,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoMagic"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5204,
+          "Description": "A side street leads to the northern half of the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5203,
+          "Description": "Main street leads out to the main gate of the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5206,
+          "Description": "A side street leads to the southern part of the city.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5205,
+          "Description": "The market place lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 5200,
+      "Name": "beholder",
+      "ShortDescription": "\nthe mighty beholder",
+      "LongDescription": "\nYou meet a beholder's deadly gaze!",
+      "Description": "\nIt has a large central eye that projects an anti-magic ray and ten\neyestalks atop the round body which can do anything from charm you\nto disintegrate you.  Beholders are not known for their personality.",
+      "Level": 35,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Aggressive",
+        "Wimpy"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d14+450",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "6d9+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2560,
+      "Experience": 134000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5201,
+      "Name": "lamia beast",
+      "ShortDescription": "\nthe lamia",
+      "LongDescription": "\nA strange lamia stands here waiting for her next meal.",
+      "Description": "\nThis is a creature with the upper torso of a beautiful woman, but the \nlower body of a four-legged beast.  She licks her lips as she looks \nat you greedily.",
+      "Level": 18,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+320",
+        "Mana": 280,
+        "Move": 350
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "2d5+4"
+        },
+        {
+          "Type": "Attack_94",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+90"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 7500,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5202,
+      "Name": "mimic chest",
+      "ShortDescription": "\nthe mimic",
+      "LongDescription": "\nA strong chest lies in one corner of the room.",
+      "Description": "\nA strong, wooden chest bound with iron straps and a heavy pad-lock on \nthe front.",
+      "Level": 18,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 10,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d20+280",
+        "Mana": 280,
+        "Move": 350
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 10,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d7+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 13000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5203,
+      "Name": "mimic boulder",
+      "ShortDescription": "\nthe mimic",
+      "LongDescription": "\nTwo skeletons lie crushed under a large boulder.",
+      "Description": "",
+      "Level": 20,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d15+250",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 20000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5204,
+      "Name": "mimic floor",
+      "ShortDescription": "\nthe mimic",
+      "LongDescription": "\nThe stone floor of this house has been ripped apart.",
+      "Description": "",
+      "Level": 11,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+110",
+        "Mana": 210,
+        "Move": 245
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 9,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10500,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5205,
+      "Name": "mimic pottery",
+      "ShortDescription": "\nthe mimic",
+      "LongDescription": "\nSome broken shards of pottery lie strewn about the floor.",
+      "Description": "",
+      "Level": 14,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d8+250",
+        "Mana": 240,
+        "Move": 290
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 6,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 9800,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5206,
+      "Name": "mimic planks",
+      "ShortDescription": "\nthe mimic",
+      "LongDescription": "\nA few wooden planks lie stacked on a low shelf.",
+      "Description": "",
+      "Level": 11,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+110",
+        "Mana": 210,
+        "Move": 245
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d3+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 12000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5207,
+      "Name": "lizard horned",
+      "ShortDescription": "\nthe horned lizard",
+      "LongDescription": "\nA small horned lizard flicks his tongue and slithers away.",
+      "Description": "\nA cute little lizard -- that is, if you like reptiles!",
+      "Level": 3,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d14+30",
+        "Mana": 130,
+        "Move": 125
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 500,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5208,
+      "Name": "golem stone",
+      "ShortDescription": "\nthe stone golem",
+      "LongDescription": "\nIn the corner you see a large, stone golem faithfully standing watch.",
+      "Description": "\nIt is a big chunk of rock that has been magically formed into a giant \nstone creature.  He stands here still guarding the city.",
+      "Level": 25,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": 800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "6d6+500",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d7+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 425,
+      "Experience": 145000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5209,
+      "Name": "lamia beast",
+      "ShortDescription": "\nthe lamia",
+      "LongDescription": "\nA strange lamia stares at you hungrily.",
+      "Description": "\nThis is a creature with the upper torso of a beautiful woman, but the \nlower body of a four-legged beast.  She licks her lips as she looks \nat you greedily.",
+      "Level": 20,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "SenseLife"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+350",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 10,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "4d3+4"
+        },
+        {
+          "Type": "Attack_94",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 7600,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 5200,
+      "Name": "ringmail vest",
+      "ShortDescription": "\na ringmail vest",
+      "Description": "\nA vest made of iron rings lies heaped on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 12,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 60,
+      "Cost": 12000,
+      "CostPerDay": 400,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Armor",
+          "Modifier": -1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5201,
+      "Name": "helm iron",
+      "ShortDescription": "\nan iron helm",
+      "Description": "\nAn iron helm has been left on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 7,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 5000,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5202,
+      "Name": "gauntlets iron",
+      "ShortDescription": "\na pair of iron gauntlets",
+      "Description": "\nA pair of iron gauntlets rests heavily on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 7,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 2200,
+      "CostPerDay": 900,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5203,
+      "Name": "sleeves iron",
+      "ShortDescription": "\na pair of iron sleeves",
+      "Description": "\nA set of iron sleeves lies on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 7,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 2450,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5204,
+      "Name": "boots iron",
+      "ShortDescription": "\na pair of iron boots",
+      "Description": "\nA pair of iron boots has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 800,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -1
+        },
+        {
+          "Location": "Dexterity",
+          "Modifier": -2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5205,
+      "Name": "greaves iron",
+      "ShortDescription": "\na set of iron greaves",
+      "Description": "\nA set of iron greaves lie here unattended.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 7,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 5400,
+      "CostPerDay": 210,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -3
+        },
+        {
+          "Location": "Dexterity",
+          "Modifier": -3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5206,
+      "Name": "girth iron",
+      "ShortDescription": "\nan iron girth",
+      "Description": "\nA small iron girth lies at your feet.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 4200,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5207,
+      "Name": "breast plate iron",
+      "ShortDescription": "\na battered iron breast plate",
+      "Description": "\nA battered iron breast plate lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 125,
+      "Cost": 13000,
+      "CostPerDay": 150,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -6
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5208,
+      "Name": "shield iron",
+      "ShortDescription": "\na sturdy iron shield",
+      "Description": "\nA small, but sturdy, iron shield has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "SavingPoison",
+          "Modifier": -2
+        },
+        {
+          "Location": "MagicResistance",
+          "Modifier": -2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5210,
+      "Name": "potion black",
+      "ShortDescription": "\na black potion",
+      "Description": "\nA jet black potion sits upright waiting to be taken.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 12,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        16,
+        4,
+        36,
+        39,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 16,
+          "SpellIds": [
+            4,
+            36,
+            39
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 6000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5211,
+      "Name": "potion orange",
+      "ShortDescription": "\nan orange potion",
+      "Description": "\nA small orange potion lies here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 12,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        20,
+        44,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 20,
+          "SpellIds": [
+            44,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 7500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5213,
+      "Name": "staff serpentine",
+      "ShortDescription": "\na green serpentine staff",
+      "Description": "\nA green serpentine staff has been left here.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        15,
+        2,
+        2,
+        23,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 23,
+          "Level": 15,
+          "Charges": 2,
+          "ChargesRemaining": 2
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 6600,
+      "CostPerDay": 300,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5214,
+      "Name": "ball quartz",
+      "ShortDescription": "\na smooth quartz ball",
+      "Description": "\nA smooth quartz ball lies here gleaming.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        72,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 72
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 30,
+      "Cost": 3050,
+      "CostPerDay": 950,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5215,
+      "Name": "scroll tattered",
+      "ShortDescription": "\na tattered scroll",
+      "Description": "\nA worn and tattered scroll has been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 9,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        24,
+        24,
+        44,
+        4,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 24,
+          "SpellIds": [
+            24,
+            44,
+            4
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 11000,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5216,
+      "Name": "scroll bound",
+      "ShortDescription": "\na bound scroll",
+      "Description": "\nA bound scroll of detection lies at your feet.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 9,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        15,
+        18,
+        19,
+        20,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 15,
+          "SpellIds": [
+            18,
+            19,
+            20
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 4200,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5217,
+      "Name": "flute silver",
+      "ShortDescription": "\na silver flute",
+      "Description": "\nA brilliant silver flute glimmers from beneath a rock.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 25,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        18,
+        2,
+        2,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 7,
+          "Level": 18,
+          "Charges": 2,
+          "ChargesRemaining": 2
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1500,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5218,
+      "Name": "talisman demon",
+      "ShortDescription": "\na demon-faced talisman",
+      "Description": "\nA demon-faced talisman glares at you angrily.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 11,
+      "Cost": 2500,
+      "CostPerDay": 150,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": -10
+        },
+        {
+          "Location": "Dexterity",
+          "Modifier": -8
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5219,
+      "Name": "venison chunk",
+      "ShortDescription": "\na chunk of venison",
+      "Description": "\nA large chunk of venison sits here, ready to be eaten.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 24,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 100,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5220,
+      "Name": "fountain cracked",
+      "ShortDescription": "\na large cracked fountain",
+      "Description": "",
+      "ActionDescription": "\nA pool of blood lies in the bottom of the fountain.",
+      "Type": "Fountain",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        10,
+        10,
+        13,
+        1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 10,
+          "Amount": 10,
+          "Liquid": 13,
+          "Poisoned": true
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5221,
+      "Name": "two-handed two sword",
+      "ShortDescription": "\na two-handed sword",
+      "Description": "\nA nice two-handed sword hangs on a hook in the wall.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 14,
+      "AntiClass": "13107",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        3,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 22,
+      "Cost": 5500,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5222,
+      "Name": "robe black silk",
+      "ShortDescription": "\na black silk robe",
+      "Description": "\nA black silk robe lies heaped in one corner.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 1,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 1300,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5223,
+      "Name": "cloak green",
+      "ShortDescription": "\na dark green cloak",
+      "Description": "\nA beautiful dark green cloak has been dropped here by someone.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 27,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 0,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 4500,
+      "CostPerDay": 400,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 8
+        },
+        {
+          "Location": "Armor",
+          "Modifier": -5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5224,
+      "Name": "seal ebony",
+      "ShortDescription": "\nan engraved ebony seal",
+      "Description": "\nA small, engraved ebony seal is here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        0,
+        0,
+        0,
+        0,
+        90
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 30,
+          "Timer": 0,
+          "TimerSet": 90
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 500,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5225,
+      "Name": "desk curved",
+      "ShortDescription": "\nthe desk",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        100,
+        13,
+        5224,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 100,
+          "Flags": [
+            "Closeable",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 5224,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5226,
+      "Name": "seal ivory",
+      "ShortDescription": "\nan engraved ivory seal",
+      "Description": "\nA small, engraved ivory seal lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        31,
+        0,
+        0,
+        0,
+        0,
+        90
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 31,
+          "Timer": 0,
+          "TimerSet": 90
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 500,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5227,
+      "Name": "cabinet glass",
+      "ShortDescription": "\nthe glass cabinet",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        500,
+        13,
+        5226,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 500,
+          "Flags": [
+            "Closeable",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 5226,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5228,
+      "Name": "arm rotted",
+      "ShortDescription": "\na half-rotted arm",
+      "Description": "\nA half-rotted arm floats lazily past your feet.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        50,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 50,
+          "Poisoned": true
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 0,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5230,
+      "Name": "stone pale blue",
+      "ShortDescription": "\na pale blue stone",
+      "Description": "\nA pale blue stone sits here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 1500,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5231,
+      "Name": "stone scarlet blue",
+      "ShortDescription": "\na scarlet and blue stone",
+      "Description": "\nA pretty scarlet and blue stone has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 1500,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5232,
+      "Name": "stone blue incandescent",
+      "ShortDescription": "\nan incandescent blue stone",
+      "Description": "\nA small incandescent blue stone lies here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 1500,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5233,
+      "Name": "stone red deep",
+      "ShortDescription": "\na deep red stone",
+      "Description": "\nSomeone has left a deep red stone here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 1500,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5234,
+      "Name": "stone pink",
+      "ShortDescription": "\na pink stone",
+      "Description": "\nA tiny pink stone lies at your feet.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 1500,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Constitution",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5235,
+      "Name": "stone pearly white",
+      "ShortDescription": "\na pearly white stone",
+      "Description": "\nA lovely, pearly white stone has been carelessly left here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 870,
+      "CostPerDay": 60,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5236,
+      "Name": "stone lavender pale",
+      "ShortDescription": "\na pale lavender stone",
+      "Description": "\nA beautiful pale lavender stone lies here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 430,
+      "CostPerDay": 60,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5237,
+      "Name": "stone lavender green",
+      "ShortDescription": "\na lavender and green stone",
+      "Description": "\nA stunning lavender and green stone rests on the ground.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 4700,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": 15
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5238,
+      "Name": "stone rose dusty",
+      "ShortDescription": "\na dusty rose stone",
+      "Description": "\nA stone is here, sort of a dusty rose color and very pretty.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 980,
+      "CostPerDay": 60,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Armor",
+          "Modifier": -1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5239,
+      "Name": "stone grey dull",
+      "ShortDescription": "\na dull grey stone",
+      "Description": "\nYou can barely make out a dull grey stone on the ground.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 20,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5240,
+      "Name": "stone purple vibrant",
+      "ShortDescription": "\na vibrant purple stone",
+      "Description": "\nA stunningly vibrant purple stone attracts your attention.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 1200,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": -50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5241,
+      "Name": "stone pink green",
+      "ShortDescription": "\na pink and green stone",
+      "Description": "\nA bright pink and green stone has been left here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 660,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5242,
+      "Name": "stone green pale",
+      "ShortDescription": "\na pale green stone",
+      "Description": "\nA pale green stone lies here collecting dust.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 710,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": -5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5243,
+      "Name": "stone clear",
+      "ShortDescription": "\na clear stone",
+      "Description": "\nAn odd clear stone lies at your feet.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 6,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 890,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Armor",
+          "Modifier": -3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5244,
+      "Name": "stone irridescent",
+      "ShortDescription": "\nan irridescent stone",
+      "Description": "\nA large irridescent stone has been left here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 21,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 370,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": -100
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5250,
+      "Name": "mandolin",
+      "ShortDescription": "\na mandolin",
+      "Description": "\nA mandolin lies against the wall.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 8,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        13,
+        3,
+        3,
+        15,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 15,
+          "Level": 13,
+          "Charges": 3,
+          "ChargesRemaining": 3
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 1000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5251,
+      "Name": "harp golden",
+      "ShortDescription": "\na golden harp",
+      "Description": "\nA battered golden harp has been tipped over.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 9,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        18,
+        1,
+        1,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 6,
+          "Level": 18,
+          "Charges": 1,
+          "ChargesRemaining": 1
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 100,
+      "Cost": 1500,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5252,
+      "Name": "wristguard serpentine metal coil thalosobj",
+      "ShortDescription": "\na serpentine wristguard",
+      "Description": "\nPitted, scarred metal lies here in a coil.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Lock",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "wristguard",
+            "metal",
+            "coil",
+            "serpentine"
+          ],
+          "Description": "\nA thick coil of metal, stained with verdigris and hammered into a\nremarkable likeness of a snake, lies in your hands. The eyes and fangs\nare made of quartz, and when light plays off them, you'd swear the\nlittle snake could come alive and sink its fangs into the flesh of your\npalm......"
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

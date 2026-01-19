@@ -1,0 +1,3731 @@
+{
+  "Zone": {
+    "Id": 249,
+    "Name": "Na-Palm Beach",
+    "TopRoomId": 24999,
+    "Lifespan": 60,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24901,
+        "Arg2": 10,
+        "Arg3": 24901,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24901,
+        "Arg2": 10,
+        "Arg3": 24903,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24901,
+        "Arg2": 10,
+        "Arg3": 24905,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24901,
+        "Arg2": 10,
+        "Arg3": 24907,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24901,
+        "Arg2": 10,
+        "Arg3": 24910,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24901,
+        "Arg2": 10,
+        "Arg3": 24912,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24902,
+        "Arg2": 2,
+        "Arg3": 24903,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 24901,
+        "Arg2": 15,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24902,
+        "Arg2": 2,
+        "Arg3": 24907,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 24901,
+        "Arg2": 15,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24903,
+        "Arg2": 1,
+        "Arg3": 24914,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24904,
+        "Arg2": 2,
+        "Arg3": 24903,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 24905,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24904,
+        "Arg2": 2,
+        "Arg3": 24907,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24905,
+        "Arg2": 7,
+        "Arg3": 24905,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24905,
+        "Arg2": 7,
+        "Arg3": 24916,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24905,
+        "Arg2": 7,
+        "Arg3": 24902,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24905,
+        "Arg2": 7,
+        "Arg3": 24911,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24906,
+        "Arg2": 1,
+        "Arg3": 24913,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 24907,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 24908,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24907,
+        "Arg2": 2,
+        "Arg3": 24932,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24907,
+        "Arg2": 2,
+        "Arg3": 24935,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24908,
+        "Arg2": 2,
+        "Arg3": 24927,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24908,
+        "Arg2": 2,
+        "Arg3": 24930,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24909,
+        "Arg2": 2,
+        "Arg3": 24926,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24909,
+        "Arg2": 2,
+        "Arg3": 24947,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24910,
+        "Arg2": 5,
+        "Arg3": 24904,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24910,
+        "Arg2": 5,
+        "Arg3": 24915,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24910,
+        "Arg2": 5,
+        "Arg3": 24929,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 24910,
+        "Arg2": 5,
+        "Arg3": 24934,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 24902,
+        "Arg2": 5,
+        "Arg3": 24911,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 24903,
+        "Arg2": 5,
+        "Arg3": 24915,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 24904,
+        "Arg2": 5,
+        "Arg3": 24903,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 24905,
+        "Arg2": 5,
+        "Arg3": 24901,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 24906,
+        "Arg2": 5,
+        "Arg3": 24920,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 24901,
+      "Name": "On the beach",
+      "Description": "\n  You are standing on the very western part of the beach. A rocky slope is \nto the west, making traveling there impossible. To the south you see the \ngreat Ocean.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 24902,
+          "Description": "The beach continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24909,
+          "Description": "You see the shore to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24902,
+      "Name": "On the beach",
+      "Description": "\n  You are standing on the sunny beach of Na-Palm. The soft white sand seems\nto get inside all of your clothes. The beach continues to the west and the \neast. You see the shore to the south.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 24903,
+          "Description": "\nThe beach continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24910,
+          "Description": "You see the shore to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24901,
+          "Description": "The beach continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24903,
+      "Name": "On the beach",
+      "Description": "\n  You are standing on the sunny beach of Na-Palm. The soft white sand seems \nto get inside all of your clothes. The beach continues to the west and the\neast. You see the shore to the south.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 24904,
+          "Description": "\nThe beach continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24911,
+          "Description": "You see the shore to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24902,
+          "Description": "The beach continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24904,
+      "Name": "On the beach",
+      "Description": "\n  You are standing on the sunny beach of Na-Palm. The soft white sand seems\nto get inside all of your clothes. The beach continues to the west and the\neast. You see the shore to the south.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 24905,
+          "Description": "\nThe beach continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24912,
+          "Description": "You see the shore to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24903,
+          "Description": "The beach continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24905,
+      "Name": "On the beach",
+      "Description": "\n  You are standing on the sunny beach of Na-Palm. The soft white sand seems \nto get inside all of your clothes. The beach continues to the west and the \neast. You see the shore to the south.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 24906,
+          "Description": "\nThe beach continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24913,
+          "Description": "You see the shore to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24904,
+          "Description": "The beach continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24906,
+      "Name": "On the beach",
+      "Description": "\n  You are standing on the sunny beach of Na-Palm. The soft white sand seem\nto get inside all of your clothes. The beach continues to the west and the\neast. You see the shore to the south. To the north you see a small path\nleading up from the beach.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24949,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24907,
+          "Description": "\nThe beach continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24914,
+          "Description": "You see the shore to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24905,
+          "Description": "The beach continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24907,
+      "Name": "On the beach",
+      "Description": "\n  You are standing on the sunny beach of Na-Palm. The soft white sand seems\nto get inside all of your clothes. The beach continues to the west and the \neast. You see the shore to the south.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 24908,
+          "Description": "\nThe beach continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24915,
+          "Description": "You see the shore to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24906,
+          "Description": "The beach continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24908,
+      "Name": "On the beach",
+      "Description": "\n  You are standing by a big rock providing shelter from the sun. To the south\nyou see the shore and the beach continues to the west.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 24916,
+          "Description": "\nYou see the shore to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24907,
+          "Description": "The beach continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24909,
+      "Name": "On the shore",
+      "Description": "\n  You are standing on the shore of the beach. You see the big waves rolling\nin from the Mindorian Ocean, along with some flotsam from long forgotten\ngalleys.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24901,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24910,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24917,
+          "Description": "You see the Mindorian Ocean to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24910,
+      "Name": "On the shore",
+      "Description": "\n  You are standing on the shore of the beach. Some kids have built the King's\nCastle in the sand here.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24902,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24911,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24918,
+          "Description": "You see the Mindorian Ocean to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24909,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24911,
+      "Name": "On the shore",
+      "Description": "\n  You are standing on the shore of the beach. As you look to the horizon to\nthe south you see a small black dot. Maybe it's one of those golden katamarans\nfrom the far south that your father talked about when you were young.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24903,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24912,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24919,
+          "Description": "You see the Mindorian Ocean to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24910,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24912,
+      "Name": "On the wooden path to the pier",
+      "Description": "\n  You are standing on the wooden path to the pier. All around you kids are \nplaying beach volleyball and is throwing jelly-fishes at each other. To the \neast you see Captain Kidd's shop and to the south you see the pier.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24904,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24913,
+          "Description": "You see Captain Kidd's shop to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24920,
+          "Description": "You see the pier to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24911,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24913,
+      "Name": "Captain Kidd's Beach Shop",
+      "Description": "\n  You are at Captain Kidd's Beach Shop. Stacks of stranded goods lies here on\nthe white sand, things that the Captain seems to have found on the beach and\nsells to stupid adventurers.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24905,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24914,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24921,
+          "Description": "You see the Mindorian Ocean to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24912,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24914,
+      "Name": "On the shore",
+      "Description": "\n  You are standing on the shore of the beach. You see the big waves rolling in\nfrom the Ocean to the south. A smashed barrel lies here, half buried in the \nsand.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24915,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24921,
+          "Description": "You see the Mindorian Ocean to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24913,
+          "Description": "You see Captain Kidd's shop to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24915,
+      "Name": "On the shore",
+      "Description": "\n  You are standing on the shore of the beach. The wind from the south carries\nscents of far away places.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24907,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24916,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24923,
+          "Description": "To the south you see the Mindorian Ocean.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24914,
+          "Description": "You see the Captains beach shop to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24916,
+      "Name": "On the shore",
+      "Description": "\n  You are standing on the shore of the beach. Dead jelly-fishes litter the \nground here, dying of the burning sun.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24908,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24924,
+          "Description": "You see the Mindorian Ocean to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24915,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24917,
+      "Name": "In the shallow water",
+      "Description": "\n  You are standing knee-deep in the shallow water of the Mindorian Ocean. You\nsee small red fishes swimming around your boots, gasping at the sudden change\nof their environment.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24909,
+          "Description": "You see the shore to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24918,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24925,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24918,
+      "Name": "In the shallow water",
+      "Description": "\n  You are standing knee-deep in the shallow water of the Mindorian Ocean. The\nground here is filled with wreckage from long sunken canoes.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24910,
+          "Description": "You see the shore to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24919,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24926,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24917,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24919,
+      "Name": "In the shallow water",
+      "Description": "\n  You are standing knee-deep in the shallow water of the Mindorian Ocean. To \nthe south you see the great sea and to the east you see the pier.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24911,
+          "Description": "You see the shore to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24920,
+          "Description": "You see the pier to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24927,
+          "Description": "The Ocean is to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24918,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24920,
+      "Name": "The pier",
+      "Description": "\n  You are standing on the pier. The southern wind blows in your face, carrying\nmystic scents and sounds from exotic places. The pier is build of black\ngranite, carried here by primates from a much more violent age.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24912,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24921,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24928,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24919,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24921,
+      "Name": "In the shallow water",
+      "Description": "\n  You are standing knee-deep in the shallow water of the Mindorian Ocean. You\nsee a big wave rolling in, its getting closer ... To the north you see Captain\nKidd's beach shop.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24913,
+          "Description": "Captain Kidd's beach shop lies to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24922,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24929,
+          "Description": "You see the Great Sea to the south. The wave it rolling straight at you. ARGH!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24920,
+          "Description": "You see the pier to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24922,
+      "Name": "In the shallow water",
+      "Description": "\n  You are standing knee-deep in the shallow water of the Mindorian Ocean. You\nsee a human skeleton partly covered in the sand. It must be Gregor, that ugly\nmage apprentice that tried to walk on water. Guess he didn't make it.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24914,
+          "Description": "You see the shore to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24923,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24930,
+          "Description": "The great sea lies out there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24921,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24923,
+      "Name": "In the shallow water",
+      "Description": "\n  You are standing knee-deep in the shallow water of the Mindorian Ocean. To\nthe south you see big wave rolling in from the Ocean.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24915,
+          "Description": "You see the shore to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24924,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24931,
+          "Description": "The great sea lies to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24922,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24924,
+      "Name": "In the shallow water",
+      "Description": "\n  You are standing knee-deep in the shallow water of the Mindorian Ocean. The\nsouthern wind ruffles your hair and has a scent of silt.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24916,
+          "Description": "You see the shore to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24932,
+          "Description": "The great sea lies to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24923,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24925,
+      "Name": "On deeper water",
+      "Description": "\n  You are on the Mindorian Ocean. The water is dark and greenish blue so you\ncan't see the ground here. You hear the faint sound of the waves breaking \nagainst the beach to the north.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24917,
+          "Description": "You see Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24926,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24933,
+          "Description": "You see the horizon to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24926,
+      "Name": "On deeper water",
+      "Description": "\n  You are on the Mindorian Ocean. The water is dark and greenish blue so you\ncan't see the ground here. You hear the faint sound of the waves breaking \nagainst the beach to the north.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24918,
+          "Description": "You see Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24927,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24934,
+          "Description": "You see the horizon to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24925,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24927,
+      "Name": "On deeper water",
+      "Description": "\n  You are on the Mindorian Ocean. The water is dark and greenish blue so you\ncan't see the ground here. You hear the faint sound of the waves breaking \nagainst the beach to the north.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24919,
+          "Description": "You see Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24928,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24935,
+          "Description": "You see the horizon to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24926,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24928,
+      "Name": "On deeper water",
+      "Description": "\n  You are on the Mindorian Ocean. The water is dark and greenish blue so you\ncan't see the ground here. You hear the faint sound of the waves breaking \nagainst the beach to the north.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24920,
+          "Description": "You see Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24929,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24936,
+          "Description": "You see the horizon to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24927,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24929,
+      "Name": "On deeper water",
+      "Description": "\n  You are on the Mindorian Ocean. The water is dark and greenish blue so you\ncan't see the ground here. You hear the faint sound of the waves breaking \nagainst the beach to the north.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24921,
+          "Description": "You see Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24930,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24937,
+          "Description": "You see the horizon to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24928,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24930,
+      "Name": "On deeper water",
+      "Description": "\n  You are on the Mindorian Ocean. The water is dark and greenish blue so you\ncan't see the ground here. You hear the faint sound of the waves breaking \nagainst the beach to the north.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24922,
+          "Description": "You see Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24931,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24938,
+          "Description": "You see the horizon to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24929,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24931,
+      "Name": "On deeper water",
+      "Description": "\n  You are on the Mindorian Ocean. The water is dark and greenish blue so you\ncan't see the ground here. You hear the faint sound of the waves breaking \nagainst the beach to the north.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24923,
+          "Description": "You see Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24932,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24939,
+          "Description": "You see the horizon to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24930,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24932,
+      "Name": "On deeper water",
+      "Description": "\n  You are on the Mindorian Ocean. The water is dark and greenish blue so you\ncan't see the ground here. You hear the faint sound of the waves breaking \nagainst the beach to the north.",
+      "ZoneId": 249,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24924,
+          "Description": "You see Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24940,
+          "Description": "You see the horizon to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24931,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24933,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The water looks so beautiful, glistening and\never-changing, so dark and yet so transparent. A strong wind is blowing from\nthe south, filled with salt water. To the north you see barely see the Na-Palm\nbeach.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24925,
+          "Description": "You can barely see the Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24934,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24941,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24934,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The water looks so beautiful, glistening and\never-changing, so dark and yet so transparent. A strong wind is blowing from\nthe south, filled with salt water. To the north you see barely see the Na-Palm\nbeach.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24926,
+          "Description": "You can barely see the Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24935,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24942,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24933,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24935,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The water looks so beautiful, glistening and\never-changing, so dark and yet so transparent. A strong wind is blowing from\nthe south, filled with salt water. To the north you see barely see the Na-Palm\nbeach.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24927,
+          "Description": "You can barely see the Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24936,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24943,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24934,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24936,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The water looks so beautiful, glistening and\never-changing, so dark and yet so transparent. A strong wind is blowing from\nthe south, filled with salt water. To the north you see barely see the Na-Palm\nbeach.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24928,
+          "Description": "You can barely see the Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24937,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24944,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24935,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24937,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The water looks so beautiful, glistening and\never-changing, so dark and yet so transparent. A strong wind is blowing from\nthe south, filled with salt water. To the north you see barely see the Na-Palm\nbeach.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24929,
+          "Description": "You can barely see the Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24938,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24945,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24936,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24938,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The water looks so beautiful, glistening and\never-changing, so dark and yet so transparent. A strong wind is blowing from\nthe south, filled with salt water. To the north you see barely see the Na-Palm\nbeach.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24930,
+          "Description": "You can barely see the Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24939,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24946,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24937,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24939,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The water looks so beautiful, glistening and\never-changing, so dark and yet so transparent. A strong wind is blowing from\nthe south, filled with salt water. To the north you see barely see the Na-Palm\nbeach.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24931,
+          "Description": "You can barely see the Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24940,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24947,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24938,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24940,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The water looks so beautiful, glistening and\never-changing, so dark and yet so transparent. A strong wind is blowing from\nthe south, filled with salt water. To the north you see barely see the Na-Palm\nbeach.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24932,
+          "Description": "You can barely see the Na-Palm beach to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24948,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24939,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24941,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The dark water swirls around your boat and\ntosses it like a leaf in the wind. To the north you see a faint outline of a\ncoastline.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24933,
+          "Description": "You see a coastline to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24942,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 25001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24942,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The dark water swirls around your boat and\ntosses it like a leaf in the wind. To the north you see a faint outline of a\ncoastline.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24934,
+          "Description": "You see a coastline to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24943,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 25002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24941,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24943,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The dark water swirls around your boat and\ntosses it like a leaf in the wind. To the north you see a faint outline of a\ncoastline.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24935,
+          "Description": "You see a coastline to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24944,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 25003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24942,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24944,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The dark water swirls around your boat and\ntosses it like a leaf in the wind. To the north you see a faint outline of a\ncoastline.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24936,
+          "Description": "You see a coastline to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24945,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 25003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24943,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24945,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The dark water swirls around your boat and\ntosses it like a leaf in the wind. To the north you see a faint outline of a\ncoastline.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24937,
+          "Description": "You see a coastline to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24946,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 25005,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24944,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24946,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The dark water swirls around your boat and\ntosses it like a leaf in the wind. To the north you see a faint outline of a\ncoastline.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24938,
+          "Description": "You see a coastline to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24947,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 25006,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24945,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24947,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The dark water swirls around your boat and\ntosses it like a leaf in the wind. To the north you see a faint outline of a\ncoastline.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24939,
+          "Description": "You see a coastline to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24948,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 25007,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24946,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24948,
+      "Name": "On the high seas",
+      "Description": "\n You are on the Mindorian Ocean. The dark water swirls around your boat and\ntosses it like a leaf in the wind. To the north you see a faint outline of a\ncoastline.",
+      "ZoneId": 249,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24940,
+          "Description": "You see a coastline to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 25008,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24947,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24949,
+      "Name": "On the sandy path",
+      "Description": "\n  You are on a sandy path that leads to Na-Palm beach to the south.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24950,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24950,
+      "Name": "On the sandy path",
+      "Description": "\n  You are standing on a sandy path that leads down to the sunny Na-Palm beach.\nTo the north you see the road that leads to Midgaard, the capital of this land.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24951,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24949,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24951,
+      "Name": "On the road through the plains",
+      "Description": "\n  You are on a road through the plains. To the west and east of here young\nsaplings grows in small groups. To the north the road can take you to the city\nof Midgaard. The road turns into a small sandy path to the south.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24952,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24950,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24952,
+      "Name": "On the road through the plains",
+      "Description": "\n  You are on a road through the green plains south of Midgaard. All around you\nthe grass looks healthy and so green you almost think its artificial. The road\ncontinues to the south.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24953,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24951,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24953,
+      "Name": "On a bend on the road",
+      "Description": "\n  You are standing on a road through the green, nice plains. To the north you\nsee a big black rock. It is quite out of place from the otherwise so friendly\nand peaceful atmosphere. The road bends to the west from here.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 24952,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24954,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24954,
+      "Name": "On the road through the plains",
+      "Description": "\n  You are on the green plains south of Midgaard. The road bends to the east\nhere and far to the north you see the citywalls of Midgaard. Out of the \ncorner of your eye you notice an ancient marker stone hidden in the \nundergrowth.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24955,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 24953,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 24960,
+          "Description": "A narrow overgrown trail leads west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "ancient",
+            "marker",
+            "stone"
+          ],
+          "Description": "\n   You brush aside the bushes, and look at the marker. Its weathered \nsurface indicate that it is very old, and the writing upon it is worn \nand difficult to read. An arrow points west, and above is the name \n'Delray'. Odd, the City of Delray disappeared centuries ago, presumed \ndestroyed in a magical accident."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24955,
+      "Name": "On the road through the plains",
+      "Description": "\n  You are standing on a road through the plains. To the east you see a black\nrock, eroded by the strong wind from the south. To the north you see the\ncitywalls of Midgaard and to the northeast is the graveyard.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24956,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24954,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24956,
+      "Name": "On the road through the plains",
+      "Description": "\n  You are on a road through the plains just south of Midgaard. To the east you\nsee the west fence of the haunted graveyard. You see the white citywall to the\nnorth.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24957,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24955,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24957,
+      "Name": "City Entrance",
+      "Description": "\n   You stand on the outskirts of a large city - Midgaard; the capital of this  \nland. To the north you see the big gate in the white city wall. To the east\nyou see the west fence of the haunted graveyard. To the south you see the \nsouthern plains of this continent.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24958,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24956,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24958,
+      "Name": "Outside the South Gate of Midgaard",
+      "Description": "\n   You are by two small towers that have been built into the city wall and\nconnected with a footbridge across the heavy wooden gate. To the south the\nplains stretch out in the distance.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 24959,
+          "Description": "You see the city gate.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3133
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24957,
+          "Description": "You see the plains to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tower",
+            "towers"
+          ],
+          "Description": "\nBoth of the towers are built from large grey rocks that have been fastened to \neach other with some kind of mortar, just like the city wall."
+        },
+        {
+          "Keywords": [
+            "wall"
+          ],
+          "Description": "\nIt is built from large grey rocks that have been fastened to each other with\nsome kind of mortar.  It is far too high to climb."
+        },
+        {
+          "Keywords": [
+            "gate"
+          ],
+          "Description": "\nIt is a set of very big double doors made from hard wood.  They have been\nreinforced with large iron bands to make them even more sturdy.  One of the\ndoors is equipped with a very big lock."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24959,
+      "Name": "Inside the South Gate of Midgaard",
+      "Description": "\n   You are by two small towers that have been built into the city wall and\nconnected with a footbridge across the heavy wooden gate. To the north you see\nthe Emerald Avenue.",
+      "ZoneId": 249,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3128,
+          "Description": "You see Emerald Avenue to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24958,
+          "Description": "You see the gate.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3133
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gate"
+          ],
+          "Description": "\nIt is a set of very big double doors made from hard wood.  They have been\nreinforced with large iron bands to make them even more sturdy.  One of the\ndoors is equipped with a very big lock."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24960,
+      "Name": "Overgrown trail",
+      "Description": "\n   You can barely make out the overgrown trail beneath your feet. \nOccasional stones poke up through the ground, their shape indicating \nthat this was once a paved highway. It takes you a while to work out \nthat the trail turns here.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 24954,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 24961,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 24961,
+      "Name": "A turn in the trail",
+      "Description": "\n   Spurts of dust kick up behind your feet as you shuffle your way \nthrough the dusty undergrowth. The road twists again here, you can go \nsouth or west.",
+      "ZoneId": 249,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 24960,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 12500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 24901,
+      "Name": "crab",
+      "ShortDescription": "\nA small crab",
+      "LongDescription": "\nA crab is crawling around here looking for toes to pinch.",
+      "Description": "\nThe crab has a hard, brightly brown shell and two BIG pinchers.",
+      "Level": 5,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d8+75",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1200,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24902,
+      "Name": "fat man",
+      "ShortDescription": "\nA fat man",
+      "LongDescription": "\nA fat man is sunbathing here.",
+      "Description": "\nHis skin has a nice tan because he is using a new sun lotion.",
+      "Level": 8,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d12+120",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 2600,
+      "DefaultPosition": "Resting",
+      "Sex": "Male",
+      "ActionScript": "%10 say Go away! Can't you see i'm busy?!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24903,
+      "Name": "mitch baywatch",
+      "ShortDescription": "\nMitch the Baywatch",
+      "LongDescription": "\nMitch the Baywatch is standing here, trying to look muscular.",
+      "Description": "\nHe is staring at the people bathing here, always ready to help a poor swimmer.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d15+150",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 2400,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%10 say Hello folks!;%10 emote looks at you.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24904,
+      "Name": "fat woman",
+      "ShortDescription": "\nA fat woman",
+      "LongDescription": "\nA fat woman is sunbathing here.",
+      "Description": "\nShe looks at you angrily as you are standing between her and the sun.",
+      "Level": 8,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d12+120",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 2600,
+      "DefaultPosition": "Resting",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24905,
+      "Name": "turtle",
+      "ShortDescription": "\nA turtle",
+      "LongDescription": "\nA green turtle is crawling around on the beach here.",
+      "Description": "\nThe turtle has an extremely hard and beautifull shell and a small head.",
+      "Level": 6,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d9+90",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1600,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24906,
+      "Name": "captain kidd",
+      "ShortDescription": "\nCaptain Kidd",
+      "LongDescription": "\nCaptain Kidd is here selling boats and icecreams.",
+      "Description": "\nHe looks very mean and quite capable of chopping you to pieces if he wanted to.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "Light",
+        "Berzerk"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -600,
+        "Hitroll": 70,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d500+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 50000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24907,
+      "Name": "surfer orc",
+      "ShortDescription": "\nAn orc surfer",
+      "LongDescription": "\nAn orc surfer is here, riding the waves with some difficulty.",
+      "Description": "\nThe orc is surfing around on a surfing board made in the dark caves of moria.\nAs you watch him surfing around on the waves you notice that he is cursing the\ndark water all the time.",
+      "Level": 9,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d15+135",
+        "Mana": 190,
+        "Move": 215
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 3000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%10 emote shudders at the sight of the water.;\n%10 emote wobbles uneasily on his board.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24908,
+      "Name": "surfer elf",
+      "ShortDescription": "\nAn elf surfer",
+      "LongDescription": "\nAn elf surfer is riding the waves here.",
+      "Description": "\nHe is quite comfident in his ability in surfing the waves. His long blond hair\nis ruffling in the wind as he make spectacular turns.",
+      "Level": 9,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d15+140",
+        "Mana": 190,
+        "Move": 215
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Pierce",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 300,
+      "Experience": 3000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%10 emote combs his hair.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24909,
+      "Name": "white shark big",
+      "ShortDescription": "\nThe big white",
+      "LongDescription": "\nA big white fin just above the waterline is moving straight at you!",
+      "Description": "\nArghhh ! Suddenly you remember those old movies about this horrible creature.\nThe big white shark that killed hundreds of people bathing on nice beaches all\nover the world.",
+      "Level": 12,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d18+180",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 6,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d13+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 3500,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 24910,
+      "Name": "seagull",
+      "ShortDescription": "\nA seagull",
+      "LongDescription": "\nA seagull is flying around here.",
+      "Description": "\nThe seagull is circling around your head some 5 meters above you. It looks \nreally angry and screams at you in a highpitched voice.",
+      "Level": 5,
+      "Race": "Flybeast",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Fly"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d6+75",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "2d3+1"
+        },
+        {
+          "Type": "NoBsPierce",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1200,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%10 emote screams angrily at everyone.",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 24901,
+      "Name": "shorts",
+      "ShortDescription": "\ngreen shorts",
+      "Description": "\nA pair of green worn-out shorts lies here on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 50,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shorts"
+          ],
+          "Description": "\nThe shorts are made of green polyester and has small pink elephants sewn into\nit."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 24902,
+      "Name": "sign pole",
+      "ShortDescription": "\nA sign on a pole",
+      "Description": "\nYou see a large sign on a pole here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoDonate"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign",
+            "pole"
+          ],
+          "Description": "\nIt reads:\n                               WARNING!!!\n The water here is the hunting-ground for big white sharks. Enter at your own\nrisk!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 24903,
+      "Name": "bottle",
+      "ShortDescription": "\nA bottle",
+      "Description": "\nA bottle of dark glass lies here in the sand.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        2,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 2,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 10,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 24904,
+      "Name": "paper old",
+      "ShortDescription": "\nAn old piece of paper",
+      "Description": "\nSomeone have left an already used piece of paper here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "paper",
+            "old"
+          ],
+          "Description": "\nHELP! Im alone on an island in the middle of nowhere. The galley that i was \ntravelling with sunk in a great storm. As far as i know i'm the only surivor. \nIf you find me you will have my undying friendship and the pirate treasure \nthat i have found."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 24905,
+      "Name": "frisbee",
+      "ShortDescription": "\nA frisbee",
+      "Description": "\nA frisbee lies here on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        1,
+        6,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 6,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 50,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "frisbee"
+          ],
+          "Description": "\nThe frisbee is made of a light, yellow material. A small sign on it says: MADE\nIN TAIWAN."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 24906,
+      "Name": "sign",
+      "ShortDescription": "\nA sign",
+      "Description": "\nAn important sign is here on a pole.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 3000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign",
+            "pole"
+          ],
+          "Description": "\nSomeone has written something on it. It reads:\nYou are standing on the very southern place of this land. To the south lies\nthe great Mindorian Ocean, and on the other side of it lies Kandoria."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 24907,
+      "Name": "small boat wood",
+      "ShortDescription": "\nA small boat of wood",
+      "Description": "\nA small boat made of wood lies here.",
+      "ActionDescription": "",
+      "Type": "Boat",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 80,
+      "Cost": 1500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "small",
+            "boat"
+          ],
+          "Description": "\nAlthough its quite small you think it will be able to take you across the\nOceans."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 24908,
+      "Name": "icecream magnum",
+      "ShortDescription": "\nAn icecream",
+      "Description": "\nA tastylooking icecream with a thick layer of chocolade lies here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 7,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "icecream",
+            "magnum"
+          ],
+          "Description": "\nAh! It's one of those famous swedish icecreams that you have only seen on TV\nbefore. Its name is MAGNUM!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

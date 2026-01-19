@@ -1,0 +1,7088 @@
+{
+  "Zone": {
+    "Id": 39,
+    "Name": "Dirt Path",
+    "TopRoomId": 3999,
+    "Lifespan": 20,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3900,
+        "Arg2": 7,
+        "Arg3": 3902,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3900,
+        "Arg2": 7,
+        "Arg3": 3904,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3900,
+        "Arg2": 7,
+        "Arg3": 3915,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3900,
+        "Arg2": 7,
+        "Arg3": 3925,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3900,
+        "Arg2": 7,
+        "Arg3": 3931,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3900,
+        "Arg2": 7,
+        "Arg3": 3965,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3900,
+        "Arg2": 7,
+        "Arg3": 3968,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3901,
+        "Arg2": 7,
+        "Arg3": 3903,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3901,
+        "Arg2": 7,
+        "Arg3": 3914,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3901,
+        "Arg2": 7,
+        "Arg3": 3926,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3901,
+        "Arg2": 7,
+        "Arg3": 3967,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3901,
+        "Arg2": 7,
+        "Arg3": 3976,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3901,
+        "Arg2": 7,
+        "Arg3": 3984,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3901,
+        "Arg2": 7,
+        "Arg3": 3989,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3902,
+        "Arg2": 7,
+        "Arg3": 3924,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3902,
+        "Arg2": 7,
+        "Arg3": 3932,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3902,
+        "Arg2": 7,
+        "Arg3": 3949,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3902,
+        "Arg2": 7,
+        "Arg3": 3953,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3902,
+        "Arg2": 7,
+        "Arg3": 3956,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3902,
+        "Arg2": 7,
+        "Arg3": 3966,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3902,
+        "Arg2": 7,
+        "Arg3": 3968,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3903,
+        "Arg2": 5,
+        "Arg3": 3925,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3903,
+        "Arg2": 5,
+        "Arg3": 3931,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3903,
+        "Arg2": 5,
+        "Arg3": 3946,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3903,
+        "Arg2": 5,
+        "Arg3": 3955,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3903,
+        "Arg2": 5,
+        "Arg3": 3967,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3904,
+        "Arg2": 2,
+        "Arg3": 3923,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3905,
+        "Arg2": 2,
+        "Arg3": 3920,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3906,
+        "Arg2": 2,
+        "Arg3": 3922,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3907,
+        "Arg2": 2,
+        "Arg3": 3918,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3908,
+        "Arg2": 2,
+        "Arg3": 3921,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3909,
+        "Arg2": 4,
+        "Arg3": 3988,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3909,
+        "Arg2": 4,
+        "Arg3": 3976,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3909,
+        "Arg2": 4,
+        "Arg3": 3982,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3910,
+        "Arg2": 9,
+        "Arg3": 3907,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3910,
+        "Arg2": 9,
+        "Arg3": 3929,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3910,
+        "Arg2": 9,
+        "Arg3": 3907,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3910,
+        "Arg2": 9,
+        "Arg3": 3929,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3910,
+        "Arg2": 9,
+        "Arg3": 3907,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3910,
+        "Arg2": 9,
+        "Arg3": 3929,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3911,
+        "Arg2": 1,
+        "Arg3": 3906,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3912,
+        "Arg2": 5,
+        "Arg3": 3950,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3912,
+        "Arg2": 5,
+        "Arg3": 3953,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3912,
+        "Arg2": 5,
+        "Arg3": 3958,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3912,
+        "Arg2": 5,
+        "Arg3": 3955,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3912,
+        "Arg2": 5,
+        "Arg3": 3948,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3913,
+        "Arg2": 1,
+        "Arg3": 3930,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3914,
+        "Arg2": 3,
+        "Arg3": 3957,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3914,
+        "Arg2": 3,
+        "Arg3": 3952,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3914,
+        "Arg2": 3,
+        "Arg3": 3959,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3915,
+        "Arg2": 4,
+        "Arg3": 3934,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3915,
+        "Arg2": 4,
+        "Arg3": 3937,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3915,
+        "Arg2": 4,
+        "Arg3": 3942,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3916,
+        "Arg2": 4,
+        "Arg3": 3939,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3916,
+        "Arg2": 4,
+        "Arg3": 3934,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3916,
+        "Arg2": 4,
+        "Arg3": 3943,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3916,
+        "Arg2": 4,
+        "Arg3": 3938,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3917,
+        "Arg2": 3,
+        "Arg3": 3961,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3917,
+        "Arg2": 3,
+        "Arg3": 3963,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3918,
+        "Arg2": 1,
+        "Arg3": 3964,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3919,
+        "Arg2": 1,
+        "Arg3": 3941,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3920,
+        "Arg2": 3,
+        "Arg3": 3950,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3920,
+        "Arg2": 3,
+        "Arg3": 3954,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3920,
+        "Arg2": 3,
+        "Arg3": 3956,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3921,
+        "Arg2": 3,
+        "Arg3": 3949,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3921,
+        "Arg2": 3,
+        "Arg3": 3953,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3921,
+        "Arg2": 3,
+        "Arg3": 3940,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3922,
+        "Arg2": 5,
+        "Arg3": 3974,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3922,
+        "Arg2": 5,
+        "Arg3": 3975,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3922,
+        "Arg2": 5,
+        "Arg3": 3977,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3922,
+        "Arg2": 5,
+        "Arg3": 3979,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3923,
+        "Arg2": 5,
+        "Arg3": 3980,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3923,
+        "Arg2": 5,
+        "Arg3": 3982,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3923,
+        "Arg2": 5,
+        "Arg3": 3984,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3924,
+        "Arg2": 3,
+        "Arg3": 3971,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3924,
+        "Arg2": 3,
+        "Arg3": 3973,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3925,
+        "Arg2": 5,
+        "Arg3": 3986,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3925,
+        "Arg2": 5,
+        "Arg3": 3987,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3925,
+        "Arg2": 5,
+        "Arg3": 3989,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3925,
+        "Arg2": 5,
+        "Arg3": 3990,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3926,
+        "Arg2": 3,
+        "Arg3": 3954,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3926,
+        "Arg2": 3,
+        "Arg3": 3946,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3927,
+        "Arg2": 2,
+        "Arg3": 3950,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3927,
+        "Arg2": 2,
+        "Arg3": 3956,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3928,
+        "Arg2": 9,
+        "Arg3": 3910,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3928,
+        "Arg2": 9,
+        "Arg3": 3909,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3928,
+        "Arg2": 9,
+        "Arg3": 3910,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3928,
+        "Arg2": 9,
+        "Arg3": 3910,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3928,
+        "Arg2": 9,
+        "Arg3": 3910,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3928,
+        "Arg2": 9,
+        "Arg3": 3912,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3928,
+        "Arg2": 9,
+        "Arg3": 3912,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3929,
+        "Arg2": 1,
+        "Arg3": 3998,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3901,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3916,
+        "Arg2": 60,
+        "Arg3": 3998,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3917,
+        "Arg2": 60,
+        "Arg3": 3998,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3918,
+        "Arg2": 60,
+        "Arg3": 3998,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3930,
+        "Arg2": 1,
+        "Arg3": 3995,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3900,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3903,
+        "Arg2": 100,
+        "Arg3": 3995,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3931,
+        "Arg2": 1,
+        "Arg3": 3996,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3902,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3916,
+        "Arg2": 60,
+        "Arg3": 3996,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3917,
+        "Arg2": 60,
+        "Arg3": 3996,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3918,
+        "Arg2": 60,
+        "Arg3": 3996,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3911,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3912,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3969,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3970,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3969,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3974,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3978,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3980,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3983,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3986,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3992,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3993,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3993,
+        "Arg2": 0,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3999,
+        "Arg2": 2,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3995,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3996,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3997,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3998,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3914,
+        "Arg2": 80,
+        "Arg3": 3912,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3914,
+        "Arg2": 80,
+        "Arg3": 3912,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3915,
+        "Arg2": 90,
+        "Arg3": 3912,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3905,
+        "Arg2": 70,
+        "Arg3": 3903,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3904,
+        "Arg2": 70,
+        "Arg3": 3965,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3904,
+        "Arg2": 70,
+        "Arg3": 3931,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3906,
+        "Arg2": 70,
+        "Arg3": 3945,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3907,
+        "Arg2": 70,
+        "Arg3": 3968,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3908,
+        "Arg2": 70,
+        "Arg3": 3950,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3909,
+        "Arg2": 70,
+        "Arg3": 3956,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3910,
+        "Arg2": 70,
+        "Arg3": 3940,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3911,
+        "Arg2": 100,
+        "Arg3": 3914,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3911,
+        "Arg2": 100,
+        "Arg3": 3968,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3911,
+        "Arg2": 100,
+        "Arg3": 3932,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3912,
+        "Arg2": 100,
+        "Arg3": 3922,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3912,
+        "Arg2": 100,
+        "Arg3": 3963,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3913,
+        "Arg2": 100,
+        "Arg3": 3924,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 3913,
+        "Arg2": 100,
+        "Arg3": 3937,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 3901,
+      "Name": "Beginning of the Dirt Path",
+      "Description": "\n   You have wandered onto a narrow dirt path. It appears to be a safe and\npassable trail. The path continues to the north.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3902,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6092,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3902,
+      "Name": "A Bend in the Dirt Path",
+      "Description": "\n   The dirt path continues here. The trail makes a ninety degree turn, with\nexits leading to the south and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3901,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3903,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3903,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. You sense small animals darting about in the\ntrees and tall grass surrounding the trail. Exits lead to the east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3902,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3904,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3904,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. To the north you see a small hollow in the\nforest. To the south you see a small cave entrance. The dirt path continues to\nthe east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3908,
+          "Description": "A small hollow appears here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3903,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3905,
+          "Description": "You see a small cave entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3914,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3905,
+      "Name": "Entrance to a Small Cave",
+      "Description": "\n   You climb through a small opening in the rock formation to enter the cave.\nYou can see the exit which is to the north. However, the light from the cave\nentrance is small and you can't see beyond the entrance of the cave. The cave\ncontinues to the south.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3904,
+          "Description": "Through the cave entrance you can see the dirt path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3906,
+          "Description": "It is to dark to see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3906,
+      "Name": "A Bear's Den",
+      "Description": "\n   You have found the home of a large Cave Bear. He may not be to pleased that\nyou have entered uninvited. If you are very quiet, he may not hear you. Exits\nlead to the north and west.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3905,
+          "Description": "The entrance to the cave lies in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3907,
+          "Description": "It is to dark to see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3907,
+      "Name": "A Bat's Lair",
+      "Description": "\n   You have gone deeper into the cave. Though you may not see anything\non the ground here, you may want to check above your head. There is an\nexit to the east.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3906,
+          "Description": "It is to dark to see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3908,
+      "Name": "Entrance to Rabbit Hollow",
+      "Description": "\n   Off the dirt path you have come upon a rabbit hollow. The rabbit's\ntend to stay away from the entrance since many travelers often pass\nby on the dirt path.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3909,
+          "Description": "The rabbit hollow is there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3904,
+          "Description": "You can see the dirt path from here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3909,
+      "Name": "Rabbit Hollow",
+      "Description": "\n   You have entered the Rabbit Hollow. Here you can see rabbits darting\nhere and there. Many of the Rabbits are coming and going from the east.\nTo the south, you can make out the dirt path which lies beyond the\nentrance to the Hollow.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3910,
+          "Description": "You can see a small hole in the hollow.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3908,
+          "Description": "You can see the entrance to the Rabbit Hollow.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3910,
+      "Name": "A small hole in the hollow",
+      "Description": "\n   As you wander deeper into the hollow, you have come upon a small hole. You\nimagine that the rabbit's use this as there home. The hole looks just big\nenough for you to fit through.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3909,
+          "Description": "You can see the Rabbit Hollow where many rabbits frolic and play.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3911,
+          "Description": "Below you, you see a hole in the ground.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3911,
+      "Name": "The Rabbit Hole",
+      "Description": "\n   You are now underground. Above you can see opening that leads back up to the\nrabbit hollow. To the north there is a small wooden door. A tunnel to the east\nleads deeper into the hole.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3912,
+          "Description": "You can see a doorway to the north.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3913,
+          "Description": "You can see a tunnel leading to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3910,
+          "Description": "Through the hole you can see the rabbit hollow.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3912,
+      "Name": "Rabbit storage room",
+      "Description": "\n   You have entered the storage room of the rabbits. However, the rabbits tend\nto eat there food more quickly than they can store it. If you are lucky, you\nmight just find some carrots lying around on the floor.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3911,
+          "Description": "You can see a doorway to the south.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3913,
+      "Name": "Deeper in the rabbit hole",
+      "Description": "\n   You are deeper in the rabbit hole now. The only exit from here is to\ngo back to the west.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3911,
+          "Description": "You can see a higher in the rabbit hole.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3914,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. You feel very safe on the path. As you glance\naround, you tremble as you think about what lies off the beaten path. Exits\nlead to the east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3904,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3915,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3915,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. It is a very calm and peaceful walk. Exits\nlead to the east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3914,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3916,
+          "Description": "You can see the intersection of two paths ahead.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3916,
+      "Name": "Intersection of the Dirt Paths",
+      "Description": "\n   You have come upon a crossing of two dirt paths. Paths lead off to the\nnorth, east, and west. To the south, you can see an entrance to a wooded area.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3924,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3915,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3917,
+          "Description": "You see the entrance to the Bird Sanctuary.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3965,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3917,
+      "Name": "Entrance to the Bird Sanctuary",
+      "Description": "\n   You have entered the bird sanctuary. Here you can see several different\ntypes of birds all in one small area. You can wander through, just make sure\nthat you keep you eyes open for those bird bombs.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3916,
+          "Description": "You can see an intersection of two dirt paths.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3918,
+          "Description": "You can see the bird sanctuary to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3918,
+      "Name": "The Bird Sanctuary",
+      "Description": "\n   This area is heavily wooded so that it will attract many different types of\nbirds. You hear many different bird calls as you enter. There are thousands of\nbirds who call this sanctuary home, but you will be lucky to see just a few.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3917,
+          "Description": "You can see the entrance to the bird sanctuary.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3923,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3919,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3919,
+      "Name": "The Bird Sanctuary",
+      "Description": "\n   This area is heavily wooded so that it will attract many different types of\nbirds. You hear many different bird calls as you enter. There are thousands of\nbirds who call this sanctuary home, but you will be lucky to see just a few.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3918,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3920,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3920,
+      "Name": "The Bird Sanctuary",
+      "Description": "\n   This area is heavily wooded so that it will attract many different types of\nbirds. You hear many different bird calls as you enter. There are thousands of\nbirds who call this sanctuary home, but you will be lucky to see just a few.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3919,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3921,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3921,
+      "Name": "The Bird Sanctuary",
+      "Description": "\n   This area is heavily wooded so that it will attract many different types of\nbirds. You hear many different bird calls as you enter. There are thousands of\nbirds who call this sanctuary home, but you will be lucky to see just a few.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3920,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3922,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3922,
+      "Name": "The Bird Sanctuary",
+      "Description": "\n   This area is heavily wooded so that it will attract many different types of\nbirds. You hear many different bird calls as you enter. There are thousands of\nbirds who call this sanctuary home, but you will be lucky to see just a few.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3923,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3921,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3923,
+      "Name": "The Bird Sanctuary",
+      "Description": "\n   This area is heavily wooded so that it will attract many different types of\nbirds. You hear many different bird calls as you enter. There are thousands of\nbirds who call this sanctuary home, but you will be lucky to see just a few.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3918,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3922,
+          "Description": "You can see a thickly wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3924,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. You can see a long trail leading to the north.\nTo the south, you can see an intersection of two paths.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3925,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3916,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3925,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. The path leads of to the north and to the\nsouth.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3926,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3924,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3926,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. The path leads off to the north and to the\nsouth. To the north-east you can see a mountain. A small opening lies to the\neast.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3931,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3927,
+          "Description": "You see a small opening which leads into the mountain side.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3925,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3927,
+      "Name": "Entrance to a Cave",
+      "Description": "\n   You have entered a cave. The light from outside shines through the small\nopening during the day. You can tell the cave continues to the east, but it is\nto dark to see anything.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3928,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3926,
+          "Description": "You can see the dirt path through the small opening in the cave entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3928,
+      "Name": "Deeper in the Cave",
+      "Description": "\n   You are now well within the cave. You are getting an uneasy feeling about\nbeing here and a fleeting thought races through you mind that you should turn\nback.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3929,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3927,
+          "Description": "You can see the entrance to the cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3929,
+      "Name": "Well within the Cave",
+      "Description": "\n   As you look around, you don't see anything that interests you. Then,\nsuddenly, in the corner you see a pile of human bones that sends shivers down\nyour spine.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3930,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3928,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3930,
+      "Name": "The Grizzly Bear's Lair",
+      "Description": "\n   You have entered the lair of a huge grizzly bear. If you run now you might\njust get away with your life. As far as you can tell, there are no exits other\nthan the one that you came in through.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3929,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3931,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. To the east the mountain continues to get\nlarger and larger. The path leads off to the north and to the south.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3932,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3926,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3932,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. The mountain to the east is very large. The\npath leads off to the north and to the south.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3933,
+          "Description": "A bend in the path lies ahead.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3931,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3933,
+      "Name": "A Bend in the Dirt Path",
+      "Description": "\n   The dirt path bends to the west here. To the east you see a steep path up\nthe side of the mountain. The path does seem to be passable.\n   Near the path up the mountain side is a small sign. READ IT!!!",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3932,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3945,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3934,
+          "Description": "A path leads up the side of a mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe small weather beaten sign reads:\n\n              Dangerous CLIFFS!!!\n              -------------------\n            Climb at your own risk!\n          One wrong move and you will\n              fall to your death."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3934,
+      "Name": "Mountain Side",
+      "Description": "\n   You have walked half way up the side of the mountain. You can feel yourself\ngetting winded. You can go farther up the mountain side or you can go down to\nthe dirt path.\n   There is a sign here.  You feel the that you should READ IT!!!",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3935,
+          "Description": "You can see the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3933,
+          "Description": "You can see the dirt path below.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe small weather beaten sign reads:\n\n              Dangerous CLIFFS!!!\n              -------------------\n          Take care in every step that\n          you take. If you don't, your\n         next one could be your last..."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3935,
+      "Name": "South-West Corner of the Mountain",
+      "Description": "\n   You have reached the highest passable point on the mountain. You can follow\nthe trail which goes around the peak of the mountain, or head back down the\nside of the mountain.  There is a small fence here, which is the only thing\nthat will stop you from falling to your death.",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3936,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3943,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3934,
+          "Description": "Back down the mountain side to safe ground.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3936,
+      "Name": "Trail on Top of the Mountain",
+      "Description": "\n   You are on the edge of the cliff walking around a narrow trail. The mountain\npath continues around the top of the mountain. To the west you can look out\nover the beautiful landscape. Just don't look down! There is a small hole in\nthe fence to the west here. Be very careful, death is only a few feet away.",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3937,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3935,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3944,
+          "Description": "Off of the cliff. You don't want to go this way. But what a view!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3937,
+      "Name": "North-West Corner of the Mountain",
+      "Description": "\n   You have reached the north-western corner of the mountain. You can see for\nmiles and miles. You best not get to caught up in the view, death is only a few\nfeet away. The small fence is the only thing between you and your death!",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3938,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3936,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3938,
+      "Name": "Trail on Top of the Mountain",
+      "Description": "\n   You are on the edge of the cliff walking around a narrow trail. The mountain\npath continues around the top of the mountain. To the north you can look out\nover the beautiful landscape. Just don't look down! The fence is broken here\nand you better be careful.  One wrong step and you will be taking the fast\ntrack off of the mountain.",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3944,
+          "Description": "Off of the cliff. You don't want to go this way. But what a view!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3939,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3937,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3939,
+      "Name": "North-East Corner of the Mountain",
+      "Description": "\n   You have reached the north-eastern corner of the mountain. You can see for\nmiles and miles. You best not get to caught up in the view, death is only a few\nfeet away. The small fence is the only thing between you and flight.",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3940,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3938,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3940,
+      "Name": "Trail on Top of the Mountain",
+      "Description": "\n   You are on the edge of the cliff walking around a narrow trail. The mountain\npath continues around the top of the mountain. To the east you can look out\nover the beautiful landscape. Just don't look down! To the west you see a small\ncrack in the mountain side. You think that you could probably fit down through\nit.  The small fence continues around the mountain trail.",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3939,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3942,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3941,
+          "Description": "You see a small opening in the side of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3941,
+      "Name": "Lair of the Saber-Tooth Tiger",
+      "Description": "\n   You have entered the lair of the Saber-Tooth Tiger. It would be wise of you\nto climb right back out of here. This Tiger is not one you want to mess with.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3940,
+          "Description": "You see a small opening which will take you back onto the mountain trail.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3942,
+      "Name": "South-East Corner of the Mountain",
+      "Description": "\n   You have reached the south-eastern corner of the mountain. You can see for\nmiles and miles. You best not get to caught up in the view, death is only a few\nfeet away. The small fence has a break in it to the east, so be very very\ncareful about where you step.",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3940,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3944,
+          "Description": "Off of the cliff. You don't want to go this way. But what a view!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3943,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3943,
+      "Name": "Trail on Top of the Mountain",
+      "Description": "\n   You are on the edge of the cliff walking around a narrow trail. The mountain\npath continues around the top of the mountain. To the south you can look out\nover the beautiful landscape. Just don't look down! The small fence continues\naround the mountain trail, your only safeguard against a sure fall to death.",
+      "ZoneId": 39,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3942,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3935,
+          "Description": "You see a small trail that leads around the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3944,
+      "Name": "The Fall to Death",
+      "Description": "\n   How's it feel to fly? You watch the beautiful scenery before you as you\ntumble towards the ground below. Your life flashes before your eyes.\nAAAAAAA\n      AAAAAAAA\n             AAAAAAAAAAA\n                       AAAAHHHHHHHHHHHHHHHH\n                                          HHHHHHHHH!!!!!!!!!!!!!!!!!!!!!!!\nYou are dead.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3942,
+          "Description": "You see a trail back to safety.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3936,
+          "Description": "You see a trail back to safety.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3938,
+          "Description": "You see a trail back to safety.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3945,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. The trail continues to the east and\nto the west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3933,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3946,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3946,
+      "Name": "End of the Dirt Path",
+      "Description": "\n   You have come to a dead end on the dirt path. You can follow the path\nback to the east, or you can be adventurous you can leave the well worn\npath and enter the woods to the north. To the south, you see a small\nopening in a rock formation.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3947,
+          "Description": "There is a small entrance to a heavily wooded area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3945,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3960,
+          "Description": "You see a small opening in a rock formation.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3947,
+      "Name": "Entrance to the Heavily Wooded Area",
+      "Description": "\n   You have entered a heavily wooded area. You can hear branches breaking all\naround you. There is not a whole lot of room to move around in here, so you\nbetter keep your eyes open...",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3948,
+          "Description": "The woods are to thick to see ahead of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3946,
+          "Description": "You can barely make out the dirt path through all the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3948,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3959,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3947,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3949,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3949,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3950,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3948,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3950,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3951,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3949,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3951,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3952,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3950,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3952,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3953,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3951,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3953,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3954,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3952,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3954,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3955,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3953,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3955,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3956,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3954,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3956,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3955,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3957,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3957,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3956,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3958,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3958,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3957,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3959,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3959,
+      "Name": "Heavy Woods",
+      "Description": "\n   You are in a heavily wooded area. You hear movement all around you... You\ncan't see very far in any direction.",
+      "ZoneId": 39,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3958,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3948,
+          "Description": "You can't see anything through the thick woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3960,
+      "Name": "Crack in the Rock Formation",
+      "Description": "\n   You are now standing inside the rock formation. You can see the dirt path\nthrough the small opening. You can tell that the tunnel you have entered slopes\ndown ahead. It is very dark inside the underground tunnel.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3946,
+          "Description": "You can see the dirt path through the small crack.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3961,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3961,
+      "Name": "Underground Tunnel",
+      "Description": "\n   Inside the underground tunnel you can see almost nothing. The only light in\nthe tunnel is supplied by you.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3962,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3960,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3962,
+      "Name": "Underground Tunnel",
+      "Description": "\n   You are well within the underground tunnel. You can tell by your\nsurroundings that this is probably the home of several weasels.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3961,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3963,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3963,
+      "Name": "Underground Tunnel",
+      "Description": "\n   Now deep within the tunnel, you can see what looks like the carcasses of\nmany unlucky animals lying around the tunnel.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3962,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3964,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3964,
+      "Name": "Lair of the Giant Weasel",
+      "Description": "\n   You are at the end of the tunnel. Here you see many carcasses lying\neverywhere. Of all the weasels, you can tell that this is where the biggest of\nall resides.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3963,
+          "Description": "It is to dark to see anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3965,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. You feel as if you don't have a care in the\nworld as you wander along this peaceful trail. Exits lead to the east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3916,
+          "Description": "You can see the intersection of two paths ahead.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3966,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3966,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. This path reminds you of that path you used to\nspend all you days on as a child. You feel just so comfortable on it. Exits\nlead to the east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3965,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3967,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3967,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. You are surrounded to the north and south by\nvast fields that allow you to see for miles around. There is no reason for you\nto leave the trail however. Exits lead to the east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3966,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3968,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3968,
+      "Name": "The Dirt Path",
+      "Description": "\n   The dirt path continues here. Such a nice path don't you think? Exits lead\nto the east and west. To the north is the porch of a small farm house.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3992,
+          "Description": "A small farm house lies directly to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3967,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3969,
+          "Description": "You see an entrance to the pasture again.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3969,
+      "Name": "Entrance to the Pasture",
+      "Description": "\n   You have come upon the entrance to a vast pasture. To the south you can see\nthe entrance to a pig pen. To the west you can see the entrance to a sheep\npasture. All you are sure of is that you don't want to be here any longer than\nyou have to, because it stinks worse than anything you have ever smelled.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3968,
+          "Description": "A narrow dirt path leads in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3970,
+          "Description": "You can see a pig pen.",
+          "Keywords": [
+            "metal",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3974,
+          "Description": "You can see an entrance to a sheep pasture.",
+          "Keywords": [
+            "wooden",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3970,
+      "Name": "Pig Pen",
+      "Description": "\n   You are now in the pig pen. You have heard that pigs are one of the cleanest\nanimals around, but you are a mess. The exit to the pig pen lies to the north.\nThe wooden fence around the pen will allow you to go to the south and east.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3969,
+          "Description": "You see the exit to the Pig Pen.",
+          "Keywords": [
+            "metal",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3973,
+          "Description": "You can see farther into the pig pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3971,
+          "Description": "You can see farther into the pig pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3971,
+      "Name": "South-West Corner of the Pig Pen",
+      "Description": "\n   You are now in the pig pen. You have heard that pigs are one of the cleanest\nanimals around, but you are a mess. A wooden fence has been erected around the\npen, leaving you with exits only to the north and east.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3970,
+          "Description": "You see more of the Pig Pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3972,
+          "Description": "You can see farther into the pig pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3972,
+      "Name": "South-East corner of the Pig Pen",
+      "Description": "\n   You are now in the pig pen. You have heard that pigs are one of the cleanest\nanimals around, but you are a mess. A wooden fence has been erected around the\npen, leaving you with exits only to the north and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3973,
+          "Description": "You see more of the Pig Pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3971,
+          "Description": "You see more of the Pig Pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3973,
+      "Name": "North-East Corner of the Pig Pen",
+      "Description": "\n   You are now in the pig pen. You have heard that pigs are one of the cleanest\nanimals around, but you are a mess. A wooden fence has been erected around the\npen, leaving you with exits only to the south and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3972,
+          "Description": "You see farther into the Pig Pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3970,
+          "Description": "You see more of the Pig Pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3974,
+      "Name": "The Vast Sheep Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the sheep. To the east is the entrance to this pasture. The\npasture continues to the north and east. To the south is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3979,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3969,
+          "Description": "You see the exit to the sheep pasture.",
+          "Keywords": [
+            "wooden",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3975,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3975,
+      "Name": "The Sheep Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the sheep. The pasture continues to the north, east, and\nwest. To the south is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3978,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3974,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3976,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3976,
+      "Name": "The South-West Corner of the Sheep Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the sheep. The pasture continues to the north and east. To\nthe south and west is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3977,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3975,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3977,
+      "Name": "The North-West Corner of the Sheep Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the sheep. The pasture continues to the south and east. To\nthe north and west is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3978,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3976,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3978,
+      "Name": "The Sheep Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the sheep. To the north you see a gate which will leads into\nthe cow pasture. The pasture continues to the south, east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3980,
+          "Description": "You see a gate leading to the cow pasture.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3979,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3975,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3977,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3979,
+      "Name": "The North-East Corner of the Sheep Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the sheep. The pasture continues to the south and west. To\nthe north and east is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3974,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3978,
+          "Description": "You see more of the sheep pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3980,
+      "Name": "The Cow Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the cows. To the south you see a gate which will leads into\nthe sheep pasture. The pasture continues to the north, east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3983,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3985,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3978,
+          "Description": "You see a gate leading to the sheep pasture.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3981,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3981,
+      "Name": "The South-West Corner of the Cow Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the cows. The pasture continues to the north and east. To the\nsouth and west is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3982,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3980,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3982,
+      "Name": "The North-West Corner of the Cow Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the cows. The pasture continues to the south and east. To the\nnorth and west is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3983,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3981,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3983,
+      "Name": "The Cow Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the cows. To the north you see a gate which will leads into\nthe horse pasture. The pasture continues to the south, east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3986,
+          "Description": "You see a gate leading to the horse pasture.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3984,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3980,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3982,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3984,
+      "Name": "The North-East Corner of the Cow Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the cows. The pasture continues to the south and west. To the\nnorth and east is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3985,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3983,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3985,
+      "Name": "The South-East Corner of the Cow Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the cows. The pasture continues to the north and west. To the\nsouth and east is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3984,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3980,
+          "Description": "You see more of the cow pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3986,
+      "Name": "The Horse Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the horses. To the south you see a gate which will leads into\nthe cow pasture. The pasture continues to the north, east and west.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3989,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3991,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3983,
+          "Description": "You see a gate leading to the cow pasture.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3987,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3987,
+      "Name": "The South-West Corner of the Horse Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the horses. The pasture continues to the north and east. To\nthe south and west is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3988,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3986,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3988,
+      "Name": "The North-West Corner of the Horse Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the horses. The pasture continues to the south and east. To\nthe north and west is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3989,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3987,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3989,
+      "Name": "The Horse Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the horses. The pasture continues to the south, east and\nwest. To the north is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3990,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3986,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3988,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3990,
+      "Name": "The North-East Corner of the Horse Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the horses. The pasture continues to the south and west. To\nthe north and east is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3991,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3989,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3991,
+      "Name": "The South-East Corner of the Horse Pasture",
+      "Description": "\n   You are now in a vast fenced in pasture. This section of the pasture has\nbeen reserved for the horses. The pasture continues to the north and west. To\nthe south and east is a barbed wire fence.",
+      "ZoneId": 39,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3990,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3986,
+          "Description": "You see more of the horse pasture.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3992,
+      "Name": "Porch of a Small Farm House",
+      "Description": "\n   You are standing on the porch of the small farm house. A door lies to the\nnorth. You can step off of the porch and onto to the dirt path which lies to\nthe south.",
+      "ZoneId": 39,
+      "Sector": "City",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3993,
+          "Description": "You see a doorway which leads into a small farm house.",
+          "Keywords": [
+            "front",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3968,
+          "Description": "The dirt path lies in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3993,
+      "Name": "Foyer of the Farm house",
+      "Description": "\n   You are standing in the foyer of the small farm house. The home is very\nrustic. You can see a dining room through a doorway to the west. To the east,\nyou see a living room. To the north, there is a small doorway. The doorway out\nof the house lies to the south.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3999,
+          "Description": "You can see a doorway to the north.",
+          "Keywords": [
+            "bathroom",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3997,
+          "Description": "You can see a living room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3992,
+          "Description": "You can see the doorway which leads outside.",
+          "Keywords": [
+            "front",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3994,
+          "Description": "You can see the dinning room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3994,
+      "Name": "The Dining Room",
+      "Description": "\n   You are in the dinning room of the small home. The antique dinning room set\nis absolutely beautiful. There is a small window on the west wall. Through the\nwindow you can see a vast pasture. To the east you can see the foyer of the\nsmall house. To the north lies the kitchen.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3995,
+          "Description": "You can see the kitchen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3993,
+          "Description": "You can see the foyer in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3995,
+      "Name": "The kitchen",
+      "Description": "\n   You are now standing in the kitchen. Hmmm, does it smell good in here! Looks\nlike an apple pie baking in the oven. On the North wall is a small window that\nlooks out over the vast plains behind the house. There is a door to the east\nhere. To the south lies the dinning room.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3996,
+          "Description": "You see a doorway.",
+          "Keywords": [
+            "bedroom",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3994,
+          "Description": "You can see the dinning room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3996,
+      "Name": "The Farmer's Daughters Bedroom",
+      "Description": "\n   You are in a quaint little room. Everything in this room is placed ever\nso perfectly. There is a picture of the small family on the dresser. There\nis a window on the north wall which you can see the vast plains that lie\nbehind the house.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3995,
+          "Description": "You see a doorway.",
+          "Keywords": [
+            "bedroom",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3997,
+      "Name": "The Living Room",
+      "Description": "\n   You are standing in the Living room of the small farm house. As you look\naround, you feel as though you are in your grandmother's home, since it looks\nas though none of the furniture has been replaced in about 40 years. To the\nwest is the foyer. A door lies to the north.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3998,
+          "Description": "You see a dooryway.",
+          "Keywords": [
+            "bedroom",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3993,
+          "Description": "You can see the foyer to the small house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3998,
+      "Name": "The Master Bedroom",
+      "Description": "\n   You have entered the master bedroom of the home. As you look around, you\nnotice that the farmer and his wife might not be the simple people you thought\nthem to be. You see a set of handcuffs on the night stand next to the bed. To\nthe south is a door leading out to the living room.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3997,
+          "Description": "You can see a doorway leading out to the living room.",
+          "Keywords": [
+            "bedroom",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3999,
+      "Name": "The Bathroom",
+      "Description": "\n   You have entered the bathroom of the small farm house.  It is an\nabsolute mess in here. You think that you will wait till you see McDonald's\non your way home so you can stop and use the restroom.  There is a doorway\nto the south here.",
+      "ZoneId": 39,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3993,
+          "Description": "You can see a doorway leading out to the foyer of the house.",
+          "Keywords": [
+            "bathroom",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 3900,
+      "Name": "mouse small",
+      "ShortDescription": "\nthe small mouse",
+      "LongDescription": "\nThe small mouse is scampering around here.",
+      "Description": "\nThe mouse leads a boring existance. However, he seems to be\ncheerful and merry as he scampers along the ground.",
+      "Level": 0,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+10",
+        "Mana": 100,
+        "Move": 80
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 180,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3901,
+      "Name": "rat rodent",
+      "ShortDescription": "\nthe rat",
+      "LongDescription": "\nThe rat scurries along looking for anything to scavenge.",
+      "Description": "\nThe rat is a long tailed rodent which resembles mice, but is\na little big larger. The rat scurries along the ground.",
+      "Level": 1,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": -10,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d2+15",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 267,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3902,
+      "Name": "squirrel",
+      "ShortDescription": "\nthe squirrel",
+      "LongDescription": "\nThe squirrel is here collecting nuts.",
+      "Description": "\nA brown furry squirrel. The squirrel has a long flexible,\nbushy tail. The squirrel is here searching for nuts.",
+      "Level": 2,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 40,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d3+30",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3903,
+      "Name": " \nraccoon racoon coon",
+      "ShortDescription": "\nthe raccoon",
+      "LongDescription": "\nThe raccoon is here showing little fear of you.",
+      "Description": "\nThe raccoon has grayish-brown fur with black masklike\nfacial markings, and a bushy, black-ringed tail.",
+      "Level": 2,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d3+30",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3904,
+      "Name": "cardinal bird",
+      "ShortDescription": "\nthe cardinal",
+      "LongDescription": "\nThe cardinal is perched on a nearby tree branch.",
+      "Description": "\nThe cardinal is a beautiful red bird with a\ncrested head and a short, thick bill.",
+      "Level": 2,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d3+30",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3905,
+      "Name": "blue jay bird",
+      "ShortDescription": "\nthe blue jay",
+      "LongDescription": "\nThe blue jay is perched on a nearby tree branch.",
+      "Description": "\nThe blue jay is beautiful bird with a crested head\nand predominantly blue plumage.",
+      "Level": 2,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d3+30",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3906,
+      "Name": "robin bird",
+      "ShortDescription": "\nthe robin",
+      "LongDescription": "\nThe robin is perched nearby whistling a delightful song.",
+      "Description": "\nThe robin has a orange breast and a brown back.",
+      "Level": 2,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d3+30",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3907,
+      "Name": "eagle bird",
+      "ShortDescription": "\nthe eagle",
+      "LongDescription": "\nThe eagle is resting on a large branch nearby.",
+      "Description": "\nThe eagle has a powerful hooked bill, long broad\nwings, and strong, soaring flight.",
+      "Level": 4,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d6+60",
+        "Mana": 140,
+        "Move": 140
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 533,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3908,
+      "Name": "owl bird",
+      "ShortDescription": "\nthe owl",
+      "LongDescription": "\nThe owl is perched here on a nearby branch.",
+      "Description": "\nThe owl has hooked and feathered talons, a large head with \nshort hooked beaks, and eyes set in a frontal facial plane.",
+      "Level": 3,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d5+45",
+        "Mana": 130,
+        "Move": 125
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 400,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3909,
+      "Name": "black crow bird",
+      "ShortDescription": "\nthe black crow",
+      "LongDescription": "\nThe black crow is here shrieking his raucous call.",
+      "Description": "\nThe black crow is large glossy, black bird. The crow is\nscavenger who will feast on any corpse he encounters.",
+      "Level": 3,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": -50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d5+45",
+        "Mana": 130,
+        "Move": 125
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 400,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3910,
+      "Name": "bat",
+      "ShortDescription": "\nthe bat",
+      "LongDescription": "\nThe bat is here hanging from the ceiling.",
+      "Description": "\nThe bat is a nocturnal creature, sleeping all day and only\nmoving about at night. The bat has membranous wings that extend\nfrom the forelimbs to the hind limbs or tail.",
+      "Level": 2,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d3+30",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3911,
+      "Name": "cave bear",
+      "ShortDescription": "\nthe cave bear",
+      "LongDescription": "\nThe cave bear is sleeping here in his cave.",
+      "Description": "\nThe cave bear is about 15 feet tall with reddish brown fur. Cave\nbears are harmless when sleeping, but be careful not to wake them.",
+      "Level": 10,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": -55,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d15+150",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 2133,
+      "DefaultPosition": "Sleeping",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3912,
+      "Name": "black bear",
+      "ShortDescription": "\nthe black bear",
+      "LongDescription": "\nThe black bear is here wandering about.",
+      "Description": "\nThe black bear is about 6 feet tall with dark black fur. Black\nbears tend do not attack unless provoked.",
+      "Level": 8,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d12+120",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1333,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3913,
+      "Name": "grizzly bear",
+      "ShortDescription": "\nthe grizzly bear",
+      "LongDescription": "\nThe grizzly bear is resting here.",
+      "Description": "\nThe grizzly bear stands about 9 feet tall and has silver-tipped\nbrown fur. Grizzly bears are fond of meat, however this one looks\nas if he has just finished a meal. Lucky for you!",
+      "Level": 10,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d15+150",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 2133,
+      "DefaultPosition": "Resting",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3914,
+      "Name": "wild boar",
+      "ShortDescription": "\nthe wild boar",
+      "LongDescription": "\nThe wild boar is here minding his own business.",
+      "Description": "\nThe wild boar is an omnivorous creature, but tends to mind its own\nbusiness. However, they have extremely nasty tempers when disturbed.",
+      "Level": 5,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": -40,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d8+75",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 667,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3915,
+      "Name": "mountain lion cat",
+      "ShortDescription": "\nthe mountain lion",
+      "LongDescription": "\nThe mountain lion is here wandering around the mountain side.",
+      "Description": "\nThe mountain lion is a tawny-furred creature. The lion weakest of\nthe family of the great cats. As many of the creatures in its family,\nthe mountian lion is a playful creature, but is subject to violent\nchanges of temper.",
+      "Level": 9,
+      "Race": "Catbeast",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d14+135",
+        "Mana": 190,
+        "Move": 215
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1600,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3916,
+      "Name": "wild big horn mountain ram",
+      "ShortDescription": "\nthe wild big horn mountain ram",
+      "LongDescription": "\nThe wild big horn mountain ram is moving easily upon the mountain side.",
+      "Description": "\nThe wild big horn mountain ram has large spiral horns. The ram is long\nlegged and very agile as you can tell from the way he easily moves up\nand down the mountain side.",
+      "Level": 7,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d9+90",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1067,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3917,
+      "Name": "weasel",
+      "ShortDescription": "\nthe weasel",
+      "LongDescription": "\nThe weasel is here searching for some small prey.",
+      "Description": "\nThe weasel is a short but long creature, measuring 4 to 5 feet in length.\nThe look rather harmless, though you do not feel so safe when you see\nthere sharp teeth.",
+      "Level": 3,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": -250,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d5+45",
+        "Mana": 130,
+        "Move": 125
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 400,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3918,
+      "Name": "giant weasel",
+      "ShortDescription": "\nthe giant weasel",
+      "LongDescription": "\nThe giant weasel is here looking at you hungrily.",
+      "Description": "\nThe giant weasel looks similar to his smaller counterpart, except for\nthe fact that he is twice the length, measuring 10 feet in length.\nOne other thing you notice is that he is much more dangerous looking.",
+      "Level": 6,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d9+90",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 800,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3919,
+      "Name": "sabre tooth tiger cat",
+      "ShortDescription": "\nthe Sabre-Tooth Tiger",
+      "LongDescription": "\nThe Sabre-Tooth Tiger stands peering at his next meal.",
+      "Description": "\nThe Sabre-Tooth Tiger are larger than most cats in the same family.\nYou instanly notice the oversized fangs, from which the cat is named.",
+      "Level": 10,
+      "Race": "Catbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d15+150",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3920,
+      "Name": "wolf",
+      "ShortDescription": "\nthe wolf",
+      "LongDescription": "\nThe wolf is standing here studying his surroundings.",
+      "Description": "\nThe wolf is a beautiful animal, resembling that cute puppy you saw last\ntime you wandered by the pet store. Don't forget that this is a vicous\npredator when provoked!",
+      "Level": 7,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d11+105",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1067,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3921,
+      "Name": "goat",
+      "ShortDescription": "\nthe goat",
+      "LongDescription": "\nThe goat is standing here nibbling on some grass.",
+      "Description": "\nThe goat is a rather dull animal. He does little other than wander\naround nibbling on grass.",
+      "Level": 5,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d8+75",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 667,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3922,
+      "Name": "sheep",
+      "ShortDescription": "\nthe sheep",
+      "LongDescription": "\nThe sheep is standing here grazing.",
+      "Description": "\nThe sheep has a large wool covering over it's body. The sheep also\nhas split hoofs, making it cloven-footed.",
+      "Level": 5,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d8+75",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 667,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3923,
+      "Name": "cow",
+      "ShortDescription": "\nthe cow",
+      "LongDescription": "\nThe cow is standing in the grazing on nearby grass.",
+      "Description": "\nThe cow is a decent sized animal. He is white with large black\nspots all over his body. The cow looks pretty harmless.",
+      "Level": 6,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d9+90",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 800,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3924,
+      "Name": "pig",
+      "ShortDescription": "\nthe pig",
+      "LongDescription": "\nThe pig is here playing in the mud.",
+      "Description": "\nThe pig is a very intelligent animal. Though the pig is not the\nworld's prettiest animal, he does have some good qualities.",
+      "Level": 4,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d6+60",
+        "Mana": 140,
+        "Move": 140
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 533,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3925,
+      "Name": "horse",
+      "ShortDescription": "\nthe horse",
+      "LongDescription": "\nThe horse is standing here tall and proud.",
+      "Description": "\nThe horse is a beautiful animal standing a little of more than 6 feet tall.",
+      "Level": 7,
+      "Race": "Mount",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d11+105",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1067,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3926,
+      "Name": "deer",
+      "ShortDescription": "\nthe deer",
+      "LongDescription": "\nThe deer is wandering around.",
+      "Description": "\nThe deer is a beautiful animal. His antlers raise high above his head.\nThe deer is a very quick and agile animal.",
+      "Level": 7,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d11+105",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1067,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3927,
+      "Name": "moose",
+      "ShortDescription": "\nthe moose",
+      "LongDescription": "\nThe moose is here wandering around looking at his surroundings.",
+      "Description": "\nThe moose is the largest living deer. The moose has a heavy body,\nlong legs, and short neck and tail. The moose can move quickly\nthough his looks would seem to make you believe otherwise.",
+      "Level": 8,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d12+120",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3928,
+      "Name": "bunny hare rabbit",
+      "ShortDescription": "\nthe bunny rabbit",
+      "LongDescription": "\nThe bunny rabbit is here as cute as ever.",
+      "Description": "\nThe bunny rabbit is a cute creature which you would like to\npick up and hold. The bunny looks so harmless you feel like\na jerk even thinking about harming it.",
+      "Level": 2,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d3+30",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3929,
+      "Name": "farmer",
+      "ShortDescription": "\nthe farmer",
+      "LongDescription": "\nThe Farmer is here thinking about the chores to be done today.",
+      "Description": "\nThe farmer is a middle aged man. He is of medium height and is\npretty thin. You can tell that he has worked hard on the farm\nall his life.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d15+150",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3930,
+      "Name": "farmer wife",
+      "ShortDescription": "\nthe farmer's wife",
+      "LongDescription": "\nThe farmer's wife is standing here preparing a meal.",
+      "Description": "\nThe farmer's wife is a well rounded woman. You can tell she has\nspent many days in the kitchen.",
+      "Level": 9,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d14+135",
+        "Mana": 190,
+        "Move": 215
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 180,
+      "Experience": 1600,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3931,
+      "Name": "daughter girl",
+      "ShortDescription": "\nthe farmer's daughter",
+      "LongDescription": "\nThe farmer's daughter is standing here looking as hot as ever.",
+      "Description": "\nThe Farmer's Daughter is one of the most beautiful creatures you have\never seen in you life. As she notices you looking at her, she gives\nyou a little wink!",
+      "Level": 7,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d11+105",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 140,
+      "Experience": 1067,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 3900,
+      "Name": "frying pan pot",
+      "ShortDescription": "\nThe frying pan",
+      "Description": "\nThe frying pan with a long black handle is here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        2,
+        5,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 5,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 50,
+      "CostPerDay": 8,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3901,
+      "Name": "hoe",
+      "ShortDescription": "\nThe hoe",
+      "Description": "\nThe hoe is lying here on the groud.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        3,
+        4,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 4,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 40,
+      "CostPerDay": 6,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3902,
+      "Name": "curling iron",
+      "ShortDescription": "\nThe curling iron",
+      "Description": "\nThe curling iron is here lying here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        2,
+        7,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 7,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 100,
+      "CostPerDay": 15,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 10
+        },
+        {
+          "Location": "Charisma",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3903,
+      "Name": "apple pie",
+      "ShortDescription": "\nAn apple pie",
+      "Description": "\nAn apple pie is here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 8,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 15,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3904,
+      "Name": "branch",
+      "ShortDescription": "\nThe branch",
+      "Description": "\nThe branch is lying here on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3905,
+      "Name": "branch",
+      "ShortDescription": "\nThe branch",
+      "Description": "\nThe branch is lying here on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1304,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3906,
+      "Name": "branch",
+      "ShortDescription": "\nThe branch",
+      "Description": "\nThe branch is lying here on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1032,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3907,
+      "Name": "branch",
+      "ShortDescription": "\nThe branch",
+      "Description": "\nThe branch is lying here on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1200,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3908,
+      "Name": "branch",
+      "ShortDescription": "\nThe branch",
+      "Description": "\nThe branch is lying here on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 983,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3909,
+      "Name": "branch",
+      "ShortDescription": "\nThe branch",
+      "Description": "\nThe branch is lying here on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 843,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Constitution",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3910,
+      "Name": "branch",
+      "ShortDescription": "\nThe branch",
+      "Description": "\nThe branch is lying here on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1344,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3911,
+      "Name": "rock",
+      "ShortDescription": "\nA rock",
+      "Description": "\nA rock is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5,
+      "Cost": 200,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": -5
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": -4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3912,
+      "Name": "rock",
+      "ShortDescription": "\nA rock",
+      "Description": "\nA rock is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5,
+      "Cost": 2123,
+      "CostPerDay": 42,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Constitution",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3913,
+      "Name": "rock",
+      "ShortDescription": "\nA rock",
+      "Description": "\nA rock is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5,
+      "Cost": 1345,
+      "CostPerDay": 32,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3914,
+      "Name": "carrot",
+      "ShortDescription": "\nA carrot",
+      "Description": "\nA carrot is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 5,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 20,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3915,
+      "Name": "flask carrot juice",
+      "ShortDescription": "\nA flask of carrot juice",
+      "Description": "\nA flask of carrot juice is here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        19,
+        46,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 50,
+          "SpellIds": [
+            19,
+            46,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 233,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3916,
+      "Name": "feather pillow",
+      "ShortDescription": "\nThe feather pillow",
+      "Description": "\nThe feather pillow rests here looking ever so comfortable.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        1,
+        1,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 1,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Charisma",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3917,
+      "Name": "throw pillow",
+      "ShortDescription": "\nThe throw pillow",
+      "Description": "\nThe throw pillow lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        1,
+        1,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 1,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Charisma",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3918,
+      "Name": "fluffy pillow",
+      "ShortDescription": "\nThe fluffy pillow",
+      "Description": "\nThe fluffy pillow lies here looking inviting.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        1,
+        1,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 1,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Charisma",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

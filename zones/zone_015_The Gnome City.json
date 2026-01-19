@@ -1,0 +1,6264 @@
+{
+  "Zone": {
+    "Id": 15,
+    "Name": "The Gnome City",
+    "TopRoomId": 1599,
+    "Lifespan": 90,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1502,
+        "Arg2": 3,
+        "Arg3": 1503,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1503,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1502,
+        "Arg2": 3,
+        "Arg3": 1505,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1503,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1502,
+        "Arg2": 3,
+        "Arg3": 1506,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1503,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1500,
+        "Arg2": 3,
+        "Arg3": 1509,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1502,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1501,
+        "Arg2": 3,
+        "Arg3": 1509,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1500,
+        "Arg2": 3,
+        "Arg3": 1510,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1502,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1501,
+        "Arg2": 3,
+        "Arg3": 1510,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1500,
+        "Arg2": 3,
+        "Arg3": 1511,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1502,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1501,
+        "Arg2": 3,
+        "Arg3": 1511,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1503,
+        "Arg2": 3,
+        "Arg3": 1513,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1511,
+        "Arg2": 12,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 1513,
+        "Arg2": 12,
+        "Arg3": 1511,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1503,
+        "Arg2": 3,
+        "Arg3": 1514,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1511,
+        "Arg2": 12,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 1512,
+        "Arg2": 12,
+        "Arg3": 1511,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1503,
+        "Arg2": 3,
+        "Arg3": 1515,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1514,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1504,
+        "Arg2": 3,
+        "Arg3": 1519,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1500,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1506,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1507,
+        "Arg2": 10,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1508,
+        "Arg2": 2,
+        "Arg3": 1522,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1508,
+        "Arg2": 2,
+        "Arg3": 1522,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1507,
+        "Arg2": 1,
+        "Arg3": 1524,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1504,
+        "Arg2": 6,
+        "Arg3": 1527,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1504,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1504,
+        "Arg2": 6,
+        "Arg3": 1530,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1504,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1504,
+        "Arg2": 6,
+        "Arg3": 1530,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1504,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1504,
+        "Arg2": 6,
+        "Arg3": 1534,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1504,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 1536,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1509,
+        "Arg2": 3,
+        "Arg3": 1541,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1505,
+        "Arg2": 10,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1510,
+        "Arg2": 3,
+        "Arg3": 1542,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1503,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1511,
+        "Arg2": 3,
+        "Arg3": 1543,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 1548,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 1549,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 1550,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 1551,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 1552,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 1553,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 1554,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 1555,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1512,
+        "Arg2": 1,
+        "Arg3": 1545,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1501,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 1545,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 1546,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1513,
+        "Arg2": 10,
+        "Arg3": 1548,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1514,
+        "Arg2": 10,
+        "Arg3": 1548,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1513,
+        "Arg2": 10,
+        "Arg3": 1550,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1514,
+        "Arg2": 10,
+        "Arg3": 1550,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1513,
+        "Arg2": 10,
+        "Arg3": 1551,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1514,
+        "Arg2": 10,
+        "Arg3": 1551,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1513,
+        "Arg2": 10,
+        "Arg3": 1553,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1514,
+        "Arg2": 10,
+        "Arg3": 1553,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1513,
+        "Arg2": 10,
+        "Arg3": 1555,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1514,
+        "Arg2": 10,
+        "Arg3": 1555,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1515,
+        "Arg2": 1,
+        "Arg3": 1556,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1505,
+        "Arg2": 18,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1512,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 1516,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 3,
+        "Arg3": 1557,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 1518,
+        "Arg2": 3,
+        "Arg3": 1557,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1505,
+        "Arg2": 1,
+        "Arg3": 1558,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1508,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1509,
+        "Arg2": 12,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1510,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1520,
+        "Arg2": 6,
+        "Arg3": 1563,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1520,
+        "Arg2": 6,
+        "Arg3": 1565,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1518,
+        "Arg2": 5,
+        "Arg3": 1569,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 30,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1518,
+        "Arg2": 5,
+        "Arg3": 1569,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 30,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1518,
+        "Arg2": 5,
+        "Arg3": 1569,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 30,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1518,
+        "Arg2": 5,
+        "Arg3": 1569,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 30,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1518,
+        "Arg2": 5,
+        "Arg3": 1569,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 30,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1519,
+        "Arg2": 1,
+        "Arg3": 1569,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1520,
+        "Arg2": 5,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1521,
+        "Arg2": 1,
+        "Arg3": 1570,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 1516,
+        "Arg2": 10,
+        "Arg3": 1570,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 1517,
+        "Arg2": 10,
+        "Arg3": 1570,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 30,
+        "Arg3": 1571,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 30,
+        "Arg3": 1571,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 30,
+        "Arg3": 1571,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 30,
+        "Arg3": 1571,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 30,
+        "Arg3": 1572,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 30,
+        "Arg3": 1572,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 30,
+        "Arg3": 1572,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 30,
+        "Arg3": 1572,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 1521,
+        "Arg2": 40,
+        "Arg3": 1573,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1522,
+        "Arg2": 6,
+        "Arg3": 1577,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1522,
+        "Arg2": 6,
+        "Arg3": 1578,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1522,
+        "Arg2": 6,
+        "Arg3": 1579,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1523,
+        "Arg2": 6,
+        "Arg3": 1580,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1523,
+        "Arg2": 6,
+        "Arg3": 1581,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 20,
+        "Arg3": 1583,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 20,
+        "Arg3": 1583,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 20,
+        "Arg3": 1584,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1517,
+        "Arg2": 20,
+        "Arg3": 1584,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1526,
+        "Arg2": 1,
+        "Arg3": 1587,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1524,
+        "Arg2": 1,
+        "Arg3": 1589,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 1520,
+        "Arg2": 6,
+        "Arg3": 1590,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 1501,
+      "Name": "Entrance to Gnome Village",
+      "Description": "\n  You stand on a dusty path that leads south and east. To the east you hear\nthe sounds of a small village and to the south you can enter the forest of\nNamir.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1502,
+          "Description": "You see the turning point.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23038,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1502,
+      "Name": "A Dusty Path",
+      "Description": "\n   This is a path leading into the village. It continues east and west and\nthere is a small house to the north.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1509,
+          "Description": "You see a small house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1503,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1501,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1503,
+      "Name": "A Road in the Village",
+      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1505,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1504,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1507,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1502,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1504,
+      "Name": "A Dusty Path",
+      "Description": "\n   You are on a dusty path on the far side of the village. Houses are to the\nnorth and south, while the path continues east. There is a sign here.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1512,
+          "Description": "You see a house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1559,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1513,
+          "Description": "You see a house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1503,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n   Warning:  The area to the east was written mostly by Vougon\n                    (giggle)    - Sandman"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1505,
+      "Name": "A Road in the Village",
+      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1506,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1511,
+          "Description": "You see a house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1503,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1510,
+          "Description": "You see a house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1506,
+      "Name": "A Road in the Village",
+      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1526,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1505,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1507,
+      "Name": "A Road in the Village",
+      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1503,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1508,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1514,
+          "Description": "You see a shop.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1508,
+      "Name": "A Road in the Village",
+      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1507,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1516,
+          "Description": "You see a shop.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1517,
+          "Description": "You see a small path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1515,
+          "Description": "You see a shop.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1509,
+      "Name": "A Small Gnome House",
+      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1502,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1510,
+      "Name": "A Small Gnome House",
+      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1505,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1511,
+      "Name": "A Small Gnome House",
+      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1505,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1512,
+      "Name": "A Small Gnome House",
+      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1504,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1513,
+      "Name": "A Small Gnome House",
+      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1504,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1514,
+      "Name": "A Gnome Shop",
+      "Description": "\n   You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1507,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1515,
+      "Name": "A Gnome Shop",
+      "Description": "\n   You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1508,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1516,
+      "Name": "A Gnome Shop",
+      "Description": "\n   You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1508,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1517,
+      "Name": "Path by a Stream",
+      "Description": "\n   You are on a small path leading north and west, that is surrounded on the\nother two sides by a small stream. The water looks mighty cold.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1508,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1520,
+          "Description": "You see the stream.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1518,
+          "Description": "You see a small path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "stream"
+          ],
+          "Description": "\nThe stream is pretty small, but it looks too cold to swim."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1518,
+      "Name": "Path by a Stream",
+      "Description": "\n   You are on a small east-west path. The path shows new grass, as if it has\nstopped being used sometime in the recent past. A river is to the south, and a\nsmall hut is to the west.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1517,
+          "Description": "You see a small path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1521,
+          "Description": "You see the stream.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1519,
+          "Description": "You see a small hut that is starting to fall apart.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "hut"
+          ],
+          "Description": "\nThe hut looks well built, but it seems to have taken some damage."
+        },
+        {
+          "Keywords": [
+            "stream"
+          ],
+          "Description": "\nThe stream is pretty small, but it looks too cold to swim."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1519,
+      "Name": "A Small Hut",
+      "Description": "\n   The hut is a mess! Blood has stained the grass walls into a dark rich\ncrimson color. Torn clothes and trash lie all around, and you think you see a\nskeleton in the corner.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1518,
+          "Description": "You see a small path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skeleton"
+          ],
+          "Description": "\nThe skeleton still has a little flesh clinging to it and it is definitely\nhumanoid.  The skull has been cracked open, but it is otherwise undamaged,\nexcept by time."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1520,
+      "Name": "On the Stream",
+      "Description": "\n   The stream is cold and frigid, yet it supports plenty of life beneath its\nsurface. The current trickles west and there is a field to the south.",
+      "ZoneId": 15,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1517,
+          "Description": "You see a small path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1522,
+          "Description": "You see a grassy field.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1521,
+          "Description": "You see a small stream.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1521,
+      "Name": "On the Stream",
+      "Description": "\n   The current here flows from the east, but a logjam blocks you from\ncontinuing onward.",
+      "ZoneId": 15,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1518,
+          "Description": "You see a small path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1520,
+          "Description": "You see a small stream.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1522,
+      "Name": "The Field of Mice's Dreams",
+      "Description": "\n   This is a large green field of waist high grass. You feel something scurry\nover your feet. There is a cave to the east.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1520,
+          "Description": "You see a small stream.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1523,
+          "Description": "You see a dark mysterious cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1523,
+      "Name": "The Dark Cave",
+      "Description": "\n   The cave gleams as your light reflects off of it. As you squint your eyes\nand try to look ahead, you think you see something move.",
+      "ZoneId": 15,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1524,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1522,
+          "Description": "You see a grassy field.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1524,
+      "Name": "Darker Cave",
+      "Description": "\n   The cave gets even darker as your terror grows stronger. You fear for your\nlife as something emerges out of the shadows.",
+      "ZoneId": 15,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1523,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1526,
+      "Name": "A Dusty Path",
+      "Description": "\n   You are on a well traveled path that leads in many directions. To the north\nis a large house, and to the west is a fortress.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1558,
+          "Description": "You see a large white house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1506,
+          "Description": "You see a road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1527,
+          "Description": "You see the gateway to a large fortress.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fortress"
+          ],
+          "Description": "\nThe fortress is a large gnome stronghold to defend the city."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1527,
+      "Name": "The Iron Gateway",
+      "Description": "\n   You stand at the entrance to the gnome fortress. The place seems to be well\nfortified.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1526,
+          "Description": "You see a small path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1528,
+          "Description": "You see a long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1528,
+      "Name": "A Long Hallway",
+      "Description": "\n   You are now inside of the fortress; you must be lucky that the guards\nhaven't killed you. As you glance around, you notice that the walls and floors\nare spotlessly cleaned. The barracks are to the north and a storage room is to\nthe south.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1530,
+          "Description": "You see the barracks.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1527,
+          "Description": "You see the gateway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1532,
+          "Description": "You see a storage room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1529,
+          "Description": "You see a long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1529,
+      "Name": "A Long Hallway",
+      "Description": "\n   You are now inside of the fortress; you must be lucky that the guards\nhaven't killed you. As you glance around, you notice that the walls and floors\nare spotlessly cleaned. A mess hall is to the south.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1528,
+          "Description": "You see a long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1534,
+          "Description": "You see the mess hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1535,
+          "Description": "You see a small room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1530,
+      "Name": "The Barracks",
+      "Description": "\n   You now stand in the sleeping quarters of the gnome guards. Every bed is\nmade perfectly, and not single article of clothing is on the floor. There is a\nsmall storage room to the east.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1531,
+          "Description": "You see a small storage room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1528,
+          "Description": "You see a long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1531,
+      "Name": "A Small Storage Room",
+      "Description": "\n   This is where the gnomes store all their spare clothing and armor. There is\nnot much here, but you might come up with something.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1530,
+          "Description": "You see the barracks.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1532,
+      "Name": "A Small Storage Room",
+      "Description": "\n   This is where the gnomes store all their spare weapons. A door leads off to\nthe east.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1528,
+          "Description": "You see a long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1533,
+          "Description": "You see a small room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1533,
+      "Name": "A Small Storage Room",
+      "Description": "\n   This is yet another room for storing gnome stuff. Maps and battle plans are\nstored in neat stacks on the shelves.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1532,
+          "Description": "You see a small room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1534,
+      "Name": "The Mess Hall",
+      "Description": "\n   You are in the room where the guards come to get their grub. The benches and\ntables are neatly cleaned and straightened, while shiny plates line the walls.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1529,
+          "Description": "You see a long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1535,
+      "Name": "A Small Room",
+      "Description": "\n   This is a small plain room. Its only interesting feature is a ladder down.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1529,
+          "Description": "You see a long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 1536,
+          "Description": "You see darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1536,
+      "Name": "A Small Unused Room",
+      "Description": "\n   You stand in a small room in an unused section of the fortress. The whole\nroom is coated with dust and cobwebs. The ladder leads back up, and a rusty\ndoor is to the east.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1537,
+          "Description": "You see a rusty door.",
+          "Keywords": [
+            "rusty",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 1500
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 1535,
+          "Description": "You see a small room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1537,
+      "Name": "Dark Hallway",
+      "Description": "\n   You find yourself in a very old section of the fortress. You must be the\nfirst person to pass through here in years. The hallway continues south and a\ndoor leads off to the east.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1538,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1539,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1536,
+          "Description": "You see a rusty door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": 1500
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1538,
+      "Name": "Torture Chamber",
+      "Description": "\n   This is a room that was once used to extract lies out of helpless victims.\nThe machines look unused, but could still work.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1537,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "machine"
+          ],
+          "Description": "\nThe machine consists of a large rack with winches on each end.  You can \nalmost feel them pulling your arms out of their sockets."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1539,
+      "Name": "Dark Hallway",
+      "Description": "\n   The hall continues in a north-south direction. The floor is coated with some\nkind of molded slime. Doors lead east and west.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1537,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1542,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1540,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1541,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1540,
+      "Name": "Dark Hallway",
+      "Description": "\n   The hall continues in a north-south direction. The floor is coated with some\nkind of molded slime. Doors lead east and west.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1539,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1544,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1543,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1545,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1541,
+      "Name": "Prison Cell",
+      "Description": "\n   You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1539,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1542,
+      "Name": "Prison Cell",
+      "Description": "\n   You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1539,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1543,
+      "Name": "Prison Cell",
+      "Description": "\n   You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1540,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1544,
+      "Name": "Prison Cell",
+      "Description": "\n   You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1540,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1545,
+      "Name": "End of the Dark Hallway",
+      "Description": "\n   You have reached the end of the dark hallway and maybe the end of your puny\nlife. Something lumbers its way out of the shadows.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1540,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1546,
+          "Description": "You see a decaying door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 1501
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1546,
+      "Name": "A Ladder",
+      "Description": "\n   You have come into a vertical tunnel with a ladder.",
+      "ZoneId": 15,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1545,
+          "Description": "You see a decaying door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 1501
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 1547,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1547,
+      "Name": "Lair",
+      "Description": "\n   You have entered a new lair in the fortress. Anything could be lurking\naround the corner.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1548,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 1546,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1548,
+      "Name": "A Damp Hallway",
+      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1551,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1549,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1547,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1549,
+      "Name": "A Damp Hallway",
+      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1548,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1550,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1550,
+      "Name": "A Damp Hallway",
+      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1555,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1549,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1551,
+      "Name": "A Damp Hallway",
+      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1552,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1548,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1552,
+      "Name": "A Damp Hallway",
+      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1553,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1551,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1553,
+      "Name": "A Damp Hallway",
+      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1554,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1552,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1554,
+      "Name": "A Damp Hallway",
+      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1555,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1556,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1553,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1555,
+      "Name": "A Damp Hallway",
+      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1550,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1554,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1556,
+      "Name": "The End of the Hallway",
+      "Description": "\n   You make your way out of the hallway, just to find yourself in greater\ndanger. Before you looms the source of the great heat.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1557,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1554,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1557,
+      "Name": "The Altar",
+      "Description": "\n   You finally reach the end of the maze. There is a great altar here in the\nshape of a bat. A passageway leads off to the west.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1556,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1558,
+      "Name": "The Chief's House",
+      "Description": "\n   You enter into a large and luxurious house. The floor is coated with carpets\nand the walls are covered in paintings. You feel privileged just for stepping\ninside.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1526,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1559,
+      "Name": "The Unused Path",
+      "Description": "\n   You are now on a fairly unused path that leads east out of the village. You\nwonder what could be out this way.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1560,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1504,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1560,
+      "Name": "The Overgrown Path",
+      "Description": "\n   As the path continues on, the grass grows higher. You can't imagine what\ncould possibly be out this way.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1561,
+          "Description": "You see a clearing.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1559,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1561,
+      "Name": "The Clearing",
+      "Description": "\n   Your progress is suddenly stopped by mountains on all sides. The path leads\nback to the west, and there appears to be an old mine shaft to the north.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1562,
+          "Description": "You see a mine shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1560,
+          "Description": "You see a path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1562,
+      "Name": "Entrance to the Mine Shaft",
+      "Description": "\n   As you enter the mine shaft, you get a sudden fear of the walls closing in\non you. You are surprised to notice that you don't need a light.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1563,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1561,
+          "Description": "You see the clearing.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1563,
+      "Name": "Mine Shaft",
+      "Description": "\n   This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1582,
+          "Description": "You see a small mine shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1564,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1574,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1562,
+          "Description": "You see the entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1564,
+      "Name": "Mine Shaft",
+      "Description": "\n   This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1583,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1565,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1573,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1563,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1565,
+      "Name": "Mine Shaft",
+      "Description": "\n   This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions except\nnorth.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1566,
+          "Description": "You see the walkway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1572,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1564,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1566,
+      "Name": "Walkway",
+      "Description": "\n   You are on a well built path in the middle of a mountain. You sense\nsomething great up ahead, considering the hard work that must have gone into\ncreating this passage.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1567,
+          "Description": "You see the walkway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1565,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1567,
+      "Name": "Walkway",
+      "Description": "\n   You are on a well built path in the middle of a mountain. You sense\nsomething great up ahead, considering the hard work that must have gone into\ncreating this passage.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1566,
+          "Description": "You see the walkway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1568,
+          "Description": "You see a large hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1568,
+      "Name": "The Grand Hall",
+      "Description": "\n   You have stepped into the Grand Hall of the hobgoblin kingdom; your luck\nmust be running low by now. Golden pillars span the hallway, and you notice a\nred carpet beneath your feet.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1567,
+          "Description": "You see the walkway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1569,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1569,
+      "Name": "The Throne Room",
+      "Description": "\n   This is large bright room filled with Hobgoblins. To the south there is a\nlarge golden throne against the wall.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1568,
+          "Description": "You see a large hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1570,
+      "Name": "The Treasury",
+      "Description": "\n   You are inside the hobgoblin's treasury. Your eyes are almost blinded by the\ngold, silver and copper coins.",
+      "ZoneId": 15,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1571,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1571,
+      "Name": "Guarded Room",
+      "Description": "\n   You are inside a well guarded room. The place is slightly better built than\nthe mine shafts, and is lit by lanterns.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1572,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1570,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1572,
+      "Name": "Guarded Room",
+      "Description": "\n   You are inside a well guarded room. The place is slightly better built than\nthe mine shafts, and is lit by lanterns.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1565,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1571,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1573,
+      "Name": "Hobgoblin Armory",
+      "Description": "\n   The guards store their spare weapons and armor here. There are rusty swords\non rotting shelves, and armor hanging from hooks or laying on the floor.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1564,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1574,
+      "Name": "Mine Shaft",
+      "Description": "\n   You enter a part of the mine shaft where the torches have grown dim and are\nalmost ready to go out. From what you can see, there are plenty of cobwebs on\nthe walls and rats at your feet.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1563,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1575,
+          "Description": "You see a dark and nasty room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1575,
+      "Name": "Entrance to a Dungeon",
+      "Description": "\n   The floor dips slightly as you walk into this dark and nasty place. Your\nskin crawls as you look at the filth on the walls and see it move. Most of the\nexits lead into jail cells.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1574,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1577,
+          "Description": "You see a cell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1576,
+          "Description": "You see a dark and nasty room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1581,
+          "Description": "You see a cell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1576,
+      "Name": "A Dungeon",
+      "Description": "\n   You are in the deepest and darkest part of the mine shafts. The light from\nthe torches barely reaches to where you are. Most directions from here lead to\njail cells.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1575,
+          "Description": "You see a dark and nasty room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1578,
+          "Description": "You see a cell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1579,
+          "Description": "You see a cell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1580,
+          "Description": "You see a cell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1577,
+      "Name": "A Jail Cell",
+      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1575,
+          "Description": "You see a dark and nasty room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1578,
+      "Name": "The Jail Cell",
+      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1576,
+          "Description": "You see a dark and nasty room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1579,
+      "Name": "The Jail Cell",
+      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1576,
+          "Description": "You see a dark and nasty room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1580,
+      "Name": "The Jail Cell",
+      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1576,
+          "Description": "You see a dark and nasty room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1581,
+      "Name": "The Jail Cell",
+      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1575,
+          "Description": "You see a dark and nasty room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1582,
+      "Name": "Small Mine Shaft",
+      "Description": "\n   You are in a small extension of the mine shaft. The dust on the floor is\nundisturbed by footprints.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1588,
+          "Description": "You see a small mine shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1563,
+          "Description": "You see the shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1583,
+      "Name": "Hobgoblin Barracks",
+      "Description": "\n   You are suddenly surrounded by a small army of hobgoblin guards. The room\nitself is a mess with clothes and armor everywhere. The beds are unmade and\nstained.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1584,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1585,
+          "Description": "You see the mess hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1564,
+          "Description": "You see the mine shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1584,
+      "Name": "Hobgoblin Barracks",
+      "Description": "\n   Yech! As you continue forward, the smell just keeps getting worse. What are\nyou DOING here?",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1583,
+          "Description": "You see a large room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1585,
+      "Name": "Mess Hall",
+      "Description": "\n   You stand in the hobgoblin eating area. There are a few rotting tables and\nmany broken dishes scattered around the room. You almost slip on a rotten piece\nof meat, but catch yourself just in time.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1586,
+          "Description": "You see a small room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1587,
+          "Description": "You see a kitchen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1583,
+          "Description": "You see a large room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1586,
+      "Name": "A Store Room",
+      "Description": "\n   You stand in a small room filled with flour, grain, fruit, and bat\ndroppings.",
+      "ZoneId": 15,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1585,
+          "Description": "You see the mess hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1587,
+      "Name": "The Kitchen",
+      "Description": "\n   This kitchen hasn't been cleaned since the creation of humans. The trash and\nspoiled food laying on the floor reach up to your knees. Off to the side a pot\nis boiling over. A human hand floats in it.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 1585,
+          "Description": "You see the mess hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1588,
+      "Name": "A Small Mine Shaft",
+      "Description": "\n   You come to a place in the mine shaft where a tunnel leads down. The small\npassage continues north and south.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1589,
+          "Description": "You see an almost caved in area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1582,
+          "Description": "You see a small mine shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 1590,
+          "Description": "You see a hole.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1589,
+      "Name": "Hermit's Lair",
+      "Description": "\n   You are in a small section where the mine wall has collapsed to reveal a\ntiny one-room cave. The area is barely lit, but you can make out something\nmoving towards you.",
+      "ZoneId": 15,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 1588,
+          "Description": "You see a small mine shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1590,
+      "Name": "A Hole",
+      "Description": "\n   You are in a hole.",
+      "ZoneId": 15,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 1588,
+          "Description": "You see a small mine shaft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 1500,
+      "Name": "child gnome",
+      "ShortDescription": "\na gnome child",
+      "LongDescription": "\nA gnome child is playing around here.",
+      "Description": "\nThe little tyke looks so innocent playing with his boomerang that you \njust want to pick him up and hug him.",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "NiceThief"
+      ],
+      "Affects": [],
+      "Alignment": 600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d3+61",
+        "Mana": 130,
+        "Move": 125
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 400,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1501,
+      "Name": "woman gnome",
+      "ShortDescription": "\na gnome woman",
+      "LongDescription": "\nA gnome woman is standing here, trying to look beautiful.",
+      "Description": "\nThe woman is short and gnarled, but acts like a woman several times her beauty.\nShe's starting to look pretty attractive to you ...",
+      "Level": 8,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "NiceThief"
+      ],
+      "Affects": [],
+      "Alignment": 600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d8+121",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 50,
+      "Experience": 1332,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1502,
+      "Name": "man gnome",
+      "ShortDescription": "\na gnome man",
+      "LongDescription": "\nA gnome man is walking here, on his way to work.",
+      "Description": "\nThis is a prime example of a gnome.  He looks short and weak, but at the\nsame time an intelligent creature who could outsmart you.",
+      "Level": 11,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d11+157",
+        "Mana": 210,
+        "Move": 245
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 2666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1503,
+      "Name": "scientist gnome",
+      "ShortDescription": "\na gnome scientist",
+      "LongDescription": "\nA scientist wanders around deep in thought.",
+      "Description": "\nYou see a gnome who is lost deep into some invention that he is about\nto make.  His hair is white, but he looks fairly strong.",
+      "Level": 13,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d13+181",
+        "Mana": 230,
+        "Move": 275
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 4266,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1504,
+      "Name": "guard gnome",
+      "ShortDescription": "\na gnome guard",
+      "LongDescription": "\nA gnome guard stands here guarding something.",
+      "Description": "\nThis is a well trained gnome.  He might not have a lot of strength but\nhe makes up for it with his weapons skill.",
+      "Level": 16,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d16+217",
+        "Mana": 260,
+        "Move": 320
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 7,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 8433,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1505,
+      "Name": "chief gnome",
+      "ShortDescription": "\nthe chief gnome",
+      "LongDescription": "\nA powerful looking gnome stands here wearing ornate clothes.",
+      "Description": "\nThe Chief looks like he could whap you hard.  He looks not only powerful\nbut wise and resourceful.  You better not mess with him.",
+      "Level": 18,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 550,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d18+241",
+        "Mana": 280,
+        "Move": 350
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d9+9"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 800,
+      "Experience": 12500,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1507,
+      "Name": "troll small",
+      "ShortDescription": "\na small troll",
+      "LongDescription": "\nA small troll grunts as he takes a swing at you.",
+      "Description": "\nThe small troll is a short and stocky beast with a human-like face\nbut with the eyes and fangs of a wild beast.",
+      "Level": 18,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d18+241",
+        "Mana": 280,
+        "Move": 350
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 7,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d9+9"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 80,
+      "Experience": 12500,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1508,
+      "Name": "mouse field",
+      "ShortDescription": "\na field mouse",
+      "LongDescription": "\nA small mouse runs across your foot.",
+      "Description": "\nThe Mouse is a cute little creature.",
+      "Level": 1,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+37",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 266,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1509,
+      "Name": "rat",
+      "ShortDescription": "\na rat",
+      "LongDescription": "\nA small rat shrieks and runs around.",
+      "Description": "\nThe rat is a little evil creature that deserves death.",
+      "Level": 2,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d2+49",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 332,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1510,
+      "Name": "rat large",
+      "ShortDescription": "\na large rat",
+      "LongDescription": "\nA large rat runs up to you and nibbles on your boots.",
+      "Description": "\nYou have the urge to kill this vile creature.",
+      "Level": 4,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d4+73",
+        "Mana": 140,
+        "Move": 140
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 533,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1511,
+      "Name": "rat giant",
+      "ShortDescription": "\na giant rat",
+      "LongDescription": "\nA giant rat growls at you and prepares to attack.",
+      "Description": "\nThis rat has grown up to be the size of an average dog.",
+      "Level": 6,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d6+97",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 800,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1512,
+      "Name": "troll",
+      "ShortDescription": "\nthe troll",
+      "LongDescription": "\nA giant troll lumbers around.",
+      "Description": "\nYou see before you a huge mass of living flesh.  You cringe in fear as\nhe lifts his powerful arm to bludgeon you.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d30+385",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 12,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d15+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 900,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1513,
+      "Name": "bat black",
+      "ShortDescription": "\na black bat",
+      "LongDescription": "\nA black bat hangs from the ceiling.",
+      "Description": "\nThe bat is a grotesque little creature with large wings and fangs.",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d5+85",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 666,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1514,
+      "Name": "zombie gnome",
+      "ShortDescription": "\nthe zombie gnome",
+      "LongDescription": "\nA zombie gnome shuffles his way towards you.",
+      "Description": "\nThis is a creature which has passed away long ago.  His body has been\npulled out of its resting place by some evil force.",
+      "Level": 18,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [],
+      "Affects": [
+        "SenseLife",
+        "Berzerk"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d18+241",
+        "Mana": 280,
+        "Move": 350
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 7,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d9+9"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 12500,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1515,
+      "Name": "bat fire",
+      "ShortDescription": "\nthe fire bat",
+      "LongDescription": "\nThe fire bat flames brightly and prepares to attack.",
+      "Description": "\nYou see a huge flame which resembles the shape of a bat.  The creature\nhangs from the ceiling and bites at you.",
+      "Level": 24,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Berzerk"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d24+313",
+        "Mana": 340,
+        "Move": 440
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 9,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d12+12"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 600,
+      "Experience": 50000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1517,
+      "Name": "soldier hobgoblin",
+      "ShortDescription": "\nthe hobgoblin soldier",
+      "LongDescription": "\nA hobgoblin soldier stands here.",
+      "Description": "\nThis is just a low life hobgoblin, who couldn't make it to the ranks\nof the elite guards.  He looks pissed.",
+      "Level": 28,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d28+361",
+        "Mana": 380,
+        "Move": 500
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d14+14"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 83333,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1518,
+      "Name": "bodyguard hobgoblin",
+      "ShortDescription": "\nthe hobgoblin bodyguard",
+      "LongDescription": "\nA hobgoblin bodyguard guards the king with his life.",
+      "Description": "\nThis is one of the elite hobgoblin guards.  He stands tall for his short\nstature.  He grins a toothy grin as he prepares to attack.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d27+389",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d13+16"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 600,
+      "Experience": 75000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1519,
+      "Name": "king hobgoblin",
+      "ShortDescription": "\nthe king of the hobgoblins",
+      "LongDescription": "\nThere is a great king here, sitting in his throne.",
+      "Description": "\nThe king is a silly looking hobgoblin whose muscles bulge out of his robes,\ndestroying the sophisticated effect he was trying to create.",
+      "Level": 42,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d42+529",
+        "Mana": 520,
+        "Move": 710
+      },
+      "Combat": {
+        "Armor": -90,
+        "Hitroll": 25,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d21+21"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 220000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1520,
+      "Name": "miner hobgoblin",
+      "ShortDescription": "\na hobgoblin miner",
+      "LongDescription": "\nA hobgoblin miner stands here looking for gold.",
+      "Description": "\nThe miner is totally covered in dust.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d25+325",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -20,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d12+12"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 58333,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1521,
+      "Name": "treasurer hobgoblin",
+      "ShortDescription": "\nthe treasurer",
+      "LongDescription": "\nA treasurer is here counting out money.",
+      "Description": "\nThe hobgoblin treasurer is an old goblin with glasses.  It appears that he\ncan only see a couple feet in front of him.",
+      "Level": 34,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d34+433",
+        "Mana": 440,
+        "Move": 590
+      },
+      "Combat": {
+        "Armor": -70,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d17+17"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 133333,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1522,
+      "Name": "prisoner gnome",
+      "ShortDescription": "\na gnome prisoner",
+      "LongDescription": "\nA gnome prisoner is here resting in the straw.",
+      "Description": "\nThe prisoner is just barely alive.",
+      "Level": 23,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d23+301",
+        "Mana": 330,
+        "Move": 425
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d11+11"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 41666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1523,
+      "Name": "prisoner human",
+      "ShortDescription": "\na human prisoner",
+      "LongDescription": "\nA human prisoner is here resting in the straw.",
+      "Description": "\nThe prisoner is just barely alive.",
+      "Level": 23,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d23+301",
+        "Mana": 330,
+        "Move": 425
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d11+11"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 41666,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1524,
+      "Name": "hermit crab",
+      "ShortDescription": "\na hermit",
+      "LongDescription": "\nA hermit crab crawls towards you.",
+      "Description": "\nThe hermit crab is about 5 feet high and looks mad that you had the nerve\nto wake it up.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d35+445",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d17+17"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 141666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 1526,
+      "Name": "cook hobgoblin",
+      "ShortDescription": "\nthe cook",
+      "LongDescription": "\nA hobgoblin cook stands here cooking something.",
+      "Description": "\nThe cook is a dirty and fat hobgoblin.  He burps as he stirs up something\nin a pot.",
+      "Level": 27,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d27+349",
+        "Mana": 370,
+        "Move": 485
+      },
+      "Combat": {
+        "Armor": -20,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d13+13"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 75000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 1500,
+      "Name": "key bloody",
+      "ShortDescription": "\na bloody key",
+      "Description": "\nA bloody key is stuck to the floor.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 2,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        180
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 180
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 40,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1501,
+      "Name": "key dirty",
+      "ShortDescription": "\na dirty key",
+      "Description": "\nA dirty key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 2,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        180
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 180
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 105,
+      "CostPerDay": 40,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1502,
+      "Name": "toy boomerang",
+      "ShortDescription": "\nA toy boomerang",
+      "Description": "\nA toy boomerang wants to be picked up.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1503,
+      "Name": "staff gnarled",
+      "ShortDescription": "\nA gnarled staff",
+      "Description": "\nA gnarled staff is here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        1,
+        9,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 9,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 60,
+      "CostPerDay": 25,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1504,
+      "Name": "sword gnome",
+      "ShortDescription": "\nA gnome sword",
+      "Description": "\nA gnome sword catches your eye.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        3,
+        5,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 5,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 400,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1505,
+      "Name": "shield studded",
+      "ShortDescription": "\na studded shield",
+      "Description": "\nA studded wooden shield lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 16,
+      "Cost": 300,
+      "CostPerDay": 150,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1506,
+      "Name": "potion bloody",
+      "ShortDescription": "\na bloody potion",
+      "Description": "\nA bloody potion lies here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        15,
+        14,
+        15,
+        39,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 15,
+          "SpellIds": [
+            14,
+            15,
+            39
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 22,
+      "Cost": 150,
+      "CostPerDay": 80,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1507,
+      "Name": "cloak bloody",
+      "ShortDescription": "\na bloody cloak",
+      "Description": "\nA bloody cloak lies in a corner.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 200,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1508,
+      "Name": "ring bat",
+      "ShortDescription": "\nA bat ring",
+      "Description": "\nA ring in the shape of a bat lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 4,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 250,
+      "CostPerDay": 125,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": 45
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1509,
+      "Name": "necklace bead",
+      "ShortDescription": "\nA bead necklace",
+      "Description": "\nA string of beads is here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 400,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1510,
+      "Name": "sword electrum",
+      "ShortDescription": "\nAn electrum sword",
+      "Description": "\nAn electrum sword lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 6,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        2,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 2000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1511,
+      "Name": "basket wicker",
+      "ShortDescription": "\na wicker basket",
+      "Description": "\nA wicker basket sits here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        90,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 90,
+          "Flags": [],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 4,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1512,
+      "Name": "peanuts",
+      "ShortDescription": "\nsome peanuts",
+      "Description": "\nPeanuts lie here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        16,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 16,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9,
+      "Cost": 2,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1513,
+      "Name": "grain",
+      "ShortDescription": "\nsome grain",
+      "Description": "\nThere is some grain here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 15,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 2,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1514,
+      "Name": "skiff",
+      "ShortDescription": "\na skiff",
+      "Description": "\nA small skiff is here.",
+      "ActionDescription": "",
+      "Type": "Boat",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 24,
+      "Cost": 150,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1516,
+      "Name": "coins",
+      "ShortDescription": "\na pile of coins",
+      "Description": "\nA pile of coins.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        567,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 567
+        },
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1517,
+      "Name": "coins",
+      "ShortDescription": "\na pile of coins",
+      "Description": "\nA pile of coins.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        1234,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 1234
+        },
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1518,
+      "Name": "coins",
+      "ShortDescription": "\na pile of coins",
+      "Description": "\nA pile of coins.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        673,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 673
+        },
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1520,
+      "Name": "mail heavy banded",
+      "ShortDescription": "\nheavy banded mail",
+      "Description": "\nA large suit of heavy banded mail is here",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 30,
+      "Cost": 3500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1521,
+      "Name": "club large",
+      "ShortDescription": "\na large club",
+      "Description": "\nA large club sits here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        2,
+        5,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 5,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 22,
+      "Cost": 200,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

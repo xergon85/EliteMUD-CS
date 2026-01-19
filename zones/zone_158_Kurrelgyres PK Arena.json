@@ -1,0 +1,2868 @@
+{
+  "Zone": {
+    "Id": 158,
+    "Name": "Kurrelgyres PK Arena",
+    "TopRoomId": 15899,
+    "Lifespan": 100,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3082,
+        "Arg2": 100,
+        "Arg3": 15849,
+        "Comment": "Loads the Arena Board in to the specators gallery"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15801,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": "Middle Level Of the Arena - South Close East"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15802,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - South Close West"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15804,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - Central Close East"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15805,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - SouthWest Corner Close North"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15805,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - SouthWest Corner Close East"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15806,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - Central Edge Close West"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15806,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - Central Edge Close East"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15807,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - Central Close North"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15809,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - NorthEast Corner Close South"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15809,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - Central Close East"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15810,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - Central Edge Close North"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15812,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - North Close West"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15813,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - North Close East"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15814,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - North Close South"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15814,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - North Close West"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15808,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - Central Edge Close South"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15815,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": "Middle Level of the Arena - NorthWest Corner Close East"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15827,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "Arena Catacombs - North Close North"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 15847,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "A Hidden Alcove on the Middle Level Close North"
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 15800,
+      "Name": "Waiting Room",
+      "Description": "\n  Adrenaline surges through your veins as the anticipation of battle \nand death builds.A sign hangs from the wall, look at it if you aren't \nfamiliar with this style of battle. Only one of you will leave alive, \nso prepare now, and fight well. A doorway will lead upwards when \nthe battle begins.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScout"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThese will be instructions when the zone is complete. (Mental note:\nmust put a door in here :P)"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15801,
+      "Name": "Middle Level Of the Arena - South",
+      "Description": "\n   The battle begins, and the time for strategy is now. You can go up, \nto the open hallways, for sniping. Or you can go down, into the dank \ncatacombs of the Arena, where sight and movement are impaired. Or, \nyou can just stay on the middle level. Exits leave in all directions \nexcept south.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15806,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15802,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15804,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15833,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15818,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15802,
+      "Name": "Middle Level of the Arena - South",
+      "Description": "\n   Footsteps echo all around you, and you wonder how near your \nadversary is. Not too near, you hope. This room is bare, save for \nthe evidence of battle, and exits leave in all directions save for \nsouth.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15809,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15803,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15801,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15832,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15819,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15803,
+      "Name": "Middle Level of the Arena - SouthEast Corner",
+      "Description": "\n  You find yourself cornered here, yet you can use it to your \nadvantage, if you so choose. This room is bare and reasonably \nwell-lit, allowing you to see the bloodstains and holes in the wall. \nExits are in all directions except south and east.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15810,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15802,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15831,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15820,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15804,
+      "Name": "Middle Level of the Arena - South",
+      "Description": "\n   As is the motif here, this room is bare, with light entering from \nabove. Fin d your opponent, and slay him! Exits lead in all directions,\n except south.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15807,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15801,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15805,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15834,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15817,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15805,
+      "Name": "Middle Level of the Arena - SouthWest Corner",
+      "Description": "\n   You are in the corner of the arena, more vulnerable than in most \nplaces, yet also in a fair position to set an ambush. Exits lead in\nall directions, except south and west.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15808,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15804,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15835,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15816,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15806,
+      "Name": "Middle Level of the Arena - Central",
+      "Description": "\n   This room, like all others on this level, is bare. Exits lead in \nall directions, and you find yourself wishing for the security of a \nwall at your back.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15813,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15809,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15801,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15807,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15838,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15823,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15807,
+      "Name": "Middle Level of the Arena - Central",
+      "Description": "\n   This well-lit room is close to the center of the Arena, bloodstains \nattest to the danger of having exits, and entryways, in all directions. \nIf you dont have eyes in the back of your head, you had better find a \nmore defensible position.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15814,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15806,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15804,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15808,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15837,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15824,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15808,
+      "Name": "Middle Level of the Arena - Central Edge",
+      "Description": "\n   You feel more secure with a solid wall at your back. Echoes of \nfootsteps ring all around you, yet you cannot tell in what direction. \nExits, however, lead in all directions except east, so you could try \nto find out......",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15815,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15807,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15805,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15836,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15809,
+      "Name": "Middle Level of the Arena - Central",
+      "Description": "\n   Once again, a pretty bare room, littered with some broken crossbow \nbolts, and as usual, some dried blood. Exits lead in every direction.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15812,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15810,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15802,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15806,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15839,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15822,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15810,
+      "Name": "Middle Level of the Arena - Central Edge",
+      "Description": "\n   Again, you feel secure without a potential sniper at your back. The\nworn stone floors of this room are spattered with drops of blood from \nwounded players. Exits lead in every direction except east.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15811,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15803,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15809,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15840,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15821,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15811,
+      "Name": "Middle Level of the Arena - NorthEast Corner",
+      "Description": "\n   You find yourself in another corner, the pitted floors seem more \nworn than the rest, attesting to the fact that some combatants use \nthis room often, for whatever reason. Exits lead in all directions \nexcept north and east.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 15810,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15812,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15841,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15830,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15812,
+      "Name": "Middle Level of the Arena - North",
+      "Description": "\n   Little furnishings and bloodstained, pockmarked walls make this \na dreary room.Exits lead in all directions except for north.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15811,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15809,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15813,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15842,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15829,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15813,
+      "Name": "Middle Level of the Arena - North",
+      "Description": "\n   The battle begins, and the time for strategy is now. You can go \nup, to the open hallways, for sniping. Or you can go down, into the \ndank catacombs of the Arena, where sight and movement are impaired. \nOr, you can just stay on the middle level. Exits leave in all \ndirections except north.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15812,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15806,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15814,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15843,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15828,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15814,
+      "Name": "Middle Level of the Arena - North",
+      "Description": "\n   The sound of shuffling feet fills your ears, but you cant place the \nsound. It sounds like someone who is trying to walk softly, with little\nsuccess. Exits lead everywhere but north.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15813,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15807,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": -1,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15844,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15827,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15815,
+      "Name": "Middle Level of the Arena - NorthWest Corner",
+      "Description": "\n   Bones litter the ground beneath your feet, step carefully, your \nopponent will no doubt hear the crunching of bones beneath your feet. \nAnother corner room, and exits going everywhere but north and west.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15813,
+          "Description": "It looks remarkably like a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15808,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15845,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15826,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15816,
+      "Name": "Arena Catacombs - SouthWest Corner",
+      "Description": "\n   This room is dark, dank, and cluttered. Bones and other assorted \njunk is strewn across the floor, making accurate and quick movement \nimpossible.Exits from this corner lead in all directions but west, \nsouth, and down.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15825,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15817,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15805,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15817,
+      "Name": "Arena Catacombs - South",
+      "Description": "\n   Unidentifiable sounds fill the air, making you very jumpy and wary. \nYour only comfort is that to find you, your opponent must subject \nhimself to same confusing catacombs. Exits lead everywhere but south \nand down.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15824,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15818,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15816,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15804,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15818,
+      "Name": "Arena Catacombs - South",
+      "Description": "\n   The heat and humidity make your eyes water, and the constant \nthundering sounds distract you from proper concentration. Clutter \nsurrounds the exits that lead everywhere except south and down.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15823,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15819,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15817,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15801,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15819,
+      "Name": "Arena Catacombs - South",
+      "Description": "\n   You stumble around this filthy and bleak room for a moment, before \nfinding the exits that lead everywhere but down and south.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15822,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15820,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15818,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15802,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15820,
+      "Name": "Arena Catacombs - SouthEast Corner",
+      "Description": "\n   The sweltering heat combined with the smell of death makes for a \nnauseating combination as you stumble into this corner room. Exits lead\neverywhere but down, south, and east.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15821,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15819,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15803,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15821,
+      "Name": "Arena Catacombs - Central Edge",
+      "Description": "\n   Stifling heat and steam cloud your vision, blood and gore stays \nmoist and quickly decomposes down here. Exits lead everywhere but down\nand east.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15830,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15820,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15822,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15810,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15822,
+      "Name": "Arena Catacombs - Central",
+      "Description": "\n   Sweat drips into your eyes, and the stinging forces you to blink \nrepeatedly. The blink of an eye is more than enough time to catch a \ncrossbow bolt between the eyes....Wipe the sweat from your brow and \nleave through an exit that leads anywhere but down.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15829,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15821,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15819,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15823,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15809,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15823,
+      "Name": "Arena Catacombs - Central",
+      "Description": "\n   Sounds assail your ears, and the heat makes your head throb. How \nmuch longer can you remain down here? There is an exit that leads up, \nas well as to the 4 cardinal directions.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15828,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15822,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15818,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15824,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15806,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15824,
+      "Name": "Arena Catacombs - Central",
+      "Description": "\n   Your head swims, your vision is blurry, in this state, your \nvulnerability is clear. But will the other combatants pursue you into\nthis hellhole? You may soon find out. In the meantime, however, you\ncan leave in every direction but down.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15827,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15823,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15817,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15825,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15807,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15825,
+      "Name": "Arena Catacombs - Central Edge",
+      "Description": "\n   A wall at your back calms you down, but just barely. Your eyesight \nis almost useless, as is your hearing. You may want to stumble through \nan exit that leads to all directions but down and west, but who knows \nwhere you'll end up.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15826,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15824,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15816,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15826,
+      "Name": "Arena Catacombs - NorthWest Corner",
+      "Description": "\n   You find yourself in another corner, did you come here on purpose? \nWho knows, your mind plays tricks on you due to the constant assaults \non your senses. Exits lead everywhere but down, north, and west.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15827,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15825,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15815,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15827,
+      "Name": "Arena Catacombs - North",
+      "Description": "\n   The clutter becomes impassable to some directions, bones and junk \nline the walls. You can stagger in any direction but north and down.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15846,
+          "Description": "This large pile of crap could be obscuring something.",
+          "Keywords": [
+            "junk"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15828,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15824,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15826,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15814,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15828,
+      "Name": "Arena Catacombs - North",
+      "Description": "\n   Your only consolation is that your opponent is experiencing the \nsame agony as yourself. That is, of course, if he is down here. If \nnot, well, then all this agony is for naught. Exits lead everywhere \nbut north and down.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15829,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15823,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15827,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15813,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15829,
+      "Name": "Arena Catacombs - North",
+      "Description": "\n   The pain you experience down here is nothing compared to the pain \nof a bolt drilling into your chest. The clutter parts to reveal exits \nto everywhere, save for north and down.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15830,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15822,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15828,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15812,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15830,
+      "Name": "Arena Catacombs - NorthEast Corner",
+      "Description": "\n   You have a tactical advantage over your opponents by being down \nhere, though that is little comfort against the crashing sounds and \nstinging, acrid steam. Exits from this corner lead everywhere but down,\nnorth, and east.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 15821,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15829,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15811,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15831,
+      "Name": "Open-air Hallways of the Upper Arena - Southeast Corner",
+      "Description": "\n   The fresh air masks the real menace of this upper level. You are \nextremely vulnerable from all directions, then again, so are your \nopponents, if they choose to brave this veritable shooting gallery. \nExits lead everywhere but up, south, and east.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15840,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15832,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15803,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15832,
+      "Name": "Open-air Hallways of the Upper Arena - South",
+      "Description": "\n   The sky is above you, escape from this deathtrap seems almost \npossible. Think again, the walls are three times as tall as you are, \nand slick with blood. Exits lead everywhere but up and south.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15839,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15831,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15833,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15802,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15833,
+      "Name": "Open-air Hallways of the Upper Arena - South",
+      "Description": "\n   These hallways are bare, save for glorious paintings of opponents \npast, most are blood-smeared or damaged. The hallway leads everywhere \nbut up and south, and trapdoors go down in every room.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15838,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15832,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15834,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15801,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15834,
+      "Name": "Open-air Hallways of the Upper Arena - South",
+      "Description": "\n   The walls, underneath the gristle and sun-dried blood, are made \nof stone, and and inscription is carved here. Exits lead everywhere, \nexcept up and south.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15837,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15833,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15835,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15804,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "inscription",
+            "carving"
+          ],
+          "Description": "\nYou may find it worth your while to stop and examine your \nsurroundings from time to time, you may find an exceptional tactical \nadvantage. Be sure not to stop too long, or you remains too, will \nlitter this arena....."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15835,
+      "Name": "Open-air Hallways of the Upper Arena - SouthWest Corner",
+      "Description": "\n   You find yourself in another corner, and a femur lies at your feet,\nsurrounded by scattering of smaller bones. You can lie in wait here, \nor you can move on, through exits to all directions but up, south, and\nwest.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15836,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15834,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15805,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "femur",
+            "bone"
+          ],
+          "Description": "\nThere is a small carving on this femur, it reads as follows:\n\n          #wZone by Kurrelgyre, Hope you like it!:)#N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15836,
+      "Name": "Open-air Hallways of the Upper Arena - Central Edge",
+      "Description": "\n   The west wall is smooth and stained, save for a crossbow bolt \nstuck into the wall at angle. Exits lead everywhere but up and west.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15845,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15837,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15835,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15808,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15837,
+      "Name": "Open-air Hallways of the Upper Arena - Central",
+      "Description": "\n   These rooms are weather-worn, but fresh-smelling from the \nconstant influx of air. The smell of death remains, however. \nExits lead everywhere but up.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15844,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15838,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15834,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15836,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15807,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15838,
+      "Name": "Open-air Hallways of the Upper Arena - Central",
+      "Description": "\n   You're extremely vulnerable here, a well-aimed shot could take you \ndown from any of the four directions, and someone can come from below \nand take you by surprise.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15843,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15839,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15833,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15837,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15806,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15839,
+      "Name": "Open-air Hallways of the Upper Arena - Central",
+      "Description": "\n   The center of the upper arena could very well be the most \nindefensible area in the arena, you may want to move around often, \nat they very least. Exits lead in every direction but up.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15842,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15840,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15832,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15838,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15809,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15840,
+      "Name": "Open-air Hallways of the Upper Arena - Central Edge",
+      "Description": "\n   A nice, seemingly solid wall is on the eastern wall of this room. A \nskull, held fast by a rusty bolt, adorns the center of the wall. Exits \nlead to victory or death in every direction but up, and east.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15841,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15848,
+          "Description": "Perhaps this skull has something to offer.",
+          "Keywords": [
+            "skull"
+          ],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15831,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15839,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15810,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15841,
+      "Name": "Open-air Hallways of the Upper Arena - NorthEast Corner",
+      "Description": "\n   You find yourself in another corner, the air rushes in from above, \nobscuring any sounds you might otherwise hear. You can wedge yourself \ninto the corner and wait, or you can exit in any direction but up, \nnorth, and east.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 15840,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15842,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15811,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15842,
+      "Name": "Open-air Hallways of the Upper Arena - North",
+      "Description": "\n   Blood streaks the floor here, it glistens, and reveals its freshness.\nExits go everywhere but up and north.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15841,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15839,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15843,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15812,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15843,
+      "Name": "Open-air Hallways of the Upper Arena - North",
+      "Description": "\n   A corpse lies here, dessicated by the sun and dry air from above. \nIt looks as if this combatant had a painful death. Leave this corpse \nbehind, and go in any direction but up and north.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15842,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15838,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15844,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15813,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15844,
+      "Name": "Open-air Hallways of the Upper Arena - North",
+      "Description": "\n   The wind whistles through the hallways atop the arena, and you \ncan't hear much from below. Could your opponent be drawing a bead on \nyou as you stand here, listening? Move quickly, and leave in any \ndirection but up and north.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15843,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15837,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15845,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15814,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15845,
+      "Name": "Open-air Hallways of the Upper Arena - NorthWest Corner",
+      "Description": "\n   Rusted items of useless equipment litter the floor of this corner \nroom, most with neat little holes in them, just about the size of a \ncrossbow bolt. Leave anywhere buy up, north, and east.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 15844,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15836,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15815,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15846,
+      "Name": "A Hidden Alcove in the Catacombs",
+      "Description": "\n   This small alcove is a brief respite from the acrid air of the \ncatacombs.The air in here is cooler and less foul. You can lie in \nwait for your opponent here, or, if you're a pessimist, consider \nyourself trapped.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 15827,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 15848,
+          "Description": "This vent allows air to pass into the chamber.",
+          "Keywords": [
+            "vent"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15847,
+      "Name": "A Hidden Alcove on the Middle Level",
+      "Description": "\n   You can rest here, and catch your breath, but pray your opponents \ndont get the same idea....",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 15805,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15848,
+      "Name": "A Hidden Alcove among the Open-air Hallways",
+      "Description": "\n   This little room offers a supreme place to snipe an unknowing \nopponent. A stench wafts in from someplace, making it less than ideal\nto sit here.",
+      "ZoneId": 158,
+      "Sector": "City",
+      "Flags": [
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 15840,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 15846,
+          "Description": "This vent allows air to pass into the chamber.",
+          "Keywords": [
+            "vent"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15849,
+      "Name": "The Spectators Room for the Arena",
+      "Description": "\n   This room was created for the amusement of the spectators watching \nthe fights to the death contained within the Arena. While spectators \nrarely get a glimpse of the frenzied combatants, from this room they \ncan shout encouragement, and hear the agonized screams of the dying.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3097,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15850,
+      "Name": "Waiting room",
+      "Description": "\nAdrenaline surges through your veins as the anticipation of \nbattle and death builds. A sign is etched into the wall. Read it \nif you aren't familiar with the art of the crossbow. Only one of \nyou will leave alive, so prepare now, and fight well. A doorway will \nlead upwards when the battle begins.",
+      "ZoneId": 158,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Arena",
+        "NoTeleport"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThis will be instructions when the code is complete."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 3082,
+      "Name": "board bulletin arena",
+      "ShortDescription": "\na arena board",
+      "Description": "\nAn arena board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

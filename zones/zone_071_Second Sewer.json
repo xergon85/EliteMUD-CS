@@ -1,0 +1,1537 @@
+{
+  "Zone": {
+    "Id": 71,
+    "Name": "Second Sewer",
+    "TopRoomId": 7199,
+    "Lifespan": 60,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7004,
+        "Arg2": 3,
+        "Arg3": 7102,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7005,
+        "Arg2": 7,
+        "Arg3": 7112,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7005,
+        "Arg2": 7,
+        "Arg3": 7112,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7005,
+        "Arg2": 7,
+        "Arg3": 7122,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7002,
+        "Arg2": 7,
+        "Arg3": 7104,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7000,
+        "Arg2": 3,
+        "Arg3": 7103,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7000,
+        "Arg2": 3,
+        "Arg3": 7103,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7006,
+        "Arg2": 7,
+        "Arg3": 7113,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7006,
+        "Arg2": 7,
+        "Arg3": 7122,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7006,
+        "Arg2": 7,
+        "Arg3": 7122,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 7116,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 7280,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 7101,
+      "Name": "Under the mudhole",
+      "Description": "\n   You stand in a small room with a great big opening in the ceiling. From this\nopening there's mud dripping down in large lumps. >YUCK<. You can smell the\nfoul stench of the slimy sediment as you try not to get covered by the falling\nsludge. To the east there is an entryway leading out from here and it seems\nabsolutely impossible to force the muddy decent.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7103,
+          "Description": "East. You see nothing of interest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mud"
+          ],
+          "Description": "\nYou never saw such disgusting matter before, it nearly makes you puke."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7102,
+      "Name": "Under the Dark Pit",
+      "Description": "\n   Nice place you found yourself. You stand in the middle of a room with only\ntwo exits, Up and East. A tall ladder is left here so that you can climb up\nthrough the Pit without the use of a rope.",
+      "ZoneId": 71,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7104,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7004,
+          "Description": "Up. You can't see a thing up there, it's way too dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7400,
+          "Description": "",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "ladder"
+          ],
+          "Description": "\nThis is funny enough a wooden ladder and, after closer inspection, you\ndiscover it is magically held towards the wall!  You can't, even with your\ngreatest effort, rock it at ALL!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7103,
+      "Name": "A muddy bend in the sewer system",
+      "Description": "\n   You are standing in what looks like a bend in the pipe system of the sewer.\nThe 'floor' is covered completely by mud! This includes covering your legs up\nto you knees as well. The pipe leads west and south.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7104,
+          "Description": "To the south there's less mud than here! It actually seems to end there! You\nhave a felling it would be nice to have your feet free from mud again.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7101,
+          "Description": "You can see a room in which mud drips from the roof onto the floor in great\ncakes of sludge. There doesn't seem to be any exits from that room apart from\nin you direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mud"
+          ],
+          "Description": "\nYou never saw such disgusting matter before, it nearly makes you puke."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7104,
+      "Name": "A junction in the sewer pipes",
+      "Description": "\n   You stand in the middle of what looks like a triple junction of pipes going\neast, west and north.",
+      "ZoneId": 71,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7103,
+          "Description": "You can see a mud area starting in that direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7112,
+          "Description": "East. You can't even make out what it might look like, it's just too dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7102,
+          "Description": "West. There's a room with a ladder leading up.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7105,
+      "Name": "Down the old well",
+      "Description": "\n   You are dangling on the slippery sides of the old well leading down and up.\nThe only secure point here is the metal bars that are cemented into the sides,\nthe ones that you cling frantically to so that you don't fall. Who knows how\ndeep this well is? The bars lead down and up and nowhere else.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7015,
+          "Description": "There's a slight, dim light from above, or maybe it's your imagination. Anyway\nit SEEMS darker down here than up there, if that is possible.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bars"
+          ],
+          "Description": "\nThese look like they're pretty slippery, and not very safe, but perhaps safe\nenough for you to climb down, WITH both hands on them."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7106,
+      "Name": "The northwestern corner of the ledge",
+      "Description": "\n   You stand, swaying out from the ledge, with only a couple of inches of safe,\nsolid ledge under your feet. The ledge continues to the east but not back\nsouth. It seems that the ledge is too narrow to turn on so you'll have to\ncontinue forward.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7113,
+          "Description": "The ledge continues east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7107,
+          "Description": "The ledge continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7279,
+          "Description": "The Abyss lies down there. Who knows what might lurk down there?",
+          "Keywords": [
+            "rock",
+            "step",
+            "edge"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rock"
+          ],
+          "Description": "\nIt looks as if it can be opened in a door-like fashion.  Maybe this will lead\nthe way down."
+        },
+        {
+          "Keywords": [
+            "step"
+          ],
+          "Description": "\nA small rock sticks out right under it, otherwise the way is DOWN, DOWN, and\nSPLAT!!!"
+        },
+        {
+          "Keywords": [
+            "edge",
+            "odd-looking"
+          ],
+          "Description": "\nThis is truly a weird piece of craftsmanship in your eyes.  The edge seems to\nform a step leading down, but WHAT a STEP DOWN.  The Abyss opens down there \nleading to seemingly total destruction."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7107,
+      "Name": "The narrow ledge",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7106,
+          "Description": "North. The ledge leads into a corner and turns eastward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7190,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling an utterly unknown distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7108,
+          "Description": "South. The ledge leads further south into utter darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7108,
+      "Name": "The narrow ledge",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7107,
+          "Description": "North. The ledge leads further north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7190,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling that distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7109,
+          "Description": "The ledge continues further south into darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7109,
+      "Name": "The narrow ledge",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7108,
+          "Description": "North. The ledge leads further north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7190,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling that distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7110,
+          "Description": "The ledge continues south into darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7110,
+      "Name": "The narrow ledge",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7107,
+          "Description": "North. The ledge leads further north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7190,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling that distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7111,
+          "Description": "South. You can just make out the south-western corner of this ledge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7111,
+      "Name": "The southwestern corner of the ledge",
+      "Description": "\n   This seems like a ledge that is a little broader than the one just to the\nnorth of here. The ledge seems to lead around some sort of Abyss of total\ndarkness. The ledge seems to have an odd-looking edge here.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7110,
+          "Description": "North. The ledge leads further north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7115,
+          "Description": "You see a broad ledge leading eastward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7112,
+          "Description": "South of here is the exit from the ledge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7279,
+          "Description": "The Abyss lies down there. Who knows what might lurk down there?",
+          "Keywords": [
+            "rock",
+            "step",
+            "edge"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rock"
+          ],
+          "Description": "\nIt looks as if it can be opened in a door-like fashion.  Maybe this will lead\nthe way down."
+        },
+        {
+          "Keywords": [
+            "step"
+          ],
+          "Description": "\nA small rock sticks out right under it, otherwise the way is DOWN, DOWN, and\nSPLAT!!!"
+        },
+        {
+          "Keywords": [
+            "edge",
+            "odd-looking"
+          ],
+          "Description": "\nThis is truly a weird piece of craftsmanship in your eyes.  The edge seems to\nform a step leading down, but WHAT a STEP DOWN.  The Abyss opens down there \nleading to seemingly total destruction."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7112,
+      "Name": "An odd intersection",
+      "Description": "\n   You stand in a rather odd intersection of pipes. The pipes actually don't\nresemble pipes anymore. They look more like a real stone tunnel, or a\npassageway hewn directly into the rock. The ways from here lead north, east and\nwest.",
+      "ZoneId": 71,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7111,
+          "Description": "North. You see a ledge to something that looks like an abyss.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7122,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7104,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7113,
+      "Name": "The narrow ledge going east to west",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7116,
+          "Description": "The ledge leads further east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7190,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling that distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7114,
+      "Name": "Mid-air",
+      "Description": "\n   You've just stepped into the most unlucky position in the whole of ELITEMUD.\nThe result of such a foolish act should be punished with death, you know. With\nan acceleration of approximately 9. 82 meters per second per second, you are\nnow descending the Abyss. What awaits you at the bottom will continue to be a\nmystery. Bye Cruel World.",
+      "ZoneId": 71,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7119,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7118,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7115,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7115,
+      "Name": "The Broad ledge",
+      "Description": "\n   You are standing on a ledge that seems quite a lot larger than the rest of\nthe ledges. This one leads to the west and the east, plus it has an exit going\nto the south. Though you could jump into mid-air, but it probably wouldn't be\nsuch a good idea. The way south is in utter darkness.",
+      "ZoneId": 71,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7114,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7121,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7129,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7111,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7116,
+      "Name": "The northeastern corner of the ledge",
+      "Description": "\n   You stand, swaying out from the ledge, with only a couple of inches of safe,\nsolid ledge under your feet. The ledge continues to the west and leads south\nfrom here into darkness.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7113,
+          "Description": "The ledge continues west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7280,
+          "Description": "",
+          "Keywords": [
+            "secret",
+            "trapdoor",
+            "entrance"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "soil",
+            "soft",
+            "earth"
+          ],
+          "Description": "\nYou can just make out the outline of a trapdoor here in the soil.  The earth\nis probably there to conceal a secret entrance.  This looks as if it leads down\ninto the seemingly solid rock face of the ledge."
+        },
+        {
+          "Keywords": [
+            "ground",
+            "ledge",
+            "rock"
+          ],
+          "Description": "\nThe ground here seems a little different from all the other ledges along the\nAbyss.  There's a kind of soft soil on this ledge, maybe you should look \ncarefully at this.  It seems to be of some interest."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7117,
+      "Name": "The narrow eastern ledge",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards. And THAT is west of here so watch your step.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7118,
+          "Description": "The ledge leads further south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7114,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling that distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7118,
+      "Name": "The narrow eastern ledge",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards. And THAT is west of here so watch your step.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7119,
+          "Description": "The ledge leads further south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7114,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling that distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7119,
+      "Name": "The narrow eastern ledge",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards. And THAT is west of here so watch your step.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7120,
+          "Description": "The ledge leads further south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7114,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling that distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7120,
+      "Name": "The narrow eastern ledge",
+      "Description": "\n   You are in the progress of walking all the way around the ledge since\nthere's no way of turning around on this all too narrow path. There IS another\nexit from here but that leads right into mid-air and with high probability of a\nfree fall session afterwards. And THAT is west of here so watch your step. You\nalso see a small opening to the east.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7123,
+          "Description": "East. You stare into darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7121,
+          "Description": "The ledge leads further south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7114,
+          "Description": "You stare into mid-air, and right under there's absolutely nothing but\ndarkness. You shiver by the thought of falling that distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7121,
+      "Name": "The southeastern corner of the ledge",
+      "Description": "\n   This seems like a ledge that is a little broader than the one just to the\nnorth of here. The ledge seems to lead around some sort of abyss of total\ndarkness.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7120,
+          "Description": "North of here you can see a ledge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7115,
+          "Description": "The ledge leads further west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7279,
+          "Description": "The Abyss lies down there. Who knows what might lurk down there?",
+          "Keywords": [
+            "rock",
+            "step",
+            "edge"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rock"
+          ],
+          "Description": "\nIt looks as if it can be opened in a door-like fashion.  Maybe this will lead\nthe way down."
+        },
+        {
+          "Keywords": [
+            "step"
+          ],
+          "Description": "\nA small rock sticks out right under it, otherwise the way is DOWN, DOWN, and\nSPLAT!!!"
+        },
+        {
+          "Keywords": [
+            "edge",
+            "odd-looking"
+          ],
+          "Description": "\nThis is truly a weird piece of craftsmanship in your eyes.  The edge seems to\nform a step leading down, but WHAT a STEP DOWN.  The Abyss opens down there \nleading to seemingly total destruction."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7122,
+      "Name": "Under the pit",
+      "Description": "\n   You stand in a completely dark cavern leading west. The wall looks weird\nhere.",
+      "ZoneId": 71,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7112,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "wall"
+          ],
+          "Description": "\nThere is a crack here that looks like it has been made recently."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7123,
+      "Name": "Under The Shaft",
+      "Description": "\n   A ladder leads up from here to the Shaft. A small opening leads west from\nhere.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7120,
+          "Description": "You can see a narrow ledge going north and south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7041,
+          "Description": "It's too dark up there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7129,
+      "Name": "The sewer line",
+      "Description": "\n   You are in a narrow part of the sewer. Down the sewer continues and to the\nnorth is the ledge.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7115,
+          "Description": "You can see the southern part of the ledge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7221,
+          "Description": "You look deeper down into the drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7130,
+      "Name": "The sewer pipe",
+      "Description": "\n   You are in an odd sewer pipe You see some odd scratches on the pipe wall, as\nfrom a gigantic rat. You can see some slimy water gently running down into a\nsewer drain, and north the drain continues.",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7190,
+      "Name": "Mid-air",
+      "Description": "\n   You've just stepped into the most unlucky position in the whole of DikuMUD.\nThe result of such a foolish act should be punished with death, you know. With\nan acceleration of approximately 9. 82 meters per second per second, you are now\ndescending the Abyss. What awaits you at the bottom will continue to be a\nmystery. Bye Cruel World.",
+      "ZoneId": 71,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7109,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7108,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7110,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7107,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7113,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7199,
+      "Name": "The Edge of the Water",
+      "Description": "\n   The pool side is dimly lit up by your light. You can see absolutely\nnothing else nearby. The darkness here seems enormously oppressive here. \nThe air is damp and the rock on which you stand is slippery. The pool\nseems too dark to make anything clear. The pool seems to extend to the\neast. The rock can be climbed upwards from here. \n§N",
+      "ZoneId": 71,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7099,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 7000,
+      "Name": "mud monster mudmonster",
+      "ShortDescription": "\nthe horrifying Mudmonster",
+      "LongDescription": "\nA horrifying Mudmonster is slowly evolving from the mud...",
+      "Description": "\nIt sure looks like something out of a horror movie.  It strongly resembles\na huge figure made up from mud alone, and it sure looks like it had human \nflesh for breakfast and is strongly intent on having the same for dinner\n- Perhaps you?",
+      "Level": 25,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d40+330",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7002,
+      "Name": "rat",
+      "ShortDescription": "\nthe sewer rat",
+      "LongDescription": "\nThe huge hungry-looking sewer rat sits here.",
+      "Description": "",
+      "Level": 10,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+120",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 2100,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7004,
+      "Name": "beetle",
+      "ShortDescription": "\nthe giant earth beetle",
+      "LongDescription": "\nThe giant, mean-looking earth beetle is here.",
+      "Description": "",
+      "Level": 12,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+170",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d8+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 4500,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7005,
+      "Name": "maggot",
+      "ShortDescription": "\nthe maggot",
+      "LongDescription": "\nThe giant maggot is here, simply existing.",
+      "Description": "",
+      "Level": 7,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [],
+      "Affects": [],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+70",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1800,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7006,
+      "Name": "snake",
+      "ShortDescription": "\nthe snake",
+      "LongDescription": "\nThe snake slithers towards you. It looks very mean.",
+      "Description": "",
+      "Level": 6,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Spec",
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d40+60",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d9+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1400,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": []
+}

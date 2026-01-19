@@ -1,0 +1,3331 @@
+{
+  "Zone": {
+    "Id": 63,
+    "Name": "Arachnos",
+    "TopRoomId": 6399,
+    "Lifespan": 45,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6301,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6301,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6301,
+        "Arg2": 10,
+        "Arg3": 6306,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6301,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6305,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6310,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6303,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6308,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6308,
+        "Arg2": 5,
+        "Arg3": 6308,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6308,
+        "Arg2": 5,
+        "Arg3": 6308,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6308,
+        "Arg2": 5,
+        "Arg3": 6308,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6308,
+        "Arg2": 5,
+        "Arg3": 6308,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6309,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6307,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6307,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6304,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6306,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6305,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6306,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6305,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6311,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6302,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6315,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6109,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6109,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6314,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6301,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6302,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6303,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6304,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6312,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6301,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6109,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6313,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6306,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6302,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6304,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 7203,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6316,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6317,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 6392,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 6399,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 6301,
+      "Name": "Webbed Entrance",
+      "Description": "\n   Sticky, sticky, sticky! The ground is cluttered with leaves, decayed remains\nof webbed crickets, beetle, rats, dogs (?), and even humans. You begin to\nwonder about what lies ahead. The air is damp here, and even the little light\nthat shines through the canopy seems absorbed into the webbing.",
+      "ZoneId": 63,
+      "Sector": "City",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6302,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6132,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6302,
+      "Name": "Webby Passage",
+      "Description": "\n   You find that footing here is very good, almost too good. The limbs are\ncoated with cobwebs and seem unusually strong for tree branches. Paths lead in\nfour directions. The eastward path goes down a bit.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6304,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6305,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6301,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6303,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6303,
+      "Name": "Wasp Hive",
+      "Description": "\n   Drones scuttle about in this room. The cells on the walls are honeycomb in\nshape and many of the maggots and wasps you see have fang-marks on their\nbodies. You sense some order in their markings.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6302,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6304,
+      "Name": "Webby Passage",
+      "Description": "\n   Another webby passage, all sticky and wet. Tiny ballooning spiders fill the\nair. It seems that these young ones are newborns.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6305,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6302,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6305,
+      "Name": "Beneath the Busy Path",
+      "Description": "\n   You hear the sounds of crawling arachnids above. The rhythms of the\nfootsteps suggest a primitive order in there movement. The light seems brighter\nupwards.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 6304,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 6306,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6306,
+      "Name": "On the Busy Path",
+      "Description": "\n   Spiders, spiders, everywhere! It is almost ant-like in efficiency with one\nbig difference. The spiders here are carrying ant-corpses, as well as rats,\nwolves, and humans.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6307,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6305,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6307,
+      "Name": "On the Busy Path",
+      "Description": "\n   Spiders, spiders, everywhere! It is almost ant-like in efficiency with one\nbig difference. The spiders here are carrying ant-corpses, as well as cats,\nwolves, and humans.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6306,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6308,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6308,
+      "Name": "On the Busy Path",
+      "Description": "\n   Spiders, spiders, everywhere! It is almost ant-like in efficiency with one\nbig difference. The spiders here are carrying ant-corpses, as well as cats,\ndogs, and humans.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6307,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6306,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6305,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6309,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6309,
+      "Name": "A Split in the Path",
+      "Description": "\n   As always, there is a split in the road. One road is strewn with cricket\nfeelers. The other is well-kept and suitable for smooth traveling. The webbing\nthat was prevalent in earlier rooms is almost non-existent now.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6310,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6308,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6320,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6310,
+      "Name": "Fuzzy Tree Limb",
+      "Description": "\n   You are on a \"fuzzy\" tree limb. Interesting, since the branches seem to have\n\"hairs\" sprouting from its bark. As you look closer you see millions of aphids\ncovering each limb.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6309,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6311,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6311,
+      "Name": "Tree Trunk",
+      "Description": "\n   You feel that you can rest here safely. There is evidence of webbing here,\nbut it is of a finer quality.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6310,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6312,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6312,
+      "Name": "Tree Lair Entrance",
+      "Description": "\n   It seems the inhabitant of this place does not web her victims, as evidenced\nby the remains before you. The area is cluttered with desiccated corpses,\napparently bitten but unwebbed, and drained of their life juices.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6311,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6313,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6313,
+      "Name": "Wolf Spider Lair",
+      "Description": "\n   Very dark, as all lairs of spiders are. Not much of furnishings save an\nexit. The wolf spider keeps no corpses here, but rather throws them out at her\nleisure.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6312,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6320,
+      "Name": "The Webless Path",
+      "Description": "\n   Strange. No webbing here. In fact, no sounds whatsoever. The path continues\nnorthward, where you find that you may have to tightrope your way across a\nravine.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6309,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6321,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6321,
+      "Name": "Above the Ravine",
+      "Description": "\n   Stranger still. Your feet get a real firm grip on the spiderline. You are\nabove a deep ravine. This line connects you between two trees. Below you can\nsee a prismatic web with lots of animal bones caught in it: some bear and small\ndeer bones in fact. No human skeletons are visible (yet).",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6320,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6323,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6322,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6322,
+      "Name": "The Rainbow Web",
+      "Description": "\n   This is the rainbow web--each strand, each link, a hue of violently sharp\ncolors and contrasts. The resident here seems to have a command of light as\nwell.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 6321,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6323,
+      "Name": "The Web Forest",
+      "Description": "\n   The trees here take on a different appearance--they are not trees anymore,\nbut disjointed make-shift silken made shafts, sticky to the touch, and webby in\ntexture. This is another world it would appear.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6321,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6324,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6324,
+      "Name": "The Slave Pit",
+      "Description": "\n   You have entered the slave pit. A voice blares in the distance, \"Get back to\nwork, maggots!\" Rails upon rails of mined gold and silver clutter the trail\nbeneath you.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6325,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 6323,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6325,
+      "Name": "The Tether Path",
+      "Description": "\n   Another tether path just like the rest of them. Surprising well -lit by the\ngolden orbs that hang from the sides, you can see the paths become finer and\nfiner in quality.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6326,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6324,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6326,
+      "Name": "A Road Crossing",
+      "Description": "\n   Another shifty little strand of webs, almost ethereal in nature.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 6325,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 6327,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6327,
+      "Name": "A Leader Strand",
+      "Description": "\n   This strand is weightier, more sturdy. It shimmers as you step on it. You\nare definitely not in the Midgaardian realms anymore. Just where you are you\ncan't tell. It feels like you're moving through ether. You can still get back\ndown to more surer lands.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6328,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6326,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6328,
+      "Name": "The Entrance of the Ethereal Web",
+      "Description": "\n   You are at the entrance to ethereal web. Flickering in and out, in and out,\neach strand reveals a different hue from black to green to blue.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6330,
+      "Name": "The Young Wormkin's Crib",
+      "Description": "\n   A playpen of sorts, with maggots of wasps and other baby vermin lying about.\nYou feel that humans have been played with here too, and eaten later. You sense\nthat the maker of this place has an appetite for dragon meat, and uses this\nroom as a breeding area.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6331,
+      "Name": "The Base of the Web",
+      "Description": "\n   Large strands connect at this point. The node shimmers and flickers within\nthe ether. You see many flying creatures-- insects, pegasi, and dragon\nwormkins--navigate the dangerous passages of the web. Exits go in many\ndirections.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6330,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6332,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6333,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6334,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6332,
+      "Name": "Through the Trees",
+      "Description": "\n   This part of the web intersects through the branches of some trees. Various\nleaves and other debris that the many drones have not picked up yet lie here.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6335,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6333,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6333,
+      "Name": "Above the Clouds",
+      "Description": "\n   You can see all of Midgaard in this ethereal web. Many of the larger dragons\nthat do wish to fly seem to fly away from the sticky strands of the web.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6334,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6335,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6334,
+      "Name": "On A Cloud",
+      "Description": "\n   Rather thick in consistency. You realize this is not a typical cloud, but it\nmight be the nest of an aerial creature.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6335,
+      "Name": "A Link in the Ethereal Web",
+      "Description": "\n   This is another link in the ethereal web. Various creatures seem to get\ncaught (or hypnotized) by its sticky strands.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6336,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6336,
+      "Name": "The Tenuous Strand",
+      "Description": "\n   Very windy here since it goes up into the sky somewhat. Still, it's safe\nenough to move around.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6340,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6341,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6340,
+      "Name": "The Elder Wormkin's Room",
+      "Description": "\n   A more mature wormkin it seems resides here. Various tomes of arcane lore\nclutter the area, along with shards of armor and weaponry.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6341,
+      "Name": "Another Tree Limb",
+      "Description": "\n   Once again the web crosses another tree limb. To the side you see the\npossible entrance to another creatures lair.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6342,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6334,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6345,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6342,
+      "Name": "The Bird Spider's Lair",
+      "Description": "\n   This is a big game hunter among most spiders. Crush jewels and other weapons\nsuggest the inhabitant must have powerful jaws. Beware!",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6345,
+      "Name": "A Link in the Ethereal Web",
+      "Description": "\n   This is another link in the ethereal web. Various creatures seem to get\ncaught (or hypnotized) by its sticky strands.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6350,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6346,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 6345,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6346,
+      "Name": "The Quiet Tree Top",
+      "Description": "\n   Here is a quiet tree top. Downwards you can see a familiar path that may\nlead back to Midgaard.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6345,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6347,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6132,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6347,
+      "Name": "On The Web",
+      "Description": "\n   RRRRRRRRRRROOOOOOOOOOOOOAAAAAAAAAAAAAARR! You hear the roar of a powerful\nbeast. Dragon, you think. You shiver in your boots as you tiptoe on this\nsection of the web.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6346,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6355,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6350,
+      "Name": "The Ki-Rin Chamber",
+      "Description": "\n   A wise ki-rin was entrapped here many years ago. It is from her that the\nruler of this realm zaps his magical strength.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6347,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6355,
+      "Name": "A Link in the Ethereal Web",
+      "Description": "\n   This is another link in the ethereal web. Various creatures seem to get\ncaught (or hypnotized) by its sticky strands. To the north you sense the heavy\nbreathing of a fiery animal.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6360,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6365,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6360,
+      "Name": "Yevaud's Lair",
+      "Description": "\n   Yevaud, the Usurper of Midgaard, resides here. A voice cries out, \"BEWARE,\nthe Usurper of Midgaard lives here! FLEE while you can!\" But even Yevaud has\nhis master... or so you deduce.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6355,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6365,
+      "Name": "A Link in the Ethereal Web",
+      "Description": "\n   This is another link in the ethereal web. Various creatures seem to get\ncaught (or hypnotized) by its sticky strands. A single spider line lies to the\nnorth, while ghastly sightings are due south. The grim entrance of Arachnos'\nLair is downward.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6371,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6366,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6390,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6366,
+      "Name": "Entrance to the Donjonkeep",
+      "Description": "\n   A dark path at the end of the web strand, you see ahead a torch lit chamber\nwhere the souls of unavenged adventurers come and gnash their teeth. The howls\nand screams of many echo through the hall ways. You see one definite path\nahead.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6367,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6367,
+      "Name": "The Guardian's Room",
+      "Description": "\n   A chair sits here for a tireless guardian who ensures that no soul escapes.\nThe room is undecorated.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6368,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chair"
+          ],
+          "Description": "\nAn ordinary chair, well used, glued to the ground by spiderweb."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6368,
+      "Name": "Realm of the Hopeless",
+      "Description": "\n   Here you see many misguided souls who think they still live. They search for\nthose who killed them without warrant, and seek the free souls of living beings\nto inhabit and perhaps adventure once more.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6369,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6369,
+      "Name": "Realm of the Hopeless",
+      "Description": "\n   Here you see many misguided souls who think they still live. They search for\nthose who killed them without warrant, and seek the free souls of living beings\nto inhabit and perhaps adventure once more.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6368,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6370,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6370,
+      "Name": "The Donjonkeep",
+      "Description": "\n   No souls have ever lived in this place. The wails of slaves and the howls of\nwolves are the only way you can describe the sounds you hear. The walls are\nthin and wispy. The only light you receive is the shimmering from the strand of\nthe ethereal web you used to get here.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6371,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6371,
+      "Name": "The Single Spider Line",
+      "Description": "\n   A single spider line supports you once more. As you look across the ether\nyou seen a single shack up ahead with a light in the window. You sense a great\nevil coming from the north and feel inclined to go back on the ethereal web and\ntake your chances there.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6372,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6372,
+      "Name": "The Single Spider Line",
+      "Description": "\n   A single spider line supports you once more. The shack comes closer into\nview and you are even more inclined to go back now.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6371,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6373,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6373,
+      "Name": "The Hermit's Corner",
+      "Description": "\n   Here you see evidence of a vagrant's abode. The shack is to the north, if\nyou dare enter it. You get the sneaking feeling you should go back now. The\nskies above you darken and roar with the laughter of thunder.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6372,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6380,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6380,
+      "Name": "Mahatma's Inescapable Trap",
+      "Description": "\n   Mahatma, that silly thief, is here, and he steals everything you have. He\nsays, \"Here, have a quick trip to the Temple of Midgaard.\" He plugs a black\ndagger into your back...",
+      "ZoneId": 63,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6390,
+      "Name": "The Entrance to the Arachnos' Lair",
+      "Description": "\n   All strands inevitably lead here, the center of the web, the entrance to\nArachnos' Lair.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6391,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6391,
+      "Name": "The Sticky Chamber",
+      "Description": "\n   You can still bail out since your knees are shaking from the anticipation\n(or is it fear?). The sky is clear on this strand of web, surprisingly\nunsticky. The strand does not vibrate like the others. A few ballooning spiders\npass by, cackling \"You're gonna die, you're gonna fry. Good bye!\"",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6392,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6331,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6392,
+      "Name": "The Great Door",
+      "Description": "\n   Before you, you see a large, web-like door. Various designs of ancient runes\nand names of Midgaard heroes are etched into the webwork. Perhaps lists of\nvictims? You can't tell.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6399,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6391,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6399,
+      "Name": "The Lair of Arachnos",
+      "Description": "\n   This is the lair of the Empress Spider, Arachnos. A lavishly adorned rainbow\nweb, her lair allows her to move to any universe she wishes by using her\nmagical strands to the Prime Material Plane. Coffers upon coffers of gold,\nmagical jewels and gems await. Unfortunately Arachnos is a baggy spider too,\nand webs all her treasures to her beautiful silken body.",
+      "ZoneId": 63,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6392,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 6301,
+      "Name": "spider young",
+      "ShortDescription": "\nthe young spider",
+      "LongDescription": "\nThe young spider is ballooning by you.",
+      "Description": "\nHe looks freshly hatched and sprightly.  His young fangs are just\ngrowing in as of late.",
+      "Level": 26,
+      "Race": "Insect",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "60d10+10",
+        "Mana": 360,
+        "Move": 470
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 12,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 600,
+      "Experience": 66666,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6302,
+      "Name": "dragon Yevaud",
+      "ShortDescription": "\nYevaud",
+      "LongDescription": "\nYevaud the Usurper of Midgaard is here, grinning evilly at you.",
+      "Description": "\nOld, scaly, but still with a lot of bite in him left.",
+      "Level": 35,
+      "Race": "Dragon",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "100d8+50",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Whip",
+          "DamageType": 500,
+          "Chance": 60,
+          "DamageDice": "3d7+10"
+        },
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 30,
+          "DamageDice": "3d7+10"
+        },
+        {
+          "Type": "Attack_8",
+          "DamageType": 0,
+          "Chance": 13,
+          "DamageDice": "1d0+60"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3000,
+      "Experience": 120000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%1 l; %10 emote sets a small bush to fire.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6303,
+      "Name": "spider wolf",
+      "ShortDescription": "\nthe Wolf Spider",
+      "LongDescription": "\nThe Wolf Spider is here, licking its bloody fangs.",
+      "Description": "\nThe Wolf Spider is hairy, very hairy.",
+      "Level": 30,
+      "Race": "Insect",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d50+400",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d4+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 900,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6304,
+      "Name": "orc",
+      "ShortDescription": "\nthe orc",
+      "LongDescription": "\nThe orc is stuck in the web and he can't get out.",
+      "Description": "\nYou notice an evil look in his eyes, but he seems quite drained of life, and\nall he can do is glare at you while he's stuck in this web.",
+      "Level": 25,
+      "Race": "Insect",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d150+250",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+7"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6305,
+      "Name": "wasp queen",
+      "ShortDescription": "\nthe Queen Wasp",
+      "LongDescription": "\nThe Queen Wasp is here, thinking how tasty you look.",
+      "Description": "\nYou notice a glazed look in her eyes.",
+      "Level": 30,
+      "Race": "Insect",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectAlign"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d50+400",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d4+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 900,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6306,
+      "Name": "spider drone",
+      "ShortDescription": "\nthe drone spider",
+      "LongDescription": "\nA drone spider walks around doing its master's bidding.",
+      "Description": "\nAn ordinary drone spider.",
+      "Level": 29,
+      "Race": "Insect",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d10+300",
+        "Mana": 390,
+        "Move": 515
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d7+13"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 700,
+      "Experience": 92000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6307,
+      "Name": "spider ethereal",
+      "ShortDescription": "\nthe ethereal spider",
+      "LongDescription": "\nAn ethereal spider strides here, traveling to different worlds.",
+      "Description": "\nShe winks in and out of reality.  It looks like it'd be difficult to hit her\nwithout a magickal weapon.",
+      "Level": 30,
+      "Race": "Insect",
+      "Class": "MagicUser",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "SenseLife",
+        "Hide",
+        "Infrared"
+      ],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d50+400",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "4d4+10"
+        },
+        {
+          "Type": "Attack_8",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+60"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 900,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%1 l;%20 emote fades into existence, but disapears again.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6308,
+      "Name": "slave human",
+      "ShortDescription": "\nthe slave",
+      "LongDescription": "\nA human slave of Arachnos works here relentlessly.",
+      "Description": "\nThe slave does not mind you, but will fight like a warrior if attacked.  He\nserves the spider Empress, Arachnos, though whether it is by choice or because\nhe was beguiled you are not fully certain.",
+      "Level": 26,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectAlign"
+      ],
+      "Alignment": -50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "60d10+10",
+        "Mana": 360,
+        "Move": 470
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 12,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 600,
+      "Experience": 66666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6309,
+      "Name": "quasit",
+      "ShortDescription": "\nthe quasit",
+      "LongDescription": "\nA quasit blinks in and out, grinning at you.",
+      "Description": "\nDemoniac in nature, but more mischievous.  He twiddles his thumbs\nand creates a magickal treasure!",
+      "Level": 30,
+      "Race": "Catbeast",
+      "Class": "MagicUser",
+      "Flags": [
+        "Scavenger",
+        "NiceThief",
+        "Aggressive",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Hide"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d50+400",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "4d4+10"
+        },
+        {
+          "Type": "Attack_8",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+60"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 900,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6310,
+      "Name": "spider bird",
+      "ShortDescription": "\nthe Bird Spider",
+      "LongDescription": "\nThe Bird Spider snaps its powerful jaws.",
+      "Description": "\nThe Bird Spider has very powerful jaws.",
+      "Level": 30,
+      "Race": "Insect",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d50+400",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d4+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 900,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6311,
+      "Name": "hermit",
+      "ShortDescription": "\nthe Hermit",
+      "LongDescription": "\nThe Hermit sits here and warns, \"Go back before it's too late!\"",
+      "Description": "\nA dishevelled veteran warrior in disguise is what he is, but he\nmeans well.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 750,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+350",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 115000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6312,
+      "Name": "donjonkeeper",
+      "ShortDescription": "\nthe Donjonkeeper",
+      "LongDescription": "\nThe Donjonkeeper eyes you and wonders how pure your soul is.",
+      "Description": "\nHe delves deeper into you as you stare at him.  Only those free of taint will\nbe allowed to remain here safely.",
+      "Level": 29,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+350",
+        "Mana": 390,
+        "Move": 515
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 110000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6313,
+      "Name": "guardian",
+      "ShortDescription": "\nThe guardian",
+      "LongDescription": "\nThe guardian is obviously not doing his job.",
+      "Description": "\nHe looks like a lazy bum who sleeps half the time.",
+      "Level": 28,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectAlign"
+      ],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6314,
+      "Name": "spider empress arachnos",
+      "ShortDescription": "\nArachnos",
+      "LongDescription": "\nArachnos the Empress of Spiders welcomes you with an evil smile.",
+      "Description": "\nShe is a very attractive spider with an ornate gown.  She tempts you\ninto being one of her many slaves.  She does not possess the venomous\nfangs of normal spiders, but then, as you realize, she does not need\nthem.",
+      "Level": 30,
+      "Race": "Insect",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+450",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 15,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "4d9+6"
+        },
+        {
+          "Type": "Attack_8",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+60"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 142000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6315,
+      "Name": "ki-rin",
+      "ShortDescription": "\nthe Ki-Rin",
+      "LongDescription": "\nThe Ki-Rin smiles good-naturedly to you.",
+      "Description": "\nShe is the last bastion of good in this realm.  Her mission is to\nsomeday free the slaves of the Empress.  She has been trapped here for\ntime eternal, and now the evil power of Arachnos feeds upon her intense\nmagickal energies.  She will never give up here fight against evil, though,\nand will continue her work in whatever manner presents itself.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+350",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 15,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+6"
+        },
+        {
+          "Type": "Attack_8",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+60"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 140000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6316,
+      "Name": "dragon wormkin young",
+      "ShortDescription": "\nthe young wormkin",
+      "LongDescription": "\nA wormkin with no teeth plays here.",
+      "Description": "\nIt is a rather small dragon, and you almost feel sad in killing it.",
+      "Level": 24,
+      "Race": "Dragon",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6317,
+      "Name": "dragon wormkin elder",
+      "ShortDescription": "\nthe elder wormkin",
+      "LongDescription": "\nA wormkin that has grown a bit stares at you inquisitively.",
+      "Description": "\nA medium-sized dragon -- seems it hasn't killed anything yet by itself, \nthough there is a first time for everything...",
+      "Level": 28,
+      "Race": "Dragon",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 7203,
+      "Name": "cloak purple",
+      "ShortDescription": "\na purple cloak",
+      "Description": "\nA purple cloak lies on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 18,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 5000,
+      "CostPerDay": 6000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cloak",
+            "purple"
+          ],
+          "Description": "\nThis is a very fine made cloak from an unknown material, in a nice purple\ncolor."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6301,
+      "Name": "knife thief's",
+      "ShortDescription": "\na very sharp knife",
+      "Description": "\nA very sharp knife lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        8,
+        1,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 8,
+          "DiceSides": 1,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9,
+      "Cost": 1000,
+      "CostPerDay": 2500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "knife"
+          ],
+          "Description": "\nA keen knife, very sharp -- you could cut the air in two!"
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 2
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6302,
+      "Name": "hat wizard's",
+      "ShortDescription": "\na wizard's hat",
+      "Description": "\nA blue wizard's hat lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 35,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 20000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "hat"
+          ],
+          "Description": "\nA hat made of blue cloth.  It looks very comfortable."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": 3
+        },
+        {
+          "Location": "Mana",
+          "Modifier": 17
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6303,
+      "Name": "headress pontiff's",
+      "ShortDescription": "\na pontiff's headress",
+      "Description": "\nA white cone-shaped head ornament with religious symbols lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 35,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 20000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "headress"
+          ],
+          "Description": "\nA starchy headress worn by powerful secular types."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 3
+        },
+        {
+          "Location": "Mana",
+          "Modifier": 13
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6304,
+      "Name": "visor black knight's",
+      "ShortDescription": "\na black knight's visor",
+      "Description": "\nA black visor sits here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 35,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 20000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "visor"
+          ],
+          "Description": "\nA visor that protects the head, good for warriors."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 1
+        },
+        {
+          "Location": "Constitution",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6305,
+      "Name": "potion thick white",
+      "ShortDescription": "\na thick white potion",
+      "Description": "\nA thick white potion has been left here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 35,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        25,
+        15,
+        35,
+        19,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 25,
+          "SpellIds": [
+            15,
+            35,
+            19
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9,
+      "Cost": 21000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "potion",
+            "thick",
+            "white"
+          ],
+          "Description": "\nIt is disgusting thick white gunk which looks like liquid web and smells like\nmedicine."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6109,
+      "Name": "potion blue",
+      "ShortDescription": "\na blue potion",
+      "Description": "\nA blue potion has been left here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        15,
+        28,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 15,
+          "SpellIds": [
+            28,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 15000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "potion",
+            "blue"
+          ],
+          "Description": "\nIt has a nice deep blue color and a smell like peppermint."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

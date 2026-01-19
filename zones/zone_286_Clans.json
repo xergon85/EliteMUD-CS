@@ -1,0 +1,2390 @@
+{
+  "Zone": {
+    "Id": 286,
+    "Name": "Clans",
+    "TopRoomId": 28699,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 35,
+        "Arg2": 100,
+        "Arg3": 28600,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 33,
+        "Arg2": 100,
+        "Arg3": 28602,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 16,
+        "Arg2": 100,
+        "Arg3": 28627,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11,
+        "Arg2": 100,
+        "Arg3": 28611,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28600,
+        "Arg2": 100,
+        "Arg3": 28610,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3034,
+        "Arg2": 100,
+        "Arg3": 28622,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28601,
+        "Arg2": 100,
+        "Arg3": 28601,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 28601,
+        "Arg2": 1,
+        "Arg3": 28613,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 28600,
+        "Arg2": 1,
+        "Arg3": 28612,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28602,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28603,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28604,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28605,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28606,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28607,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28608,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28609,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28610,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28611,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 28600,
+      "Name": "#rThe Entrance to the Castle of Shamhna#N",
+      "Description": "\n   Violet thunder crashes are roaming the black sky, thick raindrops \nare falling down, and wolflike beings are howling at the full moon, \nwhich is shining behind a high tower, that rears itself high above \nthe castle, as a shadow of death. Dead bodies hang from poles along \nthe path and bonfires burn bright. Right in front of you, high, \nblack walls made of bones and black stone, lift themselves up, \nsurrounding the 'Castle of Shamhna'. A black acid filled moat is \nsurrounding the fortress, and a deathgate is let down, allowing you \nto cross the deadly brew.",
+      "ZoneId": 286,
+      "Sector": "Mountain",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28601,
+          "Description": "",
+          "Keywords": [
+            "deathgate",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6158,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28601,
+      "Name": "#rThe Great Hall of Shamhna#N",
+      "Description": "\n   A silent wind blows through the corridors which lead in various \ndirections, deeper into the death castle, resulting in the lit torch \nfires slowly waving, throwing a strange light in the hall. The floor \nis made of ancient rock, and each of your steps echoes loudly, until \nit disappears in the high roof. To the east and west, large gates \nstand open, with mystical letters engraved in them. A large, horned \nskull is fastened, high upon the wall, showing you that you have \nentered the Shamhna Clan castle.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28600,
+          "Description": "",
+          "Keywords": [
+            "deathgate",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28602,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28604,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28603,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28602,
+      "Name": "#rThe Mystical Library#N",
+      "Description": "\n   It is a large, silent library, with long, wooden shelves leaned on \nthe walls that surround you, containing old, dusty books. Thick \ncandles, burning on skulls, are fastened to the walls and placed on \nthe tables, giving you the light you need. You notice some scratches \nin the floor, engraved as some kind of a path in front of a shelf in \nthe back of the library. A gigantic statue of a werewolf tearing a \ncorpse apart, made out of black marble is placed next to the the \nclan board.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28629,
+          "Description": "",
+          "Keywords": [
+            "shelf"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28601,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28603,
+      "Name": "#rThe Mausoleum#N",
+      "Description": "\n   Walls covered with used armours and weapons stored under thick \nglass, and a mighty spirit of death, associates you that this is a \nplace where the Clan's history is stored for eternity. Shelves are \nfilled with ancient items and artifacts which got captured during \nglorious wars. Paintings showing bloody fights and the clan creation \nare placed everywhere, compressing a process which lasted for ages \ninto one single moment. Large, beautifully painted windows are \nreflecting thunderlights from the black sky, inside the mausoleum, \nwhose light rays change its colors when shining through the \nmulticolored glass parts, creating a dark violet light in the whole \nhall.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28601,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28604,
+      "Name": "#rThe Cold Stairway#N",
+      "Description": "\n   At this place the large corridor crosses a staircase, which \nappears out from deep beneath, and continues up into the darkness, \ndisappearing in a left bend. Waterdrops are leaking down the walls, \nleaving a green, moldy path behind. A few torches are placed around, \nthrowing a weak light on the first steps.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28601,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28605,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28609,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28629,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28605,
+      "Name": "#rThe Hallway of Corpses#N",
+      "Description": "\n   All the corpses hang headless and limp, bodies with no surprises. \nSkins are turned inside out, letting the blood drain down in a pile \nof human flesh. Hacked heads are nailed on the walls, and squeaking \nrats crawling around are carrying thorn out guts away. The sight \nwakes up your instinct and urges you to kill more and more. Death is \nwhat we need to survive merciless slaughtering is what brings all \nthis bodies in this hall.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28604,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28608,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28606,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28608,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28606,
+      "Name": "#rThe Swamp Garden#N",
+      "Description": "\n   Murky grass and rotten trees decorate this place beneath the black \nsky. Horrific creatures are crawling through the swamp parts of the \ngarden, leaving corpse rests behind for the crows which made their \nnests in the dead trees. A thick fog spreads itself above the ground, \nand gas shoots out from exploding balloons that are forming in the \nswampy water. Benches made out of bones are placed on various places, \nsurrounded by flesh-eating plants.",
+      "ZoneId": 286,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28605,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28607,
+          "Description": "",
+          "Keywords": [
+            "graveyard"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28607,
+      "Name": "#rThe Mortuary of Damned Souls#N",
+      "Description": "\n   Owls with glowing eyes sit on gravestones and bats fly through the \nnight. Bright moonlight shows mystical engravings on the tombstones, \ndug up graves, and bones that stick out of the earth. This ghastly \nhill behind the castle, is the Clan's cemetery, a place where the \ndead undead is laid down for the final rest, before they can open the \ngates of death and enter the plane of eternal violence.",
+      "ZoneId": 286,
+      "Sector": "Hills",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28606,
+          "Description": "",
+          "Keywords": [
+            "graveyard"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28608,
+      "Name": "#rThe Skull Passage#N",
+      "Description": "\n   Thousands of skulls are mowled in the walls of this passage. It is \nas if they were still humming the pain of their tortured souls, which \nare imprisoned for eternity. The lantern lightened passage continues, \nbut there is a staircase leading down, where from the clinking of \nchains and real pain yelling can be heard.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28628,
+          "Description": "",
+          "Keywords": [
+            "glassdoor",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28605,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28605,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28624,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28609,
+      "Name": "#rThe First Floor#N",
+      "Description": "\n   You have reached the first floor of the castle. It is a long \ncircular passage, surrounded by cold walls, which are decorated with \nbones. Large candles are fastened all around. From the outside, \nclaps of thunder are heard, mixed with noise that rain makes while \npouring against the windows. There are three tight corridors leading \ninto various parts of the castle. More steps continue to lead you \nhigher up,to the next floor.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28613,
+          "Description": "",
+          "Keywords": [
+            "curtain"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28610,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28612,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28611,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28604,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28610,
+      "Name": "#rThe Lair of Ressurection#N",
+      "Description": "\n   This large, dry lair offers a lot of place for the warriors of \nShamhna. Huge beds, pollstered with werewolf skin are all around. \nThick candles are placed on old skulls, throwing a dark yellow light \nin the room. In the middle of the room the Shamhna skull is placed on \nan altar. Visible, light blue rays, shine from the inside of the \nstatue, creating a mystical aura which spreads through the whole \nroom. Your wounds begin to heal faster as the rays render your body. \nYou feel your heart extend, you feel your muscles break. Your veins \npump wolfsblood, and you arise yourself with anger in your eyes, with \na will to murder, urging you to start another journey of \nextermination.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28609,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28611,
+      "Name": "#rThe Second Floor#N",
+      "Description": "\n   The steps finish in this dark hall, which circularly extends \nitself over the castle's second floor. A heavy,wooden door is on the \nnorth and a totally unlit corridor leads to another damp staircase,in \nthe south of the castle. A statue is lifting itself up, next to the \nwall. It shows the clash between two demons, fighting each other in \nhell's fire. The symbol of Shamhna is etched into the large door, \ncreating an atmosphere of might and power.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28627,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28614,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28609,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28612,
+      "Name": "#rThe Tavern of the Damned#N",
+      "Description": "\n   Tables and chairs made out of carved bones are placed all over. A \nviolet fire burns in the open fireplace. Some members are having a \nfeast of food at the tables, others are just getting drunk. Some just \ncame to hear the latest gossips and rumors from the cloaked barman, \nor to meet friends. A large, horned skull is build in the wall, and \ndark red wine is dripping from its opened mouth in a silver bowl. \nSilent songs of death fill the room, joined with drunk voices and \nshouts.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28609,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28613,
+      "Name": "#rThe Mansion of Pleasure#N",
+      "Description": "\n   Welcome to the Devil's whorehouse. It's a smoke filled room and \nloud music attacks your ears. A dark violet light shines on the stage \nwhere wild vamps are dancing. Vixens are serving drinks and Devil's \nwhores are entertaining the guests. Skeletons are chained to the \nwalls and fresh blood is dripping down their bones. A strange force \ntakes your body over as soon as you enter, you feel as if you are in \na trance, while deep sounds drain your brain, forcing you to drink \nmore of the blood, served in skull like bowls. You're possessed and \ncan't even recall your name.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28609,
+          "Description": "",
+          "Keywords": [
+            "curtain"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28614,
+      "Name": "#rThe Black Corridor#N",
+      "Description": "\n   At this place, the tight corridor crosses another staircase, \nleading up into darkness, as if there were no end. It's the entrance \nto the High Tower. Dark voices muttering ancient formulas can be \nheard from the distance, spreading as an echo through the halls, and \nyou can't locate them exactly. The black walls that surround you are \nengraved with mystical signs. The corridor continues in a bend \nfurther to the east, where from a reddish light shimmers in the \ndarkness.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28611,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28615,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28616,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28615,
+      "Name": "#rThe Shrine of Shamhna#N",
+      "Description": "\n   You stand on the entrance to a large, round room. A circle is \nengraved in the floor, containing ancient formulas and signs. In the \nmiddle of the circle an altar is created, and above it, a horned \nskull, made of black marble is floating in the air. Each eyehole \ncontains a red gem which shines so bright that the whole room is \nshined in a reddish light. Fresh blood is dripping out from splits in \nthe wall, leaking through engraved paths, towards a large bowl which \nis placed behind the altar, where it is gathered and used for deadly \nrituals of Shamhna members, dressed in large black cloaks, uttering \nmystical words and praying for more captured souls.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28614,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28616,
+      "Name": "#rThe High Tower#N",
+      "Description": "\n   After passing endless stairs, you finally reached a large, round \nhall, which is placed in the top of the castle's High Tower. A large, \nred circle is drawn on the floor, and in the middle a green fire is \nburning, creating a strange sound. Large gates are leading in all \nfour directions, each of them with a different engraved symbol. \nAround the gates skulls are fastened and on the top of each gate a \nSkull of Shamhna is staring with a cold look towards you.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28620,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28619,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28617,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28618,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28614,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28617,
+      "Name": "#rEvilive's Inferno#N",
+      "Description": "\n   You closed the gate behind you and now you realize that this is a \nlarge room without a floor. You're standing on the edge of a deep \nabyss. Burning flames arise themselves up from deep beneath, tortured \nsouls are yelling for mercy and an enormous heat makes you feel weak \nand helpless. Chains are hanging from above, and a massacred corpse \nis hooked on each of it. The blood is dripping down into the \nbottomless pit like devil's rain. Right in front of you a stone \nthrone is floating in the air. Evilive is sitting in it, his red eyes \nglaring at you, the Dagger of Shamhna in his hand ready to tare your \nchest apart,in order to consume your body and imprison your soul in \nthe eternal flames of his Inferno.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 28626,
+          "Description": "",
+          "Keywords": [
+            "flames"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28618,
+      "Name": "#rVerminaard's Morgue#N",
+      "Description": "\n   Here in this place, rules the tyrant of death. Corpses hang down \nfrom the walls and blood drips down in a pile of flesh. Collared \nskeletons are chained to the black walls. Tortured bodies imprisoned \nin steel cages are hanging down from above, yelling and begging for a \nquick dead. Torches fastened on the walls, light the path which leads \nto the dark end of the room. A large throne, made of bones lifts \nitself up there. That's the place where from Verminaard commands the \nforces of Shamhna through our wars of annihilation.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28616,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28619,
+      "Name": "#rRob's Personal Residence#N",
+      "Description": "\n   You see a lighted, good looking room. In the middle of the room a \nviolet fire is burning, creating a silent cracking. On the walls of \nthis room, there are many interesting historical pictures and a few \nbig, blood covered spears and swords, which are momentous of Rob's \npast. A large stone throne is in the back on the room, and the Skull \nof Shamna is fastened on the top of it. A map of Elite is engraved in \nthe wall and a list of clan members is written in blood, next to it.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28616,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28620,
+      "Name": "#rManowar's Great Hall#N",
+      "Description": "\n   You see wide light hall. A Huge golden throne is standing in front \nof you. There is large emblem of Manowar's dynasty on it. Great \nWarhammer crossed with Samurai Sword fixed on the wall. Soft bear fur \ncover marble floor. Two silver armchairs with Rob's and Mitia's \ndynasty emblems are standing near the throne. Large black compact \ndisc stereo system is standing behaind them. Collection of CD-disks \nis laying on the carved wooden table near it. Charming sounds of \nmurmuring crystal water in fountain filling the room.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28616,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28621,
+      "Name": "#rThe Deep Equipment Grot#N",
+      "Description": "\n   This is a deep, weakly lighted grot. Poisonous snakes are crawling \namong ribcages of old skeletons and deadly spiders are sitting in \ntheir webs. Blood covered blades and dusty armors are laying \neverywhere, some stored in large chests or shelves. Daily, new \nequipment from killed enemies is thrown in here, sometimes even \narmored corpses are just left behind, letting them turn into rotten \nskeletons, holding weapons with their bone hands, until they are \ntaken by someone for further use.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28629,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28622,
+      "Name": "#rThe Treasure Keep#N",
+      "Description": "\n   After unlocking, and passing the heavy door of thick metal, you \nfind yourself at the entrance to a long hall. Large treasure chests \nand enormous heaps of gold are spread all over the floor. Valuable \nartifacts and expensive jewelry are stored in large, golden shelves. \nTorches fastened on the wall give you the light you need in the \nsearch for your treasure. Square, black and white stone cabinets are \nbuild in the wall. Each of it with a different symbol etched into \nit, marking the owner they belong to.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28629,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28623,
+      "Name": "#rThe Arena of Death#N",
+      "Description": "\n   A large, round arena is witnessing bloody fights and bestial \nslaughtering deep beneath the castle. The crowd is shouting and \nyelling for another massacre. A kick in the head or a gouged out eye \nmake your intensities explode. The taste of blood drives us on. We \nget what we want and we want to see enemies bleed, cause we like when \nchests are thorn apart and the way heads come off. Another dagger \nblade gets blood signed as it ripped the veins of a opponent's neck, \nand you turn into a raw martian ready to fight and to kill, ready to \nrape the lands and exterminate whatever stands left.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "PkOk",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28624,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28624,
+      "Name": "#rThe Torture Chamber#N",
+      "Description": "\n   Black chains hanging down the walls, rusty cages with captured \nsaints are fastened on the floor above, hanging down, letting its \nprisoners die and rot in pain. Tortured living beings are screaming \nand begging for mercy. A vast, open fireplace is building up an \nenormous heat, making you sweat as you hunger to torture gets stalled \nwith the sight which spreads in front of you. The Skull of Shamhna, \nplaced in the back of the chamber, glows brighter while draining \nenergy from each bloody slaughter, which is proceeded as long as our \nforces gather prisoners in their journeys of slaughter and \ndevastation.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28623,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28625,
+          "Description": "",
+          "Keywords": [
+            "bars"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28608,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28626,
+          "Description": "",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28625,
+      "Name": "#rThe Deep Dungeon#N",
+      "Description": "\n   There is a human slaughterhouse deep beneath the castle. The walls \nare black, and those who ignore, and those who pretend that it does \nnot exist end up in its hull. Our blood goes to work and we hear the \nhowl of the thralled. This is a grove of bleached bones, where the \ntortured vomit their limbs, taking all their liberties with parts of \nhuman anatomy, and in the hollow of a restless soul, lies no remorse \nand no disgust. Every kill is clean and pure, every thought is \ncleansed in growls. This is the grove of tortured forms, where all is \ndark and deeds are foul. And those who end up here, will stop to \nexist.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28624,
+          "Description": "",
+          "Keywords": [
+            "bars"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28626,
+      "Name": "#rThe Abyss of Eternal Fire#N",
+      "Description": "\n   Deep beneath the castle, you find yourself in the middle of \nnowhere. Walls do not exist. Just bright, hot flames, shoot out from \nthe darkness, surrounding you, forcing your heart pump faster, as an \nextreme heat drains your body. Damned souls and skeletons are doing a \ndance of death, led by horror music, which you can't realize where it \ncomes from, inviting you to join the dance of the undead ritual. The \nfire becomes your friend, the dead becomes your master. The \npossession of your mind turns in a transformation with the urge to \nkill.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 28624,
+          "Description": "",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28627,
+      "Name": "#rThe Shamhna Meeting Room#N",
+      "Description": "\n   This is the entrance to a large hall with no windows in the high \nwalls. The light sources are big candle lamps hanging down from the \nceiling. The light falls onto a long table, made out of bones, which \nis the dominant object of this room. Big apolstered chairs with high \nback supports are placed around it. Each chair has a different \nskull-like symbol on the top of it, marking the leader the chair \nbelongs to. The black walls are covered with paintings of legendary \nShamhna leaders. In the back of the room there are large shelves \ncontaining various books, and a large strategy map of the Elite \nworld.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28600,
+          "Description": "",
+          "Keywords": [
+            "painting"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28611,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28628,
+      "Name": "#rThe Banquet Hall#N",
+      "Description": "\n   A large hall with a semispheric roof spreads itself in front of \nyou. It's so big that one can imagine a thousand people having a \ndance in it. The roof and the floor are beautifully painted, and \nlarge, jewel oil lamps hang down from above, throwing a bright light \nin the hall. During the Oidche Shamhna, ghouls arise themselves from \nthe dark plane, and gather in the banquet hall for a ball of death. \nWalls start closing in around you, like twins of darkness, they shake \nyour collarbone, then snap your ribcage. Broken bodies in a death \nball dance hall looking for a partner. Eyeballs pop, accelerated \nblood beats. Veins are shaking. The Feile na Marbh has begun. It's \nthe night of Shamhna, it's a feast, we'll sing and kill tonight.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28607,
+          "Description": "",
+          "Keywords": [
+            "wall"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "ResetClosed",
+            "ResetLocked"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28608,
+          "Description": "",
+          "Keywords": [
+            "glassdoor",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28629,
+      "Name": "#rA Large, Dark Cellar#N",
+      "Description": "\n   This is the the entrance to the castle's cellar complex, deep \nbeneath it. Extremely weak light is provided in this moistly room, by \nold torches, not giving you enough of it to see your way through the \ndusty corridor. Spiderwebs hang forgotten in the corners and bones \nlay on the floor. Large gates lead to the east and west, into the \nclans storage chambers. Old wine shelves and barrels are placed all \naround and cold waterdrops are heared, dripping down from the high \nceiling.",
+      "ZoneId": 286,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28621,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28622,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28604,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 28600,
+      "Name": "shopkeeper grim edgar shamhna",
+      "ShortDescription": "\nGrim Edgar",
+      "LongDescription": "\n#rGrim #MEdgar #rthe one-eyed tavernkeeper#N is standing behind the bar.",
+      "Description": "\nIt is the good old Edgar, our tavernkeeper. His tall body is dressed \nin a long, black robe. He's got only one eye left, and a long scar across \nhis cheek symbolizes his killer experience, and you get the impression \nthat though he is a friendly clannie, you'd better not insult him when \nyou get drunk. Tired from numeruous wars this mighty warrior retired from \nthe battlefields and opened the clan's bar. Friendly he greets all \nShamhna members as they approach the tavern. He knows each member's \nfavorite drink so there is no need to order anything, simply give him a \nsign and he will serve it. Besides food and drinks Edgar also has some \nother useful items to sell.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "NiceThief"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 say The weak will parrish!;\n%5 say Want some booze?;\n%5 say Let me tell you some of my war tales son.;\n%5 say Wanna hear the latest gossip dude?;\n%5 say #MS#rha#Mm#rhn#Ma #rrules!#N;\n%5 say Hey! I heared you made another slaughter in the PK zone guys. Keep on rocking!;\n%5 say #rDeath before Dishonour!#N;\n%5 peer;\n%5 stretch;\n%5 burp;\n%5 yawn;\n%5 mumble;\n%5 grumble",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 28601,
+      "Name": "morella shamhna vamp",
+      "ShortDescription": "\nMorella",
+      "LongDescription": "\n#MMorella #rthe curvy vamp#N, watches you expectingly.",
+      "Description": "\nMorella is a redheaded, sexy vamp with green, serpentine eyes. Her\nperfect body is dressed in tight, semi-transparent clothes which show \nmore then they actually cover. Black fishnet stockings perfectly fit on \nher long legs that stand on red, 4 inch high heels. Morella is the \nprettiest of all girls from the mansion and knows all the means by which \nto make the warriors of Shamhna feel comfortable when they return from \nthe battles.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "NiceThief"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%5 say Hi hon, long time no see!;\n%5 say Feeling tired sweety?;\n%5 say Could you light my ciggarette?;\n%5 say What can I do for you?;\n%5 wiggle;\n%5 lick;\n%5 purr;\n%5 smile",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 11,
+      "Name": "guards skeleton shamhna",
+      "ShortDescription": "\nthe skeleton guards",
+      "Description": "\n+Two Skeletons guard the gate with their spears crossed in\nfront of it.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28611,
+        1,
+        122,
+        6,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 16,
+      "Name": "board bulletin leadership shamhna",
+      "ShortDescription": "\nthe Shamhna leadership board",
+      "Description": "\nThe Shamhna leadership board is etched into the wall.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        122,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 33,
+      "Name": "board bulletin shamhna",
+      "ShortDescription": "\na Shamhna clan bulletin board",
+      "Description": "\nThe Shamhna clan bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        122,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 35,
+      "Name": "statue shamhna",
+      "ShortDescription": "\nthe statue of shamhna",
+      "Description": "\nA werewolf statue is guarding the castle's entrance.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28600,
+        4,
+        122,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "statue",
+            "werewolf"
+          ],
+          "Description": "\nIt's a large, imposing statue of a werewolf. It is made out of black \nstone and is at least five times as tall as you are. Two red, shining \ngems represent it' s eyes and the wide opened mouth, filled with \nsharp teeth, expresses violence and cruelty. The werewolf' s arms are \nlifted high above the head and it seems like they are going to grab \nevery illegals visitor, in attempt to sneak in the Castle of Shamhna."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 28600,
+      "Name": "fountain",
+      "ShortDescription": "\na fountain",
+      "Description": "\nA fountain shaped in an Ankh pours water.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "\nThe fountain looks old and is made from stone."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28601,
+      "Name": "fountain blood",
+      "ShortDescription": "\na blood fountain",
+      "Description": "\nA horned skull is spurting blood into a large bowl.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        13,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 13,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain",
+            "blood"
+          ],
+          "Description": "\nIt is the horned Shamhna skull,fastened on a bone pedestal. Fresh blood \nis dripping from it's opened mouth into a large bowl, made from black \nmarble."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28602,
+      "Name": "alcohol skullbowl bowl",
+      "ShortDescription": "\n#wa Skullbowl full of pure alcohol#N",
+      "Description": "\nA strange looking cup has been dropped here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        7,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 7,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 15,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skullbowl",
+            "bowl",
+            "alcohol"
+          ],
+          "Description": "\nIt's a skullshaped bowl with a bone handle."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28603,
+      "Name": "alcohol skull canteen",
+      "ShortDescription": "\n#wa Skull#N",
+      "Description": "\nA white skull lies on the ground and some red liquid is leaking from it.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        80,
+        80,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 80,
+          "Amount": 80,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 45,
+      "CostPerDay": 15,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "canteen",
+            "skull"
+          ],
+          "Description": "\nIt's a canteen in the shape of a skull."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28604,
+      "Name": "corpse fried yummy",
+      "ShortDescription": "\n#rthe corpse a'la #MS#rha#Mm#rhn#Ma#N",
+      "Description": "\nA fried corpse has been left here.  It smells yummy.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 10,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "corpse",
+            "fried",
+            "yummy"
+          ],
+          "Description": "\nIt is a finely prepared, tasty looking corpse."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28605,
+      "Name": "meat human fresh",
+      "ShortDescription": "\n#ra piece of fresh human meat#N",
+      "Description": "\nA piece of a human is laying on the ground, still dripping blood.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 10,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "meat",
+            "human",
+            "fresh"
+          ],
+          "Description": "\nIt is a piece of fresh human meat, still soaked with blood."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28606,
+      "Name": "scroll recall demon",
+      "ShortDescription": "\na scroll named 'Demon Wings'",
+      "Description": "\nYou see a glowing scroll with demons drawn on it.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        42,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            42,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1000,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll",
+            "recall",
+            "demon"
+          ],
+          "Description": "\nA glowing scroll has been left on the ground."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28607,
+      "Name": "elixir potion blood",
+      "ShortDescription": "\nan elixir of #Rvampire blood#N",
+      "Description": "\nA thin flask filled with blood is floating in the air.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        45,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            45,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "elixir",
+            "vampire",
+            "blood"
+          ],
+          "Description": "\nIt is a flask containing a red liquid. It's blood. Vampire blood."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28608,
+      "Name": "crecall clan",
+      "ShortDescription": "\nthe Death Portal scroll",
+      "Description": "\nA mysterious looking scroll is laying on the ground.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        109,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            109,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "crecall",
+            "clan"
+          ],
+          "Description": "\nAs you unroll the scroll you see a picture of the Shamhna death \ncastle in the middle of it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28609,
+      "Name": "flask eye",
+      "ShortDescription": "\na flask labeled #y'The Evil Eye'#N",
+      "Description": "\nA small flask made of yellow glass seems as if it was starring at you.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        19,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            19,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 400,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "flask",
+            "eye"
+          ],
+          "Description": "\nIt is a small flask made from yellow glass. It is labelled with a \ngrim looking eye."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28610,
+      "Name": "book identify necronomicom",
+      "ShortDescription": "\nThe Necronomicom",
+      "Description": "\nA very thick book with leather covers has been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        53,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            53,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "book",
+            "identify",
+            "necronomicom"
+          ],
+          "Description": "\nIt is a thick book with leather covers. It contains  \ninformation about various things."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28611,
+      "Name": "wine skullbowl bowl",
+      "ShortDescription": "\n#wa Skullbowl full of red wine#N",
+      "Description": "\nA strange looking cup has been dropped here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        2,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 2,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 15,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skullbowl",
+            "bowl",
+            "wine"
+          ],
+          "Description": "\nIt's a skullshaped bowl with a bone handle."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "\nan automatic teller machine",
+      "Description": "\nAn automatic teller machine has been installed in the wall here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "\nThere is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

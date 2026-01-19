@@ -1,0 +1,2197 @@
+{
+  "Zone": {
+    "Id": 112,
+    "Name": "Book of Kai/Book of Fables",
+    "TopRoomId": 11299,
+    "Lifespan": 15,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11200,
+        "Arg2": 2,
+        "Arg3": 11211,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11200,
+        "Arg2": 2,
+        "Arg3": 11211,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11201,
+        "Arg2": 1,
+        "Arg3": 11211,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11202,
+        "Arg2": 1,
+        "Arg3": 11212,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11203,
+        "Arg2": 1,
+        "Arg3": 11213,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11204,
+        "Arg2": 1,
+        "Arg3": 11213,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11205,
+        "Arg2": 1,
+        "Arg3": 11214,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11206,
+        "Arg2": 1,
+        "Arg3": 11214,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11207,
+        "Arg2": 1,
+        "Arg3": 11215,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11208,
+        "Arg2": 1,
+        "Arg3": 11215,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11209,
+        "Arg2": 1,
+        "Arg3": 11216,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11210,
+        "Arg2": 1,
+        "Arg3": 11217,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11211,
+        "Arg2": 1,
+        "Arg3": 11217,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11212,
+        "Arg2": 1,
+        "Arg3": 11218,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11213,
+        "Arg2": 1,
+        "Arg3": 11218,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11214,
+        "Arg2": 1,
+        "Arg3": 11219,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11215,
+        "Arg2": 1,
+        "Arg3": 11219,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11216,
+        "Arg2": 1,
+        "Arg3": 11220,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11217,
+        "Arg2": 1,
+        "Arg3": 11221,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11218,
+        "Arg2": 1,
+        "Arg3": 11221,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11219,
+        "Arg2": 1,
+        "Arg3": 11223,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11220,
+        "Arg2": 1,
+        "Arg3": 11224,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11221,
+        "Arg2": 1,
+        "Arg3": 11226,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11222,
+        "Arg2": 1,
+        "Arg3": 11227,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11223,
+        "Arg2": 1,
+        "Arg3": 11228,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11224,
+        "Arg2": 1,
+        "Arg3": 11229,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 11200,
+      "Name": "Title Page",
+      "Description": "\n   Welcome to the History of the Kai Clan.  In these pages you will\nlearn of the people who founded and rule the Clan, people who strove\nto make Kai one of the strongest clans in the land of Elite. Perhaps \nyou, too, can one day be a part of the Kai Legacy...",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11201,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\n                      The History of the Kai Clan\n\n                     Written by: Phobos, Kai Deity\n               Edited by: Mystery, Kai Knight of the Rose\n\n         The 9th Day of the Month of the Frost Giant, Year 218."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11201,
+      "Name": "Preface",
+      "Description": "\n   On the outskirts of Midgaard stands a mighty fortress, over which\nflies a banner marked with a blazing phoenix.  In this fabled citadel\ndwell the Kai, an elite order of knights who daily dedicate their lives\nto upholding the virtues they hold dear.  To be courageous, standing\ntall in the face of danger; to be true, to themselves and to others; to\nbe just in a world that is not; to be honourable, for a life without\nhonour is not a life at all. Upon these virtues, a fellowship has grown.\nThe Kai embody all this and more. They are truly a breed apart.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11202,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nLooking at the bottom of the page you see the Kai symbol:\n\n                       //              \\\\\n                    .//(/'             ((\\\\\n                    \"\\)"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11202,
+      "Name": "Prologue",
+      "Description": "\n   A long time ago, in a land far, far away, a band of heroes fled\ntheir world and ventured into the realm of Elite. They brought with\nthem a set of values and a rich history, that of Kai. Time passed, \nand the heroes went their separate ways.\n   A dark time came. A mighty empire rose and fell. The Saracens\nwere born from the ashes of this empire.  Led by Nymph and Deimos,\nthis small tribe struggled for survival. Lacking any sense of \ndirection or purpose, the tribe nearly faded away, until the Kai, led\nby Ben Kenobi and Deimos, took control of the people. Thus the Kai \nwas born. The Kai citadel was built around this time.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11203,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11203,
+      "Name": "Chapter One",
+      "Description": "\n   The Kai clan was small at first, a minor power in a world of \ngreat clans. Many great names of yesteryear helped found the clan.\nNo one speaks of Toon, Dementor, or Radagast anymore, but these \nwere the names that made the clan what it was. With the fall of the \nPack, heroes such as Viv and Soulcatcher found their way into Kai.\nMighty warriors followed long time friends, and soon the Kai were \nproud to have in their number names such as Zifnab, Dakkon, Karen,\nXala, and many other famous people, too numerous to mention. Kai \nhad become a clan without equal.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11204,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11204,
+      "Name": "Chapter Two",
+      "Description": "\n   It was not to last. Troublesome elements entered into the clan.\nCatwoman and Ashenshugar became two strong supporters within the \nclan, but with time, the friendships that kept them in Kai soured\nand decayed. Atlantis, one of our greatest, faded into obscurity,\nand the clan found itself at a crossroads. Would it take the path\nof power and might, or the path of honor and truth? The clan was \ntorn asunder as this decision was made. Those who departed during \nthis chaos were many: Zifnab, Dakkon, Karen, Ashenshugar, Rakshar, \nAtlantis, Crimson... for reasons ranging from personal honor to \nconflicts with other members to infractions of clan policy, one bye \none they left.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11205,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11205,
+      "Name": "Chapter Three",
+      "Description": "\n   It is my opinion that this was not a dark time for Kai - rather\nit was a rebirth. We truly became the Phoenix, more than ever before.\nThose who remained took the burden of the clan upon their backs and\ntransformed it. Nibor and Darius were two such leaders. Within time,\nthe clan's honor and power was restored and reborn. This was a great\nmulticultural time for the clan. Many of the mud's most wonderful \nSwedes flocked to Kai. Desdichado, Rand, Mithrandir, Thingol, and\nothers number among them.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11206,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11206,
+      "Name": "Chapter Four",
+      "Description": "\n   With the devastating destruction brought on by the crash, the \nclan also suffered. People faded away, and new leaders arose. A \ncouncil of five was born to rule the clan. Young leader such as\nKronan and Mithrandir stepped in by the sides of Soulcatcher and\nTakashi, and the union of young and old in the clan was complete.\nThe honor of knighthood and squiredom was restored.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11207,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11207,
+      "Name": "Chapter Five",
+      "Description": "\n   The system of knighthood withstood the test of time and with the\ngrowth of the clan, new Squires were knighted.  Mystery, a long time\nsquire of the great Kronan rose to become one of the High Council, and\nSarastro and Matlin, two of the Kai's finest Swedes were now infamous\nin the land of Elite.  With the help of the elder Kai, the younger \ngeneration will be trained in the ways of the Kai so that they, too \nmay one day rule the citadel with pride.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11208,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11208,
+      "Name": "Epilogue",
+      "Description": "\n   The Kai of today are not the same Kai of days passed, but they\nstand for the same virtues of truth, justice, and honor. I am proud\nto call myself one of them. We should not dwell on past glory, but \nrather on what we can do to continue to make ourselves who we are.\nFor the first time on EliteMUD, we in the Kai clan can call ourselves,\nwithout arrogance or ignorance, the greatest of the clans.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11209,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11209,
+      "Name": "Appendix",
+      "Description": "\n                          The True Kai\n\n   During the fief wars for control of Japan, Oda Nobunaga rose to\npower. During this period the warriors known as the Kai rose in \npower and prestige. Their clan was the Takeda clan. Their capital\ncity was named Kai. Their warriors were called the Kai. Their leader\nTakeda himself was the most feared Daiymo and Warlord throughout all\nof Japan. He was called the \"Tiger of the Kai\" and never lost a \nbattle in his life.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11210,
+      "Name": "The Book of Fables",
+      "Description": "\n   In this room you find The Book of Fables.  Written on it's \ndelicate pages are parables that have been passed on from one\ngeneration to the next.  After entering this book, you will \nemerge and find yourself to be a wiser person... that is, if \nyou take the time to look for the moral of the story after \nreading the Fable.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11211,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11211,
+      "Name": "The Ants and the Grasshopper",
+      "Description": "\n   The ants were spending a fine winter's day drying grain that\nhad been collected in the summertime.  A grasshopper, perishing\nwith famine, passed by and earnestly begged for a little food.\nThe ants inquired of him, \"Why did you not treasure up food in\nthe summer?\" He replied, \"I had not leisure enough. I passed the\ndays in singing.\" They then said in derision: \"If you were so\nfoolish as to sing all the summer, you must dance supperless to\nbed in the winter.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11212,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nIt is thrifty to prepare today for the wants of tomorrow."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11212,
+      "Name": "The Boasting Traveler",
+      "Description": "\n   A man who had traveled in foreign lands boasted very much, on\nreturning to his own country, of the many wonderful and heroic\nfeats he had performed in the different places he had visited. \nAmong other things, he said that when he was at Rhodes he had\nleaped to such a distance that no man of his day could leap as\nfar as he had.  There were in Rhodes many persons who saw him do\nit and whom he could call as witnesses.  One of the bystanders \ninterrupted him, saying: \"Now, my good man, if this be all true,\nthere is no need of witnesses.  Suppose this to be Rhodes, and\nleap for us.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11213,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nHe who does a thing well does not need to boast."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11213,
+      "Name": "The Cat and the Mice",
+      "Description": "\n   A certain house was overrun with mice.  A cat, discovering this,\nmade her way into it and began to catch and eat them one by one.\nFearing for their lives, the mice kept themselves close in their\nholes.  The cat was no longer able to get at them and perceived\nthat she must tempt them forth by some device.  For this purpose\nshe jumped upon a peg, and suspending herself from it, pretended to\nbe dead.  One of the mice, peeping stealthily out, saw her and said,\n\"Ah, my good madam, even though you should turn into a mealbag, we\nwill not come near you.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11214,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nHe who is once deceived is doubly cautious."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11214,
+      "Name": "The Dog and the Hare",
+      "Description": "\n   A hound, having startled a hare on the hillside, pursued her for\nsome distance, at one time biting her with his teeth as if he would \ntake her life, and at another fawning upon her, as if in play with\nanother dog.  The hare said to him, \"I wish you would act sincerely\nby me, and show yourself in your true colors.  If you are a friend,\nwhy do you bite me so hard? If an enemy, why do you fawn on me?\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11215,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nNo one can be a friend if you know not whether to trust or distrust\nhim."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11215,
+      "Name": "The Eagle and the Fox",
+      "Description": "\n   An eagle and a fox formed an intimate friendship and decided to\nlive near each other.  The eagle built her nest in the branches of\na tall tree, while the fox crept into the underwood and there she\nproduced her young.  Not long after they had agreed upon this plan,\nthe eagle, being in want of provision for her young ones, swooped \ndown while the fox was out, seized upon one of the little cubs, and\nfeasted herself and her brood.  The fox on her return discovered\nwhat had happened, but was less grieved for the death of her young\nthan for her inability to avenge them.  A just retribution, however,\nquickly fell upon the eagle.  While hovering near an altar, on which\nsome villagers were sacrificing a goat, she suddenly seized a piece\nof the flesh, and carried it, along with a burning cinder, to her \nnest.  A strong breeze soon fanned the spark into a flame, and the\neaglets, as yet unfledged and helpless, were roasted in their nest\nand dropped down dead at the bottom of the tree. There, in  sight of\nthe eagle, the fox gobbled them up.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11216,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nDo unto others as you would have done unto you."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11216,
+      "Name": "The Fox and the Grapes",
+      "Description": "\n   A famished fox saw some clusters of ripe black grapes hanging\nfrom a trellised vine.  She resorted to all her tricks to get at \nthem, but wearied herself in vain, for she could not reach them.\nAt last she turned away, hiding her disappointment and saying:\n\"The grapes are sour, and not as ripe as I thought they were.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11217,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nAny fool can despise what he cannot get."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11217,
+      "Name": "The Goat and the Goatherd",
+      "Description": "\n   A goatherd had sought to bring back a stray goat to his flock.\nHe whistled and sounded his horn in vain; the straggler paid no\nattention to the summons.  At last the goatherd threw a stone, and\nbreaking its horn, begged the goat not to tell his master.  The \ngoat replied, \"Why, you silly fellow, the horn will speak though\nI be silent.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11218,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nDo not attempt to hide things that cannot be hidden."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11218,
+      "Name": "The Hare and the Tortoise",
+      "Description": "\n   A hare one day ridiculed the short feet and slow pace of the\ntortoise, who replied, laughing: \"Though you be swift as the wind,\nI will beat you in a race.\"  The hare, believing her assertion to \nbe simply impossible, assented to the proposal; they agreed that \nthe fox should choose the course and fix the goal.  On the day \nappointed for the race, the two started together.  The tortoise\nnever for a moment stopped, but went on with a slow and steady pace\nstraight to the end of the course.  The hare, lying down by the\nwayside, fell fast asleep. At last waking up, and moving as fast as\nhe could, he saw the tortoise had reached the goal, and was dozing\nafter her fatigue.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11219,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nSlow and steady wins the race."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11219,
+      "Name": "The Lion and the Mouse",
+      "Description": "\n   A lion was awakened from sleep by a mouse running over his face.\nRising up angrily, he caught him and was about to kill him, when \nthe mouse piteously entreated, saying, \"If you would only spare my\nlife, I would be sure to repay your kindness.\" The lion laughed and\nlet him go. Shortly after this, the lion was caught by some hunters\nwho bound him by ropes tied to the ground. The mouse, recognizing \nhis roar, came and gnawed the rope and set him free, exclaiming:\n\"You ridiculed the idea of my ever being able to help you; now you \nknow that it is possible for even a Mouse to help a Lion.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11220,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nEven the weak can help the strong."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11220,
+      "Name": "The Man and His Two Sweethearts",
+      "Description": "\n   A middle aged man, whose hair had begun to turn gray, courted two\nwomen at the same time. One of them was young, and the other well\nadvanced in years. The elder woman, ashamed to be courted by a man\nyounger than herself, made a point, whenever her admirer visited her\nto pull out some portion of his black hairs. The younger, on the \ncontrary, not wishing to become the wife of an old man, was equally\nzealous in removing every gray hair she could find. Thus it came to \npass that between them both he very soon found that he had not a \nsingle hair on his head.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11221,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nThose who seek to please everybody please nobody."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11221,
+      "Name": "The North Wind and the Sun",
+      "Description": "\n   The North Wind and the Sun disputed as to which was the most \npowerful, and agreed that he should be declared the victor who \ncould first strip a wayfaring man of his clothes. The North Wind\nfirst tried his power and blew with all his might, but the keener \nhis blasts, the closer the Traveler wrapped his cloak around him,\nuntil at last, resigning all hope of victory, the Wind called upon\nthe Sun to see what he could do. The Sun suddenly shone out with \nall his warmth. The Traveler no sooner felt his genial rays than\nhe took off one garment after another, and at last, fairly overcome\nwith heat, undressed and bathed in a stream that lay in his path.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11222,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nPersuasion is better than Force."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11222,
+      "Name": "The Oxen and the Axle Trees",
+      "Description": "\n   A heavy wagon was being dragged along a country lane by a team of\noxen. The axle trees groaned and creaked terribly; whereupon the oxen\nturning around, thus addressed the wheels: \"Hullo there! Why do you \nmake so much noise? We bear all the labor, and we, not you, ought to\nbe the ones crying out.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11223,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nThose who suffer most, cry out the least."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11223,
+      "Name": "The Peacock and Juno",
+      "Description": "\n   A peacock once placed a petition before Juno desiring to have the\nvoice of a nightingale in addition to his other attractions, but Juno\nrefused his request.  When he persisted, and pointed out that he was \nher favorite bird, she said, \"Be content with your lot, for you cannot\nbe first in everything.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11224,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nBe content with what you are given."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11224,
+      "Name": "The Quack Frog",
+      "Description": "\n   A frog once upon a time came forth from his home in the marsh and\nproclaimed to all the beasts that he was a learned physician, skilled\nin the use of drugs and able to heal all diseases.  A fox asked him,\n\"How can you pretend to prescribe for others, when you are unable to\nheal your own lame gait and wrinkled skin?\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11225,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nPhysician, heal thyself!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11225,
+      "Name": "The Rose and the Amaranth",
+      "Description": "\n   A rose and an amaranth blossomed side by side in a garden, and the\namaranth said to her neighbor, \"How I envy you your beauty and your \nsweet scent! No wonder you are such a universal favorite.\" But the \nrose replied with a shade of sadness in her voice, \"Ah, my dear friend,\nI bloom but for a time: my petals soon wither and fall, and then I die.\nBut your flowers never fade, even if they are cut; for they are ever\nlasting.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11226,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nGreatness carries its own penalties."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11226,
+      "Name": "The Shepherd's Boy and the Wolf",
+      "Description": "\n   A shepherd boy, who watched a flock of sheep near a village, \nbrought out the villagers three or four times by crying out,\n\"Wolf! Wolf!\" and when his neighbors came to help him, laughed\nat them for their pains. The wolf, however, did truly come at \nlast. The shepherd boy, now really alarmed, shouted in an agony\nof terror: \"Pray, do come help me; the wolf is killing the sheep\";\nbut nobody paid any heed to his cries, nor rendered any assistance.\nThe wolf, having no cause of fear, at his leisure destroyed the \nentire flock.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11227,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nThere is no believing a liar, even when he speaks the truth."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11227,
+      "Name": "The Thief and the Housedog",
+      "Description": "\n   A thief came in the night to break into a house. He bought with\nhim several slices of meat in order to pacify the housedog, so that\nhe would not alarm his master by barking. As the thief threw him the\npieces of meat, the dog said, \"If you think to stop my mouth, you are\ngreatly mistaken. This sudden kindness at your hands will only make\nme more watchful, lest under these unexpected favors to myself, you\nhave some private ends to accomplish for your own benefit, and for\nmy master's injury.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11228,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nA bribe in hand betrays mischief at heart."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11228,
+      "Name": "The Vixen and the Lioness",
+      "Description": "\n   A vixen who was taking her babies out for an airing one balmy \nmorning, came across a lioness with her cub in arms. \"Why such\nairs, haughty dame, over one solitary cub?\" sneered the vixen.\n\"Look at my healthy and numerous litter here, and imagine, if you\nare able, how a proud mother should feel.\" The lioness gave her a \nsquelching look, and lifting up her nose, walked away, saying \ncalmly, \"Yes, just look at that beautiful collection. What are\nthey? Foxes! I've only one, but remember, that one is a lion.\"",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11229,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nQuality is better than quantity."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11229,
+      "Name": "The Wolf in Sheep's Clothing",
+      "Description": "\n   A wolf found great difficulty in getting at the sheep owing to \nthe vigilance of the shepherd and his dogs. But one day it found\nthe skin of a sheep that had been flayed and thrown aside, so it \nput it on over its own pelt and strolled down among the sheep. The\nlamb that belonged to the sheep, whose skin the wolf was wearing, \nbegan to follow the wolf in the sheep's clothing; so, leading the\nlamb a little apart, he soon made a meal of her, and for some time\nsucceeded in deceiving the sheep, and enjoying hearty meals.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11230,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nAppearances can be deceiving."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11230,
+      "Name": "The Aethiop",
+      "Description": "\n   The purchaser of a black servant was persuaded that the color of \nhis skin arose from dirt contracted through the neglect of his \nformer masters. On bringing him home he resorted to every means of\ncleaning, and subjected the man to incessant scrubbings. The servant\ncaught a severe cold, but he never changed his color of complexion.",
+      "ZoneId": 112,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moral"
+          ],
+          "Description": "\nWhat's bred in the bone will stick to the flesh."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 11200,
+      "Name": "ant worker m11200",
+      "ShortDescription": "\nthe worker ant",
+      "LongDescription": "\nA tiny worker ant glares at you for being in its way.",
+      "Description": "\nThis ant scurries about with the rest of his colony preparing \ngrain for the winter. He seems very determined to get his job \ndone efficiently, and he doesn't look too happy now that you've\nmanaged to get in his way.",
+      "Level": 17,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11201,
+      "Name": "grasshopper grass m11201",
+      "ShortDescription": "\nthe starving grasshopper",
+      "LongDescription": "\nThe grasshopper begs you for some food.",
+      "Description": "\nAlthough he once sang cheerily in the summer evenings, famine has \ncaused this grasshopper to look sickly and weak. His antennae \nhang droopily and his skin has turned a strange yellowish green \ncolor. Perhaps one of the ants will be kind enough to give him \nsome food to last him the winter.",
+      "Level": 18,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 shiver;%5 say Please, sir, can I have some more?",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11202,
+      "Name": "traveller m11202",
+      "ShortDescription": "\nthe boasting traveller",
+      "LongDescription": "\nA man is telling tales to anybody who will listen.",
+      "Description": "\nFrom the suitcase at his feet to the trinkets in his pockets, you \ncan tell that this man has been on numerous journeys.  The most \nimpressive souveneir that he has brought home, though, are the tall \ntales that are tumbling out of his mouth.",
+      "Level": 16,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11203,
+      "Name": "mouse m11203",
+      "ShortDescription": "\na wary mouse",
+      "LongDescription": "\nYou think you see two eyes peering at you through a hole in the wall.",
+      "Description": "\nAfter being terrorized by that awful cat, it's no wonder the mice \nhere are so frightened. It's difficult to get a good look at them \nas they go scurrying across the floor, and the only thing you see \nis a scrawny tail disappearing into a hole in the wall.",
+      "Level": 15,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Hide"
+      ],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%10 emote squeeks frightfully.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11204,
+      "Name": "cat m11204",
+      "ShortDescription": "\nthe deceitful cat",
+      "LongDescription": "\nA dead cat is hanging from a peg on the wall.",
+      "Description": "\nAt first glance, this beautiful calico kitty appears to be dead, \nbut upon closer examination you see that she is very much alive. \nEvery now and then she peeks at the mouse hole with one eye to \nsee if the mice have fallen for her trick.",
+      "Level": 19,
+      "Race": "Catbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11205,
+      "Name": "dog hound m11205",
+      "ShortDescription": "\na hound dog",
+      "LongDescription": "\nA hound dog playfully chases a hare across the hillside.",
+      "Description": "\nThis puppy is full of energy, and it's obvious that he just wants \nto play with his new friend, the hare. He looks at you with big \nbrown eyes and wags his tail in an invitation to come play with him.",
+      "Level": 20,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "AggressiveEvil"
+      ],
+      "Affects": [],
+      "Alignment": -250,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%15 bark",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11206,
+      "Name": "hare m11206",
+      "ShortDescription": "\nthe hare",
+      "LongDescription": "\nThe hare runs as fast as she possibly can away from the hound.",
+      "Description": "\nThis poor hare just can't seem to get away from her pursuer, \ndespite her powerful legs and natural agility. Her long ears \nstart to twitch with fright as the hound dog closes in on her. He \nwouldn't really eat her... would he?",
+      "Level": 20,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11207,
+      "Name": "eagle m11207",
+      "ShortDescription": "\na mourning eagle",
+      "LongDescription": "\nAn eagle mourns the loss of her young.",
+      "Description": "\nThis eagle sits in the place where her nest once sat, high above \nthe ground nestled in the branches of a tall tree. The once proud \neagle silently ruffles her feathers as she looks down at the fox \nwith her beady eyes. At one time, the two of them had been close \nfriends, now it appears they are mortal enemies.",
+      "Level": 18,
+      "Race": "Flybeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "AggressiveGood"
+      ],
+      "Affects": [
+        "Infrared",
+        "Berzerk",
+        "Fly"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11208,
+      "Name": "fox vixen m11208",
+      "ShortDescription": "\nthe vengeful vixen",
+      "LongDescription": "\nA childless vixen seeks revenge against the eagle.",
+      "Description": "\nEverybody knows that the fox is the most clever creature in the \nworld, and this one is no exception. She knows that mourning for \nthe loss of her children is not going to bring them back, and \ninstead seeks retribution. Don't double cross this fox unless you \nwant to feel the heat of her ire.",
+      "Level": 18,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "AggressiveEvil"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11209,
+      "Name": "fox m11209",
+      "ShortDescription": "\na hungry fox",
+      "LongDescription": "\nA starving fox mutters something about sour grapes.",
+      "Description": "\nSomething in this fox's eyes makes you want to run in the \nopposite direction; perhaps it is because she looks bitter and \nhungry, not a good combination in a fox. While foxes are known \nfor being swift and cunning, this one obviously couldn't figure \nout how to get those grapes down.",
+      "Level": 16,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11210,
+      "Name": "goat m11210",
+      "ShortDescription": "\na wandering goat",
+      "LongDescription": "\nA goat has meandered away from its flock.",
+      "Description": "\nThis goat wanders around the mountainside nibbling on the grass, \nnot really paying attention to anything else around him. Upon \ncloser inspection you notice that one of his horns has been \nbroken by someone or something. Perhaps the inattentiveness of \nthe goat has gotten him into trouble before.",
+      "Level": 19,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11211,
+      "Name": "goatherd boy m11211",
+      "ShortDescription": "\nthe guilty goatherd",
+      "LongDescription": "\n#cThe guilty goatherd whispers to you, 'I'm in trouble...'#N",
+      "Description": "\nA boy of no more than fifteen or sixteen looks at you with a \nguilty look on his face. His ruddy complexion indicates that he \nmust spend a lot of time on this mountain with his goats. Every \nnow and then he checks to make sure the flock is still together. \nMaybe he knows what has happened to the goat with the broken horn.",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11212,
+      "Name": "tortoise m11212",
+      "ShortDescription": "\nthe persistent tortoise",
+      "LongDescription": "\nA tortoise walks steadily past you with a determined look on her face.",
+      "Description": "\nThis tortoise won't let anything get in the way of her goal - the \nfinish line! She ambles slowly down the path with her stumpy legs, \nnot even flinching as the hare speeds past her.",
+      "Level": 17,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11213,
+      "Name": "hare m11213",
+      "ShortDescription": "\na sleeping hare",
+      "LongDescription": "\nYou hear a hare snoring as he sleeps under a tree.",
+      "Description": "\nLooking peaceful and contented, this hare sleeps away the \nafternoon under a huge tree.  His long ears hang down and every \nnow and then you see his nose twitch. It is hard to imagine that \nthis hare plans on winning a race by sleeping, especially \nconsidering that his opponent is just coming around the bend.",
+      "Level": 16,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Sleep"
+      ],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11214,
+      "Name": "mouse m11214",
+      "ShortDescription": "\na mouse",
+      "LongDescription": "\nA mouse tries desperately to save his friend, the lion.",
+      "Description": "\nThis little gray mouse scampers about as he attempts to chew the \nlion out of trouble. One would never think that a timid mouse \nwould be able to aid a brave and mighty lion, but the proof is \nright in front of you.",
+      "Level": 15,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11215,
+      "Name": "lion m11215",
+      "ShortDescription": "\nthe trapped lion",
+      "LongDescription": "\nA lion seems to have been outsmarted by giant ropes.",
+      "Description": "\nThe lion roars angrily at the rope that has ensnared him, which \nonly traps him more. His golden mane is tangled and his teeth are \nbared... maybe you should leave before he becomes free and attacks\nthe closest living thing - YOU!",
+      "Level": 20,
+      "Race": "Catbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote roars in your general direction.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11216,
+      "Name": "man m11216",
+      "ShortDescription": "\nOld Baldy",
+      "LongDescription": "\nYou flinch as the light reflects off this man's head.",
+      "Description": "\nThis finely dressed man stands here frowning, probably due to the \nfact that he no longer has any hair on his head.  Rumor has it \nthat he got himself into trouble with the ladies, and that's never \na good sign.",
+      "Level": 18,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11217,
+      "Name": "wind north m11217",
+      "ShortDescription": "\nthe North Wind",
+      "LongDescription": "\nYou feel a sudden gust of air as the North Wind greets you.",
+      "Description": "\nThe North Wind picks up anything it can that stands in its path \nand chills everything else.  Just looking at it makes you want to \npile on some more clothes.",
+      "Level": 20,
+      "Race": "Air",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Hover"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11218,
+      "Name": "sun m11218",
+      "ShortDescription": "\nthe blazing Sun",
+      "LongDescription": "\nAn intense heat fills your body as the Sun shines down upon you.",
+      "Description": "\nNot paying any attention to all those warnings about looking \ndirectly at the sun has proved to be a very dumb thing to do. \nThe only thing that you manage to notice before having to turn \naway is that it's just bright... very, very bright.",
+      "Level": 20,
+      "Race": "Fire",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11219,
+      "Name": "peacock bird m11219",
+      "ShortDescription": "\nthe peacock",
+      "LongDescription": "\nA peacock struts about, showing off his plumage with pride.",
+      "Description": "\nThis beautiful bird can't last a single day without showing off \nhis feathers to everyone around him. They are a radiant blue and \ngreen with just a touch of yellow, and they make you want to \nreach out and take one... but you wouldn't dare do that, would you?",
+      "Level": 16,
+      "Race": "Flybeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11220,
+      "Name": "frog m11220",
+      "ShortDescription": "\na crazy frog",
+      "LongDescription": "\nA frog rushes up to you claiming that he can heal all your wounds.",
+      "Description": "\nThis \"cure-all\" doctor needs to listen to his own advice - he \nwalks with a crutch and has wrinkles all over his body. He seems \nfriendly enough, if not a little bit looney in the head.",
+      "Level": 16,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Wimpy"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 say Ribbit! Ribbit Ribbit!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11221,
+      "Name": "boy shepherd m11221",
+      "ShortDescription": "\nthe shepherd",
+      "LongDescription": "\nThe shepherd boy mourns the loss of his flock.",
+      "Description": "\nThis young man will never forget the lesson he learned the night \nthat awful wolf devoured his flock right before his eyes. He \nwatches cautiously over the meadow and is always looking over \nhis shoulder for any signs of danger.",
+      "Level": 15,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11222,
+      "Name": "thief m11222",
+      "ShortDescription": "\nthe sneaky thief",
+      "LongDescription": "\nA thief tries to look innocent as he breaks into somebody's house.",
+      "Description": "\nThis HUGE man manages to make himself look small and stealthily moves  \nalong the wall of this unsuspecting person's house. He doesn't look \nlike someone you should be messing around with, so maybe you should \nkeep moving and pretend you never saw a thing.",
+      "Level": 19,
+      "Race": "Humanoid",
+      "Class": "Thief",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Light",
+        "Sneak"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11223,
+      "Name": "lioness lion m11223",
+      "ShortDescription": "\nthe lioness",
+      "LongDescription": "\nA lioness holds and cuddles her cub in her arms.",
+      "Description": "\nObviously, this lioness is proud of her only cub, and she makes \nsure it is well cared for. She looks at the little cub, and the \nonly thing you can see in her big brown eyes is pure love and \naffection.",
+      "Level": 17,
+      "Race": "Catbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Sleep",
+        "Infrared"
+      ],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11224,
+      "Name": "wolf m11224",
+      "ShortDescription": "\na wolf",
+      "LongDescription": "\nAn odd-looking sheep stands out from the rest of the flock.",
+      "Description": "\nAs you approach the odd sheep, you realize that it is actually a \nwolf in a sheep's skin. The disguise is an excellent one... or \nelse these are very gullible sheep!",
+      "Level": 17,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "AggressiveGood"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": []
+}

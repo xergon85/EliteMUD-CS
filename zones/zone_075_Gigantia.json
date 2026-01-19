@@ -1,0 +1,5807 @@
+{
+  "Zone": {
+    "Id": 75,
+    "Name": "Gigantia",
+    "TopRoomId": 7554,
+    "Lifespan": 40,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7500,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7501,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7506,
+        "Arg2": 5,
+        "Arg3": 7503,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7506,
+        "Arg2": 5,
+        "Arg3": 7503,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7501,
+        "Arg2": 5,
+        "Arg3": 7504,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7500,
+        "Arg2": 4,
+        "Arg3": 7504,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7504,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7510,
+        "Arg2": 1,
+        "Arg3": 7505,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 7500,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7503,
+        "Arg2": 10,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7508,
+        "Arg2": 15,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7505,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7505,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7512,
+        "Arg2": 1,
+        "Arg3": 7506,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 7501,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7506,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7501,
+        "Arg2": 5,
+        "Arg3": 7508,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7500,
+        "Arg2": 4,
+        "Arg3": 7508,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7501,
+        "Arg2": 5,
+        "Arg3": 7509,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7500,
+        "Arg2": 4,
+        "Arg3": 7509,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7509,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7506,
+        "Arg2": 5,
+        "Arg3": 7511,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7506,
+        "Arg2": 5,
+        "Arg3": 7511,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7501,
+        "Arg2": 5,
+        "Arg3": 7512,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7506,
+        "Arg2": 5,
+        "Arg3": 7512,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7500,
+        "Arg2": 4,
+        "Arg3": 7512,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7513,
+        "Arg2": 4,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7507,
+        "Arg2": 5,
+        "Arg3": 7514,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7507,
+        "Arg2": 5,
+        "Arg3": 7514,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7507,
+        "Arg2": 5,
+        "Arg3": 7515,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7507,
+        "Arg2": 5,
+        "Arg3": 7515,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7511,
+        "Arg2": 1,
+        "Arg3": 7517,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7518,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7507,
+        "Arg2": 5,
+        "Arg3": 7519,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7517,
+        "Arg2": 5,
+        "Arg3": 7519,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7519,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7517,
+        "Arg2": 5,
+        "Arg3": 7522,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7522,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7502,
+        "Arg2": 5,
+        "Arg3": 7523,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7523,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7523,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7523,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7517,
+        "Arg2": 5,
+        "Arg3": 7524,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7524,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7524,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7523,
+        "Arg2": 1,
+        "Arg3": 7525,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7504,
+        "Arg2": 15,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7517,
+        "Arg2": 5,
+        "Arg3": 7525,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7525,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7502,
+        "Arg2": 5,
+        "Arg3": 7526,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7526,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7502,
+        "Arg2": 5,
+        "Arg3": 7527,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7502,
+        "Arg2": 5,
+        "Arg3": 7527,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7518,
+        "Arg2": 1,
+        "Arg3": 7527,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7509,
+        "Arg2": 20,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7516,
+        "Arg2": 1,
+        "Arg3": 7528,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 7502,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 7528,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7505,
+        "Arg2": 15,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7506,
+        "Arg2": 15,
+        "Arg3": 4,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7514,
+        "Arg2": 1,
+        "Arg3": 7529,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 7519,
+        "Arg2": 100,
+        "Arg3": 7529,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 7514,
+        "Arg2": 15,
+        "Arg3": 7519,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7529,
+        "Arg2": 4,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7530,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7504,
+        "Arg2": 5,
+        "Arg3": 7531,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7504,
+        "Arg2": 5,
+        "Arg3": 7531,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7504,
+        "Arg2": 5,
+        "Arg3": 7532,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7504,
+        "Arg2": 5,
+        "Arg3": 7532,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7504,
+        "Arg2": 5,
+        "Arg3": 7533,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7521,
+        "Arg2": 1,
+        "Arg3": 7533,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7510,
+        "Arg2": 15,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7533,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7534,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7503,
+        "Arg2": 5,
+        "Arg3": 7535,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7503,
+        "Arg2": 5,
+        "Arg3": 7535,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7503,
+        "Arg2": 5,
+        "Arg3": 7536,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7522,
+        "Arg2": 1,
+        "Arg3": 7536,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7511,
+        "Arg2": 15,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7536,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 7521,
+        "Arg2": 30,
+        "Arg3": 7537,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7537,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7503,
+        "Arg2": 5,
+        "Arg3": 7538,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7503,
+        "Arg2": 5,
+        "Arg3": 7538,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7505,
+        "Arg2": 5,
+        "Arg3": 7540,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7505,
+        "Arg2": 5,
+        "Arg3": 7540,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7505,
+        "Arg2": 5,
+        "Arg3": 7541,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7520,
+        "Arg2": 1,
+        "Arg3": 7541,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7515,
+        "Arg2": 15,
+        "Arg3": 14,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7516,
+        "Arg2": 15,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7505,
+        "Arg2": 5,
+        "Arg3": 7542,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7505,
+        "Arg2": 5,
+        "Arg3": 7542,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7513,
+        "Arg2": 3,
+        "Arg3": 7543,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7513,
+        "Arg2": 3,
+        "Arg3": 7543,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7513,
+        "Arg2": 3,
+        "Arg3": 7543,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7543,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7515,
+        "Arg2": 2,
+        "Arg3": 7544,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7515,
+        "Arg2": 2,
+        "Arg3": 7544,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7508,
+        "Arg2": 5,
+        "Arg3": 7546,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7519,
+        "Arg2": 1,
+        "Arg3": 7547,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7513,
+        "Arg2": 15,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7508,
+        "Arg2": 5,
+        "Arg3": 7549,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7508,
+        "Arg2": 5,
+        "Arg3": 7550,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7508,
+        "Arg2": 5,
+        "Arg3": 7551,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7508,
+        "Arg2": 5,
+        "Arg3": 7552,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7509,
+        "Arg2": 1,
+        "Arg3": 7553,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 7517,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7512,
+        "Arg2": 15,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7553,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 7518,
+        "Arg2": 20,
+        "Arg3": 7554,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 7520,
+        "Arg2": 100,
+        "Arg3": 7554,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 7522,
+        "Arg2": 15,
+        "Arg3": 7520,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7554,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 7500,
+      "Name": "Cavernous Gate",
+      "Description": "\n   As you enter the area you notice a giant boulder blocking your path.\nUpon closer inspection it seems that there is a large iron gate in the\ncenter of the boulder which leads to the area beyond. The only other\nexit appears to be back south the way you came.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7501,
+          "Description": "You see a large iron gate with hand rings for opening. The rings\nappear to be as big as a human head.",
+          "Keywords": [
+            "gate",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 580,
+          "Description": "The path leads back the way you came.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7501,
+      "Name": "Beyond the Gate",
+      "Description": "\n   The room here is remarkably clean for the inside of a cave. Dim torch\nlight lines the walls as if someone has been through here recently. More\ntorches line the walls to the east and the gate is back to the south.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7500,
+          "Description": "You see a large iron gate with hand rings for opening.",
+          "Keywords": [
+            "door",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7502,
+          "Description": "The dimly lit hall stretches onward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7502,
+      "Name": "Inside South Gate",
+      "Description": "\n   The room here is well lit by torches as well but the only occupants\nyou see are the small spiders and rats which pass before you from time\nto time. There is a large sculpture of some being who you have never\nseen before sitting in the corner of the room. From here it appears you\ncan go north or east but the rooms beyond no longer have a source of\nlight to guide you.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7503,
+          "Description": "The passage leads of into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7514,
+          "Description": "The passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7501,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sculpture",
+            "statue"
+          ],
+          "Description": "\nthe statue has the eyes of a demon and they seem to burn right through\nanyone who looks at it."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7503,
+      "Name": "Cave West Passage",
+      "Description": "\n   The passage is covered in the bones of some humanoid figure or maybe\nseveral you cant really tell. There is a small humming noise coming from\nthe north but you cant make out exactly where. The passage also leads\nsouth into the darkness.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7504,
+          "Description": "The passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7502,
+          "Description": "The passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7504,
+      "Name": "Middle West Passage",
+      "Description": "\n   The room contains a weapons rack along the west wall but anything\nhere is far too old to be of any use or already broken. There is an oak\ndoor in the east wall which is usually closed. The passage also\ncontinues up some 40 feet above.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7507,
+          "Description": "A rocky cliff ledge can be barely made out some 40 feet up.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7505,
+          "Description": "There is an oak door here.",
+          "Keywords": [
+            "oak",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7503,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7505,
+      "Name": "Alchemist's Study",
+      "Description": "\n   It is almost immediately apparent that this room belongs to the\nalchemist. Broken potion bottles lay everywhere here and there seems to\nbe a small chest in the northwest corner of the room. There is an oak\ndoor to the west here and strangely enough a window in the north wall.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Dispell"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7504,
+          "Description": "There is an oak door here.",
+          "Keywords": [
+            "oak",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7506,
+          "Description": "You see a small window.",
+          "Keywords": [
+            "small",
+            "window"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7500
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7506,
+      "Name": "Beast Lair",
+      "Description": "\n   The room here is covered in some type of some strange animal\ndroppings.  From the size of the claw marks in the floor a very large\nanimal. If its not here count yourself lucky and take the exit to the\nsouth.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7505,
+          "Description": "You see a small window.",
+          "Keywords": [
+            "small",
+            "window"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7500
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7507,
+      "Name": "Cliff Edge",
+      "Description": "\n\n   From where you stand now you can see that the room is really only a\nsmall ledge. Tracks here show that the ledge is used quite often though.\nThe ledge continues to the west and the passage leads down to the south \nas well.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7508,
+          "Description": "The small ledge continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7504,
+          "Description": "The rocky cliff leads into the darkness below.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7508,
+      "Name": "Upper Cavern",
+      "Description": "\n   The room you see has obviously had a lot of work put into it. Someone\nhas hand carved out of the rocks a set of stairs. The stairs lead up\nto the north into the darkness and there is a passage to the east \nhere as well.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7509,
+          "Description": "A set of stairs leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7507,
+          "Description": "A small ledge continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7509,
+      "Name": "Northeast Balcony",
+      "Description": "\n   Upon exiting the stairway you come upon a large stone balcony. There\nseems to be several pictures here placed on the north wall of strange\ncreatures. The balcony continues to the west and there is a red colored\ndoor to the east.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7511,
+          "Description": "The balcony leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7510,
+          "Description": "You see a red door to the east here.",
+          "Keywords": [
+            "door",
+            "red"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7508,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "door",
+            "red"
+          ],
+          "Description": "\nthere is a strange language on the door but you can make out the word\ndanger."
+        },
+        {
+          "Keywords": [
+            "picture"
+          ],
+          "Description": "\nalong all the pictures you see a name followed by another name in large\nletters and discover this is sort of a record of kills by the person in\nlarge letters."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7510,
+      "Name": "Beyond the Red Door",
+      "Description": "\n   Apparently the construction crew forgot to finish this room. As you\nenter you notice the floor is missing. You drop some 75 feet to the cave\nbottom below. Miraculously you notice that only your legs are broken and\nyou are going to survive. Unfortunately you discover you have landed in\na lake of quicksand though and you sink to the bottom and die.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7509,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7511,
+      "Name": "Northwest Balcony",
+      "Description": "\n   Nothing seems out of the ordinary in this room. The stone balcony\ncontinues to the east and the west from here. There is also another\nlarge sculpture in this room that resembles the one you seen before.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7509,
+          "Description": "The balcony continues off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7512,
+          "Description": "The balcony continues off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7512,
+      "Name": "Balcony End",
+      "Description": "\n   From here the balcony leads off north into the darkness and the\npassage leads to the east as well. One major difference though is that\nthe stone floor no longer exists but is now made of marble instead.\nThere is some more strange writing on the wall here as well.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7511,
+          "Description": "The balcony continues off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7513,
+          "Description": "The passage disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "writing"
+          ],
+          "Description": "\nYou have entered the home of Atrolicus master giant. Turn back while you\nstill can."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7513,
+      "Name": "Forbidden Passage",
+      "Description": "\n   As you enter the room you see a very large statue of a knight. It is\nwearing full platemail and carrying a massive shield. You notice some\nsmall writing on its shield. There is also a passage to the south here.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7512,
+          "Description": "The passage disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7530,
+          "Description": "You hear a faint humming coming from this direction.",
+          "Keywords": [
+            "gate",
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7501
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "statue",
+            "shield",
+            "knight"
+          ],
+          "Description": "\n\nWhat is beyond this door above is a great evil. I have set up a gate to\nkeep it out and my diamond sword is the only thing that can take it\ndown. To pass you must get it."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7514,
+      "Name": "South Wall",
+      "Description": "\n   The room here is about 50 feet from one end to the other. There is\nonly a small walkway big enough for one person at a time here and the\nfloor is covered with stalagmites. The passage runs east and west into\nthe darkness but better watch your step.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7502,
+          "Description": "The passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7515,
+          "Description": "The passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7515,
+      "Name": "Southeast Corner of Passage",
+      "Description": "\n   The most distinguishable feature as you enter this room is the small\nlake in the center. The water of the lake is crystal clear and appears\nto be running off to the north. There is also a passage to the west here\nas well.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7514,
+          "Description": "The passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7516,
+          "Description": "You notice a light off in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7516,
+      "Name": "Garden Area",
+      "Description": "\n   As you enter you see many types of plants here which most you dont\nrecognize. The area is very bright as too get the needed light for the\nplants and yet you can seem to find a light source. The lake continues\nthrough the garden to the east here and there is a passage to the south\nas well.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7515,
+          "Description": "There is a passage that leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7517,
+          "Description": "All you can see is plants this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7517,
+      "Name": "Middle Garden",
+      "Description": "\n   As you enter the area you finally discover what was making the\nhumming noise. There are millions of bees all over the area. The garden\nand the lake lead to the east and the west here.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Damage"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7518,
+          "Description": "The garden leads off to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7516,
+          "Description": "The garden leads off to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7518,
+      "Name": "Garden End",
+      "Description": "\n   You finally come to the end of the garden and meet up with a large\nstone wall. The lake seems to have entirely disappeared from sight\nhowever.  The garden leads to the west here.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7517,
+          "Description": "Large plants are everywhere in sight.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7519,
+          "Description": "You see a large stone wall.",
+          "Keywords": [
+            "stone",
+            "wall"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7519,
+      "Name": "Secret Chamber",
+      "Description": "\n   The entire room is decorated with medals of honor and trophies to\nmatch.  The lake as you have now discovered went here and flows through\na narrow opening in the ground. The hall continues through the stone\nwall to the west or to the north as well.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7518,
+          "Description": "You see a large stone wall.",
+          "Keywords": [
+            "stone",
+            "wall"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7520,
+          "Description": "The hall leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7520,
+      "Name": "Court Beginning",
+      "Description": "\n   As you enter you notice a red carpet running down the center of the\nhall and disappearing to the north. There are two large golden statues\nhere on either side of the passage. Both statues appear to be great\nwarriors decorated for battle. The passage also leads to the south as\nwell.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7519,
+          "Description": "The passage disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7521,
+          "Description": "The red carpet runs off to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7521,
+      "Name": "Banquet Hall",
+      "Description": "\n   There is a large table in this room that stretches from end to end.\nIt appears to be set up for a great feast and looks like about 30 people\nwill be attending. The walla are covered with brightly colored\ntapestries and most have the name Atrolicus on them. The red carpet runs\nout the door to the north and south here.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7522,
+          "Description": "The red carpet runs out the door to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7519,
+          "Description": "The red carpet runs out the door to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7522,
+      "Name": "Court End",
+      "Description": "\n   The red carpet comes to an end here and the two large golden statues\nare present here as well. There is a set of large double doors to the\nnorth with a symbol of a lightning bolt across them. The passage leads\nto the south as well.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7523,
+          "Description": "A set of large double doors lies ahead.",
+          "Keywords": [
+            "doors",
+            "large",
+            "double",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7521,
+          "Description": "\nThe red capet runs to the south here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7523,
+      "Name": "Main Barracks",
+      "Description": "\n   The area here appears to be some type of training grounds. There are\nremains of broken weapons and armor laying on the floor and huge targets\nlining the walls at the opposite end of the room. There appears to be a\nlarge crystal door on the west wall and a large diamond door to the east\nhere.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7524,
+          "Description": "A large crystal door is here.",
+          "Keywords": [
+            "door",
+            "crystal"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7526,
+          "Description": "A large diamond door is here.",
+          "Keywords": [
+            "diamond",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7522,
+          "Description": "A set of large double doors lies ahead.",
+          "Keywords": [
+            "doors",
+            "large",
+            "double",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7524,
+      "Name": "Southwest Corner of Barracks",
+      "Description": "\nThis room appears to be some sort of sleeping quarters. Several large\nmats are placed on the floor here and all appear to have been used\nrecently. There is a large wooden door to the north and a large crystal\ndoor to the east here as well.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7525,
+          "Description": "A large wooden door is here.",
+          "Keywords": [
+            "wooden",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7523,
+          "Description": "A large crystal door is here.",
+          "Keywords": [
+            "crystal",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7525,
+      "Name": "Northwest Corner of Barracks",
+      "Description": "\n   The room here contains a large weapons rack with a vast assortment of\ndifferent weapons. Some appear to be too large and heavy to use however\nthere may be something to your approval here. The passage to the south\nappears to be the only exit here.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7524,
+          "Description": "A large wooden door is here.",
+          "Keywords": [
+            "wooden",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7526,
+      "Name": "Southeast Corner of Barracks",
+      "Description": "\n   The room here appears to be the sleeping quarters of several large\nfigures. Mats lie on the floor which appear to have been used recently\nand some half eaten bread is laying in the corner of the room. There is\na large diamond door to the west here and a passage that leads north as\nwell.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7523,
+          "Description": "A large diamond door is here.",
+          "Keywords": [
+            "diamond",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7527,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7527,
+      "Name": "Northeast Corner of Barracks",
+      "Description": "\n   As you enter the room the first thing you notice is an extremly large\nmap on the east wall. The map has about 20 large red X marks on it in\nvarious assorted places. There is also a very large table in the center\nof the room and exits to the south and west here as well.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7526,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7528,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7528,
+      "Name": "Inner Sanctum",
+      "Description": "\n   Along the north wall is a huge waterfall that empties into a large\nlight green colored pool in the center of the room. Along the west wall\nsits a huge golden throne surrounded by two huge golden statues of\ndragons.  There is a passage to the east here and you seem to see a\nsmall grate in the center of the pool here as well.",
+      "ZoneId": 75,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7527,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7529,
+          "Description": "A small grate lies beneath the water.",
+          "Keywords": [
+            "grate",
+            "small"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7502
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7529,
+      "Name": "Pool Cavern",
+      "Description": "\n   There is a large chest directly in the center of this room on a small\nledge. The water surrounds the ledge but so far you don't see anything \nin the water that looks threatening. The only exit you see is up through\nthe grate.",
+      "ZoneId": 75,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7528,
+          "Description": "A small grate is here.",
+          "Keywords": [
+            "grate",
+            "small"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7502
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7530,
+      "Name": "Beyond Balcony",
+      "Description": "\n   The room here has been carefully constructed just like the previous\nrooms on the balcony. There is a large diamond hand railing running\nalong the room and dissapearing to the north. The only other exit\nappears to be down the stairs.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7531,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7513,
+          "Description": "You hear a faint humming coming from this direction.",
+          "Keywords": [
+            "gate",
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7501
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7531,
+      "Name": "Southeast Hallway",
+      "Description": "\n   The room here is of the same construction as the other however very\npoorly cared for. Creatures of various kinds wander the halls here\nalthough none seem to dangerous. A passage leads to the south and to the\neast here.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7530,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7532,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7532,
+      "Name": "South Wall",
+      "Description": "\n   This room appears to be used as a bathroom for the current occupants.\nThere is a chamber pot set in the corner and the smell is almost enough\nto kill you. The passage leads to the north and west here.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7531,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7533,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7533,
+      "Name": "East Wall",
+      "Description": "\n   The room is made entirely of polished brown stone. Rows of pillars\nsupport the ceiling approximately 12 feet overhead. There is a passage\nto the north and south and a door to the east here as well.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7535,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7532,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7534,
+          "Description": "You see a large iron door here.",
+          "Keywords": [
+            "iron",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7534,
+      "Name": "Private Chamber",
+      "Description": "\n   This small room is lit by a hanging lamp of dull metal. It contains a\nbed,chair,and small table. A large iron door to the west appears to be\nthe only exit.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7533,
+          "Description": "A large iron door is here.",
+          "Keywords": [
+            "iron",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7535,
+      "Name": "Room of Battle",
+      "Description": "\n   As you walk in you see many colorful paintings of great battles in\nthe realm of Elite. What is most interesting is that the paintings of\nbattles are actually alive. There is a passage to the south and to the\nwest here as well.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7533,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7536,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "paintings",
+            "painting"
+          ],
+          "Description": "\nAs you peer closer you recognize the great gods of elite such as\nHelm, IO, Phobos, and Kaleen doing battle with the forces of evil."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7536,
+      "Name": "North Hall",
+      "Description": "\n   This large chamber is empty and bare. The polished stones of its\nfloor are exceptionally smooth and close fitted. Each sound here causes\na very alarming echo throughout. There is a passage to the east and west\nhere as well as a large golden door to the north.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7537,
+          "Description": "You see a large golden door here.",
+          "Keywords": [
+            "golden",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7535,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7538,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7537,
+      "Name": "Lost and Found",
+      "Description": "\n   This large chamber was once an extensive library. Charred books and\nscraps of burnt or torn scrolls lie everywhere. A large golden door to\nthe south appears to be the only exit here.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7536,
+          "Description": "\nA large golden door is here.",
+          "Keywords": [
+            "golden",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7538,
+      "Name": "North Corridor",
+      "Description": "\n   This plain room is unfurnished except for a thick carpet on the\nfloor.  It's walls are solid stone blocks, closely set and polished.\nThere is a passage to the east and west here.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7536,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7539,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7539,
+      "Name": "Display Room",
+      "Description": "\n   The room is covered wall to wall with gruesome looking weapons of\ndeath.  Unfortunately most of the items have been locked in cases and it\ndoes not look like they have kept well. There is a passage to the east\nand west here as well.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7538,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7540,
+          "Description": "A passage leads off into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7540,
+      "Name": "West Wall",
+      "Description": "\n   This room is obviously one of great importance. It is decorated with\ntapestries with scenes of great battles from long ago. There are exits\nto the north and south as well as a passage to the east here.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7539,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7541,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7542,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7541,
+      "Name": "Northwest Corner Passage",
+      "Description": "\n   Strange runes cover the walls of the entire room. A set of marble\nstairs dissapear up into the darkness in the northwest corner of the\nroom. You also see a passage that wanders off to the south as well.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7540,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7545,
+          "Description": "Stairs lead up into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7542,
+      "Name": "Southwest Corner Passage",
+      "Description": "\n   The room is made up entirely of black stone and covered with strange\nrunic symbols. There is a large onyx black door to the west and a\npassage that leads to the north here. You notice a very large sign\nhanging on the door as well.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7540,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7543,
+          "Description": "\nA large black onyx door is here.",
+          "Keywords": [
+            "black",
+            "onyx",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nHolding Cells Keep Out!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7543,
+      "Name": "Ruined Passage",
+      "Description": "\n   The room here although rather large is barely passable. The ceiling\nhas collapsed slightly due to age and now parts of it lie here. There is\na passage to the south and to the east here.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7542,
+          "Description": "A large black onyx door is here.",
+          "Keywords": [
+            "black",
+            "onyx",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7544,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7544,
+      "Name": "Holding Cell",
+      "Description": "\n   The room is covered in debris from one corner to the other here. You\nnotice some rusted and broken chains sticking out of the wall and\nrealize that this used to be where the captives were held. The only\nvisible exit appears to be to the north.",
+      "ZoneId": 75,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7543,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7545,
+      "Name": "Stairs End",
+      "Description": "\n   As you reach the top of the staircase you notice something strange.\nIt appears you are no longer walking on solid ground but the floor has\nvanished completely. Fortunately the walls remain to guide you and you\ncan see a passage to the east and stairs leading down here.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 7541,
+          "Description": "A staircase leads down into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7546,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7546,
+      "Name": "Main Hall",
+      "Description": "\n   The room here is decorated in tapestries depicting many great\nbattles. A  faint trail of blood runs along the floor and dissapears to\nthe north.  Another passage leads to the west here as well.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7547,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7545,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7547,
+      "Name": "Trophy Room",
+      "Description": "\n   As you enter you see one of the most disgusting sites you have seen\nin your life. This is not your typical trophy room but is displaying the\nheads of all the unfortunate victims that have come this way. Exits lead\nto the north and south here, better pick one while you still have your\nhead.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7548,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7546,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "head"
+          ],
+          "Description": "\nA head stares back at you with a gaze as cold as ice. You would swear\nyou heard it murmur run!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7548,
+      "Name": "Room of Dead",
+      "Description": "\n   Skeletons lie all over the ground here and you can hear the crunch as\nyou walk on them. There are exits in all four directions here. You can\nhear screams of horror and pain echo all through this room.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7553,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7547,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7551,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7549,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7549,
+      "Name": "Window In South Wall",
+      "Description": "\n   The small room here is dirty and dusty as if unused for ages. A small\nwindow displays the outer lands of elite as best can be seen. The\npassage leads to the east and west here.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7548,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7550,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7550,
+      "Name": "Corridor End",
+      "Description": "\n   This appears to be the remains of an old mages laboratory. Items are\nscattered here and there and there is a burnt sigil in the floor. The\nonly you exit you see is a passage to the east.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7549,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7551,
+      "Name": "Supply Room",
+      "Description": "\n   This room appears to be a supply room for many different types of\nobjects. Most you have no idea what they are and others are worn out\nbeyond repair but there may be a few things you can use here. A passage\nleads to the east and to the west here.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7552,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7548,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7552,
+      "Name": "Corridor's End",
+      "Description": "\n   The room here appears to be very empty of anything at all. The only\nthings you notice is a small lamp hanging near the wall and a small\nplaque directly beneath it. The only exit appears to be to the west\nhere.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7551,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plaque"
+          ],
+          "Description": "\nThis zone was created by Rasputen. I hope you all enjoy it very much."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7553,
+      "Name": "Altar of Power",
+      "Description": "\n   As you enter the room you see a large glowing altar in the center of\nthe room. Placed upon the altar is a glowing sword with blue colored\nrunes burnt into the blade and glowing brightly. The only exit appears\nto be a passage to the south.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7548,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7554,
+          "Description": "",
+          "Keywords": [
+            "altar"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sword"
+          ],
+          "Description": "\nTo get that which you seek the altar is the key."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7554,
+      "Name": "Hidden Room",
+      "Description": "\n   As you enter you realize you have found the remains of the giants\ntreasure hoard. There is a large chest in the north corner of the room\nhere as well. The only visible exit is to the south.",
+      "ZoneId": 75,
+      "Sector": "Air",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7553,
+          "Description": "A passage leads into the darkness.",
+          "Keywords": [
+            "altar"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 7500,
+      "Name": "cave giant",
+      "ShortDescription": "\nThe female cave giant",
+      "LongDescription": "\nThe female cave giant, guards her home with the strength of ten\nmen.",
+      "Description": "\nBorn and raised within the caves of the underground. This giant\ncarries a boulder as a weapon and has great skill in using it.\nAlthough the weakest of the race it could easily crush a human's\nskull.",
+      "Level": 40,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+500",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -140,
+        "Hitroll": 25,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "1d20+10"
+        },
+        {
+          "Type": "Attack_16",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+50"
+        }
+      ],
+      "Skills": [
+        "Skill_339:100",
+        "Skill_304:100",
+        "Skill_326:50",
+        "Skill_327:25"
+      ],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7501,
+      "Name": "cave giant",
+      "ShortDescription": "\nThe male cave giant",
+      "LongDescription": "\nThe male cave giant, guards his home with the strength of ten\nmen.",
+      "Description": "\nBorn and raised within the caves of the underground. This giant\ncarries a boulder as a weapon and has great skill in using it.\nAlthough the weakest of the race it could easily crush a humans\nskull.",
+      "Level": 40,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+550",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -160,
+        "Hitroll": 27,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "1d20+15"
+        },
+        {
+          "Type": "Attack_16",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+50"
+        }
+      ],
+      "Skills": [
+        "Skill_339:100",
+        "Skill_304:100",
+        "Skill_326:75",
+        "Skill_327:40"
+      ],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 210000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7502,
+      "Name": "stone giant",
+      "ShortDescription": "\nThe stone giant",
+      "LongDescription": "\nThe stone giant stares at you with a gaze as hard as stone.",
+      "Description": "\nAs its name describes this creature is made entirely of stone.\nIt's powerful rock form is capable of receiving and dealing an\nimmense amount of damage. As it stares at you the urge to run\ngrows intense.",
+      "Level": 45,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+600",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -170,
+        "Hitroll": 29,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "1d25+20"
+        },
+        {
+          "Type": "Attack_15",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+50"
+        }
+      ],
+      "Skills": [
+        "Skill_339:100",
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:60",
+        "Skill_318:15"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 217000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7503,
+      "Name": "frost giant",
+      "ShortDescription": "\nThe frost giant",
+      "LongDescription": "\nThe frost giant commands the power of the arctic winds.",
+      "Description": "\nGenerally found in the frozen wastelands of Calldorn these\ngiants possess awesome powers of cold magic. Frost giants\nhave white ivory skin and yellow hair. These creatures are \nusually found wearing some type of battle armor and are a \ntrue spectacle to see if you live to tell about it.",
+      "Level": 50,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+700",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "1d30+20"
+        },
+        {
+          "Type": "Attack_77",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:80",
+        "Skill_339:100",
+        "Skill_318:25"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 241000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7504,
+      "Name": "fire giant",
+      "ShortDescription": "\nThe fire giant",
+      "LongDescription": "\nThe fire giant holds a giant flaming sphere from the depths of hell.",
+      "Description": "\nStraight from the gates of hell is where this being comes from. In\na territory war this giant was banished to outer lands. His skin is\na coal black and his hair is flame red. He usually carries a large\nflaming sword as weapon of choice against his victims. If you are\nsmart you wont be one of those victims.",
+      "Level": 50,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+700",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "1d30+20"
+        },
+        {
+          "Type": "Attack_48",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:80",
+        "Skill_339:100",
+        "Skill_318:25"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 241000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7505,
+      "Name": "cloud giant",
+      "ShortDescription": "\nThe cloud giant",
+      "LongDescription": "\nThe cloud giant drifts along upon the winds of destiny.",
+      "Description": "\nPerhaps one of the more peaceful of the race is the cloud giant.\nThis  being usually resides in great castles or atop high\nmountains. Cloud giants have pale blue skin and silver hair and\nare usually wearing some type of valuable jewelry. Don\u0092t let there\nsomewhat peaceful demeanor fool you though because the huge\nspiked club they carry is definitely not used to protect the\ninnocent.",
+      "Level": 55,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+750",
+        "Mana": 650,
+        "Move": 905
+      },
+      "Combat": {
+        "Armor": -220,
+        "Hitroll": 32,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d10+25"
+        },
+        {
+          "Type": "Attack_50",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:95",
+        "Skill_339:100",
+        "Skill_318:35",
+        "Skill_365:15"
+      ],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 249000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7506,
+      "Name": "snow wolf",
+      "ShortDescription": "\nThe snow wolf",
+      "LongDescription": "\nThe snow wolf of the frozen wasteland searches for its next kill.",
+      "Description": "\nThis trained pet of the frost giants is anything but nice and\ncuddly. The snow wolf has dark blue fur and dark green eyes.\nWith stealth and cunning this is more than a worthy adversary\nfor even the toughest of fighters.",
+      "Level": 43,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Sneak",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7507,
+      "Name": "flare beast wolf",
+      "ShortDescription": "\nThe flare beast",
+      "LongDescription": "\nA giant wolf covered in flames howls in your direction.",
+      "Description": "\nThis trained pet of the fire giants is also a former creature of hell.\nThe beasts fur is a bright red or white when covered in flame and\nits eyes are jet black. This trusted guardian of the fire giants has\nboth the power and the skills to back up the title of guardian as\nwell.",
+      "Level": 43,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Sneak",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7508,
+      "Name": "storm giant",
+      "ShortDescription": "\nThe storm giant",
+      "LongDescription": "\nThe storm giant commands the forces of thunder and lightning.",
+      "Description": "\nMaster of the forces of nature and the elements is the storm\ngiant. It has pale green skin and dark green hair. Its emerald\ngreen eyes burn a hole right through you and if you don\u0092t have\nyour lightning protected equipment on I suggest you run.",
+      "Level": 60,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared",
+        "Fly"
+      ],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+800",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -240,
+        "Hitroll": 35,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 60,
+          "DamageDice": "3d10+30"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "2d0+100"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100",
+        "Skill_339:100",
+        "Skill_318:20"
+      ],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 273000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7509,
+      "Name": "giant Atrolicus",
+      "ShortDescription": "\nAtrolicus master giant",
+      "LongDescription": "\nThe master of all giants awaits as the foolish mortals enter.",
+      "Description": "\nAs with age and wisdom comes power and you can tell that this\ngiant  is truly a powerful being. Atrolicus wears a huge crown\ncovered in gems of every kind known to man and at his side\nrests a huge golden scepter the length of a man. His eyes burn\nfiery red as if to burn right through you. As you enter he speaks\n\"who dares enter my land without my permission shall face my\nwrath.\" Perhaps it was a good day to stay at home.",
+      "Level": 65,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared",
+        "Fly"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+900",
+        "Mana": 750,
+        "Move": 1055
+      },
+      "Combat": {
+        "Armor": -260,
+        "Hitroll": 37,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 60,
+          "DamageDice": "4d10+30"
+        },
+        {
+          "Type": "Attack_60",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "2d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100",
+        "Skill_339:100",
+        "Skill_318:25",
+        "Skill_322:5"
+      ],
+      "Resistances": [],
+      "Gold": 3000,
+      "Experience": 410000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%20 emote stands here pointing a lightning bolt at your head.;\n%5 cackle;%10 insult player",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7510,
+      "Name": "bob alchemist man",
+      "ShortDescription": "\nBob the Mad Alchemist",
+      "LongDescription": "\nA very strange looking man toying with various mixtures.",
+      "Description": "\nA strange man toying with different mixtures and potions and\nwearing bright orange robes. He seems to have mixed the wrong\ncombination a  few times as his room is in ruins. His origin is\nunknown but if you had to guess you would say he is not quite\nright in the head.",
+      "Level": 50,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Sneak",
+        "Hide",
+        "Infrared",
+        "Fly"
+      ],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+600",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -150,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 20,
+          "DamageDice": "3d10+20"
+        },
+        {
+          "Type": "Attack_56",
+          "DamageType": 0,
+          "Chance": 16,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_57",
+          "DamageType": 0,
+          "Chance": 16,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_58",
+          "DamageType": 0,
+          "Chance": 16,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_59",
+          "DamageType": 0,
+          "Chance": 16,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_60",
+          "DamageType": 0,
+          "Chance": 16,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_339:100",
+        "Skill_318:10"
+      ],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 243000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%45 emote dances around the room like a raving lunatic.;%10\ncackle",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7511,
+      "Name": "queen bee insect",
+      "ShortDescription": "\nThe queen bee",
+      "LongDescription": "\nA very large flying insect is guarding its territory.",
+      "Description": "\nThis is perhaps one of the largest flying creatures you have ever\nseen in your life. Its large black eyes seem to stare right through\nyou, daring you to make a move. The only thing you notice other\nthan that is the very large stinger getting ready to spear you.",
+      "Level": 45,
+      "Race": "Flybeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Fly"
+      ],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7512,
+      "Name": "displacer beast cat",
+      "ShortDescription": "\nThe displacer beast",
+      "LongDescription": "\nA large black cat with spiked tentacles waits for its next meal.",
+      "Description": "\nThis large black panther like cat is very quick and very deadly. Its\nfour tentacles are capable of dealing massive damage to anyone\nwho isn\u0092t fully alert. If your in its lair perhaps you should think\nabout leaving real soon.",
+      "Level": 45,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+700",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 32,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Whip",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+15"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:95",
+        "Skill_318:15",
+        "Skill_339:100",
+        "Skill_372:35"
+      ],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 219000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%25 growl;%10 snarl;%15 emote stares at you with a hunger\nin its eyes.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7513,
+      "Name": "bolt wolf",
+      "ShortDescription": "\nThe bolt wolf",
+      "LongDescription": "\nA huge white wolf with glowing white eyes prowls the darkness.",
+      "Description": "\nTrained pet of the storm giants, these creatures possess the\nsame deadly skills with lightning as their masters. Bolt wolfs are\ncompletely white in color and have white eyes the color of a\nlightning bolt. Their skills with lightning combined with their\nability to see in any type of light make them a very deadly foe.",
+      "Level": 50,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Sneak",
+        "Infrared"
+      ],
+      "Alignment": 150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+750",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 33,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d10+20"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:75",
+        "Skill_339:100",
+        "Skill_318:15",
+        "Skill_372:20"
+      ],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 243000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7514,
+      "Name": "giant octopus creature",
+      "ShortDescription": "\nThe giant octopus",
+      "LongDescription": "\nA stange creature slowly crawls towards you using its eight arms.",
+      "Description": "\nOne of the great masters of the ocean is this creature. Its huge\nhead is truly a sight to look at but what is more immediately\nnoticeable is the eight tentacled arms coming towards you. As it\nslowly inches closer you start to realize now may be a good time\nto leave.",
+      "Level": 50,
+      "Race": "Water",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Hide",
+        "Infrared"
+      ],
+      "Alignment": 250,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+750",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 33,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Whip",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+20"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100",
+        "Skill_339:100"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 243000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7515,
+      "Name": "mutated prisoner human being",
+      "ShortDescription": "\nThe mutated prisoner",
+      "LongDescription": "\nA very grossly disfigured being looks at you in pain.",
+      "Description": "\nAs you look upon this poor tortured soul you realize that this is\nthe finished product of the giants torture devices. All that is left \nof this being that resembles a human is half of its face. As a matter\nof fact you don\u0092t even know whether its a man or a woman. The being \nseems to have lost all sorts of reason and is attacking anyone or \nanything that comes near.",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Helper"
+      ],
+      "Affects": [
+        "Light",
+        "Berzerk"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+400",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 25,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+10"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:15",
+        "Skill_339:100",
+        "Skill_372:5"
+      ],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 195000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%20 moan;%20 sulk;%20 whine",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7516,
+      "Name": "jonas dungeon keeper giant",
+      "ShortDescription": "\nJonas the Dungeon Keeper",
+      "LongDescription": "\nA large giant wearing a necklace that says Jonas stares at you coldly.",
+      "Description": "\nJonas is know well in this land as his role as dungeon keeper.\nWhat exactly is a dungeon keeper?...well that\u0092s the guy who\nwatches the territory he is in for unwanted visitors and removes\nthem if you get my meaning. His trusty battle axe is more than\nup to the job too. As you approach he demands \"WHO GOES\nTHERE!\" then as he realizes you shouldn\u0092t be here, prepares\nto...remove...you.",
+      "Level": 50,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+800",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -250,
+        "Hitroll": 36,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d10+25"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+85"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:95",
+        "Skill_339:100",
+        "Skill_318:15"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 243000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%20 say INFIDELS! Who dares trespass into my dungeon?;\n%5 glares around the room.;\n%5 swear;\n%5 growl",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7517,
+      "Name": "mountain giant",
+      "ShortDescription": "\nThe mountain giant",
+      "LongDescription": "\nA very large giant blocks your path with a boulder.",
+      "Description": "\nThis giant is very similar in appearance to their cousins the cave\ngiants. The only difference is that they are a little larger.\nMountain giants are also know for their immense strength, as\nthey like to target people with boulders from time to time.",
+      "Level": 45,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+550",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d10+15"
+        },
+        {
+          "Type": "Attack_15",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:80",
+        "Skill_339:100"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 223000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7518,
+      "Name": "mountain giant commander",
+      "ShortDescription": "\nThe mountain giant commander",
+      "LongDescription": "\nA giant with a boulder in one hand stares at you coldly.",
+      "Description": "\nThese giants are born and raised in the mountains and well\nskilled in combat there too. The high rank they wear on there\nvest is earned and highly respected by the lesser giants. Using a\nboulder as weapon of choice they are very deadly.",
+      "Level": 45,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+600",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d10+15"
+        },
+        {
+          "Type": "Attack_15",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:80",
+        "Skill_339:100"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 226000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7519,
+      "Name": "storm giant commander",
+      "ShortDescription": "\nThe storm giant commander",
+      "LongDescription": "\nThe storm giant commander conjures up the forces of nature.",
+      "Description": "\nMaster of the forces of nature and the elements is the storm\ngiant. It has pale green skin and dark green hair. Its emerald\ngreen eyes burn a hole right through you and if you don\u0092t have\nyour lightning protected equipment on I suggest you run.",
+      "Level": 60,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared",
+        "Fly"
+      ],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+825",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -240,
+        "Hitroll": 35,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 60,
+          "DamageDice": "3d10+30"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "2d0+100"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100",
+        "Skill_339:100",
+        "Skill_318:20"
+      ],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 278000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7520,
+      "Name": "cloud giant commander",
+      "ShortDescription": "\nThe cloud giant commander",
+      "LongDescription": "\nThe cloud giant commander drifts along upon the winds of destiny.",
+      "Description": "\nPerhaps one of the more peaceful of the race is the cloud giant.\nThis being usually resides in great castles or atop high\nmountains. Cloud giants have pale blue skin and silver hair and\nare usually wearing some type of valuable jewelry. Don\u0092t let there\nsomewhat peaceful demeanor fool you though because the huge\nspiked club they carry is definitely not used to protect the\ninnocent.",
+      "Level": 55,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+775",
+        "Mana": 650,
+        "Move": 905
+      },
+      "Combat": {
+        "Armor": -220,
+        "Hitroll": 32,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d10+25"
+        },
+        {
+          "Type": "Attack_50",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:95",
+        "Skill_339:100",
+        "Skill_318:35",
+        "Skill_365:15"
+      ],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 252000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7521,
+      "Name": "fire giant commander",
+      "ShortDescription": "\nThe fire giant commander",
+      "LongDescription": "\nThe fire giant commander glares at you with a fiery rage.",
+      "Description": "\nStraight from the gates of hell is where this being comes from. In\na territory war this giant was banished to outer lands. His skin is\na coal black and his hair is flame red. He usually carries a large\nflaming sword as weapon of choice against his victims. If you are\nsmart you wont be one of those victims.",
+      "Level": 50,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+725",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "1d30+20"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:80",
+        "Skill_339:100",
+        "Skill_318:25"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 245000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7522,
+      "Name": "frost giant commander",
+      "ShortDescription": "\nThe frost giant commander",
+      "LongDescription": "\nThe frost giant commander wields the power of the arctic winds.",
+      "Description": "\nGenerally found in the frozen wastelands of Calldorn these\ngiants possess awesome powers of cold magic. Frost giants\nhave white ivory skin and yellow hair. These creatures are \nusually found wearing some type of battle armor and are a \ntrue spectacle to see if you live to tell about it.",
+      "Level": 50,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+725",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "1d30+20"
+        },
+        {
+          "Type": "Attack_77",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:80",
+        "Skill_339:100",
+        "Skill_318:25"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 245000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7523,
+      "Name": "stone giant commander",
+      "ShortDescription": "\nThe stone giant commander",
+      "LongDescription": "\nThe stone giant commander commands the rocky caverns below.",
+      "Description": "\nAs its name describes this creature is made entirely of stone.\nIt's powerful rock form is capable of receiving and dealing an\nimmense amount of damage. As it stares at you the urge to run\ngrows intense.",
+      "Level": 45,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d25+625",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -170,
+        "Hitroll": 29,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "1d25+20"
+        },
+        {
+          "Type": "Attack_15",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "2d0+50"
+        }
+      ],
+      "Skills": [
+        "Skill_339:100",
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:60",
+        "Skill_318:15"
+      ],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 221000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 7500,
+      "Name": "window key",
+      "ShortDescription": "\na window key",
+      "Description": "\nA very odd shaped clear key.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        7505,
+        0,
+        0,
+        0,
+        0,
+        80
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 7505,
+          "Timer": 0,
+          "TimerSet": 80
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7501,
+      "Name": "diamond sword key",
+      "ShortDescription": "\na diamond sword",
+      "Description": "\nA gleaming sword covered in runes and radiating extreme power.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        7513,
+        0,
+        0,
+        0,
+        0,
+        80
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 7513,
+          "Timer": 0,
+          "TimerSet": 80
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7502,
+      "Name": "grate key",
+      "ShortDescription": "\na grate key",
+      "Description": "\nA very small light green key covered in seaweed and slime.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        7528,
+        0,
+        0,
+        0,
+        0,
+        80
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 7528,
+          "Timer": 0,
+          "TimerSet": 80
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7503,
+      "Name": "runic scepter stick",
+      "ShortDescription": "\na runic scepter",
+      "Description": "\nA long thin stick covered in strange designs of another language.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 40,
+      "AntiClass": "2048",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        150,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 150
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7504,
+      "Name": "stone ring",
+      "ShortDescription": "\na stone ring",
+      "Description": "\nA small circular object for the hands made of rare emerald stone.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "128",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        10,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 1500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7505,
+      "Name": "necklace power chain",
+      "ShortDescription": "\nnecklace of power",
+      "Description": "\nA shiny golden chain with a symbol of a mighty hammer at its end.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 45,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        10,
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 1500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7506,
+      "Name": "necklace accuracy chain",
+      "ShortDescription": "\nnecklace of accuracy",
+      "Description": "\nA shiny golden chain with a symbol of a mighty arrow at its end.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        10,
+        40,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 1500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7508,
+      "Name": "crown magic item",
+      "ShortDescription": "\ncrown of magic",
+      "Description": "\nA mysterious looking item seems to be born from the elements.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "314572",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        10,
+        40,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 1500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7509,
+      "Name": "gauntlets ogre power",
+      "ShortDescription": "\ngauntlets of ogre power",
+      "Description": "\nHuge mythril gauntlets with a giant glowing diamond in the center.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 45,
+      "AntiClass": "4915",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        8,
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 1000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7510,
+      "Name": "lava rock greaves",
+      "ShortDescription": "\nlava rock greaves",
+      "Description": "\nGlowing greaves forged straight from the fires of a monster volcano.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        5,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 1000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Move",
+          "Modifier": 100
+        },
+        {
+          "Location": "SavingPhysical",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7511,
+      "Name": "boots north",
+      "ShortDescription": "\nboots of the north",
+      "Description": "\nCrystal clear boots seem to freeze you at the slightest touch.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 60,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        10,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "SavingMental",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7512,
+      "Name": "north star shield",
+      "ShortDescription": "\nnorth star shield",
+      "Description": "\nA huge steel shield with a glowing blue star and cross upon it.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "267893",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        10,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1600,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 25
+        },
+        {
+          "Location": "Move",
+          "Modifier": 25
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7513,
+      "Name": "girdle storm giant belt",
+      "ShortDescription": "\ngirdle of storm giant strength",
+      "Description": "\nA finely crafted leather belt of extreme weight and thickness.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 52,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        15,
+        52,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 2500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 4
+        },
+        {
+          "Location": "Hit",
+          "Modifier": 30
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7514,
+      "Name": "robe stars cloth",
+      "ShortDescription": "\nrobe of stars",
+      "Description": "\nA thick dark blue cloth with a map of the galaxy.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 55,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        12,
+        55,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 1500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7515,
+      "Name": "bracer defense",
+      "ShortDescription": "\nbracer of defense",
+      "Description": "\nA small sturdy piece of wrist wear glows brightly.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 65,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        12,
+        65,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7516,
+      "Name": "sword planes blade",
+      "ShortDescription": "\nsword of the planes",
+      "Description": "\nA gleaming blade shows evidence of another time and place.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 55,
+      "AntiClass": "294775",
+      "ExtraFlags": [
+        "Hum",
+        "Dark"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        55,
+        4,
+        13,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 13,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 1500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 6
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 6
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7517,
+      "Name": "rod security",
+      "ShortDescription": "\nrod of security",
+      "Description": "\nA long thin metal rod branded with ruins of power.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Invisible",
+        "Hidden"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        109,
+        10,
+        10,
+        36,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 36,
+          "Level": 109,
+          "Charges": 10,
+          "ChargesRemaining": 10
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 2500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7518,
+      "Name": "huge treasure gold",
+      "ShortDescription": "\nhuge treasure",
+      "Description": "\nA huge mountain of gold waits here for its next owner.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        10000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 10000
+        },
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7519,
+      "Name": "treasure chest",
+      "ShortDescription": "\ntreasure chest",
+      "Description": "\nA large treasure chest waits here on the floor.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoInvis"
+      ],
+      "WearFlags": [],
+      "Values": [
+        5,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 5,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 150,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7520,
+      "Name": "treasure chest",
+      "ShortDescription": "\ntreasure chest",
+      "Description": "\nA large treasure chest waits here on the floor.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoInvis"
+      ],
+      "WearFlags": [],
+      "Values": [
+        5,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 5,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 150,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7521,
+      "Name": "cosmic scroll paper",
+      "ShortDescription": "\ncosmic scroll",
+      "Description": "\nA very burnt and barely readable piece of paper.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        109,
+        1,
+        36,
+        39,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 109,
+          "SpellIds": [
+            1,
+            36,
+            39
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7522,
+      "Name": "gloves titan",
+      "ShortDescription": "\ngloves of the titans",
+      "Description": "\nA very large pair of gloves with the symbol of a lightning bolt.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "263236",
+      "ExtraFlags": [
+        "Glow",
+        "Hum"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        8,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 1000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

@@ -1,0 +1,5530 @@
+{
+  "Zone": {
+    "Id": 149,
+    "Name": "The Gauntlet",
+    "TopRoomId": 14999,
+    "Lifespan": 241,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14900,
+        "Arg2": 1,
+        "Arg3": 14926,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14901,
+        "Arg2": 1,
+        "Arg3": 14926,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14902,
+        "Arg2": 1,
+        "Arg3": 14926,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14911,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14903,
+        "Arg2": 1,
+        "Arg3": 14927,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14912,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14904,
+        "Arg2": 1,
+        "Arg3": 14928,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14905,
+        "Arg2": 1,
+        "Arg3": 14928,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14906,
+        "Arg2": 1,
+        "Arg3": 14928,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14907,
+        "Arg2": 1,
+        "Arg3": 14928,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14913,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14908,
+        "Arg2": 1,
+        "Arg3": 14929,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14909,
+        "Arg2": 1,
+        "Arg3": 14929,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14914,
+        "Arg2": 100,
+        "Arg3": 1,
+        "Comment": "HELD(as light) Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14910,
+        "Arg2": 1,
+        "Arg3": 14930,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14911,
+        "Arg2": 1,
+        "Arg3": 14930,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14915,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14912,
+        "Arg2": 1,
+        "Arg3": 14931,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14913,
+        "Arg2": 1,
+        "Arg3": 14931,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14914,
+        "Arg2": 1,
+        "Arg3": 14931,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14916,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14915,
+        "Arg2": 1,
+        "Arg3": 14932,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14916,
+        "Arg2": 1,
+        "Arg3": 14932,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14917,
+        "Arg2": 1,
+        "Arg3": 14932,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14918,
+        "Arg2": 1,
+        "Arg3": 14932,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14919,
+        "Arg2": 1,
+        "Arg3": 14932,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14917,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14921,
+        "Arg2": 1,
+        "Arg3": 14933,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14920,
+        "Arg2": 1,
+        "Arg3": 14933,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14918,
+        "Arg2": 100,
+        "Arg3": 3,
+        "Comment": "HEAD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14922,
+        "Arg2": 1,
+        "Arg3": 14934,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14923,
+        "Arg2": 1,
+        "Arg3": 14934,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14924,
+        "Arg2": 1,
+        "Arg3": 14934,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14919,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14925,
+        "Arg2": 1,
+        "Arg3": 14935,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14926,
+        "Arg2": 1,
+        "Arg3": 14935,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14927,
+        "Arg2": 1,
+        "Arg3": 14935,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14928,
+        "Arg2": 1,
+        "Arg3": 14935,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14920,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14929,
+        "Arg2": 1,
+        "Arg3": 14936,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14930,
+        "Arg2": 1,
+        "Arg3": 14936,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14931,
+        "Arg2": 1,
+        "Arg3": 14936,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14921,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14932,
+        "Arg2": 1,
+        "Arg3": 14937,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14933,
+        "Arg2": 1,
+        "Arg3": 14937,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14922,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14934,
+        "Arg2": 1,
+        "Arg3": 14938,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14935,
+        "Arg2": 1,
+        "Arg3": 14938,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14936,
+        "Arg2": 1,
+        "Arg3": 14938,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14923,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14937,
+        "Arg2": 1,
+        "Arg3": 14939,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14938,
+        "Arg2": 1,
+        "Arg3": 14939,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14939,
+        "Arg2": 1,
+        "Arg3": 14939,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14924,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": "HELD Key to next level"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14940,
+        "Arg2": 1,
+        "Arg3": 14940,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14925,
+        "Arg2": 99,
+        "Arg3": 17,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 14900,
+      "Name": "The Gauntlet INFO room",
+      "Description": "\n        15 rooms the fatto mobs migrate into    11-25\n        15 pop rooms                            26-40\n        14 keys to the next migrate-into room   11-24 same as room number",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Death",
+        "NoTeleport"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14911,
+      "Name": "A warm welcome",
+      "Description": "\n   ROOM_DESC00\n* this room got 3x flaming fury",
+      "ZoneId": 149,
+      "Sector": "Desert",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14912,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14911
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14912,
+      "Name": "Scared yet?",
+      "Description": "\n   ROOM_DESC00\n*contain a man in red (crimsonlord)",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14913,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14912
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14913,
+      "Name": "Room of the divine march (or was it marx?)",
+      "Description": "\n   ROOM_DESC00\n*zeppo harpo groucho gloria (archangels)",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14914,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14913
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14914,
+      "Name": "Speedy transit",
+      "Description": "\n   ROOM_DESC00\n*contain McLArry and a Wall (Mchoro+lord of death)",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14915,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14914
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14915,
+      "Name": "A dubious exit",
+      "Description": "\n   ROOM_DESC00\n*with Henry and Morgan (henrietta+masteranger)",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14916,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14915
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14916,
+      "Name": "Dragon spree",
+      "Description": "\n   ROOM_DESC00\n*with good/evil/neutral dragon (shadow+ruby+aquamarine dragon)",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14917,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14916
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14917,
+      "Name": "Pentagon",
+      "Description": "\n   ROOM_DESC00\n*with First,2nd 3rd 4th and 5th memeber of the pentagon\n* which is all the warp goodies...\n* Minax, Blackthorne, Mondain, Guardian, Exodus",
+      "ZoneId": 149,
+      "Sector": "Mountain",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14918,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14917
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14918,
+      "Name": "The field of Dualism",
+      "Description": "\n   ROOM_DESC00\n*the genious and the vamp (genial+vampire dragonlord)",
+      "ZoneId": 149,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14919,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14918
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14919,
+      "Name": "Work Out",
+      "Description": "\n   ROOM_DESC00\n*Pilates/steupp/taichi\n*Polaris Cepheus Orcus(oldgen)",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14920,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14919
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14920,
+      "Name": "The Veranda of the Faboulous Four",
+      "Description": "\n   ROOM_DESC00\n*fab4 1 2 3 4\n*apocalyptic horseriders",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14921,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14920
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14921,
+      "Name": "Dwelling place of the Holy TRIad",
+      "Description": "\n   ROOM_DESC00\n*holy triads W T/C M\n*unicorn grandMis Dagga",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14922,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14921
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14922,
+      "Name": "A cave with a strange bat infestion",
+      "Description": "\n   ROOM_DESC00\n*with brunce + robin which really are\n*avatar+championdethguard",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14923,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14922
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14923,
+      "Name": "The gauntlets last attempt to misguide you",
+      "Description": "\n   ROOM_DESC00\n*with Slafs Stomp Schlurp\n*hades satan and that nice lord over the flies",
+      "ZoneId": 149,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Indoors",
+        "Chaotic",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14924,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14923
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14924,
+      "Name": "The Path of Resurrection",
+      "Description": "\n   ROOM_DESC00\n*with ArtiDragon DivineIntervention and AntiMass\n* Dragonlady, Mistress of the dead, Mistress of disgust.",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14925,
+          "Description": "What_u_see_when_looking_at_next_room",
+          "Keywords": [
+            "DOOR_NAME00"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": 14924
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14925,
+      "Name": "The END.",
+      "Description": "\n   ROOM_DESC00\n*with THE BLOB as the blob itself.",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14926,
+      "Name": "Pop Room 14911",
+      "Description": "\npops\n 14900 flaming fury 1\n 14901 flaming fury 2\n 14902 flaming fury 3",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14911,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14927,
+      "Name": "Pop Room 14912",
+      "Description": "\npops\n 14903 Man shifting in red",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14912,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14928,
+      "Name": "Pop Room 14913",
+      "Description": "\npops\n 14904 Zeppo\n 14905 Groucho\n 14906 Harpo\n 14907 GloriaGloriaGloria",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14913,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14929,
+      "Name": "Pop Room 14914",
+      "Description": "\npops\n 14908 McLarry\n 14909 The Wall",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14914,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14930,
+      "Name": "Pop Room 14915",
+      "Description": "\npops\n 14910 Henry\n 14911 Morgan",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14915,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14931,
+      "Name": "Pop Room 14916",
+      "Description": "\npops\n 14912 Evil Dragon\n 14913 Good Dragon\n 14914 Neutral Dragon",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14916,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14932,
+      "Name": "Pop Room 14917",
+      "Description": "\npops\n 14915 First member of the pentagon.\n 14916 Second\n 14917 Third\n 14918 Fourth\n 14919 Fifth",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14917,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14933,
+      "Name": "Pop Room 14918",
+      "Description": "\npops\n 14921 The Genious\n 14920 The Vamp",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14918,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14934,
+      "Name": "Pop Room 14919",
+      "Description": "\npops\n 14922 Pilates\n 14923 StepUpppp\n 14924 ChiTai",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14919,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14935,
+      "Name": "Pop Room 14920",
+      "Description": "\npops\n 14925 1  The fabolous Four\n 14926 2  The fabolous Four\n 14927 3  The fabolous Four\n 14928 4  The fabolous Four",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14920,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14936,
+      "Name": "Pop Room 14921",
+      "Description": "\npops\n 14929 Holy TRIad\n 14930 Holy TRIad\n 14931 Holy TRIad",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14921,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14937,
+      "Name": "Pop Room 14922",
+      "Description": "\npops\n 14932 Robin\n 14933 Bruce",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14922,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14938,
+      "Name": "Pop Room 14923",
+      "Description": "\npops\n 14934 Slafs\n 14935 Stomp\n 14936 Schlurp",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14923,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14939,
+      "Name": "Pop Room 14924",
+      "Description": "\npops\n 14937 Arti\n 14938 Divine\n 14939 AntiMass",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14924,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14940,
+      "Name": "Pop Room 14925",
+      "Description": "\npops\n 14940 THE BLOB = THE BADASS!!!",
+      "ZoneId": 149,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSummon"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14925,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 14900,
+      "Name": "fury flaming",
+      "ShortDescription": "\na Flaming Fury",
+      "LongDescription": "\nA Flaming Fury greets you with a torching smile",
+      "Description": "\nThe flaming Fury are physical emotions of the gods rage\nthat has taken shape and now reside here within the gauntlet.\nIts body is covered in flames that urges to burn your skin.",
+      "Level": 90,
+      "Race": "Demon",
+      "Class": "MagicUser",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d100+2000",
+        "Mana": 1000,
+        "Move": 1430
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 0,
+          "DamageDice": "1d1+0"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_72",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 900000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14901,
+      "Name": "fury flaming",
+      "ShortDescription": "\na Flaming Fury",
+      "LongDescription": "\nA Flaming Fury greets you with a torching smile",
+      "Description": "\nThe flaming furys are physical emotions of the gods rage\nthat has taken shape and now reside here within the gauntlet.\nIts body is covered in flames that urges to burn your skin.",
+      "Level": 90,
+      "Race": "Demon",
+      "Class": "MagicUser",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d100+2000",
+        "Mana": 1000,
+        "Move": 1430
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 0,
+          "DamageDice": "1d1+0"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_72",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14902,
+      "Name": "fury flaming",
+      "ShortDescription": "\na Flaming Fury",
+      "LongDescription": "\nA Flaming Fury greets you with a torching smile",
+      "Description": "\nThe flaming furys are physical emotions of the gods rage\nthat has taken shape and now reside here within the gauntlet.\nIts body is covered in flames that urges to burn your skin.",
+      "Level": 90,
+      "Race": "Demon",
+      "Class": "MagicUser",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d100+2000",
+        "Mana": 1000,
+        "Move": 1430
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 0,
+          "DamageDice": "1d1+0"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_72",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14903,
+      "Name": "red man",
+      "ShortDescription": "\nA man shifting in Red",
+      "LongDescription": "\nA man slightly shivers, standing within a reddish aura.",
+      "Description": "\nThe light of the room vastly enhances the scaling of his skin.\nEach scale glimmers and changes color from pearl white to ruby red\nas he advances towards you.",
+      "Level": 105,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Fly"
+      ],
+      "Alignment": -750,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+6500",
+        "Mana": 1150,
+        "Move": 1655
+      },
+      "Combat": {
+        "Armor": -600,
+        "Hitroll": 70,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 83,
+          "DamageDice": "5d30+50"
+        },
+        {
+          "Type": "Attack_322",
+          "DamageType": 0,
+          "Chance": 7,
+          "DamageDice": "0d0+0"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+85"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [
+        "Resist_4:100",
+        "Resist_7:100",
+        "Resist_38:100",
+        "Resist_40:100",
+        "Resist_104:50",
+        "Resist_105:50",
+        "Resist_106:50",
+        "Resist_107:50"
+      ],
+      "Gold": 1,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14904,
+      "Name": "Zeppo devine artist",
+      "ShortDescription": "\nZeppo",
+      "LongDescription": "\nZeppo devine artist is singing a praise to peace and tranquility.",
+      "Description": "\nZeppo skips around you, pointing at your feet, bonking your\nhead and taunting you, this guy is really begging for it.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Cleric",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Fly"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+5000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 58,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 85,
+          "DamageDice": "2d40+15"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "2d0+95"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100"
+      ],
+      "Resistances": [],
+      "Gold": 1,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote utters the words 'pzar'.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14905,
+      "Name": "Groucho obidient",
+      "ShortDescription": "\nGroucho the obidient",
+      "LongDescription": "\nGroucho is so obidient that he can not take any more orders.",
+      "Description": "\nIs that a fake nose or what? The glasses are half melted over\nis sootened nose and his cigar is filling the air with a stench\nso abhorrent that you have to breathe through your ears to get\na remote gasp.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Fly"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+5000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 63,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "2d40+20"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100"
+      ],
+      "Resistances": [],
+      "Gold": 1,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14906,
+      "Name": "Harpo blessed",
+      "ShortDescription": "\nHarpo the blessed",
+      "LongDescription": "\nHarpo is blessed with the most useful skilll in the world.",
+      "Description": "\n  And he can not tell you...\n\nUriel",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Cleric",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Fly"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+5000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 58,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 90,
+          "DamageDice": "2d40+20"
+        },
+        {
+          "Type": "Attack_6",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100"
+      ],
+      "Resistances": [],
+      "Gold": 1,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%8 frown;%8 mumble;%8 scratch;%8 ponder",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14907,
+      "Name": "Gloria",
+      "ShortDescription": "\nGloria",
+      "LongDescription": "\nGloria, Gloria, Gloria!  The salvation have come! And you to receive!",
+      "Description": "\nC'mon now, sing it folks, Gloria states. A voice crackling with\nfalse notes and rhymes that doesnt match, how can you not oblige\nit?",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Fly"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+5000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 63,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "2d40+20"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100"
+      ],
+      "Resistances": [],
+      "Gold": 206,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14908,
+      "Name": "mclarry speedfreak speed freak",
+      "ShortDescription": "\nMcLarry, the speedfreak",
+      "LongDescription": "\nA destined man have taken aim and is now rushing towards the wall.",
+      "Description": "\nOnce a respected jockey, now reduced to a babbling idiot since he\nfell off his horse one too many times. His face is mangled and his\nvoice is nasal, but hey, he used to be the fastest, so be gentle.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Dodge",
+        "Sneak"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+7000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -700,
+        "Hitroll": 52,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "5d30+50"
+        },
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 10,
+          "DamageDice": "3d100+30"
+        },
+        {
+          "Type": "Attack_322",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "0d0+0"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [
+        "Skill_321:100"
+      ],
+      "Resistances": [
+        "Resist_4:90",
+        "Resist_7:100",
+        "Resist_38:100",
+        "Resist_40:100",
+        "Resist_104:50",
+        "Resist_105:50",
+        "Resist_106:50",
+        "Resist_107:50",
+        "Resist_372:90"
+      ],
+      "Gold": 1,
+      "Experience": 2000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote grins and says 'Can I try your mount ?';\n%10 emote whispers quietly 'I am the fastest there is, you know.'",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14909,
+      "Name": "wall death",
+      "ShortDescription": "\nthe Wall",
+      "LongDescription": "\nA flat death awaits the destiny of McLarry.",
+      "Description": "\nThis is what ended McLarry's carreer, According to McLarry,\nthe walled attacked him. The wall seems totally indifferent\nwith the accsations. What do you think?",
+      "Level": 105,
+      "Race": "Demon",
+      "Class": "MagicUser",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Dodge"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+2750",
+        "Mana": 1150,
+        "Move": 1655
+      },
+      "Combat": {
+        "Armor": -550,
+        "Hitroll": 55,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 35,
+          "DamageDice": "10d10+30"
+        },
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 10,
+          "DamageDice": "10d15+30"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+90"
+        },
+        {
+          "Type": "Attack_100",
+          "DamageType": 0,
+          "Chance": 30,
+          "DamageDice": "1d0+90"
+        },
+        {
+          "Type": "Attack_106",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+90"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [
+        "Resist_4:95",
+        "Resist_7:100",
+        "Resist_38:100",
+        "Resist_40:100",
+        "Resist_103:75"
+      ],
+      "Gold": 0,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14910,
+      "Name": "Henry",
+      "ShortDescription": "\nHenry",
+      "LongDescription": "\nHenry is crossdressing (and this do not mean mixing up fashionstatements)",
+      "Description": "\nNice high heels, glorious legs in thin laced stockings, a nice teddy,\na pare of cherry red lips and a big furry mustache. Henry refuses to\nlook ordinary, and will commit his charms upon you.",
+      "Level": 100,
+      "Race": "Humanoid",
+      "Class": "Cleric",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Regeneration"
+      ],
+      "Alignment": 750,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d40+20000",
+        "Mana": 1100,
+        "Move": 1580
+      },
+      "Combat": {
+        "Armor": -500,
+        "Hitroll": 70,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 30,
+          "DamageDice": "3d20+90"
+        },
+        {
+          "Type": "Attack_104",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_65",
+          "DamageType": 0,
+          "Chance": 1,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_97",
+          "DamageType": 0,
+          "Chance": 24,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_106",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+98"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 231,
+      "Experience": 2000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%5 emote smiles and winks suggestivly at you.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14911,
+      "Name": "Morgan dresser assistant",
+      "ShortDescription": "\nMorgan",
+      "LongDescription": "\nBeware, beware! Morgan is coming short of new (and odd) underwear.",
+      "Description": "\nMorgan is Henry's dressing assistant, as Henry's short arms cant reach\nall the odds ends of himself. While Henry is out for fun, Morgan cultivates\nhis collection of underwear.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Berzerk",
+        "Regeneration"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d10+7000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -550,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "14d4+60"
+        },
+        {
+          "Type": "Pierce",
+          "DamageType": 500,
+          "Chance": 20,
+          "DamageDice": "10d5+40"
+        }
+      ],
+      "Skills": [
+        "Skill_317:100",
+        "Skill_327:100",
+        "Skill_328:100",
+        "Skill_318:100",
+        "Skill_359:100",
+        "Skill_321:100",
+        "Skill_322:100",
+        "Skill_323:10"
+      ],
+      "Resistances": [],
+      "Gold": 1,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%2 giggle;%2 say can I have your underwear when you are done?",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14912,
+      "Name": "Evil dragon",
+      "ShortDescription": "\nThe Evil Dragon",
+      "LongDescription": "\n>From head to tail, there is pure evil through this dragon.",
+      "Description": "\nBlack and white scales intertwine to form a pattern of pure hatred\nacross the dragons torso. Fierce teeth glimmer in the darkness high\nabove you and you realize that you may have gone just a bit too far.",
+      "Level": 100,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sneak",
+        "Berzerk",
+        "Fly"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d50+7600",
+        "Mana": 1100,
+        "Move": 1580
+      },
+      "Combat": {
+        "Armor": -470,
+        "Hitroll": 50,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 40,
+          "DamageDice": "2d40+100"
+        },
+        {
+          "Type": "Attack_107",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+60"
+        },
+        {
+          "Type": "Attack_105",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+70"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+70"
+        },
+        {
+          "Type": "Attack_86",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+85"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 666,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14913,
+      "Name": "Good dragon",
+      "ShortDescription": "\nThe Good Dragon",
+      "LongDescription": "\n>From wingtip to wingtip, the dragon is but utter goodness.",
+      "Description": "\nWhite scales are exhanged with hues of blue, magnificent as the\nsky itself. This dragon seems to have understood the wisdom of\nlive and let live, but you can never be certain, can you ?",
+      "Level": 83,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Light",
+        "Dodge",
+        "Berzerk",
+        "Fly"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "50d2+2900",
+        "Mana": 930,
+        "Move": 1325
+      },
+      "Combat": {
+        "Armor": -360,
+        "Hitroll": 23,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 40,
+          "DamageDice": "2d15+100"
+        },
+        {
+          "Type": "Attack_104",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+60"
+        },
+        {
+          "Type": "Attack_105",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+50"
+        },
+        {
+          "Type": "Attack_56",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_10",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14914,
+      "Name": "Neutral dragon spectral",
+      "ShortDescription": "\nthe dragon of balance",
+      "LongDescription": "\nThe spectral dragon of balance shimmers in all colours and none.",
+      "Description": "\nNot quite here, not quite anyplace really, this dragon is the perfect\nmatch in hunters knowledge, predatorian instincts and wise decisions.\nAt least its colors suggest that it has lived for more then you wish\nto find out.",
+      "Level": 85,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Dodge",
+        "Berzerk",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "8d10+2975",
+        "Mana": 950,
+        "Move": 1355
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 44,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 10,
+          "DamageDice": "30d2+100"
+        },
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 30,
+          "DamageDice": "15d4+80"
+        },
+        {
+          "Type": "Attack_104",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+80"
+        },
+        {
+          "Type": "Attack_48",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+99"
+        },
+        {
+          "Type": "Attack_10",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14915,
+      "Name": "pentagon first grandmaster",
+      "ShortDescription": "\nFirst member of the Pentagon",
+      "LongDescription": "\nThe First member of the Pentagon is sceming up yet another evil plan.",
+      "Description": "\nOnce just a mage, now a grandmaster of a secret order called\nthe pentagon. His long beard flows in the wind he just conjured up\nand you expect to see bolts of lightning any second now.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Invisible",
+        "Light"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d164+3270",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -500,
+        "Hitroll": 62,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Whip",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "5d10+45"
+        },
+        {
+          "Type": "Attack_71",
+          "DamageType": 0,
+          "Chance": 3,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_75",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_88",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5,
+      "Experience": 600000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 say The Pentagon does not accept failure.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14916,
+      "Name": "pentagon second",
+      "ShortDescription": "\nSecond member of the Pentagon",
+      "LongDescription": "\nThe Second member of the Pentagon is waiting on the grandmaster.",
+      "Description": "\nAs the grandmasters apprentice he knows he is also second in command\nand will inherit the power when the grandmaster dies of his old age\nor the poisons carefully placed in his food.",
+      "Level": 104,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Invisible",
+        "Light"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d156+2680",
+        "Mana": 1140,
+        "Move": 1640
+      },
+      "Combat": {
+        "Armor": -450,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Whip",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "5d10+40"
+        },
+        {
+          "Type": "Attack_71",
+          "DamageType": 0,
+          "Chance": 3,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_75",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_88",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5,
+      "Experience": 600000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 say The Pentagon will not show mercy.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14917,
+      "Name": "pentagon third",
+      "ShortDescription": "\nThird member of the Pentagon",
+      "LongDescription": "\nThe Third member of the Pentagon is hiding in the shadows.",
+      "Description": "\nTrained to be a stealth assassin for his order, the pentagon,\nhe has now decided to turn against it forthe riches they store.\nIf the old leader dies, he might be able to sneak into the treasury.",
+      "Level": 107,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Invisible",
+        "Light"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d161+2840",
+        "Mana": 1170,
+        "Move": 1685
+      },
+      "Combat": {
+        "Armor": -500,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Whip",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "4d12+50"
+        },
+        {
+          "Type": "Attack_1",
+          "DamageType": 0,
+          "Chance": 3,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_75",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_88",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5,
+      "Experience": 600000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14918,
+      "Name": "pentagon fourth",
+      "ShortDescription": "\nFourth member of the Pentagon",
+      "LongDescription": "\nThe Fourth member of the Pentagon is trying to gain power for himself.",
+      "Description": "\nGreed can be a large temptation and it seems that this pentagon\nmember has succumbed to it. He plots and plans for his own elevation\nwithin the order aswell as the elimiation of the competition.",
+      "Level": 101,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Invisible",
+        "Light"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d152+2420",
+        "Mana": 1110,
+        "Move": 1595
+      },
+      "Combat": {
+        "Armor": -440,
+        "Hitroll": 54,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Whip",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "4d10+50"
+        },
+        {
+          "Type": "Attack_71",
+          "DamageType": 0,
+          "Chance": 3,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_75",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_88",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5,
+      "Experience": 600000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14919,
+      "Name": "pentagon Fifth",
+      "ShortDescription": "\nFifth member of the Pentagon",
+      "LongDescription": "\nThe Fifth member of the Pentagon is sceming up yet another evil plan.",
+      "Description": "\nThe fifth member of the pentagon tried to reach the seat of power\nbut was cut off by the second in command. Since then he has been\nnursing a strong hate towards the apprentice and just waits for a\nchance to place a dagger in his back.",
+      "Level": 98,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Invisible",
+        "Light"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d147+1960",
+        "Mana": 1080,
+        "Move": 1550
+      },
+      "Combat": {
+        "Armor": -440,
+        "Hitroll": 48,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Whip",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d12+40"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5,
+      "Experience": 600000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14920,
+      "Name": "vamp",
+      "ShortDescription": "\nThe Vamp",
+      "LongDescription": "\nThe Vamp is trying to please her beloved genious.",
+      "Description": "\nBlack soft velvet covers the vamps body, all to please her\ngenious lover while he invents new ways to improve or destroy\nthe world....",
+      "Level": 109,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared",
+        "Fly",
+        "Regeneration"
+      ],
+      "Alignment": -900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d10+12000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -650,
+        "Hitroll": 75,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 402,
+          "Chance": 80,
+          "DamageDice": "10d10+100"
+        },
+        {
+          "Type": "Attack_372",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "0d0+0"
+        },
+        {
+          "Type": "Attack_103",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [
+        "Skill_315:95",
+        "Skill_372:95",
+        "Skill_322:951"
+      ],
+      "Resistances": [
+        "Resist_10000:2000000",
+        "Resist_8:8",
+        "Resist_1:14921",
+        "Resist_0:8336",
+        "Resist_0:8336",
+        "Resist_0:262400",
+        "Resist_0:1476625",
+        "Resist_0:1",
+        "Resist_0:0",
+        "Resist_0:28736",
+        "Resist_0:8196",
+        "Resist_0:397333",
+        "Resist_0:17842176",
+        "Resist_0:524289",
+        "Resist_0:1059136",
+        "Resist_0:1204233",
+        "Resist_0:151552",
+        "Resist_0:24576",
+        "Resist_0:8201",
+        "Resist_0:292160",
+        "Resist_0:8448",
+        "Resist_0:8329",
+        "Resist_0:655385",
+        "Resist_0:4598080",
+        "Resist_0:524432",
+        "Resist_0:151584",
+        "Resist_0:8710416",
+        "Resist_0:1835520",
+        "Resist_0:0",
+        "Resist_18:4",
+        "Resist_0:687867016",
+        "Resist_750:4096",
+        "Resist_109:-55",
+        "Resist_-65:8012000",
+        "Resist_400:407",
+        "Resist_60:1010100",
+        "Resist_400:408",
+        "Resist_20:1010120",
+        "Resist_103:0",
+        "Resist_20:9095"
+      ],
+      "Gold": 322,
+      "Experience": 95,
+      "DefaultPosition": "Position_-1",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14922,
+      "Name": "Pilates instructor aerobics",
+      "ShortDescription": "\nPilates",
+      "LongDescription": "\nPilates, the grand intructor of slimming aerobics stands before you!",
+      "Description": "\nDancing around, or something to the beat of a drum seems to have brought\nextasy to this thing. Pink tights, curled socks and a tank top, and a\nhideous headband, her flying in the wind, and a stench of body odours\nemanate from her. EEEEW!",
+      "Level": 109,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "8d100+4000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -500,
+        "Hitroll": 62,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 60,
+          "DamageDice": "3d30+20"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+80"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+85"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14923,
+      "Name": "Stepup stepuppp",
+      "ShortDescription": "\nStepUp",
+      "LongDescription": "\nThe Queen of power movement roars out 'StepUppp'.",
+      "Description": "\nStepping up, and stepping down from a single stair. My, where did this\nthing come from? Why walk a stair that doesnt lead anywhere ? Maybe\nyou should end her suffering right here and now?",
+      "Level": 107,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+3000",
+        "Mana": 1170,
+        "Move": 1685
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 54,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d30+20"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "2d0+75"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14924,
+      "Name": "ChiTai chi tai",
+      "ShortDescription": "\nChiTai",
+      "LongDescription": "\nChiTai the Prince of slow movement, just try to ignore your speed.",
+      "Description": "\nClad in a pyjamas, moving so slow it seems he is frozen in time,\nthis Tai-Chi instructor slowly (VERY SLOWLY) advances towards you.\nWhy not take a short nap and wait for his arrival ?",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Regeneration"
+      ],
+      "Alignment": -349,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+3500",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 55,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "3d20+35"
+        },
+        {
+          "Type": "Attack_23",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1200000,
+      "DefaultPosition": "Sitting",
+      "Sex": "Male",
+      "ActionScript": "%%10 yawn;%20 say Slow circular movements, thats it.;\n%15 emote seems to move at least an inch.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14925,
+      "Name": "four fabolous guitar player guitarplayer*",
+      "ShortDescription": "\nThe mismatched guitarplayer",
+      "LongDescription": "\nThe mismatched guitarplayer tries to take a clean chord.",
+      "Description": "\nZebra striped boots, plaid pants and spotted shirt. This thing is\nan orgy in mismatching colors that hurts your eyes. On top of that\nhe is abusing his guitar to really bring up a headache.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Hover"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+6000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -550,
+        "Hitroll": 65,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "7d10+35"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100",
+        "Skill_338:100",
+        "Skill_328:100"
+      ],
+      "Resistances": [
+        "Resist_1004:33"
+      ],
+      "Gold": 4,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 growl;%5 moan;%10 emote swings his guitar in a raunchy movement\naround his pelvis.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14926,
+      "Name": "four fabolous singer*",
+      "ShortDescription": "\nThe singer",
+      "LongDescription": "\nThe singer waves his hands in the air, starting the crowd.",
+      "Description": "\nWith bat wings and a bat painted in his face, the singer starts\nto slobber all over you (YUCK!). At least he has a somewhat descent\nvoice, but regrettably, not much else.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Sneak",
+        "Hover"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+6000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -550,
+        "Hitroll": 65,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "6d10+35"
+        },
+        {
+          "Type": "Attack_100",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_17",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100",
+        "Skill_338:100",
+        "Skill_328:100"
+      ],
+      "Resistances": [],
+      "Gold": 4,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%40 emote shouts 'All together now!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14927,
+      "Name": "four fabolous drummer",
+      "ShortDescription": "\ndrunk drummer",
+      "LongDescription": "\nThe drunk drummer is trying to hit the drums at least once.",
+      "Description": "\nThe drummer waves his sticks about frantically, his tongue halfway\nout of a tooth free mouth. The stench of mead is almost touchable\naround this wild thing. Suddenly he throws his sticks into your\nface and grabs another pair.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Thief",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Sneak",
+        "Hover",
+        "Regeneration"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+6000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -500,
+        "Hitroll": 63,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Pierce",
+          "DamageType": 500,
+          "Chance": 90,
+          "DamageDice": "6d10+30"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100",
+        "Skill_338:100",
+        "Skill_328:100",
+        "Skill_331:100"
+      ],
+      "Resistances": [],
+      "Gold": 4,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14928,
+      "Name": "four fabolous baseplayer base player",
+      "ShortDescription": "\nidiot baseplayer",
+      "LongDescription": "\nAn idiot baseplayer is ignoring the note sheets.",
+      "Description": "\nDeaf as a pole, intelligent as a worm and as subtle as a brick.\nThe perfect base player in other words. Nothing can stop him\nfrom playing the base as he wants, not even the other band members.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Hover"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+5500",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 62,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "6d10+30"
+        }
+      ],
+      "Skills": [
+        "Skill_304:100",
+        "Skill_326:100",
+        "Skill_327:100",
+        "Skill_338:100",
+        "Skill_328:100"
+      ],
+      "Resistances": [],
+      "Gold": 4,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%30 emote laughs a wicked laugh.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14929,
+      "Name": "triad member mage holy",
+      "ShortDescription": "\nthe Mage",
+      "LongDescription": "\nThe grand Mage of the Holy TRIad, watches you with great intense.",
+      "Description": "\nThe grandmage snorts in contempt at your gaze. At least he knows\nhe trancends you by miles. His arrogant ways are what recruited\nhim into the TRIad in the first place.",
+      "Level": 105,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d5+6000",
+        "Mana": 1150,
+        "Move": 1655
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "NoBsPierce",
+          "DamageType": 500,
+          "Chance": 85,
+          "DamageDice": "14d4+45"
+        },
+        {
+          "Type": "Attack_96",
+          "DamageType": 0,
+          "Chance": 7,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_101",
+          "DamageType": 0,
+          "Chance": 8,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [
+        "Skill_322:100"
+      ],
+      "Resistances": [],
+      "Gold": 1,
+      "Experience": 700000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14930,
+      "Name": "thief cleric holy triad member",
+      "ShortDescription": "\nthe Thief Clergyman",
+      "LongDescription": "\nThere is no peace to the war this clergyman fights within himself.",
+      "Description": "\nDressed in wide white garments this member of the TRIad seems\nto have at least one ounce of goodness in him, his smile warms\nthe room and then he attacks.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d100+4000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -450,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 40,
+          "DamageDice": "3d20+30"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "3d0+95"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_87",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 3,
+          "DamageDice": "3d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%30 say We come in peace, KILL IT FAST!;\n%20 smile;%20 dance;%20 say Welcome, now please leave us.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14931,
+      "Name": "helper holy triad warrior member",
+      "ShortDescription": "\nthe Warrior",
+      "LongDescription": "\nThe warrior of the TRIad is sharpening his boar-spear",
+      "Description": "\nWHOA. This thing is having an allergic reaction or something.\nhe has bulges all over his body and displays muscles you didn't\nknow existed. His broad, leaf-bladed spear definetly looks like\nit can do serious damage.",
+      "Level": 109,
+      "Race": "Fire",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Dodge",
+        "Berzerk",
+        "Regeneration"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d10+10000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -900,
+        "Hitroll": 70,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "1d50+80"
+        },
+        {
+          "Type": "Attack_103",
+          "DamageType": 0,
+          "Chance": 4,
+          "DamageDice": "1d0+90"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 8,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_5",
+          "DamageType": 0,
+          "Chance": 8,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 40000,
+      "Experience": 1300000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14932,
+      "Name": "Robin bird duo",
+      "ShortDescription": "\nRobin",
+      "LongDescription": "\nRobin is the latest bird in the Dynamic Duo.",
+      "Description": "\nHe really is one rocking robin, but was misplaced by a nanny from being\na common sparrow. You can clearly see his grey feathers beneath the\nred paint. Gently cracking a note he tries to look casual.",
+      "Level": 103,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d155+2960",
+        "Mana": 1130,
+        "Move": 1625
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 77,
+          "DamageDice": "4d10+50"
+        },
+        {
+          "Type": "Attack_1",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "2d0+75"
+        },
+        {
+          "Type": "Attack_61",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_67",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_71",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2,
+      "Experience": 666667,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14933,
+      "Name": "Bruce man duo",
+      "ShortDescription": "\nBruce",
+      "LongDescription": "\nBruce likes to dress up in tight leather outfits, Dynamic Duo, you bet!",
+      "Description": "\nBruce was supposed to be the dark knight, but some old mummy down in that\nsmall temple in Moria beat him too it, so he has to settle for second best,\nat least for a little while longer. He only needs one kill to be number one.",
+      "Level": 105,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+8000",
+        "Mana": 1150,
+        "Move": 1655
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 55,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 90,
+          "DamageDice": "30d4+0"
+        },
+        {
+          "Type": "Attack_322",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "0d0+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 75,
+      "Experience": 2333333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%10 flex",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14934,
+      "Name": "Slafs pro protectorate",
+      "ShortDescription": "\nSlafs",
+      "LongDescription": "\nSlafs is but one part of the Gauntlets final Protectorate.",
+      "Description": "\nConsisting of a puddle of slimy liquid cant be that easy, but Slafs\nhas managed this far. Green, brown and some other colors you cant\nreally name is floating around within his liquid body, aswell as\nthe last visitor.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d10+4200",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -600,
+        "Hitroll": 70,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+50"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14935,
+      "Name": "stomp pro protectorate",
+      "ShortDescription": "\nStomp",
+      "LongDescription": "\nStomp is adding more power to the final Protectorate of the Gauntlet.",
+      "Description": "\nStomp really isnt much of a looker, but hey, his feet is large enough\nto stomp you into the ground and past breaking point, best be you watch\nyour step around him, and maybe he will mind his.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d100+4000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -550,
+        "Hitroll": 70,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 85,
+          "DamageDice": "1d40+45"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_23",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1000000,
+      "DefaultPosition": "Sitting",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14936,
+      "Name": "Schlurp pro protectorate",
+      "ShortDescription": "\nSchlurp",
+      "LongDescription": "\nThe Protectorates own protegee, Schlurp, want to suck your life out.",
+      "Description": "\nGibbering and giggling he runs to you and asks, can I keep you?\nThen he runs around screaming about some giant ant in his nose.\nYou nervously look at the surroundings for that ant of his.",
+      "Level": 105,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -550,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+3500",
+        "Mana": 1150,
+        "Move": 1655
+      },
+      "Combat": {
+        "Armor": -490,
+        "Hitroll": 65,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "2d26+40"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "3d0+100"
+        },
+        {
+          "Type": "Attack_100",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "3d0+100"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14937,
+      "Name": "arti demon fallen",
+      "ShortDescription": "\nArti",
+      "LongDescription": "\nThe old fallen, wants to feed you #rFIRE#N!",
+      "Description": "\nOnce a nobody, now fallen from grace, he tries to lure people\ndown in despair to shorten his own eternal lifespan. The gods\nhas granted him 20 years off his sentance for each soul he\ngives them.",
+      "Level": 100,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+3500",
+        "Mana": 1100,
+        "Move": 1580
+      },
+      "Combat": {
+        "Armor": -550,
+        "Hitroll": 55,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 407,
+          "Chance": 60,
+          "DamageDice": "7d11+30"
+        },
+        {
+          "Type": "Hit",
+          "DamageType": 408,
+          "Chance": 20,
+          "DamageDice": "10d10+50"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+90"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1,
+      "Experience": 1200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14938,
+      "Name": "divine intervention mistress",
+      "ShortDescription": "\nthe Divine Intervention",
+      "LongDescription": "\nThe mistress, is really an act of higher divinity.",
+      "Description": "\nA sight for sore eyes. Pherhaps a little too much sight, but\nyou can definetly get used to it, oh if only you had time to\nogle it some more.",
+      "Level": 105,
+      "Race": "Demon",
+      "Class": "MagicUser",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+2750",
+        "Mana": 1150,
+        "Move": 1655
+      },
+      "Combat": {
+        "Armor": -600,
+        "Hitroll": 55,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "20d6+10"
+        },
+        {
+          "Type": "Attack_322",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "0d0+0"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_100",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_107",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [
+        "Resist_4:95",
+        "Resist_7:100",
+        "Resist_38:100",
+        "Resist_40:100",
+        "Resist_103:75"
+      ],
+      "Gold": 2,
+      "Experience": 1800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 emote bats her long lashes towards you.;\n%5 sneeze;\n%5 giggle",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14939,
+      "Name": "anti mass",
+      "ShortDescription": "\nThe AntiMass",
+      "LongDescription": "\nThe AntiMass is very much anti to masses.",
+      "Description": "\nWith his anti body he tried to destroy the world, but was trapped\nby trickery and put here, to guard the gauntlet forever, to stop\nintruders and to be a tough challenge.",
+      "Level": 105,
+      "Race": "Demon",
+      "Class": "MagicUser",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Regeneration"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+2500",
+        "Mana": 1150,
+        "Move": 1655
+      },
+      "Combat": {
+        "Armor": -450,
+        "Hitroll": 50,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 15,
+          "DamageDice": "20d3+30"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+40"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+90"
+        },
+        {
+          "Type": "Attack_37",
+          "DamageType": 0,
+          "Chance": 13,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_63",
+          "DamageType": 0,
+          "Chance": 14,
+          "DamageDice": "1d0+50"
+        },
+        {
+          "Type": "Attack_88",
+          "DamageType": 0,
+          "Chance": 13,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_100",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+40"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 15,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%10 fart;\n%10 puke;\n%10 drool",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14940,
+      "Name": "blob",
+      "ShortDescription": "\nThe Blob",
+      "LongDescription": "\nThe Blob is at the end of the Gauntlets food chain.",
+      "Description": "\nA blob, much like those that surround Midgaard, but 50 times\ntheir size has taken up its residence here. Gelatinous slime\ncovers the coating and it stenches like a slaughterhouse on \na hot summers day. Suddenly a slimy tentacle rushes forward\nto grasp and burn your leg away with its acid touch.",
+      "Level": 110,
+      "Race": "Undefined",
+      "Class": "MagicUser",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Regeneration"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d999+15000",
+        "Mana": 1200,
+        "Move": 1730
+      },
+      "Combat": {
+        "Armor": -540,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 10,
+          "DamageDice": "1d200+50"
+        },
+        {
+          "Type": "Attack_322",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "0d0+0"
+        },
+        {
+          "Type": "Attack_59",
+          "DamageType": 0,
+          "Chance": 25,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_100",
+          "DamageType": 0,
+          "Chance": 25,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_109",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+100"
+        },
+        {
+          "Type": "Attack_110",
+          "DamageType": 0,
+          "Chance": 3,
+          "DamageDice": "2d0+60"
+        },
+        {
+          "Type": "Attack_75",
+          "DamageType": 0,
+          "Chance": 2,
+          "DamageDice": "2d0+60"
+        },
+        {
+          "Type": "Attack_71",
+          "DamageType": 0,
+          "Chance": 3,
+          "DamageDice": "2d0+60"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "2d0+100"
+        }
+      ],
+      "Skills": [
+        "Skill_322:100",
+        "Skill_339:100",
+        "Skill_321:100",
+        "Skill_373:100",
+        "Skill_377:100"
+      ],
+      "Resistances": [
+        "Resist_375:90",
+        "Resist_372:90",
+        "Resist_324:100",
+        "Resist_322:100",
+        "Resist_300:90",
+        "Resist_301:90",
+        "Resist_302:90",
+        "Resist_303:90",
+        "Resist_373:90",
+        "Resist_387:90"
+      ],
+      "Gold": 1000000,
+      "Experience": 3,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%10 Emote tries to devour you.\n;%10 Emote welcomes you, in its very own special way, as dinner.\n;%10 rasp",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 14911,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14911,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14911,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14912,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14912,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14912,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14913,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14913,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14913,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14914,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14914,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14914,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14915,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14915,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14915,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14916,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14916,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14916,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14917,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14917,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14917,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14918,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14918,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14918,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14919,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14919,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14919,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14920,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14920,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14920,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14921,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14921,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14921,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14922,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14922,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14922,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14923,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14923,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14923,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14924,
+      "Name": "key SOMETHING00",
+      "ShortDescription": "\n inventory_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14924,
+        0,
+        0,
+        0,
+        0,
+        241
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 14924,
+          "Timer": 0,
+          "TimerSet": 241
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "SOMETHING00"
+          ],
+          "Description": "\n Examine_desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14925,
+      "Name": "reward",
+      "ShortDescription": "\n inv_desc00",
+      "Description": "\n Room_Desc00",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristLeft"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 100000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "reward"
+          ],
+          "Description": "\n desc00"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [
+        "Bitvector_268435488"
+      ],
+      "SpecialProc": null
+    }
+  ]
+}

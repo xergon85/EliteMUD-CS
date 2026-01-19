@@ -1,0 +1,1711 @@
+{
+  "Zone": {
+    "Id": 282,
+    "Name": "Clans",
+    "TopRoomId": 28299,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 25,
+        "Arg2": 100,
+        "Arg3": 28204,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 31,
+        "Arg2": 100,
+        "Arg3": 28220,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3135,
+        "Arg2": 100,
+        "Arg3": 28205,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 28200,
+      "Name": "#bThe Entrance to the Kai Citadel#N",
+      "Description": "\n     A huge citadel is outlined against the sky, overlooking the city of\nMidgaard. The massive bronze doors to this fortress stand open, and you\nsomehow feel welcome. No guards defend this place, and the sounds that \nare normally heard in the castles of the Elite world are not heard here.\nWhatever lies within, this place is at peace. Above the door you see a\nhuge stone archway with some writing on it. You can go south, back into\nMidgaard, or north, into the citadel. You also see a #N#bplaque#N on the\nwall here that may bear furthur reading.\n§N",
+      "ZoneId": 282,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28201,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3065,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "archway",
+            "arch"
+          ],
+          "Description": "\nCarved from a single piece of marble, this archway supports the south\nfacing wall of the citadel. Inscribed across the top of the archway is\nthe Kai Credo. It reads:\n\n           \"Honour, Fellowship, Courage, Respect, Loyalty.\"\n§N"
+        },
+        {
+          "Keywords": [
+            "plaque",
+            "sign",
+            "wall"
+          ],
+          "Description": "\nIt reads:\n     A lot of work was put into this house, especially the extra\ndescriptions!  If you see a work of interest such as plaque, sign, \nstatue, anything, try to look at it! Often, there is a detailed \ndescription attached. We, the  builders of the Kai Fortress, hope you \nlike it, and you are *more* then welcome to look around and use our \nfacilities.  -Nymph and Rilarien\n§N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28201,
+      "Name": "#bInside the Citadel#N",
+      "Description": "\n     You are standing in a darkened hallway, massive marble pillars\nholding up the arched ceiling all along the length of the hall. Carved\ninto each pillar is a statue, presumably of some past hero. You can \nfollow the hallway north, or go to one of the two rooms here. There is a \nsmall plaque on one of the pillars.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28204,
+          "Description": "The hallway to the north is dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28200,
+          "Description": "You can see sunlight from here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fang"
+          ],
+          "Description": "\nStern, stalwart, deadly, Fang was the Kai of Honour and Courage. He \nhelped those he deemed worthy, and had no patience for those who were \nincompetent.  Years of battle changed him, and he became much respected\nfor who he was, as well as for his unmatched ability with the sword."
+        },
+        {
+          "Keywords": [
+            "karen",
+            "lanier"
+          ],
+          "Description": "\nBeautiful, elegant, slender frame belying great power, Karen Eth Lanier \nwas the trusted ally of Ben Kenobi and succeeded where he failed. The two \nfought many great battles side by side, for Karen is the Kai of Skill."
+        },
+        {
+          "Keywords": [
+            "ben",
+            "kenobi"
+          ],
+          "Description": "\nA slender robed figure carved in stone, with deep scars and determined \ngaze. Ben Kenobi was the Kai of respect, once beloved by his people, and \ncast aside when he lost his faith in them."
+        },
+        {
+          "Keywords": [
+            "plaque",
+            "sign",
+            "pillar"
+          ],
+          "Description": "\nThese are the semblances of the mightiest of the old Kai. Look upon them \nwell, for they each symbolize a facet of what you aspire to be. The \nlegendary Ben Kenobi, the vengeful Fang, and the mighty Karen Eth Lanier."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28202,
+      "Name": "#bAn Arched Hallway#N",
+      "Description": "\n     This large hallway continues to the north and south. Pillars line \nboth sides of the walls, supporting the giant arches above. Some of them \nseem to have carvings of ancient people on them, giving off great wisdom. \nTo the west of here is a quiet, dark room, lit by candles. To the north, \nthe great hallway ends and opens into a large room with an enormous \ncircular table in the middle.\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28220,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 1074023867,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pillar",
+            "wall",
+            "statue",
+            "carving"
+          ],
+          "Description": "\nCarved into these pillars are the faces of legendary Kai heroes. Most \nrecognizable are Kronan, Nibor, and the great Darius. All of them seem to \nhave been very important to Kai, and very wise."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28203,
+      "Name": "#bThe Kai Training Hall#N",
+      "Description": "\n     This empty chamber has weapons lining the walls, and it obviously\ndoubles for an armoury. On the far wall beyond a glowing forcefield are 4\nweapons, legendary artifacts from another world. A pure white blade, a\ncrackling black sword, a solid mithril mace and a long war spear. The Kai\nalso use this room to stock spare equipment. New warriors are always\nwelcome to look here should they have need of beginning equipment!\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28204,
+          "Description": "You see the dark hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "blade",
+            "white",
+            "pure",
+            "glory"
+          ],
+          "Description": "\nThis is the mighty Sword of Glory, the weapon of the Kai. It was brought \nto this world by Ben Kenobi, and is kept here, as he is no longer worthy \nto wield such a blade."
+        },
+        {
+          "Keywords": [
+            "sword",
+            "crackling",
+            "black",
+            "stormblade"
+          ],
+          "Description": "\nThis is the deadly Stormblade, hidden by the elves until the dragon Santa \nplundered their castles and completed their quests. When it fell into his \nhands, all who were good trembled with fear, and no-one dared oppose him."
+        },
+        {
+          "Keywords": [
+            "mace",
+            "mithril",
+            "disruption"
+          ],
+          "Description": "\nThis is the holy Mace of Disruption, brought to this world by the warrior \nmaiden Kris. Thought lost, it surfaced recently and has been kept here \never since. Many undead creatures were blasted into oblivion at Kris's\nhands."
+        },
+        {
+          "Keywords": [
+            "spear",
+            "vangar"
+          ],
+          "Description": "\nThis is Vangar's Spear, wielded by the mighty general of the Crimson \nWorld. No-one knows how it arrived in Elite, but here it is kept, lest it \nfall into the wrong hands."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28204,
+      "Name": "#bArched Hallway#N",
+      "Description": "\n     The large hallway continues. There are more pillars with statues\ncarved into them here, and there is a plaque on one support. If you wish, \nyou can follow the hall north or south, or you can enter one of the two \ndoorways here to see what lies beyond. A spiral staircase also leads up\nfrom here.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28202,
+          "Description": "The hallway continues to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28205,
+          "Description": "There is a large chamber to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28201,
+          "Description": "The hallway continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28203,
+          "Description": "There is a large chamber to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plaque"
+          ],
+          "Description": "\nThis is the room of the dead gods. The gods who once held power in the\nworld of Crimson, but fell after the Apocalypse.  Chani is not the power \nshe once was, and Trinity and Terrock have vanished totally."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28205,
+      "Name": "#bThe Kai Barracks#N",
+      "Description": "\n     These are the sleeping quarters of the Kai, where they rest between\ntheir rigorous adventures. If you need to rest, rest here, for the magic \nof the Kai ensures that you cannot be harmed within this room. Indeed, \nsome claim that those who tend their wounds here heal much faster than \nanywhere else! Also, the food you see here is for people resting here, \noften left by kind-hearted Kai for less fortunate people. Please \ncontribute! There is a map on\nthe wall here, with a plaque beneath it.\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Lawful",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28204,
+          "Description": "The hallway is through this door.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "map"
+          ],
+          "Description": "\n\n                                      #bRoom#N   \n                                      /  |   \n                                     / #bCouncil#N   \n                                    /   \n                           #bWoR#N -- #bEoH#N  -- #bAsh#N   \n                                   |    \n                                   |        #bZif#N   \n             #bWil    DaM    Atl#N     |   #bRoom#N/   \n              |      |      |      |  /   \n             #bElH#N -- #bElH#N -- #bElH#N -- #bArH#N  -- #bKai\n                                                        Barracks#N   \n              |      |      |      |   \n         #bCat    Dar    Flg#N     |   \n                                   |   \n                           #bArm#N -- #bInC#N  -- #bLibrary#N   \n                                   |   \n                                  #bEnt#N  \n§N"
+        },
+        {
+          "Keywords": [
+            "key",
+            "plaque"
+          ],
+          "Description": "\n#bMAP KEY\n-------#N\n\nAsh - Ashen-Shugar's Room  WoR - Worship Room\nEoH - End of Hall          Wil - Willow's Room\nDaM - Dakkon's Maze        Atl - Atlantis's Room (register of Kai is \n                                                  here)\nElh - Elder Hall           Cat - Catwoman's Playroom\nDar- Darren's Room        Flg - Flagg's Room \nZif - Zifnab's Room        ArH - Arched Hallway\nInC - Inside Citidel       Ent - Entrance\n\nArm- Armory. NOTE: this room is for low level players only.\n     High level players taking equip from this room is *HIGHLY*\n     frowned on.\n\n       Map courtesy of the Kai and the Keeper of the Citidel\n§N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28206,
+      "Name": "#bHallway of the Elders#N",
+      "Description": "\n  This long hallway is beautifully decorated, with a scarlet red\ncarpet covering the length. Doors line this hall, presumably leading to\nthe private rooms of various notable Kai. You can follow the hallway to\nthe east or the west, or open on of the doors here. The door to the south\nhas the is engraved with the name \"Flagg\".\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28207,
+      "Name": "#bSnicker's Room#N",
+      "Description": "\n     The first thing you notice upon stepping into this room, is the \nclutter.  A dark blue velvet cloak hangs over the lone chair which sits \nnear a writing desk piled with journals, papers and scrolls.  Books are \nstacked everywhere, maps and illustrations line the walls, and small \nmetal figurines crowd a little shelf.  A worn staff in the corner topped \nwith a traditional jester's cap and bells declares the owner's \noccupation.  The bed is the only thing that looks neat, appearing to \nnever have been slept in.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28217,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "journals",
+            "papers",
+            "scrolls"
+          ],
+          "Description": "\nMost of the papers seem to be written in a cramped, unreadable script.  \nWhat few you can read seem to be notations on the world you are familiar \nwith. One paper in particular is dedicated to the study of extinct flora \nand fauna, including the long-lost \"smurfs.\""
+        },
+        {
+          "Keywords": [
+            "maps"
+          ],
+          "Description": "\nThe maps on the walls cover large amounts of territory, both familiar\nand strange.  The largest maps cover areas labeled \"Elanthia,\" \"Norrath,\"\nand \"Covenia,\" in addition to a large world map that seems somewhat\nfamiliar, if a bit old.  Although all appear to be drawn by the same \nhand, the Elanthian and Norrath maps are signed by \"Talies,\" and the \nCovenia map is unsigned, and appears to be unfinished."
+        },
+        {
+          "Keywords": [
+            "figurines"
+          ],
+          "Description": "\nThe metal figurines are each small enough to hold in one hand,\nalthough much heavier than they first appear. Each one is different, and\ncolorfully painted, and they all seem to be tiny adventurers or monsters."
+        },
+        {
+          "Keywords": [
+            "cloak"
+          ],
+          "Description": "\nThe cloak appears somewhat worn, but still retains it's original\nbeauty.  The scent of campfires lingers when you touch it."
+        },
+        {
+          "Keywords": [
+            "staff"
+          ],
+          "Description": "\nWorn by use or travel, you can't tell, but the jester's cap seems to\nbe a recent addition."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28208,
+      "Name": "#bInside a Beautiful Flower#N",
+      "Description": "\n     The sweet scent of the flower is overwhelming and makes you feel a \nlittle dizzy. As you enter the small opening in the flower, you feel a \nstrange sensation goes through your body and everything around you seems \nto increase in size. \n\n     Looking back up at the opening, you can see a piece of the flower, \nwhich hangs over the opening acting like an awning. You can see the sky \nfrom where you are sitting and feel a cool breeze in your hair. On the \nedge of the opening is a small hook, maybe used to fasten the awning in \nbad weather. If you stand up you might be able to look over the edge back \ninto the garden. The walls of the small nest are soft like velvet and \nseem to be changing in colors ranging from yellow to green right before \nyour eyes. The bottom is covered with small silk pillows in many \ndifferent colors and patterns to sit on. Also, a small chest acts as both \na table and a place to keep things. On top of it are some small pictures \nin silver frames and a basket with fruit.\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "InAir",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 28214,
+          "Description": "",
+          "Keywords": [
+            "awning"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pillow"
+          ],
+          "Description": "\nThe pillows are of many colors, shapes and patterns, their look very \ncomfortable."
+        },
+        {
+          "Keywords": [
+            "chest"
+          ],
+          "Description": "\nThe small chest is made of wood and has strange patterns carved into it. \nA large metal lock prevents you from opening it."
+        },
+        {
+          "Keywords": [
+            "walls"
+          ],
+          "Description": "\nThe yellow and green colors seems to change all the time."
+        },
+        {
+          "Keywords": [
+            "awning"
+          ],
+          "Description": "\nThe awning is of a light yellow color with small green spots, on one side \nis a rope hanging, most likely used to secure it when the wind blows."
+        },
+        {
+          "Keywords": [
+            "hook"
+          ],
+          "Description": "\nIt is a small hook that seems to have been put there for a reason."
+        },
+        {
+          "Keywords": [
+            "fruit"
+          ],
+          "Description": "\nThere are a few different kinds of fruit all foreign to you, but they \nlook fresh and delicious."
+        },
+        {
+          "Keywords": [
+            "basket"
+          ],
+          "Description": "\nThe basket is made of wicker."
+        },
+        {
+          "Keywords": [
+            "out"
+          ],
+          "Description": "\nYou see the garden below you with all it's flowers and grass. When you \nlook up you can see the trees above. Everything looks much bigger than \nusual or maybe you remember wrong."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28209,
+      "Name": "#bThe Room of Worship#N",
+      "Description": "\n     This is where the Kai pray to their gods. Many idols line the\nwalls, hold-overs from the Saracen days. In the center of the room is a \nlarge altar, presumably used for the many ceremonies of the Kai. This is \nwhere new Kai are initiated, and taught of the days of old, the days of \nthe Saracen, and the credo of the Kai.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28202,
+          "Description": "You can leave to the hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "idols"
+          ],
+          "Description": "\nThe idols of Nymph the Angel, Rilarien the Wolf, Odie, Nymph's lover, \nXman the once-king, and Radagast the Wizard all line the walls.  There \nare other nameless statues, too old to be identified."
+        },
+        {
+          "Keywords": [
+            "altar"
+          ],
+          "Description": "\nThe large altar is vaguely translucent, and you see that embedded deep  \nwithin is what appears to be a Sword of Glory."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28210,
+      "Name": "#bEnd of the West Wing#N",
+      "Description": "\n     The west wing ends here. Further west lies the humble abode of one \nof the greatest Kai of all, Viv. North is the home of Karen Eth Lanier. \nLike the other hallways in this citadel, there are pillars supporting the \narched ceiling. However, nothing has been carved into these, perhaps \nleaving room for future Kai.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28223,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28211,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28225,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "painting",
+            "north",
+            "art"
+          ],
+          "Description": "\nAn ancient dragon, fighting side-by-side a much younger red dragon and\nseveral mortal heroes, battles a mighty demon in this painting. You\nidentify one of the robed figures as Evil, once-emperor of the Storm\nDragons, and therefore the dragons are likely to be Santa and Reddragon.\nThe other heroes are unknown to you. Writing on the bottom of the \npainting indicates that this work of art was taken from the world of \nCrimson, from Santa's cave, so that it would always be safe here.\n§N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28211,
+      "Name": "#bIn the West Wing#N",
+      "Description": "\n     This large hallway leads east and west. The vaulted ceiling is \nsupported by huge pillars. Most of them have been carved into statues of \nancient Kai, others may have been, but have eroded and are \nincomprehensible at their present state. There seems to be room north and \nsouth for people's rooms.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28220,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28210,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pillar",
+            "wall",
+            "carvings"
+          ],
+          "Description": "\nThe pillars here have been carved away to form statues of the faded Kai. \nOdie, and Dementorr, are the only statues here that haven't been worn \naway beyond recognition."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28212,
+      "Name": "#bJesta's Garden#N",
+      "Description": "\n     The red light fades and you find yourself standing in the middle\nof a massive desert, with sand as far as the eye can see... burnt, black \nsand. In the middle there is a small broken-down tower with some dead \ntrees around it, and brown vines seem to fill the interior. Inside you \nsee a broken swing and a dog's collar lying on the floor. You can still \nsmell something in the air, possibly sulfur, possibly something much, \nmuch worse. You are filled  with an overpowering urge to leave this ruin.",
+      "ZoneId": 282,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28214,
+          "Description": "The desert stretches as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "swing"
+          ],
+          "Description": "\nThis is Jesta's swing, where the carefree goddess used to swing for\nhours and hours."
+        },
+        {
+          "Keywords": [
+            "collar",
+            "dog"
+          ],
+          "Description": "\nThis is the collar of Watson, the Sausage dog."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28213,
+      "Name": "#bBen Kenobi's Study#N",
+      "Description": "\n     Ben Kenobi, much respected Jedi hero and Kai Lord, once a\nhigh-god in the world of Crimson, now a mere mortal, spends his days \nhere, when he is not out in the world of Elite. It took all the magic the \nKai could muster to salvage this portion of the world he came from. The \nroom itself is rather sparse, a bed, a desk, paperwork cluttering it. The \nonly objects of note are two statues, one of a fair maiden, and one of an \nelven hero, which seem to guard the stairs against all intruders.\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 28220,
+          "Description": "You can climb down to the Garden.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "alannon",
+            "elven",
+            "hero",
+            "elf"
+          ],
+          "Description": "\nAlannon the Elven Knight, who instructed Ben in the use of the\nsword, and showed Ben the ways of magic. His apparant youth belies his \ntalent, and  he is sorely missed by the Kai Lords. He was the Avatar of \nGood, a fabled  warrior in his time.. but now he is dead, and no-one \nspeaks of his deeds anymore."
+        },
+        {
+          "Keywords": [
+            "jesta",
+            "maiden"
+          ],
+          "Description": "\nThis is a statue of Jesta, Ben's goddess in the world of Crimson.\nShe looks rather playful, like she was a harmless figure, and her almost  \nchildlike beauty is marred only by her eyes. They seem too fierce, too  \nangry for her face."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28214,
+      "Name": "#bA Large Garden#N",
+      "Description": "\n     The garden is filled with flowerbeds and tall beautiful trees. There \nare many trails in the garden, but most of them lead right back to the \nmiddle. All around the garden is a tall stone wall. On the wall flowers \nand grass is growing and some places the stones have been broken, leaving \nopening in the wall. There is a small flower right next to an old oak \ntree, which looks foreign and out of place.",
+      "ZoneId": 282,
+      "Sector": "Hills",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28228,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "maple"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28212,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28217,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28208,
+          "Description": "",
+          "Keywords": [
+            "flower"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "oak"
+          ],
+          "Description": "\nThe old tree looks to be many hundreds of years old."
+        },
+        {
+          "Keywords": [
+            "flower"
+          ],
+          "Description": "\nThe green and yellow flower has a small opening in the top."
+        },
+        {
+          "Keywords": [
+            "trail"
+          ],
+          "Description": "\nThe trail is a dirt trail."
+        },
+        {
+          "Keywords": [
+            "wall"
+          ],
+          "Description": "\nIn between the large stones flowers and grass grows. The wall has not \nbeen kept well."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28215,
+      "Name": "#bDeimos's Cave#N",
+      "Description": "\n     It is a lot cooler in here, as the cave you've found shelters you \nfrom the desert heat. This cave is tremendous on the inside, and every\nnoise you make echoes off the walls in an eerie fashion. You see a ledge\non the other side of the cave, strewn with treasure, a dragon's treasure,\nyou suddenly realize. You can't get to it from here, because you are\nblocked by a large lake, and all the treasure on this side doesn't really\nseem worth it. Mostly books.. a dragon reading? There is also a small\npainting on the  ground, mostly completed. You can go back out into the\ndesert, or try to cross the lake.",
+      "ZoneId": 282,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28227,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "painting",
+            "lanceor"
+          ],
+          "Description": "\nThis is a almost complete painting of a young elf. According to the \nframe, this is Lanceor Eth Lanier, the last Jedi. He is depicted here in\nbattle with the evil denizens of the fabled city of Arnath, with the\nspirits of the Jedi Knights Karen Eth Lanier and Ben Kenobi watching \nover him."
+        },
+        {
+          "Keywords": [
+            "lake"
+          ],
+          "Description": "\nOdd, it seems like there is a red glowing shape in the lake."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28216,
+      "Name": "#bA Storage Room#N",
+      "Description": "\n     This is where the Kai keep their spare equipment. The shelves in\nthis room are all kept clean, and it is well lit enough that you can see\nfar into the storage chamber. If you find yourself in need of some of the\nmore common items EliteMUD has, check here often. Occasionally you may\nfind something interesting!",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 28220,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28217,
+      "Name": "#bNorth Wing#N",
+      "Description": "\n    This hallway is much shorter than the others, it ends to the north in \nenormous double doors, forming a great arch. Through the doorway, a vast \ngarden is visible, and beyond that a giant tree. Pillars line the walls \nhere, each with carvings in them. A small blue animal resembling a smurf \nwalks into the room east of here, and to the west comes the laughter of \nthe greatest Jester to belong to Kai.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28214,
+          "Description": "§N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28222,
+          "Description": "§N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28220,
+          "Description": "§N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28207,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pillar",
+            "wall",
+            "carving"
+          ],
+          "Description": "\nThe pillars here have been carved away to form statues of the faded Kai. \nLabria, Larson, and Mithrandir are among the most prominent statues here."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28218,
+      "Name": "#bThe East Wing#N",
+      "Description": "\n  This hallway continues off to the east, an endless tribute to faded \nKai, carved onto the pillars. North leads to the room of Atlantis, and to \nthe south is space for a new Kai to live. Rocks crumble from the top of \nthe arched ceiling, this hallway is badly in need of repair.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28229,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28227,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28220,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pillar",
+            "wall",
+            "carving"
+          ],
+          "Description": "\nThe pillars here have been carved away to form statues of the faded Kai. \nXala, Garthos, and Seleena have been carved into these pillars, forever \nhonored."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28219,
+      "Name": "#gDarren's Woodland Hide-Away#N",
+      "Description": "\n   The Kai have many valued friends, and as a mark of respect, some\nof these allies are given dwellings within the fortified walls of the\nKai citadel. The Huntress Soulcatcher is one such person. An experienced  \nranger, she has chosen to live in the peace and serenity of the woods \njust outside the fortress, forsaking the civilization within. When this\nwarrior maiden is not out aiding her clan, the Pack, or battling in the \nworld of Elite, she can occasionally be found resting here. The mystical \npowers of the grove are beneficial to the injured, and many an adventurer \nhas tended his wounds here, using the woodland's healing power. The woods \nhave been   vacant since Soulcatcher left the land of the mortals, but \nrecently, a ranger by the name of Darren has been seen resting here.\n§N",
+      "ZoneId": 282,
+      "Sector": "Forest",
+      "Flags": [
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28227,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28220,
+      "Name": "#bThe Heart of the Citadel#N",
+      "Description": "\n    This giant room appears to be the meeting room of the citadel. In its \ncenter is an enormous round table, with places for all the Kai to sit and \nparticipate. Off in one corner is a fountain, and in the opposite, a \nlounge for the weary Kai to socialize after a hard day's fighting. In the \nother two corners are staircases, one leading up, another leading down.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28217,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28218,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28202,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28211,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28213,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28216,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28221,
+      "Name": "#bThingol's Farm#N",
+      "Description": "\n    In the oasis of the desert the humble peasant Thingol tills the\nsoil, growing corn and wheat and meatballs for his glorious lords....\nwell, mostly for his friends and family, but his glorious lords do get a\nlittle bit, if Thingol feels generous.  All peasants are welcome to work\nthe land and take care of Thingol's animals, and he will protect them\nfrom all harm.\n#N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28228,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28222,
+      "Name": "#cGunter's Mushroom House#N",
+      "Description": "\n   You have just walked into the room of one of the #bKai#N Knights, \nGunter the #csmurf#N. Being a #csmurf#N with #csmurf#N like natures, he will \nundoubtedly invite you in to talk and what not, although you may have to \nsneak out to get away. One of the first things you notice as you walk in \nis that the room is not very well kept. There are #Cpictures#W of loved \nones on a counter, and after meeting Gunter, you are afraid to peer into \nthe drawers. At the very end of the room you see a small box marked \nGunters special stock, but of what, you wonder. Some of more interesting \nthings you notice are a half open #rcloset#N, a tall #ebookshelf#N that holds \nthe many books he reads. Also small, #csmurf#N sized #gbed#N, and even a funny \nshaped #Bhammok#N that Gunter loves to sit in when there is nothing more \ninteresting to be done, and #ypool table #Wnear it, in which he boasts \nhimself to be the best player around. And lastly you see strange \n#mmantles#N that seem to be glowing, lighting and brighting the room.\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28217,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pictures"
+          ],
+          "Description": "\nYou see many pictures of different people,most of them #csmurfs#N and \nother people of Kai. One of the#c smurf #Wpeople you know from the \npictures is the famed #rgrandpa #csmurf#N!"
+        },
+        {
+          "Keywords": [
+            "closet"
+          ],
+          "Description": "\nYou peek into the closet, and it is not unlike many you have seen \nbefore. Shirts with #csmurf#Wish logos and names on them, socks, coats, a \ndress.....How did that get in there?!?"
+        },
+        {
+          "Keywords": [
+            "Bookshelf"
+          ],
+          "Description": "\nAt the top of the shelf you see a lot of the books are dusty \nand have not been used for a while, probally because Gunter cant reach \nthem. The ones on the lower shelves seem to be well used though. You look \nat some of the titles: Go Dog Go, Clifford, Curious Gorge... Hmm..."
+        },
+        {
+          "Keywords": [
+            "bed"
+          ],
+          "Description": "\nThis bed looks much to small for any human to use, but it seems \nperfect for a #csmurf#W. There are blue sheets and a fluffy pillow, maybe \na favorite of his."
+        },
+        {
+          "Keywords": [
+            "hammock"
+          ],
+          "Description": "\nThis hammock has been crafted, somehow, into the form of a sitting \n#csmurf#N. It looks very comfortable, and you wonder if you could sit for \na while in it."
+        },
+        {
+          "Keywords": [
+            "Pool",
+            "table"
+          ],
+          "Description": "\nA finely crafted table with, of course, blue felt. Also a slot \nto accept four quarters.... What a cheap smurf!"
+        },
+        {
+          "Keywords": [
+            "mantles"
+          ],
+          "Description": "\nThese are glowing with a bright, warming light because of some magic. \nItems have been encased in the wood, shown though glass. Relics from \nhis old homeland of the #csmurfs#W, these are very dear to him."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28223,
+      "Name": "#wThe Sanctuary of Sorrow#N",
+      "Description": "\n    As you walk into this room a feeling of anguish and neverending\nloss assults your senses. The room's interior is an expanse of a floor \nand walls of white marble. The ceiling is golden but blackened soot \ncovers it giving everything a dingy cast. Tapestries of red and blue are \nstill up on the walls but they are torn and ripped apart. In the center \nof the room a dias is raised and upon it is a throne of gold and wood, \ncovered with a plush blue pillow. The throne itself is covered in ash and \nfire, the pillow has a long claw mark in it and is soaked in blood and a \nsmell of brimstone still fills the air. A feeling of sorrow and loss as \nnever felt before in this world overcomes you and in your mind you can \nhear the silent screams of the men, women, and children of the family, \n'Eth Lanier' as they died to the demon hordes decades past.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28210,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "throne"
+          ],
+          "Description": "\nThis throne sits upon a the dias of white marble. The blue pillow on it\nhas long claw marks through it, and the whole pillow is soaked in blood.\nLooking at it you can almost imagine the dread demon-lord Beriz, \nwrenching a clawed hand through the lost Patron of the family 'Eth \nLanier' cutting through sinew and bone to reach the pillow behind him, and then casually tossing him aside."
+        },
+        {
+          "Keywords": [
+            "tapestry",
+            "tapestries"
+          ],
+          "Description": "\nThe tapestries along the wall smell of soot, ash, smoke, and brimstone.\nRipped apart by the conquoring demons they depict a land as fair as the\nmorning dawn. A land you can only see in the memory of this faded \ntapestry as the guardians of this land were finally over-run."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28224,
+      "Name": "#bHallway of the Elders#N",
+      "Description": "\n     You are standing in the long hallway. It is soothingly quiet this \ndeep into the Kai Fortress, and as the walls of this citadel dig furthur\ninto the mountain on which it is built, they get closer to the magic that\nbinds much of this mystical place to this plane. To the north there is a \ndoor with a faint red aura around it; the name \"Viv\" is written upon it \nin golden lettering. To the south is another door with the name \"Odie\" \ninscribed on it.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28225,
+      "Name": "#mViv's Treehouse#N",
+      "Description": "\n    You are standing in a small wooden tree house.  This is where\nViv crashes when she gets tired of rocking the mud, and decides to rock \nsomething else instead. *wink* Lots of cushions, wine bottles, leather \ntoys and other stuff can be seen here.  There is a small TV and VCR in \nthe corner.\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoMagic",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28210,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28226,
+      "Name": "#bWargas's Sanctuary#N",
+      "Description": "\n    This, quite odd room, belongs to the Master Wizard of the red order.\nQuite hard to believe that, since the whole room is absolutely full of\ncats. cats, everywhere, small balls of fur racing around on the floor,\nstalking and pouncing on eachother. Sounds of purring, everywhere,\nthere's no way escaping it. Along one wall, a huge bed has been\nplaced, now very full of cats. By the far end of the room, a small \naltar has been erected, propably dedicated to cats, yes, cats.\nThen it hits you; Where does he sleep? He does sleep, doesn't he?\nYou check the room, the closets, every corner and as you check behind\nthe entrance door, you find a chair. A simple chair, still showing \nthe signs of great use. A chair? You begin wondering, what kind of cat\nmaniac is this?.           \n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28227,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28227,
+      "Name": "#bEnd of the East Wing#N",
+      "Description": "\n   You are at the end of the long hallway. North of here there is a\ndoor with the name \"Deimos\" inscribed on it. The southern door has the\nname \"Darren\" written on it. To the east is a door with the name \n\"Wargas's Sanctuary\". Three white marble pillars lining the walls have \nbeen carved to form statues of lost Kai.\n§N",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28215,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28226,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28219,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28218,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pillar"
+          ],
+          "Description": "\nThe pillars here have been carved away to form statues of the faded Kai. \nThe statues of Nimbus, Takashi, and Sarastro seem rather new, compared \nwith the rest of the statues in the citadel."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28228,
+      "Name": "#bGeoff and Belephebe's Love Nest#N",
+      "Description": "\n   Upon entering this giant maple tree, you realize that it has been \ncarved into a cozy one-room house. In the northwest corner, there is a \nsoft fluffy bed, with a nightstand sitting next to it. On the other side \nof the room is the wood stove, with two rocking chairs sitting next to \neach other, looking out through a window. Immediately to the right, there \nis a beautifully carved maple table. Across from that is a white \nloveseat, sitting in front of a bookshelf. Next to the loveseat is a \nsmall scratching post for Belephebe's fluffy gray kitten, who seems to be \nhunting mice right now, judging by the noises coming from outside. There \nare many windows on each wall, looking out upon spectacular scenery.",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28214,
+          "Description": "",
+          "Keywords": [
+            "maple",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28221,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rocking",
+            "chairs",
+            "stove",
+            "chairs"
+          ],
+          "Description": "\nOff to the east is a wood stove, used to cook all sorts of food, but more \nimportantly, keep the house warm. A little ways away from the stove, \nthere lies two rocking chairs made of maple, side by side. They face \nanother window, through which a wooden bench, suspended from a higher \nbranch on the tree by two metal chains, can be seen."
+        },
+        {
+          "Keywords": [
+            "pillow",
+            "bed",
+            "nightstand"
+          ],
+          "Description": "\nA fluffy bed rests in the northwest corner of the house. On top of it is \na magical patchwork quilt, that's kept people warm even in the coldest of \nwinters. It is very colorful, and appears to be homemade, which might \nexplain its magic. The down pillows are extremely soft, and comfortable, \nmuch like the rest of the bed. Beside the bed is a nightstand, with two \ncandles on it, one blue, and one brown. Also, there are some books on it, \nlying open since the night before."
+        },
+        {
+          "Keywords": [
+            "table",
+            "pie"
+          ],
+          "Description": "\nA worn wooden table, big enough for no more than two, lies in the corner. \nOn top of it is a delicious blueberry pie, cooling off before it gets \neaten. Next to the pie is a vase of daisies, filling the room with a \nsweet smell. Beside the daisies is a picture of Geoff and Belephebe in \ntheir wedding outfits, with bigger smiles on their face than anyone else \nin the world."
+        },
+        {
+          "Keywords": [
+            "window"
+          ],
+          "Description": "\nCarved into the side of the wall is a square window. On the sill, there \nis a pair of candles, and a vase of daisies. The rows of blueberry \nbushes, and sugar maple orchards are visible through the crystalline \nwindow panes."
+        },
+        {
+          "Keywords": [
+            "candle"
+          ],
+          "Description": "\nBunches of candles are scattered about the room, always in pairs. The two \ncandles' aromas combine to make the sweetest smell known to man. Even \nwithout the other, the smell of blueberries or maple sugar would bring \nany nose to ecstasy."
+        },
+        {
+          "Keywords": [
+            "vase",
+            "daisies"
+          ],
+          "Description": "\nStanding out in the room are daisies. There are daisies in crystal vases \neverywhere, in the window, in the bookshelf, and on the table. All of \nthem are beautiful, as if duplicates of each other, give off a smell that \ntickles every nose that smells it."
+        },
+        {
+          "Keywords": [
+            "wall",
+            "picture"
+          ],
+          "Description": "\nHanging on the wall is a picture of the most beautiful woman you've ever \nseen. Her loving face seems to portray an aura of sweetness throughout \nthe room. It's hard to look away from such a captivating woman."
+        },
+        {
+          "Keywords": [
+            "bookshelf",
+            "loveseat"
+          ],
+          "Description": "\nThe bookshelf carved into the southwest corner of the room is filled with \nbooks. The only exception is a row of daisies in the middle shelf. In \nfront of the bookshelf is a white loveseat. It's big enough for two \npeople and a cat to cuddle in while reading faerie tales, magic books, or \none of many other books hidden in the bookshelf."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28229,
+      "Name": "#bThe Abode of Atlantis#N",
+      "Description": "\n   Embedded into the floor is a #bblue phoenix#N, molded from blue cobolt \nglass.  It seems as if it is lit from below, as a bright blue aura fills\nthe room.  Rumor has it that this aura is the very heart and soul of that \nwhich is #bKai#N.  One's safety is guaranteed when surrounded by it.  On the \neastern wall, hangs a #yportrait#N of Atlantis and his beautiful wife Bronwyn.  \nBelow the portrait, an engraved #yplaque#N is mounted on a polished wooden \nblock.  The #yinscription#N fills the plaque, however a closer look will be \nrequired to make out the words.  On the ceiling, a #gportal#N to the heavens \nremains open, as an invite to the lords that dwell over this domain.  There\nare weapons and armors scattered about the room, and #wbooks#N of magic \nand combat on the #wshelves#N.  One book catches your eye as it seems to \nglow with the very same aura that is #bKai#N.  It is titled \"The #cCode#N of \n#CAtlantis#N\"",
+      "ZoneId": 282,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28218,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 1264,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "portrait",
+            "picture"
+          ],
+          "Description": "\n   The noble and brave Atlantis, of #bKai#N and his beautiful \nwife Bronwyn.  Atlantis is dressed head to toe in his finest crystal\narmors, wearing the Crown of Alannon, to show his pride in #bKai#N.\nBronwyn, dressed in her skimpiest silken gown, stands beside her\nman, giving a sense of prowess and beauty to the painting.  What a \nlucky man Atlantis is."
+        },
+        {
+          "Keywords": [
+            "plaque",
+            "inscription"
+          ],
+          "Description": "\n   It reads:\n\n   To my dearest love, \n      My heart will always beat for you, and my love\n   will always guide me.  Wherever I am, and wherever you\n   go, my soul will always follow.\n\n   Love Bronwyn"
+        },
+        {
+          "Keywords": [
+            "portal"
+          ],
+          "Description": "\n   This portal leads directly into the heavens.  It is only \npassible by the divine.  In order for a mortal to go through it, he\nor she must be escorted by a lord."
+        },
+        {
+          "Keywords": [
+            "shelf",
+            "books",
+            "shelves"
+          ],
+          "Description": "\n   You see the following titles:\n\"Magic & You\"\n\"How to Slay a Dragon\"\n\"Weapons and Armor\"\n\"The Healing Power of Herbs\"\n\"The Potion Cookbook\""
+        },
+        {
+          "Keywords": [
+            "code"
+          ],
+          "Description": "\n   I vow to be honest and noble; to uphold the Credo of #bKai#N;\nto assist the weak; to protect this realm from any and all evils.  My \nheart will stay pure and my mind focussed -- for I am #bKai#N, and #bKai#N is me.\n      #CAtlantis#N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 25,
+      "Name": "statue kai",
+      "ShortDescription": "\na statue",
+      "Description": "\nThere is a large statue of Alannon the Elven Hero.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28204,
+        1,
+        117,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 31,
+      "Name": "board bulletin kai",
+      "ShortDescription": "\nan Kai clan bulletin board",
+      "Description": "\nThe Kai clan bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        117,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3135,
+      "Name": "fountain",
+      "ShortDescription": "\na fountain",
+      "Description": "\nA small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 500,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "\nIt is very nice.  Made from fine white marble."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

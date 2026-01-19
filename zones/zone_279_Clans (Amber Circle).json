@@ -1,0 +1,1135 @@
+{
+  "Zone": {
+    "Id": 279,
+    "Name": "Clans (Amber Circle)",
+    "TopRoomId": 27999,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 36,
+        "Arg2": 100,
+        "Arg3": 27902,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27900,
+        "Arg2": 100,
+        "Arg3": 27900,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27901,
+        "Arg2": 100,
+        "Arg3": 27910,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3034,
+        "Arg2": 100,
+        "Arg3": 27902,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27902,
+        "Arg2": 100,
+        "Arg3": 27916,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27903,
+        "Arg2": 100,
+        "Arg3": 27926,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 27900,
+      "Name": "The Amber Circle",
+      "Description": "\n   You're are standing outside the Amber Circle's stronghold. On either\nside you are flanked by a large tower. On the ground in front of you is a\ntrench about one human hand deep. The trench has been dug into\nthe ground, which has been inlaid with mithril. Placed in the mithril is\nthe Amber, which is so important to the Circle. A translucent barrier of\nenergy separates you from the interior of the clan house making the\nimpressive clockwork Minotaur clan guardians pointless. Both obstacles\nrecognize members of the circle and will let them pass.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27902,
+          "Description": "The stronghold of the Amber Circle lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 15091,
+          "Description": "The Forest lies to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27901,
+      "Name": "Circle of the Blade",
+      "Description": "\n   In this area the ground has a slight slope and the grass has grown\nlong. In the center is a wooden platform shaped like a circle with a\nseries of runes formed from amber. The platform serves as a combat ring\nwhere warriors of the circle test their skills. The platform's real purpose\nis a protection circle during summonings. Groups of warriors stand within\nthe runes and are thus protected. One warrior will stay within the circle\nat all times during summonings, chanting hymns meant to restrain the power\nof any demons in the amber circle.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27904,
+          "Description": "A training lesson for fighters is in sessios.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27902,
+          "Description": "A clockwork gnome is wandering around announcing bulletins.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27913,
+          "Description": "A door blocks you from seeing inside the tower of fire.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27902,
+      "Name": "Hear Ye! Hear Ye!",
+      "Description": "\n   This part of the stronghold's courtyard serves as a meeting ground for\nhunting parties. The clan message board, a clockwork gnome, is walking\naround calling out any important bulletins. An atm is set into an alcove\nin the tower of earth awaiting your banking needs.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27905,
+          "Description": "You see an enormous metal bowl resting on a platform.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27903,
+          "Description": "A runic circle dominates the area to your west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27900,
+          "Description": "The world of midgaard lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27901,
+          "Description": "You see two warriors practice blade routines within a circle of runes.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27903,
+      "Name": "Circle of Spells",
+      "Description": "\n   The ground here is grassy and covered in the shade of a tall oak\ntree. An amber rune circle was placed here to allow magi and clerics a\nchance to practice their craft. The circle has been inscribed on a wood\nplatform covered by pure gold and inlaid with Amber. It is often used\nby young casters practicing their new spells under the watchful eye of\nan archmagi or high cleric. During rituals a magi or cleric will sit\nhere and chant hymns meant to undo any magic a deamon tries to cast.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27906,
+          "Description": "A group of spell casters sit here studying their book under the sky.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27914,
+          "Description": "A door blocks you from seeing inside the tower of earth.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27902,
+          "Description": "A clockwork gnome is wandering around announcing bulletins.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27904,
+      "Name": "Blade and Bludgeon",
+      "Description": "\n   This is where many of the warriors practice their attack and defense\nroutines. The ground is level providing stable footing and the grass has\nbeen trimmed. A few racks on either side of the area hold every type of\nweapon imaginable. Some of the warriors are reading books about attack\nand defense styles but most are practicing with the weapons instead. The\narea smells of sweat, blood, and determination. A small bucket rests on a\nnearby table along with a plate of bread, a dish of butter, and a bowl of\njelly. A strange gnomish invention, powered by a small amber mana battery\nis turning three oblong, flat, blunt blades. The mechanism keeps the air\nmoving so the fighters can cool off. Gnomes sure are useful.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27907,
+          "Description": "You see a green house used for growing food.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27905,
+          "Description": "You see an enormous bowl resting on a platform.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27901,
+          "Description": "You see two warrior fighting within a runic circle.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27911,
+          "Description": "You see the tower of water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27905,
+      "Name": "Circle of Binding",
+      "Description": "\n   This area of the courtyard is probably the most important place within\nthe stronghold. Five amber rune circles have been placed in small mithril\ntrenches and all are inscribed with smaller runes of protection. Each is\naligned with a different tower and attuned to one of the elemental\npowers. In the center a large mithril bowl sits upon a solid amber\nframework. The amber framework pierces the bowl in five places creating\nanother set of runic circles. A pile of wood rests next to the bowl and\nhas been prepared with spells so that no daemon may touch it. All these\nelements combined create a powerful summoning circle.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27908,
+          "Description": "The sights and smells of a feast in preparation great you warmly.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27906,
+          "Description": "You see the more studious members of the clan hard at work.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27902,
+          "Description": "A clockwork gnome is wandering around announcing bulletins.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27904,
+          "Description": "Warriors and rouges are all gathered around practicing blade crafts.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27906,
+      "Name": "Spell and scroll",
+      "Description": "\n   A few wooden tables rest in this flat grassy area of the courtyard. It\nis here, at these tables, that many of the clan's Magi study their craft.\nOn the table tops are loafs of bread, dishes of butter, jars of jelly,\nand pitchers of water.  The area is also spotted with small trees forming\nshade to lounge in and maybe even take a nap. Most of the Magi seem to\nprefer the tables. You even see one warrior studying a book concerning\nthe language used to cast spells. It is a very inviting place to sit,\nrelax, and learn about the arcane arts.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27909,
+          "Description": "You see the smithy hard at work creating weapons for the circle.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27912,
+          "Description": "You see the tower of air.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27903,
+          "Description": "A group of young magi are practicing their spells under the watch of a\npowerful archmage.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27905,
+          "Description": "The master binding circle lies this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27907,
+      "Name": "The Green House",
+      "Description": "\n   Everyone needs food to eat. The green house is the circle's solution to\nfeeding the clan. The green house is a wooden building frame fitted with\nan odd green metal. Each piece of metal is inscribed with a rune meant to\naid the growth of the vegetables, and fruits. A fairly large area has\nbeen fenced off and serves as a chicken coop. All the smells mingled\ntogether create a very relaxing aroma. A young girl is planting new\ntomato plants and a boy, who looks to be near her age, is walking around\nwith a pail watering the plants. Together they grow and care for most of\nthe food used to feed the clan.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27908,
+          "Description": "The sights and smells of a feast in preparation great you warmly.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27904,
+          "Description": "Warriors and rouges are all gathered around practicing blade crafts.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27908,
+      "Name": "Feasting Tables",
+      "Description": "\n   This is where the clan comes to sit and have meals together. Currently\nlunch is being prepared. Bread is being baked in a large stone oven next\nto a deer roasting on a spit. A semi-circle of fire hosts five huge pots\nfull of soup. Vegetable beef, clam chowder,  beef stew, and more are all\nsimmering in their pots waiting to be eaten. On the dining tables rest\nplatters of bread, pitchers of milk and water, and great slabs of cheese.\nA few members of the clan are already sitting here waiting for the food\nto be ready. Eating is a very important affair in the stronghold of the\nAmber Circle.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27910,
+          "Description": "You see the Tower of Soul.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27909,
+          "Description": "You see the smithy hard at work.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27905,
+          "Description": "The Master Binding circle greets you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27907,
+          "Description": "You see vines of ivy twined around the greenhouse.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27909,
+      "Name": "The Smithy",
+      "Description": "\n   To fight daemons you need good weapons and armor to protect you.  An\nexcellent smith from a local village has agreed to work for the Circle in\nreturn for housing, food, and some spending money. The greatest payment\nhe receives is the opportunity for his children to read, and learn\nfrom the books the circle possess. The smithy's anvil rests upon a broad\ntree trunk. Behind that lies his forge, and a wooden barrel filled with\nwater stands between the two. Currently the smith is working on a new\nbreastplate to put in the clan store room.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27906,
+          "Description": "You see the more studious members of the clan hard at work.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27908,
+          "Description": "The sights and smells of a feast in preparation great you warmly.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27910,
+      "Name": "Chambers of Healing",
+      "Description": "\n   This is the bottom room of the Tower of Soul. It is enchanted with\npowerful spells of regeneration to aid healing. Large comfortable couches\nline walls; and a fountain of fresh mead lies in the room's center. A\nspiral staircase twists its way up to the second floor.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27908,
+          "Description": "The sights and smells of a feast in preparation great you warmly.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27915,
+          "Description": "The library is upstairs.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27911,
+      "Name": "Storage Chamber",
+      "Description": "\n   This room is the bottom floor of the Tower of Water. It serves as a\nstorage chamber for the less useful pieces of equipment the clan has come\nacross. Extra tables, chairs, barrels, clothes, boots, swords, shields,\nand many other common, but useful, pieces of equipment are stored here.\nAll the items are stored away in an organized manner either in cabinets,\non shelves, on tables, or in whatever way works best. A staircase runs\nalong the wall leading to the second floor.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27904,
+          "Description": "You see warriors and rogues practicing their blade craft.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27912,
+      "Name": "Treasurery of Amber",
+      "Description": "\n   You have entered the Tower of Air. This is the clan's treasure chamber.\nPiles of gold litter the floor and pieces of magical equipment lay about\nas if they were common items. These are here to be used by anyone in the\nclan who might need them. Near the back of the room sit three enormous\noak chests filled with precious amber. The center of the room has a rune\ncarved into the floor. The rune creates a powerful gust of wind, strong\nenough to move you to the second floor through a round opening in the\nceiling. That should be a fun ride.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27906,
+          "Description": "You see the more studious members of the Circle hard at work.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27913,
+      "Name": "Chamber of the Blade",
+      "Description": "\n   Although the Circle promotes a closeness between all its members, no\nmatter what their race might be, some distinctions are useful. This room,\nthe bottom room in the Tower of Fire, serves as barracks for the more\ncombat oriented members of the clan. Magi and clerics need a quiet place\nto rest and study their books. Warriors and rogues often stay up far into\nthe night drinking and playing dice or card games. Though no one is here\nright now, a keg of fine dark ale rests in the corner waiting for the\nnight to come. A bones alley seems to call you and your money with eager\npromises of fun. Despite the rooms rowdy nature every bed is neatly made\nand more than one has a book of lore resting on top of the sheets. A\nstiarcase lining the back wall leads to the second floor.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27901,
+          "Description": "You see warriors engaged in sparing matches.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27914,
+      "Name": "Chamber of the Arcane",
+      "Description": "\n   The bottom floor of the Tower of Earth is the sleeping chamber of the\nclan's spell casters but serves. Rows of beds line the walls in neat rows\nIn a small area at the back of the room a table has been placed for\nanyone who wants to study late at night. A staircase lining the back\nwall leads too the seond floor.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27903,
+          "Description": "You see young magi practicing their spells under the watchful eye of a\npowerful archmage.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27915,
+      "Name": "The Library",
+      "Description": "\n   Reading and firsthand experience are the quickest ways to learn what\nyou don't already know. Since firsthand experience can sometimes be very\ndangerous, reading is preferred by many. This library is the pinnacle of\nwhat a library is meant to be. Each shelf stands at about the height of\nan average troll, and is absolutely stuffed with books of all types. In\nthe middle of the room is a spiral staircare leading to the different\nfloors of the tower. Either side of the room hosts innumerable book\nshelves. Down the middle of the room is an area with tables instead of\nshelves. Surrounding the staircase are several podiums with books of\nparticular importance to the clan in them. The first is named\n\"#wMysteries of Amber.#N\" The second is titled \"#wEncyclopedia  Celestia,#N\"\nit probably details the different known daemon and  angel orders. The\nothers are blank.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 27916,
+          "Description": "The Chamber of Amber is upstrairs.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27910,
+          "Description": "The Chamber of Healing is downstairs.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "Mysteries",
+            "of",
+            "amber"
+          ],
+          "Description": "\nThe books is opened to a page concerned with the proper incantations for\nsummoning an imp. You decide to flip through to see if anything catches\nyou eye. The first things you notice of interest is a picture of a demon\nlord being summoned by the Circle. The demon is of a type you don't seem\nto remember. A caption at the pages bottle says it is the demon prince\nGratt'z. The oppisite page lists a peculiar occurance at this summoning\nthat had never occured before. It says that Grattz came into the circle\nhis own free will to provide the Circle with information about his great\nrivals, Orcus, next plot. What made the summoning truly interesting is\nthat the Amber did not actively restrain Gratt'z as it should have. The\nnext twenty pages talk about the possible reason for this and the magic\ntheories behind these ideas. The most notable theory is that since\nGratt'z came into the circle of his own free will that the amber\nresponded with like action by not restraining him. How interesting..."
+        },
+        {
+          "Keywords": [
+            "Encyclopedia",
+            "celestia"
+          ],
+          "Description": "\nThis book is worn and old though well cared for. It probably been read\nthrough by every member of the order at least once. It is opened to an\nentry on a group of Angels known as Star lords. They are rarely seen on\nthe earthly plane since they are embodiements stars. Its also talks\nabout a gypsy whose crystal ball can show a person the way to these\nbeings if she can be found."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27916,
+      "Name": "The Chamber of Amber",
+      "Description": "\n   This is the Chamber of Amber. In this room the Morphean Oracles and\nthe High Seers perform the spells of summoning to \"extract\" information\nfrom extra-planar beings. In the very center of the room is a small amber\ncircle. Surrounding it are ten more circles big enough for even a\nHalf-ogre to sit cross-legged comfortably. Every stone in the walls has\na rune carved into it as well. At the walls' base are rugs for other\nmembers of the clan to sit on. Along the walls are sconces, with candles\nenchanted to renew their wax. The light cast by the candles seems to\ndance along the edges of the amber cirles before being sucked in by the\npower of the runes. Numerous doors lead into private rooms of  different\nclan members. The northern door is guarded by a stone golem and a\nstaircase at the room's back leads down into the library.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27926,
+          "Description": "This door leads to the Council Room.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27927,
+          "Description": "This door leads to Darth's private chambers.",
+          "Keywords": [
+            "door",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27929,
+          "Description": "This heavy metal door leads to Malcalypse's chambers.",
+          "Keywords": [
+            "heavy",
+            "metal",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27928,
+          "Description": "This door leads to Xorinthalasea's private chambers.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27915,
+          "Description": "The clan library lies this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27926,
+      "Name": "The Council Chambers",
+      "Description": "\n   This is the Council Chambers of the Amber Circle. The room contains a\ncircular wooden table with a number of chairs around it. Each chair is\ndistinctly different from the others. In the middle of the table is a\nglowing orb, It looks as if words are dancing across its surface. The\nwalls have torches set in sconces. They flicker eternally, and change\ncolors, thanks to a magical dweamoner.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27916,
+          "Description": "The flicker of candles reveals the Chamber of Amber.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chairs",
+            "bowl",
+            "pappasan"
+          ],
+          "Description": "\nAt what looks to be the head of the table rests two chairs. The first\nlooks like a hovering #Wbowl#N. It has a very soft cushion in it and\nlooks very comfy. The second chair is a dragon sized #Wpappasan#N with a\nmithril base. Other chairs rest around the table as well."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27927,
+      "Name": "Darth's Chamber",
+      "Description": "\n   The air in this room is thick with the scent of incense. Candles line\nthe walls casting a low light on the room's features. The center of the\nroom is occupied by a low table with cushions laid out in front of them,\nwhich are ideal for kneeling. The table is covered in a plethora of\ntrinkets and puzzles meant to train the mind & hone perceptions. A pile of\nbooks also rest on the table. A number of object dangle from the walls\nand ceiling, just barely illuminated by the candles. You see balls\nhanging from chains, hoops on hinges, and lots of other strange devices.\nMany of them have ropes tied to them and are set up so they can be moved.\nA complex system of pulleys run along the ceiling as well and the ropes\nall come together near a series of ten levers. Beneath the levers is a\nsmall metallic monkey with a red button on his forehead. In the corner\nyou see what can only be Darth's bed. It isn't so much a bed as a pile of\npillows blankets and other soft objects. The room seems to suit its\nowner well. The only exit is through an oak door to the west.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27916,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27928,
+      "Name": "A Dream of Marble.",
+      "Description": "\n   Black and white marble intertwine in the room, creating intricate\npatterns on the walls, ceiling and floor. Inlaid in the walls are golden\nwords forming the history of someone that walked the long road of life,\nand tried to enjoy every second of it, in both sunshine and rain. An\nexquisite goldplated chandelier lights the room. The flames of the\ncandles make the shadows dance in front of your eyes. The sweet scent of\nhoneysuckle fills the room as a slight breeze sweeps the dust from an\nopened window to the far left. To the right is a very large fireplace. A\nwood pile lies to the side of it, ready to be put into the fire to give\nXorinthalasea warmth. On the right is an oversized chair with books\nstacked all around, all with tattered covers that shows how lovingly\nthey had been read through the ages. Two glasses of chardonnay have been\nset out on a table next to the chair. One for the host, Xorinthalasea.\nThe second for you. The words \"Welcome\" come to your ear on the noon day\nbreeze.",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27916,
+          "Description": "",
+          "Keywords": [
+            "Door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27929,
+      "Name": "An Ancient Curse",
+      "Description": "\n   As you enter the lair of Malcalypse you suddenly feel at odds with\nyour own soul.  All around you it seems as though something is trying to\nget into, or perhaps more accurately out of your very being.  The runes\nof this room represent the darker side of everyone\u0092s soul.  Of the few\nthat catch your eye one seems to represent Chaos and another an ancient\nEvil whose name no one dares to speak.  Upon closer inspection the wall\nfurthest from the door seems to be completely covered in fresh blood.  A\nlarge dark amber circle, big enough for a dragon, hangs in the air with\nbut a single pillow.  In one corner of the room you notice a treasure\nhoard and in another the remains of a bonfire.  Melted candles make a\ncircle in the center of the room but the summoning circle is unlike any\nother in the house.  Why would anyone choose to actually live in this\nroom?  What is Malcalypse trying to summon into this world?  Or is he\nattempting to keep something out?  In the corner is that the remains of\ndinner or a blood sacrifice?",
+      "ZoneId": 279,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27916,
+          "Description": "",
+          "Keywords": [
+            "heavy",
+            "metal",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 36,
+      "Name": "board bulletin order amber circle clockwork gnome",
+      "ShortDescription": "\nan Amber Circle clan bulletin board",
+      "Description": "\nA clockwork gnome is calling out important messages.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        113,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27900,
+      "Name": "clockwork minotaurs",
+      "ShortDescription": "\ntwo clockwork minotaurs",
+      "Description": "\nTwo massively muscled clockwork minotaurs guard the Amber Circle clanhouse.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27900,
+        1,
+        113,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 27901,
+      "Name": "fountain",
+      "ShortDescription": "\na fountain",
+      "Description": "\nA pure white fountain overflows with tasty mead.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoInvis"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        17,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 17,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6000,
+      "Cost": 30,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27902,
+      "Name": "phantom shadowy",
+      "ShortDescription": "\na shadowy phantom",
+      "Description": "\nA shadowy phantom blocks the entrance to the council chambers.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27916,
+        1,
+        113,
+        6,
+        1,
+        114
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 27903,
+      "Name": "board orb magical",
+      "ShortDescription": "\na magical orb",
+      "Description": "\nA small magical orb awaits your command.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "orb",
+            "magical",
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board. Use LOOK BOARD and READ <ITEM>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "\nan automatic teller machine",
+      "Description": "\nAn automatic teller machine has been installed in the wall here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "\nThere is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

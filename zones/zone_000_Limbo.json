@@ -1,0 +1,436 @@
+{
+  "Zone": {
+    "Id": 0,
+    "Name": "Limbo",
+    "TopRoomId": 99,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": []
+  },
+  "Rooms": [
+    {
+      "Id": 12,
+      "Name": "The Wedding Chapel",
+      "Description": "\n     The walls inside the chapel glow with a divine light.  You feel at\nease inside here, all of your worries left at the door.  Rows of\ncushioned silvery seats are here for your seating comfort.  Murals of\nElite's great gods line the walls, providing witness to this event.\nUpon closer inspection, you realize the stained glass windows are\nactually depictions of IO creating the very fabric of existance.  At\nthe far end of the room you see a magnificent altar constructed of an\nunknown, but enchanting alloy. A beautiful silken canopy covers the\nwedding platform, where the bride and groom to be will stand and speak\ntheir vows.\n§N",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "Ocs",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 11,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 0,
+      "Name": "The Void",
+      "Description": "\n   You don't think that you are not floating in nothing. This is where IO dwelt\nfor an unimaginable time before he got this unimaginable idea of creating \nthe universe.",
+      "ZoneId": 0,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3001,
+          "Description": "void",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 1,
+      "Name": "Limbo",
+      "Description": "\n   You are floating in a formless void, detached from all sensation of physical\nmatter, surrounded by swirling glowing light, which fades into the relative\ndarkness around you without any trace of edges or shadow.",
+      "ZoneId": 0,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Lawful",
+        "BfsMark",
+        "NoDrop"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3,
+      "Name": "A totally useless room",
+      "Description": "\n   The walls are completely bare... no nothing at all in the room what so ever.\nStrange ...",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3048,
+          "Description": "You do not see that here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4,
+      "Name": "The EliteMUD Correctional Institution.",
+      "Description": "\n   So this is what the inside of a jail cell looks like...\n ________________________________________________________________________\n|.      .       .       .       .       .       .       .       .       .|\n|.      .       .       .       .       .       .       .       .       .|\n|.      .       .       .       .       .       .       .       .       .|\n|.      .       .       .       .       .       .       .       .       .|\n|________________________________________________________________________|\n\n   Through this little window, you can see into the Temple, but alas, you are\nhere, and they cannot help you. You had better pray to what ever God put you\nhere and ask for forgiveness of your sins. For you shall be condemed to this\nroom until the POWERs that be decide that you are reformed enough to enter the\nworld of EliteMUD.",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Lawful",
+        "NoMagic",
+        "GodRoom",
+        "Silent",
+        "NoDrop"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5,
+      "Name": "The Morgue",
+      "Description": "\nThis is the morgue, where frozen people go to die.  Please store frozen people\nhere to avoid cluttering jail.  If you like, have a beer from the fridge, but\ndon't touch the corpses!\n§N",
+      "ZoneId": 0,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Lawful",
+        "NoMagic",
+        "GodRoom",
+        "Silent"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6,
+      "Name": "IO's residence",
+      "Description": "\n   You are in the most weirdest room you have ever seen. The room itself is\nlarge.  Actually it's very large. You can't seem to see where is ends. (Or\nhow). This room contains little however. A large and neat bed in one part. A\nlarge fridge in another. A bar with an Auto Bartender System, ABS(tm) is in\nanother place.  Music can be heard, but the source cannot be found. Naturally\nthere is a small computer somewhere around here where he codes when things gets\nboring. There is also a poker table in one part.",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9,
+      "Name": "The (Experimental?) Remort Lab",
+      "Description": "\nThis room is very clean, white tile floor, bright lights, you immediately\nthink of a laboratory.  Looking around, you see that it indeed is.  Flasks\nline the shelves with various labels on them such as 'kick', 'sanctuary',\nand the ever popular 'backstab' and 'circle' 2-pack.  Further down you\nsee some strange looking equipment and some vials labeled 'experimental',\none vial is jumping around. . .strange.  As you stray too near the\nexperimental section you are intercepted and guided to your seat.  Many\nothers, of whom you have only heard stories of their great exploits have\nsat in this seat.  Will you join them in glory or become just another name\non a remort list?\n§N",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "GodRoom"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "vial"
+          ],
+          "Description": "\nThe vial is rather large and seems to move by some power within\nThere is a label on it... Experimental:  Whupass\n§N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 10,
+      "Name": "Outside the Wedding Chapel",
+      "Description": "\n     You seem to be floating in the heavens above Elite.  Directly below\nyou can see the town of Midgaard, the center of Elite.  Looking around you\ncan also see Welmar's castle and the fires of Hell dimly burning. You\nwonder what mystical power protects you from falling to the earth below.\nAs you look around, the only thing visible is a white chapel in the\ndistance.  Two large golden doors and beautiful stained glass windows\ndecorate this magnificent building.  You conclude that this place must be\nthe creation of one of Elite's gods.  Putting aside the fear of plummeting\nto your death below, you decide to approach the chapel to bear witness to\nthe events that are about to unfold.\n§N",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11,
+      "Name": "Inside the Wedding Chapel",
+      "Description": "\n     The golden doors mysteriously open, as if sensing your presence.\nAt first glance, the interior of this building is as beautiful as its\nexterior.  Flowers gathered from the far reaches of Elite can be seen\nhere decorating the white walls.  Ahead of you a set of crystaline\ndoors can be seen.  These also open, as if they had a life of their\nown.  Your first look at the actual chapel leaves you speechless.  \n§N",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 12,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 13,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 10,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12,
+      "Name": "The Wedding Chapel",
+      "Description": "\n     The walls inside the chapel glow with a divine light.  You feel at\nease inside here, all of your worries left at the door.  Rows of\ncushioned silvery seats are here for your seating comfort.  Murals of\nElite's great gods line the walls, providing witness to this event.\nUpon closer inspection, you realize the stained glass windows are\nactually depictions of IO creating the very fabric of existance.  At\nthe far end of the room you see a magnificent altar constructed of an\nunknown, but enchanting alloy. A beautiful silken canopy covers the\nwedding platform, where the bride and groom to be will stand and speak\ntheir vows.\n§N",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 11,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13,
+      "Name": "Flower Garden",
+      "Description": "\n  You have wandered into a beautiful flower garden.  Every variety of\nElite foliage must be here growing and blossoming.  Looking around\nyou realize that the flowers form a heart-shape, with a single\ngolden swing in the middle.  The swing seems perfectly sized for two\npeople.  You inhale deeply and breath in the wonderful scents that\nfloat around this garden.\n§N",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 11,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14,
+      "Name": "Dining Hall",
+      "Description": "\n     Inside the dining hall you see a gigantic room with foods of all\nsorts.  Elite's finest chefs must have gathered and collaborated to\ncreate such a magnificent feast for the eyes as well as the stomachs of\nall.  At the head of the room you see a gigantic cake, fit for such an\noccassion.  Next to the cake you see the table that belongs to the lucky\ncouple.  Through the many large glass doors you can see a balcony that\nmust provide a breathtaking view of the land below.\n§N",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 11,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 15,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 15,
+      "Name": "Balcony",
+      "Description": "\n     Standing upon the balcony you can see virtually all of Elite below.\nThrough the clouds, characters the size of ants can be seen scurrying\naround below, rushing from one zone to the next.  There appears to be\ncelebration all around you, including on the world below.  The news of\na wedding must have spread throught the realm.  Looking out above the\nclouds, in the very distance you see the palace that contains the\nhomes of Elite's mighty gods.\n§N",
+      "ZoneId": 0,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 0,
+      "Name": "The Room that will be",
+      "Description": "\n  This is the room that is the one that will be something when you have decided\nto do something about it,now that it has become something from nothing",
+      "ZoneId": 0,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3001,
+          "Description": "room willbe",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": true
+    }
+  ],
+  "Mobs": [],
+  "Objects": []
+}

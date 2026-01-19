@@ -1,0 +1,925 @@
+{
+  "Zone": {
+    "Id": 276,
+    "Name": "Clans",
+    "TopRoomId": 27699,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27600,
+        "Arg2": 100,
+        "Arg3": 27600,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27,
+        "Arg2": 100,
+        "Arg3": 27601,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3135,
+        "Arg2": 100,
+        "Arg3": 27601,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27601,
+        "Arg2": 100,
+        "Arg3": 27601,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27602,
+        "Arg2": 100,
+        "Arg3": 27614,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27,
+        "Arg2": 100,
+        "Arg3": 27614,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 27600,
+      "Name": "#BT#YR#MI #BClan Gates#N",
+      "Description": "\n   You have come upon the front gate of the Tri Clan House. Upon the \ngate you see a plaque. There is also a portal to the west with an odd \nlooking triangle on it.",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27601,
+          "Description": "You see the main meeting area of the house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3070,
+          "Description": "Back to town!",
+          "Keywords": [
+            "portal"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27601,
+      "Name": "#BT#YR#MI #BClan Meeting Hall#N",
+      "Description": "\n   You find yourself in a room that glows with a light of its own. \nAround you are beautiful paintings of mighty Tri Elders in battle. \nYou feel at home here and know that this is a place to rest were you \ncan get away from the busy mud traffic. On one wall is a large \nfireplace that adds to the glow of the room.  This room is large \nenough to hold the entire clan and has ample seating for any clan \nmeeting if need were to arise.",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27603,
+          "Description": "You see a comfortable looking lounge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27600,
+          "Description": "The front gate of Tri House",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27602,
+          "Description": "You see what looks like a storage room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27602,
+      "Name": "#BStorage and Donations Room#N",
+      "Description": "\n   You are standing in the Donations room. Please help out your \nfellow clan members and leave your unused or unwanted equiptment \nhere.",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27601,
+          "Description": "You see the clan meeting hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27603,
+      "Name": "#BT#YR#MI #BLounge#N",
+      "Description": "\n   You enter a comfortable lounge area decorated in relaxing colors \nand patterns. This is a great place to get away for a while, kick up \nyour feet and just relax or have a nice conversation. Around you are \nchairs and couches provided for your comfort.",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27604,
+          "Description": "You see a pub.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27601,
+          "Description": "You see the main meeting area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27606,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27604,
+      "Name": "#BT#YR#MI #BClan Pub#N",
+      "Description": "\n   Here you find the perfect pub. Around you are your friends, the \nbeer is good and there is no phone, so you dont have to worry about \ncalling the wife. Enjoy while you are here.\n§N",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27605,
+          "Description": "You see a door to the back alley.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27603,
+          "Description": "To the west is the lounge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27605,
+      "Name": "#BBack Alley#N",
+      "Description": "\n   Ok, you come out here for a reason, so lets get at it. If you got \na problem this is were to solve it. Just remember, there are no rules \nin street fights.",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "PkOk",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27604,
+          "Description": "The back door of the pub is here.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27606,
+      "Name": "#BT#YR#MI #Bhallway#N",
+      "Description": "\n   You have reached the inner sanctum of the TRI clan house.  All \naround you are the doors that lead to the personal rooms of the TRI \nDominators.\n§N",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27608,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27609,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27614,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27610,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27613,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27603,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27607,
+      "Name": "#BAngulion's Corner#N",
+      "Description": "\n   The room is filled with the odour of the many roses around and you \nget a strange feeling of happines and honour towards the clan.  From \nthe ceiling, which glows with unearthly colors, hangs a huge skull of \na dragon.  In the middle of the room is a well-laid table with roses \nand candles on it.  On the east wall hangs a rack with many unique \nweapons and armors.  By the west wall are bookshelves filled with \nbooks containing the secrets of magic and skills.  In the north wall \nis an alcove with a king size bed. Above the bed is a picture of a \nvery lovely girl.  In the south wall is something that seems like a \nwindow, through which you see strange wagons moving fast, hoovering \nabove the ground, there are also huge glass like towers, could it be \na distant future?\n§N",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "Private",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 27609,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "candle"
+          ],
+          "Description": "\nThe candles burn with a clear light. They seem as if the would have\njust been lighted."
+        },
+        {
+          "Keywords": [
+            "candles"
+          ],
+          "Description": "\nThe candles burn with a clear light. They seem as if the would have\njust been lighted."
+        },
+        {
+          "Keywords": [
+            "rose"
+          ],
+          "Description": "\nThe roses are of a varity of colors, but a large part are in the \nshades of red."
+        },
+        {
+          "Keywords": [
+            "roses"
+          ],
+          "Description": "\nThe roses are of a varity of colors, but a large part are in the \nshades of red."
+        },
+        {
+          "Keywords": [
+            "picture"
+          ],
+          "Description": "\nUnder the picture reads 'Anna' in golden letters."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27608,
+      "Name": "#BOgy's Room#N",
+      "Description": "\n   You have entered the room of one of the TRI clan leaders, the \nhonorable and humble Ogy. The room is filled with a wide variety of \nart and artifact depicting the areas of skill and knowledge, that Ogy \nhas chosen to gain power, honor, and glory, in the name of the \nmightiest of all the clans, the TRI clan.\n   Against the east wall you see a large and luxurious waterbed, so \nlarge in fact, you could lay two people end to end and still not span \nthe length or width of this masterpiece of aquatic hybernation. On \nthe wall above the bed is a large portrait of Ogy in battle against \nthe nearly indestructable \"ferocious killer rabbit\".\n   On west wall can be seen a large rack holding a vast arsenal of \nweapons.  It contains practically every type of weapon imaginable. \nYou shiver at the thought that any one person could be their master.\n   Near the west wall is large cabinet. Peering within you see a \nenormous assortment of healing and recupritive items. Seen are, \nscrolls, potions, vials, herbs, and several other items you've never \nseen before. It is quite clear that Ogy is not just a run of the mill \nhealer, but is instead well versed in the healing arts.\n   A bookcase stands against the entire north wall. It contains \nvolume after volume of magical knowledge from times long forgotten \nupto the present day.  Mastering the knowledge contained in just a \nfew of these precious tabloids would most certainly make any man one \nof the most powerful magic-users in the land.  Your mind reels to \nthink of the person who could master them all.\n§N",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27606,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27609,
+      "Name": "#BT#YR#MI #BHallway#N",
+      "Description": "\n   You have reached the inner sanctum of the TRI clan house.  All \naround you are the doors that lead to the personal rooms of the TRI \nDominators.\n§N",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27611,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27612,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27606,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27607,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27610,
+      "Name": "#BThe seventh side of truth...#N",
+      "Description": "\nThe best day of my life was with you, on that\nsummer warm beach, remember?...with some people  \nin the distance, still... we weren't feeling very disturbed\nwith that, for a change. That sweet low breeze, really\nwas a gift from the gods, and the way it balanced your\nhair made the impossible thought of loving you more,\ncould i die there and justice was made on my life...\nYet, the very shadow of misfortune hanged around\nour very heads... we knew about the next day and\ni can't think how we could find such a peace on such\na dreadfull moment. The next day the dream was over.\nHow can i survive? I guess im finding out...\n- Here lives Kidd, still searching...\n  to Mijke",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27606,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27611,
+      "Name": "#BThe Sept of a Deep One.#N",
+      "Description": "\n   You are in a small clearing in what seem to be a endless forest. \nStrange, you think as you are sure that this is within the walls of \nthe TRI-clanhouse. But considering it is the home of Egba Glob, you \nare not really surprised. The climate in here is very moist and you \nfeel really refreshed. In the centre of the clearing is a small \nstatue of some very odd deity. It is surrounded by large heaps of \ngold and jewellery, weapons, bloodstenched armours and one or two \ndismembered peasants. This surely is: the Home of Egba Glob the Furry \nDeep One.",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27609,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "statue"
+          ],
+          "Description": "\nThe statue shows a strange entity.\nA massive body with large pods,\ncrude arms, huge leathery bat wings \nand a head that looks like a gigantic octopus. \nAnd the eyes.......\n\nYou hear yourself say : CHUTHULU !!!  I hear and obey !"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27612,
+      "Name": "#BHath's Lair#N",
+      "Description": "\n   What is this!? - You wonder as you step inside his lair. The room \nthat from the outside looked so warm and cozy has turned into an icy \nand dark lair as you step over the threshold. Gloom and sadness is \nlurking here in the shadows, making you feel uncomfortable.  It's \ncold here, so very cold. A chilly wind is blowing from nowhere.  A \nlarge bed is placed in the middle of the lair. Above the bed there is \ncircular window in the roof, from there you can see the dark starlit \nsky and the Northern lights dancing seductively. In the middle of the \nbed you can see an old torn teddy-bear. You smile a bit as you see \nit. Everyone, no matter how strong, needs some comfort and support \nwhen times are tough.\n   On one of the Icy walls you can see a carving of a red dragon on a \nsnow-covered mountain top. There are a Sun and a Moon on each side of \nthe mountain, facing each other. From the dragon's nostrils and \nmouth, a cone of cold can be seen as it breaths. It is probably the \nfirst time you've seen a red dragon breathe something other than \nfire. The carving looks very much alive and you can almost feel the \nserpent eyes watch you as you move along. Strange indeed.\n   Then on the floor under the bed you can see a half-written book \nabout the clan called TRI. \"Hath's guide to TRI\" it's called. You \nopen it andread the first lines in the introduction.\n\n\"This is the book written by me, Hath. I am a TRI in heart and will \nalways be no matter what. Of me you can ask the way of a true TRI, \nbeginner as a master, lawful or chaotic. Everyone is welcome.\nHere the story begins...\"",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "Private",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27609,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27613,
+      "Name": "#BGoddess's retreat#N",
+      "Description": "\nA thousand years ago, supersition and the sword ruled.  It was a time \nof darkness it was the age of gargolyes.  Stone by day warriors by \nnight.  As a gargoyle  I have sworn to protect my clan.  I am the \ndefender of the TRI Clan. I am Demona the Gargoyle.\n\nInsences fill the room reminding you of a far off land.  Silken \nsashes hang from the ceiling making it hard to judge the size of the \nroom.  Eerie melodies waft across the air.  You feel a peace, a \noneness with yourself and the world around.  You have entered a calm \nstate.  Thoughts of the world of mobs and  levels fade like a distant \nstome. A voice speaks out and says, 'Come, relax, and enjoy all I can \noffer.  One request, please check your egos at the door.\n§N",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 27606,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27614,
+      "Name": "#BA Teddybear's Hideyhole#N",
+      "Description": "\n   As you enter the room a sparkling veil of wind carresses your heart\nand soul, cleansing your aura to the deepest of blues. Icecream trees \nand popsical plants spring up amidst the great big flowers which emit an\napple fragrence. You see teddybears playing carefree amongst large\npillows and comfy blankies. A wonderful waterfall flows from a \nrefreshing stream of orange juice that circles this teddybear paradise.\nThe beat of a faint song whispers soothing sounds in your ears,\ninstinctively moving your body joyfully to its tempting lure. A twinkle\ncatches your eye and you see a small angel beckoning you to follow her\nand you are lead to a trail deep within this haven.\nYou search around to find that the angel has disappeared. After much \nwandering, you come upon a floating scroll encased in shimmering glass\nsurrounded by the most beautiful roses ever seen. You feel youself drawn \nto learn of these magical words and discover an angel sitting on the\nglass singing the words - it was always you and me, always and forever - \nYou are suddenly filled with a peace like no other as you are carried \nby these words. As the angel finishes her song, she whispers to you once\nmore - welcome to the home of Bod and Drusian - and quickly vanishes\nleaving a faint mist of blue sparkles.",
+      "ZoneId": 276,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27606,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 27600,
+      "Name": "Monolith tri",
+      "ShortDescription": "\nA large monolith",
+      "Description": "\nA Large Monolith set with the TRI-clan symbol is here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27600,
+        1,
+        107,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 27601,
+      "Name": "guard urther tri",
+      "ShortDescription": "\nUrther the guard",
+      "Description": "\n#YUrther the guard is whistling a tune here.#G",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27601,
+        8,
+        107,
+        3,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "guard",
+            "urther"
+          ],
+          "Description": "\nHe is a young, athletic man, who whistles a tune floating around inside his \nhead. Apart from the tune, there's nothing really in there. He just stands \nhere guarding the TRI Donation Room for Icestorm. \nUrther the guard is in excellent condition."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 27602,
+      "Name": "stream orange juice",
+      "ShortDescription": "\nan orange juice stream",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoInvis",
+        "Hidden"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        18,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 18,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6000,
+      "Cost": 30,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27,
+      "Name": "board bulletin tri",
+      "ShortDescription": "\nan TRI clan bulletin board",
+      "Description": "\nThe TRI clan bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        107,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3135,
+      "Name": "fountain",
+      "ShortDescription": "\na fountain",
+      "Description": "\nA small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 500,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "\nIt is very nice.  Made from fine white marble."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

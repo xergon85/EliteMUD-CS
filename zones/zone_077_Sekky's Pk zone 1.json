@@ -1,0 +1,2742 @@
+{
+  "Zone": {
+    "Id": 77,
+    "Name": "Sekky's Pk zone 1",
+    "TopRoomId": 7753,
+    "Lifespan": 15,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 7753,
+        "Arg2": 6,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7700,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7701,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7701,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7701,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7701,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7701,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7702,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7702,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7702,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7702,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7702,
+        "Arg2": 5,
+        "Arg3": 7711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7703,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7711,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7724,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7741,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7750,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "L",
+        "IfFlag": 0,
+        "Arg1": 2101,
+        "Arg2": 7703,
+        "Arg3": 7753,
+        "Comment": null
+      },
+      {
+        "Command": "A",
+        "IfFlag": 1,
+        "Arg1": 7703,
+        "Arg2": 1,
+        "Arg3": -1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 7700,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would nicely\ncamouflage you and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further on to the south \nand to your east lies a small dark cave.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7701,
+          "Description": "To your east lies a small dark cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7706,
+          "Description": "You see a single large oak tree standing in the distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7701,
+      "Name": "The Cave of Kyre Banorg",
+      "Description": "\n   You are standing in a small dark cave and, with skeletons piled up \nin each corner, the stench of death seems to be everywhere. What \nhorrible, vile creature could be responsible for this massacre? \nSeveral astronomical drawings cover the east wall of the cave, glowing \nwith a soft blue light. The glow from the drawings gives the cave \nan eerie atmosphere.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7753,
+          "Description": "The east wall of the cave is covered with astronomical drawings.",
+          "Keywords": [],
+          "ExitFlags": [
+            "Trap",
+            "TrapSet"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7700,
+          "Description": "To your west lies the entrance to this cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "drawings",
+            "astronomical"
+          ],
+          "Description": "\nThe design of the drawing looks very familiar to you. Several circles\nplaced inside each other form some kind of elaborate symbol. You\nremember reading in an ancient book of wizardry a long time ago. You\nremember that this symbol calls upon the ultimate power in the\nuniverse, and is call the \"Ultimate Magic Circle of Warding\". Only the\ngods are able to manipulate this magical power."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7702,
+      "Name": "Along the River bank",
+      "Description": "\n   A river flows east and south from here. You could either \nfollow the river eastwards along the bank or go on the river \nand let the gentle currents carry you south. Dense vegetation \ncovers the river bank and the ground beneath your feet feels \nsoft making it awkward to move around. A steep rocky wall to \nyour west looks impossible to climb.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "Chaotic",
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7703,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7708,
+          "Description": "The river bank continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7703,
+      "Name": "On the River",
+      "Description": "\n   Quietly, the river runs from north to south. On the east side\nof the river there is a dense forest and on the west, dense \nvegetation grows. The water is clean and pure, but looking \ndownwards, you are unable to see the river bed. Who knows what\nkind of creature lurks down there?",
+      "ZoneId": 77,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7704,
+          "Description": "A dense forest covers the east river bank.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7709,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7702,
+          "Description": "Dense vegetation covers the west river bank.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7738,
+          "Description": "It is too dark down there to make out anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7704,
+      "Name": "In the Heavy Woods",
+      "Description": "\n   You are standing in a dense forest composed mainly of oak trees.\nLots of leaves have fallen from the trees and lie all over the forest \nfloor, although enough remain on the trees to hide a stealthy assailant.\nThese oak trees are not really very large, but further to the east you \ncan make out some truly ancient ones. Through the branches to the west \nyou can make out a river, winding its way southwards.",
+      "ZoneId": 77,
+      "Sector": "Forest",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7705,
+          "Description": "You can make out some ancient trees to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7710,
+          "Description": "The river gently continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7703,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7705,
+      "Name": "In the Heavy Woods",
+      "Description": "\n   You are standing in a dense forest composed mainly of oak trees.\nLots of leaves have fallen from the trees and lie all over the forest \nfloor, although enough remain on the trees to hide a stealthy assailant.\nThe forest continues further to the south and west.",
+      "ZoneId": 77,
+      "Sector": "Forest",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7711,
+          "Description": "You can only make out more trees to the south.",
+          "Keywords": [],
+          "ExitFlags": [
+            "Trap",
+            "TrapSet"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7704,
+          "Description": "You can only make out more trees to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7735,
+          "Description": "You could hide up in that large oak tree.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7706,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would nicely \ncamouflage you and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further in every \ndirection, and to the south you can see a large oak tree.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7700,
+          "Description": "The vast green plain stretches on further to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7707,
+          "Description": "The vast green plain stretches on further to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7712,
+          "Description": "A lonely oak tree stands south of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7707,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would nicely \ncamouflage you and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further to the west, \nand to the east you can see thick vegetation. The way north is \nblocked by a steep rocky outcrop and further to the south is a small \nhill.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7708,
+          "Description": "You see dense vegetation covering a river bank.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7713,
+          "Description": "A small hill rises south of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7706,
+          "Description": "The vast green plain stretches on further to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7708,
+      "Name": "Along the River Bank",
+      "Description": "\n   You stop alongside a wide river just to the east, which flows from \nnorth to south. You can either follow the river or take the plunge and \nswim eastwards, letting the currents take you south. Dense vegetation \ncovers both river banks and the ground beneath your feet feels soft \nmaking it hard to move about. A vast green plain of grass lies to your \nwest while to the south a small hill peers down at you.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "Chaotic",
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7702,
+          "Description": "The river bank continues north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7709,
+          "Description": "The river takes a sharp turn to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7714,
+          "Description": "A small hill rises south of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7707,
+          "Description": "A vast green plain of grass lies to your west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7709,
+      "Name": "On the River",
+      "Description": "\n   The river takes a sharp turn to the east here following around the \nbase of a small hill. Dense vegetation covers the west back of the \nriver, and on the eastern side you can see a dark forest. Although \nthe water is clean and pure, you cannot see very far downwards - who \nknows what might lurk in the depths?",
+      "ZoneId": 77,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7703,
+          "Description": "The river arrives from the north and takes a sharp turn east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7710,
+          "Description": "The river continues east around the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7715,
+          "Description": "A small hill rises south of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7708,
+          "Description": "Dense vegetation covers the west river bank.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7739,
+          "Description": "It is too dark down there to make out anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7710,
+      "Name": "On the River",
+      "Description": "\n   The river resumes its course south alongside the small hill. East \nof the river is a dark forest, and the west bank is covered by thick \nvegetation. Although the river water is clean and pure, you cannot \nsee very far downwards - who knows what might lurk in the depths?",
+      "ZoneId": 77,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7704,
+          "Description": "A dark forest grows on the river bank.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7711,
+          "Description": "A dark forest grows on the river bank.",
+          "Keywords": [],
+          "ExitFlags": [
+            "Trap",
+            "TrapSet"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7716,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7709,
+          "Description": "The river arrives from the west and continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7740,
+          "Description": "It is to dark down there to make out anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7711,
+      "Name": "In the Heavy Woods",
+      "Description": "\n   You are standing in a dense forest, composed mainly of oak trees. \nThe ground beneath your feet is covered by a thick layer of fallen \nleaves, although there are many still on the trees. Although these \ntrees are probably too weak to take your weight, there are some \nsturdier looking trees further to the north. To the west, a wide \nriver flows south.",
+      "ZoneId": 77,
+      "Sector": "Forest",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7705,
+          "Description": "You can make out some ancient trees to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7717,
+          "Description": "The forest continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7710,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7741,
+          "Description": "You notice a small trapdoor hidden under some leaves.",
+          "Keywords": [
+            "trap",
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7712,
+      "Name": "A Lonely Oak",
+      "Description": "\n   You are standing in high grass, which reaches as high as your \nknees, dancing gracefully in the gentle breeze. This green plain \nwould nicely camouflage you and make you almost invisible to your \nfoes until they practically stepped on you. The grassy plain \ncontinues to the north and south, and a small hill lies to the \neast. A big old oak tree stands here completely isolated, and \nwould definitely make a nice hiding place for you.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7706,
+          "Description": "The vast green plain stretches on further to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7713,
+          "Description": "A small hill rises east of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7718,
+          "Description": "The vast green plain stretches on further to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7736,
+          "Description": "You could hide up in that large oak tree.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7713,
+      "Name": "Northwest Side of the Hill",
+      "Description": "\n   You are standing on the northwest side of a small hill. You can \neither climb the hill or walk around it to the east or south. A \nbig solitary oak tree stands just west of here, and a wide grassy \nplain spreads out to the north.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7707,
+          "Description": "A vast green plain of grass lies to your north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7714,
+          "Description": "The hill continues east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7719,
+          "Description": "The hill continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7712,
+          "Description": "A big solitary oak tree stands just west of here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7737,
+          "Description": "You see the top of the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7714,
+      "Name": "North Side of the Hill",
+      "Description": "\n   You are standing on the north side of a small hill. You can \neither climb the hill or walk around it to the east or west. A \nlittle further to the northeast you can see a river flowing gentle \nsouthwards, and beyond the river is a dark forest.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7708,
+          "Description": "Dense vegetation covers the west river bank.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7715,
+          "Description": "The hill continues east, looks muddy over there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7713,
+          "Description": "The hill continues west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7737,
+          "Description": "You see the top of the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7715,
+      "Name": "Northeast Side of the Hill",
+      "Description": "\n   You are standing on the northeast side of a small hill. You can \neither climb the hill or walk around it to the south or west. A \nriver flows from the north, around this hill making the ground \nbeneath your feel very muddy. Be careful not to fall into the river!",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7709,
+          "Description": "The river makes a hard turn east just before the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7716,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7720,
+          "Description": "The hill continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7714,
+          "Description": "The hill continues west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7737,
+          "Description": "You see the top of the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 4474912,
+          "Description": "the muddy hill side.",
+          "Keywords": [
+            "S\n#7716\nOn",
+            "the",
+            "River"
+          ],
+          "ExitFlags": [
+            "ResetLocked",
+            "Wall",
+            "Broken"
+          ],
+          "KeyId": 2228496
+        },
+        {
+          "Direction": "North",
+          "TargetId": -1,
+          "Description": "forest, \nand to the west you can see a small hill. The water is clean and \npure, but looking downwards, you are unable to see the river bed. \nWho knows what kind of creature lurks down there?",
+          "Keywords": [
+            "77",
+            "r",
+            "6\nD0\nThe",
+            "river",
+            "gently",
+            "flows",
+            "from",
+            "north",
+            "to",
+            "south."
+          ],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7717,
+          "Description": "On the east bank a dark forest grows.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7721,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7715,
+          "Description": "A small hill rises west of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7746,
+          "Description": "It is too dark down there to make out anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7717,
+      "Name": "In the Heavy Woods",
+      "Description": "\n   You are standing in a dense forest, composed mainly of oak trees. \nThe ground beneath your feet is covered by a thick layer of fallen \nleaves, although there are many still on the trees. Although these \ntrees are probably too weak to take your weight, there are some \nsturdier looking trees further to the north. In the distance you can\nsee some big oak trees, while east beyond the trees there is a \nriver. To the south, the forest becomes a grassy plain.",
+      "ZoneId": 77,
+      "Sector": "Forest",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7711,
+          "Description": "You notice some ancient oak trees to the north.",
+          "Keywords": [],
+          "ExitFlags": [
+            "Trap",
+            "TrapSet"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7722,
+          "Description": "To the south, the forest becomes a grassy plain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7716,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7718,
+      "Name": "Standing in the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would nicely \ncamouflage you and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further to the north \nand south, and to the east you can see a small hill. To the north you\ncan see a big oak tree, standing alone.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7712,
+          "Description": "To the north you can see a big oak tree, standing alone.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7719,
+          "Description": "A small hill rises east of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7723,
+          "Description": "The vast green plain stretches on further to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7719,
+      "Name": "West Side of the Hill",
+      "Description": "\n   You are standing on the west side of a small hill. You can either \nwalk up the hill or around it to the north and south. To the east is \na wide grassy plain.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7713,
+          "Description": "The hill continues north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7724,
+          "Description": "A large flat stone slab lies south on the hill side.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7718,
+          "Description": "A vast green plain of grass lies to your west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7737,
+          "Description": "You see the top of the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7720,
+      "Name": "East Side of the Hill",
+      "Description": "\n   You are standing on the east side of a small hill. You can either \nwalk up the hill or walk around it to the north or south. To the east\na river runs, making this bank slippery with mud. If you are not \ncareful you might slip into the river.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7715,
+          "Description": "The hill continues north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7721,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7726,
+          "Description": "The hill continues west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7737,
+          "Description": "You see the top of the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 2228496,
+          "Description": "the muddy hill side.",
+          "Keywords": [
+            "S\n#7721\nOn",
+            "the",
+            "River"
+          ],
+          "ExitFlags": [
+            "ResetLocked",
+            "BashProof",
+            "PassProof",
+            "TrapSet"
+          ],
+          "KeyId": 524432
+        },
+        {
+          "Direction": "North",
+          "TargetId": -1,
+          "Description": "\nvegetation grows. The water is clean and pure, but looking \ndownwards, you are unable to see the river bed. Who knows what\nkind of creature lurks down there?",
+          "Keywords": [
+            "77",
+            "r",
+            "6\nD0\nThe",
+            "river",
+            "gently",
+            "flows",
+            "from",
+            "north",
+            "to",
+            "south."
+          ],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7722,
+          "Description": "On the east river bank grows a plain of long green grass.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7727,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7720,
+          "Description": "A hill rises west of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7749,
+          "Description": "It is too dark down there to make out anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7722,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would  \ncamouflage you nicely and make you almost invisible to your foes \nuntil they practically stepped on you. The plain stretches further to \nthe south, and to the north of you lies a dense forest. To the west \nyou can see a wide river, flowing south.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7717,
+          "Description": "To your north lies a dense forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7728,
+          "Description": "The vast green plain stretches on further to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7721,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7723,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would\ncamouflage you nicely and make you almost invisible to your foes \nuntil they practically stepped on you. The plain stretches further to \nthe north and south and a small hill raises to your east.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7718,
+          "Description": "The vast green plain stretches on further to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7724,
+          "Description": "A hill rises to your east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7729,
+          "Description": "The vast green plain stretches on further to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7724,
+      "Name": "Southwest Side of the Hill",
+      "Description": "\n   You are standing on the southwest side of a small hill, you can\nclimb the hill, or try going around it to the north or east. An vast \ngrassy plain stretches in every direction. A large flat stone slab \nlies on the floor here.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7719,
+          "Description": "The hill continues north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7725,
+          "Description": "The hill continues east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7730,
+          "Description": "A vast green plain of grass lies to your south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7723,
+          "Description": "A vast green plain of grass lies to your west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7737,
+          "Description": "You see the top of the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7750,
+          "Description": "A large big flat stone slab lies here on the floor, it seems like it \nhas been moved recently.",
+          "Keywords": [
+            "stone",
+            "slab"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "stone",
+            "slab"
+          ],
+          "Description": "\nA large big flat stone slab lies here on the floor, it seems like it    \nhas been moved recently."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7725,
+      "Name": "South Side of the Hill",
+      "Description": "\n   You are standing on the south side of a small hill, you can\nclimb the hill or walk around it to the east or west. A vast grassy\nplain stretches in every direction as far as the eye can see.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7726,
+          "Description": "The hill continues east, looks muddy over there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7731,
+          "Description": "A vast green plain of grass lies to your south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7724,
+          "Description": "The hill continues west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7737,
+          "Description": "You see the top of the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7726,
+      "Name": "Southeast Side of the Hill",
+      "Description": "\n   You are standing on the southeast side of a small hill, you can\nclimb the hill or walk around it to the north or west. A vast grassy\nplain lies to your south and to your east is a river. The river has\nmade this side of the hill muddy and very slippery.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7720,
+          "Description": "The hill continues north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7727,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7732,
+          "Description": "A bridge over the river lies southeast from here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7725,
+          "Description": "The hill continues west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7737,
+          "Description": "You see the top of the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 2228496,
+          "Description": "the muddy hill side.",
+          "Keywords": [
+            "S\n#7727\nOn",
+            "the",
+            "River"
+          ],
+          "ExitFlags": [
+            "ResetLocked",
+            "BashProof",
+            "PassProof",
+            "TrapSet"
+          ],
+          "KeyId": 524432
+        },
+        {
+          "Direction": "North",
+          "TargetId": -1,
+          "Description": "in the breeze and to the west\nstands a small hill. The water is clean and pure, but looking \ndownwards, you are unable to see the river bed. Who knows what\nkind of creature lurks down there?",
+          "Keywords": [
+            "77",
+            "r",
+            "6\nD0\nThe",
+            "river",
+            "gently",
+            "flows",
+            "from",
+            "north",
+            "to",
+            "south."
+          ],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7728,
+          "Description": "On the east river bank grows a plain of long green grass.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7733,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7726,
+          "Description": "A hill rises west of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7751,
+          "Description": "It is too dark down there to make out anything.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7728,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would camouflage \nyou nicely and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further to the north\nand south.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7722,
+          "Description": "The vast green plain stretches on further to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7734,
+          "Description": "A bridge over the river lies southwest from here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7727,
+          "Description": "The river gently flows south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7729,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would camouflage \nyou nicely and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further to the north\nand east. To the northeast you can see a small hill.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7723,
+          "Description": "The vast green plain stretches on further to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7730,
+          "Description": "The vast green plain stretches on further to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7730,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would camouflage \nyou nicely and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further to the east\nand west. To the north you can see a small hill.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7724,
+          "Description": "A hill rises north of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7731,
+          "Description": "The vast green plain stretches on further to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7729,
+          "Description": "The vast green plain stretches on further to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7731,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would camouflage \nyou nicely and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further to the east\nand west. To the north you can see a small hill.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7725,
+          "Description": "A hill rises north of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7732,
+          "Description": "The vast green plain stretches on further to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7730,
+          "Description": "The vast green plain stretches on further to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7732,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would camouflage \nyou nicely and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further to the west \nand to the east a bridge spans the river. To the north you can see a \nsmall hill.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "Chaotic",
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7726,
+          "Description": "A hill rises north of you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7733,
+          "Description": "A bridge over the river lies just east from you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7731,
+          "Description": "The vast green plain stretches on further to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7733,
+      "Name": "A Bridge over the River",
+      "Description": "\n   You are standing on a bridge that crosses the river. As you lean over \nthe side of the bridge and look into the water you are struck by how \nclean and pure the water is. However, the water becomes dark and you are \nunable to see any further than a couple of feet into the depths. The \nbridge supports plunge into the water below you, making a good hiding \nplace. On both sides of the bridge a wide grassy plain stretches as far as \nthe eye can see.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7727,
+          "Description": "Gently the river flows from north to south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7734,
+          "Description": "A vast green plain of grass lies to your east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7732,
+          "Description": "A vast green plain of grass lies to your west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7734,
+      "Name": "In the High Grass",
+      "Description": "\n   You are standing in high grass that reaches up to your knees and\ndances gracefully in the gentle breeze. This green plain would camouflage \nyou nicely and make you almost invisible to your foes until they \npractically stepped on you. The plain stretches further to the north\nand to the west a bridge spans the river.",
+      "ZoneId": 77,
+      "Sector": "Field",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7728,
+          "Description": "The vast green plain stretches on further to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7733,
+          "Description": "A bridge over the river lies just west from you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7735,
+      "Name": "Up in a Large Oak Tree",
+      "Description": "\n   You are standing on a sturdy oak branch, with red and brown leaves\ntumbling to the ground as you shuffle about. You can see a river a little\nfurther on to the west meandering from north to south. On the far side\nof the river you can see a small hill.",
+      "ZoneId": 77,
+      "Sector": "Mountain",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 7705,
+          "Description": "If you could get that damn branch out of your face you might see something.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7736,
+      "Name": "Up in a Large Oak Tree",
+      "Description": "\n   You are standing on a sturdy oak branch, with red and brown leaves\ntumbling to the ground as you shuffle about. There is a small hill \njust to the east, and to the north you notice a little cave.",
+      "ZoneId": 77,
+      "Sector": "Mountain",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 7712,
+          "Description": "If you could get that damn branch out of your face you might see something.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7737,
+      "Name": "The Top of the Hill",
+      "Description": "\n   As you reach the top of the hill you stop and look around you. Your\neyes wander across the landscape, searching out you foes. You notice\na small cave lying just to the north and looking further eastwards \na river flows from north to south. As your eyes follow the river south, \nyou see a bridge, and on the far side a dense forest. To the west, a\nlarge oak tree stands isolated on a vast green plain.",
+      "ZoneId": 77,
+      "Sector": "Mountain",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7714,
+          "Description": "You notice a small cave lying just to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7720,
+          "Description": "You see a river gently flowing from north to south, on the far side is\ndense forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7725,
+          "Description": "A bridge over the river lies a little further southeast from the hill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7719,
+          "Description": "You only see a large oak tree standing isolated.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7738,
+      "Name": "In the River",
+      "Description": "\n   You are diving underwater in the river. Long green weeds reach up\nfrom the river bed hiding you from anyone who might be looking for\nyou in the water.",
+      "ZoneId": 77,
+      "Sector": "Underwater",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7739,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7703,
+          "Description": "It's hard to make out anything above the water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7739,
+      "Name": "In the River",
+      "Description": "\n   You are diving underwater in the river. Long green weeds reach up\nfrom the river bed hiding you from anyone who might be looking for\nyou in the water.",
+      "ZoneId": 77,
+      "Sector": "Underwater",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7738,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7740,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7709,
+          "Description": "It's hard to make out anything above the water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7740,
+      "Name": "In the River",
+      "Description": "\n   You are diving underwater in the river. Long green weeds reach up\nfrom the river bed hiding you from anyone who might be looking for\nyou in the water.",
+      "ZoneId": 77,
+      "Sector": "Underwater",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7746,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7739,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7710,
+          "Description": "It's hard to make out anything above the water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7741,
+      "Name": "Inside a Small Tunnel",
+      "Description": "\n  You are crouched inside a cramped dusty tunnel. Dirt rains down from\nceiling as you crawl slowly forward. Roots growing down from above wrap\nthemselves around your limbs, and get into your eyes. Although low, the \ntunnel is wide enough for two people to pass each other. A small \ntrapdoor above your head leads out of the tunnel.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7747,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7711,
+          "Description": "A small trapdoor that leads out of this tunnel is situated just above\nyour head.",
+          "Keywords": [
+            "trap",
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7742,
+      "Name": "Inside a Small Tunnel",
+      "Description": "\n  You are crouched inside a cramped dusty tunnel. Dirt rains down from\nceiling as you crawl slowly forward. Roots growing down from above wrap\nthemselves around your limbs, and get into your eyes. Although low, the \ntunnel is wide enough for two people to pass each other.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7743,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7748,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7743,
+      "Name": "Inside a Small Tunnel",
+      "Description": "\n  You are crouched inside a cramped dusty tunnel. Dirt rains down from\nceiling as you crawl slowly forward. Roots growing down from above wrap\nthemselves around your limbs, and get into your eyes. Although low, the \ntunnel is wide enough for two people to pass each other.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7744,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [
+            "Trap",
+            "TrapSet"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7742,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7744,
+      "Name": "Inside a Small Tunnel",
+      "Description": "\n  You are crouched inside a cramped dusty tunnel. Dirt rains down from\nceiling as you crawl slowly forward. Roots growing down from above wrap\nthemselves around your limbs, and get into your eyes. Although low, the \ntunnel is wide enough for two people to pass each other.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7745,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7743,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7745,
+      "Name": "Inside a Small Tunnel",
+      "Description": "\n  You are crouched inside a cramped dusty tunnel. Dirt rains down from\nceiling as you crawl slowly forward. Roots growing down from above wrap\nthemselves around your limbs, and get into your eyes. Although low, the \ntunnel is wide enough for two people to pass each other.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7747,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7744,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7746,
+      "Name": "In the River",
+      "Description": "\n   You are diving underwater in the river. Long green weeds reach up\nfrom the river bed hiding you from anyone who might be looking for\nyou in the water.",
+      "ZoneId": 77,
+      "Sector": "Underwater",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7740,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7749,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7716,
+          "Description": "It's hard to make out anything above the water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7747,
+      "Name": "Inside a Small Tunnel",
+      "Description": "\n  You are crouched inside a cramped dusty tunnel. Dirt rains down from\nceiling as you crawl slowly forward. Roots growing down from above wrap\nthemselves around your limbs, and get into your eyes. Although low, the \ntunnel is wide enough for two people to pass each other.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7741,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7745,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7748,
+      "Name": "Inside a Small Tunnel",
+      "Description": "\n  You are crouched inside a cramped dusty tunnel. Dirt rains down from\nceiling as you crawl slowly forward. Roots growing down from above wrap\nthemselves around your limbs, and get into your eyes. Although low, the \ntunnel is wide enough for two people to pass each other.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7742,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7750,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7749,
+      "Name": "In the River",
+      "Description": "\n   You are diving underwater in the river. Long green weeds reach up\nfrom the river bed hiding you from anyone who might be looking for\nyou in the water.",
+      "ZoneId": 77,
+      "Sector": "Underwater",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7746,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7751,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7721,
+          "Description": "It's hard to make out anything above the water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7750,
+      "Name": "Inside a Small Tunnel",
+      "Description": "\n  You are crouched inside a cramped dusty tunnel. Dirt rains down from\nceiling as you crawl slowly forward. Roots growing down from above wrap\nthemselves around your limbs, and get into your eyes. Although low, the \ntunnel is wide enough for two people to pass each other. A wide flat\nstone above your head covers the exit from the tunnel.",
+      "ZoneId": 77,
+      "Sector": "Hills",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7748,
+          "Description": "The tunnel disappears into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7724,
+          "Description": "A big flat stone that covers the exit that leads out of this tunnel is\nsituated just above your head.",
+          "Keywords": [
+            "stone"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "stone"
+          ],
+          "Description": "\nA big flat stone that covers the exit that leads out of this tunnel is\nsituated just above your head."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7751,
+      "Name": "In the River",
+      "Description": "\n   You are diving underwater in the river. Long green weeds reach up\nfrom the river bed hiding you from anyone who might be looking for\nyou in the water.",
+      "ZoneId": 77,
+      "Sector": "Underwater",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7749,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7752,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7727,
+          "Description": "It's hard to make out anything above the water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7752,
+      "Name": "In the River",
+      "Description": "\n   You are diving underwater in the river. Long green weeds reach up\nfrom the river bed hiding you from anyone who might be looking for\nyou in the water. A bridge across the river prevents you from\nsurfacing here.",
+      "ZoneId": 77,
+      "Sector": "Underwater",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7751,
+          "Description": "Weed, weed, weed, everywhere you look weed.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7753,
+      "Name": "The Nexus",
+      "Description": "\n   You are standing at a crossroads in time and space. Visions of \nvast green plains, dense forests and a river running alongside a small \nhill fill your mind. You feel as if you exist everywhere at the same\ntime.",
+      "ZoneId": 77,
+      "Sector": "Inside",
+      "Flags": [
+        "Chaotic",
+        "PkOk"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7710,
+          "Description": "As you look north the possibilities of the Nexus rise in your mind you\ncan travel to vast green plains or a river that runs alongside a small\nhill or choose to travel to an ancient oak forrest, that is if you can\ncontrol the Nexus.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7720,
+          "Description": "As you look east the possibilities of the Nexus rise in your mind you\ncan travel to vast green plains or a river that runs alongside a small\nhill or choose to travel to an ancient oak forrest, that is if you can\ncontrol the Nexus.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7730,
+          "Description": "As you look south the possibilities of the Nexus rise in your mind you\ncan travel to vast green plains or a river that runs alongside a small\nhill or choose to travel to an ancient oak forrest, that is if you can\ncontrol the Nexus.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7740,
+          "Description": "As you look west the possibilities of the Nexus rise in your mind you\ncan travel to vast green plains or a river that runs alongside a small\nhill or choose to travel to an ancient oak forrest, that is if you can\ncontrol the Nexus.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7750,
+          "Description": "As you look up the possibilities of the Nexus rise in your mind you\ncan travel to vast green plains or a river that runs alongside a small\nhill or choose to travel to an ancient oak forrest, that is if you can\ncontrol the Nexus.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7752,
+          "Description": "As you look down the possibilities of the Nexus rise in your mind you\ncan travel to vast green plains or a river that runs alongside a small\nhill or choose to travel to an ancient oak forrest, that is if you can\ncontrol the Nexus.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 7700,
+      "Name": "killer rabbit bunny",
+      "ShortDescription": "\nthe killer rabbit",
+      "LongDescription": "\nA cute little bunny hops around this place.",
+      "Description": "\nThe little bunny looks soft and fluffy with long pointy ears, you'd \nlike to take it in your arms and hug it tenderly.",
+      "Level": 109,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Dodge",
+        "Regeneration"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "85d85+1",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -750,
+        "Hitroll": 80,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "25d25+100"
+        }
+      ],
+      "Skills": [
+        "Skill_322:100"
+      ],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7701,
+      "Name": "knight ni",
+      "ShortDescription": "\nthe knight of Ni",
+      "LongDescription": "\nThe knights who say \"Ni!\" are standing here.",
+      "Description": "\nWe are now no longer the Knights who say \"Ni!\"\nWe are now the Knights who say \"ekky-ekky-ekky-ekky-z'Bang,\nzoom-Boing, z'nourrrwringmm\".\nTherefore we must give you a test.\nFirstly, you must find....\n                  ANOTHER SHRUBBERY!!!!\nTHEN...Then, when you have found the shrubbery, you must place\nit here, beside this shrubbery, only slightly higher, so we get\nthe two-level effect with a little path running down the middle.\nThen, when you have found the shrubbery, you must cut down the\nmightiest tree in the forest...\nWiiiiiiithh....   A HERRING!",
+      "Level": 109,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Helper"
+      ],
+      "Affects": [
+        "Light",
+        "Dodge",
+        "Regeneration"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "50d50+1",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -750,
+        "Hitroll": 80,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "20d20+100"
+        }
+      ],
+      "Skills": [
+        "Skill_322:100"
+      ],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%25 say Ni!;%5 say Ekky-ekky-ekky-ekky-z'Bang, zooom-boing, z'nourrrwringmm!;%5 say Then, when you have found the shrubbery, you must cut down the mightiest tree in the forest...Wiiiithh....A HERRING!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7702,
+      "Name": "knight ni",
+      "ShortDescription": "\nthe knight of Ni",
+      "LongDescription": "\nThe knights who say \"Ni!\" are standing here.",
+      "Description": "\nWe are the keepers of the sacred words: Ni, Ping, and Nee-womm!\nThe knights who say \"Ni\" demand.... a sacrifice!\nNi!  Ni!  Ni!  Ni!  Ni!  Ni!  Ni!\nWe shall say \"Ni!\" to you... if you do not appease us.\nWe want......\n                    A SHRUBBERY!!!!\nNi!   Ni!!  Ni!  Ni!\nYou must return here with a shrubbery... or else you will never\npass through this wood... alive.\nOne that looks nice.\nAnd not too expensive.\nNoowwww.... GO!",
+      "Level": 109,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Helper"
+      ],
+      "Affects": [
+        "Light",
+        "Dodge",
+        "Regeneration"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "50d50+1",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -750,
+        "Hitroll": 80,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "20d20+100"
+        }
+      ],
+      "Skills": [
+        "Skill_322:100"
+      ],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%50 say Ni!;%5 say Ping!;%5 say Nee-womm!;%10 say We want...    A SHRUBBERY!!!!!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7703,
+      "Name": "brother maynard",
+      "ShortDescription": "\nBrother Maynard",
+      "LongDescription": "\nBrother Maynard is standing here.",
+      "Description": "\nArmaments, chapter two, versus nine to twenty-one.\n\"And Saint Atila raised the hand grenade up high,\nsaying, 'Oh, Lord, bless this thy hand grenade that with it thou\nmayest blow thy enemies to tiny bits, in thy mercy.' And the Lord\ndid grin, and people did feast upon the lambs, and sloths, and carp, \nand anchovies, and orangutans, and breakfast cereals, and fruits bats,\nand large ...\"\n\"And the Lord spake, saying, 'First shalt thou take out the Holy Pin.\nThen, shalt thou count to three, no more, no less. Three shall be the\nnumber thou count, and the number of the counting shalt be three.\nFour shalt thou not count, nor either count thou two, excepting that\nthou then proceed to three. Five is right out. Once the number three,\nbeing the third number, be reached, then lobbest thou thy Holy Hand\nGrenade of Antioch towards thou foe, who being naughty in my sight,\nshall snuff it.'\"\nAmen.",
+      "Level": 109,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Dodge",
+        "Regeneration"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "75d75+1",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -750,
+        "Hitroll": 80,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "25d25+100"
+        }
+      ],
+      "Skills": [
+        "Skill_322:100"
+      ],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%30 say And Saint Atila raised the hand grenade up on high, saying, \"Oh Lord, bless this thy hand grenade that with it thou mayest blow thy enemies to tiny bits, in thy mercy.\";%30 say And the Lord did grin, and people did feast upon the lambs, and sloth\n\ns, and carp, and anchovies, and orangutans, and breakfast cereals, and fruit bats, and large ...;%5 say Amen.",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": []
+}

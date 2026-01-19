@@ -1,0 +1,6525 @@
+{
+  "Zone": {
+    "Id": 85,
+    "Name": "The Japanese Island",
+    "TopRoomId": 8592,
+    "Lifespan": 130,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 8517,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 8526,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 8526,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 8529,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 8529,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 8542,
+        "Arg2": 2,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 8575,
+        "Arg2": 2,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 8500,
+        "Arg2": 5,
+        "Arg3": 8512,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 8517,
+        "Arg2": 5,
+        "Arg3": 8500,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8503,
+        "Arg2": 1,
+        "Arg3": 8583,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8509,
+        "Arg2": 5,
+        "Arg3": 12,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8525,
+        "Arg2": 1,
+        "Arg3": 8586,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 8514,
+        "Arg2": 50,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 8515,
+        "Arg2": 50,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 8516,
+        "Arg2": 50,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8502,
+        "Arg2": 2,
+        "Arg3": 8583,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8502,
+        "Arg2": 2,
+        "Arg3": 8583,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8519,
+        "Arg2": 2,
+        "Arg3": 8515,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8519,
+        "Arg2": 2,
+        "Arg3": 8516,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8517,
+        "Arg2": 5,
+        "Arg3": 8509,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8516,
+        "Arg2": 3,
+        "Arg3": 8512,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8500,
+        "Arg2": 10,
+        "Arg3": 8524,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8504,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8500,
+        "Arg2": 10,
+        "Arg3": 8533,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8510,
+        "Arg2": 5,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8500,
+        "Arg2": 10,
+        "Arg3": 8539,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8511,
+        "Arg2": 5,
+        "Arg3": 12,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8501,
+        "Arg2": 8,
+        "Arg3": 8517,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 8505,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8501,
+        "Arg2": 8,
+        "Arg3": 8506,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8502,
+        "Arg2": 5,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8504,
+        "Arg2": 6,
+        "Arg3": 8528,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8504,
+        "Arg2": 6,
+        "Arg3": 8528,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8504,
+        "Arg2": 6,
+        "Arg3": 8531,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8504,
+        "Arg2": 6,
+        "Arg3": 8531,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8504,
+        "Arg2": 6,
+        "Arg3": 8533,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8504,
+        "Arg2": 6,
+        "Arg3": 8527,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 8508,
+        "Arg2": 5,
+        "Arg3": 8528,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8511,
+        "Arg2": 1,
+        "Arg3": 8522,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8542,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 8542,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8513,
+        "Arg2": 5,
+        "Arg3": 8522,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8513,
+        "Arg2": 5,
+        "Arg3": 8522,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8513,
+        "Arg2": 5,
+        "Arg3": 8522,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8513,
+        "Arg2": 5,
+        "Arg3": 8522,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 8501,
+        "Arg2": 5,
+        "Arg3": 8543,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 8506,
+        "Arg2": 5,
+        "Arg3": 8543,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8518,
+        "Arg2": 4,
+        "Arg3": 8546,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8518,
+        "Arg2": 4,
+        "Arg3": 8547,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8518,
+        "Arg2": 4,
+        "Arg3": 8550,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8518,
+        "Arg2": 4,
+        "Arg3": 8551,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8523,
+        "Arg2": 1,
+        "Arg3": 8554,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8505,
+        "Arg2": 10,
+        "Arg3": 8556,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8505,
+        "Arg2": 10,
+        "Arg3": 8558,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8505,
+        "Arg2": 10,
+        "Arg3": 8561,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8506,
+        "Arg2": 1,
+        "Arg3": 8562,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8507,
+        "Arg2": 2,
+        "Arg3": 8565,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8509,
+        "Arg2": 5,
+        "Arg3": 8569,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8509,
+        "Arg2": 5,
+        "Arg3": 8571,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8514,
+        "Arg2": 1,
+        "Arg3": 8568,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8512,
+        "Arg2": 1,
+        "Arg3": 8568,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8522,
+        "Arg2": 10,
+        "Arg3": 8568,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8512,
+        "Arg2": 50,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8522,
+        "Arg2": 10,
+        "Arg3": 8568,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8512,
+        "Arg2": 50,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8524,
+        "Arg2": 10,
+        "Arg3": 8576,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8524,
+        "Arg2": 10,
+        "Arg3": 8576,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8524,
+        "Arg2": 10,
+        "Arg3": 8576,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8524,
+        "Arg2": 10,
+        "Arg3": 8576,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8524,
+        "Arg2": 10,
+        "Arg3": 8576,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8508,
+        "Arg2": 10,
+        "Arg3": 8573,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8520,
+        "Arg2": 1,
+        "Arg3": 8575,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8513,
+        "Arg2": 5,
+        "Arg3": 9,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 8575,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 8575,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8515,
+        "Arg2": 8,
+        "Arg3": 8575,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8515,
+        "Arg2": 8,
+        "Arg3": 8575,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8515,
+        "Arg2": 8,
+        "Arg3": 8575,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8515,
+        "Arg2": 8,
+        "Arg3": 8575,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8521,
+        "Arg2": 1,
+        "Arg3": 8580,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8507,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8503,
+        "Arg2": 5,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8510,
+        "Arg2": 10,
+        "Arg3": 8580,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8510,
+        "Arg2": 10,
+        "Arg3": 8580,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8510,
+        "Arg2": 10,
+        "Arg3": 8580,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8510,
+        "Arg2": 10,
+        "Arg3": 8580,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8510,
+        "Arg2": 10,
+        "Arg3": 8580,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8510,
+        "Arg2": 10,
+        "Arg3": 8580,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 8500,
+      "Name": "Start of the sandy track",
+      "Description": "\n   You find yourself on a sandy track that leads east to what seems to be a \nsmall town. You hear little noise except for some soft melodic music and you\nfeel quite at peace in this tranquil place.  A large temple lies just\nsouth of here.",
+      "ZoneId": 85,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8587,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8501,
+          "Description": "The trail continues in that direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 13003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 25033,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8501,
+      "Name": "The sandy track",
+      "Description": "\n   The track becomes harder here and the sand thins out. The walking is\neasier on this harder ground and you start to look forward to what may\nbe ahead. The sound of wildlife and the song of the birds adds to your\nmood.",
+      "ZoneId": 85,
+      "Sector": "Field",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8502,
+          "Description": "The trail continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8500,
+          "Description": "You see the start of the sandy track.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8502,
+      "Name": "The stone path",
+      "Description": "\n   Now the track is paved and is shaded by large ornamental hedges on\neither side. The hedges are beautifully trimmed and it is evident that a\nlot of care and attention has gone into the landscaping. You realize that\nthe people inhabiting the town must be very meticulous and proud.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8503,
+          "Description": "The entrance to the town.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8501,
+          "Description": "The sandy track.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8503,
+      "Name": "Entrance to Old Japan",
+      "Description": "\n   You find yourself in a large open area. All around you there are neatly\nmanicured plants and flowers. The smell is enchanting and your spirits\nare lifted. You decide that it was a good idea that you decided to venture\nso far from home after all. As you take in the astounding beauty a large\nbanner that seems to be made from paper rustles in the wind and raises your\ninterest.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8511,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8512,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8504,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8502,
+          "Description": "The stone path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "banner"
+          ],
+          "Description": "\nThe banner reads:\n\n         Welcome to the palace of the Emperor Nazaki.\n         All are welcome to explore the grounds and\n         to pay homage to the great Emperor himself,\n         who extends his hospitality to you. Please\n         visit the monks in the shrine and they will\n         help you find enlightenment and peace within\n         yourself."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8504,
+      "Name": "South-west corner of the square",
+      "Description": "\n   You are standing along the border of the square. The exquisitely tended\nhedges reach up far above your head and you wonder how they are kept in\nsuch a good condition, surely they are too high to be reached. The square\ncontinues to the east and to the north you can see the entrance to the town.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8503,
+          "Description": "The entrance to the town.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8505,
+          "Description": "Southern side of the square.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8505,
+      "Name": "Southern side of the square",
+      "Description": "\n   You are at the southern-most side of the town square. From here you can\nsee the whole square and the view is magnificent. To the west and east are\nthe corners of the square and in the distance to the north you spy a small\ntrail leading away from the square. One thing strikes you as a little odd,\nthe hedge here seems slightly discolored and a little more tatty than the\nother parts are. Also to the north it looks as though something has been\ndemolished.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8512,
+          "Description": "Center of the square.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8507,
+          "Description": "South-east corner of the square.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8506,
+          "Description": "You can just see through the discolored hedge.",
+          "Keywords": [
+            "hedge",
+            "discolored"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8504,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "hedge",
+            "discolored"
+          ],
+          "Description": "\nYou try to push the hedge and you find that it gives a little."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8506,
+      "Name": "The small, dusty trail",
+      "Description": "\n   You find yourself on a small trail leading southwards. The air is cooler\nhere and the light seems fainter as if dusk were setting in. You put this\ndown to the fact that the large hedges are blocking most of the light but\nyou can't help but feel a little disconcerted. All around you insects are\nbuzzing and humming and this eerie melody only darkens your mood. To the\nsouth the trail continues, but for some reason you can't really see where\nit is going.",
+      "ZoneId": 85,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8505,
+          "Description": "The discolored hedge is to the north",
+          "Keywords": [
+            "hedge",
+            "discolored"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8521,
+          "Description": "The trail darkens",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8507,
+      "Name": "South-east corner of the square",
+      "Description": "\n   The whole of the square looks beautiful. All the flowers are in full\nbloom and bees hum quietly around looking for pollen. To the north you can\nsee the bordering hedges and to the west you can nearly make out the trail\nwhich you followed here.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8508,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8508,
+      "Name": "Eastern side of the square",
+      "Description": "\n   You are standing at the side of the square directly opposite from where\nyou entered. You can see the center of the square to the west and to the\neast there is a wide bordered path which leads up to a large building. The\nbuilding appears to be a kind of temple, most probably the residence of the\nEmperor, you think to yourself.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8509,
+          "Description": "The north-eastern corner.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8513,
+          "Description": "A white path",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8507,
+          "Description": "The south-eastern corner.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8512,
+          "Description": "The center of the square.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8509,
+      "Name": "North-east corner of the square",
+      "Description": "\n   You are standing at the corner of the great square still finding it hard\nto believe that such a work of beauty could be accomplished. You ponder over\nwho actually looks after the garden, and decide that whoever it is must be\nendowed with strange and wonderful talents.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8508,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8510,
+      "Name": "Northern Side of the square",
+      "Description": "\n   You can see the whole square from here and it looks quite beautiful. To\nthe south you notice that the hedge directly opposite is slightly different\nin color to the rest of that side, but you decide it must just be the way\nthe light reflects off it. To the north there is a gap in the hedge but it\nhas been filled by a large pile of rubble, which presumably was at one time\nan arch of some description. Anyway, it does not look as though you will be\nable to climb it.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8509,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8512,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8511,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rubble",
+            "stone",
+            "stones"
+          ],
+          "Description": "\n   The rubble looks quite fresh, as though whatever it was has only been \n   destroyed quite recently."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8511,
+      "Name": "North-west corner of the square",
+      "Description": "\n   You are in the top corner of the square. It seems to be a little higher\nhere than at other places and you are able to just peek over the southern\nhedge. What you see is quite an awesome sight, a volcanic mountain shrouded\nin mist climbs up into the heavens. You are not able to make out much detail\ndue to the thick mountain mists, but it quite a wondrous sight. From here\nthe square extends to the east and south.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8510,
+          "Description": "You see the square",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8512,
+      "Name": "The center of the square",
+      "Description": "\n   Here at the center of the square you can take in all the beauty of your\nsurroundings. The mystical music you heard earlier can be heard more strongly\nnow, but its source is indiscernible. From here you can see the white path\nleading east from the square and the temple behind that. To the west you\nrecognize the path you entered on, and to the south you notice that the hedge\nis a slightly different color to the rest of the border.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8508,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8513,
+      "Name": "The rice path",
+      "Description": "\n   You are standing on a white path that seems to be made from rice. It makes\na strange crunching noise as you walk on it and you wonder what the purpose\nof it is. To the east you see that the path continues on to a large temple.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8508,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8514,
+      "Name": "On the rice path",
+      "Description": "\n   You follow the white path quite enjoying the funny sound you are making.\nTo the north you see there is a small enclave and also an identical looking\none to the south. It appears that they house flowers and some ornamental\nstatues.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8515,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8517,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8516,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8513,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8515,
+      "Name": "A small enclave",
+      "Description": "\n   You are stood in a small enclave that appears to be a flower garden of\nsome kind. The flowers are beautifully arranged and the smell is intoxicating.\nTo the south, past the path, you see a similar enclave.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8516,
+      "Name": "A small enclave",
+      "Description": "\n   You are standing in a small enclave that appears to be a flower garden of\nsome kind. The flowers are beautifully arranged and the smell is intoxicating.\nTo the north you see a similar enclave past the white path.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8517,
+      "Name": "In front of the temple",
+      "Description": "\n   You are stood in front of a grand temple. The architecture is stunning\nand you are truly awed by the sight. It is quite intimidating. The steep \nroof reaches down to nearly touch the floor and the light reflects off the \ntiles hurting your eyes. To the east there are some large engraved doors.",
+      "ZoneId": 85,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8519,
+          "Description": "",
+          "Keywords": [
+            "doors",
+            "door",
+            "large"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8518,
+      "Name": "The Emperor's temple",
+      "Description": "\n   You are at the end of the paper screen. You can now see to the east where\na small passage leads to the great long hall of the Emperor. A smell of fine\nfoods is wafting from the east.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8585,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8519,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8519,
+      "Name": "The temple foyer",
+      "Description": "\n   You find yourself in a large open space. The temple appears to be just\none large room that is separated by paper-like screens. You can see through\nthe screens slightly as they are quite translucent in the light, but you\ncan only make out faint outlines. Along the walls hang great tapestries which\ndepict wars and horrible monsters. The screen prevents your way eastwards\nbut you can move north or south.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8518,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8520,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8517,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "doors",
+            "large"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestries"
+          ],
+          "Description": "\nThe tapestries depict scenes of battle, mainly between samurai and ninja.\nHowever these are not the only parties involved, spectral images haunt\nthe backgrounds of the pictures."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8520,
+      "Name": "The Emperor's temple",
+      "Description": "\n   To the east you see a small passage. It leads along the outer wall of the\ntemple and is quite plain. This room is tidy and clean but there is little to\nsee.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8519,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8581,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8521,
+      "Name": "The dusty trail",
+      "Description": "\n   You are following a dusty trail which is getting steeper as you go. You\nhear the sound of people and animals to the south and smoke is rising in a\nsteady pattern. It appears there may be some sort of settlement ahead. The\ntrail continues south for a short while and then turns. You can go back to\nthe square by traveling north.",
+      "ZoneId": 85,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8522,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8522,
+      "Name": "On the dusty trail",
+      "Description": "\n   The trail is quite firm and the going easy. The path turns here and now\nleads to the east. The sounds of people are getting closer and you hope that\nthe inhabitants will be friendly. However, the mist that surrounds this place\nis less than inviting.",
+      "ZoneId": 85,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8521,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8523,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8523,
+      "Name": "The path steepens",
+      "Description": "\n   The path you are on begins to rise a little and you can now see a little\nway into the distance. The thick mist prevents you from seeing too far but\nyou are approaching some foothills by the look of things. Further away to\nthe south you can see the rocky peaks of a small mountain range. The path\ncontinues to the east for a short way, but you can always change your mind\nand return to the west.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8524,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8522,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8524,
+      "Name": "A turning in the path",
+      "Description": "\n   You are at a turn in the path. The trail continues to the south where it\nrises up into some foothills. The mist seems thicker now and a chill begins\nto set in. You are beginning to feel slightly uncomfortable and rub your hands\ntogether to keep warm. The trail is quite steep now, and you can just make out\na few wooden shacks to the south. Back to the west you can make your way to the\nsquare.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8525,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8523,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8525,
+      "Name": "The path to the shacks",
+      "Description": "\n   You are on a path that leads into a small gathering of huts. They appear\nquite run down, but inhabited nonetheless as you can see smoke rising from\nthe small chimneys. All seems quite except for a chattering sound, like a\nchild's rattle. The path leads south between the shacks.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8524,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8526,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8526,
+      "Name": "Path between the shacks",
+      "Description": "\n   You are on a small dirt path. To the east and west there are small, wooden\nshacks. There is little noise from inside and you wonder whether whoever owns\nthem is hospitable or not. Smoke rises from the small chimneys and you wonder\nwhether you should take a look inside.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8525,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8528,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8529,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8527,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shack",
+            "shacks"
+          ],
+          "Description": "\nYou see two small wooden shacks standing opposite one another."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8527,
+      "Name": "Inside the small shack",
+      "Description": "\n   You are stood inside a small shack. The smell is terrible in here, like food\nthat has rotted away. There is a small table and a couple of chairs scattered\naround the room. The northern wall houses a fireplace and glowing coals try\nto add a little warmth to this cold abode. You look around for exits but it\nappears that this is the only room. The small futon lying on the floor seems\nto confirm this.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8526,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "table"
+          ],
+          "Description": "\nYou see a small wooden table. On it lie a few scraps of food which are rotten\nand do not look in the slightest bit edible."
+        },
+        {
+          "Keywords": [
+            "chair",
+            "chairs"
+          ],
+          "Description": "\nThe small chairs are in drastic need of repair and it seems they would collapse\nif you were to sit on them."
+        },
+        {
+          "Keywords": [
+            "fire",
+            "fireplace"
+          ],
+          "Description": "\nThe glowing coals in the fireplace try in vain to give the room a little\nwarmth."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8528,
+      "Name": "A small shack",
+      "Description": "\n   You are standing inside a small shack, which it would appear, houses at\nthe maximum, only two people. It is tiny and squalid. There is a small table\nand a futon lying on the floor, which the owner must use as a bed. You decide\nthat there is nothing much to see here as the hut is just a single room. The\ndoor you entered by leads back to the path outside.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 8526,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "futon"
+          ],
+          "Description": "\nThe futon appears to be a small bed where the owner(s) of this place sleep."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8529,
+      "Name": "Between the shacks",
+      "Description": "\n   To the east and west you see two more shacks. They look very much the same\nas the two to the north. They are just as decrepit and smelly. The path leads\nnorth and south or you can hold your nose and enter one of the huts.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8526,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8531,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8532,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8530,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8530,
+      "Name": "The smelly shack",
+      "Description": "\n   The smell in here is disgusting. You don't know what caused it and you\ndon't think you really want to. There is no furniture at all in here. All\nthere is that prevents this hut just being a wooden box is a small fireplace\nin the western wall. The door leads back out to the east.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8529,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8534,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8531,
+      "Name": "Another wooden shack",
+      "Description": "\n   This shack is a little larger than the others but it smells just as badly.\nThe fire has gone out in the fireplace and is very chilly. It makes you\nfeel like you should have stayed away from this place. The door leads back\nout to the path to the west.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 8529,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8532,
+      "Name": "The mountain trail",
+      "Description": "\n   You are on a trail leading up towards a small mountain range. The small\ngathering of shacks is to the north, and fortunately the wind has picked up\nenough to take the smell of them away. The path turns quite sharply here and\nyou may continue along it to the west.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8529,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8533,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8533,
+      "Name": "The mountain trail",
+      "Description": "\n   The trail is made from a hard substance that seems quite porous. It is\nlight-gray in color and crunches a little as you tread on it. Around you\nthrough the mist you once again hear the sound of animals, but they sound\nlarger than before. You trail gains height and leads to the south once again\nbut the way back is to the east.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8532,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8535,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8534,
+      "Name": "The fireplace",
+      "Description": "\n   AGGGGGGGGGGGHHHHHHHHHHHH, it's a tight squeeze but you just manage to\ncrawl into the fireplace. The coals are glowing hot and you have burnt\nyourself quite badly. You attempt to pull yourself out and back into the \nroom but find yourself completely stuck. The wind starts to get up outside\nand suddenly a gust comes down the chimney. The flames start to rise and \nsoon catch on to your clothing. You pull harder but just cannot budge yourself\nfrom this mess. Eventually your hair starts to burn and you smell your own\nflesh cooking. You die an agonizing and slow death here in a smelly hut!\nWhat a fitting end for a hero such as yourself!",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8530,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8535,
+      "Name": "The steep path",
+      "Description": "\n   This part of the path rises sharply up to what looks like a small plateau.\nIt looks as though there is some greenery up there but it is difficult to say.\nYou can hear the sound of running water from far over to the west but there is\nno way you can see that far in this fog. If you like you can return towards the\nshacks on the path to the north, or if you feel like braving what lies ahead\nsouth is the direction in which to travel.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8533,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8536,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8536,
+      "Name": "The marshy path",
+      "Description": "\n   The path has become quite wet here. You feel yourself sliding in the\nmud. It seems there must be water somewhere close by. To the east it seems\nthat the path rises slightly and hardens up some. To the west it looks\ndecidedly boggy. The road into the small village leads back to the north.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8535,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8537,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8544,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8537,
+      "Name": "A mountain trail",
+      "Description": "\n   The trail is harder again here and it appears to be made of the same\ngray rock as you saw earlier. The trail rises slightly and leads to the\neast.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8538,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8536,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8538,
+      "Name": "The mountain trail",
+      "Description": "\n   You are on a small track that appears to have been made by animals\nalthough there are larger footprints here. The path is narrow and there\nis a relatively large drop to the north of you. The path continues on to\nthe east.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8539,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8537,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8539,
+      "Name": "A turn in the mountain path",
+      "Description": "\n   You are at the edge of a small precipice. To the north and east there\nare sheer cliff faces. A thin crumbling path leads to the south and appears\nto end at a rock face.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8540,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8538,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8540,
+      "Name": "A narrow path on the mountain",
+      "Description": "\n   You are on a path approaching a cliff face. It is narrow and you have to\nbe careful not to fall down the cliff. The view from here is astounding\nand you can see for miles even through the mist. The cliff face is along\nto the south.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8539,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8541,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8541,
+      "Name": "Outside a small opening",
+      "Description": "\n   You are right up against the cliff face now. It stretches high up\ninto the sky and you wonder whether there could be a path leading up\nthere somewhere. To the east you see a narrow gap that you may just be\nable to squeeze in to it if you dare. The trail also leads back to the\nnorth.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8540,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8542,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8542,
+      "Name": "The small, dark cave",
+      "Description": "\n   You are stood in a small cave that stinks of putrefaction and death.\nAll around you are bones and limbs amongst other things. Creatures have\nmade nests in the remains here and maggots run freely over the floor.\nTo the south there seems to be a thin crack in the wall and west will\ntake you back outside.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8543,
+          "Description": "",
+          "Keywords": [
+            "secret",
+            "door",
+            "crack"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 8542
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8541,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8543,
+      "Name": "The secret store",
+      "Description": "\n   You find yourself in a small alcove that has been hollowed out of the\nrear or the cave. There is not much to see as it's a pretty small room.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8542,
+          "Description": "",
+          "Keywords": [
+            "secret",
+            "door",
+            "crack"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 8542
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8544,
+      "Name": "The marshy path",
+      "Description": "\n   The path has become decidedly more marshy and less path-like now and\nyou hope that you will not sink altogether. You can hear the sound of \nrunning water quite clearly now from the north-west. Exits lead east\nand west.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8536,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8545,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8545,
+      "Name": "The sinking path",
+      "Description": "\n   The path has become more of a mire now and to the south you can see\na small expanse of water to the south which seems quite still. It may\nbe the source of the river you can hear.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8544,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8546,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8546,
+      "Name": "The source",
+      "Description": "\n   You are swimming in ice cold water. There is not much vegetation around\ndue to the biting coldness, but small reeds and rushes extend from the\nsurface in places. There is more water to the south and west.",
+      "ZoneId": 85,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8545,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8547,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8551,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8547,
+      "Name": "The source",
+      "Description": "\n   You are swimming in a pool of water that meets the cliff face to the\nsouth, it may be possible to climb out there if you can find any hand-holds.\nTo the north and west is more water but it seems to be running a little\nfaster to the west.",
+      "ZoneId": 85,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8546,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8550,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8548,
+      "Name": "The foot of the mountain",
+      "Description": "\n   There is a steady stream of water running down the mountain here which\ngathers in a pool to the north of you. To the south the cliff face stretches\nhigh into the sky and there is no way to climb straight up. You will have to\nfollow the small path, which appears to have been made by goats, eastwards\nif you want to try to climb up.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8550,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8549,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8549,
+      "Name": "A trail up the volcano",
+      "Description": "\n   As you walk along the path you can see through the mist slightly. This is\nactually a volcano, not just a mountain after all. The gray rocks you have\nseen must be pumice stone. Smoke rises in thin wisps from the peak and you\nhope that this particular volcano isn't active. The trail continues on east\nfrom here which appears to be the only way up the mountain from here.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8556,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8548,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8550,
+      "Name": "The source",
+      "Description": "\n   The water here is running much faster and in a northerly direction.\nTo the south there is a rocky slope leading into the pool. To the north\nyou see that the pool becomes a small river and flows away down the cliff.",
+      "ZoneId": 85,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8551,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8547,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8548,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8551,
+      "Name": "The source",
+      "Description": "\n   You feel as though you are being pulled along by the flow of the water\nand have to swim against it. There are strange noises coming from the\nsouth but you aren't sure if they are caused by the flow of water or not.\nThere is more water east and south of you and the pool becomes a small\nriver to the north.",
+      "ZoneId": 85,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8552,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8546,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8550,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8552,
+      "Name": "The small river",
+      "Description": "\n   You are on a small but fast flowing river which is proceeding at a\nsteady pace down the mountain-side. The current is strong but you are\nable to swim against it. It flows northwards into the thick mist and \nyou cannot easily tell where it leads to. You can always fight the current\nand return southwards if you wish though.",
+      "ZoneId": 85,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8553,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8551,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8553,
+      "Name": "On the small river",
+      "Description": "\n   The river is much faster here and you can hear a loud crashing sound to\nthe north. Rocks jut out of the river at curious angles and the sides of\nthe river are smooth stone, from where the water has grooved it's path. You\ncan continue north further down the river or you may wish to try to swim\nback upstream to the south.",
+      "ZoneId": 85,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8554,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8552,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8554,
+      "Name": "The small river rapids",
+      "Description": "\n   You are at the terminus of the river. The flow is extremely fast here and\nit is difficult to stay afloat. All around you the waves crash and the noise\nis deafening. If front of you to the north the river crashes over the edge of\nthe cliff in an astoundingly beautiful waterfall, the spray from which causes\na rainbow to appear in the haze. You may swim back up the river southwards or\nyou may dare to risk the hazards of the waterfall.",
+      "ZoneId": 85,
+      "Sector": "WaterSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8555,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8553,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8555,
+      "Name": "The waterfall",
+      "Description": "\n   WHHHHHHHHHHHHOOOOOOOOOAAAAAAAAAA, what a thrill. You are traveling down\nthe mountainside at a ridiculous speed and the excitement is immense! However,\nthere are also HUGE rocks at the bottom of the fall! As you plunge down you\nnotice them and then they flash by, you missed them! Unfortunately the under-\ncurrent is so strong here at the bottom that there is no way you can break\nthe surface once you have been pulled under. You manage to hold your breath\nfor a while but then the strain becomes too much and you inhale a lung-full\nof water. What they say about drowning isn't right and your death is agonizing!",
+      "ZoneId": 85,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8554,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8556,
+      "Name": "The volcanic trail",
+      "Description": "\n   You are following a small gray trail along the mountainside. The trail\nis thin and the gusty wind makes this trek quite treacherous. The view is\nsuperb, even through the mist. You can see the Emperor's temple in all its\nmagnificence and the small shacks you passes over to the north-west. From\nhere the trail leads southwards into what looks like a lava gully.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8557,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8549,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8557,
+      "Name": "The volcanic trail",
+      "Description": "\n   You are in a small gully carved from the rock by previous flows of lava.\nIt looks like the going may get tough here as the trail appears to end. You\nwill have to try to make your way up the mountain without the aid of a path\nnow. You may wish to turn back and head northwards or risk the climb upward.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8556,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 8558,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8558,
+      "Name": "Climbing the volcano",
+      "Description": "\n   You are hanging dangerously on the mountainside. It is difficult going\nbut you are managing to slowly edge yourself upwards. Eastwards there seems\nto be a thin ledge that you may be able to stand on.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8559,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 8557,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8559,
+      "Name": "A ledge on the volcano",
+      "Description": "\n   You are teetering precariously on a small ledge hundreds of feet up the\nvolcano. It leads in a southerly direction towards a large opening in the\nrock face. The ledge is very steep and it appears you will have to climb at\nleast some of the way.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8560,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8558,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8560,
+      "Name": "A ledge on the volcano",
+      "Description": "\n   The ledge is slightly wider now and your footing more secure. Above you\nand to the south there seems to be a cave of some sort and the trail leads\nyou in that direction apparently.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8559,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 8561,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8561,
+      "Name": "A ledge on the volcano",
+      "Description": "\n   You are standing on a small ledge far up the mountainside. To the south\nyou see a large, dark cave while the ledge seems to go east where it meets\na more stable and wider path.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8563,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8562,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 8560,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8562,
+      "Name": "A cave in the volcano",
+      "Description": "\n   The cave is huge and dark. Shadows flicker and scatter unnervingly from\nyour light source and you feel ill at ease. It is difficult to tell how\nthis cave was created as the walls are jagged rather than smooth and there\nappears to be no other openings around.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8561,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8563,
+      "Name": "The ledge widens",
+      "Description": "\n   You are on what seems to be a small platform. The ledge is much wider\nhere but is seems some subsidence has caused this part to slip and you\nwill have to climb up to continue your ascent.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 8561,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 8564,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8564,
+      "Name": "The volcanic trail",
+      "Description": "\n   The ledge now becomes a trail once again. It winds around a jagged\noutcrop of rock and it is difficult to tell where it is leading to.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8565,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 8563,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8565,
+      "Name": "The winding path on the volcano",
+      "Description": "\n   The path curves around quite sharply and you have to be careful not to\nfall off the edge. The path extends a little to the east but does not look\nparticularly safe there. It may be safer to follow it to the south or even\nto return west.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8566,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8567,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8564,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8566,
+      "Name": "The path crumbles",
+      "Description": "\n   OOOOOOOOOHHHHHHHHHHHHHHHHHHH NNNNNNNNNNOOOOOOOOOOOOOOOOOOOOOO\nThe path crumbles beneath your feet. You slip and slide down the mountain\nside, but are able to eventually grab hold of a tree. But, as luck would\nhave it, and in the spirit of irony the tree breaks sending you plummeting\nto your death hundreds of feet below.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 8565,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8567,
+      "Name": "Outside a cave on the volcano",
+      "Description": "\n   You are on a small path that winds around the volcano. The going is tricky\nbut you think you are progressing well. To the south is a wide opening that\nseems to be a cave, whereas the path continues to the west. North leads back\ndown the mountain.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8565,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8568,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8569,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8568,
+      "Name": "A cave in the volcano",
+      "Description": "\n   You are in a small cave hewn out of the rock by some unexplainable force.\nThere is very little of interest here and the wind moans across the entrance\nmaking you feel uneasy. You may exit the cave to the north.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8567,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8569,
+      "Name": "A trail on the volcano",
+      "Description": "\n   The trail is beginning to thin out again and before you know it you are\nup against a vertical climb. There is no way around it so you will be forced\nto climb up. The way back leads to the east.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8567,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 8570,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8570,
+      "Name": "Near the summit of the volcano",
+      "Description": "\n   You are on a small plateau. Looking around you can see for miles. The island\nis larger than it appears at first and you can see strange lands far away. The\nsea looks rough, but from this height you can get no real impression of the\nsize of the waves. A few scattered vessels can be seen being tossed around by\nthe elements and you feel glad to be on land. As you are on a much flatter area\nthe mist does not obscure your view so badly now and you can see a well used\npath winding along to the south.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8571,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 8569,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8571,
+      "Name": "On the volcanic plateau",
+      "Description": "\n   Large rocks jut out of the ground all over the place and you have to\nfollow the trail around these. The going is much easier as you do not have\nto fight a slope now and you can see the smoke pouring from the opening at\nthe top of the volcano. Although it makes you quite uneasy it is a stunning\nsight. The trail leads south still where it appears to curve around another\ncrag.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8570,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8572,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8572,
+      "Name": "The volcanic plateau",
+      "Description": "\n   The trail you are following comes to a sharp turn to the east here. From\nthere it looks as though it will lead southwards but the outcrops make it\ndifficult to tell.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8571,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8573,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8573,
+      "Name": "The wide volcanic pathway",
+      "Description": "\n   The trail become much wider here and it looks as if a conscious effort\nhas been made here to lay a path. It looks as though this part of the mount\nis inhabited by someone, or something. This particular path leads south to\na very large opening in the rock face.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8574,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8572,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8574,
+      "Name": "Outside the large cave",
+      "Description": "\n   You are stood in front of an extremely large cave entrance. Above the\ncave there appears to be a ledge which you should be able to climb up to.\nThe entrance to the cave is south or if you wish to explore the ledge you\ncan climb up to it.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8573,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8575,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 8576,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8575,
+      "Name": "The great cave in the volcano",
+      "Description": "\n   You are stood inside a huge cave which seems to be a natural crevice in\nthe mountainside. The walls are covered in arcane signs which have been\npainted in blood. Small evil-looking creatures scurry about in the shadows\nand a sticky-looking goo drips from the ceiling in places creating a horrible\natmosphere.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8574,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8577,
+          "Description": "",
+          "Keywords": [
+            "secret",
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 8575
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8576,
+      "Name": "The Lair",
+      "Description": "\n   You are on top of a small outcrop of rock which is covered in grasses\nand moss. All around bones and scraps of meat litter the floor. It seems\nthe be the lair of a group of creatures, but what would be living up here?\nYou may climb back down to the path if you wish as you can see no other\nexits.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 8574,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8577,
+      "Name": "A tunnel inside the volcano",
+      "Description": "\n   You are standing in a tunnel which leads into the actual volcano. The\nwalls are jagged and coarse and the floor is uneven. You can actually\nfeel the heat emanating from the walls of the tunnel and you hope that\nit won't get much worse as you go onwards. The tunnel continues to the\nsouth but you can reenter the cave to the north.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoMagic",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8575,
+          "Description": "",
+          "Keywords": [
+            "secret",
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 8575
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8578,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8578,
+      "Name": "The tunnel inside the volcano",
+      "Description": "\n   The tunnel you are in now turns to the east. The heat is getting much\nworse the further you go into the volcano and you are beginning to sweat.\nStrange noises can be heard from the east but you put this down to the\nlava gurgling inside the volcano.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoMagic",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8577,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8579,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8579,
+      "Name": "The tunnel inside the volcano",
+      "Description": "\n   The tunnel now opens out into a large cavern to the south. Back to the\nwest you can follow the tunnel out of the volcano if you wish.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoMagic",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8580,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8578,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8580,
+      "Name": "The lair of the Dai-Oni",
+      "Description": "\n   This huge cave is decorated with human corpses. They hang from the roof,\nthe walls and even decorate the floor in places. An enormous throne stands\nagainst the southern wall. It is made from bones and the head-rest from large\nskulls. It is covered in human skin, which is beginning to rot creating a\ndisgusting smell. The tunnel is to the north but that appears to be the only\nexit from this vile place.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8579,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "throne"
+          ],
+          "Description": "\nThe throne is huge and made of human bones. The sight of it makes you want\nto vomit."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8581,
+      "Name": "A passage in the temple",
+      "Description": "\n   You are stood in a small passage. It leads east to what seems like a long\nhall. There are some nice smells coming from the eastern direction.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8582,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8520,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8582,
+      "Name": "The long hall",
+      "Description": "\n   You are standing in a long hall that leads northwards. A short way to the\nnorth there is a grand looking throne. The eastern wall is decorated with a \nlarge assortment of weapons and armor and is quite a stunning sight.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8583,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8581,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8583,
+      "Name": "Before the Emperor's throne",
+      "Description": "\n   In front of you is a beautiful throne made from bamboo and the finest cloth.\nIt is the throne of the Emperor and is beautiful in design. To the north and\nsouth you can follow the hall and from the west comes the smell of fine food.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8584,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8582,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8586,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8584,
+      "Name": "The long hall",
+      "Description": "\n   You are at the northern end of the long hall. To the south you see the \ngreat throne of the Emperor. The wall to the east is decorated with the\nfinest weapons and armor. Westwards will take you away from the hall.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8583,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8585,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8585,
+      "Name": "The passage in the temple",
+      "Description": "\n   You are stood in a small passage that leads to the grand hall of the\nEmperor Nazaki. From somewhere the smell of fine food assails your nostrils\nand you begin to feel a little hungry. East will take you to the grand hall\nwhilst going west should eventually take you out of the temple.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8584,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8518,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8586,
+      "Name": "The Sushi Bar",
+      "Description": "\n   You are stood inside a small room that appears to be where the Emperor\nand his men eat. There is a small serving hatch behind which you can see\na small man scurrying about trying to prepare his food faster. The smell is\nincredible and you want to eat right away. When you are finished you can\nenter the hall by going east.",
+      "ZoneId": 85,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8583,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8587,
+      "Name": "The island coast",
+      "Description": "\n   You are following the coastline of what appears to be a small island.\nAll around you waves crash into the rocks and the sea breeze whips your\nhair about. The you can follow the coastline to the north or south.",
+      "ZoneId": 85,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8588,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8588,
+      "Name": "The island coast",
+      "Description": "\n   You are walking along a thin stretch of beach which is shadowed by\nlarge cliffs to the east. There is no way you would be able to climb \nthem so it would be best to look for a way through.",
+      "ZoneId": 85,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8589,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8587,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8589,
+      "Name": "The small cove",
+      "Description": "\n   You find yourself in a small, natural cove. The water laps up the\nsandy bank to a small beach which runs along the length of the coastline.\nIn the distance a huge mountain peak reaches up into the clouds. An \nimpressive range of cliffs block your view east, although you can make \nout a small cave at the base of the cliff.",
+      "ZoneId": 85,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8590,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8588,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8590,
+      "Name": "Smugglers Cave",
+      "Description": "\n   After a short while you become accustomed to the darkness in the \ncave, and take a proper look around. Broken boxes and casks, along with \nvarious items for the repair of boats are scattered all around this \narea. Judging from the contents of the boxes, you assume that this is \neither the result of smuggling, or of a large scale exploration. Peering\ninto the darkness at the back of the cave, you notice a narrow tunnel \nheading upwards.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 8589,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 8591,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8591,
+      "Name": "Winding Tunnel",
+      "Description": "\n   You struggle to clamber over and around the rocks that fill this \nnarrow tunnel. The sound of the sea roars in your ears, and the smell \nof salt stings your nostrils, carried by a strong breeze from the cave \nbelow. The cave disappears in darkness to the east. A deep rumbling \nalmost shakes you from your feet, and fragments of igneous rock rain \ndown on your head.",
+      "ZoneId": 85,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8592,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 8590,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8592,
+      "Name": "Rocky Shaft",
+      "Description": "\n   The heat and smell of sulphur are very strong at this end of the \ntunnel, which at first sight appears to be a dead end. You soon notice \nhowever that it is lighter here than elsewhere in the caves, a rocky \nshaft leads straight up from here, and you can see the sky. It's a \ndifficult climb, but not for a hardy adventurer like you.",
+      "ZoneId": 85,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 8591,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 18200,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 8500,
+      "Name": "ninja warrior",
+      "ShortDescription": "\nthe Ninja",
+      "LongDescription": "\nA Ninja Warrior is on a quest to slay the Emperor.",
+      "Description": "\nThe person in front of you is a ninja. He has been trained from birth as\n an assassin and has no equal in this area. He is clad all in black and \n only his dark eyes are visible through the small slit in his mask. He \n whispers the word \"Akukugara\" and looks straight at you. A shiver runs \n down your spine as a voice that seems to come from nowhere echos \n \"Prepare to die!\".",
+      "Level": 70,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Sneak",
+        "Infrared"
+      ],
+      "Alignment": -50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d90+1100",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 32,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "NoBsPierce",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "6d7+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 526666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8501,
+      "Name": "monk",
+      "ShortDescription": "\na Monk",
+      "LongDescription": "\nA monk of the White Lotus has fled the temple",
+      "Description": "\nThe man before you has a shaved head and wears loose fitting robes.\n He is a peaceful and religious man, a monk who is a member of the\n White Lotus. On his forearms he bares a tatoo of a Lotus Flower.\n His life has been spent practising martial arts to improve his\n self-control. You would be a fool to attack him as his temple has\n been destroyed by the minions of the Evil Daimyo and he is not happy!",
+      "Level": 55,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "SenseLife",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d50+900",
+        "Mana": 650,
+        "Move": 905
+      },
+      "Combat": {
+        "Armor": -230,
+        "Hitroll": 29,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "5d5+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1450,
+      "Experience": 370000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8502,
+      "Name": "sumo wrestler",
+      "ShortDescription": "\na Sumo Wrestler",
+      "LongDescription": "\nA Sumo wrestles to amuse the Emperor",
+      "Description": "\nThis man is huge. He must weigh over 600 pounds! He is a sumo wrestler\n and one of the Emperor's champions. He is here to provide the Emperor\n with some amusement in these troubled times. You would not fare well\n in a fight against him, if he sat on you it would probably kill you!",
+      "Level": 80,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Regeneration"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "50d10+3000",
+        "Mana": 900,
+        "Move": 1280
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 26,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "10d10+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 670000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%20 emote wrestles the sumo wrestler to the floor.;\n%35 emote charges towards the sumo wrestler attempting to grab him.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8503,
+      "Name": "emperor nazaki",
+      "ShortDescription": "\nEmperor Nazaki",
+      "LongDescription": "\nEmperor Nazaki sits here on his throne.",
+      "Description": "\nHe is the Emperor of this peaceful land but of late there has been\n much trouble. The man who acts directly under him- the Daimyo, has\n rebelled and now controls evil forces which are bringing the Emperor's\n land to it's knees. A powerful man and a great ruler- it is a shame\n that this has happened.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light"
+      ],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d20+4500",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -700,
+        "Hitroll": 80,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "10d6+30"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 10000,
+      "Experience": 1400000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%30 cheer sumo;%50 say Why don't you join the fun?;%60 pat sumo",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8504,
+      "Name": "rokoru kubi head",
+      "ShortDescription": "\nthe Rokoru-Kubi",
+      "LongDescription": "\nA disembodied head snaps its teeth at you.",
+      "Description": "\nArrgghh, this is digusting. A human head has actually flown away from\n its corpse and is flying towards you! It is a Rokoru-Kubi an undead\n being, no doubt a direct result from it's slaughter by the Daimyo's\n legion of death. It snaps its teeth at you and attacks. It hasn't\n eaten for a while!",
+      "Level": 60,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Infrared",
+        "Fly"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d10+1000",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 30,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "7d8+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 420000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8505,
+      "Name": "bakemono goblin",
+      "ShortDescription": "\nthe Bakemono",
+      "LongDescription": "\nA strange looking goblin eyes you curiously.",
+      "Description": "",
+      "Level": 65,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light"
+      ],
+      "Alignment": -70,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d20+700",
+        "Mana": 750,
+        "Move": 1055
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "5d8+18"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1213,
+      "Experience": 470000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8506,
+      "Name": "o-bakemono o bakemono goblin",
+      "ShortDescription": "\nThe O-Bakemono",
+      "LongDescription": "\nA huge goblin towers over you.",
+      "Description": "\nThis is a huge goblin, larger that even an ogre or troll and much more\n dangerous. His green, scaly skin looks like it would act as good armour\n and his huge fists look dangerous.",
+      "Level": 80,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d10+1000",
+        "Mana": 900,
+        "Move": 1280
+      },
+      "Combat": {
+        "Armor": -300,
+        "Hitroll": 40,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "8d8+30"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 670000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8507,
+      "Name": "totate kumo spider trapdoor",
+      "ShortDescription": "\nthe Totate Kumo",
+      "LongDescription": "\nA giant trapdoor spider leaps at you.",
+      "Description": "",
+      "Level": 70,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "Wimpy"
+      ],
+      "Affects": [
+        "SenseLife",
+        "Sneak",
+        "Hide",
+        "Infrared"
+      ],
+      "Alignment": -50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d15+700",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -270,
+        "Hitroll": 30,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "5d10+23"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 526666,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8508,
+      "Name": "ronin samurai",
+      "ShortDescription": "\na ronin",
+      "LongDescription": "\nA samurai with no master wanders around here.",
+      "Description": "",
+      "Level": 70,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Memory"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "15d15+780",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -230,
+        "Hitroll": 33,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "7d6+33"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 965,
+      "Experience": 526666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8509,
+      "Name": "samurai",
+      "ShortDescription": "\nthe Emperor's samurai",
+      "LongDescription": "\nThe Emporer's Samurai searches for the source of evil.",
+      "Description": "\nThe Emperor has sent the last of his troops on a desperate mission to\n destroy the Evil Daimyo. His power is growing and there have been tales\n of horrific beings living in the mountain regions. He has only one thought\n on his mind, and that is to destroy the Daimyo.",
+      "Level": 80,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "ProtectEvil"
+      ],
+      "Alignment": 600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "12d20+1150",
+        "Mana": 900,
+        "Move": 1280
+      },
+      "Combat": {
+        "Armor": -280,
+        "Hitroll": 42,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Slash",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "8d8+35"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 670000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 say We need your help to destroy the Daimyo!;%30 peer",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8510,
+      "Name": "shura",
+      "ShortDescription": "\nthe Shura",
+      "LongDescription": "\nThe ghost of a former warrior drifts by.",
+      "Description": "\nThe apparition before you is the ghost of a former warrior, maybe even one\n of the Emperor's own samurai. He has been raised from the dead by evil\n magic to fight on the side of the Daimyo and the Dai-Oni.",
+      "Level": 65,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d20+1000",
+        "Mana": 750,
+        "Move": 1055
+      },
+      "Combat": {
+        "Armor": -220,
+        "Hitroll": 32,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "7d6+18"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 470000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8511,
+      "Name": "nushi woman beautiful",
+      "ShortDescription": "\nthe Nushi",
+      "LongDescription": "\nA beautiful woman arouses you.",
+      "Description": "\nThe gorgeous woman before you is actually a demon in human form. It has\n taken this form in order to seduce and then kill it's victims, so don't\n get any ideas about asking her for a date!",
+      "Level": 95,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "30d30+1200",
+        "Mana": 1050,
+        "Move": 1505
+      },
+      "Combat": {
+        "Armor": -410,
+        "Hitroll": 50,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "9d9+30"
+        },
+        {
+          "Type": "Attack_86",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+80"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 15000,
+      "Experience": 983333,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%20 say Well, hello there. Have you got any plans for this evening?",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8512,
+      "Name": "mukade worm",
+      "ShortDescription": "\na Mukade",
+      "LongDescription": "\nA huge glowing worm attempts to devour you.",
+      "Description": "",
+      "Level": 70,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "Memory",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "9d9+900",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 35,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "7d7+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 526666,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8513,
+      "Name": "shadow demon",
+      "ShortDescription": "\na Shadow Demon",
+      "LongDescription": "\nThe Shadow Demon is eating your face.",
+      "Description": "",
+      "Level": 60,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Helper"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Infrared",
+        "Berzerk"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+1300",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -190,
+        "Hitroll": 30,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "5d7+19"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 90,
+      "Experience": 420000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8514,
+      "Name": "mantis preying demon",
+      "ShortDescription": "\nthe Mantis Demon",
+      "LongDescription": "\nAn enormous preying mantis is preying on you.",
+      "Description": "",
+      "Level": 70,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "AggressiveGood",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Hide",
+        "Infrared"
+      ],
+      "Alignment": -150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d200+1800",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -230,
+        "Hitroll": 37,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "7d8+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 526666,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%40 emote prays to the gods.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8515,
+      "Name": "ninja red",
+      "ShortDescription": "\nthe red ninja",
+      "LongDescription": "\nA Ninja with a red costume sneaks around.",
+      "Description": "",
+      "Level": 70,
+      "Race": "Humanoid",
+      "Class": "Thief",
+      "Flags": [
+        "Sentinel",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Sneak",
+        "Hide"
+      ],
+      "Alignment": -180,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d10+1200",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 35,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Pierce",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "8d8+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 526666,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8516,
+      "Name": "piper man",
+      "ShortDescription": "\nthe Emperor's piper",
+      "LongDescription": "\nA small man plays melodies on a set of pipes.",
+      "Description": "\nThe beautiful music you heard must have been played by this man. \n He is a very skilled musician and has been asked to play to help \n raise the morals of the Emperor's followers.",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "ProtectEvil"
+      ],
+      "Alignment": 80,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d20+600",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -110,
+        "Hitroll": 22,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 90,
+          "DamageDice": "4d5+12"
+        },
+        {
+          "Type": "Attack_17",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+60"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1290,
+      "Experience": 196666,
+      "DefaultPosition": "Resting",
+      "Sex": "Male",
+      "ActionScript": "%%25 emote plays wonderful melodies on his pipes.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8517,
+      "Name": "gardener man",
+      "ShortDescription": "\nthe Emperor's gardener",
+      "LongDescription": "\nA small and wizened man tends the Emperor's garden.",
+      "Description": "\nThis old man must have a very special skill. It appears as though an\n army of giants would be needed to tend this garden. Maybe he has magical\n skills.",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "ProtectEvil"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "30d5+700",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -150,
+        "Hitroll": 26,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+18"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 943,
+      "Experience": 196666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%25 emote trims the hedge.;%10 emote say Stay off the grass!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8518,
+      "Name": "kappa huge green being",
+      "ShortDescription": "\nthe Kappa",
+      "LongDescription": "\nA huge green being with a flat head bursts out of the water.",
+      "Description": "\nThe being before you looks like a huge troll of some. Its flat head holds\n water which it needs to breath. The only way you will defeat it is by\n hitting it so much that the water spills from it's head.",
+      "Level": 85,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Infrared",
+        "Regeneration"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d200+1200",
+        "Mana": 950,
+        "Move": 1355
+      },
+      "Combat": {
+        "Armor": -350,
+        "Hitroll": 43,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "7d8+38"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 760000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8519,
+      "Name": "tiger white ornamental",
+      "ShortDescription": "\nthe white tiger",
+      "LongDescription": "\nA beautiful ornamental tiger sits here peacefully.",
+      "Description": "",
+      "Level": 50,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 65,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+800",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -120,
+        "Hitroll": 25,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "4d10+15"
+        },
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "4d10+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 255000,
+      "DefaultPosition": "Sitting",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8520,
+      "Name": "daimyo evil",
+      "ShortDescription": "\nthe evil Daimyo",
+      "LongDescription": "\nThe evil Daimyo awaits news of the Emperor's destruction.",
+      "Description": "\nThis is the man who has caused all the trouble here. The Emperor's\n lands are becoming infested with evil and all because of him! When \n you look closely though, he dooen't appear to be anything other\n than a human, maybe a good fighter, but he would not have the \n ability to control all these creatures...",
+      "Level": 100,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "AggressiveGood",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared",
+        "Regeneration"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d25+3000",
+        "Mana": 1100,
+        "Move": 1580
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 65,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "8d9+47"
+        },
+        {
+          "Type": "Attack_87",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+70"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 18945,
+      "Experience": 1600000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%20 say So you have found me! Now prepare to die.\n;%40 emote orders his Ninja to attack.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8521,
+      "Name": "dai-oni dai oni creature",
+      "ShortDescription": "\nthe Dai-Oni",
+      "LongDescription": "\nThe creature before you is the source of the Daimyo's power.",
+      "Description": "\nAh, this would explain it. The Dai-Oni is a great demon from the spiritual\n planes of existence who has felt that the Emperor's benevolent rule\n was causing too much of a threat to all of the dark-minded creatures\n of the lands. He has come to put that right!",
+      "Level": 108,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "Memory"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Light",
+        "Infrared",
+        "Regeneration"
+      ],
+      "Alignment": -700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+3500",
+        "Mana": 1180,
+        "Move": 1700
+      },
+      "Combat": {
+        "Armor": -600,
+        "Hitroll": 75,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "8d8+53"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+65"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "2d0+85"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 35000,
+      "Experience": 3155555,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8522,
+      "Name": "shikome ape hairy",
+      "ShortDescription": "\nthe Shikome",
+      "LongDescription": "\nA weird, hairy ape-like creature runs at you.",
+      "Description": "",
+      "Level": 58,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -67,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d50+800",
+        "Mana": 680,
+        "Move": 950
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "5d6+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 932,
+      "Experience": 400000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%30 growl",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8523,
+      "Name": "kracken",
+      "ShortDescription": "\nthe Kracken",
+      "LongDescription": "\nThe tentacles of a Kracken lunge at you.",
+      "Description": "",
+      "Level": 90,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+2200",
+        "Mana": 1000,
+        "Move": 1430
+      },
+      "Combat": {
+        "Armor": -380,
+        "Hitroll": 44,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "6d10+35"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 900000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8524,
+      "Name": "lion mountain",
+      "ShortDescription": "\na mountain lion",
+      "LongDescription": "\nA large mountain lion paces about here.",
+      "Description": "",
+      "Level": 60,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Helper"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Infrared"
+      ],
+      "Alignment": 55,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d100+1200",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -110,
+        "Hitroll": 26,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "4d10+30"
+        },
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 20,
+          "DamageDice": "4d10+30"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 470000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8525,
+      "Name": "bruce lee shopkeeper",
+      "ShortDescription": "\nBruce Lee",
+      "LongDescription": "\nBruce Lee is here cooking delights for you to sample.",
+      "Description": "\nThey were right, Bruce Lee was not dead! All that happened was that by\n some temporal anomaly he was transported back in time and to these lands.\n Bored with acting, and with not much call for it in these parts, he \n decided to turn his hand to the art of cookery and food preperation.\n In his spare time he teaches the troops the chinese art of Wing Chun\n and his own martial art- Jeet Kune Do.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "NiceThief",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -1000,
+        "Hitroll": 70,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+50"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 10000,
+      "Experience": 6000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%50 emote shows his devastating martial arts skills.;%40 pose",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 8500,
+      "Name": "statue buddha",
+      "ShortDescription": "\nthe Statue of Buddha",
+      "Description": "\nA golden statue of buddha gleams in the sun.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 104,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        200,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 200,
+          "Flags": [],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10000,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8501,
+      "Name": "mask ninja",
+      "ShortDescription": "\na ninja mask",
+      "Description": "\nA dark cloth mask lies crumpled here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 65,
+      "AntiClass": "46043",
+      "ExtraFlags": [
+        "Dark",
+        "Evil",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 12000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 2
+        },
+        {
+          "Location": "MagicResistance",
+          "Modifier": 15
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8502,
+      "Name": "belt strip red cloth",
+      "ShortDescription": "\na red belt",
+      "Description": "\nA strip of red cloth flutters in the breeze.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 55,
+      "AntiClass": "46043",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 18,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 2000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "SavingPhysical",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8503,
+      "Name": "belt black cloth strip",
+      "ShortDescription": "\na black belt",
+      "Description": "\nA strip of black cloth flutters in the breeze.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 85,
+      "AntiClass": "64511",
+      "ExtraFlags": [
+        "Hum",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 21,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 5000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8504,
+      "Name": "naginata spear curved",
+      "ShortDescription": "\na Naginata",
+      "Description": "\nA long, curved spear stands in the dirt.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 68,
+      "AntiClass": "64475",
+      "ExtraFlags": [
+        "Glow",
+        "Evil",
+        "NoDrop",
+        "AntiGood",
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        8,
+        9,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 8,
+          "DiceSides": 9,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 17,
+      "Cost": 12000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": -2
+        },
+        {
+          "Location": "Wisdom",
+          "Modifier": -2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8505,
+      "Name": "shuriken star metal",
+      "ShortDescription": "\na shuriken",
+      "Description": "\nA small metal star lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 53,
+      "AntiClass": "64511",
+      "ExtraFlags": [
+        "Glow",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        4,
+        8,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 8,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 25000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 6
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8506,
+      "Name": "tanto black knife evil",
+      "ShortDescription": "\nthe tanto",
+      "Description": "\nA black knife glows with evil here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 80,
+      "AntiClass": "64507",
+      "ExtraFlags": [
+        "Glow",
+        "Dark",
+        "Evil",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        5,
+        6,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 6,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 11,
+      "Cost": 8600,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "knife",
+            "tanto"
+          ],
+          "Description": "\nThe tanto is a hunting knife with a short blade. Instead of tapering\nat the end, it has the same type of point as a samurai sword. It is made\nof a strange eldritch metal that glows with darkness."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8507,
+      "Name": "katana sword dai",
+      "ShortDescription": "\nthe Dai-Katana",
+      "Description": "\nA huge samurai sword has been stuck in the stone here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 90,
+      "AntiClass": "13139",
+      "ExtraFlags": [
+        "Glow",
+        "Dark",
+        "Evil",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        8,
+        8,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 8,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 18,
+      "Cost": 50000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sword",
+            "katana"
+          ],
+          "Description": "\nThe Dai-Katana is a huge curved sword, over 45 inches long. It is made\nfrom a strange eldritch metal and the blade is perfectly forged. It seems\nthat it would cut through even stone!"
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 5
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8508,
+      "Name": "futon",
+      "ShortDescription": "\na futon",
+      "Description": "\nA small futon has been placed against the wall.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "futon",
+            "bed"
+          ],
+          "Description": "\nThe futon is a small mat that is used for sleeping on.\nYou notice a small tag on the side of it."
+        },
+        {
+          "Keywords": [
+            "tag"
+          ],
+          "Description": "\nThe tag reads \"The Futon-Mouth Company\""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8509,
+      "Name": "clothes emperor emperor's",
+      "ShortDescription": "\nthe Emperor's new clothes",
+      "Description": "\nWhen you look you think you see some clothes, then you don't.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 100,
+      "AntiClass": "4915",
+      "ExtraFlags": [
+        "Glow",
+        "Invisible",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 20,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 80,
+      "Cost": 90000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "clothes",
+            "emperor",
+            "emperor's"
+          ],
+          "Description": "\nIt is difficult to say whethere these clothes are here or not! On minute\nthey are, the next they seem to phase out of existance!"
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 2
+        },
+        {
+          "Location": "MagicResistance",
+          "Modifier": 18
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8510,
+      "Name": "boots tabi",
+      "ShortDescription": "\na pair of tabi boots",
+      "Description": "\nSome boots made of black cloth are crumpled on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 68,
+      "AntiClass": "13203",
+      "ExtraFlags": [
+        "Dark",
+        "Evil",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 10000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Move",
+          "Modifier": 80
+        },
+        {
+          "Location": "Dexterity",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8511,
+      "Name": "suit ninja black cloth",
+      "ShortDescription": "\na Ninja suit",
+      "Description": "\nA suit of black cloth lies here in a pile.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 68,
+      "AntiClass": "64507",
+      "ExtraFlags": [
+        "Dark",
+        "Evil",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        17,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 17,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 35000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8512,
+      "Name": "tetsubo club spiked",
+      "ShortDescription": "\na Tetsubo",
+      "Description": "\nA spiked club lies half buried in the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 55,
+      "AntiClass": "4913",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        6,
+        7,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 6,
+          "DiceSides": 7,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 19,
+      "Cost": 2000,
+      "CostPerDay": 150,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 7
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 7
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8513,
+      "Name": "tekagi strap spikes",
+      "ShortDescription": "\ntekagi",
+      "Description": "\nA leather strap with spikes along one side hangs here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 80,
+      "AntiClass": "64507",
+      "ExtraFlags": [
+        "Hum",
+        "Dark",
+        "Evil",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 12300,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": -35
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 8
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8514,
+      "Name": "sushi",
+      "ShortDescription": "\na bowl of sushi",
+      "Description": "\nA small bowl of raw fish has been placed here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 8,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 170,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8515,
+      "Name": "rice bowl",
+      "ShortDescription": "\na bowl of rice",
+      "Description": "\nA bowl, full to the brim with rice, has been left here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 3,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 8,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8516,
+      "Name": "prawn crackers",
+      "ShortDescription": "\na bag of prawn crackers",
+      "Description": "\nA bag full of yummy prawn crackers is waiting to be taken.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 5,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 90,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8517,
+      "Name": "golden potion glowing",
+      "ShortDescription": "\na glowing golden potion",
+      "Description": "\nThere is a phial of golden liquid on the floor.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 80,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        80,
+        29,
+        80,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 80,
+          "SpellIds": [
+            29,
+            80,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 45000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8542,
+      "Name": "ring nushi nushi's",
+      "ShortDescription": "\nthe Nushi's ring",
+      "Description": "\nA small black ring with a strange symbol on it has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Dark",
+        "NoRent",
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight",
+        "WristRight"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 100,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "ring",
+            "nushi"
+          ],
+          "Description": "\nThe ring has a funny symbol sticking out of it that looks a little like\na key. Naaaah, it can't be...Or can it?"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8575,
+      "Name": "metal lock lock-pick",
+      "ShortDescription": "\na lock-pick",
+      "Description": "\nA twisted piece of metal lies here in the corner.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 55,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Dark",
+        "NoRent",
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 100,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

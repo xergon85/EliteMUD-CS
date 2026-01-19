@@ -1,0 +1,3828 @@
+{
+  "Zone": {
+    "Id": 98,
+    "Name": "Rand's Tower",
+    "TopRoomId": 9899,
+    "Lifespan": 65,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9800,
+        "Arg2": 6,
+        "Arg3": 9800,
+        "Comment": "goats*/"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9800,
+        "Arg2": 6,
+        "Arg3": 9802,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9800,
+        "Arg2": 6,
+        "Arg3": 9804,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9801,
+        "Arg2": 4,
+        "Arg3": 9807,
+        "Comment": "demons */"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9801,
+        "Arg2": 4,
+        "Arg3": 9807,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9802,
+        "Arg2": 2,
+        "Arg3": 9812,
+        "Comment": "book monster */"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 9810,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": "chaos book */"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 9811,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": "elder book */"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9803,
+        "Arg2": 1,
+        "Arg3": 9811,
+        "Comment": "bad feeling */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 9809,
+        "Arg2": 100,
+        "Arg3": 9811,
+        "Comment": "desk */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9802,
+        "Arg2": 5,
+        "Arg3": 9809,
+        "Comment": "agate */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9803,
+        "Arg2": 5,
+        "Arg3": 9809,
+        "Comment": "jade */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9800,
+        "Arg2": 5,
+        "Arg3": 9809,
+        "Comment": "glowing dagger */"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9805,
+        "Arg2": 2,
+        "Arg3": 9837,
+        "Comment": "door guardian */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 9804,
+        "Arg2": 5,
+        "Arg3": 9811,
+        "Comment": "sculpture */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 9813,
+        "Arg2": 5,
+        "Arg3": 9841,
+        "Comment": "mevais */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 9814,
+        "Arg2": 5,
+        "Arg3": 9841,
+        "Comment": "peska */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 9815,
+        "Arg2": 5,
+        "Arg3": 9836,
+        "Comment": "rand's staff */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 9819,
+        "Arg2": 100,
+        "Arg3": 9810,
+        "Comment": "water basin */"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9804,
+        "Arg2": 1,
+        "Arg3": 9816,
+        "Comment": "worst nightmare */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 9816,
+        "Arg2": 100,
+        "Arg3": 9816,
+        "Comment": "chest */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9801,
+        "Arg2": 5,
+        "Arg3": 9816,
+        "Comment": "glowing platemail */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 9817,
+        "Arg2": 100,
+        "Arg3": 9816,
+        "Comment": "chest */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9805,
+        "Arg2": 5,
+        "Arg3": 9817,
+        "Comment": "dragon's blood */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9807,
+        "Arg2": 5,
+        "Arg3": 9817,
+        "Comment": "tent pole */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 9818,
+        "Arg2": 100,
+        "Arg3": 9816,
+        "Comment": "chest */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9806,
+        "Arg2": 5,
+        "Arg3": 9818,
+        "Comment": "amulet */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9808,
+        "Arg2": 5,
+        "Arg3": 9818,
+        "Comment": "powder of wealth */"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 9812,
+        "Arg2": 5,
+        "Arg3": 9818,
+        "Comment": "occluded lens */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 9820,
+        "Arg2": 100,
+        "Arg3": 9824,
+        "Comment": "food */"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 9820,
+        "Arg2": 100,
+        "Arg3": 9824,
+        "Comment": "food */"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9806,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9807,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9807,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9808,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9809,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9809,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9810,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9811,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9812,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9812,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9813,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9814,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9814,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9815,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9816,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9817,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9817,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9817,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9818,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9819,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9820,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9821,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9823,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9824,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9835,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9836,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9837,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 9838,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 9800,
+      "Name": "Mountain Trail",
+      "Description": "\n   This trail leads high into the mountains. You hope you don't fall because\nit would result in instant death. The trail continues to the east. To the south\na half cleared trail leads downward. To the west you can see a large plateau.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9801,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9850,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9855,
+          "Description": "Path to Dwarven Village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9801,
+      "Name": "Mountain Trail",
+      "Description": "\n   You're really high up now. You can keep going even farther up into the\nmountains to the east, or go back down to the west.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9802,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9800,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9802,
+      "Name": "Mountain Trail",
+      "Description": "\n   Wispy clouds are beginning to surround you now, and your ears pop due to the\naltitude. To the east, you see the summit of the mountain, and from the way the\nnearby mountains are arranged behind it, you believe you're on your way to a\nbig valley. You can also go down to the west.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9803,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9801,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9803,
+      "Name": "Near the Mountain's Peak",
+      "Description": "\n   The peak of this mountain is another couple hundred feet above you, but here\nis where the trail leads down into the valley... What an odd valley! The valley\nseems to have been filled up by a hundreds of feet of lava many years ago. It\ngives the valley an odd, 'flat' look and darkish ground. The path leads down\neast into the valley, and west back to civilization.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9804,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9802,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9804,
+      "Name": "Trail to the Valley",
+      "Description": "\n   The trail leads down into the valley, where, by judging by the height of the\ntrees, the lava had cooled tens of decades ago. Down below you see the path\nlead into the small forest in the valley, and disappear out of sight. East\nleads into the valley, West back to civilization.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9805,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9803,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9805,
+      "Name": "In the Valley",
+      "Description": "\n   The ground has taken on the texture of dirt on the top, but this valley is\nfar too flat and too rocky to disguise the catastrophe that happened here so\nlong ago. Looking up to the mountains ringing this area, you notice several\nmountains look as if they had 'exploded', which is strange, considering that\nthey are not volcanoes. The path leads into the woods to the east, and back up\nthe mountain to the west.",
+      "ZoneId": 98,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9806,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9804,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9806,
+      "Name": "In a Clearing",
+      "Description": "\n   You come to a small clearing now, after walking for several minutes through\nthe silent woods. An odd block sticks up here and there in the ground... ...\nwait a minute. These stones seem a little too regular, and from the circle\nformation and size you could almost swear that they were... crenellations?\nCould some sort of building been buried by the lava here? A rusty ring sticks\nout of the earth in the center... a trapdoor? This is almost too good to be\ntrue!",
+      "ZoneId": 98,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9805,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9807,
+          "Description": "An ancient trapdoor, grimed with earth and age.",
+          "Keywords": [
+            "trapdoor",
+            "trap"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9807,
+      "Name": "A Stairwell",
+      "Description": "\n   This small room is the top of a stairwell leading down deep into the tower.\nA small trapdoor overhead leaks the light of day around its edges. To the south\nis a wooden door, preserved through the ages by means unknown. To the west is a\nshort hall.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9808,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9809,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9806,
+          "Description": "An ancient trapdoor, grimed with earth and age.",
+          "Keywords": [
+            "trapdoor",
+            "trap"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9813,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9808,
+      "Name": "A Linen Closet",
+      "Description": "\n   This small room holds many types of linen on shelves along the walls. They\nare undoubtedly preserved by magic against the toil of the ages, since they\nseem freshly washed and folded. You wonder what sort of mage could wield so\nmuch power to waste on such little things.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9807,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "linen",
+            "shelf",
+            "shelves"
+          ],
+          "Description": "\n   White sheets, pillow-cases, etc.  Not really  anything that you need, but\ninteresting."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9809,
+      "Name": "Corridor",
+      "Description": "\n   This is only a clean corridor, that leads back to the stairwell to the east,\nand has doors leading to other rooms to the north and south.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9811,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "north"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9807,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9810,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "south"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9810,
+      "Name": "Bathroom",
+      "Description": "\n   This is some sort of bathroom, like you've never seen before... Water\nappliances leading from nowhere deliver hot and cold running water to basins\nthat drain to... where? How strange!",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9809,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9811,
+      "Name": "Master Bedroom",
+      "Description": "\n   This is an opulent room, decorated in silks and gold. There is an ebony desk\nagainst one wall, cooled lava rock spilling over its surface from the window it\nonce looked out at. A nice, spacious closet is filled with clothes just cleaned\nand pressed.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9809,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "closet"
+          ],
+          "Description": "\n   Nice clothes, but not your size at all."
+        },
+        {
+          "Keywords": [
+            "desk"
+          ],
+          "Description": "\n   The desk is basically uninteresting, as are the papers on top of it..."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9812,
+      "Name": "The Library",
+      "Description": "\n   A great mages' library is contained on this floor of the tower. You feel you\ncould learn anything you wanted to if you only looked and read long enough. A\nstrange chessgame is standing on a oak table in the middle of the room. It \nlooks very old, dust have collected all around it, but not on it. To the\neast a door leads back to the stairwell.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9813,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9814,
+          "Description": "A big bookcase, that looks rather odd.",
+          "Keywords": [
+            "bookcase"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 1855,
+          "Description": "If you go down you enter the magic chessboard.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "Chess",
+            "chessboard",
+            "board"
+          ],
+          "Description": "\nAs you examine the chessgame more closely you can see that the small pieces are\nmoving around. As they played by them self. On a box beside the chessboard\nyou can read the following words..\n\"Chessgame of Illusions this is the trap of the two mages Malthus and Turing\n they could never beat each other in chess so they agreed to be transformed\n into a illusionary chessgame. One condition from the maker was that they\n couldn't leave the game before either off them had won. As they never could\n beat each other they where trapped forever.\"\n\nCreated by Coke for Elite mud. To enter go down."
+        },
+        {
+          "Keywords": [
+            "book",
+            "books"
+          ],
+          "Description": "\nThere's lots of books about everything here!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9813,
+      "Name": "Stairwell",
+      "Description": "\n   This stairwell continues up and down, and there is a door to the west.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9812,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9807,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9815,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9814,
+      "Name": "A Hidden Hall",
+      "Description": "\n   This is a small hidden hall with a secret entrance to the library on the\nnorth end of the west wall, and a trapdoor on the south end.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9812,
+          "Description": "The backside of a movable bookcase.",
+          "Keywords": [
+            "book",
+            "bookcase"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9816,
+          "Description": "",
+          "Keywords": [
+            "trapdoor",
+            "trap"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9815,
+      "Name": "A Stairwell",
+      "Description": "\n   This stairwell continues up and down, and there is a door to the west\nopening up onto this level.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9817,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9813,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9822,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9816,
+      "Name": "Hidden Treasure Room",
+      "Description": "\n   Jackpot! A small room filled with treasure chests! Go get it!",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 9814,
+          "Description": "",
+          "Keywords": [
+            "trapdoor",
+            "trap"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9817,
+      "Name": "Hallway",
+      "Description": "\n   This hall runs through the tower. There's more hall to the west, and doors\nto your north and south. A door to the east leads back to the stairwell.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9819,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "north"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9815,
+          "Description": "",
+          "Keywords": [
+            "east",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9818,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "south"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9820,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9818,
+      "Name": "Servant's Room",
+      "Description": "\n   This seems to be a small servant's bedroom, sparsely decorated and outfitted\nwith a bed, night stand, chair and table, etc. Nothing real important here.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9817,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9819,
+      "Name": "Servant's Room",
+      "Description": "\n   This seems to be a small servant's bedroom, sparsely decorated and outfitted\nwith a bed, night stand, chair and table, etc. Nothing real important here.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9817,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9820,
+      "Name": "Hallway",
+      "Description": "\n   This hallway continues to the east, and has a door to the north. You could\nswear that the way this level is arranged... nah, couldn't be.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9821,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9817,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9821,
+      "Name": "Servant's Room",
+      "Description": "\n   This seems to be a small servant's bedroom, sparsely decorated and outfitted\nwith a bed, night stand, chair and a table, etc. Nothing real important here.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9820,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9822,
+      "Name": "Stairwell",
+      "Description": "\n   This stairwell leads up and down, and there is a big open room to your west.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9823,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9815,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9825,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9823,
+      "Name": "Dining Hall",
+      "Description": "\n   This is a large dining hall, with a long table that runs down the length of\nit. Chairs are set up along the sides to accommodate approximately 10 people.\nThere are paintings and tapestries on the walls, adding color to the stonework.\nThe cooled lava that had poured in the windows makes the place seem eerie\nsomehow . There is a door to the north, and the stairwell is to the east.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9824,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9822,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestry",
+            "tapestries",
+            "painting",
+            "paintings"
+          ],
+          "Description": "\n   Many of these show scenes of high magic and heroism. Just like almost every\ntapestry and painting you've seen."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9824,
+      "Name": "Kitchen Area",
+      "Description": "\n   This is a well-stocked kitchen, the larders still fresh and full as if by\nmagic. Perhaps this would be a good place to take a break.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9823,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9825,
+      "Name": "Stairwell",
+      "Description": "\n   The stairwell leads up and down here, and there is a hall you can enter to\nthe west.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9826,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9822,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9829,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9826,
+      "Name": "Hall",
+      "Description": "\n   This area of the tower seems dank and oppressive. The hall runs north-south\nand there is an empty cell to your west. The stairwell is to your east.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9827,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9825,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9828,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cell",
+            "cells"
+          ],
+          "Description": "\nIt's open, empty, and uninteresting."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9827,
+      "Name": "Hall",
+      "Description": "\n   This is the northern end of the hall. There are cells to your right and\nleft, empty and awaiting occupants.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9826,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cell",
+            "cells"
+          ],
+          "Description": "\nIt's open, empty, and uninteresting."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9828,
+      "Name": "Hall",
+      "Description": "\n   This is the southern end of the hall. There are cells to your right and\nleft, empty and awaiting occupants.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9826,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cell",
+            "cells"
+          ],
+          "Description": "\nIt's open, empty, and uninteresting."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9829,
+      "Name": "Stairwell",
+      "Description": "\n   The stairwell continues up and down here. A large room opens up to the west.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9830,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9825,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9831,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9830,
+      "Name": "Mage's Office",
+      "Description": "\n   A small desk here is cluttered with magically preserved papers and\ndocuments. None seem of value, except perhaps to a historian. This place seems\nvaguely uninteresting...",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9829,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "desk"
+          ],
+          "Description": "\n   It's cluttered with all sorts of papers.  Some look half interesting,\nactually."
+        },
+        {
+          "Keywords": [
+            "paper",
+            "papers",
+            "documents",
+            "document"
+          ],
+          "Description": "\n   Well, one of the papers relate a story about how the mage of this tower,\nRand, angered many kings, and relates how they set his armies on him. You\nwonder if the lava outside was a failed attempt to destroy the armies..."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9831,
+      "Name": "Stairwell",
+      "Description": "\n   The stairs go up and down here, and there is a room to the west...",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9832,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9829,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9833,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9832,
+      "Name": "Sitting Room",
+      "Description": "\n   This is a simply furnished room, with chairs all about. A fireplace is inset\ninto an inner wall, the chimney undoubtedly directed by magic... This would be\na nice place to rest awhile...",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9831,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9833,
+      "Name": "Stairwell",
+      "Description": "\n   This is where the stairwell finally ends. There is a hall to your west.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9834,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9831,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9834,
+      "Name": "Hallway",
+      "Description": "\n   This small hallway on the former 'ground floor' ran north-south. To the east\nis the stairwell that leads up into the shadowy recesses of the tower. To the\nwest is the entrance way to the tower. The north is completely blocked off by\nlava, and the way south is still clear.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9833,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9837,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9835,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9835,
+      "Name": "Entranceway",
+      "Description": "\n   This is a grand chamber with giant double-doors to the west. To the east is\nthe main floor of the tower. This room is arranged highly attractively and very\nimpressively, with sculptures and tapestries everywhere. The doors seem\nimpenetrable... you don't think you'd be able to get through them if you really\nhad to...",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9834,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9836,
+          "Description": "These doors seem incredible. Unfortunately, they're locked.",
+          "Keywords": [
+            "door",
+            "double"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sculpture",
+            "tapestry",
+            "sculptures",
+            "tapestries"
+          ],
+          "Description": "\n   They look nice, but aren't very valuable."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9836,
+      "Name": "Doorway",
+      "Description": "\n   This was the entrance to the tower. Now lava has blocked it up completely.\nHowever: It seems when the lava came down a man was outside the doors. He was\nblasted into the doors, and died instantly, but his skeleton still clutches a\nstaff in perfect condition...",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9835,
+          "Description": "These double doors have the outline of a man blasted into them...",
+          "Keywords": [
+            "double",
+            "doors"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9837,
+      "Name": "Hallway",
+      "Description": "\n   This is the southern part of the hallway. There is a door to the west,\nbarred with gleaming bands of lights. To the north is more hallway.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9834,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9838,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9838,
+      "Name": "Stairs",
+      "Description": "\n   Stairs lead down here into the tower's basement, or you can head east into\nthe main floor of the tower.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9837,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9839,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9839,
+      "Name": "Stairs",
+      "Description": "\n   Stairs lead up here to the main level, or you can go east to the basement of\nthe tower.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9840,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9838,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9840,
+      "Name": "Alcove",
+      "Description": "\n   This alcove leads into a huge room to your north, and to stairs leading down\nto the east, and stairs going up to your west.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9841,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9842,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9839,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9841,
+      "Name": "Laboratory",
+      "Description": "\n   This laboratory has lots of stuff in it. Beakers, flasks, burners, tongs,\nmortars and pestles, jars filled with normal things, jars filled with abnormal\nthings, jars filled with things you'd rather not think about... A search could\nreveal many things...",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9840,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "beaker",
+            "beakers",
+            "flask",
+            "flasks",
+            "burner",
+            "burners",
+            "tong",
+            "tongs",
+            "mortar",
+            "mortars",
+            "pestle",
+            "pestles",
+            "jar",
+            "jars"
+          ],
+          "Description": "\n   Looks like normal, fragile lab equipment to you."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9842,
+      "Name": "Stairs",
+      "Description": "\n   Stairs lead down here to the second level of the basement, or back west to\nthe alcove.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9840,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9843,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9843,
+      "Name": "Stairs",
+      "Description": "\n   Stairs lead up here to the first level of the basement, or you can go east\nto another big room.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9844,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9842,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9844,
+      "Name": "Summoning Room",
+      "Description": "\n   This room is darkly lit by a giant glowing pentagram in the center of the\nroom. Bands of force encircle some sort of being trapped inside. You think that\ngoing inside would be an EXTREMELY BAD idea...",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9845,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9843,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "being"
+          ],
+          "Description": "\n   You can't see it clearly through the energy field of the pentagram, but you\nsense that whatever it is, it is very, very, very, very angry."
+        },
+        {
+          "Keywords": [
+            "pentagram"
+          ],
+          "Description": "\n   It's centuries old.  You don't think standing close by would be a good idea."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9845,
+      "Name": "Inside a Pentagram",
+      "Description": "\n   The small god entrapped by the wizard looks at you with an insane\nexpression. Four hundred years of imprisonment doesn't do much for ones...\nOOPS! He killed you! You are dead, R. I. P.",
+      "ZoneId": 98,
+      "Sector": "Inside",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9844,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9850,
+      "Name": "Old Trail up the Mountain",
+      "Description": "\n   You are walking on a trail going up the mountain. Further ahead the trail\nmakes a turn around a large cliff. If you walk north you will go around this\nrock and if you walk south you will go down the mountain to its base.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9800,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9851,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9851,
+      "Name": "Old Trail up the Mountain",
+      "Description": "\n   You have almost reached the top of the mountain. To the south you see the\nforest of Namir. If you look very closely to the south-west you can see the\ncity of Midgaard. The trail continues up to the north and down to the south.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9850,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27800,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9852,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9852,
+      "Name": "Old Trail up the Mountain",
+      "Description": "\n   You are walking on a old trail up the mountain. Large rocks and cliffs\nsurround you on both sides. The trail continues up to the north and down to\nthe south.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9851,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9853,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9853,
+      "Name": "Old Trail up the Mountain",
+      "Description": "\n   You are on a half cleared mountain trail. You are walking between high \ncliffs and large rocks. The trail makes its way upward to the north and to the\nsouth it goes down to the base of the mountain.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9852,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9854,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9854,
+      "Name": "The Start of the Old Trail up the Mountains",
+      "Description": "\n   You are standing at the base of the Moria mountains. A half cleared trail\nleads up the mountains to the north. To the south a trail leads back to\nMidgaard. Far to the west you can see the river flowing into the mountain and\nto the east you see the large forest of Namir. A large sign have been placed\non a pole here.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9853,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23013,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign",
+            "pole"
+          ],
+          "Description": "\nThe sign reads\nNorth, Old Trail to the Dwarven mines.\nSouth, Trail to the city of Midgaard."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9855,
+      "Name": "The Plateau",
+      "Description": "\n   A huge rockfall has blocked the narrow pass that once led north \nthrough the Moria mountains. The plateau continues further to the east,\nand to the south, a narrow path passes precariously close to the cliff \nedge.",
+      "ZoneId": 98,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9800,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4040,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 9800,
+      "Name": "goat mountain",
+      "ShortDescription": "\na mountain goat",
+      "LongDescription": "\nA mountain goat nibbles at a piece of grass here.",
+      "Description": "\nThis goat is acclimated to the rugged terrain of the mountains.  It looks at\nyou and shies away a little.",
+      "Level": 8,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d5+95",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1500,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9801,
+      "Name": "demon decay",
+      "ShortDescription": "\na Demon of Decay",
+      "LongDescription": "\nA cloaked and clawed demon of decay comes at you viciously!",
+      "Description": "\nThis demon has pure malevolence for anything living.  Oops!  You're living!\nI guess that means you!",
+      "Level": 24,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Infrared"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d5+250",
+        "Mana": 340,
+        "Move": 440
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 9,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d7+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 50000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9802,
+      "Name": "book monster guardian",
+      "ShortDescription": "\nthe Book Monster",
+      "LongDescription": "\nA mound of books rise up into a human shape and tries to hit you!",
+      "Description": "\nIronically enough, the book-monster's head is War and Peace.  Hmm.",
+      "Level": 28,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+340",
+        "Mana": 380,
+        "Move": 500
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d8+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 80000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9803,
+      "Name": "bad feeling",
+      "ShortDescription": "\na Bad Feeling",
+      "LongDescription": "\nA bad feeling chokes your throat.",
+      "Description": "\nIt resembles a lot of other bad feelings you've had, but a lot more\ntangible....magic?",
+      "Level": 36,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+410",
+        "Mana": 460,
+        "Move": 620
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 150000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9804,
+      "Name": "nightmare",
+      "ShortDescription": "\nYour Worst Nightmare",
+      "LongDescription": "\nYour worst nightmare coalesces in front of you and attacks!",
+      "Description": "\nIt looks like you deepest, darkest fears personified.  Wait a minute!  It IS\nyour deepest, darkest fears personified!",
+      "Level": 38,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+480",
+        "Mana": 480,
+        "Move": 650
+      },
+      "Combat": {
+        "Armor": -20,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 180000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9805,
+      "Name": "guardian",
+      "ShortDescription": "\nthe Guardian",
+      "LongDescription": "\nA guardian guards the door.  It looks at you and attacks!",
+      "Description": "\nThe guardian guards the door.  That's about all its brain can handle: guarding.",
+      "Level": 36,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d6+400",
+        "Mana": 460,
+        "Move": 620
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 155000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 9800,
+      "Name": "dagger glowing",
+      "ShortDescription": "\na glowing dagger",
+      "Description": "\nA glowing dagger glows here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        2,
+        6,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 6,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1000,
+      "CostPerDay": 300,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9801,
+      "Name": "glowing platemail plate mail",
+      "ShortDescription": "\nthe glowing platemail",
+      "Description": "\nSome glowing platemail lies in a heap here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "4881",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 100,
+      "Cost": 10000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9802,
+      "Name": "agate gem",
+      "ShortDescription": "\nan agate",
+      "Description": "\nA small gem lies here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9803,
+      "Name": "jade jewel",
+      "ShortDescription": "\na piece of jade",
+      "Description": "\nA small jewel gleams here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 4000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9804,
+      "Name": "sculpture",
+      "ShortDescription": "\na piece of sculpture",
+      "Description": "\nA nice piece of sculpture is here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 40,
+      "Cost": 5000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sculpture"
+          ],
+          "Description": "\nIts of a beautiful woman, straining\nbeneath a heavy weight.  She looks\ntired, with chiseled tears staining\nher cheeks.  It makes you sad."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9805,
+      "Name": "vial dragons blood",
+      "ShortDescription": "\na vial of dragon's blood",
+      "Description": "\nA small vial filled with a red fluid lies in the dust here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        7,
+        39,
+        39,
+        39,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 7,
+          "SpellIds": [
+            39,
+            39,
+            39
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 8000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9806,
+      "Name": "amulet",
+      "ShortDescription": "\nan amulet",
+      "Description": "\nAn odd looking amulet has been discarded here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 0,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 4000,
+      "CostPerDay": 300,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9807,
+      "Name": "tent pole",
+      "ShortDescription": "\na tent pole",
+      "Description": "\nA tent pole has been tossed away here.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 20,
+      "AntiClass": "57480",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        40,
+        5,
+        5,
+        38,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 38,
+          "Level": 40,
+          "Charges": 5,
+          "ChargesRemaining": 5
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 5000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9808,
+      "Name": "bag powder wealth",
+      "ShortDescription": "\na bag of powder of wealth",
+      "Description": "\nA small bag filled with powder of wealth lies here.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        15000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 15000
+        },
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 15000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9809,
+      "Name": "desk",
+      "ShortDescription": "\na desk",
+      "Description": "\nThere is an ebony desk here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        100,
+        13,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 100,
+          "Flags": [
+            "Closeable",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 800,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9810,
+      "Name": "chaos book",
+      "ShortDescription": "\nthe Book of Chaos",
+      "Description": "\nA book with a title written in moving letters rests here.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 25,
+      "AntiClass": "57480",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        20,
+        5,
+        5,
+        26,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 26,
+          "Level": 20,
+          "Charges": 5,
+          "ChargesRemaining": 5
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 6000,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9811,
+      "Name": "elder book",
+      "ShortDescription": "\nthe Book of the Elder",
+      "Description": "\nA grey-bound book lies here.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 25,
+      "AntiClass": "57480",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        2,
+        2,
+        28,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 28,
+          "Level": 30,
+          "Charges": 2,
+          "ChargesRemaining": 2
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 9000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9813,
+      "Name": "mevais herb leaf",
+      "ShortDescription": "\na leaf of mevais",
+      "Description": "\nA small black leaf of a mevais plant lies here, well preserved.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 25,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        30,
+        4,
+        17,
+        27,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            4,
+            17,
+            27
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 200,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mevais",
+            "herb",
+            "leaf"
+          ],
+          "Description": "\nQuaffing this down might provide interesting effects."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9814,
+      "Name": "bottle peska",
+      "ShortDescription": "\na bottle of peska",
+      "Description": "\nThere is a bottle of a milky fluid here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        30,
+        67,
+        3,
+        1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            67,
+            3,
+            1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 1000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bottle",
+            "peska"
+          ],
+          "Description": "\nIt's a milky concoction, with strange motes floating in it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9815,
+      "Name": "rand staff",
+      "ShortDescription": "\nRand's staff",
+      "Description": "\nThere is a metal-shod staff here.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 25,
+      "AntiClass": "57480",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        5,
+        5,
+        87,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 87,
+          "Level": 50,
+          "Charges": 5,
+          "ChargesRemaining": 5
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 7,
+      "Cost": 25000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9816,
+      "Name": "chest wooden",
+      "ShortDescription": "\na wooden chest",
+      "Description": "\nThere is a wooden chest here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        500,
+        13,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 500,
+          "Flags": [
+            "Closeable",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9817,
+      "Name": "chest wooden",
+      "ShortDescription": "\na wooden chest",
+      "Description": "\nThere is a wooden chest here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        500,
+        13,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 500,
+          "Flags": [
+            "Closeable",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9818,
+      "Name": "chest wooden",
+      "ShortDescription": "\na wooden chest",
+      "Description": "\nThere is a wooden chest here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        500,
+        13,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 500,
+          "Flags": [
+            "Closeable",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9819,
+      "Name": "basin water",
+      "ShortDescription": "\na water basin",
+      "Description": "\nA basin filled with crisp, clean water is here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [],
+      "Values": [
+        100,
+        100,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 100,
+          "Amount": 100,
+          "Liquid": 0,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9820,
+      "Name": "food",
+      "ShortDescription": "\nsome food",
+      "Description": "\nThere's some food lying here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 8,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 20,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "food"
+          ],
+          "Description": "\n   It's just random and assorted food.\n   Don't ask questions.  It's just a game."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

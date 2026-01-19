@@ -1,0 +1,6271 @@
+{
+  "Zone": {
+    "Id": 94,
+    "Name": "Galaxy",
+    "TopRoomId": 9499,
+    "Lifespan": 150,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9401,
+        "Arg2": 3,
+        "Arg3": 9413,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9401,
+        "Arg2": 3,
+        "Arg3": 9422,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9401,
+        "Arg2": 3,
+        "Arg3": 9423,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9402,
+        "Arg2": 6,
+        "Arg3": 9404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9402,
+        "Arg2": 6,
+        "Arg3": 9408,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9402,
+        "Arg2": 6,
+        "Arg3": 9412,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9402,
+        "Arg2": 6,
+        "Arg3": 9421,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9402,
+        "Arg2": 6,
+        "Arg3": 9433,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9402,
+        "Arg2": 6,
+        "Arg3": 9455,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9403,
+        "Arg2": 3,
+        "Arg3": 9410,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9403,
+        "Arg2": 3,
+        "Arg3": 9418,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9403,
+        "Arg2": 3,
+        "Arg3": 9422,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9404,
+        "Arg2": 10,
+        "Arg3": 9422,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9401,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9404,
+        "Arg2": 10,
+        "Arg3": 9408,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9401,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 1,
+        "Arg1": 9401,
+        "Arg2": 10,
+        "Arg3": 9413,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9401,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9404,
+        "Arg2": 10,
+        "Arg3": 9405,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9401,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9404,
+        "Arg2": 10,
+        "Arg3": 9417,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9401,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9405,
+        "Arg2": 4,
+        "Arg3": 9404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9405,
+        "Arg2": 4,
+        "Arg3": 9408,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9405,
+        "Arg2": 4,
+        "Arg3": 9409,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9405,
+        "Arg2": 4,
+        "Arg3": 9413,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9406,
+        "Arg2": 3,
+        "Arg3": 9406,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9406,
+        "Arg2": 3,
+        "Arg3": 9414,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9406,
+        "Arg2": 3,
+        "Arg3": 9422,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9407,
+        "Arg2": 1,
+        "Arg3": 9410,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9408,
+        "Arg2": 1,
+        "Arg3": 9430,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9428,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9409,
+        "Arg2": 1,
+        "Arg3": 9432,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9402,
+        "Arg2": 3,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9410,
+        "Arg2": 1,
+        "Arg3": 9417,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9411,
+        "Arg2": 1,
+        "Arg3": 9428,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9404,
+        "Arg2": 3,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9412,
+        "Arg2": 7,
+        "Arg3": 9426,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9412,
+        "Arg2": 7,
+        "Arg3": 9426,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9412,
+        "Arg2": 7,
+        "Arg3": 9426,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9412,
+        "Arg2": 7,
+        "Arg3": 9426,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9412,
+        "Arg2": 7,
+        "Arg3": 9426,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9412,
+        "Arg2": 7,
+        "Arg3": 9426,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9412,
+        "Arg2": 7,
+        "Arg3": 9426,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9413,
+        "Arg2": 1,
+        "Arg3": 9463,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 9405,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9414,
+        "Arg2": 2,
+        "Arg3": 9458,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9414,
+        "Arg2": 2,
+        "Arg3": 9460,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9415,
+        "Arg2": 1,
+        "Arg3": 9442,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 9424,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 9439,
+        "Arg2": 4,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 9454,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9406,
+        "Arg2": 6,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9416,
+        "Arg2": 1,
+        "Arg3": 9443,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9407,
+        "Arg2": 3,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9417,
+        "Arg2": 1,
+        "Arg3": 9444,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9418,
+        "Arg2": 1,
+        "Arg3": 9444,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9408,
+        "Arg2": 3,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9419,
+        "Arg2": 1,
+        "Arg3": 9445,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 9425,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 9454,
+        "Arg2": 4,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 9455,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9409,
+        "Arg2": 3,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9420,
+        "Arg2": 1,
+        "Arg3": 9446,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9410,
+        "Arg2": 3,
+        "Arg3": 12,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9421,
+        "Arg2": 1,
+        "Arg3": 9447,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9411,
+        "Arg2": 5,
+        "Arg3": 14,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9422,
+        "Arg2": 1,
+        "Arg3": 9448,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 9426,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 9459,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 9460,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 9412,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9413,
+        "Arg2": 3,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9423,
+        "Arg2": 1,
+        "Arg3": 9449,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9414,
+        "Arg2": 3,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9424,
+        "Arg2": 1,
+        "Arg3": 9450,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9415,
+        "Arg2": 3,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9416,
+        "Arg2": 3,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9425,
+        "Arg2": 1,
+        "Arg3": 9451,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 9427,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 9463,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 9464,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9417,
+        "Arg2": 3,
+        "Arg3": 9,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9426,
+        "Arg2": 1,
+        "Arg3": 9452,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9418,
+        "Arg2": 8,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9427,
+        "Arg2": 1,
+        "Arg3": 9453,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9419,
+        "Arg2": 3,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9428,
+        "Arg2": 1,
+        "Arg3": 9453,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9429,
+        "Arg2": 1,
+        "Arg3": 9470,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9430,
+        "Arg2": 1,
+        "Arg3": 9465,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9420,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9431,
+        "Arg2": 1,
+        "Arg3": 9467,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9421,
+        "Arg2": 5,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 9432,
+        "Arg2": 1,
+        "Arg3": 9471,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9422,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 9423,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 9401,
+      "Name": "Inside a Tavern",
+      "Description": "\n   You are inside a dimly-lit room. The atmosphere makes you feel\nuncomfortable. In front of you stands a mysterious gypsy. She whispers 'Your\nfate and destiny lie beyond this world.' You are still wondering what she means\nwhen you suddenly notice the crystal ball ... it glows fiercely and displays\nthe Universe!",
+      "ZoneId": 94,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 9402,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6137,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9402,
+      "Name": "Inside the Crystal Ball",
+      "Description": "\n   You have touched the crystal ball and find that you have gone inside it: a\nworld of stars and wonders! As you look back you figure out there is no choice\nbut to go forward.",
+      "ZoneId": 94,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9403,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9403,
+      "Name": "Inside the Galaxy",
+      "Description": "\n   You are now inside the galaxy. Around you, you see stars and nebulae smiling\nat your presence, and comets and meteors wandering around you. You realize that\nthis world may not be the true galaxy after all, but just another fantasy zone.\nExits lie virtually in all directions.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9404,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9408,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9402,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9421,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9404,
+      "Name": "On an InterGalactic Walkway",
+      "Description": "\n   You are on a well-paved path which seems that it was made deliberately for\nvisitors like you. The walkway continues north and a small exit lies west.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9405,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9403,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9422,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9405,
+      "Name": "End of the InterGalactic Walkway",
+      "Description": "\n   You notice the walkway has come to an abrupt end and you wonder why. You see\nthat there is still a small path which leads north and one to the west. To the\neast lies a bridge.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9406,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9409,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9404,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9423,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9406,
+      "Name": "At the Undeveloped Part of the Galaxy",
+      "Description": "\n   This place looks deserted, covered with space debris. Not a sign of life is\naround.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9405,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9424,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9408,
+      "Name": "On the Bridge of Stars",
+      "Description": "\n   This bridge has been made by the stars to honor their ancestors. The bridge\nitself shines brightly and makes you feel that you are walking on a path of\nlight. An entrance to an ancient building lies north and to the east lies the\nMilky Way.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9431,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9412,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9403,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9409,
+      "Name": "On the Bridge of Nebulae",
+      "Description": "\n   This bridge, like the other, was made as a memorial. The nebulae had to make\none just to show that they are as capable as the stars. North lies a throne\nroom.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9410,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9414,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9405,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9410,
+      "Name": "The Throne Room of the Nebula King",
+      "Description": "\n   You can only faintly make out that it is a throne room as it is too dark in\nhere. In the middle is an empty throne. You wonder where the King has gone,\nmaybe he is hiding from you?",
+      "ZoneId": 94,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9409,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9412,
+      "Name": "At the Start of the Milky Way",
+      "Description": "\n   It is here that the famous old Milky Way starts flowing. You are surrounded\nby streams of mist the moment you tread on it. You can't see well in here ...\nluckily you haven't fallen yet!",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9413,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9408,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9413,
+      "Name": "Along the Milky Way",
+      "Description": "\n   You are still traveling inside this path of mist. You notice a small\nopening to the east.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9414,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9417,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9412,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9414,
+      "Name": "At the End of the Milky Way",
+      "Description": "\n   Just as you started enjoying this journey inside the mist, you have come to\nthe end of it. West leads to a bridge and east leads to somewhere else.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9418,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9413,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9409,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9417,
+      "Name": "A Small Clearing",
+      "Description": "\n   You are inside a small clearing. You can see that there are signs of a\nliving creature nearby.",
+      "ZoneId": 94,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9418,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9413,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9418,
+      "Name": "An Edge of the Galaxy",
+      "Description": "\n   You are on the very edge of the galaxy. Nothing is here except that there is\na path which leads down.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9417,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9414,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9419,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9419,
+      "Name": "Very Near to a Gigantic Star",
+      "Description": "\n   You are very near to a gigantic red star. While you are still fascinated by\nits beauty, the star keeps on growing ... suddenly you realize that you'd\nbetter leave.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9420,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9420,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9420,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9420,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9420,
+      "Name": "Too Bright to Tell",
+      "Description": "\n   Indeed it is too bright to tell. Because what you are witnessing is the rare\nevent of a Supernova, how a star explodes itself into galactic dust. You may\nfind yourself lucky to witness this rare event but even luckier, you have\nfinally got out of this galaxy as your body turns into dust. That really HURTS!",
+      "ZoneId": 94,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9421,
+      "Name": "The Star Cluster",
+      "Description": "\n   You are inside the home of the stars. All you can see around you are stars\nand nothing else. You eyes become pretty hurt as you look at them.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9422,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9403,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9422,
+      "Name": "Another Edge of the Galaxy",
+      "Description": "\n   This is another uninhabited place. Exits lie north, east and south.",
+      "ZoneId": 94,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9423,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9404,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9421,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9423,
+      "Name": "Corner of the Galaxy",
+      "Description": "\n   You wonder why the galaxy is limited. All you have done in Astronomy courses\nnow prove worthless. Well who told you to take one at the start?",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9424,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9405,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9422,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9424,
+      "Name": "Lost in Space",
+      "Description": "\n   You are now lost in space. Compasses don't work here, sorry. What's more you\ncan sense darkness engulfing you. You'd better get out quick.",
+      "ZoneId": 94,
+      "Sector": "Field",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9425,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9406,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9423,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9425,
+      "Name": "Black Hole",
+      "Description": "\n   Well you have chosen the wrong path, sorry. Nothing can escape from this\nmonster, not even light. PANIC! You can't escape!",
+      "ZoneId": 94,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Death",
+        "NoMob"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9426,
+      "Name": "The Homes of the Pleiades",
+      "Description": "\n   This is where the famous Seven Sisters live. You'd better not disturb them.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9429,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9427,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9427,
+      "Name": "Western Side of the Temple",
+      "Description": "\n   You are still wandering around this temple. You notice exits lie in all\ndirections except west.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9426,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9430,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9428,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9428,
+      "Name": "Orion's Hunting Lodge",
+      "Description": "\n   This is dedicated to the Great Hunter of all time -- Orion. Scattered on the\nfloor is the famous hunting equipment used by him.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9427,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9431,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9429,
+      "Name": "Northern Side of the Temple",
+      "Description": "\n   You are still wandering around this temple. You notice exits lie in all\ndirections except north.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9432,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9430,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9426,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9430,
+      "Name": "The Offering Chamber",
+      "Description": "\n   This is the sacred offering chamber in which sacrifices are made. You see a\nyoung girl here, chained to the wall, as if she is waiting for execution. You\nlook up and realize the chains are sent down directly from above. Below you\nrecognize the temple of Thalos.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9429,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9433,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9431,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9427,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9439,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5250,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9431,
+      "Name": "The Entrance of the Ancient Temple",
+      "Description": "\n   You have entered into this old temple, which was built originally for the\ngods in Mount Olympia, but it is now deserted as someone took over this part of\nthe Universe.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9430,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9434,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9408,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9428,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9432,
+      "Name": "Hercules' Mighty Throne",
+      "Description": "\n   You stand before the throne of a long-forgotten hero. It is full of bounty\nthat he got from the Ten Labors.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9433,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9429,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9433,
+      "Name": "Eastern Side of the Temple",
+      "Description": "\n   You are still wandering around this temple. You notice exits lie in all\ndirections except east.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9432,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9434,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9430,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9434,
+      "Name": "Perseus' Chamber",
+      "Description": "\n   It is the chamber of the prince, Perseus. However, he seems not to be here.\nMaybe he has gone to get Pegasus to save Andromeda?",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9433,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9431,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9439,
+      "Name": "On the Mystic Chains",
+      "Description": "\n   You are dangling on the chains. You notice exits lie in all directions. Up\nabove you see the chains continue upwards. But a forcefield prevents you from\ngoing further upwards.",
+      "ZoneId": 94,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9448,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9451,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9442,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9445,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 9454,
+          "Description": "You see the forcefield of Spring.",
+          "Keywords": [
+            "forcefield"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 9424
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9430,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9442,
+      "Name": "On a Hill",
+      "Description": "\n   Suddenly you find yourself on a hillside. As you look around, you notice\nthat Spring has descended upon you.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9439,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9453,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9443,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9443,
+      "Name": "Inside a Spanish Bull-Ring",
+      "Description": "\n   You are inside what used to be a ground for bull fighting. But you notice\nthere are no Matadors around. Maybe they are all dead?",
+      "ZoneId": 94,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9442,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9444,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9444,
+      "Name": "Inside a study",
+      "Description": "\n   This is a strange study. Besides the desks and chairs you also see a large\nmirror in the middle. So, you wonder, is this how you make a Gemini into two\nGemini?",
+      "ZoneId": 94,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9443,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9445,
+      "Name": "Along the seashore",
+      "Description": "\n   You start to feel the heat of Summer. Amongst the rocky beach you notice\nhidden forms which could be camouflaged crabs.",
+      "ZoneId": 94,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9439,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9446,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9446,
+      "Name": "Within the Deep Jungle",
+      "Description": "\n   Nearby you can hear the roar of an animal. Peering through the dense\novergrowth you think you glimpse a pair of menacing eyes.",
+      "ZoneId": 94,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9445,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9447,
+      "Name": "Inside a Luxurious Bedroom",
+      "Description": "\n   A peaceful feeling overtakes you. You see a magnificent four-poster bed.\nIt's a double bed and there is only room for one more! Well, what now ... ?",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9448,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9448,
+      "Name": "The Supreme Court",
+      "Description": "\n   You are standing inside the dock of a court. You feel an overwhelming sense\nof guilt and you want to protest your innocence! You fear retribution and feel\nyourself exposed, just like the trees in Autumn.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9447,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9439,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9449,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9449,
+      "Name": "In the Dry Desert",
+      "Description": "\n   You are confused by the shifting sands around you. Through the shimmering\nheat you see the hazy outline of a giant scorpion ... is this a mirage?",
+      "ZoneId": 94,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9448,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9450,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9450,
+      "Name": "In the Woods",
+      "Description": "\n   You find yourself in the center of a Centaurion hunting party. You'd better\nhide yourself before you become the 'center attraction'!",
+      "ZoneId": 94,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9449,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9451,
+      "Name": "On a Mountain Peak",
+      "Description": "\n   You are on the highest peak of the Universe. You look around and notice\nclouds below you. One of the clouds resembles a goat-like form.",
+      "ZoneId": 94,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9452,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9439,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9452,
+      "Name": "Inside a Waterfall",
+      "Description": "\n   The noise is deafening. You are about to take a drink when you realize that\nthe water is being poured out of a vessel of mind-boggling proportions!",
+      "ZoneId": 94,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9451,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9453,
+      "Name": "Inside a Gigantic Clam",
+      "Description": "\n   You feel uneasy here as if some evil magic is being cast on you. You suspect\nsomething fishy is going on in here.",
+      "ZoneId": 94,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 9442,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9454,
+      "Name": "End of the Mystic Chains",
+      "Description": "\n   You have reached the end of the mystic chains. Looking up, you notice a\nsmall landing on which you can climb. However, there seems to be another\nforcefield blocking your way.",
+      "ZoneId": 94,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 9455,
+          "Description": "You see the forcefield of Summer.",
+          "Keywords": [
+            "forcefield"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 9425
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9439,
+          "Description": "You see the forcefield of Spring.",
+          "Keywords": [
+            "forcefield"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 9424
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9455,
+      "Name": "On the Draco",
+      "Description": "\n   You realize you are standing on scaly ground. As you wonder what the ground\nis made of, you feel the ground move.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9456,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 9454,
+          "Description": "You see the forcefield of Summer.",
+          "Keywords": [
+            "forcefield"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 9425
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9456,
+      "Name": "Tail of the Draco",
+      "Description": "\n   At last you realize that you are on a giant snake-like dragon called the\nDraco, the guardian of the inner galaxy. You realize that the Draco is actually\nflying now!",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9455,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 9457,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9457,
+      "Name": "Path of the Draco",
+      "Description": "\n   As you struggle along this scaly creature you realize that the only way you\ncan reach to the inner galaxy is by going all the way to the head.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9458,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9456,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9458,
+      "Name": "Near the Legs of Draco",
+      "Description": "\n   You are approaching the leg part of this creature. You look around and see\nthat the surrounding is all dark except for some faint lights from the distant\nstars.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9459,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9457,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9459,
+      "Name": "On the Back of Draco",
+      "Description": "\n   At last you are half way through this long, weary journey. You can see the\nwings are to the east but it seems that another forcefield is in the way.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9460,
+          "Description": "You see the forcefield of Autumn.",
+          "Keywords": [
+            "forcefield"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 9426
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9458,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9460,
+      "Name": "Between the Wings of Draco",
+      "Description": "\n   You hear some giant flapping sounds nearby. You desperately try to get hold\nof something as the forceful gusts sweep you away.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9461,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9459,
+          "Description": "You see the forcefield of Autumn.",
+          "Keywords": [
+            "forcefield"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 9426
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9461,
+      "Name": "Near the Arms of Draco",
+      "Description": "\n   From above you can faintly make out the gigantic arms which extend far\nbeyond into the darkness.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 9462,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9460,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9462,
+      "Name": "On the Neck of Draco",
+      "Description": "\n   Your journey is now approaching the end. However, this neck seems to be\nendless.",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9461,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9463,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9463,
+      "Name": "Approaching the Head of Draco",
+      "Description": "\n   You have come to the end of Draco, but you can't find the head! You see a\nforcefield to the south, some distance away, beyond reach. If only the head\nwere here ...",
+      "ZoneId": 94,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9462,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9464,
+          "Description": "You see the forcefield of Winter.",
+          "Keywords": [
+            "forcefield"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 9427
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9464,
+      "Name": "At the Entrance of the Great Dipper",
+      "Description": "\n   Now you are in the innermost part of the galaxy. What you are walking on now\nis the path of the Great Dipper or the Plough. You notice that there are seven\nrooms in this zone, representing the seven stars of the Dipper.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9463,
+          "Description": "You see the forcefield of Winter.",
+          "Keywords": [
+            "forcefield"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 9427
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9465,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9466,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9465,
+      "Name": "Cassiopeia's Throne",
+      "Description": "\n   This is the Throne room of the Queen of the Universe. From here you can see\nevery star and constellation in the Universe.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9464,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9467,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9466,
+      "Name": "Along the Path of the Dipper",
+      "Description": "\n   You see stars around you but nothing of special interest.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9464,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9467,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9467,
+      "Name": "Cepheus' Throne",
+      "Description": "\n   This is the Throne room of the King of the Universe. From here you can see\nevery star and constellation in the Universe.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9466,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 9465,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9468,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9468,
+      "Name": "Along the path of the Dipper",
+      "Description": "\n   You see stars around you but nothing of special interest.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9467,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 9469,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9469,
+      "Name": "Along the path of the Dipper",
+      "Description": "\n   You see stars around you but nothing of special interest.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 9468,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9470,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9470,
+      "Name": "End of the Dipper",
+      "Description": "\n   You have finished the path of the Dipper. Here, the most prominent feature\nis a set of claw-marks. You also notice a room to the south; it looks as if\nPolaris could lie here.",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9469,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 9471,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 9471,
+      "Name": "The Polar Star",
+      "Description": "\n   You have entered the private chamber of Polaris. This is a room of great\nsignificance. You can see a powerful telescope pointing down towards the\nUniverse (SNOOPING!). It is from here that Polaris commands the Universe. You\nfeel you have come to end of your search in this galaxy ...",
+      "ZoneId": 94,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9470,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 9401,
+      "Name": "poor mudder",
+      "ShortDescription": "\na poor mudder",
+      "LongDescription": "\nA poor mudder, lost in this place.",
+      "Description": "\nYou will become her if you are not careful.",
+      "Level": 72,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1000",
+        "Mana": 820,
+        "Move": 1160
+      },
+      "Combat": {
+        "Armor": -300,
+        "Hitroll": 36,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d15+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 550000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9402,
+      "Name": "star",
+      "ShortDescription": "\na beautiful star",
+      "LongDescription": "\nA beautiful white star smiles at you.",
+      "Description": "\nYou can't tell what the star looks like, it is too bright!",
+      "Level": 80,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1000",
+        "Mana": 900,
+        "Move": 1280
+      },
+      "Combat": {
+        "Armor": -350,
+        "Hitroll": 40,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 670000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9403,
+      "Name": "nebula young",
+      "ShortDescription": "\na young nebula",
+      "LongDescription": "\nA young nebula, waiting to become a star.",
+      "Description": "\nIt hasn't got a definite shape, it is just a cloud of mist.",
+      "Level": 81,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1100",
+        "Mana": 910,
+        "Move": 1295
+      },
+      "Combat": {
+        "Armor": -360,
+        "Hitroll": 41,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+18"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 685000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9404,
+      "Name": "comet speedy",
+      "ShortDescription": "\na speedy comet",
+      "LongDescription": "\nA speedy comet is waiting to crush your head in.",
+      "Description": "\nYou see the offspring of Halley's comet, here just to wipe everything out.",
+      "Level": 82,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1200",
+        "Mana": 920,
+        "Move": 1310
+      },
+      "Combat": {
+        "Armor": -360,
+        "Hitroll": 42,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d25+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 700000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9405,
+      "Name": "red supergiant",
+      "ShortDescription": "\na red supergiant",
+      "LongDescription": "\nAn enormous, red supergiant is forced to protect the galaxy.",
+      "Description": "\nYou notice the giant is not as tough as his name sounds ...\nStill he can be very powerful.",
+      "Level": 90,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1500",
+        "Mana": 1000,
+        "Move": 1430
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 900000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9406,
+      "Name": "white dwarf",
+      "ShortDescription": "\na white dwarf",
+      "LongDescription": "\nA tiny white dwarf is trying to sneak away from duty.",
+      "Description": "\nLike the red giant, he is also appointed to stand guard for the galaxy.\nBut somehow he manages to escape.  Though tiny, it can take a lot of hits!",
+      "Level": 88,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1300",
+        "Mana": 980,
+        "Move": 1400
+      },
+      "Combat": {
+        "Armor": -420,
+        "Hitroll": 43,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9407,
+      "Name": "horsehead nebula",
+      "ShortDescription": "\na horsehead nebula",
+      "LongDescription": "\nA huge nebula is here, resembling a horsehead.",
+      "Description": "\nYou can only make out its shape from the darkness.  He was cursed to stay in\nhere and his face may never be seen by anyone again.",
+      "Level": 86,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d200+1300",
+        "Mana": 960,
+        "Move": 1370
+      },
+      "Combat": {
+        "Armor": -370,
+        "Hitroll": 43,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Blast",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 780000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9408,
+      "Name": "andromeda",
+      "ShortDescription": "\npoor Andromeda",
+      "LongDescription": "\nThe poor Andromeda is chained to the wall, suffering ...",
+      "Description": "\nShe was once a princess of beauty.  However, her beauty has led to a Goddess's\njealousy and she has to suffer here endlessly until Perseus comes.",
+      "Level": 84,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "NiceThief",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1200",
+        "Mana": 940,
+        "Move": 1340
+      },
+      "Combat": {
+        "Armor": -370,
+        "Hitroll": 42,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9409,
+      "Name": "hercules",
+      "ShortDescription": "\nthe mighty Hercules",
+      "LongDescription": "\nThe Mighty Hercules is working hard on his extra Labours for the Gods.",
+      "Description": "\nHe has been put to do the Ten Labours -- ten impossible tasks, by Hera, the\nqueen goddess, who disliked him.  But he finished them all and at the end was\ngranted immortality. He is a very brave and strong fighter.",
+      "Level": 84,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1400",
+        "Mana": 940,
+        "Move": 1340
+      },
+      "Combat": {
+        "Armor": -380,
+        "Hitroll": 42,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9410,
+      "Name": "pegasus",
+      "ShortDescription": "\nthe wild Pegasus",
+      "LongDescription": "\nThe wild pegasus is grazing peacefully.",
+      "Description": "\nIt is the legendary horse with wings on its back.",
+      "Level": 87,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1200",
+        "Mana": 970,
+        "Move": 1385
+      },
+      "Combat": {
+        "Armor": -380,
+        "Hitroll": 43,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9411,
+      "Name": "orion",
+      "ShortDescription": "\nOrion the hunter",
+      "LongDescription": "\nOrion is still hunting for Scorpio.",
+      "Description": "\nHe is the legendary hunter who almost defeated Taurus the bull, but got killed\nby Scorpio.  The gods put them both up as constellations but one appears on one\nside of the sky and the other the other side so they will never meet.",
+      "Level": 83,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1000",
+        "Mana": 930,
+        "Move": 1325
+      },
+      "Combat": {
+        "Armor": -380,
+        "Hitroll": 42,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9412,
+      "Name": "pleiades",
+      "ShortDescription": "\nthe Pleiades",
+      "LongDescription": "\nThe Pleiades are here, weeping for the loss of their sisters.",
+      "Description": "\nThese are the seven sisters of the Myths, and as for why they are here, no\none knows; even the Gods themselves have forgotten.",
+      "Level": 85,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1400",
+        "Mana": 950,
+        "Move": 1355
+      },
+      "Combat": {
+        "Armor": -380,
+        "Hitroll": 42,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9413,
+      "Name": "draco head",
+      "ShortDescription": "\nthe Head of Draco",
+      "LongDescription": "\nThe gigantic Head of Draco lurks out from beneath and prepares to roast you.",
+      "Description": "\nThis evil-looking head is even larger than a giant.  He is the last guardian \nbefore entering the inner galaxy.  His neck is flexing in a random fashion so \nhitting the head is certainly not easy.",
+      "Level": 89,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1300",
+        "Mana": 990,
+        "Move": 1415
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 900000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9414,
+      "Name": "draco baby",
+      "ShortDescription": "\na baby draco",
+      "LongDescription": "\nA baby draco is crawling on the Draco's body.",
+      "Description": "\nYou see a tiny creature which looks like a dragon except that its body\nresembles a snake.  Gosh, is this a draco, you wonder, is this the thing\nwe are on now?",
+      "Level": 76,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1000",
+        "Mana": 860,
+        "Move": 1220
+      },
+      "Combat": {
+        "Armor": -320,
+        "Hitroll": 38,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d15+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 610000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9415,
+      "Name": "aries",
+      "ShortDescription": "\nAries",
+      "LongDescription": "\nAries is sitting here, welcoming you.",
+      "Description": "\nYou see a white goat here, the first guardian of the Zodiac, also the ruler of\nSpring. He looks as if he is expecting you.",
+      "Level": 82,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d200+1000",
+        "Mana": 920,
+        "Move": 1310
+      },
+      "Combat": {
+        "Armor": -360,
+        "Hitroll": 42,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 4000,
+      "Experience": 700000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9416,
+      "Name": "taurus",
+      "ShortDescription": "\nTaurus",
+      "LongDescription": "\nTaurus wants to leave, but has been forced to stay as a guardian here.",
+      "Description": "\nYou see a wild-looking bull with a bad temper.  He is well-built and looks like\nhe can fight well ... indeed he has fought with Orion before and survived.",
+      "Level": 83,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1400",
+        "Mana": 930,
+        "Move": 1325
+      },
+      "Combat": {
+        "Armor": -360,
+        "Hitroll": 42,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 4000,
+      "Experience": 750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9417,
+      "Name": "gemini",
+      "ShortDescription": "\nGemini",
+      "LongDescription": "\nGemini is looking for his brother; have you seen him?",
+      "Description": "\nAs soon as you see him you know that he is the most perfect man you have seen.\nYou can't find any imperfections on him.",
+      "Level": 88,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1300",
+        "Mana": 980,
+        "Move": 1400
+      },
+      "Combat": {
+        "Armor": -370,
+        "Hitroll": 44,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9418,
+      "Name": "gemini",
+      "ShortDescription": "\nGemini",
+      "LongDescription": "\nGemini is hiding from his brother, grinning evilly at you.",
+      "Description": "\nAs soon as you see him you see the most imperfect man you have ever seen.\nHow can there be such a contrast?  You wonder ...",
+      "Level": 89,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Hide"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d100+1300",
+        "Mana": 990,
+        "Move": 1415
+      },
+      "Combat": {
+        "Armor": -370,
+        "Hitroll": 43,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 850000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9419,
+      "Name": "cancer",
+      "ShortDescription": "\nCancer",
+      "LongDescription": "\nCancer the crab is here, hoarding the treasure away from you.",
+      "Description": "\nYou see a gigantic crab (YES, it is bigger than you!) with a crushed shell.\nLegend is that he was crushed by Hercules when he was sent by Hera to kill him.\nSo Hera made Cancer a constellation for his work.",
+      "Level": 90,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1400",
+        "Mana": 1000,
+        "Move": 1430
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 43,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 15000,
+      "Experience": 900000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9420,
+      "Name": "leo",
+      "ShortDescription": "\nLeo",
+      "LongDescription": "\nLeo the lion is roaring at you, ready for a strike!",
+      "Description": "\nHis metallic skin means that he could be the one which was killed by Hercules\nduring his first Labour.  His skin is so weapon-proof that Hercules had to use\nhis bare hands to tear the lion into two from its mouth!",
+      "Level": 86,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1200",
+        "Mana": 960,
+        "Move": 1370
+      },
+      "Combat": {
+        "Armor": -340,
+        "Hitroll": 44,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d25+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 4000,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9421,
+      "Name": "virgo",
+      "ShortDescription": "\nVirgo",
+      "LongDescription": "\nVirgo is sitting here, winking at you suggestively ... you are alarmed!",
+      "Description": "\nFrom what you have seen, you now realize that legends are legends, and Virgo\nmay not be the maid of chastity and purity at all!  But still she looks\ngorgeous and is waiting for your first move, whatever it is ...",
+      "Level": 92,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1300",
+        "Mana": 1020,
+        "Move": 1460
+      },
+      "Combat": {
+        "Armor": -410,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 900000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9422,
+      "Name": "libra",
+      "ShortDescription": "\nLibra",
+      "LongDescription": "\nLibra, the fair and just, is staring at you, weighing up the sins of your past.",
+      "Description": "\nHe is a wise old man and can see people's thoughts through their eyes....\nNow all he can see from you is greed and bloodshed.",
+      "Level": 92,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+1400",
+        "Mana": 1020,
+        "Move": 1460
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d25+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 950000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9423,
+      "Name": "scorpio",
+      "ShortDescription": "\nScorpio",
+      "LongDescription": "\nScorpio is moving his tail towards you, waiting to put an end to some mortals.",
+      "Description": "\nEver since he killed Orion in the myths, he has been punished by having \nSagittarius' arrow aimed at his heart forever.",
+      "Level": 90,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+1000",
+        "Mana": 1000,
+        "Move": 1430
+      },
+      "Combat": {
+        "Armor": -350,
+        "Hitroll": 40,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d25+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 900000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9424,
+      "Name": "sagittarius centaur",
+      "ShortDescription": "\nSagittarius",
+      "LongDescription": "\nSagittarius the centaur is waiting to let go of his well aimed arrow ...",
+      "Description": "\nHe is a centaur and a well trained archer. No one can escape his arrows.",
+      "Level": 89,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1200",
+        "Mana": 990,
+        "Move": 1415
+      },
+      "Combat": {
+        "Armor": -380,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 850000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9425,
+      "Name": "capricorn",
+      "ShortDescription": "\nCapricorn",
+      "LongDescription": "\nCapricorn is here, feeling bored ... he wants a fight!",
+      "Description": "\nYou see a mean-looking ram here.  He used to be a fierce fighter in the ancient\nwar but now the gods have decided to put him here, to live out the rest of his \ndays in peace.",
+      "Level": 87,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1200",
+        "Mana": 970,
+        "Move": 1385
+      },
+      "Combat": {
+        "Armor": -370,
+        "Hitroll": 43,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9426,
+      "Name": "aquarius",
+      "ShortDescription": "\nAquarius",
+      "LongDescription": "\nThe beautiful Aquarius is standing here, holding THE vessel.",
+      "Description": "\nThe pretty Water Bearer is smiling at you, you think you'd better give her a \nhand with holding the vessel.",
+      "Level": 95,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1400",
+        "Mana": 1050,
+        "Move": 1505
+      },
+      "Combat": {
+        "Armor": -420,
+        "Hitroll": 47,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d25+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 10000,
+      "Experience": 980000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9427,
+      "Name": "pisces mermaid",
+      "ShortDescription": "\nPisces the mermaid",
+      "LongDescription": "\nPisces the mermaid is sitting here, waiting for your help.",
+      "Description": "\nShe has been forced to serve her husband, who had been cursed to turn into a\nfish and she deserves your pity.",
+      "Level": 92,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1200",
+        "Mana": 1020,
+        "Move": 1460
+      },
+      "Combat": {
+        "Armor": -420,
+        "Hitroll": 46,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 900000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9428,
+      "Name": "pisces fish",
+      "ShortDescription": "\nPisces the fish",
+      "LongDescription": "\nPisces the fish, is jealous of your approach...",
+      "Description": "\nHe was once a very handsome man but now has turned into an ugly big fish.\nSo he becomes jealous of any living thing which is more handsome than him.",
+      "Level": 93,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1400",
+        "Mana": 1030,
+        "Move": 1475
+      },
+      "Combat": {
+        "Armor": -420,
+        "Hitroll": 47,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 950000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9429,
+      "Name": "bear ursa major",
+      "ShortDescription": "\nUrsa Major the bear",
+      "LongDescription": "\nUrsa Major the bear is the last defense against any intruders.",
+      "Description": "\nThe Huge Bear which resides in the northern skies is here. \nYou think you'd better turn back.  At least you have got a chance of survival.",
+      "Level": 100,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+2000",
+        "Mana": 1100,
+        "Move": 1580
+      },
+      "Combat": {
+        "Armor": -450,
+        "Hitroll": 50,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d25+30"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1500000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9430,
+      "Name": "cassiopeia queen",
+      "ShortDescription": "\nCassiopeia the Queen",
+      "LongDescription": "\nCassiopeia, the queen of the Universe, is sitting on her throne.",
+      "Description": "\nShe is the Queen of Dignity; facing her you feel all your dignity has gone.",
+      "Level": 104,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+2500",
+        "Mana": 1140,
+        "Move": 1640
+      },
+      "Combat": {
+        "Armor": -430,
+        "Hitroll": 53,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d20+30"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+60"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 15000,
+      "Experience": 2500000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9431,
+      "Name": "cepheus king",
+      "ShortDescription": "\nCepheus the King",
+      "LongDescription": "\nCepheus, the king of the Universe, is sitting on his throne.",
+      "Description": "\nHe is the King of Might as well as of the Universe. You suddenly feel very\nweak and useless in front of him.",
+      "Level": 107,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+3000",
+        "Mana": 1170,
+        "Move": 1685
+      },
+      "Combat": {
+        "Armor": -480,
+        "Hitroll": 54,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d30+20"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "2d0+75"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 20000,
+      "Experience": 3000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 9432,
+      "Name": "polaris polar star",
+      "ShortDescription": "\nPolaris, the polar star",
+      "LongDescription": "\nPolaris, the polar star, who commands the whole Universe, stands before you!",
+      "Description": "\nHe is the Master of the Universe, (NOT He-Man!), the most powerful!  \nEven the King and the Queen obey him.  As you look at him you notice he is \nactually a STAR, with dazzling bright light ... maybe you shouldn't have come\nhere at all?",
+      "Level": 109,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "8d100+4000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -500,
+        "Hitroll": 62,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 60,
+          "DamageDice": "3d30+20"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+80"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+85"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 20000,
+      "Experience": 4500000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 9401,
+      "Name": "comet tail spark",
+      "ShortDescription": "\na comet's tail",
+      "Description": "\nA long, slender spark lies here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 60,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        60,
+        28,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 60,
+          "SpellIds": [
+            28,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9,
+      "Cost": 35000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9402,
+      "Name": "titanic arm hercules",
+      "ShortDescription": "\nthe Mighty Arm plates of Hercules",
+      "Description": "\nArm plates of the Zodiac lie here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 73,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 30000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "arm"
+          ],
+          "Description": "\nThese mighty armors have been worn by this immortal, since the \nancient time."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 5
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9404,
+      "Name": "titanic belt orion",
+      "ShortDescription": "\nOrion's Hunting Belt",
+      "Description": "\nA belt of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 67,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 7,
+      "Cost": 15000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "belt"
+          ],
+          "Description": "\nYou can immediately see that it belongs to Orion, from the three stars\nengraved on it."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Constitution",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9405,
+      "Name": "skull draco",
+      "ShortDescription": "\nthe ugly skull of Draco",
+      "Description": "\nA massive skull of a dead Draco lies here.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 85,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Hum",
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        109,
+        10,
+        10,
+        4,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 4,
+          "Level": 109,
+          "Charges": 10,
+          "ChargesRemaining": 10
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 10000,
+      "CostPerDay": 300,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9406,
+      "Name": "titanic fleece aries",
+      "ShortDescription": "\nthe Golden Fleece",
+      "Description": "\nA fleece of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 65,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fleece"
+          ],
+          "Description": "\nFrom a look it resembles the Golden Fleece that exists in the Greek \nmyths."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 60
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9407,
+      "Name": "titanic hoof taurus",
+      "ShortDescription": "\nthe Hoof of Taurus",
+      "Description": "\nA hoof of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 71,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 30000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "hoof"
+          ],
+          "Description": "\nIt is with these hooves that Taurus can stand against Orion's attacks."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": 100
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9408,
+      "Name": "titanic mask gemini",
+      "ShortDescription": "\nthe Mask of Gemini",
+      "Description": "\nA mask of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 75,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "NoDrop",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        16,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 16,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 7,
+      "Cost": 20000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mask"
+          ],
+          "Description": "\nYou notice the mask has got two faces, one smiling and the other \ncrying.\nYou don't know which way you should wear it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9409,
+      "Name": "titanic shell cancer",
+      "ShortDescription": "\nthe Shell of Cancer",
+      "Description": "\nA shell of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 65,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        30,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 30,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 75,
+      "Cost": 35000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shell"
+          ],
+          "Description": "\nA shell which is dented in the middle, resulting from the Hercules' \nmighty\npound when the Crab was still an enemy of Hercules in ancient times."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9410,
+      "Name": "titanic skin leo nemean",
+      "ShortDescription": "\na Nemean Lion Skin",
+      "Description": "\nA skin of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 72,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 45,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skin"
+          ],
+          "Description": "\nA skin made of metal, which was worn by Hercules during his Ten \nLabours."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9411,
+      "Name": "titanic bracelet crystal virgo",
+      "ShortDescription": "\nthe Crystal Bracelet of Virgo",
+      "Description": "\nA bracelet of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 60,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bracelet"
+          ],
+          "Description": "\nA bracelet of purity and youth, only worn by selected virgins."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 50
+        },
+        {
+          "Location": "Charisma",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9412,
+      "Name": "titanic scale libra justice",
+      "ShortDescription": "\nLibra's Scale of Justice",
+      "Description": "\nA shield of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 75,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        11,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 11,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 40000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scale"
+          ],
+          "Description": "\nIt is a shield of justice, used in the ancient battle against injustice."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 50
+        },
+        {
+          "Location": "Hit",
+          "Modifier": 50
+        },
+        {
+          "Location": "Wisdom",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9413,
+      "Name": "titanic scale libra injustice",
+      "ShortDescription": "\nLibra's Scale of Injustice",
+      "Description": "\nA shield of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 75,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Hum",
+        "NoDrop",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 1000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scale"
+          ],
+          "Description": "\nIt is a shield of injustice, it picks on the innocent."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Wisdom",
+          "Modifier": -2
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9414,
+      "Name": "sting scorpio",
+      "ShortDescription": "\nthe Sting of Scorpio",
+      "Description": "\nSting of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 68,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        6,
+        7,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 6,
+          "DiceSides": 7,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sting"
+          ],
+          "Description": "\nThis dreadful weapon put a lot of mortals to death before Scorpio \nwas \nbanished."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 7
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 7
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9415,
+      "Name": "arrow sagittarius",
+      "ShortDescription": "\nthe Arrow of Sagittarius",
+      "Description": "\nthe Arrow of Sagittarius lies here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 70,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 7,
+      "Cost": 15000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "arrow"
+          ],
+          "Description": "\nIt's an arrow of lightning; it will never miss any target."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 12
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9416,
+      "Name": "titanic bow sagittarius",
+      "ShortDescription": "\nthe Bow of Sagittarius",
+      "Description": "\nthe Titanic Bow of Sagittarius lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 65,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        7,
+        8,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 7,
+          "DiceSides": 8,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 30000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bow"
+          ],
+          "Description": "\nThe gigantic bow used by the Archer; it is a very powerful weapon."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 6
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 6
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9417,
+      "Name": "titanic horns capricorn",
+      "ShortDescription": "\nthe Horns of Capricorn",
+      "Description": "\na pair of horns of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 65,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 25000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "horn"
+          ],
+          "Description": "\nThese strange horns are the work of gods, shaped to fit on hands.\nThey look powerful indeed."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9418,
+      "Name": "vessel aquarius",
+      "ShortDescription": "\nthe Ancient Vessel of Aquarius",
+      "Description": "\nA vessel of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 60,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        32,
+        10,
+        10,
+        71,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 71,
+          "Level": 32,
+          "Charges": 10,
+          "ChargesRemaining": 10
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 35000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "vessel"
+          ],
+          "Description": "\nThis vessel has been carried by the Water Bearer ever since she \ncame to the\nZodiac."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9419,
+      "Name": "titanic tail pisces",
+      "ShortDescription": "\nthe Tail of Pisces",
+      "Description": "\nA fish tail of the Zodiac lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 68,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 20000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tail"
+          ],
+          "Description": "\nThis tail can actually be worn by mortals somehow as leggings ... \nanother\nwork of the gods."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9420,
+      "Name": "ring dignity",
+      "ShortDescription": "\nthe Ring of Dignity",
+      "Description": "\nA ring of specialty lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 80,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Invisible",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 35000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "ring"
+          ],
+          "Description": "\nThis ring belongs to Cassiopeia, queen of the Universe.\nMortals, do not touch!"
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 85
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9421,
+      "Name": "sceptre might",
+      "ShortDescription": "\nthe Sceptre of Might",
+      "Description": "\nA sceptre of interest lies here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 90,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Invisible",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        500,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 500
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 40000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sceptre"
+          ],
+          "Description": "\nYou'd better give it back, or the king of the Universe will punish you."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9422,
+      "Name": "ring universe",
+      "ShortDescription": "\nthe ring of the universe",
+      "Description": "\nHere lies a fortune ... a small ring of power.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 90,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Invisible",
+        "Magic",
+        "Bless"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        30,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 30,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 35000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "ring"
+          ],
+          "Description": "\nIt conceals the power of the universe."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9423,
+      "Name": "great dipper",
+      "ShortDescription": "\nthe Great Dipper of the Skies",
+      "Description": "\nA dazzling white object lies on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 90,
+      "AntiClass": "318943",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Invisible",
+        "Magic",
+        "Bless"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        6,
+        12,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 6,
+          "DiceSides": 12,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 16,
+      "Cost": 30000,
+      "CostPerDay": 20000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 10
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9424,
+      "Name": "spring shoot key",
+      "ShortDescription": "\na spring shoot",
+      "Description": "\nA shoot grows here, covered with dew.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 0,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9425,
+      "Name": "summer flower key",
+      "ShortDescription": "\na summer flower",
+      "Description": "\nA flower grows here, waiting to be picked up.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 0,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9426,
+      "Name": "autumn leaf key",
+      "ShortDescription": "\nan autumn leaf",
+      "Description": "\nA leaf lies here, as if just fallen from a tree.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 0,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9427,
+      "Name": "winter branch key",
+      "ShortDescription": "\na winter branch",
+      "Description": "\nA branch lies here, still covered with snow.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 0,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9428,
+      "Name": "chains andromeda",
+      "ShortDescription": "\nchains of Andromeda",
+      "Description": "\nSome chains lie on the floor.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Invisible"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 50,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chains"
+          ],
+          "Description": "\nThey certainly look important!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

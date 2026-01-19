@@ -1,0 +1,2429 @@
+{
+  "Zone": {
+    "Id": 38,
+    "Name": "Hobbit Village",
+    "TopRoomId": 3899,
+    "Lifespan": 40,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3808,
+        "Arg2": 100,
+        "Arg3": 3809,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3802,
+        "Arg2": 3,
+        "Arg3": 3818,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3800,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3802,
+        "Arg2": 3,
+        "Arg3": 3817,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3800,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3802,
+        "Arg2": 3,
+        "Arg3": 3816,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3800,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3801,
+        "Arg2": 3,
+        "Arg3": 3805,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3802,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3801,
+        "Arg2": 3,
+        "Arg3": 3810,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3802,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3801,
+        "Arg2": 3,
+        "Arg3": 3811,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3802,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3801,
+        "Arg2": 3,
+        "Arg3": 3812,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3802,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3801,
+        "Arg2": 3,
+        "Arg3": 3807,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3802,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3801,
+        "Arg2": 3,
+        "Arg3": 3808,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3802,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3801,
+        "Arg2": 3,
+        "Arg3": 3809,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3802,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3801,
+        "Arg2": 3,
+        "Arg3": 3804,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3802,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3803,
+        "Arg2": 1,
+        "Arg3": 3819,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3801,
+        "Arg2": 80,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3804,
+        "Arg2": 1,
+        "Arg3": 3820,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3803,
+        "Arg2": 80,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3805,
+        "Arg2": 1,
+        "Arg3": 3822,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3806,
+        "Arg2": 1,
+        "Arg3": 3821,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3803,
+        "Arg2": 80,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3807,
+        "Arg2": 1,
+        "Arg3": 3823,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3808,
+        "Arg2": 1,
+        "Arg3": 3824,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3809,
+        "Arg2": 1,
+        "Arg3": 3829,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3807,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3813,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3825,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3804,
+        "Arg2": 50,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3810,
+        "Arg2": 1,
+        "Arg3": 3825,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3809,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3827,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3828,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3806,
+        "Arg2": 50,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3811,
+        "Arg2": 1,
+        "Arg3": 3828,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3805,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3812,
+        "Arg2": 1,
+        "Arg3": 3828,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 3801,
+      "Name": "A Dimly Lit Path",
+      "Description": "\n   This path is narrow, REAL narrow.  You draw the conclusion that it\nwasn't man-made, or made for man for that matter.  The path continues\nnorth to a village.",
+      "ZoneId": 38,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3802,
+          "Description": "The path continues toward a village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3053,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3802,
+      "Name": "A Dimly Lit Path",
+      "Description": "\n   This section of the road is badly worn and frequently traversed.\nThere is some noise coming from the north.  The road back to the forest\nlies to the south.",
+      "ZoneId": 38,
+      "Sector": "Forest",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3803,
+          "Description": "The path continues toward the village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28400,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3801,
+          "Description": "The dimly lit path continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3803,
+      "Name": "A Dimly Lit Path",
+      "Description": "\n   This section of the road is badly worn and frequently traversed.  The\nnoise is getting stronger to the north.  The road back to the forest\nlies to the south.",
+      "ZoneId": 38,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3804,
+          "Description": "You see the entrance to Hobbit Village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3802,
+          "Description": "You see a dimly lit path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3804,
+      "Name": "The Entrance to Hobbit Village",
+      "Description": "\n   You stand at the entrance to a small hobbit village.  You have heard\nstories about these little creatures, but you had no idea they really\nexisted.  You wonder how many people have seen this village before, and\nreturned to tell about it.  Now go on... explore.",
+      "ZoneId": 38,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3805,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3803,
+          "Description": "You see a dimly lit path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3805,
+      "Name": "Hobbit Road",
+      "Description": "\n   A small narrow road here twists through the village.  Hobbit Road\ncontinues to the north, west, and east.  There is still time to turn\nback and head south.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3806,
+          "Description": "Hobbit Road stretches to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3810,
+          "Description": "Hobbit Road winds of to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3804,
+          "Description": "You can make out the entrance to Hobbit Village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3811,
+          "Description": "Hobbit Road veers off  to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3806,
+      "Name": "Hobbit Road",
+      "Description": "\n   You continue to stroll down Hobbit Road.  The smell of richly scented\nsmoke assails your senses as you pass house after immaculate house.\nThis place is not that bad when you think of it, clean, friendly, and\ncomfortable.  Perhaps that is why nobody ever seems to leave here...\nHobbit Road continues its path to the north, west, and south.   A small\nhobbit home lies to the east.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3807,
+          "Description": "Hobbit Road continues to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3820,
+          "Description": "Hobbit Road continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3805,
+          "Description": "Hobbit Road continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3812,
+          "Description": "Hobbit Road continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3807,
+      "Name": "Hobbit Road",
+      "Description": "\n   You stroll along down Hobbit Road.  It continues north and south\nhere.  To the west you can see a small hobbit home.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3808,
+          "Description": "Hobbit Road continues to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3816,
+          "Description": "You see the tobacco garden.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3806,
+          "Description": "Hobbit Road continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3829,
+          "Description": "You see a Hobbit Home.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3808,
+      "Name": "Hobbit Road",
+      "Description": "\n   The straightforward little Hobbit Road continues in its leisurely\nnorth-south direction. A tobacco garden is to the east.  A stone path\nleads west.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3809,
+          "Description": "Hobbit Road continues to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3817,
+          "Description": "You see the tobacco garden.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3807,
+          "Description": "Hobbit Road continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3813,
+          "Description": "A stone path lies to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3809,
+      "Name": "Hobbit Road",
+      "Description": "\n   A small hospitable well sits neatly by the side of the road, waiting\nfor you to bring up a bucket of fresh cold well water.  A small garden\nis to the east. Hobbit Road continues to the south and west, and a road\nleads north towards some purple mountains.  The hobbits have had many\nadventures with the dwarves and gnomes who live in the highlands north\nof here.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6500,
+          "Description": "A long cart track headed north carries produce from the farms north of\nhere and marvelous weapons from the steel mill.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3818,
+          "Description": "You see the tobacco garden.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3808,
+          "Description": "Hobbit Road continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3814,
+          "Description": "Hobbit Road continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "hobbit",
+            "well"
+          ],
+          "Description": "\nA small well is here.  Just the right size if you're a hobbit, but just\nbarely big enough for you to get some water from.  I'm sure no-one would\nmind."
+        },
+        {
+          "Keywords": [
+            "fence"
+          ],
+          "Description": "\nIt looks high."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3810,
+      "Name": "Hobbit Road",
+      "Description": "\n   A corner of Hobbit Road is where you stand.  A high fence blocks\npassage to the east or south.  A hobbit home is to the north.  Hobbit\nRoad goes back to the west.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3819,
+          "Description": "You see a Hobbit Home.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3805,
+          "Description": "Hobbit Road continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fence"
+          ],
+          "Description": "\nIt looks high."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3811,
+      "Name": "Hobbit Road",
+      "Description": "\n   You are at a bend of Hobbit Road.  You can continue down the road to\nthe east and north.  You can also visit a hobbit home to the south.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3812,
+          "Description": "Hobbit Road continues to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3805,
+          "Description": "Hobbit Road continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3821,
+          "Description": "You see a Hobbit Home.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3812,
+      "Name": "Hobbit Road",
+      "Description": "\n   You are on Hobbit Road.  A hobbit home is to the west.  Took's\nbackyard is to the north, but you can't go there.  Hobbit Road continues\nto the south and east.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3806,
+          "Description": "Hobbit Road continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3811,
+          "Description": "Hobbit Road continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3822,
+          "Description": "You see a Hobbit Home.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3813,
+      "Name": "Stone Path",
+      "Description": "\n   You are walking along a cute little stone path.  To the south lies\nTook\u0092s house.  A small house is to the west.  Hobbit Road is to the\neast.  Everything is so peaceful here.  You could stay forever.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3808,
+          "Description": "Hobbit Road continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3825,
+          "Description": "You see Took\u0092s House.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3807
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3823,
+          "Description": "You see a Hobbit House.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3814,
+      "Name": "Hobbit Road",
+      "Description": "\n   Yet another part of Hobbit Road.  To the west is the last section of\nHobbit Road.  You can go back to the small well to the east.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3809,
+          "Description": "Hobbit Road continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3815,
+          "Description": "Hobbit Road continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3815,
+      "Name": "Hobbit Road",
+      "Description": "\n   The last part of Hobbit Road.  You can go back the Hobbit Road to the\neast.  A nice, beautiful, hobbit home is to the south.  In the distance\nto the north you can see the Hobbit Mayor's office.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3826,
+          "Description": "You see the path to Mayor's office.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3814,
+          "Description": "Hobbit Road continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3824,
+          "Description": "You see a Hobbit Home.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3816,
+      "Name": "The Tobacco Garden",
+      "Description": "\n   The greatest tobacco in the world is growing here.  If only you were\na smoker... Hobbit Road is back to the west.  Another part of the garden\nis to the north.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3817,
+          "Description": "The tobacco garden continues to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3807,
+          "Description": "Hobbit Road continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3817,
+      "Name": "The Tobacco Garden",
+      "Description": "\n   Another part of the garden.  Small tobacco-leafs is growing here.\nThe smell is driving your nostrils crazy.  It almost makes you forget\nthat you don't smoke.  Hobbit Road is to the west, while the garden are\nto the north and south.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3818,
+          "Description": "The tobacco garden continues to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3816,
+          "Description": "The tobacco garden continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3808,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3818,
+      "Name": "Tobacco Garden",
+      "Description": "\n   The northern part of the tobacco garden.  It smells just as good as\nall the rest. Hobbit Road is to the west.  The tobacco garden lies to\nthe south.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3817,
+          "Description": "The tobacco garden continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3809,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3819,
+      "Name": "Bilbo's Home",
+      "Description": "\n   This is the home of the famous Bilbo.  You see a desk all covered\nwith books, but you can't understand a word in them!  Maybe it is\nwritten in Hobbitish.  Hobbit Road is back to the south.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3810,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3820,
+      "Name": "Frodo's Home",
+      "Description": "\n   This home looks nice and cozy.  A small sofa is standing in a corner\nand the room is covered in papers and books.  Frodo must be a hobbit who\nlikes to read.  Hobbit Road is back to the west.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3806,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3821,
+      "Name": "Merry's Hole",
+      "Description": "\n   This home belongs to Merry.  A hobbit who has shared many adventures\nwith Frodo.  He is a tough hobbit and if he can carry the sword that is\nnailed to the wall, he must be quite strong.  Better not make him angry\nwith you!  Hobbit Road is back to the north.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3811,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3822,
+      "Name": "Sam's Home",
+      "Description": "\n   The home of Sam and Rosa.  The house is all clean and shiny.  Rosa\nand Sam must like to have things clean in case they have visitors.\nMaybe you should stay a while.  This place is nice.  Hobbit Road to the\neast.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3812,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3823,
+      "Name": "Pippin's Home",
+      "Description": "\n   The home of Pippin.  A tough hobbit who has been on many adventures.\nYou have heard rumors about this guy.  People say he is a mean and\nstrong hobbit, just like his cousin Merry.  Maybe you should leave\nbefore he find you here.  Hobbit Road to the east may be your only\nsalvation.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3813,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3824,
+      "Name": "Bogo's Hole",
+      "Description": "\n   Bogo, the laughing stock of the hobbit village lives here.  This\nplace is all dirty and dusty.  Maybe Bogo is here somewhere, but you are\nnot sure.  Anyway, you don't really like the smell of this place.\nHobbit Road is to the north.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3815,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3825,
+      "Name": "Took's House",
+      "Description": "\n   Took's home.  The home of Took.  You have heard stories about this\nguy.  The other hobbits say he is big and strong and some people say he\nknows his way around magic.  You can see a desk here, all covered with\npapers.  There seems to be some magic words written on the papers, but\nyou can't understand them.  A stone  path lies to the north.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3813,
+          "Description": "You see a stone path.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3807
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3826,
+      "Name": "Path to Hobbit Mayor's Office",
+      "Description": "\n   You are walking along a path to the Mayor's office to the North.\nHobbit Road lies to the south.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3827,
+          "Description": "Outside the Hobbit Mayor's office.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3815,
+          "Description": "Hobbit Road continues to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3827,
+      "Name": "Outside the Hobbit Mayor's Office",
+      "Description": "\n   You are standing outside the Mayor's office.  You can hear him\nscreaming at his employees inside from the road.  His office is to the\nnorth, while Hobbit Road is to the south.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3828,
+          "Description": "You see the Hobbit Mayor's office.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3809
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3826,
+          "Description": "You see the path to Hobbit Mayor's office.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3828,
+      "Name": "The Hobbit Mayor's Office",
+      "Description": "\n   This is the office of the Hobbit Mayor.  You can see a huge desk\nwhere he usually sits and look busy.  The office is quite large with\nnice paintings on the walls.  The desk is all covered with papers.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3827,
+          "Description": "Outside the Hobbit Mayor's office.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3809
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3829,
+      "Name": "Rosa's Home",
+      "Description": "\n   This is Rosa's home still, since she and Sam aren't legally wedded\nyet. However if she is not here, she is most likely at Sam's.  The only\nexit is to the east.",
+      "ZoneId": 38,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3807,
+          "Description": "You see Hobbit Road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 3801,
+      "Name": "hobbit",
+      "ShortDescription": "\na hobbit",
+      "LongDescription": "\nA hobbit is strolling around here.",
+      "Description": "\nA short, fat hobbit is strolling along here, talking to himself.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3802,
+      "Name": "hobbit",
+      "ShortDescription": "\na hobbit",
+      "LongDescription": "\nA fat hobbit is here, gathering tobacco.",
+      "Description": "\nA short fat hobbit is here, gathering tobacco. He seems to like his work.",
+      "Level": 12,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3803,
+      "Name": "bilbo hobbit",
+      "ShortDescription": "\nBilbo",
+      "LongDescription": "\nBilbo Baggings is here, daydreaming.",
+      "Description": "\nBilbo stands here, daydreaming about long gone adventures.",
+      "Level": 15,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3804,
+      "Name": "frodo hobbit",
+      "ShortDescription": "\nFrodo",
+      "LongDescription": "\nFrodo is standing here, smoking his pipe.",
+      "Description": "\nFrodo seems to be a nice hobbit with his big belly and hairy feet.",
+      "Level": 15,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3805,
+      "Name": "sam hobbit",
+      "ShortDescription": "\nSam",
+      "LongDescription": "\nSam, Frodo's gardener is here mowing the lawn.",
+      "Description": "\nSam seems to be a kind hobbit. He is short and fat and shouldn't be that hard\nto squash.",
+      "Level": 15,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3806,
+      "Name": "merry hobbit",
+      "ShortDescription": "\nMerry",
+      "LongDescription": "\nMerry is standing here, looking almost as mean as his cousin Pippin.",
+      "Description": "\nMerry is standing here. He's a tall and muscular hobbit and he DOES look mean.\nIf you are going to fight a hobbit, don't fight this guy.",
+      "Level": 17,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3807,
+      "Name": "pippin hobbit",
+      "ShortDescription": "\nPippin",
+      "LongDescription": "\nPippin is standing here, looking almost as mean as his cousin Merry.",
+      "Description": "\nPippin is a tall muscular hobbit who just LOVES to fight. Challange him if you\nwant to but I wouldn't reccomend it.",
+      "Level": 16,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3808,
+      "Name": "bogo hobbit",
+      "ShortDescription": "\nBogo",
+      "LongDescription": "\nBogo is standing here with a bottle to his mouth as usual.",
+      "Description": "\nBogo the hobbit drunk is here, drinking as usual. He doesn't look too tough. \nMaybe you should put an end to his misery.",
+      "Level": 13,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3809,
+      "Name": "rosa female hobbit",
+      "ShortDescription": "\nRosa",
+      "LongDescription": "\nRosa is here, looking for her beloved Sam.",
+      "Description": "\nRosa, Sam's wife-to-be is standing here, wondering where Sam is.",
+      "Level": 14,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3810,
+      "Name": "took hobbit",
+      "ShortDescription": "\nTook",
+      "LongDescription": "\nTook is standing here, mumbling some magic words.",
+      "Description": "\nTook, an old experienced hobbit is standing here. This hobbit saw adventures \nbefore you were even born. Some hobbits say he knows his way around magic but\nof course, that is just rumours.",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d40+380",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "2d6+10"
+        },
+        {
+          "Type": "Attack_10",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_22",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_48",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_52",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+65"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 300,
+      "Experience": 12000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3811,
+      "Name": "mayor hobbit",
+      "ShortDescription": "\nHobbit Mayor",
+      "LongDescription": "\nThe hobbit mayor is here, looking busy.",
+      "Description": "\nThe mayor of the hobbits is here, trying hard to look busy. He is a tough built\nhobbit, although he seems to be kind. He controls the hobbit village with a\nfirm but fair hand.",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d40+400",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": -20,
+        "Hitroll": 10,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d10+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 300,
+      "Experience": 12000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3812,
+      "Name": "karo dog",
+      "ShortDescription": "\nKaro",
+      "LongDescription": "\nKaro, the mayor's loyal watchdog is here.",
+      "Description": "\nKaro, the hobbit mayor's loyal watchdog is here, looking confused. This dog\nappears to have a problem with both his IQ and his weight. However, he is big\nand you have the feeling that he bites hard.",
+      "Level": 10,
+      "Race": "Hound",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d8+130",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 3800,
+      "Name": "leaf tobacco",
+      "ShortDescription": "\nA tobacco-leaf",
+      "Description": "\nA small but nice-smelling tobacco leaf is lying here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 8,
+          "Poisoned": true
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 50,
+      "CostPerDay": 25,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3801,
+      "Name": "monocle",
+      "ShortDescription": "\nA small monocle",
+      "Description": "\nA small monocle is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 1500,
+      "CostPerDay": 250,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3802,
+      "Name": "black hat",
+      "ShortDescription": "\nA small black hat",
+      "Description": "\nA small black hat has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 150,
+      "CostPerDay": 25,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3803,
+      "Name": "tiny axe",
+      "ShortDescription": "\na tiny axe",
+      "Description": "\nA tiny axe has been left here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 10,
+      "AntiClass": "4371",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        2,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 7,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3804,
+      "Name": "medallion",
+      "ShortDescription": "\na small medallion",
+      "Description": "\nA small medallion is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 1500,
+      "CostPerDay": 250,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3805,
+      "Name": "pink potion",
+      "ShortDescription": "\na pink potion",
+      "Description": "\nA pink potion is barely visible on the ground.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        20,
+        15,
+        15,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 20,
+          "SpellIds": [
+            15,
+            15,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 2500,
+      "CostPerDay": 250,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3806,
+      "Name": "small red wand",
+      "ShortDescription": "\na small red wand",
+      "Description": "\nA small red wand have been left here.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 16,
+      "AntiClass": "322732",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        5,
+        8,
+        8,
+        26,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 26,
+          "Level": 5,
+          "Charges": 8,
+          "ChargesRemaining": 8
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1500,
+      "CostPerDay": 250,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3807,
+      "Name": "key",
+      "ShortDescription": "\na tiny key",
+      "Description": "\nA tiny key is lying here. You hardly notice it.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 100
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 50,
+      "CostPerDay": 25,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3808,
+      "Name": "water well",
+      "ShortDescription": "\na hobbit well",
+      "Description": "\nA small hobbit well is here.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoSweep"
+      ],
+      "WearFlags": [],
+      "Values": [
+        100,
+        100,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 100,
+          "Amount": 100,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3809,
+      "Name": "key",
+      "ShortDescription": "\na small key",
+      "Description": "\nA key to hobbit mayor's office lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 100
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

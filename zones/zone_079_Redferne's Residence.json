@@ -1,0 +1,1807 @@
+{
+  "Zone": {
+    "Id": 79,
+    "Name": "Redferne's Residence",
+    "TopRoomId": 7999,
+    "Lifespan": 50,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7900,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7901,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7902,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7901,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7901,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7910,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7910,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7903,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7904,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7913,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7911,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7912,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7904,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7905,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7906,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7908,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7906,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7907,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7009,
+        "Arg2": 1,
+        "Arg3": 7900,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7212,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7217,
+        "Arg2": 5,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7218,
+        "Arg2": 5,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7219,
+        "Arg2": 5,
+        "Arg3": 9,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7220,
+        "Arg2": 5,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7221,
+        "Arg2": 5,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7223,
+        "Arg2": 5,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7222,
+        "Arg2": 5,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 7090,
+        "Arg2": 40,
+        "Arg3": 7907,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6013,
+        "Arg2": 10,
+        "Arg3": 7908,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 7900,
+      "Name": "Outside Redferne's residence",
+      "Description": "\n   A huge cloud forms the plateau on which you are now standing. The wind here\nis absolutely quiet and the sun is shining warmly upon you. From under the\ncloud you can hear the faint sounds of Midgaard. Right before you to the north\nlies the grand Mansion of Naris, the residence of the Greater God Redferne.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7901,
+          "Description": "You see a HUGE arched gate leading into this magnificent building.",
+          "Keywords": [
+            "gate",
+            "door",
+            "huge",
+            "arched"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7901
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7918,
+          "Description": "You see a Huge Chain that anchors the Mansion of Naris to the ground.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7901,
+      "Name": "The Southern end of the hall",
+      "Description": "\n   You are standing in a vast hall that is dimly lit, but from where the light\ncomes, is a mystery. The walls seem to radiate warmth and give the pleasant\nfeeling of being welcome here. A large portrait is hanging on one of the walls.\nA large wooden staircase leads up into the tower. To the east there is a high\npassage away from the hall. This ends shortly after by a tall oak door. The\nenormous hall extends further north from here. To the south you can see a huge,\nand VERY heavy- looking iron-wrought door. It looks like this is the only exit\nfrom this magnificent old house. To the west you can see a large ashen door.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7904,
+          "Description": "The hallway continues that way. You can see more doorways under the wooden\nstaircase in that direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7910,
+          "Description": "You see there a tall oak door. It looks quite tightly closed to you. On it\nlittle runes are chiseled into the wood.",
+          "Keywords": [
+            "oak",
+            "tall",
+            "east",
+            "oakdoor",
+            "talldoor",
+            "eastdoor"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7900,
+          "Description": "Here you see a REAL door. It would be more proper to call this a \"GATE\", rather\nthan a \"door\". It's really HUGE! On it hangs a large sign with very large\nletters spelling : \"EMERGENCY EXIT\".",
+          "Keywords": [
+            "gate",
+            "south",
+            "exit",
+            "iron",
+            "huge",
+            "emergency"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7901
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7902,
+          "Description": "This looks like a \"door\" in the meaning of the word. The ashen wood is painted\nin a peculiar yellow color. Small letters are written with black on it.",
+          "Keywords": [
+            "ashen",
+            "ash",
+            "door",
+            "west",
+            "yellow"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7909,
+          "Description": "You see the staircase extending upwards into the very high tower. It ends in\nwhat seems like a large bedroom up there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "runes"
+          ],
+          "Description": "\nThese runes are utterly strange to you, but you are in luck today: Under\nthe runes you can just make out a sentence in Common.  It goes : \" Stay out,\nif you treasure your life.  That is if you are mortal.\"."
+        },
+        {
+          "Keywords": [
+            "letters"
+          ],
+          "Description": "\nThey read \"LIBRARY\"."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7902,
+      "Name": "Redferne's Library",
+      "Description": "\n   This is truly a magnificent place! Books and scrolls lie together on every\nshelf. A large globe, with the map of the Mud-world upon it, stands in the\ndimly lit north-western corner of the room. Two large and comfortable- looking\nleather arm-chairs adorn the center of the library together with a huge oak\ndesk. Dim light radiates from an enormous crystal chandelier hanging down from\nthe ceiling approximately 10 feet off the floor. To the east there is a great\nold ashen door. A large glass window is set in the west wall.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7901,
+          "Description": "You can see an old ashen door, painted in a peculiar yellow color.",
+          "Keywords": [
+            "door",
+            "ash",
+            "ashen",
+            "east"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "globe",
+            "world",
+            "map"
+          ],
+          "Description": "\nYou see a large world map stretch out on the enormous globe.  It has towns\ndrawn in every spot available for such.  In the middle of the map you can\nspot a large town with the name 'MIDGAARD' written over it.  The rest is\nmountains, woods, plains and water."
+        },
+        {
+          "Keywords": [
+            "midgaard",
+            "town",
+            "city"
+          ],
+          "Description": "\nYou see a small speck with woods on the west from it, plains to the east\nfrom it and mountains to the north from it.  To the south from it you can\nsee a thin trail lead to a large castle.  Finally you notice a rather large\nriver pour in from the east and go through Midgaard in the middle."
+        },
+        {
+          "Keywords": [
+            "chairs",
+            "leather",
+            "arm-chairs"
+          ],
+          "Description": "\nThese two chair are exactly alike one another.  They look incredibly\ncomfortable.  They're both made from old leather, and yet they seem so worn\nthat they can be nothing but a perfect place for a long needed rest."
+        },
+        {
+          "Keywords": [
+            "window",
+            "glass"
+          ],
+          "Description": "\nThese windows are really BIG!  They reach from about 20 inches above the\nfloor to approximately 10 inches under the ceiling.  If you try and\n\"look out\", you might see what might lie beyond these windows."
+        },
+        {
+          "Keywords": [
+            "out",
+            "outside",
+            "beyond"
+          ],
+          "Description": "\nThe clouds muster and form the ground on which this entire building is set.\nThrough the thinnest of the clouds you can just make out MIDGAARD with all\nit's magnificent activity."
+        },
+        {
+          "Keywords": [
+            "river"
+          ],
+          "Description": "\nYou see a large and winding river cut through the landscape, starting at an\nenormous inland lake, it seeps through Midgaard and finally ends up in the\nGrand Sea on the West-coast of the land."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7903,
+      "Name": "The Artifact room of Naris",
+      "Description": "\n   This is gloomy and dark room with only a faint light radiating from the\nwalls. A bunch of funny-looking items fill the center of the room. There are no\nfurniture here what-so-ever. The only way out seems to be west, through the low\nsteel door.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7910,
+          "Description": "You see only the back of a safe's steel door.",
+          "Keywords": [
+            "steel",
+            "door",
+            "exit",
+            "safe"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7900
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7904,
+      "Name": "The Northern end of the hall",
+      "Description": "\n   You are standing in the northern end of the huge hall. This part is under\nthe grand wooden staircase so the light seems a little less bright here, but\nthis doesn't bother your sight at all. To the north lies the kitchen. To the\nsouth lies the Southern end of the hall. To the east there is a huge metal\ndoor. To the west there is a large aspenwood door.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7913,
+          "Description": "You see a huge metal door. From it a foul stench emanates. The smell is the\nmost awful experience in your entire life. A thought seeps through this\nterrible stench and into your mind : \"Monsters\", you feel BAD about opening\nthat door.",
+          "Keywords": [
+            "steel",
+            "metal",
+            "huge"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7901,
+          "Description": "The rest of the hall lies in that direction, and so does the exit.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7905,
+          "Description": "The door has \"SITTING ROOM\" written on it. It is made from Aspenwood and is\nbeautifully carved with small elves as main issue of sculpture.",
+          "Keywords": [
+            "aspen",
+            "asp"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7905,
+      "Name": "The Sitting room of Naris",
+      "Description": "\n   You are standing in the middle of a really comfortable place. The walls are\ndecorated with paintings of smiling Kings and Queens. The most attractive\npicture is one of a Prince in shiny armor. By one of the walls there is an old\narm-chair. The only exit is through the aspenwood door to the east.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7904,
+          "Description": "The door seems to be a very HEAVY door, carved completely from the trunk of an\nAspen tree.",
+          "Keywords": [
+            "asp",
+            "aspen",
+            "door",
+            "heavy"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chair",
+            "arm-chair"
+          ],
+          "Description": "\nThis is truly a wonderful relic of the past.  In it is a large cushion."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7906,
+      "Name": "The Kitchen of Naris",
+      "Description": "\n   This must be the place of food and drink. You can hear the faint noise of\nrats feasting on meat and bread from somewhere indeterminable. The sound makes\nyou feel the agony of HUNGER. The only visible exit is south to the Northern\nend of the hall.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7907,
+          "Description": "It's dark in there. But the sounds from there are unmistakable. The rats are\nhere to your information.",
+          "Keywords": [
+            "larder",
+            "wooden",
+            "cupboard"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7908,
+          "Description": "You can see the fridge from here. In it are drinks all over.",
+          "Keywords": [
+            "fridge"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7904,
+          "Description": "You can see the northern end of the hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7907,
+      "Name": "The Larder",
+      "Description": "\n   You can see food all over. Among the heaps of food you notice HUGE rats\nscuttling around, nibbling pieces off the heaps here and there.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7906,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "larder",
+            "exit"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7908,
+      "Name": "The Fridge",
+      "Description": "\n   This place is LOADED with drink, water and booze.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7906,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "exit",
+            "fridge"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7909,
+      "Name": "On the stairs",
+      "Description": "\n   You can see up and down the stairway. It seems to take forever, either going\nup OR down. It's just a seemingly insurmountable climb, either way. Up is the\nbedroom of Redferne, and Down leads to the Southern end of the hall.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7911,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7901,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7910,
+      "Name": "The Treasure room",
+      "Description": "\n   This place is gloomy. A HUGE safe is cemented into the west wall. The only\nvisible exit is west, through the oak door.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7903,
+          "Description": "",
+          "Keywords": [
+            "safe",
+            "steel"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 7900
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7901,
+          "Description": "You see a tall oak door.",
+          "Keywords": [
+            "door",
+            "oak",
+            "tall"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7911,
+      "Name": "Redferne's Bedroom",
+      "Description": "\n   This is a snugly set bedroom with all the necessities for a romantic\nevening. A large fireplace adorns the east wall, and sizzling away is the wood\nthat is ablaze within. The bed is enormous, covering at least HALF of this\ngreat room. This stretches at least 140 square feet, so can you imagine the\nBED? A large staircase leads down to the hall. A couple of doors open up to a\nbroad balcony to the south.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7912,
+          "Description": "The suns seems to shine out there, warmly and comforting.",
+          "Keywords": [
+            "doors"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7909,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7912,
+      "Name": "The Balcony of Redferne's Residence",
+      "Description": "\n   You see a splendid of the most of this world. The valleys stretch as far as\nthe eye reaches to the south from here. Down below you can see the entrance of\nthis magnificent building. To the north are the doors to Redferne's Bedroom.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7911,
+          "Description": "You see the comfortable bedroom of Naris, the mansion of Redferne the Greater\nGod.",
+          "Keywords": [
+            "doors"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": -1,
+          "Description": "You see the ground on which this castle is set. Funnily it seems to you that\nit's no more than clouds.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7913,
+      "Name": "The Monster Pen",
+      "Description": "\n   This looks like the cage in which a large carnivore is being kept. Judging\nby the state the walls are in, this could very well be a large AGGRESSIVE\nanimal. This makes you pretty insecure, this stating your feeling about the\nplace quite mildly.",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7904,
+          "Description": "This looks like the only exit from here.",
+          "Keywords": [
+            "door",
+            "cage",
+            "metal",
+            "pen"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7914,
+      "Name": "On the Huge Chain",
+      "Description": "\n   This place has quite a good view over Midgaard. Your possibilities of\nmovement seems to extend only to up and down. Unless you want to let go of the\nsecure and seemingly unmovable chain, then those are the directions you should\ntake from here.",
+      "ZoneId": 79,
+      "Sector": "Mountain",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7915,
+          "Description": "Up the way you see the chain disappearing into the clouds above.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3120,
+          "Description": "Down below you see the huge chain anchored to the ground in the Road Crossing.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7915,
+      "Name": "The Chain where it's too windy",
+      "Description": "\n   Hanging on to the chain you figure out that there's no way of leaving down\nfrom here. The wind pulls you from left to right and back. This seems like a\ntotally impossible task. The ascend is the only way ahead for you. Otherwise\nyou would risk death by falling to the hard ground below. DO NOT DESCEND NOW OR\nYOU'LL SURELY DIE!!!!",
+      "ZoneId": 79,
+      "Sector": "Mountain",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7916,
+          "Description": "That way seems to be the only way away from here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7920,
+          "Description": "THAT WAY IS CERTAIN DEATH!!!! You can see the wind tearing at the chain down\nbelow you. It swings like a furious serpent from side to side! The descend is\nABSOLUTELY out of the QUESTION.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7916,
+      "Name": "On the Great Chain of Naris",
+      "Description": "\n   You are approximately on the middle of the treacherous Chain. One false step\nand death will come and collect you quickly. The chain leads upwards and down.\nNo way are you going to descend now... You've only just begun your climb.\nBesides it could cost you your life. Look down and you'll see why.",
+      "ZoneId": 79,
+      "Sector": "Mountain",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7918,
+          "Description": "There seems to be only one way from here and that's up.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7915,
+          "Description": "The chain down there is swinging wildly back and forth. Going down there will\nbe pretty risky!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7917,
+      "Name": "The Chain",
+      "Description": "\n   As you descend, the chain seems to absorb all weather around it, making it\nswing less and less in the very powerful wind tearing at it. The Chain seems to\nchuckle quietly, and as you descend further you hear a soft whisper originating\nfrom within the Chain *ITSELF*. It says, \" Welcome back some other time,\nstranger. Your company is always ... hmmm ... interesting. God Speed. \" The\nchain extends further down through the now spreading clouds.",
+      "ZoneId": 79,
+      "Sector": "Mountain",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": -1,
+          "Description": "It seems to you that the Chain is dissolving again. Maybe it's just an\nillusion, but still ... !",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7914,
+          "Description": "That way seems safe enough ... now.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7918,
+      "Name": "The Mighty Chain of Naris",
+      "Description": "\n   This place truly a splendid view of the WHOLE COUNTRY SIDE!!! A magnificent\nlight shines upon you and the way up through the clouds is opened. Up there you\ncan now see the Mansion of Naris, Residence of the Greater God Redferne. The\nchain beneath you seems to evaporate in the mustering clouds that surround you\nby now.",
+      "ZoneId": 79,
+      "Sector": "Mountain",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7900,
+          "Description": "You see the sunny top of the clouds. Beyond these, the Mansion towers before\nyour eyes. Beautiful!!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7917,
+          "Description": "You see nothing but the thick clouds. They've closed completely around the\nChain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7920,
+      "Name": "Free fall from the Chain",
+      "Description": "\n   This is probably the third worst place to be in this entire MUD right now.\nYou fall . . . and fall . . . and fall . . . and HIT THE GROUND WITH SUCH A\n*SPLUTCH* that you die horribly, but instantly. Bye Cruel World. You lose all\nyour things immediately, Sorry!!",
+      "ZoneId": 79,
+      "Sector": "Inside",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 3120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7915,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7916,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7917,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7918,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 7914,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 7009,
+      "Name": "grand knight paladin",
+      "ShortDescription": "\nthe Grand Knight of Paladins",
+      "LongDescription": "\nThe Grand Knight is standing here, waiting for someone to help.",
+      "Description": "\nThe Knight is standing here, smiling at you.  He is dressed all in white, blue\nand silver.  He looks VERY strong, as he stands here, ready to help the\ninnocent.",
+      "Level": 26,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 7090,
+      "Name": "waybread food",
+      "ShortDescription": "\na waybread",
+      "Description": "\nSome waybread has been put here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 24,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 50,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "waybread"
+          ],
+          "Description": "\nThe waybread is the traditional feed of elves when travelling, they call it\nlembas.  It is said to refresh the weary traveler greatly."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7212,
+      "Name": "sword bastard",
+      "ShortDescription": "\na huge bastard sword",
+      "Description": "\nThere is a huge bastard sword here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 20,
+      "AntiClass": "270199",
+      "ExtraFlags": [
+        "Magic",
+        "AntiEvil",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Waist"
+      ],
+      "Values": [
+        0,
+        2,
+        10,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 10,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 18,
+      "Cost": 7000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bastard",
+            "sword"
+          ],
+          "Description": "\nQuite a heavy weapon, with a pure white hilt."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7217,
+      "Name": "plate breast silvery PalItem",
+      "ShortDescription": "\na silvery breast plate",
+      "Description": "\nThere is a silvery breast plate on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 13,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Magic",
+        "Bless",
+        "AntiEvil",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 110,
+      "Cost": 2500,
+      "CostPerDay": 1300,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plate",
+            "breast"
+          ],
+          "Description": "\nOn the breast plate you notice a relief of large rose. The metal seems to be \nsome kind of silver or platinum."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7218,
+      "Name": "greaves silvery PalItem",
+      "ShortDescription": "\na pair of silvery greaves",
+      "Description": "\nOn the floor you see a shiny pair of greaves.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 13,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Magic",
+        "Bless",
+        "AntiEvil",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 40,
+      "Cost": 1250,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "greaves"
+          ],
+          "Description": "\nThey seem to be made from silver or platinum. You see the outline of a rose."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7219,
+      "Name": "gauntlets silvery PalItem",
+      "ShortDescription": "\na pair of silvery gauntlets",
+      "Description": "\nYou can see a pair of gauntlets on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 13,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Magic",
+        "Bless",
+        "AntiEvil",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 24,
+      "Cost": 900,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gauntlets"
+          ],
+          "Description": "\nThey seem to be made from silver or platinum. You see the outline of a rose."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7220,
+      "Name": "helmet",
+      "ShortDescription": "\na silvery helmet",
+      "Description": "\nA silvery helmet lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 13,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Magic",
+        "Bless",
+        "AntiEvil",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 40,
+      "Cost": 12000,
+      "CostPerDay": 13000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "helmet"
+          ],
+          "Description": "\nThe helmet is made from platinum or silver and has a white fur brush attached\non the top."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 2
+        },
+        {
+          "Location": "Mana",
+          "Modifier": 15
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7221,
+      "Name": "shield rose",
+      "ShortDescription": "\na shield of the rose",
+      "Description": "\nA shield of the rose rests on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 25,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Magic",
+        "Bless",
+        "AntiEvil",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 60,
+      "Cost": 15000,
+      "CostPerDay": 9000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shield"
+          ],
+          "Description": "\nOn the shield you see a clear and perfect painting of a dark red rose on a \nwhite background.  You also notice the inscription :'Pax Est Sanctuum'."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7222,
+      "Name": "boots",
+      "ShortDescription": "\na pair of silvery plated boots",
+      "Description": "\nA pair of heavy plated boots stand on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 10,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Magic",
+        "Bless",
+        "AntiEvil",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 40,
+      "Cost": 1000,
+      "CostPerDay": 900,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "boots"
+          ],
+          "Description": "\nThe boots are made from a silvery metal."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": 20
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7223,
+      "Name": "plates arm",
+      "ShortDescription": "\na pair of silvery arm plates",
+      "Description": "\nOn the floor you see some arm plates.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 13,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Magic",
+        "Bless",
+        "AntiEvil",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 40,
+      "Cost": 1250,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plates",
+            "arm"
+          ],
+          "Description": "\nThey seem to be made from silver or platinum. You see the outline of a rose."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6013,
+      "Name": "water barrel",
+      "ShortDescription": "\na barrel",
+      "Description": "\nA water barrel has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        40,
+        40,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 40,
+          "Amount": 40,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 45,
+      "Cost": 60,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

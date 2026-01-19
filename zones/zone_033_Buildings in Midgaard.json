@@ -1,0 +1,141 @@
+{
+  "Zone": {
+    "Id": 33,
+    "Name": "Buildings in Midgaard",
+    "TopRoomId": 3399,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3300,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3118,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3100,
+        "Arg2": 777,
+        "Arg3": 3300,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 6904,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3126,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 3300,
+      "Name": "Papi's Cozy Cottage",
+      "Description": "\n   You are inside Papi's living room, a light room at around three by four\nt(meters in size. The nicely carved oaken front door is set in the middle of\nthe western wall, just between two windows. A small fire crackles in the\nfireplace which is set against the northern wall.",
+      "ZoneId": 33,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3118,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 3300
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 3100,
+      "Name": "tea cup",
+      "ShortDescription": "\na cup",
+      "Description": "\nA cup has been set here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        11,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 11,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 5,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cup"
+          ],
+          "Description": "\nIt is a small simple cup."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}
