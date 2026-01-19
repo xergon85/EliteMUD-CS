@@ -1,6 +1,7 @@
 using EliteMud.Application.Commands.ImportLegacy;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
+using EliteMud.Application.Commands.Score;
 using EliteMud.Application.Session;
 using EliteMud.Legacy.Import;
 using EliteMud.Scripting;
@@ -33,6 +34,7 @@ internal static class CommandServiceCollectionExtensions
                 provider.GetRequiredService<ConnectionRegistry>().GetConnections
             ))
             .AddSingleton<ResetZoneCommandHandler>()
+            .AddSingleton<ScoreHandler>()
             .AddSingleton<WhoCommandHandler>(provider =>
                 new WhoCommandHandler(provider.GetRequiredService<ConnectionRegistry>().GetConnections
             ))

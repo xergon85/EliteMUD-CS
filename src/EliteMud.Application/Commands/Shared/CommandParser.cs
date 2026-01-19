@@ -20,6 +20,7 @@ public enum CommandKind
     Load,
     Search,
     Who,
+    Score,
     ResetZone,
     Say,
     Move,
@@ -130,6 +131,12 @@ public sealed class CommandParser
         if (trimmed.Equals("who", StringComparison.OrdinalIgnoreCase))
         {
             return new CommandRequest(CommandKind.Who, null, null);
+        }
+
+        if (trimmed.Equals("score", StringComparison.OrdinalIgnoreCase)
+            || trimmed.Equals("sc", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Score, null, null);
         }
 
         if (trimmed.Equals("zreset", StringComparison.OrdinalIgnoreCase)

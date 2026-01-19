@@ -79,21 +79,96 @@ public sealed class PlayerState
     private readonly List<int> _inventoryObjectIds = new();
     private readonly Dictionary<int, int> _equipmentSlotToObjectId = new(); // slot -> objectInstanceId
 
-    public PlayerState(int id, string name, int roomId)
+    public PlayerState(
+        int id,
+        string name,
+        int roomId,
+        byte level = 1,
+        string characterClass = "Warrior",
+        string race = "Human",
+        byte sex = 0)
     {
         Id = id;
         Name = name;
         RoomId = roomId;
+        Level = level;
+        CharacterClass = characterClass;
+        Race = race;
+        Sex = sex;
+        
+        // Initialize with default starting values
+        // These match legacy starting character defaults
+        Strength = 16;
+        StrengthAdd = 0;
+        Intelligence = 16;
+        Wisdom = 16;
+        Dexterity = 16;
+        Constitution = 16;
+        Charisma = 16;
+        
+        MaxHitPoints = 20;
+        HitPoints = 20;
+        MaxMana = 100;
+        Mana = 100;
+        MaxMovement = 100;
+        Movement = 100;
+        
+        ArmorClass = 100; // Legacy: -100 to 100 (higher is worse)
+        Gold = 0;
+        BankGold = 0;
+        Experience = 0;
+        
+        Hitroll = 0;
+        Damroll = 0;
+        
+        Alignment = 0; // Neutral
     }
 
+    // ===== Identity =====
     public int Id { get; }
-
     public string Name { get; }
+    public string? Title { get; set; }
+    public string? Description { get; set; }
+    public byte Sex { get; set; } // 0 = neutral, 1 = male, 2 = female
 
+    // ===== Location =====
     public int RoomId { get; set; }
 
-    public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
+    // ===== Class & Level =====
+    public string CharacterClass { get; set; }
+    public string Race { get; set; }
+    public byte Level { get; set; }
+    public int Experience { get; set; }
 
+    // ===== Core Abilities (Stats) =====
+    public sbyte Strength { get; set; }
+    public sbyte StrengthAdd { get; set; } // 0-100 if Strength == 18
+    public sbyte Intelligence { get; set; }
+    public sbyte Wisdom { get; set; }
+    public sbyte Dexterity { get; set; }
+    public sbyte Constitution { get; set; }
+    public sbyte Charisma { get; set; }
+
+    // ===== Vitals (Hit/Mana/Movement) =====
+    public short HitPoints { get; set; }
+    public short MaxHitPoints { get; set; }
+    public short Mana { get; set; }
+    public short MaxMana { get; set; }
+    public short Movement { get; set; }
+    public short MaxMovement { get; set; }
+
+    // ===== Combat Stats =====
+    public short ArmorClass { get; set; } // -100 to 100 (higher = worse)
+    public sbyte Hitroll { get; set; }    // Bonus to hit
+    public sbyte Damroll { get; set; }     // Bonus to damage
+    public int Alignment { get; set; }     // -1000 (evil) to +1000 (good)
+
+    // ===== Resources =====
+    public int Gold { get; set; }
+    public int BankGold { get; set; }
+
+    // ===== Inventory & Equipment =====
+    public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
     public IReadOnlyDictionary<int, int> EquipmentSlotToObjectId => _equipmentSlotToObjectId;
 
     public void AddToInventory(int objectInstanceId)
