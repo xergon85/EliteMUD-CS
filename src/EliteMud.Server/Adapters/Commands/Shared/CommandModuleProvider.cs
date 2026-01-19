@@ -1,5 +1,7 @@
+using EliteMud.Server.Adapters.Commands.Drop;
 using EliteMud.Server.Adapters.Commands.Examine;
 using EliteMud.Server.Adapters.Commands.Get;
+using EliteMud.Server.Adapters.Commands.Inventory;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Move;
 using EliteMud.Server.Adapters.Commands.NoOp;
@@ -21,6 +23,8 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new LookCommandModule(),
             new ExamineCommandModule(),
             new GetCommandModule(),
+            new DropCommandModule(),
+            new InventoryCommandModule(),
             new WhoCommandModule(),
             new ResetZoneCommandModule(),
             new SayCommandModule(),

@@ -10,6 +10,8 @@ public enum CommandKind
     Look,
     Examine,
     Get,
+    Drop,
+    Inventory,
     Who,
     ResetZone,
     Say,
@@ -61,6 +63,19 @@ public sealed class CommandParser
             var spaceIndex = trimmed.IndexOf(' ');
             var target = trimmed[(spaceIndex + 1)..].Trim();
             return new CommandRequest(CommandKind.Get, target, null);
+        }
+
+        if (trimmed.StartsWith("drop ", StringComparison.OrdinalIgnoreCase))
+        {
+            var target = trimmed[5..].Trim();
+            return new CommandRequest(CommandKind.Drop, target, null);
+        }
+
+        if (trimmed.Equals("inventory", StringComparison.OrdinalIgnoreCase)
+            || trimmed.Equals("inv", StringComparison.OrdinalIgnoreCase)
+            || trimmed.Equals("i", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Inventory, null, null);
         }
 
         if (trimmed.Equals("who", StringComparison.OrdinalIgnoreCase))
