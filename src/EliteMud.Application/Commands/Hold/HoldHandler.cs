@@ -27,9 +27,13 @@ public sealed class HoldHandler
         {
             if (MatchesTarget(obj.Definition, target))
             {
-                // Legacy behavior: Check object Type to determine equipment slot
-                // Light objects (Type="Light") go to WEAR_LIGHT slot and only need Take flag
-                // Other objects go to HOLD slot and need Hold flag
+                // Legacy EliteMUD behavior (see act.obj2.c:do_grab):
+                // The 'hold' command has special handling for Light objects.
+                // - Light objects (Type==ITEM_LIGHT) → WEAR_LIGHT slot (requires only ITEM_TAKE)
+                // - All other objects → HOLD slot (requires ITEM_HOLD flag)
+                // 
+                // This is a legacy design choice where lights can't be equipped via 'wear',
+                // only via 'hold', and they go to a dedicated light source slot.
                 EquipmentSlot slot;
                 
                 if (obj.Definition.Type == "Light")
