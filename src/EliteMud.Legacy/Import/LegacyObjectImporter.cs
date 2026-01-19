@@ -74,6 +74,10 @@ internal static class LegacyObjectImporter
                 ParseObjectExtensions(parser, extras, affects, bitvectors, ref specialProc);
 
                 var typeName = LegacyImportLookup.ItemTypeFromIndex(type);
+                var wearFlagsList = LegacyImportLookup.ItemWearFlags(wearFlags);
+                
+                // Fix corrupted WearFlags based on item type
+                wearFlagsList = FixWearFlags(typeName, wearFlagsList);
 
                 objects.Add(new ObjectContent
                 {
@@ -86,7 +90,7 @@ internal static class LegacyObjectImporter
                     Level = level,
                     AntiClass = LegacyImportLookup.AntiClassFromIndex(antiClass),
                     ExtraFlags = LegacyImportLookup.ItemExtraFlags(extraFlags),
-                    WearFlags = LegacyImportLookup.ItemWearFlags(wearFlags),
+                    WearFlags = wearFlagsList,
                     Values = values,
                     Details = details,
                     Weight = weight,
@@ -252,5 +256,55 @@ internal static class LegacyObjectImporter
                 }
             }
         }
+    }
+
+    private static IReadOnlyList<string> FixWearFlags(string itemType, IReadOnlyList<string> wearFlags)
+    {
+        // The legacy .obj files have corrupted wear flags where weapons have bit 13 (Waist)
+        // set instead of bit 16 (Wield). Fix these based on item type.
+        
+        if (wearFlags.Count == 0)
+        {
+            return wearFlags;
+        }
+
+        var hasTake = wearFlags.Contains("Take");
+        var fixedFlags = new List<string>();
+
+        // Fix based on item type
+        switch (itemType)
+        {
+            case "Weapon":
+            case "FireWeapon":
+                // Weapons: should be [Take, Wield] or [Take, WieldTwoHanded]
+                if (wearFlags.Contains("Waist"))
+                {
+                    // Replace Waist with Wield
+                    if (hasTake) fixedFlags.Add("Take");
+                    fixedFlags.Add("Wield");
+                    return fixedFlags;
+                }
+                if (wearFlags.Contains("WristRight") || wearFlags.Contains("WristLeft"))
+                {
+                    // Two-handed weapons mistakenly marked as wrist items
+                    if (hasTake) fixedFlags.Add("Take");
+                    fixedFlags.Add("WieldTwoHanded");
+                    return fixedFlags;
+                }
+                break;
+
+            case "Light":
+                // Light sources: should be [Take, Light] or [Take, Hold]
+                if (hasTake && wearFlags.Count == 1)
+                {
+                    fixedFlags.Add("Take");
+                    fixedFlags.Add("Light");
+                    return fixedFlags;
+                }
+                break;
+        }
+
+        // No fix needed, return original
+        return wearFlags;
     }
 }
