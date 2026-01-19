@@ -262,8 +262,14 @@ internal sealed class WorldState : IWorldState
             return;
         }
 
-        // TODO: Implement mob equipment storage
-        // For now, this is a placeholder - need to add equipment to MobInstance
+        if (!_objectDefinitions.TryGetValue(reset.ObjectId.Value, out var objectDefinition))
+        {
+            return;
+        }
+
+        var slot = (EquipmentSlot)reset.EquipSlot.Value;
+        var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
+        mob.Equip(objectInstance, slot);
     }
 
     private void ExecuteGiveMob(ZoneResetDefinition reset, MobInstance? mob, Random random)
