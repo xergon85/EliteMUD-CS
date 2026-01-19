@@ -1220,7 +1220,7 @@
     {
       "Id": 2101,
       "Name": "A Dark Alleyway (PKOK ZONE)",
-      "Description": "\nThe walls of the alleyway have been spray painted over many times over the\nyears. One section of graffiti actually looks legible.  It says, \"This\nsection has been designed as a player killer area.  Within this area, there\nare few rules #g(See HELP PK  for a listing of them)#N, so if you don't like\nthat, then please turn back!  There is another section of graffiti saying, \nRaff Rules! There is a boulevard to the east and Wall Road  to the west.\n§N",
+      "Description": "\nThe walls of the alleyway have been spray painted over many times over the\nyears. One section of graffiti actually looks legible.  It says, \"This\nsection has been designed as a player killer area.  Within this area, there\nare few rules #g(See HELP PK  for a listing of them)#N, so if you don't like\nthat, then please turn back!  There is another section of graffiti saying, \nRaff Rules! There is a boulevard to the east and Wall Road  to the west.\n\u00a7N",
       "ZoneId": 21,
       "Sector": "City",
       "Flags": [
@@ -3798,7 +3798,7 @@
     {
       "Id": 2171,
       "Name": "Wall Road",
-      "Description": "\nThe road extends south along the inside of the wall surrounding the city.\nYou spy the start of a bridge to the east.  Their seems to be a trail of \nblood leading south, probably from some poor adventurer straying into the\ndeadly part of town.\n§N",
+      "Description": "\nThe road extends south along the inside of the wall surrounding the city.\nYou spy the start of a bridge to the east.  Their seems to be a trail of \nblood leading south, probably from some poor adventurer straying into the\ndeadly part of town.\n\u00a7N",
       "ZoneId": 21,
       "Sector": "City",
       "Flags": [],
@@ -3828,7 +3828,7 @@
     {
       "Id": 2172,
       "Name": "Wall Road",
-      "Description": "\nWall road extends north along the inside of the city wall.  A dark alley\nlies to the east.  A trail of blood extends from the north and pools nearby.\nWritten on a wall is the following inscription: #r\nTO THE EAST LIES THE DUELING GROUNDS OF ADVENTURERS #g(PK ZONE)#r\nTHIS IS A PLACE ADVENTURERS DIE BY THE HANDS OF OTHER ADVENTURERS.\nNOW IS A GOOD TIME TO GO BACK. #g(Head North to leave)#y\n\nIf you are unfamiliar with the PK rules on Elite, please type:\n>HELP PK\nIf you have questions about the rules, please contact an Imm (see Immlist)\nIf you have any doubts on this, please go north and back to Midgaard now.\n§N",
+      "Description": "\nWall road extends north along the inside of the city wall.  A dark alley\nlies to the east.  A trail of blood extends from the north and pools nearby.\nWritten on a wall is the following inscription: #r\nTO THE EAST LIES THE DUELING GROUNDS OF ADVENTURERS #g(PK ZONE)#r\nTHIS IS A PLACE ADVENTURERS DIE BY THE HANDS OF OTHER ADVENTURERS.\nNOW IS A GOOD TIME TO GO BACK. #g(Head North to leave)#y\n\nIf you are unfamiliar with the PK rules on Elite, please type:\n>HELP PK\nIf you have questions about the rules, please contact an Imm (see Immlist)\nIf you have any doubts on this, please go north and back to Midgaard now.\n\u00a7N",
       "ZoneId": 21,
       "Sector": "City",
       "Flags": [
@@ -4389,7 +4389,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist"
+        "Wield"
       ],
       "Values": [
         0,
@@ -4551,7 +4551,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Waist"
+        "Wield"
       ],
       "Values": [
         0,
@@ -4777,7 +4777,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Waist"
+        "Wield"
       ],
       "Values": [
         0,

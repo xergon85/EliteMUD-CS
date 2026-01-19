@@ -10821,7 +10821,7 @@
     },
     {
       "Id": 6621,
-      "Name": "Barns & Nibble Café",
+      "Name": "Barns & Nibble Caf\u00e9",
       "Description": "\n   This cafe feels like the living room of your great aunt right down\nto the odd cats wandering through, brushing against your legs.\nComfortable chairs and tables fill the room, but the large plants and\nscreens provide an atmosphere of privacy where you can sit and chat.\nThe walls are lined with ancient books containing the wisdom of the\nelder Elves.  This would be a cozy place to rest a while.  You notice a\nsign hanging at the end of one of the shelves of books.",
       "ZoneId": 66,
       "Sector": "Inside",
@@ -25089,7 +25089,8 @@
         "Glow"
       ],
       "WearFlags": [
-        "Take"
+        "Take",
+        "Light"
       ],
       "Values": [
         0,
@@ -25160,8 +25161,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         90,
@@ -26187,8 +26187,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         90,
@@ -26684,8 +26683,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         85,
@@ -27765,8 +27763,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         33,
@@ -28644,7 +28641,6 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
         "Wield"
       ],
       "Values": [
@@ -30355,8 +30351,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         100,
@@ -30747,8 +30742,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         60,
@@ -31207,8 +31201,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         1,
@@ -31544,8 +31537,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         10,
@@ -31679,8 +31671,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         75,
@@ -32106,8 +32097,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         10,
@@ -33312,8 +33302,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield"
       ],
       "Values": [
         85,
@@ -34290,7 +34279,8 @@
         "Glow"
       ],
       "WearFlags": [
-        "Take"
+        "Take",
+        "Light"
       ],
       "Values": [
         0,
