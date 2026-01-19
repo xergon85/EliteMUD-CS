@@ -59,7 +59,17 @@ internal sealed class TelnetSession
 
     public async ValueTask SendLineAsync(string message, CancellationToken cancellationToken)
     {
-        var payload = _encoding.GetBytes(message + "\r\n");
+        // Translate color codes (#X format) to ANSI escape sequences
+        var translatedMessage = ColorTranslator.TranslateColors(message);
+        var payload = _encoding.GetBytes(translatedMessage + "\r\n");
+        await _stream.WriteAsync(payload, cancellationToken);
+    }
+
+    public async ValueTask SendAsync(string message, CancellationToken cancellationToken)
+    {
+        // Translate color codes (#X format) to ANSI escape sequences
+        var translatedMessage = ColorTranslator.TranslateColors(message);
+        var payload = _encoding.GetBytes(translatedMessage);
         await _stream.WriteAsync(payload, cancellationToken);
     }
 

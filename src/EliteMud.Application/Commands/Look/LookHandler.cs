@@ -22,10 +22,15 @@ public sealed class LookHandler
         {
             var line = string.IsNullOrWhiteSpace(mob.Definition.LongDescription)
                 ? mob.Definition.ShortDescription
-                : mob.Definition.LongDescription.TrimEnd();
+                : mob.Definition.LongDescription;
+            
+            // Trim leading/trailing whitespace and newlines (mobs can have \n prefix like rooms)
+            line = line?.TrimStart('\n', '\r').TrimStart().TrimEnd();
+            
             if (!string.IsNullOrWhiteSpace(line))
             {
-                mobLines.Add(line);
+                // Add yellow color for NPCs (legacy: #Y...#N)
+                mobLines.Add($"#Y{line}#N");
             }
         }
 
@@ -35,10 +40,15 @@ public sealed class LookHandler
         {
             var line = string.IsNullOrWhiteSpace(obj.Definition.LongDescription)
                 ? obj.Definition.ShortDescription
-                : obj.Definition.LongDescription.TrimEnd();
+                : obj.Definition.LongDescription;
+            
+            // Trim leading/trailing whitespace and newlines (objects can have \n prefix like rooms)
+            line = line?.TrimStart('\n', '\r').TrimStart().TrimEnd();
+            
             if (!string.IsNullOrWhiteSpace(line))
             {
-                objectLines.Add(line);
+                // Add green color for objects (legacy: #G...#N)
+                objectLines.Add($"#G{line}#N");
             }
         }
 
@@ -151,15 +161,18 @@ public sealed class LookHandler
     {
         if (room.Exits.Count == 0)
         {
-            return "Exits: none.";
+            return "[Exits: #CNone!#N]";
         }
 
         var names = new List<string>(room.Exits.Count);
         foreach (var exit in room.Exits)
         {
-            names.Add(exit.Direction.ToString().ToLowerInvariant());
+            // Use single-letter abbreviations matching legacy (n/e/s/w/u/d)
+            var dir = exit.Direction.ToString().ToLowerInvariant();
+            names.Add(dir.Substring(0, 1));
         }
 
-        return $"Exits: {string.Join(", ", names)}.";
+        // Legacy format: [Exits: #C{exits}#N]
+        return $"[Exits: #C{string.Join("", names)}#N]";
     }
 }

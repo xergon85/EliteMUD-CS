@@ -37,18 +37,34 @@ internal sealed class LookCommandHandler : ICommandHandler
 
         // Otherwise, show the room
         var view = _lookHandler.Handle(context.Player);
-        await context.Session.SendLineAsync(view.Name, cancellationToken);
-        await context.Session.SendLineAsync(view.Description, cancellationToken);
+        
+        // Room name with color
+        await context.Session.SendLineAsync($"#C{view.Name}#N", cancellationToken);
+        
+        // Room description - trim leading newline/whitespace and send as-is
+        // (it already contains embedded newlines, so we use SendAsync to avoid adding extra)
+        var description = view.Description.TrimStart('\n', '\r').TrimStart();
+        await context.Session.SendAsync(description, cancellationToken);
+        
+        // Ensure description ends with newline before showing objects/mobs/exits
+        if (!description.EndsWith('\n'))
+        {
+            await context.Session.SendAsync("\r\n", cancellationToken);
+        }
+        
+        // Objects (green color)
+        foreach (var line in view.ObjectLines)
+        {
+            await context.Session.SendLineAsync(line, cancellationToken);
+        }
+        
+        // NPCs (yellow color)
         foreach (var line in view.MobLines)
         {
             await context.Session.SendLineAsync(line, cancellationToken);
         }
 
-        foreach (var line in view.ObjectLines)
-        {
-            await context.Session.SendLineAsync(line, cancellationToken);
-        }
-
+        // Exits line
         await context.Session.SendLineAsync(view.ExitLine, cancellationToken);
         await ExecuteHookAsync(context, ScriptHook.OnLook, null, cancellationToken);
         return CommandOutcome.Continue;
