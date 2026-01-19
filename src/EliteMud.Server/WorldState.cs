@@ -64,6 +64,20 @@ internal sealed class WorldState : IWorldState
         return inventory;
     }
 
+    public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> GetPlayerEquipment(PlayerState player)
+    {
+        var equipment = new Dictionary<EquipmentSlot, ObjectInstance>();
+        foreach (var (slotInt, objectId) in player.EquipmentSlotToObjectId)
+        {
+            if (_objectInstances.TryGetValue(objectId, out var obj))
+            {
+                var slot = (EquipmentSlot)slotInt;
+                equipment[slot] = obj;
+            }
+        }
+        return equipment;
+    }
+
     public ObjectInstance? GetObjectInstance(int instanceId)
     {
         return _objectInstances.TryGetValue(instanceId, out var obj) ? obj : null;
@@ -117,6 +131,53 @@ internal sealed class WorldState : IWorldState
         }
 
         roomObjects.Add(obj);
+
+        return true;
+    }
+
+    public bool EquipObject(PlayerState player, int objectInstanceId, EquipmentSlot slot)
+    {
+        // Check if player has the object in inventory
+        if (!player.InventoryObjectIds.Contains(objectInstanceId))
+        {
+            return false;
+        }
+
+        // Get the object instance
+        if (!_objectInstances.TryGetValue(objectInstanceId, out var obj))
+        {
+            return false;
+        }
+
+        // Check if object can be worn in this slot
+        var slotName = slot.ToString();
+        if (!obj.Definition.WearSlots.Contains(slotName))
+        {
+            return false;
+        }
+
+        // Try to equip to slot
+        if (!player.EquipToSlot((int)slot, objectInstanceId))
+        {
+            return false; // Slot already occupied
+        }
+
+        // Remove from inventory
+        player.RemoveFromInventory(objectInstanceId);
+
+        return true;
+    }
+
+    public bool UnequipObject(PlayerState player, EquipmentSlot slot)
+    {
+        // Try to unequip from slot
+        if (!player.UnequipFromSlot((int)slot, out var objectInstanceId))
+        {
+            return false; // Nothing equipped in that slot
+        }
+
+        // Add back to inventory
+        player.AddToInventory(objectInstanceId);
 
         return true;
     }

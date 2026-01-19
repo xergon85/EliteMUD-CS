@@ -76,11 +76,17 @@ public interface IWorldState
 
     IReadOnlyList<ObjectInstance> GetPlayerInventory(PlayerState player);
 
+    IReadOnlyDictionary<EquipmentSlot, ObjectInstance> GetPlayerEquipment(PlayerState player);
+
     ObjectInstance? GetObjectInstance(int instanceId);
 
     bool TakeObject(PlayerState player, int objectInstanceId);
 
     bool DropObject(PlayerState player, int objectInstanceId);
+
+    bool EquipObject(PlayerState player, int objectInstanceId, EquipmentSlot slot);
+
+    bool UnequipObject(PlayerState player, EquipmentSlot slot);
 
     bool ResetZone(int zoneId);
 

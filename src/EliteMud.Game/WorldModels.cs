@@ -77,6 +77,7 @@ public sealed record ZoneDefinition(
 public sealed class PlayerState
 {
     private readonly List<int> _inventoryObjectIds = new();
+    private readonly Dictionary<int, int> _equipmentSlotToObjectId = new(); // slot -> objectInstanceId
 
     public PlayerState(int id, string name, int roomId)
     {
@@ -93,6 +94,8 @@ public sealed class PlayerState
 
     public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
 
+    public IReadOnlyDictionary<int, int> EquipmentSlotToObjectId => _equipmentSlotToObjectId;
+
     public void AddToInventory(int objectInstanceId)
     {
         _inventoryObjectIds.Add(objectInstanceId);
@@ -101,6 +104,26 @@ public sealed class PlayerState
     public bool RemoveFromInventory(int objectInstanceId)
     {
         return _inventoryObjectIds.Remove(objectInstanceId);
+    }
+
+    public bool EquipToSlot(int slot, int objectInstanceId)
+    {
+        if (_equipmentSlotToObjectId.ContainsKey(slot))
+        {
+            return false; // Slot occupied
+        }
+        _equipmentSlotToObjectId[slot] = objectInstanceId;
+        return true;
+    }
+
+    public bool UnequipFromSlot(int slot, out int objectInstanceId)
+    {
+        if (_equipmentSlotToObjectId.Remove(slot, out objectInstanceId))
+        {
+            return true;
+        }
+        objectInstanceId = 0;
+        return false;
     }
 }
 

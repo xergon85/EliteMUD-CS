@@ -12,6 +12,11 @@ public enum CommandKind
     Get,
     Drop,
     Inventory,
+    Equipment,
+    Wear,
+    Remove,
+    Wield,
+    Hold,
     Who,
     ResetZone,
     Say,
@@ -76,6 +81,36 @@ public sealed class CommandParser
             || trimmed.Equals("i", StringComparison.OrdinalIgnoreCase))
         {
             return new CommandRequest(CommandKind.Inventory, null, null);
+        }
+
+        if (trimmed.Equals("equipment", StringComparison.OrdinalIgnoreCase)
+            || trimmed.Equals("eq", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Equipment, null, null);
+        }
+
+        if (trimmed.StartsWith("wear ", StringComparison.OrdinalIgnoreCase))
+        {
+            var target = trimmed[5..].Trim();
+            return new CommandRequest(CommandKind.Wear, target, null);
+        }
+
+        if (trimmed.StartsWith("remove ", StringComparison.OrdinalIgnoreCase))
+        {
+            var target = trimmed[7..].Trim();
+            return new CommandRequest(CommandKind.Remove, target, null);
+        }
+
+        if (trimmed.StartsWith("wield ", StringComparison.OrdinalIgnoreCase))
+        {
+            var target = trimmed[6..].Trim();
+            return new CommandRequest(CommandKind.Wield, target, null);
+        }
+
+        if (trimmed.StartsWith("hold ", StringComparison.OrdinalIgnoreCase))
+        {
+            var target = trimmed[5..].Trim();
+            return new CommandRequest(CommandKind.Hold, target, null);
         }
 
         if (trimmed.Equals("who", StringComparison.OrdinalIgnoreCase))
