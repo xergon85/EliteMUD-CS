@@ -27,6 +27,15 @@ internal sealed class LookCommandHandler : ICommandHandler
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
+        // If a target is specified, examine it (look <object>)
+        if (!string.IsNullOrWhiteSpace(command.Argument))
+        {
+            var result = _lookHandler.HandleLookAt(context.Player, command.Argument);
+            await context.Session.SendLineAsync(result.Message, cancellationToken);
+            return CommandOutcome.Continue;
+        }
+
+        // Otherwise, show the room
         var view = _lookHandler.Handle(context.Player);
         await context.Session.SendLineAsync(view.Name, cancellationToken);
         await context.Session.SendLineAsync(view.Description, cancellationToken);

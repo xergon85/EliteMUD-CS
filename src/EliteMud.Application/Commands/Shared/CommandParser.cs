@@ -39,6 +39,12 @@ public sealed class CommandParser
             return new CommandRequest(CommandKind.Look, null, null);
         }
 
+        if (trimmed.StartsWith("look ", StringComparison.OrdinalIgnoreCase))
+        {
+            var target = trimmed[5..].Trim();
+            return new CommandRequest(CommandKind.Look, target, null);
+        }
+
         if (trimmed.StartsWith("examine ", StringComparison.OrdinalIgnoreCase)
             || trimmed.StartsWith("ex ", StringComparison.OrdinalIgnoreCase)
             || trimmed.StartsWith("exa ", StringComparison.OrdinalIgnoreCase))

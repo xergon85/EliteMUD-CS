@@ -1,4 +1,4 @@
-using EliteMud.Application.Commands.Examine;
+using EliteMud.Application.Commands.Look;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Shared;
@@ -7,13 +7,11 @@ namespace EliteMud.Server.Adapters.Commands.Examine;
 
 internal sealed class ExamineCommandHandler : ICommandHandler
 {
-    private readonly IWorldState _worldState;
-    private readonly ExamineHandler _examineHandler;
+    private readonly LookHandler _lookHandler;
 
     public ExamineCommandHandler(IWorldState worldState)
     {
-        _worldState = worldState;
-        _examineHandler = new ExamineHandler(worldState);
+        _lookHandler = new LookHandler(worldState);
     }
 
     public CommandKind Kind => CommandKind.Examine;
@@ -23,7 +21,8 @@ internal sealed class ExamineCommandHandler : ICommandHandler
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
-        var result = _examineHandler.Handle(context.Player, command.Argument ?? string.Empty);
+        // Examine is just an alias for "look <target>"
+        var result = _lookHandler.HandleLookAt(context.Player, command.Argument ?? string.Empty);
         await context.Session.SendLineAsync(result.Message, cancellationToken);
         return CommandOutcome.Continue;
     }
