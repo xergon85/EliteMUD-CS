@@ -8,6 +8,7 @@ public enum CommandKind
     None,
     Quit,
     Look,
+    Examine,
     Who,
     ResetZone,
     Say,
@@ -36,6 +37,15 @@ public sealed class CommandParser
         if (trimmed.Equals("look", StringComparison.OrdinalIgnoreCase))
         {
             return new CommandRequest(CommandKind.Look, null, null);
+        }
+
+        if (trimmed.StartsWith("examine ", StringComparison.OrdinalIgnoreCase)
+            || trimmed.StartsWith("ex ", StringComparison.OrdinalIgnoreCase)
+            || trimmed.StartsWith("exa ", StringComparison.OrdinalIgnoreCase))
+        {
+            var spaceIndex = trimmed.IndexOf(' ');
+            var target = trimmed[(spaceIndex + 1)..].Trim();
+            return new CommandRequest(CommandKind.Examine, target, null);
         }
 
         if (trimmed.Equals("who", StringComparison.OrdinalIgnoreCase))
