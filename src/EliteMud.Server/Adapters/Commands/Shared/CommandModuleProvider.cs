@@ -4,6 +4,7 @@ using EliteMud.Server.Adapters.Commands.Examine;
 using EliteMud.Server.Adapters.Commands.Get;
 using EliteMud.Server.Adapters.Commands.Hold;
 using EliteMud.Server.Adapters.Commands.Inventory;
+using EliteMud.Server.Adapters.Commands.Load;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Move;
 using EliteMud.Server.Adapters.Commands.NoOp;
@@ -35,6 +36,7 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new RemoveCommandModule(),
             new WieldCommandModule(),
             new HoldCommandModule(),
+            new LoadCommandModule(),
             new WhoCommandModule(),
             new ResetZoneCommandModule(),
             new SayCommandModule(),

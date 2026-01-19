@@ -182,6 +182,24 @@ internal sealed class WorldState : IWorldState
         return true;
     }
 
+    public ObjectInstance? LoadObjectToPlayer(PlayerState player, int objectDefinitionId)
+    {
+        // Check if object definition exists
+        if (!_objectDefinitions.TryGetValue(objectDefinitionId, out var objectDefinition))
+        {
+            return null;
+        }
+
+        // Create new object instance
+        var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
+        _objectInstances[objectInstance.InstanceId] = objectInstance;
+
+        // Add to player inventory
+        player.AddToInventory(objectInstance.InstanceId);
+
+        return objectInstance;
+    }
+
     public void ResetAllZones()
     {
         foreach (var zone in _zones)

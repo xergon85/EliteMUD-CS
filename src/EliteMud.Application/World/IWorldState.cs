@@ -88,6 +88,8 @@ public interface IWorldState
 
     bool UnequipObject(PlayerState player, EquipmentSlot slot);
 
+    ObjectInstance? LoadObjectToPlayer(PlayerState player, int objectDefinitionId);
+
     bool ResetZone(int zoneId);
 
     bool ResetZoneForRoom(int roomId, out int zoneId);
