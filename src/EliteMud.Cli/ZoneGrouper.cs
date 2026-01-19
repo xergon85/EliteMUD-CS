@@ -119,8 +119,18 @@ internal static class ZoneGrouper
 
     private static string SanitizeFileName(string name)
     {
+        // Remove leading/trailing whitespace and normalize internal whitespace
+        var cleaned = name.Trim();
+        cleaned = string.Join(" ", cleaned.Split(new[] { ' ', '\t', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+        
+        // Replace invalid filename characters with underscore
         var invalid = Path.GetInvalidFileNameChars();
-        var sanitized = string.Join("_", name.Split(invalid, StringSplitOptions.RemoveEmptyEntries));
-        return sanitized.Length > 50 ? sanitized.Substring(0, 50) : sanitized;
+        foreach (var c in invalid)
+        {
+            cleaned = cleaned.Replace(c, '_');
+        }
+        
+        // Limit length
+        return cleaned.Length > 50 ? cleaned.Substring(0, 50) : cleaned;
     }
 }
