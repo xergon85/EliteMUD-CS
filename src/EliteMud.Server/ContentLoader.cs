@@ -245,6 +245,185 @@ internal static class ContentLoader
         return zones;
     }
 
+    public static (WorldDefinition? World, IReadOnlyList<MobDefinition> Mobs, IReadOnlyList<ObjectDefinition> Objects, IReadOnlyList<ZoneDefinition> Zones) LoadFromZoneFiles(string zonesDirectory)
+    {
+        if (!Directory.Exists(zonesDirectory))
+        {
+            Console.WriteLine($"Zone directory not found: {zonesDirectory}");
+            return (null, Array.Empty<MobDefinition>(), Array.Empty<ObjectDefinition>(), Array.Empty<ZoneDefinition>());
+        }
+
+        var zoneFiles = Directory.GetFiles(zonesDirectory, "zone_*.json");
+        if (zoneFiles.Length == 0)
+        {
+            Console.WriteLine($"No zone files found in: {zonesDirectory}");
+            return (null, Array.Empty<MobDefinition>(), Array.Empty<ObjectDefinition>(), Array.Empty<ZoneDefinition>());
+        }
+
+        Console.WriteLine($"Loading {zoneFiles.Length} zone files...");
+
+        var allRooms = new Dictionary<int, RoomDefinition>();
+        var allMobs = new Dictionary<int, MobDefinition>();
+        var allObjects = new Dictionary<int, ObjectDefinition>();
+        var allZones = new List<ZoneDefinition>();
+
+        foreach (var zoneFile in zoneFiles)
+        {
+            try
+            {
+                var json = File.ReadAllText(zoneFile);
+                var zoneData = JsonSerializer.Deserialize<ZoneGroupedFile>(json, JsonOptions);
+
+                if (zoneData is null)
+                {
+                    Console.WriteLine($"  Skipped (null): {Path.GetFileName(zoneFile)}");
+                    continue;
+                }
+
+                // Load rooms
+                if (zoneData.Rooms is not null)
+                {
+                    foreach (var room in zoneData.Rooms)
+                    {
+                        var exits = new List<ExitDefinition>();
+                        if (room.Exits is not null)
+                        {
+                            foreach (var exit in room.Exits)
+                            {
+                                if (Enum.TryParse<Direction>(exit.Direction ?? string.Empty, true, out var direction))
+                                {
+                                    exits.Add(new ExitDefinition(direction, exit.TargetId));
+                                }
+                            }
+                        }
+
+                        allRooms[room.Id] = new RoomDefinition(room.Id, room.Name ?? "", room.Description ?? "", exits);
+                    }
+                }
+
+                // Load mobs
+                if (zoneData.Mobs is not null)
+                {
+                    foreach (var mob in zoneData.Mobs)
+                    {
+                        var mobDef = ParseMobDefinition(mob);
+                        if (mobDef is not null)
+                        {
+                            allMobs[mobDef.Id] = mobDef;
+                        }
+                    }
+                }
+
+                // Load objects
+                if (zoneData.Objects is not null)
+                {
+                    foreach (var obj in zoneData.Objects)
+                    {
+                        var objectDef = ParseObjectDefinition(obj);
+                        if (objectDef is not null)
+                        {
+                            allObjects[objectDef.Id] = objectDef;
+                        }
+                    }
+                }
+
+                // Load zone definition
+                if (zoneData.Zone is not null)
+                {
+                    var resets = new List<ZoneResetDefinition>();
+                    if (zoneData.Zone.ResetCommands is not null)
+                    {
+                        foreach (var command in zoneData.Zone.ResetCommands)
+                        {
+                            resets.Add(ConvertResetCommand(command));
+                        }
+                    }
+
+                    var roomRange = zoneData.Zone.RoomRange ?? new RoomRangeContent();
+                    var zoneDef = new ZoneDefinition(
+                        zoneData.Zone.Id,
+                        zoneData.Zone.Name ?? string.Empty,
+                        new RoomRange(roomRange.Min, roomRange.Max),
+                        zoneData.Zone.ResetMode ?? string.Empty,
+                        resets);
+
+                    allZones.Add(zoneDef);
+                }
+
+                Console.WriteLine($"  Loaded: {Path.GetFileName(zoneFile)} ({zoneData.Rooms?.Count ?? 0} rooms, {zoneData.Mobs?.Count ?? 0} mobs, {zoneData.Objects?.Count ?? 0} objects)");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"  Error loading {Path.GetFileName(zoneFile)}: {ex.Message}");
+            }
+        }
+
+        Console.WriteLine($"Total: {allRooms.Count} rooms, {allMobs.Count} mobs, {allObjects.Count} objects, {allZones.Count} zones");
+
+        var world = allRooms.Count > 0 ? new WorldDefinition(allRooms) : null;
+        return (world, allMobs.Values.ToList(), allObjects.Values.ToList(), allZones);
+    }
+
+    private static MobDefinition? ParseMobDefinition(MobContent mob)
+    {
+        if (string.IsNullOrWhiteSpace(mob.Name))
+        {
+            return null;
+        }
+
+        var stats = new StatBlock(
+            mob.Stats?.Strength ?? 10,
+            mob.Stats?.Dexterity ?? 10,
+            mob.Stats?.Intelligence ?? 10,
+            mob.Stats?.Wisdom ?? 10,
+            mob.Stats?.Constitution ?? 10,
+            mob.Stats?.Charisma ?? 10);
+
+        return new MobDefinition(
+            mob.Id,
+            mob.Name,
+            mob.ShortDescription ?? string.Empty,
+            mob.LongDescription ?? string.Empty,
+            mob.Description ?? string.Empty,
+            mob.Level,
+            mob.Race ?? "Unknown",
+            mob.Class ?? "Unknown",
+            mob.Flags ?? new List<string>(),
+            stats,
+            mob.Resistances ?? new List<string>(),
+            mob.Skills ?? new List<string>());
+    }
+
+    private static ObjectDefinition? ParseObjectDefinition(ObjectContent obj)
+    {
+        if (string.IsNullOrWhiteSpace(obj.Name))
+        {
+            return null;
+        }
+
+        ObjectDetails? details = null;
+        if (obj.Details is not null)
+        {
+            // Parse object details from the JSON structure
+            // For now, we'll skip the complex details parsing
+            // TODO: Implement full ObjectDetails parsing
+        }
+
+        return new ObjectDefinition(
+            obj.Id,
+            obj.Name,
+            obj.ShortDescription ?? string.Empty,
+            obj.LongDescription ?? string.Empty,
+            obj.Description ?? string.Empty,
+            obj.Type ?? "Unknown",
+            obj.WearFlags ?? new List<string>(),
+            obj.ExtraFlags ?? new List<string>(),
+            details,
+            obj.Values ?? new List<int>(),
+            obj.Weight,
+            obj.Cost);
+    }
+
     private static ZoneResetDefinition ConvertResetCommand(ZoneResetContent cmd)
     {
         // If modern format (semantic fields), use them directly
@@ -461,7 +640,9 @@ internal static class ContentLoader
         public string? Description { get; set; }
         public string? Type { get; set; }
         public List<string>? WearSlots { get; set; }
+        public List<string>? WearFlags { get; set; } // Legacy format
         public List<string>? Flags { get; set; }
+        public List<string>? ExtraFlags { get; set; } // Legacy format
         public List<int>? Values { get; set; }
         public ObjectDetails? Details { get; set; }
         public int Weight { get; set; }
@@ -471,6 +652,14 @@ internal static class ContentLoader
     private sealed class ZonesFile
     {
         public List<ZoneContent> Zones { get; set; } = new();
+    }
+
+    private sealed class ZoneGroupedFile
+    {
+        public ZoneContent? Zone { get; set; }
+        public List<RoomContent>? Rooms { get; set; }
+        public List<MobContent>? Mobs { get; set; }
+        public List<ObjectContent>? Objects { get; set; }
     }
 
     private sealed class ZoneContent

@@ -18,7 +18,28 @@ internal static class ServerBootstrap
     public static TelnetServer CreateServer(int port)
     {
         var contentRoot = ResolveContentRoot();
-        var world = ContentLoader.LoadWorld(contentRoot);
+        
+        WorldDefinition? world;
+        IReadOnlyList<MobDefinition> mobs;
+        IReadOnlyList<ObjectDefinition> objects;
+        IReadOnlyList<ZoneDefinition> zones;
+        
+        // Try loading from zone-grouped files first
+        var zonesDirectory = Path.Combine(contentRoot, "..", "zones");
+        if (Directory.Exists(zonesDirectory))
+        {
+            Console.WriteLine($"Found zone-grouped content in {zonesDirectory}");
+            (world, mobs, objects, zones) = ContentLoader.LoadFromZoneFiles(zonesDirectory);
+            
+            if (world is not null)
+            {
+                return CreateServerFromContent(port, world, mobs, objects, zones, contentRoot);
+            }
+        }
+
+        // Fall back to old monolithic format
+        Console.WriteLine($"Loading from monolithic content in {contentRoot}");
+        world = ContentLoader.LoadWorld(contentRoot);
         if (world is null)
         {
             Console.WriteLine($"Content not found under {contentRoot}; using bootstrap world.");
@@ -29,22 +50,29 @@ internal static class ServerBootstrap
             Console.WriteLine($"Loaded {world.Rooms.Count} rooms from {contentRoot}.");
         }
 
+        mobs = ContentLoader.LoadMobs(contentRoot);
+        objects = ContentLoader.LoadObjects(contentRoot);
+        zones = ContentLoader.LoadZones(contentRoot);
+        Console.WriteLine(
+            $"Loaded {mobs.Count} mobs, {objects.Count} objects, {zones.Count} zones from {contentRoot}.");
+
+        return CreateServerFromContent(port, world, mobs, objects, zones, contentRoot);
+    }
+
+    private static TelnetServer CreateServerFromContent(
+        int port,
+        WorldDefinition world,
+        IReadOnlyList<MobDefinition> mobs,
+        IReadOnlyList<ObjectDefinition> objects,
+        IReadOnlyList<ZoneDefinition> zones,
+        string contentRoot)
+    {
         var scripts = ContentLoader.LoadScripts(contentRoot);
         if (scripts.Count == 0)
         {
-            Console.WriteLine($"No scripts found under {contentRoot}; using bootstrap scripts.");
+            Console.WriteLine($"No scripts found; using bootstrap scripts.");
             scripts = BuildBootstrapScriptDefinitions();
         }
-        else
-        {
-            Console.WriteLine($"Loaded {scripts.Count} scripts from {contentRoot}.");
-        }
-
-        var mobs = ContentLoader.LoadMobs(contentRoot);
-        var objects = ContentLoader.LoadObjects(contentRoot);
-        var zones = ContentLoader.LoadZones(contentRoot);
-        Console.WriteLine(
-            $"Loaded {mobs.Count} mobs, {objects.Count} objects, {zones.Count} zones from {contentRoot}.");
 
         var worldState = BuildWorldState(world, mobs, objects, zones);
         var scriptEngine = BuildScriptEngine(scripts);
