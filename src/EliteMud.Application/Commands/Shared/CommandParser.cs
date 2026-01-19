@@ -18,6 +18,7 @@ public enum CommandKind
     Wield,
     Hold,
     Load,
+    Search,
     Who,
     ResetZone,
     Say,
@@ -118,6 +119,12 @@ public sealed class CommandParser
         {
             var objectId = trimmed[5..].Trim();
             return new CommandRequest(CommandKind.Load, objectId, null);
+        }
+
+        if (trimmed.StartsWith("search ", StringComparison.OrdinalIgnoreCase))
+        {
+            var query = trimmed[7..].Trim();
+            return new CommandRequest(CommandKind.Search, query, null);
         }
 
         if (trimmed.Equals("who", StringComparison.OrdinalIgnoreCase))

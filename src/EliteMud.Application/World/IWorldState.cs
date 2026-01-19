@@ -90,6 +90,8 @@ public interface IWorldState
 
     ObjectInstance? LoadObjectToPlayer(PlayerState player, int objectDefinitionId);
 
+    IReadOnlyList<ObjectDefinition> SearchObjects(string query);
+
     bool ResetZone(int zoneId);
 
     bool ResetZoneForRoom(int roomId, out int zoneId);

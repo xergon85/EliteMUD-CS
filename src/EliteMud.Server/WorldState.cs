@@ -200,6 +200,29 @@ internal sealed class WorldState : IWorldState
         return objectInstance;
     }
 
+    public IReadOnlyList<ObjectDefinition> SearchObjects(string query)
+    {
+        if (string.IsNullOrWhiteSpace(query))
+        {
+            return Array.Empty<ObjectDefinition>();
+        }
+
+        var queryLower = query.ToLowerInvariant();
+        var results = new List<ObjectDefinition>();
+
+        foreach (var objDef in _objectDefinitions.Values)
+        {
+            // Search in Name and ShortDescription
+            if (objDef.Name?.ToLowerInvariant().Contains(queryLower) == true ||
+                objDef.ShortDescription?.ToLowerInvariant().Contains(queryLower) == true)
+            {
+                results.Add(objDef);
+            }
+        }
+
+        return results;
+    }
+
     public void ResetAllZones()
     {
         foreach (var zone in _zones)
