@@ -12,6 +12,7 @@ using EliteMud.Server.Adapters.Commands.Quit;
 using EliteMud.Server.Adapters.Commands.Remove;
 using EliteMud.Server.Adapters.Commands.ResetZone;
 using EliteMud.Server.Adapters.Commands.Say;
+using EliteMud.Server.Adapters.Commands.Score;
 using EliteMud.Server.Adapters.Commands.Search;
 using EliteMud.Server.Adapters.Commands.Wear;
 using EliteMud.Server.Adapters.Commands.Who;
@@ -40,6 +41,7 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new LoadCommandModule(),
             new SearchCommandModule(),
             new WhoCommandModule(),
+            new ScoreCommandModule(),
             new ResetZoneCommandModule(),
             new SayCommandModule(),
             new MoveCommandModule()
