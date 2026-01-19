@@ -76,6 +76,8 @@ public sealed record ZoneDefinition(
 
 public sealed class PlayerState
 {
+    private readonly List<int> _inventoryObjectIds = new();
+
     public PlayerState(int id, string name, int roomId)
     {
         Id = id;
@@ -88,6 +90,18 @@ public sealed class PlayerState
     public string Name { get; }
 
     public int RoomId { get; set; }
+
+    public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
+
+    public void AddToInventory(int objectInstanceId)
+    {
+        _inventoryObjectIds.Add(objectInstanceId);
+    }
+
+    public bool RemoveFromInventory(int objectInstanceId)
+    {
+        return _inventoryObjectIds.Remove(objectInstanceId);
+    }
 }
 
 public sealed class WorldDefinition

@@ -74,6 +74,14 @@ public interface IWorldState
 
     IReadOnlyList<ObjectInstance> GetObjectsInRoom(int roomId);
 
+    IReadOnlyList<ObjectInstance> GetPlayerInventory(PlayerState player);
+
+    ObjectInstance? GetObjectInstance(int instanceId);
+
+    bool TakeObject(PlayerState player, int objectInstanceId);
+
+    bool DropObject(PlayerState player, int objectInstanceId);
+
     bool ResetZone(int zoneId);
 
     bool ResetZoneForRoom(int roomId, out int zoneId);

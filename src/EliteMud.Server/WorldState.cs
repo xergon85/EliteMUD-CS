@@ -10,6 +10,7 @@ internal sealed class WorldState : IWorldState
     private readonly Dictionary<int, ObjectDefinition> _objectDefinitions;
     private readonly Dictionary<int, List<MobInstance>> _roomMobs;
     private readonly Dictionary<int, List<ObjectInstance>> _roomObjects;
+    private readonly Dictionary<int, ObjectInstance> _objectInstances = new();
     private readonly IReadOnlyList<ZoneDefinition> _zones;
     private int _nextMobInstanceId;
     private int _nextObjectInstanceId;
@@ -48,6 +49,76 @@ internal sealed class WorldState : IWorldState
         return _roomObjects.TryGetValue(roomId, out var objects)
             ? objects
             : Array.Empty<ObjectInstance>();
+    }
+
+    public IReadOnlyList<ObjectInstance> GetPlayerInventory(PlayerState player)
+    {
+        var inventory = new List<ObjectInstance>();
+        foreach (var objectId in player.InventoryObjectIds)
+        {
+            if (_objectInstances.TryGetValue(objectId, out var obj))
+            {
+                inventory.Add(obj);
+            }
+        }
+        return inventory;
+    }
+
+    public ObjectInstance? GetObjectInstance(int instanceId)
+    {
+        return _objectInstances.TryGetValue(instanceId, out var obj) ? obj : null;
+    }
+
+    public bool TakeObject(PlayerState player, int objectInstanceId)
+    {
+        // Find the object in the room
+        if (!_roomObjects.TryGetValue(player.RoomId, out var roomObjects))
+        {
+            return false;
+        }
+
+        var obj = roomObjects.FirstOrDefault(o => o.InstanceId == objectInstanceId);
+        if (obj is null)
+        {
+            return false;
+        }
+
+        // Remove from room
+        roomObjects.Remove(obj);
+
+        // Add to player inventory
+        player.AddToInventory(objectInstanceId);
+
+        return true;
+    }
+
+    public bool DropObject(PlayerState player, int objectInstanceId)
+    {
+        // Check if player has the object
+        if (!player.InventoryObjectIds.Contains(objectInstanceId))
+        {
+            return false;
+        }
+
+        // Get the object instance
+        if (!_objectInstances.TryGetValue(objectInstanceId, out var obj))
+        {
+            return false;
+        }
+
+        // Remove from player inventory
+        player.RemoveFromInventory(objectInstanceId);
+
+        // Add to room
+        if (!_roomObjects.TryGetValue(player.RoomId, out var roomObjects))
+        {
+            roomObjects = new List<ObjectInstance>();
+            _roomObjects[player.RoomId] = roomObjects;
+        }
+
+        roomObjects.Add(obj);
+
+        return true;
     }
 
     public void ResetAllZones()
@@ -247,7 +318,9 @@ internal sealed class WorldState : IWorldState
             _roomObjects[reset.RoomId.Value] = list;
         }
 
-        list.Add(new ObjectInstance(_nextObjectInstanceId++, objectDefinition));
+        var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
+        _objectInstances[objectInstance.InstanceId] = objectInstance;
+        list.Add(objectInstance);
     }
 
     private void ExecuteEquipMob(ZoneResetDefinition reset, MobInstance? mob, Random random)
@@ -269,6 +342,7 @@ internal sealed class WorldState : IWorldState
 
         var slot = (EquipmentSlot)reset.EquipSlot.Value;
         var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
+        _objectInstances[objectInstance.InstanceId] = objectInstance;
         mob.Equip(objectInstance, slot);
     }
 
