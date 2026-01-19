@@ -115,10 +115,10 @@ internal sealed class WorldState : IWorldState
         foreach (var reset in zone.ResetCommands)
         {
             if (string.Equals(reset.Type, "LoadObject", StringComparison.OrdinalIgnoreCase) 
-                && reset.MobId.HasValue 
+                && reset.ObjectId.HasValue 
                 && reset.MaxExisting.HasValue)
             {
-                objectDefsWithMaxLimit.Add(reset.MobId.Value);
+                objectDefsWithMaxLimit.Add(reset.ObjectId.Value);
             }
         }
 
@@ -143,79 +143,171 @@ internal sealed class WorldState : IWorldState
     private void ApplyZoneResets(ZoneDefinition zone)
     {
         MobInstance? lastMob = null;
+        var random = new Random();
 
         foreach (var reset in zone.ResetCommands)
         {
-            if (string.Equals(reset.Type, "LoadMob", StringComparison.OrdinalIgnoreCase))
+            // Skip if IfFlag is set but no previous mob loaded
+            if (reset.IfFlag && lastMob is null)
             {
-                if (!reset.MobId.HasValue || !reset.RoomId.HasValue)
-                {
-                    continue;
-                }
-
-                if (!_mobDefinitions.TryGetValue(reset.MobId.Value, out var mobDefinition))
-                {
-                    continue;
-                }
-
-                if (!_roomMobs.TryGetValue(reset.RoomId.Value, out var list))
-                {
-                    list = new List<MobInstance>();
-                    _roomMobs[reset.RoomId.Value] = list;
-                }
-
-                var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
-                var existing = 0;
-                foreach (var instance in list)
-                {
-                    if (instance.Definition.Id == mobDefinition.Id)
-                    {
-                        existing++;
-                    }
-                }
-
-                var toSpawn = desiredCount - existing;
-                for (var i = 0; i < toSpawn; i++)
-                {
-                    var mob = new MobInstance(_nextMobInstanceId++, mobDefinition);
-                    list.Add(mob);
-                    lastMob = mob;
-                }
+                continue;
             }
-            else if (string.Equals(reset.Type, "LoadObject", StringComparison.OrdinalIgnoreCase))
+
+            switch (reset.Type)
             {
-                if (!reset.MobId.HasValue || !reset.RoomId.HasValue)
-                {
-                    continue;
-                }
+                case "LoadMob":
+                    lastMob = ExecuteLoadMob(reset);
+                    break;
 
-                if (!_objectDefinitions.TryGetValue(reset.MobId.Value, out var objectDefinition))
-                {
-                    continue;
-                }
+                case "LoadObject":
+                    ExecuteLoadObject(reset, random);
+                    break;
 
-                if (!_roomObjects.TryGetValue(reset.RoomId.Value, out var list))
-                {
-                    list = new List<ObjectInstance>();
-                    _roomObjects[reset.RoomId.Value] = list;
-                }
+                case "EquipMob":
+                    ExecuteEquipMob(reset, lastMob, random);
+                    break;
 
-                var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
-                var existing = 0;
-                foreach (var instance in list)
-                {
-                    if (instance.Definition.Id == objectDefinition.Id)
-                    {
-                        existing++;
-                    }
-                }
+                case "GiveMob":
+                    ExecuteGiveMob(reset, lastMob, random);
+                    break;
 
-                var toSpawn = desiredCount - existing;
-                for (var i = 0; i < toSpawn; i++)
-                {
-                    list.Add(new ObjectInstance(_nextObjectInstanceId++, objectDefinition));
-                }
+                case "PutObject":
+                    ExecutePutObject(reset, random);
+                    break;
+
+                case "DoorState":
+                    // TODO: Implement door state resets
+                    break;
+
+                case "RemoveObject":
+                    // TODO: Implement object removal
+                    break;
             }
         }
+    }
+
+    private MobInstance? ExecuteLoadMob(ZoneResetDefinition reset)
+    {
+        if (!reset.MobId.HasValue || !reset.RoomId.HasValue)
+        {
+            return null;
+        }
+
+        if (!_mobDefinitions.TryGetValue(reset.MobId.Value, out var mobDefinition))
+        {
+            return null;
+        }
+
+        if (!_roomMobs.TryGetValue(reset.RoomId.Value, out var list))
+        {
+            list = new List<MobInstance>();
+            _roomMobs[reset.RoomId.Value] = list;
+        }
+
+        var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
+        var existing = 0;
+        foreach (var instance in list)
+        {
+            if (instance.Definition.Id == mobDefinition.Id)
+            {
+                existing++;
+            }
+        }
+
+        if (existing >= desiredCount)
+        {
+            return null;
+        }
+
+        var mob = new MobInstance(_nextMobInstanceId++, mobDefinition);
+        list.Add(mob);
+        return mob;
+    }
+
+    private void ExecuteLoadObject(ZoneResetDefinition reset, Random random)
+    {
+        if (!reset.ObjectId.HasValue || !reset.RoomId.HasValue)
+        {
+            return;
+        }
+
+        if (!CheckSpawnChance(reset.SpawnChance, random))
+        {
+            return;
+        }
+
+        if (!_objectDefinitions.TryGetValue(reset.ObjectId.Value, out var objectDefinition))
+        {
+            return;
+        }
+
+        if (!_roomObjects.TryGetValue(reset.RoomId.Value, out var list))
+        {
+            list = new List<ObjectInstance>();
+            _roomObjects[reset.RoomId.Value] = list;
+        }
+
+        list.Add(new ObjectInstance(_nextObjectInstanceId++, objectDefinition));
+    }
+
+    private void ExecuteEquipMob(ZoneResetDefinition reset, MobInstance? mob, Random random)
+    {
+        if (mob is null || !reset.ObjectId.HasValue || !reset.EquipSlot.HasValue)
+        {
+            return;
+        }
+
+        if (!CheckSpawnChance(reset.SpawnChance, random))
+        {
+            return;
+        }
+
+        // TODO: Implement mob equipment storage
+        // For now, this is a placeholder - need to add equipment to MobInstance
+    }
+
+    private void ExecuteGiveMob(ZoneResetDefinition reset, MobInstance? mob, Random random)
+    {
+        if (mob is null || !reset.ObjectId.HasValue)
+        {
+            return;
+        }
+
+        if (!CheckSpawnChance(reset.SpawnChance, random))
+        {
+            return;
+        }
+
+        // TODO: Implement mob inventory storage
+        // For now, this is a placeholder - need to add inventory to MobInstance
+    }
+
+    private void ExecutePutObject(ZoneResetDefinition reset, Random random)
+    {
+        if (!reset.ObjectId.HasValue || !reset.ContainerId.HasValue)
+        {
+            return;
+        }
+
+        if (!CheckSpawnChance(reset.SpawnChance, random))
+        {
+            return;
+        }
+
+        // TODO: Implement container storage
+        // For now, this is a placeholder - need to track object containers
+    }
+
+    private static bool CheckSpawnChance(int? spawnChance, Random random)
+    {
+        if (!spawnChance.HasValue)
+        {
+            return true; // No spawn chance = always spawn
+        }
+
+        // Legacy logic: spawnChance >= random(1, 100)
+        // This means spawnChance=100 is 100%, spawnChance=1 is 1%
+        var roll = random.Next(1, 101); // 1-100 inclusive
+        return spawnChance.Value >= roll;
     }
 }

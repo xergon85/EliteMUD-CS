@@ -56,9 +56,16 @@ public sealed record RoomRange(int Min, int Max);
 
 public sealed record ZoneResetDefinition(
     string Type,
+    int? ObjectId,
     int? MobId,
     int? RoomId,
-    int? MaxExisting);
+    int? MaxExisting,
+    int? SpawnChance,
+    int? EquipSlot,
+    int? ContainerId,
+    int? DoorDirection,
+    int? DoorState,
+    bool IfFlag);
 
 public sealed record ZoneDefinition(
     int Id,

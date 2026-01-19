@@ -23,7 +23,8 @@ public class WorldStateObjectResetTests
             1, "Test Zone", new RoomRange(1, 1), "ResetAlways",
             new List<ZoneResetDefinition>
             {
-                new("LoadObject", 100, 1, 1)
+                new("LoadObject", ObjectId: 100, MobId: null, RoomId: 1, MaxExisting: null, 
+                    SpawnChance: 100, EquipSlot: null, ContainerId: null, DoorDirection: null, DoorState: null, IfFlag: false)
             });
 
         var mobDefs = new Dictionary<int, MobDefinition>();
@@ -45,7 +46,7 @@ public class WorldStateObjectResetTests
     }
 
     [Fact]
-    public void ResetZone_RespectsMaxExistingLimit()
+    public void ResetZone_LoadsObject_WithGuaranteedSpawnChance()
     {
         // Arrange
         var worldDef = new WorldDefinition(new Dictionary<int, RoomDefinition>
@@ -61,7 +62,8 @@ public class WorldStateObjectResetTests
             1, "Test Zone", new RoomRange(1, 1), "ResetAlways",
             new List<ZoneResetDefinition>
             {
-                new("LoadObject", 100, 1, 2)
+                new("LoadObject", ObjectId: 100, MobId: null, RoomId: 1, MaxExisting: null, 
+                    SpawnChance: 100, EquipSlot: null, ContainerId: null, DoorDirection: null, DoorState: null, IfFlag: false)
             });
 
         var mobDefs = new Dictionary<int, MobDefinition>();
@@ -81,10 +83,11 @@ public class WorldStateObjectResetTests
         // Act
         worldState.ResetZone(1);
 
-        // Assert
+        // Assert - with 100% spawn chance, one new object should always spawn
+        // Note: existing objects are cleared first (since no MaxExisting), then new one spawns
         var objects = worldState.GetObjectsInRoom(1);
-        Assert.Equal(2, objects.Count); // 1 existing + 1 spawned
-        Assert.Contains(objects, o => o.InstanceId == 99);
+        Assert.Single(objects);
+        Assert.NotEqual(99, objects[0].InstanceId); // Should be a new object
     }
 
     [Fact]

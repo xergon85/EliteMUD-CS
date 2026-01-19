@@ -229,11 +229,7 @@ internal static class ContentLoader
             {
                 foreach (var command in zone.ResetCommands)
                 {
-                    resets.Add(new ZoneResetDefinition(
-                        command.Type ?? string.Empty,
-                        command.MobId,
-                        command.RoomId,
-                        command.MaxExisting));
+                    resets.Add(ConvertResetCommand(command));
                 }
             }
 
@@ -247,6 +243,128 @@ internal static class ContentLoader
         }
 
         return zones;
+    }
+
+    private static ZoneResetDefinition ConvertResetCommand(ZoneResetContent cmd)
+    {
+        // If modern format (semantic fields), use them directly
+        if (cmd.Type is not null)
+        {
+            return new ZoneResetDefinition(
+                cmd.Type,
+                cmd.ObjectId,
+                cmd.MobId,
+                cmd.RoomId,
+                cmd.MaxExisting,
+                cmd.SpawnChance,
+                cmd.EquipSlot,
+                cmd.ContainerId,
+                cmd.DoorDirection,
+                cmd.DoorState,
+                cmd.IfFlag == 1);
+        }
+
+        // Legacy format: map Command + Args to semantic fields
+        var command = cmd.Command ?? string.Empty;
+        var ifFlag = cmd.IfFlag == 1;
+
+        return command switch
+        {
+            "M" => new ZoneResetDefinition(
+                "LoadMob",
+                ObjectId: null,
+                MobId: cmd.Arg1,
+                RoomId: cmd.Arg3,
+                MaxExisting: cmd.Arg2,
+                SpawnChance: null,
+                EquipSlot: null,
+                ContainerId: null,
+                DoorDirection: null,
+                DoorState: null,
+                ifFlag),
+
+            "O" => new ZoneResetDefinition(
+                "LoadObject",
+                ObjectId: cmd.Arg1,
+                MobId: null,
+                RoomId: cmd.Arg3,
+                MaxExisting: null,
+                SpawnChance: cmd.Arg2,
+                EquipSlot: null,
+                ContainerId: null,
+                DoorDirection: null,
+                DoorState: null,
+                ifFlag),
+
+            "E" => new ZoneResetDefinition(
+                "EquipMob",
+                ObjectId: cmd.Arg1,
+                MobId: null,
+                RoomId: null,
+                MaxExisting: null,
+                SpawnChance: cmd.Arg2,
+                EquipSlot: cmd.Arg3,
+                ContainerId: null,
+                DoorDirection: null,
+                DoorState: null,
+                ifFlag),
+
+            "G" => new ZoneResetDefinition(
+                "GiveMob",
+                ObjectId: cmd.Arg1,
+                MobId: null,
+                RoomId: null,
+                MaxExisting: null,
+                SpawnChance: cmd.Arg2,
+                EquipSlot: null,
+                ContainerId: null,
+                DoorDirection: null,
+                DoorState: null,
+                ifFlag),
+
+            "P" => new ZoneResetDefinition(
+                "PutObject",
+                ObjectId: cmd.Arg1,
+                MobId: null,
+                RoomId: null,
+                MaxExisting: null,
+                SpawnChance: cmd.Arg2,
+                EquipSlot: null,
+                ContainerId: cmd.Arg3,
+                DoorDirection: null,
+                DoorState: null,
+                ifFlag),
+
+            "D" => new ZoneResetDefinition(
+                "DoorState",
+                ObjectId: null,
+                MobId: null,
+                RoomId: cmd.Arg1,
+                MaxExisting: null,
+                SpawnChance: null,
+                EquipSlot: null,
+                ContainerId: null,
+                DoorDirection: cmd.Arg2,
+                DoorState: cmd.Arg3,
+                ifFlag),
+
+            "R" => new ZoneResetDefinition(
+                "RemoveObject",
+                ObjectId: cmd.Arg2,
+                MobId: null,
+                RoomId: cmd.Arg1,
+                MaxExisting: null,
+                SpawnChance: null,
+                EquipSlot: null,
+                ContainerId: null,
+                DoorDirection: null,
+                DoorState: null,
+                ifFlag),
+
+            _ => new ZoneResetDefinition(
+                command,
+                null, null, null, null, null, null, null, null, null, ifFlag)
+        };
     }
 
     private static string JsonElementToString(JsonElement element)
@@ -373,8 +491,21 @@ internal static class ContentLoader
     private sealed class ZoneResetContent
     {
         public string? Type { get; set; }
+        public string? Command { get; set; }
+        public int? IfFlag { get; set; }
+        public int? Arg1 { get; set; }
+        public int? Arg2 { get; set; }
+        public int? Arg3 { get; set; }
+        
+        // Semantic fields (for modern JSON format)
         public int? MobId { get; set; }
+        public int? ObjectId { get; set; }
         public int? RoomId { get; set; }
         public int? MaxExisting { get; set; }
+        public int? SpawnChance { get; set; }
+        public int? EquipSlot { get; set; }
+        public int? ContainerId { get; set; }
+        public int? DoorDirection { get; set; }
+        public int? DoorState { get; set; }
     }
 }
