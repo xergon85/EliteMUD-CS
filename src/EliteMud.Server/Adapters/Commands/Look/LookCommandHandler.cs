@@ -35,6 +35,11 @@ internal sealed class LookCommandHandler : ICommandHandler
             await context.Session.SendLineAsync(line, cancellationToken);
         }
 
+        foreach (var line in view.ObjectLines)
+        {
+            await context.Session.SendLineAsync(line, cancellationToken);
+        }
+
         await context.Session.SendLineAsync(view.ExitLine, cancellationToken);
         await ExecuteHookAsync(context, ScriptHook.OnLook, null, cancellationToken);
         return CommandOutcome.Continue;

@@ -32,6 +32,7 @@ public sealed record RoomView(
     string Name,
     string Description,
     IReadOnlyList<string> MobLines,
+    IReadOnlyList<string> ObjectLines,
     string ExitLine);
 
 public sealed record WhoResult(IReadOnlyList<string> Names);

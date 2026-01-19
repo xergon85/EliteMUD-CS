@@ -29,7 +29,20 @@ public sealed class LookHandler
             }
         }
 
-        return new RoomView(room.Name, room.Description, mobLines, BuildExitLine(room));
+        var objects = _worldState.GetObjectsInRoom(room.Id);
+        var objectLines = new List<string>();
+        foreach (var obj in objects)
+        {
+            var line = string.IsNullOrWhiteSpace(obj.Definition.LongDescription)
+                ? obj.Definition.ShortDescription
+                : obj.Definition.LongDescription.TrimEnd();
+            if (!string.IsNullOrWhiteSpace(line))
+            {
+                objectLines.Add(line);
+            }
+        }
+
+        return new RoomView(room.Name, room.Description, mobLines, objectLines, BuildExitLine(room));
     }
 
     private static string BuildExitLine(RoomDefinition room)
