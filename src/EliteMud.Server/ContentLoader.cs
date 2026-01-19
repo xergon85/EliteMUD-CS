@@ -178,6 +178,10 @@ internal static class ContentLoader
         var objects = new List<ObjectDefinition>();
         foreach (var obj in file.Objects)
         {
+            // Use WearSlots if present, otherwise fallback to WearFlags (legacy JSON format)
+            var wearSlots = obj.WearSlots ?? obj.WearFlags ?? new List<string>();
+            var flags = obj.Flags ?? obj.ExtraFlags ?? new List<string>();
+            
             objects.Add(new ObjectDefinition(
                 obj.Id,
                 obj.Name ?? string.Empty,
@@ -185,8 +189,8 @@ internal static class ContentLoader
                 obj.LongDescription ?? string.Empty,
                 obj.Description ?? string.Empty,
                 obj.Type ?? string.Empty,
-                obj.WearSlots ?? new List<string>(),
-                obj.Flags ?? new List<string>(),
+                wearSlots,
+                flags,
                 obj.Details,
                 obj.Values ?? new List<int>(),
                 obj.Weight,

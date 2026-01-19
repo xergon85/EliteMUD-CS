@@ -27,16 +27,29 @@ public sealed class HoldHandler
         {
             if (MatchesTarget(obj.Definition, target))
             {
-                // Check if object can be held
-                if (!obj.Definition.WearSlots.Contains("Hold") && !obj.Definition.WearSlots.Contains("Light"))
+                // Legacy behavior: Check object Type to determine equipment slot
+                // Light objects (Type="Light") go to WEAR_LIGHT slot and only need Take flag
+                // Other objects go to HOLD slot and need Hold flag
+                EquipmentSlot slot;
+                
+                if (obj.Definition.Type == "Light")
                 {
-                    return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be held.");
+                    // Light objects only need Take flag (legacy: wear_bitvectors[WEAR_LIGHT] = ITEM_TAKE)
+                    if (!obj.Definition.WearSlots.Contains("Take"))
+                    {
+                        return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be held.");
+                    }
+                    slot = EquipmentSlot.Light;
                 }
-
-                // Determine hold slot (prefer Hold over Light for shields, Light for light sources)
-                var slot = obj.Definition.WearSlots.Contains("Light") 
-                    ? EquipmentSlot.Light 
-                    : EquipmentSlot.Hold;
+                else
+                {
+                    // Non-light objects need Hold flag
+                    if (!obj.Definition.WearSlots.Contains("Hold"))
+                    {
+                        return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be held.");
+                    }
+                    slot = EquipmentSlot.Hold;
+                }
 
                 // Try to equip the object
                 if (_worldState.EquipObject(player, obj.InstanceId, slot))
