@@ -1,0 +1,6365 @@
+{
+  "Zone": {
+    "Id": 60,
+    "Name": "Haon-Dor (Light)",
+    "TopRoomId": 6099,
+    "Lifespan": 45,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 6009,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6000,
+        "Arg2": 1,
+        "Arg3": 6009,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6000,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6001,
+        "Arg2": 10,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6002,
+        "Arg2": 20,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 6,
+        "Arg3": 6012,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 6,
+        "Arg3": 6015,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 6,
+        "Arg3": 6017,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 6,
+        "Arg3": 6019,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6002,
+        "Arg2": 1,
+        "Arg3": 6022,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6004,
+        "Arg2": 1,
+        "Arg3": 6023,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6024,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6005,
+        "Arg2": 4,
+        "Arg3": 6014,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6003,
+        "Arg2": 100,
+        "Arg3": 6010,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 6006,
+        "Arg2": 50,
+        "Arg3": 6003,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6004,
+        "Arg2": 5,
+        "Arg3": 6010,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6005,
+        "Arg2": 50,
+        "Arg3": 6010,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 6007,
+        "Arg2": 25,
+        "Arg3": 6005,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6013,
+        "Arg2": 9,
+        "Arg3": 6010,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6010,
+        "Arg2": 5,
+        "Arg3": 6023,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 10,
+        "Arg3": 6006,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 10,
+        "Arg3": 6013,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 10,
+        "Arg3": 6016,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6012,
+        "Arg2": 5,
+        "Arg3": 6000,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 6,
+        "Arg3": 6006,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 6,
+        "Arg3": 6007,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 6,
+        "Arg3": 6008,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 6,
+        "Arg3": 6013,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 6,
+        "Arg3": 6014,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6015,
+        "Arg2": 5,
+        "Arg3": 6025,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6015,
+        "Arg2": 5,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6016,
+        "Arg2": 2,
+        "Arg3": 6033,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6017,
+        "Arg2": 5,
+        "Arg3": 6026,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 6018,
+        "Arg2": 5,
+        "Arg3": 6017,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 6019,
+        "Arg2": 5,
+        "Arg3": 6017,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6020,
+        "Arg2": 5,
+        "Arg3": 6067,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6021,
+        "Arg2": 100,
+        "Arg3": 6032,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 6022,
+        "Arg2": 10,
+        "Arg3": 6021,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 6022,
+        "Arg2": 10,
+        "Arg3": 6021,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 6022,
+        "Arg2": 10,
+        "Arg3": 6021,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 15,
+        "Arg3": 6019,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 15,
+        "Arg3": 6065,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 15,
+        "Arg3": 6062,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 15,
+        "Arg3": 6069,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 15,
+        "Arg3": 6078,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6006,
+        "Arg2": 1,
+        "Arg3": 6033,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6007,
+        "Arg2": 1,
+        "Arg3": 6033,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6008,
+        "Arg2": 4,
+        "Arg3": 6005,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6008,
+        "Arg2": 4,
+        "Arg3": 6013,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6008,
+        "Arg2": 4,
+        "Arg3": 6062,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6009,
+        "Arg2": 3,
+        "Arg3": 6032,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6009,
+        "Arg2": 4,
+        "Arg3": 6066,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6009,
+        "Arg2": 4,
+        "Arg3": 6013,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6009,
+        "Arg2": 4,
+        "Arg3": 6016,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6010,
+        "Arg2": 2,
+        "Arg3": 6030,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6010,
+        "Arg2": 2,
+        "Arg3": 6030,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6011,
+        "Arg2": 1,
+        "Arg3": 6067,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6012,
+        "Arg2": 7,
+        "Arg3": 6003,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6012,
+        "Arg2": 7,
+        "Arg3": 6007,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6012,
+        "Arg2": 7,
+        "Arg3": 6028,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6012,
+        "Arg2": 7,
+        "Arg3": 6032,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6012,
+        "Arg2": 7,
+        "Arg3": 6030,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6012,
+        "Arg2": 7,
+        "Arg3": 6064,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6012,
+        "Arg2": 7,
+        "Arg3": 6075,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6013,
+        "Arg2": 4,
+        "Arg3": 6030,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6013,
+        "Arg2": 4,
+        "Arg3": 6021,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6013,
+        "Arg2": 4,
+        "Arg3": 6067,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6013,
+        "Arg2": 4,
+        "Arg3": 6061,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 4,
+        "Arg3": 6026,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 4,
+        "Arg3": 6026,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 4,
+        "Arg3": 6026,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6014,
+        "Arg2": 4,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6015,
+        "Arg2": 1,
+        "Arg3": 6026,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6016,
+        "Arg2": 1,
+        "Arg3": 6025,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6024,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6017,
+        "Arg2": 3,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6017,
+        "Arg2": 3,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6017,
+        "Arg2": 3,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3124,
+        "Arg2": 4,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3124,
+        "Arg2": 4,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3124,
+        "Arg2": 3,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3124,
+        "Arg2": 3,
+        "Arg3": 6027,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 11,
+        "Arg3": 6068,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 16,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 11,
+        "Arg3": 6062,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 16,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 11,
+        "Arg3": 6071,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 16,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 11,
+        "Arg3": 6070,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 16,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6001,
+        "Arg2": 11,
+        "Arg3": 6060,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 6023,
+        "Arg2": 16,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6005,
+        "Arg2": 8,
+        "Arg3": 6069,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6005,
+        "Arg2": 8,
+        "Arg3": 6074,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6005,
+        "Arg2": 8,
+        "Arg3": 6060,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 6000,
+      "Name": "The Edge of the Forest",
+      "Description": "\n   You are standing at the end of a dusty road, near the eastern edge of the\nlarge forest of Haon-Dor. To the east you see the road heading back to the\nwalled city, Midgaard, and to the west is a narrow trail leading through the\nforest.",
+      "ZoneId": 60,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6090,
+          "Description": "To the east a dusty road takes you back to the walls of Midgaard, and its large\nwest gate.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6001,
+          "Description": "You see a narrow forest trail winding westward in between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "trail"
+          ],
+          "Description": "\nThe forest trail winds westwards through the trees."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are quite tall considering most of them appear to be quite young.\nOn one of the trees, crude letters forming the word \"Haon-Dor\" have been\ncarved into the bark."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6001,
+      "Name": "A trail through the light forest",
+      "Description": "\n   You are on a trail leading through the forest. There seems to be a small\npath leading north into the shadows. To the east is the forest edge and to the\nwest the trail leads further into the forest.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6060,
+          "Description": "You see evidence of a small path leading through a break in the trees to the\nnorth.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6000,
+          "Description": "The trail continues eastwards out of the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6002,
+          "Description": "You see the narrow forest trail winding westwards in between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "trail"
+          ],
+          "Description": "\nThe forest trail winds east-west through the trees."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees here are quite young and fresh.  They seem to accommodate many kinds\nof birds, insects and other small animals."
+        },
+        {
+          "Keywords": [
+            "birds",
+            "insects",
+            "animals"
+          ],
+          "Description": "\nVery cute little creatures, they seem to enjoy life."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6002,
+      "Name": "A trail through the light forest",
+      "Description": "\n   You are on a narrow trail winding east and west through the forest. To the\nwest, the forest gradually becomes more dense. A small forest path leads off to\nthe south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6001,
+          "Description": "The trail continues eastwards through the young trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6011,
+          "Description": "The small path leads south through the young trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6003,
+          "Description": "You see the narrow forest trail winding westwards into the dense forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "trail"
+          ],
+          "Description": "\nThe forest trail winds east-west through the trees."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe young, slender trees look beautiful, their fresh, green leaves moving\nlightly in the wind."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6003,
+      "Name": "A trail through the dense forest",
+      "Description": "\n   You are on a trail winding east and west through the dense forest. To the\neast, the forest gradually seems to become lighter.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 9900,
+          "Description": "A trail continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6002,
+          "Description": "The trail continues eastwards to the younger part of the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6004,
+          "Description": "You see the narrow trail winding westwards through the dense forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "trail"
+          ],
+          "Description": "\nThe forest trail seems almost fragile compared to the massive trunks."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe dense crowns of the mature trees leave only a fraction of the sky to be\nseen through the leaves."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6004,
+      "Name": "A trail through the dense forest",
+      "Description": "\n   You are on a trail winding east and west through the dense forest. To the\nwest, the trees are so huge and their crowns so dense that forest remains in\ntotal darkness. A small path leads south through the trees.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6003,
+          "Description": "The trail continues eastwards through the dense forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6005,
+          "Description": "The small path leads south through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6100,
+          "Description": "The narrow trail almost seems to disappear between the enormous trunks.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "trail"
+          ],
+          "Description": "\nThe forest trail seems almost fragile compared to the massive trunks."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe crowns of the old trees almost cut out all light."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6005,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The path\ncontinues north and south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6004,
+          "Description": "The small path leads north through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6006,
+          "Description": "The small path leads south through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6006,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The path\ncontinues north and east.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6005,
+          "Description": "The small path leads north through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6007,
+          "Description": "The small path leads east through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6007,
+      "Name": "An intersection in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The forest\ngradually lightens to the east. Paths lead east, west and south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6008,
+          "Description": "You can barely make out a clearing to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6012,
+          "Description": "The small path leads south through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6006,
+          "Description": "The small path leads west through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6008,
+      "Name": "The forest clearing",
+      "Description": "\n   You are in a clearing in the forest. Lots of fresh stumps of varying sizes\nprotrude from the ground and heavy logs are stacked neatly in a big pile\nsupported by stakes set into the ground. Paths lead north, east and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6011,
+          "Description": "The small path leads north through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6009,
+          "Description": "The small path leads east through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6007,
+          "Description": "The small path leads west through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "log",
+            "logs"
+          ],
+          "Description": "\nEven though the logs have been chopped to shorter pieces, they are quite heavy\nas they are fresh and still filled with sap."
+        },
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "stake",
+            "stakes"
+          ],
+          "Description": "\nThe stakes keep the logs from rolling down."
+        },
+        {
+          "Keywords": [
+            "stump",
+            "stumps"
+          ],
+          "Description": "\nThere are more stumps than logs and some of the stumps are partly covered in\nmoss."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6009,
+      "Name": "Outside a small cabin in the forest",
+      "Description": "\n   You are outside a small cabin built entirely from heavy logs. There is a\nwooden door to the north and small paths lead west and south through the trees.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6010,
+          "Description": "The wooden door is quite sturdy but does not appear to be equipped with a lock.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6014,
+          "Description": "The small path leads south through the dense forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6008,
+          "Description": "The small path leads west through the light forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cabin",
+            "logs",
+            "log"
+          ],
+          "Description": "\nIt looks simple but comfortable and the slender trees make the whole place seem\npretty idyllic.  It's a cabin built from wooden logs."
+        },
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe path is probably used by the cabin's inhabitants."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are fairly young, not much more than a hundred years or so."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6010,
+      "Name": "Inside the Cabin",
+      "Description": "\n   You are inside a small one-room cabin made entirely from heavy logs. It is\nvery sparsely furnished, containing only the most basic housekeeping equipment,\nsuch as a bed, a chair and a table.",
+      "ZoneId": 60,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6009,
+          "Description": "The wooden door leads south.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bed"
+          ],
+          "Description": "\nIt is definitely not the most comfortable bed you have seen in your life."
+        },
+        {
+          "Keywords": [
+            "chair"
+          ],
+          "Description": "\nIt is made from oak and looks strong and sturdy."
+        },
+        {
+          "Keywords": [
+            "table"
+          ],
+          "Description": "\nA heavy table that doesn't even appear to rock. It seems to have something\ncarved on it."
+        },
+        {
+          "Keywords": [
+            "carving",
+            "carvings",
+            "carved"
+          ],
+          "Description": "\nOn the table is carved :\n                                                  /) /)\n          Danny and Mari, Oct 31, 1991           ( o o )\n                                                  = x =\n                                                 m     m\n                                              ***(========-"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6011,
+      "Name": "A small path through the light forest",
+      "Description": "\n   You are on a small path leading through the forest. The trees are tall and\nslender. Paths lead north and south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6002,
+          "Description": "The path leads north through the young trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6008,
+          "Description": "The path leads south through the young trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are fairly young, not much more than a hundred years or so."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6012,
+      "Name": "An intersection in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest floor in an unreal twilight illumination. Paths lead\nnorth, east and south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6007,
+          "Description": "The small path leads north through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6013,
+          "Description": "The small path leads east through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6021,
+          "Description": "The small path leads south through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6013,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The path\ncontinues east and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6014,
+          "Description": "The small path leads east through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6012,
+          "Description": "The small path leads west through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6014,
+      "Name": "An intersection in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The forest\ngradually lightens to the north. Paths lead north, east and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6009,
+          "Description": "The path leads north to a lighter part of the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6015,
+          "Description": "The small path leads east through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6013,
+          "Description": "The small path leads west through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe crowns of the old trees leave the forest in an unreal twilight\nillumination."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6015,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The path\ncontinues south and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6016,
+          "Description": "The small path leads south through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6014,
+          "Description": "The small path leads west through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6016,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The path\ncontinues north, south and east.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6015,
+          "Description": "The small path leads north through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6028,
+          "Description": "The small path leads east through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6017,
+          "Description": "The small path leads south through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6017,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are at a turn on a small path leading through the dense forest. The\nforest seems to become lighter to the west. The path continues north and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6016,
+          "Description": "The small path leads north through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6018,
+          "Description": "The small path leads west through the trees to a lighter part of the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe crowns of the old trees leave the forest in an unreal twilight\nillumination.  A large branch looms above you, over the path."
+        },
+        {
+          "Keywords": [
+            "up",
+            "branches",
+            "branch",
+            "large"
+          ],
+          "Description": "\nThe branch of a large oak stretches out above the path from the east."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6018,
+      "Name": "An intersection in the light forest",
+      "Description": "\n   You are on a small path leading through the forest. A path leads north to a\nsmall field and other paths lead east and west into the dense forest.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6023,
+          "Description": "The path leads north to a small, grassy field.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6017,
+          "Description": "The path leads east to a dense part of the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6019,
+          "Description": "The path leads west to a dense part of the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe tall trees are young and slender, not much more than a hundred years or so."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6019,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The forest seems\nto become lighter to the east. The path continues north and east.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6020,
+          "Description": "The small path leads north through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6018,
+          "Description": "The small path leads east through the trees to a lighter part of the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe crowns of the old trees leave the forest in an unreal twilight\nillumination."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6020,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The path\ncontinues south and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6019,
+          "Description": "The small path leads south through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6021,
+          "Description": "The small path leads west through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6021,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. To the west you\nsee a dark cave entrance, leading into a small hillside. The path continues\nnorth and east.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6012,
+          "Description": "The small path leads north through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6020,
+          "Description": "The small path leads east through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6022,
+          "Description": "The cave is very dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe crowns of the old trees leave the forest in an unreal twilight\nillumination."
+        },
+        {
+          "Keywords": [
+            "cave",
+            "entrance"
+          ],
+          "Description": "\nThe irregular opening is eight feet wide and six feet tall.  An acrid smell\nemanates from within."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6022,
+      "Name": "Inside the cave",
+      "Description": "\n   You are in a natural cave. Various sorts of debris cover the stone floor,\nemitting a rather unpleasant smell that makes the air thick and hard to\nbreathe. The only obvious exit is east.",
+      "ZoneId": 60,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6021,
+          "Description": "The cave opening is to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "debris"
+          ],
+          "Description": "\nIt consists mostly of gnawed bones mixed with small pieces of torn fur."
+        },
+        {
+          "Keywords": [
+            "cave",
+            "walls",
+            "floor",
+            "stone"
+          ],
+          "Description": "\nQuite uninteresting."
+        },
+        {
+          "Keywords": [
+            "air",
+            "smell"
+          ],
+          "Description": "\nKind of transparent, but quite noticeable nevertheless."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6023,
+      "Name": "A Grassy Field",
+      "Description": "\n   You are in a grass covered field somewhere in the forest. The tall grass\nnearly reaches your waist, and the surrounding oaks and beeches form an almost\nwall-like thicket on the east side of the field. To the northeast you can see a\nsmall lake. A small path leads south through the trees, and the field opens up\nto the north and west.",
+      "ZoneId": 60,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6026,
+          "Description": "Wind blowing in from the north carries with it the smell of a newly killed\nanimal, as well as the noise of many birds, which you can see circling there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6024,
+          "Description": "The ground slopes gently downward to the eastern tree line.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6018,
+          "Description": "The small path leads south in between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "grass"
+          ],
+          "Description": "\nThe tall grass makes a nice hiding place for animals."
+        },
+        {
+          "Keywords": [
+            "path"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees",
+            "thicket"
+          ],
+          "Description": "\nThe trees form a close thicket, blocking any exit to the west."
+        },
+        {
+          "Keywords": [
+            "birds",
+            "bird",
+            "circling"
+          ],
+          "Description": "\nMany carrion birds are circling to the north, you presume they are waiting for\ntheir turn to feast on a corpse."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6024,
+      "Name": "Lower Part of the Grassy Field",
+      "Description": "\n   You are in a lower part of the grassy field, south of a small lake. The\ngrass here has been trampled by the many animals coming here for water, leaving\nthe ground covered in tracks of different types. To the west you see a break in\nthe wall of trees surrounding the field, and to the north is a small lake.",
+      "ZoneId": 60,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6025,
+          "Description": "The animal tracks lead off to the north, and around the lake there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6023,
+          "Description": "To the south-west you see a break in the tree line, leading back to the forest\npath.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "grass"
+          ],
+          "Description": "\nThe tall grass makes a nice hiding place for animals."
+        },
+        {
+          "Keywords": [
+            "path",
+            "trampled"
+          ],
+          "Description": "\nThe trampled grass path leads to the lake north of here."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees",
+            "thicket"
+          ],
+          "Description": "\nThe trees form a close thicket, blocking any exit to the south and east."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6025,
+      "Name": "Beside the Lake on a Grassy Field",
+      "Description": "\n   The grass stops shortly before the lake, replaced by mud covered in tracks\nfrom the local animals. When you come close many animals scatter into the tall\ngrass and some even into the forest. To the west you see birds circling in the\nhigh in the air, and to the north you see a small lake, surrounded by tall\nreeds. The field continues to the south, and the forest blocks passage to the\neast.",
+      "ZoneId": 60,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6027,
+          "Description": "The lake looks inviting, and you can see some sort of water fowl floating\naround among the reeds.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6024,
+          "Description": "To the south an animal trail leads of towards a the other side of the lower\nfield.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6026,
+          "Description": "The smell of carrion drifts down to you from higher on the field to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "grass"
+          ],
+          "Description": "\nThe tall grass makes a nice hiding place for animals."
+        },
+        {
+          "Keywords": [
+            "lake"
+          ],
+          "Description": "\nAnimals from all around come here to drink. The lake itself is not very big,\nbut it stretches off to the north from here."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees",
+            "thicket"
+          ],
+          "Description": "\nThe trees form a close thicket, blocking any exit to the north or east."
+        },
+        {
+          "Keywords": [
+            "birds",
+            "bird",
+            "circling"
+          ],
+          "Description": "\nMany carrion birds are circling to the west, you presume they are waiting for\ntheir turn to feast on a corpse."
+        },
+        {
+          "Keywords": [
+            "track",
+            "tracks",
+            "mud"
+          ],
+          "Description": "\nYou see tracks of both hooved and other sorts of animals. Evidence of all\nsizes of animals is here in the mud, showing just how lively the forest is."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6026,
+      "Name": "The Northern Section of a Grassy Field",
+      "Description": "\n   As you come close, scavenging animals and birds of all sorts scatter,\nleaving only the boldest and stupidest encircling the corpse of a large boar.\nCarrion birds circle overhead, and smaller animals stare out of the tall grass\nat you. The grass here has been trampled, and a large area around the corpse is\nstained by blood. A trail leads down the sloping field to a lake, and to the\nsouth you see the path back to the forest.",
+      "ZoneId": 60,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6025,
+          "Description": "A small lake lies down the sloping field to the east. Some of the animals that\nfled from here have gone there, and are watching, waiting for you to leave so\nthey can resume their feasting.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6023,
+          "Description": "The field continues to the south, and you can see the path back to the forest\nthere.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "grass"
+          ],
+          "Description": "\nThe tall grass makes a nice hiding place for animals. You see some of the\nanimals you frightened away peeking furtively out at you."
+        },
+        {
+          "Keywords": [
+            "path"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees",
+            "thicket"
+          ],
+          "Description": "\nThe trees form a close thicket, blocking any exit to the north and west."
+        },
+        {
+          "Keywords": [
+            "birds",
+            "circling"
+          ],
+          "Description": "\nMany birds of varying size circle overhead, waiting for you to leave. You hope\nthey don't decide that you could be a corpse with just a little effort."
+        },
+        {
+          "Keywords": [
+            "animal",
+            "animals",
+            "small"
+          ],
+          "Description": "\nSeveral pairs of eyes peer out at you, urging you to leave.  The just might\ndecide that en masse they could kill you, so you probably don't want to tarry\nhere."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6027,
+      "Name": "On the Lake",
+      "Description": "\n   You are in the middle of a small lake, fed from a small stream coming\nthrough the forest from the northwest. The water is not that clear, but you can\nsee fish swimming around below you. The bank is clear to the south, providing a\nsafe place to get back to the field.",
+      "ZoneId": 60,
+      "Sector": "WaterNoSwim",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6025,
+          "Description": "Some animals have gathered on the bank to watch you, curious about what you are\ndoing.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fish"
+          ],
+          "Description": "\nTrout and perhaps a catfish or two swim about below your boat, totally\nignoring your presence."
+        },
+        {
+          "Keywords": [
+            "lake"
+          ],
+          "Description": "\nAnimals from all around come here to drink. The lake itself is not very big,\nbut it stretches off to the north from here."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees",
+            "thicket"
+          ],
+          "Description": "\nTrees cover the bank on most sides, preventing you from docking there."
+        },
+        {
+          "Keywords": [
+            "reed",
+            "reeds"
+          ],
+          "Description": "\nReeds grow up around the edges of the lake, providing cover for the small\nwater fowl that live here."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6028,
+      "Name": "A small path in the dense forest",
+      "Description": "\n   You are on a small path leading through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The path\ncontinues to the west and south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6029,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6016,
+          "Description": "The small path leads west through the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6029,
+      "Name": "Near a Large Tree in the Dense Forest",
+      "Description": "\n   You are at the end of a small path leading through the dense forest. The\ncrowns of the old trees leave the forest in an unreal twilight illumination.\nThis rough clearing is dominated by a very large oak tree, probably the largest\nin this part of the forest. The path leads back to the north.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6028,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 6030,
+          "Description": "You see the lower branches of the towering oak.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks, with one large oak off to your\nright."
+        },
+        {
+          "Keywords": [
+            "large",
+            "oak",
+            "tree"
+          ],
+          "Description": "\nIt has some lower branches that you think you could reach if you stretched.\nYou might even be able to climb all the top, though from here it looks like\nsomething else had that idea before you. There is a faint animal shape pacing\non one of the highest branches."
+        },
+        {
+          "Keywords": [
+            "animal",
+            "shape"
+          ],
+          "Description": "\nFrom here it looks vaguely feline, though you could get a much better view\nfrom in the tree.  You are not sure if it has seen you yet."
+        },
+        {
+          "Keywords": [
+            "limb",
+            "limbs"
+          ],
+          "Description": "\nThey look quite sturdy, certainly capable of holding your weight should you\ndecide to climb up the tree using them."
+        },
+        {
+          "Keywords": [
+            "top",
+            "highest",
+            "high"
+          ],
+          "Description": "\nYou could probably see most of the forest, and perhaps even the city from the\ntop of the tree...of course, you'd have to deal with whatever that shape is\npacing on one of the upper limbs."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6030,
+      "Name": "In the Lower Branches of a Large Oak",
+      "Description": "\n   You are in a huge oak, about one third of the way to the top. The branches\nabove you block out much of the light, but enough filters through for you to\nsee. Small animals and birds scatter at your approach, rustling the leaves all\nabout you. You could easily climb back down to the ground, or continue up the\ntree. One large branch juts outward to the west, possibly providing a third\nchoice of exit.",
+      "ZoneId": 60,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 6031,
+          "Description": "This limb looks large and strong enough for you to walk most of the way along\nits length to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 6032,
+          "Description": "More large branches spread out from the tree above you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6029,
+          "Description": "The rough clearing is just a quick climb and jump below you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "nest",
+            "nests"
+          ],
+          "Description": "\nAfter a short period of looking, you notice a bird's nest on a limb not far\nabove you, and a large squirrel's nest in the crook of a large limb that\nstretches out towards the west."
+        },
+        {
+          "Keywords": [
+            "animals",
+            "bird",
+            "birds"
+          ],
+          "Description": "\nA variety of squirrels, chipmunks, and birds make their homes in this and the\nsurrounding trees.  If you look closely you may be able to see some of their\nrapidly emptying nests."
+        },
+        {
+          "Keywords": [
+            "feline"
+          ],
+          "Description": "\nThe shape above you moves with definite grace and confidence. You think that\nit must be a Bobcat, stalking smaller tree-dwelling animals."
+        },
+        {
+          "Keywords": [
+            "pacing",
+            "pace",
+            "animal",
+            "shape"
+          ],
+          "Description": "\nFrom here it looks feline.  You still don't think it has noticed you, despite\nthe noise you made while climbing up here."
+        },
+        {
+          "Keywords": [
+            "limb",
+            "limbs"
+          ],
+          "Description": "\nThey look quite sturdy, certainly capable of holding your weight should you\ndecide to climb around in the tree using them."
+        },
+        {
+          "Keywords": [
+            "top",
+            "highest",
+            "high"
+          ],
+          "Description": "\nYou could probably see most of the forest, and perhaps even the city from the\ntop of the tree...of course, you would have to deal with whatever that shape is\nthat you see pacing on one of the upper limbs."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6031,
+      "Name": "Out on a Limb in a Large Oak",
+      "Description": "\n   This sturdy branch hangs far out over a path to the west, which you might be\nable to jump down to. Several squirrels scamper into hiding as you approach,\nleaving you alone and swaying slightly with the wind. To your north you can see\na small log cabin through the trees, and to the southeast there seems to be\nsome sort of clearing, with many birds circling above it.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6030,
+          "Description": "Back to the east you see the tree trunk. It is much less precarious there\ncompared to here... perhaps you should go back.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6016,
+          "Description": "Below you is a small path, probably used by the forest animals. You think that\nyou could jump down with a little effort.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "nest",
+            "nests"
+          ],
+          "Description": "\nYou notice that several of the squirrels sought refuge in a large nest that is\nwell within your reach.  Looking into the nest, you see two pairs of eyes\nstaring back at you."
+        },
+        {
+          "Keywords": [
+            "animals",
+            "bird",
+            "birds"
+          ],
+          "Description": "\nA variety of squirrels, chipmunks, and birds make their homes in this and the\nsurrounding trees.  If you look closely you may be able to see some of their\nrapidly emptying nests."
+        },
+        {
+          "Keywords": [
+            "feline"
+          ],
+          "Description": "\nThe shape above you moves with definite grace and confidence. You think that\nit must be a Bobcat, stalking smaller tree-dwelling animals."
+        },
+        {
+          "Keywords": [
+            "pacing",
+            "pace",
+            "animal",
+            "shape"
+          ],
+          "Description": "\nFrom here it looks feline.  You still don't think it has noticed you, despite\nthe noise you made while climbing up here."
+        },
+        {
+          "Keywords": [
+            "limb",
+            "limbs"
+          ],
+          "Description": "\nThe limbs look quite sturdy, certainly capable of holding your weight should\nyou decide to climb around in the tree using them."
+        },
+        {
+          "Keywords": [
+            "top",
+            "highest",
+            "high"
+          ],
+          "Description": "\nYou could probably see most of the forest, and perhaps even the city from the\ntop of the tree...of course, you would have to deal with whatever that shape is\nthat you see pacing on one of the upper limbs."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6032,
+      "Name": "Midway to the Top of the Large Oak",
+      "Description": "\n   You are in a huge oak, about midway to the top. The branches above you block\nout much of the light, but enough filters through for you to see. A few birds\nhave remained to watch you from the fringe branches, well out of your reach.\nScratches mar the tree here, and torn bark is scattered near you on the branch.\nIt would seem some large forest cat lives nearby, so you had better be careful!\nYou can continue a bit farther up the tree, or descend to limbs that don't sway\nso much.",
+      "ZoneId": 60,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 6033,
+          "Description": "Above you the tree narrows farther, but it still looks like you could climb up\nthere. A feline shape is pacing about above you, trying to get to a large\nwounded bird. Perhaps you should try to see what sort of cat this is before you\ninterrupt it's hunt... it might eat you instead of the bird.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6030,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "nest",
+            "nests"
+          ],
+          "Description": "\nA medium sized bird's nest is close to you here, and it looks like it has some\nnice looking eggs in it too!"
+        },
+        {
+          "Keywords": [
+            "animal",
+            "animals",
+            "bird",
+            "birds"
+          ],
+          "Description": "\nA variety of squirrels, chipmunks, and birds make their homes in this and the\nsurrounding trees.  If you look closely you may be able to see some of their\nrapidly emptying nests."
+        },
+        {
+          "Keywords": [
+            "feline",
+            "cat",
+            "pacing",
+            "pace",
+            "shape"
+          ],
+          "Description": "\nIt looks like a Bobcat, and it seems quite intent on getting to a large bird\nthat it has wounded.  It has not seen you yet, or perhaps just thinks you are\ntoo easy a meal."
+        },
+        {
+          "Keywords": [
+            "limb",
+            "limbs"
+          ],
+          "Description": "\nThey look quite sturdy, certainly capable of holding your weight should you\ndecide to climb around in the tree using them."
+        },
+        {
+          "Keywords": [
+            "top",
+            "highest",
+            "high"
+          ],
+          "Description": "\nYou could probably see most of the forest, and perhaps even the city from the\ntop of the tree...of course, you would have to deal with whatever that shape is\nthat you see pacing on one of the upper limbs."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6033,
+      "Name": "High in the Large Oak",
+      "Description": "\n   The tree top gently sways in the wind, and you think you are as high as you\ncan safely go in the tree. The limbs here show evidence of a small battle, with\nripped bark and loose feathers scattered everywhere. Looking around, you can\nsee the forest stretching out below you in all directions. To the east you see\nMidgaard, and to the south the river runs through a deep chasm. North and west\nof here you can see another small village, and on the western horizon you see a\nlarge mountain.",
+      "ZoneId": 60,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 6032,
+          "Description": "Below you many of the animals you frightened earlier have returned to their\nvarious nests and homes. You can see a small hint of the path far below you\nthrough the branches.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "around",
+            "trees",
+            "everywhere",
+            "woods",
+            "forest"
+          ],
+          "Description": "\nOff to the southwest you can see a grass covered field, and a small lake;\nnorthwest of you is a small cabin and a large pile of wood. Far to west the\ntreetops form a tight canopy, blocking out almost all sunlight and your view.\nIt is said that large wolves live there. You've also heard rumors of horrible\nspiders and drow living there. You'd be best off leaving that area to more\nexperienced adventurers."
+        },
+        {
+          "Keywords": [
+            "mountain",
+            "range",
+            "northeast"
+          ],
+          "Description": "\nA long mountain range stretches across the horizon to the north and northeast.\nYou have heard rumors of many different sorts of creatures living there,\nvarying from Dwarves and Humans to Ogres and various humanoid creatures. Some\nsay that evil Dark Elves dwell in the underworld deep below the lands of the\nDwarves.  The caves of Moria also are found there, peopled by all sorts of\nevil creatures."
+        },
+        {
+          "Keywords": [
+            "river",
+            "chasm"
+          ],
+          "Description": "\nTo the south you see a river flowing roughly from the northeast to the west.\nIt emerges from a dark opening in the side of a mountain and flows through\nMidgaard, and on into the forest. It has eroded a deep chasm in the soft stone\nunder the forest floor, and is not visible for long after it enters the forest\nproper."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6060,
+      "Name": "A shaded path through the forest",
+      "Description": "\n   You are on a small shaded path leading through the trees. The forest\ngradually lightens to the east. The path continues to the north, and to the\nsouth you see the main trail.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6065,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6001,
+          "Description": "Through a break in the tree line you see the main trail that heads back towards\nMidgaard.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded"
+          ],
+          "Description": "\nThe shaded path is probably used by the small animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThey are mostly young oaks and tall beeches."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6061,
+      "Name": "A shaded path through the forest",
+      "Description": "\n   You are at a turn on a small shadowed path leading through the forest. The\nforest seems to become lighter to the west. The path continues north and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6066,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6062,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded",
+            "shadowed"
+          ],
+          "Description": "\nThe shadowy path is probably used by the small animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe crowns of the old trees leave the forest in an unreal twilight\nillumination.  A large branch looms above you, over the path."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6062,
+      "Name": "A shaded path through the dense forest",
+      "Description": "\n   You are on a small shaded path leading through the dense forest. The crowns\nof the old trees leave the forest floor in an unreal twilight illumination. To\nthe north you see a small clearing. Paths lead east and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6067,
+          "Description": "Through the underbrush you see a small clearing.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6061,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6063,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded",
+            "shadowy"
+          ],
+          "Description": "\nThe shaded path is probably used by the small animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6063,
+      "Name": "A shaded path through the dense forest",
+      "Description": "\n   You are on a small shaded path through the dense forest. The crowns of the\nold trees leave the forest in an unreal twilight illumination. The path\ncontinues north and east.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6068,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6062,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded"
+          ],
+          "Description": "\nThe shaded path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6064,
+      "Name": "A shadowy path through the dense forest",
+      "Description": "\n   You are on a small shadowy path leading through the dense forest. The crowns\nof the old trees leave the forest in an unreal twilight illumination. The path\ncontinues north and south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6069,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6100,
+          "Description": "The path winds its way into darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shadowy"
+          ],
+          "Description": "\nThe shadowy path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6065,
+      "Name": "A shaded path through the forest",
+      "Description": "\n   You are at a turn on a small shaded path winding through the trees. The\nforest gradually becomes more dense to the west. The path continues west and\nsouth from here.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6060,
+          "Description": "Through the trees to the south you can almost see the main trail leading back\nto Midgaard.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6066,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded"
+          ],
+          "Description": "\nThe shadowed path is probably used by the small animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly young oaks and tall beeches."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6066,
+      "Name": "A fork in the shaded path through the forest",
+      "Description": "\n   You are at a fork in the small shaded path winding through the trees. The\nforest gradually becomes more dense to the west. The path branches to the north\nand south here, and also continues to the east.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6071,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6065,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6061,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded"
+          ],
+          "Description": "\nThe shaded path is probably used by the small animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6067,
+      "Name": "At the fallen tree",
+      "Description": "\n   You are standing in a small clearing, beside a large fallen tree. A large\namount of the tree has already decomposed, but some pieces remain, scattered\nabout the clearing. Paths border the clearing to the north and south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6072,
+          "Description": "A shaded path winds its way northeast between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6062,
+          "Description": "A shaded path winds its way east between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe shaded paths are probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "fallen",
+            "rotten",
+            "decomposed",
+            "tree"
+          ],
+          "Description": "\nThe tree has mostly rotted away, providing nourishment to many small plants\ngrowing here in the clearing.  The few pieces that remain are not all that\nlarge, but one log in particular catches your eye and seems to remind you of\nsomething. Under one of these logs would be a great place for an animal to\nmake it's den..."
+        },
+        {
+          "Keywords": [
+            "clearing",
+            "clear"
+          ],
+          "Description": "\nWhen the large tree fell it must have brought a few of the smaller trees down\nwith it in order to make a clearing like this."
+        },
+        {
+          "Keywords": [
+            "under",
+            "animal",
+            "den"
+          ],
+          "Description": "\nUnder a log you think you see some sort of hole, or animal's den. Looking\ncloser, you can make out the form of what you believe to be a Badger resting\ninside of the den."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6068,
+      "Name": "An intersection on the shaded path",
+      "Description": "\n   You are on a small shaded path leading through the dense forest. The crowns\nof the old trees leave the forest in an unreal twilight illumination. The path\ncontinues north, south, and west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6073,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6063,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6069,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded"
+          ],
+          "Description": "\nThe shaded path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6069,
+      "Name": "A shadowy path through the dense forest",
+      "Description": "\n   You are on a small shadowy path leading through the dense forest. The crowns\nof the old trees leave the forest in an unreal twilight illumination. The path\ncontinues south and east.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6068,
+          "Description": "The path winds its way between the old trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6064,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded",
+            "shadowy"
+          ],
+          "Description": "\nThe shadowy path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6070,
+      "Name": "Off of the path in the shaded forest",
+      "Description": "\n   You are wandering amongst the trees in the light forest, without the aid of\na path or trail. More sunlight trickles through the treetops here, making your\ntravel a bit easier. Small animals scurry away as you approach. You are no\nlonger on a path, so you may go whichever way you please.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6078,
+          "Description": "The trees seem to part, exposing a trail into the shade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6070,
+          "Description": "The trees seem to part, exposing a trail into the shade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6061,
+          "Description": "The trees seem to part, exposing a trail into the shade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6072,
+          "Description": "The trees seem to part, exposing a trail into the shade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe path is long behind you now...you aren't sure which direction it lies in\nanymore."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are younger here than to those to the west."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6071,
+      "Name": "A shaded path through the forest",
+      "Description": "\n   You are on a small shaded path leading in between the trees. The forest\ngradually lightens to the east. Paths lead west and south, and you think you\nsee a small path leading eastward.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6070,
+          "Description": "It looks like a small path begins between two trees to the east, but you aren't\nquite certain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6066,
+          "Description": "The path winds its way through the trees to an split in the path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6072,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shadowy",
+            "shadowed"
+          ],
+          "Description": "\nThe shadowy path is probably used by the small animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6072,
+      "Name": "A shaded path though the forest",
+      "Description": "\n   You are on a small shaded path leading between the trees. The forest\ngradually becomes more dense to the west. Paths lead north and east, and you\nsee a small clearing to the south.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6075,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6071,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6067,
+          "Description": "A lightly traveled path heads southward to a small clearing.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded"
+          ],
+          "Description": "\nThe shaded path is probably used by the small animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6073,
+      "Name": "A shadowy path through the dense forest",
+      "Description": "\n   You are on a small shadowy path leading through the dense forest. To the\nnorth the terrain becomes quite hilly and rough. The crowns of the old trees\nleave the forest in an unreal twilight illumination. The path continues north\nand south.",
+      "ZoneId": 60,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6076,
+          "Description": "The path winds its way into the hills and denser forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6068,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shadowy"
+          ],
+          "Description": "\nThe shadowy path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hill",
+            "hills",
+            "terrain"
+          ],
+          "Description": "\nTo the northwest you see hills covered by dense forest."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6074,
+      "Name": "A small trail through the forest",
+      "Description": "\n   You have just left the shaded path, and you are now standing at the head of\na very short trail. It looks like someone begin clearing away the underbrush\nhere, but didn't get finished. You may leave in any direction, but the path is\nto the west.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6074,
+          "Description": "The trees seem to part, exposing a trail into the shade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6070,
+          "Description": "The trees seem to part, exposing a trail into the shade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6070,
+          "Description": "The trees seem to part, exposing a trail into the shade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6075,
+          "Description": "Through the underbrush you see a small path winding its way northward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe narrow path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6075,
+      "Name": "A shaded path through the forest",
+      "Description": "\n   You are on a small shaded path leading between the trees. The forest\ngradually becomes more dense to the west, and to the northwest the terrain is\nquite hilly. The path continues north and south. To the east you see a trail\nwinding through the younger section of the forest.",
+      "ZoneId": 60,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6078,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6074,
+          "Description": "You think you see the beginnings of a small trail through the younger part of\nthe forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6072,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded"
+          ],
+          "Description": "\nThe shaded path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hills",
+            "hill",
+            "terrain"
+          ],
+          "Description": "\nTo the northwest the ground becomes more hilly. You have heard that a halfling\nvillage is somewhere in the hills."
+        },
+        {
+          "Keywords": [
+            "trail"
+          ],
+          "Description": "\nYou think you see the beginnings of a small trail to the east, winding through\nthe younger part of the forest."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6076,
+      "Name": "In the dense forest between the hills",
+      "Description": "\n   You are standing among tightly packed trees between several hills. You lost\ntrack of the path long ago, and now must rely on your instincts to guide you.\nThe ground is very rough and rocky here, and only the most hardy plants\nsurvive. The crowns of the old trees leave the hills in an unreal twilight\nillumination.",
+      "ZoneId": 60,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6081,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6077,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6076,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6073,
+          "Description": "All you see are trees and a shadowy path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe path is probably around here somewhere...if only you had paid more\nattention."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hills",
+            "hill"
+          ],
+          "Description": "\nHills rise up all around you, blocking your view of the terrain."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6077,
+      "Name": "In the dense forest between the hills",
+      "Description": "\n   You are standing among tightly packed trees between several hills. You lost\ntrack of the path long ago, and now must rely on your instincts to guide you.\nThe ground is very rough and rocky here, and only the most hardy plants\nsurvive. The crowns of the old trees leave the hills in an unreal twilight\nillumination.",
+      "ZoneId": 60,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6081,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6076,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6079,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6077,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe path is probably around here somewhere...if only you had paid more\nattention."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hills",
+            "hill"
+          ],
+          "Description": "\nHills rise up all around you, blocking your view of the terrain."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6078,
+      "Name": "At the top of a hill",
+      "Description": "\n   You are standing on the top of a hill, this seems to be the begining of a\nlarge area with hills. To the west you see a strange circle of stones. At the\nmiddle of the circle you see a blue shimmering moongate. Is this the entrance\nto the world of Ultima?.",
+      "ZoneId": 60,
+      "Sector": "Hills",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6075,
+          "Description": "The path winds its way between the trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2600,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths",
+            "shaded"
+          ],
+          "Description": "\nThe shaded path is probably used by the animals living in the forest."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hills",
+            "hill"
+          ],
+          "Description": "\nThe terrian is very hilly and rough to the north and west.  You have heard\nthat there is a halfling village somewhere in the hills."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6079,
+      "Name": "In the dense forest between the hills",
+      "Description": "\n   You are standing among tightly packed trees between several hills. You lost\ntrack of the path long ago, and now must rely on your instincts to guide you.\nThe ground is very rough and rocky here, and only the most hardy plants\nsurvive. The crowns of the old trees leave the hills in an unreal twilight\nillumination.",
+      "ZoneId": 60,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6081,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6078,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6073,
+          "Description": "All you see are trees and a shadowy path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6080,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe path is probably around here somewhere...if only you had paid more\nattention."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hills",
+            "hill"
+          ],
+          "Description": "\nHills rise up all around you, blocking your view of the terrain."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6080,
+      "Name": "In the dense forest between the hills",
+      "Description": "\n   You are standing among tightly packed trees between several hills. You lost\ntrack of the path long ago, and now must rely on your instincts to guide you.\nThe ground is very rough and rocky here, and only the most hardy plants\nsurvive. The crowns of the old trees leave the hills in an unreal twilight\nillumination.",
+      "ZoneId": 60,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6081,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6082,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6076,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6081,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe path is probably around here somewhere...if only you had paid more\nattention."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hills",
+            "hill"
+          ],
+          "Description": "\nHills rise up all around you, blocking your view of the terrain."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6081,
+      "Name": "In the dense forest between the hills",
+      "Description": "\n   You are standing among tightly packed trees between several hills. You lost\ntrack of the path long ago, and now must rely on your instincts to guide you.\nThe ground is very rough and rocky here, and only the most hardy plants\nsurvive. The crowns of the old trees leave the hills in an unreal twilight\nillumination.",
+      "ZoneId": 60,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6078,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6077,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6076,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6073,
+          "Description": "All you see are trees and a shadowy path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "path",
+            "paths"
+          ],
+          "Description": "\nThe path is probably around here somewhere...if only you had paid more\nattention."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hills",
+            "hill"
+          ],
+          "Description": "\nHills rise up all around you, blocking your view of the terrain."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6082,
+      "Name": "In the dense forest between the hills",
+      "Description": "\n   You are standing among tightly packed trees on a medium sized hill. The\ndense forest spreads out all around you, and the crowns of the old trees leave\nthe hills in an unreal twilight illumination. To the west you can make out a\nsmall path leading northward.",
+      "ZoneId": 60,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6081,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6079,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6076,
+          "Description": "All you see are trees and hillsides.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": -1,
+          "Description": "All you see are trees and a <to be announced> to the north. Unfortunately, the\narea that is going to be north of here isn't fully debugged yet! Sorry for the\ninconvenience, it should be in soon :)",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nThe trees are mostly old beeches and oaks."
+        },
+        {
+          "Keywords": [
+            "hills",
+            "hill"
+          ],
+          "Description": "\nHills rise up all around you, blocking your view of the terrain."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6090,
+      "Name": "A Road Through the Plains",
+      "Description": "\n   You are on a dust covered east-west road through the western plains. An\noccasional hunter or adventurer can be seen, heading to or from the forest. To\nthe east is the walled city, Midgaard, and to the west the road ends at the\nhead of a narrow trail into a large forest.",
+      "ZoneId": 60,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6091,
+          "Description": "Far to the east you see the large walls guarding Midgaard.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6000,
+          "Description": "To the west the dusty trail ends, and becomes a narrow trail into the cool\nshadows of the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "trail"
+          ],
+          "Description": "\nThe forest trail winds westwards through the trees."
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees",
+            "forest"
+          ],
+          "Description": "\nThe trees are quite tall considering most of them appear to be quite young."
+        },
+        {
+          "Keywords": [
+            "road",
+            "dust",
+            "dusty"
+          ],
+          "Description": "\nThe road is well used, and quite dusty."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6091,
+      "Name": "A Road Through the Plains",
+      "Description": "\n   You are on a dust covered east-west road through the western plains. An\noccasional hunter or adventurer can be seen, heading to or from the forest. To\nthe east is the walled city, Midgaard, and to the west the road continues\ntowards a large forest.",
+      "ZoneId": 60,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6092,
+          "Description": "Far to the east you see the walls and western gate of Midgaard.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6090,
+          "Description": "You see the large forest, Haon-Dor, stretching out far to the west, and to the\nnorthwest you the forest gives way to hills.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "forest",
+            "haondor",
+            "haon-dor",
+            "haon",
+            "dor"
+          ],
+          "Description": "\nThe large forest of Haon-Dor spreads out to the west. Small and large game\nis plentiful there...as is adventure, and of course, danger!"
+        },
+        {
+          "Keywords": [
+            "tree",
+            "trees"
+          ],
+          "Description": "\nSome small trees grow amongst the underbrush of the plains. These slowly gain\nin height as you travel farther westward towards Haon-Dor"
+        },
+        {
+          "Keywords": [
+            "road",
+            "dust",
+            "dusty"
+          ],
+          "Description": "\nThe road is well used, and quite dusty."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6092,
+      "Name": "A Road Through the Plains",
+      "Description": "\n   You are on a dust covered east-west road crossing the grassy plains between\nMidgaard the forest of Haon-Dor. An occasional hunter or adventurer can be\nseen, heading to or from the forest. To the east is the walled city, Midgaard,\nand to the west the road continues towards a large forest.",
+      "ZoneId": 60,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3901,
+          "Description": "You see a small dirt path.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3052,
+          "Description": "To the east you see the walls and West Gate of Midgaard.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6091,
+          "Description": "To the west the road continues towards the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "forest"
+          ],
+          "Description": "\nThe large forest of Haon-dor spreads out to the west.  Small and large game\nis plentiful there...as is adventure, and of course, danger!"
+        },
+        {
+          "Keywords": [
+            "road",
+            "dust",
+            "dusty"
+          ],
+          "Description": "\nThe road is well used, and quite dusty."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 3124,
+      "Name": "duck",
+      "ShortDescription": "\nthe duck",
+      "LongDescription": "\nA duck is here, quacking happily.",
+      "Description": "\nThe duck is quite fat.  It looks like it is enjoying life.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+5",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 75,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6000,
+      "Name": "john lumberjack",
+      "ShortDescription": "\nJohn the Lumberjack",
+      "LongDescription": "\nJohn the Lumberjack is here, looking for some trees to chop down.",
+      "Description": "\nHe is six feet tall and looks quite strong, muscles bulging under his heavy,\nchequered shirt.  His features are worn with hard work and his expression is\none of a peaceful man leading a simple life.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 370,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+120",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 4000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%15 say Damn this weather!;\n%10 say Beware the bandits in dragon mountains.;\n%5 say You heading for the swamp?, take care it is filled with evil creatures.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6001,
+      "Name": "rabbit",
+      "ShortDescription": "\nthe rabbit",
+      "LongDescription": "\nA small rabbit is foraging in the bushes here.",
+      "Description": "\nIt is a small, furry creature with long ears and big feet.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d20+25",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 300,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6002,
+      "Name": "bear",
+      "ShortDescription": "\nthe brown bear",
+      "LongDescription": "\nA big, brown, angry-looking bear is here.",
+      "Description": "\nThe bear is a big, brown, furry animal with very large claws and very sharp\nteeth.  It doesn't resemble those cute little dolls from toy shops at all.",
+      "Level": 15,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveNeutral"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+230",
+        "Mana": 250,
+        "Move": 305
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6004,
+      "Name": "deer",
+      "ShortDescription": "\nthe fallow deer",
+      "LongDescription": "\nA fallow deer is grazing peacefully here.",
+      "Description": "\nShe is a graceful creature on long, slender legs, and with large, brown eyes\nlooking back at you with an air of watchful interest.",
+      "Level": 8,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "NiceThief",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d50+40",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 2100,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6005,
+      "Name": "fox",
+      "ShortDescription": "\nthe brown fox",
+      "LongDescription": "\nA brown fox is stalking rabbits through the underbrush here.",
+      "Description": "\nIt is a large fox with beautiful, red-brown fur and a long, thick bushy tail.",
+      "Level": 4,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d15+40",
+        "Mana": 140,
+        "Move": 140
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 750,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6006,
+      "Name": "bird large",
+      "ShortDescription": "\nthe bird",
+      "LongDescription": "\nA large bird with a broken wing has been cornered here.",
+      "Description": "\nThe bird isn't going to live much longer, by the looks of it.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "NiceThief"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d10+20",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d2+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 300,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6007,
+      "Name": "bobcat cat",
+      "ShortDescription": "\nthe bobcat",
+      "LongDescription": "\nA medium sized bobcat is stalking a bird here.",
+      "Description": "\nThe bobcat has sharp claws and teeth, and will probably eat you instead of the\nbird if you give it the chance.",
+      "Level": 5,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+60",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1100,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6008,
+      "Name": "sparrow",
+      "ShortDescription": "\nthe sparrow",
+      "LongDescription": "\nA sparrow is flapping around by the ground.",
+      "Description": "\nThe sparrow looks like it is enjoying life.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+20",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 250,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6009,
+      "Name": "robin",
+      "ShortDescription": "\nthe robin",
+      "LongDescription": "\nA robin is hopping around looking for bugs to eat.",
+      "Description": "\nThe robin looks quite intent on finding a bug or worm to eat.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+20",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 250,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6010,
+      "Name": "squirrel",
+      "ShortDescription": "\nthe squirrel",
+      "LongDescription": "\nA squirrel is here seeking refuge in it's nest.",
+      "Description": "\nIt peers out of it's next at you anxiously, seeming to plead silently with you\nto leave it alone.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+20",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 250,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6011,
+      "Name": "badger",
+      "ShortDescription": "\nthe sleepy badger",
+      "LongDescription": "\nA furry brown badger is curled up under a log here.",
+      "Description": "\nThe badger is slowly awakening and peering up at you from it's burrow. You know\nthat it won't be moving this slow for long.  It's sharp claws and teeth catch\nyour attention when you consider killing it.",
+      "Level": 4,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 50,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d20+50",
+        "Mana": 140,
+        "Move": 140
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 750,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6012,
+      "Name": "grey squirrel",
+      "ShortDescription": "\nthe grey squirrel",
+      "LongDescription": "\nA grey squirrel with a bushy tail is foraging for nuts here.",
+      "Description": "\nThis happy creature seems to pay you no heed as it goes about it's search for\nnuts among the leaves and twigs on the ground here.",
+      "Level": 2,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 150,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+22",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 300,
+          "Chance": 100,
+          "DamageDice": "1d6+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 350,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6013,
+      "Name": "chipmunk",
+      "ShortDescription": "\nthe small chipmunk",
+      "LongDescription": "\nA small brown-red chipmunk dashes from tree to tree here.",
+      "Description": "\nThe absolute zenith of hyperactivity, this small rodent seems to never tire of\nrunning up, down, and around the trees in this area.  If you could ever catch\nit, you imagine it would make an easy meal.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 170,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+20",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 300,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6014,
+      "Name": "crow black bird",
+      "ShortDescription": "\nthe large black crow",
+      "LongDescription": "\nA large black crow flits about here, picking at bits of carrion.",
+      "Description": "\nThe bird eyes you warily, but continues with it's meal.",
+      "Level": 2,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "AggressiveEvil"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+22",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3,
+      "Experience": 350,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6015,
+      "Name": "grotesque vulture",
+      "ShortDescription": "\nthe grotesque vulture",
+      "LongDescription": "\nA grotesque vulture covered in blood and gore is here feeding madly.",
+      "Description": "\nIt sickens you to even look at this foul bird.  Bits of dried gore stick to\nit's beak, and unidentifiable organs hang from it's talons and feathers.  \nIt sees you and attacks, protecting it's horrible feast!",
+      "Level": 6,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+68",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 14,
+      "Experience": 750,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6016,
+      "Name": "buck deer",
+      "ShortDescription": "\nthe young buck",
+      "LongDescription": "\nA young 5-point buck is drinking from the lake here.",
+      "Description": "\nThis young male deer is drinking from the edge of the lake and watching you\nwarily.  His antlers are not full size yet, and will no doubt be quite \nimpressive in a few years.",
+      "Level": 4,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+48",
+        "Mana": 140,
+        "Move": 140
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 450,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6017,
+      "Name": "fish",
+      "ShortDescription": "\nthe fish",
+      "LongDescription": "\nA fish is swimming just below the surface here.",
+      "Description": "",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+10",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d3+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 180,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 6000,
+      "Name": "axe lumber",
+      "ShortDescription": "\na lumber axe",
+      "Description": "\nA heavy lumber axe lies here.",
+      "ActionDescription": "\nchop",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "546",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        10,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 10,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 50,
+      "CostPerDay": 15,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "axe",
+            "lumber"
+          ],
+          "Description": "\nIt is a heavy axe of the kind lumberjacks use to chop down trees."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6001,
+      "Name": "shirt",
+      "ShortDescription": "\na chequered shirt",
+      "Description": "\nA chequered shirt lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 20,
+      "CostPerDay": 8,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shirt"
+          ],
+          "Description": "\nIt is an extra large, chequered shirt made from heavy cloth."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6002,
+      "Name": "boots",
+      "ShortDescription": "\na pair of worn leather boots",
+      "Description": "\nA pair of worn leather boots lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 60,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "boots"
+          ],
+          "Description": "\nThey are fashioned from rough leather that has been oiled frequently to make\nit stay waterproof.  They look worn but quite functional."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6003,
+      "Name": "fireplace",
+      "ShortDescription": "\na fireplace",
+      "Description": "\nA fireplace made from stone is set against the east wall.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        200,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 200,
+          "Flags": [],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fireplace"
+          ],
+          "Description": "\nIt is fashioned from stones of various sizes that have been stacked on top of\neach other and fastened with mortar.  Its chimney is constructed likewise and\nleads the smoke out through the low cabin ceiling."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6004,
+      "Name": "lantern",
+      "ShortDescription": "\na hooded brass lantern",
+      "Description": "\nA hooded brass lantern has been left here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 100
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 60,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "lantern"
+          ],
+          "Description": "\nIt is a large and robust but somewhat battered oil lantern made from brass,\nand it is equipped with a handle to make it handy and a hood to protect its\nflame.  Some letters have been scratched on its bottom."
+        },
+        {
+          "Keywords": [
+            "letters"
+          ],
+          "Description": "\nThey say, \"Use 'hold lantern' to activate.\""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6005,
+      "Name": "chest",
+      "ShortDescription": "\na wooden chest",
+      "Description": "\nA wooden chest stands in the corner.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        100,
+        15,
+        6006,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 100,
+          "Flags": [
+            "Closeable",
+            "PickProof",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 6006,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 100,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chest"
+          ],
+          "Description": "\nIt is a robust chest made from short, heavy planks that have been fastened\ntogether with tenons.  It is equipped with a simple brass lock."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6006,
+      "Name": "key",
+      "ShortDescription": "\na small brass key",
+      "Description": "\nA small brass key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        6005,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 6005,
+          "Timer": 0,
+          "TimerSet": 100
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 4,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key"
+          ],
+          "Description": "\nIt is a small, simple brass key with no inscriptions or marks of any kind."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6007,
+      "Name": "coins gold",
+      "ShortDescription": "\na heap of gold coins",
+      "Description": "\nSome gold coins lie piled up in a heap on the floor.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        255,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 255
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "coins"
+          ],
+          "Description": "\nThe coins seem to be gold.  They are obviously valuable."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6010,
+      "Name": "blackberries",
+      "ShortDescription": "\nsome blackberries",
+      "Description": "\nSome blackberries grow on a bush nearby.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 3,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "blackberries"
+          ],
+          "Description": "\nThey look very tasty indeed."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6011,
+      "Name": "mushroom",
+      "ShortDescription": "\na mushroom",
+      "Description": "\nA small mushroom grows nearby.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 6,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mushroom"
+          ],
+          "Description": "\nIt is a tasty little thing."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6012,
+      "Name": "sign",
+      "ShortDescription": "\na large sign",
+      "Description": "\nA large sign mounted on a pole is standing by the roadside.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pole"
+          ],
+          "Description": "\nNot the most interesting pole in the world.\nBetter leave it here, though, as it holds the sign in place."
+        },
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nIt says :-\n                         Haon-Dor\n                         --------\n This is the Forest of Haon-Dor.  Enter at your own risk.\n     Please report any strange occurrences to Derkhil,\n     as Quifael is currently indisposed."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6013,
+      "Name": "water barrel",
+      "ShortDescription": "\na barrel",
+      "Description": "\nA water barrel has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        40,
+        40,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 40,
+          "Amount": 40,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 45,
+      "Cost": 60,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6014,
+      "Name": "water brook",
+      "ShortDescription": "\na small brook",
+      "Description": "\nA small brook trickles through the forest beside the path.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        50000,
+        50000,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 50000,
+          "Amount": 50000,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6015,
+      "Name": "lake water",
+      "ShortDescription": "\nthe lake",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        50000,
+        50000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 50000,
+          "Amount": 50000,
+          "Liquid": 0,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6016,
+      "Name": "oak oaken cudgel limb",
+      "ShortDescription": "\nan oaken cudgel",
+      "Description": "\nA limb has fallen here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        7,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 7,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 14,
+      "Cost": 50,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6017,
+      "Name": "corpse boar",
+      "ShortDescription": "\nthe corpse of a boar",
+      "Description": "\nA rotting corpse of a boar lies on the ground here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 100,
+          "Flags": [],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 500,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6018,
+      "Name": "slab meat",
+      "ShortDescription": "\na large slab of meat",
+      "Description": "\nA large piece of freshly cut boar meat is on the ground here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 36,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 40,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6019,
+      "Name": "pair tusks",
+      "ShortDescription": "\na pair of boar tusks",
+      "Description": "\nA pair of large boar tusks have been dropped here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 1000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6020,
+      "Name": "log floating",
+      "ShortDescription": "\na hollow log",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Boat",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 48,
+      "Cost": 2,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "log"
+          ],
+          "Description": "\nIt looks like it would probably float."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6021,
+      "Name": "nest",
+      "ShortDescription": "\nthe bird's nest",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        30,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 30,
+          "Flags": [],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6022,
+      "Name": "egg robins",
+      "ShortDescription": "\na blue robin's egg",
+      "Description": "\nA small bluish egg has been left here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 6,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6023,
+      "Name": "meat rabbit",
+      "ShortDescription": "\na piece of rabbit meat",
+      "Description": "\nA large piece of rabbit meat.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 29,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6024,
+      "Name": "meat deer venison",
+      "ShortDescription": "\na piece of venison",
+      "Description": "\nA large piece of venison.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 24,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 80,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

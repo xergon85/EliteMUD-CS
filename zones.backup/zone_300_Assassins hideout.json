@@ -1,0 +1,4583 @@
+{
+  "Zone": {
+    "Id": 300,
+    "Name": "Assassins hideout",
+    "TopRoomId": 30099,
+    "Lifespan": 80,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 30038,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 30040,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 30041,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 30042,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 30043,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 30044,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 30045,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30001,
+        "Arg2": 2,
+        "Arg3": 30003,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30005,
+        "Arg2": 4,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 30003,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 30004,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30001,
+        "Arg2": 2,
+        "Arg3": 30003,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30004,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30035,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30002,
+        "Arg2": 5,
+        "Arg3": 30008,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30002,
+        "Arg2": 5,
+        "Arg3": 30009,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30002,
+        "Arg2": 5,
+        "Arg3": 30010,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30002,
+        "Arg2": 5,
+        "Arg3": 30012,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30003,
+        "Arg2": 2,
+        "Arg3": 30011,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30014,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30004,
+        "Arg2": 2,
+        "Arg3": 30016,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30010,
+        "Arg2": 15,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30004,
+        "Arg2": 2,
+        "Arg3": 30016,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30010,
+        "Arg2": 15,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30019,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30019,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30011,
+        "Arg2": 1,
+        "Arg3": 30022,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30023,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30024,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30024,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30026,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30005,
+        "Arg2": 1,
+        "Arg3": 30028,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30007,
+        "Arg2": 4,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30006,
+        "Arg2": 1,
+        "Arg3": 30031,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30013,
+        "Arg2": 4,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 30029,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 30030,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30008,
+        "Arg2": 4,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30013,
+        "Arg2": 1,
+        "Arg3": 30030,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30007,
+        "Arg2": 1,
+        "Arg3": 30032,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30006,
+        "Arg2": 4,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 30032,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 30033,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30002,
+        "Arg2": 4,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30004,
+        "Arg2": 4,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30001,
+        "Arg2": 4,
+        "Arg3": 12,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30032,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30012,
+        "Arg2": 6,
+        "Arg3": 30038,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30012,
+        "Arg2": 6,
+        "Arg3": 30039,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30012,
+        "Arg2": 6,
+        "Arg3": 30043,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30012,
+        "Arg2": 6,
+        "Arg3": 30041,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30012,
+        "Arg2": 6,
+        "Arg3": 30044,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30009,
+        "Arg2": 4,
+        "Arg3": 30047,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30009,
+        "Arg2": 4,
+        "Arg3": 30047,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30009,
+        "Arg2": 4,
+        "Arg3": 30047,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30009,
+        "Arg2": 4,
+        "Arg3": 30047,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30049,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30008,
+        "Arg2": 15,
+        "Arg3": 30049,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 30010,
+        "Arg2": 1,
+        "Arg3": 30055,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30009,
+        "Arg2": 4,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 30003,
+        "Arg2": 4,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 30012,
+        "Arg2": 4,
+        "Arg3": 30017,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 30011,
+        "Arg2": 2,
+        "Arg3": 30052,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 30014,
+        "Arg2": 1,
+        "Arg3": 30033,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30004,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30005,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30014,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30015,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30018,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30019,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30020,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30021,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30020,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30022,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30023,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30024,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30026,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30027,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30029,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30031,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30029,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30032,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30035,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 30036,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 30000,
+      "Name": "The Old Well",
+      "Description": "\n   The well doesn't look that unused as you thought it should be. In \nfact it looks like it has been used every day. You see rungs leading \ndown into the darkness below. The main farm house lies to the north \nand to the west you see a large wild grown field.",
+      "ZoneId": 300,
+      "Sector": "Field",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 30058,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 30001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rungs",
+            "rung",
+            "well"
+          ],
+          "Description": "\nAs you look closer you see that some of the rungs have been replaced \nwith new ones."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30001,
+      "Name": "Down in the well",
+      "Description": "\n   This is a dark and slippery place, filled with maggots and rotten \nsmells. The ladder is rusty, and you wonder if the rung will really \nhold you and all that equipment you insist on having with you.",
+      "ZoneId": 300,
+      "Sector": "Hills",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 30000,
+          "Description": "You see the light of the sky up there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 30002,
+          "Description": "The ladder leads further down into the darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30002,
+      "Name": "Further down in the well",
+      "Description": "\n   The rotten smells are almost intolerable down here. The brick walls \nhere is very old and whole sections have fallen down into the dark \nwater far below you.",
+      "ZoneId": 300,
+      "Sector": "Hills",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 30001,
+          "Description": "You see a small dot up there that you think is the sky over EliteMud.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 30057,
+          "Description": "\nThe ladder leads further down into the darkness, but the rung is VERY \nrusty and will probably fall apart if you try them.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30003,
+          "Description": "There is a hole here that your probably can squeeze you through, if you \ntake away some stones.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30003,
+      "Name": "Small room",
+      "Description": "\n   This room is quite small, and the stone bricks on the walls are \nmarked with erosion. A small stone door is on the west wall, with \nancient symbols carved into it. There is a hole in the east wall \nthat you probably can squeeze you through.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30004,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 30005
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30004,
+      "Name": "Entrance room",
+      "Description": "\n   The ancient stonewalls are covered here by black tapestries with \nstrange symbols on them. The room extends further to the north and a \nblack painted door leads to the west. A small stone door is on the east \nwall.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30035,
+          "Description": "The room extends further to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30005,
+          "Description": "The black door is on this wall, between two black tapestries.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestries"
+          ],
+          "Description": "\nThe tapestries are very ancient, and now as you look at them, the \nsymbols must actually be letters in an unknown language."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30005,
+      "Name": "Dark corridor",
+      "Description": "\n   This corridor is filled up to your knees with a gray, thick, slow \nmoving smoke. The walls here are completely black with strange symbols \npainted in purple.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30004,
+          "Description": "There is a door on this wall.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30006,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30006,
+      "Name": "Dark corridor",
+      "Description": "\n   This corridor is filled up to your knees with a gray, thick, slow \nmoving smoke. The walls here are completely black with strange symbols \npainted in purple.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30005,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30007,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30007,
+      "Name": "Dark corridor",
+      "Description": "\n   The corridor is filled up to your waist with a gray, thick, slow \nmoving smoke, making your feet impossible to spot. The corridor opens \nup into a room to the west.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30006,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30008,
+          "Description": "The room to the west is even more filled with the gray smoke.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30008,
+      "Name": "Smoke filled room",
+      "Description": "\n   The room is almost completely filled with the thick smoke. The smoke \nseems to flow through the room in a very strange way. It's almost as if \nyou can see the smoke turn into cloaked figures, moving in a ancient \ndance of death.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30007,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30010,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30009,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30009,
+      "Name": "Smoke filled room",
+      "Description": "\n   The room is almost completely filled with the thick, gray smoke. Here \nthe smoke is almost at rest, only moving by the sudden movements of your \nbody.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30012,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30008,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30011,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30013,
+          "Description": "The smoke seems to be less thick to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30010,
+      "Name": "Smoke filled room",
+      "Description": "\n   The room is almost completely filled with the thick, gray smoke. The \nsmoke is moving through this room in a very strange way. It's almost as \nif you can see the smoke turn into cloaked figures, moving in an ancient \ndance of death.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30008,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30011,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30011,
+      "Name": "Smoke filled room",
+      "Description": "\n   The room is almost completely filled with the thick, slow moving \nsmoke. The smoke seems to flow around you and grapple your body in a \nmost disturbing way.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30009,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30010,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30012,
+      "Name": "Smoke filled room",
+      "Description": "\n   This part of the room IS completely filled with the gray smoke, \nmaking breathing almost impossible. You wonder if this smoke is \npoisonous to inhale.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 30009,
+          "Description": "The smoke seems to be less thick to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30013,
+      "Name": "Dark corridor",
+      "Description": "\n   The corridor is filled up to your waist with the gray smoke. To the \neast you see a room filled with this strange smoke. The corridor bends \nto the south here.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30009,
+          "Description": "The room seems to be completely filled with smoke.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30014,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30014,
+      "Name": "Dark corridor",
+      "Description": "\n   At last you leave the smoke behind you as you enter this part of the\ncorridor. The corridor leads into the darkness to the north, and to the \neast into a narrower part of the corridor. To the south there is an \nold oak door.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30013,
+          "Description": "Smoke slowly moves towards you from the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30018,
+          "Description": "The corridor stretches further to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30015,
+          "Description": "Yes, there is definitely a door to the south.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "door"
+          ],
+          "Description": "\nThe door must be very old because it fits exactly into the door frame."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30015,
+      "Name": "The dining room",
+      "Description": "\n   You have entered a quite big room with rows of tables and chairs. On \nthe walls hangs black tapestries of assassins killing king Welmar. The \nair is filled with an aroma of lobsters and sweet wine. Who makes this \ngood and expensive food for the foul assassins?",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30014,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30016,
+          "Description": "The room to the west must be the kitchen. You hear the well-known noises \nof someone making a nice dinner.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestries"
+          ],
+          "Description": "\nIts certainly King Welmar on one of the tapestries, but he looks much \nyounger on it, and quite dead too with a knife in his back."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30016,
+      "Name": "The Kitchen",
+      "Description": "\n   The kitchen is filled with tools needed for making food. A big \ncauldron with lobster soup stands here over a small fire. You suddenly \nthink back to the loaves of bread you always eat when hungry and wonder \nif the soup is as good as it smells. To the east is the eating area and \nto the west is a small door, probably to the food storage.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30015,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30017,
+          "Description": "The door to the west is small and very fragile.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 262400,
+          "Description": "The door is very very fragile and would probably break if you bash it.",
+          "Keywords": [
+            "S\n#30017\nThe",
+            "food",
+            "storage",
+            "room"
+          ],
+          "ExitFlags": [
+            "Wall",
+            "BashProof",
+            "Broken"
+          ],
+          "KeyId": 151552
+        },
+        {
+          "Direction": "North",
+          "TargetId": -1,
+          "Description": "and the walls is made of packed earth. The \nroom is filled with sacks and barrels with food and wine. With all this \nfood this organization will not be starving for years. The only exit is \nthrough the door to the east.",
+          "Keywords": [
+            "300",
+            "ad",
+            "0\nD1"
+          ],
+          "ExitFlags": [],
+          "KeyId": 1
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30018,
+      "Name": "Dimly lit corridor",
+      "Description": "\n   The corridor's only light source is a small flickering torch on the \nsouth wall. The bricks here are painted black making this a quite scary \nplace. The corridor continues to the west and the east. A black door \nwith a small sign is to the north.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30019,
+          "Description": "The black door has a sign on it.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30020,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30014,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "door"
+          ],
+          "Description": "\nThere is a sign on the black door."
+        },
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign says:\n\n\n           THE TRAINING ROOM"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30019,
+      "Name": "The assassins training room",
+      "Description": "\n   You have entered a big room with gray walls a big nice carpet of \nArabian quality. A huge amount of wicked weapons hangs on the walls, \nsome of them you recognize, others are very strange and old. Three \ndummies stand near the north wall, looking somewhat smashed. The only \nexit is through the door to the south.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 30018,
+          "Description": "The door leads out to the corridor.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "dummies",
+            "dummy"
+          ],
+          "Description": "\nThe assassins must be fond of cutting these dummies throats because it \nlooks like they have been repaired there several times."
+        },
+        {
+          "Keywords": [
+            "weapon",
+            "weapons"
+          ],
+          "Description": "\nThe weapons looks extremely deadly. Wonder if the assassins train with \nrazor-sharp weapons?"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30020,
+      "Name": "Dimly lit corridor",
+      "Description": "\n   This part of the corridor is completely silent. You see small \npuddles of fresh blood on the floor. Someone must have been killed here \nrecently. The corridor continues to the east and west, and there is a \ndoor on the north wall with a small sign.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30021,
+          "Description": "There is a door on the north wall, made of oak.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30023,
+          "Description": "You see that the corridor continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30018,
+          "Description": "The corridor continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 30022,
+          "Description": "You see that the blood comes from a small trapdoor in the ceiling. \nSuddenly a blood drop lands on your shoulder. Yuck!",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "door"
+          ],
+          "Description": "\nThe door is made of oak, and there is a sign on it."
+        },
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign says:\n\n              MEDITATION CHAMBER"
+        },
+        {
+          "Keywords": [
+            "trapdoor"
+          ],
+          "Description": "\nThe trapdoor is small and fits well into the ceiling. You are very \nlucky that you even saw it."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30021,
+      "Name": "Meditation chamber",
+      "Description": "\n   The air in this room is filled with a soft, narcotic aroma that makes \nyour head spin. On small tables by the walls stands hundreds of small \ncandles which provides a eerie feeling over the place. On the floor is \na big black carpet with strange golden symbols woven into it. The only \nexit is through the door to the south.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 30020,
+          "Description": "You see a door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "carpet"
+          ],
+          "Description": "\nThe carpet is very beautiful but too heavy for you to take with you."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30022,
+      "Name": "Secret room",
+      "Description": "\n   These assassins must be maniacs! The floor is almost completely \nfilled with fresh corpses, and you can't move an inch without steeping \ninto a puddle of blood. Is this place a storage room for corpses?",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 30020,
+          "Description": "There is a trapdoor under all the corpses.",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30023,
+      "Name": "Dimly lit corridor",
+      "Description": "\n   You are at a bend of the corridor. It stretches further to the west \nand to the south. The smell of something sticky and poisonous catch \nyour nose from the south corridor. There is a black painted door on the \nnorth wall.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30024,
+          "Description": "There is a door on the north wall.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30026,
+          "Description": "There is strange smell coming from this corridor.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30020,
+          "Description": "The corridor continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30024,
+      "Name": "Barracks",
+      "Description": "\n   This sparsely equipped room must be the assassins sleeping quarters. \nRows of small and not so comfortable beds stand by the walls, there \nmust be some 20 beds here. Why don't you count the beds and then see \nif you have killed the right number of baddies down here? (grin). The \nroom extends further to the east, and there is a door to the south here.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30025,
+          "Description": "Someone must have a candle lit to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30023,
+          "Description": "Yes, there is a door there.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30025,
+      "Name": "The inner part of the barracks",
+      "Description": "\n   These beds seems even more uncomfortable than the beds in the west \npart of the room. They are made of stone! On a small table by a bed is \na lit candle. The only apparent exit is to the west.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 30024,
+          "Description": "The room extends further to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "candle"
+          ],
+          "Description": "\nThe candle seems to have burned halfway and is firmly attached to the \ntable."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30026,
+      "Name": "Smelly part of the corridor",
+      "Description": "\n   There is a poisonous smell in the air here, mainly coming from the \ndoor to the east. There is a sign on the door too. You see the end of \nthe corridor to the south and a bend of the corridor to the north.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30023,
+          "Description": "You see a bend in the corridor to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30027,
+          "Description": "There is a door to the east, with a sign on it.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30029,
+          "Description": "You see three doors at the end of the corridor.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign says:\n\n   The hall of the Poisonlord.\n    \n          Keep out !!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30027,
+      "Name": "The hall of the Poisonlord",
+      "Description": "\n   You have entered a great underground hall, probably a natural cave. \nHuge black tapestries cover the gray stone walls, with a very ugly and \nhorrible face woven in gold on each of them. To the east you see a pool \nfilled with a boiling liquid, the smell of acidic venom is almost \nintolerable in here.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30028,
+          "Description": "You the pool to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30026,
+          "Description": "The door leads out to the corridor.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestries"
+          ],
+          "Description": "\nThe eyes on the huge ugly faces seems to follow your every move."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30028,
+      "Name": "By the Pool",
+      "Description": "\n   You stand by the 10 feet wide pool. Lethal fumes is emerging from the \nboiling surface of the liquid, making you cough.  On tables around the \npool stands hundreds of small flasks and bottles with weird looking tags \nlabels on each of them. A huge humanoid stands by the pool, wearing a \nblack robe and a hood that puts its face in shadow. He radiates a \nfeeling of complete corruption. Suddenly you realize that this is the \nguy on the tapestries to the west.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 30027,
+          "Description": "You see the door at the end of the hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 30056,
+          "Description": "The pool doesn't look nice to jump into. Do you really wanna try that?",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pool"
+          ],
+          "Description": "\nThe pool is filled with a green boiling liquid that must be poison. \nBubbles with gray smoke is constantly emerging on the surface."
+        },
+        {
+          "Keywords": [
+            "bottles",
+            "flasks"
+          ],
+          "Description": "\nThe stuff in the bottles seems to be ingredients to the liquid in the \npool. Do not touch them, they must be poisonous too!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30029,
+      "Name": "By the end of the corridor",
+      "Description": "\n   You stand at the end of the long corridor. The bricks on the walls \nare really old here, looking like they have been there for thousands of \nyears. A steel door is on the east wall, and on the west wall there is \na completely normal door. Silent screams can be heard from the door to \nthe south.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30026,
+          "Description": "The corridor goes back to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30030,
+          "Description": "There is a heavy steel door to the east.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 30013
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30031,
+          "Description": "Horrible screams breaks the otherwise complete silence through the door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30032,
+          "Description": "The door is very normal.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30030,
+      "Name": "The Dungeons",
+      "Description": "\n   This prison is simply constructed, its a square room with steel bars \nrunning parallel with the ceiling at 8 feet high. The bars must have \nbeen put there to hang the prisoners upside down through their achilles \ntendons. Hoards of maggots and rats run around on the dirty floor.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 30029,
+          "Description": "You see the corridor through a small window in the door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bar",
+            "bars"
+          ],
+          "Description": "\nThe bars are very rusty and there is coagulated blood all over them."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30031,
+      "Name": "The torture chamber",
+      "Description": "\n   This room is filled with clever tools to inflict pain into a \ncreatures body and soul. Most of the stuff in here are so complex that \nit would take days for you to optimize the efficiency of them. You spot \na iron maiden in one corner, probably out of use with all the other \napparently effective tools here. You somehow feel the hopelessness of \nall the victims of these horrible experiment during the centuries past.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30029,
+          "Description": "The door leads out to the corridor.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "iron",
+            "maiden"
+          ],
+          "Description": "\nThe steel tips in the iron maiden is very rusty. Wonder if that will \nhelp you a bit if you got trapped in it."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30032,
+      "Name": "Gontran's room",
+      "Description": "\n   This rooms interior are very luxurious and very different to all the \nother rooms in this complex. The huge bed is made of dharian irontree, \nthe furniture of Direwood and the carpet must be from Thalos. Small \nlanterns hangs in the ceiling making this room kind of a nice place. \nBut the guy that lives here is probably not nice at all.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30029,
+          "Description": "The door leads out to the corridor.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30033,
+          "Description": "\nThere is a secret door behind the a tapestry.",
+          "Keywords": [
+            "secret",
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 30006
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30033,
+      "Name": "Secret room",
+      "Description": "\n   This room is very small and the stone bricks in the walls are heavily \neroded here. Small puddles of water is on the floor, probably the \nsubsoil water that is leaking through the walls.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30032,
+          "Description": "The secret door leads to the Gontran's room.",
+          "Keywords": [
+            "secret",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30035,
+      "Name": "Entrance room",
+      "Description": "\n   The black tapestries cover most of the walls here, with ancient \nsymbols which seems to move around in small circles, although you know \nthat they are well woven into the cloth. You spot a door to the west, \nand the room extends further to the south.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 30004,
+          "Description": "You see the southern part of the room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30036,
+          "Description": "There is a door on the west wall.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30036,
+      "Name": "A dark corridor",
+      "Description": "\n   You are standing in a dark corridor, very dirty and with spiderwebs \nin the upper corners of the walls. To the west you see a illuminated \nhall with several mirrors reflecting your image back to you. To the east \nthere is a door.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30035,
+          "Description": "You see a door to the east.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30037,
+          "Description": "To the west lies the Hall of Mirrors.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30037,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30042,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30036,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30045,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30038,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30038,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30041,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30037,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30044,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30039,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30039,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30040,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30038,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30043,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30046,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30040,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30043,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30041,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30039,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30042,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30041,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30044,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30042,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30038,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30040,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30042,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30045,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30040,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30037,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30041,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30043,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30039,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30044,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30040,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30045,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30044,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30038,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30045,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30041,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30043,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30045,
+      "Name": "The Hall of Mirrors",
+      "Description": "\n   You have entered a hall with thousands of mirrors. In the light of \nyour light source you see thousands of images of yourself staring at \nyou. The mirrors seems to make the proportions of the room very \nunrealistic and strange.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30037,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30043,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30042,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30044,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30046,
+      "Name": "A dark corridor",
+      "Description": "\n   This corridor doesn't seem to have been used for ages. The dirt on \nthe floor is almost ankle-deep and the spiderwebs are really big here. \nTo the east you see the strange Hall of Mirrors, and to the west you \nsee a well lit room.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30039,
+          "Description": "You see the Hall of Mirrors to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30047,
+          "Description": "You see a room to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30047,
+      "Name": "Hall of the Statues",
+      "Description": "\n   The entire room is filled with statues of cloaked figures. On the \nwalls and in the ceiling the figures have been carved out with \nperfection from the bare rock. Several statues stands in the middle of \nthe room. They look so natural that you almost think that they will \nstart moving and stab you in the back! There is an exit to the east and \none to the south.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30046,
+          "Description": "You see a corridor to the east leading to the Hall of Mirrors.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30048,
+          "Description": "You see one more room to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "statue",
+            "statues"
+          ],
+          "Description": "\nThe statues are carved out of the rock with excellent expertise. Maybe \nthey are made by a dwarven artist, captured by the wicked assassins."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30048,
+      "Name": "Skull filled room",
+      "Description": "\n   In the ceiling of this room hangs several complete sets of human \nbones, with rotten pieces of flesh hanging from them. In niches lies \nhundreds of humanoid skulls in rows, some half smashed, others very \nfine specimens that you could have on your table at home and recite \nHamlet to. To the north lies the Hall of Statues and to the south you \nsee the entrance to the temple.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30047,
+          "Description": "The Hall of Statues lies to the north from here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30049,
+          "Description": "The temple to the south seems very old and evil.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30049,
+      "Name": "The Temple",
+      "Description": "\n   You have entered the organizations own temple, dedicated to unearthly \npowers of old. The bloodstained floor with ancient inscriptions and the \npresence of something horrible makes you think that you probably should \nleave right now.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30048,
+          "Description": "The exit from the temple is to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30050,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30052,
+          "Description": "You see the temple-altar far to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30054,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30050,
+      "Name": "The eastern tapestries",
+      "Description": "\n   You are standing by a row of stone pillars made of a green unearthly \ntype of rock. On the east wall you see huge tapestries of hellish demons entering human bodies. The realistic pictures make your poor stomach \nscream. You sense a very evil presence all around you searching for the \nright moment to steal your soul here.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 30051,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30049,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestries"
+          ],
+          "Description": "\nAs you look at the tapestries, you suddenly notice a movement in the \npicture. Are the demons for real?"
+        },
+        {
+          "Keywords": [
+            "presence"
+          ],
+          "Description": "\nThe evil presence is all around you, seeking for a weakness in your \niron will."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30051,
+      "Name": "By a manmade mountain of coffins",
+      "Description": "\n   By the south wall there is a pile of coffins, made for human-sized \nbodies. All of them seems to have been forced open. Are the assassins \ngrave robbers too? The columns that supports the ceiling are shaped \nlike robed figures, praying to the altar to the south-west.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30050,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30052,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "coffin",
+            "coffins"
+          ],
+          "Description": "\nThe coffins are all empty."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30052,
+      "Name": "By the Pentagram",
+      "Description": "\n   You are standing by a big Pentagram painted in red on the floor. As \nyou look at it, it seems to rotate in a strange way on the ground. In \nthe center of the pentagram stands a small statue resembling a demon. \nThe dark priests probably summons demons here, to wreak the world of \nnice guys like yourself. You sense a strong evil presence from the south.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30049,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30051,
+          "Description": "You see a mountain of coffins to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30055,
+          "Description": "You see the Temple Altar to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30053,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30053,
+      "Name": "\nBy the great fire",
+      "Description": "\n   A big fireplace is here, providing light to the evil temple . As you \nlook into the red flames, you think you see faces of people in fear, \njust as if they were trapped into the fire. You also see some pieces of \nbones in the ashes here.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30054,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30052,
+          "Description": "You see a Pentagram on the floor to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30054,
+      "Name": "Dimly lit part of the temple",
+      "Description": "\n   As you look around here, you notice that it's strangely dark. To the \nsouth you see a big fireplace, but somehow the light fails to get here. \nOn the walls you see dark tapestries with strange symbols woven into \nthem.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 30049,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 30053,
+          "Description": "You see a big fireplace to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestry",
+            "tapestries"
+          ],
+          "Description": "\nYou fail to recognize most of the symbols, but catches your eye: \ntriangle with a watching eye in the center. Wonder what that means..."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30055,
+      "Name": "The Temple Altar",
+      "Description": "\n   The evil presence is building up to gigantic proportions around the \nblack altar in front of you. The surface of the altar is stained with \ngallons of coagulated blood and pieces of rotten corpses. The only exit \nfrom this horrible place is to the north.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30052,
+          "Description": "You see a pentagram on the floor to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30056,
+      "Name": "In the pool",
+      "Description": "\n   As you step into the pool, the acid burns your flesh. You look in \nfear at your feet as they slowly disintegrates. Suddenly you lose the \ngrip and fall into the poisonous pool. You scream in agony as the \npoison enters your body and the acidic ingredients eats you raw.\n\n\n                       Sorry Dude, You Died!!!!\n        All that is left of you is some teeth at the bottom of the pool.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 30028,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30057,
+      "Name": "On the ladder",
+      "Description": "\n   As you try the old rungs they suddenly break and falls into the \ndarkness below. Unfortunately you are joining them..... \n\n AAAAAAAAA\n         AAAAAAAAAAA\n                   AAAAAAAAAAAA \n                               AAAAAAAAAAAAAAAAAA \n--------------------------------------------------------->DEAD!!!!!!!!!",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 30002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30058,
+      "Name": "On an overgrown old road",
+      "Description": "\n   You are standing on an overgrown old road. High grass and bushes make \nit very hard to see that it actually has been a road. As you move \nfurther on the road you see some buildings to the north. The buildings \nlooks like they once have been a farm. To the west you can see the \nremnants of an old barn and to the north lies the main building, and \njust before it you see an old well. The overgrown road turns eastwards \nhere.",
+      "ZoneId": 300,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30000,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 30059,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23045,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30059,
+      "Name": "The Overgrown Road",
+      "Description": "\n   The road quickly turns back towards the north and continues uphill \ntowards the mountains. The vegetation here is sparse, and not \nparticularly healthy, and dry grasses crunch beneath your feet as you \nwalk.",
+      "ZoneId": 300,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 30060,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 30058,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30060,
+      "Name": "A Narrow Trail",
+      "Description": "\n   The road climbs as you continue north, it becomes more and more \ndifficult to make out the old overgrown road, until all that is left \nis a narrow trail through the foothills. You could rediscover the old \nroad if you go south from here, but a short steep section of the trail \nappears to lead to a plateau, and might be worth investigating.",
+      "ZoneId": 300,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 30059,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 10900,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30099,
+      "Name": "A totally empty last room in the system",
+      "Description": "\n   You are standing in a totally empty room with nothing in it and no \nwhere to go.",
+      "ZoneId": 300,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 30001,
+      "Name": "assassin guard sentry",
+      "ShortDescription": "\nan assassin",
+      "LongDescription": "\nAn assassin stands here, guarding the entrance to the ancient hideout.",
+      "Description": "\nHe is completely dressed in black and looks very agile.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "AggressiveGood",
+        "AggressiveNeutral"
+      ],
+      "Affects": [
+        "Light",
+        "Hide"
+      ],
+      "Alignment": -450,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+300",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30002,
+      "Name": "assassin cloak figure",
+      "ShortDescription": "\na cloaked figure",
+      "LongDescription": "\nYou see a a figure in the shadows floating at you.",
+      "Description": "\nAll you can see is a the two yellow dots that must be the eyes.",
+      "Level": 33,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Sneak"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+350",
+        "Mana": 430,
+        "Move": 575
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 700,
+      "Experience": 125000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30003,
+      "Name": "shadow",
+      "ShortDescription": "\nA shadow",
+      "LongDescription": "\nA shadow is moving around in the smoke.",
+      "Description": "\nHmm a shadow without form? That must be it.",
+      "Level": 35,
+      "Race": "Illusion",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Hide"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d100+350",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 600,
+      "Experience": 142000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30004,
+      "Name": "elf slave cook",
+      "ShortDescription": "\nA slave cook",
+      "LongDescription": "\nAn elf slave is making a dinner here.",
+      "Description": "\nThe elf slave looks very depressed and must be constantly threatened by\nthe foul assassins.",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+200",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 20000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30005,
+      "Name": "poisonlord poison lord",
+      "ShortDescription": "\nThe Poisonlord",
+      "LongDescription": "\nHe grins at you and attacks!",
+      "Description": "",
+      "Level": 42,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light"
+      ],
+      "Alignment": -700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+700",
+        "Mana": 520,
+        "Move": 710
+      },
+      "Combat": {
+        "Armor": -150,
+        "Hitroll": 26,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 10000,
+      "Experience": 300000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": "roc(snake)",
+      "Programs": []
+    },
+    {
+      "Id": 30006,
+      "Name": "torturer",
+      "ShortDescription": "\nThe torturer",
+      "LongDescription": "\nThe torturer wants to try some new tools on you.",
+      "Description": "\nThe torturer wears his standard outfit, red clothing and a black hood.",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d100+500",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 24,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30007,
+      "Name": "Gontran Master",
+      "ShortDescription": "\nThe Master of Assassins",
+      "LongDescription": "\nGontran, Master of the Assassins, circles around you!",
+      "Description": "\nGontran is very muscular but looks quite agile too. He has a strange \ntattoe on the forehead that glows in evilly red.",
+      "Level": 45,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Sneak"
+      ],
+      "Alignment": -900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+700",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -150,
+        "Hitroll": 29,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Pierce",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d15+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 10000,
+      "Experience": 300000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30008,
+      "Name": "assassin",
+      "ShortDescription": "\nAn assassin",
+      "LongDescription": "\nAn assassin is sneaking around here.",
+      "Description": "",
+      "Level": 32,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "AggressiveGood",
+        "AggressiveNeutral"
+      ],
+      "Affects": [
+        "Light",
+        "Sneak"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+300",
+        "Mana": 420,
+        "Move": 560
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 600,
+      "Experience": 110000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30009,
+      "Name": "statue",
+      "ShortDescription": "\nA statue",
+      "LongDescription": "\nA finelooking statue is standing here.",
+      "Description": "\nThe statues are carved out of the rock with excellent expertise. Maybe they are\nmade by a dwarven artist, captured by the wicked assassins.",
+      "Level": 35,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "AggressiveGood",
+        "AggressiveNeutral"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light",
+        "Hide",
+        "Regeneration"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+400",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -120,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 150000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30010,
+      "Name": "priest dark cleric",
+      "ShortDescription": "\nThe dark priest",
+      "LongDescription": "\nThe dark priest stands here, eager to conjure up some demons.",
+      "Description": "\nThe look in his eyes make you think he is a real fanatic. The tattoes all over\nhis body seems to move around on his skin.",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+500",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -90,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Pierce",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d10+10"
+        },
+        {
+          "Type": "Attack_27",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+90"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "3d0+80"
+        },
+        {
+          "Type": "Attack_36",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+90"
+        },
+        {
+          "Type": "Attack_15",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "2d0+90"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 10000,
+      "Experience": 250000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30011,
+      "Name": "shade",
+      "ShortDescription": "\nA bloodstained assassin",
+      "LongDescription": "\nAn assassin stands here in all the blood, grinning evilly at his awful deeds.",
+      "Description": "",
+      "Level": 38,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Hide"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d100+400",
+        "Mana": 480,
+        "Move": 650
+      },
+      "Combat": {
+        "Armor": -110,
+        "Hitroll": 19,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 180000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30012,
+      "Name": "assassin man mirror",
+      "ShortDescription": "\nfigure in the mirror",
+      "LongDescription": "\nYou see a figure walking around in the reflections of the mirrors.",
+      "Description": "\nThe figure looks quite unreal. It is dressed just like you!",
+      "Level": 33,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "AggressiveGood",
+        "AggressiveNeutral"
+      ],
+      "Affects": [
+        "Light",
+        "Sneak"
+      ],
+      "Alignment": -450,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d100+300",
+        "Mana": 430,
+        "Move": 575
+      },
+      "Combat": {
+        "Armor": -90,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 700,
+      "Experience": 125000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 30013,
+      "Name": "hengist poor man",
+      "ShortDescription": "\nhengist, the eternally tortured",
+      "LongDescription": "\nA badly wounded man rests here, bearing the marks of the torturers tools.",
+      "Description": "\nHe is in very bad condition.",
+      "Level": 32,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+300",
+        "Mana": 420,
+        "Move": 560
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 116000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 30001,
+      "Name": "silk suit",
+      "ShortDescription": "\na black silk suit",
+      "Description": "\nA suit of the finest black silk lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 4000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30002,
+      "Name": "garrote",
+      "ShortDescription": "\nGontran's garrote",
+      "Description": "\nA small garrote lies here in the rubble.",
+      "ActionDescription": "\nslice",
+      "Type": "Weapon",
+      "Level": 40,
+      "AntiClass": "64507",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        5,
+        6,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 6,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30003,
+      "Name": "amulet",
+      "ShortDescription": "\na oddlooking amulet",
+      "Description": "\nAn oddlooking amulet lies here, made of stone.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 3000,
+      "CostPerDay": 400,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30004,
+      "Name": "boots silk black",
+      "ShortDescription": "\na pair of silk boots",
+      "Description": "\nA pair of black silk boots lies in the corner.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 3000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30005,
+      "Name": "key obsidian",
+      "ShortDescription": "\na obsidian key",
+      "Description": "\nA key made of obsidian lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        160
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 160
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30006,
+      "Name": "twilight key",
+      "ShortDescription": "\na twilight key",
+      "Description": "\nThe key of twilight lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        160
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 160
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 1000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30007,
+      "Name": "armor shadow",
+      "ShortDescription": "\na shadow armor",
+      "Description": "\nA shadow armor lies here as a grey shadow in the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 35,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 45,
+      "Cost": 10000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "SavingPoison",
+          "Modifier": 20
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30008,
+      "Name": "belt dark",
+      "ShortDescription": "\na dark belt",
+      "Description": "\nA belt made of dark matter lies here in the corner.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 36,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Dark",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 7,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 2000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30009,
+      "Name": "book old ones",
+      "ShortDescription": "\nthe Book of Old Ones",
+      "Description": "\nA black book covered with green slime lies here.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 35,
+      "AntiClass": "320652",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        4,
+        4,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 6,
+          "Level": 50,
+          "Charges": 4,
+          "ChargesRemaining": 4
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 4000,
+      "CostPerDay": 400,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30010,
+      "Name": "spoon",
+      "ShortDescription": "\nA big spoon",
+      "Description": "\nA big spoon made of ebony lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        5,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 5,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 10,
+      "CostPerDay": 666,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30011,
+      "Name": "statue green",
+      "ShortDescription": "\na small green statue",
+      "Description": "\nA small green statue stands in the middle of the room.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5,
+      "Cost": 5000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": 80
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30012,
+      "Name": "barrel",
+      "ShortDescription": "\na barrel",
+      "Description": "\nA barrel stands here in the dark corner of the room.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        40,
+        35,
+        4,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 40,
+          "Amount": 35,
+          "Liquid": 4,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 300,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30013,
+      "Name": "key dungeon dungeons",
+      "ShortDescription": "\nthe key to the dungeons",
+      "Description": "\nThe key to the dungeons burns a hole in the floor here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        160
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 160
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 100,
+      "CostPerDay": 42,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 30014,
+      "Name": "jewelry",
+      "ShortDescription": "\nsome expensive jewelry",
+      "Description": "\nSome expensive jewelry lies on a pillow here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 3,
+      "Cost": 20000,
+      "CostPerDay": 666,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

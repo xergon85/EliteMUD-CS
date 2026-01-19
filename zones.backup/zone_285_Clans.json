@@ -1,0 +1,1424 @@
+{
+  "Zone": {
+    "Id": 285,
+    "Name": "Clans",
+    "TopRoomId": 28599,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 24,
+        "Arg2": 100,
+        "Arg3": 28500,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 45,
+        "Arg2": 100,
+        "Arg3": 28514,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 32,
+        "Arg2": 100,
+        "Arg3": 28502,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 7,
+        "Arg2": 100,
+        "Arg3": 28519,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3135,
+        "Arg2": 100,
+        "Arg3": 28509,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3034,
+        "Arg2": 100,
+        "Arg3": 28501,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 28500,
+      "Name": "#yOn the river before a narrow passage#N",
+      "Description": "\n     Through a narrow passage to the north you can spot the HUMBLE CASTLE\n(hmm..) of the NIGHT TRIBE Order lying on top of a large cliff in a \ngigantic cave.  Two immortal DEMONS are guarding the narrow passage to the\ncave, trapped here by powerfull magic that seem to eminate from the\ncastle itself. One of the demons warn you: - You take one more step in\nthis direction I'll rip your head off.",
+      "ZoneId": 285,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3214,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "humble"
+          ],
+          "Description": "\nWell thats probably the understatment of the year but hey we night\ntribers are modest."
+        },
+        {
+          "Keywords": [
+            "night",
+            "tribe"
+          ],
+          "Description": "\nThis is really the best clan around."
+        },
+        {
+          "Keywords": [
+            "castle"
+          ],
+          "Description": "\nThe castle seems to glow in the dark from the precious stones decorating\nits walls forming an arcane magical pattern."
+        },
+        {
+          "Keywords": [
+            "demon",
+            "demons",
+            "guardian",
+            "guardians"
+          ],
+          "Description": "\nIf your not a night tribe member your in big trouble. Mayby if you keep to \nthe middle and run real fast you can get through without the demons \nhaving you for dinner."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28501,
+      "Name": "#yOn the jetty in the gigantic CAVE#N",
+      "Description": "\n     You are standing on a small JETTY on the rocky shore below the\ncastle. The only way up to the castle seems to be a small path leading \nnorth from the jetty snakeing itself upwards between the cliffs. A couple \nof small BOATS made of wood are tied to the jetty. To the south you see \nthe two guardian demons standing in the water, watching you closely. For \nsome reason you get the feeling that they are hungry. (some boats to be\nloaded)",
+      "ZoneId": 285,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28502,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28502,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "jetty"
+          ],
+          "Description": "\nThe small wooden jetty is well worn but seems to be in perfect condition."
+        },
+        {
+          "Keywords": [
+            "boat",
+            "boats"
+          ],
+          "Description": "\nThese small wooden rowingboats are here floating on the water just waiting  \nfor a member of the Night Tribe to use them."
+        },
+        {
+          "Keywords": [
+            "stalactites",
+            "up"
+          ],
+          "Description": "\nYou can see waterdrops falling from the celing making a small sound \nhitting the cave floor and suddenly you realise that there is a sort of a \nbackground noise coming from thousands of small waterdrops that almost \nsounds like rain."
+        },
+        {
+          "Keywords": [
+            "cave"
+          ],
+          "Description": "\nThe gigantic cave streches out deeper into the hart of the moria mountains \nwith thousands of STALACTITES hanging down from the celing."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28502,
+      "Name": "#yIn front of the castle#N",
+      "Description": "\n     The castle is only half finised. Lots of workers are here on strike \nblocking the entrance, refusing to finish the castle if they don't get \npaid.  A small path to the south is leading down from the castle to the \nshoreline.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28503,
+          "Description": "The huge gate made of black oakwood is still missing.",
+          "Keywords": [
+            "The",
+            "wall",
+            "of",
+            "workers"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28503,
+      "Name": "#yThe Courtyard#N",
+      "Description": "\n     You are on the inside of the castle walls. Right in front of you is\nthe main building. Along the walls to your left and right you can see the \nstables, metal workshop and the barraks of the guards and servants. To \nyour south lies the huge black gate through which you entered. Some pigs \nand chicken are running around here happy to have escaped their cages and \nsome poor servant is trying to catch them again. It looks rather funny \nactually.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28506,
+          "Description": "A guard is standing on both sides of the big oak door leading into the\nmain building. They are armed with large halberds and look very capable of \ntheir job, keeping introuders out of the royal halls.",
+          "Keywords": [
+            "oak",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28508,
+          "Description": "You see a small door at the base of the South-Eastern tower.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28502,
+          "Description": "",
+          "Keywords": [
+            "huge",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28504,
+          "Description": "You see the door leading into the South-West tower. A guard is standing \nhere on duty guarding the entrance.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28504,
+      "Name": "#ySouth-West Watchtower#N",
+      "Description": "\n     You are standing at the top of the S-W watchtower. Two guards is \nkeeping watch over the ground below for anything suspicious. You have the \nfeeling that the viev from up here would be marvelous if you weren't in a \ndark cave. Some servants is running around here updating the Area BOARD. \nTo the north you can go by the breastwalk to the North-West Watchtower. To \nthe south you can go back down to the courtyard.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28505,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28503,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28505,
+      "Name": "#yNorth-West Watchtower#N",
+      "Description": "\n     A guard is here sleeping on duty. Well what the heck nothing ever \nhappens on this mud anyway, does there :). Some servants are here updating \nthe Quest BOARD, quietly not to wake the sleeping guard. To your east you \ncan follow the brestwalk on the back side of the castle. South the \nSouth-West Watchtower is towering.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28510,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28504,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28506,
+      "Name": "#yThe Throneroom#N",
+      "Description": "\n     The golden throne of the Bloodking stands here by the northen wall \ndecorated with marks of honour and pictures from the history of the Night \nTribe clan. The kings personal servant stands here keeping track of all \nthat consernes the Night Tribe and puts everything of importance on the \nclanboard. Jugs with ale and wine and some grilled pigs and chicken is \nhere to eat for the hungry and thirsty members of the clan. To the north \ntheres a small door leading out into the castle garden. Before you entered \nthe throneroom you noticed a beautifully worked staiway up to the second \nfloor with two guards standing half way up watching your every move and a \nlittle door to the west.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28509,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28512,
+          "Description": "To the east you can see the hidden door to the secret escape route out of\nthe castle.",
+          "Keywords": [
+            "secret",
+            "passage."
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28503,
+          "Description": "",
+          "Keywords": [
+            "oak",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28515,
+          "Description": "Since the King can't trust his heirs not looting the Wine cellar, the only \ntwo to have a key to this door is the King himself and his trusted guard  \nMinx.",
+          "Keywords": [
+            "wine",
+            "cellar"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28511,
+          "Description": "",
+          "Keywords": [
+            "n"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28507,
+      "Name": "#yThe North-East Watchtower#N",
+      "Description": "\n     The guard is probably away taking a snack but he left a note saying \nthat he'll be back soon. Well nothing dangerous in the moria mountais \nanyway (hehe). However a few servants are running around here updating\nthe bulletin BOARD. To the south you can get to the South-East Watchtower\nvia the breastwalk. West is the breastwalk on the back side of the castle.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28508,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28510,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28508,
+      "Name": "#ySouth-East Watchtower#N",
+      "Description": "\n     Two guard are here playing cards, but they jump up and eagerly start \nscouting the area when they notice your approch. A few servants is here \nmanaging the Social BOARD.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28507,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28503,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28509,
+      "Name": "#yThe Castle Garden#N",
+      "Description": "\n     A lovely smell reaches your nose when you enter the garden. Different\ntypes of fungus, lichen and moss is growing here almost on the rock itself  \nwith great variety in size and colour. You get the feeling that the fauna \nhas a healing effect on you and you feel relaxed. WATER dropping down from \na large stalactite in the cave ceiling makes up a small stream through the \ngarden and leaves down through a small HOLE in the rock.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28506,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28520,
+          "Description": "",
+          "Keywords": [
+            "secret"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "water"
+          ],
+          "Description": "\nThe water has probably been seeking its way through the mountain above for \ncenturies befor reaching here and is very clear. When you taste it you \nnotice how cool and good it tastes. Mayby you should bottle it up and sell \nit as expensive mineral water."
+        },
+        {
+          "Keywords": [
+            "hole"
+          ],
+          "Description": "\nThis hole seems to be bottomless  anyway you can't hear the small rock you  \ndropped into it hit the ground below. You better not drop anything \nimportant down it, it might be lost for ever."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28510,
+      "Name": "#yOn the breastwalk on the backside of the castle#N",
+      "Description": "\n     You stand on the breastwalk on the backside of the castle between  \ntwo of the watchtowers. East and west leads to the small doors of the \nwatchtowers. To your left you can see small stepps leading down to the \ncastle garden.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28507,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28505,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28509,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28511,
+      "Name": "#y2nd floor#N",
+      "Description": "\n     To the north you see the private quarters of the Bloodking. You \nwouldn't dare to enter without his permission. Through a door to the east \nyou  can spot rows of bookshelfs filled with old books containing almost \nforgotten knowledge of the powers of magic. South you see a hallway with \ndoors on both sides each door leading to the private chambers of one of \nthe Heirs or royal guards.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28513,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28517,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "fingers"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28516,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "ripper"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28518,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "metalman"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28512,
+      "Name": "#yTournament Grounds#N",
+      "Description": "\n     A large field spreads out along the eastern side of the castle. \nGreat flags are raised upward, between large multi colored tents, being\nused for many purposes.  Large areas are fenced off for jousts and combats \nbeing held throughout the day.  People mill about, watching and cheering \nfor the various knights of the realm competing here, listening to the \nclanging of armour and fighting.  Great banners and tributes are raised to \nthe champions and rulers of this land, Night Tribe. Royal Questors dodge \namount with uncany skill, teasing the crowd while great clerics of the \nTribe heal those wounded during the tournament.  Before it all, stands a \nlarge tent, with beautiful banners, belonging to the royal heirs and the\nBlood King himself.\n§N",
+      "ZoneId": 285,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob",
+        "PkOk",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28513,
+      "Name": "#yThe Bloodking's Private Chamber#N",
+      "Description": "\n     A large room, richly embroidered with gold and crimson, showing \nbeautiful oak trim of the stone walls.  Tapestries and and other works \nfrom about the countryside decorate the inner hall, leading to the \nchambers of the Blood King.  Beautiful sets of armor and weapons, inlaid \nwith designs and emblems of Night Tribe decorate the room in a magnificent \ndisplay.  Large windows open outward onto a grand balcony overlooking the \ntournament grounds of the kingdom.\n§N",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28511,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28514,
+      "Name": "#yStar Chamber of the Royal Council#N",
+      "Description": "\n     A large room, with a large star carved into deep stone on the floor.  \nsmall exits drift off to various chambers in the stone walls, half hidden \nby great tapestries.  A large beautifully crafted wooden table fills the \nchamber, cluttered with papers of state and war.  Above you a large\nwindowed ceiling made of multi-colored glass serves to create an odd \neffect upon the whole of the room with the light drifting in from the\nmoon. \n§N",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28519,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28521,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28513,
+          "Description": "",
+          "Keywords": [
+            "^"
+          ],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28515,
+      "Name": "#yThe Castle Winecellar#N",
+      "Description": "\n     You wake up with a terrible headache. You try opening your eyes\nbut the room just seems to spinn around makeing you feel dizzy so you\nclose them again. After a minute or so you try again and manage to focus \non an ITEM in your hand. You have absolutely no recollection of how you\nended up here. When you turn your head you can make out some steps to the \nsouth that should lead you up from here if you could just get on you feet.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "down"
+          ],
+          "Description": "\nYou roll over and look at the floor very closely seeing small creatures\ngoing along in the own little world."
+        },
+        {
+          "Keywords": [
+            "up"
+          ],
+          "Description": "\nYou lie staring at the celing and studying a little spider weave a net. \nWell it's real fachinating but mayby you should get up now don't you\nthink."
+        },
+        {
+          "Keywords": [
+            "south",
+            "steps"
+          ],
+          "Description": "\nThe steps ought to lead up to the castle."
+        },
+        {
+          "Keywords": [
+            "north",
+            "west",
+            "east"
+          ],
+          "Description": "\nThe whole wall is covered with shelfs packed with winebottles."
+        },
+        {
+          "Keywords": [
+            "item"
+          ],
+          "Description": "\nWhen you look closer you see that the item your holding is an empty wine-\nbottle though you can't make out the brand (those damned letters just\nwon't lie still). A bit to your left you see a couple of more empty \nbottles."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28516,
+      "Name": "#yRipper's Room#N",
+      "Description": "\n   As you walk into this room, you start to wonder what's been going\nthrough this little mudder's mind. To the north you see a picture of\nJack the Ripper and a picture of Ripper and notice they look exactly\nthe same. To the south you see a wall of the heads of many mudders\ndefeated by Ripper. As you look closely at one, you notice it is your\nown. To the west you see a wall with weapons and armour made by  \nthe mightiest of Dwarves. To the east you see a mirror. As you walk \ncloser to the mirror you see not your reflection, but the reflection\nof Ripper with an ebony kris ready to backstab you!",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28511,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "ripper"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28517,
+      "Name": "#yFinger's Crypt#N",
+      "Description": "\n   As you enter you see torches in ornate gold #Ybrackets#N light the walls\nof the crypt with flickering light, reflected off the polished pink\ngranite of the huge, vaulted room, lending their smell of pitch to the\nfragrance of #rroses#N in the dead, still air.  The floor is white #wmarble#N.\nA short pillar in the center of the immense room supports the coffin\nitself, giving it the effect of floating in the air.  The\ngold-enshrouded #Ycoffin#N glows in the torchlight.  Carved symbols cover\nits sides, and continue in a ring around the room, cut into the granite\nbeneath the torches and gold #Yvases#N.  \n\n#GOn a small sign, instructions in an ancient language detail\nthe process of going to the underworld and back. #N",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28511,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "fingers"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "instruction",
+            "instructions",
+            "sign"
+          ],
+          "Description": "\n          Master fingers guide us. \n          Master fingers teach us. \n          Master fingers protect us.  \n          In your light we thrive. \n          In your mercy we are sheltered.\n          In your wisdom we are humbled.  \n          We live only to serve. \n          Our lives are yours."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28518,
+      "Name": "#yPrivate Chamber of Metalman#N",
+      "Description": "\n   You have entered the private chamber of Sir Metalman.\nOn the walls hang the mounted heads of many strange creatures. \nIn the middle of the room is a huge bed covered in rich furs. \nA warming energy fills the room. \nThis inner sanctum is a place to find peace and rest from a bloody and \ndangerous world.\nA sign on the wall reads : Well Come Brothers of the Night Tribe.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28511,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "metalman"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28519,
+      "Name": "#yBlood Council Private Chambers#N",
+      "Description": "\n   You have entered the private chambers of the Blood Council, on one \nwall you see the Council board, please keep all postings to council \nbusiness. On the remaining walls you see ornate tapestries depicting the \nBlood Kings of the past.  In the center of the room is a large round \ntable. The ceiling consists of a domed ruby window, bathing all in an \neerie light.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28520,
+      "Name": "#yNC and Enforcer's room#N",
+      "Description": "\n   As you enter NC and Enforcer's room, you are awed at it's furnishings. \nThough it is littered with many items, it has a clean outlook along with \na powerful magical glow. You wonder what rare pieces of equipment lie \ninside the safes that you see. You feel smaller as you see the two \ngigantic statues of NC and Enforcer looking upon you. There is a large \nposter posted on the wall with the words \"NIGHT TRIBE ROCKS!\" in the \nroom.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28509,
+          "Description": "",
+          "Keywords": [
+            "secret"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28521,
+      "Name": "#yZutgoraks Hidingplace#N",
+      "Description": "\n   This place looks like the worst mess you ever saw. Pencils,\nbrushes and half-finished paintings are scattered everywhere, \nalong with various bodyparts from dismembered beings. The walls\nare filled with drawings and it feels as if the eyes of the\nportraits are recording your every move and screaming at you, \ncalling you an intruder. On the southern wall hangs a portrait\nwith a golden frame. The colors are faint, but there is \nsomething visible.",
+      "ZoneId": 285,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28514,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "painting",
+            "portrait"
+          ],
+          "Description": "\nAs you look at the painting it seems to shift colors and\nshapes and marvellous images are shown, the next one more\nexquisite than the previous. You see a fine draconian, \ndressed as a priest. A minotaur in shining armor and last, \na demon surrounded by undead minions, all bowing before\ntheir demonic master."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 7,
+      "Name": "board leadership night tribe nt",
+      "ShortDescription": "\na Night Tribe leadership bulletin board",
+      "Description": "\nThe Night Tribe Council board is mounted here on the wall.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        121,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 24,
+      "Name": "statue night tribe nt",
+      "ShortDescription": "\nthe statue of night tribe",
+      "Description": "\nThe two demons are here guarding the passage.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28500,
+        1,
+        121,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 32,
+      "Name": "board bulletin night tribe nt",
+      "ShortDescription": "\na Night Tribe clan bulletin board",
+      "Description": "\nThe Night Tribe clan bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        121,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 45,
+      "Name": "guard nt",
+      "ShortDescription": "\na guard",
+      "Description": "\nA large guard is here blocking your way.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28514,
+        1,
+        121,
+        7,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 3135,
+      "Name": "fountain",
+      "ShortDescription": "\na fountain",
+      "Description": "\nA small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 500,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "\nIt is very nice.  Made from fine white marble."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "\nan automatic teller machine",
+      "Description": "\nAn automatic teller machine has been installed in the wall here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "\nThere is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

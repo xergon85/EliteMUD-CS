@@ -68,11 +68,13 @@ public sealed class WearHandler
         if (obj.WearSlots.Contains("Arms")) return EquipmentSlot.Arms;
         if (obj.WearSlots.Contains("About")) return EquipmentSlot.About;
         if (obj.WearSlots.Contains("Waist")) return EquipmentSlot.Waist;
-        if (obj.WearSlots.Contains("Neck1")) return EquipmentSlot.Neck1;
+        
+        // Handle both legacy single slots and split slots
+        if (obj.WearSlots.Contains("Neck") || obj.WearSlots.Contains("Neck1")) return EquipmentSlot.Neck1;
         if (obj.WearSlots.Contains("Neck2")) return EquipmentSlot.Neck2;
-        if (obj.WearSlots.Contains("WristRight")) return EquipmentSlot.WristRight;
+        if (obj.WearSlots.Contains("Wrist") || obj.WearSlots.Contains("WristRight")) return EquipmentSlot.WristRight;
         if (obj.WearSlots.Contains("WristLeft")) return EquipmentSlot.WristLeft;
-        if (obj.WearSlots.Contains("FingerRight")) return EquipmentSlot.FingerRight;
+        if (obj.WearSlots.Contains("Finger") || obj.WearSlots.Contains("FingerRight")) return EquipmentSlot.FingerRight;
         if (obj.WearSlots.Contains("FingerLeft")) return EquipmentSlot.FingerLeft;
         if (obj.WearSlots.Contains("Shield")) return EquipmentSlot.Shield;
         if (obj.WearSlots.Contains("Light")) return EquipmentSlot.Light;

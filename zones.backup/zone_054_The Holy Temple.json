@@ -1,0 +1,2848 @@
+{
+  "Zone": {
+    "Id": 54,
+    "Name": "The Holy Temple",
+    "TopRoomId": 5499,
+    "Lifespan": 80,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5405,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5403,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5406,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5408,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5407,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5410,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5409,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5412,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5413,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 5414,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5402,
+        "Arg2": 7,
+        "Arg3": 5401,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5400,
+        "Arg2": 7,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5401,
+        "Arg2": 7,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5402,
+        "Arg2": 7,
+        "Arg3": 5401,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5400,
+        "Arg2": 7,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5401,
+        "Arg2": 7,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5402,
+        "Arg2": 7,
+        "Arg3": 5406,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5400,
+        "Arg2": 7,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5401,
+        "Arg2": 7,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5402,
+        "Arg2": 7,
+        "Arg3": 5406,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5400,
+        "Arg2": 7,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5401,
+        "Arg2": 7,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5406,
+        "Arg2": 1,
+        "Arg3": 5407,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5408,
+        "Arg2": 3,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5415,
+        "Arg2": 1,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5409,
+        "Arg2": 1,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5410,
+        "Arg2": 1,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5411,
+        "Arg2": 1,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5412,
+        "Arg2": 1,
+        "Arg3": 9,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5413,
+        "Arg2": 1,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5414,
+        "Arg2": 1,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5402,
+        "Arg2": 7,
+        "Arg3": 5407,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5401,
+        "Arg2": 7,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5402,
+        "Arg2": 7,
+        "Arg3": 5411,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5401,
+        "Arg2": 7,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5402,
+        "Arg2": 7,
+        "Arg3": 5411,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5401,
+        "Arg2": 7,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5403,
+        "Arg2": 4,
+        "Arg3": 5401,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5403,
+        "Arg2": 4,
+        "Arg3": 5402,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5403,
+        "Arg2": 4,
+        "Arg3": 5404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5403,
+        "Arg2": 4,
+        "Arg3": 5408,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5405,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5405,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5408,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5408,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5409,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5409,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5407,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5407,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5412,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5402,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5412,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5411,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5404,
+        "Arg2": 12,
+        "Arg3": 5411,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5405,
+        "Arg2": 1,
+        "Arg3": 5411,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5405,
+        "Arg2": 4,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5406,
+        "Arg2": 4,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5404,
+        "Arg2": 4,
+        "Arg3": 14,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 5416,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 5416,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 5417,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 5418,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5401,
+        "Arg2": 1,
+        "Arg3": 5419,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5403,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 5420,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 5421,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 5422,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5400,
+        "Arg2": 8,
+        "Arg3": 5422,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5407,
+        "Arg2": 5,
+        "Arg3": 5410,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 5400,
+      "Name": "Outside The Small Temple",
+      "Description": "\n   You are outside a place of religious rituals and worship. There lies\nan entrance of the temple to the north. On either side of the entrance \nyou see stone statues of a former god standing guard. To the south you \nsee some hills.",
+      "ZoneId": 54,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5401,
+          "Description": "You see an entrance to the temple.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4038,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5401,
+      "Name": "The Hall",
+      "Description": "\n   You are in a large hall decorated with various religious symbols and\nartifacts. Against the east wall is a statue of a forbidding god holding \na lit torch. The torch seems to light up the entire temple with its soft \nglow. Fresh air blows in from the south where you can see an exit out into \nthe sunlight. The hall continues to the north.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5402,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5400,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5402,
+      "Name": "The Hall",
+      "Description": "\n   The walls are covered with paintings of powerful immortals and high \npriests. The room is filled with scented smoke drifting from an urn \nstanding in the middle of the room. The hall continues to the north and \nto the south.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5404,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5401,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5403,
+      "Name": "The Store Room",
+      "Description": "\n   You are in a small room filled with crates and barrels. The only exit is to\nthe east.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5404,
+          "Description": "You see a wooden door",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5404,
+      "Name": "The Hall",
+      "Description": "\n   You see doors with strange runes engraved on them to the east and the\nwest. The hall continues to the north and the south.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5406,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5405,
+          "Description": "You see a wooden door",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5402,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5403,
+          "Description": "You see a wooden door",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5405,
+      "Name": "The Living Quarters",
+      "Description": "\n   The room is filled with beds and a few tables. In the corner a bookshelf\nhosted a musty collection of rare artifacts. The only exit is to the west.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5404,
+          "Description": "You see a wooden door",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5406,
+      "Name": "The Statue Room",
+      "Description": "\n   Tall statues, stretching up into the darkness, line the east and the west\nwall. They look extremely powerful and ancient. To the north are two large\nmetal doors and a hallway lies to the south.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5408,
+          "Description": "You see two metal doors",
+          "Keywords": [
+            "doors",
+            "metal",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5404,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5407,
+      "Name": "The Prayer Room",
+      "Description": "\n   You are in what seems to be a prayer room. Smoke rises from torches mounted\non the walls. The stone floor is covered with strange symbols and words in a\nforeign tongue. The room continues to the west. You can see a metal door to\nthe north. A small sign is hanging on the door.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5410,
+          "Description": "You see a metal door",
+          "Keywords": [
+            "door",
+            "metal"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 5408
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5408,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "Sign"
+          ],
+          "Description": "\nTemple treasury."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5408,
+      "Name": "The Prayer Room",
+      "Description": "\n   You are in what seems to be a prayer room. Smoke rises from torches mounted\non the walls. The stone floor is covered with strange symbols and words in a\nforeign tongue. The room continues to the east and the west. You can see two\nlarge metal doors to the south and an throne to the north.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5411,
+          "Description": "You see an altar",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5409,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5406,
+          "Description": "You see two metal doors",
+          "Keywords": [
+            "doors",
+            "metal",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5407,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5409,
+      "Name": "The Prayer Room",
+      "Description": "\n   You are in what seems to be a prayer room. Smoke rises from torches mounted\non the walls. The stone floor is covered with strange symbols and words in a\nforeign tongue. The room continues to the west. You can see an oak door to\nthe north.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5412,
+          "Description": "You see an oak door",
+          "Keywords": [
+            "door",
+            "oak",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5408,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5410,
+      "Name": "The Treasure Room",
+      "Description": "\n   Judging from the thick walls and lack of windows, this is the place where\nthe inhabitants of the temple put their most valuable goods. The only way in\nand out of here is south.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5407,
+          "Description": "You see a metal door",
+          "Keywords": [
+            "door",
+            "metal"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5411,
+      "Name": "The Throne Room",
+      "Description": "\n   You are in a throne room designed for a god. A huge stone throne with\nstrange runes carved along its edges is located in the middle of the room. \nThe only exits are to the north and the south.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5413,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5408,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5412,
+      "Name": "The Meditation Chamber",
+      "Description": "\n   This room filled with lighted candles. The only objects in the room are\nsome pillows. The only exit is to the south.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5409,
+          "Description": "You seen an oak door",
+          "Keywords": [
+            "door",
+            "oak",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5413,
+      "Name": "Behind The Throne",
+      "Description": "\n   You stand in a small room behind the throne. It's completely empty except for\nsome black bars of steel at the end of room, their purpose seems to be for\npreventing people from climbing down a ladder into the darkness.",
+      "ZoneId": 54,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5411,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5414,
+          "Description": "You see some metal bars.",
+          "Keywords": [
+            "bars",
+            "bar",
+            "metal",
+            "steel",
+            "black"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5414,
+      "Name": "Entrance To The Catacombs",
+      "Description": "\n   You are in a small room at the entrance to the temple's catacombs. This room\nis decorated with many small statues and urns, probably in the remembrance of \nthose who are buried here. To the south a large archway leads into the \ncatacombs. A ladder leads up.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5415,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5413,
+          "Description": "You see some metal bars.",
+          "Keywords": [
+            "bars"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5415,
+      "Name": "In the Catacombs",
+      "Description": "\n   You are in the catacombs under the temple. Around you are rows of coffins\nand stone slabs with mummified corpses on them. A few skeletons lay in the\ncorner and layers of dust covered everything. You notice some footprints in the\ndust. The catacombs continue to the east and west. To the north a small archway\nleads into the darkness.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5414,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5416,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5422,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5416,
+      "Name": "In the Catacombs",
+      "Description": "\n   You are in the catacombs under the temple. Around you are rows of coffins\nand stone slabs with mummified corpses on them. A few skeletons lay in the\ncorner and layers of dust covered everything. You notice some footprints \nin the dust. The catacombs continue to the west and south.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5417,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5415,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5417,
+      "Name": "In the Catacombs",
+      "Description": "\n   You are in the catacombs under the temple. Around you are rows of coffins\nand stone slabs with mummified corpses on them. A few skeletons lay in the\ncorner and layers of dust covered everything. You notice some footprints in the\ndust. The catacombs continue to the north and south.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5416,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5418,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5418,
+      "Name": "In the Catacombs",
+      "Description": "\n   You are in the catacombs under the temple. Around you are rows of coffins\nand stone slabs with mummified corpses on them. A few skeletons lay in the\ncorner and layers of dust covered everything. You notice some footprints in the\ndust. The catacombs continue to the north and west.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5417,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5419,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5419,
+      "Name": "In the Catacombs",
+      "Description": "\n   You are in the catacombs under the temple. Around you are rows of coffins\nand stone slabs with mummified corpses on them. A few skeletons lay in the\ncorner and layers of dust covered everything. You notice some footprints in the\ndust. The catacombs continue to the west and east.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5418,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5420,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5420,
+      "Name": "In the Catacombs",
+      "Description": "\n   You are in the catacombs under the temple. Around you are rows of coffins\nand stone slabs with mummified corpses on them. A few skeletons lay in the\ncorner and layers of dust covered everything. You notice some footprints in the\ndust. The catacombs continue to the north and east.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5421,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5419,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5421,
+      "Name": "In the Catacombs",
+      "Description": "\n   You are in the catacombs under the temple. Around you are rows of coffins\nand stone slabs with mummified corpses on them. A few skeletons lay in the\ncorner and layers of dust covered everything. You notice some footprints in the\ndust. The catacombs continue to the north and south.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5422,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5420,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5422,
+      "Name": "In the Catacombs",
+      "Description": "\n   You are in the catacombs under the temple. Around you are rows of coffins\nand stone slabs with mummified corpses on them. A few skeletons lay in the\ncorner and layers of dust covered everything. You notice some footprints in the\ndust. The catacombs continue to the east and south.",
+      "ZoneId": 54,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5415,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5421,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 5400,
+      "Name": "mummy",
+      "ShortDescription": "\nthe mummy",
+      "LongDescription": "\nThe mummy awakens and walks against you.",
+      "Description": "\nThis tall, withered husk of a former nobleman is dressed in remenants of once\nresplendant white cloth.",
+      "Level": 80,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1100",
+        "Mana": 900,
+        "Move": 1280
+      },
+      "Combat": {
+        "Armor": -320,
+        "Hitroll": 39,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5401,
+      "Name": "skeletal warrior",
+      "ShortDescription": "\nthe skeletal warrior",
+      "LongDescription": "\nThe skeletal warrior cackles and attacks!",
+      "Description": "\nThis tall, withered husk of a former king is dressed in remenants of once\nresplendant white cloth.",
+      "Level": 90,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Infrared"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1600",
+        "Mana": 1000,
+        "Move": 1430
+      },
+      "Combat": {
+        "Armor": -350,
+        "Hitroll": 45,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+30"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 15000,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5402,
+      "Name": "dark knight",
+      "ShortDescription": "\nthe dark knight",
+      "LongDescription": "\nA knight in glinting black armor guards here.",
+      "Description": "\nThe paladin wears a shiny plate. He watches every step you take.\nHe rest his arms on a large broadsword.",
+      "Level": 80,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -349,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+1000",
+        "Mana": 900,
+        "Move": 1280
+      },
+      "Combat": {
+        "Armor": -250,
+        "Hitroll": 40,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d20+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%15 emote looks you over with a suspicous look.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5403,
+      "Name": "dark priest",
+      "ShortDescription": "\nthe dark priest",
+      "LongDescription": "\nA priest is walking around here muttering.",
+      "Description": "\nThe priest is dressed in black robes. The priest look\nvery wicked..",
+      "Level": 60,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -349,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d50+650",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -170,
+        "Hitroll": 25,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "3d8+20"
+        },
+        {
+          "Type": "Attack_27",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 600000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%20 emote prays to the powers that be.; %20 say I am not worthy.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5404,
+      "Name": "evil cleric",
+      "ShortDescription": "\nthe evil cleric",
+      "LongDescription": "\nA cleric is praying to his god here.",
+      "Description": "\nThe priest is dressed in brown robes. The priest look\nvery wicked.",
+      "Level": 60,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": -349,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+650",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -170,
+        "Hitroll": 25,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "3d8+20"
+        },
+        {
+          "Type": "Attack_27",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 600000,
+      "DefaultPosition": "Sitting",
+      "Sex": "Male",
+      "ActionScript": "%25 emote prays to the powers that be.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5405,
+      "Name": "orcus death demon evil",
+      "ShortDescription": "\nPrince Orcus",
+      "LongDescription": "\nPrince Orcus, the wicked lord of the demons, rests on his throne.",
+      "Description": "\nOrcus looks extremely horrid, with his leathery wings and strong physique.",
+      "Level": 109,
+      "Race": "Demon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Regeneration"
+      ],
+      "Alignment": -349,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+3500",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -400,
+        "Hitroll": 55,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "3d20+35"
+        },
+        {
+          "Type": "Attack_23",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_90",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 25000,
+      "Experience": 4000000,
+      "DefaultPosition": "Sitting",
+      "Sex": "Male",
+      "ActionScript": "%%10 snort;%20 say Give me your soul.;\n%15 emote feeds off your hate and your cuts.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5406,
+      "Name": "death knight",
+      "ShortDescription": "\nthe death knight",
+      "LongDescription": "\nA skeletal knight in glinting black plate is walking around here.",
+      "Description": "\nThe knight is dead but still walks.  Tattered garb hangs on his feeble\nframe, but he exudes power.",
+      "Level": 105,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -349,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d100+3000",
+        "Mana": 1150,
+        "Move": 1655
+      },
+      "Combat": {
+        "Armor": -300,
+        "Hitroll": 50,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "3d15+35"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "2d0+80"
+        },
+        {
+          "Type": "Attack_22",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "3d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 20000,
+      "Experience": 2200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%20 yell Muahaha!;\n%20 say Orcus dwells here -- begone, foul mortals.;\n%15 emote hefts his wicked hammer.",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 5400,
+      "Name": "large broadsword",
+      "ShortDescription": "\na large broadsword",
+      "Description": "\nA large broadsword has been left here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 70,
+      "AntiClass": "270199",
+      "ExtraFlags": [
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        6,
+        10,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 6,
+          "DiceSides": 10,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 17,
+      "Cost": 25000,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 5
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5401,
+      "Name": "shiny plate",
+      "ShortDescription": "\na shiny plate",
+      "Description": "\nA shiny plate has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 70,
+      "AntiClass": "270199",
+      "ExtraFlags": [
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 40,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 100,
+      "Cost": 25000,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5402,
+      "Name": "dagger",
+      "ShortDescription": "\na cermonial dagger",
+      "Description": "\nA cermonial dagger has been left here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        5,
+        8,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 8,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 5000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5403,
+      "Name": "emerald ring",
+      "ShortDescription": "\nan emerald ring",
+      "Description": "\nAn emerald ring has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 80,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 45000,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5404,
+      "Name": "bracers bracer",
+      "ShortDescription": "\na pair of shiny bracers",
+      "Description": "\nA pair of shiny bracers has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 85,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 50000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5405,
+      "Name": "chainmail golden glowing",
+      "ShortDescription": "\na glowing golden chainmail",
+      "Description": "\nA glowing golden chainmail has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 85,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        45,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 45,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 90,
+      "Cost": 100000,
+      "CostPerDay": 20000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "golden",
+            "chainmail"
+          ],
+          "Description": "\nThe chainmail is covered with arcane symbols and writings."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5406,
+      "Name": "spear avatar avatars glowing",
+      "ShortDescription": "\nthe avatars glowing spear",
+      "Description": "\nA glowing spear lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 85,
+      "AntiClass": "546",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        6,
+        10,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 6,
+          "DiceSides": 10,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 16,
+      "Cost": 50000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 6
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 15
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5407,
+      "Name": "gold coins",
+      "ShortDescription": "\na huge mountain of gold",
+      "Description": "\nA huge mountain of gold lies here.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        100000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 100000
+        },
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 100000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5408,
+      "Name": "treasury key",
+      "ShortDescription": "\na treasury key",
+      "Description": "\nA shiny key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 50,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5409,
+      "Name": "breastplate shiny golden",
+      "ShortDescription": "\na shiny golden breastplate",
+      "Description": "\nA shiny golden breastplate has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 90,
+      "AntiClass": "286591",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        50,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 50,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 140,
+      "Cost": 50000,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 80
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5410,
+      "Name": "legplates shiny golden",
+      "ShortDescription": "\nshiny golden legplates",
+      "Description": "\nA pair of shiny golden legplates are laying here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 90,
+      "AntiClass": "286591",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 20,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 60,
+      "Cost": 40000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": -50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5411,
+      "Name": "armplates shiny golden",
+      "ShortDescription": "\nshiny golden armplates",
+      "Description": "\nA pair of shiny golden armplates are laying here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 90,
+      "AntiClass": "286591",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 20,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 40,
+      "Cost": 30000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5412,
+      "Name": "gauntlets shiny golden",
+      "ShortDescription": "\nshiny golden gauntlets",
+      "Description": "\nA pair of shiny golden gauntlets are laying here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 90,
+      "AntiClass": "286591",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 30,
+      "Cost": 30000,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 5
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5413,
+      "Name": "footplate footplates shiny golden",
+      "ShortDescription": "\nshiny golden footplates",
+      "Description": "\nA pair of shiny golden footplates are laying here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 90,
+      "AntiClass": "286591",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 20000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": -50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5414,
+      "Name": "helm shiny golden",
+      "ShortDescription": "\na shiny golden helm",
+      "Description": "\nA shiny golden helm is laying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 90,
+      "AntiClass": "286591",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        30,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 30,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 30,
+      "Cost": 40000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 100
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5415,
+      "Name": "hammer holy",
+      "ShortDescription": "\nthe holy hammer",
+      "Description": "\nA huge glowing hammer is laying here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 85,
+      "AntiClass": "286045",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        7,
+        10,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 7,
+          "DiceSides": 10,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 45000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "holy",
+            "hammer"
+          ],
+          "Description": "\n  As you inspect the hammer, you notice a small inscription. \n \"This hammer can only be used by those that are true and good\"."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": 10
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 15
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

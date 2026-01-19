@@ -1,0 +1,6764 @@
+{
+  "Zone": {
+    "Id": 5,
+    "Name": "The Northern Woods",
+    "TopRoomId": 599,
+    "Lifespan": 10,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 500,
+        "Arg2": 4,
+        "Arg3": 506,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 500,
+        "Arg2": 4,
+        "Arg3": 513,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 500,
+        "Arg2": 4,
+        "Arg3": 520,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 500,
+        "Arg2": 4,
+        "Arg3": 557,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 501,
+        "Arg2": 2,
+        "Arg3": 500,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 501,
+        "Arg2": 2,
+        "Arg3": 556,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 502,
+        "Arg2": 5,
+        "Arg3": 501,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 502,
+        "Arg2": 5,
+        "Arg3": 529,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 502,
+        "Arg2": 5,
+        "Arg3": 531,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 502,
+        "Arg2": 5,
+        "Arg3": 560,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 502,
+        "Arg2": 5,
+        "Arg3": 562,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 503,
+        "Arg2": 5,
+        "Arg3": 522,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 503,
+        "Arg2": 5,
+        "Arg3": 529,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 503,
+        "Arg2": 5,
+        "Arg3": 531,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 503,
+        "Arg2": 5,
+        "Arg3": 560,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 503,
+        "Arg2": 5,
+        "Arg3": 562,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 504,
+        "Arg2": 2,
+        "Arg3": 546,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 504,
+        "Arg2": 2,
+        "Arg3": 555,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 505,
+        "Arg2": 2,
+        "Arg3": 546,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 505,
+        "Arg2": 2,
+        "Arg3": 555,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 507,
+        "Arg2": 5,
+        "Arg3": 508,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 507,
+        "Arg2": 5,
+        "Arg3": 544,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 507,
+        "Arg2": 5,
+        "Arg3": 549,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 507,
+        "Arg2": 5,
+        "Arg3": 551,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 507,
+        "Arg2": 5,
+        "Arg3": 552,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 508,
+        "Arg2": 2,
+        "Arg3": 524,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 508,
+        "Arg2": 2,
+        "Arg3": 539,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 509,
+        "Arg2": 3,
+        "Arg3": 502,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 509,
+        "Arg2": 3,
+        "Arg3": 509,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 509,
+        "Arg2": 3,
+        "Arg3": 518,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 510,
+        "Arg2": 2,
+        "Arg3": 524,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 510,
+        "Arg2": 2,
+        "Arg3": 537,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 511,
+        "Arg2": 3,
+        "Arg3": 542,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 511,
+        "Arg2": 3,
+        "Arg3": 542,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 511,
+        "Arg2": 3,
+        "Arg3": 551,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 512,
+        "Arg2": 3,
+        "Arg3": 505,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 512,
+        "Arg2": 4,
+        "Arg3": 512,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 512,
+        "Arg2": 4,
+        "Arg3": 514,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 513,
+        "Arg2": 3,
+        "Arg3": 528,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 513,
+        "Arg2": 3,
+        "Arg3": 538,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 513,
+        "Arg2": 3,
+        "Arg3": 545,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 514,
+        "Arg2": 3,
+        "Arg3": 502,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 514,
+        "Arg2": 3,
+        "Arg3": 503,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 514,
+        "Arg2": 3,
+        "Arg3": 510,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 515,
+        "Arg2": 3,
+        "Arg3": 524,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 515,
+        "Arg2": 3,
+        "Arg3": 539,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 515,
+        "Arg2": 3,
+        "Arg3": 539,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 516,
+        "Arg2": 3,
+        "Arg3": 516,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 516,
+        "Arg2": 3,
+        "Arg3": 532,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 516,
+        "Arg2": 3,
+        "Arg3": 550,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 517,
+        "Arg2": 5,
+        "Arg3": 509,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 517,
+        "Arg2": 5,
+        "Arg3": 533,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 517,
+        "Arg2": 5,
+        "Arg3": 534,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 517,
+        "Arg2": 5,
+        "Arg3": 535,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 517,
+        "Arg2": 5,
+        "Arg3": 555,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 518,
+        "Arg2": 5,
+        "Arg3": 504,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 518,
+        "Arg2": 5,
+        "Arg3": 504,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 518,
+        "Arg2": 5,
+        "Arg3": 508,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 518,
+        "Arg2": 5,
+        "Arg3": 508,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 518,
+        "Arg2": 5,
+        "Arg3": 525,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 519,
+        "Arg2": 3,
+        "Arg3": 503,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 519,
+        "Arg2": 3,
+        "Arg3": 533,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 519,
+        "Arg2": 3,
+        "Arg3": 543,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 520,
+        "Arg2": 3,
+        "Arg3": 542,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 520,
+        "Arg2": 3,
+        "Arg3": 542,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 521,
+        "Arg2": 3,
+        "Arg3": 500,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 521,
+        "Arg2": 3,
+        "Arg3": 506,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 521,
+        "Arg2": 3,
+        "Arg3": 507,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 522,
+        "Arg2": 2,
+        "Arg3": 507,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 522,
+        "Arg2": 2,
+        "Arg3": 514,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 523,
+        "Arg2": 1,
+        "Arg3": 519,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 524,
+        "Arg2": 1,
+        "Arg3": 519,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 525,
+        "Arg2": 1,
+        "Arg3": 518,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 526,
+        "Arg2": 1,
+        "Arg3": 518,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 527,
+        "Arg2": 1,
+        "Arg3": 543,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 528,
+        "Arg2": 1,
+        "Arg3": 559,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 529,
+        "Arg2": 1,
+        "Arg3": 501,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 529,
+        "Arg2": 1,
+        "Arg3": 511,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 530,
+        "Arg2": 3,
+        "Arg3": 500,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 530,
+        "Arg2": 3,
+        "Arg3": 515,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 531,
+        "Arg2": 3,
+        "Arg3": 512,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 531,
+        "Arg2": 3,
+        "Arg3": 513,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 531,
+        "Arg2": 3,
+        "Arg3": 518,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 532,
+        "Arg2": 2,
+        "Arg3": 524,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 532,
+        "Arg2": 2,
+        "Arg3": 537,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 533,
+        "Arg2": 2,
+        "Arg3": 561,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 533,
+        "Arg2": 2,
+        "Arg3": 564,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 534,
+        "Arg2": 2,
+        "Arg3": 504,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 534,
+        "Arg2": 2,
+        "Arg3": 511,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 535,
+        "Arg2": 1,
+        "Arg3": 536,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 535,
+        "Arg2": 2,
+        "Arg3": 540,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 535,
+        "Arg2": 2,
+        "Arg3": 540,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 536,
+        "Arg2": 2,
+        "Arg3": 536,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 536,
+        "Arg2": 2,
+        "Arg3": 540,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 537,
+        "Arg2": 5,
+        "Arg3": 507,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 537,
+        "Arg2": 5,
+        "Arg3": 511,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 537,
+        "Arg2": 5,
+        "Arg3": 521,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 538,
+        "Arg2": 4,
+        "Arg3": 550,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 538,
+        "Arg2": 4,
+        "Arg3": 554,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 538,
+        "Arg2": 4,
+        "Arg3": 559,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 538,
+        "Arg2": 4,
+        "Arg3": 563,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 539,
+        "Arg2": 1,
+        "Arg3": 513,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 540,
+        "Arg2": 3,
+        "Arg3": 542,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 540,
+        "Arg2": 3,
+        "Arg3": 549,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 540,
+        "Arg2": 3,
+        "Arg3": 550,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 540,
+        "Arg2": 3,
+        "Arg3": 553,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 540,
+        "Arg2": 3,
+        "Arg3": 565,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 541,
+        "Arg2": 5,
+        "Arg3": 510,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 541,
+        "Arg2": 5,
+        "Arg3": 514,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 541,
+        "Arg2": 5,
+        "Arg3": 530,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 541,
+        "Arg2": 5,
+        "Arg3": 537,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 541,
+        "Arg2": 5,
+        "Arg3": 550,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 542,
+        "Arg2": 3,
+        "Arg3": 553,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 542,
+        "Arg2": 3,
+        "Arg3": 558,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 543,
+        "Arg2": 3,
+        "Arg3": 541,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 543,
+        "Arg2": 3,
+        "Arg3": 556,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 543,
+        "Arg2": 3,
+        "Arg3": 557,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 500,
+        "Arg2": 5,
+        "Arg3": 566,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3031,
+        "Arg2": 100,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 544,
+        "Arg2": 10,
+        "Arg3": 559,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3040,
+        "Arg2": 100,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 545,
+        "Arg2": 10,
+        "Arg3": 559,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3042,
+        "Arg2": 100,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 544,
+        "Arg2": 10,
+        "Arg3": 560,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3046,
+        "Arg2": 100,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 545,
+        "Arg2": 10,
+        "Arg3": 561,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3070,
+        "Arg2": 100,
+        "Arg3": 9,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 544,
+        "Arg2": 10,
+        "Arg3": 562,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3075,
+        "Arg2": 100,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 545,
+        "Arg2": 10,
+        "Arg3": 563,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3080,
+        "Arg2": 100,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 544,
+        "Arg2": 10,
+        "Arg3": 564,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3085,
+        "Arg2": 100,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 545,
+        "Arg2": 10,
+        "Arg3": 565,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3085,
+        "Arg2": 100,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 544,
+        "Arg2": 10,
+        "Arg3": 566,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3075,
+        "Arg2": 100,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 545,
+        "Arg2": 10,
+        "Arg3": 560,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3042,
+        "Arg2": 100,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 544,
+        "Arg2": 10,
+        "Arg3": 561,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3040,
+        "Arg2": 100,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 12001,
+        "Arg2": 50,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 545,
+        "Arg2": 10,
+        "Arg3": 562,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3040,
+        "Arg2": 100,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 545,
+        "Arg2": 10,
+        "Arg3": 562,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 12001,
+        "Arg2": 100,
+        "Arg3": 13,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 500,
+      "Name": "The End of the Northern Road",
+      "Description": "\n   The road bends sharply here to the west, travelling slowly upwards\ntowards a large mountain of ancient, obviously volcanic origin.  The\npath to the south is straight and well travelled.  A small trail\nleads north into magnificent rolling hills.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 567,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 508,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 18000,
+          "Description": "The path leads westwards towards a large mountain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 501,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path ends abruptly at a tiny cave.  It looks barely large\nenough to fit into.  A faint breeze coming from the cave carries the scent\nof flowers upon it.  How very odd!  You may enter the small cave to the\nnorth, and the small path returns back into the woods to the east,\nallowing you passage in that direction.  You may also venture into the\nwoods to the south, but they are too dense to allow further passage to the\nwest.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14201,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 502,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 509,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 502,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path leads you through the dense forest.  The trees continue\nin every direction, but the path cuts through them to the west and south.\nThe forest continues to the north and east, but passage to the north is\nimpeded by an enormous wall of thorns.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 503,
+      "Name": "The Northern Woods",
+      "Description": "\n   The forest surounds you on all sides.  The tall trees gaze down at you\nas you wander through their home.  The foliage grows quite dense to the\nnorth, impeding any further progress in that direction.  You can wander\nthrough the woods in every other direction.  Through the trees to the\nwest, you spy a small path cutting through the forest.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 504,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 511,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 502,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 504,
+      "Name": "The Northern Woods",
+      "Description": "\n   The forest surounds you on all sides.  The tall trees gaze down at you\nas you wander through their home.  The foliage grows quite dense to the\nnorth, impeding any further progress in that direction.  You can wander\nthrough the woods in every other direction.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 512,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 505,
+      "Name": "The Northern Woods",
+      "Description": "\n   The forest surounds you on all sides.  The tall trees gaze down at you\nas you wander through their home.  The foliage grows quite dense to the\nnorth, impeding any further progress in that direction.  You can wander\nthrough the woods in every other direction.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 513,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 504,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 506,
+      "Name": "The Northern Woods",
+      "Description": "\n   The forest surounds you on all sides.  The tall trees gaze down at you\nas you wander through their home.  The foliage grows quite dense to the\nnorth, impeding any further progress in that direction.  You can wander\nthrough the woods in every other direction.  You spot a small path through\nthe trees to the east.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 507,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 507,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path makes its way through the dense woods, leading you into\nplaces unknown.  Almost hidden by the trees, you see a large iron gate to\nthe east.  The path continues to the south, and the dense forest may be\nentered to the west, however the foliage is impenetrable to the north,\nmaking further progress in that direction impossible.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6600,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 515,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 508,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many \nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 516,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 509,
+      "Name": "The Northern Woods",
+      "Description": "\n   The beautiful forest surrounds you on every side.  To the north and\neast you see a small path through the tall trees.  The forest continues to\nthe south, but it grows too dense to continue to the west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 517,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 510,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path meanders through the forest on its north-south journey.\nYou can follow it through the woods, or enter the forest itself to the\neast and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 502,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 511,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 518,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 509,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 511,
+      "Name": "The Northern Woods",
+      "Description": "\n   The forest surrounds you on all sides.  The tall trees gaze down at you\nas you wander through their home. You can wander through the woods\nto the north, east, and south.  Through the trees to the west, you spy a\nsmall path cutting through the forest.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 512,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 519,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 512,
+      "Name": "The Northern Woods",
+      "Description": "\n   The lovely forest surrounds you in every direction.  The tall trees\ngaze down at you as you wander through their home.  A small bird swoops\ndown from his tree-top dwelling, buzzing just past your head in an attempt\nto frighten you away.  You may continue through the woods in any\ndirection.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 504,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 513,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 520,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 511,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 513,
+      "Name": "The Northern Woods",
+      "Description": "\n   The lovely forest surrounds you in every direction.  The tall trees    \ngaze down at you as you wander through their home.  You hear tiny\nfootsteps behind you, but when you turn to see who is making them, you\nonly see the trees.  You may continue through the forest to the north,\neast, south, or west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 521,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 512,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 514,
+      "Name": "The Northern Woods",
+      "Description": "\n   As you wander through the woods, you get the sense that someone, or\nsomething, is watching you!  Should you be afraid?  Only if you don't know\nwhat sort of creatures live in these woods!  The trees continue in every\ndirection, and you notice a small path cutting through them to the south\nand east.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 515,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 522,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 513,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 515,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path leads through the woods to the north and south.  Through\nthe tall trees, you see what appears to be a large wall to the east.  You\nmay enter the forest to the west, or continue along the path to the north\nor south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 507,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 523,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 516,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many \nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 508,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 524,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 517,
+      "Name": "The Northern Woods",
+      "Description": "\n   Wandering through the woods, you hear the sounds of the forest\ncreatures all around you.  The trees continue in every direction, but they\nbecome too dense to pass any further to the west.  Through the trees, you\ncan see a small path making its way through the forest to the east.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 509,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 518,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 525,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 518,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path meanders through the forest on its north-south journey.\nYou can follow it through the woods, or enter the forest itself to the\neast and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 519,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 526,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 517,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 519,
+      "Name": "The Northern Woods",
+      "Description": "\n   The forest surrounds you on all sides.  The tall trees gaze down at you\nas you wander through their home. You can wander through the woods\nto the north, east, and south.  Through the trees to the west, you spy a\nsmall path cutting through the forest.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 511,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 520,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 527,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 518,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 520,
+      "Name": "The Northern Woods",
+      "Description": "\n   You can feel the eyes of the forest creatures upon you as you wander\nthrough their home.  The trees continue to the north, west, and south, and\nto the east you can see a small path wandering through the woods.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 512,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 521,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 528,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 519,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 521,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path wanders through the forest to the south and east.\nYou can hear birds chirping in the trees lining the path as you wander\nthrough the forest.  The forest continues to the north and west, allowing\nyou to leave the path and wander there.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 513,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 522,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 529,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 520,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 522,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path continues through the woods to the east and west.  The\ntrees that line the path are apparently home to many small creatures, as\nyou can feel their eyes watching you as you wander through their home.\nYou may enter the forest itself to the north and south, or stay on the\npath by following it east or west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 523,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 530,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 521,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 523,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path leads through the woods to the north and west.  Through\nthe tall trees, you see what appears to be a large wall to the east.  You\nmay enter the forest to the south, or follow the path to the north or\nwest.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 515,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 531,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 522,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 524,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many \nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 516,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 532,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 525,
+      "Name": "The Northern Woods",
+      "Description": "\n   The forest continues in every direction, but it is too dense to pass to\nthe south or west.  Through the trees you can see a small path making its\nway through the woods to the east.  You may also continue through the\nwoods to the north.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 517,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 526,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 526,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path wanders through the forest to the north and south.  The\ntrees that line the path gaze down at you as you make your way through\ntheir home.  You may continue along the path to the north and south, or\nwander into the woods to the east or west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 518,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 527,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 533,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 525,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 527,
+      "Name": "The Northern Woods",
+      "Description": "\n   The trees of the forest continue their domain in every direction.\nThrough the branches, you see a small path making its way through the\nwoods to the west and south.  As you wander through his home, a small bird\nchirps angrily at you!",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 519,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 528,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 534,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 526,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 528,
+      "Name": "The Northern Woods",
+      "Description": "\n   Wandering through the woods you can sense the eyes of the forest\ncreatures upon you.  They seem harmless enough, but you can never tell\nwhat the trees may hide.  The woods continue to the north and west, and to\nthe south and east you see a small path making its way through the forest.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 520,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 529,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 535,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 527,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 529,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path winds through the dense forest, allowing you to follow\nits journey.  The path continues to the north and south, and you can\nwander through the trees to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 521,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 530,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 536,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 528,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 530,
+      "Name": "The Northern Woods",
+      "Description": "\n   The dense foliage surrounds you in every direction.  The forest becomes\nimpossible to pass through to the south, but you may move in any other\ndirection.  Through the trees, you notice a small path making its way\nthrough the forest to the north and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 522,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 531,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 529,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 531,
+      "Name": "The Northern Woods",
+      "Description": "\n   The dense forest surrounds you on every side.  Through the tall trees,\nyou notice what appears to be a wall to the east.  To the west and south\nis more forest, but the thick foliage keeps you from moving any further\nsouth.  You can see a small path cutting through the forest to the north.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 523,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 530,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 532,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many \nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 524,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 537,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 533,
+      "Name": "A Split in the Path",
+      "Description": "\n   The small path splits here, leading off through the forest to the\nnorth, east and south.  The trees grow quite dense along the path, forcing\nyou to stay on it.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 526,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 534,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 538,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 534,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The path wanders through the woods to the east and west here.  The tall\ntrees gaze down at you as you follow the path through their home.  The\nforest is too dense to travel further south, but it is passable to the\nnorth.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 527,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 535,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 533,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 535,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The path wanders through the woods to the east and west here.  The tall\ntrees gaze down at you as you follow the path through their home.  The\nforest is too dense to travel further south, but it is passable to the\nnorth.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 528,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 536,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 534,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 536,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path bends sharply as it meets a dense growth of trees to the\neast.  Through the trees, you can barely see a large wall.  The dense\nforest continues to the south, but you wouldn't be able to make your way\nthrough the underbrush in that direction.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 529,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 535,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 537,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many \nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 532,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 539,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 538,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path winds through the forest to the north and south.  The\ntrees lining the path grow quite close together, forcing you to stay on\nthe path.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 533,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 541,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 539,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many \nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 537,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 542,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 540,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path continues through the woods to the east and south.  The\nforest lining the path is too dense to travel in any other direction.  As\nyou wander along the path, you can hear birds chirping, and a small\ncreature hastily scurries away at your approach somewhere in the trees.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 541,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 543,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 541,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path winds through the forest to the north and west.  The\ntrees lining the path grow quite close together, forcing you to stay on\nthe path.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 538,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 540,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 542,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many \nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 539,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 544,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 543,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path leads you through the forest on its north-south\njourney.  The trees grow very close together along the path, making it\nimpossible to wander into the woods.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 540,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 545,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 544,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many\nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 542,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 546,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 545,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path leads you through the forest on its north-south \njourney.  The trees grow very close together along the path, making it    \nimpossible to wander into the woods.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 543,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 547,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 546,
+      "Name": "The Northern Road",
+      "Description": "\n   This wide road cuts through a large forest on its way north and south.\nTo the east and west, the forest is so dense that it is impenetrable.  The\nwide dirt road has seen much use, and you may follow it like so many\nothers have on your way north or south.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 544,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 548,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 547,
+      "Name": "A Small Path through the Woods",
+      "Description": "\n   The small path leads you through the forest on its north-south \njourney.  The trees grow very close together along the path, making it    \nimpossible to wander into the woods.  To the south, you see that the path\nleads toward a narrow path at the edge of the woods.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 545,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 557,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 548,
+      "Name": "The Northern Road",
+      "Description": "\n   The wide road cuts through the northern lands on its way to places\nunknown.  To the east, a narrow road branches off of this one.  It takes a\npath along the southern edge of a great forest.  To the north, the road\ncontinues on its way through a dense forest.  A wide clay road branches off\nto the west, leading towards a large city.  The northern road also\ncontinues to the south, towards another large city.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 546,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 549,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 558,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 12000,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 549,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To\nthe north of the road is a large forest, filled with all sorts of\nwildlife.  The narrow road seems to have been built to accomodate the\npassage of wagons judging from the twin ruts that have been cut into it\nover time.  The road continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 550,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 548,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 550,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To   \nthe north of the road is a large forest, filled with all sorts of \nwildlife.  The narrow road seems to have been built to accomodate the \npassage of wagons judging from the twin ruts that have been cut into it   \nover time.  The road continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 551,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 549,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 551,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To   \nthe north of the road is a large forest, filled with all sorts of \nwildlife.  The narrow road seems to have been built to accomodate the \npassage of wagons judging from the twin ruts that have been cut into it   \nover time.  The road continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 552,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 550,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 552,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To   \nthe north of the road is a large forest, filled with all sorts of \nwildlife.  The narrow road seems to have been built to accomodate the \npassage of wagons judging from the twin ruts that have been cut into it   \nover time.  The road continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 553,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 551,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 553,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To   \nthe north of the road is a large forest, filled with all sorts of \nwildlife.  The narrow road seems to have been built to accomodate the \npassage of wagons judging from the twin ruts that have been cut into it   \nover time.  The road continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 554,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 552,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 554,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To   \nthe north of the road is a large forest, filled with all sorts of \nwildlife.  The narrow road seems to have been built to accomodate the \npassage of wagons judging from the twin ruts that have been cut into it   \nover time.  The road continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 555,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 553,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 555,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To   \nthe north of the road is a large forest, filled with all sorts of \nwildlife.  The narrow road seems to have been built to accomodate the \npassage of wagons judging from the twin ruts that have been cut into it   \nover time.  The road continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 556,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 554,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 556,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To   \nthe north of the road is a large forest, filled with all sorts of \nwildlife.  The narrow road seems to have been built to accomodate the \npassage of wagons judging from the twin ruts that have been cut into it   \nover time.  The road continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 557,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 555,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 557,
+      "Name": "A Narrow Road",
+      "Description": "\n   The narrow road is the northern border of a large rolling plain.  To\nthe north of the road is a large forest, filled with all sorts of\nwildlife.  The narrow road seems to have been built to accomodate the\npassage of wagons judging from the twin ruts that have been cut into it\nover time.  The road continues to the east, leading into a small village\nat the edge of the forest.  To the north, a small path branches off this\nnarrow road.  The road also continues back along the edge of the plains to\nthe west.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 547,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1701,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 556,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 558,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually\nleading into hills and mountains.  To the west is a large, dark forest.\nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 548,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 559,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 559,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually\nleading into hills and mountains.  To the west is a large, dark forest.\nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 558,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 560,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 560,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually \nleading into hills and mountains.  To the west is a large, dark forest.   \nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 559,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 561,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 561,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually \nleading into hills and mountains.  To the west is a large, dark forest.   \nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 560,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 562,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 562,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually \nleading into hills and mountains.  To the west is a large, dark forest.   \nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 561,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 563,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 563,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually \nleading into hills and mountains.  To the west is a large, dark forest.   \nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 562,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 564,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 564,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually \nleading into hills and mountains.  To the west is a large, dark forest.   \nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 563,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 565,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 565,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually \nleading into hills and mountains.  To the west is a large, dark forest.   \nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 564,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 566,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 566,
+      "Name": "The Northern Road",
+      "Description": "\n   The rolling plains extend east for quite some distance, eventually \nleading into hills and mountains.  To the west is a large, dark forest.   \nThe road continues towards the north, into places unknown.  To the south,\nthe road leads towards a large city.",
+      "ZoneId": 5,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 565,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3061,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 567,
+      "Name": "A Small Trail Through the Hills",
+      "Description": "\n   The small trail winds its way through the hills as it leaves the\nNorthern Road.  In the distance to the north, you see the snowcapped\npeaks of a mountain range.  The path continues to the north, and\nleads to the Northern Road to the south.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 568,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 568,
+      "Name": "A Small Trail Through the Hills",
+      "Description": "\n   The small trail follows the terrain of the rolling hills.  As the\nhills crest and fall, so does the trail.  The air is much cooler as\nyou progress towards the north, closer to the snowapped peaks you can\nsee in the distance.  The trail continues through the hills to the\nnorth and south.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 569,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 567,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 569,
+      "Name": "A Small Trail Through the Hills",
+      "Description": "\n   The small trail follows the terrain of the rolling hills.  As the\nhills crest and fall, so does the trail.  The air is much cooler as\nyou progress towards the north, closer to the snowapped peaks you can\nsee in the distance.  The trail continues through the hills to the\nnorth and south.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 570,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 568,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 570,
+      "Name": "A Small Trail Through the Hills",
+      "Description": "\n   As the trail continues through the hills, the terrain becomes\nconsiderably more treacherous.  The rolling hills have become more\nsteep as they approach the still-distant mountains.  The trail\ncontinues through the hills to the north and south.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 571,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 569,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 571,
+      "Name": "A Small Trail Through the Hills",
+      "Description": "\n   As the trail continues through the hills, the terrain becomes \nconsiderably more treacherous.  The rolling hills have become more   \nsteep as they approach the still-distant mountains.  The trail \ncontinues through the hills to the north and south.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 572,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 570,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 572,
+      "Name": "A Small Trail Through the Hills",
+      "Description": "\n   The trail winds its way through the hills, apparently heading\ntowards the snowcapped mountains in the not-so-distant north.  The\ncool, crisp air is invigorating!  The trail turns to the east,\napparently to avoid a large boulder that has been left here by the\nforces of nature.  It also heads south, into more gently rolling\nhills.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 573,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 571,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 573,
+      "Name": "A Winding Trail Through the Hills",
+      "Description": "\n   As the trail winds its way through the increasingly steep hills,\nyou begin to notice that the air is much more thin.  Perhaps the\naltitude is to blame.  Upon reaching the crest of one particularly\nlarge hill, you realize that you can see for miles in every distance.\nTo the north you see the snowcapped peaks of a large mountain range.\nThe range appears to curve southwards along the east and west ends,\nforming a sort of basin within which these hills reside. A steep\nincline leads down and north into what appears to be a boulder\nfield.  To the south, the hills roll gently, and past them is a large\nforest.  The trail continues through the hills to the north and west.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 574,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 572,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 574,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 574,
+      "Name": "The Boulder Field",
+      "Description": "\n   Boulders are strewn about everywhere, by the forces of nature...\nor perhaps they have been placed here intentionally.  The boulder\nfield continues to the north and east, but becomes too treacherous to\npass to the west.  A short climb to the south would take you to a\nsmall trail that winds its way through the hills in that direction.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 575,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 578,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 573,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 575,
+      "Name": "The Boulder Field",
+      "Description": "\n   Large boulders have been thrown haphazardly about, making it\nrather difficult to maneuver through this terrain.  The boulder field\ncontinues to the north, towards a large mountain range, and south\ntowards the hills.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 576,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 574,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 576,
+      "Name": "The Boulder Field",
+      "Description": "\n   As the boulder field approaches the mountains, you notice that a\nsmall pass cuts through the range not far to the north.  Perhaps if\nyou are able to make your way through this field, access to the other\nside of the range would be attainable.  The large boulders make your\njourney difficult, but a somewhat clear path leads to the north and\nsouth.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 577,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 575,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 577,
+      "Name": "Approaching the Mountain Pass",
+      "Description": "\n   As you reach the base of the mountain range, you see that there is\nindeed a pass through it.  However, it has been quite blocked by a\nrecent landslide.  Passage through the rubble is quite impossible to\nthe north, but a somewhat clear path leads into a boulder field to\nthe south.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 576,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 578,
+      "Name": "The Boulder Field",
+      "Description": "\n   Enormous boulders litter the field, making it very difficult to\nmake your way through.  Passage to the north and south is blocked by\nparticularly large boulders.  Their placement seems too precise to be\nnatural, as if the \"path\" you are on was made intentionally.  While \ntreacherous, the boulder field continues to the east and west.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 579,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 574,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 579,
+      "Name": "The Boulder Field",
+      "Description": "\n   The large boulders that line the field keep you on an east-west\npath as you venture through the rocky terrain.  Past the boulders to\nthe north, you can see a large mountain range, meeting the sky with\nits snowcapped peaks.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 580,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 578,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 580,
+      "Name": "The Boulder Field",
+      "Description": "\n   Large boulders line a sort of path through the field.  They guide\nyou on a north and west journey, further into the field.  A short\ndistance to the north, the path appears to end abruptly at a large\nboulder, but you may continue through the field to the west.",
+      "ZoneId": 5,
+      "Sector": "Hills",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 579,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 500,
+      "Name": "bouncy ferret male m500",
+      "ShortDescription": "\nA bouncy male ferret",
+      "LongDescription": "\nThe bouncy male ferret races through the grasses.",
+      "Description": "\nThis small bundle of fur loves racing through the high grasses.\nAlthough small, he is fierce and can easily kill animals several times\nhis size.  He is sly and quick, and not an animal you want to harass!",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d5+85",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 80,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 20,
+      "Experience": 666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%1 sneeze",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 501,
+      "Name": "general Roman procession leader m501",
+      "ShortDescription": "\nthe Roman general",
+      "LongDescription": "\nThe Roman general follows his triumphal procession into Rome.",
+      "Description": "\nWearing the laurel wreath of the successful Roman general, Fobos\nMaximilius follows his successful army back to Rome.  They bring with\nthem treasures from the mighty civilizations and barbaric tribes they\nhave conquered.  The general ponders the effect his triumph may have on\nhis political career.  Perhaps he should stage a coup.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+350",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+9-1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [
+        "Resist_1000:100000",
+        "Resist_8:8",
+        "Resist_1:502",
+        "Resist_0:655408",
+        "Resist_0:8336",
+        "Resist_0:655408",
+        "Resist_0:17050880",
+        "Resist_0:264211",
+        "Resist_0:655408",
+        "Resist_0:1720512",
+        "Resist_0:393281",
+        "Resist_0:67108864",
+        "Resist_0:1058985",
+        "Resist_0:802848",
+        "Resist_0:1179680",
+        "Resist_0:16820545",
+        "Resist_0:655408",
+        "Resist_0:8448",
+        "Resist_0:393281",
+        "Resist_0:524432",
+        "Resist_0:16416",
+        "Resist_0:147465",
+        "Resist_0:524546",
+        "Resist_0:16416",
+        "Resist_0:540704",
+        "Resist_0:24576",
+        "Resist_0:147465",
+        "Resist_0:144",
+        "Resist_0:19005456",
+        "Resist_0:590208",
+        "Resist_0:292865",
+        "Resist_0:139586",
+        "Resist_0:397585",
+        "Resist_0:26689",
+        "Resist_0:147465",
+        "Resist_0:17301648",
+        "Resist_0:282640",
+        "Resist_0:17317890",
+        "Resist_0:24592",
+        "Resist_0:655760",
+        "Resist_0:786465",
+        "Resist_0:524544",
+        "Resist_0:270339",
+        "Resist_0:3",
+        "Resist_0:194",
+        "Resist_0:0",
+        "Resist_0:7",
+        "Resist_17:7",
+        "Resist_0:408",
+        "Resist_500:100",
+        "Resist_0:-1"
+      ],
+      "Gold": -1,
+      "Experience": 100,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%3 hop",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 503,
+      "Name": "albino female ferret snow white m503",
+      "ShortDescription": "\nA snow white ferret",
+      "LongDescription": "\nThe pure white ferret is too busy playing ferret games to notice you.",
+      "Description": "\nOften just a streak of white, racing up a tree or across the road in\nfront of you (startling the horses), this ferret spends her days\nfrolicking in the grass.  She is so beautiful, so soft and sleek, that\nshe is frequently fed by passersby.  She is an animal worthy of being a\npet to an emperor.",
+      "Level": 7,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "NiceThief",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d7+109",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 1066,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 504,
+      "Name": "centurion Roman soldier leader m504",
+      "ShortDescription": "\nThe Roman centurion",
+      "LongDescription": "\nThe Roman centurion commands his 100 soldiers with a will of iron.",
+      "Description": "\nWearing a bronze helmet topped with bright red feathers, the Roman\ncenturion struts at the head of his 100 man command.  The Roman army\nwas, as always, successful, and the centurion is mentally spending the\nbonus he will receive.  He is a tall man, well favored, with a long\nstraight nose.  His skin is well-tanned and firm, though it bears many\nscars.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d150+250",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+7-1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [
+        "Resist_400:60000",
+        "Resist_8:8",
+        "Resist_1:505",
+        "Resist_0:131091",
+        "Resist_0:411928",
+        "Resist_0:4096505",
+        "Resist_0:30721",
+        "Resist_0:139717",
+        "Resist_0:524432",
+        "Resist_0:16416",
+        "Resist_0:1228864",
+        "Resist_0:925723",
+        "Resist_0:4718976",
+        "Resist_0:0",
+        "Resist_0:32792",
+        "Resist_0:155650",
+        "Resist_0:1861652",
+        "Resist_0:827408",
+        "Resist_0:4202512",
+        "Resist_0:942085",
+        "Resist_0:4718976",
+        "Resist_0:276",
+        "Resist_0:17039376",
+        "Resist_0:26634",
+        "Resist_0:2207",
+        "Resist_0:4718992",
+        "Resist_0:524432",
+        "Resist_0:8336",
+        "Resist_0:16416",
+        "Resist_0:2361361",
+        "Resist_0:143417",
+        "Resist_0:34349332",
+        "Resist_0:655825",
+        "Resist_0:19005456",
+        "Resist_0:540802",
+        "Resist_0:262528",
+        "Resist_0:262145",
+        "Resist_0:262145",
+        "Resist_0:401716",
+        "Resist_0:526355",
+        "Resist_0:1",
+        "Resist_4:66",
+        "Resist_0:0",
+        "Resist_0:22",
+        "Resist_11:-3",
+        "Resist_0:400",
+        "Resist_500:100",
+        "Resist_0:-1"
+      ],
+      "Gold": 400,
+      "Experience": 33000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 508,
+      "Name": "slave captive gallic Gaul m508",
+      "ShortDescription": "\nThe Gallic slave",
+      "LongDescription": "\nThe Gallic captive, now a slave to the Romans, glares haughtily at you.",
+      "Description": "\nHe was a great and fierce fighter, but he was captured and now will be\na great and proud slave.  His body still retains the remnants of blue\npaint, which evidently was not enough to frighten off the Roman armies.\nHis amulet of herbs and unmentionables, worn about his neck, were also\nnot enough to protect him from capture.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d38+262",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 90,
+          "DamageDice": "3d5+6"
+        },
+        {
+          "Type": "Attack_32",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 29167,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 509,
+      "Name": "fairy floating m509",
+      "ShortDescription": "\nThe floating fairy",
+      "LongDescription": "\nLightly floating on a breeze, the fairy flies north to see Titania.",
+      "Description": "\nThe delicate fairy, dressed in gossamer thin fabric, is enjoying the\nfeel of the light breeze on his skin.  His delicate pale features and\nlight boned body make him appear frail, but his magic makes him\nfearsomely strong.",
+      "Level": 14,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible",
+        "Sanctuary",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d13+181",
+        "Mana": 240,
+        "Move": 290
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 4266,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 510,
+      "Name": "orc black huge captive prisoner m510",
+      "ShortDescription": "\nThe Morian Orc",
+      "LongDescription": "\nThe huge Black Orc shuffles along, a captive of war in chains.",
+      "Description": "\nDuring a trip through the Morian caves, in search of the fabled\ntreasures of the ancient elven city of Illir, the Roman army decimated\nthe population of Orcs, deeming them too stupid to bother to bring\nback.  They did spare a few, just for the curiosity sake.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+350",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+9-1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [
+        "Resist_1000:100000",
+        "Resist_8:8",
+        "Resist_1:511",
+        "Resist_0:159745",
+        "Resist_0:4096511",
+        "Resist_0:17306048",
+        "Resist_0:8336",
+        "Resist_0:1732865",
+        "Resist_0:4342017",
+        "Resist_0:24576",
+        "Resist_0:262145",
+        "Resist_0:417920",
+        "Resist_0:0",
+        "Resist_0:34349332",
+        "Resist_0:8448",
+        "Resist_0:295057",
+        "Resist_0:33816848",
+        "Resist_0:1995009",
+        "Resist_0:4456449",
+        "Resist_0:1188168",
+        "Resist_0:16910353",
+        "Resist_0:24576",
+        "Resist_0:18",
+        "Resist_0:4196368",
+        "Resist_0:1",
+        "Resist_0:139601",
+        "Resist_0:1909009",
+        "Resist_0:18504",
+        "Resist_0:1",
+        "Resist_0:672149",
+        "Resist_0:524432",
+        "Resist_0:147456",
+        "Resist_0:528401",
+        "Resist_0:4456449",
+        "Resist_0:8201",
+        "Resist_0:286720",
+        "Resist_0:417865",
+        "Resist_0:4325392",
+        "Resist_0:540672",
+        "Resist_0:34349332",
+        "Resist_0:1",
+        "Resist_4:66",
+        "Resist_0:600",
+        "Resist_0:30",
+        "Resist_6:-4",
+        "Resist_0:400",
+        "Resist_500:100",
+        "Resist_0:-1"
+      ],
+      "Gold": 1000,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 512,
+      "Name": "elf woodelf wood m512",
+      "ShortDescription": "\nThe wood elf",
+      "LongDescription": "\nThe little wood elf is heading off for a lark in Tynstri to the east.",
+      "Description": "\nThe merry little elf has skin the color of oak bark on a warm summer\nafternoon.  He is off to visit some distant cousins, who live in the\nwoods northeast of Tynstri.  With his dark green tunic he easily blends\ninto the woods surrounding the road.  He slips into the woods, hiding\nwhen the path becomes busy.",
+      "Level": 25,
+      "Race": "Air",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+300",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 513,
+      "Name": "rabbit longears mr jackrabbit m513",
+      "ShortDescription": "\nMr. Longears",
+      "LongDescription": "\nMr. Longears is off to visit his jackrabbit friends in the forest.",
+      "Description": "\nMr. Longears is a very large rabbit, with long, strong hind legs and\nfeet and ears that stretch high above his head.  As he hops along, his\nlegs pound the earth with a heavy thud, and he practically flies\nthrough the grass.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 250,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+145",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 hop;%5 em wiggles his rabbit nose, sniffing the air",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 514,
+      "Name": "burnt umber ghost dragon m514",
+      "ShortDescription": "\nThe burnt umber ghost",
+      "LongDescription": "\nThe huge burnt umber ghost was once a graceful dragon.",
+      "Description": "\nWhy should ghosts always be a foggy white?  That's what this (former)\ndragon thought.  She loved beautiful jewels while still alive, and this\nis about the best she can do now that she is a dragon ghost.  Robbed of\nher strength by death, she can still be a formidable opponent.",
+      "Level": 13,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Infrared",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d13+181",
+        "Mana": 230,
+        "Move": 275
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 4266,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 515,
+      "Name": "barbarian evil slave m515",
+      "ShortDescription": "\nThe evil barbarian",
+      "LongDescription": "\nThe evil barbarian is led in chains past you, a prize of war.",
+      "Description": "\nA tall human ... perhaps all of 6.5' (about 2m.) ... with heavy bone\nstructure and well defined musculature, the captive will undoubtedly\nsell for a high price at the slave market.  His unshaven chin juts out\nwith pride, and his shoulders remain square, his back straight.  He is\naware of his worth and uncowed by his status.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d38+262",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 29167,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 516,
+      "Name": "warrior elephant roman m516",
+      "ShortDescription": "\nThe warrior elephant",
+      "LongDescription": "\nHuge elephants brought back from a foreign campaign pound along.",
+      "Description": "\nThe pachyderm packs a whallop with his trunk, although he has not been\nused for fighting.  Originally brought over from Africa by Hannibal,\nwho wanted to \"surprise\" the Romans one winter, these Romans are\ndelighted to bring them back as a prize to Rome.  They can carry\nliterally tons of treasure brought back from the wars.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "NiceThief",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+350",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+9"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 517,
+      "Name": "hedgehog little m517",
+      "ShortDescription": "\nThe little hedgehog",
+      "LongDescription": "\nThe little hedgehog has rolled up into a spiny ball.",
+      "Description": "\nThe little hedgehog wishes to be left alone to sleep (if the sun is\nshining) or roam around and rid the earth of worms, beetles and slugs,\nsurely a noble occupation!  This one is aware of your interest, and has\nrolled himself into a little ball of sharp spines that say, \"Don't\ntouch!\"",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+145",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 518,
+      "Name": "sleepy bat hanging m518",
+      "ShortDescription": "\nThe sleepy bat",
+      "LongDescription": "\nThe sleepy bat is hanging from the tree branch, hoping he's invisible.",
+      "Description": "\nThis bat tends to think of the Romans as a race of vampires.  He and\nhis brethren, a small band of fruit bats, are killed by the romans and\nthe bodies drained of blood.  The blood is sold to the Roman shops\nwhich help keep the citizens beautiful.",
+      "Level": 7,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d7+109",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 1066,
+      "DefaultPosition": "Sleeping",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 519,
+      "Name": "gnome gnomish scientist psci psi pscientist m519",
+      "ShortDescription": "\nThe gnomish psci",
+      "LongDescription": "\nThe #ggnomish#Y pscientist checks you carefully for signs of dragoness.",
+      "Description": "\nHe has heard rumors that sometimes dragons masquerade as other life\nforms, and he is hot on the trail of some field research on the\nsubject.\nObviously, he has ignored the effect the dragons' hot breath might have\non his slightly hairy pointed ears.",
+      "Level": 13,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d13+181",
+        "Mana": 230,
+        "Move": 275
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 4266,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 pose",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 520,
+      "Name": "ratman roman warrior soldier ratsoldier m520",
+      "ShortDescription": "\nThe Roman Ratsoldier",
+      "LongDescription": "\nThe Ratman Ratsoldier looks fierce despite his long twitching tail.",
+      "Description": "\nAs long as you are a land owning citizen, you may sign up for a 20 year\nstretch in the Roman army.  Although it is a hard life (especially for\na rat), the promise of glory and a regular salary are hard to resist.",
+      "Level": 25,
+      "Race": "Air",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+300",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 pose",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 521,
+      "Name": "elf ranger m521",
+      "ShortDescription": "\nThe elf ranger",
+      "LongDescription": "\nThe elf ranger watches you warily.",
+      "Description": "\nThe elf is new to his ranger job, and he takes it quite seriously.  He\nis worried about the tramping of the Roman soldiers through this woods,\nalthough as yet they have not discovered the path to the deep forest.\nHe fears he will soon have to do battle with them.",
+      "Level": 12,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+120",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 10500,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 522,
+      "Name": "elf scout m522",
+      "ShortDescription": "\nThe elf scout",
+      "LongDescription": "\nThe elf scout looks for signs of danger approaching Tynstri.",
+      "Description": "\nThis small woodland elf is training hard, hoping one day to become a\nmighty ranger.  Her hair is a deep green and quite short.  She is tiny,\nbut wiry, and her dusky brown skin helps her blend in.  She is ever\nwatchful for danger, although she is unsure what form it will take.\nCould those enormous footprints, for example, be from some large\nelf-predator?",
+      "Level": 12,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+120",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 10500,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%5 peer;%5 scout",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 523,
+      "Name": "Peter Rabbit m523",
+      "ShortDescription": "\nPeter Rabbit",
+      "LongDescription": "\nPeter looks about curiously, wondering where the elves grow cabbages.",
+      "Description": "\nA bit away from his original home, nevertheless Peter Rabbit still\nloves carrots and cabbages, and the elves have a hard time keeping him\naway\nfrom their greens.  He is often to be seen hopping through the woods in\nhis blue waistcoat.",
+      "Level": 12,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "ProtectEvil"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+120",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 10500,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 hop",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 524,
+      "Name": "Benjamin Bunny m524",
+      "ShortDescription": "\nBenjamin Bunny",
+      "LongDescription": "\nBenjamin is a handsome little rabbit with white fur and pink ears.",
+      "Description": "\nBenjamin often accompanies Peter on adventures in the forest.  Today\nthey are finding many little tricks to play on the elves.  Together\nthey can pound their hind feet into deep depressions in the earth, so\nwatchful elves believe there are LARGE MONSTERS in their forest!",
+      "Level": 10,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "ProtectEvil"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+145",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 8000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 hop",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 525,
+      "Name": "cat striped skunk m525",
+      "ShortDescription": "\nThe little skunk",
+      "LongDescription": "\nThe black cat has a strange white stripe down his back.",
+      "Description": "\nPepe LePew would love this little stinker.  The skunk is busy digging\nthrough forest debris looking for good things to eat.  She is solid\nblack with a bright white stripe starting at her head and extending\nthrough her tail.  She may be small, but she has a secret weapon that\nforces even very large predators to back away.",
+      "Level": 12,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "ProtectEvil"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+120",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 10500,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%1 sniff",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 526,
+      "Name": "Pepe LePew skunk m526",
+      "ShortDescription": "\nPepe LePew",
+      "LongDescription": "\nThis skunk ain't no stinker.  He's a lover!",
+      "Description": "\nPepe is so busy looking for the skunk of his dreams that he may not\nnotice you.  Be sure not to frighten him, because the results would be\n... alarming!",
+      "Level": 12,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "ProtectEvil"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+120",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 10500,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 527,
+      "Name": "Mrs T Tiggywinkle Hedgehog m527",
+      "ShortDescription": "\nMrs Tiggywinkle",
+      "LongDescription": "\nMrs Tiggywinkle is full of grandmotherly advice for you.",
+      "Description": "\nMrs T has tiny pink feet and a soft black nose.  Her back is covered\nwith long sharp spikes, and she is apt to roll up into a ball of spikes\nwhen she is frightened.  Her belly is covered with soft white fur.\nMrs. T is very small, but very well armored.",
+      "Level": 12,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "ProtectEvil"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+120",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 10500,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 528,
+      "Name": "duck jemima puddle puddle-duck m528",
+      "ShortDescription": "\nJemima Puddle-Duck",
+      "LongDescription": "\nJemima Puddle-Duck waddles happily through forest streams and ponds.",
+      "Description": "\nThat's what ducks do best, after all!  Swimming in the little lakes and\nponds is something Jemima learned to do very early in life, and she is\nquite good at it.",
+      "Level": 12,
+      "Race": "Bearbeast",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "ProtectEvil"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+120",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 10500,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%5 kvack",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 529,
+      "Name": "fairy apprentice mage m529",
+      "ShortDescription": "\nThe fairy apprentice",
+      "LongDescription": "\nA young fairy holds tightly to a short stick that seems to glow.",
+      "Description": "\nThe fairy is out exploring the woods for the first time, experimenting\nwith a wand he discovered in a workshop.  A very tiny mage with\ngossamer wings that beat rapidly, his magic makes him more powerful than\na human\nmany times his size.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": 800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "6d6+500",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 10,
+          "DamageDice": "4d7+3"
+        },
+        {
+          "Type": "Attack_32",
+          "DamageType": 0,
+          "Chance": 90,
+          "DamageDice": "1d0+90"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 425,
+      "Experience": 145000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 530,
+      "Name": "gnome old cloth merchant m530",
+      "ShortDescription": "\nThe cloth merchant",
+      "LongDescription": "\nThe old gnome leads a donkey laden with bolts of wool.",
+      "Description": "\nBringing heavy bolts of wool woven from Stanneg sheep, the cloth\nmerchant hopes to trade for some fairy cloth, should he be lucky enough\nto discover the fairy home.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "6d6+500",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d7+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 425,
+      "Experience": 145000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 531,
+      "Name": "tinker m531",
+      "ShortDescription": "\nThe tinker",
+      "LongDescription": "\nThe tinker easily carries his huge pack on his massive back.",
+      "Description": "\n\"Wandering from village to village, that's the life for me!\"  A man of\nenormous strength and cleverness, the tinker carries the tools of his\ntrade on his back.  Quick to fix, that's the tinker.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Dodge"
+      ],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "6d6+500",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d7+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 425,
+      "Experience": 145000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 532,
+      "Name": "druid captive m532",
+      "ShortDescription": "\nThe druid captive",
+      "LongDescription": "\nIn his earth colored robes, the druid walks in harmony with the forest.",
+      "Description": "\nCaptured in Gaul, the Romans noted the druid's remarkable healing\nabilities.  He will undoubtedly become the physician for some patrician\nunable to afford a Greek slave.  He is tall, lean and pale, with long\nbrown hair tied neatly at his neck with a leather thong.",
+      "Level": 28,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d38+362",
+        "Mana": 380,
+        "Move": 500
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 60,
+          "DamageDice": "3d5+6"
+        },
+        {
+          "Type": "Attack_8",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+40"
+        },
+        {
+          "Type": "Attack_15",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "2d0+40"
+        },
+        {
+          "Type": "Attack_48",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+40"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 29167,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 533,
+      "Name": "mouse m533",
+      "ShortDescription": "\nThe frightened mouse",
+      "LongDescription": "\nThe frightened mouse scurries off to hide from you.",
+      "Description": "\nLong black whiskers twitching as he glares at you from his beady little\nmouse eyes, the mouse is panicking, attempting to flee ... from YOU!",
+      "Level": 1,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 em twitches nervously.;%2 twitch;%2em 's whiskers tremble violently.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 534,
+      "Name": "fox sly red m534",
+      "ShortDescription": "\nThe sly red fox",
+      "LongDescription": "\nThe sly red fox curls up in the shade, tail tucked neatly around him.",
+      "Description": "\nThe fox may be the picture of innocence and foxy beauty where he lies\nbeneath the tree, but he is a very clever fellow.  Hiding his razor\nsharp teeth in an appearance of sleep is just one of his many tricks.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Dodge",
+        "Sneak"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d150+250",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+7"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%2 snore",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 535,
+      "Name": "gnome picnic boy m535",
+      "ShortDescription": "\nThe boy gnome",
+      "LongDescription": "\nThe boy gnome carries the heavy basket, looking for a good picnic spot.",
+      "Description": "\nThe boy gnome wonders what his Midgaardian girl friend could possibly\nhave packed in the basket, it is so heavy.  It feels like rocks!  The\nlittle gnome hopes they will find a nice place for a picnic very soon!",
+      "Level": 23,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+200",
+        "Mana": 330,
+        "Move": 425
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 12,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 40000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 smile girl",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 536,
+      "Name": "girl picnic m536",
+      "ShortDescription": "\nThe wary picnicker",
+      "LongDescription": "\nThe Midgaard girl warily fingers her dagger as she looks about her.",
+      "Description": "\nShe has never seen so many trees in her life.  They have a presence of\ntheir own - a \"beingness\", and she is unsure whether it is benign or\nevil.  She leans a bit closer to her gnome and wonders if she should\nhelp with the heavy basket.  She has packed some rocks to hold down the\nblanket.",
+      "Level": 23,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+200",
+        "Mana": 330,
+        "Move": 425
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 12,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 40000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%5 flirt boy",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 537,
+      "Name": "changeling baby m537",
+      "ShortDescription": "\nThe demon changeling",
+      "LongDescription": "\nApparently someone has abandoned a sweet little baby.",
+      "Description": "\nBut Beware!  This softly crying babe is a changeling.  He will become a\nsmall demon with a raging temper when disturbed.",
+      "Level": 40,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+550",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%3 cry",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 538,
+      "Name": "girl red riding hood ridinghood m538",
+      "ShortDescription": "\nThe little girl",
+      "LongDescription": "\nThe little girl in a bright red hooded cape carries a heavy basket.",
+      "Description": "\nTwo long dark pigtails trail out from under the cherry red hood that\nkeeps the child's head warm.  Bright blue eyes and an eager smile give\nher a very elfin charm, although she is undoubtedly human.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "NiceThief",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "Light",
+        "Regeneration"
+      ],
+      "Alignment": 800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "6d6+500",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d7+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 425,
+      "Experience": 145000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%1 say do you know the way to Grandmother's house?;%1 say Have you seen\nmy pet wolf?",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 539,
+      "Name": "owl m539",
+      "ShortDescription": "\nThe horny owl",
+      "LongDescription": "\nThe horny owl eyes the mice hungrily.",
+      "Description": "\nYou are glad it's the mice and not you that those big golden eyes are\nstaring at!  The sharp beak and long talons look like they could do a\nlot of damage.",
+      "Level": 4,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%1 yell C'mere little mousey!  I have a nice surprise for you!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 540,
+      "Name": "sparrow m540",
+      "ShortDescription": "\nThe sparrow",
+      "LongDescription": "\nThe gray-brown sparrow is looking for yummy worms and seeds.",
+      "Description": "\nThe tiny bird hops along in the short grass looking for good things to\neat.  It has a small, sharp beak and short, delicate claws, and doesn't\nlook like it could hurt anything bigger than a worm.",
+      "Level": 2,
+      "Race": "Bird",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 em chirps cheerfully.;%2 emote pecks away at the dirt, trying to\nunearth a worm.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 541,
+      "Name": "worm red m541",
+      "ShortDescription": "\nThe glistening red worm",
+      "LongDescription": "\nThe long, glistening red worm looks like bird food.",
+      "Description": "\nHe took a wrong turn in one of the many tunnels underground and now,\nalas, he is destined to be breakfast for some sparrow or bait for some\nfish.  He is your garden variety long red worm, not too bright.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%1 emote heads down into the dirt and knocks himself out on a rock.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 542,
+      "Name": "slug m542",
+      "ShortDescription": "\nThe slug",
+      "LongDescription": "\nThe slug slimes his way along the underside of a leaf.",
+      "Description": "\nCarrying a little house around with him is a lot of work.  The slug\nmunches the tender leaves of young plants and wonders how long til he\nhas to build something a little larger.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%1 emote slimes along happily.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 543,
+      "Name": "sly pinworm m543",
+      "ShortDescription": "\nThe sly pinworm",
+      "LongDescription": "\n#r\"DESTRUCTION FROM WITHIN!!\" shouts the lowly pinworm.#N",
+      "Description": "\nThe sly pinworm is waiting for his chance to work his way into your\nbody and cause massive destruction! ... or at least some itching,\ndiscomfort, and massive barfiness.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%2 say C'mon, baby! Let me worm my way into your heart!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 544,
+      "Name": "halfling roman soldier m544",
+      "ShortDescription": "\nThe halfling",
+      "LongDescription": "\nThe halfling looks small, but his heart is as brave as any Roman's.",
+      "Description": "\nThis halfling is small and far from the land of his grandparent's birth,\nbut he is a Roman citizen-soldier and very proud of it.  His parents,\ncaptured in a raid, were able to buy their freedom from their small\ntobacco shop.",
+      "Level": 1,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d2+45",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 800,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d1+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 55,
+      "Experience": 270,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 545,
+      "Name": "gnome roman soldier m544",
+      "ShortDescription": "\nThe gnome",
+      "LongDescription": "\nThe gnomish soldier is in charge of building roads across ravines.",
+      "Description": "\nThis gnome was something of a washout in terms of carrying around 3 days\nworth of equipment on his back, but he is a positive genius when it\ncomes to building bridges and designing campsites.  He is small and\ngetting a trifle old for the life of a soldier.",
+      "Level": 2,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d2+55",
+        "Mana": 120,
+        "Move": 110
+      },
+      "Combat": {
+        "Armor": 600,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "5d1+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 65,
+      "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 3031,
+      "Name": "lantern",
+      "ShortDescription": "\na lantern",
+      "Description": "\nA brass lantern is here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        96,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 96
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 50,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3040,
+      "Name": "breast plate",
+      "ShortDescription": "\na breast plate",
+      "Description": "\nA breast plate is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        400
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 7,
+          "HitPoints": 400
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 100,
+      "Cost": 10000,
+      "CostPerDay": 150,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3042,
+      "Name": "shield",
+      "ShortDescription": "\na shield",
+      "Description": "\nA small wooden shield is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        40
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 40
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 100,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3046,
+      "Name": "bronze breast plate",
+      "ShortDescription": "\na bronze breast plate",
+      "Description": "\nA bronze breast plate is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        450
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 450
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 80,
+      "Cost": 8000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3070,
+      "Name": "gauntlets bronze",
+      "ShortDescription": "\na pair of bronze gauntlets",
+      "Description": "\nA pair of bronze gauntlets is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        50
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 50
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 1750,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3075,
+      "Name": "helmet bronze",
+      "ShortDescription": "\na bronze helmet",
+      "Description": "\nA bronze helmet is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        60
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 60
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 2500,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3080,
+      "Name": "leggings bronze",
+      "ShortDescription": "\na pair of bronze leggings",
+      "Description": "\nA pair of bronze leggings is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        60
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 60
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 2500,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3085,
+      "Name": "sleeves bronze",
+      "ShortDescription": "\na pair of bronze sleeves",
+      "Description": "\nA pair of bronze sleeves is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        60
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 60
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 1750,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 12001,
+      "Name": "bronze belt romeobj",
+      "ShortDescription": "\na bronze belt",
+      "Description": "\nThis bronze belt will probably be overlooked since it is invisible.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 7,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 1000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "belt",
+            "bronze"
+          ],
+          "Description": "\nHammered from bronze by dwarven metalsmiths, this belt is adequate\nprotection for a new soldier.  Being invisible, it may lure an enemy to\nstrike where it appears the soldier is unprotected.  Very cunning."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": -2
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

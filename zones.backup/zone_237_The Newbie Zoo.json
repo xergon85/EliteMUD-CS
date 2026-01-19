@@ -1,0 +1,6106 @@
+{
+  "Zone": {
+    "Id": 237,
+    "Name": "The Newbie Zoo",
+    "TopRoomId": 23799,
+    "Lifespan": 10,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23701,
+        "Arg2": 1,
+        "Arg3": 23758,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23707,
+        "Arg2": 30,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23709,
+        "Arg2": 70,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23729,
+        "Arg2": 70,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23702,
+        "Arg2": 1,
+        "Arg3": 23739,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23707,
+        "Arg2": 30,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23709,
+        "Arg2": 70,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23729,
+        "Arg2": 70,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23703,
+        "Arg2": 1,
+        "Arg3": 23760,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23724,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23704,
+        "Arg2": 2,
+        "Arg3": 23754,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23704,
+        "Arg2": 2,
+        "Arg3": 23759,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23705,
+        "Arg2": 1,
+        "Arg3": 23759,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23706,
+        "Arg2": 2,
+        "Arg3": 23754,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23706,
+        "Arg2": 2,
+        "Arg3": 23759,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23707,
+        "Arg2": 1,
+        "Arg3": 23754,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23708,
+        "Arg2": 1,
+        "Arg3": 23745,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23701,
+        "Arg2": 70,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23709,
+        "Arg2": 1,
+        "Arg3": 23733,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23710,
+        "Arg2": 1,
+        "Arg3": 23732,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23732,
+        "Arg2": 70,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23711,
+        "Arg2": 2,
+        "Arg3": 23743,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23708,
+        "Arg2": 70,
+        "Arg3": 23711,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23712,
+        "Arg2": 1,
+        "Arg3": 23737,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23713,
+        "Arg2": 1,
+        "Arg3": 23721,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23714,
+        "Arg2": 1,
+        "Arg3": 23721,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23715,
+        "Arg2": 1,
+        "Arg3": 23721,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23716,
+        "Arg2": 1,
+        "Arg3": 23729,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23717,
+        "Arg2": 1,
+        "Arg3": 23729,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23730,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23718,
+        "Arg2": 1,
+        "Arg3": 23736,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23711,
+        "Arg2": 60,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23719,
+        "Arg2": 1,
+        "Arg3": 23728,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23712,
+        "Arg2": 60,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23720,
+        "Arg2": 1,
+        "Arg3": 23725,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23713,
+        "Arg2": 10,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23721,
+        "Arg2": 2,
+        "Arg3": 23705,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23706,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23704,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23721,
+        "Arg2": 2,
+        "Arg3": 23746,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23706,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23735,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23722,
+        "Arg2": 2,
+        "Arg3": 23702,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23722,
+        "Arg2": 2,
+        "Arg3": 23750,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23723,
+        "Arg2": 1,
+        "Arg3": 23708,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23720,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23721,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23723,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23724,
+        "Arg2": 1,
+        "Arg3": 23726,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23725,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23726,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23727,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23735,
+        "Arg2": 1,
+        "Arg3": 23752,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23725,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23726,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23727,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23725,
+        "Arg2": 2,
+        "Arg3": 23724,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23725,
+        "Arg2": 2,
+        "Arg3": 23753,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23726,
+        "Arg2": 4,
+        "Arg3": 23707,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23726,
+        "Arg2": 4,
+        "Arg3": 23727,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23702,
+        "Arg2": 40,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23727,
+        "Arg2": 2,
+        "Arg3": 23748,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23728,
+        "Arg2": 40,
+        "Arg3": 14,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23728,
+        "Arg2": 1,
+        "Arg3": 23739,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23729,
+        "Arg2": 1,
+        "Arg3": 23739,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23730,
+        "Arg2": 2,
+        "Arg3": 23757,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23703,
+        "Arg2": 99,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23731,
+        "Arg2": 1,
+        "Arg3": 23756,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 23731,
+        "Arg2": 55,
+        "Arg3": 12,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23732,
+        "Arg2": 1,
+        "Arg3": 23749,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23720,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23721,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 23723,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23733,
+        "Arg2": 1,
+        "Arg3": 23717,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23734,
+        "Arg2": 1,
+        "Arg3": 23719,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 23736,
+        "Arg2": 1,
+        "Arg3": 23703,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23714,
+        "Arg2": 99,
+        "Arg3": 23724,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23714,
+        "Arg2": 99,
+        "Arg3": 23753,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23715,
+        "Arg2": 99,
+        "Arg3": 23724,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23715,
+        "Arg2": 99,
+        "Arg3": 23753,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23716,
+        "Arg2": 99,
+        "Arg3": 23724,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23716,
+        "Arg2": 99,
+        "Arg3": 23753,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23722,
+        "Arg2": 100,
+        "Arg3": 23704,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3087,
+        "Arg2": 100,
+        "Arg3": 23711,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23733,
+        "Arg2": 100,
+        "Arg3": 23701,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23734,
+        "Arg2": 100,
+        "Arg3": 23701,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23721,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23722,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23728,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23729,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23730,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23732,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23733,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23735,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23735,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23736,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23737,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23739,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23740,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23740,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23743,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23745,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23754,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23755,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23755,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23756,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23757,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23758,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23758,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23758,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23759,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 23760,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 23701,
+      "Name": "The Entrance to the Newbie Zoo",
+      "Description": "\n   A large iron gate separates the small zoo from the rest of the city. \nYou can hear the sounds of exotic animals from behind the walls of the\nzoo, along with the odors characteristic of such a park.  Inside the zoo\nyou will find not only the exotic creatures native to this world, but many\ninformative exhibits to help you get acquainted with your new\nsurroundings.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23702,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23702,
+      "Name": "Inside the Newbie Zoo",
+      "Description": "\n   As you enter the lovely little zoo, you notice a large wooden building\nbefore you.  A small shaded path leads through the zoo to the east.  You\nsee a large sign posted on one of the trees along the path, perhaps you\nshould look at it!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23701,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23703,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23710,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n*******************************************************\n*                                                     *\n*         Welcome to the Newbie Zoo!                  *\n*                                                     *\n*     This Zoo is full of interesting animals         *\n*      and informative exhibits for newbies           *\n*                                                     *\n*      Make sure you look at everything and           *\n*         ask LOTS of questions here!!                *\n*                                                     *\n*    The Newbie Zoo was founded by the                *\n*          Save the Newbies Foundation                *\n*         with a design from architect                *\n*                    Lovely                           *\n*         and technical assistance from               *\n*                    Fishbone                         *\n*                                                     *\n*******************************************************\n#rPlease note that not all features of the zoo are currently working!#N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23703,
+      "Name": "Along the Shaded Path in the Newbie Zoo",
+      "Description": "\n   The shaded path is quiet except for the exotic animals and children's\nvoices.  The characteristic smell of the zoo is strangely enticing as you\nmove further into the zoo.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23704,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23702,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23704,
+      "Name": "The Three-way Intersection on the Shaded Path",
+      "Description": "\n   The shady path branches off to the south here.  You may may continue to\nthe east or west, but most of the action in zoo seems to be taking place\nto the south of here.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23705,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23712,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23703,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23705,
+      "Name": "The Shaded Path through the Newbie Zoo",
+      "Description": "\n   The shaded path continues along the east and west here.  The chirping\nbirds mingled with the roars of nearby animals creates a melodious chorus\nof nature.  Children can be heard somewhere nearby, squealing with delight\nas they see strange and exotic animals for the first time.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23706,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23704,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23706,
+      "Name": "The Shaded Path through the Newbie Zoo",
+      "Description": "\n   The east-west path meanders through the shady zoo here.  You can hear\nthe sounds of animals somewhere to the south, and the air carries their\nstrange odors right to your nose.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23707,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23705,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23707,
+      "Name": "The Shaded Path through the Newbie Zoo",
+      "Description": "\n   The shady path is covered with bird droppings here.  As you gaze up\ninto the trees, you can see a small nest high above.  Frantic chirps\nemanate from the nest, and a pair of small birds begin to dive at you. \nThey must have a nest full of babies, so you should probably leave them\nalone.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23708,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23706,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23708,
+      "Name": "The Information Station at the Bend in the Path",
+      "Description": "\n   A small table is set up here with various pamphlets and maps placed\nupon it.  A light breeze rustles through the papers at this bend in the\nshaded path.  The path continues to the west and south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 23716,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23707,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23709,
+      "Name": "The Information Room",
+      "Description": "\n   This room is filled with information about Midgaard and the Newbie Zoo. \nTwo large maps cover the west wall, one of Midgaard and one of the zoo.  A\ntable sits in the corner covered with several pamphlets.  The main\ncorridor of the Education Building lies to the east.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23710,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "zoo",
+            "map"
+          ],
+          "Description": "\n\nThe Newbie Zoo\n(Please note that this map is not to scale!)\n\n      Zoo Gate\n         |                                          Information \n         |                                            Station\n         |---------|-------------------------------------|\n         |         |\t\t\t\t\t |\n      Education    |-----------------------------|-------|\n       Building    |                             |       |\n                   |                           Small     |\n                   |                          Mammals    |\n                   |    Large                            |--Reptiles\n                   |---Mammals                           |\n                   |                          Birds      |\n                   |\t\t\t        |\t |\n\t           |-------|--------------------|--------|\n                   |       |                Information  |\n                  Ape   Souvenirs                      Snack\n                 House                                  Shop"
+        },
+        {
+          "Keywords": [
+            "midgaard",
+            "map"
+          ],
+          "Description": "\n                                ALTAR\n                                  |\n           HALLS                  |\n             OF-------READING---TEMPLE----DONATION\n         LEARNING       ROOM      |         ROOM\n             |                    |\n          LIBRARY                 |\n                                  | \n              CITY     CLERIC     |   POST OFFICE             CITY\n             LIBRARY    GUILD     |   THREE CROWNS   CASINO   BANK\n                |         |       |        |           |       |\n         ---TEMPLE---STREET-----TEMPLE-----TEMPLE---STREET------\n         |      |         |     SQUARE     |           |       | \n         |   TAILOR'S  JEWELER'S  |      ROSY'S    STATIONARY  |     \n         |                        |      FLOWERS      SHOP     |    HOBBIT \n DIRT    |                        |                            |    VILLAGE\n PATH    |  MAGIC      BAKER      |     GENERAL    WEAPON      |      |\n  |      |   SHOP       SHOP      |     STORE       SHOP       |      |\n  | WEST |    |          |        |       |          |         |   EAST   \n  --GATE----MAIN------STREET----MARKET----MAIN------STREET---------GATE----   \n         |    |          |      SQUARE    |          |        |\n         |  MAGIC      ARMORER    |      PET       WARRIOR    |\n         |  GUILD                 |      SHOP       GUILD   WATER\n         |                        |                         SHOP  \n         |                        |                    \n         |                        |                      UNCLE JUAN'S\n         |                        |                           |\n         |--POOR---ALLEY--------COMMON----DARK---ALLEY--------- \n         |               |      SQUARE      |        |        |\n         |            GRUBBY      |       THIEF    LEEVE  WAREHOUSE\n   MIDGAARD PARK        INN       |       GUILD      |"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23710,
+      "Name": "Inside the Newbie Zoo Education Building",
+      "Description": "\n   You are in a large hallway that runs through the center of the\nEducation Building.  Small rooms lie to the east and west, both of which\nare full of important newbie Education materials!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23702,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23711,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23718,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23709,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23711,
+      "Name": "The Newbie Board Room",
+      "Description": "\n   This room contains a bulletin board full of information for newbies. \nYou may post questions and problems on the board, and just read it for\nanswers to questions you may have that have already been asked.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 23710,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23712,
+      "Name": "Another Three-way Intersection",
+      "Description": "\n   You are at the intersection of two paths.  A small gravel path leads\nfurther into the zoo to the east, and the wider dirt path continues to the\nnorth and south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23704,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23713,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23720,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23713,
+      "Name": "A Path Through the Newbie Zoo",
+      "Description": "\n   The gravel path is covered with discarded popcorn boxes and candy\nwrappers.  It looks like the groundskeepers haven't been doing their jobs\ntoo well here lately!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23714,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23712,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23714,
+      "Name": "A Path Through the Newbie Zoo",
+      "Description": "\n   The gravel path continues to the east and west.  Just east of here you\nsee a large stone building.  You hear strange sounds coming from within\nthe building.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23715,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23713,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23715,
+      "Name": "Outside the Small Mammal House",
+      "Description": "\n   The gravel path runs east and west outside of a large stone building. \nThe gray stones of the building lend to it a cold and dark appearance. \nYou can feel warm humid air coming from the doorway however, and the\nsounds coming from inside let you know that many animals can be found\nwithin.  A small metal sign is hanging next to the doorway.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23716,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23722,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23714,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "metal",
+            "sign"
+          ],
+          "Description": "\nSmall Mammal House"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23716,
+      "Name": "Another Three-way Intersection",
+      "Description": "\n   The gravel path intersects here with a wider dirt path.  Tall shady\ntrees line the eastern side of the dirt path, and you can barely see the\noutline of a large stone wall behind them.  The dirt path continues to the\nnorth and south while the gravel path continues to the west.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23708,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23723,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23715,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23717,
+      "Name": "The Newbie Training Room",
+      "Description": "\n   The newbie training facilities have been provided to you as a service\nof the Save the Newbies Fund.  They have provided a master instructor to\nhelp you find your way to enlightenment.  You may practice any of your\nskills in this room with this great instructor.  Simply type \"practice\" to\nsee what skills and spells you can practice, then \"practice <skill/spell>\"\nto practice them.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23718,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23718,
+      "Name": "Inside the Newbie Zoo Education Building",
+      "Description": "\n   You are in a large hallway that leads down the middle of the Education\nBuilding.  The walls are covered with murals painted by the children of\nMidgaard.  Rooms lie to the east and west, full of educational facilities\nfor you as a newbie.  Take advantage of them while you can!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23710,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23719,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23725,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23717,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23719,
+      "Name": "The Newbie First-Aid Station",
+      "Description": "\n   Most people have to pay for the services of a healer, but here at the\nNewbie Zoo, one is provided for free!  You should probably rest here for a\nlittle while before you venture back out into the zoo... we don't want to\nhave to scrape anyone off of the buildings!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 23718,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23720,
+      "Name": "A Path Through the Newbie Zoo",
+      "Description": "\n   You are on a wide dirt path that runs to the north and south.  Through\nthe trees to the west, you can see a large building.  You hear some\nstrange whoops coming from the south, and you can smell the strong odors\nof several large animals.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23712,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23727,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23721,
+      "Name": "The Pygmy Marmoset Enclosure",
+      "Description": "\n   The eastern wall of this room is made of a strange, clear material. \nYou can see several people pointing and waving at you on the other side. \nSeveral small trees fill up the room, and you can hear strange noises\ncoming from above.  perhaps some small animals are hiding in here!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23722,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23722,
+      "Name": "Inside the Small Mammal House",
+      "Description": "\n   The smell in this building is nearly unbearable.  The zookeepers must\nnot have cleaned it out yet today.  You can hear strange squeaks coming\nfrom behind a large, clear wall to the west.  On the other side of the\nwall you see several large trees.  A small door is cut into the wall,\nbarely large enough for you to pass through, if you can even open it.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23715,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23730,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23721,
+          "Description": "A small door has been cut in the glass, allowing entry to the room within.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23723,
+      "Name": "A Path Through the Newbie Zoo",
+      "Description": "\n   The north-south path is rather serene here.  You can hear the distant\nvoices of the animals, but for some reason they are not so evident on this\npart of the path.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23716,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23731,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23724,
+      "Name": "The Snack Shop",
+      "Description": "\n   The Newbie Zoo staff has thought of everything!  They figured you would\nneed a place to stop and eat on your tour, so they provided a snack shop! \nThe best thing about this shop is that everything is free!  Just help\nyourself to the food sitting on the counter.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23725,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23725,
+      "Name": "The Director's Reception",
+      "Description": "\n   This is where the Director of the Newbie Zoo welcomes all patrons.  A\nlarge podium stands here for the director to stand behind while he gives\nyou a brief history of the Newbie Zoo, as well as an informative lecture\non the areas surrounding Midgaard.  The Director can also answer some\nquestions, such as what routes you should follow to find the animal\nhouses.  Just stand here long enough and he'll talk your ear off!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23718,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23726,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23724,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23726,
+      "Name": "The Souvenir Shop",
+      "Description": "\n   Here in the Newbie Zoo Souvenir Shop, you can find low-cost,\ncomfortable Zoo attire.  All proceeds from this shop go toward providing\nthe many services to newbies in the zoo.  To see what you can buy, type\n\"list.\"  Then just buy the item you would like by typing \"buy <item>.\" \nYou can also help yourself to the many free samples that have been left\nhere.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 23725,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23727,
+      "Name": "A Path Through the Newbie Zoo",
+      "Description": "\n   The path runs north and south here, The trees to the west slightly\nobscure a large building.  To the south you can see another large building\ndown the path.  Strange sounds seem to be coming from within it.  A\nshorter distance to the south is the entrance to a dark building.  You can\nhear an occasional roar coming from within.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23720,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23734,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23728,
+      "Name": "The Tiger Cage",
+      "Description": "\n   You are inside a large metal cage.  The zookeepers have filled the cage\nwith large plants.  You can hear the footsteps of some large animal\nsomewhere inside the cage.  You better watch out, or you may get eaten!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 23735,
+          "Description": "",
+          "Keywords": [
+            "cage"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23729,
+      "Name": "The Golden Lion Tamarin Enclosure",
+      "Description": "\n   The warm humid room is filled with many tall trees.  A large clear\nwindow opens up into the room to the east.  You see several people outside\nthe window looking in at you.  A small door is cut into the window leading\nto the room.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23730,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23730,
+      "Name": "Inside the Small Mammal House",
+      "Description": "\n   As you continue into the small mammal house, you come upon another wall\nof the same clear material.  Behind the wall you see a room full of trees,\nand some small furry animals.  A small door is cut into the wall, through\nwhich you may gain entry to the room within.  The small mammal house also\nextends to the north.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23722,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23729,
+          "Description": "A small door is cut in the glass.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23731,
+      "Name": "A Path Through the Zoo",
+      "Description": "\n   The path continues through the zoo here.  To the west is a large black\nbuilding.  This part of the zoo is much more quiet for some reason.  The\npath continues to the north and south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23723,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23738,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23732,
+      "Name": "The Mata Mata Tank",
+      "Description": "\n   The large tank is full of warm, murky water.  You have a hard time\nseeing what might lie beneath the surface of the water.  You feel small\nfish swimming between your legs, at least you hope they are fish!  You can\nclimb out of the tank to the south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 23739,
+          "Description": "",
+          "Keywords": [
+            "tank"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23733,
+      "Name": "The Gila Monster's Enclosure",
+      "Description": "\n   The sandstone floor of this dry room is bare but for a few small cacti. \nA large bright lantern warms the entire room.  The wall to the south is\ntransparent, allowing you to see the adjacent room.  A small door has been\ncut into the wall for passage in and out of the room.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 23740,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23734,
+      "Name": "A Path Through the Zoo",
+      "Description": "\n   The north-south path is bordered by trees on the west, and the outside\nwall of a large stone building to the east.  You can hear menacing roars\ncoming from within the building, and even stranger sounds coming from the\nbuilding further to the south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23727,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23741,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23735,
+      "Name": "Inside the Dark Building",
+      "Description": "\n   The rooms don't seem to get any brighter as you move further into the\nbuilding.  Two large cages are inside of this room.  One lies to the\nnorth, filled with several large plants that seem to be hiding a rather\nlarge animal inside.  The other cage lies to the east.  You can see a set\nof large eyes reflecting your light back at you from behind the bars.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23728,
+          "Description": "",
+          "Keywords": [
+            "cage"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23736,
+          "Description": "",
+          "Keywords": [
+            "cage"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23742,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23736,
+      "Name": "The Lion's Den",
+      "Description": "\n   The floor of this dark cage is covered with tall dry grasses.  The\nsmell of blood overwhelms your senses and makes you quite nauseous.  The\nhair on the back of your neck stands on end as you feel the movement of a\nlarge body just behind you.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 23735,
+          "Description": "",
+          "Keywords": [
+            "cage"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23737,
+      "Name": "The Kiwi's Hiding Place",
+      "Description": "\n   This dark room is home to the elusive kiwi.  He only comes out at\nnight, so in order to see him, please try not to shine any bright lights\nhis way.  A large black curtain separates this room from the rest of the\nbird house to the south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 23743,
+          "Description": "",
+          "Keywords": [
+            "curtain"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23738,
+      "Name": "Outside the Reptile House",
+      "Description": "\n   A large obsidian building stands east of the dirt path here.  A large\nsign over the door informs you that you have reached the reptile house. \nThe Newbie Zoo is famous for its collection of rare and exotic reptiles,\nso you should most definitely take a look inside.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23731,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23739,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23744,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23739,
+      "Name": "Inside the Reptile House",
+      "Description": "\n   The large Newbie Zoo Reptile House is home to several interesting\nreptile species.  A large glass tank lies to the north, filled with\nbrownish water.  The building continues to the east, and you can exit to\nthe west.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23732,
+          "Description": "",
+          "Keywords": [
+            "tank"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23740,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23738,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23740,
+      "Name": "Inside the Reptile House",
+      "Description": "\n   The Reptile House is home to several rare species of large lizards. \nBehind the large transparent walls to the north and south you can see the\nrooms of two such lizards.  The komodo dragon's pit lies to the south, and\nthe gila monsters enclosure lies to the north.  You may enter the rooms\nthrough the small doors that have been cut into the walls.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23733,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23745,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23739,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23741,
+      "Name": "Outside the Menacing Building",
+      "Description": "\n   You are outside of a large stone building.  Menacing roars can be heard\nfrom within.  The building looks dark and frightening inside.  The path\ncontinues further to the north and south.  A large gray building lies at\nthe end of the path a short distance to the south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23734,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23742,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23746,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23742,
+      "Name": "A Dark Room",
+      "Description": "\n   The building is dark and menacing.  You have an incredible urge to turn\naround and walk back through the entrance.  The loud roars coming from\nwithin definitely do not help calm your feels at all.  You can venture\nfurther into the building to the north, or leave for the path to the west.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23735,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23741,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23743,
+      "Name": "The Bird House",
+      "Description": "\n   The collection of birds at the Newbie Zoo is housed in this spacious\naviary.  The tall glass ceiling allows you to see the sky above the zoo. \nMost of the birds housed here are flightless to maintain their residency\nwithin this building.  The birds are free to roam about the room.  That\ncombined with the lush tropical foliage makes you feel as if you have\nentered a sort of avian paradise.  A small room lies to the north of the\naviary.  A thick black curtain hides your view of what lies inside.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23737,
+          "Description": "",
+          "Keywords": [
+            "curtain"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23749,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23744,
+      "Name": "A Path Through the Zoo",
+      "Description": "\n   The path passes between two buildings here.  To the west is a small\nbuilding made of greenish stone.  To the east is a larger building made of\nan obsidian material.  The path continues to the north and south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23738,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23750,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23745,
+      "Name": "The Komodo Dragon's Pit",
+      "Description": "\n   As you climb into the large pit, you feel a warm blast of humid air.  A\nlarge burrow leads deeper into the room, but it is too small for you to\nenter.  You can exit the pit through the small door on the north wall.  As\nyou look towards the exit, you see looks of horror on the faces of the\npeople in the adjacent room.  Perhaps you should turn around...slowly.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23740,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23746,
+      "Name": "Another Three-way Intersection",
+      "Description": "\n   The three-way intersection appears to be well-worn, as if many visitors\nhave traveled to this part of the zoo.  A large gray building lies a short\nway down the path to the south, and a large menacing building of stone\nlies a short way to the north.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23741,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23747,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23751,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23747,
+      "Name": "On the Path Outside the Souvenir Shop",
+      "Description": "\n   The dirt path continues to the east and west here.  A small wooden\nbuilding lies just south of the path.  You can see several articles of\nclothing displayed in a small case next to the doorway.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23748,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23752,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23746,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23748,
+      "Name": "A Path Through the Zoo",
+      "Description": "\n   The small dirt path continues to the east and west.  The exotic animal\nchorus that you have heard on your visit here accompanies you on your\npassage.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23749,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23747,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23749,
+      "Name": "Outside the Bird House",
+      "Description": "\n   A small building made of greenish stones stands just north of the dirt\npath.  You hear birds chirping and singing from within.  The path\ncontinues to the east and west.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23743,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23750,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23748,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23750,
+      "Name": "Outside the Snack Shop",
+      "Description": "\n   At the bend in the dirt path, you find yourself enticed by the smell of\nthe snack shop to the south.  Fresh buttered popcorn and delicious roasted\nhot-dogs are almost begging you to come in for a bite.  The path continues\non its merry way through the zoo to the north and west.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23744,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23753,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23749,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23751,
+      "Name": "Outside the Ape House",
+      "Description": "\n   A large gray building stands just south of here at the path's end.  The\nsounds of many strange animals can be heard within.  Loud whoops and hoots\npique your interest as to what creatures abide within.  As you approach\nthe building you notice the large sign that hangs above the door informing\nyou that this is the Ape House.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23746,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23755,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23752,
+      "Name": "The Souvenir Shop",
+      "Description": "\n   The souvenir shop is always stocked with all of your zoo-going needs. \nSmall stuffed animals are piled high on a shelf which sits next to a table\ncontaining a display of reading materials on various types of animals. \nBehind the display case containing various animal artifacts is a young man\nwho can help you with your selections.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23747,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23753,
+      "Name": "The Snack Shop",
+      "Description": "\n   The snack shop at the Newbie Zoo is always free!  The Save the Newbies\nFoundation funds parts of the zoo to provide visitors with many different\nservices.  Just help yourself to the food and beverages.  If you would\nlike to have something added to the menu, please contact the management or\nan information aide!",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23750,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23754,
+      "Name": "A Tree-filled Room",
+      "Description": "\n   This rather large room is filled with all types of tall trees.  The\nmany branches are perfect for swinging and climbing.  The east wall of the\nroom is made of a clear material, allowing you to see into the adjacent\nroom.  A small door has been cut into the clear wall allowing access to\nthe room outside.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23755,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23755,
+      "Name": "Inside the Ape House",
+      "Description": "\n   The Newbie Zoo Ape House was named by a former zoo director who wasn't\nvery well versed in the terminology of primates.  The building is home to\nseveral species of not only apes, but other primates as well.  The walls\nto the east and west afford spectacular views of the animals in the\nadjacent rooms.  The Ape House also continues further to the south.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23751,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23756,
+          "Description": "",
+          "Keywords": [
+            "metal",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23758,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23754,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23756,
+      "Name": "Tucker's Room",
+      "Description": "\n   This room is filled with large blocks of wood and chewed up leather\nhats.  Ropes hang from the large tree-like structure in the center of the\nroom.  Piles of straw are scattered about the room, some of them covered\nwith pieces of burlap.  A large clear wall dominates the west side of the\nroom.  A small metal door is set into the clear wall to allow access to\nthe room outside.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 23755,
+          "Description": "",
+          "Keywords": [
+            "metal"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23757,
+      "Name": "The Monkey Room",
+      "Description": "\n   A large tree-like structure stands in the middle of the room.  The\nceiling here is made of glass, allowing a lovely view of the sky above. \nThe clear eastern wall allows you to see into the room adjacent to this\none.  A small door is cut into the wall.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 23758,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23758,
+      "Name": "Inside the Ape House",
+      "Description": "\n   The large room is surrounded on three sides by clear walls.  On the\nother side of each of the walls you can see the habitats of various large\nprimate species.  This building houses a very interesting collection of\nape and monkey species.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23755,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23759,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23760,
+          "Description": "",
+          "Keywords": [
+            "metal",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 23757,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23759,
+      "Name": "A Tree-filled Room",
+      "Description": "\n   This is another tree-filled room.  Like all of the other rooms, one\nwall (the west wall) is made of a clear material allowing visitors to see\ninside, and allowing the animals to see out.  A small door is cut into the\nwall allowing access to the room outside.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 23758,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 23760,
+      "Name": "Katu's Room",
+      "Description": "\n   This spacious room is filled with several large pieces of soft\nfurniture.  A small bed made of straw has been placed in one corner of the\nroom.  Several pieces of paper covered with bright paints are pasted to\nthe walls of this room.  A large clear wall stands to the north allowing\nthe occupant of this room to see the people outside.  A small metal door\nhas been placed in the wall.",
+      "ZoneId": 237,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 23758,
+          "Description": "",
+          "Keywords": [
+            "metal",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 23701,
+      "Name": "zookeeper chrissy christine",
+      "ShortDescription": "\nChristine the Zookeeper",
+      "LongDescription": "\nChristine the Zookeeper is standing here feeding the animals.",
+      "Description": "\nChristine the Zookeeper loves her job!  She gets to work with all of the\ninteresting animals of the New Mavernal Zoo every day.  Her hair is a\nmess, and she doesn't smell too great, but that is OK for the job she has\nto do.",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 emote reeks like the animals she works with.;%10 smile",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23702,
+      "Name": "danno zookeeper dan",
+      "ShortDescription": "\nDanno the Zookeeper",
+      "LongDescription": "\nDanno the Zookeeper is standing here cleaning out cages.",
+      "Description": "\nDanno the Zookeeper has a very diffucult job ahead of him.  He gets to\n clean up after all of the animals in the zoo!  The zookeeper does't smell\n too sweet, but he doesn't seem to mind.",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote points to the mess you are leaving.;%10 sigh;%10 say I wish\n people would learn to clean up after themselves!  The animals are bad\n enough as it is.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23703,
+      "Name": "gorilla male katu",
+      "ShortDescription": "\nKatu the Gorilla",
+      "LongDescription": "\nA large male gorilla sits here pondering his existence.",
+      "Description": "\nThe large silverback meets your gaze with an eerily intelligent one of his\nown.  Katu is the solitary gorilla in the zoo's collection since his mate\nNalaga died a year ago.  Now poor Katu sits alone waiting for someone to\nvisit him.",
+      "Level": 4,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote beats his barrel chest proudly.;%10 emote closes his eyes and\n smiles as he remembers his mate.;%10 emote likes bananas, but only the\n ones from Africa!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23704,
+      "Name": "siamang gibbon female mother",
+      "ShortDescription": "\na female siamang gibbon",
+      "LongDescription": "\nA female siamang gibbon swings through the trees.",
+      "Description": "\nThe female siamang gibbon swings through the trees with her long sinewy\narms.  She has a powerful grip, and even when she is barely balanced, she\nmanages not to fall from her arboreal perch.  The siamang has a large\nblack pouch on her throat which she uses to create the eerie call distinct\nto her species.",
+      "Level": 2,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 emote emits an eerie call to her mate.;%10 emote swings through the\n trees with the greatest of ease.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23705,
+      "Name": "male siamang gibbon",
+      "ShortDescription": "\na male siamang gibbon",
+      "LongDescription": "\nA male siamang gibbon sits in a tree calling to his mate.",
+      "Description": "\nThe male siamang is only slightly larger than his female mate.  He has the\ncharacteristic large throat sac by which he creates his eerie whooping\ncall.  He flies easily through the tree-tops of his enclosure.",
+      "Level": 2,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote grabs a branch and takes off swinging.;%10 emote throws his\nhead back and starts to whooop whoooop whooooop whoooooop!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23706,
+      "Name": "baby siamang gibbon",
+      "ShortDescription": "\na baby siamang gibbon",
+      "LongDescription": "\nA baby siamang gibbon is standing here sucking his thumb.",
+      "Description": "\nThe baby siamang is very cute indeed.  He has a tiny little face, and you\ncan't help but laugh when you watch him try to walk.  His arms are too\nlong for his body, so he holds them in the air above his head.",
+      "Level": 1,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote gives up trying to walk and just sits down to pout.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23707,
+      "Name": "young siamang gibbon",
+      "ShortDescription": "\na young siamang gibbon",
+      "LongDescription": "\nA young siamang chases his brother around.",
+      "Description": "\nThe young siamang is quite a sight as he zips through the trees chasing\nhis younger brother around.",
+      "Level": 1,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 tickle baby;%10 taunt baby",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23708,
+      "Name": "komodo dragon",
+      "ShortDescription": "\na large komodo dragon",
+      "LongDescription": "\nA large komodo dragon lumbers toward you in search of a meal.",
+      "Description": "\nYou think you are lucky that this dragon only eats carrion??  Maybe not! \nHis bite is so deadly that he will kill you within minutes.  Then once you\nare dead, he will eat you at his leisure!",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23709,
+      "Name": "gila monster",
+      "ShortDescription": "\na gila monster",
+      "LongDescription": "\nA colorful gila monster basks in the sunlight.",
+      "Description": "\nThe colorful gila monster appears to be sluggish, but don't turn your back\non him as he will attack you and kill you with his poisonous bite!",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23710,
+      "Name": "mata turtle matamata",
+      "ShortDescription": "\na mata mata",
+      "LongDescription": "\nA large mata mata floats stealthily beneath the surface of the water.",
+      "Description": "\nAt first glance, the mata mata appears to be a large pile of leaves below\nthe surface of the water, but as you peer closer a small head shoots out\nfrom beneath the strange turtle's shell.  The mata mata uses camoflauge\nand lightning reflexes to capture his aquatic prey.",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote snaps his head out from under his shell and grabs a fish.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23711,
+      "Name": "peacock bird colorful",
+      "ShortDescription": "\na colorful peacock",
+      "LongDescription": "\nA colorful peacock shows off his beautiful tail.",
+      "Description": "\nThe peacock uses his lovely tail to attract his less colorful mate, the\npeahen.  His glorious tail has been used as decoration for centuries. \nMaybe one of his feathers will look nice in your cap!",
+      "Level": 2,
+      "Race": "Bird",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 strut",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23712,
+      "Name": "kiwi bird",
+      "ShortDescription": "\na kiwi",
+      "LongDescription": "\nA fuzzy brown bird walks around here because he has no wings!",
+      "Description": "\nThe fuzzy brown kiwi is one of the few wingless birds.  He prefers the\ndarkness of night, and can seldom be seen anywhere else.",
+      "Level": 2,
+      "Race": "Bird",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23713,
+      "Name": "pygmy marmoset young",
+      "ShortDescription": "\na young pygmy marmoset",
+      "LongDescription": "\nA young pygmy marmoset swings from a branch here.",
+      "Description": "\nThe pygmy marmoset peers down at you from his perch.  He is rather shy, so\nyou might have to lure him down here with a piece of candy.",
+      "Level": 2,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote peeks out shyly from his perch.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23714,
+      "Name": "female pygmy marmoset",
+      "ShortDescription": "\na female pygmy marmoset",
+      "LongDescription": "\nA young female marmoset peers at you with cautious eyes.",
+      "Description": "\nThe shy marmoset cowers as you try to get a closer look.  She doesn't\ntrust you very much, and she shakes with fear as you approach.",
+      "Level": 2,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23715,
+      "Name": "marmoset male pygmy",
+      "ShortDescription": "\na male pygmy marmoset",
+      "LongDescription": "\nA male marmoset cautiously approaches you.",
+      "Description": "\nThis bold male marmoset is actually very afraid right now.  He is only\napproaching you because he must defend his territory, which you appear to\nbe in right now.",
+      "Level": 2,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23716,
+      "Name": "golden lion male tamarin",
+      "ShortDescription": "\na male golden lion tamarin",
+      "LongDescription": "\nA male golden lion tamarin screeches fiercely at you as you enter his territory.",
+      "Description": "\nThe male tamarin is generally a shy creature, but if you threaten his\nterritory, he will attempt to chase you away.",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 emote screeches fiercely!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23717,
+      "Name": "golden lion female tamarin",
+      "ShortDescription": "\na female tamarin",
+      "LongDescription": "\nA female golden lion tamarin hides in her tree-top nest.",
+      "Description": "\nThe tamarin female is more cautious than her male mate.  She gazes at you\ncautiously from the relative safety of her tree-top nest.",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23718,
+      "Name": "lion",
+      "ShortDescription": "\na fierce lion",
+      "LongDescription": "\nA fierce lion roars as he attacks you!",
+      "Description": "\nThe mighty lion is rather stupendous with his glorious mane and proud\nstature.",
+      "Level": 4,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 roars loudly!;%10 purr",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23719,
+      "Name": "tiger",
+      "ShortDescription": "\na vicious tiger",
+      "LongDescription": "\nA vicious tiger surprises you as he attacks from behind.",
+      "Description": "\nThe magnificent tiger is covered with the characteristic black and orange\nstrips.  His large claws are indeed as fearsome as his long sharp teeth.",
+      "Level": 4,
+      "Race": "Catbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23720,
+      "Name": "zoo director",
+      "ShortDescription": "\nthe Zoo Director",
+      "LongDescription": "\nThe Zoo Director stands here waiting to tell you all about the zoo.",
+      "Description": "\nThe Zoo Director is so full of information!  If you stand around long\nenough, he will tell you all about the New Mavernal Zoo and the\nsurrounding areas.  You can even ask him how to get to any of the exhibits\nin the zoo!",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%5 'I like bananas, but only the ones from Africa!;%5 'If you'd like to \nfind your way to any of the exhibits, check out the map in the map room or \nget your own from one of our Information Aides!;%5 'Be sure to visit Katu, \nhe gets so lonely sometimes.;%5 smile;%5 'Welcome to the Newbie Zoo!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23721,
+      "Name": "groundskeeper gardener",
+      "ShortDescription": "\na groundskeeper",
+      "LongDescription": "\nA groundskeeper is planting some flowers to brighten up the zoo.",
+      "Description": "\nThe groundskeeper's hands are covered with dirt, and he smells of\nfertilizer.  He does his best to keep the zoo looking great!",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23722,
+      "Name": "groundskeeper",
+      "ShortDescription": "\na groundskeeper",
+      "LongDescription": "\nA groundskeeper is here trying to keep the zoo clean.",
+      "Description": "\nThe groundskeeper is always walking around picking up after people.  He\ndoes his best to keep the zoo looking nice.",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 grumble;%10 glare",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23723,
+      "Name": "sisaly information aide",
+      "ShortDescription": "\nSisaly the Information Aide",
+      "LongDescription": "\nSisaly the Information aide is here to help you.",
+      "Description": "\nSisaly the Information Aide is a helpful young lady.  She will provide you\nwith maps, brochures, and various other bits of information!",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23724,
+      "Name": "salesman souveneir",
+      "ShortDescription": "\nthe Souveneir Salesman",
+      "LongDescription": "\nA young man stands here waiting to assist you with your purchases.",
+      "Description": "\nThis helpful young man is here to help you with your souveneir purchases. \nSimply <list> then <buy item> to get him to help!",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23725,
+      "Name": "snack shop employee lady",
+      "ShortDescription": "\na snack shop employee",
+      "LongDescription": "\nA helpful young lady stands here watching over the Snack Shop.",
+      "Description": "\nThis helpful young lady keeps the counter of the snack shop stocked so you\ncan find something to eat and drink in the New Mavernal Zoo.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 emote tries to look busy in case her boss walks in.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23726,
+      "Name": "boy",
+      "ShortDescription": "\na little boy",
+      "LongDescription": "\nA little boy is wandering around looking at the animals.",
+      "Description": "\nThis young man has his eyes filled with awe as he looks at the many\nanimals found in the New Mavernal Zoo.",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23727,
+      "Name": "girl",
+      "ShortDescription": "\na little girl",
+      "LongDescription": "\nA little girl looks at you with wonder.",
+      "Description": "\nThe little girl doesn't seem sure if you are a part of the exhibit or a\nvisitor like her...",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 emote stares in awe.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23728,
+      "Name": "mom mother woman",
+      "ShortDescription": "\nsomebody's mother",
+      "LongDescription": "\nA lovely woman wanders around the zoo.",
+      "Description": "\nThis lovely young woman seems to have lost her son.  She is wandering\naround calling his name...",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 'Bart!  Where are you?;%10 'Have you seen my son?",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23729,
+      "Name": "dad father man",
+      "ShortDescription": "\nsomebody's father",
+      "LongDescription": "\nA young man is wandering around calling for his wife.",
+      "Description": "\nThis young man seems to have misplaced his whole family!",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 grumble;%10 'Where could they have gone?;%10 sigh",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23730,
+      "Name": "titi monkey",
+      "ShortDescription": "\na titi monkey",
+      "LongDescription": "\nA titi monkey sits in the tree.",
+      "Description": "\nThe titi monkey has golden fur and a long fuzzy tail.  He sits high up in\nthe tree-tops gazing down at you.",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23731,
+      "Name": "tucker orang orangutan",
+      "ShortDescription": "\nTucker the Orangutan",
+      "LongDescription": "\nA silly young orangutan is doing flips across the room.",
+      "Description": "\nTucker is a young orangutan, still small and silly.  He is playful, and he\ntries to entice you into a game of fetch.  You soon realize it is YOU who\nis doing the fetching!",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 wiggle;%10 grin;%10 giggle;%10 stare",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23732,
+      "Name": "darwin information aide info",
+      "ShortDescription": "\nDarwin the Information Aide",
+      "LongDescription": "\nDarwin the Information Aide is here to help you.",
+      "Description": "\nDarwin knows all kinds of facts about the many animals in the zoo.  He can\nhelp you find your way around and provide you with various maps.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23733,
+      "Name": "trainer instructor newbie guildmaster",
+      "ShortDescription": "\nthe wise instructor",
+      "LongDescription": "\nA wise man stands here to train all newbies.",
+      "Description": "\nThis wise man will train you with your skills.  He is learned in all of\nthe classes of skills.  This wise instructor is brought to you by a grant\nfrom the Save the Newbies Foundation.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 'Tell me \"practice\" and let me teach you something!\"",
+      "SpecialProc": "roc(mu_guild)",
+      "Programs": []
+    },
+    {
+      "Id": 23734,
+      "Name": "medic newbie healer",
+      "ShortDescription": "\nthe Newbie Zoo medic",
+      "LongDescription": "\nThe Newbie Zoo Medic is here to help you when you need it.",
+      "Description": "\nThis lady is a skilled professional.  She is learned in the ways of magic\nand healing.  She will gladly clean your wounds if you let her.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 'I can't wait til I get licensed so I can actually help you!",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23735,
+      "Name": "salesman souvenir man young",
+      "ShortDescription": "\nthe Souvenir Salesman",
+      "LongDescription": "\nA young man stands here waiting to assist you with your purchases.",
+      "Description": "\nThis helpful young man is here to help you with your souveneir purchases. \nSimply <list> then <buy item> to get him to help!",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 23736,
+      "Name": "penguin escapee bird escaped",
+      "ShortDescription": "\nthe penguin escapee",
+      "LongDescription": "\nA penguin tries to look inconspicuous as she tries to escape the zoo.",
+      "Description": "\nThis little penguin managed to somehow escape from the bird house!  She's\non the run now and doesn't want to go back!",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 23701,
+      "Name": "necklace dragon tooth zoo",
+      "ShortDescription": "\na dragon tooth necklace",
+      "Description": "\nA necklace made of dragon's teeth lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23702,
+      "Name": "cap red zoo",
+      "ShortDescription": "\na bright red cap",
+      "Description": "\nA bright red cap has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Age",
+          "Modifier": -10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23703,
+      "Name": "banana zoo",
+      "ShortDescription": "\na banana",
+      "Description": "\nA ripe banana sits on the floor here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 1,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23704,
+      "Name": "shovel zoo",
+      "ShortDescription": "\na small shovel",
+      "Description": "\nA small dirt-covered shovel sits on the ground here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 200,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23706,
+      "Name": "lantern zoo",
+      "ShortDescription": "\na small brass lantern",
+      "Description": "\nSomeone has dropped a small brass lantern here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Light"
+      ],
+      "Values": [
+        0,
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 100
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 20,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23707,
+      "Name": "clipboard zoo",
+      "ShortDescription": "\na clipboard",
+      "Description": "\nAn important looking clipboard has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        1,
+        39,
+        70,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 0,
+          "SpellIds": [
+            1,
+            39,
+            70
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "clipboard",
+            "board",
+            "zoo"
+          ],
+          "Description": "\nThe are some strange markings on the clipboard...perhaps you should try to\nrecite them??"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23708,
+      "Name": "peacock feather zoo",
+      "ShortDescription": "\na peacock's feather",
+      "Description": "\nA colorful feather has been left here.",
+      "ActionDescription": "",
+      "Type": "Worn",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck2",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Charisma",
+          "Modifier": 2
+        },
+        {
+          "Location": "Mana",
+          "Modifier": 10
+        },
+        {
+          "Location": "Move",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23709,
+      "Name": "safari vest zoo",
+      "ShortDescription": "\na safari vest",
+      "Description": "\nA khaki vest has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 200,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23711,
+      "Name": "paws pair lion paw zoo",
+      "ShortDescription": "\na pair of lion's paws",
+      "Description": "\nA bloody pair of paws appear to have been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 1,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 300,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23712,
+      "Name": "paws tiger paw zoo",
+      "ShortDescription": "\na pair of tiger's paws",
+      "Description": "\nSome poor tiger seems to have lost his paws.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 300,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": 10
+        },
+        {
+          "Location": "Constitution",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23713,
+      "Name": "belt jeweled zoo",
+      "ShortDescription": "\na magnificent jeweled belt",
+      "Description": "\nA beautiful jewel encrusted belt has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1000,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": 1
+        },
+        {
+          "Location": "Wisdom",
+          "Modifier": 1
+        },
+        {
+          "Location": "Mana",
+          "Modifier": 20
+        },
+        {
+          "Location": "Hit",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23714,
+      "Name": "box popcorn zoo",
+      "ShortDescription": "\na box of popcorn",
+      "Description": "\nA box of butter flavored popcorn is sitting here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 1,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23715,
+      "Name": "hotdog zoo",
+      "ShortDescription": "\na hotdog",
+      "Description": "\nA delicious hotdog is sitting here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 2,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23716,
+      "Name": "water paper cup zoo",
+      "ShortDescription": "\na paper cup",
+      "Description": "\nA paper cup sits here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        2,
+        2,
+        6,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 2,
+          "Amount": 2,
+          "Liquid": 6,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23720,
+      "Name": "map midgaard city zoo",
+      "ShortDescription": "\na map of Midgaard",
+      "Description": "\nA map of Midgaard has been left here.",
+      "ActionDescription": "\nTHE CITY OF MIDGAARD\n                                ALTAR\n                                  |\n           HALLS                  |\n             OF-------READING---TEMPLE----DONATION\n         LEARNING       ROOM      |         ROOM\n             |                    |\n          LIBRARY                 |\n                                  | \n              CITY     CLERIC     |   POST OFFICE             CITY\n             LIBRARY    GUILD     |   THREE CROWNS   CASINO   BANK\n                |         |       |        |           |       |\n         ---TEMPLE---STREET-----TEMPLE-----TEMPLE---STREET------\n         |      |         |     SQUARE     |           |       | \n         |   TAILOR'S  JEWELER'S  |      ROSY'S    STATIONARY  |     \n         |                        |      FLOWERS      SHOP     |    HOBBIT \n DIRT    |                        |                            |    VILLAGE\n PATH    |  MAGIC      BAKER      |     GENERAL    WEAPON      |      |\n  |      |   SHOP       SHOP      |     STORE       SHOP       |      |\n  | WEST |    |          |        |       |          |         |   EAST   \n  --GATE----MAIN------STREET----MARKET----MAIN------STREET---------GATE----   \n         |    |          |      SQUARE    |          |        |\n         |  MAGIC      ARMORER    |      PET       WARRIOR    |\n         |  GUILD                 |      SHOP       GUILD   WATER\n         |                        |                         SHOP  \n         |                        |                    \n         |                        |                      UNCLE JUAN'S\n         |                        |                           |\n         |--POOR---ALLEY--------COMMON----DARK---ALLEY--------- \n         |               |      SQUARE      |        |        |\n         |            GRUBBY      |       THIEF    LEEVE  WAREHOUSE\n   MIDGAARD PARK        INN       |       GUILD      |",
+      "Type": "Note",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": {
+          "Language": 0
+        },
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23721,
+      "Name": "zoo map",
+      "ShortDescription": "\na map of the zoo",
+      "Description": "\nA map of the Newbie Zoo is sitting here.",
+      "ActionDescription": "\nThe Newbie Zoo\n(Please note that this map is not to scale!)\n\n      Zoo Gate\n         |                                          Information \n         |                                            Station\n         |---------|-------------------------------------|\n         |         |                                     |\n      Education    |-----------------------------|-------|\n       Building    |                             |       |\n                   |                           Small     |\n                   |                          Mammals    |\n                   |    Large                            |--Reptiles\n                   |---Mammals                           |\n                   |                          Birds      |\n                   |                            |        |\n                   |-------|--------------------|--------|\n                   |       |                Information  |\n                  Ape   Souvenirs                       Snack\n                 House                                  Shop",
+      "Type": "Note",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": {
+          "Language": 0
+        },
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23722,
+      "Name": "fountain zoo",
+      "ShortDescription": "\na large fountain",
+      "Description": "\nA large fountain carved in the shape of an elephant sits here.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        100000,
+        100000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 100000,
+          "Amount": 100000,
+          "Liquid": 0,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23723,
+      "Name": "newbie guide zoo",
+      "ShortDescription": "\na Newbie Guide",
+      "Description": "\nSome newbie has dropped their Newbie Guide.",
+      "ActionDescription": "\n#r\nWelcome to the Newbie Zoo!\n#N\nWe are currently working on designing a most wonderful newbie guide.  \nUntil such a time when it has been implemented, you may find most useful \ninformation pertaining to newbies on the newbie board in the Zoo.\n\nThank you for your patience!\n\nThe Newbie Zoo Administration\n^",
+      "Type": "Note",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": {
+          "Language": 0
+        },
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23724,
+      "Name": "banana zoo",
+      "ShortDescription": "\na bright yellow banana",
+      "Description": "\nA delicious banana has been left here, maybe it's from Africa!!",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 1,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 10,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23725,
+      "Name": "shirt t-shirt zoo",
+      "ShortDescription": "\na Newbie Zoo t-shirt",
+      "Description": "\nA really cool souvenir t-shirt has been left here.",
+      "ActionDescription": "",
+      "Type": "Worn",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Armor",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23726,
+      "Name": "belt pouch zoo",
+      "ShortDescription": "\na Newbie Zoo belt pouch",
+      "Description": "\nA really cool belt pouch has been left here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        10,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 10,
+          "Flags": [
+            "Closeable"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Armor",
+          "Modifier": -1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23727,
+      "Name": "wrist band zoo",
+      "ShortDescription": "\na Newbie Zoo wrist band",
+      "Description": "\nSomeone has left a really cool wrist band here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 1,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23728,
+      "Name": "shiny bracelet zoo",
+      "ShortDescription": "\na shiny bracelet",
+      "Description": "\nA shiny bracelet has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 100,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23729,
+      "Name": "khaki pants zoo",
+      "ShortDescription": "\na pair of khaki pants",
+      "Description": "\nSome comfortable khaki pants are piled in a heap on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 200,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23730,
+      "Name": "furry sleeves zoo",
+      "ShortDescription": "\nsome furry sleeves",
+      "Description": "\nA pair of furry sleeves have been dropped here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 200,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23731,
+      "Name": "burlap cape zoo",
+      "ShortDescription": "\na burlap cape",
+      "Description": "\nA burlap cape lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 300,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23732,
+      "Name": "mata matamata shell zoo",
+      "ShortDescription": "\na mata mata shell",
+      "Description": "\nA large turtle shell has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 200,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23733,
+      "Name": "sign",
+      "ShortDescription": "\na sign",
+      "Description": "\nA large sign stands at the entrance to the Newbie Zoo.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign^"
+          ],
+          "Description": "\n#yWelcome to the Newbie Zoo!  Please note that not all of our services have\nbeen fully funded yet, so some of our employees are not yet licensed.  This\nmeans that our master instructor and healer will not be able to perform\ntheir duties for you until they have been licensed!#N"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23734,
+      "Name": "statue katu blocker south",
+      "ShortDescription": "\nA huge statue of Katu the Gorilla",
+      "Description": "\nA huge statue of Katu the Gorilla guards the entrance.  He holds a sign.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated",
+        "NoSweep"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        4,
+        0,
+        0,
+        1,
+        10
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n            \n          #gNewbie Zoo:  Only those under 11 may enter#N"
+        },
+        {
+          "Keywords": [
+            "statue",
+            "katu",
+            "gorilla"
+          ],
+          "Description": "\nAn enormous stone sculpture of the zoo's famous gorilla, Katu, stands\nguarding the entrance to the Zoo.  He looks thoughtful, and VERY strong."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 23735,
+      "Name": "spade zoo",
+      "ShortDescription": "\na small spade",
+      "Description": "\nA small spade has been left in the dirt.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        5,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 5,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 200,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3087,
+      "Name": "board bulletin newbie",
+      "ShortDescription": "\na newbie advice board",
+      "Description": "\nA newbie advice bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

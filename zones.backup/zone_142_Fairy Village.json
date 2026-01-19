@@ -1,0 +1,3044 @@
+{
+  "Zone": {
+    "Id": 142,
+    "Name": "Fairy Village",
+    "TopRoomId": 14240,
+    "Lifespan": 40,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 14222,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": "Lock trapdoor from inside Sanctuary"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 14223,
+        "Arg2": 4,
+        "Arg3": 2,
+        "Comment": "Lock trapdoor from dark room"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 14207,
+        "Arg2": 100,
+        "Arg3": 14238,
+        "Comment": "Loads Oberon's Desk"
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 14208,
+        "Arg2": 5,
+        "Arg3": 14207,
+        "Comment": "Puts scroll of weapon enchantment in desk"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 14209,
+        "Arg2": 100,
+        "Arg3": 14239,
+        "Comment": "Loads fountain"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14202,
+        "Arg2": 1,
+        "Arg3": 14222,
+        "Comment": "Loads the Monk"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 14203,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": "Gives him the rose key"
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14202,
+        "Arg2": 1,
+        "Arg3": 17,
+        "Comment": "Holds the holy grail"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14203,
+        "Arg2": 1,
+        "Arg3": 14224,
+        "Comment": "Loads Puck"
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14201,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": "Holds the magic mushroom"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14210,
+        "Arg2": 1,
+        "Arg3": 14237,
+        "Comment": "Loads Titania"
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14204,
+        "Arg2": 5,
+        "Arg3": 13,
+        "Comment": "Equips Around Waist: Mystical Loincloth"
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14205,
+        "Arg2": 5,
+        "Arg3": 6,
+        "Comment": "Equips on Head: Diamond Rose"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14211,
+        "Arg2": 1,
+        "Arg3": 14237,
+        "Comment": "Loads Oberon"
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14206,
+        "Arg2": 5,
+        "Arg3": 7,
+        "Comment": "Equips on Legs: Luminous Leggings"
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 14200,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": "Holds the Unicorn's Horn"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14204,
+        "Arg2": 1,
+        "Arg3": 14223,
+        "Comment": "Loads Evil Fairy"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14205,
+        "Arg2": 1,
+        "Arg3": 14231,
+        "Comment": "Loads Female Unicorn"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14206,
+        "Arg2": 1,
+        "Arg3": 14231,
+        "Comment": "Loads Male Unicorn"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14207,
+        "Arg2": 2,
+        "Arg3": 14211,
+        "Comment": "Loads Bee"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14207,
+        "Arg2": 2,
+        "Arg3": 14211,
+        "Comment": "\""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14208,
+        "Arg2": 1,
+        "Arg3": 14220,
+        "Comment": "Loads Giant Girl"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14209,
+        "Arg2": 2,
+        "Arg3": 14238,
+        "Comment": "Loads Servant"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14209,
+        "Arg2": 2,
+        "Arg3": 14239,
+        "Comment": "\""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14203,
+        "Comment": "Female Fairies"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14207,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14208,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14209,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14210,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14213,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14215,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14217,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14219,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14224,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14225,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14226,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14200,
+        "Arg2": 13,
+        "Arg3": 14232,
+        "Comment": "-"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14203,
+        "Comment": "Male Fairies"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14207,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14208,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14209,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14210,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14213,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14215,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14217,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14219,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14224,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14225,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14226,
+        "Comment": "|"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 14201,
+        "Arg2": 13,
+        "Arg3": 14232,
+        "Comment": "-"
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 14200,
+      "Name": "Credits",
+      "Description": "\n   Thanks to IO for making the MUD in the first place.  Thanks to Nymph,\nfor helping us out with supplying us with a sample file.  Also to all the\nimmortals for helping to make the MUD a better place :)",
+      "ZoneId": 142,
+      "Sector": "Forest",
+      "Flags": [
+        "NoSummon"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14201,
+      "Name": "Through a Tiny Cave",
+      "Description": "\n   As you walk through this dark place you seem to find your equipment\ndouble in size, or is it you getting smaller?",
+      "ZoneId": 142,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14202,
+          "Description": "Before the Village",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14202,
+      "Name": "Before the Village of Faerise",
+      "Description": "\n   Far and wide in front of you lies the most beautiful garden you've \never seen. Overgrown flowers that resemble homes tower above you. \nThis place has a beautiful, magical scent and you decide its a good \nplace to visit.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14203,
+          "Description": "Village of Faerise",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14201,
+          "Description": "The Dark Passage",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14203,
+      "Name": "Village of Faerise",
+      "Description": "\n   Home of the most tiniest, most beautiful creatures -- the fairies.\nTo the east you see a giant sunflower stem that needs to be explored,\nand farther north lies a magnificent, miniature lagoon.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14209,
+          "Description": "Before the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 14204,
+          "Description": "A Giant Stem",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14202,
+          "Description": "Before the village",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14204,
+      "Name": "In Front of a Giant Stem",
+      "Description": "\n   You look up. Woah. Before you stands the largest, greenest stem you've\never seen. It makes you dizzy just looking at it.  But when you look\ncloser you see there are grooves and leaf stems that make it look like an\neasy climb. Shall you?",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 14203,
+          "Description": "The Village",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 14205,
+          "Description": "Climbing the Stem",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14205,
+      "Name": "Climbing the Stem",
+      "Description": "\n   You place your feet into the tiny notches along the stem. As you keep \ngoing, you hope you won't slip and fall to your doom.",
+      "ZoneId": 142,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14206,
+          "Description": "Climbing the Stem",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 14204,
+          "Description": "The Base of the Stem",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14206,
+      "Name": "Climbing the Stem",
+      "Description": "\n   You are nearing the top of the huge stem. Looking upwards you see a \nhuge sunflower petals of vibrant yellow.",
+      "ZoneId": 142,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14207,
+          "Description": "On Top of a SunFlower",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 14205,
+          "Description": "Climbing the Stem",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14207,
+      "Name": "On Top of a SunFlower",
+      "Description": "\n   Wiping a drop of sweat from your brow, you take a deep breath. The air \nis crisp and floral, overall, pleasant up here.  The view is overwhelming.\nFrom here you can see the whole village of Faerise, the wonderful gardens,\nthe beautiful lagoon and all the little fairies playing below. The ground\nis soft and light.  There's a trail of sunflower seeds leading to the east.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14208,
+          "Description": "On a SunFlower Petal",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 14206,
+          "Description": "Climbing the Stem",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14208,
+      "Name": "On a SunFlower Petal",
+      "Description": "\n   The Scent of the flower is overpowering! You can see far over the \nvillage at this view point. I'd say the climb was worth it? Wouldn't you?",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 14207,
+          "Description": "On the Tippy Top of the Flower",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14209,
+      "Name": "Before the Lagoon",
+      "Description": "\n   Before you lies a miniature lagoon. From here you see the delicate \nripples of the water, the grassy surroundings and the beautiful fairy \ncivilization. No wonder the fairies are such a charming race.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14212,
+          "Description": "The path continues",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14210,
+          "Description": "A Garden",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14210,
+      "Name": "A Small Garden",
+      "Description": "\n   Your nostrils are filled with exotic scents from the many types of \nflowers. Roses, Tulips, Buttercups, you name it, it's here. All the bright \ncolors fill your eyes with delight, while the sound of the wind blowing \nthrough the trees make you feel calm. Looking westward you see a small red \ntulip that has fallen over.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14209,
+          "Description": "Before the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14211,
+          "Description": "Inside a Tulip",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14211,
+      "Name": "Inside a Tulip",
+      "Description": "\n   You've never really been inside a flower before, so you don't know what\nto expect. There's a strong smell of nectar in the area and you're not too\nsure if you like it. In fact, its giving you a headache. There's a faint\nbuzzing too, but it seems to be getting louder. Maybe exploring the flower\nwasn't such a good idea.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14210,
+          "Description": "A Small Garden",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14212,
+      "Name": "In Front of the Lagoon",
+      "Description": "\n   Here lies the Lagoon of Faerise. Beautiful to the eye, but you're not\ntoo sure about swimming in it. The lagoon continues to the east and west.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14213,
+          "Description": "South-East Edge of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14209,
+          "Description": "Before the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14219,
+          "Description": "South-West Corner of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14213,
+      "Name": "South-East Edge of the Lagoon",
+      "Description": "\n   The path around the lagoon continues to the north and to the west.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14214,
+          "Description": "Around the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14212,
+          "Description": "In Front of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14214,
+      "Name": "Around the Lagoon",
+      "Description": "\n   As you keep walking around the lagoon, you notice a small path \nleading to the east.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14215,
+          "Description": "North-East Corner of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 14220,
+          "Description": "A Small Path",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14213,
+          "Description": "South-East Edge of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14215,
+      "Name": "North-East Corner of the Lagoon",
+      "Description": "\n   The path around the lagoon continues to the south and to the west.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 14214,
+          "Description": "Around the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14216,
+          "Description": "Beside the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14216,
+      "Name": "Beside the Lagoon",
+      "Description": "\n   Here you can see across the lagoon right to the entrance of Faerise. \nYou smile to yourself and decide this was a wonderful experience. To the \nnorth you see another path leading away from the lagoon, towards a palace \nmade of flowers.  To the east and west, the lagoon continues.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14224,
+          "Description": "In the dense part of Faerise",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 14215,
+          "Description": "North-East Corner of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14217,
+          "Description": "North-West Edge of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14217,
+      "Name": "North-West Edge of the Lagoon",
+      "Description": "\n   The path around the lagoon continues to the east and south.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14216,
+          "Description": "Beside the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14218,
+          "Description": "Around the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14218,
+      "Name": "Around the Lagoon",
+      "Description": "\n   Across the lagoon, eastward, you can see a small path. This path \ncontinues to the north and south.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14217,
+          "Description": "North-West Edge of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14219,
+          "Description": "South-West Corner of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14219,
+      "Name": "South-West Corner of the Lagoon",
+      "Description": "\n   The path around the lagoon continues to the north and east.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14218,
+          "Description": "Around the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 14212,
+          "Description": "In Front of the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14220,
+      "Name": "A Small Path",
+      "Description": "\n   This path made of small stones, lined with tulips and marigolds \nis said to be the way to the Fairy's Sanctuary. It is also said that \npeople who enter the Sanctuary never leave feeling the same. Maybe its \na blessing. Maybe its a curse. You can always turn back.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14221,
+          "Description": "In Front of the Sanctuary",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14214,
+          "Description": "Around the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14221,
+      "Name": "In Front of the Sanctuary",
+      "Description": "\n   Before you stands a small little temple, the Fairy's Sanctuary. It is\nhideous looking from the outside, almost as if it doesn't belong here,\nsurrounded with such beautiful creatures and magnificent flowers. There is\na door to the east, slightly open. A strange white glow shines from behind\nthe door.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14222,
+          "Description": "The Sanctuary",
+          "Keywords": [
+            "doors"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14220,
+          "Description": "A Small Path",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14222,
+      "Name": "The Sanctuary",
+      "Description": "\n   Light pours in from all directions, which seems odd because all\nthe windows have been covered with vines and strange flowers. The only \nvisible exit is the way you came in, but there is a small draft coming\nin from underneath you.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 14221,
+          "Description": "Outside the Sanctuary",
+          "Keywords": [
+            "doors"
+          ],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 14223,
+          "Description": "Darkness",
+          "Keywords": [
+            "secret"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 14203
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14223,
+      "Name": "In the dark passage",
+      "Description": "\n   It is damp and cold in here. You'd like to make a hasty exit.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 14222,
+          "Description": "The Sanctuary",
+          "Keywords": [
+            "secret"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 14204
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 14240,
+          "Description": "    \nA Room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14224,
+      "Name": "In the dense part of Faerise",
+      "Description": "\n   Fairies are flying in and out from every direction. They seem very\nbusy, but each has their own delighted expression on their faces. To the\nnorth is the Village Square.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14225,
+          "Description": "Village Square",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14216,
+          "Description": "Beside the Lagoon",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14225,
+      "Name": "Village Square",
+      "Description": "\n   Small shops line the streets. A florist selling flowers, a magician\nselling fine herbs and vials, and a baker selling sweet smelling deserts\nare all here smiling at their customers. You see at least a dozen fairies\nflittering about.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14226,
+          "Description": "The Palace Gates",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14224,
+          "Description": "In the dense part of the city",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14226,
+      "Name": "The Palace Gates",
+      "Description": "\n   Towering before you, the Palace Gates stand. The gates seem to\nbe slightly open towards the north, looks like a short cut. And to the\nwest is a small flowery path.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14227,
+          "Description": "Inside the Palace",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14225,
+          "Description": "Village Square",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14228,
+          "Description": "A Flower Patch",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14227,
+      "Name": "Fairy's Revenge",
+      "Description": "\n   You think to yourself, 'If I were a fairy where would I be? The\nPalace!' But now you realize this was just a trick. Getting your entire\nleg stuck in mud you can't get it out. You eventually get really bored and\nslit your wrists. Picking on Fairies are ya? That'll teach ya!",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "Death",
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 14226,
+          "Description": "You can't see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14228,
+      "Name": "A Flower Patch",
+      "Description": "\n   Smells so sweet in here and you feel like you want to stay forever. \nYou suddenly remember that that's not why you're here. You secure all your\nequipment, and get in one last glance of this beautiful place.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14226,
+          "Description": "The Palace Gates",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14229,
+          "Description": "A Bed of Roses",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14229,
+      "Name": "In a Bed of Roses",
+      "Description": "\n   You slash through the thorns and vines of the roses that tower\nabove you. It seems as if you'd probably would have enjoyed being a little\ntaller at the moment. Never thought being so little was such hard work.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14230,
+          "Description": "A Path",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 14228,
+          "Description": "A Bed of Flowers",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14230,
+      "Name": "A Path to the Garden Palace",
+      "Description": "\n   There is a trail of rose petals leading northbound. Beautiful Fairies\nflitter about here.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14231,
+          "Description": "Before the Garden Palace",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14229,
+          "Description": "A Bed of Roses",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14231,
+      "Name": "Overlooking the Garden Palace",
+      "Description": "\n   It has been a long journey and you've started to believe that there\nis no such thing as the Fairy Palace.  Just some stupid myth that people\ntalk about to get you here. You start to grovel, when all of a sudden\nyou have a certain urge to look forward. A smile comes across your lips\nas you see the sun peeping out from behind the palace.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14232,
+          "Description": "The Path Continues",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14230,
+          "Description": "The Path",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14232,
+      "Name": "In Front of the Garden Palace",
+      "Description": "\n   Still enchanted from your first glimpse of the palace, your feet lead\nthe way, as your eyes dart around trying to memorize the beauty of the\nplace.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14233,
+          "Description": "Entrance to the Palace",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14231,
+          "Description": "Before the Palace",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14233,
+      "Name": "Entrance to the Garden Palace",
+      "Description": "\n   As you get a closer look at the palace, you notice the fine\ncraftsmanship and detail that has been put into the making of this fine\nstructure. The marbleized pillars stretch to the almost limitless ceiling,\nin itself highly adorned with golden vines slathering across its vast\nsurface.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14234,
+          "Description": "Inside the Palace",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14232,
+          "Description": "In Front of the Palace",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14234,
+      "Name": "Inside the Garden Palace",
+      "Description": "\n   You stumble somewhat awkwardly as you realize the magnificent size\nof the foyer you have just entered. Gazing at the curvaceous walls, you\nare totally awed by the flawless beauty of the gorgeous hand-woven \ntapestries. Westward is the exit from the palace and to the east lies\na long hallway.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14235,
+          "Description": "A Hallway",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14233,
+          "Description": "Entrance to the Palace",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14235,
+      "Name": "A Long Hallway",
+      "Description": "\n   Wood carvings of dalecarlian horses, their nostrils flaring, stare at\nyou in equine amazement. As you progress down the hallway, the walls are\nrecessed with gleaming golden pedestals bearing exquisitely-shaped crystal\nornaments. The hallway continues westward leading back to the entrance. To\nthe east lies a turn in the hallway.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14236,
+          "Description": "A Corner",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14234,
+          "Description": "Inside the Palace",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14236,
+      "Name": "A Corner",
+      "Description": "\n   A strong silent sentry suited in silver armor stands sagaciously in the\ncorner. As you egress down the hallway, shimmering purple pixie dust\ndescends upon you. Looking south, you get a glimpse of the enchanting\nthrone room. To the west is a brightly lit hallway.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 14237,
+          "Description": "The Throne Room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14235,
+          "Description": "A Long Hallway",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14237,
+      "Name": "The Throne Room",
+      "Description": "\n   In the center of the throne room is an incredible pair of pearlized\nthrones, encrusted with bedazzling emeralds, rubies, diamonds and\nsapphires. This is where King Oberon and Queen Titania rule over their\nmystical kingdom.  To the east is Titania's garden. Westward lies Oberon's\nstudy. Looking south, you see a room filled with fragrant flower petals.\nNorth you see a bend in the hallway.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14236,
+          "Description": "A Corner",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 14239,
+          "Description": "Titania's Personal Garden",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 14240,
+          "Description": "A Room Filled With Rose Petals",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14238,
+          "Description": "Oberon's Study",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14238,
+      "Name": "Oberon's Study",
+      "Description": "\n   In the study, the shelves are lined with spell-binding books.  Off to\none side is a massive mahogany desk. An extremely large bay window\nspanning one complete wall scatters shimmering shafts of sunlight into all\nnooks and crannies. The window is open permitting a billowing breeze to\nflow into the room wafting the curtains high into the air.  The only\nvisible exit is back the way you came.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "Silent"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 14237,
+          "Description": "The Throne Room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14239,
+      "Name": "Titania's Personal Garden",
+      "Description": "\n   An abundance of beautiful blossoms in a rainbow of colours flourishes\nin this gorgeous garden. In the centre of the garden is a frolicking\nfountain with posing chubby cherubs. While the floral fragrance fills your\nnostrils, the profusion of colour seizes your eyes and the cascading water\nheightens your awareness. You feel incredibly energized.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "Regen"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 14237,
+          "Description": "The Throne Room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 14240,
+      "Name": "A Room Filled With Rose Petals",
+      "Description": "\n   An immediate sense of peace surrounds you when you step into this room.     \nThe heady aroma of the soft rose petals invades your soul.",
+      "ZoneId": 142,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 14237,
+          "Description": "The Throne Room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 14223,
+          "Description": "A Secret Place",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 14200,
+      "Name": "fairy female",
+      "ShortDescription": "\nthe female fairy",
+      "LongDescription": "\nA beautiful female Fairy frolics in the flowers here.",
+      "Description": "\nThe fairy is about 32 centimeters tall and as she notices you she\ngreets you with a smile.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d55+420",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 410,
+          "Chance": 60,
+          "DamageDice": "3d8+10"
+        },
+        {
+          "Type": "Attack_10",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_79",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+50"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 133333,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14201,
+      "Name": "fairy male",
+      "ShortDescription": "\nthe male fairy",
+      "LongDescription": "\nA male fairy stands here looking for a mate.",
+      "Description": "\nHe looks strong to you now since you are the same size as him. Probably quite\nthe adversary too.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d55+425",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 410,
+          "Chance": 60,
+          "DamageDice": "3d8+11"
+        },
+        {
+          "Type": "Attack_52",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+95"
+        },
+        {
+          "Type": "Attack_32",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+45"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1750,
+      "Experience": 133333,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14202,
+      "Name": "monk fairy",
+      "ShortDescription": "\nthe Fairy Monk",
+      "LongDescription": "\nThe Monk of Faerise is standing here, chanting a psalm.",
+      "Description": "\nThe Monk looks really wise and omnipotent. He doesn't seem to notice you.",
+      "Level": 45,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+550",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -160,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 410,
+          "Chance": 70,
+          "DamageDice": "3d9+20"
+        },
+        {
+          "Type": "Attack_23",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+50"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+45"
+        },
+        {
+          "Type": "Attack_63",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "2d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 150000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%20 emote mumbles to himself.;%10 emote prays to the powers that be.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14203,
+      "Name": "puck sprite",
+      "ShortDescription": "\nPuck",
+      "LongDescription": "\nPuck, the mischeivious sprite stands here looking for trouble.",
+      "Description": "\nPuck is Oberon's loyal servant. He notices you and smirks. Looks like he has\nsomething in store for you!",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light",
+        "Sneak",
+        "Hide",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+475",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -150,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 410,
+          "Chance": 75,
+          "DamageDice": "3d9+15"
+        },
+        {
+          "Type": "Attack_17",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+40"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+60"
+        },
+        {
+          "Type": "Attack_37",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+65"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 137222,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14204,
+      "Name": "fairy evil",
+      "ShortDescription": "\nan Evil Fairy",
+      "LongDescription": "\nA hideous looking fairy glares at you and attacks.",
+      "Description": "\nShe is the ugliest fairy you have ever seen. She definitely doesn't seem\nto fit in well with the other fairies. Maybe she's an outcast.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light",
+        "Fly"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+400",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d8+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 120667,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14205,
+      "Name": "unicorn female",
+      "ShortDescription": "\na Female Unicorn",
+      "LongDescription": "\nA female unicorn is here, comforting her mate.",
+      "Description": "\nShe is a beautiful creature, but there is a sadness about her.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+450",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -70,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 408,
+          "Chance": 100,
+          "DamageDice": "3d8+11"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 105000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14206,
+      "Name": "unicorn male",
+      "ShortDescription": "\na Male Unicorn",
+      "LongDescription": "\nA male unicorn with his horn slashed off stands here weeping in pain.",
+      "Description": "\nSince his horn has been detached from his body, he looks like a magnificent\nwhite stallion.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+425",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -70,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 408,
+          "Chance": 100,
+          "DamageDice": "3d8+11"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14207,
+      "Name": "bee bumble",
+      "ShortDescription": "\na Bumble Bee",
+      "LongDescription": "\nA bumble bee is here gathering pollen.",
+      "Description": "\nThe Bumble Bee looks very angry that you have entered its territory.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+380",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 16,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 409,
+          "Chance": 100,
+          "DamageDice": "3d7+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 69000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": "%%25 emote buzzs loudly making your ears ring.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14208,
+      "Name": "girl gigantic young",
+      "ShortDescription": "\na Gigantic Young Girl",
+      "LongDescription": "\nA gigantic young girl is here, running around trying to catch fairies.",
+      "Description": "\nShe towers above you. She suddenly looks your way, giggles and starts\nswinging her net at you. Maybe you shouldn't have bothered her.",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+500",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -110,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d9+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 89222,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 emote hums happily, swinging her net.;%10 emote exclaims, 'My, you're an ugly fairy!'",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14209,
+      "Name": "servant fairy woman",
+      "ShortDescription": "\na Fairy Servant",
+      "LongDescription": "\nA servant of the king and queen fairies dusts happily here.",
+      "Description": "\nShe looks like a very pleasant woman. She hums quietly as she works, seems\nto like her job.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+450",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 410,
+          "Chance": 100,
+          "DamageDice": "3d8+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1100,
+      "Experience": 110000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14210,
+      "Name": "titania queen fairy",
+      "ShortDescription": "\nTitania",
+      "LongDescription": "\nTitania the beautiful queen of fairies sits here on her throne.",
+      "Description": "\nTitania is the most beautiful fairy you've ever laid eyes on. She smiles\nsweetly at you.",
+      "Level": 45,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+600",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -190,
+        "Hitroll": 19,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 410,
+          "Chance": 100,
+          "DamageDice": "3d10+20"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 40,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3000,
+      "Experience": 170888,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14211,
+      "Name": "oberon king fairy",
+      "ShortDescription": "\nOberon",
+      "LongDescription": "\nOberon the handsome king of the fairies sits here admiring his queen.",
+      "Description": "\nOberon looks very charming, his smile is broad and his body is built.\nHe seems very fond of the lovely lady sitting beside him.",
+      "Level": 45,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary",
+        "Light",
+        "Fly"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+610",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -190,
+        "Hitroll": 19,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 410,
+          "Chance": 60,
+          "DamageDice": "3d10+20"
+        },
+        {
+          "Type": "Attack_99",
+          "DamageType": 0,
+          "Chance": 40,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3000,
+      "Experience": 200888,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 14200,
+      "Name": "horn unicorn fairy",
+      "ShortDescription": "\nHorn of the Unicorn",
+      "Description": "\nA horn lies here, vibrating power.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 30,
+      "AntiClass": "322798",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "Bless"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        28,
+        4,
+        6,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 6,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 25000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14201,
+      "Name": "magic mushroom fairy",
+      "ShortDescription": "\nMagic Mushroom",
+      "Description": "\nA glowing mushroom is growing here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        20,
+        67,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 20,
+          "SpellIds": [
+            67,
+            0,
+            0
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 5000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14202,
+      "Name": "cup holy grail fairy",
+      "ShortDescription": "\nthe Holy Grail",
+      "Description": "\nA golden, jewel encrusted grail is sitting here, glowing.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        20,
+        36,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 20,
+          "SpellIds": [
+            36,
+            0,
+            0
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 5000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14203,
+      "Name": "key rose fairy",
+      "ShortDescription": "\na rose-shaped key",
+      "Description": "\nA key that is shaped like a rose is here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent",
+        "Donated"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        80
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 2,
+          "Timer": 0,
+          "TimerSet": 80
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14204,
+      "Name": "loincloth mystical mystic fairy^",
+      "ShortDescription": "\na Mystical Loincloth",
+      "Description": "\nA strip of cloudy cloth levitates here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 25,
+      "AntiClass": "322799",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield",
+        "WristRight"
+      ],
+      "Values": [
+        13,
+        25,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 13,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 25000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 1
+        },
+        {
+          "Location": "Constitution",
+          "Modifier": 1
+        },
+        {
+          "Location": "Mana",
+          "Modifier": 25
+        },
+        {
+          "Location": "MagicResistance",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14205,
+      "Name": "rose diamond fairy",
+      "ShortDescription": "\na diamond rose",
+      "Description": "\nA magnificent diamond rose lies here glinting light around the room.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 10000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 2
+        },
+        {
+          "Location": "Charisma",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14206,
+      "Name": "leggings luminous fairy",
+      "ShortDescription": "\nLuminous Leggings",
+      "Description": "\nA pair of leggings lie here, giving off light.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "59596",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Body",
+        "WristRight"
+      ],
+      "Values": [
+        10,
+        30,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 10000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 1
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14207,
+      "Name": "desk mahogany fairy",
+      "ShortDescription": "\na mahogany desk",
+      "Description": "\nOberon's mahogany desk sits here in the corner.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        10,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 10,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 100,
+      "Cost": 10000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "desk",
+            "mahogany"
+          ],
+          "Description": "\nOberon's desk looks amazingly well crafted. He must have had the best\ncarpenter in all of Faerise to make it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14208,
+      "Name": "scroll enchant enchantment weapon fairy",
+      "ShortDescription": "\na scroll of weapon enchantment",
+      "Description": "\nA scroll that reads 'nopeaw tnahcne' lies here.",
+      "ActionDescription": "\n^",
+      "Type": "Scroll",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        80,
+        24,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 80,
+          "SpellIds": [
+            24,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 15000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 14209,
+      "Name": "fountain fairy",
+      "ShortDescription": "\na large fountain",
+      "Description": "\nA cascading multi-tiered fountain splashes crystal-clear water here.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "327679",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        50000,
+        50000,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 50000,
+          "Amount": 50000,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20000,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "\nThis fountain sprays beautiful mists of water in the air and has a small \ncherub on the top."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

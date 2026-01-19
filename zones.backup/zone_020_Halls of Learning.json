@@ -1,0 +1,1201 @@
+{
+  "Zone": {
+    "Id": 20,
+    "Name": "Halls of Learning",
+    "TopRoomId": 2099,
+    "Lifespan": 1,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 50,
+        "Arg2": 100,
+        "Arg3": 2000,
+        "Comment": "Newbie Handbook (from 0.obj) - Mokky"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3087,
+        "Arg2": 100,
+        "Arg3": 2000,
+        "Comment": "Newbie board (from 20.obj) - Mokky"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 2000,
+        "Arg2": 100,
+        "Arg3": 2004,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 2000,
+        "Arg2": 100,
+        "Arg3": 2004,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 2000,
+        "Arg2": 100,
+        "Arg3": 2004,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 2001,
+        "Arg2": 100,
+        "Arg3": 2004,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 2001,
+        "Arg2": 100,
+        "Arg3": 2004,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 2002,
+        "Arg2": 100,
+        "Arg3": 2007,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 2002,
+        "Arg2": 100,
+        "Arg3": 2007,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3020,
+        "Arg2": 100,
+        "Arg3": 2005,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3021,
+        "Arg2": 100,
+        "Arg3": 2005,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3024,
+        "Arg2": 100,
+        "Arg3": 2005,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3081,
+        "Arg2": 100,
+        "Arg3": 2005,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3043,
+        "Arg2": 100,
+        "Arg3": 2005,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3076,
+        "Arg2": 100,
+        "Arg3": 2005,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2000,
+        "Arg2": 3,
+        "Arg3": 2006,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 2000,
+      "Name": "The Hallway of Learning",
+      "Description": "\n   This is the beginning of the Hallway of Learning. If you are new to mudding\nand new to Elite, you should walk through these halls. You will be taught the\nbasics on survival and also you will be given some equipment to help you on the\nway. There will be \u00a7RSIGNS\u00a7N along the hallways. Read them. There is sign right\nhere. Read it with: look sign",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3000,
+          "Description": "You see the reading room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2099,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n        _____________________________________________________________________\n       / Welcome to EliteMud.                                               /\n      / Within these halls, much knowledge will be revealed.               /\n     / When you have finished with one room, just continue north to go on./\n    / If there is something you have missed or want to look back upon,   /\n   / just go back south, or come back here later.  If there is anything /\n  / you don't understand, feel free to ask other players here.         /\n / Now go forth north to meet your fate, adventurer!                  /\n(____________________________________________________________________("
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2001,
+      "Name": "The Hallway of Movement",
+      "Description": "\n   This is where the art of movement is taught. If you master that already,\nfeel free to go on. To move around in the world of Elite, there are some\ncommands to use. You should already know the basics. There are six directions\nto go. North, south, east, west, up and down. You can abbreviate those commands\nto n, s, e, w etc. To know where you are able to go from one place you can use\nthe command EXITS. In Elite as in the real world, you cannot always walk to all\nthe places. There are water, hills and air. Those must be crossed with other\nmeans. Doors and other obstacles may block your way too. There is a sign here.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2000,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n +---------------------------------------------------------+\n | Summary of commands involving movement:                 |\n |                                                         |\n | North South East West Up Down Enter Leave               |\n | Look Exits                                              |\n | Lock Unlock Open Close                                  |\n |                                                         |     \n | (Walking around is tiresom business)                    |\n | Sleep Wake Rest Sit Stand                               |\n +---------------------------------------------------------+"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2002,
+      "Name": "The Hallway of Scores",
+      "Description": "\n   To keep track of your character here in Elite, there are some scores to show\nyou the characters statisticts. The most important is the DISPLAY command. It\nshould show you your Hp, Mn and Mv. Hp stands for Hit points and is a way to\nvalue your health. Try to keep it positive and as high as possible, since\nfailure will mean death. Mn stands for mana, your mental power. This is most\nimportant for spell casters but all will have use for it. Mv stands for\nmovement, your endurance in other words. Everything involving movement will tax\nyour movement, so rest now and then when it gets too low. There is a sign here.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n _______________________________________________________\n( Informatic commands:                                  )\n(                                                       )\n( Score Stat Levels Skills Spells Practice              )\n( Who Whois Where Time Date Toggle Weather              )\n( Help News Credit Wizlist Immlist Policy Info          )\n(_______________________________________________________)"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2003,
+      "Name": "The Hallway of Communication",
+      "Description": "\n   The main reason for playing a mud is the social contact it offers. There are\nmany more better games for any home computer, but seldom can you play with\npeople from all round the globe. To make the communication easier there are\nmany commands. Be sure you know how to use them. There is a large sign here.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2004,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n...............................................................................\n Communication with other players:                              \n\n Say     ( All in room will hear. Use ' instead of typing say. For ex: 'Hello )\n Tell    ( To any other player in game - Very private indeed. )\n Yell    ( All in your specific area will hear )\n Newbie  ( All with this channel switched on will hear)\n Chat    ( All with this social line on will hear.  Can use . as abbr. Ex: .HI)\n Gossip  ( Like chat )\n Auction ( Another channel for selling/buying stuff )\n Gtell   ( Group-tell.  All in your 'group' will hear )\n Ask\n Whisper\n\n Socials are commands only for social entertainment.\n Smile Cry Laugh Grin   etc\n\n To get a complete list, use the commands socials.\n..............................................................................."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2004,
+      "Name": "The Hallway of Refreshment",
+      "Description": "\n   Walking around in this world makes your character both hungry and thirsty.\nSo have some refreshments before going on. There is a small sign here.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2005,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n  ________________________________________ \n < Eat, drink and be happy:               >\n <                                        >\n < Get Examine Taste Sip Pour Drop        >\n < Eat Drink Inventory                    >\n <________________________________________>"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2005,
+      "Name": "The Hallway of Equipment",
+      "Description": "\n   Many dangers will fall upon you on your visits here on Elite. To prepare for\nthe tasks ahead you need to equip yourself with things that will help you. Take\nwhatever you need here and prepare yourself. There is a battered sign here.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2006,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2004,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n ** ** ** ** ** ** ** ** ** ** ** ** ** ** **\n * To get ready:                            *\n *                                          *\n * Get Drop Grab Wear Wield Remove          * \n * Equipment Inventory Give Put             *\n * Sacrifice Donate                         * \n ** ** ** ** ** ** ** ** ** ** ** ** ** ** **"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2006,
+      "Name": "The Hallway of Battle",
+      "Description": "\n   There are many foul creatures on the earth of this Land. You must use both\nstrength and courage to prevail. Why don't you practice little here in the art\nof battle. There is a sign here.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2007,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2005,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n \n ---===========)**** ****(============---\n  Only through practice can you master:\n\n  Kill Flee Assist Consider\n\n ---===========)**** ****(============---"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2007,
+      "Name": "The Hallway of Light",
+      "Description": "\n   Throughout the Land, not all places will be as light as this. Where evil\nresides there are often darkness. Always bring light with you where ever you\ngo. The light in your heart may not always be enough. There is a glowing sign\nhere.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2008,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2006,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n\n \\ /  To brighten up your day:\n -O- \n / \\  Get Hold Remove"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2008,
+      "Name": "The Hallway of Darkness",
+      "Description": "\n   It is well that you brought light, for this place is else dark. There is\nnothing here to see though, just go on.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2009,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2007,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2009,
+      "Name": "The Hallway of Ending and New Beginning",
+      "Description": "\n   You have now been taught the basics of this game. There are however lots\nmore to learn. Let's hope you learn them on your travels and will have use for\nthem. By using the HELP command you should be able to get more info. Ask\nothers, for in asking there is wisdom. Through the portal to the north you will\nget back to the Temple. Rest well and ask for the way to your guild, so that\nyou may practice your skills. Journey then below the temple. Be strong,\nadventurer and good luck. There is a sign here.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2008,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n You can get a simple map of central Midgaard by typing:\n > help midgaard"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2099,
+      "Name": "The Library",
+      "Description": "\nThis is the Midgaard library.  You should be very quiet in here in order not\nto disturb the others.",
+      "ZoneId": 20,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Lawful",
+        "NoMagic",
+        "Silent"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2000,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 2000,
+      "Name": "gremlin",
+      "ShortDescription": "\nThe gremlin",
+      "LongDescription": "\nA dirty evil looking gremlin is leashed to the wall here.",
+      "Description": "\nThe gremlin is purely evil and snarls at you.  You should help it by ending its\nlife.",
+      "Level": 0,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d4+10",
+        "Mana": 100,
+        "Move": 80
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d1+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3,
+      "Experience": 15,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 50,
+      "Name": "handbook newbie hand book",
+      "ShortDescription": "\na newbie handbook",
+      "Description": "\nA book has the words \"#CDon't Panic#G\" emblazoned on the cover.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "handbook",
+            "hand",
+            "book",
+            "newbie"
+          ],
+          "Description": "\nWelcome to EliteMUD. You have chosen to embark upon a great adventure\nand this guide has been written to help you get started. In order to\nmake this Mud an enjoyable place for everybody, we ask that you read \nand obey our simple rules - these can be viewed by typing POLICY. This\nguide should contain enough information to get you started, but if\nthere is anything you do not understand, typing \"help <topic>\" should \nexplain things to you. If you discover errors in the help files, or \nthere are topics missing, contact an immortal (level 110+) and they \nwill assist you.\n\nThis handbook contains information on a number of topics. Typing \n\"read <topic>\" will list the information you require. Here is the list:\n\nIntroduction\nGetting Started\nFinding Equipment\nGaining Levels\nClans"
+        },
+        {
+          "Keywords": [
+            "Introduction"
+          ],
+          "Description": "\nEliteMUD is a MUD unlike any other. Based on CircleMUD code, and running\noriginally from Sweden, Elitemud was started in 1994 by IO and Rigel. The \ngame has run continuously since then, and passed through the hands of\nseveral implementors. The game currently runs from a site in America.\n\nThere are 109 mortal levels, and a remort system that allows multiclassing\nup to 4th remort. Characters above level 109 are immortals, and are there\nto help make everyones EliteMUD experience more enjoyable. If you need\nimmortal help, type \"who 110-\" to see a list of online immortals. You can\nsee a list of all immortals by typing \"wizlist\". Their particular \nresponsibilities are listed in \"immlist\".\n\nAll new players are automatically enrolled into the Adventurers Guild\nclan. This allows new players to get to know each other and help each\nother learn their way around. In addition, there are several Guildmasters\nwho will help you when you are stuck. The Adventurers Guild is not\na real clan, and you may resign and apply to a real clan anytime after\nlevel 10. See the later section on Clans.\n\nThere is a dedicated communication channel for new players. Type \n\"newbie <your message>\" and usually people will try to help you.\n\nHelp may also be found on several webpages. Currently, the EliteMUD official\nwebpage is at #Ghttp://orangeroad.tzo.com/"
+        },
+        {
+          "Keywords": [
+            "getting",
+            "started"
+          ],
+          "Description": "\nEliteMUD has 18 mortal races, and 17 classes to choose from. (Although \nsome races are available as quest rewards only.) All of the classes \npractice at one of the standard four guilds: Warrior, Thief, Cleric, \nand Mage. The Guilds are marked on the map of Midgaard which can be \nviewed at any time by typing \"help midgaard\".\n\nAt any time until level 10 you can type \"recall\" to return to the temple. \nAfter level 10, you will have to purchase recall scrolls, or walk back \nto the temple.\n\nInside your guild, you can use practice sessions to improve your \nskills and spells. To see a list of the things you can learn, and to\nsee how many practice sessions you have left type \"practice\" when\nstanding next to your guildmaster. The different skills and spells should\nbe explained in the help files. Enter \"help <skill>\" to check what a\nskill does.\n\nIf you are new to mudding, you should visit the Halls of Learning, which\nare located west, west, north from the recall point."
+        },
+        {
+          "Keywords": [
+            "finding",
+            "equipment"
+          ],
+          "Description": "\nThere are four places in Midgaard where good equipment may be found.\nThe donation room (east from temple), the Adventurers Guild donation \nroom (west, up, west), the Armory (two south, west, south), and the \nWeaponsmith (two south, two east, north from temple).\n\nAt any shop, you can type \"list\" to see what items are on offer, their\nminimum level, and the cost. When you start out, you will not have very\nmuch money, so the best places to start are probably the donation rooms.\nAlthough items in donation rooms have been freely given, it is considered\nimpolite to take items you do not need, and shopkeepers will not permit \nyou to sell items you have obtained from a donation room.\n\nEquipment may also be aquired by killing mobiles (mobs) and taking any\nitems from their corpse. You may also find gold this way. In addition, \nyou will receive gold as a reward from the gods if you sacrifice mob\ncorpses (type \"help sacrifice\"). The quickest way to make gold is to kill\nmobs for their equipment and sell it in the shops. If on the other hand\nyou prefer to help others you may donate items using the \"donate\" command, \nwhich will usually transfer the item to the Midgaard donation room.\n\n(more...type: #Gread equipment2#N)"
+        },
+        {
+          "Keywords": [
+            "equipment2"
+          ],
+          "Description": "\nGood equipment makes levelling much easier. Every item of equipment that\nyou can wear, will have an effect on your statistics. Typing \"stats\" will\ngive you a listing of your current status. There are several values which\nare worth noting.\n\nHitroll affects how likely you are to hit a mob. The higher your hitroll\nthe more often you will strike your enemies.\n\nDamroll is a value added to your normal weapon damage when you strike a\nmob. The higher the damroll, the harder you hit.\n\nThac0 stands for \"To Hit Armour Class 0\" and tells the mud how good you\nare at hitting armoured mobs. Your thac0 depends on your level and \nyour class and is not changed by any equipment you can wear.\n\nAC or armour class is a measure of how well protected you are. It starts\nfrom 100 and becomes lower with better equipment. A well equipped starting\ncharacter can manage an armour class of around 0-10. A well equipped \nhigh level character might have an armour class of around -350 and for a\nfourth remort, an armour class of better than -550 is not uncommon.\n\nWeapons: You can use two weapons at a time. Wield one, and then hold\nthe second. You will receive the bonuses from holding the second weapon.\nSome low level weapons can be enchanted, which gives them +2HR and +2DR.\nMake sure both your weapons are enchanted when you start."
+        },
+        {
+          "Keywords": [
+            "gaining",
+            "levels"
+          ],
+          "Description": "\nYou can gain levels on EliteMUD by killing mobiles (mobs). When you type\n\"score\" you can see how much more experience you need to reach your next\nlevel. \n\nLevel advancement is automatic, once you have surpassed the experience\nrequirement. WHen you level, you will gain additional hit points, mana\nand movement points, and occasionally your Thac0 and statistics (strength,\nconstitution etc.) will increase.\n\nWhen starting out, try killing animals in the Newbie Zoo, which is sseeeees\nfrom the temple. Other good places for new players to go are the catacombs\n(down from the temple) and the north road (north from the temple). Typing\n\"help areas\" will show you the area help files for EliteMUD - if you cannot\nfind zones by exploring, ask other players and they will help you find your\nway around."
+        },
+        {
+          "Keywords": [
+            "clans"
+          ],
+          "Description": "\nThe Clan system on EliteMUD allows groups of mudders with similar outlooks\nto come together and socialize - and help each other out. All new players\nstart in a special clan called the Adventurers Guild. This allows players\nto become familiar with the workings of clans, meet other new people and\nmake new friends. However, once you reach level 25 you will be ejected\nfrom the clan and will be forced to choose either to remain clanless, or\njoin one of the other clans.\n\nTyping \"clan\" on its own will show you a list of available clan commands - \nexperiment with them to find out what they do!\n\nYou can resign from Adventurers Guild and apply to another clan at any time\nafter level 10. To see a list of other clans type \"clan info\"."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3020,
+      "Name": "dagger",
+      "ShortDescription": "\na dagger",
+      "Description": "\nA dagger with a long thin blade is here.",
+      "ActionDescription": "\npierce",
+      "Type": "Weapon",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        4,
+        11,
+        0,
+        50
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 4,
+          "DamageType": 11,
+          "HitPoints": 50
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3021,
+      "Name": "sword small",
+      "ShortDescription": "\na small sword",
+      "Description": "\nA small sword lies here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "13107",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        6,
+        11,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 6,
+          "DamageType": 11,
+          "HitPoints": 100
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 60,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sword",
+            "small"
+          ],
+          "Description": "\nThe small sword seems to have an inscription of some sort inscription..."
+        },
+        {
+          "Keywords": [
+            "inscription"
+          ],
+          "Description": "\nIt says: \"May this sword be a good companion.\""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3024,
+      "Name": "warhammer hammer",
+      "ShortDescription": "\na warhammer",
+      "Description": "\nA medium sized warhammer is here.",
+      "ActionDescription": "\npound",
+      "Type": "Weapon",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        5,
+        7,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 5,
+          "DamageType": 7,
+          "HitPoints": 100
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 50,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3043,
+      "Name": "jacket soft leather",
+      "ShortDescription": "\na leather jacket",
+      "Description": "\nA soft leather jacket is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 100
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 200,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3076,
+      "Name": "cap leather",
+      "ShortDescription": "\na leather cap",
+      "Description": "\nA leather cap is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 20
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 150,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3081,
+      "Name": "pants leather",
+      "ShortDescription": "\na pair of leather pants",
+      "Description": "\nA pair of leather pants is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        30
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 30
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 150,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3087,
+      "Name": "board bulletin newbie",
+      "ShortDescription": "\na newbie advice board",
+      "Description": "\nA newbie advice bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2000,
+      "Name": "bread",
+      "ShortDescription": "\na bread",
+      "Description": "\nA small round bread is here smelling newly baked.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2001,
+      "Name": "water waterskin",
+      "ShortDescription": "\na waterskin",
+      "Description": "\nA waterskin has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        50,
+        50,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 50,
+          "Amount": 50,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 15,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "waterskin"
+          ],
+          "Description": "\nIt's made of leather of some animal.  Looks like it can hold a lot of liquid."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2002,
+      "Name": "torch",
+      "ShortDescription": "\na torch",
+      "Description": "\nA small torch.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        12,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 12
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

@@ -1,0 +1,3764 @@
+{
+  "Zone": {
+    "Id": 51,
+    "Name": "Drow City",
+    "TopRoomId": 5199,
+    "Lifespan": 55,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5100,
+        "Arg2": 15,
+        "Arg3": 5122,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5101,
+        "Arg2": 10,
+        "Arg3": 5118,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5100,
+        "Arg2": 50,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5101,
+        "Arg2": 10,
+        "Arg3": 5133,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5100,
+        "Arg2": 50,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5102,
+        "Arg2": 4,
+        "Arg3": 5104,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5101,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5102,
+        "Arg2": 4,
+        "Arg3": 5124,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5101,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5102,
+        "Arg2": 4,
+        "Arg3": 5108,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5101,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5102,
+        "Arg2": 4,
+        "Arg3": 5111,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5101,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5103,
+        "Arg2": 4,
+        "Arg3": 5104,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5102,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5103,
+        "Arg2": 4,
+        "Arg3": 5124,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5102,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5103,
+        "Arg2": 4,
+        "Arg3": 5108,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5102,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5103,
+        "Arg2": 4,
+        "Arg3": 5111,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5102,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5104,
+        "Arg2": 4,
+        "Arg3": 5104,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5103,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5104,
+        "Arg2": 4,
+        "Arg3": 5124,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5103,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5104,
+        "Arg2": 4,
+        "Arg3": 5108,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5103,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5104,
+        "Arg2": 4,
+        "Arg3": 5111,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5103,
+        "Arg2": 12,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5105,
+        "Arg2": 3,
+        "Arg3": 5118,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5105,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5110,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5105,
+        "Arg2": 3,
+        "Arg3": 5120,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5104,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5110,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5105,
+        "Arg2": 3,
+        "Arg3": 5116,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5104,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5110,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5106,
+        "Arg2": 2,
+        "Arg3": 5150,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5105,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5109,
+        "Arg2": 5,
+        "Arg3": 9,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5106,
+        "Arg2": 2,
+        "Arg3": 5101,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5105,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5107,
+        "Arg2": 3,
+        "Arg3": 5125,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5106,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 5114,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5107,
+        "Arg2": 3,
+        "Arg3": 5105,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5106,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5111,
+        "Arg2": 5,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5107,
+        "Arg2": 3,
+        "Arg3": 5109,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5106,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5108,
+        "Arg2": 5,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5108,
+        "Arg2": 1,
+        "Arg3": 5113,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5107,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5112,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5109,
+        "Arg2": 1,
+        "Arg3": 5148,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5113,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 5100,
+      "Name": "City Entrance",
+      "Description": "\n   You are at the entrance to a small underground city. A great adamantite gate\nlies open to the west allowing entrance into the city.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5101,
+          "Description": "A huge gate opens to the west allowing entrance into the city.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5011,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gate"
+          ],
+          "Description": "\nA large adamantite gate with giant spider shaped emblems stands here."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5101,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate street going north-south. A large gate lies\nto the east while a building lies to the west.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5123,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5100,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5102,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5122,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5102,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street going north and west.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5101,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5103,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5103,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street going east-west. A large house\nstands to the south.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5102,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5104,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5106,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5104,
+      "Name": "3rd House",
+      "Description": "\n   You stand inside the 3rd house of the city; it is fairly well decorated by\ndrow standards having a few statues, murals and such. A door leads to the\nsouth.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5103,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5105,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5105,
+      "Name": "Throne Room",
+      "Description": "\n   The throne room of the 3rd house is about as decorated as the inner\ncourtyard except with a blood covered altar in the center of the room.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5104,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5106,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street going east-west. To the north is\na large building.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5118,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5103,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5107,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5107,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street leading north and east. To the\nsouth is an extremely large house.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5110,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5106,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5108,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5108,
+      "Name": "2nd House",
+      "Description": "\n   You stand inside the 2nd house of the city. The room is highly decorated\nwith statues of spiders and murals everywhere.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5107,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5109,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5109,
+      "Name": "Throne Room",
+      "Description": "\n   The throne room of the 2nd house is just a little more decorative than the\ninner courtyard having an altar in the center of the room.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5108,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5110,
+      "Name": "Main Gate",
+      "Description": "\n   You are at the entrance to the 1st house of the city. A large gate, almost\nas big and elegant as the one at the entrance to the city, stands here.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5114,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5107,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5111,
+          "Description": "A large gate lies to the west.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5111,
+      "Name": "1st House",
+      "Description": "\n   You stand in the inner courtyard of the 1st and largest house in the city.\nThe room is extremely large and decorative. Mural and paintings hang on the\nwalls depicting some battles and a spider queen.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5110,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5112,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5112,
+      "Name": "Throne Room",
+      "Description": "\n   The throne room of the 1st house is in one word... awesome. It is so\nhorrifying it is almost beautiful.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5113,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5111,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5113,
+      "Name": "Main Chamber",
+      "Description": "\n   This is the council chamber for the Matron Mother herself. A huge table and\nchairs surrounding it sits in the center of the room.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5112,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5114,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street leading north-south and east.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5115,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5110,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5115,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street leading south. A building is to\nthe west.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5114,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5116,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5116,
+      "Name": "Cleric Academy",
+      "Description": "\n   This is the most lavish of the academies being that it is for the clerics.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5115,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5117,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street going east-west. To the north is\na giant temple.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5119,
+          "Description": "The entrance to the temple of Lloth.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5121,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5114,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5118,
+      "Name": "Warrior's Academy",
+      "Description": "\n   This looks more like a barracks than a school.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5106,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5119,
+      "Name": "Entrance to the Temple of Lloth",
+      "Description": "\n   The temple is the largest building in the city. Even it's doors are beyond\nimagination. Inside of the temple entrance, the walls are made of gold and\nadamantite.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5126,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5120,
+      "Name": "Mage's Academy",
+      "Description": "\n   The Mage's Academy is fairly well decorated see that the drow prefer magic\nover physical power greatly.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5121,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5121,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street going eastward. To the north is a\nbuilding.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5123,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5122,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5122,
+      "Name": "Slave Chamber",
+      "Description": "\n   The room is in shambles. Straw is strewn all about the room as beds for the\nunfortunate creatures who have fallen prey to drow imperialism.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5121,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5101,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5123,
+      "Name": "City street",
+      "Description": "\n   You walk along a highly ornate city street leading west and south. To the\nnorth is a relatively small house.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5124,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5101,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5121,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5124,
+      "Name": "4th house",
+      "Description": "\n   You stand inside the 4th house of the city. Its inner courtyard is rather\ndull by drow standards and rather small as well.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5125,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5123,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5125,
+      "Name": "Throne Room",
+      "Description": "\n   The throne room is basically similar to the inner courtyard in regards to\ndecor. there is a small throne behind the altar but that is about it.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5124,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5126,
+      "Name": "Entrance Way",
+      "Description": "\n   You stand in the entrance way to the temple which opens up to the north into\na large hallway going east and west. Small statues of spiders line the entrance\nway's walls.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5127,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5119,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5127,
+      "Name": "Hallway",
+      "Description": "\n   You are in a long hallway lined with adamantite. The walls are engraved with\npictures of elves and spiders. The hallway continues east and west. As you look\ndown the hallway you can make out one or two figures moving away from you. To\nthe north is a obsidian stairway.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5135,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5128,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5126,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5131,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5128,
+      "Name": "Long Hallway",
+      "Description": "\n   You are in a long hallway lined with adamantite. The walls are engraved with\npictures of elves and spiders. The hallway continues east and west. As you look\ndown the hallway you can make out one or two figures moving away from you.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5129,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5127,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5129,
+      "Name": "Long Hallway",
+      "Description": "\n   You are in a long hallway lined with adamantite. The walls are engraved with\npictures of elves and spiders. The hallway continues east and west. As you look\ndown the hallway you can make out one or two figures moving away from you. To\nthe north is a door.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5150,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5130,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5128,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5130,
+      "Name": "Long Hallway",
+      "Description": "\n   You are in a long hallway lined with adamantite. The walls are engraved with\npictures of elves and spiders. The hallway continues east and west. As you look\ndown the hallway you can make out one or two figures moving away from you.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5134,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5129,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5131,
+      "Name": "Long Hallway",
+      "Description": "\n   You are in a long hallway lined with adamantite. The walls are engraved with\npictures of elves and spiders. The hallway continues east and west. As you look\ndown the hallway you can make out one or two figures moving away from you.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5127,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5132,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5132,
+      "Name": "Long Hallway",
+      "Description": "\n   You are in a long hallway lined with adamantite. The walls are engraved with\npictures of elves and spiders. The hallway continues east and west. As you look\ndown the hallway you can make out one or two figures moving away from you. To\nthe south is a door.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5131,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5133,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5134,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5133,
+      "Name": "Warrior's Barracks",
+      "Description": "\n   The room is a complete mess. None of the beds are made, clothes and other\nitems have been left all about the room. Well drow warriors never were known\nfor neatness.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5131,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5134,
+      "Name": "Long Hallway",
+      "Description": "\n   You are in a long hallway lined with adamantite. The walls are engraved with\npictures of elves and spiders. The hallway continues east and west. As you look\ndown the hallway you can make out one or two figures moving away from you.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5132,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5130,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5135,
+      "Name": "Grand Stairway",
+      "Description": "\n   You are standing at the bottom of a giant obsidian and adamantite stairway.\nThe edges are trimmed with gold.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5127,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5136,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5136,
+      "Name": "Grand Hallway",
+      "Description": "\n   You are standing in the middle of a grand hallway. The walls are of the\npurest adamantite with gold trim. Mosaics line the walls.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5138,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5137,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5135,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5137,
+      "Name": "Mage's Barracks",
+      "Description": "\n   The mage's living quarters is rather clean with the exception of a few used\ncomponent containers. It is rather well decorated as well. Cots line the floor\nfor the mages to sleep on. the only door is to the west.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5136,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5138,
+      "Name": "Grand Hallway",
+      "Description": "\n   You are walking down a grand hallway, heavily decorated with adamantite and\ngold. To the north the hall goes down a flight of stairs while a door is too\nthe west.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5136,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5139,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5140,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5139,
+      "Name": "Cleric's Barracks",
+      "Description": "\n   The bed chamber is brightly decorated with spider shaped statues, murals and\nthe like. Large beds line the floor making this a comfortable room to live in.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5138,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5140,
+      "Name": "Grand Stairway",
+      "Description": "\n   You are climbing a set of obsidian stairs surrounded by adamantite walls. To\nthe north are a set of large golden doors.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5141,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5138,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5141,
+      "Name": "Main Chamber",
+      "Description": "\n   This is the south side of a large auditorium used for services by the drow\npriestesses. In the center is a large sacrificial pit and beyond that is an\naltar.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5142,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5140,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5144,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5142,
+      "Name": "Eastern Side of Chamber",
+      "Description": "\n   You are on the eastern side of the chamber overlooking the pit. To the east\nis a door while to the north is an altar.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5145,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5146,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5141,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5143,
+      "Name": "Sacrificial Pit",
+      "Description": "\n   A you climb down into the pit, thousands of spiders cover you, tearing your\nfragile body to shreds. Lloth thanks you for your sacrifice.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5144,
+      "Name": "Western Side of Chamber",
+      "Description": "\n   You are on the western side of the main chamber overlooking a sacrificial\npit. To the north is an altar.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5145,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5141,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5145,
+      "Name": "The Altar",
+      "Description": "\n   You are standing in front of a highly and freshly bloodstained altar.\nEngraved on the top of the altar is a giant spider with a human head. Looking\ndown from the altar you see a large sacrificial pit with thousands of swarming\nspiders looking for their next meal!",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5148,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5142,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5144,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5143,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5146,
+      "Name": "Slave Cells",
+      "Description": "\n   This is the main room to the cell chambers for the slaves to be sacrificed.\nYou notice there are no guards around.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5147,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5142,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5147,
+      "Name": "Slave Pen",
+      "Description": "\n   Rotten meat and breads lie about the floor while shackles hang from the\nwalls. The room reeks of death. You almost become nauseous and decide to leave\nthe room since you were obviously too late to save the slave.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5146,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5148,
+      "Name": "Dias",
+      "Description": "\n   You stand upon a dias behind the altar. Above you is a enormous illusion of\na female drow turning into a giant spider and back again. There is a door to\nthe west.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5145,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5149,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5149,
+      "Name": "The Treasury",
+      "Description": "\n   This is obviously only a temporary storage place for the collected treasure\nbeing rather bare.",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5148,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5150,
+      "Name": "Weaponsmaster's Chamber",
+      "Description": "\n   This one person bedchamber is very elegant. The owner must be held in\nhigh regard to get this kind of treatment. \n\u00a7N",
+      "ZoneId": 51,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5129,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 5100,
+      "Name": "goblin slave",
+      "ShortDescription": "\nthe goblin slave",
+      "LongDescription": "\nA goblin slave lies here asleep.",
+      "Description": "\nThe defenseless goblin begs for mercy.",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+50",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 6666,
+      "DefaultPosition": "Sleeping",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5101,
+      "Name": "Drow commoner",
+      "ShortDescription": "\nthe Drow commoner",
+      "LongDescription": "\nA drow commoner is here, walking around on guard duty.",
+      "Description": "\nI doubt he is the type to give directions.",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d40+220",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 20000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5102,
+      "Name": "drow noble warrior",
+      "ShortDescription": "\nthe drow warrior noble",
+      "LongDescription": "\nA drow warrior noble stands here guarding his home.",
+      "Description": "\nHe looks kind of p.o.ed!",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+300",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 12,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 300,
+      "Experience": 50000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5103,
+      "Name": "drow noble mage",
+      "ShortDescription": "\nthe drow mage noble",
+      "LongDescription": "\nA drow mage noble is here protecting his home.",
+      "Description": "\nThe mage prepares to cast a spell...at you!!",
+      "Level": 28,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d50+260",
+        "Mana": 380,
+        "Move": 500
+      },
+      "Combat": {
+        "Armor": -20,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "2d5+6"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+80"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+80"
+        },
+        {
+          "Type": "Attack_32",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 90000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5104,
+      "Name": "drow priestess",
+      "ShortDescription": "\nthe drow priestess",
+      "LongDescription": "\nA drow priestess is here shouting orders.",
+      "Description": "\nI wouldn't want go get on her bad side!",
+      "Level": 32,
+      "Race": "Humanoid",
+      "Class": "Cleric",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d50+260",
+        "Mana": 420,
+        "Move": 560
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d5+6"
+        },
+        {
+          "Type": "Attack_27",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+80"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "3d0+75"
+        },
+        {
+          "Type": "Attack_36",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 125000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5105,
+      "Name": "drow master",
+      "ShortDescription": "\nthe drow master",
+      "LongDescription": "\nA drow master stares at you angrily.",
+      "Description": "\nThe drow master is ALWAYS ready for a fight.",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d60+420",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 8000,
+      "Experience": 200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5106,
+      "Name": "drow weaponsmaster",
+      "ShortDescription": "\nthe weaponsmaster",
+      "LongDescription": "\nA drow weaponsmaster is here shadow boxing.",
+      "Description": "\nHe definitely know his way around in combat.",
+      "Level": 38,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d50+350",
+        "Mana": 480,
+        "Move": 650
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+12"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 4000,
+      "Experience": 170000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5107,
+      "Name": "drow matron mother",
+      "ShortDescription": "\nthe Matron Mother",
+      "LongDescription": "\nThe Matron Mother of the house is standing here.",
+      "Description": "\nShe looks really p.o.ed!!!!",
+      "Level": 40,
+      "Race": "Humanoid",
+      "Class": "Cleric",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d50+350",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d8+8"
+        },
+        {
+          "Type": "Attack_27",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "3d0+75"
+        },
+        {
+          "Type": "Attack_36",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+75"
+        },
+        {
+          "Type": "Attack_33",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "3d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3500,
+      "Experience": 200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5108,
+      "Name": "drow matron mother",
+      "ShortDescription": "\nthe Matron Mother",
+      "LongDescription": "\nThe Matron Mother of the first house is waiting for you.",
+      "Description": "\nShe looks like she is about to rip your head of and eat it.",
+      "Level": 42,
+      "Race": "Humanoid",
+      "Class": "Cleric",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d50+350",
+        "Mana": 520,
+        "Move": 710
+      },
+      "Combat": {
+        "Armor": -130,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "3d10+10"
+        },
+        {
+          "Type": "Attack_27",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+75"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "3d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 230000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5109,
+      "Name": "yochlol",
+      "ShortDescription": "\nthe yochlol",
+      "LongDescription": "\nA yochlol forms out of a swirling mist...",
+      "Description": "\nThe yochlol is not in a good mood.",
+      "Level": 45,
+      "Race": "Hound",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Sanctuary",
+        "Infrared"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "5d50+400",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -140,
+        "Hitroll": 23,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 250000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 5100,
+      "Name": "longsword commoner",
+      "ShortDescription": "\na commoner's longsword",
+      "Description": "\nA commoner's longsword made of adamantite has been left here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        8,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 1000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5101,
+      "Name": "longsword noble",
+      "ShortDescription": "\na noble's longsword",
+      "Description": "\nA drow noble's longsword, made of adamantite, lies here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 6,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        8,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 1500,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5102,
+      "Name": "whip snake twoheaded",
+      "ShortDescription": "\na snake headed whip",
+      "Description": "\nA whip with two snakes heads lies here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 13,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 1750,
+      "CostPerDay": 1500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5103,
+      "Name": "whip snake threeheaded",
+      "ShortDescription": "\na snake headed whip",
+      "Description": "\nA whip with three snake heads has been left here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 15,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        7,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 7,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 5000,
+      "CostPerDay": 2300,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5104,
+      "Name": "whip snake fourheaded",
+      "ShortDescription": "\na snake headed whip",
+      "Description": "\nA whip with four snake heads has been carelessly left here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 17,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        8,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 10250,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5105,
+      "Name": "longsword black",
+      "ShortDescription": "\na black longsword",
+      "Description": "\nA black longsword has been carelessly left here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 18,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        8,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 10250,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5106,
+      "Name": "whip snake fiveheaded",
+      "ShortDescription": "\na snake headed whip",
+      "Description": "\nA whip with 5 snake heads has been carelessly dropped here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 17,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 12000,
+      "CostPerDay": 4500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": -2
+        },
+        {
+          "Location": "Intelligence",
+          "Modifier": -2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5107,
+      "Name": "whip snake sixheaded",
+      "ShortDescription": "\na snake headed whip",
+      "Description": "\nA whip with six snake heads has been dropped here very carelessly.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 18,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        5,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 5,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 15000,
+      "CostPerDay": 8000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": -3
+        },
+        {
+          "Location": "Intelligence",
+          "Modifier": -3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5108,
+      "Name": "bracers iron",
+      "ShortDescription": "\na pair of bracers",
+      "Description": "\nA pair of bracers has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 5,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 2000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5109,
+      "Name": "gauntlets strength",
+      "ShortDescription": "\na pair of gauntlets",
+      "Description": "\nA pair of gauntlets is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Worn",
+      "Level": 25,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 2,
+      "Cost": 10000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5110,
+      "Name": "wand lightning blue silver",
+      "ShortDescription": "\na silvery blue wand",
+      "Description": "\nA silvery blue wand has been dropped in the dirt.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        10,
+        3,
+        3,
+        30,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 30,
+          "Level": 10,
+          "Charges": 3,
+          "ChargesRemaining": 3
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 4000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5111,
+      "Name": "helmet helm",
+      "ShortDescription": "\na small helmet",
+      "Description": "\nA small helmet lies up against a rock.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 1,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 6000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5112,
+      "Name": "ring ruby",
+      "ShortDescription": "\na small ruby ring",
+      "Description": "\nA small ruby ring lies in the dirt.",
+      "ActionDescription": "",
+      "Type": "Worn",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 20000,
+      "CostPerDay": 8000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 25
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5113,
+      "Name": "dagger sacrificial spidag",
+      "ShortDescription": "\na spider shaped dagger",
+      "Description": "\nA dagger with spider leg shaped blades lies on the ground.",
+      "ActionDescription": "\npierce",
+      "Type": "Weapon",
+      "Level": 21,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        4,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 4,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 12000,
+      "CostPerDay": 15000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5114,
+      "Name": "hat green",
+      "ShortDescription": "\na small bright green hat",
+      "Description": "\nA small bright green hat lies in the dirt.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Age",
+          "Modifier": -15
+        },
+        {
+          "Location": "Armor",
+          "Modifier": -2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

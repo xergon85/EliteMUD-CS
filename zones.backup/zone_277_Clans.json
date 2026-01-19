@@ -1,0 +1,1070 @@
+{
+  "Zone": {
+    "Id": 277,
+    "Name": "Clans",
+    "TopRoomId": 27799,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 46,
+        "Arg2": 100,
+        "Arg3": 27701,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27701,
+        "Arg2": 100,
+        "Arg3": 27702,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27702,
+        "Arg2": 100,
+        "Arg3": 27702,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 47,
+        "Arg2": 100,
+        "Arg3": 27705,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27705,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27700,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27706,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27714,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27706,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27713,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27709,
+        "Arg2": 0,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27710,
+        "Arg2": 2,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27709,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 27712,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 27700,
+      "Name": "Cursed Den of Frogeaters",
+      "Description": "\n   Down in the wet cellar of the Ni-Knights clan house (well, House can\nbe discussed, but still) the frogeaters hang out chatting about their\nglorious deeds. To their help they have one of the Clans Minstrels,\nKami, whos voice can stand up to the glorious mushysinger Hulio, anyday.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 27705,
+          "Description": "The constant turmoil of the Ni Throne room.",
+          "Keywords": [
+            "bars"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "Kami",
+            "minstrel"
+          ],
+          "Description": "\n Even if Kami is not here you can still here some of his chantings\neminating from the damp walls of the Den."
+        },
+        {
+          "Keywords": [
+            "wall",
+            "walls"
+          ],
+          "Description": "\n Placing your ear to the wet wall the chanting comes clearer to you.\n   ...   ni   ...    ni   ...   ni   ...   ni   ...\nYou stand there for a long time completely hexed and looking awfully\nsilly with your ears sticked to the fungicovered wall.\nSo impregnated with the chanting of NI (ni ni) the walls are that they\nseem to reverberate it for all eternity\n\n                                        ni   ...   ni   ...   ni"
+        },
+        {
+          "Keywords": [
+            "Hulio",
+            "mushysinger"
+          ],
+          "Description": "\n Hulio has a standing act at Ma Globs Dancing Parlor in Stanneg. Go\nthere if you want to have a peek at him."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27701,
+      "Name": "Hall of Ni",
+      "Description": "\n   This is the clan house of the #RKnights #Ywho say #GNi#N. There is\nalmost no light at all, but you can still distinguish some statues of the\nclan founders. At the end on the wall you can see a picture showing the\nholy grail and a cross marking a spot. Some intricate carvings can also\nbe found next to the picture. They read: \"Here may be found the last\nwords of Joseph of Arimathea. He who is valiant and pure of spirit, may\nfind the #YHoly Grail#N in the Castle of Aaahh...\"",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27702,
+          "Description": " The clan regeneration, or is it degeneration?, room open up before you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2915,
+          "Description": " Back to the cold unfriendly Outside...",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27703,
+          "Description": " The soup kitchen smell invitingly.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27704,
+          "Description": " The Herring passage takes you further inside the clan house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "statue"
+          ],
+          "Description": "\n Reading the stones on the statues you see engraved the names of: Kidd,\nSadsam, Eladamri, Trilion, Tungtor, Wildthing, Achilles, Gloin, Bofur,\nKami, GOAG, Legasi, Champion, Bedevere, Juvenile, Midas, Maynard,\nCerbaro, Ephex, Vombat, Zolgorath, Fatbob, Planeswalker.\nA real mighty bunch of people set out to bring NI to everyone.\nOver and over again.    Ni      Ni      Ni      Ni      Ni      Ni."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27702,
+      "Name": "Clan Regeneration Room",
+      "Description": "\n   You enter a round room in which you can see portraits of the fellow\nclan members. From some sort of device in the roof dim lights stream\ndown unto you. Along the walls several beds are lined up together with a\nsmall table. In the middle of the room a small pond filled with cold\nwater and nets filled with delicate beer. Beverage for true heroes!\n An unseen servant tucks you into bed as fast as you lay down on the\nbeds and you really feel at home.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27701,
+          "Description": "The Hall of Ni.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "roof",
+            "device"
+          ],
+          "Description": "\n Some all mighty Ni-Knight have bonded a big block of shining true magic\nin the centre of the roof, so that it can radiate down on the clan\nmembers when they relax after a hard day of old crone taunting. A fact\nthat cause some to believe it is not magic after all, but just a piece\nvery high consentrated essence of 'wicked'."
+        },
+        {
+          "Keywords": [
+            "true",
+            "magic"
+          ],
+          "Description": "\n              Brought to you courtesy of #BGlob Inc.#N\n\n(Binding magic that way could not been accomplished by someone else.)"
+        },
+        {
+          "Keywords": [
+            "picture",
+            "portrait",
+            "pictures",
+            "portraits"
+          ],
+          "Description": "\n Some of the main contributors to the creation of the clan and the\nclanhouse has their pics here. The current pictures show the faces off\nKidd, Egba Glob, DJMC, SadSam, Eladamri and Beleg."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27703,
+      "Name": "The Soup Kitchen",
+      "Description": "\n   You enter what appears to be an anbandon warehouse, you realise, you\nfound the Ni's Soup Kitchen. You see stockpiles of slighty used\nequipment ranging in levels, styles and types. There are several\nclannies roaming through the stuff, looking for that particular jem to\ntheir collection, that missing piece, that would make there kit\ncomplete. So have a look about, see what you can use. All is at your\ndisposal. We just ask that you don't put stuff in there that one would\nconsider junk, you know what I mean that stuff that is just usless to\nall that would desire. These rules are also stated on a big sign on the\nrear wall.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27701,
+          "Description": "The Hall of Ni.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "Sign",
+            "rules",
+            "rear"
+          ],
+          "Description": "\n The sign of Rules reads as follows :\nDo not place junk here.\nDo not donate stuff from ON your field trips, bring it here and drop it.\nIf you find something worth equiping yourself with, drop the thingie you\n were wearing(unless its complete junk:) so that the younger clannies\n can get it.\nDo say Ni to everyone you see, every time. Ni.\nNever sell anything from the Soup Kitchen.\n (unless its junk and they are really stooopid)\nIf you have or find stuff that are too junky for this place that you\n still want to make available to the rest of the clan for a while drop\n them in the Old Crone Quarters."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27704,
+      "Name": "Herring Passage",
+      "Description": "\n   Again the strange crowned knight and a multitude of people\ngathering. There is a strange conversation going on:\n\nKing Arthur: Oh, Knights of Ni, we have brought you your shrubbery. May\n  we go now?\nKnights of \"Ni\" Leader: It is a good shrubbery. I like the laurels\n  particularly. But there is one small problem.\nKing Arthur: What is that?\nKnights of \"Ni\" Leader: We are now...no longer the Knights Who Say Ni.\nRandom Knight of \"Ni\" (thats us bringing chaos): Ni!\nKnights of \"Ni\" Leader: Shh shh. We are now the Knights Who Say Ecky-\n  ecky-ecky-ecky-pikang-zoom-boing-mumble-mumble.\nRandom Knight of \"Ni\"(ooops, we again:) : Ni!\nKnights of \"Ni\" Leader: Therefore, we must give you a test.\nKing Arthur: What is this test, Oh, Knights of...Knights who 'til\n  recently said \"Ni\"?\nKnights of \"Ni\" Leader: Firstly, you must find...another shrubbery!\nKing Arthur: Not another shrubbery!\nKnights of \"Ni\" Leader: Then, when you have found the shrubbery, you\n  must place it here beside this shrubbery, only slightly higher so you\n  get a two-level effect with a little path running down the middle.\nKnights of \"Ni\": A path! A path! Ni!\nKnights of \"Ni\" Leader: Then, when you have found the shrubbery, you\n  must cut down the mightiest tree in the forest with...a herring!",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27701,
+          "Description": " The Hall of Ni.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27705,
+          "Description": " The Ni Throne Room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27705,
+      "Name": "The Ni Throne Room.",
+      "Description": "\n   In a little clearing within the group of trees a mighty throne is set\nup for the Head of the #RKnights #Ywho say #GNi#N Clan. In this very room\na daily court is held where kinds of subjects are taken up for\ndiscussion. The topic range from 'How to spread the knowledge of the\ncorrect intonation of NI amongst the unbelievers' to 'Spanking 101' via\n'Optimum distance between two shrubberies to fit a path suitable for two\nKnights dragging a Old Crone behind them tied up in a rope made of\nraspberry twigs' and 'The current pricing of herrings'. The Clan leader\ndo have a real cumbersome duty, eased up only by the frequent uttering\nof the sacred words 'Ni Ni Ni'.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27706,
+          "Description": "The Old Crone Quarters.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27704,
+          "Description": " The Herring Passage.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27707,
+          "Description": " The Shrubbery Tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27708,
+          "Description": " The Forest of Mighty Trees (Bring your own herring!)",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27700,
+          "Description": " The den below smells of frog leftovers. Bleh !",
+          "Keywords": [
+            "bar",
+            "bars"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "throne"
+          ],
+          "Description": "\n The throne is huge, a necessity if one want to dangle ones leg over the\nedge of the throne seat. It is wooden and all black. Some small carvings\ncan be seen in the wood, apart from that there is no other decorations\npresent. Well a gigantic reindeer horn set is placed on top of the\nthrone spreading its pointy horns in all directions."
+        },
+        {
+          "Keywords": [
+            "horn",
+            "reindeer",
+            "set"
+          ],
+          "Description": "\n The multidirectional spreading of the horn edges show a clear influence\nin the current ruling and decitionmaking in the clan."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27706,
+      "Name": "Old Crone Mud Quarters",
+      "Description": "\n   Covered in mud you continue along the path watching an Old Crone\ntalking with a guy with a Crown on his head you listen in:\n\nKing Arthur: Old crone! Is there anywhere in this town where we could\n  buy a shrubbery?\nCrone: Who sent you?\nKing Arthur: The #RKnights #Ywho say #GNi#N.\nCrone: Agh! No! Never! We have no shrubberies here.\nKing Arthur: If you do not tell us where we can buy a\n  shrubbery, my friend and I will say...we will say...Ni!\nCrone: Agh! Do your worst!\nKing Arthur: Very well! If you will not assist us voluntarily... Ni!\n\nHaaaa... by the terrible sound of the very word Ni the Old Crone is\nterrified and runs away in a flash!!!",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27714,
+          "Description": " Vombats Collector Studio.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": -1,
+          "Description": " A room for a prominent Kniggit is about to be excavated from this wall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27705,
+          "Description": " The Ni Throne Room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27713,
+          "Description": " A room for the champion, Champion.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27707,
+      "Name": "Shrubbery Tunnel",
+      "Description": "\n   You find yourself in a very long Tunnel. A splendid tunnel filled\nwith... Shrubbery!\nShrubberies of all sizes and colours and on the floor deep green moss in\nwhich you quickly throw yourself into. Mmmm, nice...\nAnd from within the walls faint soothing voices chant:\n\"ni..ni..ni..ni...\".\nSoothing, relaxing...and you feel you could lay here forever...as long\nas you keep track on the white killer rabbit that is...After all, you\nare not very far from the very cave of Caer Bannog!",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27705,
+          "Description": " The Ni Throne Room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": -1,
+          "Description": " A room for a prominent Kniggit is about to be excavated from this wall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": -1,
+          "Description": " A room for a prominent Kniggit is about to be excavated from this wall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": -1,
+          "Description": " A room for a prominent Kniggit is about to be excavated from this wall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27708,
+      "Name": "Mighty Trees Forest",
+      "Description": "\n   As you walk along the path, you start to enter a great and very old\nforest, with trees so high and mighty you could get scared just by\nlooking at it. Suddenly you notice a huge stone with some carvings in\nit. Carvings well worth reading.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27705,
+          "Description": " The Ni Throne Room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27709,
+          "Description": "The Shrubbery Shrine.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "huge",
+            "stone",
+            "reading",
+            "readings",
+            "carving",
+            "carvings"
+          ],
+          "Description": "\nThe carvings read the following :\n\nKing Arthur: Who are you?\nKnights of \"Ni\" Leader: We are the knights who say...\"Ni\". Ni!\nNi! Ni!\nKing Arthur: No! Not the knights who say \"Ni\"!\nKnights of \"Ni\" Leader: The same.\nSir Bedevere: Who are these?\nKnights of \"Ni\" Leader: We are the keepers of the sacred words\nNi Peng and Ni Wom!\n(Echo): Ny Wom...\nKing Arthur: Those who here them seldom live to tell the tale.\nKnights of \"Ni\" Leader: The knights who say \"Ni\" demand a\nsacrifice!\nKing Arthur: Knights of \"Ni\", we are but simple travellers, who\nseek the enchanter who lives beyond these woods.\nKnights of \"Ni\" Leader: Ni! Ni!\nKnights of \"Ni\": Ni! Ni! Ni!\nKing Arthur, Sir Bedevere and their company: Ah! No! Aie! No!\nKnights of \"Ni\" Leader: We shall say \"´Ni\" again to you, if you\ndo not appease us.\nKing Arthur: Well, what is it you want?\nKnights of \"Ni\" Leader: We want...a shrubbery!\nKing Arthur: A what?\nKnights of \"Ni\": Ni! Ni! Ni! Ni!\nKing Arthur: Aah! No! No, please, please! No more! We will find\nyou a shrubbery.\nKnights of \"Ni\" Leader: You must return here with a shrubbery,\nor else you will never pass through these woods...alive.\nKing Arthur: Oh, Knights of Ni, you are just and fair. And we\nwill return here with a shrubbery.\nKnights of \"Ni\" Leader: One that looks nice!\nKing Arthur: Of course.\nKnights of \"Ni\" Leader: And not too expensive.\nKing Arthur: Yes!\nKnights of \"Ni\" Leader: Now...go!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27709,
+      "Name": "The Shrubbery Shrine",
+      "Description": "\n   The shrine of Shrubberies is fully devoted to the art of arranging\nshrubberies in perfect order so that the maximum effect can be reached\nwith a minimum of shrubberies. We all know that Shrubberies is very\nsought of all over the land as the availability is somewhat limited.\nEveryday new constellations can be found here as the Knights are very\nkeen on rearranging them to fit the task of the day.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27710,
+          "Description": " The Secret Order of Holy Shrubbery most secret hideout.",
+          "Keywords": [
+            "shrubbery",
+            "path"
+          ],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27708,
+          "Description": " A Foretst of Mighty Trees.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27712,
+          "Description": " Kidds Secret Hideout - Do not tell anyone...",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27710,
+      "Name": "Secret Order of Holy Shrubbery",
+      "Description": "\n   The bright and fantastic look of the walls of the room of the holy\norder makes you a bit dizzy, now you are feeling even more silly than\nthe usual. Around you gather the other members of this sacred and\nhermetic order, they also look pale,maybe they are on dope, who knows.\nYou never felt so strange, yet is sooooo good to be in the mud most\nsecret place!!! A old man comes forth, he tells you to move forward, he\nspeaks:\n\nStop! Who approaches the Bridge of Death must answer me these questions\nthree, 'ere the other side he see.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27709,
+          "Description": " The Shrubbery Shrine.",
+          "Keywords": [
+            "path",
+            "shrubbery"
+          ],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27711,
+          "Description": " On the other side of the Bridge of Death is The Grail !!!",
+          "Keywords": [
+            "Bridge",
+            "of",
+            "Death"
+          ],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 2236432,
+          "Description": "You Really answer the questions correctly ???\n   Lucky you to still be alive - and inside the Ni Clan House !",
+          "Keywords": [
+            "S\n#27711\n#YThe",
+            "Holy",
+            "Grail#N",
+            "!!!"
+          ],
+          "ExitFlags": [
+            "Locked",
+            "Broken"
+          ],
+          "KeyId": 786816
+        },
+        {
+          "Direction": "North",
+          "TargetId": -1,
+          "Description": "Knights might gather\nwhen they want to draft some new plans in privacy. Their long and very\ndangerous path finally led them to their ultimate goal.\n                      #RThe #YHoly #GGrail#N.\nNo mortal may ever enter this room as it most certainly would cause\ncertain death to those still unworthy.",
+          "Keywords": [
+            "277",
+            "uzd",
+            "1\nD1",
+            "Walk",
+            "out",
+            "into",
+            "the",
+            "realm",
+            "of",
+            "the",
+            "mortal",
+            "#RKnights",
+            "#Ywho",
+            "say",
+            "#GNi#N."
+          ],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27712,
+      "Name": "KIDDs Secret Hideout",
+      "Description": "\n   This room is more like a cave or hummm, a cavern maybe. It sure it a\ngood place to mud when you are alone. Kidd spent long memorable nights\nhere and you can see loads of memorabilia scattered around, like some\npictures from dear friends like Hath, Angulion, Egba, Therold, Icestorm\nand Demona.\nSome Monty Python movies lies dumped in the corner and a bed made\ndirectly on the floor, shows a bit KIDD tastes on sleeping.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27709,
+          "Description": " The shrubbery Shrine",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27713,
+      "Name": "#R CHAMPION#N OF THE #RKNIGHTS #YWHO SAY #GNI#N",
+      "Description": "\n   The room appears quite spartan. The only items adorning the walls is\na broadsword and a shield. There is also a table, chair, bed and closet.\nSparse accomodations for one such as Champion. Perhaps he likes it that\nway.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27706,
+          "Description": " The Old Crone Qaurters.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "broadsword",
+            "broad",
+            "sword"
+          ],
+          "Description": "\n This broadsword is huge! Obviously too large for any normal man. The\nhilt is wrapped in sharkskin for the perfect grip. A single sapphire the\nsize of an egg adorns the pommel. The silvery blades is etched with what\nappears to be magical symbols. When you look closer the blade appears to\nemit an ethereal flow. Better to not touch this weapon!"
+        },
+        {
+          "Keywords": [
+            "bed"
+          ],
+          "Description": "\n You see a normal ordinary bed. Looks to be quite uncomfortable really."
+        },
+        {
+          "Keywords": [
+            "table"
+          ],
+          "Description": "\n Your cursory examination show some letters which seem to be for someone\nnamed Demona."
+        },
+        {
+          "Keywords": [
+            "letter",
+            "letters"
+          ],
+          "Description": "\n Reading the letters you find thaty Champion seems to worship a lady\nwhose name is Demona. It seem, however, that clan affiliations have\ndoomed any real relationship."
+        },
+        {
+          "Keywords": [
+            "closet"
+          ],
+          "Description": "\n Opening the closet you find a complete set of plate armor. Shining\ngold, it is emblazoned with the insignia of the Knight of Ni."
+        },
+        {
+          "Keywords": [
+            "shield"
+          ],
+          "Description": "\n The shield seems to glow with a fire of it's own.The emblem of the\nKnight of Ni is burnished into it's surface. Looks dangerous! Better\nleave it alone."
+        },
+        {
+          "Keywords": [
+            "chair"
+          ],
+          "Description": "\n Just a chair. What?! Did you expect more?"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27714,
+      "Name": "#R Vombat#N Collector\u0092s Studio",
+      "Description": "\n   There are several shelves full of old and new books and albums. A big\ndesk in the middle of the room with a magnifying glass and some nippers\non it. It also seems to be full of very small pieces of paper. Stamps!!\nPlease, take caution upon your breathing!\nThis is a very quiet and very relaxing place, where Vombat usually spend\nhis time collecting stamps, searching for perfection on his beautiful\nthematic Ships Collection. This walls still echoing the word he said\nwhen he finally found a new rare specimen.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27706,
+          "Description": " The Old Crone Quarters.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "Stamp",
+            "Ship"
+          ],
+          "Description": "\n You see a stamp with an image of a fabulous sailing ship! If you want\nto see more of this, please ask Vombat and he shows you his secret\nexhibition, somewhere in the web space."
+        },
+        {
+          "Keywords": [
+            "Collection"
+          ],
+          "Description": "\n You see some albums full of complete stamp sets, arranged by sub-themes\nlike Sailing ships, Sport ships, Fishing Ships, War Ships ! If you\nreally want to see more, please ask Vombat and he shows you the place\nwhere he have his secret exhibition, somewhere in the web space."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 27701,
+      "Name": "pond rainbow water",
+      "ShortDescription": "\nA pond of #Rrainbow #Ycoloured #Gwater#N",
+      "Description": "\nA pond of #Rrainbow #Ycoloured #Gwater#N also contain some chilled beer.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoDonate",
+        "NoSweep"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pond",
+            "rainbow",
+            "water"
+          ],
+          "Description": "\nFilled of nice and cold water as well as a few floating, perfectly\nchilled sixpacks for the brave and thirsty #RKnights #Ywho say #GNi#N."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27702,
+      "Name": "Beer chilled sixpack",
+      "ShortDescription": "\na sixpack",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoDonate",
+        "NoSweep"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 1,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "Beer",
+            "chilled",
+            "sixpack"
+          ],
+          "Description": "\nMmmmm, Beer !!!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 46,
+      "Name": "shrubbery path kon",
+      "ShortDescription": "\nA beautiful shrubbery",
+      "Description": "\nA #Rcolourful #Ylittle #Gshrubbery#N, including path, open up westly.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27701,
+        13,
+        111,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shrubbery",
+            "path"
+          ],
+          "Description": "\nOne of the nicest shrubberies,  perfectly aligned with a small but\ndelicate path through it show you the way to the sacred grounds of the\n#RKnight #Ywho say #GNi#N (#Gni ni#N...) Clan."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 47,
+      "Name": "board bulletin wooden paper ni kon",
+      "ShortDescription": "\n#RKnights #Ywho say #GNi#N Clan board",
+      "Description": "\nA wooden board have a huge amount of pieces of paper nailed to it.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

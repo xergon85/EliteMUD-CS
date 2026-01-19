@@ -1,0 +1,3041 @@
+{
+  "Zone": {
+    "Id": 280,
+    "Name": "Clans DoP",
+    "TopRoomId": 28098,
+    "Lifespan": 20,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 28000,
+        "Arg2": 1,
+        "Arg3": 28015,
+        "Comment": "Shopkeeper"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28008,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "Bota"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28009,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "Fly potion"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28010,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "Detect invis potion"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28011,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "ID scroll"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28012,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "Forget me not"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28013,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "Clanrecall"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28014,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "food"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28016,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "vorp potion (retelzin)"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28017,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "heal potion (astrologer)"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3034,
+        "Arg2": 100,
+        "Arg3": 28015,
+        "Comment": "ATM"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28000,
+        "Arg2": 100,
+        "Arg3": 28011,
+        "Comment": "Board"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28001,
+        "Arg2": 100,
+        "Arg3": 28012,
+        "Comment": "Xen and Fists board"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28003,
+        "Arg2": 100,
+        "Arg3": 28013,
+        "Comment": "Lemonade fountain"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28004,
+        "Arg2": 100,
+        "Arg3": 28000,
+        "Comment": "Clanhouse Blocker"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28005,
+        "Arg2": 100,
+        "Arg3": 28002,
+        "Comment": "Locker"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28002,
+        "Arg2": 100,
+        "Arg3": 28002,
+        "Comment": "Milk fountain"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28006,
+        "Arg2": 100,
+        "Arg3": 28012,
+        "Comment": "Second Blocker"
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28001,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28010,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28002,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28002,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28005,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28005,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28005,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28005,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28020,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28021,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28032,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28033,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28004,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28004,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28004,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28007,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28006,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28007,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28022,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28023,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28031,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28028,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28029,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28009,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28009,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28009,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28024,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28025,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28008,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28008,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28008,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28018,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28019,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 28034,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 28000,
+      "Name": "#MThe Gates of Zia#N",
+      "Description": "\n   Awe is what you feel, standing in front of these truly gigantic \ngates, which burn perpetually, keeping those not of Phos from entering \nour sacred refuge. The burning spires tower high above you, seeming to \nsinge the clouds and reach for the sun in their marvelous grandeur. \nAmazingly, the spectacular gates are only the beginning of the wonders \nthat await you when you enter our sacred fold.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3060,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28001,
+      "Name": "#MDen of the Eclipse#N",
+      "Description": "\n   The first thing that catches your eye as you enter this immense \ndining room for the followers of Phos is a monstrous marble dining \ntable. Each of our esteemed brothers and sisters claims a seat, where \nwe discuss our exploits and drink wine until Phos shines upon us once \nagain. Richly dark oak pillars stand around the table, and huge fires \nremind us of our Lord when he is away blessing others. A #Ygolden \n#Yplaque#N hangs on the eastern wall. Thick rugs and furs invite you \nto remove your heavy boots and sit for a spell, and talk amongst \nyourselves.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28011,
+          "Description": "#MThe Library#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28000,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28015,
+          "Description": "#MThe Store#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28010,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "golden",
+            "plaque"
+          ],
+          "Description": "\n#yThe Founding Members of #MDragoons #wof #CPhos#N\nIx, Kurrelgyre, Ambryl, Purr, Chani, Tsunami, Wick, Hylar, \nKieriay, Colosul, Aynjul, Jura, Rage, Ragnar, Nermal, Garf, \nProphator, Redfang, Snarf\n#yMay the Sun shine upon you wherever you may go.#N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28002,
+      "Name": "#MPhos' High Altar#N",
+      "Description": "\n   This dedication to our god, Phos, is an immense room with a dome made \nof stained glass. The entire room is golden with the light of our \nbeloved Lord of the Sun. Even at night, the room still emanates a warm \nglow, a gift given to his chosen ones by our benevolent Lord. The walls \nglitter with elaborate tapestries of silk, glittering weapons, and \ngilded icons showing our faith. A very warm feeling of replenishment \nflows through your veins as you stand here, for the light from above \ninvigorates your weary body. Rest here and Phos will watch over you. \nThere is also anther #MShelf #wof #CPhos#N here where we can put items \nthat might help you but are not worth enter the #MDragoon Trove#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28004,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28005,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28008,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28003,
+      "Name": "#MDragoon Trove#N",
+      "Description": "\n   In this room, our brethren leave important items for communal use. \nThere is also a #MShelf #wof #CPhos#N where you can place items you find \nyou cant drop. Take what you wish, but try to return it once no more \ncan be gleaned from it. Another dragoon may find use of it, and the \nfavor shall come back to you.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 28001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28012,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28004,
+      "Name": "#MBurning Den#N",
+      "Description": "\n   Warmth encompasses your body as you enter the den. A hearth heats the \nentire room, and fire pits lie spitting and hissing in the Four Corners \nof the room. Two enormous couches sit facing each other, large enough \nto accommodate all the Dragoons and then some. A thick slab of redwood \nserves as a table and a footrest, and engraved mugs of pewter lie \nscattered and empty. While the dining room serves the more serious and \nformal matters, this room is designed purely for comfort. This is also \nwhere the Dragoons hone their battle skills, so as not forget the reason \nthey banded together. They will always remain exceptional warriors.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "PkOk",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28006,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28007,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28009,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28005,
+      "Name": "#MA Phos Hallway#N",
+      "Description": "\n   This is a long hallway that expands to the east. From this hallway \nyou can get to many different rooms of the #MDragoon's#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28020,
+          "Description": "#MKeldron's Swinging Pad#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28032,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28021,
+          "Description": "#MHarlan's Conservatory#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28002,
+          "Description": "#MPhos' High Altar#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28034,
+          "Description": "#MThe #cSizzling #MChamber#N",
+          "Keywords": [
+            "door",
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28006,
+      "Name": "#MSith's Shrine Of '#RCore#N",
+      "Description": "\n   As you enter this room, you get the inexplicable urge to Skank. And \nin the background you notice a feverish, up-beat guitar, a melodic, and \nmoving baseline which is amplified in effect by a set of horns \n(Trombone, and alto and Bari sax), a throbbing drumbeat, that all \nintertwine behind a blaring set of vocal chords, screaming the anthem \n\"We're not gonna take it!\" After finally getting adjusted to the music \nof the room, you notice the shape of this \"room\", it is round, with no \ncorners and one visible face that surrounds and encompasses the viewer \nwith a #Rmural#N painted onto this surface, the floor is of hard wood \nand slanted at various angles to give a mesmerizing effect if one were \nto stare at it for too long. Along this wall above the mural are many \nvarious guitars, with a white Yamaha bass as the centerpiece to them \nall. Along the side opposite the door is a stack of speakers resembling \nan amplifier of some sort, the section of floor under this area is \nraised to be a bit higher than that of the rest of the room. To the \nnear side of the room are a couple of chairs and couches, with a bed \nresting on two red trunks on the area to the right, just before the \nstage.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28004,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mural"
+          ],
+          "Description": "\nThis mural depicts 4 men. The first one an older man with a blonde \nreceding hairline, he has a big nose and an awkward grin on his face, \nas if he has just done something wrong. The second man is much shorter \nthan the first and is wearing allot of necklaces and bracelets. In his \nright hand he holds a paints brush still dripping with red paint. The \nthird man is slightly taller than the second, he is very thin and looks \nabout as old as the second (but in all reality is not), on his head he \nwears a hat that bears an iron cross on the backside (since he is \nwearing it backwards, that is the side facing), on his right hand in a \nwatch, and in the hand is a piece of glass. The fourth and final man is \nthe same height as the third, although this man carries a much larger \nand muscular build. He wears a pair of china blue shoes, and on his face \nare the thickest pair of glasses you have ever seen in your life. \nAttached to his shirt in some fashion is some sort of watch, it \nresembles a grandfather clock's face only smaller. The four men look \nconfident and indomitable. As you continue to stare at the painting, the \npicture shifts and the men's appearances change, all the while under \nclose scrutiny, one can notice other shapes fall in behind the four men, \nsome ever seem to stand along side the four. But the only real \nnoticeable difference is that the second man seems to have a dark shadow \nover him, and all that look upon this know something has gone awry. The \nonly signature to be found on the painting is that of and \"S\" with two \nvertical lines running through it."
+        },
+        {
+          "Keywords": [
+            "bass",
+            "yamaha"
+          ],
+          "Description": "\nThis is a standard issue white Yamaha bass model kpx250 along the neck \nis written the words \"#Rfor Stan#N\"."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28007,
+      "Name": "#MA Phos  Hallway#N",
+      "Description": "\n   This is a long hallway that expands to the east. From this hallway \nyou can get to many different rooms of the #MDragoon's#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28022,
+          "Description": "#wMinas #gLus#yi#rtania#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28031,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28023,
+          "Description": "#MSamas' #NSecret #CPalace#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28004,
+          "Description": "#MBurning Den#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28008,
+      "Name": "#MThe Hall of Rememberence#N",
+      "Description": "\n   As you step into this room you get the feeling that things here are \ncalmer, more peaceful then in the hustle and bustle of the normal rooms. \nAs you peer around you see that this hallway leads to the rooms of our \nlong departed but honored #MPhos#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28018,
+          "Description": "#MAynjul's Playroom#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28002,
+          "Description": "#MPhos' High Altar#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28019,
+          "Description": "#MGarf and Ragnar's Room#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28009,
+      "Name": "#MA Phos  Hallway#N",
+      "Description": "\n   This is a long hallway that expands to the west. From this hallway \nyou can get to many different rooms of the #MDragoon's#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28024,
+          "Description": "#MWab#No's D#Cojo#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28004,
+          "Description": "#MBurning Den#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28025,
+          "Description": "#rPuma#e'#rs#e and #rDemonic#e'#rs #rA#ercane #rS#eanctuary#",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28030,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28010,
+      "Name": "#MThe Hall of Gods#N",
+      "Description": "\n   Amongst these sacred halls lay the rooms of Gods both past and\npresent who were either members of #MD#wo#CP#N or held by the clan in high\nregards for their wisdom and advice. #MD#wo#CP#N salutes and remembers those who\ngave unselfishly if their time and energy to create and rule in this\nland we call #bElitemud#N!",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 1271,
+          "Description": "#MChani's Sylvan Paradise#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 1242,
+          "Description": "#Mdroggs Room#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28017,
+          "Description": "Ix's Humble Abode",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 1229,
+          "Description": "#rLink's Realm#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28016,
+          "Description": "#MThrone of the Eclipse Lord#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28001,
+          "Description": "#MDen of the Eclipse#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28011,
+      "Name": "#MThe Library#N",
+      "Description": "\n   As you walk in this great room you realize that this is where the \n#MDragoon#e'#Ms#N come to read the important information being passed down from \nmember to member. As you stand in the center you get the feeling that \nthere is something different about this room. Its not just that huge \nwriting board in the center that #MPhos#N use to pass on information. \nYou walk to the center of the room and look up and see a huge \n#Cskylight#N that allows the sun and moon alike to let their rays of \nlight into this great hall. Just as you are about to leave this room \nit finally comes to you what is so different about this place. This \nroom is devoid of any sound.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep",
+        "NoDrop"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28001,
+          "Description": "#MDen of the Eclipse#N",
+          "Keywords": [
+            "door",
+            "den"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skylight"
+          ],
+          "Description": "\nAs you look up you gaze in awe at the beauty of the skylight directly \nabove you. 20 feet in diameter, this giant dome fills the room with the \nglory of the #yday#N and the beauty of the #Bnight#N. It seems to you \nthat there is nothing between you and the #bsky#N above."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28012,
+      "Name": "#MThe Waiting Room#N",
+      "Description": "\n   As you descend from the #MDragoon Trove#N you realize at once that\nthis isn't an ordinary room. You get the impression that your being\nwatched by more then #gMercedes#N the secretary at the center of the room.\nYou quickly scan the room and see a door to the #Gnorth#N and #Rsouth#N.\nEach door has a name over it. There are also quite a few #Bpictures of\nbeautiful naked women#N on the walls in addition to a #Cstatue#N in the\nnorth corner of the room. Strangely enough there are #Mchairs#N on the\nWest Side of the room. As you attempt to step towards one of the doors\nthe secretary blocks your way and points to the south corner of the of\nthe room where there is a #Csign#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoDrop"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 28003,
+          "Description": "#MDragoon Trove#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 28013,
+          "Description": "#RDa #BFuzzy #YOne #C, High Lord of #G(HEMP)'s #C Room#N",
+          "Keywords": [
+            "door",
+            "fuzzy",
+            "lord",
+            "high",
+            "HEMP"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28014,
+          "Description": "#MFistandantilus Room of Honor#N",
+          "Keywords": [
+            "door",
+            "fistandantilus"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 131209,
+          "Description": "have an appointment, you will just have \nto sit and wait.",
+          "Keywords": [
+            "S\n#28013\n#RDa",
+            "#BFuzzy",
+            "#YOne",
+            "#C,",
+            "High",
+            "Lord",
+            "of",
+            "#G(HEMP)",
+            "#COutdoors",
+            "Indoors#N"
+          ],
+          "ExitFlags": [
+            "Locked"
+          ],
+          "KeyId": 262400
+        },
+        {
+          "Direction": "North",
+          "TargetId": -1,
+          "Description": "the heat of the day, \nor when da Wolf seeks #Bnight#N, the glass ceiling darkens until the \nroom has the comfort of a shaded spot in a deep #Gforest#N or a cave \nburied in the face of a mountain. The roof slants gradually from its \npeak 20 feet up the side of the tree to a bare 8 inches from the thick \ndark green moss, which cushions the floor. A very fine screen forms \nthe short remaining wall. The mesh seems to disappear when you attempt \nto look closely at it. A bubbling stream fills the pond at the center \nof the room, and the force of the water forms a small magical \n#Bfountain#N that seems to be altered.",
+          "Keywords": [
+            "280",
+            "dtuz",
+            "0\nD2"
+          ],
+          "ExitFlags": [
+            "ResetClosed"
+          ],
+          "KeyId": 1
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "picture",
+            "women"
+          ],
+          "Description": "\nAshlyn's measurements are 34C-22-33 and five foot-three inches tall, \nwith shapely legs, a beautifully round ass and breasts that are enticing \nmounds of flesh standing erect. Ashlyn is simply stunning."
+        },
+        {
+          "Keywords": [
+            "naked",
+            "beautiful"
+          ],
+          "Description": "\nBriana is a beautiful blonde, wild, who seems born to be a model. She \nhas a 34DD-26-30 figure and long, blonde hair."
+        },
+        {
+          "Keywords": [
+            "chair",
+            "chairs"
+          ],
+          "Description": "\nAs you check out these comfortable leather chairs you realize that you \nmay have a long wait before you gain entry into XeNos's and Fistandantilus\nrooms."
+        },
+        {
+          "Keywords": [
+            "Statue!"
+          ],
+          "Description": "\nThis is a statue of Kaitlyn our most precious prize. This buxom blonde \nstatue is a long legged seducer that boasts a stellar 34D-24-35 figure \nat 5'5''."
+        },
+        {
+          "Keywords": [
+            "redwood",
+            "tree",
+            "forest"
+          ],
+          "Description": "\nReally some fabulous trees, a holdout from the Cretaceous or Pleistocene \nprehistoric time. The Redwood is the world's tallest known tree and one \nof the world's oldest trees. This tree, is nine hundred years old, \nstands 360 feet tall and has a diameter of 15 feet. Redwoods are named \nfor the color of their bark and heartwood. The high tannin content of \nthe wood gives the trees remarkable resistance to fungus diseases and \ninsect infestations. The thick, fibrous bark has an even higher tannin \ncontent, and insulates them from the periodic fires which have occurred \nnaturally down through the centuries. This immense tree has delicate \nfoliage. Narrow, sharp-pointed needles only one-half to three-quarters \nof an inch long grow flat along their stems, forming feathery sprays. \nThe cones are about an inch long and each cone contains fourteen to \ntwenty-four tiny seeds"
+        },
+        {
+          "Keywords": [
+            "ratton",
+            "basket",
+            "chair",
+            "chairs"
+          ],
+          "Description": "\nAs you look at the ratton basket chairs you see it's made of wicker with \nvery thick reeds instead of thin ones and is almost enclosed on three \nsides."
+        },
+        {
+          "Keywords": [
+            "night"
+          ],
+          "Description": "\nAs you look up into the night you see a vivid display. The night shines \nwith the light of the moon and the stars. It is indeed a beautiful site."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28014,
+      "Name": "#MFistandantilus Room of Honor#N",
+      "Description": "\n   In this room full of pillage and plunder #MD#wo#CP#N honors one of their own.\nThe wonderfully awesome spectacular Fistandantilus whose aliases have \nbeen known to include Darklord, Hawkeye... and the list goes on and on.\nThis fearless warrior will wipe out entire zones of monsters without\neven blinking an eye. This is where he plans out his mass killing sprees\nso that the they can be executed to perfection since nothing less than\nperfection will do. Just take a look around the room and admire and\nlook in awe of at all of his trophies and prizes. The one we know as\nFistandantilus is an admired #MD#wo#CP#N Council member.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28012,
+          "Description": "#RThe Waiting Room#N",
+          "Keywords": [
+            "door",
+            "waiting"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28015,
+      "Name": "#MThe Store#N",
+      "Description": "\n   This is where all #MPhos#N come to do their business. As you can see \nyou can buy things from the nice merchant. In addition you can do \nbanking in case you have too much or too little cash on hand. As you \nlook around you notice a small sign on the wall.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep",
+        "NoDrop"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28001,
+          "Description": "#MDen of the Eclipse#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThis is a place of business. I will not tolerate any violence or \nstealing in my shop. Violators will be punished to the full extent of \nthe law!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28016,
+      "Name": "#MThrone of the Eclipse Lord#N",
+      "Description": "\n   Closest to Phos is Kurrelgyre, Lord of the Eclipse, and co-founder of \nour wondrous clan. His gilded throne sits here, lined with plush satin \ncushions and endowed with a regal glow. A spire of light illuminates the \ncenter of the room, piercing through a round window cut from diamond and \nplaced directly above the throne. This serves as a constant reminder of \nKurrelgyre's Lord, and his dedication to the #MDragoons #wof#C Phos#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 28010,
+          "Description": "#MThe Hall of Gods#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "throne"
+          ],
+          "Description": "\nAs you examine the throne more closely, the glare seems to subside and \nyou see small, ornate etchings. Reading them more closely, you see the \nnames of the mercenaries who embrace Phos."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28017,
+      "Name": "#MIx's Humble Abode#N",
+      "Description": "\n   You are standing in a small, but ever expanding room. On the walls, \nyou see great artwork, which was obviously stolen from art galleries \naround the world. The room is very cozy and you feel right at home.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28010,
+          "Description": "#MThe Hall of Gods#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28018,
+      "Name": "#MAynjul's Playroom#N",
+      "Description": "\n   You have entered a room that appears to be completely white. Upon \ncloser inspection, you realize that you are surrounded on all sides by \nwalls made of moving clouds. The white, fluffy clouds and cool, blowing \nbreeze in this room give it a peaceful and relaxing feel. As you turn \naround to get a better look at the rest of the room, you notice a black \nkitten sitting on top of a smaller, stationary cloud just above your \nhead looking down ready to pounce!",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28008,
+          "Description": "#MThe Hall of Rememberence#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28019,
+      "Name": "#MGarf and Ragnar's Room#N",
+      "Description": "\n   This is a not so small room for two people. It has the standard \nequipment; two desks, two closets, a weapons rack and of course a finely \ncarved four-poster canopy bed. The heavy oak desk obviously belongs to \nRagnar as there is an axe holding down a sheet of paper. The other \nlighter desk just has to belong to Garf. The weapons rack has the \nstandard tools of the trade locked up in it; a couple of swords, an axe \nor two, and of course a bow with a quiver of arrows A sign at the door \nsays: \"Wipe Your Feet the rug costs money\"",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28008,
+          "Description": "#MThe Hall of Rememberence#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28020,
+      "Name": "#MKeldron's Swinging Pad#N",
+      "Description": "\n   As you walk into this room the eerie glow of 30 lava lamps surrounds \nyou. You smell a faint trace of reefer and notice the bright colors on \nthe walls. Over the door hangs a sign proclaiming #r\"FREE LOVE MAN!\" #N\nThere is a bean bag chair in the corner and a large flower shaped carpet \nin the middle of the room. The resident has posted several Woodstock \nposters on the wall and there is a stack of records up to waist level \nin the corner. You decide to take a seat and the lights dim and a Jimmy \nHendrix record begins playing. \"Hmm...\" you think to yourself, \"what a \nswinging pad.\"",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28005,
+          "Description": "#MA Phos  Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28021,
+      "Name": "#MHarlan's Conservatory#N",
+      "Description": "\n   You have entered a place of learning and growth. In this room, Harlan \nstudies and cultivates the art of creating music. In the center of the \nroom, you see a beautiful #rpiano#N, superbly crafted from ebony. There \nare various other musical instruments surrounding it. Along the west \nwall, many large bookcases made of a dark wood stretch toward the \nceiling, filled with stacks of handwritten scores. As your eyes follow \nthe them upward, you see several large skylights that allow the sultry \nglow of dusk to saturate the room. In the southern stretch of the room, \nyou see a huge #bbed#N adorned in fine silk. Beside it is a small \nwooden table. Looking to the north, you see a small area of the floor \ncrowded with overstuffed beanbag chairs. It looks like a nice place to \nrelax for a while. There are many #gplants#N striving in stone pots all \naround it. You feel a sense of peace and healing here.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28005,
+          "Description": "#MA Phos  Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "piano"
+          ],
+          "Description": "\nIt is a fine instrument, unlike any you have seen. The whole piano seems \nto quietly emanate the emotion that has been poured into it. Its lid is \npropped open, revealing the work of a master craftsman. The is a small \nengraving in the sound board that reads: \"Without music, life would be a \nmistake.\" - Nietzsche"
+        },
+        {
+          "Keywords": [
+            "bed"
+          ],
+          "Description": "\nThe bed is large and round, about ten feet across. The sheets, a cobalt \npool of silk, are in disarray. There are pillows strewn about the bed \nand the floor around it. The scent of a woman lingers in the air here."
+        },
+        {
+          "Keywords": [
+            "plant",
+            "plants"
+          ],
+          "Description": "\nThe plants appear to be a fine strain of cannabis sativa. \nThey are robust and fragrant."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28022,
+      "Name": "#wMinas #gLus#yi#rtania#N",
+      "Description": "\n   You feel a sense of quietness as you enter this room. A dim light \ncomes from the walls and a soft tone fills the place. Lying on the \nfloor you find a #bbagpipe#N and a #brecorder#N among other musical \ninstruments. On a desk some unfinished music scores wait the \ninspiration of their creator. At the other end some rather #Mqueer \nshelves#N keep #bbooks#N and #bscrolls#N of all sizes and for all \nocasions just next to bottles containing liquids of bizarre colours \nand smells. On a heavy table rests a wizard hat and a wand seeming to \nmove with own life. Levitating over a shiny mirror there is a \n#Mplaque#N reading in some weird language.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28007,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plaque"
+          ],
+          "Description": "  \n           #M| x x x x x x x x x x x x x x x x x |\n           |x o o o o o o o o o o o o o o o o x|\n           | o x x x x x x x x x x x x x x x o |\n           |x x|                           |x x|\n           | o |                           | o |\n           |x x|  #yREQUALIFICAR E' LINDO!   #M|x x|\n           | o |                           | o |\n           |x x|                           |x x|\n           | o x x x x x x x x x x x x x x x o |\n           |x o o o o o o o o o o o o o o o o x|\n           | x x x x x x x x x x x x x x x x x |"
+        },
+        {
+          "Keywords": [
+            "shelf",
+            "shelves"
+          ],
+          "Description": "\n#MAvariel #CPrivate #NLibrary\nTacking a fast look the shelves you see large books, small books, \nweird books with wood covers, elegant books with fine worked leather \ncovers, scrolls with strange symbols, bottles filled with exotic \nfluids, multiple flasks containing arcane ingredients. You try to get \none book out, but when you touch it you feel a pain in the soul that \nforce you to drop it. A voice in you head warns you that you're not \nallowed to take that book. You take another look trying to find \nsomething without a protective aura and your eyes stop in one name \nthat you recognize. In one of the books you read '#MThe book of \nShadows#N by #bAvariel the Warmage#N'. This must be the famous \nlibrary of the migthy wizard."
+        },
+        {
+          "Keywords": [
+            "book"
+          ],
+          "Description": "\nThe #MBook #Cof #NShadows by #MAvariel the Warmage#N\nYou see a large book with letters and magic symbols of gold and a \npurple silk cover. The book of shadows is more then a spell book, is \nthe diary of the wizards progress in the art of magic, were he \nregister his thoughs, his visions and his spells. The book is the \nWarmage greater treasure and this one is protected with several\nspells that gives it a strange aura of many colours, a aura that keep \nthe nosy folks away."
+        },
+        {
+          "Keywords": [
+            "bagpipe"
+          ],
+          "Description": "\nThe #MBagpipe #Cof #NWarsongs\nThe #bbagpipe#N is decorated by a symbol in silver blue from an \nancient celtic village. It looks as if music comes from it calling \nyou to battle. #CGood luck to your quest!#N"
+        },
+        {
+          "Keywords": [
+            "recorder"
+          ],
+          "Description": "\n#MPalantir#C's #Nrecorder\nThis #rrecorder#N appears to be very precious indeed to its owner. It \nis as shiny as if it was polished today and it is placed on soft red \nsilk. Picking it up and blowing a tune you hear the rumble of a \nthousand warrior coming to help you."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28023,
+      "Name": "#MSamas' #NSecret #CPalace#N",
+      "Description": "\n   As enter you notice two haunting golden #Cknights#N on each side of \nthe platinum door. You begin to question your existence in such a room \nand start to quiver. However, you begin to hear an inviting chant coming \nfrom the slaved #Cmonks#N in the corner of the palace. Further in \ntapestries align the walls in a soothing manner. You no longer feel \napprehension of being lost. You begin to wonder what type of wealth can \npurchase and decorate a room with such soothing discipline. Samas is a \nman of power, deception, and care for his fellow clannies. However, you \nwill begin to notice in your stay that there is no expectance of his \nreturn. A journeyman and nomad, Samas rarely is present in his own \npalace. To the contrary, he has filled this room with gold, herbs, and \nriches to express his wealth and share it with other #MD#wo#CP#N members. You \nnow figure that after staying in such wealth for a few hours, it is time \nto leave. You take one last sniff of power and exterminate your \nexistence. Wait... what was that? Who was watching you gazing the riches? \nYou run out more quickly than you entered.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28007,
+          "Description": "#MA Phos  Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "knight",
+            "knights",
+            "golden"
+          ],
+          "Description": "\nThe knight statues, made of the purest gold, diamonds, and platinum, are \ncreated after darkest days of Elite. Built much like the guardians of \nthe ancient Elite Clan, these enormous statues can scare even the second \ntoughest warrior of Elite. The only fighter not tainted by their evil \nlooks is the owner of this room, Samas. The great sculptor, Michelangelo \nis the artist of these two massive golden pieces. Their value is \npriceless and the shear wonder of how Samas could purchase one, let \nalone two, is an unknown myth."
+        },
+        {
+          "Keywords": [
+            "monk",
+            "monks",
+            "slaved"
+          ],
+          "Description": "\nHailing from the most secluded mountains of Tibet, these ancient \nBuddhist monks are skilled in the art of muteness and chanting. They all \nhave ridded of material needs which makes their presence in this room \nof wealth a wonder in itself. The average value of a monk on the slave \nmarket is nearly 50m, but as you well know, this is pocket change to the \ngreat and powerful"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28024,
+      "Name": "#MWab#No's D#Cojo#N",
+      "Description": "\n   When you walk in to the #CDojo#N you see Wabo in his #wwhite#N \njudogi. And you notice that he knows exactly what to do on the \n#gtatami#N. Wabo looks at you and tells you 'Hey come on join the \nfun!' and #ySmiles#N next to the #gtatami#N you see a table with \na #bTV#N on it, and in front of the table you see a #rBIG#N fluffy \n#mBED#N and in the corner a Pool table. What a nice place to \n#CRELAX#N in.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28009,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28025,
+      "Name": "#rPuma#e'#rs#e #rA#ercane #rS#eanctuary#N",
+      "Description": "\n   This magical room is filled with thin #egrey#N mist. The walls are \ncovered in ancient #yglowing#N #Crunes#N, and there is a round #eblack#N \ntable in the middle of the room, filled with different #Gscrolls#N and \n#Mpotions#N. Then you feel like you are being watched, when you turn \naround you see a little #bImp#N looking up at you. Then you realize that \nthere are #rmages#N living here, when you sit down you feel a #Rwarm \n#Gfeeling#N flow though you, and you feel #Bsafe#N here",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28009,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "imp"
+          ],
+          "Description": "\nThis little Imp is like all other Imps, short, annoying and loyal to his \nMage. He looks at you, examining you equipment."
+        },
+        {
+          "Keywords": [
+            "runes"
+          ],
+          "Description": "\nThese strange Runes glow with a #rred#N light, they are from an ancient \norder of mages. They seem to heal your wounds quicker."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28026,
+      "Name": "#CHigh #Ntower #Mroom#N",
+      "Description": "\n   This is where the mighty dweomer master #CGlobal #Nspends his time\nwhen he doesn't level or is helping other clan members. In his room he\nhas a lot of books witch contain magic formulas and the history of other\nmasters and the history of other clans. There is many other stuffs in his\ntower room too, he has a small bed where he sleeps and at the wall there\nis a large chest with his clothes. At the right side of the window there\nis a big fire barrel witch he can use to see great distances. There is 4\nstatues in here, one of the Greatest Dweomer master Nevyn, the wise elf\nDallandra, Aderyn when he is in his owl shape ready to take off and Jill´s\nmost loved warrior Rhodry. And on the left side on the wall beside the\nwindow there is a picture of the dragon Arzosah Sothy Lorezohaz.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28030,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chest"
+          ],
+          "Description": "\nYou look at a chest on the floor witch contains all the stuffs that \nGlobal has been collecting under all these years. In the chest you\nsee a many herbs and clothes, even some weapons is lying in the \nchest."
+        },
+        {
+          "Keywords": [
+            "nevyn"
+          ],
+          "Description": "\nHere stands Nevyn a great dweomer master, he is holding his staff and \nhe is wearing a large coat."
+        },
+        {
+          "Keywords": [
+            "dallandra"
+          ],
+          "Description": "\nHere is one of the mighty elven dweomer master named Dallandra, she was\nAderyns husband before got contact with the Guardians witch took her to\ntheir world where the time passed much slower then in the land that\nAderyn lives in. She is wearing a coat and backpack, and she is sitting\non a horse."
+        },
+        {
+          "Keywords": [
+            "rhodry"
+          ],
+          "Description": "\nYou want to #rscream#N when you see him in this mood, hes is ready for\na fight and he is already berzerking, with his laugh you just want to\nflee far away from him."
+        },
+        {
+          "Keywords": [
+            "arzosah",
+            "sothy",
+            "lorezohaz:"
+          ],
+          "Description": "\nArzosah is a huge black dragon who lives far up in the mountains among\nthe volcanos, so she can keep warm all the long winter. The only one\nthat can control her is the one who has the #wsilverring#N. And the one\nwho has it now is Rhordry."
+        },
+        {
+          "Keywords": [
+            "aderyn"
+          ],
+          "Description": "\nHe is a kind of strange elf, because he looks like an owl. But he is just\nas mighty as all the other Dweomer masters."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28027,
+      "Name": "#MAdara's abode#N",
+      "Description": "\n   As you walk in this room you immediately smell the #mevocative#N\nfragrance of the perfume Adara wears. The apparent source seems to be a\n#rrose#N lying on the farthest wall. The wallpaper of the room is pink and\nspeckled with flowers. There is a marble statue of #MPhos#N in a corner\nsurrounded by perpetually burning candles. Adara's #Ycomfy bed#N is in the\ncenter of the room with her clothes spread all over it. There is also a\nportrait of Adara's true love, that #Cmagically#N changes when her heart\nchanges. A small #egrey#N kitten with #gbright eyes#N leaps toward you.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28030,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "grey",
+            "kitten",
+            "bright",
+            "eyes"
+          ],
+          "Description": "\nThis is an elegant #egrey#N kitten with #gbright eyes#N and black\nstripes down his sides with one long magnificent black stripe from the\ntip of his tail to the top of his head. You can't help but to draw in a\nbreath and just take in this magnificent creature, its somehow #Cmagical#N."
+        },
+        {
+          "Keywords": [
+            "rose",
+            "red"
+          ],
+          "Description": "\nAs you gaze upon this rose, the redness of the petals enchants you and\ndraws you into it and fills you with its scent which causes you to smile\nand feel loved."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28028,
+      "Name": "#MRoom of Gilian#N",
+      "Description": "\n   This is not a big room, it looks like a trophy room or something like \nthat. On the North wall you see a lot of heads hanging. Mostly orcs \n(from Moria), but there I also saw other evil creatures hanging there. \nYou see a sign that says \"Balrog\". But the balrog doesn't seem to be \nthere. On the East wall there is lots of equipment (also from Moria) \nhanging, nothing interesting. On the right side of the door you see \nthree stuffed horses. When you look at the first one you see that it is \na brown colored, fat horse (it looks very lazy). The second is also \nbrown, but this one looks underfed, not very nice. When you take a \ncloser look on the third horse you see a very muscular white colored \nhorse. A very fine horse (it looks like a fake). On the West Side of \nthe room you see a very large, blue and white colored bed. Beside it \nlies a #Mnote#N. On the bed you see a small note.\nAbove the bed is a big #Mpainting #wof four #Cbards#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28031,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "note"
+          ],
+          "Description": "\nThis is my Hästens bed and it was very expensive so do not touch!"
+        },
+        {
+          "Keywords": [
+            "painting",
+            "four",
+            "bards"
+          ],
+          "Description": "\nThe four bards are Hansi Kursh, Andre Olbrich, Markus Siepen and Thomen \nStauch. These four bards have wandered together in a very long time. \nThey call themselves The Blind Guardians."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28029,
+      "Name": "Title (free room)",
+      "Description": "\nDescription",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28030,
+      "Name": "#MA Phos Hallway#N",
+      "Description": "\n   This is a long hallway that expands to the east. From this hallway \nyou can get to many different rooms of the #MDragoon's#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28026,
+          "Description": "#CHigh #Ntower #Mroom#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28009,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28027,
+          "Description": "Adara's abode",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28031,
+      "Name": "#MA Phos Hallway#N",
+      "Description": "\n   This is a long hallway that expands to the west. From this hallway \nyou can get to many different rooms of the #MDragoon's#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28028,
+          "Description": "#MRoom of Gilian#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28007,
+          "Description": "#MA Phos  Hallway#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28032,
+      "Name": "#MA Phos Hallway#N",
+      "Description": "\n   This is a long hallway that expands to the west. From this hallway \nyou can get to many different rooms of the #MDragoon's#N.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28033,
+          "Description": "#MLoomin's Throne Room#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28005,
+          "Description": "#MA Phos  Hallway#N",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28033,
+      "Name": "#MLoomin's Throne Room#N",
+      "Description": "\n   You have entered the room of Loomin, the mighty warrior. The first\nthing that catches your eyes is a big map on the southern wall. It\nshows what the world looked like a long time ago when the world was \nstill new. You also see a different collection of all kinds of ancient \nweapons and armours. He has saved them during the ages, and when he some\nday in the future retires, he will write a history book about armour and\nweapons, and how they have developed through the ages.\n#GLoomin's Large golden breast plate lies here\nA staff of magic lies here\nLoomin's Journal lies here\nA #yGolden #GDagger lies here",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28032,
+          "Description": "#MA Phos  Hallway#N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "breast",
+            "plate"
+          ],
+          "Description": "\n#MOn this armour, you see a banner from a clan long lost.\n#CYou can still see the marks of #eswords#C on it."
+        },
+        {
+          "Keywords": [
+            "staff"
+          ],
+          "Description": "\nThis is a #MM#Ca#Mg#Ci#Mc#Ca#Ml #wstaff it can only be used by its original owner #ML#Coomi#Mn."
+        },
+        {
+          "Keywords": [
+            "golden",
+            "dagger"
+          ],
+          "Description": "\nThis ancient dagger is made out of pure gold. It was once made by the\nhands of an elder priest, to be used in ceremonies. It still keeps\nthe memory of ancient rituals and sacrifises alive."
+        },
+        {
+          "Keywords": [
+            "journal"
+          ],
+          "Description": "\nThis is what you see on the journal#M\n \n                  ,_\n                   _  \\`\\  )\\  ,\n                   \\`\\|  \\/ |_/\\  \n         .-. ,    _/  `   '     |/\\\n         _> \\|\\,_'>               <__,\n        `\\      ,/\\/\\               /__  ,\n         / _   / `/) >_,/\\            <_/|\n  * _____\\/_\\._\\'     ,   '-\\  /\\        /_,\n   `-.\\\\_\\\\_\\\\} /|     |     >/ |       ` /         \n              | #gD#M/    /    ; ` _\\       .'       \n              |    _.'|   ;   /        /_,             \n              |    (_ | .'    _>        <\n              |, _ `,`\\_    ,_/        _.'\n               \\| 7/`\\_;`  \\         /_ ,\n                  `  ;  _.-'           /\n                     | <             <'\n                     |  `7         .-'\n                     \\_ /__________/\n#NBut thers a lock on it so you cant read it#N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28034,
+      "Name": "#MThe #cSizzling #MChamber#N",
+      "Description": "\n   As you step into the glowing chamber, your eyes immediately hurt from\na blazing #wsphere#N of white light just in the middle of the room. This\nis the recharging room of the being known as #cBalefire#N. There are no\nfurniture or other objects in the room, for what chairs does a fiery\nentity need? When the thing isn't roaming the lands, you can be sure it\nis either recharging close to the giant sphere, or it has withdrawn into\nit completely. Should it be in this room and regaining lost energy, be\nsure to keep away from the uncontrolled bursts of fire which sometimes \nemerges from it's body, as they can kill even before they reach home.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 28005,
+          "Description": "#MA Phos Hallway#N",
+          "Keywords": [
+            "door",
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sphere"
+          ],
+          "Description": "\nA ball of electricity, that  now and then strikes out bursts of pure\nenergy. If you feel your hairs are starting to stand straight out, you're\nstanding too close."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 28000,
+      "Name": "attendant immortal shopkeeper DOPclan",
+      "ShortDescription": "\nThe Immortal Attendant",
+      "LongDescription": "\nThe Immortal Attendant lives only to serve you.",
+      "Description": "\nThe Attendant is humanoid in shape, with sallow grey skin, and\nlarge black eyes. He looks at you with a mixture of awe and \nfear. He has been brought across space and time by the rulers \nof the #MDragoons #wof #CPhos#N to serve their clan for eternity.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "NiceThief"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Hide"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%3 emote kneels before you in solemn worship.;\n%3 emote offers you some sweet #MDragoons #wof #CPhos#N crackers.;\n%3 emote brushes the dust off your clothes.;\n%3 emote starts polishing his bar.;\n%3 say welcome home master, let me fetch you a drink.;\n%3 emote straightens your jacket and polishes your weapon.;\n%3 emote begins to clean the atm.;\n%3 emote gets some cash from the atm.;\n%3 emote drinks some water.;\n%3 emote eats a sweet #MDragoons #wof #CPhos#N cracker.;\n%3 emote offers you some delicious donuts.;\n%3 say The finest brew in the finest clan, care to try some?;\n%3 emote nods respectfully at you.;\n%3 emote hums a soft melody.;\n%3 emote polishes a commemorative #MDragoons #wof #CPhos#N tankard.;\n%3 say These crackers are delicious! How about some for the road?;\n%3 say There is a Dragoon in the forest master.;\n%3 emote cleans your weapons.;\n%3 emote lives only to serve you.",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "\nan automatic teller machine",
+      "Description": "\nAn automatic teller machine has been installed in the wall here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "\nThere is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28000,
+      "Name": "board bulletin dragoon",
+      "ShortDescription": "\na Dragoon of Phos clan bulletin board",
+      "Description": "\nThe Dragoons of Phos clan bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board. Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28001,
+      "Name": "board bulletin dragoon",
+      "ShortDescription": "\nThe Fistandantilus & XeNos sign",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "Hidden"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe Fistandantilus & XeNos sign is mounted on a wall here.\nThis is a Memo Board. Use LOOK board and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28002,
+      "Name": "fountain milk",
+      "ShortDescription": "\nthe large fountain",
+      "Description": "\nA small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        10,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 10,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28003,
+      "Name": "fountain lemonade",
+      "ShortDescription": "\nthe large fountain",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent",
+        "Hidden"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        6,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 6,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain",
+            "lemonade"
+          ],
+          "Description": "\nA large fountain carved from blue-streaked marble is here, bubbling\nmerrily. It is a well-crafted fountain, carved from a single piece\nof marble. It seems to be enchanted in some manner."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28004,
+      "Name": "dragoon dragoons gate",
+      "ShortDescription": "\na statue",
+      "Description": "\nAn immense flaming gate stands here, flanked by equally impressive\nstatues of Kurrelgyre and Ix.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28000,
+        1,
+        114,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 28005,
+      "Name": "chest locker shelf dragoon",
+      "ShortDescription": "\nshelf",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "Hidden",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        1000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 1000,
+          "Flags": [],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chest",
+            "locker",
+            "shelf",
+            "dragoon"
+          ],
+          "Description": "\n#MA deep shelf, carved with hundreds of dragons, lies at your feet.#N"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28006,
+      "Name": "secretary",
+      "ShortDescription": "\nmercedes the secretary",
+      "Description": "",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Hidden",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28012,
+        5,
+        114,
+        9,
+        109,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chick",
+            "babe",
+            "fox",
+            "secretary",
+            "mercedes"
+          ],
+          "Description": "\nMercedes is a stunning women. This buxom blonde is a long legged\nseducer that boasts a stellar 36-24-36 figure at 5'5'' with bold green\neyes. As you star into those eyes you are lost and almost forget that\nyou are here to see XeNos and Fistandantilus. She gestures to the chairs\nand the sign, and calmly states you may use either or both."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 28008,
+      "Name": "milk bota endless bottle",
+      "ShortDescription": "\n#MEndless #Wbottle of #CMilk#N",
+      "Description": "\nA small container witch looks to hold a large amount of milk seems to\nbe laying on the ground.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Shield",
+        "WristRight"
+      ],
+      "Values": [
+        80,
+        0,
+        10,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 80,
+          "Amount": 0,
+          "Liquid": 10,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 50,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28009,
+      "Name": "potion fly wing",
+      "ShortDescription": "\n#MWing #Wof #CPhos#N",
+      "Description": "\nA small wing floats in the air here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        45,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            45,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28010,
+      "Name": "potion seeinvis eyes",
+      "ShortDescription": "\n#MEyes #Wof a #CDragoon#N",
+      "Description": "\nA small pair of eyes have been carelessly left here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        19,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            19,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 400,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28011,
+      "Name": "scroll identify knowledge",
+      "ShortDescription": "\n#MScroll #Wof #CKnowledge#N",
+      "Description": "\nA scroll has carelessly been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        53,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            53,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28012,
+      "Name": "portal safety scroll",
+      "ShortDescription": "\na #MPortal #Wto #CSafety#N",
+      "Description": "\nThe soft blue petals are the color of the sky on a summer morning just\nbefore it opens into a portal.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        40,
+        42,
+        16,
+        16,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 40,
+          "SpellIds": [
+            42,
+            16,
+            16
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 800,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28013,
+      "Name": "scroll clan crecall flight",
+      "ShortDescription": "\n#MFlight #Wof a #CDragoon#N",
+      "Description": "\nA scroll has carelessly been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        109,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            109,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28014,
+      "Name": "food bits dragoon",
+      "ShortDescription": "\n#MBits #Wof #CDragoon#N",
+      "Description": "\nSome yummy #MBits #Wof #CDragoon#G look a bit crumbly.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 30,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cookie",
+            "phos"
+          ],
+          "Description": "\nBefore being mashed up in someone's pocket, these used to be very tasty\n#MDragoon#G cookies!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28016,
+      "Name": "shield potion",
+      "ShortDescription": "\n#MShield #Wof #CDragoon#G",
+      "Description": "\nA #MShield #Wof #CDragoon#G lies here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        40,
+        67,
+        11,
+        4,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 40,
+          "SpellIds": [
+            67,
+            11,
+            4
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 10000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28017,
+      "Name": "vial lifeforce",
+      "ShortDescription": "\n#MLifeforce #Wof a #CDragoon#N",
+      "Description": "\nThe essence of a #MDragoon#G lies here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        15,
+        15,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 15,
+          "SpellIds": [
+            15,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 14,
+      "Cost": 2000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

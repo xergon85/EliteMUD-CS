@@ -1,0 +1,2396 @@
+{
+  "Zone": {
+    "Id": 278,
+    "Name": "Clans",
+    "TopRoomId": 27899,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27809,
+        "Arg2": 100,
+        "Arg3": 27800,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 29,
+        "Arg2": 100,
+        "Arg3": 27805,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3135,
+        "Arg2": 100,
+        "Arg3": 27801,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27812,
+        "Arg2": 100,
+        "Arg3": 27807,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27808,
+        "Arg2": 100,
+        "Arg3": 27821,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27810,
+        "Arg2": 100,
+        "Arg3": 27802,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 27800,
+        "Arg2": 1,
+        "Arg3": 27801,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27800,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27801,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27802,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27803,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27804,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27805,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27806,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27807,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 27800,
+      "Name": "#RThe Dragons Gateway#N",
+      "Description": "\n   The cave fortress of the Storm Dragons towers over you here.\nDetailed statues of dragons with their wings outstretched stand on\neach side of the gateway leading in. A wide stone stairway leads\nup the side of the fortress. The gateway is always open... if you \nare a Storm Dragon.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoMagic",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27802,
+          "Description": "You see a corridor in the fortress.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6573,
+          "Description": "A path away from the clan house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27821,
+          "Description": "Wide granite steps lead up onto the roof.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fortress"
+          ],
+          "Description": "\nThis is the unassailable fortress of the Storm Dragons clan. Dragons\nwith glistening scales are roosting on the battlements."
+        },
+        {
+          "Keywords": [
+            "statue",
+            "statues"
+          ],
+          "Description": "\nThese beautiful statues catch the light in an almost magical way. They\nappear to be staring straight into your eyes."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27801,
+      "Name": "#RThe Relaxation Chamber#N",
+      "Description": "\n   You are in a small, silent chamber. The walls are pulsating slowly\nradiating the power of calmness and peace. You feel you could stay\nhere forever. There are soft, Persian carpets around here, where you\ncan sleep well and rest comfortably in a lotus position. An Attendant \nstands ready to serve you with food and drink.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27802,
+          "Description": "You see a corridor to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "carpet",
+            "carpets"
+          ],
+          "Description": "\nThe carpets look very soft and you are sure they would be comfortable\nto rest upon."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27802,
+      "Name": "#RDragons Hallway#N",
+      "Description": "\n   This is a stone corridor that connects the outer parts of the clan\nhome. A colourfull painting covering the walls reminds you of the\nproud heritage of the clan and of the importance of valor, friendship\nand honour.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27805,
+          "Description": "There is a red glow to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27803,
+          "Description": "A large room can be seen to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27800,
+          "Description": "The exits from these caves is to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27801,
+          "Description": "A soft glow comes from the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "painting"
+          ],
+          "Description": "\nThe painting is not of any recognisable people..yet at the same time\nyou can see some of yourself and others you know in them."
+        },
+        {
+          "Keywords": [
+            "buildersrefs"
+          ],
+          "Description": "\nmore updates by amok/demandred july 2000.\nupdates by amok/demandred october 1998. im sorry i cant credit the\noriginal writer - i just don't know who it was. enjoy!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27803,
+      "Name": "#RStorm Dragons Donation Room#N",
+      "Description": "\n   You are in a large, untidy room. People have dropped their useless\nitems all over the place. There is a hewn stone altar in the middle\nof the room upon which donated things appear. A spiral staircase in\nthe corner leads down into a dark basement.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27802,
+          "Description": "You see a corridor to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27822,
+          "Description": "A spiral staircase leads down to a dark basement.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27804,
+      "Name": "#RKamthra's Sanctum of Solitude#N",
+      "Description": "\n   An ancient stone table cluttered with heavy tomes of knowledge,\nstrange artifacts and all manner of arcane devices, stands proudly in\nthe centre of this oversize chamber. One side of the table is left\nslightly clear, and here rests a mysterious pulsating #wglobe#N held in\nthe clenched talons of a bronze stand, slowly changing colour as you\nwatch. On one side of the room, a old weathered wooden #wbookcase#N\nstrains under the weight of a mountain of books. Huge crystal #wwindows#N\nspan a whole side of the room, extending upwards to meet high above\nyou in a dome. A large threadbare divan rests in a corner of the\nroom, and a roaring fire blazes in the fireplace,  strangely without\nthe need of any fuel. Above the fireplace hangs a great #woil-painting#N\nand the most noticeable fixture is the ornate full length #wmirror#N\nbordered with softly glowing mystic symbols, which stands in front of\na stone wall.\n§N",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27805,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "window",
+            "windows"
+          ],
+          "Description": "\nFluffy white clouds seem to brush your head as you gaze down,\nwatching the movement of many people bustling like ants in a large\ntown at the edge of a wild forest on a great river. In one direction\na desert stretches into the distance, rippling mirages seeming to\nappear out of the heat-shimmer, and in another, the relentless sea\ncrashes against cold grey rocks. A break in the clouds briefly shows\nyou a glimpse of a faraway winged form, gliding smoothly on the\ncurrents. One of the windows seems to have a handle built into its\nframe, allowing the window to open inwards like a door out into\nnowhere.\n§N"
+        },
+        {
+          "Keywords": [
+            "globe"
+          ],
+          "Description": "\nYou are drawn into the swirling colours, and feel yourself growing\nlight-headed, and detached. Indistinct voices reach your ears, and\nsuddenly cheery laughter the spell, and you feel as though you were\nright on the edge of a stupendous insight or secret but can't \nfigure out what.\n§N"
+        },
+        {
+          "Keywords": [
+            "mirror"
+          ],
+          "Description": "\nYou see a reflection of yourself, and wonder why this takes such a\nprominent position in the room, when suddenly the mirror clouds over\nand a vague image of a time and place you don't recognise appears for\na second before fading back to your reflection. You don't think you\nhave the required expertise to fully activate such an arcane\nartifact.\n§N"
+        },
+        {
+          "Keywords": [
+            "bookcase"
+          ],
+          "Description": "\nLeather-bound books of all shapes and sizes, colours and textures are\nstacked haphazardly along the shelves. A couple of titles catch your\neye, 'Legends of the Storm Dragons', 'The early life of Kamthra the\nArchmage', are but a couple of the titles that you recognise. Some\nare in strange languages that you've never encountered before, some\ntitles are in a script which seems to move as you watch, defying all\nattempts to decipher them, and some just seem to have no title at\nall.\n§N"
+        },
+        {
+          "Keywords": [
+            "painting"
+          ],
+          "Description": "\nThe painting depicts three figures, a shadowy figure in a dark cloak,\na brawny barrel-chested fighter, and a dragon.  You notice that all\nthree figures share similar features, and suddenly you realize that\nthey are all the same person, but slightly different.  The youngest\nseems to be a robed figure, then comes the chilling shadowy figure,\nand finally the veteran fighter.  The crest of the dragon becomes \nmore and more prominent and decorative with each figure.\n§N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27805,
+      "Name": "#RStorm Dragons Main Meeting Room#N",
+      "Description": "\n   This is the heart of the dragon caves. Lava floats slowly through\nhere in broad channels on each side of the room. The walls are\ndecorated with tapestries of huge dragons in gold on red silk. On the\nnorth wall hangs the board of the Storm Dragons, with messages\nwritten in white hot fire. Three thin bridges span over the lava to\nclan ruler rooms to the north, west and east. A much safer looking\ncorridor leads south to the Dragons Hallway. A levitating disc of\npure gold can take you up to the throne room from here.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27809,
+          "Description": "A thin bridge leads east into a rulers chambers.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27802,
+          "Description": "A corridor leading away from the heart of the clan house.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27804,
+          "Description": "A thin bridge leads west to a ruler's room.\n§N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27807,
+          "Description": "A tunnel leading up to the Storm Dragons throne room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27810,
+          "Description": "A Dark tunnel leads down to the lower chambers.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "lava"
+          ],
+          "Description": "\nIt's hot and dangerous to touch but is a safe distance away from you."
+        },
+        {
+          "Keywords": [
+            "tapestry",
+            "tapestries"
+          ],
+          "Description": "\nThe tapestries are very beautiful and no doubt very valuable."
+        },
+        {
+          "Keywords": [
+            "disc"
+          ],
+          "Description": "\nThe disc floats around waiting to take you up if you desire."
+        },
+        {
+          "Keywords": [
+            "bridge",
+            "bridges"
+          ],
+          "Description": "\nThey appear to be safe.. but walking uninvited into a rulers room may\nnot be."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27806,
+      "Name": "#RHercules' Quarters#N",
+      "Description": "\n   This grand room you have entered, is the home of the Mighty\nHercules. The room is divided into two parts assist training ground\nand a living room.  The training ground is filled with all sorts of\nweapons and armor, most of which are too heavy for you to use. They\nall look like they have had their share of action though.  The living\nroom consists of a rough desk and a small bed. On the desk there are\nvarious documents about how to become a Dragon...  On the walls there\nare pictures of former clan leaders, like Zharradan and Djeli. On\nanother wall hangs a portrait of the omnipotent Crusher.\n§N",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27816,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "PickProof",
+            "BashProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27807,
+      "Name": "#RThrone room of the Storm Dragons#N",
+      "Description": "\n   You stand in the great throne room of the clan. Here the clan\nholds councils of matter concerning the Storm Dragons. A long table\nof black obsidian stands here, completly with chairs for all members.\nAt the north end of the table stands the great ruby thrones of the\nclan rulers. Behind them high up sits the clan leader on his diamond\nthrone. Two pools of lava provide light and warmth for people. To \nthe west a large oak door leads into the Storm Dragon great library \nwith records of all that is written in the world and to the north \na red silk carpet leads north through an archway to one of the the \nclan leader's room. A glowing archway leads east into the room of \nanother clan leader. A golden disc that can take you down to the main \nmeeting room is hovering here.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27813,
+          "Description": "A red carpet leads north into the clan leader's room.\n§N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27808,
+          "Description": "A archway leads into one of the clan leaders chambers.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27815,
+          "Description": "You can see a library to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27805,
+          "Description": "A glowing golden disc will take you down to the main meeting room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "table"
+          ],
+          "Description": "\nThis table is perfectly smooth and is a wonder of nature."
+        },
+        {
+          "Keywords": [
+            "chairs"
+          ],
+          "Description": "\nThese chairs look very comfortable."
+        },
+        {
+          "Keywords": [
+            "ruby",
+            "thrones"
+          ],
+          "Description": "\nThe ruby thrones are truly beautiful but perhaps not as comfortable\nas the other chairs. A reminder that rulers have great rewards but\nalso duties."
+        },
+        {
+          "Keywords": [
+            "diamond",
+            "throne"
+          ],
+          "Description": "\nAs you look at the diamond throne you cant stop looking, it is\ncrafted from pure diamond and so well made that you never though that\nkind of work was possible. This is the throne of the leader of the\nStorm Dragons. Well fit a king."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27808,
+      "Name": "#RDemandred's Study#N",
+      "Description": "\n   This room is dominated by a large desk covered with notes, scrolls \nand tomes of knowledge. Demandred has travelled the world in search of \nrare artefacts, and he keeps many of them here for people to view. You \nnotice what appears to be a #wmagical minature globe#N on the desk - you \nimagine that it is a region of space compressed for storage. A large \n#wpainting#N has pride of place on the wall across the room from where you \nstand. Two crystal pillars on the east side of the chamber look like a \n#wwarp gate#N, such as the ancients were said to use. It appears to be \ninnactive, but might be worth investigating.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoScry",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 1272,
+          "Description": "The ancient warp gate does not appear to work.",
+          "Keywords": [
+            "gate",
+            "warp"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27807,
+          "Description": "An glowing archway leads to the Storm Dragon's Throne Room.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "miniature",
+            "magical",
+            "globe"
+          ],
+          "Description": "\nNo mortal has the power to produce one of these items, it must be a \ngift from one of the creators of the world. The globe appears to be \na region of space, compressed into a very small space. Gazing deep\ninto the globe, you can see a glimpse into the #wfuture#N of the world."
+        },
+        {
+          "Keywords": [
+            "future"
+          ],
+          "Description": "\nYour vision blurs briefly...then you can see!\n\nIn the Wasteland\n   You find yourself in a waking nightmare. The sky is a threatening \ndark grey colour, and the clouds are blood red. The ground beneath your \nfeet is also grey, and as you move it sends up little puffs of foul \nsmelling ash to assault your nose and eyes. The terrain is flat as far \nas the eye can see to the north, east and south, but quickly fades into \nan indistict fog. You imagine that it would be very easy to get lost out \nthere in the desolation. However it is the sight to the west that \ncaptures your attention. You stand before a set of broken gates, melted \non their hinges, but still just about attached to the crumbling walls. \nMoreover, you recognise these walls, and the city behind them - Midgaard.\n\n\nYou blink, and find yourself safely back in Demandred's Study."
+        },
+        {
+          "Keywords": [
+            "painting"
+          ],
+          "Description": "\nIts a huge picture, magically rendered, of the entire Storm Dragon Clan. \nYou recognise Rise, Corin, Gomorra, Mithembra, Garrion and Dragonstorm \namong the huge crowd of dragons. In the centre stand Kamthra and \nHercules, along with Zharradan and Demandred. The carefully depicted \nsky is almost blinding in its radiance, as the Celestial Drakes of the \nStorm Dragons look down on their beloved clan. Among them you recognise \nNostromo and Shampoo, Amok and Radagast, Crusher, Criz, Rol and Shylanne."
+        },
+        {
+          "Keywords": [
+            "pillars",
+            "gate",
+            "warp"
+          ],
+          "Description": "\nTwo faintly glowing crystal pillars form a gate between worlds. It's said \nthat the ancients had the power to use them, but now they are merely\nbeautiful and incredibly rare souveniers. As you gaze into the gate you\nthink you can see another realm, with strange forces of gravity, but you\nlack the power to enter the gate."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27809,
+      "Name": "#RGarrion's Room#N",
+      "Description": "\n   This large room is filled with the spoils of a lifetime of \nadventuring. Shelves are stacked with books and trophies and the \nwalls are covered with #wpaintings#N. Two large desks, one neat and \nclear save for pen and paper, one covered with strange objects\nand scribbled notes, sit in opposite corners. Along one wall runs \na #wbed#N covered in thick comfortable pelts and in the centre of the \nroom lies a large red #wrug#N with a stylised golden dragon rampant. \nGlowing globes embedded in the walls and ceiling gently light this \npleasant and inviting room.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27805,
+          "Description": "You see the Main Meeting Room.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rug"
+          ],
+          "Description": "\nWith a deep pile you can't resist taking off your footwear and letting\nyour toes sink in to it."
+        },
+        {
+          "Keywords": [
+            "bed"
+          ],
+          "Description": "\nLarge, warm and comfortable! Although some large beasts have been\ndeprived of life to make it so."
+        },
+        {
+          "Keywords": [
+            "painting",
+            "paintings"
+          ],
+          "Description": "\nAlmost unimaginable variety is on display. Snow bound glaciers, jungle\nforests and majestic mountain vistas have been rendered in exquisite \ndetail."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27810,
+      "Name": "#RThe Great Drake's Gallery#N",
+      "Description": "\n   You stand inside a great chamber carved out of the mountain. Steps \nlead up to the Main Meeting room of the Storm Dragons, and down to \nanother chamber. The rock walls gleam in the light from the pools of \nlava encircling you. Wide archways lead to rooms belonging to the \nclan's Great Drakes.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27812,
+          "Description": "An archway leads north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27814,
+          "Description": "An archway leads south.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27820,
+          "Description": "An archway leads west.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27805,
+          "Description": "Steps lead up to the main meeting room of the Storm Dragons.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27811,
+          "Description": "Carved stone steps lead downwards to the Drake's Gallery.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27811,
+      "Name": "#RThe Drake's Gallery#N",
+      "Description": "\n   Darker and slightly smaller than the gallery of the Great Drake's, \nthis chamber still a magnificent sight. It is warmed by a river of lava \nflowing through the chamber, narrow bridges lead over the lava flow \nthrough arches to the rooms belonging to the clan's Drakes.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27819,
+          "Description": "A narrow bridge crosses the river of lava into a Drakes Chambers.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27818,
+          "Description": "A narrow bridge crosses the river of lava into a Drakes room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27810,
+          "Description": "Steps lead up to the gallery of the Great Drakes.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27816,
+          "Description": "A narrow passage leads downwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27812,
+      "Name": "#RThe Chambers of Rise#N",
+      "Description": "\n   As you enter the room, you are overwhelmed by a strong pleasant \nsensation which starts to take control over your will. You look around\nand see a big cave-like room with black obsidian walls, decorated with \nsymbols of healing and sanctuary, glowing with a sickly green light. \nIn the centre of the cave you see a hot steaming pond. The vapours \naround you carry spicy exotic scents. You feel your head swim as the \nrich scents flow into your nostrils and sting your eyes in a pleasant \nway. Through the misty vapors you spot an opening in the far wall \ndecorated with exotic weapons and trophies. The opening leads into a \nsmaller side chamber, just large enough to contain a huge round bed. \nLight emanating from the countless candles within dances on the fine \nblack silk sheets. You let go of your weapons and armor, and enter the \nsteam...",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27810,
+          "Description": "A narrow archway leads north into the basement of the clanhouse.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27813,
+      "Name": "#RZharradan's Room#N",
+      "Description": "\n   You have entered the room of the Storm Dragon leader, the Undead\nLord Zharradan. A huge oak desk stands at the end of the room, bare\napart from piles of papers and an ink well...... with red ink???\nThere are two large paintings hung behind the desk showing the Storm\nDragon clan symbol.  A red silk carpet covers the floor, and a large\nfireplace is the west wall makes the room light up. On the east wall\nare portraits of former rulers of the Storm Dragons clan.  Below the\nportraits is a rack of torture devices, thumbscrews, collapsable\nracks... you are glad you aren't one of his prisoners, though if you\nare here without his permission you may become one...\n§N",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27807,
+          "Description": "The Throne room is this way.\n§N",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27814,
+      "Name": "#RCorin's Sanctuary#N",
+      "Description": "\n   You find yourself standing in a large dark chamber, at first glance \nthe only thing that can be seen is a soft shimmering light coming from \nthe fireplace in the west wall. As your eyes start to get used to the \ndark you notice that the room is filled with all sorts of parchments and \nbooks, everywhere you look there are stacks of books. Looking around you \nnotice several shelves overwhelmed with papers, books and such. On the \nwall there is a single blurred painting, after observing it for several \nmoments you think that you can see the face of beautiful woman, but as \nhard as you try you cannot see it again. The floor is decorated with \nsome strange symbols, and a carving of a skeletal arm holding the \ngolden scale of justice. On the north wall, where darkness is thicker \nstands a large mirror with some strange mystical symbols on it. Next to \nthe mirror is a lone statue of a Wizard, sadly gazing at the archway \nfrom which you entered a few moments ago.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27810,
+          "Description": "A narrow bridge crosses a river of lava to the north.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27815,
+      "Name": "#RThe Storm Dragon Library#N",
+      "Description": "\n   You enter the Storm Dragon Library, around you are large\nbookshelves stacked with old books. A large #wboard#N is fastened on the\nnorth wall.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27807,
+          "Description": "You see the throne room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThere's information here on a variety of topics, all collected together\nso that any clan member can refer to them whenever they choose (Use 'Look\n[item]' to view them):-\n\n                        #GRanks#N\n                        #GApplicants#N\n                        #GPolicy#N\n                        #GWebpage#N\n                        #GEquipment#N\n                        #GHistory#N\n                        #GAreas#N"
+        },
+        {
+          "Keywords": [
+            "ranks",
+            "rank"
+          ],
+          "Description": "\n#RStorm Dragons#N operates a merit-based ranking system. This system has \nbeen chosen in order to give those worthy members a greater position of \nresponsibility in the clan. It also allows people to see who they can \nturn to for good advice and help when required.\n\nA consequence of this system is that level is an unimportant consideration \nwhe taking into account a member's suitability for a promotion. \n\nAs you grow higher in rank, thus more is expected from you. Your behaviour\nshould be a beacon for others to follow, and you should exemplify the \nvirtues of the Storm Dragons.\n\nA word of caution:-\n#y            Beware of asking for promotions.#N\n#y           Be prepared for blunt answers.#N\n      \n    Promotions will come when you are ready."
+        },
+        {
+          "Keywords": [
+            "applicants",
+            "applicant"
+          ],
+          "Description": "\n       Minimun level for entry into #RStorm Dragons#N is #c25#N\n\nApplicants may apply at any time, but will only be allowed into the clan\nat level 25. #yWe do not approve of active recruitment.#N We prefer our \napplicants to make their own way to us. Recruitment of mudders from other\nclans is look upon very badly - expect harsh punishment.\n\nOnly #RStorm Dragons#N with the rank of #RDrake#N or higher may enlist\nEggs into the clan. Any member should feel free to talk to new applicants\nbut the final decision regarding enlistment will be for a Drake to make.\n\nThe enlisting Drake will normally post a notice on the clan board inviting\nmembers to comment on the new Hatchling. These comments are in strictest \nconfidence, and are to help the drake make a decision at the end of the \nprobation period, whether the Hatchling will be made a Young Wyrm, or \nexpelled."
+        },
+        {
+          "Keywords": [
+            "webpage",
+            "webpages"
+          ],
+          "Description": "\n       #MFor the current webage address, finger the clan high drakes.#N"
+        },
+        {
+          "Keywords": [
+            "policy"
+          ],
+          "Description": "\n   The #RStorm Dragons #Nare a clan built on brotherhood, and as such is it \nexpected that you will always help your fellow clan members to the best \nof your abilities. \n\n#RDonation Room#N\n   Items placed in our donation room should be used only by members of this \nclan, and not given away to non-members. When donating items for other people \nto use, you should always come to the clan house and drop those items in \nperson, rather than use the donate command. (This is because when you use the \ndonate command there is a chance that the item will go to the midgard main \ndonation room, or be sacrificed instead.)\n   Please #rdo not#N place items that are easy to obtain, such as bronze \nequipment, or keys or food, in our donation room. There is a limit to the \nnumber of items that are saved in the event of a crash, and we would like to \nreserve the space for better items."
+        },
+        {
+          "Keywords": [
+            "equipment"
+          ],
+          "Description": "\n   A list of some of the better equipment in the realm, and some clues as \nto where it can be found have been placed here. This list is by no means\ncomplete or up to date - there are new areas being introduced all the time.\n(Type 'look <range>' to view the equipment in each range)\n\n                        #clev0=9#N\n                #clev10=19#N\n                #clev20=29#N\n                #clev30=39#N\n                #clev40=49#N\n                #clev50=59#N\n                #clev60=69#N\n                #clev70=79#N\n                #clev80=89#N\n                #clev90=#N"
+        },
+        {
+          "Keywords": [
+            "lev0=9"
+          ],
+          "Description": "\n#gML 1:-----{#N\n        A breast plate              <on body> Wg 100 AC 7\n        (shop)                                [ANTI: Mu Ps Wi Il]\n        A Small Spade                <wield>  Wg 1 D 3d5 HR+2 DR+2 En\n        (groundskeeper - Newbie Zoo)          [NO ANTICLASSES]\n        Revolution Ring            2<fingers> Wg 1 AC 5 HR+1 Con+1\n        (Neb N'Var -- Welmars Kingdom)        [NO ANTICLASSES]\n        A bloody cloak             2<ar neck> Wg 15  AC 4\n        (Old gen equipment)                   [NO ANTICLASSES]\n        A bronze helmet             <on head> Wg 8   AC 6\n        (troglodyte lieutenant)               [NO ANTICLASSES]\n        A black silk robe           <ab body> Wg 6   AC 1\n        (mimic -- Thalos)                     [NO ANTICLASSES]\n        A troll signet ring        2<fingers> Wg 1   AC 4 +1 St\n        (Troll gang leader, bruiser -- PK)    [NO ANTICLASSES]\n        A pair of bronze sleeves    <on arms> Wg 8   AC 6\n        (troglodyte  -- catacombs)            [NO ANTICLASSES]\n        A pair of bronze leggings   <on legs> Wg 8   AC 6\n        (troglodyte -- catacombs)             [NO ANTICLASSES]\n        Spiked heeled boots         <on foot> Wg 4   AC 3 -1 Dx +1 DR\n        (Doll -- PK)                          [NO ANTICLASSES]\n        A pair of bronze gauntlets  <on hand> Wg 8   AC 6\n        (Troglodyte -- catacombs)             [NO ANTICLASSES]\n        Iron girth                  <  waist> Wg 6   AC 4\n        (glass cabinet -- Thalos)             [NO ANTICLASSES]\n        A sturdy iron shield        < shield> Wg 5   AC 5 -2 SP -2 SM ND\n        (Beholder in Thalos)                  [NO ANTICLASSES]\n        A teddybear called Qualen   < shield> Wg 4   AC 6 +4 Ch\n        (QUEST -- 2 QP)                         [NO ANTICLASSES]\n        A long sword                <   held> Wg 15  D 1d8  HR+2 DR+2 En\n        (shop, Cityguard NR)                  [NO ANTICLASSES]\n        A hoe                       <  wield> Wg 1   D 3d4  HR+2 DR+2 En\n        (farmer -- Dirt path)                 [NO ANTICLASSES]\n        A pewter ring              2<fingers> Wg 5   AC 0   +10 Hp +1 Dx\n        (master scheduler -- rome)            [NO ANTICLASSES]\n\n#gML 3:-----{#N\n        A chessboard                < shield> Wg 10  AC 8  Int+1 Wis+1+25Mnm  \n        (Quest - 5 QP)                      [ANTI: Th Wa Kn As Ra Pa]\n\n#gML 4:-----{#N\n        A bat ring                 2<fingers> Wg 2   AC 3 +45 Mv\n        (chief gnome -- gnome village)        [NO ANTICLASSES]\n\n#gML 5:-----{#N\n        A small bright green hat    <on head> Wg 1   AC 11 -15 Age ND\n        (matron mother=5.mother -- Drow city) [NO ANTICLASSES]\n        A bead necklace            2<ar neck> Wg 8   AC 3  +2 HR\n        (chief gnome)                         [NO ANTICLASSES]\n        A black metal breast plate  <on body> Wg 10  AC 8\n        A black metal helm          <on head> Wg 7   AC 7\n        Black metal arm plates      <on arms> Wg 7   AC 7\n        Black metal leg plates      <on legs> Wg 6   AC 7\n        Black metal gauntlets       <on hand> Wg 3   AC 7\n        All 5:(troglodyte chief -- caves)     ANTI:[Mu Th Ps Mo Wi Dr AsIl]\n        A samurai bracer           2< wrists> Wg 2   AC 2  +1 HR +1 DR AE\n        (samurai apprentice -- Samurai Tower) [NO ANTICLASSES]\n        A gnome belt                <  waist> Wg 5   AC 3\n        (gnome armourer -- gnome village)     [NO ANTICLASSES]\n        A long dagger               < b/stab> Wg 6   D 3d4  HR+2 DR+2 EnBS   \n        (gnome weaponry -- gnome village)     ANTI:[Cl Mo]\n\n#gML 7:-----{#N\n        A bronze belt               <  waist> Wg 5   AC 4  -2 St +1 HR\n        (Nobleman -- Rome)                    [NO ANTICLASSES]\n\n\n#gML 8:-----{#N\n        A yellow and green ring    2<fingers> Wg 1   AC 8  ND AG +1 CON\n        (large orc -- upper Moria)            [NO ANTICLASSES]\n        A glinting silver ring     2<fingers> Wg 9   AC 5  +30 Hp\n        (rat  -- sewers)                      [NO ANTICLASSES]\n        A pair of muddy boots       <on foot> Wg 10  AC 5  +15 Mv\n        (rat  -- sewers)                      [NO ANTICLASSES]\n        A stethoscope              2<ar neck> Wg 1   AC 0  +4 HR -3 DR\n        (healer -- Rome)                      [NO ANTICLASSES]\n\n#gML 9:-----{#N\n        Sapphire ring              2<fingers> Wg 20  AC 10 +2 HR\n        (judge -- Rome)                       [NO ANTICLASSES]\n        Roman combat boots          <on foot> Wg 45  AC 8  +2 Str -1 DR\n        (Soldier -- rome)                     ANTI:[Mu Ps Wi Il]\n        A stiletto                  < b/stab> Wg 2   D 7d2  HR+4 BS AC+2\n        (Ogre gang leader -- PK)              [NO ANTICLASSES]"
+        },
+        {
+          "Keywords": [
+            "lev10=19"
+          ],
+          "Description": "\n#gML 10:-----{#N\n        Black bear fur              <ab body> Wg 10  AC 6  +1 CON\n        (Black bear -- Forest)                [NO ANTICLASSES]\n        Green pointed wizard hat    <on head> Wg 1   AC 10\n        (Slartiin -- Moria Drow)              [NO ANTICLASSES]\n        A pair of swordmans` gloves <on hand> Wg 1   AC 2  +2 HR +2 DR AG\n        (Human warrior -- Moria)              [NO ANTICLASSES]\n        A broken sword              <  wield> Wg 10  D 4d5  HR+2 DR+2 En\n        (Skeleton warrior -- Graveyard)       [NO ANTICLASSES]\n        A golden dwarven ring      2<fingers> Wg 1   AC 0   +1 HR +1 DR\n        (dwarven guards -- dwarven mines NR)  [NO ANTICLASSES]\n\n#gML 12:-----{#N\n        A pair of Moorish bracers   <on arms> Wg 15  AC 8  +2 DR -2 DEX\n        (Caesar -- rome)                  ANTI: [Mu Ps Wi Il]\n\n#gML 15:-----{#N\n        A leather vest              <on body> Wg 10  AC 8  +30 Hp\n        (Salle -- Stanneg)                    [NO ANTICLASSES]\n        A Jewel of the Rising Sun  2<ar neck> Wg 5   AC 15 +1 In Wi AE\n        (Tokugawa -- Samurai Tower)           [NO ANTICLASSES]\n        Blue steel vambraces        <on arms> Wg 8   AC 8\n        (High Minotaur Guard -- Man-Thor)     ANTI:[Mu Cl Ps Mo Wi As]\n        A broad silver belt         <  waist> Wg 4   AC 6\n        (Isha -- Midgaard park)               [NO ANTICLASSES]\n        A glowing dagger            < b/stab> Wg 1   D 2d6  HR+3 DR+2 NMv\n        (In desk near Bad Feeling -- Chessboard) [NO ANTICLASSES]\n        A Poisoned dagger           < b/stab> Wg 1   D 2d10 HR+3 DR+3 NMv\n        (QUEST -- 10 QP)                      [NO ANTICLASSES]\n\n#gML 18:-----{#N\nMR:2    A purple cloak              <ab body> Wg 20  AC 10 +10 SM\n        (Yevaud -- spider area)               [NO ANTICLASSES]\n        (Master mindflayer -- sewers)\n        A black shield              < shield> Wg 4   AC 5  AG\n        (Black orc leader, NR -- Moria)       [NO ANTICLASSES]"
+        },
+        {
+          "Keywords": [
+            "lev20=29"
+          ],
+          "Description": "\n#gML 20:-----{#N\n        A black breast plate        <on body> Wg 100 AC 15 +30 Hp +4 SM AG\n        (Black orc chief -- Moria)            ONLY:[Wa Kn Ca Ma]\n        Drow noble armband            <on arms> Wg 30  AC 10     AG\n        (Drow noble -- Moria Drow)            [NO ANTICLASSES]\n        The Amulet of Suun Lu      2<ar neck> Wg 5   AC 15 +20 Hp +3 Co AE\n        (Tokugawa -- Samurai Tower)           [NO ANTICLASSES]\n        Pair of rollerblades        <on foot> Wg 5   AC 15 +50Mv +25Hp\n        (Old gen quest eq)                    [NO ANTICLASSES]\n        A robe                      <ab body> Wg 5   AC 5  +20 Mn AE\n        (Mage -- Ultima)                      ONLY: [Dr Mu Ps Il Wi]\n        A pair of troll gauntlets   <on hand> Wg 8   AC 4  +4 STR\n        (General Woundwort  -- Crete)         [NO ANTICLASSES]\n        The morning star            <h+wield> Wg 10  D 2d10 HR+2 DR+4\n        (Elder Druid -- West Forest)          [NO ANTICLASSES]\n        Golden bow                  <  wield> Wg 20  D 4d6 Bl\n        (Nomad leader -- nomads)              ANTI:[Mu Cl Ps Mo Wi Dr IlPa]\n        Iron scepter                <  light> Wg 10  Eternal light\n        (Spider Queen -- Spider area)         [NO ANTICLASSES]\n\n#gML 21:-----{#N\n        A spider shaped dagger      < b/stab> Wg 8   D 3d4  HR+3 DR+3 BSAG\n        (Yochlol -- Drow City)                [NO ANTICLASSES]\n\n#gML 22:-----{#N\n        A gavel                     <h+wield> Wg 8   D 3d6  +2 Wis +30 MnAE\n        (Judge -- Ultima)                     [NO ANTICLASSES]\n\n#gML 23:-----{#N\n        A red loincloth             <  waist> Wg 30  AC 15 +2 STR +2Dx AE\n        (Mars -- Valley of gods)              Anti:[Cl Dr Mo Pa Mu Wi IlPs]\n\n#gML 24:-----{#N\n        An adamant hammer           <  wield> Wg 12  D 4d8       DR +5\n        (QUEST --  5 QP)                      [NO ANTICLASSES]\n        An iron barbed flail        <  wield> Wg 14  D 5d5 HR +3 DR +3 Ev\n        (QUEST --  5 QP)                      [NO ANTICLASSES]\n        An morning star             <h+wield> Wg 12  D 6d6 HR +6 DR +6\n        (QUEST --  15 QP)                     [NO ANTICLASSES]\n\n#gML 25:-----{#N\n        Vine-embellished Shirt      <on body> Wg 2 AC 15 DexCha+1 Mr+3\n        (Sturdy Elf  -- Tynstri)              [ANTI Th Il]\n        Mystical Loincloth          <waist>   Wg 5 AC13 StrCon+1 Mana+25 Mr+5\n        (Titania -- Fairy Zone)               [ONLY Wi Il Dr Ps]\n        A dark minotaur shield      < shield> Wg 12  AC 10 +10 SP\n        (Crete King -- Crete)                 [NO ANTICLASSES]\n        A magic dagger              < b/stab> Wg 7   D 4d5  HR+2 DR+3 BS\n        (Nystul -- Ultima)                    ANTI:[Cl Mo]\n        A pair of real wings        <ab body> Wg 0   AC 0  FLY\n        (Quest -- 3 QP)                       [NO ANTICLASSES]\n\n#gML 26:-----{#N\n        The basher mace            2<h+wield> Wg 15  D 4d6  HR+4 DR+4 AE\n        (Fat Fryer, Nameless Hero --  Graveyard)  [NO ANTICLASSES]\n\n#gML 27:-----{#N\n        An ebony bracelet          2< wrists> Wg 5 AC1 +30Mn +30Hp AG\n        (Black bishop -- Chessboard)          [NO ANTICLASSES]\n        An ivory bracelet          2< wrists> Wg 5 AC1 +20Mn +20Hp +1St AE\n        (White bishop -- Chessboard)          [NO ANTICLASSES]\n\n#gML 28:-----{#N\n        White gauntlets             <on hand> Wg10 AC6 +1St +1HR +3DR -2DxAE\n        (white rook -- Chessboard)            ANTI:[Mu Wi Ps Il As Th Dr]"
+        },
+        {
+          "Keywords": [
+            "lev30=39"
+          ],
+          "Description": "\n#gML 30:-----{#N\n        Diamond Rose                <head>    Wg 5 AC 12 Wis,Cha +2\n        (Titania -- Fairy Zone)               [NO ANTIS]\n        Rainbow Striped Leggings    <legs>    Wg 4 AC 3 HP+40\n        (Jemera -- Tynstri)                   [NO ANTIS]\n        Horn Of Unicorn             <h/wield>  Wg 3 4d6 HR+2 DR+3 Bless\n        (Oberon -- Fairy Zone)                [ANTI ClThwaMoBaKnAsRaPaCa]\n        Red steel greaves           <on legs> Wg 8   AC 9\n        (Royal Minotaur Guard -- Man-Thor)    ANTI:[Mu Ps Wi Cl Mo As]\n        Brown cloak                2<ar neck> Wg 5   AC 10 +10 SM +100 Mv\n        (floor w from Mistress -- Mage Tower) [NO ANTICLASSES]\n        Shaman Amulet              2<ar neck> Wg 5  AC 15 +20 HP\n        (Shaman -- Black Lagoon)              [NO ANTICLASSES]\n        A dragon skin bracelet     2< wrists> Wg 10  AC 10\n        (White dragon -- Draconia)            [NO ANTICLASSES]\n        A platinum bracelet        2< wrists> Wg 5   AC 8\n        (Holy Draconian -- Draconia)          [NO ANTICLASSES]\n        The glowing platemail       <on body> Wg 100 AC 12\n        (chest near Nightmare -- chessboard)  ANTI:[Mu Ps Wi Dr Il]\n        Crimson steel helm & visor  <on head> Wg 8   AC 10\n        (elite minotaur guard -- Man-Thor)    ANTI:[Mu Cl Ps Mo Wi As]\n        A black silk belt           <  waist> Wg 25  AC 8  +1 HR +1 DR\n        (Dragonian queen -- Draconia)         [NO ANTICLASSES]\n        A pearl ring               2<fingers> Wg 1   AC 4 +1St +2DR +3SMAE\n        (White queen -- Chessboard)           [NO ANTICLASSES]\n        A chameleon poncho          <ab body> Wg 4   AC 10 +50 Mv\n        (floor w from Mistress -- Mage Tower) [NO ANTICLASSES]\n        A holy symbol              2<ar neck> Wg 2   AC 15 +35 Mn\n        (Holy Dragonian -- Draconia)          ONLY:[Cl Dr Mo Pa]\n        Drow hand crossbow          <  wield> Wg 7   D 5d6  HR+3 DR+4 AG\n        (Drow weaponry -- Moria Drow)         ANTI:[Cl]\n        A small hexagonal necklace 2<ar neck> Wg 6   AC 20 -1 Wis +1 Int\n        (QUEST -- 15 QP)                      [NO ANTICLASSES]\n        A diamond helmet            <on head> Wg 8   AC 12 +4 HR\n        (QUEST -- 30 QP)                      ANTI:[Mu Ps Wi Il]\n        The crystal shield          < shield> Wg 10  AC 16 +2 STR\n        (QUEST -- 20 QP)                      ANTI:[Mu Ps Il Cl Mo Wi DrPa]\n        Luminous Leggings           <legs>    Wg 10 AC10 HrDr+1 Dex+1\n        (Oberon -- Fairy Zone)                [ANTI Th Wa Ba Kn Ra Pa Ma Ca]\n\n#gML 31:-----{#N\n        A crystal necklace         2<ar neck> Wg 35  AC 0  +6 Int +6 Wis\n        (Venus -- Valley of gods)             [NO ANTICLASSES]\n\n#gML 32:-----{#N\n        A pearl crown               <on head> Wg 20  AC 6  +30 Mn +5 SM AE\n        (White king -- Chessboard)            [NO ANTICLASSES]\n\n#gML 35:-----{#N\n        A large round shield        < shield> Wg 15  AC 10 +40 Hp\n        (Green dragon -- draconia)            [NO ANTICLASSES]\n        A blue shield               < shield> Wg 25  AC 12\n        (Nameless Hero -- Graveyard)          [NO ANTICLASSES]\n        A shadow armor              <on body> Wg 45  AC 15 +20 SP\n        (Poisonlord -- assassins)             [NO ANTICLASSES]\n        A halberd                   <  wield> Wg 16  D 3d12 HR+2 DR+6\n        (Aglandiir -- west mountains)         ONLY:[Wa Kn Ca Ma Pa]\n        A knife                    2<h+wield> Wg 8   D 4d6  HR+4 DR+4 BSDx+2\n        (Duwick -- bandits)                   ANTI:[Th Mo Dr]\n        A girdle of power           <  waist> Wg 3   AC 10 +2 St +25SM\n        (QUEST -- 20 QP)                      [NO ANTICLASSES]\n        A golden pool cue           <   held> Wg 15  D 4d5  St+3 AC -50\n        (QUEST -- 50 QP)                      [NO ANTICLASSES]\n\n#gML 36:------{#N\n        An avalanche                <   held> Wg 18  D 4d8  HR-7 DR+21\n        (Rock Monster -- elemental canyon)    ONLY:[Wa Kn Ca Pa]\n\n#gML 39:------{#N\n        Robe Of Triskelion          <ab body> Wg 15 AC 9 INT+1 Mana+50\n        (   ???    -- Psi School)             [ANTI Th Wa Kn As Ra Ma Ca]"
+        },
+        {
+          "Keywords": [
+            "lev40=49"
+          ],
+          "Description": "\n#gML 40:------{#N\n        A Big Zither                <hold>    Wg 20 Mana+90 10chrgs mystic Sh\n        (Prince Aglandiir -- Stanneg)         [Bard Only]\n        Elven chainmail             <on body> Wg 40  AC 15 +75 Mn +57 Hp\n        A pair of elven boots       <on foot> Wg 1   AC 10 +1 HR +25 Hp\n        All 2:(Elven Archer -- Elven camp)    [NO ANTICLASSES]\n        Drow chainmail              <on body> Wg 30  AC 15 +1 HR +1 DR AG\n        Drow boots                  <on foot> Wg 1  AC 10 +1 HR +25Hp SnAG\n        All 2:(Drow commoner -- Moria Drow)   [NO ANTICLASSES]\n        A spiked buckler            < shield> Wg 5   AC 10 +2 DR\n        (Xanthias -- Man-Thor)                ONLY:[Wa Ca Kn Ma Pa Dr Il]\n        The shadow shield           < shield> Wg 15  AC 15 -3 SP\n        (Pythian -- Man-Thor)       ONLY:[Ca Dr Pa Ma Mu Wi Ps]\n        Pair of sphinxian leggings  <on legs> Wg 20  AC 9  +3 St +100 Mv\n        (S from Great Sphinx -- Pyramid)      [NO ANTICLASSES]\n        Tight leather pants         <on legs> Wg 5   AC 11    +70 Mv  AG\n        (Drow woman -- Moria Drow)            [NO ANTICLASSES]\n        Black minotaur vambraces    <on legs> Wg 9   AC 9\n        (Aegithus -- Man-Thor)                ONLY:[Wa Kn Ca Ma Il Dr]\n        A pair of spiked gauntlets  <on hand> Wg 10  AC 8  +2 DR +4 HR\n        (Dragon king -- Draconia)             [NO ANTICLASSES]\n        Major globe of invulnerability <ab body> Wg 1   AC 15 -5 SM\n        (Xanthias -- Man-Thor)                ANTI:[Mu Cl Ps Mo Wi As]\n        A heavy woolen robe         <ab body> Wg 10  AC 15\n        (Jocasta -- Man-Thor)                 ONLY:[Ca Ma As Cl Dr Mo Pa]\n        Black drow cloak            <ab body> Wg 4   AC 12  DR+1   AG\n        (Drow noble -- Moria Drow)            [NO ANTICLASSES]\n        A fur cloak                 <ab body> Wg 10  AC 10 +1 St +50 Hp\n        (Dragonian king - draconia)           [NO ANTICLASSES]\n        A green helmet              <on head> Wg 8   AC 10 +40 Hp\n        (General Patton  -- Graveyard)        [NO ANTICLASSES]\n        White knight belt           <  waist> Wg 14  AC 16          AE\n        (Akkadian -- Moria drow)              ANTI:[Mu Th Ps Wi Dr As IlMa]\n        Trollish loincloth          <  waist> Wg 12  AC 15\n        (Trolls -- Troll caves)               [NO ANTICLASSES]\n        Studded spider necklace    2<ar neck> Wg 5   AC 10  DR +2   AG\n        (Drow noble -- Moria Drow)            [NO ANTICLASSES]\n        A ruby dagger               < b/stab> Wg 8   D 5d6  HR+5 DR+5 BS\n        (Battle Mistress -- Mage Tower)       ANTI:[Cl Mo]\n        Xanthias' Great Axe         < wield>  Wg 20  D 7d7  HR+3 DR+3 Bl\n        (Xanthias -- Man-Thor)                ANTI:[Mu Cl Ps Mo Wi As]\n        An emerald sword           2<h/wield> Wg 14  D 5d8  HR+5 DR+5\n        (Dragonian king  -- Draconia)         ANTI:[Cl Dr]\n        An elven bow               2<h/wield> Wg 12  D 8d8  HR+5 DR+5\n        (Elven Archer -- Elven valley)        ONLY:[Ra]\n        Drow crossbow              2<h/wield> Wg 7   D 8d8  HR+5 DR+5  AG\n        (Drow weaponry -- Moria Drow)         ONLY:[Ra]\n        Foul  spider  scarab        <  light> Wg 5    infty   DR+1  AG\n        (Drow noble -- Moria Drow)            [NO ANTICLASSES]\n        Crystal Scarab              <  light> Wg 1   infty   +50 Mn\n        (Zombie Guardian -- Undertemple)      [NO ANTICLASSES]\n        A golden wedding ring      2<fingers> Wg 1   AC 0   +3 HR +3DR\n        (Jeweler -- shop in Midgaard)         [NO ANTICLASSES]\n        Magical Rune Tattoos        <on arms> Wg 15  AC 12  +10 SE +2 HR\n        (QUEST -- 13 QP)                      [NO ANTICLASSES]\n\n#gML 43:-----{#N\n         Bracelet of Deadly Nightshade <wrist> Wg 1 AC 12 HP+50\n         (Strawberry blond nymph -- Tynstri)   [NO ANTIS]\n \n#gML 45:-----{#N\n        A golden mask               <on head> Wg 10  AC 5  +100 Mn +50 HpMv\n        (Ramses -- Pyramid)                   [NO ANTICLASSES]\n        Wizard Walking Boots        <on feet> Wg 4 AC10 +30Mn +25Hp\n        (Fairy Warrior Wizard - Elysium)      Only:[Ps Il Wi]\n        A robe of protection        <on body> Wg 20  AC 20 +10 SC +10 SF\n        (Master Summoner -- Mage Tower)       ANTI:[Wa Kn Ca Ra Th As Ma Cl]\n        British`s sceptre (oldgen)  <h/wield> Wg 8  D 5d8  HR+4 DR+6+50HpMn\n        (Old Gen EQ)                         [NO ANTICLASSES]\n        Miniature Dragon            <light>   Wg 7 light HP+40 AE\n        (west from Malaig -- Delray)          [NO ANTIS]\n        Crimson Platemail           <on body> Wg 25 AC 20 +40Hp -1HR +2DR\n        (Primarch Morgan -- Crimson Fist)     Only:[Kn Pa Ca]\n#gML 46:-----{#N\n        Crimson Mailshirt           <on body> Wg 20 AC 18 +20Hp +1HR +50Mv\n        (Sir Aaron -- Crimson Fist)           Only:[Wa Kn Pa Ca Ra]"
+        },
+        {
+          "Keywords": [
+            "lev50=59"
+          ],
+          "Description": "\n#gML 50:-----{#N\n        Wizardly Tunic              <on body> Wg 1 AC20 IntWis+2 Mana+50\n        (Fairy Warrior Wizard - Elysium)      [ONLY Wi Ba Il Ps Dr Mo]\n         A dwarven mithril plate     <on body>Wg 100 AC 22 +3 St +3 Co\n        (crypt near Balrog -- Moria)          ONLY:[Wa Ca Kn Pa Ma]\n        A bloodstone medallion     2<ar neck> Wg 1   AC 10 +50 Mn +50 HpAG\n        (Count Vladamir --  Graveyard)        [NO ANTICLASSES]\n        A sandy-colored ring       2<fingers> Wg 5   AC 12 +2 In +75 Mn\n        (s from Great Sphinx -- Pyramid)      [NO ANTICLASSES]\n        A black cape                <on head> Wg 2   AC 12 +2 Con +100MvAG\n        (Count Vladamir --  Graveyard)        [NO ANTICLASSES]\n        A diamond ring             2<fingers> Wg 6   AC 6  +2 HR +2 DR\n        (Tiamat -- Draconia)                  [NO ANTICLASSES]\n        Deerskin Loincloth          <  waist> Wg 30  AC 17  St+2  Dx+2\n        (Pict -- Black Lagoon)                [NO ANTICLASSES]\n         Drow noble longsword       2<h/wield> Wg 10  D 4d12 HR+6 DR+6 AG\n        (Drow noble -- Moria Drow)            [NO ANTICLASSES]\n        A ruby long sword           <  wield> Wg 8   D 4d12 HR+5 DR+5\n        (Master Enchanter -- Mage Tower)      ANTI:[Cl Mo Dr]\n        A silver dagger             < b/stab> Wg 5   D 5d7  HR+5 DR+5 BS\n        (Master Enchanter -- Mage Tower)      ANTI:[Cl Mo]\n        A cermonial dagger          < b/stab> Wg 6   D 5d8  HR+2 DR+4 AE\n        (in Prayer room -- Small temple)      [NO ANTICLASSES]\n        A plain black robe          <ab body> Wg 4   AC 12  +2 HR\n        (Tiamat -- Draconia)                  [NO ANTICLASSES]\n        A Sha-Gren skin             <ab body>   Wg 4   AC 15  +2 DR\n        (QUEST -- 30 QP)                      [NO ANTICLASSES]\n\n#gML 51:-----{#N\n        Crimson Helmet              <on head> Wg 20 AC11 -1HR +1DR +50Hp\n        (Sir Azig -- Crimson Fist)            Only:[Kn Pa Ca]\n\n#gML 53:-----{#N\n        Crimson Armplates           <on arms> Wg 21 AC9 +4Str +2DR +1HR\n        (Sir Rowland -- Crimson Fist)         Only:[Kn Pa Ca]\n\n#gML 55:-----{#N\n        Robe of Stars               <ab body> Wg 5 AC 12 HrDr+1\n        (In chest near Octopus -- Gigantia)   [NO ANTIS]\n        A red belt                  <  waist> Wg 10  AC 18 +5 SF\n        (Monk -- New Japan)                   ONLY:[Th As Ma Ra Mo]\n        Tetsubo                    2<h/wield> Wg 19  D 6d7  HR+7 DR+7 ND\n        (Shikome -- New Japan NR)             ANTI:[Mu Ps Mo Wi Dr Il]\n\n#gML 59:-----{#N\n        Graceful Golden Robes                 Wg 3 AC10 Int+1 Mana+100 AE\n        (Graceful Dryad -- Tynstri)           [ONLY: Ps Il Dr]"
+        },
+        {
+          "Keywords": [
+            "lev60=69"
+          ],
+          "Description": "\n#gML 60:-----{#N\n        Soaking Wet Evening Dress   <on body> Wg 112 AC30 Mv-100 Dx-2 Mr+22\n        (Ma Glob -- Stanneg)                  [ANTI Wa Kn Ra Pa Ca, AG AN]\n        Sturdy Oaken Staff            <wield> Wg 15 D 7d8 +10DR +4HR +50MnHp\n        (Male Elf -- Tynstri Catwalk)         Only:[Dr]\n        Crystal Bracelet of Virgo  2< wrists> Wg 4   AC 10 +50 Mn +2 Ch AE\n        (Virgo -- Galaxy)                     [NO ANTICLASSES]\n        An old ring                2<fingers> Wg 1   AC 15 +100 Mn\n        (cabinet near Gollum -- Moria)        ANTI:[Wa Kn Ca As Th Ma]\n        A crystal headband          <on head> Wg 1   AC 12 +100 Mn\n        (Lich Igon -- Undertemple)            [NO ANTICLASSES]\n        Boots of the North          <on feet> Wg 4 AC10 +2HR +1DR\n        (Frost Giant Commander -- Gigantia)   [NO ANTICLASSES]\n        Shiny armour                <on body> Wg 120 AC 30 +12 SM -60 Mv\n        (Paladin -- Ultima)                   ONLY:[Pa]\n        A runed chisel              < b/stab> Wg 8   D 4d10 HR+5 DR+5 BS\n        (Golem maker -- Mage Tower)           ANTI:[Cl Mo Dr]\n        A crystal quarterstaff      <  wield> Wg 10  D 6d9  HR+4 DR+6\n        (Lich Igon -- Undertemple)            [NO ANTICLASSES]\n        Holy avenger                <  wield> Wg 10  D 5d10 HR+10 DR+5 AE\n        (Paladin -- Ultima)                   ONLY:[Pa]\n        Stone belt                  <  waist> Wg 4   AC 10 +50 HP\n        (Golem maker -- Mage Tower)           [NO ANTICLASSES]\n        Merlin's Sword              <h/wield> Wg 8 6d7  Mana+50\n        (Fairy Warrior-Wizard -- Elysium)     [ONLY: Ps Wi Il]\n\n#gML 65:-----{#N\n        Black Robe                  <on body> Wg 8 AC30 AN AG\n        (Black Apprentice -- Mage Tower)      [ANTI Mu cl Th wa kn as Pa Ma Ca]\n        A white gold bracelet      2< wrists> Wg 5   AC 10 +3 HR\n        (white robed apprentice -- Mage Tower)[NO ANTICLASSES]\n        A onyx bracelet            2< wrists> Wg 6   AC 10 +3 DR\n        (black robed apprentice -- Mage Tower)[NO ANTICLASSES]\n        A glinting silver bracelet 2< wrists> Wg 5   AC 10 +2 HR +1 DR\n        (grey robed apprentice -- Mage Tower) [NO ANTICLASSES]\n        A spiked collar            2<ar neck> Wg 9   AC 0  +5 DR\n        (calico cat -- Mage Tower)            [NO ANTICLASSES]\n        Drow steel-toed boots       <on foot> Wg15 AC10 HR+2 DR+1 +100MvAG\n        (Arziana -- Moria Drow)               ANTI:[Mu Th Wi Dr As Il Pa]\n        Cloak of midnight           <ab body> Wg 20  AC 15 +50Hp       AG\n        (Mercurien -- Moria Drow)             [NO ANTICLASSES]\n        The Horns of Capricorn      <on hand> Wg 6   AC 10 +3 HR +4 DR AE\n        (Capricorn -- Galaxy)                 [NO ANTICLASSES]\n        The Shell of Cancer         <on body> Wg 75  AC 30 AE\n        (Cancer -- Galaxy)                    [NO ANTICLASSES]\n        Drow darksteel chainmail    <on body> Wg 45  AC 30 AG\n        (Tashken, hunter -- Moria Drow)       ANTI:[Mu,Th,Wi,Dr,As,Il,Pa]\n        Darksteel drow vambraces    <on arms> Wg 10  AC 12  HR+1  DR+1  AG\n        (Balazar -- Moria Drow)               ANTI:[Mu,Th,Wi,Dr,As,Il,Pa]\n        The Golden Fleece          2<ar neck> Wg 15  AC 12 +60 Hp AE\n        (Aries -- Galaxy)                     [NO ANTICLASSES]\n        The Bow of Sagittarius      <  wield> Wg 20  D 7d8  HR+6 DR+6 AE\n        The Arrow of Sagittarius    <   held> Wg     D 0    HR+12\n        All 2:(Sagittarius -- Galaxy)         [NO ANTICLASSES]\n        Ninja mask                 <on head> Wg 2   AC 12 +15 SM +2 Dex\n         (Ninja -- New Japan)                 ONLY:[Ma As Th Ra Mo]\n\n#gML 67:-----{#N\n        Orion`s Hunting Belt        <  waist> Wg 7   AC 10 +2 HR +2 CON AE\n        (Orion the Hunter -- Galaxy)          [NO ANTICLASSES]\n        Rusty Shield                <shield>  Wg 22 AC 10 HrDr +3 AG AN\n        (Skeleton -- Ultima)                  [NO ANTIS]\n\n#gML 68:-----{#N\n        The Tail of Pisces          <on legs> Wg 10  AC 10 +1 HR +1 DR AE\n        (Pisces the mermaid -- Galaxy)        [NO ANTICLASSES]\n        A pair of tabi boots        <on foot> Wg 20  AC10 +2HR+80Mv +2DxAG\n        (Ninja Warrior -- New Japan)          ANTI:[Mu Cl Ps Kn Wi Dr IlPa]\n        The Sting of Scorpio        < b/stab> Wg 9   D 6d7  HR+7 DR+7 BSAE\n        (Scorpio -- Galaxy)                   [NO ANTICLASSES]"
+        },
+        {
+          "Keywords": [
+            "lev70=79"
+          ],
+          "Description": "\n#gML 70:-----{#N\n        Priest's Robes              <on body> Wg 10 AC33 HP+50 MR+5 AG\n        (Boar and Tiger priest -- Werehome)   [ONLY:Dr Mo Wi Il Ps]\n        Fire Opal Ring              <finger>  Wg 1 AC15 HR+2 Mana+80 SP+10 AG\n        (Fire Dragon -- tynstri)              [NO ANTIS]\n        Studded leather gloves      <on hand> Wg 6   AC 15  HR+3  DR+3  AG\n        (Denzar -- Moria Drow)                [NO ANTICLASSES]\n        Black troll hide greaves        <on legs> Wg 10  AC 10  DR+1 +30Hp\n        (Balazar -- Moria Drow)               [NO ANTICLASSES]\n        Black opal necklace        2<ar neck> Wg 10  AC 13  HR+2 +80Mn AG\n        (Mercurien -- Moria Drow)             [NO ANTICLASSES]\n        Black pearl medallion      2<ar neck> Wg 10  AC 13  HR+1 DR+1+20Hp\n        (Arziana -- Moria Drow)               [NO ANTICLASSES]\n        A shiny plate               <on body> Wg 100 AC 40 AE\n        A large broadsword         2<h/wield> Wg 17  D 6d10 HR+5 DR+10 AE\n        All 2:(paladins -- Small Temple)      ONLY:[Wa Kn Ca Ma Pa]\n\n#gML 71:-----{#N       \n        The Hoof of Taurus          <on foot> Wg 15  AC 10 +100 Mv +3 DR AE\n        (Taurus -- Galaxy)                    [NO ANTICLASSES]\n\n#gML 72:-----{#N\n        A Nemean Lion Skin          <ab body> Wg 45  AC 15 +50 Hp AE\n        (Leo -- Galaxy)                       [NO ANTICLASSES]\n\n#gML 73:-----{#N\n        Arm plates of Hercules      <on arms> Wg 20  AC 10 +5 St +3 DR AE\n        (Hercules -- Galaxy)                  [NO ANTICLASSES]\n\n#gML 75:-----{#N\n        Red Mantle                  <ab body> Wg 15 AC15 HrDr+1 Mr+5 AG\n        (Dorlan -- Wherehome)                 [ANTI Th Wa Kn As Ra Pa Ca]\n        Libra`s Scale of Injustice  < shield> Wg 15 AC 6 +2DR +2HR -2Wi AG\n        Libra`s Scale of Justice    < shield> Wg 15 AC 11 +50Mn,Hp +1Wi AE\n        All 2:(Libra -- Galaxy)               [NO ANTICLASSES]\n        The Mask of Gemini          <on head> Wg 7   AC 16 AE\n        (Gemini -- Galaxy)                    [NO ANTICLASSES]\n        Jack`s knife                < b/stab> Wg 8   D 2d25 HR+5 DR+10 BSAG\n        (Jack the Reaper -- Hell)             ANTI:[Pa]\n        Drow assassin face mask     <on head> Wg 10  AC13  HR+1  AG\n        (Drow assassin -- Moria Drow)         [NO ANTICLASSES]\n        Conans two-handed sword     <  wield>  Wg 0   D 4d20 +5 Str +5 Con\n        (Conan -- Mage tower)                 ONLY:[Wa Ca Kn Pa]\n        Large Broadsword            <h/wield>  Wg 18  D 8d8 HR+5 DR+10\n        (Peter -- Welmar castle)              ONLY:[Ra Kn Ca Pa Ma]\n        Starched White Apron        <waist>   Wg 2 AC 14 MnHp +25\n        (The chief chef -- Tynstri)           [NO ANTIS]\n\n#gML 77:-----{#N\n        Ruby Scale                  <shield>  Wg 15 AC15 Mana+25\n        (Ruby Dragon -- Tynstri)              [NO ANTIS]"
+        },
+        {
+          "Keywords": [
+            "lev80=89"
+          ],
+          "Description": "\n#gML 80:-----{#N\n        Tough Dragonskin Boots      <feet>    Wg 10 Dex+3 Mana+50\n        (Master Ranger -- Tynstri)            [ONLY Kn Pa]\n        Long grey cloak            2<ar neck> Wg 7   AC 10 +100 Mn AG AE\n        (Master of Neutrality -- Mage Tower)  ANTI:[Wa Ma Ca Th]\n        White cloak                2<ar neck> Wg 7   AC 15 +100Hp Goodonly   \n        (Master of Goodness   -- Mage Tower)  ANTI:[Wa Ma Ca Th]\n        A golden crown              <on head> Wg 40  AC 25 +100 Mn +100 Hp\n        (King Welmar -- Welmar castle)        ANTI:[Wa Cl Th Mu]\n        Rigel's shoes               <on feet> Wg 18  AC 20 +3 Con + 3 Dex\n        (QUEST -- QP)                         ONLY:[Wa Kn Ca Ra]\n        A ring of lost souls       2<fingers> Wg 2   AC 20 AG\n        (Walking satanics --  Hell)           [NO ANTICLASSES]\n        The Ring of Dignity        2<fingers> Wg 3   AC 15 +85 Hp AE\n        (Cassiopea -- Galaxy)                 [NO ANTICLASSES]\n        A emerald ring             2<fingers> Wg 4   AC 15 +3 HR +3 DR\n        (Royal Mummy -- Small temple)         [NO ANTICLASSES]\n        Tekagi                      <on hand> Wg 5   AC 2  +8 DR -35 SM AG\n        (Dia-oni -- New Japan)                ONLY:[As Th]\n        A golden sceptre                <h/wield> Wg 19  D 10d7 +6HR +10DRAE\n        (King Welmar -- Welmar castle)        ONLY:[Kn Ca Pa Ma]\n        Drow assassin dagger            < b/stab> Wg 10  D 5D10 +10HR +7DRAG\n        (Drow assassin -- Moria Drow)         [NO ANTICLASSES]\n\n#gML 84:-----{#N\n        A  magic cloak              <ab body> Wg 8   AC 15 +75 Mn AE\n        (Shamino -- Ultima)                   [NO ANTICLASSES]\n\n#gML 85:-----{#N\n        Glowing Topaz Bracelet      <wrist>   Wg 15 HP+15 HR+1 DR+1\n        (Topaz Dragon -- Tynstri)             [ NO ANTIS]\n        Steel Dagger With Ebony Handle <b/stab> Wg 8 6d10 HR+9 DR+5\n        (Philosophical Thief -- Elyisium)     [ONLY Th As Ba]\n        A black belt                <  waist> Wg 20  AC 21 AG\n        (Dai-Oni -- New Japan)                ONLY:[As]\n        A suit of fire              <on body> Wg 140 AC 50 +20 SF AG\n        (Satan -- Hell)                       [NO ANTICLASSES]\n        A pitch fork                <  wield> Wg 18 D 7d10 HR+10 DR+10 AG\n        (Satan -- Hell)                       ONLY:[Kn Ca Ra Ma]\n        The holy hammer             <h/wield> Wg 20 D 7d10 HR+4 DR+15+10SM AE\n        (Master Paladin -- Small Temple)      ONLY:[Cl Dr Mo Pa Kn Ca]\n        The avatars glowing spear  2<h/wield> Wg 16  D 6d10 HR+6 DR+15 AE\n        (Prince Orcus -- Small Temple)         [NO ANTICLASSES]\n        A glowing golden chainmail  <on body> Wg 90  AC 45 +3 HR +3 DR AE\n        (Holy Avatar -- Small Temple)         [NO ANTICLASSES]\n        A pair of shiny bracers  2< wrists> Wg 5   AC 15 +3 HR\n        (Holy Avatar -- Small Temple)         [NO ANTICLASSES]\n        Hellstaff                   <   held> Wg 10  +400 Mn AG\n        (Satan -- Hell)                       ONLY:[Wi Il]\n\n#gML 87:-----{#N\n        Deep Purple Belt            <waist>   Wg 5 AC 1 HR-1 DR+3 AG\n        (Purple Dragon -- Tynstri)            [NO ANTIS]\n\n#gML 88:-----{#N\n        Hawthorn heart              <held>    Wg 15 +150Hp 15 chrages of heal\n        (Tamric -- Tynstri)                   [ANTI: Mu Cl Th Wa Ba Kn As Ra Ma]     \n        Amethyst Ankle Bracelet     <feet>    Wg 1 AC 2 HR+1 DR+5 MR-25 AG\n        (Amethyst Dragon -- Tynstri)          [NO ANTRIS]"
+        },
+        {
+          "Keywords": [
+            "lev90="
+          ],
+          "Description": "\n#gML 90:-----{#N\n        Ornate Gold Ring            <finger>  Wg1 AC30 Mana+75\n        (Gold Dragons -- Tynstri)             [ONLY Ps]\n        Compleatly Black Armour     <on body> Wg 188 Ac 45 Mv-50 Hp+100 AN\n        (Exodus -- Ultima)                    [MuClThPsMoKnWiDrAsIlPa]\n        Cap'n's Shield              <shield>  Wg 15 AC6 MV+60 HR+2 Mr+5\n        (Master Ranger -- Tynstri)       [ANTI: Mu Cl Th Ps Mo Ba Wi Dr As]\n        Master Ranger's Hunting Knife <h/wield> Wg 8 6d9 HR+10 DR+8 AE\n        (Master Ranger -- Tynstri)            [Anti Cl Mo Dr]\n        Spiked Mace                 <h/wield> Wg 16 6d13 HR+3 DR+7 AG AN\n        (Blackthorn -- Ultima)                [ANTI: Mu Th Kn Wi Il Pa]\n        A Big Red Face              <head>    Wg 98 AC18 Mana+100 AG AN\n        (Guardian -- Ultima)                  [NO ANTIS]\n        Leggings of Elvenkind       <legs>    Wg 15 AC 10 Mana +30 AE\n        (Master Ranger -- tynstri)            [ONLY:Dr Ra]\n        Froboz`s robe              2<ar neck> Wg 5   AC 6   +20 SM\n        (Old gen eq)                          [NO ANTICLASSES]\n        Great Hunting Bow           <hold>    Wg 10 9d7 Hr+17 Dr+26 Mr10AEAG\n        (Master Ranger -- Tynstri)            [Ranger only]\n        Intricate Torc             2<ar neck> Wg 5   AC 6   +20 MR\n        (xKamthra -- SDzone)                  [NO ANTIS]\n        Bracelet of wizardry      2< wrists>  Wg 5 AC 10 +200 Mn\n        (Great Mistress -- Mage Tower)        ONLY:[Wi Il Ba Ps]\n        Ring of wizardry          2< finger>  Wg 5 AC 10 +100 Mn\n        (Great Mistress -- Mage Tower)        ONLY:[Wi Il Ba]\n        A heart shaped medallion   2<on neck> Wg 3   AC 20\n        (altar n from Mistress -- Mage Tower) [NO ANTICLASSES]\n        Green dragon scale shirt    <on body> Wg 15  AC 35 +200 Mn\n        (Mistress -- Mage Tower)              ANTI:[Kn As Pa Ma Ca]\n        An amulet of true armor    2<ar neck> Wg 10  AC 25 AG\n        (2.Fury -- Hell)                      [NO ANTICLASSES]\n        The ring of the universe   2<fingers> Wg 3   AC 30\n        (Polaris -- Galaxy)                   [NO ANTICLASSES]\n        The ebony kris              < b/stab> Wg 9   D 10d5 HR+10 DR+10\n        (Mistress -- Mage Tower)              ANTI:[Cl Mo Dr]\n        Shiny golden helm           <on head> Wg 30  AC 30  +100 HP AE\n        Shiny golden footplates     <on feet> Wg 20  AC 15  -50 Mv  AE\n        Shiny golden gauntlets      <on hand> Wg 30  AC 12  +5 HR +5 DR AE\n        Shiny golden armplates      <on arms> Wg 40  AC 20  +100 HP AE[\n        Shiny golden leg plates     <on legs> Wg 30  AC 20  -50 Mv AE\n        Shiny golden breastplate    <on body> Wg 140 AC 50  +80 Hp AE\n        All 6:(Master Paladin -- Small temple)ONLY:[Kn Ca Pa]\n        British's amulet            <ar neck> Wg 1  AC 20  +10 SM AE\n        British's crown             <on head> Wg 10 AC 18  +100Mn +5SM AE\n        British's sceptre           <h/wield> Wg 8  D 6d10 DR+8 +100Mn AE\n        All 3:(Lord British -- Ultima)        ANTI:[Th Ba As Ma]\n        Black drow longbow          <h/wield> Wg 10 D  9d9 HR+10 DR+15 AG\n        (Bandar Nazet -- Moria Drow)          ONLY:[Ra]\n        Sceptre of Might            <  light> Wg 4   300 Hrs +4 HR +4 DRAE\n        (King Cepheus -- Galaxy)              [NO ANTICLASSES]\n        Great Dipper of the Skies   <h/wield> Wg 16 D 6d12 HR+15 DR+5 Bl\n        (Old Gen EQ)                          ONLY:[Pa Dr Mo]\n        Light Sabre                 <  light>      Infty  +8HR Good only\n        Light Sabre                 <  light>      Infty  +8DR Evil only\n        All 2:(QUEST -- 20 QP)                      [NO ANTICLASSES]\n        Light Sabre                 <  light>      Infty  +4DR +4 HR AG A\n        (QUEST -- 30 QP)                      [NO ANTICLASSES]\n        Long Shimmering Icicle      <held>    Wg 5 4d3 HR+6 DR+18 AG\n        (Ice Dragon -- Tynstri)               [Invisible,nodrop,hidden]\n\n#gML 95:-----{#N\n        A Set of BattleArmour       <on body> Wg 100 AC45 Hp+75 AE\n        (xDemandred -- SDzone)                [ANTI Cl Mo Ba]\n        Long Tooth                  <b/stab>  Wg 8 10d5 HR8 DR10 MR2 AE\n        (xHercules -- SDzone)                 [NO ANTICLASSES]\n        Metallic Armplates          <on arms> Wg 20 AC10 +2DR +5MR\n        (xHercules -- SDzone)                 [NO ANTICLASSES]\n        Light Mithril Gauntlets    <on hands> Wg 15 AC10 Hp+50 DR+5\n        (xZharradan -- SDzone)                Only:[As]\n        Crimson Long Sword          <h/wield> Wg 7 8d8 HrDr+10 NoMove AG\n        (Hades -- Hell)                       [ANTI Mu Cl Th Ps mo Ba Wi Dr As]\n        Black and Deadly Dagger     <b/stab>  Wg 10 6d8 HR+8 DR+10 AG\n        (xZharradan -- SDzone)                [ANTI Mu Cl Wa Ps mo Ba Kn Wi Dr]\n        An emerald bracer          2< wrists> Wg 10  AC 5  +3 HR +3 DR\n        (Hades -- Hell)                       [NO ANTICLASSES]\n        A suit of death             <on body> Wg 180 AC 55 -5 HR -300 MnAG\n        A pair Of Golden Gauntlets  <hands>   Wg 5 AC 8 HrDr+4 AE\n        (xDemandred -- SDzone)                [ANTI Cl Mo Dr]\n        (Hades -- Hell)                       ONLY:[Wa Kn Ca Ra Ma Ba]\n        A shimmering war band       <on head> Wg 25  AC 10 +2 HR +2 DR AG\n        (Hell spawn  -- Hell)                 ONLY:[Wa Ca Ra Th Ba Pa Ma]\n        Aura of light               <  light> Wg 5   300 Hrs  -25 AC AG\n        (Hades -- Hell)                       [NO ANTICLASSES]\n\n#gML 100:----{#N\n        Psionic Whip                <h/wield> Wg15 6d12 HR+9 DR+6 Mana+100\n        [Creston -- Psi School]               [ONLY: Ps]\n        Belt of Triskelion          <waist>   Wg 25 AC 18 Mana+50 Mr10\n        (Creston -- Psionicist school)        [Ps Wi Only]\n        Magical Ball of Wildfire    <light>   Wg 14 Mana+80 HR+2\n        (Master Ranger -- Tynstri)            [NO ANTIS]\n        Finely Made Mithril Chainmail <on body> Wg 50 Ac50 Hp+25 Mv+100 AE\n        (Master Ranger -- Tynstri)            [Ranger Only]\n        The Emperor`s new clothes   <ab body> Wg 150 AC 20 AE +2 Dx +18 SM\n        (Emperor Nazaki -- New Japan)         ANTI:[Mu Cl Ps Mo Wi Dr Il]\n        Onyx hilted longsword       <  wield> Wg 7   D 8d8 HR+7 DR+10  Ev\n        (Michael -- Moria Drow)               ONLY:[Wa]\n        Kazlyn's Dark-Oak Staff     <  wield> Wg 9 D 6d9 HR+7 DR+9 +150Mn A\n        (Kazlyn -- Moria Drow)                ONLY:[Pa,Wi,Il,Ps,Ma]\n        Diffuse Glow                <light>   Wg 1 Mana+75 AE\n        (xKamthra -- SDzone)                  [NO ANTIS]\n        The heartseeker             < b/stab> Wg 1   D 7d8 HR+10 DR+10 NM\n        (QUEST -- 35 QP)                      [NO ANTICLASSES]\n        The wyrmslayer              <  wield> Wg 15  D 9d9 HR+6 DR+15 Bl\n        (QUEST -- 25 QP)                      [NO ANTICLASSES]\n        Aura of Alcmene            <  light>      Infty  +4DR +3 HR\n        (QUEST -- 30 QP)                      [NO ANTICLASSES\n        Golden Unicorn Horn         <b/stab>  Wg 15 14d3 HR+12 DR+12 AE\n        (Unicorn -- Tynstri)                  [ANTI:cl mo dr]\n        Golden Staff                <h/wield> Wg 12 6d10 HR+8 DR+8 MANA+100\n        (xKamthra -- SDzone)                   [NO ANTIS]  AE\n \n#gML 105:-----{#N\n        Mighty Hammer of justice    <h/wield> Wg 21 8d8 HR+5 DR+10 Age+50\n        (Elfking -- Elysium)                  ONLY:[Kn Pa]\n        Superhero Cape              <ab body> Wg 1 AC25\n        (Elfking -- Elyium)                   ONLY:[Kn Pa]\n        Henrietta's Favourite Dress <on body> Wg 5 AC45 +75Hp +150Mn\n        (Henrietta -- Tynstri)                ANTI:[Th Wa Kn As Ma Ca Ni]\n        Long Spiderweb Sleeves      <arms>    Wg 1 AC12 Mana+50\n        (Fairy Warrior-Wizard -- Elysium)     [ONLY Wi Ps Il]"
+        },
+        {
+          "Keywords": [
+            "areas"
+          ],
+          "Description": "\nHere is a list of some of the areas available on the mud, however the mud \nis expanding all the time and areas might be moved slightly to accomodate \nnewer ones. (All directions are from the Temple)\nThe level ranges are -very- approximate and depend very heavily on the \nclass equipment and number of remorts. Try zones about the right level, \nif they are too easy, try harder ones, or others with the same rating.\n\nAlways take recalls when exploring a new zone, and make sure you set your\nwimpy as high as possible.\n\n     #GZone Name                 Directions                 Levels#N\n     Assassins                 2s6e2n5e2n8e2n2dw          [#Ylow#W]\n     Bandits                   2s5w6wned3e3swswse         [#Ylow#W] \n     Chessboard                2s7ed3ne6n6ed              [#Ylow#W-#Mmed#W] \n     Crete                     3s2e2s7w7w7wswn2w2s        [#Ylow#W]\n     Crimson Fist              2s8e7e3s3wud               [#Chigh#W]\n     Delray                    2s3w6se6swnw3de            [#Ylow#W-#Mmed#W]\n     Demon Empire              2s3w6se6se6s2e9s2s3wnw     [#Gv.high#W]\n     Dirt Path                 2s5w2n                     [#Rnewbie#W]\n     Elysium Faire             8n8n8nw                    [#Gv.high#W]\n     Fairies                   7n7n9e4ne4nw4n             [#Mmedium#W]\n     Galaxy                    2s9w7ws2w2sws3wn2wd        [#Chigh#W] \n     Gigantia                  9n9n9n3nen3en              [#Mmedium#W] \n     Godforsaken Slum(PKOK)    3s3w3sws                   \n     Gragloy Castle            2s6e2n5e2n8enenu           [#Chigh#W]\n     Graveyard/Undertemple     2s3w6s2es                  [#Ylow#W-#Mmed#W]\n     Heaven                    2s6e2n4ed3n9ee4nw (\"exit\") [#Chigh#W]\n     Hell                      2s7ed3ne2s5e2s5e7s4sd      [#Gv.high#W]\n     Hobbit Village            2s4e5n                     [#Ylow#W]\n     Illir                     2s7ed3ne2s5e2s5e3s3ws2w3n  [#Mmedium#W]\n     Japan                     3s3w4se6se6s8s4e2s4e       [#Chigh#W]\n     Lagoon                    3s3w4se6se6s8se5s5s        [#Mmedium#W]\n     Lamias                    2s7ed5n8ese2sw             [#Ylow#W]\n     Lizardmen                 3s2e2s6ws                  [#Ylow#W]\n     Mage's Tower              2s7ed3ne2s5e2s5es4en       [#Chigh#W]\n     Minotaurs                 2s6e5n5und4nen2e3s         [#Mmedium#W]\n     New Arachnos              2s9w7ws3wun                [#Ylow#W]\n     Newbie Zoo                2s5e2s                     [#Rnewbie#W]\n     New Drow                  2s6e8n2wn3wde3n2w2n2wnwn   [#Mmed#W-#Gv.high#W]\n     Ocean                     3s2e2s6w7w3se2swsw2s       [#Mmedium#W]\n     Psionicist School         2s3w5s4en                  [#Mmedium#W]\n     Pyramid                   2s7ed5n9eneu               [#Mmedium#W]\n     Rome                      9n5n5w                     [#Ylow#W]\n     Stanneg                   2s9w2wned3e2s2e            [#Ylow#W-#Mmed#W]\n     Storm Dragons Fortress    2s3w6se6se6s2e9se2neueu    [#Gv.high#W]\n     Swamp                     2s9w7ws2w2sw3s             [#Chigh#W]\n     Small Temple              2s6e8n2n2e4n2en            [#Chigh#W-#gv.high#W]\n     Troglodytes               dned2nwnd2e2nwswndw        [#Ylow#W]\n     Trolls                    2s6e2n5e2n2e2swn           [#Chigh#W]\n     Tynstri                   7n7n9e4ne2n3en2e3ne        [#Mmed#W-#Gv.high#W]\n     Ultima                    2s9w2nwnenw3s              [#Ylow#W-#Gv.high#W]\n     Welmars Castle            2s8e7e3s9en                [#Chigh#W]\n     Werehome                  2s7ed3ne2s2e2n4e3n2edes    [#Chigh#W]\n         \nApproximate Ranges: [#Rnewbie#W]     0-5\n                    [#Ylow#W]        5-30\n                    [#Mmedium#W]     30-60\n                    [#Chigh#W]       60-90\n                    [#Gv.high#W]     90+"
+        },
+        {
+          "Keywords": [
+            "story9"
+          ],
+          "Description": "\nMaybe now, such titles as Deimos's \"Silver Dragon\" or Sinner and his\n\"a lone rogue and his dragon\".. maybe they make more sense.... Maybe\nnames such as Ji and Elvis, Dikuman and Funnyguy won't be\nforgotten... Thank you, Djeli, for allowing me to write the clan\nhistory.. I think since Evil's deletion I'm probably the one who\nknows it best, although of late my view has been from the outside and\nnot from within. Congratulations, Storm Dragons, you have a clan you\nshould all be proud of. You did something I, and others, failed to\ndo.\n\nYou made a clan out of yourselves, and for that, I respect you.\n\nLady Nymph\n(So ends the history)"
+        },
+        {
+          "Keywords": [
+            "story8"
+          ],
+          "Description": "\nEPILOGUE\nThat was then, this is now.\nFor those who wanted a list of rulers, lets see what I can manage...\nEvil/Nymph (Evil includes *all* his characters)\nEvil\nNo-one\nZharradan\nDjeli\nI've not included various others who held a leader rank, only the\nones who had \"final say\", as it were.\nStorm Dragons has had a lot in it's history. Few probably remember\nFunnyguy, or Dikuman, or Santa, or Evil, despite the fact that Evil\nwas the second most worshipped god the mud has ever known... but all\nthese people and more made this clan what it was, much as you reading\nthis make Storm Dragons what it is and what it can become. (To \ncontinue, look story9)"
+        },
+        {
+          "Keywords": [
+            "story7"
+          ],
+          "Description": "\nto the mortal world and became the first mortal to remort thrice,\nmaking him one of Midgaard's mightiest heroes. He seized the clan,\nand led it to new heights new blood joined, and working with old\ngods, made the clan something fresh, something new.\n\nStorm Dragons today are indeed a popular clan, ranging between 4 or 5\nand 15 people online, truly impressive. They are a clan with a\nhistory like no other, for few have a history so rich, or so\ncontroversial. The clan is a clan of firsts... the first 3rd remort,\nand the first clan to use unique clan titles.. also the reason why\nonly advisors and higher can resign from a clan. Due to the Storm\nDragons, 2 clans died, GeNeX, and Shadow Runners, and many others\nspent themselves attempting to extinguish this clan. Clan wars almost\nbecame a reality.(To continue, look story8)"
+        },
+        {
+          "Keywords": [
+            "story6"
+          ],
+          "Description": "\nShampoo became the clan Mother Goddess and Lagg remained the sole\nGrand Drake. Evil self-deleted in a fit of despair, and Santa soon\nfollowed suit.\n\nSTORM DRAGON CLAN HISTORY (New Hope)\nStorm Dragons, as a clan, drifted. It was no longer a potent clan,\nand its most prominent warriors became gods, leaving a vaccuum of\ntalent in the world of Midgaard. It was a clan with no leader, and\nexisted in a void, with no goals, and no identify. Those who had\nattempted to save it had left it for dead.. but it did not die.\nSalvation came in the guise of Avalon and Zharradan. Avalon became\nmore and more mighty as an immortal, while Zharradan, an absent god,\nreturned (To continue look story7)"
+        },
+        {
+          "Keywords": [
+            "story5"
+          ],
+          "Description": "\nforever. In one fell swoop, myself, Sinner, Deimos, Elvis, and Hoffa\nleft the clan, and the Storm Dragons lurched on the edge of death.\nFor a short time I stayed in the Holy Unicorns, while others drifted\ninto clanlessness or the Shadowblades of old. After immorting, I\nspoke with  friends, Deimos, Sinner, Radagast and Puck, and the 5 of\nus returned with renewed spirit to attempt to save our clan.\nIt was not to be so. New policies drove friends away, old leaders\nlost hope, and Santa faded away. In anger and despair some of the\nStorm Dragons' finest left, off to search for what they sought to\ncreate. Shadowblade accepted many, while others formed new clans: the\nArmy of Darkness, and Saracen, later to be known as Kai. Still others\ndrifted to the Holy Unicorns and the Pack.\n(to continue, read story6)"
+        },
+        {
+          "Keywords": [
+            "story4"
+          ],
+          "Description": "\nand more people ignored the clan line. What was once a clan was now\nmerely a collection of people. It was at this time that several Storm\nDragons left the clan and formed what became known as the SHOGUN\nclan.\n\nSTORM DRAGON CLAN HISTORY (Clan War)\n\nNo, clan war never happened, but it nearly did. Hatred came from\neverywhere, and old allies, such as the SHOGUNS, soon turned on their\nold friends.  Rotting from within, warring from without, the Storm\nDragons slowly lost hope. Evil became aloof, and I, in my attempts to\nsave the clan, nearly destroyed it\n( To continue, look story5)"
+        },
+        {
+          "Keywords": [
+            "story3"
+          ],
+          "Description": "\nFor some reason, Anubis was raised to the rank of Grand Drake, and\nthis began a tendency to raise people to the ruler rank. This\nresulted in a bit of chaos until a balance was reached with first 3\nrulers, and later 5, with Santa being the first among equals and me\nbeing the Queen over all. Sinner, Radagast, Anubis, Deimos, Sinner,\nPuck, Gurk, Santa, Reddragon, and I believe Odie, all served in the\npost of Grand Drake at one point or another. Lagg was the last of\nthem, until the recent election. Slowly, the clan deteriorated, as\napathy took hold and people began to ignore their kin. A slow rotting\nbecame an explosion, and the problems became deeper and deeper. The\nvery thing that made the clan grow began to destroy it, and the\nrecruitment policy of the leaders began to show its evils as more\n(to continue, look story4)"
+        },
+        {
+          "Keywords": [
+            "story2"
+          ],
+          "Description": "\nThe Storm Dragons grew swiftly, with a recruitment policy more\naggresive than any other in the history of elite. Only a few clans\nbecame as despised as the Storm Dragons were. Clumsiness on the part\nof myself and apathy on the part of Santa only quickened the problem,\nand soon the Storm Dragons had to look into themselves to see what\nhad gone wrong.\n\nSTORM DRAGON CLAN HISTORY (The Turmoil)\nI was the first Mother Goddess, as Djeli's title was known back then,\nand Reddragon was the first Grand Drake, or clan ruler. As I earlier\nsaid, I pursuaded Evil that Santa was more suited to this role.\nAvalon was the first and only Overgod, but Evil was the first\nCelestial Emperor.\n(to continue, look story3)"
+        },
+        {
+          "Keywords": [
+            "story",
+            "history",
+            "storm",
+            "sd"
+          ],
+          "Description": "\nSTORM DRAGON CLAN HISTORY (The Beginning)\nLong ago, a great assassin known as Evil achieved his immortality\nindeed, his swiftness in becoming a god was only matched, rather\nironically, by Zharradan. He found a place for himself in the clan of\nthe Shadowblades, and soon was reckoned as a mighty warrior, in\nguises of Santa and Reddragon, the powerful dragon lords. The dragon\nReddragon contrived to found a clan, a people in his new world,  and\nwith the elf Nymph as queen and the assassin Evil as Celestial\nEmperor, the Storm Dragons formed. Exodus began. Evil was a popular\ndeity and Santa a respected hero, and many of his comrades from the\nShadowblades followed, many disenchanted with the loss of Telcor. I\nmanaged to convinved Santa to take charge over Reddragon, and soon\nthis infamous ancient dragon Lord was master of the Storm Dragon\nclan.(To continue, look story2)"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27816,
+      "Name": "#RThe Lower Caverns#N",
+      "Description": "\n   You find yourself in the deepest darkest area of the Storm Dragons\nClan House, where the most ancient Storm Dragons reside. Having risen to \nthe peak of their power, these mighty clan members have moved on to other\nrealms, but their chambers are always left ready for them, should they\nreturn.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 27811,
+          "Description": "A narrow passage leads upwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 27817,
+          "Description": "You cant see much, its pretty dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27806,
+          "Description": "An archway leads east into an ancient leaders chambers.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27817,
+      "Name": "#RSkar's Study#N",
+      "Description": "\n   You have entered a cosy room. A fireplace is set into a wall, and\nthere is a big comfy looking rug in front of it. A couch is standing\nbehind the rug, and there is a bed in a corner as well.  This is the\nroom of the current leader of the Storm Dragons, Skar.  You see\npictures of his family on the walls, some still here, some sadly\nmissed. You recognize Diana, Crusher and Dragonstorm.  There are many\nbooks on ancient dragon lore placed in bookshelves all around the\nroom and on the oaken desk which stands in the centre.  A comfortable\nlooking chair is standing behind the desk, with soft cushions. Looks\nlike Skar likes to have comfort when he is working on making his clan\na better place for the people to be in.  You also notice some emtpy\nspace in one corner and wonder if that is where Rol sleeps when he is\nin his dragon form. You are not sure if dragons need sleep at all,\nbut if he does it's nice and warm here to sleep at least.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27816,
+          "Description": "You see a small dark chamber to the south.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27818,
+      "Name": "#RElminister's Funky Chamber of Sleep#N",
+      "Description": "\n   As you enter this chamber through a not-so-secret flimsy wooden door,\nyou begin to understand why Elm lives in the basement. You are enveloped\nby bright nauseating colours emitted by Elm-enhanced glowworms. Assorted\nbizarre looking weapons litter the floor, including weapons from distant \nJapan and foreboding Ultima. The book shelf is full of dusty spell books \nperilously close to the caged Book Monster and you see potion bottles \nnot properly corked filling the room with a strange mist that can\u0092t be \nhealthy. Walls are plastered with posters of the sexy Grand Mistress and \nunbeatable Bruce Lee. A massive grandiose bedstead fills the rest of the \nchamber and you recognize it as King Welmar\u0092s bed that was reported \nstolen a couple weeks ago.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27811,
+          "Description": "A narrow bridge leads into the Gallery of the Drakes.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27819,
+      "Name": "#RBludjon's Abode#N",
+      "Description": "\n   You have entered a very large room. Immediately, the #wtapestry#N on the \n#wnorth#N wall catches your attention. It depicts a very life-like image of \na raging #wStorm Dragon#N. On the centre of the #wnorth#N wall is an #walcove#N, \ncurtained off by some heavy azure velvet #wdrapes#N. #wWest#N, you see what \nappears to be a #wwizard's workshop#N. The #weast#N wall is completely filled by \nan enormous #wcloset#N with fold-away doors.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27811,
+          "Description": "A wide door leads south onto the Drakes Gallery.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": -1,
+          "Description": "The detail of the #wtapestry#N is exquisite. A #wStorm Dragon#N rearing back, \nforeclaws extended, ready to deliver a devastating breath attack. \nBreathtaking!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": -1,
+          "Description": "A huge #wcloset#N stretches from wall to wall. The folding door is featureless \nbut for a small #wrecess#N in the centre.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": -1,
+          "Description": "Looks like a collection of equipment of the kind a working wizard \nmight have. There is a glass-doored #wcabinet#N which appears to contain \nspell components. There is a mortar and pestle sitting on large \nworktable. On one end of the #wworktable#N, there stands a #wdais#N on which \nrest a huge tome. Bludjon's Spell Book? On the other, there rest a \nlarge bookcase containing what looks to be reference materials.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestry"
+          ],
+          "Description": "\nThe detail of the #wtapestry#N is exquisite. A #wStorm Dragon#N rearing back, \nforeclaws extended, ready to deliver a devastating breath attack. \nBreathtaking!"
+        },
+        {
+          "Keywords": [
+            "raging",
+            "storm",
+            "dragon"
+          ],
+          "Description": "\nA magnificent beast! The muscles beneath the iridescent scales almost \nseem to be rippling. Gleaming white fangs and razor teeth strike a \nprimordial chord deep within your breast. Huge ivory talons, the size \nof broadswords grace the forepaws of the creature. The hind quarters \nsport even larger ones. Ruby red #weyes#N with elliptical irises of the \nblackest midnight seem to glow with intelligence and life. The Storm \nDragon seems poised to step out of the tapestry to strike!"
+        },
+        {
+          "Keywords": [
+            "eye",
+            "eyes"
+          ],
+          "Description": "\nStrange! The eyes seem to be following you as you move about the \nroom. Could this be some sort of enchanted guardian?"
+        },
+        {
+          "Keywords": [
+            "wizard",
+            "wizards",
+            "wizard's",
+            "workshop"
+          ],
+          "Description": "\nLooks like a collection of equipment of the kind a working wizard \nmight have. There is a glass-doored #wcabinet#N which appears to contain \nspell components. There is a #wmortar#N and #wpestle#N sitting on large \n#wworktable#N. On one end of the #wworktable#N, there stands a #wdais#W on which \nrest a huge #wtome#W. Bludjon's Spell Book? On the other, there rest a \nlarge #wbookcase#N containing what looks to be reference materials."
+        },
+        {
+          "Keywords": [
+            "glass",
+            "door",
+            "cabinet"
+          ],
+          "Description": "\nThrough the glass you see bottles and jars neatly arranged in an \norder not readily apparent.. Curious, you start to open the door. \nYou get the door partially open, when a invisible force pulls it from \nyour hand and slams it shut. A voice echoes in your head:-\n\n#MThat would not be advisable, mortal! These items are \n         valuable and dangerous. Do Not Touch!#N\n\nYou look around. The tapestry catches your eye. Is that a tendril of \nsmoke rising form the Storm Dragon's mouth? You decide to leave the \ncabinet alone. After all, curiosity killed the cat. Didn't it?"
+        },
+        {
+          "Keywords": [
+            "dias",
+            "dais"
+          ],
+          "Description": "\nA #wtome#N embossed with arcane magical symbols sits atop the #wdais#N. The \ndais, itself is made of oak. Wait a minute! It looks like it is actually \nrooted in the floor. Closer examination shows that the #wdais#N is a \nminiature oak tree, transformed and shaped by magic. You scratch the \nthe surface of the trunk. Sure enough, sap flows slowly from the wounded \ntree."
+        },
+        {
+          "Keywords": [
+            "tome",
+            "book",
+            "volume"
+          ],
+          "Description": "\nCovered in runes and mystical symbols, the tome radiates an aura of \ntremendous power. What kind of spells and incantations reside inside? You \nmust see! You reach out to open the book. A blue glow suddenly surrounds \nthe tome. A bolt of green lances lances from the volume striking your \nhand! You have lost all feeling in your fingers. A voice dins inside your \nhead.\n\n        #MFoolish mortal! You have been warned. Do Not Touch!#N\n\nFeeling slowly returns to your fingers. You check the tapestry. You seem \nto smell the scent of ozone emanating from that direction. Perhaps you \nreally don't NEED to read the tome."
+        },
+        {
+          "Keywords": [
+            "bookcase",
+            "books",
+            "reference"
+          ],
+          "Description": "\nThe bookcase appear strange. Looking closer, you see that it is actually \na tree rooted in the floor. A transmuted oak tree shaped into a bookcase. \nAwed, you reach out to take a book from the shelf. Suddenly the book is \ntorn from your grasp! It gently floats back to it's place on the bookshelf. \nA voice chuckles softly in your head.\n\n   #MAvatar Bludjon likes to keep his library in order, mortal. Cease!#N\n   \nYou glance towards the tapestry. Is there a draft in the room? It almost \nlooked like the Storm Dragon's forepaws had twitched. You decide to catch \nup on your reading later."
+        },
+        {
+          "Keywords": [
+            "worktable",
+            "table",
+            "work"
+          ],
+          "Description": "\nA normal, ordinary worktable. The surface is scarred, stained and scorched. \nHmm... perhaps Bludjon was not alway so capable. It seems not all his \nexperiment proceeded perfectly."
+        },
+        {
+          "Keywords": [
+            "pestle",
+            "mortar"
+          ],
+          "Description": "\nUsed for combining spell components, the mortal and pestle show signs of \nwear and tear. Seem like Bludjon is a serious experimenter."
+        },
+        {
+          "Keywords": [
+            "closet"
+          ],
+          "Description": "\nA huge closet stretches from wall to wall. The folding door is featureless \nbut for a small #wrecess#N in the #wcentre#N."
+        },
+        {
+          "Keywords": [
+            "centre",
+            "center",
+            "recess"
+          ],
+          "Description": "\nA miniature duplicate of the Storm Dragon from the tapestry is carved here. \nYou reach out to finger it. You quickly yank you hand back as the doors \nslowly and silently fold back into the wall. You gasp! You see displayed \nhere just about every imaginable type of and magical and non magical \nweapon, armour and clothing. You are stupefied at the range and rarity of \nthe equipment displayed. You hands itch at the sight of the holy hammer and \navatar spear. You reach to take the spear. And quickly retract your \ntraitorous digit as a thin wall of cyan fire erupts for the floor of the \ncloset and extends to the top of the cabinet. Damn! Protected by magic. A \nvoice rumbles ominously inside you head:-\n\n         #CMortal! Much time and blood was spent in the collection \n         of this equipment. Spend some of your own. Do Not Touch!#N\n\nOh well, so much for the freebie equipment. You glance at the tapestry. Sure \nenough, the Storm Dragon's tail looked as if it twitched slightly."
+        },
+        {
+          "Keywords": [
+            "alcove",
+            "drapes",
+            "drape",
+            "curtain",
+            "curtains"
+          ],
+          "Description": "\nYou sweep aside the heavy drapes. Inside the alcove, you find a huge \nsumptuous bed. It is swathed in azure silk sheets and is covered in a \nbeautiful white fur bedcovering. Several pillows are propped against the \nwall to facilitate lounging."
+        },
+        {
+          "Keywords": [
+            "sheet",
+            "sheets",
+            "azure",
+            "silk"
+          ],
+          "Description": "\nPulling back the sheets and fur, you discover a pair of lacy black panties. \nA faint, intoxicating perfume can be detected in the air."
+        },
+        {
+          "Keywords": [
+            "lace",
+            "panty",
+            "panties"
+          ],
+          "Description": "\nObviously not Bludjon's. It appears he is not averse to the plucking of a \ndelicate flower now and then. An overwhelming urge hits you! You press the \npanties to your face and breath deep. A disgusted voice rings in your head.\n\n                        #GPerveted Mortal!#N\n\nYou blush. Embarrassed, you peek towards the tapestry. You notice there \nseems to be a smirk upon the Storm Dragon's visage."
+        },
+        {
+          "Keywords": [
+            "fur",
+            "white",
+            "bedcovering",
+            "bedcover"
+          ],
+          "Description": "\nThe fur is lovely. It appears to be made from the skins of several frost \nwolves. Very soft and wonderfully warm."
+        },
+        {
+          "Keywords": [
+            "pillow",
+            "pillows"
+          ],
+          "Description": "\nIt's just some pillows, you idiot! What did you expect?"
+        },
+        {
+          "Keywords": [
+            "bar"
+          ],
+          "Description": "\nThe bar displays a myriad of different bottles of every shape and size. The \nall seem to contain alcoholic beverages. Some you recognize. Some you don't. \nSome look very enticing. Some look positively noxious. Now why would any \nnormal being put a worm into the bottle of liquor? You think you could go \nfor a drink right now. You reach for a bottle of your favourite hooch. Will \nyou never learn? There is a peal of thunder and a flash of lightning!\n\n    #RInsidious Mortal. You may try to discover my spells. You may \n     try to take my equipment. You may despoil the sanctity of my \n           sleeping quarters. BUT NO ONE DRINKS MY LIQUOR!!! \n                      Prepare for thy doom!#N\n                      \nYou whirl around! The Storm Dragon is surrounded by an unearthly glow. Slowly \na taloned hind foot emerges from the tapestry. You think that, perhaps, now \nwould be a good time to exercise the better part of valour. Flee!"
+        },
+        {
+          "Keywords": [
+            "winerack",
+            "wine"
+          ],
+          "Description": "\nThe winerack reaches from floor to ceiling and is filled with dusty, ancient-\nlooking bottles of wine. It appears Bludjon enjoys the odd tipple. Hmmm... a \nnice sip of Cabernet might hit the spot right now. You select the dustiest \nof the bottles of Cabernet. A peal of thunder and a flash of light!\n\n    #RBlasphemous Mortal. You may try to steal my magical secrets. You \n    may try to plunder my gear. You may abscond with favours left by my \n             favourite flowers. BUT NO ONE DRINKS MY LIQUOR!!! \n                  Prepare for thy doom!#N\n\nYou spin! The Storm Dragon is outlined by an ethereal aura. Slowly a taloned \nforepaw twists itself loose from the tapestry. You think that, perhaps, now \nwould be a good time to to make like the birds and flock off. Flee!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27820,
+      "Name": "#RThe Mound of Turin Turambar #N",
+      "Description": "\n   You look upon the mound with a great grey stone up the top and you \nare filled with great sorrow.  Upon the stone there are runes they read,\nTurin Turambar Dangir Glaurunga and below them Nienor Niniel. On the\nwest side you see the words, here lies also Morwen Eledhwen. You\nrecall the lament 'Narn I Hin Hurin' the Tale of the Children of Hurin\nand know you this is Turin's and Morwen's final resting places.  Where\nTurin slayed the dragon Glaurung and afterwards threw himself upon his\nown sword Gurthang. You here the rushing for in the distance is the\nbrink of Cabed-en-Aras where Nienor threw herself into the river. \n\nAs you walk away from the mound the words - 'A Turin Turmabar turun\nambartanen' - master of doom by doom mastered enter your mind and you\nfilled with great resolve to continue onwards knowing it may cost you\nmuch but you will suceed.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27810,
+          "Description": "A narrow bridge leads eastwards to the Great Drakes Gallery.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27821,
+      "Name": "#RThe Eye of the Storm#N",
+      "Description": "\n   In the eye of the storm, all is quiet. The wide rooftop is exposed to \nthe sky, but although the storm rages all around, this place remains \npeaceful. Clearly it has more protection than the low wall of reddish \nstone that encloses the area. The sky is a magnificent sight to behold, \nclouds of grey, black and furious red clash with flashes of lightning \nand deep rumbles of thunder. Wide stone steps lead down in front of the\nfortress. The prow of a viking longship, gathered and smashed by the \nstorm has come to rest on the north side of the balcony.",
+      "ZoneId": 278,
+      "Sector": "Hills",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 27800,
+          "Description": "Looking down through the eye of the storm you see the Moria Mountains, \nand a mighty fortress perched on the mountain top.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 524432,
+          "Description": "basking in the storm.",
+          "Keywords": [
+            ">echo",
+            "1"
+          ],
+          "ExitFlags": [],
+          "KeyId": 131217
+        },
+        {
+          "Direction": "North",
+          "TargetId": 2049,
+          "Description": "enjoying the storm.",
+          "Keywords": [
+            ">echo",
+            "1"
+          ],
+          "ExitFlags": [
+            "PickProof",
+            "Trap",
+            "Wall",
+            "BashProof",
+            "Broken"
+          ],
+          "KeyId": 264369
+        },
+        {
+          "Direction": "North",
+          "TargetId": 17842176,
+          "Description": "within the fortress comes a deep rumbling roar\nand suddenly everything is calm once again.",
+          "Keywords": [
+            ">echo",
+            "1"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Locked",
+            "Trap",
+            "BashProof",
+            "TrapSet",
+            "Broken"
+          ],
+          "KeyId": 1204233
+        },
+        {
+          "Direction": "North",
+          "TargetId": 16416,
+          "Description": "dragon\nbefore swooping low overhead and disappearing into the storm.",
+          "Keywords": [
+            "S\n#27822\nThe",
+            "Basement"
+          ],
+          "ExitFlags": [
+            "ResetLocked",
+            "Wall",
+            "Broken"
+          ],
+          "KeyId": 798739
+        },
+        {
+          "Direction": "North",
+          "TargetId": -1,
+          "Description": "room. The walls are\nhidden behind stacks of unused equipment, armour and weapons. In the \nlight cast by flickering torches, the discarded junk takes on a life of \nits own, with peculiar and fearsome shadow shapes dancing on the walls.\nThis room is where the Storm Dragons leave all the lesser treasures \nthat they pick up on their adventures - not worth donating, but worth\nhaving around just in case.",
+          "Keywords": [
+            "278",
+            "duz",
+            "0\nD4\nA",
+            "spiral",
+            "staircase",
+            "leads",
+            "up",
+            "to",
+            "the",
+            "clan",
+            "Donation",
+            "room."
+          ],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "viking",
+            "longship",
+            "long",
+            "ship",
+            "prow"
+          ],
+          "Description": "\nSeveral round viking shields still cling to the bulwarks of the wrecked \nlongship. The splinted mast and shreds of the once-square sail lie \nforlornly to one side. A cluster of barrels thrown from the wreckage are\nscattered around here."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 27800,
+      "Name": "attendant immortal shopkeeper SDclan",
+      "ShortDescription": "\nThe Immortal Attendant",
+      "LongDescription": "\nThe Immortal Attendant lives only to serve you.",
+      "Description": "\nThe Attendant is humanoid in shape, with sallow grey skin, and\nlarge black eyes. He looks at you with a mixture of awe and \nfear. He has been brought across space and time by the rulers \nof the #RStorm Dragons#N to serve their clan for eternity.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "NiceThief"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%3 emote kneels before you in solemn worship.;\n%3 emote offers you some spicy #RStorm Dragon #Ncrackers.;\n%3 emote brushes the dust off your clothes.;\n%3 emote starts polishing his bar.;\n%3 say welcome home master, let me fetch you a drink.;\n%3 emote straightens your jacket and polishes your weapon.;\n%3 emote begins to clean the fountain.;\n%3 emote gets some water from the fountain.;\n%3 emote drinks some water.;\n%3 emote eats a spicy #RStorm Dragon#N cracker.;\n%3 emote offers you some delicious donuts.;\n%3 say The finest brew in the finest clan, care to try some?;\n%3 emote nods respectfully at you.;\n%3 emote hums a soft melody.;\n%3 emote polishes a commemorative #RStorm Dragons#N tankard.;\n%3 say These crackers are delicious! How about some for the road?;\n%3 say There is a storm in the air master.;\n%3 emote cleans your weapons.;\n%3 emote lives only to serve you.",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 29,
+      "Name": "board bulletin storm dragons sd",
+      "ShortDescription": "\nan Storm Dragon clan bulletin board",
+      "Description": "\nThe Storm Dragon bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        112,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27800,
+      "Name": "scroll identify knowledge dragons SDclan",
+      "ShortDescription": "\na scroll labelled #R'Dragon's Knowledge'#N",
+      "Description": "\nA glowing scroll has the knowledge of all Dragonkind.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        53,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            53,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll",
+            "identify",
+            "knowledge",
+            "dragons",
+            "SDclan"
+          ],
+          "Description": "\nThe knowledge of the whole of dragonkind is held in the scroll\nready to be used for identifying valuable discoveries."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27801,
+      "Name": "potion vial yellow seeinvis dragons eye SDclan",
+      "ShortDescription": "\na yellow potion labelled #R'Dragon's Eye'#N",
+      "Description": "\nA small yellow vial in the shape of a Dragon's Eye glares at you.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        19,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            19,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 400,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "potion",
+            "yellow",
+            "vial",
+            "dragons",
+            "eye",
+            "SDclan"
+          ],
+          "Description": "\nThis yellow potion will give you the sight of a mighty dragon - the \nability to see invisible things!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27802,
+      "Name": "scroll clan crecall SDrecall",
+      "ShortDescription": "\na scroll bearing the image of a Dragon",
+      "Description": "\nA dragon scroll has been left here, but wants to go home!",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        109,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            109,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll",
+            "dragon"
+          ],
+          "Description": "\nThe scroll has written a formulae of 'Clan Recall' upon it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27803,
+      "Name": "crackers storm dragon spicy sdclan",
+      "ShortDescription": "\nsome spicy #RStorm Dragon#N crackers",
+      "Description": "\nYou can see some delicious crackers in the shape of a #RStorm Dragon#G",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 15,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 15,
+      "CostPerDay": 15,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "crackers",
+            "storm",
+            "dragon",
+            "spicy",
+            "sdclan"
+          ],
+          "Description": "\nNot only delicious, but nutritious and able to sustain even \nthe hungriest dragon for many hours. (Rumour has it that the \nrecipe belongs to Amok.)"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27804,
+      "Name": "donut huge purple SDclan",
+      "ShortDescription": "\na huge donut with #Mpurple#N stuff in the centre",
+      "Description": "\nA delicious looking donut is enticing you from across the room.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 5,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 5,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "donut",
+            "huge",
+            "purple",
+            "SDclan"
+          ],
+          "Description": "\nIt is full of some sticky purple stuff, you don't know what it is - but\nit tastes fantastic!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27805,
+      "Name": "potion white dragons wing SDclan",
+      "ShortDescription": "\na white potion labelled #R'Dragon's Wing'#N",
+      "Description": "\nA small white potion flys around here on a tiny pair of dragon's wings.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        45,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            45,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "potion",
+            "white",
+            "dragons",
+            "wing",
+            "SDclan"
+          ],
+          "Description": "\nOnce you can catch hold of it and read the label, you realise that this\npotion will give you the ability to fly!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27806,
+      "Name": "tankard engraved storm dragon SDclan dark ale",
+      "ShortDescription": "\nan engraved #RStorm Dragons#N tankard",
+      "Description": "\nA beautifully engraved tanked sits here, full of foamy dark ale.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        3,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 3,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 10,
+      "CostPerDay": 3,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27807,
+      "Name": "beaker commemorative storm dragon SDclan milk",
+      "ShortDescription": "\na commemorative #RStorm Dragons#N beaker",
+      "Description": "\nA large beaker waits for you to take a sip.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        4,
+        4,
+        10,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 4,
+          "Amount": 4,
+          "Liquid": 10,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 6,
+      "CostPerDay": 3,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27808,
+      "Name": "barrels viking mead SDclan",
+      "ShortDescription": "\na cluster of barrels with viking runes",
+      "Description": "\nSeveral barrels marked with viking runes lie scattered by the storm.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoInvis"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        17,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 17,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6000,
+      "Cost": 30,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "barrels",
+            "viking",
+            "mead",
+            "SDclan",
+            "barrel"
+          ],
+          "Description": "\nDespite the battering of the storm, some of the stout barrels have\nsurvived intact. The runes on the barrels are undecipherable, but\na quick taste from one of them is all it takes to discover that \nyou have struck liquid gold - Its mead!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27809,
+      "Name": "statue dragons storm sd",
+      "ShortDescription": "\nA Huge dragons statue",
+      "Description": "\nA Huge statue of a Storm dragon is guarding a cave entrance here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27800,
+        17,
+        112,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 27810,
+      "Name": "chest ornate locker treasure",
+      "ShortDescription": "\nan ornate treasure chest",
+      "Description": "\n#CA deep chest, carved with hundreds of dragons, lies at your feet.#G",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        1000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 1000,
+          "Flags": [],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chest",
+            "locker",
+            "ornate",
+            "treasure"
+          ],
+          "Description": "\nThe treasure chest is made of some peculiar darkened wood, with hundreds\nof beautiful dragons in various poses, carved all over it. There is a \nsmall brass plaque inlaid into the top of the chest."
+        },
+        {
+          "Keywords": [
+            "plaque",
+            "brass"
+          ],
+          "Description": "\n                                                                        \n              #C@===================================@#N                     \n              #C|                                   |#N\n              #C|  #YThis chest is to be used #Ronly#C    |#N                     \n              #C|        #Yfor the storage of#C         |#N                     \n              #C|        #Gpotions #Yand #Gscrolls#C        |#N                     \n              #C|                                   |#N\n              #C|  #YItems placed in here will be#C     |#N                     \n              #C|  #Ylost in the event of a crash#C     |#N                     \n              #C|           #Yor reboot#C               |#N                     \n              #C|                                   |#N                     \n              #C@===================================@#N"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27812,
+      "Name": "statue golden sadsam",
+      "ShortDescription": "\na statue of SadSam",
+      "Description": "\nA large golden statue of the invincible SadSam towers over you!",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "statue",
+            "golden",
+            "sadsam"
+          ],
+          "Description": "\nThis statue was erected as a tribute to the mighty Storm Dragon\nSadSam, who won the first ever Storm Dragon Clan Olympics beating\nmany great opponents. The statue is incredibly realistic, and\nmade of solid gold (it must have taken AGES to carve it! :P). \n\nOn the base is a tiny plaque!"
+        },
+        {
+          "Keywords": [
+            "plaque",
+            "base"
+          ],
+          "Description": "\nThe inscription reads:\n\nWork hard - and you can be as great as SadSam!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3135,
+      "Name": "fountain",
+      "ShortDescription": "\na fountain",
+      "Description": "\nA small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 500,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "\nIt is very nice.  Made from fine white marble."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

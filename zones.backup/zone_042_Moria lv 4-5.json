@@ -1,0 +1,4449 @@
+{
+  "Zone": {
+    "Id": 42,
+    "Name": "Moria lv 4-5",
+    "TopRoomId": 4257,
+    "Lifespan": 90,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 4247,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 4248,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4200,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4200,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4200,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4200,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4204,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4209,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4209,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4201,
+        "Arg2": 8,
+        "Arg3": 4209,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 28,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 28,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 8,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4201,
+        "Arg2": 8,
+        "Arg3": 4212,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 28,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 28,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 8,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4201,
+        "Arg2": 8,
+        "Arg3": 4221,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 28,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 28,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 8,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4201,
+        "Arg2": 8,
+        "Arg3": 4221,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 28,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 28,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 8,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 4209,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 4210,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4202,
+        "Arg2": 1,
+        "Arg3": 4221,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 4207,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4202,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4203,
+        "Arg2": 10,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 40,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4206,
+        "Arg2": 10,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4219,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4219,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4220,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4220,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4223,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4223,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4201,
+        "Arg2": 8,
+        "Arg3": 4223,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 28,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 28,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 8,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4201,
+        "Arg2": 8,
+        "Arg3": 4223,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 28,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 28,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 8,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4225,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4225,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4230,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4230,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 4230,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 4255,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4235,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4235,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 4244,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 20,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4201,
+        "Arg2": 8,
+        "Arg3": 4236,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 28,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 28,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 8,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4201,
+        "Arg2": 8,
+        "Arg3": 4236,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4200,
+        "Arg2": 28,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4204,
+        "Arg2": 28,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4205,
+        "Arg2": 8,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 4249,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 4250,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4205,
+        "Arg2": 1,
+        "Arg3": 4254,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4203,
+        "Arg2": 1,
+        "Arg3": 4240,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4217,
+        "Arg2": 3,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 4208,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4211,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4212,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4204,
+        "Arg2": 1,
+        "Arg3": 4251,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 4216,
+        "Arg2": 100,
+        "Arg3": 4256,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 4213,
+        "Arg2": 5,
+        "Arg3": 4216,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 4251,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 4256,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 4215,
+        "Arg2": 20,
+        "Arg3": 4249,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 4209,
+        "Arg2": 12,
+        "Arg3": 4250,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 4210,
+        "Arg2": 12,
+        "Arg3": 4250,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 4200,
+      "Name": "The Guard Post",
+      "Description": "\n   You climb down the ladder into a damp room. The only light comes \nfrom the north where a little campfire burns. To the east you hear \nthe faint sound of footsteps.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4201,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4211,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 4110,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4201,
+      "Name": "The Mining Tunnel",
+      "Description": "\n   The entire tunnel gradually slopes downward, and the floor is \ncovered with small rocks from holes in the wall. It looks like \nsomeone has been mining for something.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4202,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4200,
+          "Description": "You see the guard post.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4202,
+      "Name": "The Mining Tunnel",
+      "Description": "\n   The entire tunnel gradually slopes downward, and the floor is \ncovered with small rocks from holes in the wall. It looks like \nsomeone has been mining for something.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4203,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4201,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4203,
+      "Name": "The Mining Tunnel",
+      "Description": "\n   The entire tunnel gradually slopes downward, and the floor is \ncovered with small rocks from holes in the wall. It looks like \nsomeone has been mining for something.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4204,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4202,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4204,
+      "Name": "The Mining Tunnel",
+      "Description": "\n   The tunnel makes a sharp turn to the east. You can see light \nflickering ahead.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4205,
+          "Description": "You see some flickering lights ahead.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4203,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4205,
+      "Name": "The Mining Tunnel",
+      "Description": "\n   The tunnel continues and to the east you see a large cave. The \nflickering light is getting stronger and you can make out a \ncampfire at the end of the cave.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4206,
+          "Description": "You see a large cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4204,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4206,
+      "Name": "The Large Cave",
+      "Description": "\n   The tunnel comes out in large cave. Further east you see a large \nblack door covered with strange runes. A campfire makes the whole \ncave light up. To the north you see a couple of beds made of straw.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4207,
+          "Description": "You see a couple of mattresses made of straw.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4209,
+          "Description": "You see a the huge black door.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4205,
+          "Description": "You see the mining tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4207,
+      "Name": "The Beds",
+      "Description": "\n   Around you are four beds made of straw. A table and two chairs is \nthe only furniture besides the beds. To the east you see a large pile \nof stone.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4208,
+          "Description": "You see a large pile of stone.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4206,
+          "Description": "You see the entrance to the cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4208,
+      "Name": "The North-East Corner",
+      "Description": "\n   In front of you is a large pile of stone. The stone probably comes \nfrom the mining in the tunnel. To the south you see the campfire \nand the huge black door. The straw beds are to the west.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 4209,
+          "Description": "You see the huge black door.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4207,
+          "Description": "You see a couple of beds made of straw.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4209,
+      "Name": "In Front of the Black Door",
+      "Description": "\n   Who or what ever built this door must have been enormous. The \ndoor measures ten meters in height and five meters in width, and \nthe whole door is covered with arcane writings. Maybe you should \nturn back while you can.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4208,
+          "Description": "You see a large pile of stone.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4210,
+          "Description": "The black door towers above you. Two meters up you see a large keyhole.",
+          "Keywords": [
+            "huge",
+            "black",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 4207
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4206,
+          "Description": "You see the entrance to the cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4210,
+      "Name": "The Staircase",
+      "Description": "\n   Before you a huge staircase formed of gray stone leads down into \ndarkness. To the west you hear the sound of fire burning.",
+      "ZoneId": 42,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 4209,
+          "Description": "The black door towers above you. Two meters up you see a large keyhole.",
+          "Keywords": [
+            "huge",
+            "black",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 4207
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 4223,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4211,
+      "Name": "The Dark Mining Tunnel",
+      "Description": "\n   As you enter the dark mining tunnel you notice a draft coming \nfrom within. The tunnel continues into the dark. To the West you \nhere a fire burning.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4212,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4200,
+          "Description": "You see the guard post.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4212,
+      "Name": "The T-cross",
+      "Description": "\n   The mining tunnel divides into two tunnels, one north and one \nsouth. From the south you hear footsteps and distant muttering.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4213,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4216,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4211,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4213,
+      "Name": "Turn in the Mining Tunnel",
+      "Description": "\n   The mining tunnel makes a sharp turn to the east.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4214,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4212,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4214,
+      "Name": "The Cave-In",
+      "Description": "\n   The mining tunnel comes to an abrupt end. The tunnel in front of \nyou looks like it has collapsed.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 4213,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 4215,
+          "Description": "You see a little opening at the top of the stones.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4215,
+      "Name": "The Collapsed Tunnel",
+      "Description": "\n   The whole tunnel seems too have collapsed. Remains of two skeletons \ncan be found on the floor. Maybe you should get out of here before you \njoin them.",
+      "ZoneId": 42,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 4214,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4216,
+      "Name": "The Mining Tunnel",
+      "Description": "\n   The tunnel makes a sharp turn to the east. Further east you see \nlight flickering.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4212,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4217,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4217,
+      "Name": "The Mining Tunnel",
+      "Description": "\n   As you move forward you smell the scent of roasted meat. The sound \nof muttering is getting louder.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4218,
+          "Description": "You see a light in the distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4216,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4218,
+      "Name": "The Huge Cave",
+      "Description": "\n   The tunnel emerges into a huge cave. To the south you see the cause \nof the smell, a large cauldron over a campfire.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4219,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4220,
+          "Description": "You see a large Cauldron.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4217,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4219,
+      "Name": "The Huge Cave",
+      "Description": "\n  Lots of bones and junk have been thrown away here.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 4221,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4218,
+          "Description": "You see the entrance to the cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4220,
+      "Name": "The Huge Cave",
+      "Description": "\n   A large cauldron is placed over a campfire here.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4218,
+          "Description": "You see the entrance to the cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4221,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4221,
+      "Name": "The Huge Cave",
+      "Description": "\n   In this corner of the cave the Black Orcs practice their fighting \nskills.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4219,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4220,
+          "Description": "You see a large Cauldron and some beds made of straw.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4223,
+      "Name": "The Staircase",
+      "Description": "\n   You are in a very large cave room. You can see a metal sign nailed \non the wall. To the north a large corridor continues into the unknown \nand a huge staircase leads up.",
+      "ZoneId": 42,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4224,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 4210,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "metal",
+            "sign"
+          ],
+          "Description": "\n******************************************************\n*The Balrogs Tomb created by Gimli the Dwarven King  *\n*                   ANNO 734                         *\n*             !!!Dare you enter!!!                   *\n*       (Ps. First level created by Avalon)          *\n******************************************************"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4224,
+      "Name": "The Corridor",
+      "Description": "\n   You are in a large north-south leading corridor.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4225,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4223,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4225,
+      "Name": "The Cave Entrance",
+      "Description": "\n   You see a large cave filled with stalagmites and stalactites to \nthe north and east. You can enter a corridor to the south.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4228,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4226,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4224,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4226,
+      "Name": "The South-East Corner of Stalagmite Cave",
+      "Description": "\n   You are in a large stalagmite cave. The air is very moist here and \nwater is dripping from the walls. The cave continues to the north and \nthe west.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4229,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4225,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4227,
+      "Name": "The South-West Corner of the Stalagmite Cave",
+      "Description": "\n   You are in a large stalagmite cave. The air is very moist here and \nwater is dripping from the walls. The cave continues to north and east.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4230,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4228,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4228,
+      "Name": "The Stalagmite Cave",
+      "Description": "\n   You are in a large stalagmite cave. The cave seems much bigger now. \nThe cave continues in all directions.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4231,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4229,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4225,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4227,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4229,
+      "Name": "The Stalagmite Cave",
+      "Description": "\n   You are in a large stalagmite cave. You can see big stalagmites \nhanging above your head. The cave continues to the north, south \nand west.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4232,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4226,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4228,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4230,
+      "Name": "Near the Big Boulder",
+      "Description": "\n   You are in the large stalagmite cave near a big boulder. You can \nsee a carving on the boulder's left side. The cave continues to the \nnorth, south and east.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4234,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4231,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4227,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 4255,
+          "Description": "",
+          "Keywords": [
+            "boulder",
+            "stone",
+            "rock"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "boulder",
+            "carving"
+          ],
+          "Description": "\nYou can read the words 'OPEN ME'"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4231,
+      "Name": "The Stalagmite Cave",
+      "Description": "\n   You are in the middle of a large stalagmite cave. The cave \ncontinues in all directions.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4235,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4232,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4228,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4230,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4232,
+      "Name": "The Stalagmite Cave",
+      "Description": "\n   You are in the middle of a large stalagmite cave. The floor is \ncovered with water puddles. The cave continues in all directions.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4236,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4233,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4229,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4231,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4233,
+      "Name": "The Stalagmite Cave",
+      "Description": "\n   You are in a large stalagmite cave. The floor is covered with water \npuddles. The cave continues to the north and west.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4237,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4232,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4234,
+      "Name": "Near the Abyss",
+      "Description": "\n  You are standing near the edge of a very deep abyss. Hot smoke is \ndrifting out of the abyss. You can continue north into the abyss \n(not a very wise decision) or continue south and east.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4238,
+          "Description": "Into the abyss",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4235,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4230,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4235,
+      "Name": "Near the Abyss",
+      "Description": "\n  You are standing near the edge of a very deep abyss. Hot smoke is \ndrifting out of the abyss. You can continue north into the abyss \n(not a very wise decision) or continue south, east and west.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4239,
+          "Description": "Into the abyss",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4236,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4231,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4234,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4236,
+      "Name": "Near the Narrow Stone Bridge",
+      "Description": "\n   You see a narrow stone bridge to the North. The cave continues to \nthe south, east and west.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4240,
+          "Description": "You see a stone bridge",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4237,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4232,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4235,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4237,
+      "Name": "Near the Abyss",
+      "Description": "\n  You are standing near the edge of a very deep abyss. Hot smoke is \ndrifting out of the abyss. You can continue north into the abyss \n(not a very wise decision) or continue south and west.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4241,
+          "Description": "Into the abyss",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4233,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4236,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4238,
+      "Name": "In the abyss",
+      "Description": "\n   You are faaaaaaalling down into the dark abyss.",
+      "ZoneId": 42,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4242,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4234,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4239,
+      "Name": "In the Abyss",
+      "Description": "\n   You are faaaaaaaling down into the dark abyss.",
+      "ZoneId": 42,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4243,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4240,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4235,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4240,
+      "Name": "On the Narrow Stone Bridge",
+      "Description": "\n   You are standing on a narrow stone bridge. It looks very slippery \nand wet. You better be careful because it's a long way down. You can \ncontinue east and west into the abyss or south and north to the cave.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4244,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4241,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4236,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4239,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4241,
+      "Name": "In the Abyss",
+      "Description": "\n   You are faaaaaaaling down into the dark abyss.",
+      "ZoneId": 42,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4245,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4237,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4240,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4242,
+      "Name": "Near the Abyss",
+      "Description": "\n   You are standing near the edge of a very deep abyss. Hot smoke is \ndrifting out of the abyss. You can continue south into the abyss \n(not a very wise decision) and east to the cave.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4243,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4238,
+          "Description": "Into the abyss.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4243,
+      "Name": "Near the Abyss",
+      "Description": "\n   You are standing near the edge of a very deep abyss. Hot smoke is \ndrifting out of the abyss. You can continue south into the abyss (not \na very wise decision), east, west and north to the cave.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4246,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4244,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4239,
+          "Description": "Into the abyss.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4242,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4244,
+      "Name": "Near the Narrow Stone Bridge",
+      "Description": "\n   You see a narrow stone bridge to the South. The cave continues to \nthe east and west.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4621,
+          "Description": "You see the caves go north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4245,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4240,
+          "Description": "You see a stone bridge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4243,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4245,
+      "Name": "Near the Abyss",
+      "Description": "\n   You are standing near the edge of a very deep abyss. Hot smoke is \ndrifting out of the abyss. You can continue south into the abyss (not \na very wise decision) and west to the cave.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 4241,
+          "Description": "Into the abyss.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4244,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4246,
+      "Name": "The Corridor",
+      "Description": "\n   You are in a large south-west leading corridor.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 4243,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4247,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4247,
+      "Name": "The Crypt Entrance",
+      "Description": "\n  The corridor ends up at a huge stone door to the west. You can see \na large inscription on the door. The corridor continues to the east.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4246,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4248,
+          "Description": "You see a huge stone door.",
+          "Keywords": [
+            "huge",
+            "stone",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 4208
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "Inscription"
+          ],
+          "Description": "\nYou can read the words 'Sealed by the last dwarfs in moria year 781'"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4248,
+      "Name": "The Passage",
+      "Description": "\n   You are in a very narrow tunnel. The floor is covered with dust. \nThe  tunnel continues into a large crypt to the south and east to \na corridor.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4247,
+          "Description": "You see a huge stone door.",
+          "Keywords": [
+            "huge",
+            "stone",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 4208
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4249,
+          "Description": "You see the crypt.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4249,
+      "Name": "The Crypt",
+      "Description": "\n   Lit torches line the walls of the crypt. You can see a big throne \nat the end of the room. A thick layer of dust covers the floor. It \nlooks like nobody has been here for ages. In the middle of the room \nyou see a large stone chest with arcane writings.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4248,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 4250,
+          "Description": "",
+          "Keywords": [
+            "chest",
+            "large",
+            "stone"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "throne"
+          ],
+          "Description": "\nThis was the former throne of the Dwarven  king. On the side you can \nread the history of the king and about his many brave adventures."
+        },
+        {
+          "Keywords": [
+            "chest"
+          ],
+          "Description": "\nThe lid on the stone chest seems too be moveable."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4250,
+      "Name": "The Tomb of the Dwarven king",
+      "Description": "\n   You climb down into the stone chest. Something about this makes your \nbackbone shiver. This place does not seem to like your intrusion. You \ncan see the remains of a powerful looking dwarf. He wears a shining \nplate and wields two-handed axe. Maybe you shouldn't disturb him. The \nonly exit seems to be up.",
+      "ZoneId": 42,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 4249,
+          "Description": "",
+          "Keywords": [
+            "chest",
+            "large",
+            "stone"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4251,
+      "Name": "In the Cottage",
+      "Description": "\n  You are in a very small and dirty cottage. The floor is covered with \ngarbage and junk. The only furniture in the room is a small straw bed \nand a cabinet. The only exit is to the south.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 4252,
+          "Description": "You can see a small rickety door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4256,
+          "Description": "",
+          "Keywords": [
+            "cabinet"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cabinet"
+          ],
+          "Description": "\nThe cabinet is filled with jars and rather disgusting food."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4252,
+      "Name": "Outside the Cottage",
+      "Description": "\n   You are on a small island outside a cottage. You can continue North \ninto the cottage or East into the water.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4251,
+          "Description": "You can see a small rickety door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4253,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4253,
+      "Name": "On the Lake",
+      "Description": "\n   You are on a small lake in the cave. This part of the lake seems to \nbe very deep. The lake continues to the east and you can see a small \nisland to the west.",
+      "ZoneId": 42,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4254,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4252,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4254,
+      "Name": "On the Lake",
+      "Description": "\n   You are on a small lake in the cave. The water seems to be almost \nblack. The lake continues to the west and you can see a small beach \nto the north.",
+      "ZoneId": 42,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4255,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4253,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4255,
+      "Name": "The Small Beach",
+      "Description": "\n   You are on a very small beach. The only exits are up on a \nladder or south on a small lake.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 4254,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 4230,
+          "Description": "You can see a large boulder.",
+          "Keywords": [
+            "rock",
+            "boulder",
+            "stone"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4256,
+      "Name": "Behind the Cabinet",
+      "Description": "\n   You step in behind the cabinet. The only exit is back to the east.",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4251,
+          "Description": "",
+          "Keywords": [
+            "cabinet"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "PickProof"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4257,
+      "Name": "An Empty Room",
+      "Description": "\n   Hey you, get outta here!  This is an empty room!",
+      "ZoneId": 42,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 4200,
+      "Name": "large black orc",
+      "ShortDescription": "\nThe Black Orc",
+      "LongDescription": "\nA large Black Orc screams some strange words and charges you.",
+      "Description": "\nThe Black Orc looks rather mean and agressive.\nHe waves his scimitar in a very threatening manner.",
+      "Level": 22,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+220",
+        "Mana": 320,
+        "Move": 410
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 9,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 33000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4201,
+      "Name": "huge black orc leader",
+      "ShortDescription": "\nThe Black Orc Leader",
+      "LongDescription": "\nA huge Black Orc screams some commands to his followers and charges you.",
+      "Description": "\nThis Black Orc looks very very mean and muscular.\nHe is dressed in an ill-fitting black plate and thrusts his\nspear at you.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -550,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d150+250",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+7"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4202,
+      "Name": "enormous black orc chief",
+      "ShortDescription": "\nThe Black Orc Chief",
+      "LongDescription": "\nA Enormous Black Orc screams some commands to his followers and charges you.",
+      "Description": "\nThis Black Orc looks very very mean and  muscular.\nHe is dressed in an well-fitting huge evil black plate\nand tries to pierce you with his spear.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+350",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+9"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4203,
+      "Name": "balrog humanoid enormous fire",
+      "ShortDescription": "\nThe Balrog",
+      "LongDescription": "\nAn enormous humanoid form of fire snickers cruelly at your weak efforts.",
+      "Description": "\nIt is surrounded by sparkling and lethal fire.  It is holding a mighty \nwhip in its left hand and a flaming sword in its right hand.  Around its\nneck you see the infamous Glob Medallion, and you know its soul is owned\nby an evil force.",
+      "Level": 60,
+      "Race": "Fire",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+700",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -170,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d8+20"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 420000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4204,
+      "Name": "Gollum",
+      "ShortDescription": "\nGollum",
+      "LongDescription": "\nGollum sniffs loud and looks at you with his big fish eyes.",
+      "Description": "\nThis guy really looks like he need something to eat.\nHe is small and tiny and his skin is almost transparent.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Thief",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+250",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 12,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%15 cry;%15 say Someone have stolen my ring.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4205,
+      "Name": "Octopussy blind",
+      "ShortDescription": "\nThe Blind Octopussy",
+      "LongDescription": "\nThe Octopussy attacks you with its slimy tentacles.",
+      "Description": "\nThis is a creature from the deepest part of the pool.",
+      "Level": 45,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+500",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -130,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 250000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 4200,
+      "Name": "scimitar black",
+      "ShortDescription": "\na black scimitar",
+      "Description": "\nA black scimitar has been left here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 18,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 1000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4202,
+      "Name": "spear black",
+      "ShortDescription": "\na black spear",
+      "Description": "\nA strange black spear has been left here.",
+      "ActionDescription": "\npierce",
+      "Type": "Weapon",
+      "Level": 20,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        8,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 8,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 8000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4203,
+      "Name": "black breast plate",
+      "ShortDescription": "\na black breast plate",
+      "Description": "\nA black breast plate is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 20,
+      "AntiClass": "278391",
+      "ExtraFlags": [
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 100,
+      "Cost": 15000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": 4
+        },
+        {
+          "Location": "Hit",
+          "Modifier": 30
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4204,
+      "Name": "black chain mail",
+      "ShortDescription": "\na black chain mail",
+      "Description": "\nA black chain mail is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 18,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 60,
+      "Cost": 3000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4205,
+      "Name": "black shield",
+      "ShortDescription": "\na black shield",
+      "Description": "\nA black shield is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 18,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 500,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4206,
+      "Name": "black amulet",
+      "ShortDescription": "\na black amulet",
+      "Description": "\nA black amulet is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 5000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Constitution",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4207,
+      "Name": "key huge black",
+      "ShortDescription": "\na huge black key",
+      "Description": "\nA black key is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        180
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 180
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4208,
+      "Name": "crypt key",
+      "ShortDescription": "\na crypt key",
+      "Description": "\nA crypt key is lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        180
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 180
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4209,
+      "Name": "dwarven mithril plate",
+      "ShortDescription": "\na dwarven mithril plate",
+      "Description": "\nA dwarven mithril plate is lying here on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "270199",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        22,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 22,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 100,
+      "Cost": 40000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 3
+        },
+        {
+          "Location": "Constitution",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4210,
+      "Name": "dwarven two-handed mithril axe",
+      "ShortDescription": "\na dwarven two-handed mithril axe",
+      "Description": "\nA dwarven two-handed mithril axe is lying on the ground here.",
+      "ActionDescription": "\nchop",
+      "Type": "Weapon",
+      "Level": 50,
+      "AntiClass": "270199",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        5,
+        10,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 10,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 30000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": -3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 8
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4211,
+      "Name": "sword flaming",
+      "ShortDescription": "\na flaming sword",
+      "Description": "\nA flaming sword is lying here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 45,
+      "AntiClass": "546",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        10,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 10,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 20000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4212,
+      "Name": "whip flaming",
+      "ShortDescription": "\na flaming whip",
+      "Description": "\nA flaming whip is lying here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 45,
+      "AntiClass": "546",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        5,
+        8,
+        2,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 8,
+          "DamageType": 2,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 15000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4213,
+      "Name": "ring old",
+      "ShortDescription": "\nan old ring",
+      "Description": "\nAn old ring is lying here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 60,
+      "AntiClass": "312460",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 30000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "ring"
+          ],
+          "Description": "\nYou read the inscription.\n     One ring to rule them all,\n     One ring to ......."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 100
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4215,
+      "Name": "coins",
+      "ShortDescription": "\ncoins",
+      "Description": "\na huge amount of coins is lying here.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        25000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 25000
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4216,
+      "Name": "jar",
+      "ShortDescription": "\na jar",
+      "Description": "\na jar is standing here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoDonate"
+      ],
+      "WearFlags": [],
+      "Values": [
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 1,
+          "Flags": [],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 20,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "jar"
+          ],
+          "Description": "\nThe jar is half full of some disgusting liquid."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4217,
+      "Name": "medallion eye glob",
+      "ShortDescription": "\nthe glowing eye medallion",
+      "Description": "\nAn ever-vigilant eye watches from its glowing red-orange background.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "AntiGood",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        15,
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "medallion",
+            "eye"
+          ],
+          "Description": "\nAn extremely secret, extremely evil society, Glob Inc has tentacles that\nhave threaded their way into the heart of societies around the world.\nNew members are given this medallion or some other piece of body wear\nbearing the Glob insignia.  They are told that it is a gift and a means\nfor them to identify themselves to others.  But they all experience a\nfeeling of being watched, ever afterwards."
+        },
+        {
+          "Keywords": [
+            "glob"
+          ],
+          "Description": "\nLittle is known about this society.  Perhaps it is best not to know too\nmuch."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Constitution",
+          "Modifier": 3
+        },
+        {
+          "Location": "Hit",
+          "Modifier": 20
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

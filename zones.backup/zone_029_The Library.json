@@ -1,0 +1,1845 @@
+{
+  "Zone": {
+    "Id": 29,
+    "Name": "The Library",
+    "TopRoomId": 2999,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2900,
+        "Arg2": 4,
+        "Arg3": 2900,
+        "Comment": "a librarian"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2900,
+        "Arg2": 4,
+        "Arg3": 2911,
+        "Comment": "a librarian"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2900,
+        "Arg2": 4,
+        "Arg3": 2916,
+        "Comment": "a librarian"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2900,
+        "Arg2": 4,
+        "Arg3": 2927,
+        "Comment": "a librarian"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2901,
+        "Arg2": 1,
+        "Arg3": 2915,
+        "Comment": "the student"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2902,
+        "Arg2": 1,
+        "Arg3": 2906,
+        "Comment": "little boy"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2903,
+        "Arg2": 1,
+        "Arg3": 2914,
+        "Comment": "head librarian"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2904,
+        "Arg2": 1,
+        "Arg3": 2912,
+        "Comment": "load her up!"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2902,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": "Children's card (ml 1)"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2903,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "Young Adult's card (ml 25)"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2904,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "Adult's card (ml 50)"
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2905,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": "Scholar's card (ml 80)"
+      },
+      {
+        "Command": "L",
+        "IfFlag": 0,
+        "Arg1": 2906,
+        "Arg2": 2910,
+        "Arg3": null,
+        "Comment": "Nursery Rhymes/Children's"
+      },
+      {
+        "Command": "A",
+        "IfFlag": 1,
+        "Arg1": 2906,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": ""
+      },
+      {
+        "Command": "L",
+        "IfFlag": 0,
+        "Arg1": 2906,
+        "Arg2": 2912,
+        "Arg3": 11210,
+        "Comment": "Fables/Children's"
+      },
+      {
+        "Command": "A",
+        "IfFlag": 1,
+        "Arg1": 2906,
+        "Arg2": 1,
+        "Arg3": 2902,
+        "Comment": null
+      },
+      {
+        "Command": "L",
+        "IfFlag": 0,
+        "Arg1": 2908,
+        "Arg2": 2911,
+        "Arg3": 11200,
+        "Comment": "History of the Kai Clan/Children's"
+      },
+      {
+        "Command": "A",
+        "IfFlag": 1,
+        "Arg1": 2908,
+        "Arg2": 1,
+        "Arg3": 2902,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 2900,
+      "Name": "Fiction for Young Adults",
+      "Description": "\n   Not quite children, but not quite adults, those that fall in\nbetween seem to have their own taste in reading materials.  This\ncollection was created just for the young adult crowd.  Several small\ntables stand covered with books in the center of the room, surrounded\nby the enormous bookshelves that fill the library.  The stacks\ncontinue to the south, and an open doorway leads east to a quiet\nhallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2901,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2903,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2901,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north.  A small wooden staircase leads up to the next floor of\nthe library.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2902,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2904,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2900,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 2916,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2902,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2905,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2901,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2903,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads east to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2900,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2904,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2904,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2901,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2905,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2907,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2903,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2905,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads west to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2902,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2908,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2904,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2906,
+      "Name": "Nursery Rhymes, Fables, and Other Children's Books",
+      "Description": "\n   This library is known far and wide for its magnificent\ncollection of children's books.  Here the young, and young at\nheart, may browse through wonderful picture books, fairy tales,\nand much more.  Several wooden toys are scattered about on the\nfloor, probably left here by some of the younger patrons.  Large\nwooden shelves line the walls, housing the many volumes owned by\nthis fine library.  The stacks continue to the north and south, and\nan open doorway leads to a hallway to the east.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2903,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2907,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2909,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2907,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2904,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2908,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2910,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2908,
+      "Name": "Rare Books and Historical Volumes",
+      "Description": "\n   History buffs from all around flock to this library for a chance\nto browse through the magnificent collection of rare books and\nhistorical volumes.  Ancient literary masterpieces sit safely inside\nlarge glass cases, taken out only rarely.  Several volumes detailing\nthe history of the known world line the shelves, beckoning you to\nenjoy their tales of days gone by.  The stacks continue to the north\nand south, and a small doorway leads west to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2905,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2911,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2907,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2909,
+      "Name": "New Arrivals",
+      "Description": "\n   As new volumes are acquired by the library, they are temporarily\nhoused in this section.  This allows visitors easy access to the\nlatest books and scrolls.  Several patrons sit around a large round\ntable, avidly reading their selections.  Large wooden shelves line\nthe walls, housing the many volumes owned by this fine library.  The\nstacks, as the main collection is called by the wonderful librarians,\ncontinue to the north, and an open doorway leads to a hallway to the\neast.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2910,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2910,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2907,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2911,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2913,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2909,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2911,
+      "Name": "The Reference Room",
+      "Description": "\n   Dictionaries, encyclopediae, indices, and various other reference\nvolumes make their home in the reference room.  Conveniently located\nnext to the librarian's office, the reference room holds a wealth of\ninformation about everything under the sun.  A large wooden table\nsits in the center of the room, covered with several enormous books,\nsome of which appear to be quite ancient.  The stacks, which make up\nthe bulk of the library's collection, continue to the north.  An open\ndoorway leads west to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2908,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2910,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2912,
+      "Name": "The Circulation Desk",
+      "Description": "\n   A small desk, covered with piles of books and scrolls, sits in the\nmiddle of this room.  The plush carpeting on the floor muffles any\nfootsteps that would otherwise be heard here.  This is a library\nafter all!  A large plaque hangs on the wall next to the doorway,\nwhich leads to a hallway to the east.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2913,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plaque"
+          ],
+          "Description": "\nThe plaque reads:\n\n\tWelcome patrons!\n\n\tA library card is required to check out any books.\n\tRead our books at your own risk!\n\tThe library will not be held responsible for any loss\n\tof life and/or limb from use of our books.\n\n\tThank You,\n\tThe Head Librarian"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2913,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  A small office is just\neast of here, and to the west is the Circulation Desk.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2910,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2914,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2912,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3077,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2914,
+      "Name": "The Librarian's Office",
+      "Description": "\n   A small desk sits in one corner of the room, covered with numerous\nbooks, scrolls, and bits of paper.  While the librarian's office\nappears to be quite messy, the librarian knows exactly where\neverything is.  Through the doorway to the west, you can see a\ncarpeted hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2913,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2915,
+      "Name": "Mythology and Legend",
+      "Description": "\n   Volumes filled with tales of the ancient gods and their mighty\ndeeds are stacked neatly on the large shelves in what is said to be\nthe largest single collection of mythological literature.  A large\ntable stands in the center of the room, covered with books containing\ntales of ancient heroes and gods.  The stacks that make up the main\ncollection of the library continue to the south, and an open doorway\nstands east, leading to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2916,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2918,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27701,
+          "Description": "The hallways of the Knights who say Ni open up behind a nice set of\nshrubbery.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2916,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the south.  A small wooden staircase leads down to the first floor\nof the library.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2917,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2919,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2915,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 2901,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2917,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2920,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2916,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2918,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads east to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2915,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2919,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2921,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2919,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2916,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2920,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2922,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2918,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2920,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2917,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2923,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2919,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2921,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads east to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2918,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2922,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2924,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2922,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2919,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2923,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2925,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2921,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2923,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads west to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2920,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2926,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2922,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2924,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads east to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2921,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2925,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2927,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2925,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2922,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2926,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2928,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2924,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2926,
+      "Name": "Fiction",
+      "Description": "\n   Various books, filled with tales that could only come from the\nmost creative minds in the land, are spread out across a large table\nthat dominates the center of this room.  The fiction collection in\nthis library is one of the most comprehensive known to exist.  Large\nbookcases line the walls, filled with hundreds of literary\nmasterpieces.  The stacks continue to the north from here, and an\nopen doorway leads to a quiet hallway to the east.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2923,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2929,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2925,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2927,
+      "Name": "The Stacks",
+      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads west to a quiet hallway.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2924,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2928,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2928,
+      "Name": "A Quiet Hallway",
+      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2925,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2929,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2927,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2929,
+      "Name": "The Classics",
+      "Description": "\n   Ahhh the classics!  These literary masterpieces have become an\nintegral part of our culture.  Read by every schoolchild, these\nvolumes can take you to far-off lands and mystical places.  The books\nand scrolls that make up the classics collection are very diverse and\nintended for a wide range of audiences.  The stacks that hold this\ncollection contunie to the northm and an open doorway leads to a\nhallway to the west.",
+      "ZoneId": 29,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2926,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2928,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 2900,
+      "Name": "librarian library",
+      "ShortDescription": "\na librarian",
+      "LongDescription": "\nA librarian wanders through the stacks.",
+      "Description": "\nThe librarian wears her long hair back in a tight bun, apparently in\nthe style common to all female librarians.  She smiles quietly as she\ngoes about her business, glaring at any troublemakers and noisy\npatrons.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%20 emote holds her finger to her pursed lips and hisses, 'Shhhh!'",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2901,
+      "Name": "student girl",
+      "ShortDescription": "\na student",
+      "LongDescription": "\nA young girl sits quietly, studying for an exam.",
+      "Description": "\nThe young girl must be a student.  She sits quietly with her books,\nstudying as if her life (or at least her grades) depended on it.  She\nappears to be oblivious to anything going on around her.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%20 emote flips through the pages of her book.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2902,
+      "Name": "boy little",
+      "ShortDescription": "\na little boy",
+      "LongDescription": "\nA little boy stares in awe at the life-like pictures in his book.",
+      "Description": "\nThe wide-eyed fellow smiles with glee as he flips through his\nfavorite picture book.  He learned the joys of literature at an early\nage, and hopefully he will continue to make use of the library as he\ngrows older.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": "%%10 giggle;%10 smile;%5 gasp",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2903,
+      "Name": "librarian head",
+      "ShortDescription": "\nthe Head Librarian",
+      "LongDescription": "\nThe head librarian monitors all activity in the library.",
+      "Description": "\nThe head librarian loves her job.  She enjoys wandering through the\nstacks of books, sifting through the scrolls and papers, and watching\nthe patrons wander through \"her\" library.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 smile;%5 'Can I help you find anything?;%5 'This library has a\nwonderful collection.  We have something for everyone.",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2904,
+      "Name": "circulation lady librarian head",
+      "ShortDescription": "\nthe Head of Circulation",
+      "LongDescription": "\nA pretty young lady sits behind the desk selling library cards.",
+      "Description": "\nThis young lady is the person to see if you'd like to check out any\nbooks in the library.  She controls the circulation of books in the\nlibrary, and sells the library cards needed to check the books out.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Sanctuary"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%10 'Can I help you?",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 2902,
+      "Name": "library card child children's^",
+      "ShortDescription": "\na Children's library card",
+      "Description": "\nSomeone seems to have dropped a library card.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 400,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "library",
+            "card",
+            "children's",
+            "child"
+          ],
+          "Description": "\nThis library card is used to \"check out\" the books in the library\nthat are appropriate for a younger audience, particularly for\nchildren."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2903,
+      "Name": "library card young adult",
+      "ShortDescription": "\na Young Adult's library card",
+      "Description": "\nSomeone seems to have dropped a library card.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 25,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "library",
+            "card",
+            "young",
+            "adult"
+          ],
+          "Description": "\nThis library card is used to \"check out\" the books in the library\nthat are appropriate for Young Adults."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2904,
+      "Name": "library card adult",
+      "ShortDescription": "\nan Adult's library card",
+      "Description": "\nSomeone seems to have dropped a library card.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 4000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "library",
+            "card",
+            "adult"
+          ],
+          "Description": "\nThis library card is used to \"check out\" the books in the library\nthat are appropriate for Adults."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2905,
+      "Name": "library card scholar",
+      "ShortDescription": "\na Scholar's library card",
+      "Description": "\nSomeone seems to have dropped a library card.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 80,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 255
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 6000,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "library",
+            "card",
+            "scholar"
+          ],
+          "Description": "\nThis library card is used to check out the books in the library that\nare desigated for Scholars."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

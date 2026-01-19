@@ -1,0 +1,1864 @@
+{
+  "Zone": {
+    "Id": 41,
+    "Name": "Moria, levels 3-4",
+    "TopRoomId": 4199,
+    "Lifespan": 50,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4100,
+        "Arg2": 1,
+        "Arg3": 4114,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 4102,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4101,
+        "Arg2": 1,
+        "Arg3": 4122,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4100,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4102,
+        "Arg2": 3,
+        "Arg3": 4111,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 4103,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4102,
+        "Arg2": 3,
+        "Arg3": 4111,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 4104,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4103,
+        "Arg2": 6,
+        "Arg3": 4103,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4103,
+        "Arg2": 2,
+        "Arg3": 4124,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4053,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4105,
+        "Arg2": 3,
+        "Arg3": 4108,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4106,
+        "Arg2": 2,
+        "Arg3": 4113,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 4101,
+        "Arg2": 5,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 4107,
+        "Arg2": 1,
+        "Arg3": 4119,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 4104,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 4100,
+      "Name": "The tunnel",
+      "Description": "\n   Suddenly you feel that the tunnel leads slightly down.. The only exit is to\nthe west, and it leads down..",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 4101,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4101,
+      "Name": "The long tunnel",
+      "Description": "\n   You are in a long east-west leading tunnel. The tunnel is quite wide at this\npoint.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4100,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4102,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4102,
+      "Name": "The long tunnel",
+      "Description": "\n   You are in a long east-west leading tunnel. The tunnel becomes narrow to the\nwest.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4101,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4103,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4103,
+      "Name": "The long tunnel",
+      "Description": "\n   You are in a long east-west leading tunnel. The tunnel is quite narrow at\nthis point. You notice a small hole leading south.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4102,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4106,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4104,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4104,
+      "Name": "The long tunnel",
+      "Description": "\n   You are in a long east-west leading tunnel. The tunnel starts sloping down\ntowards the west.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4103,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4105,
+      "Name": "The golden cave",
+      "Description": "\n   You are in a giant cave, all the walls are shining with a soft golden light.\nThe cave continues to the south and west.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 4108,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4106,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "light",
+            "gold",
+            "golden"
+          ],
+          "Description": "\nIt looks good, but as you look closely you notice that it has no value."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4106,
+      "Name": "The golden cave",
+      "Description": "\n   You are in a giant cave, all the walls are shining with a soft golden light.\nThe cave continues to the south and east, to the north is a narrow tunnel.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4103,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4105,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4109,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "light",
+            "gold",
+            "golden"
+          ],
+          "Description": "\nIt looks good, but as you look closely you notice that it has no value."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4107,
+      "Name": "The passage",
+      "Description": "\n   You are in a small passage, it leads south, to the west is a golden cave.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 4113,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4108,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4108,
+      "Name": "The golden cave",
+      "Description": "\n   You are in a giant cave, all the walls are shining with a soft golden light.\nThe cave continues to the north and west, east from you there is a small\npassage.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4105,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4107,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4109,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "light",
+            "gold",
+            "golden"
+          ],
+          "Description": "\nIt looks good, but as you look closely you notice that it has no value."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4109,
+      "Name": "The golden cave",
+      "Description": "\n   You are in a giant cave, all the walls are shining with a soft golden light.\nThe cave continues to the south, east and north.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4106,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4108,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4114,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "light",
+            "gold",
+            "golden"
+          ],
+          "Description": "\nIt looks good, but as you look closely you notice that it has no value."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4110,
+      "Name": "The hole",
+      "Description": "\n   You are standing by a large hole in the floor, a ladder leads down into the\ndarkness you feel frightened.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 4111,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 4200,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4111,
+      "Name": "The tunnel",
+      "Description": "\n   You are in a small tunnel, it leads from east to the west.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4110,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4112,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4112,
+      "Name": "The tunnel",
+      "Description": "\n   You are in a larger tunnel, it leads from west to east.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4111,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4113,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4113,
+      "Name": "The passage",
+      "Description": "\n   You are in a passage that leads towards the south. To the east you see a\ntunnel.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4107,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4112,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4116,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4114,
+      "Name": "The golden cave",
+      "Description": "\n   You are in a giant cave, all the walls are shining with a soft golden light.\nThe cave continues to the north, to the west you see a dark passage.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4109,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4115,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "light",
+            "gold",
+            "golden"
+          ],
+          "Description": "\nIt looks good, but as you look closely you notice that it has no value."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4115,
+      "Name": "The dark passage",
+      "Description": "\n   You are in a dark passage, that leads east. In the ceiling you notice a\nsmall hole, just big enough to pass through.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4114,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 4021,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4116,
+      "Name": "The passage",
+      "Description": "\n   You are in a passage that leads north-south. You notice a small light to the\nsouth.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4113,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "light"
+          ],
+          "Description": "\nWell you can't see where it comes from.."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4117,
+      "Name": "The secret tunnel",
+      "Description": "\n   You are in a secret tunnel that leads north, to the south you see a small\nchamber.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4114,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4122,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4118,
+      "Name": "The cave",
+      "Description": "\n   You are in a light cave, from torches several feet above your head fire\nlights the room. The cave continues to the west and south. To the north a small\nhole leads to a tunnel.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4111,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4123,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4119,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4119,
+      "Name": "The cave",
+      "Description": "\n   You are in a light cave, from torches several feet above your head fire\nlights the room. The cave continues to the east and south.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 4118,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4124,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4121,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4120,
+      "Name": "The passage",
+      "Description": "\n   You are in a north-south leading passage. To the south you see light.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4116,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 4125,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "light"
+          ],
+          "Description": "\nIt nearly is enough to light the passage."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4121,
+      "Name": "The secret tunnel",
+      "Description": "\n   You are in a secret tunnel that leads west, you feel evilness approaching\nyou as you continue west.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 4122,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4122,
+      "Name": "The secret chamber",
+      "Description": "\n   You are in a secret chamber, the room is filled with an evil feeling.",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4123,
+      "Name": "The cave",
+      "Description": "\n   You are in a light cave, from torches several feet above your head fire\nlights the room. The cave continues to the north and west.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4118,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4124,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4124,
+      "Name": "The cave",
+      "Description": "\n   You are in a light cave, from torches several feet above your head fire\nlights the room. The cave continues to the east and north. To the west a\npassage leads north.",
+      "ZoneId": 41,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4119,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4123,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 4125,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 4125,
+      "Name": "The passage",
+      "Description": "\n   You are in a passage, to the east you see a cave. Light from the cave lights\nup the passage. To the north the passage leads into the darkness..",
+      "ZoneId": 41,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 4124,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 4100,
+      "Name": "mage",
+      "ShortDescription": "\nthe Mage",
+      "LongDescription": "\nA small intelligent looking mage is standing here.",
+      "Description": "\nHis IQ makes almost any elitemud player look stupid..",
+      "Level": 22,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d20+200",
+        "Mana": 320,
+        "Move": 410
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 6,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "3d5+5"
+        },
+        {
+          "Type": "Attack_10",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+85"
+        },
+        {
+          "Type": "Attack_52",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 40000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4101,
+      "Name": "troll",
+      "ShortDescription": "\nthe troll",
+      "LongDescription": "\nA large mean-looking troll is here.",
+      "Description": "\nWell, it looks dangerous!",
+      "Level": 16,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+160",
+        "Mana": 260,
+        "Move": 320
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 9000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4102,
+      "Name": "snake",
+      "ShortDescription": "\nthe snake",
+      "LongDescription": "\nA large green snake is here, looks like a guardian for an evil force.",
+      "Description": "\nYou see a evil creature.",
+      "Level": 16,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+150",
+        "Mana": 260,
+        "Move": 320
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4103,
+      "Name": "thief",
+      "ShortDescription": "\nthe thief",
+      "LongDescription": "\nA thief is here, all dressed in black.",
+      "Description": "\nHe seems to be counting a handful of coins.  Maybe you ought to count YOUR\ngold too...",
+      "Level": 12,
+      "Race": "Humanoid",
+      "Class": "Thief",
+      "Flags": [
+        "Spec",
+        "Scavenger"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Sneak",
+        "Hide"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+140",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 3800,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4105,
+      "Name": "centipede",
+      "ShortDescription": "\na centipede",
+      "LongDescription": "\nA small harmless centipede is here.",
+      "Description": "\nWell it doesn't seem to pay any attention to you.",
+      "Level": 6,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+80",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 900,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4106,
+      "Name": "warrior",
+      "ShortDescription": "\nthe Warrior",
+      "LongDescription": "\nA human warrior is here.  He has a evil grin in his face.",
+      "Description": "\nHe doesn't look friendly at all...",
+      "Level": 16,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+150",
+        "Mana": 260,
+        "Move": 320
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 9000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 4107,
+      "Name": "kobold",
+      "ShortDescription": "\nthe kobold",
+      "LongDescription": "\nA green kobold is here.",
+      "Description": "\nIt looks slimy..",
+      "Level": 11,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+100",
+        "Mana": 210,
+        "Move": 245
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 6,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d3+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 3000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 4053,
+      "Name": "dirk",
+      "ShortDescription": "\na thieves' dirk",
+      "Description": "\nA beautifully crafted dirk is lying here.",
+      "ActionDescription": "\nstab",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "34",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        4,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 4,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 850,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "dirk"
+          ],
+          "Description": "\nIt's a medium sized, beautifully crafted dirk made from some greyish alloy.\nIts blade is double-edged and very thin...this looks like a good thieves'\nweapon."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4100,
+      "Name": "blade black demon",
+      "ShortDescription": "\na black demon blade",
+      "Description": "\nA black demon blade is here...",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 10,
+      "AntiClass": "268087",
+      "ExtraFlags": [
+        "Magic",
+        "AntiGood",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 5000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "blade"
+          ],
+          "Description": "\nYou'll become as evil as the weapon, if you use it!"
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4101,
+      "Name": "gloves swordmans sgloves",
+      "ShortDescription": "\na pair of swordmans' gloves",
+      "Description": "\nA pair of finely crafted gloves are lying on the ground here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 3500,
+      "CostPerDay": 800,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gloves"
+          ],
+          "Description": "\nThey looks very useful for combat."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4102,
+      "Name": "scroll ysafg",
+      "ShortDescription": "\na scroll which reads \"ysafg\"",
+      "Description": "\nA scroll which reads \"ysafg\", it looks very fragile and quite old.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        1,
+        53,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 1,
+          "SpellIds": [
+            53,
+            0,
+            0
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll"
+          ],
+          "Description": "\nIt looks informative."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4103,
+      "Name": "slime mold",
+      "ShortDescription": "\na green slime mold",
+      "Description": "\nA green slime mold is here.  Stinks like sh**.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 24,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 20,
+      "CostPerDay": 8,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "smile",
+            "mold"
+          ],
+          "Description": "\nIt wasn't meant to be food -- at least, certainly not for humans."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 4104,
+      "Name": "slime mold",
+      "ShortDescription": "\na green slime mold",
+      "Description": "\nA green slime mold is here.  Stinks like sh**.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        24,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 24,
+          "Poisoned": true
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 20,
+      "CostPerDay": 8,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "smile",
+            "mold"
+          ],
+          "Description": "\nIt wasn't meant to be food -- at least, certainly not for humans."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

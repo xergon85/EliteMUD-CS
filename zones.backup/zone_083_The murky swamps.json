@@ -1,0 +1,2344 @@
+{
+  "Zone": {
+    "Id": 83,
+    "Name": "The murky swamps",
+    "TopRoomId": 8399,
+    "Lifespan": 80,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8301,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8302,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 8307,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8302,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8303,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8303,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8303,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8304,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8305,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8303,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8306,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8307,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8307,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8308,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8309,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8310,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8310,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8312,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8312,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8313,
+        "Arg2": 1,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8306,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8302,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8314,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8314,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8318,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 8307,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8318,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 8307,
+        "Arg2": 0,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8321,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8321,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8320,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8301,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8320,
+        "Arg2": 2,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8301,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 8302,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 8319,
+        "Arg2": 1,
+        "Arg3": 8316,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 8301,
+      "Name": "Muddy Path",
+      "Description": "\n   This section of the path is slowly being drowned by the nearby swamp to the\nsouth, which is creeping slowly inland. Several caved-in buildings sprawl here,\ntorn apart both by battle and the elements. There is a battered sign here.",
+      "ZoneId": 83,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6125,
+          "Description": "The path looks drier here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8302,
+          "Description": "A broken road leading southward into the marsh.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nWARNING:  The Murky Swamps to the south are very dangerous."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8302,
+      "Name": "Swamp's Edge",
+      "Description": "\n   Briars and marsh plants stick to your boots and clothes, and clouds cover\nthe skies above the murky marsh, leaving the path before you dark and sinister.\nYou see some disturbances in the marsh, but after a few strangled screams, the\nsounds stop.",
+      "ZoneId": 83,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8301,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8303,
+          "Description": "To the east lies a series of bogs and shallows that look rather threatening.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8304,
+          "Description": "You notice a large hill rising out of the marsh to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8303,
+      "Name": "Marshy Forest",
+      "Description": "\n   This area is by no means a forest, but for those who dwell in these sparse\ntrees it is one. Occasionally you see a whole humanoid form floating face down\nin the water, but mostly you only find pieces. You hear a loud bellow in the\ndistance. And feel fear creep into your heart.",
+      "ZoneId": 83,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8305,
+          "Description": "Eastward is the thick bog of ooze...",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8302,
+          "Description": "Westward lies the remnants of a broken and shattered roadway being swallowed\nby the marsh.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pieces"
+          ],
+          "Description": "\nYou see severed limbs and spongy intestines."
+        },
+        {
+          "Keywords": [
+            "humanoid",
+            "corpse"
+          ],
+          "Description": "\nHe looks mangled and shredded.  You see one large gash mark that looks\nlike it came from the claw of some huge beast."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8304,
+      "Name": "On a hill",
+      "Description": "\n   You stand atop a hill on the northwestern side of the evil swamp. Dark\nclouds whip around you and the wind raises its voice and assails you.",
+      "ZoneId": 83,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8302,
+          "Description": "To the north lies a damp broken roadway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8309,
+          "Description": "A dark pool congeals to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8310,
+          "Description": "A gloomy path leads down the hill into the swamp.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8305,
+      "Name": "An Oozing Bog",
+      "Description": "\n   You stand in an oozing quagmire. A creaking beat fills the air, accompanied\nby groans and soughing of the air. Several large winged beasts flap over you\nand send chilling glares your way. You feel out of place, and feel that the\noccupants of this realm will soon have you for a feast.",
+      "ZoneId": 83,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8306,
+          "Description": "Eastward lies a horde of disgusting looking monsters.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8303,
+          "Description": "Westward lies a marshy area.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "beasts"
+          ],
+          "Description": "\nYou see a large creature, possibly a demon, flapping heavily above you."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8306,
+      "Name": "An Oozing Bog",
+      "Description": "\n   The ground here is soft and oozing. You feel slimy water seeping into your\nboots. Better stop and check for leeches when you get out of here.",
+      "ZoneId": 83,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 8305,
+          "Description": "You see a large tree limb that looks easily moved.",
+          "Keywords": [
+            "limb"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "limb"
+          ],
+          "Description": "\nThe limb looks like it is attached to a trap door in the ground."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8307,
+      "Name": "Swamp Thing's Lair",
+      "Description": "\n   A horrible swamp thing resides here. Mutilated corpses suffuse the air with\nthe overwhelming stench of putrid flesh.",
+      "ZoneId": 83,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 8308,
+          "Description": "A pool of quick sand lies to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "corpses"
+          ],
+          "Description": "\nYou notice a note on one of the corpses reading:  'Best ye forget the temple,\nit is not for the likes of you...'"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8308,
+      "Name": "Pool of Quick Sand",
+      "Description": "\n   You stand by a large oozing pool of quick sand. Luckily only a complete\nklutz could not avoid it. Dancing lights fly about you and one seems to be\ntaunting you towards the pool.",
+      "ZoneId": 83,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8307,
+          "Description": "The swamp thing's lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8314,
+          "Description": "A murky bog.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8309,
+          "Description": "A dark pool lies to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "quicksand"
+          ],
+          "Description": "\nIt looks deadly to the foolish."
+        },
+        {
+          "Keywords": [
+            "lights"
+          ],
+          "Description": "\nFrom the stories you have heard, you recognize them as will-o-wisps."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8309,
+      "Name": "A Dark Pool",
+      "Description": "\n   You stand beside a large dark pond. The water boils not with heat, but with\nmotion, as if it is alive. A creaking beat pulses through the air, leaving you\nwith a cold sweat and fear in your heart.",
+      "ZoneId": 83,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8308,
+          "Description": "A large pool of quicksand lies to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8311,
+          "Description": "You see a cloud of darkness to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8304,
+          "Description": "A hill rises out of the swamp to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pond"
+          ],
+          "Description": "\nIt looks ALIVE ..."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8310,
+      "Name": "Gloomy Path Through the Marsh",
+      "Description": "\n   To the north lies a hill, shrouded in dark clouds, and to the south lies a\nhuge patch of vegetation. You sense an evil presence and notice a beast flying\noverhead to the south east, towards what looks to be a huge fortress, half\nburied in the marsh.",
+      "ZoneId": 83,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8304,
+          "Description": "To the north a hill protrudes from the marshes.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8312,
+          "Description": "To the south a huge mass of vegetation seems to quiver with life.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "vegetation"
+          ],
+          "Description": "\nIt looks sentient."
+        },
+        {
+          "Keywords": [
+            "fortress"
+          ],
+          "Description": "\nIt is surrounded by walls nearly 20 meters high.  In a tall tower on the\nnortheast side, a window glows blue with magical energy."
+        },
+        {
+          "Keywords": [
+            "beast"
+          ],
+          "Description": "\nIt looks to be a demon of some foul breed."
+        },
+        {
+          "Keywords": [
+            "clouds"
+          ],
+          "Description": "\nThe clouds look dark and foreboding."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8311,
+      "Name": "Cloud of Darkness",
+      "Description": "\n   As you travel through this cloud of darkness, a fear such as you have never\nknown before assails you.",
+      "ZoneId": 83,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8309,
+          "Description": "A dark pool lies to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 8313,
+          "Description": "An obelisk lies to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8312,
+      "Name": "Near Vegetation from Hell",
+      "Description": "\n   You stand near some of the strangest plant life you have ever seen, a\nmixture of tumescent vegetables, evil-smelling fruit trees, and malignant\nferns.",
+      "ZoneId": 83,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8310,
+          "Description": "To the north is a gloomy path through the marsh.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8313,
+          "Description": "Eastward is a large, black stone monolith.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plant",
+            "plants"
+          ],
+          "Description": "\nThey look rather violent, and snap at you when you come near."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8313,
+      "Name": "By the Monolith",
+      "Description": "\n   You are standing near a monolith which protrudes some 20 feet from the marsh\ninto the air. Its black obsidian surface shines darkly in the strange, almost\nunearthly light that enters through the clouds above.",
+      "ZoneId": 83,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8311,
+          "Description": "To the north is a cloud of darkest evil.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8314,
+          "Description": "Eastward lies a murky bog.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8312,
+          "Description": "Near Vegetation from Hell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "monolith"
+          ],
+          "Description": "\nThis huge monolith resembles nothing you have ever seen before.\nYou have a strong feeling not to go within."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8314,
+      "Name": "Murky Bog",
+      "Description": "\n   A murky bog surrounds you. To the east a black monolith juts forth from the\nground. Far to the north lies a huge pool of quicksand. Snarls can be heard\nechoing as if from a great distance.",
+      "ZoneId": 83,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8308,
+          "Description": "To the north lies a huge pool of quicksand.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 8315,
+          "Description": "To the east the marsh turns into a small lake.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8313,
+          "Description": "Westward a large monolith awaits adventurers.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "monolith"
+          ],
+          "Description": "\nThis is a huge obsidian stone block stuck in the marsh."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8315,
+      "Name": "Northern Lake Side",
+      "Description": "\n   Floating on this boiling lake is not what you would consider an enjoyable\nexperience. Many a creature bumps the bottom of your boat, and glares at you\nthrough unblinking eyes from the waters below. The southern portion of the lake\nlooks calm and serene compared to this wild place.",
+      "ZoneId": 83,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 8316,
+          "Description": "The southern portion of the lake lies to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8314,
+          "Description": "To the west lies a murky bog.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8316,
+      "Name": "Southern Lake Side",
+      "Description": "\n   You are floating on a calm section of blue crystal water. You feel much more\nat ease then you were before in this area. Then a wave of fear passes over you.\nYou are not alone.",
+      "ZoneId": 83,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 8315,
+          "Description": "Northern lake side.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8317,
+          "Description": "To the west is a beach where your boat can land.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "north"
+          ],
+          "Description": "\nThe way to the north seems to be impassable, due to the rough water and\nstrange wild life."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8317,
+      "Name": "Beach",
+      "Description": "\n   You are on a sandy shore. Marsh life creeps across the surface. To the\nwest you can see a strange stone building.",
+      "ZoneId": 83,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8316,
+          "Description": "To the east lies the southern portion of a small lake.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 8318,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 8318,
+      "Name": "Before the Stone Building",
+      "Description": "\n   You stand before an old stone building. The building looks like it have been\nvery beautiful. Now the only thing that remains is a dark hollow shell. Green\nvegetation have taken over residence in the ruins.",
+      "ZoneId": 83,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 8317,
+          "Description": "To the east is a marshy beach.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 8301,
+      "Name": "troll",
+      "ShortDescription": "\na swamp troll",
+      "LongDescription": "\nA swamp troll charges towards you.",
+      "Description": "\nThis huge behemoth towers to a height of 15 feet.  He sneers at you \nas he approaches and raises two black taloned claws to strike you.",
+      "Level": 60,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d20+900",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 27,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d10+40"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 420000,
+      "DefaultPosition": "Resting",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8302,
+      "Name": "troll",
+      "ShortDescription": "\na green troll",
+      "LongDescription": "\nA green troll attempts to get a hold on you.",
+      "Description": "\nThis big troll towers several feet over you.  He has a large spear\nwhich he seems to ply with utmost prowess.  He jabs his spear at you\nand cackles with glee.",
+      "Level": 64,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d20+980",
+        "Mana": 740,
+        "Move": 1040
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d10+48"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 460000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8303,
+      "Name": "ogre",
+      "ShortDescription": "\nan ogre",
+      "LongDescription": "\nAn ogre stands here getting ready to beat in your face.",
+      "Description": "\nThis mean bastard looks like he could tear you limb from limb.",
+      "Level": 70,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d20+1100",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 35,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "4d5+45"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 526000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8304,
+      "Name": "thing",
+      "ShortDescription": "\nthe Swamp Thing",
+      "LongDescription": "\nthe Swamp Thing shambles about here.  It seems hungry.",
+      "Description": "\nThe Swamp Thing has huge fists, which look like they could pound you flat.",
+      "Level": 66,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d10+1220",
+        "Mana": 760,
+        "Move": 1070
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 34,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d10+38"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3000,
+      "Experience": 480000,
+      "DefaultPosition": "Resting",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8305,
+      "Name": "gnoll",
+      "ShortDescription": "\na gnoll",
+      "LongDescription": "\nThere is a mean looking gnoll here.",
+      "Description": "\nThe Gnoll seems annoyed at your presence.",
+      "Level": 72,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d10+1250",
+        "Mana": 820,
+        "Move": 1160
+      },
+      "Combat": {
+        "Armor": -280,
+        "Hitroll": 38,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d8+46"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 550000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8306,
+      "Name": "beast",
+      "ShortDescription": "\na huge hairy beast",
+      "LongDescription": "\nA huge hairy beast shambles towards you with death in his eyes.",
+      "Description": "\nThis huge beast stands about 20 feet in height and has huge green clawed\nappendages.",
+      "Level": 65,
+      "Race": "Bearbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d21+980",
+        "Mana": 750,
+        "Move": 1055
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d10+38"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 10,
+      "Experience": 470000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8307,
+      "Name": "beast",
+      "ShortDescription": "\na rather small beast",
+      "LongDescription": "\nA rather small beast cringes in terror as it notices you.",
+      "Description": "\nThis rather small beast looks like you could take it out with a single\nsword blow.",
+      "Level": 50,
+      "Race": "Bearbeast",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Disguise",
+        "Infrared"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d10+820",
+        "Mana": 600,
+        "Move": 830
+      },
+      "Combat": {
+        "Armor": -140,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d20+35"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 313000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8308,
+      "Name": "will will-o-wisp",
+      "ShortDescription": "\nthe Will-O-Wisp",
+      "LongDescription": "\nA Will-O-Wisp darts here and there, making fun of you.",
+      "Description": "\nThis strange little creature seems very hard to keep your eyes on.\nYou stare as hard as you can at the glowing ball of floating light and\nare just able to notice a small pair of glowing eyes.",
+      "Level": 68,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d20+1100",
+        "Mana": 780,
+        "Move": 1100
+      },
+      "Combat": {
+        "Armor": -250,
+        "Hitroll": 37,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Sting",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d3+44"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 503000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8309,
+      "Name": "snake anaconda",
+      "ShortDescription": "\nthe monstrous snake",
+      "LongDescription": "\nA monstrous snake slithers towards you, thinking 'breakfast'.",
+      "Description": "\nThis 10 meter anaconda looks rather hungry.",
+      "Level": 66,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d16+880",
+        "Mana": 760,
+        "Move": 1070
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 32,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d20+33"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 486000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8310,
+      "Name": "snake python",
+      "ShortDescription": "\na large snake",
+      "LongDescription": "\nA rather large python rests in a coil here.",
+      "Description": "\nIt's the largest Amazon python you have ever seen.",
+      "Level": 72,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d10+1260",
+        "Mana": 820,
+        "Move": 1160
+      },
+      "Combat": {
+        "Armor": -280,
+        "Hitroll": 38,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "1d10+46"
+        },
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 20,
+          "DamageDice": "2d8+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 550000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8312,
+      "Name": "hag",
+      "ShortDescription": "\nthe Marsh Hag",
+      "LongDescription": "\nA Marsh Hag is here.",
+      "Description": "\nYech!  She manages to make even Smurfette look attractive.  That's ok,\nbecause she thinks you stink too, and she's about to do something about it.",
+      "Level": 62,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d10+950",
+        "Mana": 720,
+        "Move": 1010
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 32,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d12+31"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 440000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8313,
+      "Name": "slaad",
+      "ShortDescription": "\na Death Slaad",
+      "LongDescription": "\nA Death Slaad is standing here distraught.  He seems lost.",
+      "Description": "\nThis dark apparition stands a meager 13 feet in height.  Even in the dim\nswamp light, the blade of his scythe gleams.",
+      "Level": 70,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d20+1150",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -250,
+        "Hitroll": 38,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d12+52"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 526000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8314,
+      "Name": "wolf",
+      "ShortDescription": "\na marsh wolf",
+      "LongDescription": "\nA marsh wolf sniffs the ground has followed your scent.",
+      "Description": "\nThis wolf looks plump.  She probably ate a friend or two of yours who came\ninto the marsh.",
+      "Level": 68,
+      "Race": "Hound",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d10+900",
+        "Mana": 780,
+        "Move": 1100
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 37,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d15+38"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 503000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8318,
+      "Name": "mound shambling",
+      "ShortDescription": "\na shambling mound",
+      "LongDescription": "\nA heap of garbage shambles towards you.",
+      "Description": "\nThis grotesque pile of plant matter fills you with utmost horror.",
+      "Level": 63,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d10+2540",
+        "Mana": 730,
+        "Move": 1025
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 25,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Crush",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d10+42"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 450000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8319,
+      "Name": "shaman orc",
+      "ShortDescription": "\nthe orc shaman",
+      "LongDescription": "\nAn orc shaman stands before you holding a staff and wearing robes.",
+      "Description": "\nThis old orc has an array of bones stuck in his hair and strange symbols\npainted on his face and hands.",
+      "Level": 62,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "IsNpc",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Hide"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d20+820",
+        "Mana": 720,
+        "Move": 1010
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "3d4+31"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 500000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8320,
+      "Name": "giant",
+      "ShortDescription": "\na marsh giant",
+      "LongDescription": "\nA marsh giant stomps towards you.",
+      "Description": "\nThis huge monster of a man has green gnarly teeth and a BIG stick.",
+      "Level": 74,
+      "Race": "Giant",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "IsNpc",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d40+1300",
+        "Mana": 840,
+        "Move": 1190
+      },
+      "Combat": {
+        "Armor": -280,
+        "Hitroll": 40,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d10+47"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 4000,
+      "Experience": 580000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 8321,
+      "Name": "gargoyle",
+      "ShortDescription": "\na gargoyle",
+      "LongDescription": "\nA large gargoyle lands next to you, baring his fangs at you.",
+      "Description": "\nThis creepy fellow looks like he could use you as a meal.",
+      "Level": 62,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "IsNpc",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Hide"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d5+750",
+        "Mana": 720,
+        "Move": 1010
+      },
+      "Combat": {
+        "Armor": -210,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d10+31"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 440000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 8301,
+      "Name": "spear long",
+      "ShortDescription": "\na long spear",
+      "Description": "\nA strange spear lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 45,
+      "AntiClass": "4919",
+      "ExtraFlags": [
+        "NoDrop",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        15,
+        2,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 15,
+          "DamageType": 2,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 2000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 5
+        },
+        {
+          "Location": "Dexterity",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8302,
+      "Name": "horned helmet",
+      "ShortDescription": "\na dark horned helmet",
+      "Description": "\nA wicked looking horned helmet lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 15000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "horns",
+            "horn"
+          ],
+          "Description": "\nThese horns appear to be made of adamantite."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Intelligence",
+          "Modifier": -3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8303,
+      "Name": "chain mail chainmail",
+      "ShortDescription": "\nA suit of chainmail",
+      "Description": "\nAn old suit of chainmail lies here, corroded by the marsh.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 42,
+      "AntiClass": "4885",
+      "ExtraFlags": [
+        "NoDrop",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        16,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 16,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 2000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8306,
+      "Name": "scythe",
+      "ShortDescription": "\nA huge, wicked-looking scythe",
+      "Description": "\nAn evil, wicked-looking scythe lies in the shadows.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 50,
+      "AntiClass": "4915",
+      "ExtraFlags": [
+        "NoDrop",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        5,
+        10,
+        1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 10,
+          "DamageType": 1,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 16,
+      "Cost": 10000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8307,
+      "Name": "green potion",
+      "ShortDescription": "\nA murky green potion",
+      "Description": "\nA murky green potion lies here in the mud.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        43,
+        15,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 43,
+          "SpellIds": [
+            15,
+            0,
+            0
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 600,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "potion"
+          ],
+          "Description": "\nIt looks really disgusting and doesn't smell very nice either."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2200,
+      "Name": "spear jagged",
+      "ShortDescription": "\na jagged spear",
+      "Description": "\nA jagged spear has been left here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 20,
+      "AntiClass": "4915",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        6,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 6,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 1000,
+      "CostPerDay": 1500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

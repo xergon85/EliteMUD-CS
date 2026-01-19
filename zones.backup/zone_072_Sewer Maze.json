@@ -1,0 +1,3225 @@
+{
+  "Zone": {
+    "Id": 72,
+    "Name": "Sewer Maze",
+    "TopRoomId": 7299,
+    "Lifespan": 70,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7201,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7201,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7202,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7208,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7200,
+        "Arg2": 1,
+        "Arg3": 7201,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7200,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7203,
+        "Arg2": 5,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 7205,
+        "Arg2": 3,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 7204,
+        "Arg2": 6,
+        "Arg3": 7200,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 7210,
+        "Arg2": 1,
+        "Arg3": 7200,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7201,
+        "Arg2": 1,
+        "Arg3": 7203,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7201,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7202,
+        "Arg2": 2,
+        "Arg3": 7205,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7202,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7202,
+        "Arg2": 2,
+        "Arg3": 7207,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7202,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 7206,
+        "Arg2": 5,
+        "Arg3": 7206,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 7208,
+        "Arg2": 15,
+        "Arg3": 7211,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7214,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7211,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7213,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7211,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7215,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7211,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7217,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7211,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7219,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7221,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7223,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7225,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7233,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7203,
+        "Arg2": 10,
+        "Arg3": 7233,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7204,
+        "Arg2": 1,
+        "Arg3": 7234,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7280,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7116,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7002,
+        "Arg2": 5,
+        "Arg3": 7285,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7002,
+        "Arg2": 5,
+        "Arg3": 7285,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7190,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7209,
+        "Arg2": 5,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 7208,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7002,
+        "Arg2": 5,
+        "Arg3": 7285,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7000,
+        "Arg2": 8,
+        "Arg3": 7286,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7000,
+        "Arg2": 8,
+        "Arg3": 7286,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7000,
+        "Arg2": 8,
+        "Arg3": 7281,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7000,
+        "Arg2": 8,
+        "Arg3": 7281,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7000,
+        "Arg2": 8,
+        "Arg3": 7280,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 7116,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 7280,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 7200,
+      "Name": "The Treasury",
+      "Description": "\n   You are in a small but well equipped treasury. You can see some\nwriting on the wall. The ceiling has a funny glow, which enables you to\nsee. You can get back into the inner lair through the stone door which\nis east.",
+      "ZoneId": 72,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7201,
+          "Description": "You look back through the opening into the inner lair.",
+          "Keywords": [
+            "door",
+            "stone"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 7205
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "door",
+            "stone"
+          ],
+          "Description": "\nThis is a heavy black stone door it looks very solid."
+        },
+        {
+          "Keywords": [
+            "writing"
+          ],
+          "Description": "\nYou read the number '666'."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7201,
+      "Name": "The inner Lair",
+      "Description": "\n   You are in a octagonal room with smooth purple stone walls. The\nfloor is made from black stone. In the western wall you see a large\nblack stone door.",
+      "ZoneId": 72,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7202,
+          "Description": "You look back through the door into the lair.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7200,
+          "Description": "You see the treasury.",
+          "Keywords": [
+            "door",
+            "stone"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 7205
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7202,
+      "Name": "The Lair",
+      "Description": "\n   On the floor you see a lot of human decay, like bones and skulls.\nYou also see a lot of slime. On the wall is a torch sitting in its\nsconce. To the north are a wooden door.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7201,
+          "Description": "You can see the inner lair.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7205,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7203,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skull",
+            "skulls",
+            "bones",
+            "decay"
+          ],
+          "Description": "\nOn all the skulls you notice that there is a three inch hole in the\nforehead.  All the bones are broken and old."
+        },
+        {
+          "Keywords": [
+            "slime"
+          ],
+          "Description": "\nThe slime is slimy and uninteresting."
+        },
+        {
+          "Keywords": [
+            "torch",
+            "sconce"
+          ],
+          "Description": "\nThe torch is bolted to the sconce and the sconce to the wall."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7203,
+      "Name": "The Lair",
+      "Description": "\n   On the floor you see a lot of human decay, like bones and skulls.\nYou also see a lot of slime. On the wall is a torch sitting in its\nsconce.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7202,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7206,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7204,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skull",
+            "skulls",
+            "bones",
+            "decay"
+          ],
+          "Description": "\nOn all the skulls you notice that there is a three inch hole in the\nforehead.  All the bones are broken and old."
+        },
+        {
+          "Keywords": [
+            "slime"
+          ],
+          "Description": "\nThe slime is slimy and uninteresting."
+        },
+        {
+          "Keywords": [
+            "torch",
+            "sconce"
+          ],
+          "Description": "\nThe torch is bolted to the sconce and the sconce to the wall."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7204,
+      "Name": "The Lair",
+      "Description": "\n   On the floor you see a lot of human decay, like bones and skulls.\nYou also see a lot of slime. On the wall is a torch sitting in its\nsconce.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7203,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7207,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7208,
+          "Description": "You see the lair entrance.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skull",
+            "skulls",
+            "bones",
+            "decay"
+          ],
+          "Description": "\nOn all the skulls you notice that there is a three inch hole in the\nforehead.  All the bones are broken and old."
+        },
+        {
+          "Keywords": [
+            "slime"
+          ],
+          "Description": "\nThe slime is slimy and uninteresting."
+        },
+        {
+          "Keywords": [
+            "torch",
+            "sconce"
+          ],
+          "Description": "\nThe torch is bolted to the sconce and the sconce to the wall."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7205,
+      "Name": "The Lair",
+      "Description": "\n   On the floor you see a lot of human decay, like bones and skulls.\nYou also see a lot of slime. On the wall is a torch sitting in its\nsconce.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7206,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7202,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skull",
+            "skulls",
+            "bones",
+            "decay"
+          ],
+          "Description": "\nOn all the skulls you notice that there is a three inch hole in the\nforehead.  All the bones are broken and old."
+        },
+        {
+          "Keywords": [
+            "slime"
+          ],
+          "Description": "\nThe slime is slimy and uninteresting."
+        },
+        {
+          "Keywords": [
+            "torch",
+            "sconce"
+          ],
+          "Description": "\nThe torch is bolted to the sconce and the sconce to the wall."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7206,
+      "Name": "The lair",
+      "Description": "\n   On the floor you see a lot of human decay, like bones and skulls.\nYou also see a lot of slime. On the wall is a torch sitting in its\nsconce.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7205,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7207,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7203,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bones",
+            "decay"
+          ],
+          "Description": "\nAll the bones are broken and old."
+        },
+        {
+          "Keywords": [
+            "slime"
+          ],
+          "Description": "\nThe slime is slimy and uninteresting."
+        },
+        {
+          "Keywords": [
+            "torch",
+            "sconce"
+          ],
+          "Description": "\nThe torch is bolted to the sconce and the sconce to the wall."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7207,
+      "Name": "The lair",
+      "Description": "\n   On the floor you see a lot of human decay, like bones and skulls.\nYou also see a lot of slime. On the wall is a torch sitting in its\nsconce.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7206,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7204,
+          "Description": "You see another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skull",
+            "skulls",
+            "bones",
+            "decay"
+          ],
+          "Description": "\nOn all the skulls you notice that there is a three inch hole in the\nforehead.  All the bones are broken and old."
+        },
+        {
+          "Keywords": [
+            "slime"
+          ],
+          "Description": "\nThe slime is slimy and uninteresting."
+        },
+        {
+          "Keywords": [
+            "torch",
+            "sconce"
+          ],
+          "Description": "\nThe torch is bolted to the sconce and the sconce to the wall."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7208,
+      "Name": "The lair entrance",
+      "Description": "\n   You are in a dry part of the sewer. To the north is a wooden door,\nyou can see some slime at the lower part of the door. You also see some\nskulls and some broken bones.",
+      "ZoneId": 72,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7204,
+          "Description": "You can see the lair.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7209,
+          "Description": "You see a crawlway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "slime"
+          ],
+          "Description": "\nThe slime is slimy and uninteresting."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7209,
+      "Name": "The crawlway",
+      "Description": "\n   You are in a narrow crawlway. Here is very boring.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7210,
+          "Description": "You see a four-way junction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7208,
+          "Description": "You see the entrance to a lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7210,
+      "Name": "The four-way function",
+      "Description": "\n   You are in a sewer junction. To the north is a small hole, to the\nwest is a narrow crawlway and to the east and south the sewer\ncontinues.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7211,
+          "Description": "You can see a small cave-like room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7212,
+          "Description": "You can see a sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7215,
+          "Description": "You can see a sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7209,
+          "Description": "You can see a narrow crawlway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7211,
+      "Name": "The small cave",
+      "Description": "\n   You are in a collapsed sewer drain, which now is more like a small\ncave.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7210,
+          "Description": "You look back into the four-way junction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7212,
+      "Name": "The sewer drain",
+      "Description": "\n   You are in a dry sewer drain which bends to the north.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7213,
+          "Description": "You can see the drain continuing north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7210,
+          "Description": "You can see the four-way junction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7213,
+      "Name": "The sewer drain",
+      "Description": "\n   You are in a dry sewer drain which bends to the east.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7214,
+          "Description": "You can see the drain continuing east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7212,
+          "Description": "You can see the drain continuing south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7214,
+      "Name": "The drain end",
+      "Description": "\n   You are at the end of the drain around you the sewer has collapsed,\nthe only exit is west.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7213,
+          "Description": "You see the sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7215,
+      "Name": "The half-wet drain",
+      "Description": "\n   You are in a sewer drain where the floor is covered with water. To\nthe north it looks more dry, south however the drain runs down into\nsome water.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7210,
+          "Description": "To the north lies a dry four-way junction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7216,
+          "Description": "To the south you see a sewer drain filled with water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "water"
+          ],
+          "Description": "\nThe water is dirty but it looks like you would be able to swim in it."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7216,
+      "Name": "Under water in the sewer",
+      "Description": "\n   You swim in some dirty water and is holding you breath. You'll\nbetter continue before you drown. It is a good thing that you can hold\nyour light above water-level.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7215,
+          "Description": "It is hard to see, but it looks like the drain runs slightly upwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7217,
+          "Description": "It is hard to see, but it looks like the drain runs a little bit\nupwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7217,
+      "Name": "The half-dry drain",
+      "Description": "\n   You are in a half-dry sewer drain. To the north the drain runs a\nlittle bit downwards into some water to the east you can see a small\nhole. To the west you see another drain.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7216,
+          "Description": "You see the drain running down into some water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7218,
+          "Description": "Through the hole you can just make out a very small room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7219,
+          "Description": "You see a drain running to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "water"
+          ],
+          "Description": "\nThe water is dirty but it looks like you would be able to swim in it."
+        },
+        {
+          "Keywords": [
+            "hole"
+          ],
+          "Description": "\nThrough the hole you can just make out a very small room."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7218,
+      "Name": "The very small room",
+      "Description": "\n   You are in a very small room, it is pretty uninteresting.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7217,
+          "Description": "Through the little hole you can see a half-dry drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7219,
+      "Name": "A dry sewer drain",
+      "Description": "\n   You are in a dry but dirty sewer drain. The drain continues east and\nsouth.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7217,
+          "Description": "You see a half-dry drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7220,
+          "Description": "You see another boring sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7220,
+      "Name": "A boring drain",
+      "Description": "\n   You are in yet another sewer drain.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7219,
+          "Description": "You see a sewer drain continuing to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7221,
+          "Description": "You can see another drain to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7221,
+      "Name": "The sewer drain",
+      "Description": "\n   You are in a sewer drain, there is nothing special inhere, except\nfor a loud echo.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7222,
+          "Description": "You can see another sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7220,
+          "Description": "You can make out a sewer drain to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7129,
+          "Description": "You can see a sewer line.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7222,
+      "Name": "The sewer drain",
+      "Description": "\n   You are in a drain, with some slimy water on the floor.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7223,
+          "Description": "You see a sewer bend.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7221,
+          "Description": "You see a sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "slimy",
+            "water"
+          ],
+          "Description": "\nThe water floats to the east from here."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7223,
+      "Name": "The sewer bend",
+      "Description": "\n   You find yourself in an ordinary sewer bend, which bend from west to\nnorth.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7224,
+          "Description": "You see a sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7222,
+          "Description": "You see a sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7224,
+      "Name": "The sewer junction",
+      "Description": "\n   You stand in a junction of three sewer drains. You see some odd\nscratches on the pipe wall, as from a gigantic rat. North and south the\nsewer continues as usual, but west it looks a little strange.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7225,
+          "Description": "You see nothing but a sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7223,
+          "Description": "You see nothing but a sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7229,
+          "Description": "You see a strange sewer pipe.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7225,
+      "Name": "The sewer",
+      "Description": "\n   You are in a sewer, where the slimy water runs down through a tiny\nhole. You see some odd scratches on the pipe wall, as from a gigantic\nrat. There is a sewer drain south.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7224,
+          "Description": "You see a sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7229,
+      "Name": "The strange sewer",
+      "Description": "\n   You are in a very strange sewer indeed, there are some odd scratches\non the pipe wall, as from a gigantic rat. And you can see a lot of\norganic decay like bones from animals AND humans. West the drain runs\nslightly upwards.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7224,
+          "Description": "You see a sewer junction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7230,
+          "Description": "You see a slimy sewer drain.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7230,
+      "Name": "The damp sewer",
+      "Description": "\n   You are in a sewer drain with a funny damp substance on the floor,\nin the substance you see a lot of decay. You see some odd scratches on\nthe wall, as from a gigantic rat. Both to the east and west the pipe\nseems to run down.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7229,
+          "Description": "You see a sewer.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7231,
+          "Description": "You see a sewer.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7231,
+      "Name": "The strange sewer",
+      "Description": "\n   You are in an ordinary sewer except for a lot of scratches on the\nsewer wall, ad a lot of debris on the floor.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7230,
+          "Description": "You see a sewer.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7232,
+          "Description": "You see another sewer.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "debris"
+          ],
+          "Description": "\nYou see a lot of organic decay on the floor."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7232,
+      "Name": "The sewer",
+      "Description": "\n   You are in a sewer with more scratches on the walls. And of course a\nwhole lot of decay. The drain runs east and north.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7233,
+          "Description": "You see yet another sewer line.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7231,
+          "Description": "You see a sewer pipe.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7233,
+      "Name": "The sewer drain",
+      "Description": "\n   You stand in a sewer drain, you are able to see some kind of\ncave-like room. You see some odd scratches on the drain wall, as from a\ngigantic rat. The sewer leads south.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7234,
+          "Description": "You see a cave-like room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7232,
+          "Description": "You see a sewer.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7234,
+      "Name": "The rat's lair",
+      "Description": "\n   You are in a little cave. You are able to see quite a lot of debris\non the floor. There is a sewer drain west of here.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7233,
+          "Description": "You see the sewer system that way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7279,
+      "Name": "The Wall of the Abyss",
+      "Description": "\n   You hang onto some steps leading down into utter darkness. There's\nan exit leading up as well, though you'll have to open the tiny rock\nagain to do so.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7111,
+          "Description": "",
+          "Keywords": [
+            "rock"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 7299,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7280,
+      "Name": "The entrance",
+      "Description": "\n   You are in a very dark room. You notice that some faces are staring\nat you from inside the walls. In the middle of the room there is a\nsmall altar. To the north there is a small round door.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7281,
+          "Description": "A beam of red light seeps through a hole in the door.",
+          "Keywords": [
+            "small",
+            "round",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7116,
+          "Description": "",
+          "Keywords": [
+            "secret",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "altar"
+          ],
+          "Description": "\nThis altar are very special.  Faces are smiling from it.  There\nis a triangle in top of it."
+        },
+        {
+          "Keywords": [
+            "triangle"
+          ],
+          "Description": "\nThe triangle are filled with small symbols.  A language you have\nnever seen before."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7281,
+      "Name": "The corridor",
+      "Description": "\n   The corridor is glowing oppressively in a red hue. You can hear\nwailing through an open black hole to the east. To the south there is a\nround door.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7280,
+          "Description": "",
+          "Keywords": [
+            "small",
+            "round",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7282,
+          "Description": "The hole seems more black than the night. It is appears to be \"eating\"\nthe red light around it.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "small",
+            "round",
+            "door"
+          ],
+          "Description": "\nThe door is completely round without a keyhole."
+        },
+        {
+          "Keywords": [
+            "red",
+            "light"
+          ],
+          "Description": "\nThe red light glows from the walls."
+        },
+        {
+          "Keywords": [
+            "walls"
+          ],
+          "Description": "\nThe walls look alive."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7282,
+      "Name": "The Realm of lost souls",
+      "Description": "\n   You are standing in nothing. All around you there are stars.\nSometimes a shadow flies closely by you, wailing very loudly. To the\nnorth there is a small bright hole. To the west there is a small red\nhole.",
+      "ZoneId": 72,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7283,
+          "Description": "You look into a very bright hole.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7281,
+          "Description": "You look into a red hole.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shadow"
+          ],
+          "Description": "\nThe shadow looks like a man in great pain."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7283,
+      "Name": "The T-crossing",
+      "Description": "\n   You are in a small hallway. There are doors to the east and to the\nwest. To the south there are a black hole. There is writing in the\nwall. Wails can be heard from the south.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7282,
+          "Description": "A black hole in the wall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7284,
+          "Description": "You can see a big fire to the west. It looks like a unhealthy place to\nenter!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7286,
+          "Description": "To dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "writing"
+          ],
+          "Description": "\nThe writing says 'The one to the east, belongs to the beast.\nTo the west you will surely END your quest!'."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7284,
+      "Name": "The firedeath",
+      "Description": "\n   This room is very hot. There are flames surrounding you. You can see\nno exits at all! Skeletons are lying all over the floor.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skeletons"
+          ],
+          "Description": "\nThe skeletons looks like they had suffered the death of hunger.\nOne of them looks like he has written something at the wall."
+        },
+        {
+          "Keywords": [
+            "writing",
+            "wall"
+          ],
+          "Description": "\nThe writing says 'A pray to the GODS will not be heard, though\nthe only exit is death.....  Mother, I love you'."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7285,
+      "Name": "The Torture Room",
+      "Description": "\n   You are standing in a middle of a square room. Along the walls\nskeletons are hanging in rusty chains. In the middle of the room there\nis a big metal box, covered with dust. To the south you can just make\nout a small exit.",
+      "ZoneId": 72,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7286,
+          "Description": "To dark to tell.",
+          "Keywords": [
+            "door",
+            "iron"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skeletons"
+          ],
+          "Description": "\nWhen you look at the skeletons, you can see that they once had been in\ngreat pain.  They are hanging in their arms, and some of them has been\nkilled with a sharp instrument."
+        },
+        {
+          "Keywords": [
+            "big",
+            "metal",
+            "box"
+          ],
+          "Description": "\nThe metal box is covered with dust.  You notice that is once has been\nfilled with coal, as you see some of them."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7286,
+      "Name": "The hells yard",
+      "Description": "\n   You are standing in a lot of mud. A disgusting smell surrounds the\nplace, and makes you fell sick. Small flames sometimes shoot up from\nthe hot mud. To the west there is a small door. To the north you can\nsee an iron door.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7285,
+          "Description": "To dark to tell.",
+          "Keywords": [
+            "door",
+            "iron"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7283,
+          "Description": "To dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7299,
+      "Name": "On the walls of the Abyss",
+      "Description": "\n   You are clutching the steps on the wall so that you don't fall to\nthe ground down below. A large sign says : I haven't gotten any further\n... Yet. But I'm pushing to get finished with this sewer. Greetings and\nGood Health :) Redferne The Gentle This stops your journey down, the\nonly exit is up.",
+      "ZoneId": 72,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 7279,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 7200,
+      "Name": "master mindflayer",
+      "ShortDescription": "\nthe master mindflayer",
+      "LongDescription": "\nThe master mindflayer is here, looking at you with an evil look.",
+      "Description": "\nIt's a seven foot tall humanoid dressed in a purple cloak, and swinging a\nblack and purple rod above its head as if it was going to attack you any\nmoment now.  In the middle of its head are four tentacles with sharp points.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d50+300",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 15,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7201,
+      "Name": "senior mind mindflayer",
+      "ShortDescription": "\nthe senior mindflayer",
+      "LongDescription": "\nThe senior mindflayer walks around here, looking for something useful.",
+      "Description": "\nThis is a horrifying monster indeed, 6'6\" high.  Dressed in purple and black,\nand carrying a large mace in its hand.  In the center of its head are four\nlarge tentacles with very sharp points.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+330",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 50000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7202,
+      "Name": "junior mind mindflayer",
+      "ShortDescription": "\nthe junior mindflayer",
+      "LongDescription": "\nThe junior mindflayer is here, watching you carefully from the corner.",
+      "Description": "\nThis mindflayer is six feet high.  It has a small mace in its belt, and is\ndressed in purple and black cloth.  It has four small tentacles in the center\nof its head.",
+      "Level": 12,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+180",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 6000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7203,
+      "Name": "wererat rat were",
+      "ShortDescription": "\nthe ugly wererat",
+      "LongDescription": "\nAn ugly wererat is here, looking at you with a strange flick in his eyes.",
+      "Description": "\nThe wererat is about four feet tall.  It looks very much like rat, except\nthat it is standing.",
+      "Level": 10,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+120",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 300,
+      "Experience": 5000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7204,
+      "Name": "rat gigantic",
+      "ShortDescription": "\nthe gigantic rat",
+      "LongDescription": "\nThere is a gigantic rat here, looking at you with a hungry look.",
+      "Description": "\nThe gigantic rat is about ten feet long from head to tail and has claws the\nsize of your head, looking very nasty.",
+      "Level": 25,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d50+350",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d7+5"
+        },
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d8+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2500,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7000,
+      "Name": "mud monster mudmonster",
+      "ShortDescription": "\nthe horrifying Mudmonster",
+      "LongDescription": "\nA horrifying Mudmonster is slowly evolving from the mud...",
+      "Description": "\nIt sure looks like something out of a horror movie.  It strongly resembles\na huge figure made up from mud alone, and it sure looks like it had human \nflesh for breakfast and is strongly intent on having the same for dinner\n- Perhaps you?",
+      "Level": 25,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d40+330",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7002,
+      "Name": "rat",
+      "ShortDescription": "\nthe sewer rat",
+      "LongDescription": "\nThe huge hungry-looking sewer rat sits here.",
+      "Description": "",
+      "Level": 10,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+120",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 2100,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 7190,
+      "Name": "ring silver",
+      "ShortDescription": "\na glinting silver ring",
+      "Description": "\nA lovely silver ring has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 8,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9,
+      "Cost": 8000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 30
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7200,
+      "Name": "rod devil",
+      "ShortDescription": "\nthe devil rod",
+      "Description": "\nThe mysterious devil rod lies on the floor.",
+      "ActionDescription": "\ncrush",
+      "Type": "Weapon",
+      "Level": 25,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        7,
+        2,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 7,
+          "DamageType": 2,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 15000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "devil",
+            "rod"
+          ],
+          "Description": "\nThis is indeed a mysterious rod.  It is dark black at the base but has four\nvery sharp purple tentacles at the end."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Strength",
+          "Modifier": -1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7201,
+      "Name": "mace large",
+      "ShortDescription": "\nthe large mace",
+      "Description": "\nA large mace lies here.",
+      "ActionDescription": "\ncrush",
+      "Type": "Weapon",
+      "Level": 18,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        10,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 10,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 1000,
+      "CostPerDay": 400,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "large",
+            "mace"
+          ],
+          "Description": "\nThe mace is pretty large with a weight of 10 lbs.  The head is actually four\npurple tentacles tied together."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7202,
+      "Name": "mace small",
+      "ShortDescription": "\nthe small mace",
+      "Description": "\na small mace has been left here.",
+      "ActionDescription": "\ncrush",
+      "Type": "Weapon",
+      "Level": 8,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        6,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 6,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 600,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "small",
+            "mace"
+          ],
+          "Description": "\nThis weapon does look like it does a lot of damage, but then you never know.\nIt consists of a black handle and a purple head."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7203,
+      "Name": "cloak purple",
+      "ShortDescription": "\na purple cloak",
+      "Description": "\nA purple cloak lies on the floor.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 18,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 5000,
+      "CostPerDay": 6000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cloak",
+            "purple"
+          ],
+          "Description": "\nThis is a very fine made cloak from an unknown material, in a nice purple\ncolor."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7204,
+      "Name": "potion blue",
+      "ShortDescription": "\nan neon blue potion",
+      "Description": "\nA neon blue potion stands on the floor.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        25,
+        1,
+        3,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 25,
+          "SpellIds": [
+            1,
+            3,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1500,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "potion",
+            "blue"
+          ],
+          "Description": "\nIn the flask is a transparent electric blue liquid."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7205,
+      "Name": "key black",
+      "ShortDescription": "\na black key",
+      "Description": "\nA black key has been left on the floor.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        140
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 140
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 10,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "black",
+            "key"
+          ],
+          "Description": "\nThis little key is made from a black metal of unknown origin."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7206,
+      "Name": "skull white",
+      "ShortDescription": "\na strange white skull",
+      "Description": "\nA strange white skull lies on the floor looking at you.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 1,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 30,
+      "Cost": 0,
+      "CostPerDay": 250,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "white",
+            "skull"
+          ],
+          "Description": "\nThe skull has two small horns in the forehead. You notice some writing on\nthe inside."
+        },
+        {
+          "Keywords": [
+            "writing",
+            "text"
+          ],
+          "Description": "\nYou read the number '666'."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": -4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7208,
+      "Name": "stick small light",
+      "ShortDescription": "\na small stick",
+      "Description": "\nA small stick lies here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        120,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 120
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 2000,
+      "CostPerDay": 400,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "small",
+            "stick"
+          ],
+          "Description": "\nThe small stick does not look interesting at all.  But just as you are going\nto throw it away you notice some small letters."
+        },
+        {
+          "Keywords": [
+            "letters",
+            "letter"
+          ],
+          "Description": "\nIt reads 'Hold me'."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7209,
+      "Name": "boots muddy",
+      "ShortDescription": "\na pair of muddy boots",
+      "Description": "\nA pair of muddy boots has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 8,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 75,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "boots^"
+          ],
+          "Description": "\nThe boots are muddy and they look well worn, but also very comfortable."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": 15
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7210,
+      "Name": "treasure coins",
+      "ShortDescription": "\na huge treasure",
+      "Description": "\nThere is a huge treasure here, looking very valuable.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14503,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 14503
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "treasure"
+          ],
+          "Description": "\nThis looks like a whole lot of coins."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7211,
+      "Name": "sword short",
+      "ShortDescription": "\na short sword",
+      "Description": "\nA short sword is lying here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 6,
+      "AntiClass": "546",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        5,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 5,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 2500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "short",
+            "sword"
+          ],
+          "Description": "\nThis is a very nice little weapon."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

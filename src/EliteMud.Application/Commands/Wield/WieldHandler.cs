@@ -28,12 +28,14 @@ public sealed class WieldHandler
             if (MatchesTarget(obj.Definition, target))
             {
                 // Check if object can be wielded
-                if (!obj.Definition.WearSlots.Contains("Wield") && !obj.Definition.WearSlots.Contains("BothHands"))
+                if (!obj.Definition.WearSlots.Contains("Wield") && 
+                    !obj.Definition.WearSlots.Contains("WieldTwoHanded") &&
+                    !obj.Definition.WearSlots.Contains("BothHands"))
                 {
                     return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be wielded.");
                 }
 
-                // Determine wield slot (prefer Wield over BothHands)
+                // Determine wield slot (prefer Wield over two-handed)
                 var slot = obj.Definition.WearSlots.Contains("Wield") 
                     ? EquipmentSlot.Wield 
                     : EquipmentSlot.BothHands;

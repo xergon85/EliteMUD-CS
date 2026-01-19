@@ -1,0 +1,428 @@
+{
+  "Zone": {
+    "Id": 133,
+    "Name": "Amok 'n Glob Harbours and Transports to NC !!!",
+    "TopRoomId": 13399,
+    "Lifespan": 20,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 13300,
+        "Arg2": 1,
+        "Arg3": 13301,
+        "Comment": "Quartermaster (SHOP)"
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 13304,
+        "Arg2": 100,
+        "Arg3": 13,
+        "Comment": "Wearing rope around waist"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 13300,
+        "Arg2": 100,
+        "Arg3": 13301,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 13300,
+      "Name": "Outlook",
+      "Description": "\n   The view from this place up at the top of the ship is really nice. You\ncan not see much but what you see is the better. The illuminated corners\nof the town make up the margins and the glowing tunnels of life tube away\ninto the mountains as glowworm in a glass pipe. Just marvelous...",
+      "ZoneId": 132,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": -1,
+          "Description": " The stone ceiling of the cave making up the harbour basin is not that\nfar away. This very ship must have been built with this specific place in\nmind.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 13227,
+          "Description": " The hard deck of the cargo vessel. Better climb, than jump down.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "corner"
+          ],
+          "Description": "\n   A brightly shining light comes from the two corners of the harbour."
+        },
+        {
+          "Keywords": [
+            "harbour",
+            "town"
+          ],
+          "Description": "\n   The harbour town light make the tunnel shine and glow in a real nice\nfashion. The dwarfs must be a lucky race to have this at all times."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13301,
+      "Name": "Passenger ship gangplank",
+      "Description": "\n   As the standard anchoring place for passenger ships, the sidewalk here\ncomes equiped with a permanent gangplank leading east onto any waiting\nship. There usually is one there waiting to fill up before its next\njourney. So buy a ticket and head out for a nice exploration event. A\nlittle sign hangs on the short pole where the ticketseller use to sit\nwhen he is around.",
+      "ZoneId": 133,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 13304,
+          "Description": " The passenger port sidewalk lead off north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": -1,
+          "Description": "The gangplank lead out towards adventure - Get yourself a ticket and\nboard a ship to the New World!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 13302,
+          "Description": " The passenger port sidewalk lead off south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe well polished sign reads :\n\n\nTo travel to the New World, purchase a ticket, then activate the\nturnstyle and enter it. After a fairly short boat trip, you will\nfind yourself in an entirely new world, with its own hometown,\nrecall point and strange new creatures."
+        },
+        {
+          "Keywords": [
+            "short",
+            "pole"
+          ],
+          "Description": "\n   The pole is at a perfect height for a old dwarf."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13302,
+      "Name": "The passenger port sidewalk",
+      "Description": "\n   The well illuminated sidewalk is the staring and finishing place of\nmany fascinating journeys. The ships that lie for anchor here carry\npeople and their luggage only. The current hot spot for travel seems to\nbe the distant Northern Continent. The waterlevel of the cave basin is\nwell below the sidewalk to ease up transport on and off the passenger\nships and any movement on the water have been strictly banned to avoid\nfree passengers. Down below you a staircase leads down into darkness,\nwhile to the north the availability of tickets is reassured by the\ntravelleader.",
+      "ZoneId": 133,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 13301,
+          "Description": " Next to the ships.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 13303,
+          "Description": " You can hear a mixture of faint sounds below as well as a few water\nsplashes.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13303,
+      "Name": "In a wide stone staircase",
+      "Description": "\n   The staircase goes up and down in a helix, 25 dwarf feet in radius.\nThe view over the Dwarven Undermountain Harbour Town that lies before you\nis excellent and you can follow its contours into distance, where it\nseems to end in a bright light. Above you the stairs continue up through\nthe stone cave roof.",
+      "ZoneId": 133,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 13302,
+          "Description": " The sound of water comes in from above as well. How could that be ?",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 13266,
+          "Description": " The sidewalk of the Dwarven Undermountain Harbour Town await your feet.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13304,
+      "Name": "The passenger port sidewalk",
+      "Description": "\n   The well illuminated side walk is the staring and finishing place of\nmany fascinating journeys. The ship that lie for anchor here carry people\nand their luggage only. The current hot spot for travel seems to be the\ndistant Northern Continent. The waterlevel of the cave basin is well\nbelow the sidewalk to ease up transport on and off the passenger ships\nand any movement on the water have been strictly banned to avoid free\npassengers. Down below you a staircase descend into darkness, while to\nthe north the availability of tickets is reassured by Fritz the\nticketeer.",
+      "ZoneId": 133,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 13301,
+          "Description": " Next to the ships.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 13305,
+          "Description": " You can hear a mixture of faint sounds below as well as a few water\nsplashes.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13305,
+      "Name": "In a wide stone staircase",
+      "Description": "\n   The staircase goes up and down in a helix, 25 dwarf feet in raduis.\nThe view over the Dwarven Undermountain Harbour Town that lies before you\nis excellent and you can follow its contours into distance, where it\nseems to end in a bright light. Above you the stairs continue up through\nthe stone cave roof.",
+      "ZoneId": 133,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 13304,
+          "Description": " The sound of water comes in from above as well. How could that be ?",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 13255,
+          "Description": " The sidewalk of the Dwarven Undermountain Harbour Town await your feet.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 13300,
+      "Name": "quartermaster dwarf",
+      "ShortDescription": "\nthe quartermaster",
+      "LongDescription": "\nA dwarven quartermaster stands by the gangplank selling tickets.",
+      "Description": "\nThe quartermaster has the rough appearance of a fellow who spends all\nhis hours at sea. His clothes are grubby and mended with patches of\nsailcloth, and his beard is ragged and unkempt. His hands, covered\nwith thick calluses, hold a handful of wooden tickets.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 120,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 99999,
+      "Experience": 50000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 13300,
+      "Name": "turnstyle",
+      "ShortDescription": "\nthe turnstyle",
+      "Description": "\nA wooden turnstyle is being constructed here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop",
+        "NoDonate",
+        "NoInvis"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 99999,
+      "Cost": 99999,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "turnstyle"
+          ],
+          "Description": "\nThere is a little sign on the side of the turnstyle:-\n\n        \"Coming soon! Regular passenger service to the \n     New World! See the world for a very reasonable price!\""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 13304,
+      "Name": "rope snake",
+      "ShortDescription": "\na strong length of rope",
+      "Description": "\nFlee! A huge long snake lies coiled on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9,
+      "Cost": 2994,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rope",
+            "snake"
+          ],
+          "Description": "\nWell ok, it's not a snake - but it could have been. The rope is around thirty\nfeet long and as thick as your wrist, with each end plaited into a strong\nloop - able to bear the weight of even the greediest troll."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

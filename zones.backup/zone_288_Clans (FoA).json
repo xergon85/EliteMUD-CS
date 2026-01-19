@@ -1,0 +1,1225 @@
+{
+  "Zone": {
+    "Id": 288,
+    "Name": "Clans (FoA)",
+    "TopRoomId": 28899,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 23,
+        "Arg2": 100,
+        "Arg3": 28800,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 42,
+        "Arg2": 100,
+        "Arg3": 28811,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 28800,
+        "Arg2": 100,
+        "Arg3": 28806,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 28800,
+        "Arg2": 100,
+        "Arg3": 28815,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28804,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28805,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28806,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28807,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 28808,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 28800,
+      "Name": "#C[ #yG#wates of Izumo outside wall #c]#N",
+      "Description": "\n   You stand before the outside wall of the Izumo Empire. The wall is\nmade of huge granite blocks and a tight archway leads inside. The same\narchway has a builtin iron gate widely open. Inside you see vast fields\nof green grass cutted by a orange bricked road leading north, wich goes\nacross a small village leading to a huge white ivory tower.\nYou can see some strange #Cw#cr#Nitin#cg#Cs #Ncarved in one block in \nyour right side.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "NoTeleport",
+        "NoSweep",
+        "NoScout"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28801,
+          "Description": "You can see clearly the orange road leading to Izumo Castle.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28803,
+          "Description": "There is no other way than death itself.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "writings",
+            "block"
+          ],
+          "Description": "\n\n#CI#cz#Nu#cm#Co #CE#cm#Npi#cr#Ce#N.\n\nEnter at your own risk! From this point on, Izumo laws prevail."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28801,
+      "Name": "#C[ #yT#whrough the Archway #C]#N",
+      "Description": "\n   You dared to go inside! You are inside of a dark tunel in the\nOutside wall of Izumo Empire. The archway is illuminated by the light\nof burning torches wich are in the walls, you can see that the orange\nroad starts some steps ahead of you and leads north.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoMagic",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28804,
+          "Description": "The orange road starts here, and seems to lead to Castle Izumo through\nIzumo Village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28800,
+          "Description": "You can still see 2 guards guarding the main gate.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28803,
+      "Name": "#C[ #yT#whe path to doom #C]#N",
+      "Description": "\n   You made the wrong option, and some weird device just triggered a\ngadget wich launched a arrow and that hitted you right between the\neyes. You can still hear the echo of your screams and feel the cold\nstell going through your skull shattering everything.",
+      "ZoneId": 288,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "Dispell",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28804,
+      "Name": "#C[ #yB#wegining of orange road #C]#N",
+      "Description": "\n   You stand at the begining of the orange road. The distance to Izumo\ncastle seems much smaller, and the village of Izumo starts right ahead.\nYou notice that the habitants are rather good looking and nice or bad\nlooking and unpleasant, there seems to be no middle term in this land\nknows as Izumo.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28805,
+          "Description": "The orange road continues towards the castle through the village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28818,
+          "Description": "To the west far from the village you see a Green House.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28801,
+          "Description": "The gates and the outside walls seem to be more distant.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28805,
+      "Name": "#C[ #yA#wlong the orange road #C]#N",
+      "Description": "\n   You are walking alonside the orange road and the village of Izumo\nis right ahead of you. This strange smell in the air is an assault\nto your senses, it seems to be the smell of #yb#wurning #yn#wapalm \n#Nmixed with a strange flower based perfume. Over you head vultures \nfly in circles looking for their next meal. You wander if they have \nspoted you.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28806,
+          "Description": "The first houses of Izumo village are right ahead.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28804,
+          "Description": "The main gates seem to be even more far than before.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28815,
+          "Description": "You can see a small building... Should you go in ?.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "vultures",
+            "vulture"
+          ],
+          "Description": "\nThese wicked birds are always keeping an eye on food. It seems they\nmight be interested in you."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28806,
+      "Name": "#C[ #yB#weginning of Izumo Village #C]#N",
+      "Description": "\n   You are inside of Izumo Village, right next to the first houses.\nYou realise that this is a very small village and has only a couple of\nhouses. From your right you sense a weird smell wich you identify has\nwine, on your right you see a flat one floor building made of wood and\nstone with a funny yellow roof. It holds a sign on the door. Ahead of\nyou the orange road continues toward the castle.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28807,
+          "Description": "You really hate to walk to much with this hot weather.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28805,
+          "Description": "Are you afraid of something ? Being followed ?.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28808,
+          "Description": "You look through the doors and all you can see is fun.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28809,
+          "Description": "You can't see nothing, but you ear screams coming from inside.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign says: \n\n=================================================\n   #rBeware fools, think twice before coming in!#N\n================================================="
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28808,
+      "Name": "#C[ #yT#whe Izumo Inn #C]#N",
+      "Description": "\n   You are inside a luxorous Inn, and it seems you are their only\ncostumer for a long time, by the time you step ahead a young #Ywaiter#N\njumps towards you direction and informs you that the Inn is closed.\nYou get angry and start cussing at him, he steps back and afraid tells\nyou that you should visit the floor above. You can see the stairs right\nfrom your position, but just as precaussion you wield your #rb#Rl#wood#Re#rd#N\nblade before going up.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28806,
+          "Description": "You notice that the sun is starting to fade by looking the orange brinks\non the road.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28802,
+          "Description": "The stairs lead up and are made of white marble with a red carpet over\nthem.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "waiter",
+            "young"
+          ],
+          "Description": "\nHe looks like a scared fool, you must look very mean and agressive.\nYou spit on him.\n\nwaiter - \"#YPlease Sir, dont beat me up! I will serve you well#N\"\n\nYou grin evilly at him."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28802,
+      "Name": "#C[ #yT#whe Penthouse #C]#N",
+      "Description": "\n   You stand in a luxurious room, with a dark oak huge bed wich seems\nto be big enough for three persons, you check ur private jacuzzi and\nthe clean towels. The waiter had followed you and seems to be waiting\nfor something. You look at the nice black leather mapple near the\nfireplace and wonder how good it might be to seat there and enjoy a\nrelaxed time reading your favourite book, \"The history of Izumo\".",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 28808,
+          "Description": "You notice that the waiter has disapeared through the stairway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "waiter",
+            "young"
+          ],
+          "Description": "\nYou - \"#rGet lost idiot!!#N\" \nYou spit on him and he runs away scared.\n\nwaiter - \"#rHe is mean, I want my mommy!!#N\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28809,
+      "Name": "#C[ #yG#wlimsdale's #yS#whack #C]#N",
+      "Description": "\n   You stand in a huge dark navy blue room. On your left side there is\na fireplace with the arms of #yG#wl#Nimsdale#N the #yL#wunatic#N, and the arms of\n#rS#wilverstar#N the #rG#worgeous#N. Here is their home. On the wall at your right\nyou see a wonderfull collection of weapons, Fugu blades, axes, halberds\nand a set of weird staff's. In the middle of the room there is huge\ndark oak table wich seems that it isnt used for a long time. Ahead of\nyou is a wall with a huge mirror wich distorts your image making you\nlook like a fool, indeed a weird place. The room is illuminated by a\ndark blue light wich comes from the fireplace, giving the room a\nmystical atmosphere.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28806,
+          "Description": "You can see the sun shining outside and you wanna go there because this\nroom scares you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "table"
+          ],
+          "Description": "\nThe are some runes. You try to read them,\n\n\"#rLudul Bel Nemeqi Ta#N\"\n\"#rNaramtu Dianau Apsu#N\"\n\nYou wonder what they mean."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28807,
+      "Name": "#C[ #yB#wefore the Castle of Izumo #C]#N",
+      "Description": "\n   You see the Castle of Izumo on the hill ahead of you. This mighty\nfortress wich has never been taken stands here making you feel small\nand tiny. On your right you have a strange stone building wich has no\nseen exits or ways to go in, you ear also very weird noises inside,\nscreams and sounds wich indicate someone is being beaten up inside, or\neven tortured... On your left you have a the last building of the\nvillage wich has a huge board on top with something writed on it. You\nhave no clue on where to go, north, south or west!",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28812,
+          "Description": "This path leads to Castle Izumo",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28806,
+          "Description": "Very far you can see the outside walls of Izumo Empire.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28811,
+          "Description": "You see a huge golden archway wich leads inside of the building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28816,
+          "Description": "To the east you can see a huge Shrine, looks like a holy place.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\n\n#yI#wzumo #yH#wigh #yC#wouncil"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28810,
+      "Name": "#C[ #yT#whe Slammer#C }]#N",
+      "Description": "\n   You are in a no exit room, you seem powerless inside of this room.\nYou can see through the steel bars in the tiny window the Castle of\nIzumo on the top of the hill and a huge army of Templar Knights and\nPikers is moving towards the city leaded by their fearless lider\nGlimsdale, probably to join the Armies of the Dark Lord Ninja to aid\nin the aid of Izumo Emperor in the battle against the Mighty Chicken\nof the Yew Forest. Sir Dalamar, the one not so brave as Sir Glimsdale\nand not so pure as Dark Lord Ninja, follows Sir Glimsdale. Sir Dalamar\nthe one who pissed his pants at the Siege of Rome and who fled at the\nBattle of Zurandar wields proudly his Ebony Kris.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoMagic",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28811,
+      "Name": "#C[ #yI#wzumo High Council#C ]#N",
+      "Description": "\n   You stand in a room with huge carpets hanged on the walls with the\nhistory of Izumo. You feel powerless when compared to the Knights and\npeople who fought those battles. One special one draws your attention,\nthe one with the ancestors of Sir Glimsdale, leader of the Royal House\nof Dawn, Morgul the bastard, the mighty warrior who gathered the 8\nartifacts needed to summon the Sacred Dragon Arsgalt wich defeated the\nEvil Sorcerer Madruk in ancient times. You feel like crying and hope\nsomeday there can be one of you and your great deeds. There is also a\npentagonal table for the High Powers of Izumo. One of the house of\nDawn, another for the Ninja the Dark Warlord, one for the represant of\nthe Izumo Legends, the Kings place and finally one for the representant\nof the people, this is indeed ur place.",
+      "ZoneId": 288,
+      "Sector": "Inside",
+      "Flags": [
+        "Arena",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28807,
+          "Description": "The orange road is outside.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28813,
+          "Description": "There is a small black ivory stairway leading down.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28810,
+          "Description": "There is a small black ivory stairway leading to the condemned room",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28812,
+      "Name": "#C[ #yA#wt the gates of Castle Izumo #C]#N",
+      "Description": "\n   From nowhere two huge #RT#wemplar #RK#wnights #Nand Faerlan the\nleader of the King's Guard jump over you, they beat you up so hard and\npainfully that the blood painted the entire gates of the castle, you\nbleed a lot. The entrance to the castle is forbiden to fools like you!.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "Death",
+        "ZeroMana",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28813,
+      "Name": "#C[ #yT#whe Anarchy Armoury #C]#N",
+      "Description": "\n   You are in a dark room, where most of your biggest light source is\nthe metal light from several weapons and armor's that are layed around\nin the room. There isnt much to see, just pick and take it.",
+      "ZoneId": 288,
+      "Sector": "City",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 28811,
+          "Description": "There is starway leading up.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28815,
+      "Name": "#C[ #yT#whe Esoteric Shop #C]#N",
+      "Description": "\n   You stand in dark room, the only source of light is a couple of\nblowtorch's in the walls. You can see a vast exposition of weird items,\nmost of them come from the uncharted lands of Elite. A old woman with the\nlooks of a wizard stands near to a cabinet cleaning some dusty old \nitems, though she is not looking at you, you sense one thousand eyes\npenetrating your soul and you feel very unconfortable as you notice\nthat you are being watched and measured.",
+      "ZoneId": 288,
+      "Sector": "Inside",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28805,
+          "Description": "You see an orange road leading to the village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cabinet"
+          ],
+          "Description": "\nIt's made of black marble, within this cabinet you can see a huge\ncollection of potions of all kinds and colors... Maybe this is what\ntook you to this place."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28816,
+      "Name": "#C[ #yT#whe hall of the past glories #C]#N",
+      "Description": "\n   You are in a huge hall full of statues, the glories of the past.\nThe entire hall is made of dark marble covering the walls, the light\nis provided by torch's in grey marble altars scatered through the\nhall. Ahead of you lies for all eternity the statues of those who\nserved Izumo in the best way they could. Bow before the #yL#wegends #Nof\nthe past, for their spirits protect this sacred place.",
+      "ZoneId": 288,
+      "Sector": "Inside",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28807,
+          "Description": "The hall continues west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28817,
+          "Description": "This path leads you to Izumo village.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "altar",
+            "altars"
+          ],
+          "Description": "\nThey are made of grey marble, on top of them is a golden container\nin the form of a helmet upside down with the 'oil of life' burning,\ngiving the room a mystic atmosphere and purifying the air."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28817,
+      "Name": "#C[ #yT#womb of #yA#wtiel, The Dragon #C]#N",
+      "Description": "\n   In this sacred place lies #rAtiel #Nthe #GDragon #NKnight. In\ndistant times, Atiel's fate crossed with 2 mighty warriors, Shandrala\nand Mystasia, they both regreted their fate when they were defeated\nat Atiel's feet. The room is covered with a green mist, the mist that\nremains when a Dragon's corpse is down, some say that the Mighty Dragon\nLord's spirit keeps an eye on his followers and that by his power, a\ncorpse can regain life and answer to the call of his Master.\nYou see a huge #yT#womb #Nmade of white marble, on the sides there are\ncarvings with the story of #rAtiel#N's life written in ancient runes.\nOn the top of the Tomb there is a statue of Atiel wielding is weapons,\nwith a raged expression it appears that he wants to charge over you.",
+      "ZoneId": 288,
+      "Sector": "Inside",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28816,
+          "Description": "This path leads you to the entrance hall of the shrine.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tomb",
+            "statue",
+            "runes"
+          ],
+          "Description": "\nThis runes state:\n\n\"Those who can not remember the past, are condemned to repeat it.\"\n\n\"Here lies Atiel, the Dragon, slayer of evil in ancient times, when\nthe elders were young, this mighty Dragon wielded the sword of Justice,\na Sword forged in fire and ice, a Sword to battle and take life, a\nSword to bring Peace and Justice in troubled times.\"\n\n\"Here lies the Slayer of Shandrala and Mystasia, bow before this great\nwarrior who awaits for the call of his Master.\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28818,
+      "Name": "#C[ #yA#wbhorsen's Green House #C]#N",
+      "Description": "\n   Here is Abhorsen's refuge in days of peace. The mighty Avatar rests\nhere when there's no more fights to be fought. He choose to live in his\ngreenhouse where he has his plantation of Cannabis and Marijuana, and,\nof course he Bong colletion. Abhorsen has a strong nervous problem and\nseeks refuge and peace on his medical treatment with the \"wild plants\".\nSome say, he is the leader of a strange cult known as the #bRasta#N\n#bWarriors#N. You see some plants growing in vases all over the place.\nThe house stays outside of Izumo because he likes peace and doesnt like\nto be disturbed when enjoying his trips.",
+      "ZoneId": 288,
+      "Sector": "Inside",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28804,
+          "Description": "To the east you can see the road wich leads to Izumo.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cannabis",
+            "marijuana",
+            "plants",
+            "herbs"
+          ],
+          "Description": "\nWhat a huge plantation, no man can smoke all of this, though Abhorsen\nsurely tries to... This might be just enough for the entire cult wich he\nleads, known as #bRasta Warriors#N.\nThey do smell nice."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 28800,
+      "Name": "verina battle mage retired",
+      "ShortDescription": "\nVerina the retired Battle Mage",
+      "LongDescription": "\nVerina the retired Battle Mage stands here cleaning some old items.",
+      "Description": "\nThis old Mage looks too young for her age, her severe expression makes you\nbelieve that ur not welcome, though you gain some extra guts and move forth\nto what really took you to such a weird place.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "NiceThief",
+        "NoTrack"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 28800,
+      "Name": "fountain fountanary izumo",
+      "ShortDescription": "\nthe fountanary of Izumo",
+      "Description": "\nThe fountanary of Izumo stands here.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28804,
+      "Name": "jar demon blood",
+      "ShortDescription": "\n#NA jar of #rD#wemon's #rB#wlood#N",
+      "Description": "\nA jar of #rD#wemon's #rB#wlood#G lies here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        40,
+        67,
+        11,
+        4,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 40,
+          "SpellIds": [
+            67,
+            11,
+            4
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 10000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "jar",
+            "demon",
+            "blood"
+          ],
+          "Description": "\nThis is a jar containing the blood of the dead beasts of the past.\nThe Blood of Demon's was known for giving common mortals\nsupernatural powers. You wonder if you should drink it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28805,
+      "Name": "aura izumo",
+      "ShortDescription": "\n#NThe #yA#wura #Nof #yI#wzumo#N",
+      "Description": "\nThe #yA#wura #Nof #yI#wzumo#G lies here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        40,
+        42,
+        16,
+        16,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 40,
+          "SpellIds": [
+            42,
+            16,
+            16
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 800,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "aura",
+            "izumo"
+          ],
+          "Description": "\nAn old myth you long heard says something about an ancient God\nwich walked amongst mortals, this God left a huge legacy, between\nknowledge to a couple of weapon's, he left also a huge stone,\nthe same stone was fragmented into pieces, each piece of this\nwhenever it was dark emanated a strong light. It appears you just\ngot one of the pieces of the old #yA#wura #yS#wtone#N. When you use\nthis ancient stone, the elders will escort you to a holy grounds."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28806,
+      "Name": "holy grail",
+      "ShortDescription": "\n#NThe #yH#woly #yG#wrail#N",
+      "Description": "\nThe #yH#woly #yG#wrail#G lies here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Shield",
+        "WristRight"
+      ],
+      "Values": [
+        80,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 80,
+          "Amount": 0,
+          "Liquid": 1,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 50,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "holy",
+            "grail"
+          ],
+          "Description": "\nThis is the sacred cup, the myth says when you drink from it, you\ngo to paradise... The myth may be wrong, but you surely wanna try it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28807,
+      "Name": "wings doom",
+      "ShortDescription": "\n#NThe #rW#wings #Nof #rD#woom#N",
+      "Description": "\nThe #rW#wings #Nof #rD#woom#G lie here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        45,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            45,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "wings",
+            "doom"
+          ],
+          "Description": "\nA jar containing a skirmished brown liquid wich will transform you\ngiving you wings. The transformation will last for 5 hours. Use it\nwisely for they aren't quite common."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 28808,
+      "Name": "elven elvish licor",
+      "ShortDescription": "\n#NA bottle of #yE#wlvish #yL#wicor#N",
+      "Description": "\nA bottle of #yE#wlvish #yL#wicor#G lies here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        19,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            19,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 400,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "elven",
+            "elvish",
+            "licor"
+          ],
+          "Description": "\nA bottle containing the fine licor made by elves. Elves say that\nthose who drink this licor will have better sight, as good and\naccurate as an elven archer. This was their gift to Izumo."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23,
+      "Name": "knight templar blocker guard",
+      "ShortDescription": "\n#NA#R T#wemplar #RK#wnight#N",
+      "Description": "\n#NA #RT#wemplar #RK#wnight#G stands here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28800,
+        5,
+        119,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 42,
+      "Name": "board fields anarchy express",
+      "ShortDescription": "\n#CThe #CF#ci#Nel#cd#Cs #Nof#C A#cn#Nar#cch#Cy Daily Express#N",
+      "Description": "\n#CThe #CF#ci#Nel#cd#Cs #Nof#C A#cn#Nar#cch#Cy #GDaily Express stands \nhere.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        119,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

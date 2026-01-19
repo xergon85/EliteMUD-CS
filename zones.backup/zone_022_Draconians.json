@@ -1,0 +1,6052 @@
+{
+  "Zone": {
+    "Id": 22,
+    "Name": "Draconians",
+    "TopRoomId": 2299,
+    "Lifespan": 100,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2204,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2206,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2204,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2205,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2205,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2223,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2206,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2208,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2208,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2209,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 2243,
+        "Arg2": 5,
+        "Arg3": 2209,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 2244,
+        "Arg2": 5,
+        "Arg3": 2209,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 7210,
+        "Arg2": 10,
+        "Arg3": 2209,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2209,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2218,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2232,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2222,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2202,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2236,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2243,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2231,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2211,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2212,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2213,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2214,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2213,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2215,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2229,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2230,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2226,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2227,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2201,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 2202,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2201,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2231,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2239,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2241,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2202,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2203,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2203,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2205,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2205,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2205,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2207,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2200,
+        "Arg2": 10,
+        "Arg3": 2206,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2201,
+        "Arg2": 8,
+        "Arg3": 2203,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2201,
+        "Arg2": 8,
+        "Arg3": 2204,
+        "Comment": ""
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2201,
+        "Arg2": 8,
+        "Arg3": 2204,
+        "Comment": ""
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2201,
+        "Arg2": 8,
+        "Arg3": 2204,
+        "Comment": ""
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2201,
+        "Arg2": 8,
+        "Arg3": 2210,
+        "Comment": ""
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2200,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2227,
+        "Arg2": 3,
+        "Arg3": 2207,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2227,
+        "Arg2": 3,
+        "Arg3": 2217,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2227,
+        "Arg2": 3,
+        "Arg3": 2217,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2226,
+        "Arg2": 1,
+        "Arg3": 2208,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2234,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2207,
+        "Arg2": 6,
+        "Arg3": 2210,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2286,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2207,
+        "Arg2": 6,
+        "Arg3": 2211,
+        "Comment": ""
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2286,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2207,
+        "Arg2": 6,
+        "Arg3": 2211,
+        "Comment": ""
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2260,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2207,
+        "Arg2": 6,
+        "Arg3": 2216,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2260,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2207,
+        "Arg2": 6,
+        "Arg3": 2216,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2286,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2207,
+        "Arg2": 6,
+        "Arg3": 2216,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2286,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2206,
+        "Arg2": 5,
+        "Arg3": 2212,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2201,
+        "Arg2": 20,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2206,
+        "Arg2": 5,
+        "Arg3": 2212,
+        "Comment": ""
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2233,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2201,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2206,
+        "Arg2": 5,
+        "Arg3": 2212,
+        "Comment": ""
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2240,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2201,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2206,
+        "Arg2": 5,
+        "Arg3": 2212,
+        "Comment": ""
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2201,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": ""
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2203,
+        "Arg2": 1,
+        "Arg3": 2214,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2261,
+        "Arg2": 7,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2223,
+        "Arg2": 7,
+        "Arg3": 12,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2250,
+        "Arg2": 7,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2230,
+        "Arg2": 7,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2251,
+        "Arg2": 7,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2242,
+        "Arg2": 3,
+        "Arg3": 2210,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2242,
+        "Arg2": 3,
+        "Arg3": 2216,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2242,
+        "Arg2": 3,
+        "Arg3": 2216,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2204,
+        "Arg2": 1,
+        "Arg3": 2215,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2237,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2220,
+        "Arg2": 7,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2211,
+        "Arg2": 7,
+        "Arg3": 14,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2210,
+        "Arg2": 7,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2270,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2252,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2205,
+        "Arg2": 1,
+        "Arg3": 2216,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2232,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2222,
+        "Arg2": 7,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2276,
+        "Arg2": 7,
+        "Arg3": 12,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2242,
+        "Arg2": 7,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2254,
+        "Arg2": 7,
+        "Arg3": 9,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2243,
+        "Arg2": 1,
+        "Arg3": 2217,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2204,
+        "Arg2": 7,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2201,
+        "Arg2": 7,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2241,
+        "Arg2": 1,
+        "Arg3": 2217,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2240,
+        "Arg2": 8,
+        "Arg3": 2218,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2240,
+        "Arg2": 8,
+        "Arg3": 2218,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2240,
+        "Arg2": 8,
+        "Arg3": 2219,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2240,
+        "Arg2": 8,
+        "Arg3": 2219,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2240,
+        "Arg2": 8,
+        "Arg3": 2232,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2240,
+        "Arg2": 8,
+        "Arg3": 2233,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2240,
+        "Arg2": 8,
+        "Arg3": 2234,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2240,
+        "Arg2": 8,
+        "Arg3": 2236,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2223,
+        "Arg2": 1,
+        "Arg3": 2220,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2203,
+        "Arg2": 7,
+        "Arg3": 15,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2246,
+        "Arg2": 7,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2222,
+        "Arg2": 1,
+        "Arg3": 2221,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2280,
+        "Arg2": 7,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2202,
+        "Arg2": 1,
+        "Arg3": 2222,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2202,
+        "Arg2": 7,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2281,
+        "Arg2": 7,
+        "Arg3": 10,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2271,
+        "Arg2": 7,
+        "Arg3": 9,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2221,
+        "Arg2": 1,
+        "Arg3": 2226,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2299,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2275,
+        "Arg2": 5,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2245,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2225,
+        "Arg2": 1,
+        "Arg3": 2230,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2241,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 2285,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2261,
+        "Arg2": 5,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 2220,
+        "Arg2": 1,
+        "Arg3": 2231,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2221,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 2224,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 2201,
+      "Name": "The Tower Gates",
+      "Description": "\n   You are at the entrance to a tall tower. Lightning flashes periodically and\nit is raining. You think it might be a good idea to turn back into the grove.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2202,
+          "Description": "You see a large steel gate. Beyond is the Foyer of the Tower.",
+          "Keywords": [
+            "gate",
+            "steel"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 2231
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6137,
+          "Description": "The shadows cloud your vision.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gate"
+          ],
+          "Description": "\nThe gate is tall and secure.  Whoever built it values privacy."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2202,
+      "Name": "The Foyer",
+      "Description": "\n   This is the entrance to the Tower. The hallway continues to the north,\nleading towards a staircase. You notice a grim painting on the wall, and\nquickly look away.",
+      "ZoneId": 22,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2203,
+          "Description": "You see a long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2201,
+          "Description": "You see the gate.",
+          "Keywords": [
+            "gate",
+            "steel"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 2231
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 2236,
+          "Description": "You see an old trapdoor.",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "painting"
+          ],
+          "Description": "\nThis painting depicts the grisly death of a foolish human.  You hope you do \nnot share his fate."
+        },
+        {
+          "Keywords": [
+            "trapdoor"
+          ],
+          "Description": "\nThe trapdoor seems to be stuck in the floor. Maybe bolted from the other side."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2203,
+      "Name": "Hallway",
+      "Description": "\n   This hallway seems to stretch on forever. You notice a stairway in the\ndistance.",
+      "ZoneId": 22,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2202,
+          "Description": "You see the foyer.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "North",
+          "TargetId": 2204,
+          "Description": "The hall continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2204,
+      "Name": "Hallway",
+      "Description": "\n   You trudge down the hallway. You notice doors to the east and west.",
+      "ZoneId": 22,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2207,
+          "Description": "The hall continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2205,
+          "Description": "You see a door. You notice a sign.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2203,
+          "Description": "The hall continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2206,
+          "Description": "You see an oak door. There is an inscription on it.",
+          "Keywords": [
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign says \"NURSERY\" in bold letters."
+        },
+        {
+          "Keywords": [
+            "inscription"
+          ],
+          "Description": "\nIt says \"STORAGE\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2205,
+      "Name": "Nursery",
+      "Description": "\n   It looks like a tornado has been through here. Toys are scattered\neverywhere, and a small group of dragon hatchlings are fighting over a bone.",
+      "ZoneId": 22,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2204,
+          "Description": "You see the hallway.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2223,
+          "Description": "You see a large stone door.",
+          "Keywords": [
+            "door",
+            "stone"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2237
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2206,
+      "Name": "Storage Room",
+      "Description": "\n   This room is covered with dust, it looks as if no one has been here in ages.",
+      "ZoneId": 22,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2204,
+          "Description": "You see the hallway.",
+          "Keywords": [],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 2208,
+          "Description": "You see nothing special.",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "dust"
+          ],
+          "Description": "\nAs you look closely at the dust, you notice the outline of a trapdoor!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2207,
+      "Name": "End of the Hallway",
+      "Description": "\n   You have finally reached the end of the hallway. A huge staircase leads up.\nYou see a sign at the base of the staircase.",
+      "ZoneId": 22,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2204,
+          "Description": "The hall continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 2210,
+          "Description": "The second floor.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign reads:\n    This area is kind of tough.  You probably shouldn't go up these stairs \n    alone if you are under 25th level, or at all if you under 20th level.  \n    Have fun! -- Wench"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2208,
+      "Name": "Guardian's Room",
+      "Description": "\n   You climb down the rickety stairs and find yourself face to face with a\ngargantuan hydra. How fast can you climb UP stairs?",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 2206,
+          "Description": "You see the storage room.",
+          "Keywords": [
+            "trapdoor",
+            "door",
+            "trap"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2209,
+          "Description": "A large grey door.",
+          "Keywords": [
+            "grey",
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2234
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2209,
+      "Name": "The Treasure Room",
+      "Description": "\n   You have made it past the hydra into the vault. You are astounded by the\ntreasure here. Not only are you now rich, you can probably rest here safely.\nThe west wall seems to have a large door made entirely of ruby.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2208,
+          "Description": "You see nothing special.",
+          "Keywords": [
+            "grey",
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2234
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2218,
+          "Description": "You see a ruby door!",
+          "Keywords": [
+            "door",
+            "ruby"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2232
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2210,
+      "Name": "The Second Floor",
+      "Description": "\n   You have made it up to the second floor. You hear hissing and see several\ndragon men rushing you. You wonder how long you will be staying here.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 2207,
+          "Description": "You see the first floor.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2211,
+          "Description": "You see the court.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2211,
+      "Name": "The Court",
+      "Description": "\n   You have entered what seems to be a large court. The people guarding it\ndon't seem happy to see you ...",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2210,
+          "Description": "You see nothing special.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2213,
+          "Description": "You see the court.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2212,
+          "Description": "You see a wooden door.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2212,
+      "Name": "Hall O' Pleasure",
+      "Description": "\n   You stop dead in your tracks as you enter this ornately decorated room - it\nis populated with the king's harem.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2211,
+          "Description": "You see the Court.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2213,
+      "Name": "The Court",
+      "Description": "\n   You are continuing down the hall. To the east and west you see ornate doors.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2211,
+          "Description": "You see the court.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2214,
+          "Description": "You see a black door.",
+          "Keywords": [
+            "door",
+            "black"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2240
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2216,
+          "Description": "You see the court.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2215,
+          "Description": "You see a white door.",
+          "Keywords": [
+            "door",
+            "white"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2233
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2214,
+      "Name": "The Library",
+      "Description": "\n   You have entered a huge room, filled with books. A peaceful man is sitting\nat a table, studying.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2213,
+          "Description": "You see the court.",
+          "Keywords": [
+            "door",
+            "black"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2240
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2215,
+      "Name": "The Sanctum",
+      "Description": "\n   This small room is modestly decorated with small dragon icons. Its sole\noccupant is deep in thought.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2213,
+          "Description": "You see the Court.",
+          "Keywords": [
+            "door",
+            "white"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2233
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2216,
+      "Name": "The Court Ends",
+      "Description": "\n   You have reached the end of the court. A huge Draconian is sitting in a\nchair here. As you enter, he motions with his hand and you are rushed by three\nof his bodyguards.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2213,
+          "Description": "You see the court.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2217,
+          "Description": "You see a private chamber.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2217,
+      "Name": "Bedroom",
+      "Description": "\n   This is the personal room of the draconian king. It is not empty.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2216,
+          "Description": "You see Court.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2218,
+      "Name": "Entrance to the Crypt",
+      "Description": "\n   You have entered a large room which smells heavily of reptile. You wonder\nwhat awaits you here.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2209,
+          "Description": "You see the Treasure Vault.",
+          "Keywords": [
+            "door",
+            "ruby"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2232
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2219,
+          "Description": "You see the Crypt.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2219,
+      "Name": "Crypt",
+      "Description": "\n   You are in a large room which continues to the west. You notice many coffins\nhere. Open coffins reveal remains of something other than man. The smell of\nreptile is very strong here.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2218,
+          "Description": "You see the entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2222,
+          "Description": "You see nothing special.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2220,
+      "Name": "The Lair",
+      "Description": "\n   You have entered a large room dominated by a great white dragon. It growls\nat you before it attacks.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2235,
+          "Description": "You the cave opening.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2221,
+      "Name": "A Lair",
+      "Description": "\n   You have entered a large room dominated by a great black dragon. It looks as\nthough it is amused by your presence.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2241,
+          "Description": "You the cave opening.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2222,
+      "Name": "The Crypt Ends",
+      "Description": "\n   You have come to the end of the Crypt. It seems deserted. There is a strange\ncoffin lying against the wall.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2219,
+          "Description": "You see the Crypt.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2232,
+          "Description": "",
+          "Keywords": [
+            "coffin"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "coffin"
+          ],
+          "Description": "\n  A coffin lies a against the east wall.  It is closed."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2223,
+      "Name": "Entrance to the Great Hall",
+      "Description": "\n   You have entered a huge hall. It has been carefully decorated with beautiful\ntapestries depicting a great battle between dragons and men. The dragons appear\nto be the victors.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2205,
+          "Description": "You see the Nursery.",
+          "Keywords": [
+            "door",
+            "stone"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2237
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2224,
+          "Description": "The Hall continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2224,
+      "Name": "The Great Hall",
+      "Description": "\n   You are working your way down the Hall. To the north, you notice a smaller\npassageway, while the main hall continues to the east.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2225,
+          "Description": "You see a narrow passageway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2229,
+          "Description": "You see the Hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2223,
+          "Description": "You see the Hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2225,
+      "Name": "A Narrow Passageway",
+      "Description": "\n   This Passageway branches off from the main hall and leads somewhere ...\nwhere?",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2226,
+          "Description": "You see a large Lair. It looks dangerous.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2224,
+          "Description": "You see the great hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2226,
+      "Name": "Lair",
+      "Description": "\n   You have entered a large lair with bones strewn about the ground. You notice\nthe source of these as you come face to face with a rather large red dragon.\nYou notice a trap door in the floor.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2225,
+          "Description": "The narrow passageway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 2227,
+          "Description": "You see a trap door.",
+          "Keywords": [
+            "door",
+            "trap",
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2227,
+      "Name": "Underground Tunnel",
+      "Description": "\n   You have entered an underground tunnel. It is dark and dirty, and you find\nyourself wishing you were back in Midgaard.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2228,
+          "Description": "You see the tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 2226,
+          "Description": "You see the red dragon's lair.",
+          "Keywords": [
+            "door",
+            "trap",
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2228,
+      "Name": "Underground Tunnel",
+      "Description": "\n   This tunnel has come to a dead end. You feel nervous about being trapped\nhere.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2227,
+          "Description": "You see the tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2229,
+      "Name": "The Great Hall Ends.",
+      "Description": "\n   You have come to the end of the great hall. You see before you a huge golden\ndoor, it must be at least twenty feet tall! It has beautiful etchings of\ndragons. You see a sign on the door.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2224,
+          "Description": "You see the hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2230,
+          "Description": "You see a great golden door.",
+          "Keywords": [
+            "door",
+            "great",
+            "golden"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2299
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n    Congratulations on making it this far!  Watch out, it gets a little\n    nasty here... :) - Wench"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2230,
+      "Name": "THE Lair",
+      "Description": "\n   You have entered a huge lair. You feel that something big lives here or at\nleast did. The golden door lies back to the west.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2229,
+          "Description": "You see a great golden door.",
+          "Keywords": [
+            "door",
+            "golden",
+            "great"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2299
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2231,
+      "Name": "The End...",
+      "Description": "\n   You have reached the final lair. It is dominated by a huge five headed\ndragon. You suddenly realize that you have SERIOUS problems...",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2243,
+          "Description": "You see the top of the mountain.",
+          "Keywords": [],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2241
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2232,
+      "Name": "Stairwell",
+      "Description": "\n   This is an old decrepit stairwell that leads to the wine cellar. It looks\nlike it hasn't been used for decades. Well, at least not by anything living.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 2222,
+          "Description": "The crypt",
+          "Keywords": [
+            "coffin"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 2233,
+          "Description": "A wine cellar",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2233,
+      "Name": "Wine cellar",
+      "Description": "\n   This is the old wine cellar of the Dragon Tower. The shelves are empty.\nNothing living has been in here for a long time. You see a tunnel leading off\nto the east and boy does it smell bad. Kind of like rotting flesh.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 2232,
+          "Description": "The stairwell",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2234,
+          "Description": "A tunnel",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2234,
+      "Name": "Tunnel",
+      "Description": "\n   This tunnel seems to stretch for miles. You try to distinguish the end but\nyour eyes soon tire from the strain. The smell here has increased two fold. The\ntunnel continues to go to the east. The wine cellar lies back to the west.",
+      "ZoneId": 22,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2235,
+          "Description": "A cave opening",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2233,
+          "Description": "A tunnel",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2236,
+          "Description": "A tunnel",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2235,
+      "Name": "A cave opening",
+      "Description": "\n   You stand at the opening of a giant cave. There are many bones strewn across\nthe room. Some human, some indistinguishable. It smells very bad in here. You\ncan hear movement in the cave to the north. The tunnel goes back to the south.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2220,
+          "Description": "The lair",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2234,
+          "Description": "The tunnel",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2236,
+      "Name": "The End of the tunnel",
+      "Description": "\n   You have finally come to the end of the tunnel. Back to the west lies the\nmiles of tunnels you have walked through. You see the faint outline of a\ntrapdoor above you. A bridge over an underground river lies to the south.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2234,
+          "Description": "The tunnel",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 2202,
+          "Description": "You see an old trapdoor. Seems like it never have been opened.",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2237,
+          "Description": "bridge",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2237,
+      "Name": "The Bridge",
+      "Description": "\n   You are walking along an old wooden bridge. Its not that secure. You might\nwant to hurry along. To the south, on the other side of the bridge, lies a\nsmall opening.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2236,
+          "Description": "The tunnel end",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2238,
+          "Description": "A small opening",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2238,
+      "Name": "A small opening",
+      "Description": "\n   You are standing in a small opening. To the north lies the old wooden\nbridge. To your south the you can see a clearing. You can see sunlight again.\nWhat a welcome relief!",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2237,
+          "Description": "bridge",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 2239,
+          "Description": "clearing",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2239,
+      "Name": "Clearing",
+      "Description": "\n   You stand out in a clearing. Mountains are all around you. There is a well\nin the middle of the clearing. Lying against the well is a sign. A path leads\nup the mountain. The small opening is back to the north.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2238,
+          "Description": "the small opening",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 2240,
+          "Description": "A path",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 2244,
+          "Description": "The well",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "well"
+          ],
+          "Description": "\n  You peer over the side of the well.  It looks VERY, VERY deep.  It appears\nto be ENDLESS."
+        },
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign reads:\n         This is a bottomless pit cleverly disguised as a well.  People have\nfallen in and never been heard from again.  Trust me, you don't want to go \ndown there.\n                        The All Powerful Well Keeper"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2240,
+      "Name": "A path",
+      "Description": "\n   This path leads up the side of the mountain. A clearing lies below you.\nThere is a cave opening to the west. The path continues up the mountain.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 2241,
+          "Description": "cave opening",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 2239,
+          "Description": "clearing",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 2242,
+          "Description": "the path continues",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2241,
+      "Name": "A cave opening",
+      "Description": "\n   You stand before a huge cave opening. You hearing heavy breathing from\nwithin the cave. There are a few skeletons lying about. The cave lies to the\nsouth. The path is back to the east.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 2221,
+          "Description": "A lair",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 2240,
+          "Description": "the path",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2242,
+      "Name": "The path continues",
+      "Description": "\n   The path continues up the mountain to the top. The path also goes down.\nThat's it, nothing more to see.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 2243,
+          "Description": "top of the mountain",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 2240,
+          "Description": "path",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2243,
+      "Name": "The top of the mountain",
+      "Description": "\n   You are standing at the top of the mountain. It feels more like the top of\nthe world. To your north lies a huge platinum door. You hear very pronounced\ngrumbling from behind the doors. It sounds like something huge and hungry. But\nif you don't have the key you don't have to worry because you can't get it. If\nyou do have the key I would suggest not going in. Some believe the Five Headed\ndragon Tiamat was imprisoned here by the gods. But who believes in fairy tales.\nWell, if you're scared, you can always go down the mountain.",
+      "ZoneId": 22,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 2242,
+          "Description": "The path continues",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "North",
+          "TargetId": 2231,
+          "Description": "The platinum door",
+          "Keywords": [
+            "door",
+            "platinum"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 2241
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "door",
+            "platinum"
+          ],
+          "Description": "\nA huge platinum door separates you from harm"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 2244,
+      "Name": "Well",
+      "Description": "\n   O h ! N o ! I warned you! You have fallen into the bottomless pit. You life\nflashes right before your eyes. Pretty pathetic isn't it? Next time you'll know\nto listen to the God of Laughs.",
+      "ZoneId": 22,
+      "Sector": "Inside",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 2200,
+      "Name": "hatchling dragon baby",
+      "ShortDescription": "\nthe dragon hatchling",
+      "LongDescription": "\nA dragon hatchling is here, chewing on a bone.",
+      "Description": "\nThis small dragon hisses at you as you enter the room.  Although it is only a\nfew feet long, its sharp teeth make you think twice about petting it.",
+      "Level": 14,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d20+200",
+        "Mana": 240,
+        "Move": 290
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 10000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2201,
+      "Name": "draconian",
+      "ShortDescription": "\nthe Draconian",
+      "LongDescription": "\nThe Draconian is standing here.",
+      "Description": "\nThis horrible creature is a bizarre cross between a man and a dragon.  He \nhas black scales and a seven foot wingspan.  He scowls at you and hefts his \nspear as you enter the room.",
+      "Level": 26,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "13d13+260",
+        "Mana": 360,
+        "Move": 470
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+8"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 66000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2202,
+      "Name": "master",
+      "ShortDescription": "\nthe dragon master",
+      "LongDescription": "\nThe lord of this crypt is here.",
+      "Description": "\nHe doesn't look happy to see you.",
+      "Level": 54,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Hide"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "27d27+540",
+        "Mana": 640,
+        "Move": 890
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 27,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d10+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 4500,
+      "Experience": 360000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2203,
+      "Name": "man mage wizard",
+      "ShortDescription": "\na powerful mage",
+      "LongDescription": "\nA man is here, studying some books.",
+      "Description": "\nA powerful looking mage is standing in this room studying his spells.  You are\nsurprised at the fact that he is human, and realize that he must be very\npowerful to have been accepted by the creatures which live here.",
+      "Level": 44,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d12+440",
+        "Mana": 540,
+        "Move": 740
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d8+10"
+        },
+        {
+          "Type": "Attack_39",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "2d0+80"
+        },
+        {
+          "Type": "Attack_77",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+80"
+        },
+        {
+          "Type": "Attack_30",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+80"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 280000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2204,
+      "Name": "cleric draconian",
+      "ShortDescription": "\nthe holy Draconian",
+      "LongDescription": "\nA Draconian is here, deep in thought.",
+      "Description": "\nA Draconian stands here, dressed in simple robes.  Around his neck you \nnotice a golden medallion in the shape of a five headed dragon.",
+      "Level": 44,
+      "Race": "Dragon",
+      "Class": "Cleric",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d22+450",
+        "Mana": 540,
+        "Move": 740
+      },
+      "Combat": {
+        "Armor": -110,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 70,
+          "DamageDice": "3d8+10"
+        },
+        {
+          "Type": "Attack_27",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "3d0+75"
+        },
+        {
+          "Type": "Attack_61",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+75"
+        },
+        {
+          "Type": "Attack_28",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "2d0+50"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 300000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2205,
+      "Name": "king draconian",
+      "ShortDescription": "\nthe Draconian King",
+      "LongDescription": "\nA Draconian wearing fine clothes is here, pondering his greatness.",
+      "Description": "\nThe king of the draconians sits here on a golden throne.  He looks as \nthough he could crush your head with a single blow.  Yet you sense that he \nis controlled by a greater power.",
+      "Level": 52,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d20+640",
+        "Mana": 620,
+        "Move": 860
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 30,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+25"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3000,
+      "Experience": 350000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2206,
+      "Name": "concubine draconian",
+      "ShortDescription": "\na concubine",
+      "LongDescription": "\nA concubine is resting here.",
+      "Description": "\nThis is a concubine of the king.  She is lounging here, wearing nothing at \nall.  You find yourself strangely repulsed as she draws a knife and \nprepares to defend herself.",
+      "Level": 20,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d40+180",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 250,
+      "Experience": 20000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2207,
+      "Name": "bodyguard draconian",
+      "ShortDescription": "\nA bodyguard",
+      "LongDescription": "\nA bodyguard is here, staring at you menacingly.",
+      "Description": "\nThis creature has devoted its life to defending the king.  Your intrusion has\nnot pleased it.",
+      "Level": 36,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "12d10+420",
+        "Mana": 460,
+        "Move": 620
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+12"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 150000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2220,
+      "Name": "tiamat dragon",
+      "ShortDescription": "\nTiamat",
+      "LongDescription": "\nA five headed dragon hisses at you as you enter this room.",
+      "Description": "\nYou see before you the master of this Tower, Tiamat.  She frowns at you as she\nprepares to make you pay for your insolence ... with your lives!",
+      "Level": 70,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d20+1200",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -250,
+        "Hitroll": 35,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d15+12"
+        },
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d15+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 10000,
+      "Experience": 700000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2221,
+      "Name": "dragon red",
+      "ShortDescription": "\nthe Great Red Dragon",
+      "LongDescription": "\nA red dragon is here, contemplating your existence.",
+      "Description": "\nThis huge red dragon dominates the chamber.  As you turn to flee, he grins at\nyou and invites you to stay ... forever!",
+      "Level": 54,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d20+750",
+        "Mana": 640,
+        "Move": 890
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d10+10"
+        },
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d10+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 400000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2222,
+      "Name": "dragon black",
+      "ShortDescription": "\nthe Great Black Dragon",
+      "LongDescription": "\nA black dragon is here, laughing at your insolence.",
+      "Description": "\nThis huge black wyrm laughs at your puny weapons.  You realize that he is not\ngoing to roll over and die for you.",
+      "Level": 52,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d20+660",
+        "Mana": 620,
+        "Move": 860
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 28,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d10+10"
+        },
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d10+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 5000,
+      "Experience": 380000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2223,
+      "Name": "dragon white",
+      "ShortDescription": "\nthe Great White Dragon",
+      "LongDescription": "\nA white dragon is here, waiting for you.",
+      "Description": "\nThis dragon towers over you.  Recalling your previous experiences with white\ndragons, you are not afraid.  She smiles at you and says 'I think you will find\nme a greater challenge than my offspring.'",
+      "Level": 54,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d20+630",
+        "Mana": 640,
+        "Move": 890
+      },
+      "Combat": {
+        "Armor": -180,
+        "Hitroll": 27,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d10+10"
+        },
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d10+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 6000,
+      "Experience": 420000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2225,
+      "Name": "dragon green",
+      "ShortDescription": "\nthe Ancient Green Dragon",
+      "LongDescription": "\nA green dragon is here, looking distraught.",
+      "Description": "\nThis huge beast appears to be the most directly related to the draconians. \nShe looks at you with sorrow in her eyes and says 'You have slaughtered my \nchildren.  Prepare to die.'",
+      "Level": 62,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "30d30+845",
+        "Mana": 720,
+        "Move": 1010
+      },
+      "Combat": {
+        "Armor": -250,
+        "Hitroll": 31,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d12+15"
+        },
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "3d15+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 7000,
+      "Experience": 500000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2226,
+      "Name": "hydra",
+      "ShortDescription": "\na large hydra",
+      "LongDescription": "\nA hydra is here, blocking the doorway.",
+      "Description": "\nA hydra is here, guarding the entrance to a sealed vault.  You have the feeling\nit isn't happy to see you.",
+      "Level": 36,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "15d10+460",
+        "Mana": 460,
+        "Move": 620
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2227,
+      "Name": "slave human",
+      "ShortDescription": "\nA human slave",
+      "LongDescription": "\nA Human slave is here, hard at work.",
+      "Description": "\nHe looks like he's under a lot of stress.  He would probably like it if you\nleft him alone.",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d40+160",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 20000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2240,
+      "Name": "zombie draconian",
+      "ShortDescription": "\na Draconian zombie",
+      "LongDescription": "\nA Draconian zombie is here, staring at nothing in particular.",
+      "Description": "\nThis used to be one of the warriors of this tribe.  He was denied his final\nrest, however, and now guards this corridor tirelessly as a zombie.",
+      "Level": 18,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+170",
+        "Mana": 280,
+        "Move": 350
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 13000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2241,
+      "Name": "dragon phase",
+      "ShortDescription": "\nthe phase dragon",
+      "LongDescription": "\nA Phase Dragon is darting around the room.",
+      "Description": "\nThis small dragon looks like he's up to no good.",
+      "Level": 20,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d10+280",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 7,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 21000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2242,
+      "Name": "fool draconian",
+      "ShortDescription": "\nthe draconian fool",
+      "LongDescription": "\nA Fool is here, making fun of you.",
+      "Description": "\nThis dragon man looks VERY foolish, dressed in a green and blue striped \nsuit.  As you enter the room, he points at you and laughs.",
+      "Level": 15,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+150",
+        "Mana": 250,
+        "Move": 305
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 6,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d3+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 2243,
+      "Name": "queen draconian",
+      "ShortDescription": "\nthe Draconian Queen",
+      "LongDescription": "\nA Female Draconian sits, here, looking very important.",
+      "Description": "\nThis draconian looks VERY busy as she orders her slaves around.  You think \nit might be a good idea to leave her alone.",
+      "Level": 40,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "20d20+400",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -80,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+10"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 3000,
+      "Experience": 196000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 7210,
+      "Name": "treasure coins",
+      "ShortDescription": "\na huge treasure",
+      "Description": "\nThere is a huge treasure here, looking very valuable.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14503,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 14503
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "treasure"
+          ],
+          "Description": "\nThis looks like a whole lot of coins."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2200,
+      "Name": "spear jagged",
+      "ShortDescription": "\na jagged spear",
+      "Description": "\nA jagged spear has been left here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 20,
+      "AntiClass": "4915",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        6,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 6,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 1000,
+      "CostPerDay": 1500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2201,
+      "Name": "dagger silver",
+      "ShortDescription": "\na silver dagger",
+      "Description": "\nA silver dagger is lying here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 25,
+      "AntiClass": "514",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        5,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 5,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 1000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2202,
+      "Name": "knife tooth dragon",
+      "ShortDescription": "\na dragon's tooth knife",
+      "Description": "\nA dangerous looking knife made from a dragon's tooth has been left here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 45,
+      "AntiClass": "34",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        8,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 8,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 5000,
+      "CostPerDay": 50000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 6
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2203,
+      "Name": "bracelet dragon",
+      "ShortDescription": "\na dragon skin bracelet",
+      "Description": "\nA scaly bracelet lies on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 2000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2204,
+      "Name": "belt silk black",
+      "ShortDescription": "\na black silk belt",
+      "Description": "\nA black belt made of the finest silk is hanging here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 25,
+      "Cost": 500,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2210,
+      "Name": "belt silk white",
+      "ShortDescription": "\na white silk belt",
+      "Description": "\nA white belt made of the finest silk is hanging here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 25,
+      "Cost": 500,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 2
+        },
+        {
+          "Location": "Hit",
+          "Modifier": 40
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2211,
+      "Name": "bracelet platinum",
+      "ShortDescription": "\na platinum bracelet",
+      "Description": "\nA tarnished platinum bracelet has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 2500,
+      "CostPerDay": 25000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2220,
+      "Name": "symbol holy",
+      "ShortDescription": "\na holy symbol",
+      "Description": "\nA golden holy symbol is here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "318941",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft",
+        "WristRight"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 5000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 35
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2221,
+      "Name": "robe black",
+      "ShortDescription": "\na plain black robe",
+      "Description": "\nA black robe is hanging on a hook on the wall.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 5000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2222,
+      "Name": "sword emerald",
+      "ShortDescription": "\nan emerald sword",
+      "Description": "\nAn emerald long sword is leaning against the wall.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 40,
+      "AntiClass": "514",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        5,
+        8,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 14,
+      "Cost": 4000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 5
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2223,
+      "Name": "club stone",
+      "ShortDescription": "\na stone club",
+      "Description": "\nA heavy looking stone club is here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        5,
+        5,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 5,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 18,
+      "Cost": 750,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2224,
+      "Name": "ring diamond",
+      "ShortDescription": "\na diamond ring",
+      "Description": "\nA diamond ring lies gleaming on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 15000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2230,
+      "Name": "ring copper",
+      "ShortDescription": "\na copper ring",
+      "Description": "\nA copper ring is here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 35,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerRight"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 7000,
+      "CostPerDay": 25000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2231,
+      "Name": "key steel",
+      "ShortDescription": "\na steel key",
+      "Description": "\nA steel key.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        200
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 200
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2232,
+      "Name": "key ruby",
+      "ShortDescription": "\nA ruby key",
+      "Description": "\nA ruby key.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        200
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 200
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2233,
+      "Name": "key white",
+      "ShortDescription": "\na white key",
+      "Description": "\nA white key.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        200
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 200
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2234,
+      "Name": "key grey",
+      "ShortDescription": "\na grey key",
+      "Description": "\nA grey key is resting on the ground here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        200
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 200
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2237,
+      "Name": "key stone",
+      "ShortDescription": "\na stone key",
+      "Description": "\nA stone key.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        200
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 200
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2240,
+      "Name": "key black",
+      "ShortDescription": "\na black key",
+      "Description": "\nA black key.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        200
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 200
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2241,
+      "Name": "key platinum",
+      "ShortDescription": "\na platinum key",
+      "Description": "\nA platinum key.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        200
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 200
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2242,
+      "Name": "shield crested",
+      "ShortDescription": "\na crested shield",
+      "Description": "\nA large crested shield draws your attention.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        11,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 11,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 10000,
+      "CostPerDay": 100000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Constitution",
+          "Modifier": 2
+        },
+        {
+          "Location": "SavingPhysical",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2243,
+      "Name": "wand golden",
+      "ShortDescription": "\na golden wand",
+      "Description": "\nA golden wand has been dropped here.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 20,
+      "AntiClass": "320652",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        60,
+        5,
+        5,
+        87,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 87,
+          "Level": 60,
+          "Charges": 5,
+          "ChargesRemaining": 5
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 10000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2244,
+      "Name": "staff silver",
+      "ShortDescription": "\na silver staff",
+      "Description": "\nA silver staff.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 15,
+      "AntiClass": "320652",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        70,
+        5,
+        5,
+        72,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 72,
+          "Level": 70,
+          "Charges": 5,
+          "ChargesRemaining": 5
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 10000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2245,
+      "Name": "staff dragon",
+      "ShortDescription": "\nthe staff of the dragon",
+      "Description": "\nA powerful oak staff has been left here.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 15,
+      "AntiClass": "320652",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        45,
+        10,
+        10,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 6,
+          "Level": 45,
+          "Charges": 10,
+          "ChargesRemaining": 10
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 5000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2246,
+      "Name": "mail scale",
+      "ShortDescription": "\nscale mail",
+      "Description": "\nA set of scale mail has been abandoned here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 35,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 15,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 10000,
+      "CostPerDay": 20000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2250,
+      "Name": "staff black",
+      "ShortDescription": "\na black staff",
+      "Description": "\nYou notice the faint outline of a staff.",
+      "ActionDescription": "",
+      "Type": "Staff",
+      "Level": 35,
+      "AntiClass": "320652",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        10,
+        10,
+        26,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 26,
+          "Level": 30,
+          "Charges": 10,
+          "ChargesRemaining": 10
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 25,
+      "Cost": 7500,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2251,
+      "Name": "potion cyan",
+      "ShortDescription": "\na cyan potion",
+      "Description": "\nA small cyan potion has been left here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        30,
+        4,
+        27,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            4,
+            27,
+            0
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2000,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2252,
+      "Name": "potion magenta",
+      "ShortDescription": "\na magenta potion",
+      "Description": "\nA magenta potion.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        30,
+        15,
+        34,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            15,
+            34,
+            0
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2254,
+      "Name": "gauntlets spiked",
+      "ShortDescription": "\na pair of spiked gauntlets",
+      "Description": "\nA pair of spiked gauntlets.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 13000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2260,
+      "Name": "scimitar golden",
+      "ShortDescription": "\na golden scimitar",
+      "Description": "\nA golden scimitar.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 25,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        7,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 7,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 4000,
+      "CostPerDay": 7000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2261,
+      "Name": "brooch diamond",
+      "ShortDescription": "\na diamond brooch",
+      "Description": "\nA diamond brooch.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 7,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 10000,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2270,
+      "Name": "scroll",
+      "ShortDescription": "\na runed scroll",
+      "Description": "\nA runed scroll.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        1,
+        34,
+        67,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 30,
+          "SpellIds": [
+            1,
+            34,
+            67
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 700,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2271,
+      "Name": "gloves dragon",
+      "ShortDescription": "\na pair of dragon skin gloves",
+      "Description": "\nA pair of dragon skin gloves are lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Legs"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 6000,
+      "CostPerDay": 15000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2275,
+      "Name": "helm dragon",
+      "ShortDescription": "\na helm of dragon kind",
+      "Description": "\nA helm made of a dragon's skull is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 5000,
+      "CostPerDay": 6000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2276,
+      "Name": "fur cloak",
+      "ShortDescription": "\na fur cloak",
+      "Description": "\nA large mound of fur is lying here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 5000,
+      "CostPerDay": 10000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 1
+        },
+        {
+          "Location": "Hit",
+          "Modifier": 50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2280,
+      "Name": "leggings dragon scale",
+      "ShortDescription": "\na pair of dragon scale leggings",
+      "Description": "\nA pair of dragon scale leggings is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 3500,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2281,
+      "Name": "sleeves dragon scale",
+      "ShortDescription": "\na set of dragon scale sleeves",
+      "Description": "\nA set of dragon scale sleeves is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Feet"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 3000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2285,
+      "Name": "whip dragon tail",
+      "ShortDescription": "\na dragon tailed whip",
+      "Description": "\nA dragon tailed whip is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        6,
+        6,
+        2,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 6,
+          "DiceSides": 6,
+          "DamageType": 2,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 14,
+      "Cost": 4000,
+      "CostPerDay": 20500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2286,
+      "Name": "hammer copper",
+      "ShortDescription": "\na copper hammer",
+      "Description": "\nA copper hammer is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        6,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 6,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 1000,
+      "CostPerDay": 15000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2299,
+      "Name": "key gold tarnished",
+      "ShortDescription": "\na tarnished gold key",
+      "Description": "\nA tarnished gold key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        200
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 200
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 500,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

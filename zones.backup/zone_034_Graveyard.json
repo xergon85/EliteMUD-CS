@@ -1,0 +1,6326 @@
+{
+  "Zone": {
+    "Id": 34,
+    "Name": "Graveyard",
+    "TopRoomId": 3499,
+    "Lifespan": 120,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3404,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3414,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3443,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3433,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3434,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3440,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3441,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3446,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3453,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3473,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3474,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3473,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3475,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3477,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3478,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3478,
+        "Arg2": 5,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3479,
+        "Arg2": 4,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3414,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3414,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3414,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3414,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 14,
+        "Arg3": 3404,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3411,
+        "Arg2": 2,
+        "Arg3": 3403,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3422,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3412,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6004,
+        "Arg2": 5,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3411,
+        "Arg2": 2,
+        "Arg3": 3403,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3422,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3412,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6004,
+        "Arg2": 5,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3413,
+        "Arg2": 1,
+        "Arg3": 3405,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3414,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3405,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 4,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3411,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3002,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3406,
+        "Arg2": 4,
+        "Arg3": 3412,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3406,
+        "Arg2": 4,
+        "Arg3": 3412,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3406,
+        "Arg2": 4,
+        "Arg3": 3416,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3406,
+        "Arg2": 4,
+        "Arg3": 3416,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3417,
+        "Arg2": 6,
+        "Arg3": 3424,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3416,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3417,
+        "Arg2": 6,
+        "Arg3": 3428,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3417,
+        "Arg2": 6,
+        "Arg3": 3429,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3417,
+        "Arg2": 6,
+        "Arg3": 3454,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3417,
+        "Arg2": 6,
+        "Arg3": 3455,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3417,
+        "Arg2": 6,
+        "Arg3": 3457,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3408,
+        "Arg2": 6,
+        "Arg3": 3425,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3408,
+        "Arg2": 6,
+        "Arg3": 3425,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3408,
+        "Arg2": 6,
+        "Arg3": 3425,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3408,
+        "Arg2": 6,
+        "Arg3": 3425,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3408,
+        "Arg2": 6,
+        "Arg3": 3461,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3408,
+        "Arg2": 6,
+        "Arg3": 3465,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3403,
+        "Arg2": 8,
+        "Arg3": 3434,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3403,
+        "Arg2": 8,
+        "Arg3": 3434,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3403,
+        "Arg2": 8,
+        "Arg3": 3435,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3403,
+        "Arg2": 8,
+        "Arg3": 3435,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3403,
+        "Arg2": 8,
+        "Arg3": 3455,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3403,
+        "Arg2": 8,
+        "Arg3": 3461,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3403,
+        "Arg2": 8,
+        "Arg3": 3465,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3403,
+        "Arg2": 8,
+        "Arg3": 3472,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3404,
+        "Arg2": 4,
+        "Arg3": 3435,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3410,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3404,
+        "Arg2": 4,
+        "Arg3": 3434,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3410,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3404,
+        "Arg2": 4,
+        "Arg3": 3446,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3410,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3404,
+        "Arg2": 4,
+        "Arg3": 3470,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3410,
+        "Arg2": 8,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3407,
+        "Arg2": 2,
+        "Arg3": 3440,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 8,
+        "Arg3": 3433,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 8,
+        "Arg3": 3433,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 8,
+        "Arg3": 3444,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 8,
+        "Arg3": 3444,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 8,
+        "Arg3": 3444,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 8,
+        "Arg3": 3444,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 8,
+        "Arg3": 3444,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3405,
+        "Arg2": 8,
+        "Arg3": 3444,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3420,
+        "Arg2": 16,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3412,
+        "Arg2": 1,
+        "Arg3": 3453,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3404,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3405,
+        "Arg2": 5,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3406,
+        "Arg2": 5,
+        "Arg3": 8,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3402,
+        "Arg2": 1,
+        "Arg3": 3474,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3418,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3479,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3400,
+        "Arg2": 5,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3401,
+        "Arg2": 5,
+        "Arg3": 4,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3409,
+        "Arg2": 1,
+        "Arg3": 3475,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3403,
+        "Arg2": 5,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 1,
+        "Arg1": 3475,
+        "Arg2": 5,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3402,
+        "Arg2": 5,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3401,
+        "Arg2": 5,
+        "Arg3": 3440,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3417,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3401,
+        "Arg2": 5,
+        "Arg3": 3462,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3421,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3401,
+        "Arg2": 5,
+        "Arg3": 3464,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3421,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3401,
+        "Arg2": 5,
+        "Arg3": 3466,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3421,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3401,
+        "Arg2": 5,
+        "Arg3": 3468,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3421,
+        "Arg2": 20,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3415,
+        "Arg2": 1,
+        "Arg3": 3480,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3407,
+        "Arg2": 5,
+        "Arg3": 6,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3408,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3409,
+        "Arg2": 5,
+        "Arg3": 0,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3410,
+        "Arg2": 1,
+        "Arg3": 3479,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3414,
+        "Arg2": 2,
+        "Arg3": 3478,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3414,
+        "Arg2": 2,
+        "Arg3": 3478,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3416,
+        "Arg2": 3,
+        "Arg3": 3477,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3416,
+        "Arg2": 3,
+        "Arg3": 3477,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3416,
+        "Arg2": 3,
+        "Arg3": 3477,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3418,
+        "Arg2": 1,
+        "Arg3": 3444,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3415,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3414,
+        "Arg2": 5,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3419,
+        "Arg2": 5,
+        "Arg3": 11,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3411,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 3400,
+      "Name": "A Gravel Road on the Graveyard",
+      "Description": "\n   You are on a well-kept gravel road that leads north-south through the\ngraveyard. On both sides of the road grow dark evergreen trees. An iron grate\nis to the north.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3129,
+          "Description": "Through the solid iron bars you see the Concourse.",
+          "Keywords": [
+            "grate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3121
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3401,
+          "Description": "The gravel road continues southward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3401,
+      "Name": "A Gravel Road on the Graveyard",
+      "Description": "\n   You are on a well-kept gravel road that leads north-south through the\ngraveyard. On both sides of the road grow dark evergreen trees.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3400,
+          "Description": "The gravel road continues northwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3402,
+          "Description": "The gravel road continues southward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3402,
+      "Name": "A Gravel Road on the Graveyard",
+      "Description": "\n   You are on a well-kept gravel road that leads north-south through the\ngraveyard. On both sides of the road grow dark evergreen trees.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3401,
+          "Description": "The gravel road continues northwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3403,
+          "Description": "The gravel road continues southward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3403,
+      "Name": "A Gravel Road on the Graveyard",
+      "Description": "\n   You are on a well-kept gravel road that leads north-south through the\ngraveyard. On both sides of the road grow dark evergreen trees.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3402,
+          "Description": "The gravel road continues northwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3404,
+          "Description": "The gravel road continues southward to an open space before a small building.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3404,
+      "Name": "In front of the Chapel",
+      "Description": "\n   You are on an open space before a small chapel. A gravel road leads north\nthrough the graveyard and the chapel entrance is to the south.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3403,
+          "Description": "The gravel road continues northwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3409,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3405,
+          "Description": "The chapel door is made of dark wood.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3419,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3405,
+      "Name": "Inside the Chapel",
+      "Description": "\n   You are in a small, dark chapel. The dark brown glass in the tiny windows do\nnot let much light through. A few rows of worn wooden benches stand here and an\nancient altar sits in the middle of the floor.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3404,
+          "Description": "The chapel door is made of dark wood.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3420,
+          "Description": "",
+          "Keywords": [
+            "altar"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3414
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "benches",
+            "rows"
+          ],
+          "Description": "\nThe benches are not of the comfortable kind."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3406,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3412,
+          "Description": "There are several old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3416,
+          "Description": "There are several old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3407,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3419,
+          "Description": "There are several old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3416,
+          "Description": "There are several old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3408,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3409,
+          "Description": "There are several old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3412,
+          "Description": "There are several old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3409,
+      "Name": "The Gravestones",
+      "Description": "\nThere are several old and weathered gravestones here that mark \nthe graves of Midgaard's formor citizens and heros.  One such \ngrave has several fresh flowers laid over it and a prominent \nheadstone.\nThis place is very cold and silent.\n\u00a7N",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "BfsMark",
+        "Silent"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3410,
+          "Description": "There are a few old and weathered gravestones are there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3408,
+          "Description": "You see a long row of gravestones.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3404,
+          "Description": "To the west is the entrance to the Chapel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tombstone",
+            "headstone",
+            "grave",
+            "stone",
+            "tomb"
+          ],
+          "Description": "\nAs you look at the tombstone and flowers, you see that the\nflowers are fell laid out by someone who cares.\nYou guess that it is done daily.\nThe tombstone is not large or remarkable, but it simply has:\n          STOMPER SHADOWLORD\nDevoted Son of Chelendria and Pendragon\nSurvived by 2 brothers and both parents.\nHe lies here dead of a terminal heart disease -- a broken heart.\n  \"May he rests with the shadows which was his home,\n   May he live with the friends of long time gone,\n   May he run in the life that knows him best,\n   May he find and remember all days gone long past.\"\n                          -- Johannes --\n\u00a7N"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3410,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3409,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3411,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3411,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3410,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3413,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3412,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3412,
+      "Name": "The Open Graves",
+      "Description": "\n   Strange, some of the graves here have been dug up. You see footprints in the\nsoft earth all about the open graves. A ghastly smell wafts up at you from the\nunearthed graves. It is a sickening smell, of something long dead.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3408,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3411,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3413,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3406,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3413,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3412,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3411,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3414,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3414,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3413,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3443,
+          "Description": "Through the gate you see the Memorial Park.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3422
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3415,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3415,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3416,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3414,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3417,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3416,
+      "Name": "The Open Graves",
+      "Description": "\n   Strange, some of the graves here have been dug up. You see footprints in the\nsoft earth all about the open graves. A ghastly smell wafts up at you from the\nunearthed graves. It is a sickening smell, of something long dead.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3407,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3406,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3415,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3417,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3417,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3418,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3416,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3415,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3418,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3419,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3417,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3419,
+      "Name": "The Gravestones",
+      "Description": "\n   There are several old and weathered gravestones here that mark the graves of\nMidgaard's former citizens. It is a cold, silent place.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3404,
+          "Description": "To the east is the entrance to the Chapel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3407,
+          "Description": "You see a long line of gravestones.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3418,
+          "Description": "There are a few old and weathered gravestones there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3420,
+      "Name": "A Spiral Staircase",
+      "Description": "\n   This stone staircase spirals down into the dark.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3405,
+          "Description": "",
+          "Keywords": [
+            "altar"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3414
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3421,
+          "Description": "The spiral staircase continues downward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3421,
+      "Name": "A spiral Staircase",
+      "Description": "\n   This stone staircase spirals downward into the dark.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3420,
+          "Description": "The spiral staircase continues upward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3422,
+          "Description": "The spiral staircase continues downward.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3422,
+      "Name": "Entrance to the Undertemple",
+      "Description": "\n   There are paintings done in relief on both sides of this chamber. The\nsymbols of evil are present everywhere you look. To the south the passage\nwidens considerably. To the north the passage is much smaller, and darker. A\nspiral staircase leads up to the surface.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3423,
+          "Description": "A small dark tunnel leads north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3425,
+          "Description": "A large dark tunnel leads south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3421,
+          "Description": "A spiral staircase leads up.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3423,
+      "Name": "A Small Passage",
+      "Description": "\n   This passage has been dug from the earth and reinforced with wooden beams and\nstone arches. Although the construction is old it looks safe enough. The floor\nis slightly damp. To the north is a small chamber. To the south is the entrance\nto the Undertemple.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3424,
+          "Description": "To the north is a small dark chamber.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3422,
+          "Description": "The entrance to the Undertemple is to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3424,
+      "Name": "Burial Chamber",
+      "Description": "\n   There is a stone sarcophagi located at each of three walls to the north,\neast, and west. The one to the north is OPEN and EMPTY!",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3423,
+          "Description": "A small passage leads south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3425,
+      "Name": "Intersection",
+      "Description": "\n   This is an intersection where smaller passages branch off to the east and\nwest. To the south the large passage continues. Was that the wind? Or did you\nhear moans from the passages ahead?",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3422,
+          "Description": "To the north is the entrance to the Undertemple",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3426,
+          "Description": "A smaller passage leads east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3430,
+          "Description": "A large passage leads south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3427,
+          "Description": "A small passage leads west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3426,
+      "Name": "A Small Passage",
+      "Description": "\n   This passage has been dug from the earth and reinforced with wooden \nbeams and stone arches. Although the construction is old it looks safe \nenough. The floor is slightly damp. To the east is a small chamber. \nTo the west is an intersection.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3428,
+          "Description": "A small chamber is to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3425,
+          "Description": "The intersection is there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3427,
+      "Name": "A Small Passage",
+      "Description": "\n   This passage has been dug from the earth and reinforced with wooden beams and\nstone arches. Although the construction is old it looks safe enough. The floor\nis slightly damp. To the west is a small chamber. To the east is an\nintersection.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3425,
+          "Description": "The intersection is there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3429,
+          "Description": "A small chamber is to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3428,
+      "Name": "Burial Chamber",
+      "Description": "\n   There is a stone sarcophagus located at each of three walls to the \nnorth, south, and east. The one to the north is OPEN and EMPTY!",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3426,
+          "Description": "A small passage leads west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3429,
+      "Name": "Burial Chamber",
+      "Description": "\n   There is a stone sarcophagi located at each of three walls to the \nnorth, west, and south. The one to the north is OPEN and EMPTY!",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3427,
+          "Description": "A small passage leads east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3430,
+      "Name": "Large Passage",
+      "Description": "\n   The walls, ceiling, and floor of this large passage are of interlocked stone\nand mortar. Arches and a vaulted ceiling make it a very solid construction.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3425,
+          "Description": "The intersection is there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3431,
+          "Description": "A large passage leads south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3431,
+      "Name": "Large Passage",
+      "Description": "\n   The walls, ceiling, and floor of this large passage are of interlocked stone\nand mortar. Arches and a vaulted ceiling make it a very solid construction.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3430,
+          "Description": "A large passage leads north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3432,
+          "Description": "A large passage leads east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3432,
+      "Name": "Large Passage",
+      "Description": "\n   The walls, ceiling, and floor of this large passage are of interlocked stone\nand mortar. Arches and a vaulted ceiling make it a very solid construction.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3433,
+          "Description": "A large passage leads east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3431,
+          "Description": "A bend in the large passage is to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3433,
+      "Name": "Large Passage",
+      "Description": "\n   The walls, ceiling, and floor of this large passage are of interlocked stone\nand mortar. Arches and a vaulted ceiling make it a very solid construction.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3434,
+          "Description": "You see two large bronze doors.",
+          "Keywords": [
+            "bronze",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3416
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3432,
+          "Description": "A large passage leads west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3434,
+      "Name": "The Undertemple",
+      "Description": "\n   This massive chamber is at least six times larger than the little church.\nThe ceiling is at least 30 feet up! Two rows of columns form a procession to\nthe east that ends at a raised dais. Your footsteps echo loudly in here.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3436,
+          "Description": "It is to dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3435,
+          "Description": "The east end of the undertemple.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3438,
+          "Description": "It is to dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3433,
+          "Description": "You see two large bronze doors.",
+          "Keywords": [
+            "bronze",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3416
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3435,
+      "Name": "The Undertemple",
+      "Description": "\n   This massive chamber is at least six times larger than the little church.\nThe ceiling is at least 30 feet up! Two rows of columns form a procession to\nthe east that ends at a raised dais. Your footsteps echo loudly in here.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3437,
+          "Description": "It is to dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3440,
+          "Description": "Three steps lead up onto the dais.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3439,
+          "Description": "It is to dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3434,
+          "Description": "The west end of the undertemple.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3436,
+      "Name": "The Undertemple",
+      "Description": "\n   You are behind the columns. To the north is the cold stone wall. Through the\npillars to the south is the procession. To the east is the east end of the\nUndertemple.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3437,
+          "Description": "It is to dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3434,
+          "Description": "Through the pillars you see the procession.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3437,
+      "Name": "The Undertemple",
+      "Description": "\n   You are behind the columns. To the north is the cold stone wall. Through the\npillars to the south is the procession. To the west is the west end of the\nUndertemple.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3435,
+          "Description": "Through the pillars you see the procession.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3436,
+          "Description": "It is to dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3438,
+      "Name": "The Undertemple",
+      "Description": "\n   You are behind the columns. To the south is the cold stone wall. Through the\npillars to the south is the procession. To the east is the east end of the\nUndertemple.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3434,
+          "Description": "Through the pillars you see the procession.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3439,
+          "Description": "It is to dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3439,
+      "Name": "The Undertemple",
+      "Description": "\n   You are behind the columns. To the south is the cold stone wall. Through the\npillars to the south is the procession. To the west is the west end of the\nUndertemple.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3435,
+          "Description": "Through the pillars you see the procession.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3438,
+          "Description": "It is to dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3440,
+      "Name": "The Dais",
+      "Description": "\n   Three steps lead up to the dais. An altar made of a huge block of obsidian\nforms the focal point of the whole Undertemple. To the east a mural tapestry\nhangs upon the wall.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3441,
+          "Description": "A door is concealed behind the mural.",
+          "Keywords": [
+            "mural",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3417
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3435,
+          "Description": "Three steps lead down to the floor of the Undertemple.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mural"
+          ],
+          "Description": "\nA mural depicting a skeletal figure riding a dracolich into battle.  The\nhumanoid figure wields a glowing glasslike staff and holds a bright ball of\nlight.  Some letters are on the mural, they seem to spell the name Igon."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3441,
+      "Name": "A Stairway",
+      "Description": "\n   This stairway leads down into the dark.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3440,
+          "Description": "You see a small door.",
+          "Keywords": [
+            "mural",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3417
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3442,
+          "Description": "Stairs lead down into the dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3442,
+      "Name": "The Landing",
+      "Description": "\n   Here the stairs come to a landing where a dark passage leads east. The\nstairway continues.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3454,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3441,
+          "Description": "Stairs lead up into the dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3461,
+          "Description": "Stairs lead down into the dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3443,
+      "Name": "Entrance to The Memorial Park",
+      "Description": "\n   This section of the graveyard is reserved for those honored dead who have\nserved in the defense of Midgaard in the militia or cityguard. These graves are\nlined up nicely in east-west rows. Each grave has a white gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3414,
+          "Description": "Through the gate you see the main graveyard.",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3422
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3450,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3444,
+          "Description": "A small path leads south through the Park.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3447,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3444,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3443,
+          "Description": "A small path leads north through the Park.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3450,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3445,
+          "Description": "A small path leads south through the Park.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3447,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3445,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3444,
+          "Description": "A small path leads north through the Park.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3446,
+          "Description": "A small path leads south through the Park.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3446,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker. To the south is the mausoleum of General Patton. On top of\nthe mausoleum is a statue of the General atop a rearing horse, about to charge\ninto battle.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3445,
+          "Description": "A small path leads north through the Park.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3452,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3453,
+          "Description": "An iron door.",
+          "Keywords": [
+            "iron",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3415
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3449,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3447,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3444,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3448,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3448,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3447,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3449,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3449,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3448,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3446,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3450,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3451,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3444,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3451,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3450,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3452,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3452,
+      "Name": "The Memorial Park",
+      "Description": "\n   These graves are lined up very nicely in east-west rows. Each grave has a\nwhite gravemarker.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3451,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3446,
+          "Description": "You see a line of graves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3453,
+      "Name": "Patton's Mausoleum",
+      "Description": "\n   The inside of this stone mausoleum is bare except for a stone sarcophagus\nthat is at its center.",
+      "ZoneId": 34,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3446,
+          "Description": "An iron door.",
+          "Keywords": [
+            "iron",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": 3415
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3454,
+      "Name": "The Crypts",
+      "Description": "\n   Horizontal niches in the walls house embalmed corpses. The air is stale and\ndank. Shadows play everywhere, and you hear a low moaning.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3455,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3442,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3455,
+      "Name": "An Intersection in the Crypts",
+      "Description": "\n   Horizontal niches in the walls house embalmed corpses. The air is stale and\ndank. Shadows play everywhere, and you hear a low moaning.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3458,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3456,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3454,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3456,
+      "Name": "The Crypts",
+      "Description": "\n   Horizontal niches in the walls house embalmed corpses. The air is stale and\ndank. Shadows play everywhere, and you hear a low moaning.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3457,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3455,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3457,
+      "Name": "A Bend in the Crypts",
+      "Description": "\n   Horizontal niches in the walls house embalmed corpses. The air is stale and\ndank. Shadows play everywhere, and you hear a low moaning.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3460,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3456,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3458,
+      "Name": "The Crypts",
+      "Description": "\n   Horizontal niches in the walls house embalmed corpses. The air is stale and\ndank. Shadows play everywhere, and you hear a low moaning.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3459,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3455,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3459,
+      "Name": "The Crypts",
+      "Description": "\n   Horizontal niches in the walls house embalmed corpses. The air is stale and\ndank. Shadows play everywhere, and you hear a low moaning.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3458,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3416,
+          "Description": "An earthen tunnel leads up to the surface.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3460,
+      "Name": "The Crypts",
+      "Description": "\n   Horizontal niches in the walls house embalmed corpses. The air is stale and\ndank. Shadows play everywhere, and you hear a low moaning.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3457,
+          "Description": "Its too dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3461,
+      "Name": "A Lighted Hallway",
+      "Description": "\n   This hallway is lighted by torches along the walls. It is a cold but dry\ntunnel. A stairway is here.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3462,
+          "Description": "A lighted chamber is to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3468,
+          "Description": "A lighted chamber is to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3442,
+          "Description": "A flight of stone stairs lead up.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3462,
+      "Name": "The Northeast Chamber",
+      "Description": "\n   This chamber is light by torches. It is a living chamber of some kind. There\nis a table and a chair. A coffin is against the east wall. A carpet covers the\nfloor.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3463,
+          "Description": "A lighted hallway leads south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3461,
+          "Description": "A lighted hallway leads west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3463,
+      "Name": "The Lighted Hallway",
+      "Description": "\n   This hallway is lighted by torches along the walls. It is a cold but dry\ntunnel.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3462,
+          "Description": "A lighted chamber is to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3464,
+          "Description": "A lighted chamber is to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3464,
+      "Name": "The Southeast Chamber",
+      "Description": "\n   This chamber is lit by torches. It is a living chamber of some kind. There\nis a table and a chair. A coffin is against the east wall. A carpet covers the\nfloor.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3463,
+          "Description": "A lighted hallway leads north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3465,
+          "Description": "A lighted hallway leads west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3465,
+      "Name": "The Lighted Hallway",
+      "Description": "\n   This hallway is lighted by torches along the walls. It is a cold but dry\ntunnel. A stairway is here.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3464,
+          "Description": "A lighted chamber is to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3466,
+          "Description": "A lighted chamber is to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3469,
+          "Description": "A stairway leads up.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3466,
+      "Name": "The Southwest Chamber",
+      "Description": "\n   This chamber is light by torches. It is a living chamber of some kind. There\nis a table and a chair. A coffin is against the west wall. A carpet covers the\nfloor.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3467,
+          "Description": "A lighted hallway leads north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3465,
+          "Description": "A lighted hallway leads east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3467,
+      "Name": "The Lighted Hallway",
+      "Description": "\n   This hallway is lighted by torches along the walls. It is a cold but dry\ntunnel.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3468,
+          "Description": "A lighted chamber is to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3466,
+          "Description": "A lighted chamber is to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3468,
+      "Name": "The Northwest Chamber",
+      "Description": "\n   This chamber is light by torches. It is a living chamber of some kind. There\nis a table and a chair. A coffin is against the west wall. A carpet covers the\nfloor.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3461,
+          "Description": "A lighted hallway leads east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3467,
+          "Description": "A lighted hallway leads south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3469,
+      "Name": "The Paneled Hallway",
+      "Description": "\n   The walls of this hallway are paneled in a dark oiled wood. Candles are set\nin sconces to provide light. The floor is a waxed wood and has a fine carpet\nthat runs the length of the hallway. A stairway is here.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3470,
+          "Description": "A lighted hallway leads west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3465,
+          "Description": "A stairway leads down.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3470,
+      "Name": "The Paneled Hallway",
+      "Description": "\n   The walls of this hallway are paneled in a dark oiled wood. Candles are set\nin sconces to provide light. The floor is a waxed wood and has a fine carpet\nthat runs the length of the hallway.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3469,
+          "Description": "The end of the hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3471,
+          "Description": "A sitting room is to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3471,
+      "Name": "The Sitting Room",
+      "Description": "\n   This is a cozy yet large sitting room. Two couches are placed with a bear\nrug between them in front of a large stone fireplace. The walls are of the same\nwood paneling as the halls but pictures are placed on them at various places\nabout the room.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3472,
+          "Description": "A bend in the hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3470,
+          "Description": "A lighted hallway leads east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3472,
+      "Name": "A Bend in the Paneled Hallway",
+      "Description": "\n   The walls of this hallway are paneled in a dark oiled wood. Candles are set\nin sconces to provide light. The floor is a waxed wood and has a fine carpet\nthat runs the length of the hallway.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3473,
+          "Description": "The end of the hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3471,
+          "Description": "A sitting room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3473,
+      "Name": "The End of the Hallway",
+      "Description": "\n   The walls of this hallway are paneled in a dark oiled wood. Candles are set\nin sconces to provide light. The floor is a waxed wood and has a fine carpet\nthat runs the length of the hallway. Two wooden doors are here, one to the east\nand one to the south.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3475,
+          "Description": "An ornately carved door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3474,
+          "Description": "An ornately carved wooden door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3472,
+          "Description": "A bend in the hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3474,
+      "Name": "Vladamir's Bedchamber",
+      "Description": "\n   This is a room filled with expensive antiques from ages past. A wooden\nchair, a vanity, desk, and table are placed in the room. A very expensive rug\ncovers the floor. A large black coffin is against the south wall.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3473,
+          "Description": "An ornately carved wooden door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3475,
+      "Name": "The Library",
+      "Description": "\n   Bookshelves are on all the walls of this room. They are filled with books of\nall kinds. Most are of no interest to you whatever. A nice large padded chair\nand footstool sits at its center. A small table is at its side.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3473,
+          "Description": "An ornately carved door.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3476,
+          "Description": "A trapdoor is under a padded chair.",
+          "Keywords": [
+            "trapdoor"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 3403
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chair"
+          ],
+          "Description": "\nA splendidly comfortable looking chair.  From the marks on the floor it looks\nlike this chair gets moved a lot."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3476,
+      "Name": "A Stonelined Shaft",
+      "Description": "\n   A shaft that leads deep within the earth. It is lined with stones and\nmortar. The walls are very slippery with a brown slimy mold.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 3477,
+          "Description": "The shaft continues downward into the dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3477,
+      "Name": "The Spiked Pit",
+      "Description": "\n   O O O O O P S ! You have fallen into a nasty spiked pit! There are several\nsharp spikes here to meet you, say HELLO! Strange, they seem to be moving as if\nalive?\n \n     o-<--< \n    ^ ^ ^ ^ ^ \n    | | | | |",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3478,
+          "Description": "You see a door concealed within the wall.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3478,
+      "Name": "A Large Cavern",
+      "Description": "\n   The floor of the cavern is covered with all sorts of junk. There are bits of\narmor and weapons, clothing, bones, and other assorted garbage. You even see\nthe glint of gold and silver coins here and there.",
+      "ZoneId": 34,
+      "Sector": "Hills",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3477,
+          "Description": "A small door is to the west.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 3412,
+          "Description": "An earthen tunnel leads up to the surface.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3479,
+          "Description": "Under the garbage you find a large stone slab.",
+          "Keywords": [
+            "stone",
+            "slab"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3479,
+      "Name": "A Small Stone Burial Vault",
+      "Description": "\n   This ancient vault is totally dark, cold and dry. It is bare except for a\nlarge stone sarcophagus against the east wall.",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 3478,
+          "Description": "The entrance to the vault.",
+          "Keywords": [
+            "stone",
+            "slab"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 3480,
+          "Description": "The sarcophagus conceals an entrance.",
+          "Keywords": [
+            "sarcophagus"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 3418
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3480,
+      "Name": "A Large Stone Burial Vault",
+      "Description": "\n   This vault is huge, but contains only a single large stone sarcophagus. The\nentrance you came through has closed by itself. You are alone here. Or are you?",
+      "ZoneId": 34,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 3400,
+      "Name": "skeleton bones",
+      "ShortDescription": "\nThe Skeleton",
+      "LongDescription": "\nA Skeleton attacks you!",
+      "Description": "\n It is a humanoid undead. Made of bones and wearing torn and dirty clothes.\nIt has no eyes but can still see even in the dark. The monster is like a\nmachine with only one intent... to harm all that is living.",
+      "Level": 20,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3401,
+      "Name": "vampire vamp",
+      "ShortDescription": "\nThe Vampire",
+      "LongDescription": "\nA Vampire grins evilly at you with sharp white fangs.",
+      "Description": "\n This is a vampire, a poweful undead that drinks the blood of its victims.",
+      "Level": 45,
+      "Race": "Undead",
+      "Class": "Cleric",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Infrared"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d45+600",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -130,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 75,
+          "DamageDice": "1d23+33"
+        },
+        {
+          "Type": "Attack_73",
+          "DamageType": 73,
+          "Chance": 25,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 255000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3402,
+      "Name": "vladamir vampire vamp count",
+      "ShortDescription": "\nCount Vladamir",
+      "LongDescription": "\nCount Vladamir grins evilly at you with sharp white fangs.",
+      "Description": "\n This is a the master of vampires, Count Vladamir. He wears a cloak of\nblack that he uses to hide his features. He is tall and muscular. Driplets\nof blood drop from his white fangs.",
+      "Level": 60,
+      "Race": "Undead",
+      "Class": "Cleric",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Infrared"
+      ],
+      "Alignment": -800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d100+750",
+        "Mana": 700,
+        "Move": 980
+      },
+      "Combat": {
+        "Armor": -200,
+        "Hitroll": 27,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 40,
+          "DamageDice": "3d10+20"
+        },
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 30,
+          "DamageDice": "3d12+20"
+        },
+        {
+          "Type": "Attack_73",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_27",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+85"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 20000,
+      "Experience": 600000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3403,
+      "Name": "wraith",
+      "ShortDescription": "\nA Wraith",
+      "LongDescription": "\nA Wraith is here.",
+      "Description": "\n This undead is more shadow than anything else. It is so black that you\ncan not make out its features.",
+      "Level": 40,
+      "Race": "Undead",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Sneak",
+        "Hide"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d50+550",
+        "Mana": 500,
+        "Move": 680
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 17,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+15"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 200000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3404,
+      "Name": "swordwraith",
+      "ShortDescription": "\nA Swordwraith",
+      "LongDescription": "\nA Wraith is here.",
+      "Description": "\n This undead is more shadow than anything else. It is so black that you\ncan not make out its features. This is the undead form of an evil Paladin.\nHe also wears armor and wields a sword.",
+      "Level": 45,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light",
+        "Sneak",
+        "Hide"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "6d50+550",
+        "Mana": 550,
+        "Move": 755
+      },
+      "Combat": {
+        "Armor": -130,
+        "Hitroll": 20,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+18"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 260000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3405,
+      "Name": "skeleton warrior",
+      "ShortDescription": "\nThe Skeleton Warrior",
+      "LongDescription": "\nA Skeleton with sword in hand, attacks you!",
+      "Description": "\n This collection of walking bones has a sword in its hand that it is waving\nat you!",
+      "Level": 35,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -350,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3406,
+      "Name": "ghoul",
+      "ShortDescription": "\nA Ghoul",
+      "LongDescription": "\nA Ghoul is here.",
+      "Description": "\n This foul smelling creature barely notices that you are here and doesn't\nseem to care.",
+      "Level": 25,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3407,
+      "Name": "ghost",
+      "ShortDescription": "\nThe Ghost",
+      "LongDescription": "\nThe ethereal Ghost is here.",
+      "Description": "\n You can see right through this undead.\n Your weapons pass right through it too.",
+      "Level": 50,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Memory"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Hover"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3408,
+      "Name": "zombie",
+      "ShortDescription": "\nA Zombie",
+      "LongDescription": "\nA Zombie stands here.",
+      "Description": "\n The zombie is a foul looking undead creature.  It wears wormridden clothes\nand has various maggots, worms, and flies crawling all over it.  Its mouth is\nsewn shut.  Its eyes are wormridden empty sockets that still seem to find you\nin the dark.",
+      "Level": 40,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3409,
+      "Name": "zombie guardian",
+      "ShortDescription": "\nA The Zombie Guardian",
+      "LongDescription": "\nThe Zombie Guardian stands here.",
+      "Description": "\n This putrid looking undead is covered with all sorts of maggots and worms.\nHe wears a pendant of some sort about his neck and holds what looks like an\nhourglass in one hand.",
+      "Level": 50,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3410,
+      "Name": "spectre",
+      "ShortDescription": "\nThe Spectre",
+      "LongDescription": "\nA Spectre is here.",
+      "Description": "\n This ghost like undead attacks as soon as it sees you.",
+      "Level": 55,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3411,
+      "Name": "graverobber",
+      "ShortDescription": "\nA Graverobber",
+      "LongDescription": "\nA Graverobber hides in the shadows.",
+      "Description": "\n This grubby human carries a shovel and hooded lantern. He is searching\nthe graveyard for the largest gravestones where the richest corpses lie.",
+      "Level": 15,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Light",
+        "Hide"
+      ],
+      "Alignment": -200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3412,
+      "Name": "general patton",
+      "ShortDescription": "\nThe General",
+      "LongDescription": "\nGeneral Patton is here.",
+      "Description": "\n The war hero.",
+      "Level": 50,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3413,
+      "Name": "fat fryer",
+      "ShortDescription": "\nThe Fryer",
+      "LongDescription": "\nA Fat Fryer stands here.",
+      "Description": "\n This cleric stands ready to bless all who enter here. He is a jolly fat\nman with balding pate and a short beard. He holds a bottle of ale in one\nhand and a mace in the other. A key is thrust under his belt.",
+      "Level": 35,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Light"
+      ],
+      "Alignment": 600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3414,
+      "Name": "dracolich",
+      "ShortDescription": "\nA Dracolich",
+      "LongDescription": "\nA Dracolich is here.",
+      "Description": "\n This undead creature is the animated remains of a large dragon. Most of\nits former flesh and hide is gone to reveal its white bony skeleton.",
+      "Level": 50,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": -700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3415,
+      "Name": "igon lich",
+      "ShortDescription": "\nThe Lich",
+      "LongDescription": "\nThe Lich Igon is here.",
+      "Description": "\n What a nice lich.",
+      "Level": 70,
+      "Race": "Undead",
+      "Class": "Cleric",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": -1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+900",
+        "Mana": 800,
+        "Move": 1130
+      },
+      "Combat": {
+        "Armor": -250,
+        "Hitroll": 35,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 40,
+          "DamageDice": "3d12+20"
+        },
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 40,
+          "DamageDice": "3d15+15"
+        },
+        {
+          "Type": "Attack_76",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+75"
+        },
+        {
+          "Type": "Attack_73",
+          "DamageType": 0,
+          "Chance": 15,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 800000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3416,
+      "Name": "steel spike",
+      "ShortDescription": "\nA spike",
+      "LongDescription": "\nA steel spike.",
+      "Description": "\nIt seems to move as if it were alive.",
+      "Level": 50,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3417,
+      "Name": "mummy",
+      "ShortDescription": "\nthe undead mummy",
+      "LongDescription": "\nAn undead mummy lies here.",
+      "Description": "\n He is very pretty wrapped in toilet paper.",
+      "Level": 40,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Infrared"
+      ],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3418,
+      "Name": "nameless hero",
+      "ShortDescription": "\nThe Nameless Undead Hero",
+      "LongDescription": "\nThe Nameless Undead Hero walks the earth.",
+      "Description": "\n This undead creature was once a great hero but now she roams the graveyard\nand protects all the graves therein. To her you are an intruder.",
+      "Level": 40,
+      "Race": "Undead",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 6004,
+      "Name": "lantern",
+      "ShortDescription": "\na hooded brass lantern",
+      "Description": "\nA hooded brass lantern has been left here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 100
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 60,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "lantern"
+          ],
+          "Description": "\nIt is a large and robust but somewhat battered oil lantern made from brass,\nand it is equipped with a handle to make it handy and a hood to protect its\nflame.  Some letters have been scratched on its bottom."
+        },
+        {
+          "Keywords": [
+            "letters"
+          ],
+          "Description": "\nThey say, \"Use 'hold lantern' to activate.\""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3002,
+      "Name": "ale bottle dark",
+      "ShortDescription": "\na bottle",
+      "Description": "\nA dark bottle of ale has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        3,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 3,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 10,
+      "CostPerDay": 3,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3400,
+      "Name": "cape bat",
+      "ShortDescription": "\na black cape",
+      "Description": "\nA black cape with a red lining lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 10000,
+      "CostPerDay": 3500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Move",
+          "Modifier": 100
+        },
+        {
+          "Location": "Constitution",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3401,
+      "Name": "bloodstone medallion",
+      "ShortDescription": "\na bloodstone medallion",
+      "Description": "\nA medallion with a bloodstone setting lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 50,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10000,
+      "CostPerDay": 3000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 50
+        },
+        {
+          "Location": "Hit",
+          "Modifier": 50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3402,
+      "Name": "crystal scarab",
+      "ShortDescription": "\na crystal scarab",
+      "Description": "\nA small crystal that glows with a soft light lies here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": -1
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10000,
+      "CostPerDay": 5000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 50
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3403,
+      "Name": "hourglass key",
+      "ShortDescription": "\na small hourglass",
+      "Description": "\nA small hourglass sits here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        240
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 240
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 50,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3404,
+      "Name": "ivory sword longsword",
+      "ShortDescription": "\nan ivory hilted longsword",
+      "Description": "\nA ivory hilted longsword lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        6,
+        7,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 6,
+          "DiceSides": 7,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 12000,
+      "CostPerDay": 1500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3405,
+      "Name": "green helmet",
+      "ShortDescription": "\na green helmet",
+      "Description": "\nAn olive green steel helmet lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 10000,
+      "CostPerDay": 1500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 40
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3406,
+      "Name": "combat boots",
+      "ShortDescription": "\na pair of black combat boots",
+      "Description": "\nA pair of black combat boots sit here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 40,
+      "AntiClass": "49",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Head"
+      ],
+      "Values": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 8,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 10000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": -1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3407,
+      "Name": "crystal band headband",
+      "ShortDescription": "\na crystal headband",
+      "Description": "\nA black silk band with a crystal at its center lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 60,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 15000,
+      "CostPerDay": 6000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Mana",
+          "Modifier": 100
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3408,
+      "Name": "crystal quarterstaff staff",
+      "ShortDescription": "\na crystal quarterstaff",
+      "Description": "\nA crystal quarterstaff lies here forgotten.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 60,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        6,
+        9,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 6,
+          "DiceSides": 9,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 10000,
+      "CostPerDay": 6000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 6
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3409,
+      "Name": "crystal ball",
+      "ShortDescription": "\na crystal ball",
+      "Description": "\nA crystal ball lies here.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 60,
+      "AntiClass": "61083",
+      "ExtraFlags": [
+        "Glow",
+        "Invisible",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        70,
+        5,
+        5,
+        80,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 80,
+          "Level": 70,
+          "Charges": 5,
+          "ChargesRemaining": 5
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 30000,
+      "CostPerDay": 6000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3410,
+      "Name": "shadowsword sword",
+      "ShortDescription": "\na dark shadowsword",
+      "Description": "\nA long thin shaddow is cast upon the floor at your feet.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 35,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Hum",
+        "Magic",
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        5,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 5,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 3000,
+      "CostPerDay": 300,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3411,
+      "Name": "basher mace",
+      "ShortDescription": "\nthe basher mace",
+      "Description": "\nThe \"Basher\" lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 26,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "AntiEvil"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        6,
+        6,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 6,
+          "DamageType": 6,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 10000,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3412,
+      "Name": "shovel",
+      "ShortDescription": "\na small shovel",
+      "Description": "\nA small shovel lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9,
+      "Cost": 100,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3414,
+      "Name": "skeleton key",
+      "ShortDescription": "\na skeleton key",
+      "Description": "\nA skeleton key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Invisible"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        240
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 1,
+          "Timer": 0,
+          "TimerSet": 240
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3415,
+      "Name": "rusty iron key",
+      "ShortDescription": "\na rusty iron key",
+      "Description": "\nA rusty iron key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        240
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 1,
+          "Timer": 0,
+          "TimerSet": 240
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3416,
+      "Name": "dark bronze key",
+      "ShortDescription": "\na dark bronze key",
+      "Description": "\nA dark bronze key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        240
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 1,
+          "Timer": 0,
+          "TimerSet": 240
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3417,
+      "Name": "key",
+      "ShortDescription": "\nan ordinary key",
+      "Description": "\nAn ordinary key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        240
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 1,
+          "Timer": 0,
+          "TimerSet": 240
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3418,
+      "Name": "black stone key",
+      "ShortDescription": "\na black stone key",
+      "Description": "\nA black stone key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        240
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 1,
+          "Timer": 0,
+          "TimerSet": 240
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3419,
+      "Name": "blue shield",
+      "ShortDescription": "\na blue shield",
+      "Description": "\nA blue shield with a white phoenix painted on it lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 35,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hands"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 12,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 25,
+      "Cost": 5000,
+      "CostPerDay": 1500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3420,
+      "Name": "broken sword",
+      "ShortDescription": "\na broken sword",
+      "Description": "\nA broken sword lies here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        5,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 5,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 100,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3421,
+      "Name": "violet potion",
+      "ShortDescription": "\na violet potion",
+      "Description": "\nA violet potion sits here in a glass flask.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        50,
+        36,
+        61,
+        67,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 50,
+          "SpellIds": [
+            36,
+            61,
+            67
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 10000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3422,
+      "Name": "gate key",
+      "ShortDescription": "\na gate key",
+      "Description": "\nA gate key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        240
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 240
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 300,
+      "CostPerDay": 30,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

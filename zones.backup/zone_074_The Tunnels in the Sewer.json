@@ -1,0 +1,2476 @@
+{
+  "Zone": {
+    "Id": 74,
+    "Name": "The Tunnels in the Sewer",
+    "TopRoomId": 7499,
+    "Lifespan": 50,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7415,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7416,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7418,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7421,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7424,
+        "Arg2": 1,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7425,
+        "Arg2": 3,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7405,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7406,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7404,
+        "Arg2": 2,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 7405,
+        "Arg2": 0,
+        "Arg3": 1,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7040,
+        "Arg2": 1,
+        "Arg3": 7428,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7041,
+        "Arg2": 2,
+        "Arg3": 7444,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7042,
+        "Arg2": 2,
+        "Arg3": 7435,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7043,
+        "Arg2": 3,
+        "Arg3": 7439,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7044,
+        "Arg2": 6,
+        "Arg3": 7406,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7045,
+        "Arg2": 1,
+        "Arg3": 7419,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7046,
+        "Arg2": 1,
+        "Arg3": 7424,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 7010,
+        "Arg2": 2,
+        "Arg3": 7429,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 7400,
+      "Name": "Cave entrance",
+      "Description": "\n   You are standing in the cave entrance. It is very dark down here.\nThere is writing at the wall. There is an exit to the north. A stairway\nleads up.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7401,
+          "Description": "To the north you can see a small tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7102,
+          "Description": "You can see the stairs going up into darkness.",
+          "Keywords": [],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "writing",
+            "wall"
+          ],
+          "Description": "\nThe writing says 'BEWARE adventurer!'"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7401,
+      "Name": "Cave tunnel",
+      "Description": "\n   You are walking in a tunnel. It is very cold. You can feel the\npresence of a living thing ... SOMEWHERE.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7402,
+          "Description": "To the north you can see the tunnel continuing.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7400,
+          "Description": "To the south tunnel continuing.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7402,
+      "Name": "Cave room",
+      "Description": "\n   You are standing in a room. It's much cooler now. The walls are\nglowing.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7403,
+          "Description": "To the east you see the tunnel going downwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7421,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7401,
+          "Description": "To the south you see a dark cave tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7403,
+      "Name": "Cave T-cross",
+      "Description": "\n   You are standing in a mudlike substance. The smell here is awful, it\nis rotten. To the west you can see some light.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7404,
+          "Description": "To the east the tunnel still goes downwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7408,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7402,
+          "Description": "You can see some light to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mud"
+          ],
+          "Description": "\nWhen you examine the mud, you notice small worms crawling around."
+        },
+        {
+          "Keywords": [
+            "worms"
+          ],
+          "Description": "\nThe worms are purple.  They do not look edible."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7404,
+      "Name": "Cave turning-point",
+      "Description": "\n   The mud are getting deeper. You are wondering, 'Would it be an idea\nto leave, before I disappear?'. To the south you notice a flat round\nstone are blocking the way. To the west you can see mud.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7403,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7405,
+          "Description": "You can see an opening behind the stone.",
+          "Keywords": [
+            "flat",
+            "round",
+            "stone"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "flat",
+            "round",
+            "stone"
+          ],
+          "Description": "\nThe stone looks very uninteresting.  BUT as you are about to turn away,\nyou see a light stripe coming through a small hole.  Conclusion: The\nstone is moveable."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7405,
+      "Name": "The secret room",
+      "Description": "\n   There is dust all over the place. It looks like nobody has been here\nfor ages. In the middle of the room you see a socket with a crystal\nglobe. The globe glows with a pulsing light. To the north you see a\nstone door. To the south you see a gray block.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7404,
+          "Description": "You see a round stone door.",
+          "Keywords": [
+            "round",
+            "stone",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7406,
+          "Description": "You see a gray block",
+          "Keywords": [
+            "gray",
+            "block"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "socket"
+          ],
+          "Description": "\nThe socket looks like the work of a dwarf.  It is VERY beautiful."
+        },
+        {
+          "Keywords": [
+            "crystal",
+            "globe"
+          ],
+          "Description": "\nThe crystal globe is glowing with a pulsing light. It looks like there\nis smoke inside it."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7406,
+      "Name": "The mudhole",
+      "Description": "\n   You are standing in a lot of mud. The mud goes to your chest. You\nfeel the presence of something IN the mud. The only obvious exit is to\nthe west.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7405,
+          "Description": "You can see nothing at all.",
+          "Keywords": [
+            "gray",
+            "block"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7407,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7407,
+      "Name": "Tunnel",
+      "Description": "\n   The mud goes to your knees. Otherwise the tunnel looks very normal.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7408,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7406,
+          "Description": "You can see a mudhole.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7409,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7408,
+      "Name": "The long tunnel",
+      "Description": "\n   Here there is almost no mud, as you stand at the top of a small\nrock. Just beside you there are a sign which says 'WARNING! The worms\nare dangerous!'.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7403,
+          "Description": "You can see a lot of mud... Yuck!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7407,
+          "Description": "The tunnel goes a little downwards.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7409,
+      "Name": "The hot room",
+      "Description": "\n   You are very surprised, as this room for a change are hot instead of\ncold. To the north it goes downwards into some mud. There are also an\nexit to the west.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7407,
+          "Description": "You see a lot of mud.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7410,
+          "Description": "You see a entrance to a small room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7410,
+      "Name": "The small room",
+      "Description": "\n   As you look around you notice a small statue. There are exits to the\nwest and to the east.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7411,
+          "Description": "You see a VERY long hallway.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7409,
+          "Description": "It is pitch dark out there.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "small",
+            "statue"
+          ],
+          "Description": "\nThis is a statue of a imp, pointing to the west.  The imp looks like a\nman with horns and a tail."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7411,
+      "Name": "The stalagmite cave",
+      "Description": "\n   You are standing in a stalagmite cave. Water is dripping from the\nwalls. It is very cold in here.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7414,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7410,
+          "Description": "You see a long hallway, and some mud.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7412,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "stalagmite"
+          ],
+          "Description": "\nThe stalagmites are very tall, and looks very beautiful."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7412,
+      "Name": "The stalagmite tunnel",
+      "Description": "\n   You has entered a small tunnel. Here it is quite dry. Maybe it would\nbe a good idea to rest here.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7411,
+          "Description": "You can see a small cave to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7413,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7413,
+      "Name": "The spongy room",
+      "Description": "\n   You definitely NOT like this area. It is very dank, and in most of\nthe room it is wet.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7412,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7445,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7414,
+      "Name": "The stalagmite T-cross",
+      "Description": "\n   You are standing in a cross. To the north you can see some light.\nOtherwise it is dark.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7417,
+          "Description": "You see some light ahead.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7415,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7411,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7415,
+      "Name": "The blind end room",
+      "Description": "\n   This room is obviously a blind end. To the north you see a primitive\npicture.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7416,
+          "Description": "You see a primitive picture.",
+          "Keywords": [
+            "sun"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7414,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "primitive",
+            "picture"
+          ],
+          "Description": "\nYou see some people dancing around a huge sun.  The sun is about 7 feet\nin diameter, which shows the size of the picture."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7416,
+      "Name": "The treasure room",
+      "Description": "\n   This room is richly ornamented. The walls has been carved to show\npeople dancing around a sun which is drawn on the floor. It looks very\nold, and it is very dusty. To the south you see a secret door.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7415,
+          "Description": "You can see a picture with some persons crawling around a huge moon.",
+          "Keywords": [
+            "door",
+            "picture",
+            "sun",
+            "moon"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7417,
+      "Name": "The square lair",
+      "Description": "\n   You are standing in the south-east part of the lair. You can see a\nskeleton lying in the corner.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7418,
+          "Description": "Another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7420,
+          "Description": "Another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7414,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skeleton"
+          ],
+          "Description": "\nIt looks like a adventurer who wasn't lucky.  You'd better watch out..."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7418,
+      "Name": "The square lair",
+      "Description": "\n   You are standing in the north-east part of the lair. You see a sign\non the wall.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7421,
+          "Description": "You see a wooden door.",
+          "Keywords": [
+            "wooden",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7417,
+          "Description": "Another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7419,
+          "Description": "Another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign",
+            "wall"
+          ],
+          "Description": "\nThe sign says 'Gods of War I call you, my sword is by my side,\n               I seek a light free from all false pride'\n                       Reyemle Grug....."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7419,
+      "Name": "The square lair",
+      "Description": "\n   You are standing in the north-west part of the lair. Here there is\nanother sign. There is an exit from the lair to the north.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7422,
+          "Description": "You see a small tunnel leading north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7418,
+          "Description": "Another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7420,
+          "Description": "Another part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign says 'I'm wandering around in a everlasting tale,\n               seeking the light to regain my pride\n                           Corama..."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7420,
+      "Name": "The lair end",
+      "Description": "\n   You can see a table in front of you. It's very dusty. Five skeletons\nare sitting around the table. Exits are north and east.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7419,
+          "Description": "The northern part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7417,
+          "Description": "The eastern part of the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "table"
+          ],
+          "Description": "\nOn the table there is dust, in the center there is a small statue of a\nDragon sleeping."
+        },
+        {
+          "Keywords": [
+            "skeleton",
+            "skeletons"
+          ],
+          "Description": "\nThey've obviously been killed somehow, but it doesn't look like it was\nby sword or club."
+        },
+        {
+          "Keywords": [
+            "dragon",
+            "statue"
+          ],
+          "Description": "\nIt looks like a silver dragon.  It is nailed onto the table.  The\ndragon sits on a red dragon that looks dead.  But the eyes of the red\ndragon are glowing, pulsating red.  You feel drained."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7421,
+      "Name": "East tunnel",
+      "Description": "\n   You are standing in dark tunnel, the exits are east and west. To the\nwest you see a wooden door.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7418,
+          "Description": "You can see a wooden door.",
+          "Keywords": [
+            "wooden",
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7402,
+          "Description": "You can see a muddy tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7422,
+      "Name": "North tunnel",
+      "Description": "\n   You are standing in a dark tunnel, it leads upwards.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7423,
+          "Description": "The dark tunnel continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7419,
+          "Description": "You can see the lair.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7436,
+          "Description": "You can see a cave entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7423,
+      "Name": "The L-shaped room",
+      "Description": "\n   You are standing in deep darkness. To the south there is a small\nexit. To the east you can see a gaping hole.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7424,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7422,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7424,
+      "Name": "The Circular hall",
+      "Description": "\n   You are standing in round hall. To the north, east and south you can\nsee a stone head hanging on the walls.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7423,
+          "Description": "you see a room far away.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7425,
+          "Description": "",
+          "Keywords": [
+            "green",
+            "head",
+            "dragon",
+            "sculpture",
+            "face"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "head",
+            "heads"
+          ],
+          "Description": "\nWhen you study the faces of the heads you see that they are faces of\ndragons. The face to the north is red, the face to the east is green,\nand the face to the south is blue."
+        },
+        {
+          "Keywords": [
+            "green"
+          ],
+          "Description": "\nThis looks like an evil dragon."
+        },
+        {
+          "Keywords": [
+            "red"
+          ],
+          "Description": "\nThis looks like a neutral dragon."
+        },
+        {
+          "Keywords": [
+            "blue"
+          ],
+          "Description": "\nThis looks like a good dragon."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7425,
+      "Name": "Dusty tunnel",
+      "Description": "\n   You are standing in dust. This place has not been touched for a long\ntime. Otherwise it is quite boring here, looks like a place to rest! To\nthe west you see the outline of a door. A tunnel leads to the east.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7424,
+          "Description": "You can see the outline of a door. Just like in the description!",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7426,
+          "Description": "You see a tunnel which leads downwards. It is quite dark.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7426,
+      "Name": "The crossing",
+      "Description": "\n   You are standing in a crossing of hallways. You can leave this place\nin every direction, except up and down. In the dust you notice strange\nfootprints.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7431,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7430,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7427,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7425,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "footprints",
+            "foot"
+          ],
+          "Description": "\nYou have never seen this kind of footprints before!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7427,
+      "Name": "The L-shaped room",
+      "Description": "\n   You are standing in a L-shaped room. You can hear noises from the\nlong tunnel to the east. You feel very afraid! A sign is hanging on the\nwall.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7426,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7428,
+          "Description": "a long dark tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign says 'DANGER!!'."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7428,
+      "Name": "Dragons lair",
+      "Description": "\n   You can see burned walls, the floor stones are fiery red. All kinds\nof bones are scattered all over the floor. On the walls you can see\nsome burned shapes. You smell burnt flesh. Two creatures are sort of\nmelted into the floor.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7429,
+          "Description": "You can see a long tunnel.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7427,
+          "Description": "You can see nothing but darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7429,
+      "Name": "The burned room",
+      "Description": "\n   You are in a room, which once had been quite burned. There is\nwriting on the wall.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7428,
+          "Description": "You can see a red glow...",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7430,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "writing"
+          ],
+          "Description": "\nThe writing says 'DANGER!!!'"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7430,
+      "Name": "The wind tunnel",
+      "Description": "\n   You are standing in a tunnel. Above you, you can feel a breeze.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7429,
+          "Description": "To dark to tell",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7426,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "breeze"
+          ],
+          "Description": "\nThe breeze comes from a hole above you.  NO way to get up there."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7431,
+      "Name": "The glittering room",
+      "Description": "\n   This room are all bright. In the walls you can see some silver.\nExits are west, east and south.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7432,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7426,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7433,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "glitter",
+            "walls",
+            "silver"
+          ],
+          "Description": "\nThe glittering silver looks like it is INSIDE the walls."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7432,
+      "Name": "The secret passage room",
+      "Description": "\n   You have entered a tiny room. There is an exit down, and an exit to\nthe west.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7431,
+          "Description": "You can see a light to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "down"
+          ],
+          "Description": "\nA sign is blocking the way. It says 'This has not been implemented\nyet....'"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7433,
+      "Name": "End of long tunnel",
+      "Description": "\n   You are at a end of a long tunnel. Right in front of you, you can\nsee a gray mass. To the east you can see a tremendously long tunnel,\nbut you know that, you were just there.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7431,
+          "Description": "A long tunnel. JUST like in the description!",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7434,
+          "Description": "A gray mass is blocking the way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gray",
+            "mass"
+          ],
+          "Description": "\nThe mass is nothing but a mass, but it is quite suspicious!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7434,
+      "Name": "Stair-room",
+      "Description": "\n   You are standing in a small room. Drawings of faces in pain are on\nthe walls. You can fell darkness is ruling the place. There are two\nexits: south and down.  But apparently the exit down is blocked and\nimpossible to get by.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 7435,
+          "Description": "Nothing but darkness...",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": -1,
+          "Description": "A sign is blocking the way: 'This has not been implemented yet'.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7435,
+      "Name": "Dark tunnel",
+      "Description": "\n   You are standing in a dark tunnel. It continues to the north and to\nthe south. Bones are spread on the floor.",
+      "ZoneId": 74,
+      "Sector": "City",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7434,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7436,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bones",
+            "bone"
+          ],
+          "Description": "\nIt looks like bones of a human."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7436,
+      "Name": "Entrance to lair",
+      "Description": "\n   The smell here is awful. To the south you can see some smoke. A\ntunnel leads north and east.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7435,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7437,
+          "Description": "The only thing you can see is smoke.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7422,
+          "Description": "A small cave is to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7437,
+      "Name": "North-eastern part of Basilisk's cave",
+      "Description": "\n   It is hard to see here because of the smoke. To the north you can\nbarely see a small tunnel. Other exits are to the south and to the\nwest.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7436,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7438,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7439,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7438,
+      "Name": "South-eastern part of Basilisk's cave",
+      "Description": "\n   There are a very small hole in wall from which the smoke is coming\nfrom. Otherwise it is pitch black. Exits are north and west.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7437,
+          "Description": "You can see nothing but smoke.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7440,
+          "Description": "You can see nothing but smoke.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "hole",
+            "small"
+          ],
+          "Description": "\nIt's a small hole, about one foot in diameter."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7439,
+      "Name": "North-western part of Basilisk's cave",
+      "Description": "\n   You can see some hay spread on the floor. The smell is awful here,\nand it makes you feel sick. This place where the Basilisk sleeps. Watch\nout... maybe it is not far from here..",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 7437,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7440,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "hay"
+          ],
+          "Description": "\nThe hay is very dirty.  The smell of it makes you feel sick."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7440,
+      "Name": "South-western part of Basilisk's cave",
+      "Description": "\n   You can see nothing but smoke.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7439,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7438,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7441,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7441,
+      "Name": "The small cave",
+      "Description": "\n   You are standing in small cave. You can see some light at the end.\nExits are north and south.",
+      "ZoneId": 74,
+      "Sector": "Field",
+      "Flags": [
+        "Dark",
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7440,
+          "Description": "You can see only smoke.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7442,
+          "Description": "You can see a blue glow. And you feel a fresh breeze.... ahhhh....",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7442,
+      "Name": "The northern end of the pool",
+      "Description": "\n   You have wet feet, you are standing in water. The water looks calm.\nYou can see that it's a big lake. Light seeps from the water.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7441,
+          "Description": "You can see a small cave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7443,
+          "Description": "You can see more water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7444,
+          "Description": "You can see water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7443,
+      "Name": "The pool",
+      "Description": "\n   You are swimming in water. It is getting deep here. It is also dark\nin this end.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 7442,
+          "Description": "You see calm water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 7445,
+          "Description": "You can see some bubbles in the water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7444,
+      "Name": "The south end of the pool",
+      "Description": "\n   You standing in water up to your neck! You can only see water.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7442,
+          "Description": "You can see calm water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7445,
+          "Description": "To dark to tell, but you can feel something nearby.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7445,
+      "Name": "The pool",
+      "Description": "\n   You are swimming in DARKNESS. You feel something touching your right\nleg.",
+      "ZoneId": 74,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 7443,
+          "Description": "To dark to tell.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 7413,
+          "Description": "You can feel a warm breeze.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 7444,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 7010,
+      "Name": "chr-eff'n chr",
+      "ShortDescription": "\nthe evil chr-eff'n",
+      "LongDescription": "\nThe chr-eff'n are crawling here, looking around with its yellow eyes.",
+      "Description": "\nThe head and torso of a chr-eff'n is copper-covered, with yellow,\nglowing eyes.  The lower body is in an orange shading.",
+      "Level": 14,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger",
+        "Wimpy"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -100,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+170",
+        "Mana": 240,
+        "Move": 290
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d10+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 300,
+      "Experience": 6000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7040,
+      "Name": "red dragon",
+      "ShortDescription": "\nthe red dragon",
+      "LongDescription": "\nThe Red fierce-looking dragon stares at you angrily.",
+      "Description": "\nThe red dragon stares at you, angrily, as it wakes when you arrive.  It says\n'Oh, human YOU woke me up...Hsssss', while it moves closer, 'Can one NEVER\nsleep in peace...Hssss'.",
+      "Level": 35,
+      "Race": "Dragon",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d50+450",
+        "Mana": 450,
+        "Move": 605
+      },
+      "Combat": {
+        "Armor": -60,
+        "Hitroll": 18,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "5d6+10"
+        },
+        {
+          "Type": "Claw",
+          "DamageType": 500,
+          "Chance": 50,
+          "DamageDice": "4d6+12"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 4000,
+      "Experience": 140000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7041,
+      "Name": "sea hag",
+      "ShortDescription": "\nthe sea hag",
+      "LongDescription": "\nThe Sea Hag is here, swimming around.",
+      "Description": "\nThe sea hag is so ghastly looking that you feel the deepest fear: Big yellow\neyes and sharp teeth.  Its ears are very big, and it has small sharp horns.\nThis type of monster is one of the greatest haters of beauty (next after\nMedusa).",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": -500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+280",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 20000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7042,
+      "Name": "guardian naga",
+      "ShortDescription": "\nthe guardian naga",
+      "LongDescription": "\nThe Guardian Naga looks kindly at you.",
+      "Description": "\nThe naga are a snake-liked creature.  She is covered in green-gold scales with\nsilvery triangles along her back.  Her eyes are golden.  She notices that you\nare staring at her, and she says: 'Watch out.  This way leads to some evil\ncreatures'.",
+      "Level": 22,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d70+250",
+        "Mana": 320,
+        "Move": 410
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d12+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 30000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7043,
+      "Name": "scaled basilisk",
+      "ShortDescription": "\nthe scaled basilisk",
+      "LongDescription": "\nThe scaled Basilisk crawls towards you slowly.",
+      "Description": "\nThe basilisk is a reptilian monster.  It has eight legs, and a strong, toothy\njaws.  It is dull brown with yellowish underbelly.  Its eyes are glowing pale\ngreen.",
+      "Level": 21,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": -700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+180",
+        "Mana": 310,
+        "Move": 395
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 22000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7044,
+      "Name": "lemure blob",
+      "ShortDescription": "\nthe lemure",
+      "LongDescription": "\nThe lemure blob slithers towards you for an attack!",
+      "Description": "\nThis looks like a vaguely human blob.  Big black yellow eyes, and a mouth going\na little bit out from the face.  The lemure does not look interested in you at\nall, but it attacks anyway.  It looks like its mind has been burned out.",
+      "Level": 9,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": -300,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+80",
+        "Mana": 190,
+        "Move": 215
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 3200,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7045,
+      "Name": "jones cruncher ettin",
+      "ShortDescription": "\nJones 'cruncher' the ettin",
+      "LongDescription": "\nJones is standing here glaring at you.",
+      "Description": "\nAt the first sight you thought Jones was an Orc, but when it came closer you\nsaw his second head.  He wears an animal skin dress, filthy and moth eaten. \nJones really stinks...",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": -400,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d50+280",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d8+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 450,
+      "Experience": 20000,
+      "DefaultPosition": "Resting",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 7046,
+      "Name": "herald mouse killer ettin",
+      "ShortDescription": "\nHerald 'the mouse-killer' ettin",
+      "LongDescription": "\nHerald is standing here looking confused at you.",
+      "Description": "\nWhen you look at Herald, you feel petty.  His clothes are really poor, and one\nof his heads hangs down.  At the rope around his stomach hangs dead mice and\nrats.  He does not smell good.",
+      "Level": 18,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger"
+      ],
+      "Affects": [],
+      "Alignment": 200,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d20+230",
+        "Mana": 280,
+        "Move": 350
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 6,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 350,
+      "Experience": 15000,
+      "DefaultPosition": "Resting",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": []
+}

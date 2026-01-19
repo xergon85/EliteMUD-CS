@@ -1,0 +1,1269 @@
+{
+  "Zone": {
+    "Id": 289,
+    "Name": "Clans",
+    "TopRoomId": 28999,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 43,
+        "Arg2": 100,
+        "Arg3": 28900,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 44,
+        "Arg2": 100,
+        "Arg3": 28903,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3035,
+        "Arg2": 100,
+        "Arg3": 28906,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3034,
+        "Arg2": 100,
+        "Arg3": 28906,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 28900,
+      "Name": "#bThe Entrance to the Fortress#N",
+      "Description": "\n   You have arrived at the entrance to a large fortress.  Even though\nthe walls are extremely high, you manage to make out a castle in the\ndistance. You hear clanging from the other side of the wall, loud \nenough to make you wonder if there's a battle on the other side. \nSparks of bright light emerge from the castle, and sounds of \nexplosions can be heard in the distance. If you are not welcome, you \nthink it would be a good idea to depart before the occupants realize \nyou are here. You wonder if the gargoyle has a copy of the guest \nlist?",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28901,
+          "Description": "The Courtyard",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3061,
+          "Description": "Clara's Field o' Daisies",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gargoyle",
+            "statue"
+          ],
+          "Description": "\nBefore you stands a gargoyle of immense proportions. It appears to be \nmade out of stone, but just like the fortress ahead, it is scary \nenough. It appears ready to come to life at any moment and pounch on \nyou.  You wonder who made the gargoyle, for it is so large it would \nhave taken an extremely advanced magical expertise to construct it."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28901,
+      "Name": "#bThe Courtyard#N",
+      "Description": "\n   You have reached the inside of the fortress. Before you stands the\nlargest castle you have ever seen. It's not the most beautiful \nfortress you have ever seen, in fact it has the gloomy look of just \nhaving survived a major siege. Chunks of stone are missing here and \nthere. All around you various activity is commencing. You see big \nfigures watching little ones. You get the impression that a good deal \nof training is going on here. All around there are various machines \nof war set up. To your left is a catapult, to your right are some \nwooden contraptions. Just as you feel you are getting in someone's \nway the front door to the castle begins to raise.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28903,
+          "Description": "Chamber of Wizardry",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28900,
+          "Description": "",
+          "Keywords": [
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28902,
+      "Name": "#bChamber of Wizardry#N",
+      "Description": "\n   You have entered a room glowing with mystical energy. You see \nmany people shrouded in black clothing muttering incantations. You \ncan only guess that this is where the occupants test their magical \nabilities. In the corner you see a bookshelf stacked with bound \nbooks. They surely contain the secrets of these magical masters. \nThrough the occaisonal lightning bolt which lingers your way you see \nstaves, scrolls, and flasked all along the ground and on tables. You \ndecide to leave the room before something powerful strays your way.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28903,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28903,
+      "Name": "#bThe Reception Room#N",
+      "Description": "\n   As you enter the castle, you can't help but notice all the \narchways and the immense size of the reception room. You don't notice \nany servants, but rather see a whole host of dominant figures wearing \ndark clothing. The floor is decorated with a lush red rug, and there \nare various red and black banners hanging from the wall. It looks as \nif it had been recently redecorated. The battle damage doesn't appear \nas bad in here, but there are overturned articles of furniture laying \naround. Everyone is gathered around something, perhaps you should \ntake a look?",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28904,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28905,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28902,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28901,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28904,
+      "Name": "#bThe Council Chamber#N",
+      "Description": "\n   You roam into a room full of arguing people. In the center of the\nroom is a large table, rectangular in shape, with a large man at the \nhead of the table. He looks annoyed to see all his companions out of \ntheir seats screaming at the top of their lungs. The chairs, mostly \nempty, are exquisitely made, with large bones representing the arm \nrests and skulls for hand rests. The table itself had blood all over \nit, yet none of the arguing parties appear to be injured in any way. \nYou decide to leave without asking any questions.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28903,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28905,
+      "Name": "#bA Junction of Stairs#N",
+      "Description": "\n   You have entered a compact hallway, with steps leading downwards\nand upwards. You hear moans coming from both the basement and \nsecond floor. The downward steps must lead to the crypts below this \nevil castle. The steps up lead to things you can only guess at. The \nhallway itself is stained with large amounts of blood and has \nincomplete skeletons laying all around you.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28903,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28909,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28906,
+      "Name": "#bEntrance to the Crypt#N",
+      "Description": "\n   You have entered perhaps the darkest room you have ever witnessed.\nSeveral skulls are hanging along the walls, glowing with an unnatural\naura. You can barely make out several exits leading in all directions.\nThe containers of the dead housed in this room of the crypt have been \noverturned, and pieces of the coffins' occupants are strewn about the \nroom. You are confronted by moans and groans from each direction, \nhelping you very little in deciding a safe path to take.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28908,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28907,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 28905,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28907,
+      "Name": "#bThe Vault#N",
+      "Description": "\n   You have entered the armory of the current occupants. All around \nyou are mass weapons of war. You see swords, staves, maces, axes, \nshields, and armors of all varieties. There are also many occult \nobjects with special magical powers such as rings and amulets. Only \nthe best can be found in here, demonstrating the wealth of the \noccupying force. Even the simplest of their weapons are inlaid with \ndelicate gems and carvings. The rest of the room is a total mess. \nThey clearly have used the resting place of countless souls as a \nstorage space for their weapons which create even more mindless \ncorpses.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28908,
+      "Name": "#bThe Mortuary#N",
+      "Description": "\n   The room you have just entered was what was probably a mortuary at\nsome point. You see all kinds of wonderful gadgets to aid in preparing\ndead bodies for their final rest in the crypts. Unfortuantely it has \nchanged from a place of eternal rest to a place of eternal life. \nCountless alchemists have set up shop in here, healing both old \nLegionaires and preparing new corpses for eternal service to the \nLegion. As expected you see countless flasks laying around \neverywhere. You also see bodies who would have died easily from their \nwounds brought back to life by the alchemists' sinister magic.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28909,
+      "Name": "#bThe Leaders' Chambers#N",
+      "Description": "\n   You have entered the room of all rooms in this structure. All of \nthe fortress' activity is coordinated in this room. You see the two \nimmortal leaders of the Legion, #bShayde#N and #bVampyre#N, being \nadministered by their personal advisors. They are discussing new \nstrategies and experimenting on new kinds of powerful magic worthy \nof their devoted attention. You see they act very friendly towards \ntheir companions, yet the companions have a kind of fear, instilled \nonly by utmost terror and respect. There are dozens of maps and books \nsprawled all over the several tables occupying this room. Up above \nyou see a bright light, the brightest you have seen in the entire \ncastle.  The personal chambers of Vampyre and Shayde lie to the east \nand west, while the northern passage leads into a massive hallway \ntoward the council quarters.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28912,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28911,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28910,
+          "Description": "The Dark Realm of Shade lies to the west.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 1255,
+          "Description": "",
+          "Keywords": [
+            "portal"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 28905,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28910,
+      "Name": "#bDark Realm of Shayde#N",
+      "Description": "\n   This room is filled with a cold mist that smells of death.\nYou can feel a powerful energy here, emitting a magical aura\nstronger than anything you have ever felt.  There is an open\ncoffin in the middle of the room, with a name brazed upon the\nlid.  Inside the coffin, there are two #bdaggers#N, the blades\ncrossed to perfect symetry.  In the northwest corner of the\nroom, there is a misty doorway leading toward Nymph's room.\nShayde is nowhere to be found...  You wonder if all the rumors\nabout him are true.  Some people say that he is not human at\nall, that nobody has ever seen him eat or sleep.  Some even\nsay that he is immortal, only pretending to be human to serve\nhis own purposes.  Before you finish that thought, an icy wind\nhowls past you, and for just one moment, you think you heard\nsomebody whispering a word to you...  It sounded like...  \"Janus\".",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28909,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "daggers"
+          ],
+          "Description": "\nThe coffin has the name \"Dark Shayde\" brazed upon the lid in\nelectric blue letters.  The two daggers belong to Shayde and\nVampyre, and respectively have the words etched into the blades,\n\"Soren\" and \"Sartre\"."
+        },
+        {
+          "Keywords": [
+            "symbol"
+          ],
+          "Description": "\nThere are many arcane formulas and runes swirling around a central\nquotation from some ancient scripture.  It reads, #w\"#bThe Black Wind\nHowls...#w\"#N"
+        },
+        {
+          "Keywords": [
+            "abyss"
+          ],
+          "Description": "\nYou cant seem to make out a bottom to this abyss, and it might not\nbe a very good idea to examine it any closer.  There are faint \nwhisperings coming from deep inside...  You cant seem to make them \nout, but it sounds something like #w\"#bSkai Draka, Shay Vampyrica, \nDeth...#w\"#N What could this possibly mean?  The cold air sends \nchills up your spine."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28911,
+      "Name": "#bVampyre's Lair#N",
+      "Description": "\n   You enter a room covered with mist and fog. It is hard to believe\nthat this could exist in a castle. In fact it is a room conjured by\npowerful magic. In the corner you see a pair of glowing eyes. Surely \nthey belong to Vampyre, a powerful mage of the clan, Dark Legion. \nYou cannot help but wonder what your fate may be. You quickly \nglance around for an exit. But to no avail, you only find a shelf \nfull of potions and books, and a rack full of advanced weapons years \nbeyond the current genre of weaponry. Just as you think you are at \nVampyre's mercy, he smiles and kindly casts the most friendly and \nuseful of spells on you.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28909,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28912,
+      "Name": "#bA Long Dark Hallway#N",
+      "Description": "\n   The hallway continues to the north, or leads south back to the \nchamber of the clan leaders.  There are large wooden doors to the \neast and west that each have a plaque in the center with a name \nengraved in gothic letters.  The western door reads \"#bNymph#N\", \nwhile the eastern door reads \"#bDrakkon#N\".",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28913,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28917,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28909,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28916,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28913,
+      "Name": "#bA Long Dark Hallway#N",
+      "Description": "\n   The hallway continues to the north, or leads south back to the \nsouthern end of the hallway.  There are large wooden doors to the \neast and west that each have a plaque in the center with a name \nengraved in gothic letters.  The western door reads \"#bHalcyon#N\", \nwhile the eastern door reads \"#bGenso#N\".",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28914,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28919,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28912,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28918,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28914,
+      "Name": "#bA Long Dark Hallway#N",
+      "Description": "\n   The hallway continues to the north, or leads south back to the \nsouthern end of the hallway.  There are large wooden doors to the \neast and west that each have a plaque in the center with a name \nengraved in gothic letters.  The western door reads \"#bLegion#N\", \nwhile the eastern door reads \"#bKrypt#N\".",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 28915,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 28921,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28913,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28920,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28915,
+      "Name": "#bThe End of the Hallway#N",
+      "Description": "\n   The hallway has come to an end.  Besides the doors at your sides, \nyou have no choice but to head back south down the hallway.  There \nare two last large wooden doors to the east and west that each have a \nplaque in the center with a name engraved in gothic letters.  The \nwestern door reads \"#bDeathlord#N\", while the eastern door reads \n\"#bSteellord#N\".",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28923,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 28914,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 28922,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28916,
+      "Name": "#bA Darkened Chamber#N",
+      "Description": "\n   This small, dank chamber is harshly illuminated by a single, \nflickering candle mounted on the far wall.  The cobbled walls are slick \nand damp and reflect the light ominously, giving the appearance of \nconstant movement across the mouldy #btapestries#N that hang from them.  \nA heavy, granite sarcophagus sits on a wrought-iron pedestal, dominating \nthe room.  The carved #brunes#N that decorate the lid give the stone coffin\nan undeniable sense of antiquity, while the thick layer of muddy dust \nthat cakes the coffin and covers the floor gives the room a cold, dead, \nabandoned feel.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28912,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "tapestries"
+          ],
+          "Description": "\nThe tapestries were once colorful, but have now faded to dull greys.\nCobwebs cloud the images and the yellowing cords that fringe the edge of \nthe pictures hang limply, damp and brown.  The tapestry to the left \nappears to be of a #bwoman#N, while the one on the right displays what \ncould have been a #bwarrior#N."
+        },
+        {
+          "Keywords": [
+            "warrior"
+          ],
+          "Description": "\nA warrior stands in front of smudged figures in this tapestry.  The \nfigures are all faceless and the fabric of the tapestry is badly damaged \nwhere they stand, but the warrior himself is still somewhat colorful.  A \nblue phoenix decorates his tunic, and his sword was once made to appear \nto glow before the brightness faded from the cloth."
+        },
+        {
+          "Keywords": [
+            "woman"
+          ],
+          "Description": "\nA dark-skinned woman with white, braided hair stands in a castle in this\ntapestry.  Her wings indicate that she is clearly meant to be an angel, \nbut the subtle, menacing look to her grey eyes and they way her knuckles \nare whitened by the way her hands clutch a gem make her appear far too \nmalevolent to be angelic.  A closer look shows tears, badly faded by the \nage of the tapestry, in the corners of her eyes."
+        },
+        {
+          "Keywords": [
+            "runes"
+          ],
+          "Description": "\nThe old, worn runes bear a few strange words, spaced close together and\nlined with deep, simple edging.  The runes are in a language once used \nbut which now only appears in scholarly works.  It appears to be nothing \nmore than a list of names.\n\n   Sinner  Pendragon  Zumdahl  Percival  Ember  Jade  Vulcan  Rigel  Evil\n       Jesta   Mordred   Soulcatcher   Deimos  Kris   Nibor  Darius"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28917,
+      "Name": "#bDrakkon's Empty Room#N",
+      "Description": "\n   This room is in need of a description.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28912,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "raven",
+            "ravens"
+          ],
+          "Description": "\nThe two statues seem to be made of night itself... dark, black a\nsense of foreboding grips you.  Then you see one of the eyes blink\nslowly...  Death walks the land."
+        },
+        {
+          "Keywords": [
+            "symbol",
+            "symbols",
+            "rune",
+            "runes"
+          ],
+          "Description": "\n\"Blood to Blood, we stand... by our Dark Power we\nConquer as our friend Death walks the Land.\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28918,
+      "Name": "#bThe Chambers of Halcyon#N",
+      "Description": "\n   As you enter the chambers of Halcyon, you are suddenly\nembraced by a feeling of peace and harmony. The walls\nare draped in sky blue silk. The music of windchimes\nfloats gently in the breeze coming from the eastern\nwindow. Scents of lavender and chamomile hang in the\nair. To your right is Halcyon's desk. Its surface is\nin an organized state of disarray, piled with pages of\npoetry and her journals. The shelves surrounding her\ndesk contain literature both old and new. To your left\nis an inviting bed, made up in white linen. Stacks of\nbooks surround it. Under her pillow is a lock of #rred#N\ntied up in a black cord.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28913,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "red"
+          ],
+          "Description": "\nThis lock of bright ruby-red hair is tied up in a cord\nand kept safely by Halcyon.  It looks about the same\ncolor as Genso's hair..."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28919,
+      "Name": "#bYoung Master Genso's Room#N",
+      "Description": "\n   This room is strangely empty.  There is no furniture\nor bed in sight.  Against the wall nearest you, there is\na small shrine, where Genso honors his Samurai ancestors.\nThere are various weapons, mostly katana swords, resting\non the floor and against the wall.  One sword in particular\nlooks quite deadly, and has the word \"Murasame\" engraved\non the blade.  In the same corner that this sword rests,\nthere is a small mat and pillow on the floor, where Genso\nsleeps.  Under his pillow is a lock of #ygold#N tied up in\na black cord.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28913,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gold"
+          ],
+          "Description": "\nThis lock of yellow hair, as bright as the sun, is tied up\nin a cord and kept safely by Genso.  Surely this dazzling\nlock of flaxen hair could only belong to fair Halcyon."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28920,
+      "Name": "#bDark Legion's Tower#N",
+      "Description": "\n   You are in Legion's Tower. The bottom of the tower\nserves as a living area. There is a column of fire\nburning in the center of the room. The flame illuminates\nthe entire room with its fiery glow. The walls are covered\nwith weapons and armors from all over Elite. Most of the\nequipment is bloodstained and shows other signs of use in\nbattle. Maybe you should leave before Legion returns and your \nblood is the next to stain his blade.....",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28914,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28921,
+      "Name": "#bKrypt's Inner Sanctum#N",
+      "Description": "\n   A large but tidy room filled with candles, smoke and artwork taken\nfrom battles won on every nation known to man.  There is a cool draft\ncoming from what seems to be every direction.  In the corner there is\na large collection of books, mostly well used and worn.  In the \nmiddle of the room is a large altar made to the God Yeshua whom he \nserves. Against the far wall is his large collection of equipment and\ntreasure.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28914,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28922,
+      "Name": "#bShadowy Room of Deathlord#N",
+      "Description": "\n   As you walk through the walnut door, a narrow cavern is revealed \nwhich leads you down deep into a smoke filled room.  Its a small room \nthat is fogged with cool mist, and it lit only by a few fiery torches \non the rocky walls.  There is a large hole in the center of the room, \nbut you cannot make anything out when you look inside of it.  You can \nonly guess at why Deathlord being the powerful mage that he is would \nchoose to live in such an atmosphere.  The shadows seem to be \nincreasing rapidly, and an eerie moaning echoes from down inside the \nblack hole.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 28915,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28923,
+      "Name": "#bShrine of Steellord#N",
+      "Description": "\n   As you enter this room you feel a sirene calmness come over you. A \nsubtle scent fills the room. Looking around the room, the first thing \nto catch your eyes is a chest on the far right of the room. As you \nstep closer you can see a rather large amethyst crystal ball resting \non the top of a sillver stand. Scattered around the stand are smaller \npieces of various crystal. Next to the bed is a small wooden stand \nwith a tall, deep green candle sitting on fur.   Lying next to the candle\nis a large, very old, leather bound book  that looks to be \nvery tattered & torn.  On the other side of the room you see a small \nfountain sitting near the far corner.  Water slowly caresses the \nstone  with a solid black crystal ball spinning on top of the water. \nTo the left of the fountain you see an old sword, a shield, set of \nchain armor, and a cloak. Lying upon the floor you see several \ndifferent fur rugs. On the walls there are many different paintings \nof battles & slain dragons. One has a man in it showing off a dragon \nthat he has slain.  On the floor oppisite the bed there is a very \nlarge crystal ball on a stand.  As you start to leave the room you \nnotice a small ferret following you nipping at your feet. Just as you \nstart to pick it up it scuttles off.",
+      "ZoneId": 289,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 28915,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 43,
+      "Name": "statue mage dl",
+      "ShortDescription": "\nA evil mage",
+      "Description": "\nThe statue of an evil mage stands here, guarding the magical fortress.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated",
+        "NoSweep"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28900,
+        2,
+        115,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mage",
+            "statue"
+          ],
+          "Description": "\nAn ominous statue of the evil mage of legend, he is cloaked in robes of\nblue and green, while his glowing purple eyes seem to follow you as you\nwalk by."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 44,
+      "Name": "board bulletin dark legion dl",
+      "ShortDescription": "\na Dark Legion clan board",
+      "Description": "\nThe Dark Legion clan bulletin board floats here in mid air.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        115,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "\nan automatic teller machine",
+      "Description": "\nAn automatic teller machine has been installed in the wall here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "\nThere is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3035,
+      "Name": "fountain water",
+      "ShortDescription": "\nthe large fountain",
+      "Description": "\nA large fountain carved from blue-streaked marble is here, bubbling merrily.",
+      "ActionDescription": "\nIt is a well crafted fountain, carved from a single piece of marble.  It seems\nto be enchanted in some manner, as the water level seems to never lower.",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "marble",
+            "blue",
+            "streaked"
+          ],
+          "Description": "\nIt is very beautiful white marble, shot through with electric blue streaks\nthat look almost like lightning dancing along the sides of the fountain."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

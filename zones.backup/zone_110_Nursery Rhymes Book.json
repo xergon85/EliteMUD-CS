@@ -1,0 +1,2325 @@
+{
+  "Zone": {
+    "Id": 110,
+    "Name": "Nursery Rhymes Book",
+    "TopRoomId": 11099,
+    "Lifespan": 10,
+    "ResetMode": "ResetWhenEmpty",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11000,
+        "Arg2": 1,
+        "Arg3": 11002,
+        "Comment": "Farmer in the Dell"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11001,
+        "Arg2": 1,
+        "Arg3": 11002,
+        "Comment": "His pig"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11002,
+        "Arg2": 1,
+        "Arg3": 11003,
+        "Comment": "Georgie Peorgie"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11003,
+        "Arg2": 1,
+        "Arg3": 11004,
+        "Comment": "Mouse (Hickory Dickory Dock)"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11004,
+        "Arg2": 1,
+        "Arg3": 11005,
+        "Comment": "Baker"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11005,
+        "Arg2": 1,
+        "Arg3": 11006,
+        "Comment": "Jack (House that Jack Built)"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11000,
+        "Arg2": 100,
+        "Arg3": 11007,
+        "Comment": "wall (Humpty Dumpty)"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11006,
+        "Arg2": 1,
+        "Arg3": 11008,
+        "Comment": "Old Man"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11007,
+        "Arg2": 1,
+        "Arg3": 11009,
+        "Comment": "Jack (Jack & Jill)"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11008,
+        "Arg2": 1,
+        "Arg3": 11009,
+        "Comment": "Jill"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11009,
+        "Arg2": 1,
+        "Arg3": 11010,
+        "Comment": "Jack (Jack, Be Nimble)"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11010,
+        "Arg2": 1,
+        "Arg3": 11011,
+        "Comment": "Jack Sprat"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11011,
+        "Arg2": 1,
+        "Arg3": 11011,
+        "Comment": "Jack Sprat's Wife"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11001,
+        "Arg2": 100,
+        "Arg3": 11012,
+        "Comment": "swing"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11012,
+        "Arg2": 1,
+        "Arg3": 11013,
+        "Comment": "Kookaburra"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11002,
+        "Arg2": 100,
+        "Arg3": 11013,
+        "Comment": "gumdrop"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11013,
+        "Arg2": 1,
+        "Arg3": 11014,
+        "Comment": "Little Bo Peep"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11014,
+        "Arg2": 1,
+        "Arg3": 11015,
+        "Comment": "Little Bunny Foo Foo"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11003,
+        "Arg2": 100,
+        "Arg3": 11016,
+        "Comment": "brick from bridge"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11004,
+        "Arg2": 100,
+        "Arg3": 11017,
+        "Comment": "moonbeam :)"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11015,
+        "Arg2": 1,
+        "Arg3": 11018,
+        "Comment": "Mary (lamb)"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11016,
+        "Arg2": 1,
+        "Arg3": 11019,
+        "Comment": "Mary (garden)"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11005,
+        "Arg2": 100,
+        "Arg3": 11019,
+        "Comment": "bunch of flowers"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11017,
+        "Arg2": 1,
+        "Arg3": 11020,
+        "Comment": "Michael"
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 11018,
+        "Arg2": 1,
+        "Arg3": 11022,
+        "Comment": "Old King Cole"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11006,
+        "Arg2": 100,
+        "Arg3": 11024,
+        "Comment": "meatball!"
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 11007,
+        "Arg2": 100,
+        "Arg3": 11025,
+        "Comment": "shoe"
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 11000,
+      "Name": "The Title Page",
+      "Description": "\n   Welcome to \"Nursery Rhymes for Children and the Young at Heart.\" \nThis book will take you through the world of nursery rhymes and\nchildren's songs.  Each page may only be visted once each time you\nread this book so that you will not wear out the pages!  Make sure\nyou \"look\" at each page you visit so you can actually read the\nrhymes.  Please go north to start reading.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11001,
+      "Name": "The Table of Contents",
+      "Description": "\n   This book contains several nursery rhymes, all in alphabetical\norder (we want our children to know their ABC's!).  To see a complete\nlisting, please \"look\" at this page.  You may go north to start\nreading the rhymes. Enjoy!",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nThe Farmer in the Dell\nGeorgie Peorgie\nHickory Dickory Dock\nHot Cross Buns\nThe House That Jack Built\nHumpty Dumpty\nIt's Raining, It's Pouring\nJack and Jill Went Up the Hill\nJack, Be Nimble\nJack Sprat\nKnick Knack Paddy Whack\nKookaburra\nLittle Bo Peep\nLittle Bunny Foo Foo\nLondon Bridge is Falling Down\nThe Man in the Moon\nMary Had a Little Lamb\nMichael Row the Boat Ashore\nMy Bonnie Lies Over the Ocean\nOld King Cole\nOld Mother Hubbard\nOn Top of Spaghetti\nOne, Two, Buckle My Shoe\nOver the River and Through the Woods"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11002,
+      "Name": "The Farmer in the Dell",
+      "Description": "\n   The sounds and smells of farm life overwhelm your senses as you\nwander into this page.  A large group of farmhands stand watching as\nthe farmer, his family, and all the animals dance around merrily. \nYou can take a few minutes to join in the festivities, or you can\nwander on to the next page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nThe farmer in the dell,\nThe farmer in the dell,\nHi-ho, the derry-o,\nThe farmer in the dell.\n\nThe farmer takes a wife,\nThe farmer takes a wife,\nHi-ho, the derry-o,\nThe farmer takes a wife.\n\nThe wife takes a child,\nThe wife takes a child,\nHi-ho, the derry-o,\nThe wife takes a child.\n\nThe child takes a nurse,\nThe child takes a nurse,\nHi-ho, the derry-o,\nThe child takes a nurse.\n\nThe nurse takes the cow,\nThe nurse takes the cow,\nHi-ho, the derry-o,\nThe nurse takes the cow.\n\nThe cow takes a dog,\nThe cow takes a dog,\nHi-ho, the derry-o,\nThe cow takes a dog.\n\nThe dog takes a cat,\nThe dog takes a cat,\nHi-ho, the derry-o,\nThe dog takes a cat. \n\nThe cat takes a rat,\nThe cat takes a rat,\nHi-ho, the derry-o,\nThe cat takes a rat.\n\nThe rat takes the cheese,\nThe rat takes the cheese,\nHi-ho, the derry-o,\nThe rat takes the cheese.\n\nThe cheese stands alone,\nThe cheese stands alone,\nHi-ho, the derry-o,\nThe cheese stands alone."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11003,
+      "Name": "Georgie Peorgie",
+      "Description": "\n   A calliope plays in the background as you wander through this\npage.  You appear to have wandered into a small town faire, complete\nwith clowns and circus animals.  A small group of boys stands here\nlaughing and playing midway games.  You can stay here a while to join\nthem, or wander on to the next page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11004,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nGeorgie Peorgie, puddin' and pie,\nKissed the girls and made them cry.\nWhen the boys came out to play,\nGeorgie Peorgie ran away."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11004,
+      "Name": "Hickory Dickory Dock",
+      "Description": "\n   A large clock stands in the center of this small room, poised just\nseconds before one o'clock.  The room appears to be the foyer of a\npleasant farm house that has been overrun by rodents!  You can stare\nat the clock all day, or you can visit the next page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11005,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": " \nHickory, dickory, dock,\nThe mouse ran up the clock.\nThe clock struck one,\nThe mouse ran down!\nHickory, dickory, dock."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11005,
+      "Name": "Hot Cross Buns",
+      "Description": "\n   It appears that you have wandered into a small bakery.  The scents\nof cakes and pies fill your nostrils, making you ever so hungry!  You\ncan stay here and inhale the wonderful odors, or you can check out\nthe next page by going north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11006,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nHot cross buns!\nHot cross buns!\nOne a penny, two a penny,\nHot cross buns! \n\nHot cross buns!\nHot cross buns!\nIf you have no daughters,\nGive them to your sons!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11006,
+      "Name": "The House that Jack Built",
+      "Description": "\n   This is the house that Jack built.  It doesn't look very sturdy,\nas if Jack is not the best craftsman, but it is cozy and warm.  You\ncan stay a while if Jack doesn't mind, or you can visit the next page\nby moving north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11007,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nThis is the house that Jack built. \n\nThis is the malt\nThat lay in the house that Jack built.\n\nThis is the rat\nThat ate the malt\nThat lay in the house that Jack built. \n\nThis is the cat, \nThat killed the rat,\nThat ate the malt\nThat lay in the house that Jack built. \n\nThis is the dog,\nThat worried the cat,\nThat killed the rat,\nThat ate the malt\nThat lay in the house that Jack built. \n\nThis is the cow with the crumpled horn,\nThat tossed the dog, \nThat worried the cat, \nThat killed the rat,\nThat ate the malt\nThat lay in the house that Jack built. \n\nThis is the maiden all forlorn,\nThat milked the cow with the crumpled horn,\nThat tossed the dog,\nThat worried the cat, \nThat killed the rat,\nThat ate the malt\nThat lay in the house that Jack built. \n\nThis is the man all tattered and torn,\nThat kissed the maiden all forlorn,\nThat milked the cow with the crumpled horn,\nThat tossed the dog,\nThat worried the cat, \nThat killed the rat,\nThat ate the malt\nThat lay in the house that Jack built. \n\nThis is the priest all shaven and shorn,\nThat married the man all tattered and torn,\nThat kissed the maiden all forlorn,\nThat milked the cow with the crumpled horn,\nThat tossed the dog,\nThat worried the cat, \nThat killed the rat,\nThat ate the malt \nThat lay in the house that Jack built. \n\nThis is the cock that crowed in the morn,\nThat waked the priest all shaven and shorn,\nThat married the man all tattered and torn,\nThat kissed the maiden all forlorn,\nThat milked the cow with the crumpled horn,\nThat tossed the dog,\nThat worried the cat, \nThat killed the rat,\nThat ate the malt\nThat lay in the house that Jack built. \n\nThis is the farmer sowing the corn,\nThat kept the the cock that crowed in the morn,\nThat waked the priest all shaven and shorn,\nThat married the man all tattered and torn,\nThat kissed the maiden all forlorn,\nThat milked the cow with the crumpled horn,\nThat tossed the dog,\nThat worried the cat, \nThat killed the rat,\nThat ate the malt\nThat lay in the house that Jack built."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11007,
+      "Name": "Humpty Dumpty",
+      "Description": "\n   A large stone wall dominates this page.  Several distraught\nsoldiers stand around holding pieces of what appears to be a very\nlarge egg.  Some of the pieces are scattered around on the ground,\nand you are just a little surprised to see pieces of clothing mixed\nin with them!  Oh no, what could have happened here?  You may attempt\nto help the soldiers with whatever it is they are doing, or wander on\nto another page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11008,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nHumpty Dumpty sat on a wall.\nHumpty Dumpty had a great fall.\nAll the king's horses and all the king's men\nCouldn't put Humpty together again!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11008,
+      "Name": "It's Raining, It's Pouring",
+      "Description": "\n   Didn't you ever have one of those rainy days when you just wanted\nto curl back up and go to sleep?  This page holds a nice warm bed,\nright next to a large picture window.  As you look through the\nwindow, you can see a torrential downpour.  You can stay here and\nwatch the rain fall, or you can move north to the next page.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11009,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nIt's raining, it's pouring;\nThe old man is snoring.\nBumped his head\nAnd he went to bed\nAnd he couldn't get up in the morning. \n\nRain, rain, go away;\nCome again another day;\nLittle Johnny wants to play."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11009,
+      "Name": "Jack and Jill Went Up the Hill",
+      "Description": "\n   A large hill takes up most of this page.  It looks quite steep,\nand you may want to watch your step if you decide to climb it!  A\nsmall well, which appears to be a source of water for a nearby town,\nstands at the top of the hill.  You may stay here and guard the well\nfor the townsfolk, or you can wander north to the next page.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11010,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nJack and Jill\nWent up the hill\nTo fetch a pail of water.\nJack fell down\nAnd broke his crown\nAnd Jill came tumbling after.\n\nUp Jack got\nAnd home did trot\nAs fast as he could caper\nWent to bed\nAnd plastered his head\nWith vinegar and brown paper."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11010,
+      "Name": "Jack, Be Nimble",
+      "Description": "\n   This page appears to be set at a wonderful party.  People are\nclapping and dancing as several young men attempt to show off their\nagility and skill (at something!).  A shy young lady smiles at you as\nyou watch the crowd.  You can stay here and join in the fun, or you\ncan wander off to the next page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11011,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nJack, be nimble,\nJack, be quick,\nJack, jump over\nThe candlestick."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11011,
+      "Name": "Jack Sprat",
+      "Description": "\n   A banquet of royal proportions has been laid out upon a large\ntable on this page.  The food looks and smells quite delicious, and\nyou are tempted to have a little taste.  If you stay here too long,\nyour mouth will probably water enough to ruin this page, so you\nshould probably be on your way to the next page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11012,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nJack Sprat could eat no fat,\nHis wife could eat no lean,\nAnd so betwixt the two of them\nThey licked the platter clean"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11012,
+      "Name": "Knick, Knack, Paddy Whack",
+      "Description": "\n   The front porch of a small country home dominates most of this\npage.  A cozy swing rocks gently in the breeze, and you hear a\nrooster crowing in the distance.  You can watch this idyllic scene as\nlong as you'd like, or you can wander on to the next page to the\nnorth.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11013,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nThis old man, he played one,\nHe played knick knack with his thumb,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played two,\nHe played knick knack with my shoe,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home.\n\nThis old man, he played three,\nHe played knick knack on my knee,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played four,\nHe played knick knack at my door,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played five,\nHe played knick knack, jazz and jive,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played six,\nHe played knick knack with his sticks,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played seven,\nHe played knick knack with his pen,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played eight,\nHe played knick knack on my gate,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played nine,\nHe played knick knack, rise and shine,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played ten,\nHe played knick knack in my den,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played eleven,\nHe played knick knack up in heaven,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home. \n\nThis old man, he played twelve,\nHe played knick knack, dig and delve,\nWith a\nKnick, knack, paddy whack,\nGive the dog a bone;\nThis old man came rolling home."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11013,
+      "Name": "Kookaburra",
+      "Description": "\n   This page appears to be set in a small forest.  A large gum tree\nstands in the center of the page, filled with delicious gumdrops! \nYou can hear an eerie laughing in the distance, but for some reason\nyou don't feel very afraid.  If you'd like to try and get some\ngumdrops, you can stay on this page, but it might be nice to see\nwhat's on the next page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11014,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nKookaburra sits in the old gum tree.\nMerry, merry king of the bush is he.\n\nLaugh, Kookaburra,\n\nLaugh, Kookaburra,\nGay your life must be. \n\nKookaburra sits in the old gum tree,\nEating all the gumdrops he can see.\n\nStop, Kookaburra,\n\nStop, Kookaburra,\nLeave some there for me."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11014,
+      "Name": "Little Bo Peep",
+      "Description": "\n   This page is set in a large pasture.  The rolling hills smell of\nsweet grass, which is just perfect for grazing sheep.  However, there\ndon't seem to be any sheep around!  You can stay here to wait for the\nsheep to come by, or head north to the next page.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11015,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nLittle Bo Peep has lost her sheep,\nand doesn't know where to find them!\nLet them alone, and they'll come home,\nwagging their tails behind them!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11015,
+      "Name": "Little Bunny Foo Foo",
+      "Description": "\n   This page is set in a lovely forest.  The tall trees stand\nmajestically over you, and the air is filled with the scent of pine. \nThis forest is a magical place, filled with fairies and field mice! \nYou may stay here and enjoy the scenery, or move on to the next page\nto the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11016,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nLittle Bunny Foo Foo\nhoppin' through the forest,\nscoopin' up the field mice\nand boppin' em on the head. \n\nAnd down came the Blue Fairy, and she said: \nLittle Bunny Foo Foo\nI don't want to see you\nscoopin' up the field mice\nand boppin' em on the head. \nAnd now I'll give you three chances, and if you keep it up, \nI'll turn you into a goon. \n\nLittle Bunny Foo Foo\nkept hoppin' through the forest,\nkept scoopin' up the field mice\nand boppin' em on the head. \n\nAnd down came the Blue Fairy, and she said: \nLittle Bunny Foo Foo\nI don't want to see you\nscoopin' up the field mice\nand boppin' em on the head. \nAnd now I'll give you two more chances, and if you do that again, \nI'll turn you into a goon. \n\nLittle Bunny Foo Foo\nkept hoppin' through the forest,\nkept scoopin' up the field mice\nand boppin' em on the head. \n\nAnd down came the Blue Fairy, and she said: \nLittle Bunny Foo Foo\nI don't want to see you\nscoopin' up the field mice\nand boppin' em on the head. \nAnd now I'll give you one more chance, and if you keep it up, \nI'll turn you into a goon. \n\nLittle Bunny Foo Foo\nkept hoppin' through the forest,\nkept scoopin' up the field mice\nand boppin' em on the head. \n\nAnd down came the Blue Fairy, and she said: \nLittle Bunny Foo Foo\nI don't want to see you\nscoopin' up the field mice\nand boppin' em on the head. \nYou disobeyed me three times, so now I'm gonna turn you into a GOON!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11016,
+      "Name": "London Bridge is Falling Down",
+      "Description": "\n   A large bridge spanning a wide river stands in the middle of this\npage.  The bridge appears to be crumbling, and in great need of\nrepair.  Perhaps you can help, or you can visit the next page by\ngoing north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11017,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nLondon Bridge is falling down, \nFalling down, Falling down. \n\nLondon Bridge is falling down,\nMy fair lady. \n\nTake a key and lock her up,\nLock her up, Lock her up. \n\nTake a key and lock her up,\nMy fair lady. \n\nHow will we build it up,\nBuild it up, Build it up? \n\nHow will we build it up,\nMy fair lady? \n\nBuild it up with silver and gold,\nSilver and gold, Silver and gold. \n\nBuild it up with silver and gold,\nMy fair lady. \n\nGold and silver I have none,\nI have none, I have none. \n\nGold and silver I have none,\nMy fair lady. \n\nBuild it up with needles and pins,\nNeedles and pins, Needles and pins. \n\nBuild it up with needles and pins,\nMy fair lady. \n\nPins and needles bend and break,\nBend and break, Bend and break. \n\nPins and needles bend and break,\nMy fair lady. \n\nBuild it up with wood and clay,\nWood and clay, Wood and clay. \n\nBuild it up with wood and clay,\nMy fair lady. \n\nWood and clay will wash away,\nWash away, Wash away. \n\nWood and clay will wash away,\nMy fair lady. \n\nBuild it up with stone so strong,\nStone so strong, Stone so strong. \n\nBuild it up with stone so strong,\nMy fair lady. \n\nStone so strong will last so long,\nLast so long, Last so long. \n\nStone so strong will last so long, \nMy fair lady."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11017,
+      "Name": "The Man in the Moon",
+      "Description": "\n   The moon shines brightly upon you as you wander into this page. \nThe night sky is filled with stars, and you are starting to feel just\na little sleepy. Perhaps you should move along to the next page\nbefore you fall alseep!",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11018,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nThe man in the moon\nLooked out of the moon \nAnd this is what he said,\n\"Tis time that, now I'm getting up,\nAll babies went to bed.\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11018,
+      "Name": "Mary Had a Little Lamb",
+      "Description": "\n   A small country schoolyard takes up most of this page.  Children\nare laughing and playing in the yard.  A small group is standing in a\ncircle giggling and pointing at something.  You can stay here to find\nout what they are pointing at, or move north to the next page.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11019,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nMary had a little lamb,\nlittle lamb,\nlittle lamb.\nMary had a little lamb,\nIts fleece was white as snow. \n\nEverywhere that Mary went,\nMary went,\nMary went.\nEverywhere that Mary went,\nThe lamb was sure to go. \n\nIt followed her to school one day,\nschool one day,\nschool one day.\nIt followed her to school one day,\nWhich was against the rules. \n\nIt made the children laugh and play,\nlaugh and play,\nlaugh and play.\nIt made the children laugh and play,\nTo see a lamb at school"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11019,
+      "Name": "Mary, Mary, Quite Contrary",
+      "Description": "\n  A beautiful garden, filled with flowers, dominates this page.  This\ngarden appears to be quite bountiful, with silver bells, and\ncockleshells, and pretty maids all in a row.  You can stay here to\nsmell the flowers, or move on the the next page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11020,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nMary, Mary, quite contrary,\nHow does your garden grow?\nWith silver bells and cockleshells,\nAnd pretty maids all in a row."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11020,
+      "Name": "Michael Row the Boat Ashore",
+      "Description": "\n   A deep, wide river flows down the middle of this page.  In the\ncenter of the river is a small boat.  On one side of the river is a\nlarge desert, and on the other side is a large oasis.  You can stay\nhere to see which side the boat is going to, or you can visit the\nnext page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11021,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nMichael, row the boat ashore,\nHallelujah.\nMichael, row the boat ashore,\nHallelujah. \n\nSister, help to trim the sails,\nHallelujah.\nSister, help to trim the sails,\nHallelujah. \n\nRiver Jordan's deep and wide,\nHallelujah.\nMilk and honey on the other side,\nHallelujah. \n\nRiver Jordan's chilly and cold,\nHallelujah.\nChills the body, but warms the soul,\nHallelujah."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11021,
+      "Name": "My Bonnie Lies Over the Ocean",
+      "Description": "\n   You are on a large dock at the edge of wide and stormy sea.  The\nclouds above you are just starting to turn dark, when a gust of wind\nblows a woman's handkerchief right to your feet.  Perhaps you'd like\nto stay here to find out who the owner of the handkerchief is, or\nperhaps you'd just like to get out of the rain and head north to the\nnext page.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11022,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nMy Bonnie lies over the ocean,\nMy Bonnie lies over the sea.\nMy Bonnie lies over the ocean,\nPlease bring back my Bonnie to me.\n\nBring back,\nBring back,\nOh, bring back my Bonnie to me, to me.\nBring back,\nBring back,\nOh, bring back my Bonnie to me."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11022,
+      "Name": "Old King Cole",
+      "Description": "\n   A large party in a beautifully decorated reception room fills this\npage. You can only guess by the rich tapestries and colorful\npaintings that the room belongs in the home of a man of taste.  A\ngroup of lovely ladies stand along one wall, preparing to dance with\nthe young men of the kingdom.  You may join the festivities, or\ncontinue on your way to the next page to the north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11023,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nOld King Cole was a merry old soul,\nAnd a merry old soul was he.\nHe called for his pipe, and he called for his bowl,\nAnd he called for his fiddlers three.\n\nEvery fiddler had a fiddle fine,\nAnd a very fine fiddle had he, had he.\nTweedle dum, tweedle dee, went the fiddlers three,\nTweedle dum dee, dum dee deedle dee.\n\nTweedle dum, tweedle dee, went the fiddlers three,\nTweedle dum dee, dum dee deedle dee."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11023,
+      "Name": "Old Mother Hubbard",
+      "Description": "\n   This page is set in a small cottage.  A large cupboard stands\nempty at the edge of the page.  The wooden floors are covered with\ndirt, making you want to head to the next page which lies north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11024,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nOld Mother Hubbard\nWent to the cupboard\nTo fetch her poor dog a bone;\nBut when she came there\nThe cupboard was bare,\nAnd so the poor dog had none.\n\nShe took a clean dish\nTo get him some tripe;\nBut when she came back\nHe was smoking a pipe.\nShe went to the grocer's\nTo buy him some fruit;\nBut when she came back\nHe was playing the flute.\n\nShe went to the baker's\nTo buy him some bread;\nBut when she came back\nThe poor dog was dead.\n\nShe went to the undertaker's\nTo buy him a coffin;\nBut when she came back\nThe poor dog was laughing.\n\nShe went to the hatter's\nTo buy him a hat;\nBut when she came back\nHe was feeding the cat.\n\nThe dame made a curtsey,\nThe dog made a bow;\nThe dame said, \"Your servant.\"\nThe dog said, \"Bow wow!\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11024,
+      "Name": "On Top of Spaghetti",
+      "Description": "\n   Mmmmm, spaghetti!  This page is filled to the brim with\nmouth-watering spaghetti.  Pasta and sauce are everywhere, and\neverything smells simply divine.  You may leave this delectable page\nby heading north.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11025,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nOn top of spaghetti,\nAll covered with cheese,\nI lost my poor meatball\nWhen somebody sneezed. \n\nIt rolled off the table\nAnd onto the floor,\nAnd then my poor meatball\nRolled right out the door!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11025,
+      "Name": "One, Two, Buckle My Shoe",
+      "Description": "\n   A small child stands in the center of this page, learning how to\ncount to twenty.  In order to achieve this goal, he is learning a\nsimple rhyme to help him remember his numbers.  If you're not up to\nlearning how to count, just go north to the next page.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11026,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nOne, two, buckle my shoe;\n\nThree, four, knock at the door;\n\nFive, six, pick up sticks;\n\nSeven, eight, lay them straight;\n\nNine, ten, a good fat hen;\n\nEleven, twelve, dig and delve;\n\nThirteen, fourteen, maids a-courting;\n\nFifteen, sixteen, maids a-kissing;\n\nSeventeen, eighteen, maids a-waiting;\n\nNineteen, twenty, I've had plenty."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11026,
+      "Name": "Over the River and Through the Woods",
+      "Description": "\n   The crisp cold air bites your nose as you wander through a wintery\nscene.  You hear the tinkle of sleighbells somewhere in the distance,\nand you can smell the warmth of a fire somewhere close by.  You can\nenjoy this winter wonderland for a bit longer, or head north to the\nnext page.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 11027,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "page"
+          ],
+          "Description": "\nOver the river and through the woods,\nto grandmother's house we go.\nThe horse knows the way\nto carry the sleigh\nthrough the white and drifty snow.\nOh! Over the river and through the woods,\nto grandmother's house we go!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 11027,
+      "Name": "The End of the Book",
+      "Description": "\n   The book of nursery rhymes has come to an end.  As you turn the\nlast page, you wish you could have stayed a bit longer.  Don't fret\nhowever, this book can always be checked out again!  Simply go north\nto leave the book, or stay here to rest up a bit.",
+      "ZoneId": 110,
+      "Sector": "Inside",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 2906,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 11000,
+      "Name": "farmer",
+      "ShortDescription": "\nthe farmer",
+      "LongDescription": "\nThe farmer smiles happily as he dances a jig.",
+      "Description": "\nThe farmer smells of sweat and manure, but he appears to be happy\nenough.  His overalls look like they haven't been washed in weeks,\nand you fear that standing too close to him may very well make you\npass out!",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+153",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11001,
+      "Name": "pig",
+      "ShortDescription": "\na pig",
+      "LongDescription": "\nStrange, but true, this pig is dancing!",
+      "Description": "\nThis little fellow has pink skin, which has been covered almost\ncompletely in mud.  He smells terrible, but he has the cutest little\nface, and boy can he dance!",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+83",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 25,
+      "Experience": 666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11002,
+      "Name": "georgie peorgie boy",
+      "ShortDescription": "\nGeorgie Peorgie",
+      "LongDescription": "\nGeorgie Peorgie puckers up to give you a big wet kiss!",
+      "Description": "\nGeorgie Peorgie is quite the lady's man, but he doesn't seem to care\ntoo much to let his playmates know.  He's short and stout, probably\nfrom eating too much pie.  His dirty blonde hair is unkempt and could\nprobably use a good washing.",
+      "Level": 7,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+111",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 49,
+      "Experience": 1066,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11003,
+      "Name": "mouse",
+      "ShortDescription": "\na small mouse",
+      "LongDescription": "\nA small mouse runs up the clock.",
+      "Description": "\nThe small mouse has a soft grey coat and long black whiskers.  His\ngiant ears look rather comical atop his tiny little head.  He stares\nat you, twitching his tiny little tail.",
+      "Level": 4,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+69",
+        "Mana": 140,
+        "Move": 140
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 16,
+      "Experience": 533,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11004,
+      "Name": "baker",
+      "ShortDescription": "\nthe baker",
+      "LongDescription": "\nThe baker stands here, working magic on a piece of dough.",
+      "Description": "\nThe baker is an enormous man, who has an almost perfectly round\nshape.  You imagine he probably got that way from eating a few too\nmany of his delicious baked goods.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+153",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11005,
+      "Name": "jack man",
+      "ShortDescription": "\nJack",
+      "LongDescription": "\nJack smiles proudly at his handiwork.",
+      "Description": "\nJack stands tall in his dusty overalls.  His hair is covered with\nsawdust and bits of wood.  He considers himself to be a master\nbuilder, but one look at his handiwork and you know better!",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+153",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11006,
+      "Name": "old man",
+      "ShortDescription": "\nan old man",
+      "LongDescription": "\nAn old man snores loudly as he sleeps the day away.",
+      "Description": "\nThis old man looks like he's had a rough time.  He has a huge bump on\nhis head, and he's snoring loud enough to wake the dead!  Might not\nbe a good idea to wake him, he doesn't look much like a morning\nperson.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+153",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11007,
+      "Name": "jack boy",
+      "ShortDescription": "\nJack",
+      "LongDescription": "\nA young boy carries his pail to the top of the hill.",
+      "Description": "\nJack is a handsome young fellow, full of energy and life.  He better\nwatch his step though, the steep hill looks quite treacherous.  Jack\nprobably wouldn't take too well to falling down!",
+      "Level": 6,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+97",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 36,
+      "Experience": 800,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11008,
+      "Name": "jill girl",
+      "ShortDescription": "\nJill",
+      "LongDescription": "\nSinging happily, a young girl climbs the steep hill.",
+      "Description": "\nJill is a pretty young girl, with smiling blue eyes and golden hair.\nShe appears to be walking a bit too quickly, and she better be\ncareful that she doesn't come tumbling down on her pretty little\nhead!",
+      "Level": 6,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+97",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 36,
+      "Experience": 800,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11009,
+      "Name": "jack man",
+      "ShortDescription": "\nJack",
+      "LongDescription": "\nA young man runs around with his pants on fire!",
+      "Description": "\nUh oh!  It seems that Jack got a little too close to the flame as he\njumped over the candlestick!  His pants are on fire, and he's\nfrantically trying to put them out.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+153",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11010,
+      "Name": "jack sprat man husband",
+      "ShortDescription": "\nJack Sprat",
+      "LongDescription": "\nAn extremely thin man sits at the table, eating only the lean.",
+      "Description": "\nJack Sprat must eat no fat, he's ever so thin indeed!  His long, lean\nframe appears almost skeletal.  Jack better start eating something\nother than the lean, or he'll waste away to nothing.",
+      "Level": 8,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+125",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 64,
+      "Experience": 1333,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11011,
+      "Name": "wife jack sprat woman",
+      "ShortDescription": "\nJack Sprat's wife",
+      "LongDescription": "\nA portly, yet pretty, woman sits at the table stuffing her face.",
+      "Description": "\nJack Sprat's wife eats just about anything she can get her hands on,\nand it certainly shows.  She's about four times the size of her\nrail-thin husband.  Luckily for her (and for Jack) she's as pretty as\nshe is large.",
+      "Level": 8,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+125",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 64,
+      "Experience": 1333,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11012,
+      "Name": "kookaburra bird",
+      "ShortDescription": "\nthe Kookaburra",
+      "LongDescription": "\nA large bird sits in the tree, eating all the gumdrops he can see.",
+      "Description": "\nThe kookaburra is a strange-looking bird, with a laugh to match.  He\nsits high in the tree, eating all the tasty gumdrops.  Better hope he\nsaves some for you!",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+83",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 25,
+      "Experience": 666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11013,
+      "Name": "little bo peep girl",
+      "ShortDescription": "\nLittle Bo Peep",
+      "LongDescription": "\nA young girl stands crying in the pasture.",
+      "Description": "\nPoor Little Bo Peep!  She fell asleep beneath a cozy tree, and her\nsheep all wandered off.  Now she'll have to go home and explain that\nto her parents.",
+      "Level": 6,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+97",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 36,
+      "Experience": 800,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11014,
+      "Name": "little bunny foo",
+      "ShortDescription": "\nLittle Bunny Foo Foo",
+      "LongDescription": "\nLaughing wildly, a small bunny picks up a field mouse and BOPS it on\nthe head!",
+      "Description": "\nWith his long ears and wiggly nose, Little Bunny Foo Foo looks\ninnocent enough, but one look in his eyes and you know this rabbit is\na maniac!  He takes joy in that pain of field mice - what a sicko!",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+83",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 25,
+      "Experience": 666,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11015,
+      "Name": "mary girl",
+      "ShortDescription": "\nMary",
+      "LongDescription": "\nA young girl plays with her classmates.",
+      "Description": "\nMary is a pretty young girl, wearing a frilly pink dress with\nmatching petticoat.  Her curly brown hair and big green eyes seem to\ncomplete the picture.  What you can't tell from her appearance, is\nthat Mary has a thing for young sheep!",
+      "Level": 6,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+97",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 36,
+      "Experience": 800,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11016,
+      "Name": "mary contrary gardener lady",
+      "ShortDescription": "\nMary",
+      "LongDescription": "\nTending to her garden, the young lady doesn't even notice you.",
+      "Description": "\nMary is quite the gardener.  She can grow anything almost anywhere,\nand she's won numerous awards from the local gardening club.  Humming\nsoftly to herself, she tends her magnificent garden.",
+      "Level": 8,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+125",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 64,
+      "Experience": 1333,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11017,
+      "Name": "michael boy",
+      "ShortDescription": "\nMichael",
+      "LongDescription": "\nA young boy is rowing across the river as fast as he can.",
+      "Description": "\nMichael is very much the athlete, and he often rows himself across\nthe river to keep in shape.  This time however, he's rowing across\nthe river to see what he can of the promised land.",
+      "Level": 6,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+97",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 36,
+      "Experience": 800,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 11018,
+      "Name": "old king cole man",
+      "ShortDescription": "\nOld King Cole",
+      "LongDescription": "\nOld King Cole watches over the festivities, chewing on his pipe.",
+      "Description": "\nOld King Cole is a handsome old man, with twinkling grey eyes and a\nperpetual smile.  He's dressed in the finest clothing available, and\nwhile he has a bit of a belly, his outfit fits him quite well.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+153",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 2133,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 11000,
+      "Name": "wall",
+      "ShortDescription": "\na large stone wall",
+      "Description": "\nA large stone wall spans the page.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "wall"
+          ],
+          "Description": "\nThe stone wall is covered with moss.  Bits of eggshell and large\namounts of yolk are stuck to the large stones that make up the wall."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 11001,
+      "Name": "swing",
+      "ShortDescription": "\na large swing",
+      "Description": "\nThe large swing rocks gently, inviting you to sit down and relax.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "swing"
+          ],
+          "Description": "\nThe large swing is painted white to match the picket fence that\nsurrounds the small house.  It looks quite cozy, and would probably\nmake a great place to sit down and relax."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 11002,
+      "Name": "gumdrop",
+      "ShortDescription": "\na gumdrop",
+      "Description": "\nA tasty gumdrop seems to have fallen from the tree.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 1,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "gumdrop"
+          ],
+          "Description": "\nThis tasty morsel looks good enough to eat!  Better get it fast\nbefore the Kookaburra snatches it up."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 11003,
+      "Name": "brick",
+      "ShortDescription": "\nan enormous brick",
+      "Description": "\nAn enormous brick has fallen from the bridge.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "brick"
+          ],
+          "Description": "\nThis large brick was once part of the magnificent bridge.  However,\ndue to terrible maintenance, the bridge is falling apart.  The brick\nlooks quite heavy, and you probably won't be able to pick it up."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 11004,
+      "Name": "moonbeam beam",
+      "ShortDescription": "\na moonbeam",
+      "Description": "\nThe moon reaches down and gently caresses you with a moonbeam.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "moonbeam",
+            "beam"
+          ],
+          "Description": "\nThe soft light of the moonbeam lights up the room, but at the same\ntime makes you feel quite sleepy."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 11005,
+      "Name": "bunch flower flowers",
+      "ShortDescription": "\na bunch of flowers",
+      "Description": "\nA bunch of freshly-picked flowers rests on the edge of the garden.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bunch",
+            "flower",
+            "flowers"
+          ],
+          "Description": "\nThe delicious scent of the flowers fills your nose as you inhale\ndeeply.  Oh no!  You just inhaled a bug!  That'll teach you to go\naround sniffing strange flowers!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 11006,
+      "Name": "meatball",
+      "ShortDescription": "\nan enormous meatball",
+      "Description": "\nA rather large meatball rolls off the spaghetti and onto the floor.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 1,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "meatball"
+          ],
+          "Description": "\nThis meatball is making your mouth water.  If it wasn't for the bits\nof dust that it has aquired from being on the floor, it'd be\nabsolutely perfect!"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 11007,
+      "Name": "shoe",
+      "ShortDescription": "\na small shoe",
+      "Description": "\nCovered with mud, a small shoe sits here without his mate.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shoe"
+          ],
+          "Description": "\nThe shoe is covered with mud, and it looks quite alone without its\nmate.  A small silver buckle covers the top half of the shoe, and the\nleather tongue seems to be sticking out right at you!  You better not\ntry to take the shoe, it looks quite stuck to the ground."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

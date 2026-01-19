@@ -6858,7 +6858,7 @@
             "view",
             "metal"
           ],
-          "Description": "\n   In this mill iron is produced with help of a rather standard\ncontinuous counter flow reactor, The Blast Furnace. In it the ferrous ore\nis loaded together with a mix of limestone and coal/coke in the top.\nInitially the mix is dried up after which preheating takes place a bit\nfurther down the furnace. Next the carbon in the mix and the carbon\nmonoxide produced lower in the furnace starts to reduce the iron oxide\nto a lesser oxide Hematite -> Magnetite  ->  W\u00fcstite  ->  pure liquid\nIRON. At the bottom of the furnace the added air burns the leftover of\nthe carbon giving away enormous heat to manage the final melting. A\ncontinuous separation of molten metal and slags from the furnace is also\ndone very low in the furnace.\n\nFurball, Glob Inc. Research Department.\nin association with B-#<AA>, your local metallurgist and mountainman."
+          "Description": "\n   In this mill iron is produced with help of a rather standard\ncontinuous counter flow reactor, The Blast Furnace. In it the ferrous ore\nis loaded together with a mix of limestone and coal/coke in the top.\nInitially the mix is dried up after which preheating takes place a bit\nfurther down the furnace. Next the carbon in the mix and the carbon\nmonoxide produced lower in the furnace starts to reduce the iron oxide\nto a lesser oxide Hematite -> Magnetite  ->  Wüstite  ->  pure liquid\nIRON. At the bottom of the furnace the added air burns the leftover of\nthe carbon giving away enormous heat to manage the final melting. A\ncontinuous separation of molten metal and slags from the furnace is also\ndone very low in the furnace.\n\nFurball, Glob Inc. Research Department.\nin association with B-#<AA>, your local metallurgist and mountainman."
         }
       ],
       "SpecialProc": null,
@@ -16042,7 +16042,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         0,
@@ -16104,7 +16104,7 @@
       ],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         0,
@@ -16167,7 +16167,7 @@
       ],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         0,
@@ -16291,7 +16291,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Legs"
+        "Hands"
       ],
       "Values": [
         15,
@@ -16365,7 +16365,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck2"
+        "Head"
       ],
       "Values": [
         20,
@@ -16443,7 +16443,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Neck1"
+        "Body"
       ],
       "Values": [
         12,
@@ -16517,7 +16517,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck2"
+        "Head"
       ],
       "Values": [
         12,
@@ -16584,7 +16584,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         100,
@@ -16664,7 +16665,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck1"
+        "Body"
       ],
       "Values": [
         35,
@@ -16751,7 +16752,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Head"
+        "Feet"
       ],
       "Values": [
         12,
@@ -16834,7 +16835,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Neck2"
+        "Head"
       ],
       "Values": [
         12,
@@ -16913,7 +16914,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "WieldTwoHanded"
       ],
       "Values": [
         100,
@@ -16995,7 +16997,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck1"
+        "Body"
       ],
       "Values": [
         60,
@@ -17086,7 +17088,7 @@
       ],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         100,
@@ -17153,7 +17155,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "WieldTwoHanded"
       ],
       "Values": [
         80,
@@ -17234,7 +17237,7 @@
       ],
       "WearFlags": [
         "Take",
-        "About"
+        "Wrist"
       ],
       "Values": [
         3,
@@ -17313,7 +17316,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         100,
@@ -17384,7 +17388,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Shield"
+        "Waist"
       ],
       "Values": [
         16,
@@ -17460,7 +17464,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Arms"
+        "About"
       ],
       "Values": [
         80,
@@ -17527,7 +17531,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         5,
@@ -17588,7 +17593,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         100,
@@ -17668,7 +17674,7 @@
       ],
       "WearFlags": [
         "Take",
-        "About"
+        "Wrist"
       ],
       "Values": [
         14,
@@ -17774,9 +17780,9 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight",
-        "WristLeft"
+        "Wield",
+        "Hold",
+        "Throw"
       ],
       "Values": [
         0,
@@ -17819,9 +17825,9 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight",
-        "WristLeft"
+        "Wield",
+        "Hold",
+        "Throw"
       ],
       "Values": [
         0,
@@ -17878,7 +17884,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Shield"
+        "Waist"
       ],
       "Values": [
         15,
@@ -17956,7 +17962,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Arms"
+        "About"
       ],
       "Values": [
         15,
@@ -18035,8 +18041,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         109,
@@ -18113,7 +18119,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Feet"
+        "Arms"
       ],
       "Values": [
         14,
@@ -18185,7 +18191,7 @@
       ],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         98,
@@ -18246,7 +18252,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         12,
@@ -18289,7 +18295,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         100,
@@ -18367,7 +18374,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "WieldTwoHanded"
       ],
       "Values": [
         100,
@@ -18442,7 +18450,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Feet"
+        "Arms"
       ],
       "Values": [
         15,
@@ -18623,7 +18631,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck2"
+        "Head"
       ],
       "Values": [
         6,
@@ -18688,7 +18696,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Arms"
+        "About"
       ],
       "Values": [
         30,
@@ -18763,7 +18771,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Legs"
+        "Hands"
       ],
       "Values": [
         40,
@@ -18820,7 +18828,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck1"
+        "Body"
       ],
       "Values": [
         16,
@@ -18903,7 +18911,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck1"
+        "Body"
       ],
       "Values": [
         40,
@@ -18990,7 +18998,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Hands"
+        "Shield"
       ],
       "Values": [
         8,
@@ -19179,7 +19187,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         109,
@@ -19251,7 +19259,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Arms"
+        "About"
       ],
       "Values": [
         15,
@@ -19328,7 +19336,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Hands"
+        "Shield"
       ],
       "Values": [
         15,
@@ -19399,7 +19407,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Head"
+        "Feet"
       ],
       "Values": [
         12,
@@ -19476,7 +19484,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck2"
+        "Head"
       ],
       "Values": [
         30,
@@ -19552,7 +19560,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Body"
+        "Legs"
       ],
       "Values": [
         15,
@@ -19632,7 +19640,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Feet"
+        "Arms"
       ],
       "Values": [
         13,
@@ -19787,7 +19795,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         105,
@@ -19873,7 +19882,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         100,
@@ -19948,7 +19958,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Head"
+        "Feet"
       ],
       "Values": [
         10,
@@ -20026,7 +20036,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Arms"
+        "About"
       ],
       "Values": [
         10,
@@ -20105,7 +20115,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Arms"
+        "About"
       ],
       "Values": [
         100,
@@ -20165,7 +20175,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Neck2"
+        "Head"
       ],
       "Values": [
         37,
@@ -20225,7 +20235,7 @@
       ],
       "WearFlags": [
         "Take",
-        "FingerLeft"
+        "Neck"
       ],
       "Values": [
         250,
@@ -20303,7 +20313,7 @@
       ],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         100,
@@ -20365,7 +20375,7 @@
       ],
       "WearFlags": [
         "Take",
-        "FingerLeft"
+        "Neck"
       ],
       "Values": [
         18,
@@ -20441,7 +20451,7 @@
       ],
       "WearFlags": [
         "Take",
-        "About"
+        "Wrist"
       ],
       "Values": [
         8,
@@ -20518,7 +20528,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "WieldTwoHanded"
       ],
       "Values": [
         95,
@@ -20602,8 +20613,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         0,
@@ -20657,7 +20668,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Wield"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         3,
@@ -20729,7 +20741,7 @@
       ],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         50,
@@ -20792,7 +20804,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         100,
@@ -20852,7 +20864,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         90,
@@ -20914,8 +20926,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         5,
@@ -20976,7 +20988,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Head"
+        "Feet"
       ],
       "Values": [
         7,
@@ -21048,7 +21060,7 @@
       ],
       "WearFlags": [
         "Take",
-        "FingerRight"
+        "Finger"
       ],
       "Values": [
         0,
@@ -21178,7 +21190,7 @@
       ],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         160,
@@ -21245,8 +21257,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         100,
@@ -21315,7 +21327,7 @@
       ],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         0,
@@ -21439,7 +21451,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist"
+        "Wield"
       ],
       "Values": [
         0,
@@ -21482,8 +21494,8 @@
       ],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight"
+        "Wield",
+        "Hold"
       ],
       "Values": [
         2,
@@ -21655,7 +21667,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "FingerLeft"
+        "Neck"
       ],
       "Values": [
         50,
@@ -21718,7 +21730,7 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "WristRight"
+        "Hold"
       ],
       "Values": [
         107,
@@ -21789,7 +21801,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Hands"
+        "Shield"
       ],
       "Values": [
         5,
@@ -21857,7 +21869,7 @@
       ],
       "WearFlags": [
         "Take",
-        "Hands"
+        "Shield"
       ],
       "Values": [
         15,
@@ -21919,9 +21931,9 @@
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "Waist",
-        "WristRight",
-        "WristLeft"
+        "Wield",
+        "Hold",
+        "Throw"
       ],
       "Values": [
         0,

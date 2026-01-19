@@ -1,0 +1,6718 @@
+{
+  "Zone": {
+    "Id": 50,
+    "Name": "The Great Eastern Desert",
+    "TopRoomId": 5099,
+    "Lifespan": 60,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "R",
+        "IfFlag": 0,
+        "Arg1": 5073,
+        "Arg2": 4,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5015,
+        "Arg2": 3,
+        "Arg3": 5039,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5015,
+        "Arg2": 3,
+        "Arg3": 5033,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5015,
+        "Arg2": 3,
+        "Arg3": 5049,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5017,
+        "Arg2": 1,
+        "Arg3": 5058,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5000,
+        "Arg2": 5,
+        "Arg3": 5047,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7211,
+        "Arg2": 25,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5000,
+        "Arg2": 5,
+        "Arg3": 5033,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 7211,
+        "Arg2": 25,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5001,
+        "Arg2": 8,
+        "Arg3": 5040,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3022,
+        "Arg2": 25,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5002,
+        "Arg2": 5,
+        "Arg3": 5031,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5003,
+        "Arg2": 5,
+        "Arg3": 5050,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5004,
+        "Arg2": 1,
+        "Arg3": 5036,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 5019,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 5020,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 5021,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5005,
+        "Arg2": 1,
+        "Arg3": 5065,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 5024,
+        "Arg2": 5,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 5022,
+        "Arg2": 10,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5023,
+        "Arg2": 100,
+        "Arg3": 5070,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5025,
+        "Arg2": 30,
+        "Arg3": 5023,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5026,
+        "Arg2": 30,
+        "Arg3": 5023,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5027,
+        "Arg2": 30,
+        "Arg3": 5023,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5028,
+        "Arg2": 30,
+        "Arg3": 5023,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5029,
+        "Arg2": 30,
+        "Arg3": 5023,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5030,
+        "Arg2": 30,
+        "Arg3": 5023,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5031,
+        "Arg2": 30,
+        "Arg3": 5023,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5032,
+        "Arg2": 30,
+        "Arg3": 5023,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 1,
+        "Arg1": 5015,
+        "Arg2": 30,
+        "Arg3": 5070,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5006,
+        "Arg2": 1,
+        "Arg3": 5061,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5016,
+        "Arg2": 10,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5007,
+        "Arg2": 1,
+        "Arg3": 5060,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5017,
+        "Arg2": 15,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5008,
+        "Arg2": 5,
+        "Arg3": 5059,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5018,
+        "Arg2": 25,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5009,
+        "Arg2": 10,
+        "Arg3": 5057,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5010,
+        "Arg2": 1,
+        "Arg3": 5011,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5001,
+        "Arg2": 5,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5002,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5011,
+        "Arg2": 3,
+        "Arg3": 5009,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3022,
+        "Arg2": 50,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5012,
+        "Arg2": 3,
+        "Arg3": 5014,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5000,
+        "Arg2": 15,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5013,
+        "Arg2": 4,
+        "Arg3": 5021,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 5014,
+        "Arg2": 1,
+        "Arg3": 5021,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 5003,
+        "Arg2": 25,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5005,
+        "Arg2": 100,
+        "Arg3": 5011,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5006,
+        "Arg2": 100,
+        "Arg3": 5049,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5006,
+        "Arg2": 100,
+        "Arg3": 5031,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5006,
+        "Arg2": 100,
+        "Arg3": 5044,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5007,
+        "Arg2": 100,
+        "Arg3": 5060,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5012,
+        "Arg2": 100,
+        "Arg3": 5007,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5011,
+        "Arg2": 100,
+        "Arg3": 5007,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5008,
+        "Arg2": 100,
+        "Arg3": 5061,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5014,
+        "Arg2": 5,
+        "Arg3": 5008,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5009,
+        "Arg2": 100,
+        "Arg3": 5061,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 5010,
+        "Arg2": 100,
+        "Arg3": 5061,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 5013,
+        "Arg2": 50,
+        "Arg3": 5010,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 5001,
+      "Name": "A long tunnel",
+      "Description": "\n   You encounter some rapids as you enter this tunnel cut out of the\nmountains by the river.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3214,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5002,
+      "Name": "A long tunnel",
+      "Description": "\n   The tunnel branches off north.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5008,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5001,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5003,
+      "Name": "A long tunnel",
+      "Description": "\n   The tunnel branches off south.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5004,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5017,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5004,
+      "Name": "A long tunnel",
+      "Description": "\n   The tunnel branches off to the south.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5005,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5018,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5005,
+      "Name": "An underground lake",
+      "Description": "\n   A underground lake opens up eastly. It looks seminatural as most have\nbeen carved by eons of flowing water but some parts have been, improved,\nchopped away by someone who did not think this lake was large enough.\nSmall passages lead off both south and north while the dark river takes\nyou westly.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5016,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5076,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5023,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5004,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "lake",
+            "water"
+          ],
+          "Description": "\nThe lake is jet-black and there is a constant dripping of water and lime\nfrom above."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5006,
+      "Name": "A long narrow drainage tunnel",
+      "Description": "\n   The tunnel descends slightly to the east to allow possible drained\nwater to pour easily. The tunnel walls are close and you can almost feel\nthe narrowing even more to the east. Westly you can hear the distant\nsound of water dripping.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5007,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5091,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5007,
+      "Name": "A long narrow drainage tunnel",
+      "Description": "\n   The tunnel descends slightly to the east and then abruptly dives down\ninto a brightly lit hole. This must be where all drain water go. What can\nsoak up such amounts of water? Westly,and slightly up the drain tunnel\ncontinue.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5026,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5006,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5008,
+      "Name": "Cave-in",
+      "Description": "\n   You stand at the edge of a large pile of rubble created from the last\nrock slide.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5002,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5009,
+          "Description": "You can easily slide down the rocks without getting hurt.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5009,
+      "Name": "At the foot of the rubble",
+      "Description": "\n   You are at the bottom of a large pile of rubble. A tunnel branches off\nto the north and east.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5010,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5012,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5008,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5010,
+      "Name": "Cave entrance",
+      "Description": "\n   You stand in the middle of a large and beautiful cave. A path leads\ndeeper into the darkness.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5009,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5011,
+          "Description": "You look down into the cave. Bones are strewn about everywhere.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5011,
+      "Name": "Giant cave",
+      "Description": "\n   This cavern overwhelms you. The walls and ceiling seem miles away.\nBones of previous adventurers lie strewn on the cavern floor.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 5010,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5100,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5012,
+      "Name": "Narrow bend",
+      "Description": "\n   The tunnel turns to the south and west.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5013,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5009,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5013,
+      "Name": "Large cave",
+      "Description": "\n   You are standing in a large cave. Many furs are spread out on the\nfloor.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5012,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5014,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5014,
+      "Name": "Damp hallway",
+      "Description": "\n   The walls here are extremely damp, as well as the floor.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5015,
+          "Description": "You hear drops of water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5013,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5015,
+      "Name": "Underground pool",
+      "Description": "\n   You are wading in a knee deep pool of lime-water.",
+      "ZoneId": 50,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5016,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5014,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5016,
+      "Name": "Damp hallway",
+      "Description": "\n   The walls of the tunnel are extremely damp here. You hear the faint\nsound of running water to the south.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5015,
+          "Description": "You hear drops of water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5005,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5017,
+      "Name": "Narrow crawlway",
+      "Description": "\n   This crawlway is just big enough for a human to crawl through or a\nhalfling to walk through.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5003,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5018,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5019,
+          "Description": "You smell the fragrant odor of fungus.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5018,
+      "Name": "Large cavern",
+      "Description": "\n   You have entered a very large cavern. The rock formations would amaze\nalmost any dwarf.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5004,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5017,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5019,
+      "Name": "Fungus patch",
+      "Description": "\n   As you walk through the fungus patch, you are shot at by many millions\nof spores. You can hardly breathe.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5017,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5020,
+          "Description": "The fragrant smell of fungus spores continues to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5020,
+      "Name": "Fungus path",
+      "Description": "\n   As you walk along the path, millions of spores are shot at you. It is\ndifficult to breathe.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5021,
+          "Description": "A giant mushroom temple stands to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5019,
+          "Description": "The fragrant smell of spores continues to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5021,
+      "Name": "Fungus temple",
+      "Description": "\n   You find yourself standing inside of a giant mushroom. The inside is\ndecorated in the fashion of a temple.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5020,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5022,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5022,
+      "Name": "Sloping passage",
+      "Description": "\n   You follow a path sloping down from the fungus temple.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5021,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5023,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5023,
+      "Name": "Sloping passage",
+      "Description": "\n   You are on a path that gently slops up from the underground pool.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5005,
+          "Description": "You hear sounds of trickling water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5022,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5024,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sand constantly shifting around\nyou. A pyramid lies to the east and a snow-capped mountain range to the\nwest.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5030,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5034,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5025,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5025,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the east and a snow-capped mountain range\nto the west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5024,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5031,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5026,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5026,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the east and a snow-capped mountain range\nto the west. The hole which you tumbled out of is too high for you to\nreach.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5025,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5036,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5027,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5027,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the east and a snow-capped mountain range\nto the west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5026,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5033,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5028,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5028,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north-east and a snow-capped mountain\nrange to the west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5027,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5033,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5029,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5029,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north-east and a snow-capped mountain\nrange to the west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5028,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5037,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5044,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5030,
+      "Name": "A small oasis",
+      "Description": "\n   You stand beside a small pool of crystal-blue water bathed in the\nshade of a few scarce palm trees. To the north you see a small encampment\nstopped for the day.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5056,
+          "Description": "You see three tents and some camels hitched to a stake. Shadows moving\nacross the tents suggest activity.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5036,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5032,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5025,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5031,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the east.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5031,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5031,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5032,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5024,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5032,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the east.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5035,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5036,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5033,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5032,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5033,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north-east.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5037,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5037,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5043,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5028,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5034,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the south-east.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5038,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5071,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5034,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5035,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5035,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the east, although it doesn't seem to be\nresting on the ground.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5039,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5040,
+          "Description": "The pyramid seems to be floating about 100 meters in the air. Even from\nhere, you can sense a great evil residing within.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5032,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5034,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5036,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north-east.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5035,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5041,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5032,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5030,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5037,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north-east.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5048,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5033,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5042,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5033,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5038,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the south.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5046,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5045,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5040,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5034,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5039,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the south.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5046,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5039,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5048,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5073,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5040,
+      "Name": "At the Base of the Pyramid",
+      "Description": "\n   The mighty pyramid towers above you out of the hot desert sands, made\nfrom huge blocks of stone that have been coated over with a rough sandy\nplaster-like substance. The face of the pyramid is steep, but you think\nyou might be able to climb it.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5036,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5049,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5041,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5043,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5302,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5041,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5040,
+          "Description": "The pyramid seems to be floating about 100 meters above the desert. Even\nfrom here you can sense the great evil within.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5048,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5041,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5037,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5042,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5049,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5055,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5043,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5041,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5043,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5042,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5055,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5044,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5033,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5044,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north and a ruined city to the west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5050,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5055,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5029,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5200,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5045,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the south.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5045,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5052,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5045,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5038,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5046,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the south-west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5038,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5047,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5047,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5039,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5047,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5046,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5051,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5053,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5040,
+          "Description": "The pyramid seems to be floating about 100 meters above the desert. Even\nfrom here you can sense an evil presence within.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5048,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5039,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5048,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5053,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5041,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5049,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north-west.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5053,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5054,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5050,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5042,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5050,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5050,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5054,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5044,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5042,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5051,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the south-west and a deep canyon to the\neast.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5051,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5052,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5047,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5052,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the south-west and a deep canyon to the\neast. Just below you can make out a tiny ledge.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5051,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5053,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5045,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5063,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5053,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the west and a deep canyon to the east.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5052,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5062,
+          "Description": "A rickety rope bridge stretches across the canyon... it doesn't look too\nsafe.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5054,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5049,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5054,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the west and a deep canyon to the east.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5053,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5055,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5050,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5055,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. A pyramid lies to the north-west and a deep canyon to the\neast.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5054,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5055,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5043,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5056,
+      "Name": "A nomad camp",
+      "Description": "\n   This small group of desert nomads has stopped for the day to rest and\nrefresh themselves beside this beautiful oasis. Three tents and some\ncamels make up the party. From within two of the tents you hear muffled\nvoices, obviously surprised at your visit.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [
+        "NoMagic"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5058,
+          "Description": "Some camels are tied up to a mass of stakes plugged into the ground.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5057,
+          "Description": "You see inside one of the tents a huddled mass of people, probably\nslaves.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5030,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5025,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5057,
+      "Name": "Inside a small tent",
+      "Description": "\n   This is a small and simple tent with few possessions in sight. Lying\nhere and there are young-looking men and women, possibly slaves to the\nleader of this band.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [
+        "NoMagic"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5056,
+          "Description": "You see the center of the nomad camp.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5058,
+      "Name": "Beside the camels",
+      "Description": "\n   Here stand about ten camels, all hitched to some stakes plugged into\nthe ground. To the east you see a small tent while to the north you see a\nlarger, fancier tent.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [
+        "NoMagic"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5060,
+          "Description": "This tent seems to be the temporary abode of the nomad leader. You make a\nmental note to visit it before you leave.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5059,
+          "Description": "In this tent there are very large men, all carrying weapons.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5056,
+          "Description": "You see the center of the nomad camp.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5024,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5059,
+      "Name": "The warrior's tent",
+      "Description": "\n   This tent has a few furnishings, but mainly it holds the band's\nprotectors. They all stare at you coldly as you enter.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [
+        "NoMagic"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5058,
+          "Description": "Outside you see some peaceful camels.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5060,
+      "Name": "The main tent",
+      "Description": "\n   This tent is as lavishly decorated on the inside as it is on the\noutside. A fancy carpet lies on the sand and numerous baskets line the\nwalls.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [
+        "NoMagic"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5061,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5058,
+          "Description": "You see some peaceful camels.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5061,
+      "Name": "The main tent",
+      "Description": "\n   This is where the leader of this band of nomads resides. He is\ndefinitely rich as you inspect the tapestries, baskets, and a few\npaintings as well.",
+      "ZoneId": 50,
+      "Sector": "Field",
+      "Flags": [
+        "NoMagic"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5060,
+          "Description": "You see the entrance to this tent.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5062,
+      "Name": "The rickety rope bridge",
+      "Description": "\n   You carefully begin to walk across the bridge, but suddenly the rope\nbreaks and you fall...\n\n... and fall and fall and fall ...\n\n                to your death on the rocks below.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5063,
+      "Name": "The wind-swept ledge",
+      "Description": "\n   Being very careful not to lose your balance, you look around and find\nthat this canyon is about a half a kilometer deep. To the west is a dark\ncave leading under the desert sands and above you a rope bridge spans the\ngap.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 5064,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5052,
+          "Description": "The desert sands blow down in your face.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5064,
+      "Name": "The cavemouth",
+      "Description": "\n   The air in here is MUCH cooler than outside. From the west you hear\nstrange sounds, but can see nothing. The cave slopes down into the\ndarkness.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5063,
+          "Description": "Outside is lighter and very windy.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5065,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5065,
+      "Name": "The mysterious lair",
+      "Description": "\n   You have stumbled upon the home of something. From the treasure\nhaphazardly strewn about and the rotting carcasses, you would guess that\nthis is a dragon's lair. As to what type, you can't really say. The cave\nnarrows out into a tunnel to the west.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoMagic"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5064,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5066,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5066,
+      "Name": "A wide tunnel",
+      "Description": "\n   This tunnel seems to go on forever into the darkness. You carefully\nfeel your way along the walls.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5065,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5067,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5067,
+      "Name": "A narrower tunnel",
+      "Description": "\n   The tunnel becomes very narrow and you fight to squeeze your way\nthrough. The floor seems to level off a little.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5066,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5068,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5068,
+      "Name": "A narrow crack",
+      "Description": "\n   This part of the tunnel is the hardest to move through as the walls\nmove in to meet you.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5067,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5069,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5069,
+      "Name": "A small cavern",
+      "Description": "\n   It is dark and damp and bats hang from the ceiling. A narrow crack is\nin the east wall. The floor now slopes upwards.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5070,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5068,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5070,
+      "Name": "A small shaft",
+      "Description": "\n   From within this shaft you can see a narrow hole in the roof just\nlarge enough for one person. Back east is the cavern.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5068,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5009,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5071,
+      "Name": "The Great Eastern Desert",
+      "Description": "\n   A vast desert stretches for miles, the sands constantly shifting\naround you. You are standing below a gigantic pyramid floating about 100\nmeters above the ground. To your left hangs a rope which leads straight\nup to the massive structure. From here you can sense the great evil which\nresides within.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5036,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5049,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5048,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5032,
+          "Description": "Sand as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5072,
+          "Description": "The rope leads up to a hole in the pyramid. A shadowy figure hovers over\nthe rope looking down at you.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5072,
+      "Name": "Hanging on the rope",
+      "Description": "\n   About half way up the rope you feel it begin to shake and shudder. You\ndesperately try to shimmy back down the rope, but it unravels and...\nSNAP!!!!!\nAs you plummet to the ground, you look up to see a shadowy figure in the\npyramid grinning an evil grin and brandishing a shiny dagger.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Death"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 5071,
+          "Description": "A looooong way down.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5073,
+      "Name": "Lost in the Desert",
+      "Description": "\n   Blinking to clear the sand from your eyes, you try and get some idea\nof where you are. The problem is, every direction looks the same sand\nas far as the eye can see, and a haze of sandy dust hanging over\neverything. You have heard that people wandering in the desert\nsee mirages, which is undoubtably what that long stairway is, just on\nthe horizon, after all - who would build a stairway in the middle of\nthe desert?",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "NoTrack"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5048,
+          "Description": "You can't see much through the desert haze.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5034,
+          "Description": "You can't see much through the desert haze.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5036,
+          "Description": "You can't see much through the desert haze.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 14300,
+          "Description": "You can't see much through the desert haze.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5075,
+      "Name": "South west corner of a underground lake",
+      "Description": "\n   The underground lake continues north and east. The seminatural cave\nhave been carved by eons of flowing water but some parts have been,\nimproved, chopped away by someone who did not think this lake was large\nenough.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5076,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5084,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5076,
+      "Name": "On a underground lake",
+      "Description": "\n   The dark water lie almost still with the exception of whatever stir\nyou might cause. Looking around in the cave you are in you can see from\nthe roof that it is only seminatural as someone has been improving\ntransportability over this lake by removing, what you think were, certain\nstone formations. The route is now open for whoever sails these dark \nwaters. The lake surround you in all horizontal directions.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5077,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5085,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5075,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5005,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5077,
+      "Name": "North west corner of a underground lake",
+      "Description": "\n   The underground lake continues south and east. The seminatural cave\nhave been carved by eons of flowing water but some parts have been,\nimproved, chopped away by someone who did not think this lake was large\nenough.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5086,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5076,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5078,
+      "Name": "Up on a buoy metal construct",
+      "Description": "\n   The metal construct is bolted into the very cave ceiling, causing the\nbuoy to be fixated. As you think of it, you realize that there is no\nother way if you want to measure the water level. If it was floating it\nwould just follow the surface. A work of dwarf geniousity, be sure of it.",
+      "ZoneId": 50,
+      "Sector": "Mountain",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "NoMagic",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "Down",
+          "TargetId": 5085,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5079,
+      "Name": "Below a buoy",
+      "Description": "\n   The buoy is NOT fixated to anything. How could it then measure the\nwater level. If it floats it just floats revealing nothing!\nAround you the water is dark, but you can still see a pile of rubble\nlying on the lake bed.",
+      "ZoneId": 50,
+      "Sector": "Underwater",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Chaotic",
+        "Silent",
+        "NoTeleport"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 5085,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pile",
+            "rubble"
+          ],
+          "Description": "\n A large load of stones. As you examine it closer you notice a skeletal\nhand streching out from below it."
+        },
+        {
+          "Keywords": [
+            "hand",
+            "skeleton",
+            "skeletal"
+          ],
+          "Description": "\n On the rather large hand, at least seen with human standards, you see a\nrusty knuckle duster. Engraved on it is, still today clearly visible, the\nname 'GRIFO'. Poor bugger. You leave him and his belongings be as you are\npretty sure that someone was rather displeased with him."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5083,
+      "Name": "A small quay",
+      "Description": "\n   Apperantly this part of the underground lake is travelled by people \nthat actually use this shipping route. They frequently anchor up here \nwhile waiting for something, perhaps their turn in line or they are just \nreadying their ship for a longer journey. The cave wall is smooth and \nthere are clear signs that someone has improved this part of the \nunderground cave to better fit ships. Toward the north the underground \nlake stretches out its dark arms.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5084,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5084,
+      "Name": "On a underground lake",
+      "Description": "\n   The dark water lie almost still with the exception of whatever stir\nyou might cause. Looking around in the cave you are in you can see from\nthe roof that it is only seminatural as someone has been improving\ntransportability over this lake by removing, what you think were, certain\nstone formations. The route is now open for whoever sails these dark \nwaters. The lake surround you in all horizontal directions.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5085,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5088,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5083,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5075,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5085,
+      "Name": "Next to a buoy",
+      "Description": "\n   In the centre of the underground lake a large buoy floats. It has got\ncolourful circles painted around its body and on top there is a high\nmetal construct with some signs on, that reach up to the cave ceiling.\nAround you the dark water strech out in all directions as far as you can\nsee.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5086,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5089,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5084,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5076,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 5078,
+          "Description": " You can climb the metal construct on top of the buoy.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 5079,
+          "Description": " You can dive down into the water and examine how the buoy is fixated.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "buoy"
+          ],
+          "Description": "\n The lines are most presumably water level indicators, showing how deep\ndown it is to the cave ground."
+        },
+        {
+          "Keywords": [
+            "Sign",
+            "signs"
+          ],
+          "Description": "\nThe signs read :\n\n                                *Midgaard*\n\n\n*Dwarven Undermountain Harbour Town*            *Drainage*\n\n\n                                  *Quay*\n\n\nOn the *drainage* sign someone has scrabbled down som more text."
+        },
+        {
+          "Keywords": [
+            "drainage",
+            "scrabble",
+            "text"
+          ],
+          "Description": "\n\n \"Griffo Orc was heere\"\n\nObviously some kind of vandal that wanted to be know. But you never heard\nof him so one could guess he never really succeded."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5086,
+      "Name": "On a underground lake",
+      "Description": "\n   The dark water lie almost still with the exception of whatever stir\nyou might cause. Looking around in the cave you are in you can see from\nthe roof that it is only seminatural as someone has been improving \ntransportability over this lake by removing, what you think were, certain \nstone formations. Now the ceiling is high enough for sailing ships \neven though there is no wind. The lake surround you in all horizontal\ndirections, but north, where a small channel leads off into the mountain.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5087,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5090,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5085,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5077,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5087,
+      "Name": "On a underground water channel",
+      "Description": "\n   The water channel is wide enough only for one vessel, so you better\nhope that noone bigger than you is going the opposite direction. The\nchannel coninue north while it seems to open up to the south.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5092,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5086,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5088,
+      "Name": "South east corner of a underground lake",
+      "Description": "\n   The underground lake continues north and west. The seminatural cave\nhave been carved by eons of flowing water but some parts have been,\nimproved, chopped away by someone who did not think this lake was large\nenough.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5089,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5084,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5089,
+      "Name": "On a underground lake",
+      "Description": "\n   The dark water lie almost still with the exception of whatever stir\nyou might cause. Looking around in the cave you are in you can see from\nthe roof that it is only seminatural, as someone has been improving\ntransportability over this lake by removing, what you think were, certain\nstone formations. The route is now open for whoever sails these dark\nwaters. The lake surround you in all horizontal directions.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5090,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 5091,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5088,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5085,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5090,
+      "Name": "Northeast corner of a underground lake",
+      "Description": "\n   The underground lake continues south and west. The seminatural cave\nhave been carved by eons of flowing water but some parts have been,\nimproved, chopped away by someone who did not think this lake was large\nenough.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 5089,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5086,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5091,
+      "Name": "East side of a underground lake",
+      "Description": "\n   A small drain have been carved out, making a small tunnel that lead \noff eastly into the mountain, from the eastmost part of a underground lake\nthat strech out westly. The drain is probably used during the spring\nflood to limit the water level of this underground basin.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5006,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5089,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5092,
+      "Name": "A water channel",
+      "Description": "\n   The submountain water channel leads you north or south depending of\nyour targeted destination and of course depending on the big traffic\nships, that one has to avoid in the narrow tunnel. If one of them come \ndown the channel, you are clearly a potential wallsmear. There really is \nno room to meet, so the biggest vessel goes first, or through if unlucky..",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5093,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5087,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5093,
+      "Name": "A water channel",
+      "Description": "\n   The submountain water channel leads you north or south depending of\nyour targeted destination and of course depending on the big traffic\nships that one has to avoid in the narrow tunnel. There really is no room\nto meet, so the biggest vessel goes first.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5094,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5092,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5094,
+      "Name": "A water channel",
+      "Description": "\n   The submountain water channel leads you east or south depending of\nyour targeted destination and of course depending on the big traffic\nships that one has to avoid in the narrow tunnel. There really is no room\nto meet, so the biggest vessel, or the ones with the biggest fog horn,\ngoes first.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel",
+        "NoTrack",
+        "NoScout"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 5095,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5093,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5095,
+      "Name": "A water channel",
+      "Description": "\n   The submountain water channel leads you west or north depending of\nyour targeted destination and of course depending on the big traffic\nships that one has to avoid in the narrow tunnel. There really is no room\nto meet, so what appears to be the biggest vessel, goes first.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel",
+        "NoTrack",
+        "NoScout"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5096,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 5094,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5096,
+      "Name": "A water channel",
+      "Description": "\n   The submountain water channel leads you north or south depending of\nyour targeted destination and of course depending on the big traffic\nships, that one has to avoid in the narrow tunnel. Be on your guard for \nlarge waves or the warning sound of a ship fog horn.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5097,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5095,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5097,
+      "Name": "A water channel",
+      "Description": "\n   The tunnel is quite narrow and it seems that only one standard size \ncargo ship can pass along the tunnel at the time. There really is no \nroom to meet, so you would better stay out of the way when a boat glides \nby. North and south is your choise of way and you should hurry before \nthree is a boat coming.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 5098,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5096,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5098,
+      "Name": "A water channel",
+      "Description": "\n   The submountain water channel goes north or south in a narrow dug out \ntunnel, where there is no room for you AND a boat. So it is strongly \nsuggested to keep out of the way, when the cargo ships glide by at a very \nshort distance. The sound of the ships fog horns can be a signal about a \nincoming danger, but far from all use that feat.",
+      "ZoneId": 50,
+      "Sector": "WaterNoSwim",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Tunnel"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 13222,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 5097,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 5099,
+      "Name": "A Final room - filled with comments",
+      "Description": "\n   Enter Comments Below:\nRooms #05-#07 was edited and #75-#99 created as a entry to zone 132.\nDwarven Undermountain Harbour Town                      -Egba.\n\n\nThere is no room #00, #74, #80, #81, #82\nAdd R4 to 50.zon file for room #85",
+      "ZoneId": 50,
+      "Sector": "Inside",
+      "Flags": [
+        "GodRoom"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 5000,
+      "Name": "dervish raggity",
+      "ShortDescription": "\nthe dervish",
+      "LongDescription": "\nA raggity dervish walks on aimlessly.",
+      "Description": "\nDressed in loose fitting rags, this man looks like he could use some rest.",
+      "Level": 5,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Scavenger",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Hide"
+      ],
+      "Alignment": 900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+60",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 70,
+      "Experience": 600,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5001,
+      "Name": "dervish large",
+      "ShortDescription": "\nthe dervish",
+      "LongDescription": "\nA large dervish watches for signs of trouble.",
+      "Description": "\nDressed in loose fitting rags, this man looks like he could use LOTS of rest.",
+      "Level": 8,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "Hide"
+      ],
+      "Alignment": 650,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+100",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150,
+      "Experience": 1500,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5002,
+      "Name": "snake coral",
+      "ShortDescription": "\nthe coral snake",
+      "LongDescription": "\nA brightly colored snake slithers along the sands.",
+      "Description": "\nThis relatively harmless snake has bright alternating bands of red, yellow\nand black.",
+      "Level": 4,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d6+40",
+        "Mana": 140,
+        "Move": 140
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d9+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 500,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5003,
+      "Name": "scorpion small",
+      "ShortDescription": "\nthe small scorpion",
+      "LongDescription": "\nA small, red scorpion scuttles away at your approach.",
+      "Description": "\nThe little tail is mighty dangerous for such a small creature.",
+      "Level": 3,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d6+40",
+        "Mana": 130,
+        "Move": 125
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 400,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5004,
+      "Name": "worm giant purple",
+      "ShortDescription": "\nthe sand worm",
+      "LongDescription": "\nA giant, purple sand worm thrusts up out of the sand and attacks!",
+      "Description": "\nHe's big, mean, and purple.  Watch out!",
+      "Level": 30,
+      "Race": "Mount",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "SenseLife"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d10+350",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 10,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d7+14"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2540,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5005,
+      "Name": "dragon brass",
+      "ShortDescription": "\nthe brass dragon",
+      "LongDescription": "\nA very large brass dragon steps out of the darkness and says \"Hello\".\nThen adds to it, \"Prepare to die, have a nice day!\"",
+      "Description": "",
+      "Level": 20,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 950,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+300",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 7,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+4"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 20000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5006,
+      "Name": "nomad leader",
+      "ShortDescription": "\nthe nomad leader",
+      "LongDescription": "\nThe nomad leader sits silently in prayer.",
+      "Description": "\nHe is clad in silk robes lined with gold thread. At his side is a large,\nengraved cutlass.  He has an especially haughty air about him.",
+      "Level": 14,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Wimpy",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 950,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+170",
+        "Mana": 240,
+        "Move": 290
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d8+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 6000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5007,
+      "Name": "nomad commander",
+      "ShortDescription": "\nthe nomad commander",
+      "LongDescription": "\nThe nomad commander stands here staring at you suspiciously.",
+      "Description": "\nThis is the nomad leader's second in command.  His clothes are richly woven\nof silk and gold thread.  A nasty cutlass hangs at his side.",
+      "Level": 12,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Wimpy",
+        "Memory"
+      ],
+      "Affects": [],
+      "Alignment": 900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+135",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 600,
+      "Experience": 3500,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5008,
+      "Name": "nomad warrior",
+      "ShortDescription": "\nthe nomad warrior",
+      "LongDescription": "\nA proud nomad warrior stands here.",
+      "Description": "",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 700,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d6+105",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 300,
+      "Experience": 2200,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5009,
+      "Name": "slave young",
+      "ShortDescription": "\nthe slave",
+      "LongDescription": "\nA young slave sits here staring at you with pleading eyes.",
+      "Description": "",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d4+25",
+        "Mana": 130,
+        "Move": 125
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 300,
+      "DefaultPosition": "Resting",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5010,
+      "Name": "dracolich lich",
+      "ShortDescription": "\nthe dracolich",
+      "LongDescription": "\nA pile of bones rises up to form a skeletal dracolich.",
+      "Description": "\nThe dracolich is now only bone with pieces of flesh hanging from it.\nObviously it no longer fears death.",
+      "Level": 34,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Invisible",
+        "DetectInvis",
+        "Sanctuary",
+        "Fear"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+320",
+        "Mana": 440,
+        "Move": 590
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 7,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "3d5+25"
+        },
+        {
+          "Type": "Attack_4",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "3d0+90"
+        },
+        {
+          "Type": "Attack_25",
+          "DamageType": 0,
+          "Chance": 5,
+          "DamageDice": "1d0+90"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+90"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 7500,
+      "Experience": 140000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5011,
+      "Name": "drider drow",
+      "ShortDescription": "\nthe drider",
+      "LongDescription": "\nThe drider looks at you viciously while it draws its sword.",
+      "Description": "\nThis half-spider, half-drow creature is a formidable opponent.",
+      "Level": 8,
+      "Race": "Mount",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d6+95",
+        "Mana": 180,
+        "Move": 200
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d6+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 200,
+      "Experience": 1500,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5012,
+      "Name": "duergar dark dwarf",
+      "ShortDescription": "\nthe dark dwarf",
+      "LongDescription": "\nA duergar is here mining precious stones with his pick.",
+      "Description": "\nThe duergar could crush your head as easily as it does those rocks.",
+      "Level": 5,
+      "Race": "Dwarf",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d11+60",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 30,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d5+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 170,
+      "Experience": 600,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5013,
+      "Name": "myconoid",
+      "ShortDescription": "\nthe myconoid",
+      "LongDescription": "\nA myconoid lumbers along peacefully.",
+      "Description": "\nThe myconoid looks something like a giant mushroom (and probably has the same\neffect).",
+      "Level": 6,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 850,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+68",
+        "Mana": 160,
+        "Move": 170
+      },
+      "Combat": {
+        "Armor": 40,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d7+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 50,
+      "Experience": 600,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5014,
+      "Name": "myconoid shaman",
+      "ShortDescription": "\nthe myconoid shaman",
+      "LongDescription": "\nA rather large myconoid stands here chanting in a strange tongue.",
+      "Description": "\nThe shaman shoots spores into the air.",
+      "Level": 14,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Spec",
+        "Scavenger",
+        "Wimpy",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 950,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+173",
+        "Mana": 240,
+        "Move": 290
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 5,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d7+2"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1500,
+      "Experience": 5500,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5015,
+      "Name": "dustdigger",
+      "ShortDescription": "\nthe dustdigger",
+      "LongDescription": "\nA small oasis invites you to dive in.",
+      "Description": "",
+      "Level": 7,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "Fear"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d6+85",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 450,
+      "Experience": 1000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 5017,
+      "Name": "camel rabid",
+      "ShortDescription": "\nthe rabid camel",
+      "LongDescription": "\nA very dangerous rabid camel snorts at you.",
+      "Description": "\nDon't mess with this animal.",
+      "Level": 5,
+      "Race": "Mount",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d6+60",
+        "Mana": 150,
+        "Move": 155
+      },
+      "Combat": {
+        "Armor": 60,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d4+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 270,
+      "Experience": 900,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 7211,
+      "Name": "sword short",
+      "ShortDescription": "\na short sword",
+      "Description": "\nA short sword is lying here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 6,
+      "AntiClass": "546",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        2,
+        5,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 2,
+          "DiceSides": 5,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 2500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "short",
+            "sword"
+          ],
+          "Description": "\nThis is a very nice little weapon."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5000,
+      "Name": "pick",
+      "ShortDescription": "\na small mining pick",
+      "Description": "\nA small mining pick made of what appears to be silver lies on the ground.",
+      "ActionDescription": "\npierce",
+      "Type": "Weapon",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiGood"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        9,
+        11,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 9,
+          "DamageType": 11,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 600,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5001,
+      "Name": "banded mail",
+      "ShortDescription": "\na glowing suit of banded mail",
+      "Description": "\nA glowing suit of banded mail lies on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 30,
+      "AntiClass": "4369",
+      "ExtraFlags": [
+        "Glow",
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 7,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 7500,
+      "CostPerDay": 2000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 2
+        },
+        {
+          "Location": "Armor",
+          "Modifier": -4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5002,
+      "Name": "halberd",
+      "ShortDescription": "\na halberd",
+      "Description": "\nA mighty halberd lies against the wall.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 30,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "Bless"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        5,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 5,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 16,
+      "Cost": 1200,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5003,
+      "Name": "amulet",
+      "ShortDescription": "\nan amulet",
+      "Description": "\nA mushroom shaped amulet lies on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 4,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "FingerLeft"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 0,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 150,
+      "CostPerDay": 400,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Constitution",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5005,
+      "Name": "bone",
+      "ShortDescription": "\na large leg bone",
+      "Description": "\nA large leg bone rests on the ground.",
+      "ActionDescription": "\ncrush",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        4,
+        7,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 4,
+          "DamageType": 7,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 300,
+      "CostPerDay": 60,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5006,
+      "Name": "cactus",
+      "ShortDescription": "\na small cactus cup",
+      "Description": "\nA small cactus cup lies on the ground.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        5,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 5,
+          "Amount": 5,
+          "Liquid": 0,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 30,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5007,
+      "Name": "basket",
+      "ShortDescription": "\na small wicker basket",
+      "Description": "\nA small wicker basket sits on the ground.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        100,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 100,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 500,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5008,
+      "Name": "basket",
+      "ShortDescription": "\na small wicker basket",
+      "Description": "\nA small wicker basket sits on the ground.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        100,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 100,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 500,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5009,
+      "Name": "basket",
+      "ShortDescription": "\na small wicker basket",
+      "Description": "\nA small wicker basket sits on the ground.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        100,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 100,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 500,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5010,
+      "Name": "basket",
+      "ShortDescription": "\na small wicker basket",
+      "Description": "\nA small wicker basket sits on the ground.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        100,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 100,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 500,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5011,
+      "Name": "rope",
+      "ShortDescription": "\na coil of rope",
+      "Description": "\nA long coil of rope lies on the ground.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 12,
+      "Cost": 450,
+      "CostPerDay": 45,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5012,
+      "Name": "stakes",
+      "ShortDescription": "\na bunch of stakes",
+      "Description": "\nA small bundle of stakes lies here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 6,
+      "Cost": 250,
+      "CostPerDay": 30,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5013,
+      "Name": "map",
+      "ShortDescription": "\nan old, tattered map",
+      "Description": "\nAn old, tattered, and much faded map lies here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 1,
+      "Cost": 300,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5014,
+      "Name": "turban",
+      "ShortDescription": "\na thick padded turban",
+      "Description": "\nA thick padded turban lies here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 6,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck2"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 0,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 430,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Armor",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5015,
+      "Name": "coins treasure",
+      "ShortDescription": "\na great pile of treasure",
+      "Description": "\nA great, gleaming pile of treasure lies at your feet.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        26270,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 26270
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5016,
+      "Name": "sabre",
+      "ShortDescription": "\na long, curved sabre",
+      "Description": "\nA long, curved sabre stands upright in the ground.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        8,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 7,
+      "Cost": 1050,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5017,
+      "Name": "scimitar",
+      "ShortDescription": "\na curved scimitar",
+      "Description": "\nA curved scimitar lies at your feet.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        7,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 7,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 600,
+      "CostPerDay": 150,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5018,
+      "Name": "cutlass",
+      "ShortDescription": "\na long, pointed cutlass",
+      "Description": "\nA long, pointed cutlass lies here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        7,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 7,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 550,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5019,
+      "Name": "potion pink",
+      "ShortDescription": "\na pink potion",
+      "Description": "\nA pink potion stands here.",
+      "ActionDescription": "",
+      "Type": "Potion",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        25,
+        17,
+        33,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 25,
+          "SpellIds": [
+            17,
+            33,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 6,
+      "Cost": 600,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5020,
+      "Name": "wand platinum",
+      "ShortDescription": "\na platinum wand",
+      "Description": "\nA platinum wand lies here.",
+      "ActionDescription": "",
+      "Type": "Wand",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Hum"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        30,
+        10,
+        10,
+        32,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 32,
+          "Level": 30,
+          "Charges": 10,
+          "ChargesRemaining": 10
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 1900,
+      "CostPerDay": 1000,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5021,
+      "Name": "bow golden",
+      "ShortDescription": "\na golden bow",
+      "Description": "\nA powerful golden bow lies here.",
+      "ActionDescription": "\nblast",
+      "Type": "Weapon",
+      "Level": 20,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "Bless"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        6,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 6,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 5000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5022,
+      "Name": "scroll encrypted",
+      "ShortDescription": "\nan encrypted scroll",
+      "Description": "\nAn encrypted scroll lies at your feet.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 5,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        22,
+        14,
+        35,
+        43,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 22,
+          "SpellIds": [
+            14,
+            35,
+            43
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 7,
+      "Cost": 150,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5023,
+      "Name": "chest",
+      "ShortDescription": "\nan iron bound chest",
+      "Description": "\nAn iron bound chest with a shiny lock sits here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        200,
+        13,
+        5024,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 200,
+          "Flags": [
+            "Closeable",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 5024,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 200,
+      "Cost": 100,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5024,
+      "Name": "key golden",
+      "ShortDescription": "\na golden key",
+      "Description": "\nA shiny golden key lies here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        120
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 10,
+          "Timer": 0,
+          "TimerSet": 120
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 150,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5025,
+      "Name": "bracelet copper",
+      "ShortDescription": "\na copper bracelet",
+      "Description": "\nA tarnished copper bracelet lies at your feet.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        -5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": -5,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 2300,
+      "CostPerDay": 2500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hit",
+          "Modifier": 10
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": -4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5026,
+      "Name": "gem ruby",
+      "ShortDescription": "\na large ruby",
+      "Description": "\nA large ruby lies on the ground, collecting dust.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 9,
+      "Cost": 2000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5027,
+      "Name": "gem diamond",
+      "ShortDescription": "\na glittering diamond",
+      "Description": "\nA glittering diamond lies at your feet.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 12,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 10,
+      "Cost": 2500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5028,
+      "Name": "gem sapphire",
+      "ShortDescription": "\na brilliant sapphire",
+      "Description": "\nA brilliant sapphire lies here, twinkling happily.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 10,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        22,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 7,
+      "Cost": 3500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5029,
+      "Name": "gem lapis",
+      "ShortDescription": "\na deep blue lapis lazuli",
+      "Description": "\nA deep blue lapis lazuli gem lies here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 12,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 11,
+      "Cost": 3500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5030,
+      "Name": "jewel tiger",
+      "ShortDescription": "\nthe Tiger Jewel",
+      "Description": "\nThe Tiger Jewel lies here blazing.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Bless"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 23,
+      "Cost": 4300,
+      "CostPerDay": 1500,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5031,
+      "Name": "jewel red-eyed",
+      "ShortDescription": "\nthe red-eyed jewel",
+      "Description": "\nThe red-eyed jewel glares at you greedily.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 30,
+      "Cost": 3500,
+      "CostPerDay": 600,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": -2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5032,
+      "Name": "gem emerald",
+      "ShortDescription": "\na fiery green emerald",
+      "Description": "\nA fiery green emerald sits here.",
+      "ActionDescription": "",
+      "Type": "Treasure",
+      "Level": 11,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        23,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 7,
+      "Cost": 1500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3022,
+      "Name": "sword long",
+      "ShortDescription": "\na long sword",
+      "Description": "\nA long sword has been left here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        8,
+        3,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 100
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 600,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

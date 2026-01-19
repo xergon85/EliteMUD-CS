@@ -346,28 +346,28 @@ internal static class LegacyImportLookup
         "Chaos"
     };
 
+    // Wear flags mapping from legacy .obj files (builder's guide)
+    // Letter 'a' = bit 0, 'b' = bit 1, etc.
+    // See: docs/builders_guide/obj_over.html (Wear Flags section)
     private static List<string> ItemWearFlagNames => new()
     {
-        "Take",
-        "FingerRight",
-        "FingerLeft",
-        "Neck1",
-        "Neck2",
-        "Body",
-        "Head",
-        "Legs",
-        "Feet",
-        "Hands",
-        "Arms",
-        "Shield",
-        "About",
-        "Waist",
-        "WristRight",
-        "WristLeft",
-        "Wield",
-        "Hold",
-        "Throw",
-        "WieldTwoHanded"
+        "Take",           // a = bit 0
+        "Finger",         // b = bit 1
+        "Neck",           // c = bit 2
+        "Body",           // d = bit 3
+        "Head",           // e = bit 4
+        "Legs",           // f = bit 5
+        "Feet",           // g = bit 6
+        "Hands",          // h = bit 7
+        "Arms",           // i = bit 8
+        "Shield",         // j = bit 9
+        "About",          // k = bit 10
+        "Waist",          // l = bit 11
+        "Wrist",          // m = bit 12
+        "Wield",          // n = bit 13
+        "Hold",           // o = bit 14
+        "Throw",          // p = bit 15 (not implemented in legacy)
+        "WieldTwoHanded"  // q = bit 16
     };
 
     private static List<string> ItemExtraFlagNames => new()

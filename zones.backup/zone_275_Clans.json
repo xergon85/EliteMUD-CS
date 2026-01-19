@@ -1,0 +1,2212 @@
+{
+  "Zone": {
+    "Id": 275,
+    "Name": "Clans",
+    "TopRoomId": 27599,
+    "Lifespan": 1,
+    "ResetMode": "ResetNever",
+    "ResetCommands": [
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 10,
+        "Arg2": 100,
+        "Arg3": 27501,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 9,
+        "Arg2": 100,
+        "Arg3": 27515,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 15,
+        "Arg2": 100,
+        "Arg3": 27511,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 8,
+        "Arg2": 100,
+        "Arg3": 27516,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27509,
+        "Arg2": 100,
+        "Arg3": 27518,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 27500,
+        "Arg2": 100,
+        "Arg3": 27506,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 15,
+        "Arg2": 100,
+        "Arg3": 27519,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 27500,
+        "Arg2": 1,
+        "Arg3": 27504,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27501,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27502,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27503,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27504,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 27505,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 27500,
+      "Name": "#wThe Academy Archives#N",
+      "Description": "\n   In the vast basement of the Academy of the Midnight Sun huge amounts \nof just about everything is stored. The Academy goes by the rule that \nanything that is not being used at the moment and seems to be the least \nbit useful is to be archived. After all, somebody might need it for their \nstudies sometime in the distant future.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 27506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27501,
+      "Name": "#wBy the Tower#N",
+      "Description": "\n   You see before you a majestic palace of gold, surrounded by rolling \nhills, deep valleys, wooded forests, and deep blue lakes. Not long ago, \nthis was the home of the rulers of this world, their companions and \nservants, and their favourites among the mortals.\nHowever, something looks different. The palace is not what it used to be.\nThere is an all new atmosphere around the place, an atmosphere of wisdom \nand knowledge that you have never felt here before. This used to be a \nquiet place, but now students and lectors are walking around, holding \nintellectual or philosophical discussions. You come to realise that the \npalace has been rebuilt completely, and that it now looks rather small \ncompared to the huge tower to the west of it. A huge oak gate leads into \nthe tower. There is an inscription on it.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3000,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27502,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak",
+            "gate"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "inscription",
+            "sign"
+          ],
+          "Description": "\nThe Academy of #bT#Ch#we #bM#Ci#wdnig#Ch#bt S#Cu#wn#N."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27502,
+      "Name": "#wThe Entrance Room#N",
+      "Description": "\n   As you enter the Academy of the Midnight Sun, an air of freedom\nsurrounds you, and you feel that you are in the presence of intellectual\natmosphere. At the same time, you get a feeling of peace and tranquility.\nRight ahead of you is a small gallery.\n#GThere is a sign on the wall.#W",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27501,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\n         Welcome to Academy of #bT#Ch#we #bM#Ci#wdnig#Ch#bt S#Cu#wn#N!\n\n                       Some useful directions:\n\nA.  Regen room    (#wMarble Foyer#W)         #wne#W      from here.\nB.  Clan board    (#wLibrary#W)              #wnus#W     from here.\nC.  Shopkeeper    (#wLounge#W)               #wnn#W      from here.\nD.  Donation room (#wThe Academy Archives#W) #wned#W     from here.\n\n         This place from #rtemple#W             #wwnw#W."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27503,
+      "Name": "#wThe Gallery#N",
+      "Description": "\n   The walls in this room are covered with paintings of ancient \nphilosophers and scientists, as well as contemporary ones. There are also \na number of busts, of which you recognise some as portraying famous \nchampions of peace and equality. In the far end of the room, there is a \nspiral staircase leading up, on the right wall is a door with a sign \nreading \"To the Museum\" on it and straight ahead you see something that \nreminds you of a tavern, only more calm.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27504,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27502,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27504,
+      "Name": "#wThe Lounge#N",
+      "Description": "\n   During their free time, students at the Academy often come here to \nrelax and have a drink or a meal. You could have thought this was a \ntavern, but it isn't quite rowdy enough, and smells much, much too good. \nIn the far right of the room is a counter and on the wall behind it you \nsee a menu. There are a number of windows and a door on the left wall, \nleading out to the exercising grounds of the Academy.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27505,
+      "Name": "#wThe Exercising Grounds#N",
+      "Description": "\n   To this small, enclosed field on the west side of the Academy tower\nstudents often come to bide their time with jousting and fencing or to\npractice spellcasting or martial arts. In a roofed area by the tower you \nsee a large collection of swords, rapiers, sabres and other odd weapons. \nThey all seem to be surrounded by a faint glow. There is a small stable \nnext to it.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "PkOk",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27504,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27505,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27506,
+      "Name": "#wThe Marble Foyer#N",
+      "Description": "\n   Paintings, chandelliers, marble stairways, murals - nothing can fully\ndescribe the wealth that is on display here. For some reason, it seems a\nlittle quiet today - perhaps everyone is out adventuring.\n#GThere is a sign on the wall.#N",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27530,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27507,
+          "Description": "door",
+          "Keywords": [
+            "#G#Y#W#R#g#c#g#m#b#W",
+            "dveri"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe ELITE Palace Museum of The Academy of the Midnight Sun\n\nWelcome to the Palace Museum. In here, we have preserved a part of the \npalace that used to be situated here, so that students at the Academy may \nsee what this place used to look like before the Academy was built.\nIn each room there is a sign describing the past use of that room. Enjoy \nyour visit.\n\nThe Marble Foyer used to be the majestic entrance to the whole palace, \nand was also the place where its inhabitants took a rest after \nadventuring. As you can see, the sofas, armchairs and divans are still \nhere and can still be used.\nFeel free to try them out.\nThe stairs next to this sign lead down to the Academy Archives, which \nhave been installed below the old palace."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27507,
+      "Name": "#wSpinner's Relaxation Room#N",
+      "Description": "\n   There are a lots of shelfs filled with ancient books, CDs and some odd\nstorage devices. There is shield of #:r#yE#bL#yI#bT#yE#:N#N on the wall and banner\nof #bT#Ch#we #bM#Ci#wdnig#Ch#bt S#Cu#wn#N on opposite wall. You feel something odd \nin the room. It is much bigger inside than you can ever imagine from outside!",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27506,
+          "Description": "door",
+          "Keywords": [
+            "#G#Y#W#R#g#c#g#m#b#W,",
+            "dveri"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "concealed_sign",
+            "hidden_sign"
+          ],
+          "Description": "\nThis is the room of Spinner, one of the former members of the ELITE clan. \nHe is now a student here at the Academy, and the superintendent of this \nmuseum.  This sign has been concealed for the sake of Spinner's privacy, \nso please do not ask us to make it more conspicuous."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27508,
+      "Name": "#wThe Throne Room#N",
+      "Description": "\n   Could it be? Yes, this throne is cut out of a single, flawless, \nsolitary diamond. A regal red carpet leads up to it, and you kneel down \nout of respect, as the sheer power of the clan eminates before you. \nThousands upon thousands of gems litter the room, and the sparkle of them \nilluminates the room in an almost surreal manner. It is no wonder that \nonly the creme de la creme can be found here, as this is truly elite!\n#GThe ELITE clan bulletin board is mounted on a wall here.#N\n#GThere is a sign on the wall.#N",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27509,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27530,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a ELITE clan bulletin board.  Usage: READ/REMOVE <messg ##>,\nWRITE <header>.\nYou will need to look at board to save your message.\nThere are #w4#W messages.\n#w1#N  : #YThu Feb 10#c (Whole clan) #W:: #rCLAN BOARD and greetings :)#W\n#w2#N  : #YFri Jan 15#c (Cardinal)   #W:: #wIdea of Code for AMS clan#W\n#w3#N  : #YFri Apr  4#c (Rasputen)   #W:: #gClan Councill#W\n#w4#N  : #YMon Jan 27#c (Greyfair)   #W:: #gQuitting#W\n#w5#N  : #YSat Feb 25#c (IO)         #W:: #rRanks of ELITE clan#W"
+        },
+        {
+          "Keywords": [
+            "1"
+          ],
+          "Description": "\nMessage 1 : #YThu Feb 10#W #c(Whole clan)#W:: #rCLAN BOARD and greetings\n:)#W\n\n   Real AMS CLAN BOARD is #wsswus#W from here in Library room.\n\nThis is ELITE clan memorial board. Only one message per each period\n                of #:r#yE#bL#yI#bT#yE#:N#N clan story is keeped.\n\n   We shall thank all clannies who helped to build new clan house.\n\n   Special thanks to #GMelody#W who worked hard to implement it all."
+        },
+        {
+          "Keywords": [
+            "2"
+          ],
+          "Description": "\nMessage 2 : #YFri Jan 15#W #c(Cardinal)   #W:: #wIdea of Code for AMS clan#W\n\n                       MORTAL CODE OF ETHICS\n\nI.     Be fair.  This doesn't just mean to try to act fair.  It also \n       means avoiding situations in which your impartiality can be \n       compromised.  These situations can include posting on board cases \n       where clan members, friends, signifigant others or enemies are \n       concerned.  If this means waiting until another non-involved \n       mortal arrives, so be it.\n\n       A.  Fairness is more important than justice.\n       B.  If you are personally involved in a rules dispute, odds are \n           you can't be fair.  Get another mortal to adjudicate it.\n       C.  Your mortal is a tool to be used to help the mud, not a bonus\n           to help your immortals or the immortals of others.  This means\n           you should avoid situations where your mortal gives you an \n           edge in politics. Dont cheat - it helps some useless immortals \n           to look as useful. If you found a bug, try to report it to \n           115+, but not to your clannie/RL friend imm.\n           If you are online, resist the urge to log on a immortal when\n           you see someone stole kill from you.\n\nII.    Listen.  Don't assume things about immortals, and don't act like \n       they all are stupid.  If they are talking to us, they may be have \n       something important to say.\n\nIII.   Understand.  Remember, a lot of things on a mud can make people\n       angry.  Try to understand why a immortal feels the way he does.\n       Put yourself in their shoes, and only if he knows what he acts\n       unfair, post case on mortal board.\n\nIV.   Be considerate.  Having an mortal gives you a lot of clout in\n      discussions.  Use it, don't abuse it.  Always remember that you\n      are an mortal and represent Elite, even when you are playing\n      a immortal.\n\n      A.  A special note on consideration.  Remember, many of our users\n          speak english as their second language.  Be very courteous when\n          dealing with these people, and try your best to understand what\n          they are saying.  Sometimes this will mean asking another \n          player to help.\n\n      B.  While there is nothing wrong with playing low level chars,\n          try to play main character when actually criticizing immortals.\n          If you have reason to hide, consider why;  you may have a \n          conflict of interest (such as the immortal hates you) and in \n          this case, it is better if you ask another mortal to help.\n\nV.    Use common sense.  Don't get angry when dealing with immortals.  It\n      only makes it worse.  If they are angry, let them blow off some\n      steam first.  If you are angry, stop dealing with them problem and\n      let someone else take care of it.  If people are unable to agree,\n      never underestimate the value of compromise -- even if one person\n      is wrong.\n\nVI.   Don't make a mistake because you're afraid to ask questions.  If \n      you don't know what to do, ask another experienced player to help \n      you.  Also, if you need to make a ruling, be sure to gather the \n      facts before reporting or posting.  It's more important to answer \n      the questions of \"why\" and \"how\" than the question of \"who\" and \n      \"what\", and all your rulings should have a basis in fact, and not \n      rhetoric or bias.\n\nVII.  The experienced players in here are a team.  The best way for us to\n      work is through constructive work and constructive criticism.\n      If we have problems, they should be solved among the mortals --\n      including the immortals in our conflicts will only make them worse.\n\nVIII. EliteMUD is a hobby for all of us, just as it is a hobby for the\n      immortals.  All your actions should be guided by this concept;\n      for us is not a job, it is a game."
+        },
+        {
+          "Keywords": [
+            "3"
+          ],
+          "Description": "\nMessage 3 : #YFri Apr  4#W #c(Rasputen)   #W:: #gClan Councill#W\n\nFirst ELITE clan councill was elected. Next clan members will\nreceive rank 8 (highest mortal rank in clan):\n\n  Aliku, Garm, Spinner, Smarties, Raggok, Cardinal.\n\nClan Councill will run clan together with Deity."
+        },
+        {
+          "Keywords": [
+            "4"
+          ],
+          "Description": "\nMessage 4 : #YMon Jan 27#W #c(Greyfair)   #W:: #gQuitting#W\n\nBecause with new remort system 4th remorts have nothing to do, i decided\nto stop playing here. Same as most of current fourth remorts.\nMay be i will return if things will change.\n#W\n                                           Greyfair."
+        },
+        {
+          "Keywords": [
+            "5"
+          ],
+          "Description": "\nMessage 5 : #YSat Feb 25#W #c(IO)         #W:: #rRanks of ELITE clan#W\n\nRank 10: #rOVERGOD#W - Implementor\nRank 9:  #gDeity#W   - Immortals\nRank 8:  #wAngel#W   - up to Deity+\nRank 7:  #wLord#W    - up to Deity+\nRank 6:  #mCounsel#W - level 80+\nRank 5:  #yBishop#W  - level 60-80\nRank 4:  #cKnight#W  - level 40-60\nRank 3:  #bSquire#W  - level 20-40\nRank 2:  #GPage#W    - level 10-20\n\n    Be nice to clannies and you will have rank 9."
+        },
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThis is the throne on which IO the Creator presided over his subjects.\nThis is also where the clan's notice board was located. It, too, has been\npreserved, with some old messages on it."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27509,
+      "Name": "#w[ELITE]'s Immroom#N",
+      "Description": "\n   This is the room for [ELITE]'s immortal members. You can often catch \nthem in here shooting the breeze, playing poker, and making fun of \nwhoever happens to be in jail at the time.\n#GThere is a sign on the wall.#N",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27508,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThis used to be the meeting place of the divine members of the ELITE \nclan. In this room, many an odd thing have taken place.\nResearch is currently being conducted at the Academy on the subject of \nwhat the gods of ELITE actually did, and what this room was really for."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27510,
+      "Name": "#wThe Assembly Hall#N",
+      "Description": "\n   This is the large assembly hell of the Academy, where all the students\nand staff gather for ceremonies, informational meetings and voting\nsessions. The hall is very large - 300 persons would have no problem\nfinding space in here. In the middle of each wall is a small door.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27519,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27518,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27511,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27517,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27515,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27511,
+      "Name": "#wThe Library#N",
+      "Description": "\n   If you did not know about the archives of the Academy, located below\nground level, you would probably think that this must be the greatest\ncollection of books in all of Midgaard. The walls are all lined with\nshelves, and the room itself divided into narrow corridors by bookcases.\nYou get the feeling that this room holds more wisdom than anyone can ever\ngrasp in a lifetime.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27512,
+      "Name": "#wThe Realm of Chaos#N",
+      "Description": "\n   You open the door and enter the room, thinking it's the study of \nAraga, one of the Deans here at the Academy. You soon realize you must be \nmistaken. What you see you can describe best with one word: chaos. The \nroom's floor is approximately ten centimeters above that of the library \noutside it, due to the scrolls and parchments covering it in a number of \nlayers. The table in the far end of the room is cluttered with books in \npiles that reach to the ceiling. You can barely make out the small bed \nunderneath the huge piles of clothes and books. In at least twenty \ndifferent places in the room you can also see plates with half-eaten \nmeals on them. You dare not think of how many more can be found \nunderneath the \"floor\". You recall a vague memory of Araga keeping a \ncollection of rare mousetraps in this room, understand that your life may \nbe at risk, and leave very, very quickly.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27529,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "small"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27513,
+      "Name": "#wAMS Special Laboratory#N",
+      "Description": "\n   You imagine the best palace you can even see and in same second\nyou see it here. Then you imagine cold and horror of City of\nSitebanned and suddenly realize it is around you... Your illusions\nare stronger, than you, and next time you see Room of Hades, your\nsucky 1 HP and letters REBOOT appeared on wall... or Quest EQ store\nwhere you happened to pop after lucky crash...\nAnd you just understand that all your thoughts and feelings were logged\nfor further statistical processing. You just feel self not a personality,\nbut only as long structured sequence of zeros and ones which affects \nother sequences...\n... which are processing in big computer, placed in this room. After \nshort look at it you realize that it used some magical features. Computer \nis connected with some portals, like one which you used to enter in this \nroom. Big oak table in center of room is filled by printouts with \nstatistical information. Sign of #wxGRD#W on the south wall finally \nexplains you where you are... and why. Its not place where anyone can be \nwithout reason.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27531,
+          "Description": "Those who live by feelings, can use this portal to reach happiness...",
+          "Keywords": [
+            "portal",
+            "illusions"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27511,
+          "Description": "door",
+          "Keywords": [
+            "#Y#c#w#g#c#R#r#y#b#W",
+            "djcnjr"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27529,
+          "Description": "door",
+          "Keywords": [
+            "#w#B#R#r#y#w#c#b#y#c#W"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27506,
+          "Description": "door",
+          "Keywords": [
+            "#m#c#b#y#G#m#y#b#W",
+            "pfgfl"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27504,
+          "Description": "door",
+          "Keywords": [
+            "#G#W#W#r#g#m#y#b#W",
+            "dybp"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27514,
+      "Name": "#wThe Shadowy Room of Deathlord#N",
+      "Description": "\n   The room doesn't look as shadowy as the name might imply...maybe \nthat's because there's nobody living here yet. The room is completely \nempty, except for the flower by the window and the chandelier in the \nceiling. On the inside of the door is a sign reading \"Deathlord\"",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27511,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "small"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27529,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27515,
+      "Name": "#wThe Drawing-Room#N",
+      "Description": "\n  In the small drawing-room outside the Council room chairs have been \nplaced along all walls, except the north one, in the center of which is a \nlarge, moderately ornamented oak door leading to said room. On both sides \nof the door are paintings of the Academy building and, on the floor, \nlarge wooden chests.  You cannot make up your mind as to whether the \nchests are actually used for storing something, or if they are just \nornamental.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27516,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 27520,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27510,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27516,
+      "Name": "#wThe Council Room#N",
+      "Description": "\n   The room is dominated by a long table, along which the members of the \ntwo councils of the Academy gather for their meetings. The table is lined \nwith chairs, and the walls with small cabinets at regular intervals. \nLarge maps of near and distant lands cover the walls, and in the ceiling \nis a beautiful fresco depicting the world. In the center hangs a large - \nbut not too fancy - chandelier.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27519,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27518,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27515,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27517,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27517,
+      "Name": "#wThe Theoretical Faculty#N",
+      "Description": "\n   The three institutions of the Theoretical Faculty use this room for \nstoring their documents in and for having a faculty meeting every now and \nthen. The room looks very well organized. There seems to be a place for \neverything and nothing seems to be anywhere else than where it is \nsupposed to be. It does give the room a slightly cold look. On the south \nwall is a large chart describing the organizational structure of the \nAcademy.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27510,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chart",
+            "structure"
+          ],
+          "Description": "\nHierarchical structure of the Academy of the Midnight Sun\n \n                         AD\n                        / \\\n                       HC LC\n                        \\ /\n                         |---AB\n                         |\n                -------------------\n                |        |        |\n                TF      GRD       PF\n                |                 |\n            ---------         ---------\n            |   |   |         |   |   |\n            C   I   SD        QS  MS  A"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27518,
+      "Name": "#wThe Practical Faculty#N",
+      "Description": "\n   As you enter the room you realize that the people working in here must \nbe incredibly active. Even though the room is empty right now, you are \ncertain that there is somebody in here almost continuously. You remember \nthe stories of how the PF people can stay up three days in succession \nwithout showing any sign of fatigue. Your eye suddenly catches a glimpse \nof a flask inside a half-open cupboard. It has a label reading \"Magic, \nEnergy Potion\". Ah...so that's how they do it...",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27510,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27519,
+      "Name": "#wThe Institution of Global Research and Development#N",
+      "Description": "\n   Being the largest institution of the Academy, the GRD has a meeting \nroom of its own. It is, however, not only a meeting room. There are a \nlarge number of bookcases and cupboards along the walls, filled with \nbooks, scrolls and strange-looking items. There is a big table in the \nmiddle of the room, covered with strange plans and drawings.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Silent",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 27510,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27520,
+      "Name": "#wA corridor at the top of the Tower#N",
+      "Description": "\n   You walk through a rather narrow corridor at the top floor of the \nAcademy building. There is a door on each side. The one to the west has a \nsign reading \"Eagle\", and the one to the east one reading \"Frki\". The \ncorridor continues to the north. There is a stairway leading down.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27521,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27524,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27523,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 27515,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27521,
+      "Name": "#wA corridor at the top of the Tower#N",
+      "Description": "\n   You walk through a rather narrow corridor at the top floor of the \nAcademy building. There is a door on each side. The one to the west has a \nsign reading \"Miklja\", and the one to the east one reading \"Pavel\". The \ncorridor continues to the north and to the south.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27522,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27526,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27520,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27525,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27522,
+      "Name": "#wA corridor at the top of the Tower#N",
+      "Description": "\n   You walk through a rather narrow corridor at the top floor of the\nAcademy building. There is a door on each side. The one to the west has a\nsign reading \"Sprite\", and the one to the east one reading \"Tin\". The\ncorridor continues to the north and to the south.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27529,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27528,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27521,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27527,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27523,
+      "Name": "#wEagle's Nest#N",
+      "Description": "\n   High up in the tower eagles are flying in and out through a big \nwindow. They soar over near and distant lands, gathering information. \nSome of them are resting in a large nest on a shelf, others flying around \ndiscussing what they have learned. Some are also cleaning up after the \nparty their master had the night and morning before.\nIn one end of the room is a big bed made out of feathers. In the other\nyou see a big desk, on which is a huge pile of notes and books. A big \neagle is trying to get som order on the desk.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27520,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27524,
+      "Name": "#wFrki's Sanitarium#N",
+      "Description": "\n   You are standing in the middle of a large room. The room is very, very\nbright. The brightness makes you feel like you're in some kind of a\ndream.  Everywhere around you, you can see strange creatures looking at\nyou. It all seems like some kind of strange world. Everyone seems to be\nvery strange here.  Right in front of you, you see some soldiers aiming\nat you. They are the \"Disposable heroes\".  On your left, you see a\nstrange clown dancing all over the place. Is he crazy? He appears\nto be living in his own world of fun. He is the \"Leper Messiah\". He is\nholding the \"Battery\" in his hand which produces a very strange\nlight.  In the middle of the room you see a large man sitting on his\nthrone. He is the \"Master of Puppets\". As he sees you he greets you with\nan evil \"Welcome home\" and says \"Damage Inc.\". Everywhere around there \nare servants protecting him. Above them there is a large golden \"Orion\".\nThis place makes you very uncomfortable. Maybe you should leave? Maybe\nyou are \"The Thing that should not be\"?!",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Lawful",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27520,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27525,
+      "Name": "#wMiklja's Torture Chamber#N",
+      "Description": "\n   As you enter a portal you find yourself in a dark and horrible room. \nAround you you can see nothing but blood and corpses. You can't \nunderstand what a room like this is doing in a place like this, but then \nyou remember that Miklja is a member of the Institution of Military \nStudies. This must be his lab. Suddenly you hear a scream and start for \nthe door, but as you're trying to escape, Miklja appears in front of you. \nYou fall on your knees and start praying for your life...",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "PkOk",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27521,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27526,
+      "Name": "#wPavel's Universe#N",
+      "Description": "\n   You find yourself in a strange observatory. There are thousands of \nvolumes of books and maps around the wall. A telescope stands in the \nmiddle of the room, bringing closer far away worlds. You can see two \ninteresting pictures: one is of the Midnight Sun and the other of the \ntotal Solar eclipse. There is something else in the corner ... it looks \nlike a football. ... or is it just an illusion? As you look up to the \nsky, through the open roof, you are blinded by the thousands of shining \nstars. On the south part of the sky a modestly bright comet shots through \nright before your very eyes.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27521,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27527,
+      "Name": "#wAn unfurnished study#N",
+      "Description": "\n   This room is completely empty, except for the flower by the window and \nthe chandelier in the ceiling. You guess that somebody is meant to be \nmoving in here soon.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 27522,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27528,
+      "Name": "#wTin's Place of Worship#N",
+      "Description": "\n   As you take your first step into this seemingly small room, you are\nteleported to a large meadow. You stand in a circle made of large tall \nstones, called obelisks. In the centre is a small cauldron, now empty and \ncold. It looks deep, and worn out by constant uses. You can also notice \nsome inscriptions on the obelisks.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 27522,
+          "Description": "",
+          "Keywords": [
+            "door",
+            "wooden",
+            "oak"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cauldron"
+          ],
+          "Description": "\nIn this cauldron Tin makes all his potions and enchants his weapons. It \nused to be black, but now it looks like a combination of green, red and \nblack, and it also emmits a faint smell. Smells like a yummy soup..."
+        },
+        {
+          "Keywords": [
+            "obelisk"
+          ],
+          "Description": "\nThe only thing you can make out is the word: JUKKA."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27529,
+      "Name": "#wA corridor at the top of the Tower#N",
+      "Description": "\nYou walk through a rather narrow corridor at the top floor of the\nAcademy building. There is a door on each side, as well as one to the\nnorth. The door to the west has a sign reading \"Araga\", the one to the\neast one reading \"Deathlord\". Door to the north have no sign, except\nfor Academy symbol on it.\nThe corridor continues to the south.",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27513,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "ResetClosed"
+          ],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 27514,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27522,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 27512,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27530,
+      "Name": "#wTrophy Room#N",
+      "Description": "\n   The first thing that catches your eye when you enter here is the\nvast assortment of decapitated heads stuffed and mounted on the\nwalls.  Upon closer inspection, you see those heads belong to those\nunfortunate souls who have played the parts of Harold, King Welmar,\nFroboz, the Holy Avatar, Satan, and the Astrologer. This is\ndefinitely not the room to be caught in without an escort, or your\nown head may end up there as well.\n#GThere is a sign on the wall.#W",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 27508,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 27506,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThis is the room where members of Elite used to place their trophies. A \ntrophy could be anything from the corpse of a mighty foe to a piece of \nequipment that is not powerful enough to warrant its being placed in the \nDonation Room, but too valuable to simply be thrown away. As the world \nconstantly changes, some is not powerful enough to warrant its being \nplaced in the Donation Room, but too valuable to simply be thrown away. \nAs the world constantly changes, some of those items are today both very \nrare and very valuable.\nToday, this room is where students and staff of the Academy place items \nwhich currently are more or less worthless, but that they believe might \ngain such value as described above in the future and therefore should be \nplaced in the museum."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27531,
+      "Name": "#wExplorer's Doom (Shrine of Sandra)#N",
+      "Description": "\n   You see here some strange creature... she looks in your eyes...\nyou are #Rhappy#W... you are so #rhappy#W... you are extremelly #whappy...\n#WPANIC! You cannot escape!...\nYou are dead!",
+      "ZoneId": 275,
+      "Sector": "Inside",
+      "Flags": [
+        "Death",
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 27500,
+      "Name": "shopkeeper reina",
+      "ShortDescription": "\nReina",
+      "LongDescription": "\nReina, the Divine Cafe Proprietor, stands behind the counter.",
+      "Description": "\nWhile conducting some research on the Elder Gods of Elite, The \nInstitution of Global Research and Development at the Academy \naccidentally summoned Reina, last in the long line of Concubines of IO \nthe Overgod. The Institution members thought that such a mighty Goddess \nmust be of enormous help to them in their studies. Unfortunately, it \nturned out the only help she was capable of giving them was serving \ntea...",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "NiceThief"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d900+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 60,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+99"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%5 say Tea, anyone?;\n%5 emote scratches her chin and chuckles merrily;\n%5 emote looks around the room, seeing if anyone wants tea.",
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 27500,
+      "Name": "fountain water",
+      "ShortDescription": "\na fountain",
+      "Description": "\nA small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        999999,
+        999999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 999999,
+          "Amount": 999999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "\nThe fountain looks old and is made from stone."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27501,
+      "Name": "tea cup",
+      "ShortDescription": "\nA cup",
+      "Description": "\nA small cup of tea has been dropped here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        2,
+        2,
+        11,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 2,
+          "Amount": 2,
+          "Liquid": 11,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cup",
+            "tea"
+          ],
+          "Description": "\nYou see a tiny cup.  It has some liquid inside."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27502,
+      "Name": "coffee cup",
+      "ShortDescription": "\nA cup",
+      "Description": "\nA small cup of coffee has been dropped here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        2,
+        2,
+        12,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 2,
+          "Amount": 2,
+          "Liquid": 12,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cup",
+            "coffee"
+          ],
+          "Description": "\nYou see a tiny cup.  It has some liquid inside."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27503,
+      "Name": "sub submarine sandwich",
+      "ShortDescription": "\nA large submarine sandwich",
+      "Description": "\nA large sandwich has been left here.  It smells delicious.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDonate"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 5,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 20,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sub",
+            "submarine",
+            "sandwich"
+          ],
+          "Description": "\nIt is a well prepared sandwich.  It looks tasty."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27504,
+      "Name": "crecall clan homecoming scroll",
+      "ShortDescription": "\nA scroll of homecoming",
+      "Description": "\nA mysterious looking scroll is laying on the ground.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        109,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            109,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "crecall",
+            "clan",
+            "homecoming",
+            "scroll"
+          ],
+          "Description": "\nYou see an dusty old scroll."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27505,
+      "Name": "insight identify scroll",
+      "ShortDescription": "\nA scroll of insight",
+      "Description": "\nA piece of glowing parchment has been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "WristRight"
+      ],
+      "Values": [
+        12,
+        53,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            53,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "insight",
+            "identify",
+            "scroll"
+          ],
+          "Description": "\nYou see a dusty old scroll."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 27509,
+      "Name": "board bulletin member academy huge msclan",
+      "ShortDescription": "\nthe Academy membership board",
+      "Description": "\nThis huge board helps you to keep track of the academy members.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        116,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board. Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 8,
+      "Name": "board leadership academy midnight sun",
+      "ShortDescription": "\na Midnight Sun leadership bulletin board",
+      "Description": "\nThe Council discussion board isn't quite as large as the board \ndownstairs.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        110,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9,
+      "Name": "statue academy",
+      "ShortDescription": "\na statue",
+      "Description": "\nA statue of a mythical Wise Immortal is standing here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27515,
+        1,
+        110,
+        7,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 10,
+      "Name": "statue academy",
+      "ShortDescription": "\na statue",
+      "Description": "\nA statue of a mythical Wise Immortal is standing here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27501,
+        9,
+        110,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 15,
+      "Name": "board bulletin academy midnight sun",
+      "ShortDescription": "\na Midnight Sun clan bulletin board",
+      "Description": "\nThe large Academy notice board covers the whole wall.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        110,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

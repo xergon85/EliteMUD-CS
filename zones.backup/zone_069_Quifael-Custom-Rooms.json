@@ -1,0 +1,895 @@
+{
+  "Zone": {
+    "Id": 69,
+    "Name": "Quifael-Custom-Rooms",
+    "TopRoomId": 6999,
+    "Lifespan": 30,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6910,
+        "Arg2": 1,
+        "Arg3": 6900,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6910,
+        "Arg2": 5,
+        "Arg3": 5,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6911,
+        "Arg2": 5,
+        "Arg3": 7,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6912,
+        "Arg2": 5,
+        "Arg3": 3,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6913,
+        "Arg2": 5,
+        "Arg3": 13,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6914,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 6999,
+        "Arg2": 1,
+        "Arg3": 6999,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 6999,
+        "Arg2": 5,
+        "Arg3": 16,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 6900,
+      "Name": "Quifael's monster pen",
+      "Description": "\n   You are in a big, subterranean room with heavy massive stone walls and no\nwindows whatsoever. A virtual ladder leads upwards.",
+      "ZoneId": 69,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 6902,
+          "Description": "The ladder leads to the laboratory.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6901,
+      "Name": "Quifael's study",
+      "Description": "\n   You are in a small, comfortable study room. The walls are lined with\nbookcases filled with dusty volumes of all sizes. In the fireplace burns a\ncrackling fire that makes the room warm and cozy, and in front of an oakwood\nreading desk is a large old-fashioned chair.",
+      "ZoneId": 69,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 6904,
+          "Description": "The corridor leads south to the hall.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bookcase",
+            "bookcases",
+            "volume",
+            "volumes",
+            "book",
+            "books"
+          ],
+          "Description": "\nMost of the books are heavy, leather-bound and covered in a thin layer of dust.\nThere are many titles on necromancy, conjuring and other spheres of Magic,\nbut also some on computer science (although these seem to be VERY dusty\nindeed) and a fair collection of horror literature, ranging from Bram Stoker\nand H. P. Lovecraft to Anne Rice and Stephen King."
+        },
+        {
+          "Keywords": [
+            "fireplace"
+          ],
+          "Description": "\nThe fireplace isn't particularly big, but the fire crackles merrily in it."
+        },
+        {
+          "Keywords": [
+            "desk"
+          ],
+          "Description": "\nIt is very massive and but seems worn from many years of use."
+        },
+        {
+          "Keywords": [
+            "chair"
+          ],
+          "Description": "\nIt is big and old-fashioned, but quite comfortable nevertheless."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6902,
+      "Name": "Quifael's laboratory",
+      "Description": "\n   You are in a room filled with shelves containing all sorts of weird\nequipment. The walls are lined with numerous shelves and a massive working desk\nis by the north wall. The air smells of rare chemicals and spices. A virtual\nladder leads downwards. A magical portal is hovering in the air just in front\nof the east wall.",
+      "ZoneId": 69,
+      "Sector": "Inside",
+      "Flags": [
+        "NoMob",
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 6903,
+          "Description": "To the east is the magical portal.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6904,
+          "Description": "The hall is to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 6900,
+          "Description": "The virtual ladder leads down to the monster pen.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shelves"
+          ],
+          "Description": "\nThe shelves contain a mass of bottles, jars and boxes of different shapes and\nsizes, of which some contain powders and liquids in various colors.  Others\ncontain dragon's claws, giant's eyes, rabbit's ears and other body parts of\ndifferent monsters."
+        },
+        {
+          "Keywords": [
+            "desk"
+          ],
+          "Description": "\nOn the desk is a peculiar apparatus of glass bottles and globes connected by\nsmall pipelines.  The green liquid inside the apparatus' globes and pipelines\nis bubbling steadily."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6903,
+      "Name": "Quifael's virtual balcony",
+      "Description": "\n   You are on a transparent balcony hanging in mid-air. You notice a faint blue\nglow surrounding everything, even yourself, making it seem as transparent as\nthe balcony itself. From here, you have a terrific view of the whole Forest of\nHaon-Dor. A transparent bronze plate has been bolted to the balcony railing. A\nmagical portal is hovering in the air to the west.",
+      "ZoneId": 69,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 6902,
+          "Description": "The magical portal is to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "balcony",
+            "railing"
+          ],
+          "Description": "\nQuite transparent, but visible anyway, because of the blue glow that surrounds\nthe whole place."
+        },
+        {
+          "Keywords": [
+            "plate"
+          ],
+          "Description": "\nThe transparent bronze plate looks quite strange, but the engraved letters are\nquite easy to read, nevertheless :-\n\n              Quifael's Virtual Balcony\n\n                   Do not lean out!\n\n  Please do not try to attract the attention of any\n      adventurers in the forest, as you are not\n         really in existence at the moment.\n\n        (This could possibly mess up Reality,\n      and we wouldn't want to do that, would we?)"
+        },
+        {
+          "Keywords": [
+            "forest",
+            "Haon-Dor",
+            "view"
+          ],
+          "Description": "\nThrough the tree crowns, you see fellow adventurers walking around in the\nforest, gathering mushrooms, eating blackberries, committing rabbit genocide\nand generally having a good time."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6904,
+      "Name": "Quifael's hall",
+      "Description": "\n   You are in sparsely decorated and quite dusty hall. Old wooden doors lead\nnorth, east and south and to the west is the front door. An old mirror hangs on\nthe wall.",
+      "ZoneId": 69,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6901,
+          "Description": "The study is to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6902,
+          "Description": "The laboratory is to the east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6905,
+          "Description": "The kitchen is to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3126,
+          "Description": "The front door leads to Park Road.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "Closed"
+          ],
+          "KeyId": 3301
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "mirror"
+          ],
+          "Description": "\nYou see yourself looking back at you."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6905,
+      "Name": "Quifael's kitchen",
+      "Description": "\n   You are in an old-fashioned kitchen.",
+      "ZoneId": 69,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6904,
+          "Description": "The hall is to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 6999,
+      "Name": "The Realm of the Dead",
+      "Description": "\n   You are standing on an immense, gray stone floor that stretches as far as\nyou can see in all directions. Rough winds plunging from the dark, starless sky\ntear savagely at your fragile body.",
+      "ZoneId": 69,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Private",
+        "GodRoom"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 6999,
+          "Description": "The hard floor seems to go on forever.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6999,
+          "Description": "The hard floor seems to go on forever.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 6999,
+          "Description": "The hard floor seems to go on forever.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 6999,
+          "Description": "The hard floor seems to go on forever.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "floor"
+          ],
+          "Description": "\nThe stone floor is the same shade of gray as the sky and is completely plain\nand unscratched.  It is probably too hard for anything to leave as much as a\nscratch on it."
+        },
+        {
+          "Keywords": [
+            "sky",
+            "wind",
+            "winds"
+          ],
+          "Description": "\nCold winds plunge ceaselessly at you from the dark, cloudless sky."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 6910,
+      "Name": "isha elf",
+      "ShortDescription": "\nIsha the Dark Elf",
+      "LongDescription": "\nIsha the Dark Elf is here, observing you silently.",
+      "Description": "\nShe is no less than beautiful, skin as dark as the night and hair shining like\nsilver in the moonlight.  Her slender body is adorned with a sleeveless shirt\nand a short skirt made from black scales joined with silver threads.  Her back\nis covered by a large, hooded cloak as black as her skin and in her broad\nsilver belt hangs a long, slender sword in a silver scabbard.",
+      "Level": 20,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Hide"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+245",
+        "Mana": 300,
+        "Move": 380
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 4,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 80,
+          "DamageDice": "3d6+4"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+70"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 20000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6999,
+      "Name": "death reaper",
+      "ShortDescription": "\nDeath",
+      "LongDescription": "\nDeath the Grim Reaper is observing you silently from empty eye sockets.",
+      "Description": "\nThe dark-robed skeletal figure radiates an unendurable coldness.",
+      "Level": 30,
+      "Race": "Undefined",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Sentinel"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Hide"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+665",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 10,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 90,
+          "DamageDice": "10d15+20"
+        },
+        {
+          "Type": "Attack_8",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 140000,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 6910,
+      "Name": "shirt scale",
+      "ShortDescription": "\na black dragon scale shirt",
+      "Description": "\nA black dragon scale shirt has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 25,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Neck1"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 10000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shirt",
+            "scale"
+          ],
+          "Description": "\nIt is a sleeveless shirt made from big, black dragon scales joined with silver\nthreads.  Its inside has been made from the soft skin on the dragon's belly,\nmaking it very comfortable to wear.  The name \"Isha\" has been engraved on one\nof the scales."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6911,
+      "Name": "skirt scale",
+      "ShortDescription": "\na black dragon scale skirt",
+      "Description": "\nA black dragon scale skirt has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Body"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 5000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "skirt",
+            "scale"
+          ],
+          "Description": "\nIt is a short skirt made from big, black dragon scales joined with silver\nthreads.  Its inside has been made from the soft skin on the dragon's belly,\nmaking it very comfortable to wear.  The name \"Isha\" has been engraved on one\nof the scales."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6912,
+      "Name": "cloak black",
+      "ShortDescription": "\na black, hooded cloak",
+      "Description": "\nA large, hooded cloak, as dark as the night, has been left here.",
+      "ActionDescription": "",
+      "Type": "Worn",
+      "Level": 20,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Arms"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 20,
+      "Cost": 8000,
+      "CostPerDay": 4000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cloak",
+            "black"
+          ],
+          "Description": "\nIt is a heavy, black cloak with a large hood.  The name \"Isha\" is written\ninside it with a silver thread."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Armor",
+          "Modifier": -6
+        },
+        {
+          "Location": "MagicResistance",
+          "Modifier": -4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6913,
+      "Name": "belt silver",
+      "ShortDescription": "\na broad silver belt",
+      "Description": "\nA broad silver belt has been left here.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 15,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Shield"
+      ],
+      "Values": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 6,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 5000,
+      "CostPerDay": 3500,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "belt",
+            "silver"
+          ],
+          "Description": "\nIt is a broad belt made from tiny silver rings woven together."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6914,
+      "Name": "sword long slender",
+      "ShortDescription": "\na long, slender sword",
+      "Description": "\nA long, slender sword lies on the ground.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 21,
+      "AntiClass": "13107",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "AntiGood",
+        "AntiNeutral"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        3,
+        6,
+        3,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 3,
+          "DiceSides": 6,
+          "DamageType": 3,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 10000,
+      "CostPerDay": 6000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sword",
+            "long",
+            "slender"
+          ],
+          "Description": "\nIt is a long, slender sword that seems to be made from silver.  The name\n\"Isha\" has been engraved on the hilt."
+        }
+      ],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 4
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6999,
+      "Name": "axe",
+      "ShortDescription": "\nKael's axe",
+      "Description": "\nKael's axe rests heavily on the ground.",
+      "ActionDescription": "\nreaps",
+      "Type": "Weapon",
+      "Level": 27,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        8,
+        5,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 8,
+          "DamageType": 5,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 40,
+      "Cost": 0,
+      "CostPerDay": 50000,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "axe"
+          ],
+          "Description": "\nIt is a very heavy axe.  The grey handle is made from hard wood and the long\niron axehead is completely smooth from countless years of use.  It feels cold \nto the touch."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

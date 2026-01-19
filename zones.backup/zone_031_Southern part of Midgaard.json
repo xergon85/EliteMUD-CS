@@ -1,0 +1,3499 @@
+{
+  "Zone": {
+    "Id": 31,
+    "Name": "Southern part of Midgaard",
+    "TopRoomId": 3199,
+    "Lifespan": 40,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": [
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3110,
+        "Arg2": 1,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3111,
+        "Arg2": 3,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3129,
+        "Arg2": 2,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "D",
+        "IfFlag": 0,
+        "Arg1": 3400,
+        "Arg2": 0,
+        "Arg3": 2,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3134,
+        "Arg2": 3,
+        "Arg3": 3101,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3134,
+        "Arg2": 3,
+        "Arg3": 3102,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3134,
+        "Arg2": 3,
+        "Arg3": 3103,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3100,
+        "Arg2": 1,
+        "Arg3": 3106,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3100,
+        "Arg2": 500,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3101,
+        "Arg2": 500,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3102,
+        "Arg2": 500,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3068,
+        "Arg2": 4,
+        "Arg3": 3106,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3120,
+        "Arg2": 1,
+        "Arg3": 3106,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3121,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3121,
+        "Arg2": 1,
+        "Arg3": 3114,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3122,
+        "Arg2": 1,
+        "Arg3": 3114,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3123,
+        "Arg2": 1,
+        "Arg3": 3109,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3124,
+        "Arg2": 2,
+        "Arg3": 3113,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3124,
+        "Arg2": 2,
+        "Arg3": 3115,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3140,
+        "Arg2": 1,
+        "Arg3": 3110,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3122,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3141,
+        "Arg2": 4,
+        "Arg3": 3110,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 1,
+        "Arg1": 3141,
+        "Arg2": 4,
+        "Arg3": 3110,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 1,
+        "Arg1": 3141,
+        "Arg2": 4,
+        "Arg3": 3110,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 1,
+        "Arg1": 3141,
+        "Arg2": 4,
+        "Arg3": 3110,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3130,
+        "Arg2": 100,
+        "Arg3": 3110,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 3123,
+        "Arg2": 100,
+        "Arg3": 3130,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3131,
+        "Arg2": 100,
+        "Arg3": 3110,
+        "Comment": null
+      },
+      {
+        "Command": "P",
+        "IfFlag": 1,
+        "Arg1": 3132,
+        "Arg2": 50,
+        "Arg3": 3131,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3060,
+        "Arg2": 20,
+        "Arg3": 3111,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3022,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "G",
+        "IfFlag": 1,
+        "Arg1": 3120,
+        "Arg2": 100,
+        "Arg3": null,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3060,
+        "Arg2": 20,
+        "Arg3": 3111,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3022,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3060,
+        "Arg2": 20,
+        "Arg3": 3111,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3022,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3060,
+        "Arg2": 20,
+        "Arg3": 3111,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3022,
+        "Arg2": 100,
+        "Arg3": 16,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3142,
+        "Arg2": 1,
+        "Arg3": 3137,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3143,
+        "Arg2": 1,
+        "Arg3": 3138,
+        "Comment": null
+      },
+      {
+        "Command": "E",
+        "IfFlag": 1,
+        "Arg1": 3133,
+        "Arg2": 100,
+        "Arg3": 17,
+        "Comment": null
+      },
+      {
+        "Command": "M",
+        "IfFlag": 0,
+        "Arg1": 3144,
+        "Arg2": 1,
+        "Arg3": 3120,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3135,
+        "Arg2": 100,
+        "Arg3": 3141,
+        "Comment": null
+      },
+      {
+        "Command": "O",
+        "IfFlag": 0,
+        "Arg1": 3136,
+        "Arg2": 100,
+        "Arg3": 3141,
+        "Comment": null
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 3100,
+      "Name": "Northwest end of Concourse",
+      "Description": "\n   You are at the concourse, the city wall is just west. A small promenade goes\neast, and the bridge is just north of here. The concourse continues south along\nthe city wall.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3051,
+          "Description": "You see the Bridge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3101,
+          "Description": "You see the promenade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3127,
+          "Description": "The promenade continues far south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 2171,
+          "Description": "Wall road continues west of here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3101,
+      "Name": "Promenade",
+      "Description": "\n   The river gently flows west just north of here. The promenade continues\nfurther east and to the west you see the city wall. Park Road leads south from\nhere.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3102,
+          "Description": "The promenade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3131,
+          "Description": "Park Road leads south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3100,
+          "Description": "You see the Concourse.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3102,
+      "Name": "Promenade",
+      "Description": "\n   The river gently flows west just north of here. The promenade continues both\neast and west. South of here you see the entrance to the park, and a small\nbuilding seems to be just west of the entrance.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3103,
+          "Description": "You see the promenade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3105,
+          "Description": "You see the park entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3101,
+          "Description": "You see the promenade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3103,
+      "Name": "Promenade",
+      "Description": "\n   The river gently flows west just north of here. The promenade continues both\neast and west. A small path leads south. Looking across the river you see the\nlevee.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3104,
+          "Description": "You see the Concourse.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3132,
+          "Description": "The small path leads south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3102,
+          "Description": "You see the promenade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3104,
+      "Name": "Northeast end of Concourse",
+      "Description": "\n   You are at the Concourse. The city wall is just east and a small promenade\ngoes west. Looking across the river you see a building that resembles a\nwarehouse. The Concourse continues south along the city wall.  To the north\nbeyond large golden gates stands a huge green palace.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 20800,
+          "Description": "To the north stands a large school.  So large it blows your mind.  Which,\nbeing a psionicists' school, is undoubtedly what was intended.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3130,
+          "Description": "The Concourse continues south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3103,
+          "Description": "You see the promenade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "wall"
+          ],
+          "Description": "\nIt is built from large gray rocks that have been fastened to each other with\nsome kind of mortar.  It is far too high to climb."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3105,
+      "Name": "Park Entrance",
+      "Description": "\n   You are standing just inside the small park of Midgaard. To the north is the\npromenade and a small path leads south into the park. To your east is the\nfamous Park Cafe.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3102,
+          "Description": "You see the promenade.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3106,
+          "Description": "You see Park Cafe.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3108,
+          "Description": "You see the park.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3106,
+      "Name": "Park Cafe",
+      "Description": "\n   You are inside Park Cafe, a very cozy place with many tables and seats where\nyou can relax and enjoy the view. To the east you can see the entrance to the\npark.",
+      "ZoneId": 31,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3105,
+          "Description": "You see the park entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3107,
+      "Name": "Small path through the park",
+      "Description": "\n   You are walking along a small path through the park. The path continues\nsouth and east.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3108,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3113,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3108,
+      "Name": "Small path in the park",
+      "Description": "\n   You are standing on a small path inside the park. The park entrance is just\nnorth of here, and Park Cafe is just east of the entrance. The path leads\nfurther east and west.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3105,
+          "Description": "You see the northern park entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3109,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3107,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3109,
+      "Name": "Small path in the park",
+      "Description": "\n   You are on a small path running through the park. It continues west and\nsouth and just north of here you see the southern wall of Park Cafe.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3115,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3108,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3110,
+      "Name": "Cityguard Headquarters",
+      "Description": "\n   You are inside a tidy office.",
+      "ZoneId": 31,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3111,
+          "Description": "You see the park road.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 3120
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3111,
+      "Name": "Park Road",
+      "Description": "\n   The road continues north and south. A building is just west of here, you\nnotice a sign on the door. The park entrance is to the east.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3131,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3112,
+          "Description": "You see the park entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3118,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3110,
+          "Description": "You see the cityguard head quarters.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 3120
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "building",
+            "door",
+            "sign"
+          ],
+          "Description": "\nThe sign on the door says:-\n\n                 Cityguard Head Quarters\n\n           WARNING: Authorized Personnel Only!"
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3112,
+      "Name": "Western Park Entrance",
+      "Description": "\n   You are standing at the western end of the park. A small path leads east\ninto the park and going west through the entrance you will reach Park Road.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3113,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3111,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3113,
+      "Name": "A path in the park",
+      "Description": "\n   You are in the park. The paths lead north and west. Westward is the park\nentrance and to the east you see a small pond.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3107,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3114,
+          "Description": "You see the pond.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3112,
+          "Description": "You see the western park entrance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3114,
+      "Name": "The Pond",
+      "Description": "\n   You are swimming around in the pond, feeling rather stupid. You can get back\non the path from the eastern and western end of the pond.",
+      "ZoneId": 31,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3115,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3113,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3115,
+      "Name": "A path in the park",
+      "Description": "\n   You are in the park. The paths lead north and east. Eastward is the park\nentrance and to the west you see a small pond.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3109,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3116,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3114,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3116,
+      "Name": "Eastern Park Entrance",
+      "Description": "\n   You are standing at the eastern end of the park. A small path leads west\ninto the park. Going east through the entrance you will reach Emerald Avenue.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3115,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3117,
+      "Name": "Emerald Avenue",
+      "Description": "\n   You are standing on the north end of Emerald Avenue. To the north is the\npromenade and to the west is the park entrance. To the east is the not very big\nTown Hall of Midgaard.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3132,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3137,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3119,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3116,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3118,
+      "Name": "Park Road",
+      "Description": "\n   You are on Park Road which leads north and south. A cottage is just east of\nhere.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3111,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3300,
+          "Description": "You see a small cottage with an oaken door. A name plate has been set on it.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 3300
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3135,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "plate",
+            "name"
+          ],
+          "Description": "\nThe name 'Papi Llon' has been carved into the name plate."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3119,
+      "Name": "Emerald Avenue",
+      "Description": "\n   You are standing at a bend on Emerald Avenue. The road leads north and west.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3133,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3120,
+      "Name": "Road Crossing",
+      "Description": "\n   You are in the middle of the road cross. Roads lead in all directions. A\nhuge black iron chain as thick as a tree trunk is fastened into the ground at\nthe center of the road cross. Its other end leads directly upwards towards the\nsky. A road sign is here.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3133,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3136,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3134,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3135,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Up",
+          "TargetId": 7914,
+          "Description": "The chain disappears in the clouds.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chain"
+          ],
+          "Description": "\nThe chain reaches the clouds high above you.  It must take some really\npowerful magic to hold such a chain in place."
+        },
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign points in all directions:\n\n   North - Emerald Avenue.\n   East  - Park Road.\n   South - Emerald Avenue.\n   West  - Park Road.\n\nSomeone has added the following with red paint:\n\n   Up    - Redferne's Flying Citadel."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3121,
+      "Name": "Emerald Avenue",
+      "Description": "\n   You are standing at a bend on Emerald Avenue. The road leads south and east.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3134,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3125,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3122,
+      "Name": "Park Road",
+      "Description": "\n   You are on Park Road which leads south and north. Elm Street is east of\nhere.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3136,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3123,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3126,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3123,
+      "Name": "Elm Street",
+      "Description": "\n   You are on Elm street. Park Road is to the west and Elm Street continues in\neastward direction.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3124,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3122,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3124,
+      "Name": "End of Elm Street",
+      "Description": "\n   You are at the end of Elm Street. An old elm tree grows here.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3123,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "elm",
+            "tree"
+          ],
+          "Description": "\nThe fresh young leaves of the elm tree wave gently in the wind."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3125,
+      "Name": "Emerald Avenue",
+      "Description": "\n   You are on Emerald Avenue which continues north. The Concourse is south of\nhere.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3121,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3128,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3126,
+      "Name": "Park Road",
+      "Description": "\n   You are on Park Road which continues north. The Concourse is south of here.\nAn old two-story house is to the east.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3122,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 6904,
+          "Description": "A heavy oaken door is to the east.",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked",
+            "PickProof"
+          ],
+          "KeyId": 3301
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3129,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "door",
+            "knocker"
+          ],
+          "Description": "\nAs you look at it, the goblin door knocker comes alive!\n\nThe head splutters 'Tiz iz da houze uff Kwiff...  Kuiffe...  Qwiff...  Erhm...'\nThe head splutters 'Quiff...  Quiffil...  Ne'er mind!  Quiffy livez ere!'\n\nIt opens its mouth wide and gobbles 'Unlokk me!'"
+        },
+        {
+          "Keywords": [
+            "house"
+          ],
+          "Description": "\nThe house is obviously very old and needs painting.  The heavy oaken door is\nequipped with a brass door knocker shaped as a goblin's head.  No name plate\nis to be seen anywhere."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3127,
+      "Name": "On the Concourse",
+      "Description": "\n   You are at the southwest corner of the city wall. The Concourse leads both\nnorth and east.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3100,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3128,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3128,
+      "Name": "On the Concourse",
+      "Description": "\n   The Concourse continues both east and west. Emerald Avenue is north of here.\nTo the south you can leave midgaard through the south gate.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3125,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3129,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 24959,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3127,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3129,
+      "Name": "On the Concourse",
+      "Description": "\n   The Concourse continues both east and west. Park Road is north of here and\nan iron grate leads south to the graveyard.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3126,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3130,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3400,
+          "Description": "Through the solid iron bars you see the graveyard.",
+          "Keywords": [
+            "grate"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 3121
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3128,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3130,
+      "Name": "On the Concourse",
+      "Description": "\n   You are at the southeast corner of the city wall. The Concourse leads both\nnorth and west.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3104,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3129,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3131,
+      "Name": "Park Road",
+      "Description": "\n   You are at Park Road which continues north and south.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3101,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3111,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3132,
+      "Name": "Emerald Avenue",
+      "Description": "\n   You are at Emerald Avenue which continues north and south. Penny Lane leads\neast from here.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3103,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3139,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3117,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3133,
+      "Name": "Emerald Avenue",
+      "Description": "\n   You are standing at a bend on Emerald Avenue. To the east the road goes on\nand to the south is the Road Crossing.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3119,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3134,
+      "Name": "Emerald Avenue",
+      "Description": "\n   You are standing at a bend on Emerald Avenue. To the west the road goes on\nand to the north is the Road Crossing.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3121,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3135,
+      "Name": "Park Road",
+      "Description": "\n   You are at a bend on Park Road. To the north the road goes on and to the\neast is the Road Crossing.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3118,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3136,
+      "Name": "Park Road",
+      "Description": "\n   You are at a bend on Park Road. To the south the road goes on and to the\nwest is the Road Crossing.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3122,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3120,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3137,
+      "Name": "The Waiting Room",
+      "Description": "\n   You are standing in the waiting room at the town hall. Wooden chairs stand\nalong the walls and a long desk with a typewriter is placed in the middle of\nthe room.",
+      "ZoneId": 31,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3138,
+          "Description": "It looks like some kind of office.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3117,
+          "Description": "The exit west leads to Emerald Avenue.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "typewriter"
+          ],
+          "Description": "\nIt is an ancient Quifatronic T-1000 mk I.  These machines are known for their\nincredible durability, and for their even more incredible weight.  They make\na Cray II look like a laptop."
+        },
+        {
+          "Keywords": [
+            "desk"
+          ],
+          "Description": "\nAn extremely heavy desk.  It is so large that it doesn't even need drawers.\nEverything can be stored on its top."
+        },
+        {
+          "Keywords": [
+            "chair",
+            "chairs"
+          ],
+          "Description": "\nNot the very least comfortable."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3138,
+      "Name": "The Mayor's Office",
+      "Description": "\n   You are in the not very big office of the Mayor of Midgaard. A large and\npolished but completely empty desk is standing in front of an armchair that\nlooks so comfortable that it most of all resembles a bed with the head end\nraised slightly.",
+      "ZoneId": 31,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 3137,
+          "Description": "The waiting room is to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "chair",
+            "armchair"
+          ],
+          "Description": "\nThis chair is really a masterpiece.  A chair where one can sit as comfortably\nas in a bed.  All auditoriums should be equipped with these things.  A shame\nthat there wouldn't be room for the students too, though."
+        },
+        {
+          "Keywords": [
+            "desk"
+          ],
+          "Description": "\nThis desk is obviously very old.  Nevertheless it looks as if has never been\nused."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3139,
+      "Name": "Penny Lane",
+      "Description": "\n   You are on Penny Lane. Emerald Avenue is to the west and Penny Lane\ncontinues in eastward direction.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3140,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3132,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3140,
+      "Name": "Penny Lane",
+      "Description": "\n   You are on Penny Lane. The narrow road continues north and west.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3141,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3139,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3141,
+      "Name": "End of Penny Lane",
+      "Description": "\n   You are at the end of Penny Lane. The only exit appears to be south.",
+      "ZoneId": 31,
+      "Sector": "City",
+      "Flags": [
+        "BfsMark"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3140,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [
+    {
+      "Id": 3100,
+      "Name": "maid",
+      "ShortDescription": "\nThe Maid",
+      "LongDescription": "\nThe Maid is waiting for your order.",
+      "Description": "\nShe is very beautiful with golden hair, and deep blue eyes.  A good reason\nfor coming here more often, you think to yourself.",
+      "Level": 33,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+360",
+        "Mana": 430,
+        "Move": 575
+      },
+      "Combat": {
+        "Armor": -100,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+22"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 2000,
+      "Experience": 80000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3120,
+      "Name": "sexton",
+      "ShortDescription": "\nthe Sexton",
+      "LongDescription": "\nA Sexton is sitting here, drinking hot tea.",
+      "Description": "\nThe Sexton looks like he is relaxing after another gravedigging job.",
+      "Level": 3,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+35",
+        "Mana": 130,
+        "Move": 125
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d7+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 13,
+      "Experience": 400,
+      "DefaultPosition": "Sitting",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3121,
+      "Name": "swan",
+      "ShortDescription": "\nthe swan",
+      "LongDescription": "\nA swan is swimming around in the pond.",
+      "Description": "\nThe white swan is very elegant.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+10",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 100,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3122,
+      "Name": "duckling",
+      "ShortDescription": "\nthe duckling",
+      "LongDescription": "\nA duckling is swimming around in the pond.",
+      "Description": "\nThe duckling is adorable, it looks most of all like a tiny furball.",
+      "Level": 0,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+0",
+        "Mana": 100,
+        "Move": 80
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d1+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3123,
+      "Name": "sparrow",
+      "ShortDescription": "\nthe sparrow",
+      "LongDescription": "\nA sparrow is flapping around on the ground.",
+      "Description": "\nThe sparrow looks like it is enjoying life.",
+      "Level": 0,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+0",
+        "Mana": 100,
+        "Move": 80
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d3+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 25,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3124,
+      "Name": "duck",
+      "ShortDescription": "\nthe duck",
+      "LongDescription": "\nA duck is here, quacking happily.",
+      "Description": "\nThe duck is quite fat.  It looks like it is enjoying life.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+5",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 100,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 75,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3140,
+      "Name": "chief",
+      "ShortDescription": "\nthe Chief Guard",
+      "LongDescription": "\nThe Chief Guard is looking very upset.",
+      "Description": "\nA very angry chief.",
+      "Level": 17,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 800,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+210",
+        "Mana": 270,
+        "Move": 335
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 6,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+18"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 10000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3141,
+      "Name": "cityguard guard",
+      "ShortDescription": "\nthe upset cityguard",
+      "LongDescription": "\nA cityguard stands here, looking very upset.",
+      "Description": "\nA big, strong, angry guard.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Scavenger",
+        "Aggressive"
+      ],
+      "Affects": [],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+123",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 3000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3142,
+      "Name": "secretary",
+      "ShortDescription": "\nthe Secretary",
+      "LongDescription": "\nA secretary is sitting at the desk, typing away on the typewriter.",
+      "Description": "\nShe looks very busy.\n\n>\nThe Secretary says 'Sorry, but the Mayor is extremely busy today.'\nThe Secretary says 'Please sit down and have a seat in the meantime.'",
+      "Level": 12,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "Sentinel"
+      ],
+      "Affects": [],
+      "Alignment": 900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+148",
+        "Mana": 220,
+        "Move": 260
+      },
+      "Combat": {
+        "Armor": 20,
+        "Hitroll": 2,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "2d7+1"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 2000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3143,
+      "Name": "mayor",
+      "ShortDescription": "\nthe Mayor",
+      "LongDescription": "\nThe Mayor is sitting in his huge chair, snoring loudly.",
+      "Description": "\nHe is a stocky, middle-aged man with thin, grey hair.",
+      "Level": 24,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "6d10+790",
+        "Mana": 340,
+        "Move": 440
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 8,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d8+18"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 58000,
+      "DefaultPosition": "Sleeping",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3144,
+      "Name": "crier",
+      "ShortDescription": "\nthe Town Crier",
+      "LongDescription": "\nThe Town Crier is here, weeping quietly.",
+      "Description": "\nHe is very good at his job - completely dissolved in tears.",
+      "Level": 1,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Wimpy"
+      ],
+      "Affects": [],
+      "Alignment": 900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d6+10",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 90,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d5+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 34,
+      "Experience": 100,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3060,
+      "Name": "cityguard guard",
+      "ShortDescription": "\nthe Cityguard",
+      "LongDescription": "\nA cityguard stands here.",
+      "Description": "\nA big, strong, helpful, trustworthy guard.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "StayZone",
+        "Wimpy",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+160",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 90,
+          "DamageDice": "1d8+5"
+        },
+        {
+          "Type": "Attack_345",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "0d0+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 3000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3068,
+      "Name": "green gelatinous blob",
+      "ShortDescription": "\nthe green gelatinous blob",
+      "LongDescription": "\nAn oozing green gelatinous blob is here, sucking in bits of debris.",
+      "Description": "\nA horrid looking thing; it's huge, greenish, and looks like the blob.",
+      "Level": 20,
+      "Race": "Earth",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Wimpy",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    }
+  ],
+  "Objects": [
+    {
+      "Id": 3100,
+      "Name": "tea cup",
+      "ShortDescription": "\na cup",
+      "Description": "\nA cup has been set here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        11,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 11,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 5,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cup"
+          ],
+          "Description": "\nIt is a small simple cup."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3101,
+      "Name": "coffee cup",
+      "ShortDescription": "\na cup",
+      "Description": "\nA cup has been set here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        12,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 12,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 7,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cup"
+          ],
+          "Description": "\nIt is a small simple cup."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3102,
+      "Name": "water cup",
+      "ShortDescription": "\na cup",
+      "Description": "\nA cup has been set here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        12,
+        12,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 12,
+          "Amount": 12,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cup"
+          ],
+          "Description": "\nIt is a large simple cup."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3120,
+      "Name": "key iron",
+      "ShortDescription": "\na key",
+      "Description": "\nAn iron key has been left here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 100
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "iron"
+          ],
+          "Description": "\nThe iron key is not special.  In fact, it's quite boring."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3121,
+      "Name": "key rusty",
+      "ShortDescription": "\na key",
+      "Description": "\nA rusty key has been left here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 100
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "rusty"
+          ],
+          "Description": "\nThe key is a fairly large rusty key.  You notice a lot of dirt it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3122,
+      "Name": "key wooden",
+      "ShortDescription": "\na key",
+      "Description": "\nA wooden key has been left here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 100
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "wooden"
+          ],
+          "Description": "\nThe wooden key is not special.  In fact it's just about the most boring key\nyou've ever seen in your life."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3123,
+      "Name": "key brass",
+      "ShortDescription": "\na key",
+      "Description": "\nA brass key has been left here.",
+      "ActionDescription": "",
+      "Type": "Key",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 100
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 0,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "key",
+            "brass"
+          ],
+          "Description": "\nThe brass key is small and looks like it fits a very complicated lock."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3130,
+      "Name": "desk drawer",
+      "ShortDescription": "\nthe desk",
+      "Description": "\nA desk is set against the western wall.",
+      "ActionDescription": "\nThe desk looks very sparse, there is a drawer in the left side.",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        34,
+        15,
+        3122,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 34,
+          "Flags": [
+            "Closeable",
+            "PickProof",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 3122,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 100,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "drawer"
+          ],
+          "Description": "\nYou notice a keyhole in the drawer."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3131,
+      "Name": "safe",
+      "ShortDescription": "\nthe safe",
+      "Description": "\nA safe is placed in a dark corner of the room.",
+      "ActionDescription": "\nThe safe has a keyhole.",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        34,
+        15,
+        3123,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 34,
+          "Flags": [
+            "Closeable",
+            "PickProof",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 3123,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 999,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "safe"
+          ],
+          "Description": "\nThe safe is very heavy."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3132,
+      "Name": "gold coins",
+      "ShortDescription": "\nthe gold",
+      "Description": "\nA lot of gold is here.",
+      "ActionDescription": "\nLooks like at least 10,000 coins.",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        32385,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 32385
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 32385,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3133,
+      "Name": "city key",
+      "ShortDescription": "\nthe City Key",
+      "Description": "\nThe very big City Key is lying here.",
+      "ActionDescription": "\nIt is probably the biggest key you have seen in your life.  It is made from\npolished gold and has various patterns on it along with the Midgaard Coat of\nArms.",
+      "Type": "Key",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": {
+          "KeyType": 0,
+          "Timer": 0,
+          "TimerSet": 100
+        },
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 30,
+      "Cost": 10000,
+      "CostPerDay": 500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3134,
+      "Name": "bench",
+      "ShortDescription": "\nthe Bench",
+      "Description": "\nA white-painted wooden bench is standing here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 100,
+      "Cost": 600,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "bench"
+          ],
+          "Description": "\nIt is a quite heavy but very comfortable bench.  It is placed with its front\ntowards the river so you can sit and watch the river and the houses on the\nother side."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3135,
+      "Name": "fountain",
+      "ShortDescription": "\na fountain",
+      "Description": "\nA small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 500,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "\nIt is very nice.  Made from fine white marble."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3136,
+      "Name": "coins gold",
+      "ShortDescription": "\na small pile of gold coins",
+      "Description": "\nA small pile of gold coins lies here.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        37,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 37
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3022,
+      "Name": "sword long",
+      "ShortDescription": "\na long sword",
+      "Description": "\nA long sword has been left here.",
+      "ActionDescription": "\nslash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        8,
+        3,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 100
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 600,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

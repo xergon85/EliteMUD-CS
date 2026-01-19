@@ -1,0 +1,918 @@
+{
+  "Zone": {
+    "Id": 35,
+    "Name": "Miden'Nir",
+    "TopRoomId": 3599,
+    "Lifespan": 60,
+    "ResetMode": "ResetAlways",
+    "ResetCommands": []
+  },
+  "Rooms": [
+    {
+      "Id": 3500,
+      "Name": "The Plains",
+      "Description": "\n   You are on the plains, to the north you notice a small path into the hills.\nAnd to the east the plains continue. A sign is on a pole here.",
+      "ZoneId": 35,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 4000,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 23001,
+          "Description": "The plains continue here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign points North, East and south.\nTo the south it reads \"City of Midgaard\"\nTo the North it reads \"Moria Mountains\"\nTo the east it reads \"Gnome Village\"\n                    \"Dwarf Village\"\n                    \"Elven Forest of Namir\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3501,
+      "Name": "The Lane",
+      "Description": "\n   You are strolling along a pleasant, shady lane. The road is lined on both\nsides by tall, stately trees which lend the scene with a sense of quiet\nserenity. You can follow the road north or south.",
+      "ZoneId": 35,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3500,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": -1,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3502,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3523,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3502,
+      "Name": "The Turning Point",
+      "Description": "\n   The trees stand close here, and the tall, bushy undergrowth prevents you\nfrom seeing far in any direction save north, where a broad lane leads off into\nthe distance; and west, where the same lane continues towards what looks like a\nfairly large city. The muted sounds of city commotion reach your ears from a\ndistance; stray dogs barking, children crying, and street salesmen shouting.\nA large sign stands on the right side of the road.",
+      "ZoneId": 35,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 15092,
+          "Description": "You see a path and a large castle in the distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": -1,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3503,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sign"
+          ],
+          "Description": "\nThe sign points to the North, East and to the West.\n\nTo the west it reads \"City of Midgaard\"\nTo the east it reads \"King Welmars Castle\"\nTo the north is reads \"Moria Mountains\"\n                      \"Dwarf village\"\n                      \"Gnome village\"\n                      \"Elven Forest of Namir\""
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3503,
+      "Name": "City Entrance",
+      "Description": "\n   You stand on the outskirts of a large city - Midgaard; the capital of this\nland. The road leads east into the peace and quiet - and dangers - of the\nforest; and to the west it becomes the main street of the town; surrounded by a\nconfusion of shops, bars, and market places.  A large iron gate stands to \nthe south.  You can hear strange sounds coming from the other side.",
+      "ZoneId": 35,
+      "Sector": "City",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3502,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 23701,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3053,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3504,
+      "Name": "The Bridge",
+      "Description": "\n   You are standing on a small, rickety bridge over a small mountain river.\nTo the south lies the forest Miden'nir. The way north seems to be blocked\nby lots of fallen rocks.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3505,
+          "Description": "If you go south, you will enter the Miden'Nir.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3505,
+      "Name": "The Trail to Miden'Nir",
+      "Description": "\n   You are in a light forest. A path leads south, but the passage to the east\nis easy enough. To the west, smoke can be seen rising above the treetops. The\nsound of a river can be heard north of here.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3504,
+          "Description": "To the north, you see a small bridge.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3506,
+          "Description": "More light forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3507,
+          "Description": "This path cuts through the darkness of the Miden'Nir.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3506,
+      "Name": "The Miden'Nir",
+      "Description": "\n   You are in a dark forest. To the east, mountains block passage. From here,\nonly the lighter forest to the west or south offer a way to travel.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3509,
+          "Description": "The forest is darker to the south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3505,
+          "Description": "The forest gets lighter as you go west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3507,
+      "Name": "The Miden'Nir",
+      "Description": "\n   The forest is deep here and the wind blows through the trees and through\nyour hair. To the north, the forest gets lighter. However, the southern and\neastern paths place you even deeper in the wood.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3505,
+          "Description": "The forest is lighter in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3510,
+          "Description": "More and darker woods.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3508,
+          "Description": "There is a small path leading west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3508,
+      "Name": "On a Small Path",
+      "Description": "\n   A path is here, leading east and south. Mountains slash the scenery to the\nwest of here.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3507,
+          "Description": "Wind-swept forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3511,
+          "Description": "To the south, the trail continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3509,
+      "Name": "The Miden'Nir",
+      "Description": "\n   More trees... You can go north, south or travel toward the Moria mountains \nthat lie east of here.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3506,
+          "Description": "The trees lighten up a bit this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3512,
+          "Description": "Huge gray mountains lie in this direction.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3514,
+          "Description": "The forest continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3510,
+      "Name": "The Crossroads",
+      "Description": "\n   Here foot worn paths lead north, south and east. The trees seem to be closing\nin on you at this point.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3507,
+          "Description": "Trees as far as the eye can see.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3514,
+          "Description": "There is an especially dark part of the forest this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3516,
+          "Description": "There is an especially dark section of forest this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3511,
+      "Name": "The Trail",
+      "Description": "\n   You are on a north-south trail. To the west, impassable mountains glare at\nyou.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3508,
+          "Description": "The trail bends to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3515,
+          "Description": "To the south, the path re-enters the forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3512,
+      "Name": "At the Foot of the Moria Mountains",
+      "Description": "\n   You can go west or south and re-enter the forest. The Moria mountains \nprevent passage in any other direction.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 3513,
+          "Description": "A light section of forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3509,
+          "Description": "The forest continues here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3513,
+      "Name": "The Miden'Nir",
+      "Description": "\n   The forest is light here and gets lighter to the north. To the west\neverything gets dark. The wind kicks up as you ponder your options.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3512,
+          "Description": "There is a small clearing to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3514,
+          "Description": "It gets darker and thicker this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3514,
+      "Name": "Deep Forest",
+      "Description": "\n   It is quite dark here, forest surrounds you. Footsteps can be heard, but\ntheir direction can not be determined. A path lead to the turning point to the\nsouth.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3509,
+          "Description": "More forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3513,
+          "Description": "Lighter forest and mountains in the distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3517,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3510,
+          "Description": "The forest continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3515,
+      "Name": "Light Forest",
+      "Description": "\n   The forest is light here and you can easily pick your way through the trail.\nTo the east, the forest becomes deep again. South, the trail continues.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3511,
+          "Description": "A trail leading north-south.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3516,
+          "Description": "The trees get thicker as you go east.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3518,
+          "Description": "More trees and some small hills.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3516,
+      "Name": "The Sink",
+      "Description": "\n   The ground is quite muddy here and puddles are all around. Your boots make a\ndisgusting SQUISH as you walk here. You can go in any of the four cardinal\ndirections from here. Hopefully, it will be dryer. The path to the turning\npoint can be seen to the east.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3510,
+          "Description": "The Miden'Nir continues.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3517,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3519,
+          "Description": "The trees get VERY thick to the south. You can barely see...",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3515,
+          "Description": "Some light trees and daylight.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3517,
+      "Name": "Near the Moria Mountains",
+      "Description": "\n   The most prominent feature here is the Moria mountains that lie to the east.\nTo the south a small path leads back to the turning point, to the north you can \nenter a forest and to the west lies a sink.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3514,
+          "Description": "Many trees to the north.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3524,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3516,
+          "Description": "There is a bit of a slope downward to the west.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3518,
+      "Name": "The Fading Trail",
+      "Description": "\n   The trail becomes nearly impassable here. You can go south and west, as the\nforest is relatively light. To the north, you can see a path.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3515,
+          "Description": "You can see a trail this way.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3522,
+          "Description": "Dark forests.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3520,
+          "Description": "Light trees and mountains in the distance.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3519,
+      "Name": "The Dark Path",
+      "Description": "\n   You are hemmed in by trees on either side of you. There is no way to go east\nor west. The wind, which howled earlier, seems to have died in this natural\ntunnel.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3516,
+          "Description": "Ahhh... daylight.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3521,
+          "Description": "More darkness.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3520,
+      "Name": "On the Verge of Darkness",
+      "Description": "\n   The forest is getting pretty thick here. To the south, the forest is too\ndense to venture into. The eastern path seems the only way to go from here.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "East",
+          "TargetId": 3518,
+          "Description": "Light and a visible trail.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3521,
+      "Name": "Carnage",
+      "Description": "\n   Here, you see a gruesome sight. Blood is everywhere... on the trees and\nsoaked into the ground. Two carcasses lie in front of you, seeming to look up\nat you. The forest is impassable to the south, but the path continues north and\nwest. There is a small dark track to the east.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3519,
+          "Description": "Darkness...",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "West",
+          "TargetId": 3522,
+          "Description": "More dark forest.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "carcass",
+            "body",
+            "corpse",
+            "carcasses",
+            "bodies",
+            "corpses"
+          ],
+          "Description": "\n   The corpses looked as if they have been pierced by a large, jagged\nspear.  The damage these people sustained is simply amazing.  Worse, the\nlips on the bodies are a light shade of blue, hinting at poison in\ntheir systems."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3522,
+      "Name": "Stench",
+      "Description": "\n   There is a sickening stench here. It smells of blood and death. To the\nnorth, you catch glimpses of daylight. To the east, you simply cannot see. The\ntrees are close and stifling.",
+      "ZoneId": 35,
+      "Sector": "Forest",
+      "Flags": [
+        "Dark"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3518,
+          "Description": "Daylight and a trail to follow.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3521,
+          "Description": "Darkness.. the smell seems to come from here.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": 0
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3523,
+      "Name": "Small Path",
+      "Description": "\n  You walk on a small path that makes its way towards a small forest just at \nthe base of the moria mountains.",
+      "ZoneId": 35,
+      "Sector": "Field",
+      "Flags": [
+        "NoMob"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3524,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "East",
+          "TargetId": 3501,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 3524,
+      "Name": "Small Path",
+      "Description": "\n  You walk on a small path that makes its way towards a small forest just at \nthe base of the moria mountains.",
+      "ZoneId": 35,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 3517,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "South",
+          "TargetId": 3523,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    }
+  ],
+  "Mobs": [],
+  "Objects": []
+}
