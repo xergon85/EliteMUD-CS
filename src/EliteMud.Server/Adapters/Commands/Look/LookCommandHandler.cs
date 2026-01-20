@@ -12,12 +12,14 @@ internal sealed class LookCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly IScriptEngine _scriptEngine;
     private readonly LookHandler _lookHandler;
+    private readonly ConnectionRegistry _connectionRegistry;
 
-    public LookCommandHandler(IWorldState worldState, IScriptEngine scriptEngine)
+    public LookCommandHandler(IWorldState worldState, IScriptEngine scriptEngine, ConnectionRegistry connectionRegistry)
     {
         _worldState = worldState;
         _scriptEngine = scriptEngine;
-        _lookHandler = new LookHandler(worldState);
+        _connectionRegistry = connectionRegistry;
+        _lookHandler = new LookHandler(worldState, () => _connectionRegistry.GetConnections().Select(c => c.Player));
     }
 
     public CommandKind Kind => CommandKind.Look;
@@ -60,6 +62,12 @@ internal sealed class LookCommandHandler : ICommandHandler
         
         // NPCs (yellow color)
         foreach (var line in view.MobLines)
+        {
+            await context.Session.SendLineAsync(line, cancellationToken);
+        }
+
+        // Other players (cyan color)
+        foreach (var line in view.PlayerLines)
         {
             await context.Session.SendLineAsync(line, cancellationToken);
         }

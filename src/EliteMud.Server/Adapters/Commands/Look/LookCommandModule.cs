@@ -14,6 +14,7 @@ internal sealed class LookCommandModule : ICommandModule
     {
         return new LookCommandHandler(
             serviceProvider.GetRequiredService<IWorldState>(),
-            serviceProvider.GetRequiredService<IScriptEngine>());
+            serviceProvider.GetRequiredService<IScriptEngine>(),
+            serviceProvider.GetRequiredService<ConnectionRegistry>());
     }
 }

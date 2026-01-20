@@ -33,6 +33,7 @@ public sealed record RoomView(
     string Description,
     IReadOnlyList<string> MobLines,
     IReadOnlyList<string> ObjectLines,
+    IReadOnlyList<string> PlayerLines,
     string ExitLine);
 
 public sealed record WhoResult(IReadOnlyList<string> Names);
