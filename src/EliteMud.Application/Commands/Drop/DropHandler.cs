@@ -4,6 +4,8 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Drop;
 
+public sealed record DropResult(bool Success, string Message, ObjectDefinition? Object = null);
+
 public sealed class DropHandler
 {
     private readonly IWorldState _worldState;
@@ -13,11 +15,11 @@ public sealed class DropHandler
         _worldState = worldState;
     }
 
-    public CommandResult Handle(PlayerState player, string target)
+    public DropResult Handle(PlayerState player, string target)
     {
         if (string.IsNullOrWhiteSpace(target))
         {
-            return CommandResult.Fail("Drop what?");
+            return new DropResult(false, "Drop what?");
         }
 
         var inventory = _worldState.GetPlayerInventory(player);
@@ -30,16 +32,16 @@ public sealed class DropHandler
                 // Try to drop the object
                 if (_worldState.DropObject(player, obj.InstanceId))
                 {
-                    return CommandResult.Ok($"You drop {obj.Definition.ShortDescription}.");
+                    return new DropResult(true, string.Empty, obj.Definition);
                 }
                 else
                 {
-                    return CommandResult.Fail("You can't drop that.");
+                    return new DropResult(false, "You can't drop that.");
                 }
             }
         }
 
-        return CommandResult.Fail("You don't have that.");
+        return new DropResult(false, "You don't have that.");
     }
 
     private static bool MatchesTarget(ObjectDefinition obj, string target)

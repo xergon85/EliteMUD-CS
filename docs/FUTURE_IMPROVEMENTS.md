@@ -101,6 +101,143 @@ This document tracks potential improvements to the EliteMUD-CS codebase that wou
 
 ---
 
+## Authentication & Security Improvements
+
+### Password Recovery System
+
+**Current State:**
+- Account system with BCrypt password hashing implemented
+- IP-based rate limiting (3 attempts → 15 minute ban)
+- Per-session password attempt limit (3 attempts → disconnect)
+- No password recovery mechanism
+
+**Missing Features:**
+1. **Email-based Password Reset:**
+   - Needs: `string? Email` field in Account entity
+   - Email verification on account creation
+   - Secure token generation for reset links
+   - Email service integration (SMTP or third-party service)
+   - Reset token expiration (e.g., 1 hour)
+
+2. **Security Questions:**
+   - Alternative to email for MUD context
+   - Needs: `List<SecurityQuestion>` table (AccountId, Question, AnswerHash)
+   - Store hashed answers (not plaintext)
+   - Allow recovery via answering questions
+
+3. **Admin Password Reset:**
+   - Admin command to reset user passwords
+   - Generates temporary password
+   - Forces password change on next login
+   - Audit log of admin password resets
+
+4. **Account Lockout:**
+   - Currently only IP bans exist
+   - Consider: Lock account after X failed attempts (separate from IP ban)
+   - Unlock via password recovery or admin intervention
+
+**Implementation Considerations:**
+- MUDs typically don't require email, may not fit classic MUD feel
+- Security questions may be more appropriate for this genre
+- Could implement both and let users choose
+- Need to decide: required vs optional email on account creation
+
+**Priority:** Medium - Current system works but users locked out have no recovery path
+
+**References:**
+- Current authentication: `src/EliteMud.Application/Session/Authentication/AuthenticationHandler.cs`
+- Account entity: `src/EliteMud.Data/Entities/Account.cs`
+- IP ban service: `src/EliteMud.Application/Session/IpBanService.cs`
+
+---
+
+## Room Messaging System (act() Function)
+
+**Current State:**
+- Commands send messages only to the acting player
+- No broadcast messaging to other players in the room
+- No target-specific messaging
+- Messages are simple strings without substitution
+
+**Legacy System:**
+The legacy codebase uses the `act()` function (in `comm.c:1737`) for rich, context-aware messaging:
+
+**Message Types (via type parameter):**
+- `TO_CHAR` - Send to the actor only
+- `TO_VICT` - Send to the target/victim only
+- `TO_ROOM` - Send to everyone in the room (including actor and victim)
+- `TO_NOTVICT` - Send to everyone except actor and victim
+
+**String Substitution Codes:**
+The `perform_act()` function (in `comm.c:1625`) handles special `$` codes for dynamic substitution:
+
+**Character references:**
+- `$n` - Actor's name (seen by others: "Bob", seen by self: "you")
+- `$N` - Victim's name
+- `$e` - he/she/it (actor)
+- `$E` - he/she/it (victim)
+- `$m` - him/her/it (actor)
+- `$M` - him/her/it (victim)
+- `$s` - his/her/its (actor)
+- `$S` - his/her/its (victim)
+
+**Object references:**
+- `$o` - Object's name
+- `$O` - Victim object's name
+- `$p` - Object's short description
+- `$P` - Victim object's short description
+- `$a` - a/an for object
+- `$A` - a/an for victim object
+
+**Other:**
+- `$t` / `$T` - Text string passed as parameter
+- `$-` - Ignore all codes until `$+`
+- `$+` - Resume processing codes
+
+**Example Usage (from act.obj1.c:371-372):**
+```c
+// Getting an object from the room
+act("You get$T.", FALSE, ch, 0, (void*) buffer, TO_CHAR);
+act("$n gets$T.", TRUE, ch, 0, (void*) buffer, TO_ROOM);
+```
+
+**What player sees:** "You get a steel longsword."  
+**What room sees:** "Bob gets a steel longsword."
+
+**Example with target (act.obj1.c:385-387):**
+```c
+// Giving an object to another player
+act("You give$t to $N.", FALSE, ch, (void*) buffer, vict, TO_CHAR);
+act("$n gives$t to you.", FALSE, ch, (void*) buffer, vict, TO_VICT);
+act("$n gives$t to $N.", TRUE, ch, (void*) buffer, vict, TO_NOTVICT);
+```
+
+**What giver sees:** "You give a steel longsword to Alice."  
+**What receiver sees:** "Bob gives a steel longsword to you."  
+**What room sees:** "Bob gives a steel longsword to Alice."
+
+**Implementation Plan:**
+1. Create `ActMessage` service in Application layer
+2. Implement substitution code parser (`$n`, `$N`, `$o`, etc.)
+3. Add pronoun resolution (he/she/it based on sex)
+4. Implement visibility checks (can target see actor?)
+5. Add broadcast methods:
+   - `SendToChar()` - TO_CHAR
+   - `SendToVict()` - TO_VICT
+   - `SendToRoom()` - TO_ROOM
+   - `SendToNotVict()` - TO_NOTVICT
+6. Update all command handlers to use act() instead of direct SendLineAsync()
+
+**Priority:** High - Required for Phase 3.1 (Object Interaction)  
+Every get/drop/wear/remove command needs proper room messaging
+
+**References:**
+- Legacy `act()`: `~/Dev/EliteMUD/src/comm.c` lines 1737-1782
+- Legacy `perform_act()`: `~/Dev/EliteMUD/src/comm.c` lines 1625-1734
+- Usage examples: `~/Dev/EliteMUD/src/act.obj1.c` lines 350-420
+
+---
+
 ## Other Ideas
 
 (Add future improvement ideas here)

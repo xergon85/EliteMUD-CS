@@ -2,10 +2,15 @@ using System.Net;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
 using EliteMud.Application.Session;
+using EliteMud.Application.Session.Authentication;
 using EliteMud.Application.World;
+using EliteMud.Data;
+using EliteMud.Data.Repositories;
+using EliteMud.Data.Services;
 using EliteMud.Game;
 using EliteMud.Scripting;
 using EliteMud.Server.Adapters.Commands.Shared;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MobInstance = EliteMud.Application.World.MobInstance;
 
@@ -77,18 +82,49 @@ internal static class ServerBootstrap
         var worldState = BuildWorldState(world, mobs, objects, zones);
         var scriptEngine = BuildScriptEngine(scripts);
 
+        // Get database path
+        var dbPath = Path.Combine(contentRoot, "..", "elitemud.db");
+        var connectionString = $"Data Source={dbPath}";
+
         var services = new ServiceCollection()
+            // World and scripting
             .AddSingleton<IWorldState>(worldState)
             .AddSingleton(scriptEngine)
+            
+            // Database
+            .AddDbContext<EliteMudDbContext>(options =>
+                options.UseSqlite(connectionString))
+            
+            // Repositories
+            .AddScoped<IAccountRepository, AccountRepository>()
+            .AddScoped<ICharacterRepository, CharacterRepository>()
+            
+            // Services
+            .AddSingleton<IPasswordService, PasswordService>()
+            .AddSingleton<IpBanService>(new IpBanService(banDurationMinutes: 15, maxFailedAttempts: 3))
+            .AddSingleton<AuthenticationHandler>()
+            .AddSingleton<ActMessageService>()
+            
+            // Commands and other services
             .AddCommandHandlers()
             .BuildServiceProvider();
+
+        // Ensure database is created and migrated
+        using (var scope = services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<EliteMudDbContext>();
+            db.Database.Migrate();
+            Console.WriteLine($"Database initialized at {dbPath}");
+        }
 
         var commandRouter = services.GetRequiredService<CommandRouter>();
         var catalog = services.GetRequiredService<CommandCatalog>();
         var promptCatalog = services.GetRequiredService<PromptCatalog>();
         var connectionRegistry = services.GetRequiredService<ConnectionRegistry>();
+        var authHandler = services.GetRequiredService<AuthenticationHandler>();
+        var ipBanService = services.GetRequiredService<IpBanService>();
 
-        return new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry);
+        return new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry, authHandler, services, ipBanService);
     }
 
     public static int? TryParsePort(string[] args)

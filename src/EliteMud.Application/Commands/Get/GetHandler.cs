@@ -4,6 +4,8 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Get;
 
+public sealed record GetResult(bool Success, string Message, ObjectDefinition? Object = null);
+
 public sealed class GetHandler
 {
     private readonly IWorldState _worldState;
@@ -13,11 +15,11 @@ public sealed class GetHandler
         _worldState = worldState;
     }
 
-    public CommandResult Handle(PlayerState player, string target)
+    public GetResult Handle(PlayerState player, string target)
     {
         if (string.IsNullOrWhiteSpace(target))
         {
-            return CommandResult.Fail("Get what?");
+            return new GetResult(false, "Get what?");
         }
 
         var room = _worldState.World.GetRoom(player.RoomId);
@@ -31,16 +33,16 @@ public sealed class GetHandler
                 // Try to take the object
                 if (_worldState.TakeObject(player, obj.InstanceId))
                 {
-                    return CommandResult.Ok($"You get {obj.Definition.ShortDescription}.");
+                    return new GetResult(true, string.Empty, obj.Definition);
                 }
                 else
                 {
-                    return CommandResult.Fail("You can't take that.");
+                    return new GetResult(false, "You can't take that.");
                 }
             }
         }
 
-        return CommandResult.Fail("You don't see that here.");
+        return new GetResult(false, "You don't see that here.");
     }
 
     private static bool MatchesTarget(ObjectDefinition obj, string target)

@@ -7,7 +7,7 @@
 - Store world content (rooms, mobs, objects, zones, scripts) as versioned files.
 - Use SQLite for runtime/player data (players, mail, logs).
 
-## Current Status (As of Jan 2026)
+## Current Status (As of Jan 19, 2026)
 
 ### ✅ Phase 1: COMPLETE
 - ✅ Telnet session handling and input pipeline
@@ -24,22 +24,30 @@
 - ✅ Legacy IDs preserved
 - ✅ Mob equipment system (20 slots: Light, Head, Body, Wield, etc.)
 - ✅ Zone reset system (LoadMob, LoadObject, EquipMob with spawn chances)
-- ❌ SQLite schema - **NOT IMPLEMENTED** (only interfaces exist)
 
 ### 🔄 Phase 3: IN PROGRESS (Character System)
 **Milestone:** Playable persistent characters
 
-#### 3.1 Player Inventory & Object Interaction (NEXT)
-- ❌ Show objects in room description (look command)
-- ❌ `examine` command - inspect objects/mobs
-- ❌ Player inventory system - extend PlayerState with item collection
-- ❌ `get` / `take` commands - pick up objects from room
-- ❌ `drop` command - drop objects to room
-- ❌ `give` command - transfer objects to other players
-- ❌ `inventory` / `i` command - list carried items
-- ❌ Object weight and carry capacity limits
+#### 3.0 Messaging System - COMPLETE ✅
+- ✅ ActMessage service - room broadcast messaging
+- ✅ Substitution code parser ($n, $N, $o, $e, $m, $s, etc.)
+- ✅ Pronoun resolution helpers (he/she/it based on sex)
+- ✅ Multi-audience broadcasting (ToChar, ToVict, ToRoom, ToNotVict)
+- ✅ Visibility checks (can target see actor?)
+- ✅ Message capitalization and formatting
+- ✅ Support for both PlayerState and MobInstance actors/victims
 
-#### 3.2 Player Equipment System
+#### 3.1 Player Inventory & Object Interaction - COMPLETE ✅
+- ✅ Show objects in room description (look command) - already implemented
+- ✅ `examine` command - inspect objects/mobs - already implemented
+- ✅ Player inventory system - PlayerState inventory fully wired
+- ✅ `get` / `take` commands - pick up objects from room with ActMessage
+- ✅ `drop` command - drop objects to room with ActMessage
+- ✅ `inventory` / `i` command - list carried items - already implemented
+- ❌ `give` command - transfer objects to other players - deferred (needs IWorldState.GiveObject)
+- ❌ Object weight and carry capacity limits - TODO
+
+#### 3.2 Player Equipment System (CURRENT - IN PROGRESS)
 - ❌ Extend PlayerState with Equipment dictionary (copy from MobInstance)
 - ❌ `equipment` / `eq` command - show worn/wielded items
 - ❌ `wear` command - equip wearable items
@@ -47,39 +55,57 @@
 - ❌ `wield` / `hold` commands - equip weapons/lights
 - ❌ Equipment slot validation (can't wear two body armors, etc.)
 
-#### 3.3 Character Stats & Resources
-- ❌ Add to PlayerState: HP, MaxHP, Mana, MaxMana, Movement, MaxMovement
-- ❌ Add to PlayerState: Level, Experience, Gold
-- ❌ Add to PlayerState: Str, Dex, Con, Int, Wis, Cha
-- ❌ Add to PlayerState: Race, Class, Alignment
+#### 3.3 Character Stats & Resources (PARTIAL)
+- ✅ PlayerState has: HP, MaxHP, Mana, MaxMana, Movement, MaxMovement
+- ✅ PlayerState has: Level, Experience, Gold, BankGold
+- ✅ PlayerState has: Str, Dex, Con, Int, Wis, Cha
+- ✅ PlayerState has: Race, Class, Alignment, Sex
 - ❌ `score` command - display full character sheet
 - ❌ `stat` command - display detailed stats
 - ❌ HP/mana/movement regeneration tick system
 
-#### 3.4 Persistence Layer (SQLite)
-- ❌ Design player table schema (id, name, stats, position, inventory)
-- ❌ Implement SqliteConnectionFactory
-- ❌ Implement SqliteWorldRepository (IWorldRepository)
-- ❌ Player save on quit
-- ❌ Player load on login
-- ❌ Auto-save timer (every 5 minutes)
-- ❌ Mail table schema
-- ❌ Board table schema
-- ❌ Logs table schema
+#### 3.4 Persistence Layer (SQLite) - MOSTLY COMPLETE ✅
+- ✅ Database schema with EF Core (Account + Character entities)
+- ✅ Account table (username, password hash, last login)
+- ✅ Character table (name, stats, vitals, location, resources, metadata)
+- ✅ CharacterInventoryItem table (character inventory persistence)
+- ✅ CharacterEquipmentItem table (character equipment persistence)
+- ✅ Repository pattern (IAccountRepository, ICharacterRepository)
+- ✅ PasswordService with BCrypt hashing
+- ✅ CharacterMapper (Entity ↔ PlayerState conversion)
+- ✅ Player save on quit (automatic via TelnetServer finally block)
+- ✅ Player load on login (loads selected character from DB)
+- ✅ Database auto-migration on startup
+- ❌ Auto-save timer (every 5 minutes) - **TODO**
+- ❌ Mail table schema - **DEFERRED**
+- ❌ Board table schema - **DEFERRED**
+- ❌ Logs table schema - **DEFERRED**
 
-#### 3.5 Character Creation Flow
-- ❌ Race selection menu
-- ❌ Class selection menu
-- ❌ Stat rolling / point allocation
-- ❌ Starting equipment by class
-- ❌ Starting location by race/class
-- ❌ Character creation confirmation
+#### 3.5 Character Creation Flow - COMPLETE ✅
+- ✅ Account creation with password confirmation
+- ✅ Multi-character support (up to 10 per account)
+- ✅ Character selection menu (list/create/delete/quit)
+- ✅ Sex selection menu (Male/Female/Neutral)
+- ✅ Race selection menu (13 playable races)
+- ✅ Class selection menu (20+ classes with race-based restrictions)
+- ✅ Character name validation and confirmation
+- ✅ Character deletion with confirmation
+- ✅ Starting stats (all 11, matching legacy behavior)
+- ❌ Stat rolling / point allocation - **Using fixed stats**
+- ❌ Starting equipment by class - **TODO**
+- ❌ Starting location by race/class - **Hardcoded to room 1**
 
-#### 3.6 Advanced Features
-- ❌ Affects/buffs/debuffs system
-- ❌ Permission/immortal level system
-- ❌ Password authentication
-- ❌ Email registration (optional)
+#### 3.6 Security & Authentication - COMPLETE ✅
+- ✅ BCrypt password hashing
+- ✅ Per-session password attempt limit (3 attempts → disconnect)
+- ✅ IP-based rate limiting (3 failed attempts → 15 min ban)
+- ✅ IpBanService with auto-expiring bans
+- ✅ Failed attempt tracking per IP address
+- ✅ Ban status checking before connection acceptance
+- ❌ Password recovery system - **Documented in FUTURE_IMPROVEMENTS.md**
+- ❌ Email registration (optional) - **TODO**
+- ❌ Permission/immortal level system - **TODO**
+- ❌ Affects/buffs/debuffs system - **TODO**
 
 ### ⏳ Phase 4: Combat + Skills (PLANNED)
 **Milestone:** Core combat parity
@@ -290,13 +316,19 @@
 - Lua scripting engine with OnLook, OnEnterRoom, OnSay hooks
 - Basic commands: look, say, who, movement, quit, zreset
 - Connection registry and player tracking
+- **SQLite persistence with EF Core (Account + Character tables)**
+- **Multi-character account system (up to 10 chars per account)**
+- **Full character creation flow (race, class, sex selection)**
+- **BCrypt password authentication**
+- **IP-based rate limiting and banning (15 min ban after 3 attempts)**
+- **Character save/load on quit/login**
+- **Character stats and vitals (HP, mana, movement, attributes)**
 
 ### 🔄 IN PROGRESS (Phase 3: Character System)
-- Player inventory and object interaction
-- Player equipment system
-- Character stats and resources
-- SQLite persistence layer
-- Character creation flow
+- **CURRENT:** Player inventory and object interaction (Phase 3.1)
+- Player equipment system (Phase 3.2)
+- Score/stat display commands (Phase 3.3)
+- Auto-save timer (Phase 3.4)
 
 ### ❌ NOT STARTED
 - Combat system (Phase 4)
@@ -306,25 +338,41 @@
 - Shops, mail, boards, clans (Phase 6)
 - Admin tools and OLC (Phase 7)
 
-## Next Execution Checklist (Updated Jan 2026)
+## Next Execution Checklist (Updated Jan 20, 2026)
 
-### Immediate Priorities (Phase 3.1 - Object Interaction)
-1. ✅ ~~Define file-based world content schema v1~~ (DONE)
-2. ✅ ~~Implement legacy room/exit loader to file format~~ (DONE)
-3. **Show objects in look command** - extend LookHandler to display room objects
-4. **Add examine command** - new command handler for inspecting objects/mobs
-5. **Player inventory system** - extend PlayerState with Items collection
-6. **Implement get/drop commands** - object pickup and drop mechanics
-7. **Add inventory command** - display carried items
+### ✅ RECENTLY COMPLETED (Jan 20, 2026)
+- ✅ ActMessage service - room broadcast messaging (Phase 3.0 COMPLETE)
+- ✅ Substitution code parser ($n, $N, $o, $e, $m, $s, etc.)
+- ✅ Pronoun resolution helpers (he/she/it based on sex)
+- ✅ Multi-audience broadcasting (ToChar, ToVict, ToRoom, ToNotVict)
+- ✅ Message capitalization and formatting
+- ✅ Support for both PlayerState and MobInstance in messaging
 
-### Short-term (Phase 3.2-3.4 - Equipment & Persistence)
-8. **Player equipment system** - extend PlayerState with Equipment slots
-9. **Implement wear/remove/wield commands** - equipment management
-10. **Add character stats** - HP, mana, movement, level, attributes to PlayerState
-11. **Implement score command** - character sheet display
-12. **SQLite schema design** - player/mail/boards table definitions
-13. **Implement SqliteWorldRepository** - concrete persistence layer
-14. **Player save/load** - persist PlayerState on quit/login
+### ✅ COMPLETED EARLIER (Jan 19, 2026)
+- ✅ SQLite database schema with EF Core
+- ✅ Account and Character entities with full persistence
+- ✅ Character creation flow (account → character → race → class → sex)
+- ✅ BCrypt password authentication
+- ✅ IP-based rate limiting and banning
+- ✅ Character save/load on quit/login
+- ✅ Multi-character support (up to 10 per account)
+- ✅ CharacterMapper for Entity ↔ PlayerState conversion
+
+### Immediate Priorities (Phase 3.1 - Object Interaction) - CURRENT FOCUS
+1. **Show objects in look command** - extend LookHandler to display room objects
+2. **Add examine command** - new command handler for inspecting objects/mobs
+3. **Player inventory system** - wire up PlayerState Items collection with world state
+4. **Implement get/drop commands** - object pickup and drop mechanics with act() messages
+5. **Add inventory command** - display carried items
+6. **Object weight tracking** - calculate total weight carried
+
+### Short-term (Phase 3.2-3.3 - Equipment & Display)
+7. **Player equipment system** - wire up existing PlayerState Equipment slots
+8. **Implement wear/remove/wield commands** - equipment management
+9. **Add equipment command** - show worn/wielded items
+10. **Implement score command** - character sheet display
+11. **Add stat command** - detailed stats display
+12. **Auto-save timer** - periodic character saves (every 5 minutes)
 
 ### Medium-term (Phase 4 - Combat)
 15. **Basic combat loop** - fighting state and turn system

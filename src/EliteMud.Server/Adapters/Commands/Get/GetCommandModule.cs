@@ -12,6 +12,8 @@ internal sealed class GetCommandModule : ICommandModule
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {
         return new GetCommandHandler(
-            serviceProvider.GetRequiredService<IWorldState>());
+            serviceProvider.GetRequiredService<IWorldState>(),
+            serviceProvider.GetRequiredService<ActMessageService>(),
+            serviceProvider.GetRequiredService<ConnectionRegistry>());
     }
 }

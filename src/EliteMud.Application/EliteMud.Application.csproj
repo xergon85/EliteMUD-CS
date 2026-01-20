@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EliteMud.Game\EliteMud.Game.csproj" />
+    <ProjectReference Include="..\EliteMud.Data\EliteMud.Data.csproj" />
     <ProjectReference Include="..\EliteMud.Legacy\EliteMud.Legacy.csproj" />
   </ItemGroup>
 

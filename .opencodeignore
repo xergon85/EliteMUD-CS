@@ -1,0 +1,17 @@
+# Large data directories
+zones/
+zones.backup/
+imported/
+output/
+
+# Large data files
+*.heapsnapshot
+session-*.md
+
+# Build artifacts
+bin/
+obj/
+.ruff_cache/
+
+# OS files
+.DS_Store
