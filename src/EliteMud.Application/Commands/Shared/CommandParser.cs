@@ -45,14 +45,17 @@ public sealed class CommandParser
             return new CommandRequest(CommandKind.Quit, null, null);
         }
 
-        if (trimmed.Equals("look", StringComparison.OrdinalIgnoreCase))
+        if (trimmed.Equals("look", StringComparison.OrdinalIgnoreCase)
+            || trimmed.Equals("l", StringComparison.OrdinalIgnoreCase))
         {
             return new CommandRequest(CommandKind.Look, null, null);
         }
 
-        if (trimmed.StartsWith("look ", StringComparison.OrdinalIgnoreCase))
+        if (trimmed.StartsWith("look ", StringComparison.OrdinalIgnoreCase)
+            || trimmed.StartsWith("l ", StringComparison.OrdinalIgnoreCase))
         {
-            var target = trimmed[5..].Trim();
+            var spaceIndex = trimmed.IndexOf(' ');
+            var target = trimmed[(spaceIndex + 1)..].Trim();
             return new CommandRequest(CommandKind.Look, target, null);
         }
 
