@@ -17,6 +17,87 @@ public static class CombatService
     public const byte POS_FIGHTING = 7;
     public const byte POS_STANDING = 8;
 
+    // Attack type text (from legacy fight.c:49)
+    private static readonly (string Singular, string Plural)[] AttackHitText = new[]
+    {
+        ("hit", "hits"),
+        ("pound", "pounds"),
+        ("pierce", "pierces"),
+        ("slash", "slashes"),
+        ("blast", "blasts"),
+        ("whip", "whips"),
+        ("pierce", "pierces"),
+        ("claw", "claws"),
+        ("bite", "bites"),
+        ("sting", "stings"),
+        ("crush", "crushes")
+    };
+
+    // Combat damage messages (from legacy fight.c:665-721)
+    // Based on percentage of victim's max HP
+    private static readonly (string ToRoom, string ToChar, string ToVict)[] DamageMessages = new[]
+    {
+        // 0: Miss (0 damage)
+        ("$n misses $N with $s hit.", 
+         "You miss $N with your hit.", 
+         "$n misses you with $s hit."),
+        
+        // 1: < 1% of max HP
+        ("$n barely hits $N.", 
+         "You barely hit $N.", 
+         "$n barely hits you."),
+        
+        // 2: 1-2% of max HP
+        ("$n scratches $N with $s hit.", 
+         "You scratch $N as you hit $M.", 
+         "$n scratches you as $e hits you."),
+        
+        // 3: 2-3% of max HP
+        ("$n hits $N.", 
+         "You hit $N.", 
+         "$n hits you."),
+        
+        // 4: 3-5% of max HP
+        ("$n hits $N hard.", 
+         "You hit $N hard.", 
+         "$n hits you hard."),
+        
+        // 5: 5-8% of max HP
+        ("$n hits $N very hard.", 
+         "You hit $N very hard.", 
+         "$n hits you very hard."),
+        
+        // 6: 8-13% of max HP
+        ("$n hits $N extremely hard.", 
+         "You hit $N extremely hard.", 
+         "$n hits you extremely hard."),
+        
+        // 7: 13-21% of max HP
+        ("$n massacres $N to small fragments with $s hit.", 
+         "You massacre $N to small fragments with your hit.", 
+         "$n massacres you to small fragments with $s hit."),
+        
+        // 8: 21-34% of max HP
+        ("$n obliterates $N with $s deadly hit!", 
+         "You obliterate $N with your deadly hit!", 
+         "$n obliterates you with $s deadly hit!"),
+        
+        // 9: 34-55% of max HP
+        ("$n ANNIHILATES $N with $s wicked hit!!", 
+         "You ANNIHILATE $N with your wicked hit!!", 
+         "$n ANNIHILATES you with $s wicked hit!!"),
+        
+        // 10: 55-89% of max HP
+        ("$n ATOMIZES $N with $s cruel hit!!!", 
+         "You ATOMIZE $N with your cruel hit!!!", 
+         "$n ATOMIZES you with $s cruel hit!!!"),
+        
+        // 11: >= 89% of max HP
+        ("$n PAINTS THE WALLS WITH $N's head with $s mindblowing hit!!!", 
+         "You PAINT THE WALLS with $N's head with your mindblowing hit!!!", 
+         "$n PAINTS THE WALLS with your head with $s mindblowing hit!!!")
+    };
+
     /// <summary>
     /// Set a player to fighting another player.
     /// Legacy: set_fighting(ch, victim)
@@ -232,6 +313,101 @@ public static class CombatService
     {
         return victim.Level * damage / 2;
     }
+
+    /// <summary>
+    /// Format a combat message based on damage dealt as percentage of victim's max HP.
+    /// Legacy: dam_message() in fight.c:658-777
+    /// </summary>
+    /// <param name="attackerName">Name of the attacker</param>
+    /// <param name="victimName">Name of the victim</param>
+    /// <param name="damage">Damage dealt</param>
+    /// <param name="victimMaxHp">Victim's maximum HP</param>
+    /// <param name="perspective">Message perspective (ToChar, ToVict, ToRoom)</param>
+    /// <returns>Formatted combat message</returns>
+    public static string FormatCombatMessage(
+        string attackerName, 
+        string victimName, 
+        int damage, 
+        int victimMaxHp,
+        MessagePerspective perspective)
+    {
+        // Calculate damage as percentage of victim's max HP
+        int percent = damage * 100 / Math.Max(1, victimMaxHp);
+        
+        // Determine message index based on damage percentage (legacy logic from fight.c:729-743)
+        int msgIndex;
+        if (damage == 0)        msgIndex = 0;   // Miss
+        else if (percent < 1)   msgIndex = 1;   // Barely
+        else if (percent < 2)   msgIndex = 2;   // Scratch
+        else if (percent < 3)   msgIndex = 3;   // Normal hit
+        else if (percent < 5)   msgIndex = 4;   // Hard
+        else if (percent < 8)   msgIndex = 5;   // Very hard
+        else if (percent < 13)  msgIndex = 6;   // Extremely hard
+        else if (percent < 21)  msgIndex = 7;   // Massacre
+        else if (percent < 34)  msgIndex = 8;   // Obliterate
+        else if (percent < 55)  msgIndex = 9;   // Annihilate
+        else if (percent < 89)  msgIndex = 10;  // Atomize
+        else                    msgIndex = 11;  // Paint the walls
+
+        // Get the message template based on perspective
+        string template = perspective switch
+        {
+            MessagePerspective.ToChar => DamageMessages[msgIndex].ToChar,
+            MessagePerspective.ToVict => DamageMessages[msgIndex].ToVict,
+            MessagePerspective.ToRoom => DamageMessages[msgIndex].ToRoom,
+            _ => throw new ArgumentOutOfRangeException(nameof(perspective))
+        };
+
+        // Replace substitution codes (legacy act() function from comm.c)
+        // $n = attacker's name (or "you" for ToChar)
+        // $N = victim's name (or "you" for ToVict)
+        // $e = he/she/it (attacker)
+        // $E = he/she/it (victim)
+        // $M = him/her/it (victim)
+        // $s = his/her/its (attacker)
+        string message = template;
+        
+        if (perspective == MessagePerspective.ToChar)
+        {
+            message = message.Replace("$n", "You");
+            message = message.Replace("$N", victimName);
+            message = message.Replace("$M", "them");
+            message = message.Replace("$s", "your");
+            message = message.Replace("$e", "you");
+        }
+        else if (perspective == MessagePerspective.ToVict)
+        {
+            message = message.Replace("$n", attackerName);
+            message = message.Replace("$N", "you");
+            message = message.Replace("$M", "you");
+            message = message.Replace("$s", "their");
+            message = message.Replace("$e", "they");
+        }
+        else // ToRoom
+        {
+            message = message.Replace("$n", attackerName);
+            message = message.Replace("$N", victimName);
+            message = message.Replace("$M", "them");
+            message = message.Replace("$s", "their");
+            message = message.Replace("$e", "they");
+        }
+
+        return message;
+    }
+}
+
+/// <summary>
+/// Message perspective for combat messages.
+/// Based on legacy TO_CHAR, TO_VICT, TO_ROOM flags.
+/// </summary>
+public enum MessagePerspective
+{
+    /// <summary>Send to the attacker</summary>
+    ToChar,
+    /// <summary>Send to the victim</summary>
+    ToVict,
+    /// <summary>Send to everyone else in the room</summary>
+    ToRoom
 }
 
 /// <summary>

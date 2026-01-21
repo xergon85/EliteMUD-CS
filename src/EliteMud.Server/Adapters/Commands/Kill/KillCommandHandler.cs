@@ -85,38 +85,63 @@ internal sealed class KillCommandHandler : ICommandHandler
         CombatService.SetFighting(attacker.Player, victim.Id);
         CombatService.SetFighting(victim.Player, attacker.Id);
 
-        // Broadcast messages
-        await attacker.ActToCharAsync(
-            _actService,
-            $"You attack {victim.Player.Name}!",
-            cancellationToken: cancellationToken);
-
+        // Broadcast "You attack" messages
+        await attacker.Session.SendLineAsync(
+            $"You attack {victim.Player.Name}!", cancellationToken);
         await victim.Session.SendLineAsync(
             $"{attacker.Player.Name} attacks you!", cancellationToken);
 
         // Broadcast to room
-        await attacker.ActToNotCharAsync(
-            _actService,
-            _connectionRegistry,
-            $"$n attacks {victim.Player.Name}!",
-            cancellationToken: cancellationToken);
+        var otherPlayers = _connectionRegistry.GetConnections()
+            .Where(c => c.Player.RoomId == attacker.Player.RoomId 
+                     && c.Id != attacker.Id 
+                     && c.Id != victim.Id);
+        
+        foreach (var observer in otherPlayers)
+        {
+            await observer.Session.SendLineAsync(
+                $"{attacker.Player.Name} attacks {victim.Player.Name}!", cancellationToken);
+        }
 
         // Perform initial attack
         var result = CombatService.PerformAttack(attacker.Player, victim.Player);
         
+        // Format legacy combat messages
+        var attackerMsg = CombatService.FormatCombatMessage(
+            attacker.Player.Name,
+            victim.Player.Name,
+            result.Damage,
+            victim.Player.MaxHitPoints,
+            MessagePerspective.ToChar);
+            
+        var victimMsg = CombatService.FormatCombatMessage(
+            attacker.Player.Name,
+            victim.Player.Name,
+            result.Damage,
+            victim.Player.MaxHitPoints,
+            MessagePerspective.ToVict);
+        
+        // Send messages
+        await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
+        await victim.Session.SendLineAsync(victimMsg, cancellationToken);
+        
+        // Broadcast to room if hit
         if (result.Hit)
         {
-            await attacker.Session.SendLineAsync(
-                $"You hit {victim.Player.Name} for {result.Damage} damage!", cancellationToken);
-            await victim.Session.SendLineAsync(
-                $"{attacker.Player.Name} hits you for {result.Damage} damage!", cancellationToken);
+            var roomMsg = CombatService.FormatCombatMessage(
+                attacker.Player.Name,
+                victim.Player.Name,
+                result.Damage,
+                victim.Player.MaxHitPoints,
+                MessagePerspective.ToRoom);
+                
+            foreach (var observer in otherPlayers)
+            {
+                await observer.Session.SendLineAsync(roomMsg, cancellationToken);
+            }
 
             // Award experience
             attacker.Player.Experience += CombatService.CalculateExperienceGain(victim.Player, result.Damage);
-        }
-        else
-        {
-            await attacker.Session.SendLineAsync(result.Message ?? "You miss!", cancellationToken);
         }
     }
 
@@ -132,21 +157,49 @@ internal sealed class KillCommandHandler : ICommandHandler
         mob.FightingConnectionId = attacker.Id;
         mob.Position = CombatService.POS_FIGHTING;
 
-        // Broadcast messages
-        await attacker.ActToCharAsync(
-            _actService,
-            $"You attack {mob.Definition.ShortDescription}!",
-            cancellationToken: cancellationToken);
-
-        // Broadcast to room
-        await attacker.ActToNotCharAsync(
-            _actService,
-            _connectionRegistry,
-            $"$n attacks {mob.Definition.ShortDescription}!",
-            cancellationToken: cancellationToken);
-
-        // Perform initial attack (simplified for mob - we'll need to extend CombatService for this)
+        // Broadcast "You attack" messages
         await attacker.Session.SendLineAsync(
             $"You attack {mob.Definition.ShortDescription}!", cancellationToken);
+
+        // Broadcast to room
+        var otherPlayers = _connectionRegistry.GetConnections()
+            .Where(c => c.Player.RoomId == attacker.Player.RoomId && c.Id != attacker.Id);
+        
+        foreach (var observer in otherPlayers)
+        {
+            await observer.Session.SendLineAsync(
+                $"{attacker.Player.Name} attacks {mob.Definition.ShortDescription}!", cancellationToken);
+        }
+
+        // Perform initial attack
+        int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
+        int damage = CombatService.CalculateBareDamage(attacker.Player);
+        mob.HitPoints -= damage;
+        
+        // Format legacy combat messages
+        var attackerMsg = CombatService.FormatCombatMessage(
+            attacker.Player.Name,
+            mob.Definition.ShortDescription,
+            damage,
+            mobMaxHp,
+            MessagePerspective.ToChar);
+            
+        await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
+        
+        // Broadcast to room
+        var roomMsg = CombatService.FormatCombatMessage(
+            attacker.Player.Name,
+            mob.Definition.ShortDescription,
+            damage,
+            mobMaxHp,
+            MessagePerspective.ToRoom);
+            
+        foreach (var observer in otherPlayers)
+        {
+            await observer.Session.SendLineAsync(roomMsg, cancellationToken);
+        }
+        
+        // Award experience
+        attacker.Player.Experience += mob.Definition.Level * damage / 2;
     }
 }

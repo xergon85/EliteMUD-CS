@@ -146,13 +146,46 @@ internal sealed class GameTickService
     {
         var result = CombatService.PerformAttack(attacker.Player, victim.Player);
         
+        // Format legacy combat messages
+        var attackerMsg = CombatService.FormatCombatMessage(
+            attacker.Player.Name,
+            victim.Player.Name,
+            result.Damage,
+            victim.Player.MaxHitPoints,
+            MessagePerspective.ToChar);
+            
+        var victimMsg = CombatService.FormatCombatMessage(
+            attacker.Player.Name,
+            victim.Player.Name,
+            result.Damage,
+            victim.Player.MaxHitPoints,
+            MessagePerspective.ToVict);
+        
+        // Send messages
+        await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
+        await victim.Session.SendLineAsync(
+            $"{victimMsg} [{victim.Player.HitPoints}/{victim.Player.MaxHitPoints} HP]", 
+            cancellationToken);
+
+        // Broadcast to room if hit
         if (result.Hit)
         {
-            await attacker.Session.SendLineAsync(
-                $"You hit {victim.Player.Name} for {result.Damage} damage!", cancellationToken);
-            await victim.Session.SendLineAsync(
-                $"{attacker.Player.Name} hits you for {result.Damage} damage! [{victim.Player.HitPoints}/{victim.Player.MaxHitPoints} HP]", 
-                cancellationToken);
+            var roomMsg = CombatService.FormatCombatMessage(
+                attacker.Player.Name,
+                victim.Player.Name,
+                result.Damage,
+                victim.Player.MaxHitPoints,
+                MessagePerspective.ToRoom);
+                
+            var otherPlayers = _connectionRegistry.GetConnections()
+                .Where(c => c.Player.RoomId == attacker.Player.RoomId 
+                         && c.Id != attacker.Id 
+                         && c.Id != victim.Id);
+            
+            foreach (var observer in otherPlayers)
+            {
+                await observer.Session.SendLineAsync(roomMsg, cancellationToken);
+            }
 
             // Award experience
             attacker.Player.Experience += CombatService.CalculateExperienceGain(victim.Player, result.Damage);
@@ -162,11 +195,6 @@ internal sealed class GameTickService
             {
                 await HandlePlayerDeath(attacker, victim, cancellationToken);
             }
-        }
-        else
-        {
-            await attacker.Session.SendLineAsync(
-                $"You miss {victim.Player.Name}!", cancellationToken);
         }
     }
 
@@ -187,15 +215,38 @@ internal sealed class GameTickService
             return;
         }
 
-        // Simplified mob combat - calculate damage based on player stats
-        // TODO: Make this more accurate with mob AC, level, etc.
-        int damage = CombatService.CalculateBareDamage(attacker.Player);
+        // Calculate mob's max HP if not set (level * 10 is the initialization value)
+        int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
         
-        // Apply damage to mob
+        // Player attacks mob
+        int damage = CombatService.CalculateBareDamage(attacker.Player);
         mob.HitPoints -= damage;
         
-        await attacker.Session.SendLineAsync(
-            $"You hit {mob.Definition.ShortDescription} for {damage} damage!", cancellationToken);
+        // Format legacy combat messages for player hitting mob
+        var attackerMsg = CombatService.FormatCombatMessage(
+            attacker.Player.Name,
+            mob.Definition.ShortDescription,
+            damage,
+            mobMaxHp,
+            MessagePerspective.ToChar);
+            
+        await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
+        
+        // Broadcast to room
+        var roomMsg = CombatService.FormatCombatMessage(
+            attacker.Player.Name,
+            mob.Definition.ShortDescription,
+            damage,
+            mobMaxHp,
+            MessagePerspective.ToRoom);
+            
+        var otherPlayers = _connectionRegistry.GetConnections()
+            .Where(c => c.Player.RoomId == attacker.Player.RoomId && c.Id != attacker.Id);
+        
+        foreach (var observer in otherPlayers)
+        {
+            await observer.Session.SendLineAsync(roomMsg, cancellationToken);
+        }
 
         // Award experience
         attacker.Player.Experience += mob.Definition.Level * damage / 2;
@@ -207,13 +258,34 @@ internal sealed class GameTickService
         }
         else
         {
-            // Mob fights back (simplified - just damage the player)
+            // Mob fights back
             var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
             CombatService.ApplyDamage(attacker.Player, mobDamage);
             
+            // Format legacy combat messages for mob hitting player
+            var mobAttackMsg = CombatService.FormatCombatMessage(
+                mob.Definition.ShortDescription,
+                attacker.Player.Name,
+                mobDamage,
+                attacker.Player.MaxHitPoints,
+                MessagePerspective.ToVict);
+            
             await attacker.Session.SendLineAsync(
-                $"{mob.Definition.ShortDescription} hits you for {mobDamage} damage! [{attacker.Player.HitPoints}/{attacker.Player.MaxHitPoints} HP]",
+                $"{mobAttackMsg} [{attacker.Player.HitPoints}/{attacker.Player.MaxHitPoints} HP]",
                 cancellationToken);
+                
+            // Broadcast mob attack to room
+            var mobRoomMsg = CombatService.FormatCombatMessage(
+                mob.Definition.ShortDescription,
+                attacker.Player.Name,
+                mobDamage,
+                attacker.Player.MaxHitPoints,
+                MessagePerspective.ToRoom);
+                
+            foreach (var observer in otherPlayers)
+            {
+                await observer.Session.SendLineAsync(mobRoomMsg, cancellationToken);
+            }
 
             // Check if player died
             if (attacker.Player.Position == CombatService.POS_DEAD)
