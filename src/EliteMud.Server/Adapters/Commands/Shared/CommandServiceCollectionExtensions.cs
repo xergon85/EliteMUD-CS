@@ -1,3 +1,4 @@
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.ImportLegacy;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
@@ -28,6 +29,7 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<ImportLegacyCommandHandler>()
             .AddSingleton<LookCommandHandler>()
             .AddSingleton<MoveCommandHandler>()
+            .AddSingleton<FleeService>()
             .AddSingleton<SayCommandHandler>(provider => new SayCommandHandler(
                 provider.GetRequiredService<IScriptEngine>(),
                 provider.GetRequiredService<ConnectionRegistry>().GetConnections

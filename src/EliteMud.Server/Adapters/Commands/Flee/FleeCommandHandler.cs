@@ -1,3 +1,4 @@
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Game;
@@ -11,15 +12,18 @@ internal sealed class FleeCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly Func<IEnumerable<ConnectionContext>> _connections;
     private readonly LookCommandHandler _lookHandler;
+    private readonly Application.Commands.Flee.FleeService _fleeService;
 
     public FleeCommandHandler(
         IWorldState worldState,
         Func<IEnumerable<ConnectionContext>> connections,
-        LookCommandHandler lookHandler)
+        LookCommandHandler lookHandler,
+        Application.Commands.Flee.FleeService fleeService)
     {
         _worldState = worldState;
         _connections = connections;
         _lookHandler = lookHandler;
+        _fleeService = fleeService;
     }
 
     public CommandKind Kind => CommandKind.Flee;
@@ -43,107 +47,42 @@ internal sealed class FleeCommandHandler : ICommandHandler
         // Get current room for stopping combat later
         var currentRoomId = player.RoomId;
 
-        // Try to flee in 6 random directions (legacy: act.offensive.c:431)
-        var random = new Random();
-        var directions = new[] {
-            Direction.North, Direction.East, Direction.South,
-            Direction.West, Direction.Up, Direction.Down
-        };
+        // Broadcast flee attempt to room (legacy: act.offensive.c:443)
+        await BroadcastToRoomExceptAsync(
+            context,
+            $"{player.Name} panics, and attempts to flee.",
+            cancellationToken);
 
-        for (int i = 0; i < 6; i++)
+        // Attempt to flee using FleeService
+        var result = _fleeService.AttemptFlee(
+            player,
+            currentRoomId,
+            () => _connections().Select(c => c.Player),
+            () => _worldState.GetMobsInRoom(currentRoomId));
+
+        if (!result.Success)
         {
-            var attemptDirection = directions[random.Next(directions.Length)];
-
-            // Check if can move in that direction
-            if (!_worldState.World.TryMove(player.RoomId, attemptDirection, out var targetRoomId))
-            {
-                continue;
-            }
-
-            // Broadcast flee attempt to room (legacy: act.offensive.c:443)
-            await BroadcastToRoomExceptAsync(
-                context,
-                $"{player.Name} panics, and attempts to flee.",
-                cancellationToken);
-
-            // Calculate experience loss if fighting (legacy: act.offensive.c:425-427)
-            int experienceLoss = 0;
-            if (player.FightingConnectionId != null)
-            {
-                // Get victim to calculate loss
-                var victimId = player.FightingConnectionId.Value;
-                if (victimId > 0)
-                {
-                    // Fighting a player
-                    var victimContext = _connections()
-                        .FirstOrDefault(c => c.Id == victimId);
-                    if (victimContext != null)
-                    {
-                        var victim = victimContext.Player;
-                        int damageDone = victim.MaxHitPoints - victim.HitPoints;
-                        experienceLoss = damageDone * victim.Level;
-                    }
-                }
-                else
-                {
-                    // Fighting a mob
-                    var mobInstanceId = -victimId;
-                    var mob = _worldState.GetMobsInRoom(currentRoomId)
-                        .FirstOrDefault(m => m.InstanceId == mobInstanceId);
-                    if (mob != null)
-                    {
-                        int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
-                        int damageDone = mobMaxHp - mob.HitPoints;
-                        experienceLoss = damageDone * mob.Definition.Level;
-                    }
-                }
-            }
-
-            // Actually move to the new room
-            player.RoomId = targetRoomId;
-
-            // Stop fighting
-            CombatService.StopFighting(player);
-
-            // Apply experience loss (legacy: act.offensive.c:453)
-            if (experienceLoss > 0)
-            {
-                player.Experience -= experienceLoss;
-                if (player.Experience < 0) player.Experience = 0;
-            }
-
-            // Send success message (legacy: act.offensive.c:454)
-            await context.Session.SendLineAsync("You flee head over heels.", cancellationToken);
-
-            // Stop all mobs/players that were fighting us in the old room (legacy: act.offensive.c:462-466)
-            var mobsInOldRoom = _worldState.GetMobsInRoom(currentRoomId);
-            foreach (var mob in mobsInOldRoom)
-            {
-                if (mob.FightingConnectionId == context.Id)
-                {
-                    mob.FightingConnectionId = null;
-                    mob.Position = CombatService.POS_STANDING;
-                }
-            }
-
-            var playersInOldRoom = _connections()
-                .Where(c => c.Player.RoomId == currentRoomId && c.Player.FightingConnectionId == context.Id);
-            foreach (var otherPlayer in playersInOldRoom)
-            {
-                CombatService.StopFighting(otherPlayer.Player);
-            }
-
-            // Show new room by looking (same as move command)
-            await _lookHandler.HandleAsync(
-                new CommandRequest(CommandKind.Look, null, null), 
-                context, 
-                cancellationToken);
-
+            // No valid exits found (legacy: act.offensive.c:421)
+            await context.Session.SendLineAsync("PANIC!  You couldn't escape!", cancellationToken);
             return CommandOutcome.Continue;
         }
 
-        // No valid exits found (legacy: act.offensive.c:421)
-        await context.Session.SendLineAsync("PANIC!  You couldn't escape!", cancellationToken);
+        // Apply the flee result (moves player, stops combat, applies XP loss)
+        _fleeService.ApplyFleeResult(
+            player,
+            result,
+            () => _connections().Select(c => c.Player),
+            context.Id);
+
+        // Send success message (legacy: act.offensive.c:454)
+        await context.Session.SendLineAsync("You flee head over heels.", cancellationToken);
+
+        // Show new room by looking (same as move command)
+        await _lookHandler.HandleAsync(
+            new CommandRequest(CommandKind.Look, null, null), 
+            context, 
+            cancellationToken);
+
         return CommandOutcome.Continue;
     }
 

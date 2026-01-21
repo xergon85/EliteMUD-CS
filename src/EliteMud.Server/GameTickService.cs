@@ -1,9 +1,11 @@
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Session;
 using EliteMud.Application.World;
 using EliteMud.Data;
 using EliteMud.Data.Repositories;
 using EliteMud.Game;
+using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,6 +23,8 @@ internal sealed class GameTickService
     private readonly IServiceProvider _serviceProvider;
     private readonly IWorldState _worldState;
     private readonly ActMessageService _actService;
+    private readonly Application.Commands.Flee.FleeService _fleeService;
+    private readonly LookCommandHandler _lookHandler;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
     private readonly TimeSpan _regenInterval = TimeSpan.FromSeconds(75); // MUD hour (matches legacy)
@@ -34,12 +38,16 @@ internal sealed class GameTickService
         ConnectionRegistry connectionRegistry,
         IServiceProvider serviceProvider,
         IWorldState worldState,
-        ActMessageService actService)
+        ActMessageService actService,
+        Application.Commands.Flee.FleeService fleeService,
+        LookCommandHandler lookHandler)
     {
         _connectionRegistry = connectionRegistry;
         _serviceProvider = serviceProvider;
         _worldState = worldState;
         _actService = actService;
+        _fleeService = fleeService;
+        _lookHandler = lookHandler;
     }
 
     public async Task RunAsync(CancellationToken stoppingToken)
@@ -551,109 +559,37 @@ internal sealed class GameTickService
         ConnectionContext player,
         CancellationToken cancellationToken)
     {
-        // Try to flee in 6 random directions (same as flee command)
-        var random = new Random();
-        var directions = new[] {
-            Direction.North, Direction.East, Direction.South,
-            Direction.West, Direction.Up, Direction.Down
-        };
-
         var currentRoomId = player.Player.RoomId;
 
-        for (int i = 0; i < 6; i++)
+        // Attempt to flee using FleeService
+        var result = _fleeService.AttemptFlee(
+            player.Player,
+            currentRoomId,
+            () => _connectionRegistry.GetConnections().Select(c => c.Player),
+            () => _worldState.GetMobsInRoom(currentRoomId));
+
+        if (!result.Success)
         {
-            var attemptDirection = directions[random.Next(directions.Length)];
-
-            // Check if can move in that direction
-            if (!_worldState.World.TryMove(player.Player.RoomId, attemptDirection, out var targetRoomId))
-            {
-                continue;
-            }
-
-            // Calculate experience loss if fighting
-            int experienceLoss = 0;
-            if (player.Player.FightingConnectionId != null)
-            {
-                var victimId = player.Player.FightingConnectionId.Value;
-                if (victimId > 0)
-                {
-                    // Fighting a player
-                    var victimContext = _connectionRegistry.GetConnections()
-                        .FirstOrDefault(c => c.Id == victimId);
-                    if (victimContext != null)
-                    {
-                        var victim = victimContext.Player;
-                        int damageDone = victim.MaxHitPoints - victim.HitPoints;
-                        experienceLoss = damageDone * victim.Level;
-                    }
-                }
-                else
-                {
-                    // Fighting a mob
-                    var mobInstanceId = -victimId;
-                    var mob = _worldState.GetMobsInRoom(currentRoomId)
-                        .FirstOrDefault(m => m.InstanceId == mobInstanceId);
-                    if (mob != null)
-                    {
-                        int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
-                        int damageDone = mobMaxHp - mob.HitPoints;
-                        experienceLoss = damageDone * mob.Definition.Level;
-                    }
-                }
-            }
-
-            // Actually move to the new room
-            player.Player.RoomId = targetRoomId;
-
-            // Stop fighting
-            CombatService.StopFighting(player.Player);
-
-            // Apply experience loss
-            if (experienceLoss > 0)
-            {
-                player.Player.Experience -= experienceLoss;
-                if (player.Player.Experience < 0) player.Player.Experience = 0;
-            }
-
-            // Send success message
-            await player.Session.SendLineAsync("You flee head over heels.", cancellationToken);
-
-            // Stop all mobs/players that were fighting us
-            var mobsInOldRoom = _worldState.GetMobsInRoom(currentRoomId);
-            foreach (var oldMob in mobsInOldRoom)
-            {
-                if (oldMob.FightingConnectionId == player.Id)
-                {
-                    oldMob.FightingConnectionId = null;
-                    oldMob.Position = CombatService.POS_STANDING;
-                }
-            }
-
-            var playersInOldRoom = _connectionRegistry.GetConnections()
-                .Where(c => c.Player.RoomId == currentRoomId && c.Player.FightingConnectionId == player.Id);
-            foreach (var otherPlayer in playersInOldRoom)
-            {
-                CombatService.StopFighting(otherPlayer.Player);
-            }
-
-            // Show new room
-            var room = _worldState.World.GetRoom(player.Player.RoomId);
-            if (room != null)
-            {
-                await player.Session.SendLineAsync(room.Name, cancellationToken);
-                await player.Session.SendLineAsync(room.Description, cancellationToken);
-                var exits = room.Exits.Select(e => e.Direction.ToString()).ToList();
-                if (exits.Count > 0)
-                {
-                    await player.Session.SendLineAsync($"Obvious exits: {string.Join(", ", exits)}", cancellationToken);
-                }
-            }
-
-            return; // Successfully fled
+            // No valid exits found
+            await player.Session.SendLineAsync("PANIC!  You couldn't escape!", cancellationToken);
+            return;
         }
 
-        // Failed to flee
-        await player.Session.SendLineAsync("PANIC!  You couldn't escape!", cancellationToken);
+        // Apply the flee result (moves player, stops combat, applies XP loss)
+        _fleeService.ApplyFleeResult(
+            player.Player,
+            result,
+            () => _connectionRegistry.GetConnections().Select(c => c.Player),
+            player.Id);
+
+        // Send success message
+        await player.Session.SendLineAsync("You flee head over heels.", cancellationToken);
+
+        // Show new room using LookCommandHandler (same as manual flee and move)
+        await _lookHandler.HandleAsync(
+            new CommandRequest(CommandKind.Look, null, null),
+            player,
+            cancellationToken);
     }
 
     private async Task HandleMobDeath(

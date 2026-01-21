@@ -1,3 +1,4 @@
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Look;
@@ -15,7 +16,8 @@ internal sealed class FleeCommandModule : ICommandModule
         var worldState = serviceProvider.GetRequiredService<IWorldState>();
         var connectionRegistry = serviceProvider.GetRequiredService<ConnectionRegistry>();
         var lookHandler = serviceProvider.GetRequiredService<LookCommandHandler>();
+        var fleeService = serviceProvider.GetRequiredService<FleeService>();
         
-        return new FleeCommandHandler(worldState, connectionRegistry.GetConnections, lookHandler);
+        return new FleeCommandHandler(worldState, connectionRegistry.GetConnections, lookHandler, fleeService);
     }
 }
