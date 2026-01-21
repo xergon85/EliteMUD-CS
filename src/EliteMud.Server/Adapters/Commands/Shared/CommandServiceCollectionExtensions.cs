@@ -10,7 +10,6 @@ using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Move;
 using EliteMud.Server.Adapters.Commands.ResetZone;
 using EliteMud.Server.Adapters.Commands.Say;
-using EliteMud.Server.Adapters.Commands.Shared;
 using EliteMud.Server.Adapters.Commands.Who;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -37,7 +36,7 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<ScoreHandler>()
             .AddSingleton<WhoCommandHandler>(provider =>
                 new WhoCommandHandler(provider.GetRequiredService<ConnectionRegistry>().GetConnections
-            ))
+                ))
             .AddSingleton<IConnectionDirectory>(provider => provider.GetRequiredService<WhoCommandHandler>())
             .AddSingleton<ConnectionRegistry>()
             .AddSingleton<ICommandModuleProvider, CommandModuleProvider>()

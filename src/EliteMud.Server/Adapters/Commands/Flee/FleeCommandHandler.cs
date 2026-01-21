@@ -1,6 +1,7 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Game;
+using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Flee;
@@ -9,13 +10,16 @@ internal sealed class FleeCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
     private readonly Func<IEnumerable<ConnectionContext>> _connections;
+    private readonly LookCommandHandler _lookHandler;
 
     public FleeCommandHandler(
         IWorldState worldState,
-        Func<IEnumerable<ConnectionContext>> connections)
+        Func<IEnumerable<ConnectionContext>> connections,
+        LookCommandHandler lookHandler)
     {
         _worldState = worldState;
         _connections = connections;
+        _lookHandler = lookHandler;
     }
 
     public CommandKind Kind => CommandKind.Flee;
@@ -129,8 +133,11 @@ internal sealed class FleeCommandHandler : ICommandHandler
                 CombatService.StopFighting(otherPlayer.Player);
             }
 
-            // Show new room by looking
-            await ShowRoomAsync(context, cancellationToken);
+            // Show new room by looking (same as move command)
+            await _lookHandler.HandleAsync(
+                new CommandRequest(CommandKind.Look, null, null), 
+                context, 
+                cancellationToken);
 
             return CommandOutcome.Continue;
         }
@@ -158,30 +165,6 @@ internal sealed class FleeCommandHandler : ICommandHandler
             }
 
             await connection.Session.SendLineAsync(message, cancellationToken);
-        }
-    }
-
-    private async ValueTask ShowRoomAsync(
-        ConnectionContext context,
-        CancellationToken cancellationToken)
-    {
-        var room = _worldState.World.GetRoom(context.Player.RoomId);
-        if (room == null)
-        {
-            return;
-        }
-
-        // Send room name
-        await context.Session.SendLineAsync(room.Name, cancellationToken);
-
-        // Send room description
-        await context.Session.SendLineAsync(room.Description, cancellationToken);
-
-        // Send exits
-        var exits = room.Exits.Select(e => e.Direction.ToString()).ToList();
-        if (exits.Count > 0)
-        {
-            await context.Session.SendLineAsync($"Obvious exits: {string.Join(", ", exits)}", cancellationToken);
         }
     }
 }
