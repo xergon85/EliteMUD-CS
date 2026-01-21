@@ -52,7 +52,11 @@ internal static class ContentLoader
                 }
             }
 
-            rooms[room.Id] = new RoomDefinition(room.Id, room.Name ?? "", room.Description ?? "", exits);
+            rooms[room.Id] = new RoomDefinition(
+                room.Id, 
+                room.Name?.Trim() ?? string.Empty, 
+                room.Description?.Trim() ?? string.Empty, 
+                exits);
         }
 
         return new WorldDefinition(rooms);
@@ -128,13 +132,13 @@ internal static class ContentLoader
             var stats = mob.Stats ?? new StatContent();
             mobs.Add(new MobDefinition(
                 mob.Id,
-                mob.Name ?? string.Empty,
-                mob.ShortDescription ?? string.Empty,
-                mob.LongDescription ?? string.Empty,
-                mob.Description ?? string.Empty,
+                mob.Name?.Trim() ?? string.Empty,
+                mob.ShortDescription?.Trim() ?? string.Empty,
+                mob.LongDescription?.Trim() ?? string.Empty,
+                mob.Description?.Trim() ?? string.Empty,
                 mob.Level,
-                mob.Race ?? string.Empty,
-                mob.Class ?? string.Empty,
+                mob.Race?.Trim() ?? string.Empty,
+                mob.Class?.Trim() ?? string.Empty,
                 mob.Flags ?? new List<string>(),
                 new StatBlock(
                     stats.Strength,
@@ -184,11 +188,11 @@ internal static class ContentLoader
             
             objects.Add(new ObjectDefinition(
                 obj.Id,
-                obj.Name ?? string.Empty,
-                obj.ShortDescription ?? string.Empty,
-                obj.LongDescription ?? string.Empty,
-                obj.Description ?? string.Empty,
-                obj.Type ?? string.Empty,
+                obj.Name?.Trim() ?? string.Empty,
+                obj.ShortDescription?.Trim() ?? string.Empty,
+                obj.LongDescription?.Trim() ?? string.Empty,
+                obj.Description?.Trim() ?? string.Empty,
+                obj.Type?.Trim() ?? string.Empty,
                 wearSlots,
                 flags,
                 obj.Details,

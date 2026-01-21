@@ -5,6 +5,7 @@ using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Session;
 using EliteMud.Application.Session.Authentication;
 using EliteMud.Application.Session.Login;
+using EliteMud.Application.World;
 using EliteMud.Data;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
@@ -24,6 +25,7 @@ internal sealed class TelnetServer
     private readonly AuthenticationHandler _authHandler;
     private readonly IServiceProvider _serviceProvider;
     private readonly IpBanService _ipBanService;
+    private readonly IWorldState _worldState;
 
     public TelnetServer(
         IPAddress address,
@@ -34,7 +36,8 @@ internal sealed class TelnetServer
         ConnectionRegistry connectionRegistry,
         AuthenticationHandler authHandler,
         IServiceProvider serviceProvider,
-        IpBanService ipBanService)
+        IpBanService ipBanService,
+        IWorldState worldState)
     {
         _listener = new TcpListener(address, port);
         _catalog = catalog;
@@ -44,6 +47,7 @@ internal sealed class TelnetServer
         _authHandler = authHandler;
         _serviceProvider = serviceProvider;
         _ipBanService = ipBanService;
+        _worldState = worldState;
     }
 
     public async Task RunAsync(CancellationToken cancellationToken)
@@ -151,7 +155,7 @@ internal sealed class TelnetServer
                 return;
             }
 
-            var player = CharacterMapper.ToPlayerState(character, connectionId);
+            var player = CharacterMapper.ToPlayerState(character, connectionId, _worldState);
 
             context = new ConnectionContext(connectionId, session, player, sessionData.SelectedCharacterId.Value);
             _connections[context.Id] = context;
@@ -194,7 +198,7 @@ internal sealed class TelnetServer
                     var character = await characterRepository.GetByIdAsync(sessionData.SelectedCharacterId.Value, cancellationToken);
                     if (character is not null)
                     {
-                        CharacterMapper.UpdateCharacterFromPlayerState(character, context.Player);
+                        CharacterMapper.UpdateCharacterFromPlayerState(character, context.Player, _worldState);
                         await characterRepository.UpdateAsync(character, cancellationToken);
                     }
                 }

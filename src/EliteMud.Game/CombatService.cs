@@ -35,67 +35,70 @@ public static class CombatService
 
     // Combat damage messages (from legacy fight.c:665-721)
     // Based on percentage of victim's max HP
+    // Color codes: #g=bright green (attacker miss), #G=dark green (victim miss),
+    //              #r=bright red (attacker hit), #R=dark red (victim hit), #N=normal
+    // Legacy used �1G (dark green), �1g (bright green), �1R (dark red), �1r (bright red)
     private static readonly (string ToRoom, string ToChar, string ToVict)[] DamageMessages = new[]
     {
-        // 0: Miss (0 damage)
+        // 0: Miss (0 damage) - bright green for attacker, dark green for victim
         ("$n misses $N with $s hit.", 
-         "You miss $N with your hit.", 
-         "$n misses you with $s hit."),
+         "#gYou miss $N with your hit.#N", 
+         "#G$n misses you with $s hit.#N"),
         
-        // 1: < 1% of max HP
+        // 1: < 1% of max HP - bright red for attacker, dark red for victim
         ("$n barely hits $N.", 
-         "You barely hit $N.", 
-         "$n barely hits you."),
+         "#rYou barely hit $N.#N", 
+         "#R$n barely hits you.#N"),
         
         // 2: 1-2% of max HP
         ("$n scratches $N with $s hit.", 
-         "You scratch $N as you hit $M.", 
-         "$n scratches you as $e hits you."),
+         "#rYou scratch $N as you hit $M.#N", 
+         "#R$n scratches you as $e hits you.#N"),
         
         // 3: 2-3% of max HP
         ("$n hits $N.", 
-         "You hit $N.", 
-         "$n hits you."),
+         "#rYou hit $N.#N", 
+         "#R$n hits you.#N"),
         
         // 4: 3-5% of max HP
         ("$n hits $N hard.", 
-         "You hit $N hard.", 
-         "$n hits you hard."),
+         "#rYou hit $N hard.#N", 
+         "#R$n hits you hard.#N"),
         
         // 5: 5-8% of max HP
         ("$n hits $N very hard.", 
-         "You hit $N very hard.", 
-         "$n hits you very hard."),
+         "#rYou hit $N very hard.#N", 
+         "#R$n hits you very hard.#N"),
         
         // 6: 8-13% of max HP
         ("$n hits $N extremely hard.", 
-         "You hit $N extremely hard.", 
-         "$n hits you extremely hard."),
+         "#rYou hit $N extremely hard.#N", 
+         "#R$n hits you extremely hard.#N"),
         
         // 7: 13-21% of max HP
         ("$n massacres $N to small fragments with $s hit.", 
-         "You massacre $N to small fragments with your hit.", 
-         "$n massacres you to small fragments with $s hit."),
+         "#rYou massacre $N to small fragments with your hit.#N", 
+         "#R$n massacres you to small fragments with $s hit.#N"),
         
         // 8: 21-34% of max HP
         ("$n obliterates $N with $s deadly hit!", 
-         "You obliterate $N with your deadly hit!", 
-         "$n obliterates you with $s deadly hit!"),
+         "#rYou obliterate $N with your deadly hit!#N", 
+         "#R$n obliterates you with $s deadly hit!#N"),
         
         // 9: 34-55% of max HP
         ("$n ANNIHILATES $N with $s wicked hit!!", 
-         "You ANNIHILATE $N with your wicked hit!!", 
-         "$n ANNIHILATES you with $s wicked hit!!"),
+         "#rYou ANNIHILATE $N with your wicked hit!!#N", 
+         "#R$n ANNIHILATES you with $s wicked hit!!#N"),
         
         // 10: 55-89% of max HP
         ("$n ATOMIZES $N with $s cruel hit!!!", 
-         "You ATOMIZE $N with your cruel hit!!!", 
-         "$n ATOMIZES you with $s cruel hit!!!"),
+         "#rYou ATOMIZE $N with your cruel hit!!!#N", 
+         "#R$n ATOMIZES you with $s cruel hit!!!#N"),
         
         // 11: >= 89% of max HP
         ("$n PAINTS THE WALLS WITH $N's head with $s mindblowing hit!!!", 
-         "You PAINT THE WALLS with $N's head with your mindblowing hit!!!", 
-         "$n PAINTS THE WALLS with your head with $s mindblowing hit!!!")
+         "#rYou PAINT THE WALLS with $N's head with your mindblowing hit!!!#N", 
+         "#R$n PAINTS THE WALLS with your head with $s mindblowing hit!!!#N")
     };
 
     /// <summary>

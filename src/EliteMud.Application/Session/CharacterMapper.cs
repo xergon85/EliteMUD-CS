@@ -1,3 +1,4 @@
+using EliteMud.Application.World;
 using EliteMud.Data.Entities;
 using EliteMud.Game;
 
@@ -13,8 +14,9 @@ public static class CharacterMapper
     /// </summary>
     /// <param name="character">The character entity from database</param>
     /// <param name="connectionId">The connection ID for this session</param>
+    /// <param name="worldState">The world state to create object instances</param>
     /// <returns>A PlayerState ready for gameplay</returns>
-    public static PlayerState ToPlayerState(Character character, int connectionId)
+    public static PlayerState ToPlayerState(Character character, int connectionId, IWorldState worldState)
     {
         ArgumentNullException.ThrowIfNull(character);
 
@@ -72,17 +74,29 @@ public static class CharacterMapper
         // Load inventory items
         foreach (var invItem in character.Inventory)
         {
-            player.AddToInventory(invItem.ObjectId);
+            // Create object instance from definition ID
+            var objectInstance = worldState.CreateObjectInstance(invItem.ObjectDefinitionId);
+            if (objectInstance != null)
+            {
+                player.AddToInventory(objectInstance.InstanceId);
+            }
         }
 
         // Load equipment items
-        // Note: Equipment slots in PlayerState use int slot IDs
-        // We'll need a mapping from string slot names to int IDs
-        // For now, skip equipment loading - will implement proper slot mapping later
-        // foreach (var eqItem in character.Equipment)
-        // {
-        //     player.EquipToSlot(slotId, eqItem.ObjectId);
-        // }
+        foreach (var eqItem in character.Equipment)
+        {
+            // Parse slot name back to enum, then to int
+            if (Enum.TryParse<EquipmentSlot>(eqItem.Slot, out var slotEnum))
+            {
+                // Create object instance from definition ID
+                var objectInstance = worldState.CreateObjectInstance(eqItem.ObjectDefinitionId);
+                if (objectInstance != null)
+                {
+                    var slotId = (int)slotEnum;
+                    player.EquipToSlot(slotId, objectInstance.InstanceId);
+                }
+            }
+        }
 
         return player;
     }
@@ -93,7 +107,8 @@ public static class CharacterMapper
     /// </summary>
     /// <param name="character">The character entity to update</param>
     /// <param name="playerState">The current player state</param>
-    public static void UpdateCharacterFromPlayerState(Character character, PlayerState playerState)
+    /// <param name="worldState">The world state to resolve object instances</param>
+    public static void UpdateCharacterFromPlayerState(Character character, PlayerState playerState, IWorldState worldState)
     {
         ArgumentNullException.ThrowIfNull(character);
         ArgumentNullException.ThrowIfNull(playerState);
@@ -146,8 +161,39 @@ public static class CharacterMapper
         // Update last played
         character.LastPlayed = DateTime.UtcNow;
 
-        // TODO: Update inventory and equipment
-        // For now, we'll skip this since it requires more complex logic
-        // to handle adds/removes/moves. Will implement in a future iteration.
+        // Update inventory
+        // Clear existing inventory and rebuild from current state
+        character.Inventory.Clear();
+        foreach (var objectInstanceId in playerState.InventoryObjectIds)
+        {
+            var objectInstance = worldState.GetObjectInstance(objectInstanceId);
+            if (objectInstance != null)
+            {
+                character.Inventory.Add(new CharacterInventoryItem
+                {
+                    CharacterId = character.CharacterId,
+                    ObjectDefinitionId = objectInstance.Definition.Id,
+                    Quantity = 1
+                });
+            }
+        }
+
+        // Update equipment
+        // Clear existing equipment and rebuild from current state
+        character.Equipment.Clear();
+        foreach (var (slotId, objectInstanceId) in playerState.EquipmentSlotToObjectId)
+        {
+            var objectInstance = worldState.GetObjectInstance(objectInstanceId);
+            if (objectInstance != null)
+            {
+                var slotEnum = (EquipmentSlot)slotId;
+                character.Equipment.Add(new CharacterEquipmentItem
+                {
+                    CharacterId = character.CharacterId,
+                    Slot = slotEnum.ToString(),
+                    ObjectDefinitionId = objectInstance.Definition.Id
+                });
+            }
+        }
     }
 }

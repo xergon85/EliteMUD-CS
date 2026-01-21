@@ -22,38 +22,31 @@ public sealed class WearHandler
 
         var inventory = _worldState.GetPlayerInventory(player);
 
-        // Find matching object in inventory
-        foreach (var obj in inventory)
+        // Find matching object in inventory using indexed targeting (e.g., "2.helmet")
+        // Legacy: handler.c:1020-1040 (get_obj_in_list with get_number)
+        var obj = TargetParser.FindObject(inventory, target);
+        
+        if (obj == null)
         {
-            if (MatchesTarget(obj.Definition, target))
-            {
-                // Determine which slot to wear it in
-                var slot = DetermineSlot(obj.Definition);
-                if (slot is null)
-                {
-                    return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be worn.");
-                }
-
-                // Try to equip the object
-                if (_worldState.EquipObject(player, obj.InstanceId, slot.Value))
-                {
-                    return CommandResult.Ok($"You wear {obj.Definition.ShortDescription}.");
-                }
-                else
-                {
-                    return CommandResult.Fail($"You are already wearing something on your {GetSlotName(slot.Value)}.");
-                }
-            }
+            return CommandResult.Fail("You don't have that.");
         }
 
-        return CommandResult.Fail("You don't have that.");
-    }
+        // Determine which slot to wear it in
+        var slot = DetermineSlot(obj.Definition);
+        if (slot is null)
+        {
+            return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be worn.");
+        }
 
-    private static bool MatchesTarget(ObjectDefinition obj, string target)
-    {
-        var targetLower = target.ToLowerInvariant();
-        var keywords = obj.Name?.Split(' ', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-        return keywords.Any(k => k.ToLowerInvariant().StartsWith(targetLower));
+        // Try to equip the object
+        if (_worldState.EquipObject(player, obj.InstanceId, slot.Value))
+        {
+            return CommandResult.Ok($"You wear {obj.Definition.ShortDescription}.");
+        }
+        else
+        {
+            return CommandResult.Fail($"You are already wearing something on your {GetSlotName(slot.Value)}.");
+        }
     }
 
     private static EquipmentSlot? DetermineSlot(ObjectDefinition obj)

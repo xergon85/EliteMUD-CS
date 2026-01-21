@@ -55,7 +55,11 @@ public sealed class EquipmentHandler
         {
             if (equipment.TryGetValue(slot, out var obj))
             {
-                lines.Add($"  <{slotName,-15}> {obj.Definition.ShortDescription}");
+                var description = obj.Definition.ShortDescription?.Trim() ?? "";
+                if (!string.IsNullOrWhiteSpace(description))
+                {
+                    lines.Add($"  <{slotName,-15}> {description}");
+                }
             }
         }
 

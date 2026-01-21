@@ -200,6 +200,21 @@ internal sealed class WorldState : IWorldState
         return objectInstance;
     }
 
+    public ObjectInstance? CreateObjectInstance(int objectDefinitionId)
+    {
+        // Check if object definition exists
+        if (!_objectDefinitions.TryGetValue(objectDefinitionId, out var objectDefinition))
+        {
+            return null;
+        }
+
+        // Create new object instance
+        var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
+        _objectInstances[objectInstance.InstanceId] = objectInstance;
+
+        return objectInstance;
+    }
+
     public IReadOnlyList<ObjectDefinition> SearchObjects(string query)
     {
         if (string.IsNullOrWhiteSpace(query))
@@ -491,5 +506,216 @@ internal sealed class WorldState : IWorldState
         // This means spawnChance=100 is 100%, spawnChance=1 is 1%
         var roll = random.Next(1, 101); // 1-100 inclusive
         return spawnChance.Value >= roll;
+    }
+
+    /// <summary>
+    /// Create a player corpse with all inventory and equipment transferred.
+    /// Legacy: make_corpse() in fight.c:310-393
+    /// </summary>
+    public ObjectInstance CreatePlayerCorpse(PlayerState player, int roomId)
+    {
+        // Create corpse description based on HP (fight.c:326-335)
+        string description;
+        if (player.HitPoints > -20)
+            description = $"The corpse of {player.Name} is lying here.";
+        else if (player.HitPoints > -40)
+            description = $"The corpse of {player.Name} is lying here, looking mutilated.";
+        else if (player.HitPoints > -80)
+            description = $"The corpse of {player.Name} is lying here, or rather parts of it.";
+        else
+            description = "The remains of something or someone is lying here.";
+
+        // Calculate total weight (player weight + items)
+        int totalWeight = 100; // Base player weight
+        foreach (var objectId in player.InventoryObjectIds)
+        {
+            if (_objectInstances.TryGetValue(objectId, out var obj))
+            {
+                totalWeight += obj.Definition.Weight;
+            }
+        }
+        foreach (var objectId in player.EquipmentSlotToObjectId.Values)
+        {
+            if (_objectInstances.TryGetValue(objectId, out var obj))
+            {
+                totalWeight += obj.Definition.Weight;
+            }
+        }
+
+        // Create corpse object definition
+        var corpseDefinition = new ObjectDefinition(
+            Id: -1, // Dynamic object (not from content files)
+            Name: "corpse pcorpse", // Player corpse identifier
+            ShortDescription: $"the corpse of {player.Name}",
+            LongDescription: description,
+            Description: description,
+            Type: "container",
+            WearSlots: new List<string> { "take" },
+            Flags: new List<string> { "nodonate", "nosweep" },
+            Details: null,
+            Values: new List<int> { 0, 0, 0, 2 }, // value[3]=2 for player corpse identifier
+            Weight: totalWeight,
+            Cost: player.Level * 50
+        );
+
+        // Create corpse instance
+        var corpse = new ObjectInstance(_nextObjectInstanceId++, corpseDefinition);
+        _objectInstances[corpse.InstanceId] = corpse;
+
+        // Transfer inventory items to corpse (fight.c:340)
+        foreach (var objectId in player.InventoryObjectIds.ToList())
+        {
+            if (_objectInstances.TryGetValue(objectId, out var obj))
+            {
+                corpse.AddItem(obj);
+            }
+        }
+
+        // Transfer equipment to corpse (fight.c:371-373)
+        foreach (var slotId in player.EquipmentSlotToObjectId.Keys.ToList())
+        {
+            if (player.UnequipFromSlot(slotId, out var objectId))
+            {
+                if (_objectInstances.TryGetValue(objectId, out var obj))
+                {
+                    corpse.AddItem(obj);
+                }
+            }
+        }
+
+        // Transfer gold as money object (fight.c:341-347)
+        if (player.Gold > 0)
+        {
+            var money = CreateMoneyObject(player.Gold);
+            corpse.AddItem(money);
+            player.Gold = 0;
+        }
+
+        // Clear player inventory (fight.c:375-377)
+        while (player.InventoryObjectIds.Count > 0)
+        {
+            player.RemoveFromInventory(player.InventoryObjectIds[0]);
+        }
+
+        // Place corpse in room (fight.c:392)
+        if (!_roomObjects.TryGetValue(roomId, out var roomObjects))
+        {
+            roomObjects = new List<ObjectInstance>();
+            _roomObjects[roomId] = roomObjects;
+        }
+        roomObjects.Add(corpse);
+
+        return corpse;
+    }
+
+    /// <summary>
+    /// Create a mob corpse with all equipment transferred.
+    /// Legacy: make_corpse() in fight.c:310-393 for NPCs
+    /// </summary>
+    public ObjectInstance CreateMobCorpse(MobInstance mob, int roomId)
+    {
+        // Clean mob short description (remove any newlines/whitespace)
+        var mobShortDesc = mob.Definition.ShortDescription?.Trim().Replace("\n", " ").Replace("\r", " ") ?? "someone";
+        
+        // Create corpse description
+        string description = $"The corpse of {mobShortDesc} is lying here.";
+
+        // Calculate total weight (mob weight + equipment)
+        int totalWeight = 100; // Base mob weight
+        foreach (var obj in mob.Equipment.Values)
+        {
+            totalWeight += obj.Definition.Weight;
+        }
+
+        // Create corpse object definition
+        var corpseDefinition = new ObjectDefinition(
+            Id: -1, // Dynamic object
+            Name: "corpse",
+            ShortDescription: $"the corpse of {mobShortDesc}",
+            LongDescription: description,
+            Description: description,
+            Type: "container",
+            WearSlots: new List<string> { "take" },
+            Flags: new List<string> { "nodonate", "nosweep" },
+            Details: null,
+            Values: new List<int> { 0, 0, 0, 1 }, // value[3]=1 for NPC corpse identifier
+            Weight: totalWeight,
+            Cost: mob.Definition.Level * 50
+        );
+
+        // Create corpse instance
+        var corpse = new ObjectInstance(_nextObjectInstanceId++, corpseDefinition);
+        _objectInstances[corpse.InstanceId] = corpse;
+
+        // Transfer mob equipment to corpse (fight.c:371-373)
+        foreach (var slot in mob.Equipment.Keys.ToList())
+        {
+            var obj = mob.Unequip(slot);
+            if (obj is not null)
+            {
+                corpse.AddItem(obj);
+            }
+        }
+
+        // Transfer mob gold as money object (fight.c:341-347)
+        // Mobs don't have a Gold property in current implementation, but we can add it later
+        // For now, skip gold transfer for mobs
+
+        // Place corpse in room (fight.c:392)
+        if (!_roomObjects.TryGetValue(roomId, out var roomObjects))
+        {
+            roomObjects = new List<ObjectInstance>();
+            _roomObjects[roomId] = roomObjects;
+        }
+        roomObjects.Add(corpse);
+
+        return corpse;
+    }
+
+    /// <summary>
+    /// Create a money object with the specified amount of gold.
+    /// Legacy: create_money() in fight.c:318
+    /// </summary>
+    private ObjectInstance CreateMoneyObject(int amount)
+    {
+        var moneyDefinition = new ObjectDefinition(
+            Id: -2, // Special dynamic object for money
+            Name: $"gold coin{(amount == 1 ? "" : "s")}",
+            ShortDescription: $"{amount} gold coin{(amount == 1 ? "" : "s")}",
+            LongDescription: $"{amount} gold coin{(amount == 1 ? "" : "s")} is here.",
+            Description: "A pile of gold coins.",
+            Type: "money",
+            WearSlots: new List<string> { "take" },
+            Flags: new List<string>(),
+            Details: null,
+            Values: new List<int> { amount, 0, 0, 0 }, // value[0] = gold amount
+            Weight: Math.Max(1, amount / 10), // 10 coins = 1 weight unit
+            Cost: amount
+        );
+
+        var money = new ObjectInstance(_nextObjectInstanceId++, moneyDefinition);
+        _objectInstances[money.InstanceId] = money;
+        return money;
+    }
+
+    /// <summary>
+    /// Remove a mob from the world completely.
+    /// Legacy: extract_char() in handler.c
+    /// </summary>
+    public bool RemoveMob(int mobInstanceId, int roomId)
+    {
+        if (!_roomMobs.TryGetValue(roomId, out var mobs))
+        {
+            return false;
+        }
+
+        var mob = mobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
+        if (mob is null)
+        {
+            return false;
+        }
+
+        mobs.Remove(mob);
+        return true;
     }
 }

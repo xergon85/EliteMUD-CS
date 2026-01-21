@@ -25,7 +25,7 @@
 - ✅ Mob equipment system (20 slots: Light, Head, Body, Wield, etc.)
 - ✅ Zone reset system (LoadMob, LoadObject, EquipMob with spawn chances)
 
-### 🔄 Phase 3: IN PROGRESS (Character System)
+### ✅ Phase 3: COMPLETE (Character System)
 **Milestone:** Playable persistent characters
 
 #### 3.0 Messaging System - COMPLETE ✅
@@ -39,44 +39,45 @@
 
 #### 3.1 Player Inventory & Object Interaction - COMPLETE ✅
 - ✅ Show objects in room description (look command) - already implemented
-- ✅ `examine` command - inspect objects/mobs - already implemented
+- ✅ `examine` command - inspect objects/mobs - already implemented (✅ supports indexed targeting: `examine 2.corpse`)
 - ✅ Player inventory system - PlayerState inventory fully wired
-- ✅ `get` / `take` commands - pick up objects from room with ActMessage
-- ✅ `drop` command - drop objects to room with ActMessage
+- ✅ `get` / `take` commands - pick up objects from room with ActMessage (✅ supports indexed targeting: `get 2.sword`, `get all all.corpse`)
+- ✅ `drop` command - drop objects to room with ActMessage (✅ supports indexed targeting: `drop 2.sword`)
 - ✅ `inventory` / `i` command - list carried items - already implemented
-- ❌ `give` command - transfer objects to other players - deferred (needs IWorldState.GiveObject)
+- ❌ `give` command - transfer objects to other players - deferred (⚠️ **needs indexed targeting**: `give 2.sword guard`, `give sword 2.guard`)
 - ❌ Object weight and carry capacity limits - TODO
 
-#### 3.2 Player Equipment System (CURRENT - IN PROGRESS)
-- ❌ Extend PlayerState with Equipment dictionary (copy from MobInstance)
-- ❌ `equipment` / `eq` command - show worn/wielded items
-- ❌ `wear` command - equip wearable items
-- ❌ `remove` command - unequip items to inventory
-- ❌ `wield` / `hold` commands - equip weapons/lights
-- ❌ Equipment slot validation (can't wear two body armors, etc.)
+#### 3.2 Player Equipment System - COMPLETE ✅
+- ✅ Extend PlayerState with Equipment dictionary (copy from MobInstance)
+- ✅ `equipment` / `eq` command - show worn/wielded items
+- ✅ `wear` command - equip wearable items (✅ supports indexed targeting: `wear 2.helmet`)
+- ✅ `remove` command - unequip items to inventory (✅ supports indexed targeting: `remove 2.ring`)
+- ✅ `wield` / `hold` commands - equip weapons/lights (✅ supports indexed targeting: `wield 2.sword`, `hold 2.torch`)
+- ✅ Equipment slot validation (can't wear two body armors, etc.)
 
-#### 3.3 Character Stats & Resources (PARTIAL)
+#### 3.3 Character Stats & Resources - COMPLETE ✅
 - ✅ PlayerState has: HP, MaxHP, Mana, MaxMana, Movement, MaxMovement
 - ✅ PlayerState has: Level, Experience, Gold, BankGold
 - ✅ PlayerState has: Str, Dex, Con, Int, Wis, Cha
 - ✅ PlayerState has: Race, Class, Alignment, Sex
-- ❌ `score` command - display full character sheet
-- ❌ `stat` command - display detailed stats
-- ❌ HP/mana/movement regeneration tick system
+- ✅ `score` command - display full character sheet
+- ❌ `stat` command - display detailed stats - **DEFERRED (immortal command)**
+- ❌ HP/mana/movement regeneration tick system - **TODO**
 
-#### 3.4 Persistence Layer (SQLite) - MOSTLY COMPLETE ✅
+#### 3.4 Persistence Layer (SQLite) - COMPLETE ✅
 - ✅ Database schema with EF Core (Account + Character entities)
 - ✅ Account table (username, password hash, last login)
 - ✅ Character table (name, stats, vitals, location, resources, metadata)
-- ✅ CharacterInventoryItem table (character inventory persistence)
-- ✅ CharacterEquipmentItem table (character equipment persistence)
+- ✅ CharacterInventoryItem table (character inventory persistence) - **stores ObjectDefinitionId**
+- ✅ CharacterEquipmentItem table (character equipment persistence) - **stores ObjectDefinitionId**
 - ✅ Repository pattern (IAccountRepository, ICharacterRepository)
 - ✅ PasswordService with BCrypt hashing
-- ✅ CharacterMapper (Entity ↔ PlayerState conversion)
+- ✅ CharacterMapper (Entity ↔ PlayerState conversion with IWorldState)
 - ✅ Player save on quit (automatic via TelnetServer finally block)
-- ✅ Player load on login (loads selected character from DB)
+- ✅ Player load on login (loads selected character from DB, recreates object instances)
 - ✅ Database auto-migration on startup
-- ❌ Auto-save timer (every 5 minutes) - **TODO**
+- ✅ `save` command - manual character save
+- ✅ Auto-save timer (every 5 minutes via GameTickService)
 - ❌ Mail table schema - **DEFERRED**
 - ❌ Board table schema - **DEFERRED**
 - ❌ Logs table schema - **DEFERRED**
@@ -107,26 +108,26 @@
 - ❌ Permission/immortal level system - **TODO**
 - ❌ Affects/buffs/debuffs system - **TODO**
 
-### ⏳ Phase 4: Combat + Skills (PLANNED)
+### 🔄 Phase 4: IN PROGRESS (Combat + Skills)
 **Milestone:** Core combat parity
 
-#### 4.1 Basic Combat System
-- ❌ Add fighting state to PlayerState and MobInstance
-- ❌ `kill` / `hit` command - initiate combat
-- ❌ Combat loop / turn system
-- ❌ Damage calculation (dice rolls using weapon stats)
-- ❌ Hitroll / damroll / armor class calculations
-- ❌ `flee` command - escape from combat
-- ❌ Death handling for players
-- ❌ Death handling for mobs
-- ❌ Corpse creation with loot
+#### 4.1 Basic Combat System - COMPLETE ✅
+- ✅ Add fighting state to PlayerState and MobInstance - DONE
+- ✅ `kill` / `hit` command - initiate combat (✅ supports indexed targeting: `kill 2.soldier`)
+- ✅ Combat loop / turn system - DONE
+- ✅ Damage calculation (dice rolls using weapon stats) - DONE
+- ✅ Hitroll / damroll / armor class calculations - DONE
+- ✅ `flee` command - escape from combat - DONE
+- ✅ Death handling for players - DONE (corpse creation, respawn, XP loss)
+- ✅ Death handling for mobs - DONE (corpse creation with equipment transfer)
+- ✅ Corpse creation with loot - DONE (player/mob corpses with contents)
+- ✅ `wimpy` command - auto-flee at low HP threshold - DONE
 
 #### 4.2 Combat Commands
 - ❌ `bash` - shield bash attack
 - ❌ `kick` - unarmed attack
 - ❌ `rescue` - take aggro from group member
 - ❌ `consider` - estimate mob difficulty
-- ❌ Auto-attack loop (continue fighting each round)
 
 #### 4.3 Skills & Spells Framework
 - ❌ Skill definition system
@@ -187,32 +188,44 @@
 
 #### 6.1 Container System
 - ❌ Container object storage (objects inside containers)
-- ❌ `put` command - put item in container
-- ❌ `get <item> from <container>` - retrieve from container
-- ❌ `open` / `close` commands - container state
-- ❌ `lock` / `unlock` commands - keyed containers
+- ❌ `put` command - put item in container (⚠️ **needs indexed targeting**: `put 2.sword bag`, `put sword 2.bag`)
+- ❌ `get <item> from <container>` - retrieve from container (✅ already supports indexed targeting)
+- ❌ `open` / `close` commands - container state (⚠️ **needs indexed targeting**: `open 2.chest`)
+- ❌ `lock` / `unlock` commands - keyed containers (⚠️ **needs indexed targeting**: `unlock 2.chest`)
 - ❌ Weight limits for containers
-- ❌ Corpse containers (loot corpses)
+- ❌ Corpse containers (loot corpses) - ✅ already implemented
 
-#### 6.2 Door System
+#### 6.2 Consumable & Utility Items
+- ❌ `eat` command - consume food items (⚠️ **needs indexed targeting**: `eat 2.bread`)
+- ❌ `drink` command - drink from containers (⚠️ **needs indexed targeting**: `drink 2.waterskin`)
+- ❌ `quaff` command - drink potions (⚠️ **needs indexed targeting**: `quaff 2.potion`)
+- ❌ `recite` command - use scrolls (⚠️ **needs indexed targeting**: `recite 2.scroll`)
+- ❌ `use` command - activate items (⚠️ **needs indexed targeting**: `use 2.wand`)
+- ❌ `fill` command - fill containers from fountains (⚠️ **needs indexed targeting**: `fill 2.waterskin fountain`)
+- ❌ `pour` command - pour liquid from container (⚠️ **needs indexed targeting**: `pour 2.flask`)
+- ❌ `sacrifice` / `junk` command - destroy items for exp/gold (⚠️ **needs indexed targeting**: `sacrifice 2.corpse`)
+- ❌ Food/drink consumption effects (hunger/thirst)
+- ❌ Potion/scroll/wand effects and charges
+
+#### 6.3 Door System
 - ❌ Door state tracking (open/closed/locked)
-- ❌ `open` / `close` door commands
-- ❌ `lock` / `unlock` door commands
-- ❌ `pick` command - lockpicking
-- ❌ `bash` door command - force doors open
+- ❌ `open` / `close` door commands (⚠️ **needs indexed targeting**: `open 2.door`, `open 2.chest`, `close 2.gate`)
+- ❌ `lock` / `unlock` door commands (⚠️ **needs indexed targeting**: `lock 2.chest`, `unlock 2.door`)
+- ❌ `pick` command - lockpicking (⚠️ **needs indexed targeting**: `pick 2.lock`)
+- ❌ `bash` door command - force doors open (⚠️ **needs indexed targeting**: `bash 2.door`)
 - ❌ Hidden doors / secret exits
 - ❌ DoorState zone reset implementation
 
-#### 6.3 Shop System
+#### 6.4 Shop System
 - ❌ Shop definition in zone files
 - ❌ `list` command - show shop inventory
-- ❌ `buy` command - purchase items
-- ❌ `sell` command - sell items to shop
-- ❌ `value` command - appraise item value
+- ❌ `buy` command - purchase items (⚠️ **needs indexed targeting**: `buy 2.sword`)
+- ❌ `sell` command - sell items to shop (⚠️ **needs indexed targeting**: `sell 2.helmet`)
+- ❌ `value` command - appraise item value (⚠️ **needs indexed targeting**: `value 2.ring`)
 - ❌ Shop inventory restocking
 - ❌ Haggling / charisma price modifiers
 
-#### 6.4 Communication Commands
+#### 6.5 Communication Commands
 - ❌ `tell` command - private messaging
 - ❌ `shout` command - zone-wide broadcast
 - ❌ `gossip` command - global chat channel
@@ -221,15 +234,15 @@
 - ❌ `auction` command - auction channel
 - ❌ Ignore list system
 
-#### 6.5 Social Systems
-- ❌ `follow` command - follow another player
+#### 6.6 Social Systems
+- ❌ `follow` command - follow another player (⚠️ **needs indexed targeting** for mobs: `follow 2.guard`)
 - ❌ `group` command - form/manage groups
 - ❌ `split` command - divide gold among group
 - ❌ Experience sharing in groups
 - ❌ Group combat coordination
 - ❌ `gtell` command - group chat
 
-#### 6.6 Clan System
+#### 6.7 Clan System
 - ❌ Clan definition in database
 - ❌ Clan membership tracking
 - ❌ Clan ranks/hierarchy
@@ -237,7 +250,7 @@
 - ❌ Clan halls / private areas
 - ❌ Clan banks / shared storage
 
-#### 6.7 Board & Mail System
+#### 6.8 Board & Mail System
 - ❌ Bulletin board object type
 - ❌ `read` command - read board messages
 - ❌ `write` command - post to board
@@ -246,7 +259,7 @@
 - ❌ Mail retrieval at post offices
 - ❌ Mail storage in SQLite
 
-#### 6.8 Quest System
+#### 6.9 Quest System
 - ❌ Quest definition format
 - ❌ Quest tracking in PlayerState
 - ❌ Quest objectives (kill, fetch, explore)
@@ -254,7 +267,7 @@
 - ❌ `quest` command - view active quests
 - ❌ Quest completion triggers
 
-#### 6.9 Admin Commands
+#### 6.10 Admin Commands
 - ❌ `goto` - teleport to room
 - ❌ `transfer` - summon player/mob
 - ❌ `load` - spawn mob/object
@@ -299,9 +312,9 @@
 ## Legacy Module Mapping (C → C# Targets)
 - `comm.c` → ✅ Server networking + session handling (DONE)
 - `interpreter.c` → ✅ Command routing (DONE) + ❌ permissions (TODO)
-- `db.c` → ✅ World loading (DONE) + ❌ persistence layer (TODO)
+- `db.c` → ✅ World loading (DONE) + ✅ persistence layer (DONE)
 - `structs.h` → ✅ Domain model + enums (DONE)
-- `fight.c`, `magic.c` → ❌ Combat/spell services (TODO)
+- `fight.c`, `magic.c` → 🔄 Combat services (IN PROGRESS - basic combat DONE, spells TODO)
 - `mobact.c`, `mobcmd.c` → ❌ AI + scripting hooks (TODO)
 - `boards.c`, `mail.c`, `clan.c` → ❌ Feature services (TODO)
 
@@ -309,38 +322,69 @@
 
 ### ✅ COMPLETE (Production Ready)
 - Telnet server with multi-player sessions
-- Command routing and parsing
+- Command routing and parsing with indexed targeting (e.g., `get 2.sword`, `kill 2.guard`)
 - Zone-grouped content loading (114 zones, 7069 rooms, 2545 mobs, 2364 objects)
-- Legacy CircleMUD/ROM content import pipeline
+- Legacy CircleMUD/ROM content import pipeline with proper text trimming
 - Mob spawning, object spawning, mob equipment via zone resets
 - Lua scripting engine with OnLook, OnEnterRoom, OnSay hooks
-- Basic commands: look, say, who, movement, quit, zreset
+- Basic commands: look, say, who, movement, quit, zreset, examine, search
 - Connection registry and player tracking
-- **SQLite persistence with EF Core (Account + Character tables)**
-- **Multi-character account system (up to 10 chars per account)**
-- **Full character creation flow (race, class, sex selection)**
-- **BCrypt password authentication**
-- **IP-based rate limiting and banning (15 min ban after 3 attempts)**
-- **Character save/load on quit/login**
-- **Character stats and vitals (HP, mana, movement, attributes)**
+- **Phase 3 (Character System) - COMPLETE:**
+  - ActMessage service with substitution codes ($n, $N, $o, $e, $m, $s, etc.)
+  - SQLite persistence with EF Core (Account + Character + Inventory + Equipment)
+  - Multi-character account system (up to 10 chars per account)
+  - Full character creation flow (race, class, sex selection)
+  - BCrypt password authentication with IP-based rate limiting
+  - Character save/load system (auto-save on quit, manual `save` command, auto-save timer)
+  - Character stats and vitals (HP, mana, movement, attributes)
+  - Player inventory system (`get`, `drop`, `inventory` commands)
+  - Player equipment system (`wear`, `remove`, `wield`, `hold`, `equipment` commands)
+  - Score command (full character sheet display)
+  - Object instance persistence (stores definition IDs, recreates instances on load)
+- **Phase 4.1 (Basic Combat) - COMPLETE:**
+  - Combat loop with 2-second tick system (PULSE_VIOLENCE)
+  - Damage calculation with weapon dice rolls
+  - Hitroll/damroll/AC calculations
+  - `kill` command with indexed targeting
+  - `flee` command with directional escape
+  - `wimpy` command for auto-flee threshold
+  - Player death (corpse creation, XP loss, respawn at recall point)
+  - Mob death (corpse creation with equipment transfer)
+  - Combat messaging with ActMessage integration
 
-### 🔄 IN PROGRESS (Phase 3: Character System)
-- **CURRENT:** Player inventory and object interaction (Phase 3.1)
-- Player equipment system (Phase 3.2)
-- Score/stat display commands (Phase 3.3)
-- Auto-save timer (Phase 3.4)
+### 🔄 IN PROGRESS (Phase 4: Combat + Skills)
+- **CURRENT FOCUS:** Basic combat is complete, moving to advanced combat features
+- Next up: Combat skills (bash, kick, rescue), consider command
 
 ### ❌ NOT STARTED
-- Combat system (Phase 4)
-- Skills and spells (Phase 4)
+- Advanced combat skills (Phase 4.2)
+- Spells and magic system (Phase 4.3)
+- Combat Lua hooks (Phase 4.4)
 - Mob AI and behaviors (Phase 5)
-- Containers and doors (Phase 6)
-- Shops, mail, boards, clans (Phase 6)
+- Containers and doors (Phase 6.1, 6.3)
+- Consumables (Phase 6.2)
+- Shops, mail, boards, clans (Phase 6.4-6.8)
 - Admin tools and OLC (Phase 7)
 
-## Next Execution Checklist (Updated Jan 20, 2026)
+## Next Execution Checklist (Updated Jan 22, 2026)
 
-### ✅ RECENTLY COMPLETED (Jan 20, 2026)
+### ✅ RECENTLY COMPLETED (Jan 22, 2026)
+- ✅ Fixed equipment persistence bug (was storing instance IDs, now stores definition IDs)
+- ✅ Database migration: renamed ObjectId → ObjectDefinitionId in inventory/equipment tables
+- ✅ CharacterMapper now uses IWorldState to convert between instance IDs and definition IDs
+- ✅ Object instances are recreated on character load from definition IDs
+- ✅ `save` command - manual character save
+- ✅ Auto-save timer (every 5 minutes via GameTickService)
+- ✅ Fixed legacy import bug - object/mob descriptions now properly trimmed (no leading newlines)
+
+### ✅ COMPLETED (Jan 21, 2026)
+- ✅ Combat system - kill, flee, wimpy commands (Phase 4.1 COMPLETE)
+- ✅ Damage calculation and combat loop
+- ✅ Death handling for players and mobs
+- ✅ Corpse creation with loot transfer
+- ✅ Indexed targeting for kill command (`kill 2.guard`)
+
+### ✅ COMPLETED (Jan 20, 2026)
 - ✅ ActMessage service - room broadcast messaging (Phase 3.0 COMPLETE)
 - ✅ Substitution code parser ($n, $N, $o, $e, $m, $s, etc.)
 - ✅ Pronoun resolution helpers (he/she/it based on sex)
@@ -348,7 +392,7 @@
 - ✅ Message capitalization and formatting
 - ✅ Support for both PlayerState and MobInstance in messaging
 
-### ✅ COMPLETED EARLIER (Jan 19, 2026)
+### ✅ COMPLETED (Jan 19, 2026)
 - ✅ SQLite database schema with EF Core
 - ✅ Account and Character entities with full persistence
 - ✅ Character creation flow (account → character → race → class → sex)

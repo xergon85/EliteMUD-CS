@@ -44,11 +44,17 @@ internal sealed class KillCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
-        // Try to find a mob in the room
+        // Try to find a mob in the room (supports "2.soldier" syntax)
+        // Legacy: handler.c:1481-1501 (get_char_room_vis uses get_number)
+        var (index, name) = TargetParser.ParseTarget(targetName);
+        if (index == 0)
+        {
+            await context.Session.SendLineAsync("Invalid target format.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+
         var mobs = _worldState.GetMobsInRoom(player.RoomId);
-        var targetMob = mobs.FirstOrDefault(m =>
-            m.Definition.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase) ||
-            m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
+        var targetMob = TargetParser.FindNthMatch(mobs, name, index);
 
         if (targetMob == null)
         {
@@ -158,8 +164,9 @@ internal sealed class KillCommandHandler : ICommandHandler
         mob.Position = CombatService.POS_FIGHTING;
 
         // Broadcast "You attack" messages
+        var mobDesc = mob.Definition.ShortDescription?.Trim() ?? "something";
         await attacker.Session.SendLineAsync(
-            $"You attack {mob.Definition.ShortDescription}!", cancellationToken);
+            $"You attack {mobDesc}!", cancellationToken);
 
         // Broadcast to room
         var otherPlayers = _connectionRegistry.GetConnections()
@@ -168,7 +175,7 @@ internal sealed class KillCommandHandler : ICommandHandler
         foreach (var observer in otherPlayers)
         {
             await observer.Session.SendLineAsync(
-                $"{attacker.Player.Name} attacks {mob.Definition.ShortDescription}!", cancellationToken);
+                $"{attacker.Player.Name} attacks {mobDesc}!", cancellationToken);
         }
 
         // Perform initial attack

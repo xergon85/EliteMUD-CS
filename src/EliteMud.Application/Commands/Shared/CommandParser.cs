@@ -28,6 +28,7 @@ public enum CommandKind
     Flee,
     Wimpy,
     ImportLegacy,
+    Save,
     Unknown
 }
 
@@ -204,6 +205,11 @@ public sealed class CommandParser
         {
             var argument = trimmed[6..].Trim();
             return new CommandRequest(CommandKind.Wimpy, argument, null);
+        }
+
+        if (trimmed.Equals("save", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Save, null, null);
         }
 
         if (TryParseDirection(trimmed, out var direction))

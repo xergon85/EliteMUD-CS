@@ -26,8 +26,8 @@ public sealed class LookHandler
                 ? mob.Definition.ShortDescription
                 : mob.Definition.LongDescription;
             
-            // Trim leading/trailing whitespace and newlines (mobs can have \n prefix like rooms)
-            line = line?.TrimStart('\n', '\r').TrimStart().TrimEnd();
+            // Trim all whitespace and newlines
+            line = line?.Trim();
             
             if (!string.IsNullOrWhiteSpace(line))
             {
@@ -44,8 +44,8 @@ public sealed class LookHandler
                 ? obj.Definition.ShortDescription
                 : obj.Definition.LongDescription;
             
-            // Trim leading/trailing whitespace and newlines (objects can have \n prefix like rooms)
-            line = line?.TrimStart('\n', '\r').TrimStart().TrimEnd();
+            // Trim all whitespace and newlines
+            line = line?.Trim();
             
             if (!string.IsNullOrWhiteSpace(line))
             {
@@ -81,6 +81,7 @@ public sealed class LookHandler
         var room = _worldState.World.GetRoom(player.RoomId);
 
         // Try to find another player in room first
+        // Note: Players don't use indexed targeting in legacy (can't do "look 2.player")
         if (_getPlayersInRoom != null)
         {
             var otherPlayers = _getPlayersInRoom()
@@ -95,45 +96,25 @@ public sealed class LookHandler
             }
         }
 
-        // Try to find object in room
+        // Try to find object in room using indexed targeting (e.g., "look 2.corpse")
+        // Legacy: handler.c:1020-1040 (get_obj_in_list with get_number)
         var objects = _worldState.GetObjectsInRoom(room.Id);
-        foreach (var obj in objects)
+        var obj = TargetParser.FindObject(objects, target);
+        if (obj != null)
         {
-            if (MatchesTarget(obj.Definition, target))
-            {
-                return FormatObjectDescription(obj.Definition);
-            }
+            return FormatObjectDescription(obj.Definition);
         }
 
-        // Try to find mob in room
+        // Try to find mob in room using indexed targeting (e.g., "look 2.guard")
+        // Legacy: handler.c:1481-1501 (get_char_room_vis with get_number)
         var mobs = _worldState.GetMobsInRoom(room.Id);
-        foreach (var mob in mobs)
+        var mob = TargetParser.FindMob(mobs, target);
+        if (mob != null)
         {
-            if (MatchesTarget(mob.Definition, target))
-            {
-                return FormatMobDescription(mob);
-            }
+            return FormatMobDescription(mob);
         }
 
         return CommandResult.Fail("You don't see that here.");
-    }
-
-    private static bool MatchesTarget(ObjectDefinition obj, string target)
-    {
-        var targetLower = target.ToLowerInvariant();
-        
-        // Check if target matches any keyword in the object name
-        var keywords = obj.Name?.Split(' ', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-        return keywords.Any(k => k.ToLowerInvariant().StartsWith(targetLower));
-    }
-
-    private static bool MatchesTarget(MobDefinition mob, string target)
-    {
-        var targetLower = target.ToLowerInvariant();
-        
-        // Check if target matches any keyword in the mob name
-        var keywords = mob.Name?.Split(' ', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-        return keywords.Any(k => k.ToLowerInvariant().StartsWith(targetLower));
     }
 
     private static bool MatchesTarget(PlayerState player, string target)

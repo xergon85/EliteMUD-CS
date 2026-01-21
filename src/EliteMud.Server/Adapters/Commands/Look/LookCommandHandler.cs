@@ -29,9 +29,19 @@ internal sealed class LookCommandHandler : ICommandHandler
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
-        // If a target is specified, examine it (look <object>)
+        // If a target is specified
         if (!string.IsNullOrWhiteSpace(command.Argument))
         {
+            // Check for "look in <container>" syntax (legacy: act.informative.c:749-783)
+            var parts = command.Argument.Split(new[] { ' ' }, 2, StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length == 2 && parts[0].Equals("in", StringComparison.OrdinalIgnoreCase))
+            {
+                // Handle "look in <container>"
+                await HandleLookInContainer(context, parts[1], cancellationToken);
+                return CommandOutcome.Continue;
+            }
+
+            // Otherwise, examine the object/mob/player (look <target>)
             var result = _lookHandler.HandleLookAt(context.Player, command.Argument);
             await context.Session.SendLineAsync(result.Message, cancellationToken);
             return CommandOutcome.Continue;
@@ -76,6 +86,87 @@ internal sealed class LookCommandHandler : ICommandHandler
         await context.Session.SendLineAsync(view.ExitLine, cancellationToken);
         await ExecuteHookAsync(context, ScriptHook.OnLook, null, cancellationToken);
         return CommandOutcome.Continue;
+    }
+
+    /// <summary>
+    /// Handle "look in <container>" command.
+    /// Legacy: act.informative.c:749-786
+    /// </summary>
+    private async ValueTask HandleLookInContainer(
+        ConnectionContext context,
+        string containerName,
+        CancellationToken cancellationToken)
+    {
+        // Find container in inventory or room
+        var container = FindContainer(context.Player, containerName);
+        
+        if (container is null)
+        {
+            await context.Session.SendLineAsync($"You don't see {GetArticle(containerName)} {containerName} here.", cancellationToken);
+            return;
+        }
+
+        // Check if it's a container
+        if (!container.Definition.Type.Equals("container", StringComparison.OrdinalIgnoreCase))
+        {
+            await context.Session.SendLineAsync("That is not a container.", cancellationToken);
+            return;
+        }
+
+        // Show container name and location
+        var location = IsInInventory(context.Player, container) ? "(carried)" : "(here)";
+        await context.Session.SendLineAsync($"{container.Definition.ShortDescription} {location}:", cancellationToken);
+
+        // List contents
+        if (container.Contents.Count == 0)
+        {
+            await context.Session.SendLineAsync("  (empty)", cancellationToken);
+        }
+        else
+        {
+            foreach (var item in container.Contents)
+            {
+                await context.Session.SendLineAsync($"  {item.Definition.ShortDescription}", cancellationToken);
+            }
+        }
+    }
+
+    private ObjectInstance? FindContainer(PlayerState player, string containerName)
+    {
+        // Parse "2.corpse" style targeting
+        var (index, name) = TargetParser.ParseTarget(containerName);
+        if (index == 0)
+            return null; // Invalid format (e.g., "abc.corpse")
+        
+        // Check inventory first
+        var inventory = _worldState.GetPlayerInventory(player);
+        var inventoryMatch = TargetParser.FindNthMatch(inventory, name, index);
+        if (inventoryMatch != null)
+            return inventoryMatch;
+
+        // Check room
+        var room = _worldState.World.GetRoom(player.RoomId);
+        var roomObjects = _worldState.GetObjectsInRoom(room.Id);
+        return TargetParser.FindNthMatch(roomObjects, name, index);
+    }
+
+    private bool IsInInventory(PlayerState player, ObjectInstance obj)
+    {
+        return player.InventoryObjectIds.Contains(obj.InstanceId);
+    }
+
+    private static bool MatchesTarget(ObjectDefinition obj, string target)
+    {
+        var targetLower = target.ToLowerInvariant();
+        var keywords = obj.Name?.Split(' ', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+        return keywords.Any(k => k.ToLowerInvariant().StartsWith(targetLower));
+    }
+
+    private static string GetArticle(string word)
+    {
+        if (string.IsNullOrEmpty(word)) return "a";
+        char first = char.ToLower(word[0]);
+        return (first == 'a' || first == 'e' || first == 'i' || first == 'o' || first == 'u') ? "an" : "a";
     }
 
     private async ValueTask ExecuteHookAsync(

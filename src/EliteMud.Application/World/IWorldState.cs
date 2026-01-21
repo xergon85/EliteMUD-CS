@@ -72,7 +72,59 @@ public sealed class MobInstance
     }
 }
 
-public sealed record ObjectInstance(int InstanceId, ObjectDefinition Definition);
+/// <summary>
+/// Runtime instance of an object in the world.
+/// Legacy: struct obj_data in structs.h
+/// </summary>
+public sealed class ObjectInstance
+{
+    private readonly List<ObjectInstance> _contents = new();
+
+    public ObjectInstance(int instanceId, ObjectDefinition definition)
+    {
+        InstanceId = instanceId;
+        Definition = definition;
+    }
+
+    public int InstanceId { get; }
+    public ObjectDefinition Definition { get; }
+
+    /// <summary>
+    /// Items contained within this object (for containers like corpses, bags, etc.)
+    /// Legacy: obj_data->contains
+    /// </summary>
+    public IReadOnlyList<ObjectInstance> Contents => _contents;
+
+    /// <summary>
+    /// Add an item to this container.
+    /// Legacy: obj_to_obj()
+    /// </summary>
+    public void AddItem(ObjectInstance item)
+    {
+        _contents.Add(item);
+    }
+
+    /// <summary>
+    /// Remove an item from this container.
+    /// </summary>
+    public bool RemoveItem(ObjectInstance item)
+    {
+        return _contents.Remove(item);
+    }
+
+    /// <summary>
+    /// Remove an item from this container by instance ID.
+    /// </summary>
+    public bool RemoveItemById(int instanceId)
+    {
+        var item = _contents.FirstOrDefault(i => i.InstanceId == instanceId);
+        if (item is null)
+        {
+            return false;
+        }
+        return _contents.Remove(item);
+    }
+}
 
 public interface IWorldState
 {
@@ -98,9 +150,35 @@ public interface IWorldState
 
     ObjectInstance? LoadObjectToPlayer(PlayerState player, int objectDefinitionId);
 
+    /// <summary>
+    /// Creates an object instance from a definition ID without adding it to any location.
+    /// Used for loading player inventory and equipment from database.
+    /// </summary>
+    ObjectInstance? CreateObjectInstance(int objectDefinitionId);
+
     IReadOnlyList<ObjectDefinition> SearchObjects(string query);
 
     bool ResetZone(int zoneId);
 
     bool ResetZoneForRoom(int roomId, out int zoneId);
+
+    /// <summary>
+    /// Create a corpse from a dead player and place it in the specified room.
+    /// Transfers all inventory and equipment to the corpse.
+    /// Legacy: make_corpse() in fight.c:310-393
+    /// </summary>
+    ObjectInstance CreatePlayerCorpse(PlayerState player, int roomId);
+
+    /// <summary>
+    /// Create a corpse from a dead mob and place it in the specified room.
+    /// Transfers all equipment to the corpse.
+    /// Legacy: make_corpse() in fight.c:310-393
+    /// </summary>
+    ObjectInstance CreateMobCorpse(MobInstance mob, int roomId);
+
+    /// <summary>
+    /// Remove a mob from the world completely.
+    /// Legacy: extract_char() in handler.c
+    /// </summary>
+    bool RemoveMob(int mobInstanceId, int roomId);
 }

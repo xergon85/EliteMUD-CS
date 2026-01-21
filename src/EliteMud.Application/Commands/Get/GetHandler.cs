@@ -4,7 +4,7 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Get;
 
-public sealed record GetResult(bool Success, string Message, ObjectDefinition? Object = null);
+public sealed record GetResult(bool Success, string Message, ObjectDefinition? Object = null, string? ContainerName = null);
 
 public sealed class GetHandler
 {
@@ -15,15 +15,60 @@ public sealed class GetHandler
         _worldState = worldState;
     }
 
-    public GetResult Handle(PlayerState player, string target)
+    /// <summary>
+    /// Handle get command - supports both "get <item>" and "get <item> <container>"
+    /// Legacy: do_get() and get_from_container() in act.obj1.c:761-842, 649-724
+    /// </summary>
+    public GetResult Handle(PlayerState player, string input)
     {
-        if (string.IsNullOrWhiteSpace(target))
+        if (string.IsNullOrWhiteSpace(input))
         {
             return new GetResult(false, "Get what?");
         }
 
+        // Parse arguments: "get <item>" or "get <item> <container>"
+        var parts = input.Split(new[] { ' ' }, 2, StringSplitOptions.RemoveEmptyEntries);
+        var itemName = parts[0];
+        var containerName = parts.Length > 1 ? parts[1] : null;
+
+        // If container specified, get from container
+        if (!string.IsNullOrWhiteSpace(containerName))
+        {
+            return GetFromContainer(player, itemName, containerName);
+        }
+
+        // Otherwise, get from room
+        return GetFromRoom(player, itemName);
+    }
+
+    /// <summary>
+    /// Get an item from the room.
+    /// Legacy: get_from_room() in act.obj1.c:727-757
+    /// </summary>
+    private GetResult GetFromRoom(PlayerState player, string target)
+    {
         var room = _worldState.World.GetRoom(player.RoomId);
         var objects = _worldState.GetObjectsInRoom(room.Id);
+
+        // Handle "get all" - get all objects from room
+        if (target.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            int count = 0;
+            foreach (var obj in objects.ToList())
+            {
+                if (_worldState.TakeObject(player, obj.InstanceId))
+                {
+                    count++;
+                }
+            }
+            
+            if (count == 0)
+            {
+                return new GetResult(false, "There doesn't seem to be anything you can get here.");
+            }
+            
+            return new GetResult(true, $"You get {count} item{(count == 1 ? "" : "s")}.");
+        }
 
         // Find matching object
         foreach (var obj in objects)
@@ -42,7 +87,123 @@ public sealed class GetHandler
             }
         }
 
-        return new GetResult(false, "You don't see that here.");
+        return new GetResult(false, $"You don't see {GetArticle(target)} {target} here.");
+    }
+
+    /// <summary>
+    /// Get an item from a container (corpse, bag, etc.)
+    /// Legacy: get_from_container() in act.obj1.c:649-724
+    /// </summary>
+    private GetResult GetFromContainer(PlayerState player, string itemName, string containerName)
+    {
+        // Find the container in room or inventory
+        var container = FindContainer(player, containerName);
+        
+        if (container is null)
+        {
+            return new GetResult(false, $"You don't have {GetArticle(containerName)} {containerName}.");
+        }
+
+        // Check if it's actually a container
+        if (!container.Definition.Type.Equals("container", StringComparison.OrdinalIgnoreCase))
+        {
+            return new GetResult(false, $"The {container.Definition.ShortDescription} is not a container.");
+        }
+
+        // Check if container is closed (value[1] is CONT_CLOSED flag in legacy)
+        // For now, we'll assume containers are open (corpses are always open)
+        
+        // Handle "get all <container>"
+        if (itemName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            return GetAllFromContainer(player, container);
+        }
+
+        // Find item in container
+        foreach (var item in container.Contents)
+        {
+            if (MatchesTarget(item.Definition, itemName))
+            {
+                // Remove from container and add to player inventory
+                if (container.RemoveItem(item))
+                {
+                    player.AddToInventory(item.InstanceId);
+                    return new GetResult(true, string.Empty, item.Definition, container.Definition.ShortDescription);
+                }
+                else
+                {
+                    return new GetResult(false, "You can't take that.");
+                }
+            }
+        }
+
+        return new GetResult(false, $"There doesn't seem to be {GetArticle(itemName)} {itemName} in the {container.Definition.ShortDescription}.");
+    }
+
+    /// <summary>
+    /// Get all items from a container.
+    /// Legacy: MODE_GET_ALL_CONT in act.obj1.c:661-678
+    /// </summary>
+    private GetResult GetAllFromContainer(PlayerState player, ObjectInstance container)
+    {
+        if (container.Contents.Count == 0)
+        {
+            return new GetResult(false, $"The {container.Definition.ShortDescription} is empty.");
+        }
+
+        int count = 0;
+        foreach (var item in container.Contents.ToList())
+        {
+            if (container.RemoveItem(item))
+            {
+                player.AddToInventory(item.InstanceId);
+                count++;
+            }
+        }
+
+        if (count == 0)
+        {
+            return new GetResult(false, $"The {container.Definition.ShortDescription} doesn't contain anything you can get.");
+        }
+
+        // Check if looting another player's corpse (value[3]=2 for player corpse)
+        bool isPlayerCorpse = container.Definition.Values.Count > 3 && container.Definition.Values[3] == 2;
+        if (isPlayerCorpse && !container.Definition.ShortDescription.Contains(player.Name, StringComparison.OrdinalIgnoreCase))
+        {
+            // Log looting (legacy: fight.c:672-673)
+            Console.WriteLine($"[LOOT] {player.Name} looting {container.Definition.ShortDescription}.");
+        }
+
+        return new GetResult(true, $"You get {count} item{(count == 1 ? "" : "s")} from the {container.Definition.ShortDescription}.");
+    }
+
+    /// <summary>
+    /// Find a container in the player's inventory or room.
+    /// Supports indexed targeting (e.g., "2.corpse" for second corpse).
+    /// Legacy: generic_find() with FIND_OBJ_INV | FIND_OBJ_ROOM, get_number() in handler.c:997-1016
+    /// </summary>
+    private ObjectInstance? FindContainer(PlayerState player, string containerName)
+    {
+        // Parse "2.corpse" style targeting
+        var (index, name) = TargetParser.ParseTarget(containerName);
+        if (index == 0)
+            return null; // Invalid format (e.g., "abc.corpse")
+        
+        // TODO: Support "all.X" pattern (index == -1) by handling at CommandHandler level
+        //       Legacy does this by calling get_from_container for each matching container
+        if (index == -1)
+            return null; // Not supported yet
+        
+        // Check inventory first
+        var inventory = _worldState.GetPlayerInventory(player);
+        var inventoryMatch = TargetParser.FindNthMatch(inventory, name, index);
+        if (inventoryMatch != null)
+            return inventoryMatch;
+
+        // Check room
+        var room = _worldState.World.GetRoom(player.RoomId);
+        var roomObjects = _worldState.GetObjectsInRoom(room.Id);
+        return TargetParser.FindNthMatch(roomObjects, name, index);
     }
 
     private static bool MatchesTarget(ObjectDefinition obj, string target)
@@ -52,5 +213,12 @@ public sealed class GetHandler
         // Check if target matches any keyword in the object name
         var keywords = obj.Name?.Split(' ', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
         return keywords.Any(k => k.ToLowerInvariant().StartsWith(targetLower));
+    }
+
+    private static string GetArticle(string word)
+    {
+        if (string.IsNullOrEmpty(word)) return "a";
+        char first = char.ToLower(word[0]);
+        return (first == 'a' || first == 'e' || first == 'i' || first == 'o' || first == 'u') ? "an" : "a";
     }
 }

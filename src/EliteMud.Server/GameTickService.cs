@@ -426,10 +426,10 @@ internal sealed class GameTickService
         await killer.Session.SendLineAsync(
             $"You have slain {victim.Player.Name}! (+{killBonus} exp)", cancellationToken);
         await victim.Session.SendLineAsync(
-            "You have been KILLED!!", cancellationToken);
+            "You are dead!  Sorry...", cancellationToken);
 
         // Broadcast to room
-        var roomMessage = $"{victim.Player.Name} is DEAD! R.I.P.";
+        var roomMessage = $"{victim.Player.Name} is dead! R.I.P.";
         var otherPlayers = _connectionRegistry.GetConnections()
             .Where(c => c.Player.RoomId == victim.Player.RoomId && c.Id != killer.Id && c.Id != victim.Id);
         
@@ -438,8 +438,16 @@ internal sealed class GameTickService
             await observer.Session.SendLineAsync(roomMessage, cancellationToken);
         }
 
-        // TODO: Create corpse, transfer items
-        // For now, just respawn the player
+        // Create corpse (fight.c:530)
+        _worldState.CreatePlayerCorpse(victim.Player, victim.Player.RoomId);
+
+        // Death experience loss - lose half of what's needed to level (fight.c:541)
+        // TODO: Implement exp_needed() function for proper calculation
+        // For now, use a simple penalty of 10% of current experience
+        int expLoss = victim.Player.Experience / 10;
+        victim.Player.Experience = Math.Max(0, victim.Player.Experience - expLoss);
+
+        // Respawn the player at starting room
         victim.Player.HitPoints = victim.Player.MaxHitPoints;
         victim.Player.Mana = victim.Player.MaxMana;
         victim.Player.Movement = victim.Player.MaxMovement;
@@ -447,7 +455,7 @@ internal sealed class GameTickService
         victim.Player.RoomId = 1; // Respawn at starting room
         
         await victim.Session.SendLineAsync(
-            "You have been resurrected...", cancellationToken);
+            $"You have been resurrected... (-{expLoss} exp)", cancellationToken);
     }
 
     private async Task HandlePlayerDeathFromMob(
@@ -460,12 +468,12 @@ internal sealed class GameTickService
         mob.FightingConnectionId = null;
         mob.Position = CombatService.POS_STANDING;
 
-        // Messages
+        // Messages (fight.c:966-969)
         await victim.Session.SendLineAsync(
-            $"You have been KILLED by {mob.Definition.ShortDescription}!!", cancellationToken);
+            "You are dead!  Sorry...", cancellationToken);
 
-        // Broadcast to room
-        var roomMessage = $"{victim.Player.Name} has been killed by {mob.Definition.ShortDescription}!";
+        // Broadcast to room (fight.c:967)
+        var roomMessage = $"{victim.Player.Name} is dead! R.I.P.";
         var otherPlayers = _connectionRegistry.GetConnections()
             .Where(c => c.Player.RoomId == victim.Player.RoomId && c.Id != victim.Id);
         
@@ -473,6 +481,15 @@ internal sealed class GameTickService
         {
             await observer.Session.SendLineAsync(roomMessage, cancellationToken);
         }
+
+        // Create corpse (fight.c:530)
+        _worldState.CreatePlayerCorpse(victim.Player, victim.Player.RoomId);
+
+        // Death experience loss - lose half of what's needed to level (fight.c:541)
+        // TODO: Implement exp_needed() function for proper calculation
+        // For now, use a simple penalty of 10% of current experience
+        int expLoss = victim.Player.Experience / 10;
+        victim.Player.Experience = Math.Max(0, victim.Player.Experience - expLoss);
 
         // Respawn the player
         victim.Player.HitPoints = victim.Player.MaxHitPoints;
@@ -482,7 +499,7 @@ internal sealed class GameTickService
         victim.Player.RoomId = 1; // Respawn at starting room
         
         await victim.Session.SendLineAsync(
-            "You have been resurrected...", cancellationToken);
+            $"You have been resurrected... (-{expLoss} exp)", cancellationToken);
     }
 
     /// <summary>
@@ -606,11 +623,12 @@ internal sealed class GameTickService
         killer.Player.Experience += killBonus;
 
         // Messages
+        var mobDesc = mob.Definition.ShortDescription?.Trim() ?? "something";
         await killer.Session.SendLineAsync(
-            $"You have slain {mob.Definition.ShortDescription}! (+{killBonus} exp)", cancellationToken);
+            $"You have slain {mobDesc}! (+{killBonus} exp)", cancellationToken);
 
-        // Broadcast to room
-        var roomMessage = $"{mob.Definition.ShortDescription} is DEAD!";
+        // Broadcast to room (fight.c:967)
+        var roomMessage = $"{mobDesc} is dead!";
         var otherPlayers = _connectionRegistry.GetConnections()
             .Where(c => c.Player.RoomId == killer.Player.RoomId && c.Id != killer.Id);
         
@@ -619,9 +637,11 @@ internal sealed class GameTickService
             await observer.Session.SendLineAsync(roomMessage, cancellationToken);
         }
 
-        // TODO: Create corpse with loot
-        // TODO: Remove mob from world (needs IWorldState.RemoveMob method)
-        // For now, just mark it as dead by setting HP to 0
+        // Create corpse (fight.c:501)
+        _worldState.CreateMobCorpse(mob, killer.Player.RoomId);
+
+        // Remove mob from world (fight.c:502 - extract_char)
+        _worldState.RemoveMob(mob.InstanceId, killer.Player.RoomId);
     }
 
     private void ProcessRegeneration()
@@ -691,7 +711,7 @@ internal sealed class GameTickService
                 }
                 
                 // Update the character with current player state
-                CharacterMapper.UpdateCharacterFromPlayerState(character, connection.Player);
+                CharacterMapper.UpdateCharacterFromPlayerState(character, connection.Player, _worldState);
                 
                 // Save to database
                 await characterRepository.UpdateAsync(character, cancellationToken);

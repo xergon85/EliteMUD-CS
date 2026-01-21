@@ -126,7 +126,7 @@ internal static class ServerBootstrap
         var ipBanService = services.GetRequiredService<IpBanService>();
         var tickService = services.GetRequiredService<GameTickService>();
 
-        var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry, authHandler, services, ipBanService);
+        var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry, authHandler, services, ipBanService, worldState);
         return (server, tickService);
     }
 

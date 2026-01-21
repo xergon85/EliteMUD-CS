@@ -24,32 +24,23 @@ public sealed class DropHandler
 
         var inventory = _worldState.GetPlayerInventory(player);
 
-        // Find matching object in inventory
-        foreach (var obj in inventory)
+        // Find matching object in inventory using indexed targeting (e.g., "2.sword")
+        // Legacy: handler.c:1020-1040 (get_obj_in_list with get_number)
+        var obj = TargetParser.FindObject(inventory, target);
+        
+        if (obj == null)
         {
-            if (MatchesTarget(obj.Definition, target))
-            {
-                // Try to drop the object
-                if (_worldState.DropObject(player, obj.InstanceId))
-                {
-                    return new DropResult(true, string.Empty, obj.Definition);
-                }
-                else
-                {
-                    return new DropResult(false, "You can't drop that.");
-                }
-            }
+            return new DropResult(false, "You don't have that.");
         }
 
-        return new DropResult(false, "You don't have that.");
-    }
-
-    private static bool MatchesTarget(ObjectDefinition obj, string target)
-    {
-        var targetLower = target.ToLowerInvariant();
-        
-        // Check if target matches any keyword in the object name
-        var keywords = obj.Name?.Split(' ', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-        return keywords.Any(k => k.ToLowerInvariant().StartsWith(targetLower));
+        // Try to drop the object
+        if (_worldState.DropObject(player, obj.InstanceId))
+        {
+            return new DropResult(true, string.Empty, obj.Definition);
+        }
+        else
+        {
+            return new DropResult(false, "You can't drop that.");
+        }
     }
 }

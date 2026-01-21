@@ -27,7 +27,11 @@ public sealed class InventoryHandler
         var items = new List<string> { "You are carrying:" };
         foreach (var obj in inventory)
         {
-            items.Add($"  {obj.Definition.ShortDescription}");
+            var description = obj.Definition.ShortDescription?.Trim() ?? "";
+            if (!string.IsNullOrWhiteSpace(description))
+            {
+                items.Add($"  {description}");
+            }
         }
 
         return new InventoryResult(items);

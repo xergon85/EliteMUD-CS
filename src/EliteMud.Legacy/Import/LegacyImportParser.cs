@@ -98,7 +98,7 @@ internal sealed class LegacyImportParser
             builder.Append((char)next);
         }
 
-        return builder.ToString().TrimEnd();
+        return builder.ToString().Trim();
     }
 
     public string? ReadLineSkippingWhitespace()
