@@ -200,25 +200,41 @@ public static class CombatService
 
     /// <summary>
     /// Determine if an attack hits.
-    /// Legacy: calculates based on THAC0, AC, dexterity, hitroll
+    /// Legacy: calculates based on THAC0, AC, dexterity, hitroll (fight.c:1380-1418)
     /// </summary>
     public static bool AttackHits(PlayerState attacker, PlayerState victim)
     {
-        int attackerThac0 = CalculateThac0(attacker);
-        int attackRoll = RollDice(1, 20);
+        // Calculate base THAC0
+        int calcThac0 = CalculateThac0(attacker);
+        
+        // Apply bonuses (subtract from THAC0 - lower is better)
+        // Legacy: calc_thaco -= (str_tohit + hitroll + int_bonus + wis_bonus + skillbonus - drunk)
+        int strBonus = GetStrengthHitBonus(attacker.Strength);
+        int intBonus = (attacker.Intelligence - 13) / 3;
+        int wisBonus = (attacker.Wisdom - 13) / 3;
+        
+        calcThac0 -= (strBonus + attacker.Hitroll + intBonus + wisBonus);
+        
+        // Roll d20
+        int diceRoll = RollDice(1, 20);
         
         // Natural 1 always misses, natural 20 always hits
-        if (attackRoll == 1) return false;
-        if (attackRoll == 20) return true;
+        if (diceRoll == 1) return false;
+        if (diceRoll == 20) return true;
 
-        // Calculate hit value: THAC0 - AC - hitroll modifiers
-        int hitroll = attacker.Hitroll + GetStrengthHitBonus(attacker.Strength);
-        int victimAC = victim.ArmorClass;
+        // Calculate victim AC (legacy: fight.c:1395-1415)
+        int victimAc = victim.ArmorClass;
         
-        // Need to roll: THAC0 - AC or higher (modified by hitroll)
-        int neededRoll = attackerThac0 - victimAC - hitroll;
+        // Dexterity bonus (if awake)
+        // Legacy: victim_ac -= (GET_DEX(victim)) * 10 / 6
+        victimAc -= (victim.Dexterity * 10) / 6;
         
-        return attackRoll >= neededRoll;
+        // Divide by 10 (legacy: victim_ac = MAX(-200, victim_ac / 10))
+        victimAc = Math.Max(-200, victimAc / 10);
+        
+        // Legacy hit formula: MISS if (calc_thaco - diceroll) > victim_ac
+        // Inverted: HIT if diceroll >= (calc_thaco - victim_ac)
+        return diceRoll >= (calcThac0 - victimAc);
     }
 
     /// <summary>
