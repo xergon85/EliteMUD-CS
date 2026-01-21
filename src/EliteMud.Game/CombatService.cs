@@ -347,6 +347,10 @@ public static class CombatService
         int victimMaxHp,
         MessagePerspective perspective)
     {
+        // Trim names to remove legacy leading/trailing whitespace and newlines
+        attackerName = attackerName.Trim();
+        victimName = victimName.Trim();
+        
         // Calculate damage as percentage of victim's max HP
         int percent = damage * 100 / Math.Max(1, victimMaxHp);
         
