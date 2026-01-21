@@ -167,6 +167,21 @@ public sealed class PlayerState
     public int Gold { get; set; }
     public int BankGold { get; set; }
 
+    // ===== Combat State =====
+    /// <summary>
+    /// The connection ID of the player this character is fighting, or null if not in combat.
+    /// Legacy equivalent: ch->specials.fighting
+    /// </summary>
+    public int? FightingConnectionId { get; set; }
+    
+    /// <summary>
+    /// Position of the character (standing, fighting, sleeping, etc.)
+    /// For now we only track if in combat (POS_FIGHTING) vs not.
+    /// Legacy: GET_POS(ch) - POS_DEAD=0, POS_MORTALLYW=1, POS_INCAP=2, POS_STUNNED=3,
+    ///         POS_SLEEPING=4, POS_RESTING=5, POS_SITTING=6, POS_FIGHTING=7, POS_STANDING=8
+    /// </summary>
+    public byte Position { get; set; } = 8; // POS_STANDING
+
     // ===== Inventory & Equipment =====
     public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
     public IReadOnlyDictionary<int, int> EquipmentSlotToObjectId => _equipmentSlotToObjectId;
