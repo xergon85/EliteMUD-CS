@@ -20,7 +20,7 @@ internal static class ServerBootstrap
 {
     public const int DefaultPort = 7500;
 
-    public static TelnetServer CreateServer(int port)
+    public static (TelnetServer Server, GameTickService TickService) CreateServer(int port)
     {
         var contentRoot = ResolveContentRoot();
         
@@ -64,7 +64,7 @@ internal static class ServerBootstrap
         return CreateServerFromContent(port, world, mobs, objects, zones, contentRoot);
     }
 
-    private static TelnetServer CreateServerFromContent(
+    private static (TelnetServer Server, GameTickService TickService) CreateServerFromContent(
         int port,
         WorldDefinition world,
         IReadOnlyList<MobDefinition> mobs,
@@ -104,6 +104,7 @@ internal static class ServerBootstrap
             .AddSingleton<IpBanService>(new IpBanService(banDurationMinutes: 15, maxFailedAttempts: 3))
             .AddSingleton<AuthenticationHandler>()
             .AddSingleton<ActMessageService>()
+            .AddSingleton<GameTickService>()
             
             // Commands and other services
             .AddCommandHandlers()
@@ -123,8 +124,10 @@ internal static class ServerBootstrap
         var connectionRegistry = services.GetRequiredService<ConnectionRegistry>();
         var authHandler = services.GetRequiredService<AuthenticationHandler>();
         var ipBanService = services.GetRequiredService<IpBanService>();
+        var tickService = services.GetRequiredService<GameTickService>();
 
-        return new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry, authHandler, services, ipBanService);
+        var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry, authHandler, services, ipBanService);
+        return (server, tickService);
     }
 
     public static int? TryParsePort(string[] args)

@@ -153,7 +153,7 @@ internal sealed class TelnetServer
 
             var player = CharacterMapper.ToPlayerState(character, connectionId);
 
-            context = new ConnectionContext(connectionId, session, player);
+            context = new ConnectionContext(connectionId, session, player, sessionData.SelectedCharacterId.Value);
             _connections[context.Id] = context;
             _connectionRegistry.SetProvider(() => _connections.Values);
 
