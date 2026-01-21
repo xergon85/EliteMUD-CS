@@ -24,6 +24,8 @@ public enum CommandKind
     ResetZone,
     Say,
     Move,
+    Kill,
+    Flee,
     ImportLegacy,
     Unknown
 }
@@ -175,6 +177,21 @@ public sealed class CommandParser
         {
             var argument = trimmed[14..].Trim();
             return new CommandRequest(CommandKind.ImportLegacy, argument, null);
+        }
+
+        if (trimmed.StartsWith("kill ", StringComparison.OrdinalIgnoreCase)
+            || trimmed.StartsWith("k ", StringComparison.OrdinalIgnoreCase)
+            || trimmed.StartsWith("hit ", StringComparison.OrdinalIgnoreCase))
+        {
+            var spaceIndex = trimmed.IndexOf(' ');
+            var target = trimmed[(spaceIndex + 1)..].Trim();
+            return new CommandRequest(CommandKind.Kill, target, null);
+        }
+
+        if (trimmed.Equals("flee", StringComparison.OrdinalIgnoreCase)
+            || trimmed.Equals("f", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Flee, null, null);
         }
 
         if (TryParseDirection(trimmed, out var direction))
