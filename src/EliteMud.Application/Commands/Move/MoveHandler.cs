@@ -15,6 +15,12 @@ public sealed class MoveHandler
 
     public MoveResult Handle(PlayerState player, Direction direction)
     {
+        // Block movement if player is in combat (legacy: act.movement.c)
+        if (player.FightingConnectionId != null)
+        {
+            return MoveResult.Failed("You are fighting!");
+        }
+
         if (!_worldState.World.TryMove(player.RoomId, direction, out var targetRoomId))
         {
             return MoveResult.Failed("You cannot go that way.");

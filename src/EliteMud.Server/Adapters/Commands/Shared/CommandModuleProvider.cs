@@ -1,6 +1,7 @@
 using EliteMud.Server.Adapters.Commands.Drop;
 using EliteMud.Server.Adapters.Commands.Equipment;
 using EliteMud.Server.Adapters.Commands.Examine;
+using EliteMud.Server.Adapters.Commands.Flee;
 using EliteMud.Server.Adapters.Commands.Get;
 using EliteMud.Server.Adapters.Commands.Hold;
 using EliteMud.Server.Adapters.Commands.Inventory;
@@ -46,7 +47,8 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new ResetZoneCommandModule(),
             new SayCommandModule(),
             new MoveCommandModule(),
-            new KillCommandModule()
+            new KillCommandModule(),
+            new FleeCommandModule()
         };
     }
 }
