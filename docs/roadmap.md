@@ -369,13 +369,20 @@
 ## Next Execution Checklist (Updated Jan 22, 2026)
 
 ### ✅ RECENTLY COMPLETED (Jan 22, 2026)
-- ✅ Fixed equipment persistence bug (was storing instance IDs, now stores definition IDs)
+- ✅ **MAJOR FIX:** Fixed equipment persistence bug (was storing instance IDs, now stores definition IDs)
 - ✅ Database migration: renamed ObjectId → ObjectDefinitionId in inventory/equipment tables
 - ✅ CharacterMapper now uses IWorldState to convert between instance IDs and definition IDs
 - ✅ Object instances are recreated on character load from definition IDs
 - ✅ `save` command - manual character save
 - ✅ Auto-save timer (every 5 minutes via GameTickService)
-- ✅ Fixed legacy import bug - object/mob descriptions now properly trimmed (no leading newlines)
+- ✅ **MAJOR FIX:** Fixed all linebreak issues - trimming at import, content load, and runtime display
+- ✅ Re-imported legacy content with proper text trimming
+- ✅ Added .Trim() to LegacyImportParser (tilde-terminated strings)
+- ✅ Added .Trim() to ContentLoader (mobs, objects, rooms JSON loading)
+- ✅ Added .Trim() to all display handlers (inventory, equipment, look, combat)
+- ✅ Combat messages now display correctly ("You attack the gremlin!" on one line)
+- ✅ Equipment display shows slot and item on same line
+- ✅ Item lists no longer have extra blank lines between items
 
 ### ✅ COMPLETED (Jan 21, 2026)
 - ✅ Combat system - kill, flee, wimpy commands (Phase 4.1 COMPLETE)
