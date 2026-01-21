@@ -89,17 +89,14 @@ internal sealed class GameTickService
         // Find all players in combat
         var fightingPlayers = connections.Where(c => c.Player.FightingConnectionId != null).ToList();
         
-        if (fightingPlayers.Count == 0)
-        {
-            return; // No combat happening
-        }
-
+        // Process player attacks
         foreach (var attacker in fightingPlayers)
         {
             try
             {
-                // Skip if attacker is dead or incapacitated
-                if (attacker.Player.Position < CombatService.POS_STUNNED)
+                // Skip if attacker can't fight (stunned, incapacitated, mortally wounded, or dead)
+                // Players in these positions can't attack but can still be attacked
+                if (attacker.Player.Position < CombatService.POS_FIGHTING)
                 {
                     continue;
                 }
@@ -137,6 +134,94 @@ internal sealed class GameTickService
                 Console.WriteLine($"[Combat] Error processing combat for {attacker.Player.Name}: {ex.Message}");
             }
         }
+        
+        // Process mob attacks (mobs attacking players who can't fight back)
+        await ProcessMobAttacksAsync(connections, cancellationToken);
+    }
+
+    /// <summary>
+    /// Process mobs attacking players (including helpless ones).
+    /// </summary>
+    private async Task ProcessMobAttacksAsync(
+        List<ConnectionContext> connections,
+        CancellationToken cancellationToken)
+    {
+        // Find all mobs that are fighting
+        foreach (var roomId in _worldState.World.Rooms.Keys)
+        {
+            var mobs = _worldState.GetMobsInRoom(roomId);
+            foreach (var mob in mobs)
+            {
+                if (mob.FightingConnectionId == null || mob.HitPoints <= 0)
+                {
+                    continue; // Not fighting or dead
+                }
+
+                // Find the player this mob is fighting
+                var victim = connections.FirstOrDefault(c => c.Id == mob.FightingConnectionId.Value);
+                if (victim == null || victim.Player.RoomId != roomId)
+                {
+                    // Player left or disconnected
+                    mob.FightingConnectionId = null;
+                    mob.Position = CombatService.POS_STANDING;
+                    continue;
+                }
+
+                // Mob attacks the player (even if player is helpless)
+                try
+                {
+                    await ProcessMobAttackOnPlayerAsync(mob, victim, cancellationToken);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[Combat] Error processing mob attack: {ex.Message}");
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Handle a mob attacking a player (used when player is helpless/stunned).
+    /// </summary>
+    private async Task ProcessMobAttackOnPlayerAsync(
+        MobInstance mob,
+        ConnectionContext victim,
+        CancellationToken cancellationToken)
+    {
+        // Mob does damage
+        var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
+        CombatService.ApplyDamage(victim.Player, mobDamage);
+        
+        // Format legacy combat messages
+        var victimMsg = CombatService.FormatCombatMessage(
+            mob.Definition.ShortDescription,
+            victim.Player.Name,
+            mobDamage,
+            victim.Player.MaxHitPoints,
+            MessagePerspective.ToVict);
+        
+        await victim.Session.SendLineAsync(
+            $"{victimMsg} [{victim.Player.HitPoints}/{victim.Player.MaxHitPoints} HP]",
+            cancellationToken);
+            
+        // Broadcast to room
+        var roomMsg = CombatService.FormatCombatMessage(
+            mob.Definition.ShortDescription,
+            victim.Player.Name,
+            mobDamage,
+            victim.Player.MaxHitPoints,
+            MessagePerspective.ToRoom);
+            
+        var otherPlayers = _connectionRegistry.GetConnections()
+            .Where(c => c.Player.RoomId == victim.Player.RoomId && c.Id != victim.Id);
+        
+        foreach (var observer in otherPlayers)
+        {
+            await observer.Session.SendLineAsync(roomMsg, cancellationToken);
+        }
+
+        // Check player position after mob attack
+        await CheckPlayerPositionAsync(victim, mob, cancellationToken);
     }
 
     private async Task ProcessPlayerVsPlayerAttack(
@@ -287,11 +372,8 @@ internal sealed class GameTickService
                 await observer.Session.SendLineAsync(mobRoomMsg, cancellationToken);
             }
 
-            // Check if player died
-            if (attacker.Player.Position == CombatService.POS_DEAD)
-            {
-                await HandlePlayerDeathFromMob(attacker, mob, cancellationToken);
-            }
+            // Check player position after mob attack
+            await CheckPlayerPositionAsync(attacker, mob, cancellationToken);
         }
     }
 
@@ -369,6 +451,55 @@ internal sealed class GameTickService
         
         await victim.Session.SendLineAsync(
             "You have been resurrected...", cancellationToken);
+    }
+
+    /// <summary>
+    /// Check player's position after taking damage and send appropriate messages.
+    /// Legacy: update_pos() with position-based messages
+    /// </summary>
+    private async Task CheckPlayerPositionAsync(
+        ConnectionContext player,
+        MobInstance mob,
+        CancellationToken cancellationToken)
+    {
+        var position = player.Player.Position;
+        
+        if (position == CombatService.POS_DEAD)
+        {
+            // Player is dead
+            await HandlePlayerDeathFromMob(player, mob, cancellationToken);
+        }
+        else if (position == CombatService.POS_MORTALLYW)
+        {
+            // Mortally wounded (-6 to -10 HP)
+            await player.Session.SendLineAsync(
+                "You are mortally wounded, and will die soon, if not aided.", 
+                cancellationToken);
+            
+            // Stop player from fighting, but mob keeps attacking
+            CombatService.StopFighting(player.Player);
+        }
+        else if (position == CombatService.POS_INCAP)
+        {
+            // Incapacitated (-3 to -5 HP)
+            await player.Session.SendLineAsync(
+                "You are incapacitated and will slowly die, if not aided.", 
+                cancellationToken);
+            
+            // Stop player from fighting, but mob keeps attacking
+            CombatService.StopFighting(player.Player);
+        }
+        else if (position == CombatService.POS_STUNNED)
+        {
+            // Stunned (0 to -2 HP)
+            await player.Session.SendLineAsync(
+                "You are stunned, but will probably regain consciousness again.", 
+                cancellationToken);
+            
+            // Stop player from fighting, but mob keeps attacking
+            CombatService.StopFighting(player.Player);
+        }
+        // else: player is still conscious and fighting
     }
 
     private async Task HandleMobDeath(
