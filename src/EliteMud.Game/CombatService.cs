@@ -238,11 +238,41 @@ public static class CombatService
     }
 
     /// <summary>
+    /// Calculate damage with position multipliers for helpless victims.
+    /// Legacy: fight.c:1482-1489
+    /// </summary>
+    /// <param name="baseDamage">Base damage before multipliers</param>
+    /// <param name="victimPosition">Victim's current position</param>
+    /// <returns>Damage after position multiplier</returns>
+    public static int CalculateDamageWithPositionMultiplier(int baseDamage, byte victimPosition)
+    {
+        // If victim is not in fighting position, apply damage multiplier
+        // Legacy formula: dam *= (3 + POS_FIGHTING - GET_POS(victim)) / 3
+        if (victimPosition < POS_FIGHTING)
+        {
+            // Calculate multiplier: (3 + 7 - position) / 3
+            // POS_SITTING (6): 1.33x
+            // POS_RESTING (5): 1.66x
+            // POS_SLEEPING (4): 2.00x
+            // POS_STUNNED (3): 2.33x
+            // POS_INCAP (2): 2.66x
+            // POS_MORTALLYW (1): 3.00x
+            int multiplierNumerator = 3 + POS_FIGHTING - victimPosition;
+            baseDamage = baseDamage * multiplierNumerator / 3;
+        }
+        
+        return baseDamage;
+    }
+
+    /// <summary>
     /// Apply damage to a player and update their position.
     /// Legacy: damage() function
     /// </summary>
     public static int ApplyDamage(PlayerState victim, int damage)
     {
+        // Apply position multiplier before capping damage
+        damage = CalculateDamageWithPositionMultiplier(damage, victim.Position);
+        
         // Cap damage
         damage = Math.Min(damage, 500);
         damage = Math.Max(damage, 0);
@@ -328,6 +358,30 @@ public static class CombatService
     public static int CalculateExperienceGain(PlayerState victim, int damage)
     {
         return victim.Level * damage / 2;
+    }
+
+    /// <summary>
+    /// Get damage feedback messages for victim.
+    /// Legacy: fight.c:972-985
+    /// </summary>
+    /// <param name="victim">The character taking damage</param>
+    /// <param name="damage">Damage dealt</param>
+    /// <returns>Feedback message, or null if no message</returns>
+    public static string? GetDamageFeedbackMessage(PlayerState victim, int damage)
+    {
+        // "That Really did HURT!" if damage > 20% max HP (fight.c:972-973)
+        if (damage > victim.MaxHitPoints / 5)
+        {
+            return "That Really did HURT!";
+        }
+        
+        // Bleeding warning if HP < 20% max HP (fight.c:981-985)
+        if (victim.HitPoints < victim.MaxHitPoints / 5 && victim.HitPoints > 0)
+        {
+            return "You wish that your wounds would stop BLEEDING so much!";
+        }
+        
+        return null;
     }
 
     /// <summary>

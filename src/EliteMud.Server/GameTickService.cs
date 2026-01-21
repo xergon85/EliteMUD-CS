@@ -190,25 +190,32 @@ internal sealed class GameTickService
     {
         // Mob does damage
         var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-        CombatService.ApplyDamage(victim.Player, mobDamage);
+        var actualDamage = CombatService.ApplyDamage(victim.Player, mobDamage);
         
         // Format legacy combat messages
         var victimMsg = CombatService.FormatCombatMessage(
             mob.Definition.ShortDescription,
             victim.Player.Name,
-            mobDamage,
+            actualDamage,
             victim.Player.MaxHitPoints,
             MessagePerspective.ToVict);
         
         await victim.Session.SendLineAsync(
             $"{victimMsg} [{victim.Player.HitPoints}/{victim.Player.MaxHitPoints} HP]",
             cancellationToken);
+        
+        // Show damage feedback (HURT/bleeding messages)
+        var feedbackMsg = CombatService.GetDamageFeedbackMessage(victim.Player, actualDamage);
+        if (feedbackMsg != null)
+        {
+            await victim.Session.SendLineAsync(feedbackMsg, cancellationToken);
+        }
             
         // Broadcast to room
         var roomMsg = CombatService.FormatCombatMessage(
             mob.Definition.ShortDescription,
             victim.Player.Name,
-            mobDamage,
+            actualDamage,
             victim.Player.MaxHitPoints,
             MessagePerspective.ToRoom);
             
@@ -251,6 +258,16 @@ internal sealed class GameTickService
         await victim.Session.SendLineAsync(
             $"{victimMsg} [{victim.Player.HitPoints}/{victim.Player.MaxHitPoints} HP]", 
             cancellationToken);
+        
+        // Show damage feedback to victim (HURT/bleeding messages)
+        if (result.Hit && result.Damage > 0)
+        {
+            var feedbackMsg = CombatService.GetDamageFeedbackMessage(victim.Player, result.Damage);
+            if (feedbackMsg != null)
+            {
+                await victim.Session.SendLineAsync(feedbackMsg, cancellationToken);
+            }
+        }
 
         // Broadcast to room if hit
         if (result.Hit)
@@ -345,25 +362,32 @@ internal sealed class GameTickService
         {
             // Mob fights back
             var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-            CombatService.ApplyDamage(attacker.Player, mobDamage);
+            var actualDamage = CombatService.ApplyDamage(attacker.Player, mobDamage);
             
             // Format legacy combat messages for mob hitting player
             var mobAttackMsg = CombatService.FormatCombatMessage(
                 mob.Definition.ShortDescription,
                 attacker.Player.Name,
-                mobDamage,
+                actualDamage,
                 attacker.Player.MaxHitPoints,
                 MessagePerspective.ToVict);
             
             await attacker.Session.SendLineAsync(
                 $"{mobAttackMsg} [{attacker.Player.HitPoints}/{attacker.Player.MaxHitPoints} HP]",
                 cancellationToken);
+            
+            // Show damage feedback (HURT/bleeding messages)
+            var feedbackMsg = CombatService.GetDamageFeedbackMessage(attacker.Player, actualDamage);
+            if (feedbackMsg != null)
+            {
+                await attacker.Session.SendLineAsync(feedbackMsg, cancellationToken);
+            }
                 
             // Broadcast mob attack to room
             var mobRoomMsg = CombatService.FormatCombatMessage(
                 mob.Definition.ShortDescription,
                 attacker.Player.Name,
-                mobDamage,
+                actualDamage,
                 attacker.Player.MaxHitPoints,
                 MessagePerspective.ToRoom);
                 
@@ -455,7 +479,8 @@ internal sealed class GameTickService
 
     /// <summary>
     /// Check player's position after taking damage and send appropriate messages.
-    /// Legacy: update_pos() with position-based messages
+    /// Also handle auto-flee (wimpy) if HP drops below 20%.
+    /// Legacy: update_pos() with position-based messages, fight.c:987-992
     /// </summary>
     private async Task CheckPlayerPositionAsync(
         ConnectionContext player,
@@ -463,6 +488,21 @@ internal sealed class GameTickService
         CancellationToken cancellationToken)
     {
         var position = player.Player.Position;
+        
+        // Auto-flee if HP < 20% (wimpy) - Legacy: fight.c:987-992
+        // Only flee if not already incapacitated/mortally wounded/stunned
+        if (position >= CombatService.POS_FIGHTING && 
+            player.Player.HitPoints > 0 &&
+            player.Player.HitPoints < player.Player.MaxHitPoints / 5)
+        {
+            await player.Session.SendLineAsync(
+                "You wimp out, and attempt to flee!", 
+                cancellationToken);
+            
+            // Attempt to flee
+            await AttemptAutoFleeAsync(player, cancellationToken);
+            return; // Don't process other messages if fleeing
+        }
         
         if (position == CombatService.POS_DEAD)
         {
@@ -500,6 +540,119 @@ internal sealed class GameTickService
             CombatService.StopFighting(player.Player);
         }
         // else: player is still conscious and fighting
+    }
+
+    /// <summary>
+    /// Attempt to auto-flee (wimpy).
+    /// Legacy: fight.c:987-992 calls do_flee()
+    /// </summary>
+    private async Task AttemptAutoFleeAsync(
+        ConnectionContext player,
+        CancellationToken cancellationToken)
+    {
+        // Try to flee in 6 random directions (same as flee command)
+        var random = new Random();
+        var directions = new[] {
+            Direction.North, Direction.East, Direction.South,
+            Direction.West, Direction.Up, Direction.Down
+        };
+
+        var currentRoomId = player.Player.RoomId;
+
+        for (int i = 0; i < 6; i++)
+        {
+            var attemptDirection = directions[random.Next(directions.Length)];
+
+            // Check if can move in that direction
+            if (!_worldState.World.TryMove(player.Player.RoomId, attemptDirection, out var targetRoomId))
+            {
+                continue;
+            }
+
+            // Calculate experience loss if fighting
+            int experienceLoss = 0;
+            if (player.Player.FightingConnectionId != null)
+            {
+                var victimId = player.Player.FightingConnectionId.Value;
+                if (victimId > 0)
+                {
+                    // Fighting a player
+                    var victimContext = _connectionRegistry.GetConnections()
+                        .FirstOrDefault(c => c.Id == victimId);
+                    if (victimContext != null)
+                    {
+                        var victim = victimContext.Player;
+                        int damageDone = victim.MaxHitPoints - victim.HitPoints;
+                        experienceLoss = damageDone * victim.Level;
+                    }
+                }
+                else
+                {
+                    // Fighting a mob
+                    var mobInstanceId = -victimId;
+                    var mob = _worldState.GetMobsInRoom(currentRoomId)
+                        .FirstOrDefault(m => m.InstanceId == mobInstanceId);
+                    if (mob != null)
+                    {
+                        int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
+                        int damageDone = mobMaxHp - mob.HitPoints;
+                        experienceLoss = damageDone * mob.Definition.Level;
+                    }
+                }
+            }
+
+            // Actually move to the new room
+            player.Player.RoomId = targetRoomId;
+
+            // Stop fighting
+            CombatService.StopFighting(player.Player);
+
+            // Apply experience loss
+            if (experienceLoss > 0)
+            {
+                player.Player.Experience -= experienceLoss;
+                if (player.Player.Experience < 0) player.Player.Experience = 0;
+            }
+
+            // Send success message
+            await player.Session.SendLineAsync("You flee head over heels.", cancellationToken);
+
+            // Stop all mobs/players that were fighting us
+            var mobsInOldRoom = _worldState.GetMobsInRoom(currentRoomId);
+            foreach (var oldMob in mobsInOldRoom)
+            {
+                if (oldMob.FightingConnectionId == player.Id)
+                {
+                    oldMob.FightingConnectionId = null;
+                    oldMob.Position = CombatService.POS_STANDING;
+                }
+            }
+
+            var playersInOldRoom = _connectionRegistry.GetConnections()
+                .Where(c => c.Player.RoomId == currentRoomId && c.Player.FightingConnectionId == player.Id);
+            foreach (var otherPlayer in playersInOldRoom)
+            {
+                CombatService.StopFighting(otherPlayer.Player);
+            }
+
+            // Show new room
+            var room = _worldState.World.GetRoom(player.Player.RoomId);
+            if (room != null)
+            {
+                await player.Session.SendLineAsync(room.Name, cancellationToken);
+                await player.Session.SendLineAsync(room.Description, cancellationToken);
+                var exits = room.Exits.Select(e => e.Direction.ToString()).ToList();
+                if (exits.Count > 0)
+                {
+                    await player.Session.SendLineAsync($"Obvious exits: {string.Join(", ", exits)}", cancellationToken);
+                }
+            }
+
+            return; // Successfully fled
+        }
+
+        // Failed to flee
+        await player.Session.SendLineAsync("PANIC!  You couldn't escape!", cancellationToken);
     }
 
     private async Task HandleMobDeath(
