@@ -29,7 +29,7 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<ImportLegacyCommandHandler>()
             .AddSingleton<LookCommandHandler>()
             .AddSingleton<MoveCommandHandler>()
-            .AddSingleton<FleeService>()
+            .AddSingleton<FleeHandler>()
             .AddSingleton<SayCommandHandler>(provider => new SayCommandHandler(
                 provider.GetRequiredService<IScriptEngine>(),
                 provider.GetRequiredService<ConnectionRegistry>().GetConnections

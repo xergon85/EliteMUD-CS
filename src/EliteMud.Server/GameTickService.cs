@@ -23,7 +23,7 @@ internal sealed class GameTickService
     private readonly IServiceProvider _serviceProvider;
     private readonly IWorldState _worldState;
     private readonly ActMessageService _actService;
-    private readonly Application.Commands.Flee.FleeService _fleeService;
+    private readonly Application.Commands.Flee.FleeHandler _fleeService;
     private readonly LookCommandHandler _lookHandler;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
@@ -39,7 +39,7 @@ internal sealed class GameTickService
         IServiceProvider serviceProvider,
         IWorldState worldState,
         ActMessageService actService,
-        Application.Commands.Flee.FleeService fleeService,
+        Application.Commands.Flee.FleeHandler fleeService,
         LookCommandHandler lookHandler)
     {
         _connectionRegistry = connectionRegistry;
@@ -561,7 +561,7 @@ internal sealed class GameTickService
     {
         var currentRoomId = player.Player.RoomId;
 
-        // Attempt to flee using FleeService
+        // Attempt to flee using FleeHandler
         var result = _fleeService.AttemptFlee(
             player.Player,
             currentRoomId,

@@ -4,15 +4,15 @@ using EliteMud.Game;
 namespace EliteMud.Application.Commands.Flee;
 
 /// <summary>
-/// Service for handling flee attempts (both manual flee command and wimpy auto-flee).
+/// Handler for flee attempts (both manual flee command and wimpy auto-flee).
 /// Centralizes flee logic to avoid duplication between FleeCommandHandler and GameTickService.
 /// Legacy reference: act.offensive.c:379-478
 /// </summary>
-public sealed class FleeService
+public sealed class FleeHandler
 {
     private readonly IWorldState _worldState;
 
-    public FleeService(IWorldState worldState)
+    public FleeHandler(IWorldState worldState)
     {
         _worldState = worldState;
     }

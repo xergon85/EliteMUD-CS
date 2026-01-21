@@ -12,18 +12,18 @@ internal sealed class FleeCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly Func<IEnumerable<ConnectionContext>> _connections;
     private readonly LookCommandHandler _lookHandler;
-    private readonly Application.Commands.Flee.FleeService _fleeService;
+    private readonly FleeHandler _fleeHandler;
 
     public FleeCommandHandler(
         IWorldState worldState,
         Func<IEnumerable<ConnectionContext>> connections,
         LookCommandHandler lookHandler,
-        Application.Commands.Flee.FleeService fleeService)
+        FleeHandler fleeHandler)
     {
         _worldState = worldState;
         _connections = connections;
         _lookHandler = lookHandler;
-        _fleeService = fleeService;
+        _fleeHandler = fleeHandler;
     }
 
     public CommandKind Kind => CommandKind.Flee;
@@ -54,7 +54,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
             cancellationToken);
 
         // Attempt to flee using FleeService
-        var result = _fleeService.AttemptFlee(
+        var result = _fleeHandler.AttemptFlee(
             player,
             currentRoomId,
             () => _connections().Select(c => c.Player),
@@ -68,7 +68,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         }
 
         // Apply the flee result (moves player, stops combat, applies XP loss)
-        _fleeService.ApplyFleeResult(
+        _fleeHandler.ApplyFleeResult(
             player,
             result,
             () => _connections().Select(c => c.Player),

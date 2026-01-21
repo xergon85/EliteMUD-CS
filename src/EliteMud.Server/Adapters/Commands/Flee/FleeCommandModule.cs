@@ -16,7 +16,7 @@ internal sealed class FleeCommandModule : ICommandModule
         var worldState = serviceProvider.GetRequiredService<IWorldState>();
         var connectionRegistry = serviceProvider.GetRequiredService<ConnectionRegistry>();
         var lookHandler = serviceProvider.GetRequiredService<LookCommandHandler>();
-        var fleeService = serviceProvider.GetRequiredService<FleeService>();
+        var fleeService = serviceProvider.GetRequiredService<FleeHandler>();
         
         return new FleeCommandHandler(worldState, connectionRegistry.GetConnections, lookHandler, fleeService);
     }
