@@ -144,15 +144,15 @@ public static class CombatService
 
     /// <summary>
     /// Calculate base damage for an unarmed attack.
-    /// Legacy uses character level and class.
+    /// Legacy: fight.c:1439-1458
+    /// Formula: str_todam + damroll + random(0,2)
     /// </summary>
     public static int CalculateBareDamage(PlayerState attacker)
     {
-        // Legacy formula varies by class and level
-        // Simplified: 1d4 + strength bonus
-        int baseDamage = RollDice(1, 4);
+        // Legacy: dam = str_todam + damroll + number(0, 2) for bare hands
         int strBonus = GetStrengthDamageBonus(attacker.Strength);
-        return Math.Max(0, baseDamage + strBonus + attacker.Damroll);
+        int baseDamage = Random.Shared.Next(0, 3); // 0-2 damage (legacy: number(0, 2))
+        return Math.Max(0, strBonus + attacker.Damroll + baseDamage);
     }
 
     /// <summary>
