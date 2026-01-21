@@ -26,6 +26,7 @@ public enum CommandKind
     Move,
     Kill,
     Flee,
+    Wimpy,
     ImportLegacy,
     Unknown
 }
@@ -192,6 +193,17 @@ public sealed class CommandParser
             || trimmed.Equals("f", StringComparison.OrdinalIgnoreCase))
         {
             return new CommandRequest(CommandKind.Flee, null, null);
+        }
+
+        if (trimmed.Equals("wimpy", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Wimpy, null, null);
+        }
+
+        if (trimmed.StartsWith("wimpy ", StringComparison.OrdinalIgnoreCase))
+        {
+            var argument = trimmed[6..].Trim();
+            return new CommandRequest(CommandKind.Wimpy, argument, null);
         }
 
         if (TryParseDirection(trimmed, out var direction))

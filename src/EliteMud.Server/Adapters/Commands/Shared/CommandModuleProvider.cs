@@ -19,6 +19,7 @@ using EliteMud.Server.Adapters.Commands.Search;
 using EliteMud.Server.Adapters.Commands.Wear;
 using EliteMud.Server.Adapters.Commands.Who;
 using EliteMud.Server.Adapters.Commands.Wield;
+using EliteMud.Server.Adapters.Commands.Wimpy;
 
 namespace EliteMud.Server.Adapters.Commands.Shared;
 
@@ -48,7 +49,8 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new SayCommandModule(),
             new MoveCommandModule(),
             new KillCommandModule(),
-            new FleeCommandModule()
+            new FleeCommandModule(),
+            new WimpyCommandModule()
         };
     }
 }

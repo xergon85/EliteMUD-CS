@@ -181,6 +181,13 @@ public sealed class PlayerState
     ///         POS_SLEEPING=4, POS_RESTING=5, POS_SITTING=6, POS_FIGHTING=7, POS_STANDING=8
     /// </summary>
     public byte Position { get; set; } = 8; // POS_STANDING
+    
+    /// <summary>
+    /// HP threshold below which the player will auto-flee (wimpy).
+    /// Max allowed is MaxHitPoints / 4 (25%).
+    /// Legacy: ch->specials2.wimp_level
+    /// </summary>
+    public short WimpyLevel { get; set; } = 0;
 
     // ===== Inventory & Equipment =====
     public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;

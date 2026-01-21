@@ -61,6 +61,7 @@ public static class CharacterMapper
             Hitroll = (sbyte)character.Hitroll,
             Damroll = (sbyte)character.Damroll,
             Alignment = character.Alignment,
+            WimpyLevel = (short)character.WimpyLevel,
             
             // Resources
             Gold = character.Gold,
@@ -135,6 +136,7 @@ public static class CharacterMapper
         character.Hitroll = playerState.Hitroll;
         character.Damroll = playerState.Damroll;
         character.Alignment = playerState.Alignment;
+        character.WimpyLevel = playerState.WimpyLevel;
 
         // Location & Resources
         character.RoomId = playerState.RoomId;

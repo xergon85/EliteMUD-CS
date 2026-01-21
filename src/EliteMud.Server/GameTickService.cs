@@ -479,7 +479,7 @@ internal sealed class GameTickService
 
     /// <summary>
     /// Check player's position after taking damage and send appropriate messages.
-    /// Also handle auto-flee (wimpy) if HP drops below 20%.
+    /// Also handle auto-flee (wimpy) if HP drops below player's wimpy threshold.
     /// Legacy: update_pos() with position-based messages, fight.c:987-992
     /// </summary>
     private async Task CheckPlayerPositionAsync(
@@ -489,11 +489,12 @@ internal sealed class GameTickService
     {
         var position = player.Player.Position;
         
-        // Auto-flee if HP < 20% (wimpy) - Legacy: fight.c:987-992
-        // Only flee if not already incapacitated/mortally wounded/stunned
+        // Auto-flee if HP drops below wimpy level - Legacy: fight.c:987-992
+        // Only flee if wimpy is set and not already incapacitated/mortally wounded/stunned
         if (position >= CombatService.POS_FIGHTING && 
+            player.Player.WimpyLevel > 0 &&
             player.Player.HitPoints > 0 &&
-            player.Player.HitPoints < player.Player.MaxHitPoints / 5)
+            player.Player.HitPoints < player.Player.WimpyLevel)
         {
             await player.Session.SendLineAsync(
                 "You wimp out, and attempt to flee!", 

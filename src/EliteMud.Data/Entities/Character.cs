@@ -34,6 +34,7 @@ public class Character
     public int Hitroll { get; set; }
     public int Damroll { get; set; }
     public int Alignment { get; set; } = 0;
+    public int WimpyLevel { get; set; } = 0;
 
     // Location & Resources
     public int RoomId { get; set; }
