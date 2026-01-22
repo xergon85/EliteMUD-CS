@@ -84,7 +84,10 @@ internal sealed class LookCommandHandler : ICommandHandler
 
         // Exits line
         await context.Session.SendLineAsync(view.ExitLine, cancellationToken);
-        await ExecuteHookAsync(context, ScriptHook.OnLook, null, cancellationToken);
+        
+        var room = _worldState.World.GetRoom(context.Player.RoomId);
+        await context.ExecuteScriptHookAsync(_scriptEngine, ScriptHook.OnLook, room, null, cancellationToken);
+        
         return CommandOutcome.Continue;
     }
 
@@ -167,20 +170,5 @@ internal sealed class LookCommandHandler : ICommandHandler
         if (string.IsNullOrEmpty(word)) return "a";
         char first = char.ToLower(word[0]);
         return (first == 'a' || first == 'e' || first == 'i' || first == 'o' || first == 'u') ? "an" : "a";
-    }
-
-    private async ValueTask ExecuteHookAsync(
-        ConnectionContext context,
-        ScriptHook hook,
-        string? text,
-        CancellationToken cancellationToken)
-    {
-        var room = _worldState.World.GetRoom(context.Player.RoomId);
-        var scriptContext = new ScriptContext(context.Player, room, text);
-        await _scriptEngine.ExecuteAsync(hook, scriptContext, cancellationToken);
-        foreach (var output in scriptContext.Outputs)
-        {
-            await context.Session.SendLineAsync(output, cancellationToken);
-        }
     }
 }

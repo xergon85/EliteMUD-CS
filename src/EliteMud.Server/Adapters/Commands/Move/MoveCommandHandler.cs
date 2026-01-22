@@ -45,23 +45,9 @@ internal sealed class MoveCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
-        await ExecuteHookAsync(context, ScriptHook.OnEnterRoom, null, cancellationToken);
+        var room = _worldState.World.GetRoom(context.Player.RoomId);
+        await context.ExecuteScriptHookAsync(_scriptEngine, ScriptHook.OnEnterRoom, room, null, cancellationToken);
         await _lookHandler.HandleAsync(new CommandRequest(CommandKind.Look, null, null), context, cancellationToken);
         return CommandOutcome.Continue;
-    }
-
-    private async ValueTask ExecuteHookAsync(
-        ConnectionContext context,
-        ScriptHook hook,
-        string? text,
-        CancellationToken cancellationToken)
-    {
-        var room = _worldState.World.GetRoom(context.Player.RoomId);
-        var scriptContext = new ScriptContext(context.Player, room, text);
-        await _scriptEngine.ExecuteAsync(hook, scriptContext, cancellationToken);
-        foreach (var output in scriptContext.Outputs)
-        {
-            await context.Session.SendLineAsync(output, cancellationToken);
-        }
     }
 }

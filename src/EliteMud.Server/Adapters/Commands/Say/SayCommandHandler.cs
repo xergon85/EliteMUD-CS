@@ -33,28 +33,16 @@ internal sealed class SayCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
-        await ExecuteHookAsync(context, ScriptHook.OnSay, command.Argument, cancellationToken);
-        await BroadcastRoomAsync(context, result.BroadcastMessage, cancellationToken);
-        return CommandOutcome.Continue;
-    }
-
-    private async ValueTask ExecuteHookAsync(
-        ConnectionContext context,
-        ScriptHook hook,
-        string? text,
-        CancellationToken cancellationToken)
-    {
-        var room = new RoomDefinition(
+        // Create dummy room for script context (Say doesn't need full room details)
+        var dummyRoom = new RoomDefinition(
             context.Player.RoomId,
             string.Empty,
             string.Empty,
             Array.Empty<ExitDefinition>());
-        var scriptContext = new ScriptContext(context.Player, room, text);
-        await _scriptEngine.ExecuteAsync(hook, scriptContext, cancellationToken);
-        foreach (var output in scriptContext.Outputs)
-        {
-            await context.Session.SendLineAsync(output, cancellationToken);
-        }
+        
+        await context.ExecuteScriptHookAsync(_scriptEngine, ScriptHook.OnSay, dummyRoom, command.Argument, cancellationToken);
+        await BroadcastRoomAsync(context, result.BroadcastMessage, cancellationToken);
+        return CommandOutcome.Continue;
     }
 
     private async ValueTask BroadcastRoomAsync(ConnectionContext speaker, string message,

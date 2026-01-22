@@ -1,5 +1,6 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Game;
+using EliteMud.Scripting;
 
 namespace EliteMud.Server.Adapters.Commands.Shared;
 
@@ -224,5 +225,25 @@ internal static class ActMessageExtensions
             roomMessage,
             obj: obj,
             cancellationToken: cancellationToken);
+    }
+
+    /// <summary>
+    /// Executes a script hook and sends all script outputs to the player's session.
+    /// </summary>
+    public static async Task ExecuteScriptHookAsync(
+        this ConnectionContext context,
+        IScriptEngine scriptEngine,
+        ScriptHook hook,
+        RoomDefinition room,
+        string? text = null,
+        CancellationToken cancellationToken = default)
+    {
+        var scriptContext = new ScriptContext(context.Player, room, text);
+        await scriptEngine.ExecuteAsync(hook, scriptContext, cancellationToken);
+        
+        foreach (var output in scriptContext.Outputs)
+        {
+            await context.Session.SendLineAsync(output, cancellationToken);
+        }
     }
 }
