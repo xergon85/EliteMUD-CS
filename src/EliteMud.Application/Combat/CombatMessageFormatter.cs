@@ -1,3 +1,5 @@
+using EliteMud.Game;
+
 namespace EliteMud.Application.Combat;
 
 /// <summary>
@@ -199,18 +201,4 @@ public static class CombatMessageFormatter
 
         return message;
     }
-}
-
-/// <summary>
-/// Message perspective for combat messages.
-/// Based on legacy TO_CHAR, TO_VICT, TO_ROOM flags.
-/// </summary>
-public enum MessagePerspective
-{
-    /// <summary>Send to the attacker</summary>
-    ToChar,
-    /// <summary>Send to the victim</summary>
-    ToVict,
-    /// <summary>Send to everyone else in the room</summary>
-    ToRoom
 }
