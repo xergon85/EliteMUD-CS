@@ -198,4 +198,31 @@ internal static class ActMessageExtensions
 
         return null;
     }
+
+    /// <summary>
+    /// Sends equipment action messages to player and room for a single object.
+    /// Used by wield/hold/wear/remove commands for successful equipment changes.
+    /// </summary>
+    public static async Task SendEquipMessageAsync(
+        this ConnectionContext context,
+        ActMessageService actService,
+        ConnectionRegistry connectionRegistry,
+        string playerMessage,
+        string roomMessage,
+        ObjectDefinition obj,
+        CancellationToken cancellationToken = default)
+    {
+        await context.ActToCharAsync(
+            actService,
+            playerMessage,
+            obj: obj,
+            cancellationToken: cancellationToken);
+
+        await context.ActToNotCharAsync(
+            actService,
+            connectionRegistry,
+            roomMessage,
+            obj: obj,
+            cancellationToken: cancellationToken);
+    }
 }

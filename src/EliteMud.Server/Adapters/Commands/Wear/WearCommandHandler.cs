@@ -35,18 +35,13 @@ internal sealed class WearCommandHandler : ICommandHandler
         {
             foreach (var obj in result.Objects)
             {
-                await context.ActToCharAsync(
-                    _actService,
-                    "You wear $p.",
-                    obj: obj,
-                    cancellationToken: cancellationToken);
-
-                await context.ActToNotCharAsync(
+                await context.SendEquipMessageAsync(
                     _actService,
                     _connectionRegistry,
+                    "You wear $p.",
                     "$n wears $p.",
-                    obj: obj,
-                    cancellationToken: cancellationToken);
+                    obj,
+                    cancellationToken);
             }
             return CommandOutcome.Continue;
         }
@@ -54,18 +49,13 @@ internal sealed class WearCommandHandler : ICommandHandler
         // If there's a single object, use ActMessage
         if (result.Object is not null)
         {
-            await context.ActToCharAsync(
-                _actService,
-                "You wear $p.",
-                obj: result.Object,
-                cancellationToken: cancellationToken);
-
-            await context.ActToNotCharAsync(
+            await context.SendEquipMessageAsync(
                 _actService,
                 _connectionRegistry,
+                "You wear $p.",
                 "$n wears $p.",
-                obj: result.Object,
-                cancellationToken: cancellationToken);
+                result.Object,
+                cancellationToken);
             return CommandOutcome.Continue;
         }
         

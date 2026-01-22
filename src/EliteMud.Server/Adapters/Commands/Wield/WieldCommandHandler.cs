@@ -33,18 +33,13 @@ internal sealed class WieldCommandHandler : ICommandHandler
         // Success - item equipped
         if (result.Object is not null)
         {
-            await context.ActToCharAsync(
-                _actService,
-                "You wield $p.",
-                obj: result.Object,
-                cancellationToken: cancellationToken);
-
-            await context.ActToNotCharAsync(
+            await context.SendEquipMessageAsync(
                 _actService,
                 _connectionRegistry,
+                "You wield $p.",
                 "$n wields $p.",
-                obj: result.Object,
-                cancellationToken: cancellationToken);
+                result.Object,
+                cancellationToken);
             return CommandOutcome.Continue;
         }
         

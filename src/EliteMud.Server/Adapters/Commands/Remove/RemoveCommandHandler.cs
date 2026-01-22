@@ -32,18 +32,13 @@ internal sealed class RemoveCommandHandler : ICommandHandler
         
         if (result.Object is not null)
         {
-            await context.ActToCharAsync(
-                _actService,
-                "You stop using $p.",
-                obj: result.Object,
-                cancellationToken: cancellationToken);
-
-            await context.ActToNotCharAsync(
+            await context.SendEquipMessageAsync(
                 _actService,
                 _connectionRegistry,
+                "You stop using $p.",
                 "$n stops using $p.",
-                obj: result.Object,
-                cancellationToken: cancellationToken);
+                result.Object,
+                cancellationToken);
             return CommandOutcome.Continue;
         }
         
