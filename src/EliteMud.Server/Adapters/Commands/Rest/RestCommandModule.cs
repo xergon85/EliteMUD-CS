@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,7 +11,14 @@ internal sealed class RestCommandModule : ICommandModule
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {
-        return new RestCommandHandler(
-            serviceProvider.GetRequiredService<ConnectionRegistry>());
+        var config = new PositionChangeConfig(
+            Kind: CommandKind.Rest,
+            TargetPosition: Position.Resting,
+            PlayerMessage: "You sit down and rest.",
+            RoomMessage: "{0} sits down and rests.");
+
+        return new PositionChangeCommandHandler(
+            serviceProvider.GetRequiredService<ConnectionRegistry>(),
+            config);
     }
 }
