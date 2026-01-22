@@ -69,7 +69,7 @@
 - ❌ XP table/formula - experience required per level - **TODO**
 - ❌ Stat gains on level up - HP/mana/movement increases - **TODO**
 - ❌ Level up notifications and messages - **TODO**
-- ❌ `stat` command - display detailed stats - **DEFERRED (immortal command)**
+- ❌ `stat` command - show detailed character stats (self), immortals can check others - **TODO**
 - ❌ HP/mana/movement regeneration tick system - **TODO**
 - ❌ Room flags for regen bonuses (REGEN_HP, REGEN_MANA, REGEN_MOVE) - see legacy room flags - **TODO**
 - ❌ Position system (standing/sitting/resting/sleeping/fighting) - **TODO**
