@@ -71,6 +71,7 @@
 - ❌ Level up notifications and messages - **TODO**
 - ❌ `stat` command - display detailed stats - **DEFERRED (immortal command)**
 - ❌ HP/mana/movement regeneration tick system - **TODO**
+- ❌ Room flags for regen bonuses (REGEN_HP, REGEN_MANA, REGEN_MOVE) - see legacy room flags - **TODO**
 - ❌ Position system (standing/sitting/resting/sleeping/fighting) - **TODO**
 - ❌ `sleep` command - enter sleep position for faster regen - **TODO**
 - ❌ `rest` command - enter rest position for moderate regen - **TODO**
