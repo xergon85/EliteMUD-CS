@@ -79,6 +79,17 @@ public sealed class HoldHandler
             return new HoldResult(false, string.Empty, AlreadyEquipped: alreadyEquipped.Definition);
         }
 
+        // Check if wielding a two-handed weapon (legacy: act.obj2.c:696-700)
+        // If wielding a two-handed weapon, cannot hold anything
+        if (slot == EquipmentSlot.Hold && equipment.TryGetValue(EquipmentSlot.Wield, out var wieldedItem))
+        {
+            if (wieldedItem.Definition.WearSlots.Contains("WieldTwoHanded") ||
+                wieldedItem.Definition.WearSlots.Contains("BothHands"))
+            {
+                return new HoldResult(false, "Both hands are already full.");
+            }
+        }
+
         // Try to equip the object
         if (_worldState.EquipObject(player, obj.InstanceId, slot))
         {

@@ -149,12 +149,10 @@ internal sealed class WorldState : IWorldState
             return false;
         }
 
-        // Check if object can be worn in this slot
-        var slotName = slot.ToString();
-        if (!obj.Definition.WearSlots.Contains(slotName))
-        {
-            return false;
-        }
+        // NOTE: We don't check WearSlots here because the command handlers (like HoldHandler)
+        // have already validated compatibility. For example, 'hold' accepts items with either
+        // Hold OR Wield flags (legacy: wear_bitvectors[HOLD] = ITEM_HOLD | ITEM_WIELD), so
+        // we can't do a simple slot name match here.
 
         // Try to equip to slot
         if (!player.EquipToSlot((int)slot, objectInstanceId))
