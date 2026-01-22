@@ -71,6 +71,17 @@
 - ❌ Level up notifications and messages - **TODO**
 - ❌ `stat` command - display detailed stats - **DEFERRED (immortal command)**
 - ❌ HP/mana/movement regeneration tick system - **TODO**
+- ❌ Position system (standing/sitting/resting/sleeping/fighting) - **TODO**
+- ❌ `sleep` command - enter sleep position for faster regen - **TODO**
+- ❌ `rest` command - enter rest position for moderate regen - **TODO**
+- ❌ `sit` command - enter sitting position - **TODO**
+- ❌ `wake` command - wake from sleep - **TODO**
+- ❌ `stand` command - stand up from sitting/resting/sleeping - **TODO**
+- ❌ Position-based regen rates (sleeping > resting > sitting > standing) - see legacy code for formulas - **TODO**
+- ❌ Hunger/thirst system - track fullness and thirst levels - **TODO**
+- ❌ Hunger/thirst messages and warnings - **TODO**
+- ❌ Hunger/thirst effects on regen and combat - **TODO**
+- ❌ Death from starvation/dehydration - **TODO**
 
 #### 3.4 Persistence Layer (SQLite) - COMPLETE ✅
 - ✅ Database schema with EF Core (Account + Character entities)
