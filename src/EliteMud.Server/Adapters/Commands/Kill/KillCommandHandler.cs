@@ -186,7 +186,7 @@ internal sealed class KillCommandHandler : ICommandHandler
         // Format legacy combat messages
         var attackerMsg = CombatService.FormatCombatMessage(
             attacker.Player.Name,
-            mob.Definition.ShortDescription,
+            mob.Definition.ShortDescription ?? "something",
             damage,
             mobMaxHp,
             MessagePerspective.ToChar);
@@ -196,7 +196,7 @@ internal sealed class KillCommandHandler : ICommandHandler
         // Broadcast to room
         var roomMsg = CombatService.FormatCombatMessage(
             attacker.Player.Name,
-            mob.Definition.ShortDescription,
+            mob.Definition.ShortDescription ?? "something",
             damage,
             mobMaxHp,
             MessagePerspective.ToRoom);

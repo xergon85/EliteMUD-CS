@@ -103,7 +103,7 @@ public class ActMessageService
         {
             result = result.Replace("$o", obj.Name ?? string.Empty);
             result = result.Replace("$p", obj.ShortDescription ?? string.Empty);
-            result = result.Replace("$a", GetArticle(obj.Name));
+            result = result.Replace("$a", GetArticle(obj.Name ?? string.Empty));
         }
 
         // Text argument substitution
