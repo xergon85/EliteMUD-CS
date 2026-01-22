@@ -48,14 +48,55 @@ internal sealed class GetCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
-        // If there's a custom message (like "get all"), send it directly
+        // If there's a list of objects (from "get all"), echo each individually
+        if (result.Objects is not null && result.Objects.Count > 0)
+        {
+            foreach (var obj in result.Objects)
+            {
+                if (result.ContainerName is not null)
+                {
+                    // Getting from container: "You get $p from the corpse."
+                    await context.ActToCharAsync(
+                        _actService,
+                        $"You get $p from the {result.ContainerName}.",
+                        obj: obj,
+                        cancellationToken: cancellationToken);
+
+                    await context.ActToNotCharAsync(
+                        _actService,
+                        _connectionRegistry,
+                        $"$n gets $p from the {result.ContainerName}.",
+                        obj: obj,
+                        cancellationToken: cancellationToken);
+                }
+                else
+                {
+                    // Getting from room: "You get $p."
+                    await context.ActToCharAsync(
+                        _actService,
+                        "You get $p.",
+                        obj: obj,
+                        cancellationToken: cancellationToken);
+
+                    await context.ActToNotCharAsync(
+                        _actService,
+                        _connectionRegistry,
+                        "$n gets $p.",
+                        obj: obj,
+                        cancellationToken: cancellationToken);
+                }
+            }
+            return CommandOutcome.Continue;
+        }
+
+        // If there's a custom message, send it directly
         if (!string.IsNullOrEmpty(result.Message))
         {
             await context.Session.SendLineAsync(result.Message, cancellationToken);
             return CommandOutcome.Continue;
         }
 
-        // Success with object - use ActMessage to broadcast
+        // Success with single object - use ActMessage to broadcast
         if (result.Object is not null)
         {
             if (result.ContainerName is not null)

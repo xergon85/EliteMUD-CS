@@ -8,10 +8,17 @@ namespace EliteMud.Server.Adapters.Commands.Wear;
 internal sealed class WearCommandHandler : ICommandHandler
 {
     private readonly WearHandler _wearHandler;
+    private readonly ActMessageService _actService;
+    private readonly ConnectionRegistry _connectionRegistry;
 
-    public WearCommandHandler(IWorldState worldState)
+    public WearCommandHandler(
+        IWorldState worldState,
+        ActMessageService actService,
+        ConnectionRegistry connectionRegistry)
     {
         _wearHandler = new WearHandler(worldState);
+        _actService = actService;
+        _connectionRegistry = connectionRegistry;
     }
 
     public CommandKind Kind => CommandKind.Wear;
@@ -22,7 +29,52 @@ internal sealed class WearCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         var result = _wearHandler.Handle(context.Player, command.Argument ?? string.Empty);
-        await context.Session.SendLineAsync(result.Message, cancellationToken);
+        
+        // If there's a list of objects (from "wear all"), echo each using ActMessage
+        if (result.Objects is not null && result.Objects.Count > 0)
+        {
+            foreach (var obj in result.Objects)
+            {
+                await context.ActToCharAsync(
+                    _actService,
+                    "You wear $p.",
+                    obj: obj,
+                    cancellationToken: cancellationToken);
+
+                await context.ActToNotCharAsync(
+                    _actService,
+                    _connectionRegistry,
+                    "$n wears $p.",
+                    obj: obj,
+                    cancellationToken: cancellationToken);
+            }
+            return CommandOutcome.Continue;
+        }
+        
+        // If there's a single object, use ActMessage
+        if (result.Object is not null)
+        {
+            await context.ActToCharAsync(
+                _actService,
+                "You wear $p.",
+                obj: result.Object,
+                cancellationToken: cancellationToken);
+
+            await context.ActToNotCharAsync(
+                _actService,
+                _connectionRegistry,
+                "$n wears $p.",
+                obj: result.Object,
+                cancellationToken: cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Otherwise send the error message
+        if (!string.IsNullOrEmpty(result.Message))
+        {
+            await context.Session.SendLineAsync(result.Message, cancellationToken);
+        }
+        
         return CommandOutcome.Continue;
     }
 }

@@ -12,6 +12,8 @@ internal sealed class HoldCommandModule : ICommandModule
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {
         return new HoldCommandHandler(
-            serviceProvider.GetRequiredService<IWorldState>());
+            serviceProvider.GetRequiredService<IWorldState>(),
+            serviceProvider.GetRequiredService<ActMessageService>(),
+            serviceProvider.GetRequiredService<ConnectionRegistry>());
     }
 }

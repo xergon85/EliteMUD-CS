@@ -45,7 +45,7 @@ public sealed class MobInstance
     // Combat state
     public int? FightingConnectionId { get; set; } // The player connection ID this mob is fighting
     public int? FightingMobInstanceId { get; set; } // The mob instance ID this mob is fighting (for mob-vs-mob combat)
-    public byte Position { get; set; } = 8; // POS_STANDING
+    public Position Position { get; set; } = Position.Standing;
     public int HitPoints { get; set; } // Current HP (mobs don't have MaxHP property, use Definition.MaxHitPoints)
 
     public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> Equipment => _equipment;

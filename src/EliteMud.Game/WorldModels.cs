@@ -12,7 +12,31 @@ public enum Direction
 
 public sealed record ExitDefinition(Direction Direction, int TargetRoomId);
 
-public sealed record RoomDefinition(int Id, string Name, string Description, IReadOnlyList<ExitDefinition> Exits);
+public sealed record RoomDefinition(int Id, string Name, string Description, IReadOnlyList<ExitDefinition> Exits)
+{
+    /// <summary>
+    /// Clean string by removing newlines, carriage returns, tabs.
+    /// Legacy importer sometimes includes these in descriptions.
+    /// </summary>
+    private static string Clean(string? input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+        
+        return input
+            .Replace("\n", " ")
+            .Replace("\r", "")
+            .Replace("\t", " ")
+            .Replace("\\n", " ")
+            .Replace("\\r", "")
+            .Replace("\\t", " ")
+            .Trim();
+    }
+    
+    // Clean string properties on construction
+    public string Name { get; init; } = Clean(Name);
+    public string Description { get; init; } = Clean(Description);
+}
 
 public sealed record ScriptDefinition(string Id, string Hook, string Body, int? RoomId);
 
@@ -36,7 +60,35 @@ public sealed record MobDefinition(
     IReadOnlyList<string> Flags,
     StatBlock Stats,
     IReadOnlyList<string> Resistances,
-    IReadOnlyList<string> Skills);
+    IReadOnlyList<string> Skills)
+{
+    /// <summary>
+    /// Clean string by removing newlines, carriage returns, tabs.
+    /// Legacy importer sometimes includes these in descriptions.
+    /// </summary>
+    private static string Clean(string? input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+        
+        return input
+            .Replace("\n", " ")
+            .Replace("\r", "")
+            .Replace("\t", " ")
+            .Replace("\\n", " ")
+            .Replace("\\r", "")
+            .Replace("\\t", " ")
+            .Trim();
+    }
+    
+    // Clean string properties on construction
+    public string Name { get; init; } = Clean(Name);
+    public string ShortDescription { get; init; } = Clean(ShortDescription);
+    public string LongDescription { get; init; } = Clean(LongDescription);
+    public string Description { get; init; } = Clean(Description);
+    public string Race { get; init; } = Clean(Race);
+    public string Class { get; init; } = Clean(Class);
+}
 
 public sealed record ObjectDefinition(
     int Id,
@@ -50,7 +102,34 @@ public sealed record ObjectDefinition(
     ObjectDetails? Details,
     IReadOnlyList<int> Values,
     int Weight,
-    int Cost);
+    int Cost)
+{
+    /// <summary>
+    /// Clean string by removing newlines, carriage returns, tabs.
+    /// Legacy importer sometimes includes these in descriptions.
+    /// </summary>
+    private static string Clean(string? input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+        
+        return input
+            .Replace("\n", " ")
+            .Replace("\r", "")
+            .Replace("\t", " ")
+            .Replace("\\n", " ")
+            .Replace("\\r", "")
+            .Replace("\\t", " ")
+            .Trim();
+    }
+    
+    // Clean string properties on construction
+    public string Name { get; init; } = Clean(Name);
+    public string ShortDescription { get; init; } = Clean(ShortDescription);
+    public string LongDescription { get; init; } = Clean(LongDescription);
+    public string Description { get; init; } = Clean(Description);
+    public string Type { get; init; } = Clean(Type);
+}
 
 public sealed record RoomRange(int Min, int Max);
 
@@ -176,11 +255,18 @@ public sealed class PlayerState
     
     /// <summary>
     /// Position of the character (standing, fighting, sleeping, etc.)
-    /// For now we only track if in combat (POS_FIGHTING) vs not.
     /// Legacy: GET_POS(ch) - POS_DEAD=0, POS_MORTALLYW=1, POS_INCAP=2, POS_STUNNED=3,
     ///         POS_SLEEPING=4, POS_RESTING=5, POS_SITTING=6, POS_FIGHTING=7, POS_STANDING=8
     /// </summary>
-    public byte Position { get; set; } = 8; // POS_STANDING
+    public Position Position { get; set; } = Position.Standing;
+    
+    /// <summary>
+    /// Accumulator for position-based regeneration.
+    /// Incremented each tick based on position (sleeping +4, resting +3, sitting +2, standing +1).
+    /// Used in regen formulas and reset to 0 after each regen tick.
+    /// Legacy: ch->specials.gain_count
+    /// </summary>
+    public int GainCount { get; set; } = 0;
     
     /// <summary>
     /// HP threshold below which the player will auto-flee (wimpy).

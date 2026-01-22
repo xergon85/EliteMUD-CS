@@ -36,6 +36,10 @@ public class Character
     public int Alignment { get; set; } = 0;
     public int WimpyLevel { get; set; } = 0;
 
+    // Position & Regeneration
+    public string Position { get; set; } = "Standing";  // Position enum as string for DB
+    public int GainCount { get; set; } = 0;  // Accumulator for position-based regen
+
     // Location & Resources
     public int RoomId { get; set; }
     public int Gold { get; set; } = 0;

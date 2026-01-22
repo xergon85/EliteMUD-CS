@@ -12,6 +12,8 @@ internal sealed class RemoveCommandModule : ICommandModule
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {
         return new RemoveCommandHandler(
-            serviceProvider.GetRequiredService<IWorldState>());
+            serviceProvider.GetRequiredService<IWorldState>(),
+            serviceProvider.GetRequiredService<ActMessageService>(),
+            serviceProvider.GetRequiredService<ConnectionRegistry>());
     }
 }

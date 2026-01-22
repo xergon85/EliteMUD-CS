@@ -4,6 +4,8 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Wear;
 
+public sealed record WearResult(bool Success, string Message, ObjectDefinition? Object = null, List<ObjectDefinition>? Objects = null);
+
 public sealed class WearHandler
 {
     private readonly IWorldState _worldState;
@@ -13,11 +15,17 @@ public sealed class WearHandler
         _worldState = worldState;
     }
 
-    public CommandResult Handle(PlayerState player, string target)
+    public WearResult Handle(PlayerState player, string target)
     {
         if (string.IsNullOrWhiteSpace(target))
         {
-            return CommandResult.Fail("Wear what?");
+            return new WearResult(false, "Wear what?");
+        }
+
+        // Handle "wear all" - wear all wearable items in inventory
+        if (target.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            return WearAll(player);
         }
 
         var inventory = _worldState.GetPlayerInventory(player);
@@ -28,25 +36,63 @@ public sealed class WearHandler
         
         if (obj == null)
         {
-            return CommandResult.Fail("You don't have that.");
+            return new WearResult(false, "You don't have that.");
         }
 
         // Determine which slot to wear it in
         var slot = DetermineSlot(obj.Definition);
         if (slot is null)
         {
-            return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be worn.");
+            return new WearResult(false, $"{obj.Definition.ShortDescription} cannot be worn.");
         }
 
         // Try to equip the object
         if (_worldState.EquipObject(player, obj.InstanceId, slot.Value))
         {
-            return CommandResult.Ok($"You wear {obj.Definition.ShortDescription}.");
+            // Return object so CommandHandler can use ActMessage
+            return new WearResult(true, string.Empty, obj.Definition);
         }
         else
         {
-            return CommandResult.Fail($"You are already wearing something on your {GetSlotName(slot.Value)}.");
+            return new WearResult(false, $"You are already wearing something on your {GetSlotName(slot.Value)}.");
         }
+    }
+
+    private WearResult WearAll(PlayerState player)
+    {
+        var inventory = _worldState.GetPlayerInventory(player);
+        var wornObjects = new List<ObjectDefinition>();
+
+        // Try to wear each wearable item in inventory
+        foreach (var obj in inventory.ToList())
+        {
+            // Determine which slot to wear it in
+            var slot = DetermineSlot(obj.Definition);
+            if (slot is null)
+            {
+                // Not wearable, skip silently (matches legacy behavior)
+                continue;
+            }
+
+            // Try to equip the object
+            if (_worldState.EquipObject(player, obj.InstanceId, slot.Value))
+            {
+                wornObjects.Add(obj.Definition);
+            }
+            else
+            {
+                // Slot already occupied, skip silently (matches legacy behavior)
+                continue;
+            }
+        }
+
+        if (wornObjects.Count == 0)
+        {
+            return new WearResult(false, "You don't have anything you can wear.");
+        }
+
+        // Return list of worn objects so CommandHandler can use ActMessage for each
+        return new WearResult(true, string.Empty, Objects: wornObjects);
     }
 
     private static EquipmentSlot? DetermineSlot(ObjectDefinition obj)

@@ -4,6 +4,8 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Remove;
 
+public sealed record RemoveResult(bool Success, string Message, ObjectDefinition? Object = null);
+
 public sealed class RemoveHandler
 {
     private readonly IWorldState _worldState;
@@ -13,11 +15,11 @@ public sealed class RemoveHandler
         _worldState = worldState;
     }
 
-    public CommandResult Handle(PlayerState player, string target)
+    public RemoveResult Handle(PlayerState player, string target)
     {
         if (string.IsNullOrWhiteSpace(target))
         {
-            return CommandResult.Fail("Remove what?");
+            return new RemoveResult(false, "Remove what?");
         }
 
         var equipment = _worldState.GetPlayerEquipment(player);
@@ -30,7 +32,7 @@ public sealed class RemoveHandler
         
         if (obj == null)
         {
-            return CommandResult.Fail("You're not wearing that.");
+            return new RemoveResult(false, "You're not wearing that.");
         }
 
         // Find the slot this object is in
@@ -39,11 +41,11 @@ public sealed class RemoveHandler
         // Try to unequip the object
         if (_worldState.UnequipObject(player, slot))
         {
-            return CommandResult.Ok($"You remove {obj.Definition.ShortDescription}.");
+            return new RemoveResult(true, string.Empty, obj.Definition);
         }
         else
         {
-            return CommandResult.Fail("You can't remove that.");
+            return new RemoveResult(false, "You can't remove that.");
         }
     }
 }

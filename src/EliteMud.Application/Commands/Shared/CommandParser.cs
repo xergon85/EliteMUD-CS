@@ -29,6 +29,11 @@ public enum CommandKind
     Wimpy,
     ImportLegacy,
     Save,
+    Sleep,
+    Rest,
+    Sit,
+    Wake,
+    Stand,
     Unknown
 }
 
@@ -210,6 +215,32 @@ public sealed class CommandParser
         if (trimmed.Equals("save", StringComparison.OrdinalIgnoreCase))
         {
             return new CommandRequest(CommandKind.Save, null, null);
+        }
+
+        if (trimmed.Equals("sleep", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Sleep, null, null);
+        }
+
+        if (trimmed.Equals("rest", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Rest, null, null);
+        }
+
+        if (trimmed.Equals("sit", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Sit, null, null);
+        }
+
+        if (trimmed.Equals("wake", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Wake, null, null);
+        }
+
+        if (trimmed.Equals("stand", StringComparison.OrdinalIgnoreCase)
+            || trimmed.Equals("st", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Stand, null, null);
         }
 
         if (TryParseDirection(trimmed, out var direction))

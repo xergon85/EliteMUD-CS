@@ -100,7 +100,7 @@ public sealed class FleeHandler
             if (mob.FightingConnectionId == playerConnectionId)
             {
                 mob.FightingConnectionId = null;
-                mob.Position = CombatService.POS_STANDING;
+                mob.Position = Position.Standing;
             }
         }
 

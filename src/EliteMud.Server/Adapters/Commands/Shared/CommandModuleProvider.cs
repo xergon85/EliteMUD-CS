@@ -13,10 +13,15 @@ using EliteMud.Server.Adapters.Commands.NoOp;
 using EliteMud.Server.Adapters.Commands.Quit;
 using EliteMud.Server.Adapters.Commands.Remove;
 using EliteMud.Server.Adapters.Commands.ResetZone;
+using EliteMud.Server.Adapters.Commands.Rest;
 using EliteMud.Server.Adapters.Commands.Save;
 using EliteMud.Server.Adapters.Commands.Say;
 using EliteMud.Server.Adapters.Commands.Score;
 using EliteMud.Server.Adapters.Commands.Search;
+using EliteMud.Server.Adapters.Commands.Sit;
+using EliteMud.Server.Adapters.Commands.Sleep;
+using EliteMud.Server.Adapters.Commands.Stand;
+using EliteMud.Server.Adapters.Commands.Wake;
 using EliteMud.Server.Adapters.Commands.Wear;
 using EliteMud.Server.Adapters.Commands.Who;
 using EliteMud.Server.Adapters.Commands.Wield;
@@ -52,7 +57,12 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new MoveCommandModule(),
             new KillCommandModule(),
             new FleeCommandModule(),
-            new WimpyCommandModule()
+            new WimpyCommandModule(),
+            new SleepCommandModule(),
+            new RestCommandModule(),
+            new SitCommandModule(),
+            new WakeCommandModule(),
+            new StandCommandModule()
         };
     }
 }

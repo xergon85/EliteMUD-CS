@@ -32,6 +32,25 @@ public enum Sex
 }
 
 /// <summary>
+/// Character position state
+/// Based on legacy POS_* constants
+/// </summary>
+public enum Position
+{
+    Dead = 0,
+    MortallyWounded = 1,
+    Incapacitated = 2,
+    Stunned = 3,
+    Sleeping = 4,
+    Resting = 5,
+    Sitting = 6,
+    Fighting = 7,
+    Standing = 8
+    // Note: Legacy also had Swimming(10), Diving(11), Hoovering(12), Flying(13)
+    // Not implementing those yet
+}
+
+/// <summary>
 /// Character classes in EliteMUD
 /// Based on legacy system - 20+ classes including multi-class options
 /// </summary>

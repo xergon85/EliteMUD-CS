@@ -4,7 +4,7 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Get;
 
-public sealed record GetResult(bool Success, string Message, ObjectDefinition? Object = null, string? ContainerName = null);
+public sealed record GetResult(bool Success, string Message, ObjectDefinition? Object = null, string? ContainerName = null, List<ObjectDefinition>? Objects = null);
 
 public sealed class GetHandler
 {
@@ -53,21 +53,22 @@ public sealed class GetHandler
         // Handle "get all" - get all objects from room
         if (target.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            int count = 0;
+            var takenObjects = new List<ObjectDefinition>();
             foreach (var obj in objects.ToList())
             {
                 if (_worldState.TakeObject(player, obj.InstanceId))
                 {
-                    count++;
+                    takenObjects.Add(obj.Definition);
                 }
             }
             
-            if (count == 0)
+            if (takenObjects.Count == 0)
             {
                 return new GetResult(false, "There doesn't seem to be anything you can get here.");
             }
             
-            return new GetResult(true, $"You get {count} item{(count == 1 ? "" : "s")}.");
+            // Return the list of objects so CommandHandler can echo each individually
+            return new GetResult(true, string.Empty, Objects: takenObjects);
         }
 
         // Find matching object
@@ -151,17 +152,17 @@ public sealed class GetHandler
             return new GetResult(false, $"The {container.Definition.ShortDescription} is empty.");
         }
 
-        int count = 0;
+        var takenObjects = new List<ObjectDefinition>();
         foreach (var item in container.Contents.ToList())
         {
             if (container.RemoveItem(item))
             {
                 player.AddToInventory(item.InstanceId);
-                count++;
+                takenObjects.Add(item.Definition);
             }
         }
 
-        if (count == 0)
+        if (takenObjects.Count == 0)
         {
             return new GetResult(false, $"The {container.Definition.ShortDescription} doesn't contain anything you can get.");
         }
@@ -174,7 +175,8 @@ public sealed class GetHandler
             Console.WriteLine($"[LOOT] {player.Name} looting {container.Definition.ShortDescription}.");
         }
 
-        return new GetResult(true, $"You get {count} item{(count == 1 ? "" : "s")} from the {container.Definition.ShortDescription}.");
+        // Return the list of objects with container name so CommandHandler can echo each individually
+        return new GetResult(true, string.Empty, Objects: takenObjects, ContainerName: container.Definition.ShortDescription);
     }
 
     /// <summary>

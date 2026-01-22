@@ -27,10 +27,12 @@ internal sealed class GameTickService
     private readonly LookCommandHandler _lookHandler;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
-    private readonly TimeSpan _regenInterval = TimeSpan.FromSeconds(75); // MUD hour (matches legacy)
+    private readonly TimeSpan _gainInterval = TimeSpan.FromSeconds(2); // PULSE_GAIN - increment gain_count based on position
+    private readonly TimeSpan _regenInterval = TimeSpan.FromSeconds(60); // Regeneration tick (60 seconds recommended)
     private readonly TimeSpan _autoSaveInterval = TimeSpan.FromMinutes(5); // Auto-save every 5 minutes
     
     private int _tickCount;
+    private DateTime _lastGain = DateTime.UtcNow;
     private DateTime _lastRegen = DateTime.UtcNow;
     private DateTime _lastAutoSave = DateTime.UtcNow;
 
@@ -52,7 +54,7 @@ internal sealed class GameTickService
 
     public async Task RunAsync(CancellationToken stoppingToken)
     {
-        Console.WriteLine($"[GameTick] Service started. Combat: {_combatInterval.TotalSeconds}s, Regen: {_regenInterval.TotalSeconds}s, Auto-save: {_autoSaveInterval.TotalMinutes}min");
+        Console.WriteLine($"[GameTick] Service started. Combat: {_combatInterval.TotalSeconds}s, Gain: {_gainInterval.TotalSeconds}s, Regen: {_regenInterval.TotalSeconds}s, Auto-save: {_autoSaveInterval.TotalMinutes}min");
         
         while (!stoppingToken.IsCancellationRequested)
         {
@@ -65,7 +67,14 @@ internal sealed class GameTickService
                 // Combat runs every tick (2 seconds)
                 await ProcessCombatRoundAsync(stoppingToken);
                 
-                // Regeneration runs every 75 seconds
+                // Gain count increment runs every 2 seconds (same as combat for simplicity)
+                if (DateTime.UtcNow - _lastGain >= _gainInterval)
+                {
+                    ProcessGainIncrement();
+                    _lastGain = DateTime.UtcNow;
+                }
+                
+                // Regeneration runs every 60 seconds
                 if (DateTime.UtcNow - _lastRegen >= _regenInterval)
                 {
                     ProcessRegeneration();
@@ -104,7 +113,7 @@ internal sealed class GameTickService
             {
                 // Skip if attacker can't fight (stunned, incapacitated, mortally wounded, or dead)
                 // Players in these positions can't attack but can still be attacked
-                if (attacker.Player.Position < CombatService.POS_FIGHTING)
+                if (attacker.Player.Position < Position.Fighting)
                 {
                     continue;
                 }
@@ -171,7 +180,7 @@ internal sealed class GameTickService
                 {
                     // Player left or disconnected
                     mob.FightingConnectionId = null;
-                    mob.Position = CombatService.POS_STANDING;
+                    mob.Position = Position.Standing;
                     continue;
                 }
 
@@ -301,7 +310,7 @@ internal sealed class GameTickService
             attacker.Player.Experience += CombatService.CalculateExperienceGain(victim.Player, result.Damage);
 
             // Check if victim died
-            if (victim.Player.Position == CombatService.POS_DEAD)
+            if (victim.Player.Position == Position.Dead)
             {
                 await HandlePlayerDeath(attacker, victim, cancellationToken);
             }
@@ -451,7 +460,7 @@ internal sealed class GameTickService
         victim.Player.HitPoints = victim.Player.MaxHitPoints;
         victim.Player.Mana = victim.Player.MaxMana;
         victim.Player.Movement = victim.Player.MaxMovement;
-        victim.Player.Position = CombatService.POS_STANDING;
+        victim.Player.Position = Position.Standing;
         victim.Player.RoomId = 1; // Respawn at starting room
         
         await victim.Session.SendLineAsync(
@@ -466,7 +475,7 @@ internal sealed class GameTickService
         // Stop combat
         CombatService.StopFighting(victim.Player);
         mob.FightingConnectionId = null;
-        mob.Position = CombatService.POS_STANDING;
+        mob.Position = Position.Standing;
 
         // Messages (fight.c:966-969)
         await victim.Session.SendLineAsync(
@@ -495,7 +504,7 @@ internal sealed class GameTickService
         victim.Player.HitPoints = victim.Player.MaxHitPoints;
         victim.Player.Mana = victim.Player.MaxMana;
         victim.Player.Movement = victim.Player.MaxMovement;
-        victim.Player.Position = CombatService.POS_STANDING;
+        victim.Player.Position = Position.Standing;
         victim.Player.RoomId = 1; // Respawn at starting room
         
         await victim.Session.SendLineAsync(
@@ -516,7 +525,7 @@ internal sealed class GameTickService
         
         // Auto-flee if HP drops below wimpy level - Legacy: fight.c:987-992
         // Only flee if wimpy is set and not already incapacitated/mortally wounded/stunned
-        if (position >= CombatService.POS_FIGHTING && 
+        if (position >= Position.Fighting && 
             player.Player.WimpyLevel > 0 &&
             player.Player.HitPoints > 0 &&
             player.Player.HitPoints < player.Player.WimpyLevel)
@@ -530,12 +539,12 @@ internal sealed class GameTickService
             return; // Don't process other messages if fleeing
         }
         
-        if (position == CombatService.POS_DEAD)
+        if (position == Position.Dead)
         {
             // Player is dead
             await HandlePlayerDeathFromMob(player, mob, cancellationToken);
         }
-        else if (position == CombatService.POS_MORTALLYW)
+        else if (position == Position.MortallyWounded)
         {
             // Mortally wounded (-6 to -10 HP)
             await player.Session.SendLineAsync(
@@ -545,7 +554,7 @@ internal sealed class GameTickService
             // Stop player from fighting, but mob keeps attacking
             CombatService.StopFighting(player.Player);
         }
-        else if (position == CombatService.POS_INCAP)
+        else if (position == Position.Incapacitated)
         {
             // Incapacitated (-3 to -5 HP)
             await player.Session.SendLineAsync(
@@ -555,7 +564,7 @@ internal sealed class GameTickService
             // Stop player from fighting, but mob keeps attacking
             CombatService.StopFighting(player.Player);
         }
-        else if (position == CombatService.POS_STUNNED)
+        else if (position == Position.Stunned)
         {
             // Stunned (0 to -2 HP)
             await player.Session.SendLineAsync(
@@ -642,6 +651,28 @@ internal sealed class GameTickService
 
         // Remove mob from world (fight.c:502 - extract_char)
         _worldState.RemoveMob(mob.InstanceId, killer.Player.RoomId);
+    }
+
+    /// <summary>
+    /// Increment gain_count for all players based on their position.
+    /// This accumulator is used in regeneration formulas.
+    /// Legacy: check_gain() in comm.c runs every PULSE_GAIN
+    /// </summary>
+    private void ProcessGainIncrement()
+    {
+        var connections = _connectionRegistry.GetConnections().ToList();
+        
+        foreach (var connection in connections)
+        {
+            try
+            {
+                RegenerationService.IncrementGainCount(connection.Player);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Gain] Error incrementing gain for player {connection.Player.Name}: {ex.Message}");
+            }
+        }
     }
 
     private void ProcessRegeneration()

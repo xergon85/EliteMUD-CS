@@ -4,6 +4,8 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Wield;
 
+public sealed record WieldResult(bool Success, string Message, ObjectDefinition? Object = null);
+
 public sealed class WieldHandler
 {
     private readonly IWorldState _worldState;
@@ -13,11 +15,11 @@ public sealed class WieldHandler
         _worldState = worldState;
     }
 
-    public CommandResult Handle(PlayerState player, string target)
+    public WieldResult Handle(PlayerState player, string target)
     {
         if (string.IsNullOrWhiteSpace(target))
         {
-            return CommandResult.Fail("Wield what?");
+            return new WieldResult(false, "Wield what?");
         }
 
         var inventory = _worldState.GetPlayerInventory(player);
@@ -28,7 +30,7 @@ public sealed class WieldHandler
         
         if (obj == null)
         {
-            return CommandResult.Fail("You don't have that.");
+            return new WieldResult(false, "You don't have that.");
         }
 
         // Check if object can be wielded
@@ -36,7 +38,7 @@ public sealed class WieldHandler
             !obj.Definition.WearSlots.Contains("WieldTwoHanded") &&
             !obj.Definition.WearSlots.Contains("BothHands"))
         {
-            return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be wielded.");
+            return new WieldResult(false, $"{obj.Definition.ShortDescription} cannot be wielded.");
         }
 
         // Determine wield slot (prefer Wield over two-handed)
@@ -47,11 +49,11 @@ public sealed class WieldHandler
         // Try to equip the object
         if (_worldState.EquipObject(player, obj.InstanceId, slot))
         {
-            return CommandResult.Ok($"You wield {obj.Definition.ShortDescription}.");
+            return new WieldResult(true, string.Empty, obj.Definition);
         }
         else
         {
-            return CommandResult.Fail("You are already wielding something.");
+            return new WieldResult(false, "You are already wielding something.");
         }
     }
 }

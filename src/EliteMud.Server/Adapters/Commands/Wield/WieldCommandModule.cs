@@ -12,6 +12,8 @@ internal sealed class WieldCommandModule : ICommandModule
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {
         return new WieldCommandHandler(
-            serviceProvider.GetRequiredService<IWorldState>());
+            serviceProvider.GetRequiredService<IWorldState>(),
+            serviceProvider.GetRequiredService<ActMessageService>(),
+            serviceProvider.GetRequiredService<ConnectionRegistry>());
     }
 }

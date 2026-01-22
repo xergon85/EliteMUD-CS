@@ -4,6 +4,8 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Hold;
 
+public sealed record HoldResult(bool Success, string Message, ObjectDefinition? Object = null);
+
 public sealed class HoldHandler
 {
     private readonly IWorldState _worldState;
@@ -13,11 +15,11 @@ public sealed class HoldHandler
         _worldState = worldState;
     }
 
-    public CommandResult Handle(PlayerState player, string target)
+    public HoldResult Handle(PlayerState player, string target)
     {
         if (string.IsNullOrWhiteSpace(target))
         {
-            return CommandResult.Fail("Hold what?");
+            return new HoldResult(false, "Hold what?");
         }
 
         var inventory = _worldState.GetPlayerInventory(player);
@@ -28,7 +30,7 @@ public sealed class HoldHandler
         
         if (obj == null)
         {
-            return CommandResult.Fail("You don't have that.");
+            return new HoldResult(false, "You don't have that.");
         }
 
         // Legacy EliteMUD behavior (see act.obj2.c:do_grab):
@@ -45,7 +47,7 @@ public sealed class HoldHandler
             // Light objects only need Take flag (legacy: wear_bitvectors[WEAR_LIGHT] = ITEM_TAKE)
             if (!obj.Definition.WearSlots.Contains("Take"))
             {
-                return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be held.");
+                return new HoldResult(false, $"{obj.Definition.ShortDescription} cannot be held.");
             }
             slot = EquipmentSlot.Light;
         }
@@ -54,7 +56,7 @@ public sealed class HoldHandler
             // Non-light objects need Hold flag
             if (!obj.Definition.WearSlots.Contains("Hold"))
             {
-                return CommandResult.Fail($"{obj.Definition.ShortDescription} cannot be held.");
+                return new HoldResult(false, $"{obj.Definition.ShortDescription} cannot be held.");
             }
             slot = EquipmentSlot.Hold;
         }
@@ -62,12 +64,12 @@ public sealed class HoldHandler
         // Try to equip the object
         if (_worldState.EquipObject(player, obj.InstanceId, slot))
         {
-            return CommandResult.Ok($"You hold {obj.Definition.ShortDescription}.");
+            return new HoldResult(true, string.Empty, obj.Definition);
         }
         else
         {
             var slotName = slot == EquipmentSlot.Light ? "light source" : "held item";
-            return CommandResult.Fail($"You are already holding a {slotName}.");
+            return new HoldResult(false, $"You are already holding a {slotName}.");
         }
     }
 }

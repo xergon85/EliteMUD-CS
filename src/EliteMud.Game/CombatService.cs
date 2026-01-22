@@ -6,17 +6,6 @@ namespace EliteMud.Game;
 /// </summary>
 public static class CombatService
 {
-    // Position constants (from legacy structs.h)
-    public const byte POS_DEAD = 0;
-    public const byte POS_MORTALLYW = 1;
-    public const byte POS_INCAP = 2;
-    public const byte POS_STUNNED = 3;
-    public const byte POS_SLEEPING = 4;
-    public const byte POS_RESTING = 5;
-    public const byte POS_SITTING = 6;
-    public const byte POS_FIGHTING = 7;
-    public const byte POS_STANDING = 8;
-
     // Attack type text (from legacy fight.c:49)
     private static readonly (string Singular, string Plural)[] AttackHitText = new[]
     {
@@ -103,6 +92,7 @@ public static class CombatService
 
     /// <summary>
     /// Set a player to fighting another player.
+    /// Auto-stands the player if they are sitting/resting/sleeping.
     /// Legacy: set_fighting(ch, victim)
     /// </summary>
     public static void SetFighting(PlayerState attacker, int targetConnectionId)
@@ -112,8 +102,16 @@ public static class CombatService
             throw new InvalidOperationException($"{attacker.Name} is already fighting");
         }
 
+        // Auto-stand if player is sitting/resting/sleeping
+        // Legacy does this implicitly by setting position to Fighting
+        // but we'll be explicit about the transition
+        if (attacker.Position < Position.Standing)
+        {
+            attacker.Position = Position.Standing;
+        }
+
         attacker.FightingConnectionId = targetConnectionId;
-        attacker.Position = POS_FIGHTING;
+        attacker.Position = Position.Fighting;
     }
 
     /// <summary>
@@ -123,9 +121,9 @@ public static class CombatService
     public static void StopFighting(PlayerState player)
     {
         player.FightingConnectionId = null;
-        if (player.Position == POS_FIGHTING)
+        if (player.Position == Position.Fighting)
         {
-            player.Position = POS_STANDING;
+            player.Position = Position.Standing;
         }
     }
 
@@ -247,11 +245,11 @@ public static class CombatService
     /// <param name="baseDamage">Base damage before multipliers</param>
     /// <param name="victimPosition">Victim's current position</param>
     /// <returns>Damage after position multiplier</returns>
-    public static int CalculateDamageWithPositionMultiplier(int baseDamage, byte victimPosition)
+    public static int CalculateDamageWithPositionMultiplier(int baseDamage, Position victimPosition)
     {
         // If victim is not in fighting position, apply damage multiplier
         // Legacy formula: dam *= (3 + POS_FIGHTING - GET_POS(victim)) / 3
-        if (victimPosition < POS_FIGHTING)
+        if (victimPosition < Position.Fighting)
         {
             // Calculate multiplier: (3 + 7 - position) / 3
             // POS_SITTING (6): 1.33x
@@ -260,7 +258,7 @@ public static class CombatService
             // POS_STUNNED (3): 2.33x
             // POS_INCAP (2): 2.66x
             // POS_MORTALLYW (1): 3.00x
-            int multiplierNumerator = 3 + POS_FIGHTING - victimPosition;
+            int multiplierNumerator = 3 + (int)Position.Fighting - (int)victimPosition;
             baseDamage = baseDamage * multiplierNumerator / 3;
         }
         
@@ -298,27 +296,27 @@ public static class CombatService
         if (character.HitPoints > 0)
         {
             // Still conscious
-            if (character.Position > POS_STUNNED)
+            if (character.Position > Position.Stunned)
             {
                 return; // No change
             }
-            character.Position = POS_STANDING;
+            character.Position = Position.Standing;
         }
         else if (character.HitPoints > -3)
         {
-            character.Position = POS_STUNNED;
+            character.Position = Position.Stunned;
         }
         else if (character.HitPoints > -6)
         {
-            character.Position = POS_INCAP;
+            character.Position = Position.Incapacitated;
         }
         else if (character.HitPoints > -11)
         {
-            character.Position = POS_MORTALLYW;
+            character.Position = Position.MortallyWounded;
         }
         else
         {
-            character.Position = POS_DEAD;
+            character.Position = Position.Dead;
         }
     }
 

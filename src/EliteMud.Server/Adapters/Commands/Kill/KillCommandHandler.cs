@@ -161,7 +161,7 @@ internal sealed class KillCommandHandler : ICommandHandler
 
         // Set mob to fighting player
         mob.FightingConnectionId = attacker.Id;
-        mob.Position = CombatService.POS_FIGHTING;
+        mob.Position = Position.Fighting;
 
         // Broadcast "You attack" messages
         var mobDesc = mob.Definition.ShortDescription?.Trim() ?? "something";

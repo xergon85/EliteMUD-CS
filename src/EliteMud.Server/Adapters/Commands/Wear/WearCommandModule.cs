@@ -12,6 +12,8 @@ internal sealed class WearCommandModule : ICommandModule
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {
         return new WearCommandHandler(
-            serviceProvider.GetRequiredService<IWorldState>());
+            serviceProvider.GetRequiredService<IWorldState>(),
+            serviceProvider.GetRequiredService<ActMessageService>(),
+            serviceProvider.GetRequiredService<ConnectionRegistry>());
     }
 }

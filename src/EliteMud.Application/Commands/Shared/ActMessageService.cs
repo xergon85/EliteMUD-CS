@@ -101,8 +101,8 @@ public class ActMessageService
         // Object substitutions
         if (obj != null)
         {
-            result = result.Replace("$o", obj.Name);
-            result = result.Replace("$p", obj.ShortDescription);
+            result = result.Replace("$o", obj.Name ?? string.Empty);
+            result = result.Replace("$p", obj.ShortDescription ?? string.Empty);
             result = result.Replace("$a", GetArticle(obj.Name));
         }
 

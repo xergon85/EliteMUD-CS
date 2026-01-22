@@ -21,6 +21,20 @@ public sealed class MoveHandler
             return MoveResult.Failed("You are fighting!");
         }
 
+        // Block movement if player is not standing (sleeping, resting, sitting)
+        // Legacy: act.movement.c checks GET_POS(ch) < POS_STANDING
+        if (player.Position < Position.Standing)
+        {
+            string positionName = player.Position switch
+            {
+                Position.Sleeping => "sleeping",
+                Position.Resting => "resting",
+                Position.Sitting => "sitting",
+                _ => "in your current state"
+            };
+            return MoveResult.Failed($"You can't move while {positionName}!");
+        }
+
         if (!_worldState.World.TryMove(player.RoomId, direction, out var targetRoomId))
         {
             return MoveResult.Failed("You cannot go that way.");

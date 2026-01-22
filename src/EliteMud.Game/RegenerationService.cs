@@ -6,16 +6,24 @@ namespace EliteMud.Game;
 /// </summary>
 public sealed class RegenerationService
 {
-    // Legacy tick intervals
-    private const int GainCheckIntervalSeconds = 6;  // PULSE_GAIN = 6 REAL_SEC
-    private const int TickIntervalSeconds = 75;      // SECS_PER_MUD_HOUR = 75
-    
     /// <summary>
-    /// Calculate gain_count for a standing player over one MUD hour (75 seconds).
-    /// Legacy: check_gain() runs every 6 seconds and adds 1 for standing players.
-    /// 75 / 6 = 12.5 ticks, so we use 12 as the gain_count.
+    /// Increment gain_count based on player's position.
+    /// This should be called every PULSE_GAIN (every few seconds).
+    /// Legacy: check_gain() in comm.c - runs every game tick and increments gain_count by position.
     /// </summary>
-    private const int StandingGainCount = TickIntervalSeconds / GainCheckIntervalSeconds; // 75 / 6 = 12
+    public static void IncrementGainCount(PlayerState player)
+    {
+        // Legacy logic from comm.c:1795-1808
+        // Sleeping: +4, Resting: +3, Sitting: +2, Standing: +1, Fighting: +0
+        player.GainCount += player.Position switch
+        {
+            Position.Sleeping => 4,
+            Position.Resting => 3,
+            Position.Sitting => 2,
+            Position.Standing => 1,
+            _ => 0  // Fighting, Stunned, Dead, etc. = no regen accumulation
+        };
+    }
 
     /// <summary>
     /// Calculate hit point gain for a player.
@@ -23,14 +31,16 @@ public sealed class RegenerationService
     /// </summary>
     public static int CalculateHitPointGain(PlayerState player)
     {
-        // For now, assume player is standing (gain_count = 12 per MUD hour)
-        // TODO: When position system exists, calculate gain_count based on position
-        int gainCount = StandingGainCount;
-        
         // Legacy formula: gain = GET_MAX_HIT(ch) * ch->specials.gain_count / (480 - 12 * GET_CON(ch)) + GET_CON(ch)/2
-        int gain = player.MaxHitPoints * gainCount / (480 - 12 * player.Constitution) + player.Constitution / 2;
+        int divisor = 480 - 12 * player.Constitution;
+        if (divisor <= 0) divisor = 1;  // Prevent divide by zero for very high CON
+        
+        int gain = player.MaxHitPoints * player.GainCount / divisor + player.Constitution / 2;
         
         // TODO: Add bonuses for AFF_REGENERATION or REGEN room flag when affects system exists
+        // if (IS_AFFECTED(ch, AFF_REGENERATION) || ROOM_FLAGGED(IN_ROOM(ch), REGEN))
+        //   gain += gain/2;
+        
         // TODO: Reduce gain if poisoned (gain >>= 2) when affects system exists
         // TODO: Reduce gain if hungry/thirsty when hunger/thirst system exists
         
@@ -43,10 +53,11 @@ public sealed class RegenerationService
     /// </summary>
     public static int CalculateManaGain(PlayerState player)
     {
-        int gainCount = StandingGainCount;
-        
         // Legacy formula: gain = GET_MAX_MANA(ch) * ch->specials.gain_count / (480 - 12 * GET_WIS(ch)) + GET_WIS(ch)/2
-        int gain = player.MaxMana * gainCount / (480 - 12 * player.Wisdom) + player.Wisdom / 2;
+        int divisor = 480 - 12 * player.Wisdom;
+        if (divisor <= 0) divisor = 1;  // Prevent divide by zero for very high WIS
+        
+        int gain = player.MaxMana * player.GainCount / divisor + player.Wisdom / 2;
         
         // TODO: Reduce gain if poisoned (gain >>= 2) when affects system exists
         // TODO: Reduce gain if hungry/thirsty when hunger/thirst system exists
@@ -60,10 +71,11 @@ public sealed class RegenerationService
     /// </summary>
     public static int CalculateMovementGain(PlayerState player)
     {
-        int gainCount = StandingGainCount;
-        
         // Legacy formula: gain = GET_MAX_MOVE(ch) * ch->specials.gain_count / (70 - GET_STR(ch)) + GET_STR(ch)/2
-        int gain = player.MaxMovement * gainCount / (70 - player.Strength) + player.Strength / 2;
+        int divisor = 70 - player.Strength;
+        if (divisor <= 0) divisor = 1;  // Prevent divide by zero for very high STR
+        
+        int gain = player.MaxMovement * player.GainCount / divisor + player.Strength / 2;
         
         // TODO: Reduce gain if poisoned (gain >>= 2) when affects system exists
         // TODO: Reduce gain if hungry/thirsty when hunger/thirst system exists
@@ -73,18 +85,22 @@ public sealed class RegenerationService
 
     /// <summary>
     /// Apply regeneration to a player's vitals.
-    /// This should be called every MUD hour (75 seconds in legacy).
+    /// This should be called every PULSE_REGEN (every 60 seconds recommended).
+    /// After regeneration, resets gain_count to 0.
     /// Returns true if any regeneration occurred.
     /// </summary>
     public static bool RegeneratePlayer(PlayerState player)
     {
-        // Only regenerate if player is not stunned or worse (position check)
-        // For now, always regenerate since we don't have position system yet
-        // TODO: Add position check when combat/position system exists
+        // Only regenerate if player is stunned or better (not dead/incap/mortally wounded)
+        // Legacy: if (GET_POS(i) >= POS_STUNNED)
+        if (player.Position < Position.Stunned)
+        {
+            return false;  // Too wounded to regenerate
+        }
         
         bool anyChange = false;
         
-        // Calculate gains
+        // Calculate gains using accumulated gain_count
         int hitGain = CalculateHitPointGain(player);
         int manaGain = CalculateManaGain(player);
         int moveGain = CalculateMovementGain(player);
@@ -109,6 +125,10 @@ public sealed class RegenerationService
             player.Movement = (short)Math.Min(player.Movement + moveGain, player.MaxMovement);
             anyChange = true;
         }
+        
+        // Reset gain_count after regeneration
+        // Legacy: i->specials.gain_count = 0 in point_update()
+        player.GainCount = 0;
         
         return anyChange;
     }

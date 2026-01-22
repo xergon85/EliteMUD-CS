@@ -65,6 +65,10 @@ public static class CharacterMapper
             Alignment = character.Alignment,
             WimpyLevel = (short)character.WimpyLevel,
             
+            // Position & Regeneration
+            Position = Enum.TryParse<Position>(character.Position, out var pos) ? pos : Position.Standing,
+            GainCount = character.GainCount,
+            
             // Resources
             Gold = character.Gold,
             BankGold = character.BankGold,
@@ -152,6 +156,10 @@ public static class CharacterMapper
         character.Damroll = playerState.Damroll;
         character.Alignment = playerState.Alignment;
         character.WimpyLevel = playerState.WimpyLevel;
+
+        // Position & Regeneration
+        character.Position = playerState.Position.ToString();
+        character.GainCount = playerState.GainCount;
 
         // Location & Resources
         character.RoomId = playerState.RoomId;

@@ -36,7 +36,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         var player = context.Player;
 
         // Check if in bad position (legacy: act.offensive.c:388)
-        if (player.Position < CombatService.POS_FIGHTING)
+        if (player.Position < Position.Fighting)
         {
             await context.Session.SendLineAsync(
                 "You are in pretty bad shape, unable to flee!",
