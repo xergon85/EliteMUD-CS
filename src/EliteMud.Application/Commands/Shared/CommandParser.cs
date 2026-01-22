@@ -34,6 +34,7 @@ public enum CommandKind
     Sit,
     Wake,
     Stand,
+    Consider,
     Unknown
 }
 
@@ -241,6 +242,14 @@ public sealed class CommandParser
             || trimmed.Equals("st", StringComparison.OrdinalIgnoreCase))
         {
             return new CommandRequest(CommandKind.Stand, null, null);
+        }
+
+        if (trimmed.StartsWith("consider ", StringComparison.OrdinalIgnoreCase)
+            || trimmed.StartsWith("con ", StringComparison.OrdinalIgnoreCase))
+        {
+            var spaceIndex = trimmed.IndexOf(' ');
+            var target = trimmed[(spaceIndex + 1)..].Trim();
+            return new CommandRequest(CommandKind.Consider, target, null);
         }
 
         if (TryParseDirection(trimmed, out var direction))

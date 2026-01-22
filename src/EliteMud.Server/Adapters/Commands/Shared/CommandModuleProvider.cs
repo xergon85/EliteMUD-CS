@@ -1,3 +1,4 @@
+using EliteMud.Server.Adapters.Commands.Consider;
 using EliteMud.Server.Adapters.Commands.Drop;
 using EliteMud.Server.Adapters.Commands.Equipment;
 using EliteMud.Server.Adapters.Commands.Examine;
@@ -62,7 +63,8 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new RestCommandModule(),
             new SitCommandModule(),
             new WakeCommandModule(),
-            new StandCommandModule()
+            new StandCommandModule(),
+            new ConsiderCommandModule()
         };
     }
 }
