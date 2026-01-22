@@ -2,10 +2,15 @@ namespace EliteMud.Game;
 
 /// <summary>
 /// Legacy compatibility wrapper for CombatCalculator.
-/// DEPRECATED: Use CombatCalculator directly. This wrapper exists for backwards compatibility.
+/// DEPRECATED: Use CombatCalculator for domain logic and CombatMessageFormatter for presentation.
+/// 
+/// MIGRATION COMPLETE: All codebase usages have been migrated to the new architecture.
+/// This class is kept only for backwards compatibility and can be safely removed in a future cleanup.
+/// 
 /// Message formatting has been moved to EliteMud.Application.Combat.CombatMessageFormatter.
+/// Domain logic has been moved to EliteMud.Game.CombatCalculator.
 /// </summary>
-[Obsolete("Use CombatCalculator for domain logic. This wrapper exists for backwards compatibility.")]
+[Obsolete("Use CombatCalculator for domain logic and CombatMessageFormatter for presentation. Migration complete - this wrapper can be removed.")]
 public static class CombatService
 {
     // Delegate to CombatCalculator for all calculation methods
