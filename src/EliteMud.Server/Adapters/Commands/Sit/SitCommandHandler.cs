@@ -34,14 +34,11 @@ internal sealed class SitCommandHandler : ICommandHandler
         player.Position = Position.Sitting;
         await context.Session.SendLineAsync("You sit down.", cancellationToken);
         
-        var roomMessage = $"{player.Name} sits down.";
-        var playersInRoom = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == player.RoomId && c.Id != context.Id);
-        
-        foreach (var observer in playersInRoom)
-        {
-            await observer.Session.SendLineAsync(roomMessage, cancellationToken);
-        }
+        // Broadcast to room
+        await context.BroadcastToRoomAsync(
+            _connectionRegistry,
+            $"{player.Name} sits down.",
+            cancellationToken);
 
         return CommandOutcome.Continue;
     }

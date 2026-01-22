@@ -34,14 +34,11 @@ internal sealed class WakeCommandHandler : ICommandHandler
         player.Position = Position.Sitting; // Wake up to sitting, not standing
         await context.Session.SendLineAsync("You wake and sit up.", cancellationToken);
         
-        var roomMessage = $"{player.Name} awakens.";
-        var playersInRoom = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == player.RoomId && c.Id != context.Id);
-        
-        foreach (var observer in playersInRoom)
-        {
-            await observer.Session.SendLineAsync(roomMessage, cancellationToken);
-        }
+        // Broadcast to room
+        await context.BroadcastToRoomAsync(
+            _connectionRegistry,
+            $"{player.Name} awakens.",
+            cancellationToken);
 
         return CommandOutcome.Continue;
     }

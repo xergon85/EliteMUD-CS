@@ -160,4 +160,23 @@ internal static class ActMessageExtensions
             await playerConnection.Session.SendAsync(formatted, cancellationToken);
         }
     }
+
+    /// <summary>
+    /// Broadcast a simple text message to everyone in the room EXCEPT the actor.
+    /// Useful for simple announcements that don't need act() substitution.
+    /// </summary>
+    public static async Task BroadcastToRoomAsync(
+        this ConnectionContext context,
+        ConnectionRegistry connectionRegistry,
+        string message,
+        CancellationToken cancellationToken = default)
+    {
+        var playersInRoom = connectionRegistry.GetConnections()
+            .Where(c => c.Player.RoomId == context.Player.RoomId && c.Id != context.Id);
+
+        foreach (var observer in playersInRoom)
+        {
+            await observer.Session.SendLineAsync(message, cancellationToken);
+        }
+    }
 }

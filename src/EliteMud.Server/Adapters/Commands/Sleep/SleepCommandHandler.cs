@@ -38,14 +38,10 @@ internal sealed class SleepCommandHandler : ICommandHandler
         await context.Session.SendLineAsync("You go to sleep.", cancellationToken);
         
         // Broadcast to room
-        var roomMessage = $"{player.Name} lies down and falls asleep.";
-        var playersInRoom = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == player.RoomId && c.Id != context.Id);
-        
-        foreach (var observer in playersInRoom)
-        {
-            await observer.Session.SendLineAsync(roomMessage, cancellationToken);
-        }
+        await context.BroadcastToRoomAsync(
+            _connectionRegistry,
+            $"{player.Name} lies down and falls asleep.",
+            cancellationToken);
 
         return CommandOutcome.Continue;
     }

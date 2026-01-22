@@ -34,14 +34,11 @@ internal sealed class RestCommandHandler : ICommandHandler
         player.Position = Position.Resting;
         await context.Session.SendLineAsync("You sit down and rest.", cancellationToken);
         
-        var roomMessage = $"{player.Name} sits down and rests.";
-        var playersInRoom = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == player.RoomId && c.Id != context.Id);
-        
-        foreach (var observer in playersInRoom)
-        {
-            await observer.Session.SendLineAsync(roomMessage, cancellationToken);
-        }
+        // Broadcast to room
+        await context.BroadcastToRoomAsync(
+            _connectionRegistry,
+            $"{player.Name} sits down and rests.",
+            cancellationToken);
 
         return CommandOutcome.Continue;
     }
