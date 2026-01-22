@@ -1,3 +1,4 @@
+using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Session;
@@ -138,7 +139,7 @@ internal sealed class GameTickService
                     if (victim == null || victim.Player.RoomId != attacker.Player.RoomId)
                     {
                         // Target left room or disconnected
-                        CombatService.StopFighting(attacker.Player);
+                        CombatCalculator.StopFighting(attacker.Player);
                         await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
                         continue;
                     }
@@ -207,10 +208,10 @@ internal sealed class GameTickService
     {
         // Mob does damage
         var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-        var actualDamage = CombatService.ApplyDamage(victim.Player, mobDamage);
+        var actualDamage = CombatCalculator.ApplyDamage(victim.Player, mobDamage);
         
         // Format legacy combat messages
-        var victimMsg = CombatService.FormatCombatMessage(
+        var victimMsg = CombatMessageFormatter.FormatCombatMessage(
             mob.Definition.ShortDescription,
             victim.Player.Name,
             actualDamage,
@@ -222,14 +223,17 @@ internal sealed class GameTickService
             cancellationToken);
         
         // Show damage feedback (HURT/bleeding messages)
-        var feedbackMsg = CombatService.GetDamageFeedbackMessage(victim.Player, actualDamage);
+        var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
+            victim.Player.MaxHitPoints, 
+            victim.Player.HitPoints, 
+            actualDamage);
         if (feedbackMsg != null)
         {
             await victim.Session.SendLineAsync(feedbackMsg, cancellationToken);
         }
             
         // Broadcast to room
-        var roomMsg = CombatService.FormatCombatMessage(
+        var roomMsg = CombatMessageFormatter.FormatCombatMessage(
             mob.Definition.ShortDescription,
             victim.Player.Name,
             actualDamage,
@@ -253,17 +257,17 @@ internal sealed class GameTickService
         ConnectionContext victim,
         CancellationToken cancellationToken)
     {
-        var result = CombatService.PerformAttack(attacker.Player, victim.Player);
+        var result = CombatCalculator.PerformAttack(attacker.Player, victim.Player);
         
         // Format legacy combat messages
-        var attackerMsg = CombatService.FormatCombatMessage(
+        var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
             victim.Player.Name,
             result.Damage,
             victim.Player.MaxHitPoints,
             MessagePerspective.ToChar);
             
-        var victimMsg = CombatService.FormatCombatMessage(
+        var victimMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
             victim.Player.Name,
             result.Damage,
@@ -279,7 +283,10 @@ internal sealed class GameTickService
         // Show damage feedback to victim (HURT/bleeding messages)
         if (result.Hit && result.Damage > 0)
         {
-            var feedbackMsg = CombatService.GetDamageFeedbackMessage(victim.Player, result.Damage);
+            var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
+                victim.Player.MaxHitPoints,
+                victim.Player.HitPoints,
+                result.Damage);
             if (feedbackMsg != null)
             {
                 await victim.Session.SendLineAsync(feedbackMsg, cancellationToken);
@@ -289,7 +296,7 @@ internal sealed class GameTickService
         // Broadcast to room if hit
         if (result.Hit)
         {
-            var roomMsg = CombatService.FormatCombatMessage(
+            var roomMsg = CombatMessageFormatter.FormatCombatMessage(
                 attacker.Player.Name,
                 victim.Player.Name,
                 result.Damage,
@@ -307,7 +314,7 @@ internal sealed class GameTickService
             }
 
             // Award experience
-            attacker.Player.Experience += CombatService.CalculateExperienceGain(victim.Player, result.Damage);
+            attacker.Player.Experience += CombatCalculator.CalculateExperienceGain(victim.Player, result.Damage);
 
             // Check if victim died
             if (victim.Player.Position == Position.Dead)
@@ -329,7 +336,7 @@ internal sealed class GameTickService
         if (mob == null)
         {
             // Mob is gone (killed by someone else, or despawned)
-            CombatService.StopFighting(attacker.Player);
+            CombatCalculator.StopFighting(attacker.Player);
             await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
             return;
         }
@@ -338,11 +345,11 @@ internal sealed class GameTickService
         int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
         
         // Player attacks mob
-        int damage = CombatService.CalculateBareDamage(attacker.Player);
+        int damage = CombatCalculator.CalculateBareDamage(attacker.Player);
         mob.HitPoints -= damage;
         
         // Format legacy combat messages for player hitting mob
-        var attackerMsg = CombatService.FormatCombatMessage(
+        var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
             mob.Definition.ShortDescription,
             damage,
@@ -352,7 +359,7 @@ internal sealed class GameTickService
         await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
         
         // Broadcast to room
-        var roomMsg = CombatService.FormatCombatMessage(
+        var roomMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
             mob.Definition.ShortDescription,
             damage,
@@ -379,10 +386,10 @@ internal sealed class GameTickService
         {
             // Mob fights back
             var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-            var actualDamage = CombatService.ApplyDamage(attacker.Player, mobDamage);
+            var actualDamage = CombatCalculator.ApplyDamage(attacker.Player, mobDamage);
             
             // Format legacy combat messages for mob hitting player
-            var mobAttackMsg = CombatService.FormatCombatMessage(
+            var mobAttackMsg = CombatMessageFormatter.FormatCombatMessage(
                 mob.Definition.ShortDescription,
                 attacker.Player.Name,
                 actualDamage,
@@ -394,14 +401,17 @@ internal sealed class GameTickService
                 cancellationToken);
             
             // Show damage feedback (HURT/bleeding messages)
-            var feedbackMsg = CombatService.GetDamageFeedbackMessage(attacker.Player, actualDamage);
+            var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
+                attacker.Player.MaxHitPoints,
+                attacker.Player.HitPoints,
+                actualDamage);
             if (feedbackMsg != null)
             {
                 await attacker.Session.SendLineAsync(feedbackMsg, cancellationToken);
             }
                 
             // Broadcast mob attack to room
-            var mobRoomMsg = CombatService.FormatCombatMessage(
+            var mobRoomMsg = CombatMessageFormatter.FormatCombatMessage(
                 mob.Definition.ShortDescription,
                 attacker.Player.Name,
                 actualDamage,
@@ -424,8 +434,8 @@ internal sealed class GameTickService
         CancellationToken cancellationToken)
     {
         // Stop combat
-        CombatService.StopFighting(killer.Player);
-        CombatService.StopFighting(victim.Player);
+        CombatCalculator.StopFighting(killer.Player);
+        CombatCalculator.StopFighting(victim.Player);
 
         // Award full experience (bonus for kill)
         int killBonus = victim.Player.Level * 100;
@@ -473,7 +483,7 @@ internal sealed class GameTickService
         CancellationToken cancellationToken)
     {
         // Stop combat
-        CombatService.StopFighting(victim.Player);
+        CombatCalculator.StopFighting(victim.Player);
         mob.FightingConnectionId = null;
         mob.Position = Position.Standing;
 
@@ -552,7 +562,7 @@ internal sealed class GameTickService
                 cancellationToken);
             
             // Stop player from fighting, but mob keeps attacking
-            CombatService.StopFighting(player.Player);
+            CombatCalculator.StopFighting(player.Player);
         }
         else if (position == Position.Incapacitated)
         {
@@ -562,7 +572,7 @@ internal sealed class GameTickService
                 cancellationToken);
             
             // Stop player from fighting, but mob keeps attacking
-            CombatService.StopFighting(player.Player);
+            CombatCalculator.StopFighting(player.Player);
         }
         else if (position == Position.Stunned)
         {
@@ -572,7 +582,7 @@ internal sealed class GameTickService
                 cancellationToken);
             
             // Stop player from fighting, but mob keeps attacking
-            CombatService.StopFighting(player.Player);
+            CombatCalculator.StopFighting(player.Player);
         }
         // else: player is still conscious and fighting
     }
@@ -624,7 +634,7 @@ internal sealed class GameTickService
         CancellationToken cancellationToken)
     {
         // Stop combat
-        CombatService.StopFighting(killer.Player);
+        CombatCalculator.StopFighting(killer.Player);
         mob.FightingConnectionId = null;
 
         // Award kill experience

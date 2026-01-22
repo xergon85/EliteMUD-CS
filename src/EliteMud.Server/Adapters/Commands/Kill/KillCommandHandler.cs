@@ -60,7 +60,7 @@ internal sealed class KillCommandHandler : ICommandHandler
                 .ToList();
 
             var targetPlayer = otherPlayers.FirstOrDefault(c =>
-                c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
+                c.Player.Name.Contains(targetName!, StringComparison.OrdinalIgnoreCase)); // targetName validated above
 
             if (targetPlayer == null)
             {
