@@ -25,11 +25,8 @@ internal sealed class SleepCommandHandler : ICommandHandler
 
         // Validate preconditions
         var validationResult = PositionChangeValidator.Validate(player, Position.Sleeping, "sleeping");
-        if (!validationResult.IsValid)
-        {
-            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
-            return CommandOutcome.Continue;
-        }
+        var outcome = await context.HandleValidationAsync(validationResult, cancellationToken);
+        if (outcome.HasValue) return outcome.Value;
 
         // Set position to sleeping
         player.Position = Position.Sleeping;

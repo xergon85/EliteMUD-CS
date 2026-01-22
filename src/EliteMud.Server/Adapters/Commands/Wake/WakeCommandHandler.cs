@@ -25,11 +25,8 @@ internal sealed class WakeCommandHandler : ICommandHandler
 
         // Validate preconditions (wake has special logic)
         var validationResult = PositionChangeValidator.ValidateWake(player);
-        if (!validationResult.IsValid)
-        {
-            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
-            return CommandOutcome.Continue;
-        }
+        var outcome = await context.HandleValidationAsync(validationResult, cancellationToken);
+        if (outcome.HasValue) return outcome.Value;
 
         player.Position = Position.Sitting; // Wake up to sitting, not standing
         await context.Session.SendLineAsync("You wake and sit up.", cancellationToken);

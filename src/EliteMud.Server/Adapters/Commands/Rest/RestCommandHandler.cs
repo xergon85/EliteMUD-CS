@@ -25,11 +25,8 @@ internal sealed class RestCommandHandler : ICommandHandler
 
         // Validate preconditions
         var validationResult = PositionChangeValidator.Validate(player, Position.Resting, "resting");
-        if (!validationResult.IsValid)
-        {
-            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
-            return CommandOutcome.Continue;
-        }
+        var outcome = await context.HandleValidationAsync(validationResult, cancellationToken);
+        if (outcome.HasValue) return outcome.Value;
 
         player.Position = Position.Resting;
         await context.Session.SendLineAsync("You sit down and rest.", cancellationToken);

@@ -34,11 +34,8 @@ internal sealed class KillCommandHandler : ICommandHandler
 
         // Validate preconditions
         var validationResult = KillCommandValidator.Validate(player, targetName);
-        if (!validationResult.IsValid)
-        {
-            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
-            return CommandOutcome.Continue;
-        }
+        var outcome = await context.HandleValidationAsync(validationResult, cancellationToken);
+        if (outcome.HasValue) return outcome.Value;
 
         // Try to find a mob in the room (supports "2.soldier" syntax)
         // Legacy: handler.c:1481-1501 (get_char_room_vis uses get_number)

@@ -25,11 +25,8 @@ internal sealed class SitCommandHandler : ICommandHandler
 
         // Validate preconditions
         var validationResult = PositionChangeValidator.Validate(player, Position.Sitting, "sitting");
-        if (!validationResult.IsValid)
-        {
-            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
-            return CommandOutcome.Continue;
-        }
+        var outcome = await context.HandleValidationAsync(validationResult, cancellationToken);
+        if (outcome.HasValue) return outcome.Value;
 
         player.Position = Position.Sitting;
         await context.Session.SendLineAsync("You sit down.", cancellationToken);

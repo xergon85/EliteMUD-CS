@@ -25,11 +25,8 @@ internal sealed class StandCommandHandler : ICommandHandler
 
         // Validate preconditions
         var validationResult = PositionChangeValidator.Validate(player, Position.Standing, "standing");
-        if (!validationResult.IsValid)
-        {
-            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
-            return CommandOutcome.Continue;
-        }
+        var outcome = await context.HandleValidationAsync(validationResult, cancellationToken);
+        if (outcome.HasValue) return outcome.Value;
 
         player.Position = Position.Standing;
         await context.Session.SendLineAsync("You stand up.", cancellationToken);

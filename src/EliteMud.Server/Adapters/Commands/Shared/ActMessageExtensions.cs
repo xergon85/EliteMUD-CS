@@ -179,4 +179,23 @@ internal static class ActMessageExtensions
             await observer.Session.SendLineAsync(message, cancellationToken);
         }
     }
+
+    /// <summary>
+    /// Handles validation result by sending error message to player and returning Continue outcome.
+    /// If validation succeeds, returns null and the caller should proceed with command execution.
+    /// </summary>
+    /// <returns>CommandOutcome.Continue if validation failed, null if validation succeeded</returns>
+    public static async Task<CommandOutcome?> HandleValidationAsync(
+        this ConnectionContext context,
+        ValidationResult validationResult,
+        CancellationToken cancellationToken = default)
+    {
+        if (!validationResult.IsValid)
+        {
+            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
+            return CommandOutcome.Continue;
+        }
+
+        return null;
+    }
 }

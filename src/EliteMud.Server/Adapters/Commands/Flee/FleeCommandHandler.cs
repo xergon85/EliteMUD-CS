@@ -38,11 +38,8 @@ internal sealed class FleeCommandHandler : ICommandHandler
 
         // Validate preconditions
         var validationResult = FleeCommandValidator.Validate(player);
-        if (!validationResult.IsValid)
-        {
-            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
-            return CommandOutcome.Continue;
-        }
+        var outcome = await context.HandleValidationAsync(validationResult, cancellationToken);
+        if (outcome.HasValue) return outcome.Value;
 
         // Get current room for stopping combat later
         var currentRoomId = player.RoomId;
