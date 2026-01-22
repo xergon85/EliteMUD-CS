@@ -4,7 +4,7 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Hold;
 
-public sealed record HoldResult(bool Success, string Message, ObjectDefinition? Object = null);
+public sealed record HoldResult(bool Success, string Message, ObjectDefinition? Object = null, ObjectDefinition? AlreadyEquipped = null);
 
 public sealed class HoldHandler
 {
@@ -70,6 +70,15 @@ public sealed class HoldHandler
             return new HoldResult(false, $"{obj.Definition.ShortDescription} cannot be held.");
         }
 
+        // Check if slot is already occupied (legacy: act.obj2.c:680-683)
+        // If occupied, show "You're already holding $p." or "You're already using $p as light source."
+        var equipment = _worldState.GetPlayerEquipment(player);
+        if (equipment.TryGetValue(slot, out var alreadyEquipped))
+        {
+            // Return the already equipped object so CommandHandler can use ActMessage
+            return new HoldResult(false, string.Empty, AlreadyEquipped: alreadyEquipped.Definition);
+        }
+
         // Try to equip the object
         if (_worldState.EquipObject(player, obj.InstanceId, slot))
         {
@@ -77,8 +86,8 @@ public sealed class HoldHandler
         }
         else
         {
-            var slotName = slot == EquipmentSlot.Light ? "light source" : "held item";
-            return new HoldResult(false, $"You are already holding a {slotName}.");
+            // This shouldn't happen since we checked above, but handle gracefully
+            return new HoldResult(false, "You can't hold that right now.");
         }
     }
 }

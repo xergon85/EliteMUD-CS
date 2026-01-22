@@ -30,6 +30,7 @@ internal sealed class HoldCommandHandler : ICommandHandler
     {
         var result = _holdHandler.Handle(context.Player, command.Argument ?? string.Empty);
         
+        // Success - item equipped
         if (result.Object is not null)
         {
             await context.ActToCharAsync(
@@ -47,6 +48,24 @@ internal sealed class HoldCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
         
+        // Slot already occupied - show "You're already holding $p." or "You're already using $p as light source."
+        if (result.AlreadyEquipped is not null)
+        {
+            // Determine message based on slot type
+            // Legacy act.obj2.c:647-665 - already_wearing[] array
+            var message = result.AlreadyEquipped.Type == "Light"
+                ? "You're already using $p as light source."
+                : "You're already holding $p.";
+                
+            await context.ActToCharAsync(
+                _actService,
+                message,
+                obj: result.AlreadyEquipped,
+                cancellationToken: cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Other error messages (plain text)
         if (!string.IsNullOrEmpty(result.Message))
         {
             await context.Session.SendLineAsync(result.Message, cancellationToken);
