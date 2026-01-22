@@ -10,3 +10,8 @@
 .DS_Store
 .session/
 *.heapsnapshot
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal

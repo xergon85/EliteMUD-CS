@@ -51,9 +51,15 @@
 - ✅ Extend PlayerState with Equipment dictionary (copy from MobInstance)
 - ✅ `equipment` / `eq` command - show worn/wielded items
 - ✅ `wear` command - equip wearable items (✅ supports indexed targeting: `wear 2.helmet`)
+- ✅ `wear all` command - equip all wearable items in inventory
 - ✅ `remove` command - unequip items to inventory (✅ supports indexed targeting: `remove 2.ring`)
-- ✅ `wield` / `hold` commands - equip weapons/lights (✅ supports indexed targeting: `wield 2.sword`, `hold 2.torch`)
+- ✅ `wield` command - equip weapons (✅ supports indexed targeting: `wield 2.sword`)
+- ✅ `hold` command - hold items/weapons/lights (✅ supports indexed targeting: `hold 2.torch`, `hold 2.sword`)
+- ✅ Hold command accepts weapons with Wield flag (legacy: wear_bitvectors[HOLD] = ITEM_HOLD | ITEM_WIELD)
+- ✅ Two-handed weapon blocking (can't hold while wielding two-handed weapon)
 - ✅ Equipment slot validation (can't wear two body armors, etc.)
+- ✅ ActMessage integration for all equipment commands (wear/wield/hold/remove)
+- ✅ Proper "already equipped" messages showing currently equipped item ("You're already wielding $p.")
 - ❌ Item level/class/race restrictions - prevent equipping items above level or wrong class - **TODO**
 - ❌ Item stat bonuses - apply +STR, +HP, +AC, etc. from equipped items - **TODO**
 - ❌ Item affects - apply buffs/debuffs from equipped items (e.g., DETECT_INVIS, INVISIBLE) - **TODO**
