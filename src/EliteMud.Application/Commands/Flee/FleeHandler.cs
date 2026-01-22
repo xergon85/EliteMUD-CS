@@ -84,7 +84,7 @@ public sealed class FleeHandler
         player.RoomId = result.NewRoomId;
 
         // Stop fighting
-        CombatService.StopFighting(player);
+        CombatCalculator.StopFighting(player);
 
         // Apply experience loss
         if (result.ExperienceLoss > 0)
@@ -108,7 +108,7 @@ public sealed class FleeHandler
             .Where(p => p.RoomId == result.OldRoomId && p.FightingConnectionId == playerConnectionId);
         foreach (var otherPlayer in playersInOldRoom)
         {
-            CombatService.StopFighting(otherPlayer);
+            CombatCalculator.StopFighting(otherPlayer);
         }
     }
 
