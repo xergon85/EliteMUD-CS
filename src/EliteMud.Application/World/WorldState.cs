@@ -1,10 +1,8 @@
-using EliteMud.Application.World;
 using EliteMud.Game;
-using MobInstance = EliteMud.Application.World.MobInstance;
 
-namespace EliteMud.Server;
+namespace EliteMud.Application.World;
 
-internal sealed class WorldState : IWorldState
+public sealed class WorldState : IWorldState
 {
     private readonly Dictionary<int, MobDefinition> _mobDefinitions;
     private readonly Dictionary<int, ObjectDefinition> _objectDefinitions;

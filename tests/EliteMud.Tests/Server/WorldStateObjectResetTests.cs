@@ -1,6 +1,5 @@
 using EliteMud.Application.World;
 using EliteMud.Game;
-using EliteMud.Server;
 
 namespace EliteMud.Tests.Server;
 
