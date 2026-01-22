@@ -54,6 +54,10 @@
 - ✅ `remove` command - unequip items to inventory (✅ supports indexed targeting: `remove 2.ring`)
 - ✅ `wield` / `hold` commands - equip weapons/lights (✅ supports indexed targeting: `wield 2.sword`, `hold 2.torch`)
 - ✅ Equipment slot validation (can't wear two body armors, etc.)
+- ❌ Item level/class/race restrictions - prevent equipping items above level or wrong class - **TODO**
+- ❌ Item stat bonuses - apply +STR, +HP, +AC, etc. from equipped items - **TODO**
+- ❌ Item affects - apply buffs/debuffs from equipped items (e.g., DETECT_INVIS, INVISIBLE) - **TODO**
+- ❌ Equipment stat calculation - recalculate total stats when equipping/removing - **TODO**
 
 #### 3.3 Character Stats & Resources - COMPLETE ✅
 - ✅ PlayerState has: HP, MaxHP, Mana, MaxMana, Movement, MaxMovement
