@@ -172,7 +172,7 @@ internal sealed class KillCommandHandler : ICommandHandler
         }
 
         // Perform initial attack
-        int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
+        int mobMaxHp = mob.Definition.MaxHitPoints;
         int damage = CombatCalculator.CalculateBareDamage(attacker.Player);
         mob.HitPoints -= damage;
         

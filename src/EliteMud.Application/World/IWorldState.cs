@@ -34,8 +34,8 @@ public sealed class MobInstance
     {
         InstanceId = instanceId;
         Definition = definition;
-        // Initialize HP based on level (legacy formula is more complex, but this is a reasonable start)
-        HitPoints = definition.Level * 10;
+        // Initialize HP from mob definition's MaxHitPoints
+        HitPoints = definition.MaxHitPoints;
     }
 
     public int InstanceId { get; }
@@ -46,7 +46,7 @@ public sealed class MobInstance
     public int? FightingConnectionId { get; set; } // The player connection ID this mob is fighting
     public int? FightingMobInstanceId { get; set; } // The mob instance ID this mob is fighting (for mob-vs-mob combat)
     public Position Position { get; set; } = Position.Standing;
-    public int HitPoints { get; set; } // Current HP (mobs don't have MaxHP property, use Definition.MaxHitPoints)
+    public int HitPoints { get; set; } // Current HP
 
     public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> Equipment => _equipment;
 

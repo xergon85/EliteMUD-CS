@@ -17,7 +17,7 @@ public class MobCorpseTests
         var mobDef = new MobDefinition(
             100, "rat", "a small rat", "A small rat is here.", "Desc", 1, "Animal", "None",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
-            new List<string>(), new List<string>());
+            new List<string>(), new List<string>(), 10, 10);
 
         var swordDef = new ObjectDefinition(
             200, "sword", "a rusty sword", "A rusty sword is here.", "Desc", "weapon",
@@ -67,7 +67,7 @@ public class MobCorpseTests
         var mobDef = new MobDefinition(
             100, "rat", "a small rat", "A small rat is here.", "Desc", 1, "Animal", "None",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
-            new List<string>(), new List<string>());
+            new List<string>(), new List<string>(), 10, 10);
 
         var mobDefs = new Dictionary<int, MobDefinition> { [100] = mobDef };
         var objDefs = new Dictionary<int, ObjectDefinition>();
@@ -98,9 +98,9 @@ public class MobCorpseTests
         });
 
         var mobDef = new MobDefinition(
-            100, "halfling", "The halfling\n", "The halfling is here.\n", "Desc", 1, "Humanoid", "None",
+            100, "rat", "a small rat", "A small rat is here.", "Desc", 1, "Animal", "None",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
-            new List<string>(), new List<string>());
+            new List<string>(), new List<string>(), 10, 10);
 
         var mobDefs = new Dictionary<int, MobDefinition> { [100] = mobDef };
         var objDefs = new Dictionary<int, ObjectDefinition>();
@@ -118,6 +118,6 @@ public class MobCorpseTests
         Assert.NotNull(corpse);
         Assert.DoesNotContain("\n", corpse.Definition.LongDescription);
         Assert.DoesNotContain("\r", corpse.Definition.LongDescription);
-        Assert.Equal("The corpse of The halfling is lying here.", corpse.Definition.LongDescription);
+        Assert.Equal("The corpse of a small rat is lying here.", corpse.Definition.LongDescription);
     }
 }

@@ -130,6 +130,9 @@ internal static class ContentLoader
         foreach (var mob in file.Mobs)
         {
             var stats = mob.Stats ?? new StatContent();
+            int armorClass = mob.Combat?.Armor ?? Math.Min(100, mob.Level * 10);
+            int maxHitPoints = ParseHitDice(mob.Resources?.HitDice, mob.Level);
+            
             mobs.Add(new MobDefinition(
                 mob.Id,
                 mob.Name ?? string.Empty,
@@ -148,7 +151,9 @@ internal static class ContentLoader
                     stats.Constitution,
                     stats.Charisma),
                 mob.Resistances ?? new List<string>(),
-                mob.Skills ?? new List<string>()));
+                mob.Skills ?? new List<string>(),
+                armorClass,
+                maxHitPoints));
         }
 
         return mobs;
@@ -387,6 +392,12 @@ internal static class ContentLoader
             mob.Stats?.Constitution ?? 10,
             mob.Stats?.Charisma ?? 10);
 
+        // Parse AC from Combat.Armor (default to level * 10, max 100 if not specified)
+        int armorClass = mob.Combat?.Armor ?? Math.Min(100, mob.Level * 10);
+
+        // Parse MaxHP from Resources.HitDice (default to level * 10 if not specified)
+        int maxHitPoints = ParseHitDice(mob.Resources?.HitDice, mob.Level);
+
         return new MobDefinition(
             mob.Id,
             mob.Name,
@@ -399,7 +410,73 @@ internal static class ContentLoader
             mob.Flags ?? new List<string>(),
             stats,
             mob.Resistances ?? new List<string>(),
-            mob.Skills ?? new List<string>());
+            mob.Skills ?? new List<string>(),
+            armorClass,
+            maxHitPoints);
+    }
+
+    /// <summary>
+    /// Parse hit dice formula like "1d1+30000" or "5d8+25" to get max HP.
+    /// Legacy: hit dice in the format "XdY+Z" where max = X*Y + Z
+    /// If empty or invalid, defaults to level * 10.
+    /// </summary>
+    private static int ParseHitDice(string? hitDice, int level)
+    {
+        if (string.IsNullOrWhiteSpace(hitDice))
+        {
+            return level * 10;
+        }
+
+        try
+        {
+            // Format: "XdY+Z" or "XdY"
+            var parts = hitDice.Split('d');
+            if (parts.Length != 2)
+            {
+                return level * 10;
+            }
+
+            if (!int.TryParse(parts[0], out int numDice))
+            {
+                return level * 10;
+            }
+
+            var secondPart = parts[1];
+            int bonus = 0;
+            int diceSize;
+
+            if (secondPart.Contains('+'))
+            {
+                var subParts = secondPart.Split('+');
+                if (!int.TryParse(subParts[0], out diceSize) || !int.TryParse(subParts[1], out bonus))
+                {
+                    return level * 10;
+                }
+            }
+            else if (secondPart.Contains('-'))
+            {
+                var subParts = secondPart.Split('-');
+                if (!int.TryParse(subParts[0], out diceSize) || !int.TryParse(subParts[1], out int penalty))
+                {
+                    return level * 10;
+                }
+                bonus = -penalty;
+            }
+            else
+            {
+                if (!int.TryParse(secondPart, out diceSize))
+                {
+                    return level * 10;
+                }
+            }
+
+            // Calculate max HP: numDice * diceSize + bonus
+            return numDice * diceSize + bonus;
+        }
+        catch
+        {
+            return level * 10;
+        }
     }
 
     private static ObjectDefinition? ParseObjectDefinition(ObjectContent obj)
@@ -622,6 +699,22 @@ internal static class ContentLoader
         public StatContent? Stats { get; set; }
         public List<string>? Resistances { get; set; }
         public List<string>? Skills { get; set; }
+        public ResourcesContent? Resources { get; set; }
+        public CombatContent? Combat { get; set; }
+    }
+    
+    private sealed class ResourcesContent
+    {
+        public string? HitDice { get; set; }
+        public int Mana { get; set; }
+        public int Move { get; set; }
+    }
+    
+    private sealed class CombatContent
+    {
+        public int Armor { get; set; }
+        public int Hitroll { get; set; }
+        public int Damroll { get; set; }
     }
 
     private sealed class StatContent

@@ -145,7 +145,7 @@ public class WorldStateObjectResetTests
         var mobDef = new MobDefinition(
             6710, "Henrietta", "Short", "Long", "Desc", 100, "Elf", "Herbalist",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
-            new List<string>(), new List<string>());
+            new List<string>(), new List<string>(), 100, 1000);
 
         var dressDef = new ObjectDefinition(
             6709, "dress", "Henrietta's favorite dress", "Long", "Desc", "Armor",
@@ -204,7 +204,7 @@ public class WorldStateObjectResetTests
         var mobDef = new MobDefinition(
             100, "Mob", "Short", "Long", "Desc", 1, "Human", "Warrior",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
-            new List<string>(), new List<string>());
+            new List<string>(), new List<string>(), 10, 10);
 
         var swordDef = new ObjectDefinition(
             200, "sword", "A sword", "Long", "Desc", "Weapon",

@@ -76,14 +76,11 @@ public sealed class ConsiderHandler
 
         // 1. AC Comparison (lower AC is better, so we compare victim - player)
         // Legacy: diff = GET_AC(victim) - GET_AC(ch)
-        // Note: Mobs don't have AC property, estimate from level (10 AC per level, max 100)
-        int mobAC = Math.Min(100, target.Definition.Level * 10);
-        int acDiff = mobAC - player.ArmorClass;
+        int acDiff = target.Definition.ArmorClass - player.ArmorClass;
         lines.Add(GetArmorMessage(acDiff));
 
         // 2. HP Comparison (percentage difference)
         // Legacy: diff = (int) (100 - GET_HIT(victim)*100/GET_HIT(ch))
-        // Note: Mobs don't have MaxHP, estimate from level (level * 10)
         int hpDiff = 100 - (target.HitPoints * 100 / Math.Max(1, (int)player.HitPoints));
         lines.Add(GetHealthMessage(hpDiff));
 
@@ -123,9 +120,7 @@ public sealed class ConsiderHandler
         int rating = mob.Definition.Level;
 
         // Adjust by current HP percentage
-        // Note: Mobs don't have MaxHP property, estimate from level (level * 10)
-        int estimatedMaxHP = mob.Definition.Level * 10;
-        rating = (int)(rating * (float)mob.HitPoints / (float)Math.Max(1, estimatedMaxHP));
+        rating = (int)(rating * (float)mob.HitPoints / (float)Math.Max(1, mob.Definition.MaxHitPoints));
 
         return rating;
     }

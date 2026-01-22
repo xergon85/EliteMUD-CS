@@ -41,7 +41,9 @@ public sealed record MobDefinition(
     IReadOnlyList<string> Flags,
     StatBlock Stats,
     IReadOnlyList<string> Resistances,
-    IReadOnlyList<string> Skills)
+    IReadOnlyList<string> Skills,
+    int ArmorClass,
+    int MaxHitPoints)
 {
     // Clean string properties on construction
     public string Name { get; init; } = TextCleaner.Clean(Name);

@@ -116,7 +116,9 @@ public class KillTargetingTests
             Flags: new List<string>(),
             Stats: new StatBlock(10, 10, 10, 10, 10, 10),
             Resistances: new List<string>(),
-            Skills: new List<string>()
+            Skills: new List<string>(),
+            ArmorClass: 50,
+            MaxHitPoints: 50
         );
 
         return new MobInstance(instanceId, def);

@@ -341,8 +341,8 @@ internal sealed class GameTickService
             return;
         }
 
-        // Calculate mob's max HP if not set (level * 10 is the initialization value)
-        int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
+        // Get mob's max HP from definition
+        int mobMaxHp = mob.Definition.MaxHitPoints;
         
         // Player attacks mob
         int damage = CombatCalculator.CalculateBareDamage(attacker.Player);
