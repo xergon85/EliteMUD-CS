@@ -33,11 +33,13 @@ public sealed class HoldHandler
             return new HoldResult(false, "You don't have that.");
         }
 
-        // Legacy EliteMUD behavior (see act.obj2.c:do_grab):
-        // The 'hold' command accepts multiple item types:
+        // Legacy EliteMUD behavior (see act.obj2.c:do_grab and perform_wear):
+        // The 'hold' command accepts items based on their wear flags:
         // - Light objects (Type==ITEM_LIGHT) → WEAR_LIGHT slot (requires only ITEM_TAKE)
-        // - Weapons with Wield flag → WIELD slot (wield and hold are interchangeable for weapons)
-        // - Items with Hold flag → HOLD slot (shields, orbs, etc.)
+        // - Items with Hold OR Wield flag → HOLD slot (legacy: wear_bitvectors[HOLD] = ITEM_HOLD | ITEM_WIELD)
+        // - Exception: Two-handed weapons (WieldTwoHanded) cannot be held, must be wielded
+        //
+        // Note: One-handed weapons CAN be held and go to the HOLD slot (not WIELD slot)
         EquipmentSlot slot;
         
         if (obj.Definition.Type == "Light")
@@ -49,18 +51,17 @@ public sealed class HoldHandler
             }
             slot = EquipmentSlot.Light;
         }
-        else if (obj.Definition.WearSlots.Contains("Wield") || 
-                 obj.Definition.WearSlots.Contains("WieldTwoHanded") ||
+        else if (obj.Definition.WearSlots.Contains("WieldTwoHanded") || 
                  obj.Definition.WearSlots.Contains("BothHands"))
         {
-            // Weapons can be held (wield and hold are interchangeable in legacy)
-            slot = obj.Definition.WearSlots.Contains("Wield") 
-                ? EquipmentSlot.Wield 
-                : EquipmentSlot.BothHands;
+            // Legacy act.obj2.c:692-695 - two-handed weapons cannot be held
+            return new HoldResult(false, $"You can't hold {obj.Definition.ShortDescription}, wield it instead.");
         }
-        else if (obj.Definition.WearSlots.Contains("Hold"))
+        else if (obj.Definition.WearSlots.Contains("Hold") || 
+                 obj.Definition.WearSlots.Contains("Wield"))
         {
-            // Items with Hold flag (shields, orbs, etc.)
+            // Items with Hold OR Wield flag go to Hold slot
+            // Legacy: wear_bitvectors[HOLD] = ITEM_HOLD | ITEM_WIELD
             slot = EquipmentSlot.Hold;
         }
         else
