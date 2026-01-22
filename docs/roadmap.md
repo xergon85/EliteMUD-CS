@@ -80,15 +80,15 @@
 - ❌ Stat gains on level up - HP/mana/movement increases - **TODO**
 - ❌ Level up notifications and messages - **TODO**
 - ❌ `stat` command - show detailed character stats (self), immortals can check others - **TODO**
-- ❌ HP/mana/movement regeneration tick system - **TODO**
+- ✅ HP/mana/movement regeneration tick system - **COMPLETE** (RegenerationService with legacy formulas)
 - ❌ Room flags for regen bonuses (REGEN_HP, REGEN_MANA, REGEN_MOVE) - see legacy room flags - **TODO**
-- ❌ Position system (standing/sitting/resting/sleeping/fighting) - **TODO**
-- ❌ `sleep` command - enter sleep position for faster regen - **TODO**
-- ❌ `rest` command - enter rest position for moderate regen - **TODO**
-- ❌ `sit` command - enter sitting position - **TODO**
-- ❌ `wake` command - wake from sleep - **TODO**
-- ❌ `stand` command - stand up from sitting/resting/sleeping - **TODO**
-- ❌ Position-based regen rates (sleeping > resting > sitting > standing) - see legacy code for formulas - **TODO**
+- ✅ Position system (standing/sitting/resting/sleeping/fighting) - **COMPLETE**
+- ✅ `sleep` command - enter sleep position for faster regen - **COMPLETE**
+- ✅ `rest` command - enter rest position for moderate regen - **COMPLETE**
+- ✅ `sit` command - enter sitting position - **COMPLETE**
+- ✅ `wake` command - wake from sleep - **COMPLETE**
+- ✅ `stand` command - stand up from sitting/resting/sleeping - **COMPLETE**
+- ✅ Position-based regen rates (sleeping > resting > sitting > standing) - **COMPLETE** (legacy formulas: sleeping +4, resting +3, sitting +2, standing +1)
 - ❌ Hunger/thirst system - track fullness and thirst levels - **TODO**
 - ❌ Hunger/thirst messages and warnings - **TODO**
 - ❌ Hunger/thirst effects on regen and combat - **TODO**

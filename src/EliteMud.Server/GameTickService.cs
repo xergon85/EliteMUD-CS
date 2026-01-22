@@ -28,8 +28,8 @@ internal sealed class GameTickService
     private readonly LookCommandHandler _lookHandler;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
-    private readonly TimeSpan _gainInterval = TimeSpan.FromSeconds(2); // PULSE_GAIN - increment gain_count based on position
-    private readonly TimeSpan _regenInterval = TimeSpan.FromSeconds(60); // Regeneration tick (60 seconds recommended)
+    private readonly TimeSpan _gainInterval = TimeSpan.FromSeconds(6); // PULSE_GAIN - increment gain_count based on position (legacy: 6 seconds)
+    private readonly TimeSpan _regenInterval = TimeSpan.FromSeconds(75); // SECS_PER_MUD_HOUR - apply regeneration (legacy: 75 seconds)
     private readonly TimeSpan _autoSaveInterval = TimeSpan.FromMinutes(5); // Auto-save every 5 minutes
     
     private int _tickCount;
