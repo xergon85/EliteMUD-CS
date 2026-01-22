@@ -4,7 +4,7 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Wield;
 
-public sealed record WieldResult(bool Success, string Message, ObjectDefinition? Object = null);
+public sealed record WieldResult(bool Success, string Message, ObjectDefinition? Object = null, ObjectDefinition? AlreadyEquipped = null);
 
 public sealed class WieldHandler
 {
@@ -46,6 +46,14 @@ public sealed class WieldHandler
             ? EquipmentSlot.Wield 
             : EquipmentSlot.BothHands;
 
+        // Check if slot is already occupied
+        // Legacy: act.obj2.c:680-683 shows "You're already wielding $p."
+        var equipment = _worldState.GetPlayerEquipment(player);
+        if (equipment.TryGetValue(slot, out var alreadyEquipped))
+        {
+            return new WieldResult(false, string.Empty, AlreadyEquipped: alreadyEquipped.Definition);
+        }
+
         // Try to equip the object
         if (_worldState.EquipObject(player, obj.InstanceId, slot))
         {
@@ -53,7 +61,7 @@ public sealed class WieldHandler
         }
         else
         {
-            return new WieldResult(false, "You are already wielding something.");
+            return new WieldResult(false, "You can't wield that right now.");
         }
     }
 }

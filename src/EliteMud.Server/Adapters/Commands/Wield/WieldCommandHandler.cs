@@ -30,6 +30,7 @@ internal sealed class WieldCommandHandler : ICommandHandler
     {
         var result = _wieldHandler.Handle(context.Player, command.Argument ?? string.Empty);
         
+        // Success - item equipped
         if (result.Object is not null)
         {
             await context.ActToCharAsync(
@@ -47,6 +48,18 @@ internal sealed class WieldCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
         
+        // Slot already occupied - show "You're already wielding $p."
+        if (result.AlreadyEquipped is not null)
+        {
+            await context.ActToCharAsync(
+                _actService,
+                "You're already wielding $p.",
+                obj: result.AlreadyEquipped,
+                cancellationToken: cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Other error messages (plain text)
         if (!string.IsNullOrEmpty(result.Message))
         {
             await context.Session.SendLineAsync(result.Message, cancellationToken);
