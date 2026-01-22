@@ -1,7 +1,9 @@
+using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
+using MessagePerspective = EliteMud.Game.MessagePerspective;
 
 namespace EliteMud.Server.Adapters.Commands.Kill;
 
@@ -29,24 +31,19 @@ internal sealed class KillCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         var targetName = command.Argument?.Trim();
-        if (string.IsNullOrWhiteSpace(targetName))
-        {
-            await context.Session.SendLineAsync("Kill whom?", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
         var player = context.Player;
 
-        // Check if already fighting
-        if (player.FightingConnectionId != null)
+        // Validate preconditions
+        var validationResult = KillCommandValidator.Validate(player, targetName);
+        if (!validationResult.IsValid)
         {
-            await context.Session.SendLineAsync("You're already fighting!", cancellationToken);
+            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
             return CommandOutcome.Continue;
         }
 
         // Try to find a mob in the room (supports "2.soldier" syntax)
         // Legacy: handler.c:1481-1501 (get_char_room_vis uses get_number)
-        var (index, name) = TargetParser.ParseTarget(targetName);
+        var (index, name) = TargetParser.ParseTarget(targetName!); // targetName validated above
         if (index == 0)
         {
             await context.Session.SendLineAsync("Invalid target format.", cancellationToken);

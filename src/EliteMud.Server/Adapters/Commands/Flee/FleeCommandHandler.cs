@@ -1,3 +1,4 @@
+using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
@@ -35,12 +36,11 @@ internal sealed class FleeCommandHandler : ICommandHandler
     {
         var player = context.Player;
 
-        // Check if in bad position (legacy: act.offensive.c:388)
-        if (player.Position < Position.Fighting)
+        // Validate preconditions
+        var validationResult = FleeCommandValidator.Validate(player);
+        if (!validationResult.IsValid)
         {
-            await context.Session.SendLineAsync(
-                "You are in pretty bad shape, unable to flee!",
-                cancellationToken);
+            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
             return CommandOutcome.Continue;
         }
 
