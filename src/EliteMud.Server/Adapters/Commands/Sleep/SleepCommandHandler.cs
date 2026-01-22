@@ -1,3 +1,4 @@
+using EliteMud.Application.Commands.PositionChange;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
@@ -22,24 +23,11 @@ internal sealed class SleepCommandHandler : ICommandHandler
     {
         var player = context.Player;
 
-        // Check if already sleeping
-        if (player.Position == Position.Sleeping)
+        // Validate preconditions
+        var validationResult = PositionChangeValidator.Validate(player, Position.Sleeping, "sleeping");
+        if (!validationResult.IsValid)
         {
-            await context.Session.SendLineAsync("You are already sleeping.", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
-        // Check if in combat (can't sleep while fighting)
-        if (player.FightingConnectionId != null)
-        {
-            await context.Session.SendLineAsync("You can't sleep while fighting!", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
-        // Check if stunned, incapacitated, mortally wounded, or dead
-        if (player.Position < Position.Stunned)
-        {
-            await context.Session.SendLineAsync("You can't sleep in your current state.", cancellationToken);
+            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
             return CommandOutcome.Continue;
         }
 

@@ -1,3 +1,4 @@
+using EliteMud.Application.Commands.PositionChange;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
@@ -22,21 +23,11 @@ internal sealed class StandCommandHandler : ICommandHandler
     {
         var player = context.Player;
 
-        if (player.Position == Position.Standing)
+        // Validate preconditions
+        var validationResult = PositionChangeValidator.Validate(player, Position.Standing, "standing");
+        if (!validationResult.IsValid)
         {
-            await context.Session.SendLineAsync("You are already standing.", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
-        if (player.FightingConnectionId != null)
-        {
-            await context.Session.SendLineAsync("You are fighting for your life!", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
-        if (player.Position < Position.Stunned)
-        {
-            await context.Session.SendLineAsync("You can't stand in your current state.", cancellationToken);
+            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
             return CommandOutcome.Continue;
         }
 

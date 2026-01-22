@@ -1,3 +1,4 @@
+using EliteMud.Application.Commands.PositionChange;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
@@ -22,21 +23,11 @@ internal sealed class SitCommandHandler : ICommandHandler
     {
         var player = context.Player;
 
-        if (player.Position == Position.Sitting)
+        // Validate preconditions
+        var validationResult = PositionChangeValidator.Validate(player, Position.Sitting, "sitting");
+        if (!validationResult.IsValid)
         {
-            await context.Session.SendLineAsync("You are already sitting.", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
-        if (player.FightingConnectionId != null)
-        {
-            await context.Session.SendLineAsync("You can't sit while fighting!", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
-        if (player.Position < Position.Stunned)
-        {
-            await context.Session.SendLineAsync("You can't sit in your current state.", cancellationToken);
+            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
             return CommandOutcome.Continue;
         }
 

@@ -1,3 +1,4 @@
+using EliteMud.Application.Commands.PositionChange;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
@@ -22,15 +23,11 @@ internal sealed class WakeCommandHandler : ICommandHandler
     {
         var player = context.Player;
 
-        if (player.Position >= Position.Sitting)
+        // Validate preconditions (wake has special logic)
+        var validationResult = PositionChangeValidator.ValidateWake(player);
+        if (!validationResult.IsValid)
         {
-            await context.Session.SendLineAsync("You are already awake.", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
-        if (player.Position < Position.Stunned)
-        {
-            await context.Session.SendLineAsync("You can't wake up in your current state.", cancellationToken);
+            await context.Session.SendLineAsync(validationResult.ErrorMessage!, cancellationToken);
             return CommandOutcome.Continue;
         }
 
