@@ -278,3 +278,22 @@ public static class CombatCalculator
         return victim.Level * damage / 2;
     }
 }
+
+/// <summary>
+/// Result of an attack.
+/// </summary>
+public sealed record AttackResult(bool Hit, int Damage, string? Message);
+
+/// <summary>
+/// Message perspective for combat messages.
+/// Based on legacy TO_CHAR, TO_VICT, TO_ROOM flags.
+/// </summary>
+public enum MessagePerspective
+{
+    /// <summary>Send to the attacker</summary>
+    ToChar,
+    /// <summary>Send to the victim</summary>
+    ToVict,
+    /// <summary>Send to everyone else in the room</summary>
+    ToRoom
+}
