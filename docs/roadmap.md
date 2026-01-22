@@ -103,6 +103,7 @@
 - ✅ IpBanService with auto-expiring bans
 - ✅ Failed attempt tracking per IP address
 - ✅ Ban status checking before connection acceptance
+- ❌ Idle timeout - disconnect users after X minutes of inactivity - **TODO**
 - ❌ Password recovery system - **Documented in FUTURE_IMPROVEMENTS.md**
 - ❌ Email registration (optional) - **TODO**
 - ❌ Permission/immortal level system - **TODO**
