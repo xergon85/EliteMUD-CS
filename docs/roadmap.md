@@ -61,6 +61,10 @@
 - ✅ PlayerState has: Str, Dex, Con, Int, Wis, Cha
 - ✅ PlayerState has: Race, Class, Alignment, Sex
 - ✅ `score` command - display full character sheet
+- ❌ Level up system - automatic leveling when XP threshold reached - **TODO**
+- ❌ XP table/formula - experience required per level - **TODO**
+- ❌ Stat gains on level up - HP/mana/movement increases - **TODO**
+- ❌ Level up notifications and messages - **TODO**
 - ❌ `stat` command - display detailed stats - **DEFERRED (immortal command)**
 - ❌ HP/mana/movement regeneration tick system - **TODO**
 
