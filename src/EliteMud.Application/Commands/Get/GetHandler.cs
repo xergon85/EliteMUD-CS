@@ -175,8 +175,13 @@ public sealed class GetHandler
             Console.WriteLine($"[LOOT] {player.Name} looting {container.Definition.ShortDescription}.");
         }
 
+        // Create summary message for multiple items
+        string summaryMessage = takenObjects.Count == 1 
+            ? "1 item" 
+            : $"{takenObjects.Count} items";
+
         // Return the list of objects with container name so CommandHandler can echo each individually
-        return new GetResult(true, string.Empty, Objects: takenObjects, ContainerName: container.Definition.ShortDescription);
+        return new GetResult(true, summaryMessage, Objects: takenObjects, ContainerName: container.Definition.ShortDescription);
     }
 
     /// <summary>
