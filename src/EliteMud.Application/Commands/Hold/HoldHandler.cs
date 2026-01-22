@@ -34,12 +34,10 @@ public sealed class HoldHandler
         }
 
         // Legacy EliteMUD behavior (see act.obj2.c:do_grab):
-        // The 'hold' command has special handling for Light objects.
+        // The 'hold' command accepts multiple item types:
         // - Light objects (Type==ITEM_LIGHT) → WEAR_LIGHT slot (requires only ITEM_TAKE)
-        // - All other objects → HOLD slot (requires ITEM_HOLD flag)
-        // 
-        // This is a legacy design choice where lights can't be equipped via 'wear',
-        // only via 'hold', and they go to a dedicated light source slot.
+        // - Weapons with Wield flag → WIELD slot (wield and hold are interchangeable for weapons)
+        // - Items with Hold flag → HOLD slot (shields, orbs, etc.)
         EquipmentSlot slot;
         
         if (obj.Definition.Type == "Light")
@@ -51,14 +49,24 @@ public sealed class HoldHandler
             }
             slot = EquipmentSlot.Light;
         }
+        else if (obj.Definition.WearSlots.Contains("Wield") || 
+                 obj.Definition.WearSlots.Contains("WieldTwoHanded") ||
+                 obj.Definition.WearSlots.Contains("BothHands"))
+        {
+            // Weapons can be held (wield and hold are interchangeable in legacy)
+            slot = obj.Definition.WearSlots.Contains("Wield") 
+                ? EquipmentSlot.Wield 
+                : EquipmentSlot.BothHands;
+        }
+        else if (obj.Definition.WearSlots.Contains("Hold"))
+        {
+            // Items with Hold flag (shields, orbs, etc.)
+            slot = EquipmentSlot.Hold;
+        }
         else
         {
-            // Non-light objects need Hold flag
-            if (!obj.Definition.WearSlots.Contains("Hold"))
-            {
-                return new HoldResult(false, $"{obj.Definition.ShortDescription} cannot be held.");
-            }
-            slot = EquipmentSlot.Hold;
+            // Item cannot be held
+            return new HoldResult(false, $"{obj.Definition.ShortDescription} cannot be held.");
         }
 
         // Try to equip the object
