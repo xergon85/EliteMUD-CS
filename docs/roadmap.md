@@ -65,6 +65,10 @@
 - ✅ PlayerState has: Str, Dex, Con, Int, Wis, Cha
 - ✅ PlayerState has: Race, Class, Alignment, Sex
 - ✅ `score` command - display full character sheet
+- ❌ Race system - define race modifiers, stat bonuses, size, skill bonuses - **TODO (currently just strings)**
+- ❌ Class system - define class tables with HP/mana/move gains per level, skill/spell availability - **TODO (currently just strings)**
+- ❌ Stat caps by race/class - max attribute values based on race and class - **TODO**
+- ❌ Class-specific skill/spell lists - what skills/spells each class can learn - **TODO**
 - ❌ Level up system - automatic leveling when XP threshold reached - **TODO**
 - ❌ XP table/formula - experience required per level - **TODO**
 - ❌ Stat gains on level up - HP/mana/movement increases - **TODO**
