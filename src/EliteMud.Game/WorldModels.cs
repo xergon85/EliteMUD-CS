@@ -14,28 +14,9 @@ public sealed record ExitDefinition(Direction Direction, int TargetRoomId);
 
 public sealed record RoomDefinition(int Id, string Name, string Description, IReadOnlyList<ExitDefinition> Exits)
 {
-    /// <summary>
-    /// Clean string by removing newlines, carriage returns, tabs.
-    /// Legacy importer sometimes includes these in descriptions.
-    /// </summary>
-    private static string Clean(string? input)
-    {
-        if (string.IsNullOrWhiteSpace(input))
-            return string.Empty;
-        
-        return input
-            .Replace("\n", " ")
-            .Replace("\r", "")
-            .Replace("\t", " ")
-            .Replace("\\n", " ")
-            .Replace("\\r", "")
-            .Replace("\\t", " ")
-            .Trim();
-    }
-    
     // Clean string properties on construction
-    public string Name { get; init; } = Clean(Name);
-    public string Description { get; init; } = Clean(Description);
+    public string Name { get; init; } = TextCleaner.Clean(Name);
+    public string Description { get; init; } = TextCleaner.Clean(Description);
 }
 
 public sealed record ScriptDefinition(string Id, string Hook, string Body, int? RoomId);
@@ -62,32 +43,13 @@ public sealed record MobDefinition(
     IReadOnlyList<string> Resistances,
     IReadOnlyList<string> Skills)
 {
-    /// <summary>
-    /// Clean string by removing newlines, carriage returns, tabs.
-    /// Legacy importer sometimes includes these in descriptions.
-    /// </summary>
-    private static string Clean(string? input)
-    {
-        if (string.IsNullOrWhiteSpace(input))
-            return string.Empty;
-        
-        return input
-            .Replace("\n", " ")
-            .Replace("\r", "")
-            .Replace("\t", " ")
-            .Replace("\\n", " ")
-            .Replace("\\r", "")
-            .Replace("\\t", " ")
-            .Trim();
-    }
-    
     // Clean string properties on construction
-    public string Name { get; init; } = Clean(Name);
-    public string ShortDescription { get; init; } = Clean(ShortDescription);
-    public string LongDescription { get; init; } = Clean(LongDescription);
-    public string Description { get; init; } = Clean(Description);
-    public string Race { get; init; } = Clean(Race);
-    public string Class { get; init; } = Clean(Class);
+    public string Name { get; init; } = TextCleaner.Clean(Name);
+    public string ShortDescription { get; init; } = TextCleaner.Clean(ShortDescription);
+    public string LongDescription { get; init; } = TextCleaner.Clean(LongDescription);
+    public string Description { get; init; } = TextCleaner.Clean(Description);
+    public string Race { get; init; } = TextCleaner.Clean(Race);
+    public string Class { get; init; } = TextCleaner.Clean(Class);
 }
 
 public sealed record ObjectDefinition(
@@ -104,31 +66,12 @@ public sealed record ObjectDefinition(
     int Weight,
     int Cost)
 {
-    /// <summary>
-    /// Clean string by removing newlines, carriage returns, tabs.
-    /// Legacy importer sometimes includes these in descriptions.
-    /// </summary>
-    private static string Clean(string? input)
-    {
-        if (string.IsNullOrWhiteSpace(input))
-            return string.Empty;
-        
-        return input
-            .Replace("\n", " ")
-            .Replace("\r", "")
-            .Replace("\t", " ")
-            .Replace("\\n", " ")
-            .Replace("\\r", "")
-            .Replace("\\t", " ")
-            .Trim();
-    }
-    
     // Clean string properties on construction
-    public string Name { get; init; } = Clean(Name);
-    public string ShortDescription { get; init; } = Clean(ShortDescription);
-    public string LongDescription { get; init; } = Clean(LongDescription);
-    public string Description { get; init; } = Clean(Description);
-    public string Type { get; init; } = Clean(Type);
+    public string Name { get; init; } = TextCleaner.Clean(Name);
+    public string ShortDescription { get; init; } = TextCleaner.Clean(ShortDescription);
+    public string LongDescription { get; init; } = TextCleaner.Clean(LongDescription);
+    public string Description { get; init; } = TextCleaner.Clean(Description);
+    public string Type { get; init; } = TextCleaner.Clean(Type);
 }
 
 public sealed record RoomRange(int Min, int Max);

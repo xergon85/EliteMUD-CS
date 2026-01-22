@@ -6,9 +6,9 @@ using EliteMud.Application.Session.Authentication;
 using EliteMud.Application.World;
 using EliteMud.Data;
 using EliteMud.Data.Repositories;
-using EliteMud.Data.Services;
 using EliteMud.Game;
 using EliteMud.Scripting;
+using EliteMud.Server.Adapters;
 using EliteMud.Server.Adapters.Commands.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -100,7 +100,7 @@ internal static class ServerBootstrap
             .AddScoped<ICharacterRepository, CharacterRepository>()
             
             // Services
-            .AddSingleton<IPasswordService, PasswordService>()
+            .AddSingleton<IPasswordService, PasswordServiceAdapter>()
             .AddSingleton<IpBanService>(new IpBanService(banDurationMinutes: 15, maxFailedAttempts: 3))
             .AddSingleton<AuthenticationHandler>()
             .AddSingleton<ActMessageService>()

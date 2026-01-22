@@ -1,6 +1,5 @@
 using EliteMud.Data;
 using EliteMud.Data.Entities;
-using EliteMud.Data.Services;
 using EliteMud.Game;
 
 namespace EliteMud.Application.Session.Authentication;
