@@ -51,37 +51,54 @@ public sealed class StatHandler
         output.AppendLine($"#G{age} year old {sex} {raceClass} player#N");
 
         // Line 3: Stats - values in cyan
-        var strMod = GetStatModifier(player, AffectLocation.Strength);
-        var intMod = GetStatModifier(player, AffectLocation.Intelligence);
-        var wisMod = GetStatModifier(player, AffectLocation.Wisdom);
-        var dexMod = GetStatModifier(player, AffectLocation.Dexterity);
-        var conMod = GetStatModifier(player, AffectLocation.Constitution);
-        var chaMod = GetStatModifier(player, AffectLocation.Charisma);
+        var strSpellMod = GetSpellModifier(player, AffectLocation.Strength);
+        var strEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Strength);
+        var strTotalMod = strSpellMod + strEquipMod;
+        
+        var intSpellMod = GetSpellModifier(player, AffectLocation.Intelligence);
+        var intEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Intelligence);
+        var intTotalMod = intSpellMod + intEquipMod;
+        
+        var wisSpellMod = GetSpellModifier(player, AffectLocation.Wisdom);
+        var wisEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Wisdom);
+        var wisTotalMod = wisSpellMod + wisEquipMod;
+        
+        var dexSpellMod = GetSpellModifier(player, AffectLocation.Dexterity);
+        var dexEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Dexterity);
+        var dexTotalMod = dexSpellMod + dexEquipMod;
+        
+        var conSpellMod = GetSpellModifier(player, AffectLocation.Constitution);
+        var conEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Constitution);
+        var conTotalMod = conSpellMod + conEquipMod;
+        
+        var chaSpellMod = GetSpellModifier(player, AffectLocation.Charisma);
+        var chaEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Charisma);
+        var chaTotalMod = chaSpellMod + chaEquipMod;
 
-        var strDisplay = FormatStatWithModifier(player.Strength, strMod);
-        var intDisplay = FormatStatWithModifier(player.Intelligence, intMod);
-        var wisDisplay = FormatStatWithModifier(player.Wisdom, wisMod);
-        var dexDisplay = FormatStatWithModifier(player.Dexterity, dexMod);
-        var conDisplay = FormatStatWithModifier(player.Constitution, conMod);
-        var chaDisplay = FormatStatWithModifier(player.Charisma, chaMod);
+        var strDisplay = FormatStatWithModifier(player.Strength, strTotalMod, strEquipMod, strSpellMod);
+        var intDisplay = FormatStatWithModifier(player.Intelligence, intTotalMod, intEquipMod, intSpellMod);
+        var wisDisplay = FormatStatWithModifier(player.Wisdom, wisTotalMod, wisEquipMod, wisSpellMod);
+        var dexDisplay = FormatStatWithModifier(player.Dexterity, dexTotalMod, dexEquipMod, dexSpellMod);
+        var conDisplay = FormatStatWithModifier(player.Constitution, conTotalMod, conEquipMod, conSpellMod);
+        var chaDisplay = FormatStatWithModifier(player.Charisma, chaTotalMod, chaEquipMod, chaSpellMod);
 
         output.AppendLine($"Str: {strDisplay}  Int: {intDisplay}  Wis: {wisDisplay}  Dex: {dexDisplay}  Con: {conDisplay}  Cha: {chaDisplay}");
 
         // Line 4: AC, Hitroll, Damroll, THAC0 - all values in red
         var baseAC = player.ArmorClass;
-        var acSpellMod = GetStatModifier(player, AffectLocation.ArmorClass);
+        var acSpellMod = GetSpellModifier(player, AffectLocation.ArmorClass);
         var acEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.ArmorClass);
         var acTotalMod = acSpellMod + acEquipMod;
         var effectiveAC = _worldState.GetTotalEffectiveArmorClass(player);
         
         var baseHitroll = player.Hitroll;
-        var hitrollSpellMod = GetStatModifier(player, AffectLocation.Hitroll);
+        var hitrollSpellMod = GetSpellModifier(player, AffectLocation.Hitroll);
         var hitrollEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Hitroll);
         var hitrollTotalMod = hitrollSpellMod + hitrollEquipMod;
         var effectiveHitroll = _worldState.GetTotalEffectiveHitroll(player);
         
         var baseDamroll = player.Damroll;
-        var damrollSpellMod = GetStatModifier(player, AffectLocation.Damroll);
+        var damrollSpellMod = GetSpellModifier(player, AffectLocation.Damroll);
         var damrollEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Damroll);
         var damrollTotalMod = damrollSpellMod + damrollEquipMod;
         var effectiveDamroll = _worldState.GetTotalEffectiveDamroll(player);
@@ -160,11 +177,11 @@ public sealed class StatHandler
 
         // Line 5: Saving throws and magic resistance - all values in red
         // TODO: Implement saving throw fields in PlayerState
-        var savingPhysical = GetStatModifier(player, AffectLocation.SavingPhysical);
-        var savingMental = GetStatModifier(player, AffectLocation.SavingMental);
-        var savingMagic = GetStatModifier(player, AffectLocation.SavingMagic);
-        var savingPoison = GetStatModifier(player, AffectLocation.SavingPoison);
-        var magicResist = GetStatModifier(player, AffectLocation.MagicResistance);
+        var savingPhysical = GetSpellModifier(player, AffectLocation.SavingPhysical) + _worldState.GetEquipmentBonus(player, AffectLocation.SavingPhysical);
+        var savingMental = GetSpellModifier(player, AffectLocation.SavingMental) + _worldState.GetEquipmentBonus(player, AffectLocation.SavingMental);
+        var savingMagic = GetSpellModifier(player, AffectLocation.SavingMagic) + _worldState.GetEquipmentBonus(player, AffectLocation.SavingMagic);
+        var savingPoison = GetSpellModifier(player, AffectLocation.SavingPoison) + _worldState.GetEquipmentBonus(player, AffectLocation.SavingPoison);
+        var magicResist = GetSpellModifier(player, AffectLocation.MagicResistance) + _worldState.GetEquipmentBonus(player, AffectLocation.MagicResistance);
 
         output.AppendLine($"Saves[Physical: #R{savingPhysical}#N / Mental: #R{savingMental}#N / Magic: #R{savingMagic}#N / Poison: #R{savingPoison}#N] Magic Resistance[#R{magicResist}#N]");
 
@@ -224,9 +241,10 @@ public sealed class StatHandler
     }
 
     /// <summary>
-    /// Get total modifier from all affects for a specific location.
+    /// Get total modifier from spell/timed affects for a specific location.
+    /// Does not include equipment bonuses - use GetEquipmentBonus for those.
     /// </summary>
-    private static int GetStatModifier(PlayerState player, AffectLocation location)
+    private static int GetSpellModifier(PlayerState player, AffectLocation location)
     {
         return player.Affects
             .Where(a => a.Location == location)
@@ -235,19 +253,26 @@ public sealed class StatHandler
 
     /// <summary>
     /// Format a stat value with optional modifier display.
-    /// Examples: "[20]" or "[20+2]" or "[20-3]"
+    /// Examples: "[20]" or "[22 (20+2)]" or "[18 (20-2)]" or "[23 (20+3 Eq:+2 Spell:+1)]"
     /// Legacy format: stat values in cyan (#C)
     /// </summary>
-    private static string FormatStatWithModifier(sbyte baseValue, int modifier)
+    private static string FormatStatWithModifier(sbyte baseValue, int totalModifier, int equipModifier, int spellModifier)
     {
-        if (modifier == 0)
+        if (totalModifier == 0)
         {
             return $"[#C{baseValue}#N]";
         }
 
-        var effectiveValue = baseValue + modifier;
-        var modSign = modifier > 0 ? "+" : "";
-        return $"[#C{effectiveValue}#N (#C{baseValue}#N{modSign}{modifier})]";
+        var effectiveValue = baseValue + totalModifier;
+        
+        // If both equipment and spell modifiers exist, show breakdown
+        if (equipModifier != 0 && spellModifier != 0)
+        {
+            return $"[#C{effectiveValue}#N (#C{baseValue}#N Eq:{equipModifier:+0;-#} Spell:{spellModifier:+0;-#})]";
+        }
+        
+        // Otherwise just show simple modifier
+        return $"[#C{effectiveValue}#N (#C{baseValue}#N{totalModifier:+0;-#})]";
     }
 
     /// <summary>

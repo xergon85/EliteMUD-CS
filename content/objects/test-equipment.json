@@ -185,6 +185,238 @@
       ],
       "Bitvectors": [],
       "SpecialProc": null
+    },
+    {
+      "Id": 99905,
+      "Name": "gloves dexterity test",
+      "ShortDescription": "test gloves of dexterity",
+      "LongDescription": "Test gloves of dexterity lie here.",
+      "Description": "These gloves increase your dexterity.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Hands"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 800,
+      "CostPerDay": 8,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Dexterity",
+          "Modifier": 3
+        },
+        {
+          "Location": "ArmorClass",
+          "Modifier": -2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99906,
+      "Name": "helmet wisdom test",
+      "ShortDescription": "test helmet of wisdom",
+      "LongDescription": "A test helmet of wisdom rests here.",
+      "Description": "This helmet increases your wisdom and provides protection.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Head"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 4
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 900,
+      "CostPerDay": 9,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Wisdom",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99907,
+      "Name": "amulet intelligence test",
+      "ShortDescription": "test amulet of intelligence",
+      "LongDescription": "A test amulet of intelligence glows softly here.",
+      "Description": "This magical amulet boosts your intelligence.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Neck"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 950,
+      "CostPerDay": 9,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Intelligence",
+          "Modifier": 3
+        },
+        {
+          "Location": "MaxMana",
+          "Modifier": 20
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99908,
+      "Name": "belt constitution test",
+      "ShortDescription": "test belt of constitution",
+      "LongDescription": "A sturdy test belt of constitution is here.",
+      "Description": "This belt fortifies your constitution and vitality.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Waist"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 1
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1100,
+      "CostPerDay": 11,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Constitution",
+          "Modifier": 2
+        },
+        {
+          "Location": "MaxHit",
+          "Modifier": 15
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99909,
+      "Name": "cloak charisma test",
+      "ShortDescription": "test cloak of charisma",
+      "LongDescription": "An elegant test cloak of charisma billows here.",
+      "Description": "This fine cloak enhances your presence and charm.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "About"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 750,
+      "CostPerDay": 7,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Charisma",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
     }
   ]
 }
