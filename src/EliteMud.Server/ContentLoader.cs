@@ -360,6 +360,90 @@ internal static class ContentLoader
         return skills;
     }
 
+    public static IReadOnlyDictionary<int, SpellMetadata> LoadSpells(string contentRoot)
+    {
+        var spellsPath = Path.Combine(contentRoot, "spells", "spells.json");
+        if (!File.Exists(spellsPath))
+        {
+            Console.WriteLine($"Spells file not found: {spellsPath}");
+            return new Dictionary<int, SpellMetadata>();
+        }
+
+        SpellsFile? file;
+        try
+        {
+            var json = File.ReadAllText(spellsPath);
+            file = JsonSerializer.Deserialize<SpellsFile>(json, JsonOptions);
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine($"Failed to load spells: {exception.Message}");
+            return new Dictionary<int, SpellMetadata>();
+        }
+
+        if (file?.Spells is null || file.Spells.Count == 0)
+        {
+            Console.WriteLine("Spells file is empty or invalid");
+            return new Dictionary<int, SpellMetadata>();
+        }
+
+        var spells = new Dictionary<int, SpellMetadata>();
+        foreach (var spell in file.Spells)
+        {
+            var classRestrictions = new Dictionary<string, ClassSpellRestriction>();
+            if (spell.ClassRestrictions is not null)
+            {
+                foreach (var restriction in spell.ClassRestrictions)
+                {
+                    if (!string.IsNullOrWhiteSpace(restriction.Class))
+                    {
+                        classRestrictions[restriction.Class] = new ClassSpellRestriction(
+                            restriction.MinLevel,
+                            restriction.MaxProficiency,
+                            restriction.Difficulty);
+                    }
+                }
+            }
+
+            SpellMechanics? mechanics = null;
+            if (spell.Mechanics is not null)
+            {
+                mechanics = new SpellMechanics
+                {
+                    DamageFormula = spell.Mechanics.DamageFormula,
+                    HealingFormula = spell.Mechanics.HealingFormula,
+                    SuccessFormula = spell.Mechanics.SuccessFormula,
+                    DurationFormula = spell.Mechanics.DurationFormula,
+                    ArmorClassBonusFormula = spell.Mechanics.ArmorClassBonusFormula,
+                    HitrollBonusFormula = spell.Mechanics.HitrollBonusFormula,
+                    DamrollBonusFormula = spell.Mechanics.DamrollBonusFormula,
+                    StrengthBonusFormula = spell.Mechanics.StrengthBonusFormula,
+                    Note = spell.Mechanics.Note
+                };
+            }
+
+            var metadata = new SpellMetadata(
+                spell.Id,
+                spell.Name ?? string.Empty,
+                spell.Aliases ?? new List<string>(),
+                spell.Description ?? string.Empty,
+                spell.Type ?? string.Empty,
+                spell.School ?? string.Empty,
+                spell.MinimumLevel,
+                spell.ManaCost,
+                spell.CastTimeRounds,
+                spell.WaitStateRounds,
+                spell.TargetType ?? "Self",
+                classRestrictions,
+                mechanics);
+
+            spells[spell.Id] = metadata;
+        }
+
+        Console.WriteLine($"Loaded {spells.Count} spell definitions from {spellsPath}");
+        return spells;
+    }
+
     public static (WorldDefinition? World, IReadOnlyList<MobDefinition> Mobs, IReadOnlyList<ObjectDefinition> Objects, IReadOnlyList<ZoneDefinition> Zones) LoadFromZoneFiles(string zonesDirectory)
     {
         if (!Directory.Exists(zonesDirectory))
@@ -958,5 +1042,42 @@ internal static class ContentLoader
         public string? Effect { get; set; }
         public object? Value { get; set; } // Can be string or number
         public string? Description { get; set; }
+    }
+
+    private sealed class SpellsFile
+    {
+        public int Version { get; set; }
+        public string? Description { get; set; }
+        public List<SpellContent> Spells { get; set; } = new();
+    }
+
+    private sealed class SpellContent
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public List<string>? Aliases { get; set; }
+        public string? Description { get; set; }
+        public string? Type { get; set; }
+        public string? School { get; set; }
+        public int MinimumLevel { get; set; }
+        public int ManaCost { get; set; }
+        public int CastTimeRounds { get; set; }
+        public int WaitStateRounds { get; set; }
+        public string? TargetType { get; set; }
+        public List<ClassRestrictionContent>? ClassRestrictions { get; set; }
+        public SpellMechanicsContent? Mechanics { get; set; }
+    }
+
+    private sealed class SpellMechanicsContent
+    {
+        public string? DamageFormula { get; set; }
+        public string? HealingFormula { get; set; }
+        public string? SuccessFormula { get; set; }
+        public string? DurationFormula { get; set; }
+        public string? ArmorClassBonusFormula { get; set; }
+        public string? HitrollBonusFormula { get; set; }
+        public string? DamrollBonusFormula { get; set; }
+        public string? StrengthBonusFormula { get; set; }
+        public string? Note { get; set; }
     }
 }

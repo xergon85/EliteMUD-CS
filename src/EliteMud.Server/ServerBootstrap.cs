@@ -80,6 +80,10 @@ internal static class ServerBootstrap
 
         var skillMetadata = ContentLoader.LoadSkills(contentRoot);
         var skillRegistry = new SkillMetadataRegistry(skillMetadata);
+        
+        var spellMetadata = ContentLoader.LoadSpells(contentRoot);
+        var spellRegistry = new SpellMetadataRegistry(spellMetadata);
+        
         var formulaEvaluator = new FormulaEvaluator();
 
         var worldState = BuildWorldState(world, mobs, objects, zones);
@@ -94,6 +98,7 @@ internal static class ServerBootstrap
             .AddSingleton<IWorldState>(worldState)
             .AddSingleton(scriptEngine)
             .AddSingleton(skillRegistry)
+            .AddSingleton(spellRegistry)
             .AddSingleton(formulaEvaluator)
 
             // Database

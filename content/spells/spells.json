@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "description": "Spell metadata for EliteMUD",
+  "spells": [
+    {
+      "id": 1,
+      "name": "magic missile",
+      "aliases": ["mm"],
+      "description": "A bolt of magical energy that unerringly strikes its target",
+      "type": "Damage",
+      "school": "Evocation",
+      "minimumLevel": 1,
+      "manaCost": 10,
+      "castTimeRounds": 1,
+      "waitStateRounds": 2,
+      "targetType": "SingleEnemy",
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 5
+        },
+        {
+          "class": "Wizard",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 5
+        },
+        {
+          "class": "Cleric",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Warrior",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "damageFormula": "return math.floor(1 + (level / 2))",
+        "successFormula": "return true",
+        "note": "Magic Missile always hits and deals 1 + level/2 damage (level 1 = 1 dmg, level 10 = 6 dmg, level 20 = 11 dmg)"
+      }
+    },
+    {
+      "id": 28,
+      "name": "cure light wounds",
+      "aliases": ["clw", "cure light"],
+      "description": "Channels healing energy to restore minor wounds",
+      "type": "Healing",
+      "school": "Healing",
+      "minimumLevel": 1,
+      "manaCost": 15,
+      "castTimeRounds": 1,
+      "waitStateRounds": 2,
+      "targetType": "SingleAlly",
+      "classRestrictions": [
+        {
+          "class": "Cleric",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 5
+        },
+        {
+          "class": "Druid",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 5
+        },
+        {
+          "class": "MagicUser",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Warrior",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "healingFormula": "return random(1, 8) + math.floor(level / 2)",
+        "successFormula": "return true",
+        "note": "Cure Light Wounds heals 1d8 + level/2 HP (average 4.5 + level/2)"
+      }
+    },
+    {
+      "id": 15,
+      "name": "armor",
+      "aliases": [],
+      "description": "Surrounds the target with a protective magical barrier",
+      "type": "Buff",
+      "school": "Abjuration",
+      "minimumLevel": 1,
+      "manaCost": 20,
+      "castTimeRounds": 1,
+      "waitStateRounds": 2,
+      "targetType": "SingleAlly",
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 5
+        },
+        {
+          "class": "Cleric",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 5
+        },
+        {
+          "class": "Wizard",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 5
+        },
+        {
+          "class": "Warrior",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "durationFormula": "return 24 + level",
+        "armorClassBonusFormula": "return -20",
+        "successFormula": "return true",
+        "note": "Armor spell grants -20 AC (better armor) for 24 + level hours"
+      }
+    },
+    {
+      "id": 7,
+      "name": "burning hands",
+      "aliases": ["burn"],
+      "description": "A cone of searing flames erupts from your hands",
+      "type": "Damage",
+      "school": "Evocation",
+      "minimumLevel": 5,
+      "manaCost": 15,
+      "castTimeRounds": 1,
+      "waitStateRounds": 2,
+      "targetType": "SingleEnemy",
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": 5,
+          "maxProficiency": 95,
+          "difficulty": 8
+        },
+        {
+          "class": "Wizard",
+          "minLevel": 5,
+          "maxProficiency": 95,
+          "difficulty": 8
+        },
+        {
+          "class": "Warrior",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "damageFormula": "return random(1, 6) + random(1, 6) + level",
+        "successFormula": "return true",
+        "note": "Burning Hands deals 2d6 + level fire damage"
+      }
+    },
+    {
+      "id": 26,
+      "name": "lightning bolt",
+      "aliases": ["bolt", "lightning"],
+      "description": "A powerful stroke of lightning arcs toward your enemy",
+      "type": "Damage",
+      "school": "Evocation",
+      "minimumLevel": 10,
+      "manaCost": 25,
+      "castTimeRounds": 1,
+      "waitStateRounds": 2,
+      "targetType": "SingleEnemy",
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": 10,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Wizard",
+          "minLevel": 10,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Warrior",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "damageFormula": "return random(level, level * 6)",
+        "successFormula": "return true",
+        "note": "Lightning Bolt deals level to level*6 damage (level 10 = 10-60, level 20 = 20-120)"
+      }
+    },
+    {
+      "id": 29,
+      "name": "cure serious wounds",
+      "aliases": ["csw", "cure serious"],
+      "description": "Channels greater healing energy to restore moderate wounds",
+      "type": "Healing",
+      "school": "Healing",
+      "minimumLevel": 8,
+      "manaCost": 25,
+      "castTimeRounds": 1,
+      "waitStateRounds": 2,
+      "targetType": "SingleAlly",
+      "classRestrictions": [
+        {
+          "class": "Cleric",
+          "minLevel": 8,
+          "maxProficiency": 95,
+          "difficulty": 8
+        },
+        {
+          "class": "Druid",
+          "minLevel": 8,
+          "maxProficiency": 95,
+          "difficulty": 8
+        },
+        {
+          "class": "Warrior",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "healingFormula": "return random(2, 16) + level",
+        "successFormula": "return true",
+        "note": "Cure Serious Wounds heals 2d8 + level HP (average 9 + level)"
+      }
+    },
+    {
+      "id": 16,
+      "name": "bless",
+      "aliases": [],
+      "description": "Invokes divine favor to enhance combat prowess",
+      "type": "Buff",
+      "school": "Enchantment",
+      "minimumLevel": 3,
+      "manaCost": 15,
+      "castTimeRounds": 1,
+      "waitStateRounds": 2,
+      "targetType": "SingleAlly",
+      "classRestrictions": [
+        {
+          "class": "Cleric",
+          "minLevel": 3,
+          "maxProficiency": 95,
+          "difficulty": 6
+        },
+        {
+          "class": "Druid",
+          "minLevel": 5,
+          "maxProficiency": 90,
+          "difficulty": 7
+        },
+        {
+          "class": "Warrior",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "durationFormula": "return 6 + level",
+        "hitrollBonusFormula": "return 2",
+        "successFormula": "return true",
+        "note": "Bless grants +2 hitroll for 6 + level hours"
+      }
+    }
+  ]
+}

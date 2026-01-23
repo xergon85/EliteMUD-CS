@@ -104,6 +104,8 @@ public sealed class PlayerState : ICombatant
     private readonly Dictionary<int, int> _equipmentSlotToObjectId = new(); // slot -> objectInstanceId
     private readonly Dictionary<SkillType, byte> _skills = new(); // skill -> proficiency (0-100)
     private readonly Dictionary<SkillType, DateTime> _lastSkillgainTime = new(); // skill -> last improvement time
+    private readonly Dictionary<SpellType, byte> _spells = new(); // spell -> proficiency (0-100)
+    private readonly Dictionary<SpellType, DateTime> _lastSpellgainTime = new(); // spell -> last improvement time
 
     public PlayerState(
         int id,
@@ -357,6 +359,93 @@ public sealed class PlayerState : ICombatant
     public void SetSkillgainTime(SkillType skillType, DateTime timestamp)
     {
         _lastSkillgainTime[skillType] = timestamp;
+    }
+    
+    // ===== Spell Proficiency =====
+    
+    /// <summary>
+    /// Get spell proficiency (0-100 percentage).
+    /// </summary>
+    public byte GetSpell(SpellType spellType)
+    {
+        if (_spells.TryGetValue(spellType, out var proficiency))
+        {
+            return proficiency;
+        }
+        return 0;
+    }
+
+    /// <summary>
+    /// Set spell proficiency (0-100 percentage).
+    /// </summary>
+    public void SetSpell(SpellType spellType, byte proficiency)
+    {
+        _spells[spellType] = Math.Min((byte)100, proficiency);
+    }
+
+    /// <summary>
+    /// Checks if the character has learned a specific spell (proficiency > 0).
+    /// </summary>
+    public bool HasSpell(SpellType spellType)
+    {
+        return GetSpell(spellType) > 0;
+    }
+
+    /// <summary>
+    /// Get all learned spells as a read-only dictionary.
+    /// Used for persistence and spell display.
+    /// </summary>
+    public IReadOnlyDictionary<SpellType, byte> GetAllSpells()
+    {
+        return _spells;
+    }
+
+    /// <summary>
+    /// Improve spell by 1% if improvement check passes.
+    /// Same logic as skill improvement - harder at higher proficiency.
+    /// </summary>
+    public bool TryImproveSpell(SpellType spellType)
+    {
+        var currentPercent = GetSpell(spellType);
+        if (currentPercent >= 100) return false; // Already maxed
+        
+        // Check spellgain cooldown
+        if (_lastSpellgainTime.TryGetValue(spellType, out var lastImprovement))
+        {
+            var timeSinceLastGain = DateTime.UtcNow - lastImprovement;
+            if (timeSinceLastGain.TotalSeconds < CombatConstants.SkillgainCooldownSeconds)
+            {
+                return false; // Still on cooldown
+            }
+        }
+        
+        // Same improvement logic as skills
+        if (Random.Shared.Next(0, 100) > currentPercent)
+        {
+            SetSpell(spellType, (byte)(currentPercent + 1));
+            _lastSpellgainTime[spellType] = DateTime.UtcNow;
+            return true;
+        }
+        
+        return false;
+    }
+    
+    /// <summary>
+    /// Get all spellgain timestamps as a read-only dictionary.
+    /// Used for persistence and spell cooldown tracking.
+    /// </summary>
+    public IReadOnlyDictionary<SpellType, DateTime> GetAllSpellgainTimes()
+    {
+        return _lastSpellgainTime;
+    }
+    
+    /// <summary>
+    /// Set spellgain timestamp for a specific spell.
+    /// Used when loading character data from database.
+    /// </summary>
+    public void SetSpellgainTime(SpellType spellType, DateTime timestamp)
+    {
+        _lastSpellgainTime[spellType] = timestamp;
     }
     
     // ===== Combat Lag (WAIT_STATE) =====

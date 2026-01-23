@@ -212,25 +212,43 @@ public static class AllowedClasses
 }
 
 /// <summary>
-/// Skills and spells enumeration.
-/// Based on legacy system - 300 spells (0-299) + 100 skills (300-399)
-/// For now, only defining what we need for proof of concept
+/// Spell enumeration.
+/// Based on legacy system - spells use IDs 0-299
+/// </summary>
+public enum SpellType
+{
+    // === DAMAGE SPELLS ===
+    MagicMissile = 1,      // Low damage, always hits
+    BurningHands = 7,      // Fire damage cone
+    LightningBolt = 26,    // High single-target lightning damage
+    
+    // === HEALING SPELLS ===
+    CureLightWounds = 28,  // 1d8 + level/2 healing
+    CureSeriousWounds = 29, // 2d8 + level healing
+    
+    // === BUFF SPELLS ===
+    Armor = 15,            // -20 AC buff
+    Bless = 16,            // +2 hitroll buff
+    
+    // TODO: Add remaining spells as needed (0-299 range available)
+}
+
+/// <summary>
+/// Skills enumeration.
+/// Based on legacy system - skills use IDs 300-399
 /// </summary>
 public enum SkillType
 {
-    // === PROOF OF CONCEPT SKILLS ===
-    // Active combat skills
+    // === ACTIVE COMBAT SKILLS ===
     Backstab = 315,   // Legacy: SKILL_BACKSTAB = 315
     Kick = 323,       // Legacy: SKILL_KICK = 323
     Bash = 324,       // Legacy: SKILL_BASH = 324
     Rescue = 325,     // Legacy: SKILL_RESCUE = 325
     
-    // Passive defensive skills  
+    // === PASSIVE DEFENSIVE SKILLS ===
     Dodge = 360,
     Parry = 361,
     Tumble = 362,
     
-    // TODO: Add remaining 394 skills/spells as needed
-    // Spells: 0-299
-    // Skills: 300-399 (SKILL_START = 300 in legacy)
+    // TODO: Add remaining skills as needed (300-399 range)
 }
