@@ -21,6 +21,61 @@ public sealed record RoomDefinition(int Id, string Name, string Description, IRe
 
 public sealed record ScriptDefinition(string Id, string Hook, string Body, int? RoomId);
 
+/// <summary>
+/// Represents a timed effect that modifies character stats.
+/// Examples: Armor spell (-20 AC), Bless (+2 hitroll), Poison (periodic damage)
+/// Duration measured in MUD hours (75 seconds per hour via PULSE_REGEN).
+/// </summary>
+public sealed class Affect
+{
+    /// <summary>
+    /// Type of affect (for identification and stacking rules).
+    /// </summary>
+    public required AffectType Type { get; init; }
+    
+    /// <summary>
+    /// Stat/attribute being modified.
+    /// </summary>
+    public required AffectLocation Location { get; init; }
+    
+    /// <summary>
+    /// Amount to modify the stat (+/-).
+    /// Example: -20 for Armor (better AC), +2 for Bless (better hitroll)
+    /// </summary>
+    public required int Modifier { get; init; }
+    
+    /// <summary>
+    /// Duration remaining in MUD hours (75 seconds each).
+    /// Decremented each PULSE_REGEN tick (every 75 seconds).
+    /// Affect expires when this reaches 0.
+    /// </summary>
+    public required int DurationHours { get; set; }
+    
+    /// <summary>
+    /// Optional source of the affect for display purposes.
+    /// Examples: "armor", "sword of flames", null for item-based affects
+    /// </summary>
+    public string? Source { get; init; }
+    
+    /// <summary>
+    /// Message shown to the character when this affect is applied.
+    /// Example: "You feel someone protecting you."
+    /// </summary>
+    public string? ToCharMessage { get; init; }
+    
+    /// <summary>
+    /// Message shown to the room when this affect is applied.
+    /// Example: "$n is surrounded by a white aura."
+    /// </summary>
+    public string? ToRoomMessage { get; init; }
+    
+    /// <summary>
+    /// Message shown to the character when this affect wears off.
+    /// Example: "You feel less protected."
+    /// </summary>
+    public string? WearOffMessage { get; init; }
+}
+
 public sealed record StatBlock(
     int Strength,
     int Dexterity,
@@ -106,6 +161,7 @@ public sealed class PlayerState : ICombatant
     private readonly Dictionary<SkillType, DateTime> _lastSkillgainTime = new(); // skill -> last improvement time
     private readonly Dictionary<SpellType, byte> _spells = new(); // spell -> proficiency (0-100)
     private readonly Dictionary<SpellType, DateTime> _lastSpellgainTime = new(); // spell -> last improvement time
+    private readonly List<Affect> _affects = new(); // active affects/buffs/debuffs
 
     public PlayerState(
         int id,
@@ -446,6 +502,111 @@ public sealed class PlayerState : ICombatant
     public void SetSpellgainTime(SpellType spellType, DateTime timestamp)
     {
         _lastSpellgainTime[spellType] = timestamp;
+    }
+    
+    // ===== Affects (Buffs/Debuffs) =====
+    
+    /// <summary>
+    /// Get all active affects on this character.
+    /// </summary>
+    public IReadOnlyList<Affect> Affects => _affects;
+    
+    /// <summary>
+    /// Add an affect to the character.
+    /// If an affect of the same type already exists, it will be replaced (refreshed).
+    /// </summary>
+    public void AddAffect(Affect affect)
+    {
+        // Remove existing affect of same type (no stacking)
+        _affects.RemoveAll(a => a.Type == affect.Type);
+        _affects.Add(affect);
+    }
+    
+    /// <summary>
+    /// Remove an affect by type.
+    /// Returns true if an affect was removed, false if none existed.
+    /// </summary>
+    public bool RemoveAffect(AffectType type)
+    {
+        return _affects.RemoveAll(a => a.Type == type) > 0;
+    }
+    
+    /// <summary>
+    /// Decrement all affect durations and remove expired ones.
+    /// Should be called every PULSE_REGEN (75 seconds).
+    /// Returns list of affects that expired.
+    /// </summary>
+    public List<Affect> TickAffects()
+    {
+        var expired = new List<Affect>();
+        
+        foreach (var affect in _affects.ToList()) // ToList to avoid modification during iteration
+        {
+            affect.DurationHours--;
+            
+            if (affect.DurationHours <= 0)
+            {
+                expired.Add(affect);
+                _affects.Remove(affect);
+            }
+        }
+        
+        return expired;
+    }
+    
+    /// <summary>
+    /// Get effective armor class including all affect modifiers.
+    /// Lower is better (negative AC is good).
+    /// </summary>
+    public short GetEffectiveArmorClass()
+    {
+        short effectiveAC = ArmorClass;
+        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.ArmorClass))
+        {
+            effectiveAC += (short)affect.Modifier;
+        }
+        return effectiveAC;
+    }
+    
+    /// <summary>
+    /// Get effective hitroll including all affect modifiers.
+    /// Higher is better (bonus to hit).
+    /// </summary>
+    public sbyte GetEffectiveHitroll()
+    {
+        int effectiveHitroll = Hitroll;
+        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.Hitroll))
+        {
+            effectiveHitroll += affect.Modifier;
+        }
+        return (sbyte)Math.Clamp(effectiveHitroll, sbyte.MinValue, sbyte.MaxValue);
+    }
+    
+    /// <summary>
+    /// Get effective damroll including all affect modifiers.
+    /// Higher is better (bonus to damage).
+    /// </summary>
+    public sbyte GetEffectiveDamroll()
+    {
+        int effectiveDamroll = Damroll;
+        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.Damroll))
+        {
+            effectiveDamroll += affect.Modifier;
+        }
+        return (sbyte)Math.Clamp(effectiveDamroll, sbyte.MinValue, sbyte.MaxValue);
+    }
+    
+    /// <summary>
+    /// Get effective strength including all affect modifiers.
+    /// </summary>
+    public sbyte GetEffectiveStrength()
+    {
+        int effectiveStr = Strength;
+        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.Strength))
+        {
+            effectiveStr += affect.Modifier;
+        }
+        return (sbyte)Math.Clamp(effectiveStr, sbyte.MinValue, sbyte.MaxValue);
     }
     
     // ===== Combat Lag (WAIT_STATE) =====

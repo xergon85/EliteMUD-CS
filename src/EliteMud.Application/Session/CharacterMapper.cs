@@ -167,6 +167,41 @@ public static class CharacterMapper
                 // If JSON is invalid, just skip it (no cooldowns loaded)
             }
         }
+        
+        // Load affects from JSON
+        if (!string.IsNullOrWhiteSpace(character.Affects))
+        {
+            try
+            {
+                var affectsList = JsonSerializer.Deserialize<List<AffectDto>>(character.Affects);
+                if (affectsList != null)
+                {
+                    foreach (var dto in affectsList)
+                    {
+                        // Only load affects that haven't expired yet
+                        if (dto.DurationHours > 0)
+                        {
+                            var affect = new Affect
+                            {
+                                Type = dto.Type,
+                                Location = dto.Location,
+                                Modifier = dto.Modifier,
+                                DurationHours = dto.DurationHours,
+                                Source = dto.Source,
+                                ToCharMessage = dto.ToCharMessage,
+                                ToRoomMessage = dto.ToRoomMessage,
+                                WearOffMessage = dto.WearOffMessage
+                            };
+                            player.AddAffect(affect);
+                        }
+                    }
+                }
+            }
+            catch (JsonException)
+            {
+                // If affects JSON is invalid, just skip it
+            }
+        }
 
         // Load inventory items
         foreach (var invItem in character.Inventory)
@@ -313,6 +348,28 @@ public static class CharacterMapper
         {
             character.LastSpellgainTimes = null;
         }
+        
+        // Affects - serialize to JSON
+        var affects = playerState.Affects;
+        if (affects.Count > 0)
+        {
+            var affectDtos = affects.Select(a => new AffectDto
+            {
+                Type = a.Type,
+                Location = a.Location,
+                Modifier = a.Modifier,
+                DurationHours = a.DurationHours,
+                Source = a.Source,
+                ToCharMessage = a.ToCharMessage,
+                ToRoomMessage = a.ToRoomMessage,
+                WearOffMessage = a.WearOffMessage
+            }).ToList();
+            character.Affects = JsonSerializer.Serialize(affectDtos);
+        }
+        else
+        {
+            character.Affects = null;
+        }
 
         // Location & Resources
         character.RoomId = playerState.RoomId;
@@ -357,4 +414,20 @@ public static class CharacterMapper
             }
         }
     }
+}
+
+/// <summary>
+/// DTO for serializing/deserializing Affect to JSON.
+/// Needed because Affect uses required init properties which don't serialize well.
+/// </summary>
+internal sealed record AffectDto
+{
+    public AffectType Type { get; init; }
+    public AffectLocation Location { get; init; }
+    public int Modifier { get; init; }
+    public int DurationHours { get; init; }
+    public string? Source { get; init; }
+    public string? ToCharMessage { get; init; }
+    public string? ToRoomMessage { get; init; }
+    public string? WearOffMessage { get; init; }
 }

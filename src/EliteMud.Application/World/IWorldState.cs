@@ -29,6 +29,7 @@ public enum EquipmentSlot
 public sealed class MobInstance : ICombatant
 {
     private readonly Dictionary<EquipmentSlot, ObjectInstance> _equipment = new();
+    private readonly List<Affect> _affects = new(); // Mobs can have affects too!
 
     public MobInstance(int instanceId, MobDefinition definition)
     {
@@ -73,6 +74,102 @@ public sealed class MobInstance : ICombatant
     public bool HasSkill(SkillType skillType)
     {
         return false;
+    }
+    
+    // ===== Affects (Buffs/Debuffs) =====
+    
+    /// <summary>
+    /// Get all active affects on this mob.
+    /// </summary>
+    public IReadOnlyList<Affect> Affects => _affects;
+    
+    /// <summary>
+    /// Add an affect to the mob.
+    /// If an affect of the same type already exists, it will be replaced (refreshed).
+    /// </summary>
+    public void AddAffect(Affect affect)
+    {
+        // Remove existing affect of same type (no stacking)
+        _affects.RemoveAll(a => a.Type == affect.Type);
+        _affects.Add(affect);
+    }
+    
+    /// <summary>
+    /// Remove an affect by type.
+    /// Returns true if an affect was removed, false if none existed.
+    /// </summary>
+    public bool RemoveAffect(AffectType type)
+    {
+        return _affects.RemoveAll(a => a.Type == type) > 0;
+    }
+    
+    /// <summary>
+    /// Decrement all affect durations and remove expired ones.
+    /// Should be called every PULSE_REGEN (75 seconds).
+    /// Returns list of affects that expired.
+    /// </summary>
+    public List<Affect> TickAffects()
+    {
+        var expired = new List<Affect>();
+        
+        foreach (var affect in _affects.ToList()) // ToList to avoid modification during iteration
+        {
+            affect.DurationHours--;
+            
+            if (affect.DurationHours <= 0)
+            {
+                expired.Add(affect);
+                _affects.Remove(affect);
+            }
+        }
+        
+        return expired;
+    }
+    
+    /// <summary>
+    /// Get effective armor class including all affect modifiers.
+    /// Lower is better (negative AC is good).
+    /// </summary>
+    public short GetEffectiveArmorClass()
+    {
+        short effectiveAC = ArmorClass;
+        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.ArmorClass))
+        {
+            effectiveAC += (short)affect.Modifier;
+        }
+        return effectiveAC;
+    }
+    
+    /// <summary>
+    /// Get effective hitroll including all affect modifiers.
+    /// Higher is better (bonus to hit).
+    /// </summary>
+    public sbyte GetEffectiveHitroll()
+    {
+        // Mobs don't have base Hitroll in current implementation, so we use Definition.ArmorClass as placeholder
+        // TODO: Add Hitroll to MobDefinition
+        int effectiveHitroll = 0; // Default base hitroll for mobs
+        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.Hitroll))
+        {
+            effectiveHitroll += affect.Modifier;
+        }
+        return (sbyte)Math.Clamp(effectiveHitroll, sbyte.MinValue, sbyte.MaxValue);
+    }
+    
+    /// <summary>
+    /// Get effective damroll including all affect modifiers.
+    /// Higher is better (bonus to damage).
+    /// </summary>
+    public sbyte GetEffectiveDamroll()
+    {
+        // Mobs don't have base Damroll in current implementation
+        // TODO: Add Damroll to MobDefinition
+        int effectiveDamroll = 0; // Default base damroll for mobs
+        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.Damroll))
+        {
+            effectiveDamroll += affect.Modifier;
+        }
+        return (sbyte)Math.Clamp(effectiveDamroll, sbyte.MinValue, sbyte.MaxValue);
     }
 
     public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> Equipment => _equipment;

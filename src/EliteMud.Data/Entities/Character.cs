@@ -51,6 +51,9 @@ public class Character
     
     // Spellgain cooldown - stored as JSON string: {"MagicMissile":"2026-01-23T12:34:56Z","CureLightWounds":"2026-01-23T12:35:10Z"}
     public string? LastSpellgainTimes { get; set; }
+    
+    // Affects (buffs/debuffs) - stored as JSON string: [{"Type":"Armor","Location":"ArmorClass","Modifier":-20,"DurationHours":25}]
+    public string? Affects { get; set; }
 
     // Location & Resources
     public int RoomId { get; set; }

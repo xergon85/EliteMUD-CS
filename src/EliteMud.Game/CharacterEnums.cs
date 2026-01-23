@@ -252,3 +252,66 @@ public enum SkillType
     
     // TODO: Add remaining skills as needed (300-399 range)
 }
+
+/// <summary>
+/// Type of affect/buff/debuff applied to a character.
+/// Uses spell IDs from legacy system where applicable.
+/// </summary>
+public enum AffectType
+{
+    // === BUFF SPELLS ===
+    Armor = 15,            // Spell ID from legacy - AC bonus
+    Bless = 16,            // Spell ID from legacy - hitroll bonus
+    
+    // === DEBUFF SPELLS ===
+    Curse = 27,            // Spell ID from legacy - hitroll penalty
+    Poison = 33,           // Spell ID from legacy - periodic damage
+    
+    // === DETECTION SPELLS ===
+    DetectInvisibility = 8,
+    DetectMagic = 9,
+    DetectPoison = 10,
+    
+    // === PROTECTION SPELLS ===
+    Sanctuary = 36,        // Damage reduction
+    
+    // TODO: Add more as needed
+}
+
+/// <summary>
+/// Location (stat) that an affect modifies.
+/// Based on legacy APPLY_* constants from utils.h
+/// </summary>
+public enum AffectLocation
+{
+    None = 0,
+    
+    // === CORE STATS ===
+    Strength = 1,
+    Dexterity = 2,
+    Intelligence = 3,
+    Wisdom = 4,
+    Constitution = 5,
+    Charisma = 6,
+    
+    // === VITALS ===
+    MaxHit = 13,           // Max HP bonus
+    MaxMana = 12,          // Max Mana bonus
+    MaxMovement = 14,      // Max Movement bonus
+    
+    // === COMBAT STATS ===
+    ArmorClass = 17,       // AC modifier (negative is better)
+    Hitroll = 18,          // To-hit bonus
+    Damroll = 19,          // Damage bonus
+    
+    // === SAVES ===
+    SavingPhysical = 20,
+    SavingMental = 21,
+    SavingMagic = 22,
+    SavingPoison = 23,
+    
+    // === OTHER ===
+    MagicResistance = 24,
+    
+    // TODO: Add more APPLY_* locations as needed (see LegacyImportLookup.ApplyFromIndex)
+}

@@ -752,6 +752,18 @@ internal sealed class GameTickService
                 {
                     playersRegenerated++;
                 }
+                
+                // Tick affects (decrement duration and remove expired)
+                var expiredAffects = connection.Player.TickAffects();
+                if (expiredAffects.Count > 0)
+                {
+                    foreach (var affect in expiredAffects)
+                    {
+                        // Use custom wear-off message if available, otherwise use generic message
+                        var message = affect.WearOffMessage ?? $"The {affect.Type.ToString().ToLowerInvariant()} spell wears off.";
+                        _ = connection.Session.SendLineAsync(message, CancellationToken.None);
+                    }
+                }
             }
             catch (Exception ex)
             {
