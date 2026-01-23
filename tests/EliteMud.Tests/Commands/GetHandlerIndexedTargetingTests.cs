@@ -185,7 +185,8 @@ public class GetHandlerIndexedTargetingTests
             Details: null,
             Values: new List<int> { 0, 0, 0, 1 }, // value[3]=1 for NPC corpse
             Weight: 50,
-            Cost: 0
+            Cost: 0,
+            Affects: new List<ObjectAffect>()
         );
         return new ObjectInstance(instanceId, def);
     }
@@ -204,7 +205,8 @@ public class GetHandlerIndexedTargetingTests
             Details: null,
             Values: new List<int> { 0, 0, 0, 0 },
             Weight: 10,
-            Cost: 100
+            Cost: 100,
+            Affects: new List<ObjectAffect>()
         );
         return new ObjectInstance(instanceId, def);
     }

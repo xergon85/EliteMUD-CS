@@ -1,0 +1,190 @@
+{
+  "objects": [
+    {
+      "Id": 99901,
+      "Name": "sword longsword test",
+      "ShortDescription": "a test longsword",
+      "LongDescription": "A test longsword lies here.",
+      "Description": "This is a test weapon with hitroll and damroll bonuses.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Wield"],
+      "Values": [3, 6, 3, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DamageDice": 3,
+          "DamageSides": 6,
+          "DamageType": 3
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 100,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99902,
+      "Name": "armor plate test",
+      "ShortDescription": "test platemail armor",
+      "LongDescription": "Test platemail armor lies here.",
+      "Description": "This is test armor with AC bonus.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Body"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 10
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 500,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "ArmorClass",
+          "Modifier": -15
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99903,
+      "Name": "ring strength test",
+      "ShortDescription": "a test ring of strength",
+      "LongDescription": "A test ring of strength gleams here.",
+      "Description": "This is a test ring that increases strength.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Finger"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1000,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Strength",
+          "Modifier": 2
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99904,
+      "Name": "shield test",
+      "ShortDescription": "a test shield",
+      "LongDescription": "A test shield leans against the wall.",
+      "Description": "This is a test shield with AC and hitroll bonuses.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Shield"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 5
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 200,
+      "CostPerDay": 2,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "ArmorClass",
+          "Modifier": -8
+        },
+        {
+          "Location": "Hitroll",
+          "Modifier": 1
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    }
+  ]
+}

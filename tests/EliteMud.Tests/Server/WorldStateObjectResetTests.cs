@@ -16,7 +16,7 @@ public class WorldStateObjectResetTests
 
         var objDef = new ObjectDefinition(
             100, "Sword", "Short", "Long", "Desc", "Weapon",
-            new List<string>(), new List<string>(), null, new List<int>(), 10, 100);
+            new List<string>(), new List<string>(), null, new List<int>(), 10, 100, new List<ObjectAffect>());
 
         var zoneDef = new ZoneDefinition(
             1, "Test Zone", new RoomRange(1, 1), "ResetAlways",
@@ -55,7 +55,7 @@ public class WorldStateObjectResetTests
 
         var objDef = new ObjectDefinition(
             100, "Sword", "Short", "Long", "Desc", "Weapon",
-            new List<string>(), new List<string>(), null, new List<int>(), 10, 100);
+            new List<string>(), new List<string>(), null, new List<int>(), 10, 100, new List<ObjectAffect>());
 
         var zoneDef = new ZoneDefinition(
             1, "Test Zone", new RoomRange(1, 1), "ResetAlways",
@@ -104,7 +104,7 @@ public class WorldStateObjectResetTests
 
         var objDef = new ObjectDefinition(
             100, "Sword", "Short", "Long", "Desc", "Weapon",
-            new List<string>(), new List<string>(), null, new List<int>(), 10, 100);
+            new List<string>(), new List<string>(), null, new List<int>(), 10, 100, new List<ObjectAffect>());
 
         // No load commands, just verify clearing
         var zoneDef = new ZoneDefinition(
@@ -149,7 +149,7 @@ public class WorldStateObjectResetTests
 
         var dressDef = new ObjectDefinition(
             6709, "dress", "Henrietta's favorite dress", "Long", "Desc", "Armor",
-            new List<string>(), new List<string>(), null, new List<int>(), 5, 15000);
+            new List<string>(), new List<string>(), null, new List<int>(), 5, 15000, new List<ObjectAffect>());
 
         var zoneDef = new ZoneDefinition(
             66, "Tynstri", new RoomRange(6700, 6799), "ResetAlways",
@@ -208,7 +208,7 @@ public class WorldStateObjectResetTests
 
         var swordDef = new ObjectDefinition(
             200, "sword", "A sword", "Long", "Desc", "Weapon",
-            new List<string>(), new List<string>(), null, new List<int>(), 10, 100);
+            new List<string>(), new List<string>(), null, new List<int>(), 10, 100, new List<ObjectAffect>());
 
         var zoneDef = new ZoneDefinition(
             1, "Test Zone", new RoomRange(1, 1), "ResetAlways",
@@ -253,7 +253,7 @@ public class WorldStateObjectResetTests
 
         var swordDef = new ObjectDefinition(
             200, "sword", "A sword", "Long", "Desc", "Weapon",
-            new List<string>(), new List<string>(), null, new List<int>(), 10, 100);
+            new List<string>(), new List<string>(), null, new List<int>(), 10, 100, new List<ObjectAffect>());
 
         var zoneDef = new ZoneDefinition(
             1, "Test Zone", new RoomRange(1, 1), "ResetAlways",

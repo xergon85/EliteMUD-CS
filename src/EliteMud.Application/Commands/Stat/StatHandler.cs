@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.World;
 using EliteMud.Game;
 using System.Text;
 
@@ -22,6 +23,13 @@ namespace EliteMud.Application.Commands.Stat;
 /// </summary>
 public sealed class StatHandler
 {
+    private readonly IWorldState _worldState;
+
+    public StatHandler(IWorldState worldState)
+    {
+        _worldState = worldState;
+    }
+
     public CommandResult Handle(PlayerState player)
     {
         var output = new StringBuilder();
@@ -61,23 +69,92 @@ public sealed class StatHandler
 
         // Line 4: AC, Hitroll, Damroll, THAC0 - all values in red
         var baseAC = player.ArmorClass;
-        var acMod = GetStatModifier(player, AffectLocation.ArmorClass);
-        var effectiveAC = player.GetEffectiveArmorClass();
+        var acSpellMod = GetStatModifier(player, AffectLocation.ArmorClass);
+        var acEquipMod = GetEquipmentBonus(player, AffectLocation.ArmorClass);
+        var acTotalMod = acSpellMod + acEquipMod;
+        var effectiveAC = baseAC + acTotalMod;
         
         var baseHitroll = player.Hitroll;
-        var hitrollMod = GetStatModifier(player, AffectLocation.Hitroll);
-        var effectiveHitroll = player.GetEffectiveHitroll();
+        var hitrollSpellMod = GetStatModifier(player, AffectLocation.Hitroll);
+        var hitrollEquipMod = GetEquipmentBonus(player, AffectLocation.Hitroll);
+        var hitrollTotalMod = hitrollSpellMod + hitrollEquipMod;
+        var effectiveHitroll = (sbyte)Math.Clamp(baseHitroll + hitrollTotalMod, sbyte.MinValue, sbyte.MaxValue);
         
         var baseDamroll = player.Damroll;
-        var damrollMod = GetStatModifier(player, AffectLocation.Damroll);
-        var effectiveDamroll = player.GetEffectiveDamroll();
+        var damrollSpellMod = GetStatModifier(player, AffectLocation.Damroll);
+        var damrollEquipMod = GetEquipmentBonus(player, AffectLocation.Damroll);
+        var damrollTotalMod = damrollSpellMod + damrollEquipMod;
+        var effectiveDamroll = (sbyte)Math.Clamp(baseDamroll + damrollTotalMod, sbyte.MinValue, sbyte.MaxValue);
 
         // THAC0 calculation (legacy DikuMUD formula)
         var thac0 = CalculateTHAC0(player.Level, effectiveHitroll);
 
-        var acDisplay = acMod != 0 ? $"[#R{effectiveAC}/{baseAC / 10}#N  Mod: #w{acMod}/10#N]" : $"[#R{effectiveAC}/{baseAC / 10}#N]";
-        var hitrollDisplay = hitrollMod != 0 ? $"[#R{effectiveHitroll}#N  Mod: #w{hitrollMod}#N]" : $"[#R{effectiveHitroll}#N]";
-        var damrollDisplay = damrollMod != 0 ? $"[#R{effectiveDamroll}#N  Mod: #w{damrollMod}#N]" : $"[#R{effectiveDamroll}#N]";
+        // Format displays with breakdown of equipment and spell modifiers
+        string acDisplay;
+        if (acTotalMod != 0)
+        {
+            if (acEquipMod != 0 && acSpellMod != 0)
+            {
+                // Show breakdown: Mod: -26/10 (Eq: -15, Spell: -11)
+                acDisplay = $"[#R{effectiveAC}/{baseAC / 10}#N  Mod: #w{acTotalMod}/10#N (#wEq: {acEquipMod}/10, Spell: {acSpellMod}/10#N)]";
+            }
+            else if (acEquipMod != 0)
+            {
+                // Only equipment bonus
+                acDisplay = $"[#R{effectiveAC}/{baseAC / 10}#N  Mod: #w{acTotalMod}/10#N (#wEq#N)]";
+            }
+            else
+            {
+                // Only spell bonus
+                acDisplay = $"[#R{effectiveAC}/{baseAC / 10}#N  Mod: #w{acTotalMod}/10#N (#wSpell#N)]";
+            }
+        }
+        else
+        {
+            acDisplay = $"[#R{effectiveAC}/{baseAC / 10}#N]";
+        }
+
+        string hitrollDisplay;
+        if (hitrollTotalMod != 0)
+        {
+            if (hitrollEquipMod != 0 && hitrollSpellMod != 0)
+            {
+                hitrollDisplay = $"[#R{effectiveHitroll}#N  Mod: #w{hitrollTotalMod}#N (#wEq: {hitrollEquipMod}, Spell: {hitrollSpellMod}#N)]";
+            }
+            else if (hitrollEquipMod != 0)
+            {
+                hitrollDisplay = $"[#R{effectiveHitroll}#N  Mod: #w{hitrollTotalMod}#N (#wEq#N)]";
+            }
+            else
+            {
+                hitrollDisplay = $"[#R{effectiveHitroll}#N  Mod: #w{hitrollTotalMod}#N (#wSpell#N)]";
+            }
+        }
+        else
+        {
+            hitrollDisplay = $"[#R{effectiveHitroll}#N]";
+        }
+
+        string damrollDisplay;
+        if (damrollTotalMod != 0)
+        {
+            if (damrollEquipMod != 0 && damrollSpellMod != 0)
+            {
+                damrollDisplay = $"[#R{effectiveDamroll}#N  Mod: #w{damrollTotalMod}#N (#wEq: {damrollEquipMod}, Spell: {damrollSpellMod}#N)]";
+            }
+            else if (damrollEquipMod != 0)
+            {
+                damrollDisplay = $"[#R{effectiveDamroll}#N  Mod: #w{damrollTotalMod}#N (#wEq#N)]";
+            }
+            else
+            {
+                damrollDisplay = $"[#R{effectiveDamroll}#N  Mod: #w{damrollTotalMod}#N (#wSpell#N)]";
+            }
+        }
+        else
+        {
+            damrollDisplay = $"[#R{effectiveDamroll}#N]";
+        }
 
         output.AppendLine($"AC{acDisplay} Hitroll{hitrollDisplay} Damroll{damrollDisplay} THAC0[#R{thac0}#N]");
 
@@ -154,6 +231,28 @@ public sealed class StatHandler
         return player.Affects
             .Where(a => a.Location == location)
             .Sum(a => a.Modifier);
+    }
+
+    /// <summary>
+    /// Get total modifier from equipped items for a specific location.
+    /// </summary>
+    private int GetEquipmentBonus(PlayerState player, AffectLocation location)
+    {
+        var equipment = _worldState.GetPlayerEquipment(player);
+        int total = 0;
+        
+        foreach (var (slot, obj) in equipment)
+        {
+            foreach (var affect in obj.Definition.Affects)
+            {
+                if (affect.Location == location)
+                {
+                    total += affect.Modifier;
+                }
+            }
+        }
+        
+        return total;
     }
 
     /// <summary>

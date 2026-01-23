@@ -109,6 +109,14 @@ public sealed record MobDefinition(
     public string Class { get; init; } = TextCleaner.Clean(Class);
 }
 
+/// <summary>
+/// Represents a stat modification applied by an object when equipped.
+/// Examples: +2 hitroll from a sword, -10 AC from armor, +1 STR from gauntlets
+/// </summary>
+public sealed record ObjectAffect(
+    AffectLocation Location,
+    int Modifier);
+
 public sealed record ObjectDefinition(
     int Id,
     string Name,
@@ -121,7 +129,8 @@ public sealed record ObjectDefinition(
     ObjectDetails? Details,
     IReadOnlyList<int> Values,
     int Weight,
-    int Cost)
+    int Cost,
+    IReadOnlyList<ObjectAffect> Affects)
 {
     // Clean string properties on construction
     public string Name { get; init; } = TextCleaner.Clean(Name);

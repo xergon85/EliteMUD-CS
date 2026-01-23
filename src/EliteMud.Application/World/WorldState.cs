@@ -551,7 +551,8 @@ public sealed class WorldState : IWorldState
             Details: null,
             Values: new List<int> { 0, 0, 0, 2 }, // value[3]=2 for player corpse identifier
             Weight: totalWeight,
-            Cost: player.Level * 50
+            Cost: player.Level * 50,
+            Affects: new List<ObjectAffect>()
         );
 
         // Create corpse instance
@@ -636,7 +637,8 @@ public sealed class WorldState : IWorldState
             Details: null,
             Values: new List<int> { 0, 0, 0, 1 }, // value[3]=1 for NPC corpse identifier
             Weight: totalWeight,
-            Cost: mob.Definition.Level * 50
+            Cost: mob.Definition.Level * 50,
+            Affects: new List<ObjectAffect>()
         );
 
         // Create corpse instance
@@ -686,7 +688,8 @@ public sealed class WorldState : IWorldState
             Details: null,
             Values: new List<int> { amount, 0, 0, 0 }, // value[0] = gold amount
             Weight: Math.Max(1, amount / 10), // 10 coins = 1 weight unit
-            Cost: amount
+            Cost: amount,
+            Affects: new List<ObjectAffect>()
         );
 
         var money = new ObjectInstance(_nextObjectInstanceId++, moneyDefinition);

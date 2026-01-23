@@ -21,11 +21,11 @@ public class MobCorpseTests
 
         var swordDef = new ObjectDefinition(
             200, "sword", "a rusty sword", "A rusty sword is here.", "Desc", "weapon",
-            new List<string>(), new List<string>(), null, new List<int>(), 10, 100);
+            new List<string>(), new List<string>(), null, new List<int>(), 10, 100, new List<ObjectAffect>());
 
         var helmetDef = new ObjectDefinition(
             201, "helmet", "a leather helmet", "A leather helmet is here.", "Desc", "armor",
-            new List<string>(), new List<string>(), null, new List<int>(), 5, 50);
+            new List<string>(), new List<string>(), null, new List<int>(), 5, 50, new List<ObjectAffect>());
 
         var mobDefs = new Dictionary<int, MobDefinition> { [100] = mobDef };
         var objDefs = new Dictionary<int, ObjectDefinition> { [200] = swordDef, [201] = helmetDef };

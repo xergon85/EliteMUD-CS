@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Stat;
@@ -13,9 +14,9 @@ internal sealed class StatCommandHandler : ICommandHandler
 {
     private readonly EliteMud.Application.Commands.Stat.StatHandler _statHandler;
 
-    public StatCommandHandler()
+    public StatCommandHandler(IWorldState worldState)
     {
-        _statHandler = new EliteMud.Application.Commands.Stat.StatHandler();
+        _statHandler = new EliteMud.Application.Commands.Stat.StatHandler(worldState);
     }
     
     public async ValueTask<CommandOutcome> HandleAsync(CommandRequest request, ConnectionContext context, CancellationToken cancellationToken)

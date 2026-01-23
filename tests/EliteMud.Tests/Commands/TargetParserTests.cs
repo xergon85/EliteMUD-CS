@@ -243,7 +243,8 @@ public class TargetParserTests
             Details: null,
             Values: new List<int> { 0, 0, 0, 0 },
             Weight: 10,
-            Cost: 100
+            Cost: 100,
+            Affects: new List<ObjectAffect>()
         );
         return new ObjectInstance(instanceId, def);
     }

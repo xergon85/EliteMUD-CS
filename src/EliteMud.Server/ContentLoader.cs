@@ -203,7 +203,8 @@ internal static class ContentLoader
                 obj.Details,
                 obj.Values ?? new List<int>(),
                 obj.Weight,
-                obj.Cost));
+                obj.Cost,
+                new List<ObjectAffect>())); // Bootstrap objects have no affects
         }
 
         return objects;
@@ -680,6 +681,11 @@ internal static class ContentLoader
             // TODO: Implement full ObjectDetails parsing
         }
 
+        // Convert object affects from content format to game format
+        var affects = obj.Affects
+            .Select(a => new ObjectAffect(ParseAffectLocation(a.Location), a.Modifier))
+            .ToList();
+
         return new ObjectDefinition(
             obj.Id,
             obj.Name,
@@ -692,7 +698,8 @@ internal static class ContentLoader
             details,
             obj.Values ?? new List<int>(),
             obj.Weight,
-            obj.Cost);
+            obj.Cost,
+            affects);
     }
 
     private static ZoneResetDefinition ConvertResetCommand(ZoneResetContent cmd)
@@ -829,6 +836,31 @@ internal static class ContentLoader
         };
     }
 
+    private static AffectLocation ParseAffectLocation(string? location)
+    {
+        return location?.ToLower() switch
+        {
+            "strength" or "str" => AffectLocation.Strength,
+            "dexterity" or "dex" => AffectLocation.Dexterity,
+            "intelligence" or "int" => AffectLocation.Intelligence,
+            "wisdom" or "wis" => AffectLocation.Wisdom,
+            "constitution" or "con" => AffectLocation.Constitution,
+            "charisma" or "cha" => AffectLocation.Charisma,
+            "armorclass" or "armor" or "ac" => AffectLocation.ArmorClass,
+            "hitroll" => AffectLocation.Hitroll,
+            "damroll" => AffectLocation.Damroll,
+            "saving_physical" or "savingphysical" => AffectLocation.SavingPhysical,
+            "saving_mental" or "savingmental" => AffectLocation.SavingMental,
+            "saving_magic" or "savingmagic" => AffectLocation.SavingMagic,
+            "saving_poison" or "savingpoison" => AffectLocation.SavingPoison,
+            "magic_resistance" or "magicresistance" => AffectLocation.MagicResistance,
+            "hit" or "hp" or "maxhit" => AffectLocation.MaxHit,
+            "mana" or "maxmana" => AffectLocation.MaxMana,
+            "move" or "movement" or "maxmovement" => AffectLocation.MaxMovement,
+            _ => AffectLocation.None
+        };
+    }
+
     private sealed class RoomsFile
     {
         public List<RoomContent> Rooms { get; set; } = new();
@@ -934,6 +966,13 @@ internal static class ContentLoader
         public ObjectDetails? Details { get; set; }
         public int Weight { get; set; }
         public int Cost { get; set; }
+        public List<ObjectAffectContent>? Affects { get; set; }
+    }
+
+    private sealed class ObjectAffectContent
+    {
+        public string? Location { get; set; }
+        public int Modifier { get; set; }
     }
 
     private sealed class ZonesFile
