@@ -11,18 +11,18 @@ namespace EliteMud.Server.Adapters.Commands.Flee;
 internal sealed class FleeCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
-    private readonly Func<IEnumerable<ConnectionContext>> _connections;
+    private readonly ConnectionRegistry _connectionRegistry;
     private readonly LookCommandHandler _lookHandler;
     private readonly FleeHandler _fleeHandler;
 
     public FleeCommandHandler(
         IWorldState worldState,
-        Func<IEnumerable<ConnectionContext>> connections,
+        ConnectionRegistry connectionRegistry,
         LookCommandHandler lookHandler,
         FleeHandler fleeHandler)
     {
         _worldState = worldState;
-        _connections = connections;
+        _connectionRegistry = connectionRegistry;
         _lookHandler = lookHandler;
         _fleeHandler = fleeHandler;
     }
@@ -51,7 +51,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         var result = _fleeHandler.AttemptFlee(
             player,
             currentRoomId,
-            () => _connections().Select(c => c.Player),
+            () => _connectionRegistry.GetConnections().Select(c => c.Player),
             () => _worldState.GetMobsInRoom(currentRoomId));
 
         if (!result.Success)
@@ -65,7 +65,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         _fleeHandler.ApplyFleeResult(
             player,
             result,
-            () => _connections().Select(c => c.Player),
+            () => _connectionRegistry.GetConnections().Select(c => c.Player),
             context.Id);
 
         // Send success message (legacy: act.offensive.c:454)
@@ -85,7 +85,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         string message,
         CancellationToken cancellationToken)
     {
-        foreach (var connection in _connections())
+        foreach (var connection in _connectionRegistry.GetConnections())
         {
             if (connection.Id == speaker.Id)
             {
