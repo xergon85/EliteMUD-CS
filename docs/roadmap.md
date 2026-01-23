@@ -432,6 +432,16 @@
   - Mob death (corpse creation with equipment transfer)
   - Combat messaging with ActMessage integration
 
+### ✅ RECENTLY COMPLETED (Jan 24, 2026 - Session 4)
+- ✅ **Weapon Damage System - COMPLETE**
+  - ✅ Updated CombatCalculator.CalculateDamage() to use weapon dice (XdY from ObjectWeapon.DiceCount/DiceSides)
+  - ✅ Legacy formula implemented: `str_todam + damroll + dice(weapon.DiceCount, weapon.DiceSides)` (fight.c:1464)
+  - ✅ Bare hands fallback: `str_todam + damroll + random(0,2)` (fight.c:1458)
+  - ✅ Updated all combat attack paths: PvP, PvE, kick, backstab, GameTickService
+  - ✅ Marked CalculateBareDamage() as obsolete in favor of CalculateDamage(weaponDetails)
+  - ✅ Added test greatsword (ID 99913): 5d8 damage + 5 hitroll + 10 damroll
+  - ✅ All 109 tests passing, 0 errors
+
 ### ✅ RECENTLY COMPLETED (Jan 23, 2026 - Session 3)
 - ✅ **Data-Driven Skill System with Lua Formulas - COMPLETE**
   - ✅ Created FormulaEvaluator (thread-safe Lua formula engine with 20 comprehensive tests)

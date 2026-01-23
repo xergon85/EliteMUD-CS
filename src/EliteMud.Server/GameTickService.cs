@@ -289,7 +289,15 @@ internal sealed class GameTickService
             return;
         }
         
-        var result = _combatCalculator.PerformAttack(attacker.Player, victim.Player);
+        // Get wielded weapon for damage calculation
+        ObjectWeapon? weaponDetails = null;
+        if (attacker.Player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
+        {
+            var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+            weaponDetails = weapon?.Definition.Details?.Weapon;
+        }
+        
+        var result = _combatCalculator.PerformAttack(attacker.Player, victim.Player, weaponDetails);
         
         // Format legacy combat messages
         var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
@@ -383,8 +391,16 @@ internal sealed class GameTickService
         // Get mob's max HP from definition
         int mobMaxHp = mob.Definition.MaxHitPoints;
         
+        // Get wielded weapon for damage calculation
+        ObjectWeapon? weaponDetails = null;
+        if (attacker.Player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
+        {
+            var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+            weaponDetails = weapon?.Definition.Details?.Weapon;
+        }
+        
         // Player attacks mob
-        int damage = _combatCalculator.CalculateBareDamage(attacker.Player);
+        int damage = _combatCalculator.CalculateDamage(attacker.Player, weaponDetails);
         mob.HitPoints -= (short)damage;
         
         // Format legacy combat messages for player hitting mob

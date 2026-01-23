@@ -129,8 +129,16 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         // Calculate backstab damage
         // Legacy: dam = strength_bonus + damroll + weapon_dice
         // Then: dam *= MIN(level/10 + 1, 5)
-        // For now, use simplified base damage (similar to kick) then multiply
-        int baseDamage = _combatCalculator.CalculateBareDamage(attacker);
+        
+        // Get wielded weapon for damage calculation
+        ObjectWeapon? weaponDetails = null;
+        if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
+        {
+            var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+            weaponDetails = weapon?.Definition.Details?.Weapon;
+        }
+        
+        int baseDamage = _combatCalculator.CalculateDamage(attacker, weaponDetails);
         int multiplier = _backstabSkill.CalculateDamageMultiplier(attacker);
         int damage = baseDamage * multiplier;
 

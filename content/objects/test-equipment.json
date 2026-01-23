@@ -559,6 +559,56 @@
       ],
       "Bitvectors": [],
       "SpecialProc": null
+    },
+    {
+      "Id": 99913,
+      "Name": "greatsword giant test",
+      "ShortDescription": "a massive test greatsword",
+      "LongDescription": "A massive greatsword of incredible power rests here.",
+      "Description": "This legendary greatsword deals devastating damage (5d8 + bonuses).",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Wield"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DamageDice": 5,
+          "DamageSides": 8,
+          "DamageType": 3
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 25,
+      "Cost": 5000,
+      "CostPerDay": 50,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 5
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
     }
   ]
 }

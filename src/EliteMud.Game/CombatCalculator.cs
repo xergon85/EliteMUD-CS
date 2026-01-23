@@ -115,16 +115,44 @@ public class CombatCalculator
     }
 
     /// <summary>
+    /// Calculate base damage for an attack (armed or unarmed).
+    /// Legacy: fight.c:1439-1476
+    /// Formula (bare hands): str_todam + damroll + random(0,2)
+    /// Formula (with weapon): str_todam + damroll + dice(weapon.DiceCount, weapon.DiceSides)
+    /// </summary>
+    /// <param name="attacker">The attacking player</param>
+    /// <param name="weaponDetails">The wielded weapon details (null for bare hands)</param>
+    /// <returns>Base damage before modifiers</returns>
+    public int CalculateDamage(PlayerState attacker, ObjectWeapon? weaponDetails = null)
+    {
+        int strBonus = GetStrengthDamageBonus(attacker.Strength);
+        int baseDamage;
+        
+        if (weaponDetails != null)
+        {
+            // Armed: str_todam + damroll + dice(weapon->value[1], weapon->value[2])
+            // Legacy: fight.c:1464
+            baseDamage = RollDice(weaponDetails.DiceCount, weaponDetails.DiceSides);
+        }
+        else
+        {
+            // Bare hands: str_todam + damroll + number(0, 2)
+            // Legacy: fight.c:1458
+            baseDamage = Random.Shared.Next(0, 3); // 0-2 damage (legacy: number(0, 2))
+        }
+        
+        return Math.Max(0, strBonus + attacker.Damroll + baseDamage);
+    }
+    
+    /// <summary>
     /// Calculate base damage for an unarmed attack.
     /// Legacy: fight.c:1439-1458
     /// Formula: str_todam + damroll + random(0,2)
     /// </summary>
+    [Obsolete("Use CalculateDamage(attacker, weaponDetails) instead")]
     public int CalculateBareDamage(PlayerState attacker)
     {
-        // Legacy: dam = str_todam + damroll + number(0, 2) for bare hands
-        int strBonus = GetStrengthDamageBonus(attacker.Strength);
-        int baseDamage = Random.Shared.Next(0, 3); // 0-2 damage (legacy: number(0, 2))
-        return Math.Max(0, strBonus + attacker.Damroll + baseDamage);
+        return CalculateDamage(attacker, null);
     }
 
     /// <summary>
@@ -325,7 +353,11 @@ public class CombatCalculator
     /// Returns damage dealt.
     /// Legacy: hit() function
     /// </summary>
-    public AttackResult PerformAttack(PlayerState attacker, PlayerState victim)
+    /// <param name="attacker">The attacking player</param>
+    /// <param name="victim">The target player</param>
+    /// <param name="weaponDetails">The wielded weapon details (null for bare hands)</param>
+    /// <returns>Attack result including hit/miss and damage</returns>
+    public AttackResult PerformAttack(PlayerState attacker, PlayerState victim, ObjectWeapon? weaponDetails = null)
     {
         // Check if out of moves (too tired to fight)
         if (attacker.Movement < 1)
@@ -340,8 +372,8 @@ public class CombatCalculator
             return new AttackResult(false, 0, "You miss!");
         }
 
-        // Calculate damage
-        int damage = CalculateBareDamage(attacker);
+        // Calculate damage (with weapon if equipped)
+        int damage = CalculateDamage(attacker, weaponDetails);
         
         // Apply damage (includes passive defensive skills)
         var damageResult = ApplyDamage(victim, damage);

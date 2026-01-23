@@ -67,8 +67,16 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             messages.Add(new SkillMessage(SkillMessageTarget.Victim, "$n attacks you!"));
             messages.Add(new SkillMessage(SkillMessageTarget.Others, "$n attacks $N!", victim));
 
+            // Get wielded weapon for damage calculation
+            ObjectWeapon? weaponDetails = null;
+            if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
+            {
+                var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+                weaponDetails = weapon?.Definition.Details?.Weapon;
+            }
+
             // Perform initial attack
-            var result = _combatCalculator.PerformAttack(attacker, victimPlayer);
+            var result = _combatCalculator.PerformAttack(attacker, victimPlayer, weaponDetails);
 
             // Format combat messages (legacy format with damage/health)
             var attackerCombatMsg = CombatMessageFormatter.FormatCombatMessage(
@@ -117,9 +125,17 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, $"You attack {mobDesc}!"));
             messages.Add(new SkillMessage(SkillMessageTarget.Others, $"$n attacks {mobDesc}!"));
 
+            // Get wielded weapon for damage calculation
+            ObjectWeapon? weaponDetails = null;
+            if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
+            {
+                var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+                weaponDetails = weapon?.Definition.Details?.Weapon;
+            }
+
             // Perform initial attack
             int mobMaxHp = mobInstance.Definition.MaxHitPoints;
-            int damage = _combatCalculator.CalculateBareDamage(attacker);
+            int damage = _combatCalculator.CalculateDamage(attacker, weaponDetails);
             mobInstance.HitPoints -= (short)damage;
 
             // Format combat messages
