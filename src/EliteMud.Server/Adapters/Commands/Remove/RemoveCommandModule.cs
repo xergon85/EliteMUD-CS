@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Remove;
 
 internal sealed class RemoveCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Remove;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

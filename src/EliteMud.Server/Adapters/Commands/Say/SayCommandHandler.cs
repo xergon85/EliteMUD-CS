@@ -19,9 +19,6 @@ internal sealed class SayCommandHandler : ICommandHandler
         _connections = connections;
         _sayHandler = new SayHandler();
     }
-
-    public CommandKind Kind => CommandKind.Say;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

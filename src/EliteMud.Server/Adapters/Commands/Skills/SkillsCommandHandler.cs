@@ -13,9 +13,6 @@ internal sealed class SkillsCommandHandler : ICommandHandler
     {
         _catalog = catalog;
     }
-
-    public CommandKind Kind => CommandKind.Skills;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

@@ -15,9 +15,6 @@ internal sealed class WhoCommandHandler : ICommandHandler, IConnectionDirectory
         _connections = connections;
         _whoHandler = new WhoHandler(this);
     }
-
-    public CommandKind Kind => CommandKind.Who;
-
     public IReadOnlyList<string> GetPlayerNames()
     {
         return _connections()

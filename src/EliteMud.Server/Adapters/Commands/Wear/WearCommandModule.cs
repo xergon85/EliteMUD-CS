@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Wear;
 
 internal sealed class WearCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Wear;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

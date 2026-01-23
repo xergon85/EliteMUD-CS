@@ -15,9 +15,6 @@ internal sealed class ImportLegacyCommandHandler : ICommandHandler
         _handler = handler;
         _catalog = catalog;
     }
-
-    public CommandKind Kind => CommandKind.ImportLegacy;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

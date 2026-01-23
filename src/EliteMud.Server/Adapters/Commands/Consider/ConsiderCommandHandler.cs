@@ -16,9 +16,6 @@ internal sealed class ConsiderCommandHandler : ICommandHandler
         _worldState = worldState;
         _considerHandler = new ConsiderHandler(worldState);
     }
-
-    public CommandKind Kind => CommandKind.Consider;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.ImportLegacy;
 
 internal sealed class ImportLegacyCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.ImportLegacy;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

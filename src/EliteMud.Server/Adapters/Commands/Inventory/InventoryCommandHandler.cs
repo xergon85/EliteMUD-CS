@@ -14,9 +14,6 @@ internal sealed class InventoryCommandHandler : ICommandHandler
     {
         _inventoryHandler = new InventoryHandler(worldState);
     }
-
-    public CommandKind Kind => CommandKind.Inventory;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

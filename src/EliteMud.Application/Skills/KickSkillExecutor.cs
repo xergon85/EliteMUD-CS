@@ -21,7 +21,6 @@ public sealed class KickSkillExecutor : ISkillExecutor
     private readonly IWorldState _worldState;
 
     public SkillType SkillType => SkillType.Kick;
-    public CommandKind CommandKind => CommandKind.Kick;
     public TargetingMode Targeting => TargetingMode.CurrentFightTarget;
 
     public KickSkillExecutor(

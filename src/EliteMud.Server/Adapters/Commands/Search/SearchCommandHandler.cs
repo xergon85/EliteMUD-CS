@@ -14,9 +14,6 @@ internal sealed class SearchCommandHandler : ICommandHandler
     {
         _searchHandler = new SearchHandler(worldState);
     }
-
-    public CommandKind Kind => CommandKind.Search;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

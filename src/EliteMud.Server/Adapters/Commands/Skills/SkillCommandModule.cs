@@ -12,14 +12,10 @@ namespace EliteMud.Server.Adapters.Commands.Skills;
 /// </summary>
 internal sealed class SkillCommandModule : ICommandModule
 {
-    private readonly CommandKind _kind;
     private readonly Type _executorType;
     
-    public CommandKind Kind => _kind;
-    
-    public SkillCommandModule(CommandKind kind, Type executorType)
+    public SkillCommandModule(Type executorType)
     {
-        _kind = kind;
         _executorType = executorType;
     }
     

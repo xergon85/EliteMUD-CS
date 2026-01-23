@@ -6,7 +6,6 @@ namespace EliteMud.Server.Adapters.Commands.Quit;
 [Command("quit")]
 internal sealed class QuitCommandHandler : ICommandHandler
 {
-    public CommandKind Kind => CommandKind.Quit;
 
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,

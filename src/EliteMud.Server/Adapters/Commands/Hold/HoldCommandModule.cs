@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Hold;
 
 internal sealed class HoldCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Hold;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

@@ -6,7 +6,6 @@ namespace EliteMud.Server.Adapters.Commands.SetLevel;
 [Command("setlevel")]
 internal sealed class SetLevelCommandHandler : ICommandHandler
 {
-    public CommandKind Kind => CommandKind.SetLevel;
 
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,

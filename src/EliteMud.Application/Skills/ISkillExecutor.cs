@@ -145,12 +145,6 @@ public interface ISkillExecutor
     SkillType SkillType { get; }
     
     /// <summary>
-    /// The command that triggers this skill.
-    /// Maps executor to command (e.g., SkillType.Kick -> CommandKind.Kick)
-    /// </summary>
-    CommandKind CommandKind { get; }
-    
-    /// <summary>
     /// How this skill selects targets.
     /// Determines how the generic handler parses command arguments.
     /// </summary>

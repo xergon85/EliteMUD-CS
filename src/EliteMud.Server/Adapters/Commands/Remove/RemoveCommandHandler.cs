@@ -21,9 +21,6 @@ internal sealed class RemoveCommandHandler : ICommandHandler
         _actService = actService;
         _connectionRegistry = connectionRegistry;
     }
-
-    public CommandKind Kind => CommandKind.Remove;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

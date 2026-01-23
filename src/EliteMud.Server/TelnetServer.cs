@@ -162,7 +162,7 @@ internal sealed class TelnetServer
             _connectionRegistry.SetProvider(() => _connections.Values);
 
             // Auto-execute look command on entry
-            var entryCommand = new CommandRequest(CommandKind.Look, "look", null, null);
+            var entryCommand = new CommandRequest("look", null, null);
             await _commandRouter.HandleAsync(entryCommand, context, cancellationToken);
 
             // Main game loop

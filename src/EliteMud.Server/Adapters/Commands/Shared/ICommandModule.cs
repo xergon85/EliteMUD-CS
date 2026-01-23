@@ -1,10 +1,10 @@
-using EliteMud.Application.Commands.Shared;
-
 namespace EliteMud.Server.Adapters.Commands.Shared;
 
+/// <summary>
+/// Factory for creating command handlers.
+/// Handlers are decorated with [Command] attributes for routing.
+/// </summary>
 internal interface ICommandModule
 {
-    CommandKind Kind { get; }
-
     ICommandHandler CreateHandler(IServiceProvider serviceProvider);
 }

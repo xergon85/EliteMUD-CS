@@ -21,7 +21,6 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
     private readonly IWorldState _worldState;
 
     public SkillType SkillType => SkillType.Kick; // Not actually a skill, just needs a value
-    public CommandKind CommandKind => CommandKind.Kill;
     public TargetingMode Targeting => TargetingMode.RequiredInRoom;
 
     public MeleeAttackExecutor(

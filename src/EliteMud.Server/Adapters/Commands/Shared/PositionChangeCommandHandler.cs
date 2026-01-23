@@ -8,7 +8,6 @@ namespace EliteMud.Server.Adapters.Commands.Shared;
 /// Configuration for position change commands.
 /// </summary>
 internal sealed record PositionChangeConfig(
-    CommandKind Kind,
     Position TargetPosition,
     string PlayerMessage,
     string RoomMessage,
@@ -30,9 +29,6 @@ internal sealed class PositionChangeCommandHandler : ICommandHandler
         _connectionRegistry = connectionRegistry;
         _config = config;
     }
-
-    public CommandKind Kind => _config.Kind;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest request,
         ConnectionContext context,

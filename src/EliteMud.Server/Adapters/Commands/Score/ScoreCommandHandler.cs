@@ -12,9 +12,6 @@ internal sealed class ScoreCommandHandler : ICommandHandler
     {
         _scoreHandler = scoreHandler;
     }
-
-    public CommandKind Kind => CommandKind.Score;
-
     public async ValueTask<CommandOutcome> HandleAsync(CommandRequest request, ConnectionContext context, CancellationToken cancellationToken)
     {
         var result = _scoreHandler.Handle(context.Player);

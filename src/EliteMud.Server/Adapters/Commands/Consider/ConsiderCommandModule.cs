@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Consider;
 
 internal sealed class ConsiderCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Consider;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

@@ -21,9 +21,6 @@ internal sealed class WearCommandHandler : ICommandHandler
         _actService = actService;
         _connectionRegistry = connectionRegistry;
     }
-
-    public CommandKind Kind => CommandKind.Wear;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

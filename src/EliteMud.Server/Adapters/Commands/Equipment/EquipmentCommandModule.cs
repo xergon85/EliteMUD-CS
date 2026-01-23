@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Equipment;
 
 internal sealed class EquipmentCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Equipment;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

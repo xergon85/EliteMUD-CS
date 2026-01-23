@@ -21,9 +21,6 @@ internal sealed class DropCommandHandler : ICommandHandler
         _actService = actService;
         _connectionRegistry = connectionRegistry;
     }
-
-    public CommandKind Kind => CommandKind.Drop;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

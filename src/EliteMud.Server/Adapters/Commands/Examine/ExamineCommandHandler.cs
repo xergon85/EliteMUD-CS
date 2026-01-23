@@ -14,9 +14,6 @@ internal sealed class ExamineCommandHandler : ICommandHandler
     {
         _lookHandler = new LookHandler(worldState);
     }
-
-    public CommandKind Kind => CommandKind.Examine;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

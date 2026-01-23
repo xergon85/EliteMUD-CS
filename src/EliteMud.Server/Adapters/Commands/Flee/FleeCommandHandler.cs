@@ -26,9 +26,6 @@ internal sealed class FleeCommandHandler : ICommandHandler
         _lookHandler = lookHandler;
         _fleeHandler = fleeHandler;
     }
-
-    public CommandKind Kind => CommandKind.Flee;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,
@@ -76,7 +73,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
 
         // Show new room by looking (same as move command)
         await _lookHandler.HandleAsync(
-            new CommandRequest(CommandKind.Look, "look", null, null),
+            new CommandRequest("look", null, null),
             context,
             cancellationToken);
 

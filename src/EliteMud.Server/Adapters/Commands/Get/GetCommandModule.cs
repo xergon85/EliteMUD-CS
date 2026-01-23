@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Get;
 
 internal sealed class GetCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Get;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

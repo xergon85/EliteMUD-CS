@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Say;
 
 internal sealed class SayCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Say;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

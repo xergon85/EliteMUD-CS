@@ -17,9 +17,6 @@ internal sealed class SaveCommandHandler : ICommandHandler
         _characterRepository = characterRepository;
         _worldState = worldState;
     }
-
-    public CommandKind Kind => CommandKind.Save;
-
     public async ValueTask<CommandOutcome> HandleAsync(CommandRequest request, ConnectionContext context, CancellationToken cancellationToken)
     {
         try

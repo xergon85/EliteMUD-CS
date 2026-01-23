@@ -14,9 +14,6 @@ internal sealed class EquipmentCommandHandler : ICommandHandler
     {
         _equipmentHandler = new EquipmentHandler(worldState);
     }
-
-    public CommandKind Kind => CommandKind.Equipment;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

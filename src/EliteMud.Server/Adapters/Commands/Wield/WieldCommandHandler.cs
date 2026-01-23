@@ -21,9 +21,6 @@ internal sealed class WieldCommandHandler : ICommandHandler
         _actService = actService;
         _connectionRegistry = connectionRegistry;
     }
-
-    public CommandKind Kind => CommandKind.Wield;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

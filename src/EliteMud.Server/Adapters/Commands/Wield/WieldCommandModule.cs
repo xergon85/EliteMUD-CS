@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Wield;
 
 internal sealed class WieldCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Wield;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

@@ -9,7 +9,6 @@ namespace EliteMud.Server.Adapters.Commands.Flee;
 
 internal sealed class FleeCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Flee;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

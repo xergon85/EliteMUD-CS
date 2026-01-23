@@ -6,7 +6,6 @@ namespace EliteMud.Server.Adapters.Commands.SetSkill;
 
 internal sealed class SetSkillCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.SetSkill;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

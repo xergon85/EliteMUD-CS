@@ -9,7 +9,6 @@ namespace EliteMud.Server.Adapters.Commands.Move;
 
 internal sealed class MoveCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Move;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

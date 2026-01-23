@@ -28,7 +28,6 @@ internal sealed class SkillCommandHandler : ICommandHandler
     private readonly ActMessageService _actService;
     private readonly ConnectionRegistry _connectionRegistry;
     
-    public CommandKind Kind => _executor.CommandKind;
     
     public SkillCommandHandler(
         ISkillExecutor executor,

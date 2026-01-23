@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Drop;
 
 internal sealed class DropCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Drop;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

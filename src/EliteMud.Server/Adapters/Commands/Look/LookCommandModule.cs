@@ -8,7 +8,6 @@ namespace EliteMud.Server.Adapters.Commands.Look;
 
 internal sealed class LookCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Look;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

@@ -6,7 +6,6 @@ namespace EliteMud.Server.Adapters.Commands.Score;
 
 internal sealed class ScoreCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Score;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

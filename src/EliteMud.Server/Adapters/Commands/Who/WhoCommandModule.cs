@@ -6,7 +6,6 @@ namespace EliteMud.Server.Adapters.Commands.Who;
 
 internal sealed class WhoCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Who;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

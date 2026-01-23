@@ -81,10 +81,7 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
 
     /// <summary>
     /// Auto-discover all ISkillExecutor implementations and create modules for them.
-    /// This makes adding new skills trivial - just implement ISkillExecutor.
-    /// 
-    /// Note: We read CommandKind from a static property or by convention.
-    /// Executors should have a static CommandKind that matches their SkillType.
+    /// This makes adding new skills trivial - just implement ISkillExecutor with [Command] attribute.
     /// </summary>
     private static IEnumerable<ICommandModule> GetSkillExecutorModules()
     {
@@ -94,36 +91,7 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
 
         foreach (var type in executorTypes)
         {
-            // Get CommandKind by convention from type name
-            // KickSkillExecutor -> CommandKind.Kick
-            // BashSkillExecutor -> CommandKind.Bash
-            var commandKind = GetCommandKindFromTypeName(type.Name);
-
-            if (commandKind.HasValue)
-            {
-                yield return new SkillCommandModule(commandKind.Value, type);
-            }
+            yield return new SkillCommandModule(type);
         }
-    }
-
-    /// <summary>
-    /// Extract CommandKind from executor type name by convention.
-    /// KickSkillExecutor -> Kick, BashSkillExecutor -> Bash, etc.
-    /// </summary>
-    private static CommandKind? GetCommandKindFromTypeName(string typeName)
-    {
-        // Remove "SkillExecutor" suffix to get skill name
-        if (!typeName.EndsWith("SkillExecutor"))
-            return null;
-
-        var skillName = typeName[..^"SkillExecutor".Length];
-
-        // Try to parse as CommandKind enum
-        if (Enum.TryParse<CommandKind>(skillName, ignoreCase: true, out var commandKind))
-        {
-            return commandKind;
-        }
-
-        return null;
     }
 }

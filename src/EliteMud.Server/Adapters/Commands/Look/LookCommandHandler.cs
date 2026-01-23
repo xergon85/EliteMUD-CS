@@ -22,9 +22,6 @@ internal sealed class LookCommandHandler : ICommandHandler
         _connectionRegistry = connectionRegistry;
         _lookHandler = new LookHandler(worldState, () => _connectionRegistry.GetConnections().Select(c => c.Player));
     }
-
-    public CommandKind Kind => CommandKind.Look;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

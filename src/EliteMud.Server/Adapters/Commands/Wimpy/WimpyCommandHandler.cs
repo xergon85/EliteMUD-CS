@@ -6,7 +6,6 @@ namespace EliteMud.Server.Adapters.Commands.Wimpy;
 [Command("wimpy")]
 internal sealed class WimpyCommandHandler : ICommandHandler
 {
-    public CommandKind Kind => CommandKind.Wimpy;
 
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,

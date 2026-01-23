@@ -22,9 +22,6 @@ internal sealed class ResetZoneCommandHandler : ICommandHandler
         _lookHandler = lookHandler;
         _resetZoneHandler = new ResetZoneHandler(worldState);
     }
-
-    public CommandKind Kind => CommandKind.ResetZone;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,
@@ -46,7 +43,7 @@ internal sealed class ResetZoneCommandHandler : ICommandHandler
         await context.Session.SendLineAsync(result.Message, cancellationToken);
         if (result.Success)
         {
-            await _lookHandler.HandleAsync(new CommandRequest(CommandKind.Look, "look", null, null), context, cancellationToken);
+            await _lookHandler.HandleAsync(new CommandRequest("look", null, null), context, cancellationToken);
         }
 
         return CommandOutcome.Continue;

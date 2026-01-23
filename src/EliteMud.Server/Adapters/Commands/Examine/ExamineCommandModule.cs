@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Examine;
 
 internal sealed class ExamineCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Examine;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

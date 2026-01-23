@@ -6,7 +6,6 @@ namespace EliteMud.Server.Adapters.Commands.SetLevel;
 
 internal sealed class SetLevelCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.SetLevel;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

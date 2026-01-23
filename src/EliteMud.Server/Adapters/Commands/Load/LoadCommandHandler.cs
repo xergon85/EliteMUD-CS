@@ -14,9 +14,6 @@ internal sealed class LoadCommandHandler : ICommandHandler
     {
         _loadHandler = new LoadHandler(worldState);
     }
-
-    public CommandKind Kind => CommandKind.Load;
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,

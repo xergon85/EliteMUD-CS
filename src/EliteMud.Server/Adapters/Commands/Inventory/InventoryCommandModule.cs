@@ -7,7 +7,6 @@ namespace EliteMud.Server.Adapters.Commands.Inventory;
 
 internal sealed class InventoryCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.Inventory;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {

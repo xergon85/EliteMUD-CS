@@ -8,7 +8,6 @@ namespace EliteMud.Server.Adapters.Commands.ResetZone;
 
 internal sealed class ResetZoneCommandModule : ICommandModule
 {
-    public CommandKind Kind => CommandKind.ResetZone;
 
     public ICommandHandler CreateHandler(IServiceProvider serviceProvider)
     {
