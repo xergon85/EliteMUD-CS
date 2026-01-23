@@ -44,8 +44,8 @@ public sealed class SkillMetadataLoaderTests
         
         // Check mechanics
         Assert.NotNull(kick.Mechanics);
-        Assert.Equal("level / 2", kick.Mechanics.DamageFormula);
-        Assert.Equal("((10 - victimAC/10) * 2) + random(1,101)", kick.Mechanics.HitFormula);
+        Assert.Equal("return math.max(1, level / 2)", kick.Mechanics.DamageFormula);
+        Assert.Equal("return ((10 - victimAC/10) * 2) + random(1,101) <= skillPercent", kick.Mechanics.HitFormula);
     }
     
     [Fact]
@@ -69,7 +69,7 @@ public sealed class SkillMetadataLoaderTests
         
         // Check mechanics
         Assert.NotNull(backstab.Mechanics);
-        Assert.Equal("MIN(level / 10 + 1, 5)", backstab.Mechanics.DamageMultiplierFormula);
+        Assert.Equal("return math.min(math.floor(level / 10) + 1, 5)", backstab.Mechanics.DamageMultiplierFormula);
     }
     
     [Fact]
@@ -118,8 +118,8 @@ public sealed class SkillMetadataLoaderTests
         
         // Check passive mechanics
         Assert.NotNull(dodge.Mechanics);
-        Assert.Equal("(random(1,250) + damage) < skillPercent", dodge.Mechanics.ActivationFormula);
-        Assert.Equal("damage - (level * 2)", dodge.Mechanics.EffectFormula);
+        Assert.Equal("return (random(1,250) + damage) < skillPercent", dodge.Mechanics.ActivationFormula);
+        Assert.Equal("return math.max(0, damage - (level * 2))", dodge.Mechanics.EffectFormula);
     }
     
     [Fact]

@@ -1,4 +1,5 @@
 using EliteMud.Game;
+using EliteMud.Scripting;
 
 namespace EliteMud.Application.Skills;
 
@@ -26,11 +27,13 @@ namespace EliteMud.Application.Skills;
 public sealed class BashSkill : ISkillHandler
 {
     private readonly SkillMetadata _metadata;
+    private readonly FormulaEvaluator _formulaEvaluator;
 
-    public BashSkill(SkillMetadataRegistry registry)
+    public BashSkill(SkillMetadataRegistry registry, FormulaEvaluator formulaEvaluator)
     {
         _metadata = registry.GetBySkillType(SkillType.Bash)
             ?? throw new InvalidOperationException("Bash skill metadata not found in registry");
+        _formulaEvaluator = formulaEvaluator;
     }
 
     public SkillType SkillType => SkillType.Bash;
@@ -87,24 +90,42 @@ public sealed class BashSkill : ISkillHandler
     }
 
     /// <summary>
-    /// Calculate bash damage (fixed 10 damage on hit).
+    /// Calculate bash damage using Lua formula from skills.json.
+    /// Formula: "return 10"
     /// Legacy: damage(ch, victim, 10, SKILL_BASH)
     /// </summary>
-    public static int CalculateDamage()
+    public int CalculateDamage()
     {
-        return 10;
+        var damageFormula = _metadata.Mechanics?.DamageFormula;
+        if (string.IsNullOrEmpty(damageFormula))
+        {
+            return 10; // Fallback to legacy hardcoded value
+        }
+
+        return _formulaEvaluator.EvaluateInt(damageFormula, new { });
     }
 
     /// <summary>
-    /// Determine if a bash attack hits the target.
+    /// Determine if a bash attack hits the target using Lua formula from skills.json.
+    /// Formula: "return random(1,101) <= skillPercent"
     /// Legacy: percent = number(1, 101); prob = GET_SKILL(ch, SKILL_BASH);
     /// percent > prob = failure
     /// </summary>
-    public static bool RollHit(ICombatant attacker)
+    public bool RollHit(ICombatant attacker)
     {
-        int percent = Random.Shared.Next(1, 102); // 1-101 (101 is complete failure)
-        int prob = attacker.GetSkill(SkillType.Bash);
+        var hitFormula = _metadata.Mechanics?.HitFormula;
+        if (string.IsNullOrEmpty(hitFormula))
+        {
+            // Fallback to legacy hardcoded logic
+            int percent = Random.Shared.Next(1, 102);
+            return percent <= attacker.GetSkill(SkillType.Bash);
+        }
 
-        return percent <= prob;
+        var context = new
+        {
+            skillPercent = attacker.GetSkill(SkillType.Bash)
+        };
+
+        return _formulaEvaluator.EvaluateBool(hitFormula, context);
     }
 }

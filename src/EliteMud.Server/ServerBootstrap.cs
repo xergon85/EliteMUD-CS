@@ -80,6 +80,7 @@ internal static class ServerBootstrap
 
         var skillMetadata = ContentLoader.LoadSkills(contentRoot);
         var skillRegistry = new SkillMetadataRegistry(skillMetadata);
+        var formulaEvaluator = new FormulaEvaluator();
 
         var worldState = BuildWorldState(world, mobs, objects, zones);
         var scriptEngine = BuildScriptEngine(scripts);
@@ -93,6 +94,7 @@ internal static class ServerBootstrap
             .AddSingleton<IWorldState>(worldState)
             .AddSingleton(scriptEngine)
             .AddSingleton(skillRegistry)
+            .AddSingleton(formulaEvaluator)
 
             // Database
             .AddDbContext<EliteMudDbContext>(options =>

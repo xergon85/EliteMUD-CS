@@ -23,7 +23,7 @@ namespace EliteMud.Application.Skills;
 [Command("backstab", Aliases = new[] { "bs" })]
 public sealed class BackstabSkillExecutor : ISkillExecutor
 {
-    private readonly ISkillHandler _backstabSkill;
+    private readonly BackstabSkill _backstabSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
 
@@ -35,7 +35,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         CombatCalculator combatCalculator,
         IWorldState worldState)
     {
-        _backstabSkill = skillRegistry.GetActiveSkill(SkillType.Backstab);
+        _backstabSkill = (BackstabSkill)skillRegistry.GetActiveSkill(SkillType.Backstab);
         _combatCalculator = combatCalculator;
         _worldState = worldState;
     }
@@ -92,7 +92,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         // If victim is asleep (position < fighting), auto-hit in legacy
         // Reference: act.offensive.c:248 (AWAKE(victim) && ...)
         bool victimAwake = victim.Position >= Position.Resting;
-        bool hit = !victimAwake || BackstabSkill.RollHit(attacker);
+        bool hit = !victimAwake || _backstabSkill.RollHit(attacker);
 
         if (!hit)
         {
@@ -131,7 +131,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         // Then: dam *= MIN(level/10 + 1, 5)
         // For now, use simplified base damage (similar to kick) then multiply
         int baseDamage = _combatCalculator.CalculateBareDamage(attacker);
-        int multiplier = BackstabSkill.CalculateDamageMultiplier(attacker);
+        int multiplier = _backstabSkill.CalculateDamageMultiplier(attacker);
         int damage = baseDamage * multiplier;
 
         // Apply damage

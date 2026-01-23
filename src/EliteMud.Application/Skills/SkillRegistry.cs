@@ -1,5 +1,6 @@
 using System.Reflection;
 using EliteMud.Game;
+using EliteMud.Scripting;
 
 namespace EliteMud.Application.Skills;
 
@@ -19,10 +20,10 @@ public sealed class SkillRegistry
     private readonly Dictionary<SkillType, ISkillHandler> _activeSkills;
     private readonly Dictionary<SkillType, IPassiveSkillHandler> _passiveSkills;
 
-    public SkillRegistry(SkillMetadataRegistry metadataRegistry)
+    public SkillRegistry(SkillMetadataRegistry metadataRegistry, FormulaEvaluator formulaEvaluator)
     {
-        _activeSkills = DiscoverActiveSkills(metadataRegistry);
-        _passiveSkills = DiscoverPassiveSkills(metadataRegistry);
+        _activeSkills = DiscoverActiveSkills(metadataRegistry, formulaEvaluator);
+        _passiveSkills = DiscoverPassiveSkills(metadataRegistry, formulaEvaluator);
     }
 
     /// <summary>
@@ -91,7 +92,7 @@ public sealed class SkillRegistry
     /// Auto-discover all ISkillHandler implementations via reflection.
     /// Searches EliteMud.Application assembly for concrete classes implementing ISkillHandler.
     /// </summary>
-    private static Dictionary<SkillType, ISkillHandler> DiscoverActiveSkills(SkillMetadataRegistry metadataRegistry)
+    private static Dictionary<SkillType, ISkillHandler> DiscoverActiveSkills(SkillMetadataRegistry metadataRegistry, FormulaEvaluator formulaEvaluator)
     {
         var skills = new Dictionary<SkillType, ISkillHandler>();
         var assembly = Assembly.GetExecutingAssembly(); // EliteMud.Application
@@ -101,8 +102,8 @@ public sealed class SkillRegistry
 
         foreach (var type in skillTypes)
         {
-            // Instantiate the skill with SkillMetadataRegistry parameter
-            if (Activator.CreateInstance(type, metadataRegistry) is ISkillHandler skill)
+            // Instantiate the skill with SkillMetadataRegistry and FormulaEvaluator parameters
+            if (Activator.CreateInstance(type, metadataRegistry, formulaEvaluator) is ISkillHandler skill)
             {
                 if (skills.TryGetValue(skill.SkillType, out var skill1))
                 {
@@ -120,22 +121,22 @@ public sealed class SkillRegistry
 
     /// <summary>
     /// Auto-discover all IPassiveSkillHandler implementations via reflection.
-    /// Searches EliteMud.Game assembly for concrete classes implementing IPassiveSkillHandler.
+    /// Searches EliteMud.Application assembly for concrete classes implementing IPassiveSkillHandler.
     /// </summary>
-    private static Dictionary<SkillType, IPassiveSkillHandler> DiscoverPassiveSkills(SkillMetadataRegistry metadataRegistry)
+    private static Dictionary<SkillType, IPassiveSkillHandler> DiscoverPassiveSkills(SkillMetadataRegistry metadataRegistry, FormulaEvaluator formulaEvaluator)
     {
         var skills = new Dictionary<SkillType, IPassiveSkillHandler>();
 
-        // Passive skills live in EliteMud.Game (domain layer)
-        var assembly = typeof(IPassiveSkillHandler).Assembly;
+        // Passive skills now live in EliteMud.Application (same as active skills for easier maintenance)
+        var assembly = typeof(SkillRegistry).Assembly;
 
         var skillTypes = assembly.GetTypes()
             .Where(t => t is { IsClass: true, IsAbstract: false } && typeof(IPassiveSkillHandler).IsAssignableFrom(t));
 
         foreach (var type in skillTypes)
         {
-            // Instantiate the skill with SkillMetadataRegistry parameter
-            if (Activator.CreateInstance(type, metadataRegistry) is IPassiveSkillHandler skill)
+            // Instantiate the skill with SkillMetadataRegistry and FormulaEvaluator parameters
+            if (Activator.CreateInstance(type, metadataRegistry, formulaEvaluator) is IPassiveSkillHandler skill)
             {
                 if (skills.TryGetValue(skill.SkillType, out var skill1))
                 {

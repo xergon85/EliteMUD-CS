@@ -35,8 +35,8 @@
         {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
       ],
       "mechanics": {
-        "damageFormula": "level / 2",
-        "hitFormula": "((10 - victimAC/10) * 2) + random(1,101)",
+        "damageFormula": "return math.max(1, level / 2)",
+        "hitFormula": "return ((10 - victimAC/10) * 2) + random(1,101) <= skillPercent",
         "requirements": [
           {"type": "position", "value": "Fighting", "message": "You can't kick while sitting down!"}
         ],
@@ -76,8 +76,8 @@
         {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
       ],
       "mechanics": {
-        "damageFormula": "10",
-        "hitFormula": "random(1,101)",
+        "damageFormula": "return 10",
+        "hitFormula": "return random(1,101) <= skillPercent",
         "requirements": [
           {"type": "position", "value": "Fighting", "message": "You can't bash while sitting down!"},
           {"type": "equipment", "value": "Shield", "message": "You need a shield to bash!", "implemented": false}
@@ -122,8 +122,8 @@
         {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
       ],
       "mechanics": {
-        "damageMultiplierFormula": "MIN(level / 10 + 1, 5)",
-        "hitFormula": "random(1,101)",
+        "damageMultiplierFormula": "return math.min(math.floor(level / 10) + 1, 5)",
+        "hitFormula": "return random(1,101) <= skillPercent",
         "requirements": [
           {"type": "position", "value": "Fighting", "message": "You can't backstab from this position."},
           {"type": "victimState", "value": "notFighting", "message": "You can't backstab a fighting person - they're too alert!"},
@@ -167,7 +167,7 @@
         {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
       ],
       "mechanics": {
-        "hitFormula": "random(1,101)",
+        "hitFormula": "return random(1,101) <= skillPercent",
         "requirements": [
           {"type": "position", "value": "Fighting", "message": "You can't rescue from this position."}
         ],
@@ -209,8 +209,8 @@
         {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
       ],
       "mechanics": {
-        "activationFormula": "(random(1,250) + damage) < skillPercent",
-        "effectFormula": "damage - (level * 2)",
+        "activationFormula": "return (random(1,250) + damage) < skillPercent",
+        "effectFormula": "return math.max(0, damage - (level * 2))",
         "requirements": [],
         "effects": []
       }
@@ -248,8 +248,8 @@
         {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
       ],
       "mechanics": {
-        "activationFormula": "(random(1,300) + damage) < skillPercent",
-        "effectFormula": "damage - level",
+        "activationFormula": "return (random(1,300) + damage) < skillPercent",
+        "effectFormula": "return math.max(0, damage - level)",
         "requirements": [
           {"type": "equipment", "value": "Shield", "message": "You need a shield to parry!", "implemented": false}
         ],
