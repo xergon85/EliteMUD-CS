@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Server.Adapters.Commands.NoOp;
 using EliteMud.Server.Adapters.Commands.Skills;
 using System.Reflection;
 
@@ -7,6 +8,7 @@ namespace EliteMud.Server.Adapters.Commands.Shared;
 internal sealed class CommandRouter
 {
     private readonly Dictionary<string, ICommandHandler> _handlersByVerb;
+    private readonly ICommandHandler? _emptyCommandHandler;
 
     public CommandRouter(IEnumerable<ICommandHandler> handlers)
     {
@@ -14,6 +16,13 @@ internal sealed class CommandRouter
         
         foreach (var handler in handlers)
         {
+            // Special case: NoOpCommandHandler handles empty commands (user presses Enter)
+            if (handler is NoOpCommandHandler)
+            {
+                _emptyCommandHandler = handler;
+                continue;
+            }
+            
             CommandAttribute? attribute = null;
             
             // Check if handler itself has [Command] attribute
@@ -55,8 +64,16 @@ internal sealed class CommandRouter
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
-        if (!string.IsNullOrEmpty(command.Verb) && 
-            _handlersByVerb.TryGetValue(command.Verb, out var handler))
+        // Handle empty command (user pressed Enter)
+        if (string.IsNullOrEmpty(command.Verb))
+        {
+            return _emptyCommandHandler != null
+                ? _emptyCommandHandler.HandleAsync(command, context, cancellationToken)
+                : ValueTask.FromResult(CommandOutcome.Continue);
+        }
+        
+        // Handle normal commands
+        if (_handlersByVerb.TryGetValue(command.Verb, out var handler))
         {
             return handler.HandleAsync(command, context, cancellationToken);
         }
