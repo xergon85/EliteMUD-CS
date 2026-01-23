@@ -42,6 +42,9 @@ public class Character
 
     // Skills - stored as JSON string: {"Kick":75,"Dodge":90}
     public string? Skills { get; set; }
+    
+    // Skillgain cooldown - stored as JSON string: {"Kick":"2026-01-23T12:34:56Z","Dodge":"2026-01-23T12:35:10Z"}
+    public string? LastSkillgainTimes { get; set; }
 
     // Location & Resources
     public int RoomId { get; set; }

@@ -431,9 +431,11 @@
 
 ### ✅ RECENTLY COMPLETED (Phase 4: Combat + Skills Framework)
 - **Skills Framework Extraction:** COMPLETE (Jan 23, 2026)
+- **WAIT_STATE System:** COMPLETE (Jan 23, 2026)
+- **Skillgain Cooldown:** COMPLETE (Jan 23, 2026)
 - **POC Status:** Complete and validated (see `docs/skills-poc-documentation.md`)
 - **Framework Status:** ISkillHandler, IPassiveSkillHandler, SkillRegistry, ISkillExecutor all implemented
-- **Next Phase:** WAIT_STATE system, skill metadata schema, additional skills
+- **Next Phase:** Skill metadata schema, additional skills (bash, backstab, rescue)
 
 ### ❌ NOT STARTED
 - Advanced combat skills (Phase 4.2)
@@ -483,21 +485,26 @@
    - ✅ ISkillExecutor auto-discovery with SkillCommandHandler wrapping
    - ⚠️ **TODO: Handle session takeover on reconnect** (preserve fight state, wait states, skill cooldowns)
 
-5. **Implement WAIT_STATE System** (Medium-term) - NEXT
-   - Add WaitState property to PlayerState
-   - Prevent actions while waiting (cooldown system)
-   - Integrate with combat tick (decrement each tick)
-   - Block skill/command usage during wait state
+5. ✅ **Implement WAIT_STATE System** (Medium-term) - COMPLETE
+   - ✅ Added WaitState property to PlayerState (PlayerState.WaitState:230)
+   - ✅ Prevent actions while waiting (CommandRouter checks CanAct():74-80)
+   - ✅ Integrated with combat tick (GameTickService decrements each tick:116)
+   - ✅ Block skill/command usage during wait state (exempts informational commands)
+   - ✅ Implementation: WorldModels.cs:334-345, CombatCalculator.cs:7-30
 
-6. **Design Skill Metadata Schema** (Medium-term)
+6. **Design Skill Metadata Schema** (Medium-term) - NEXT
    - Create `content/skills.json` format
-   - Define: name, type, damage, cooldown, level requirements
+   - Define: name, type, damage, cooldown, level requirements, wait_state
    - Include class restrictions and skill caps
 
-7. **Implement Skillgain Cooldown** (Medium-term)
-   - Add SkillGain timestamp tracking
-   - Prevent rapid skill improvement
-   - Match legacy improvement rates
+7. ✅ **Implement Skillgain Cooldown** (Medium-term) - COMPLETE
+   - ✅ Added LastSkillgainTime tracking (Dictionary<SkillType, DateTime>)
+   - ✅ 60-second cooldown between improvements for same skill
+   - ✅ Stored in database as JSON (Character.LastSkillgainTimes)
+   - ✅ Checked in PlayerState.TryImproveSkill() before allowing improvement
+   - ✅ Player notified when skill improves: "Your skill - kick - just improved!"
+   - ✅ Implementation: WorldModels.cs:312-361, CombatConstants:33-36
+   - ✅ Tests: SkillSystemTests.cs (2 new tests for cooldown verification)
 
 8. **Add More Skills** (Long-term)
    - bash (shield attack)

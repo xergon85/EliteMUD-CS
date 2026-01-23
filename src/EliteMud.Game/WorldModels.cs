@@ -103,6 +103,7 @@ public sealed class PlayerState : ICombatant
     private readonly List<int> _inventoryObjectIds = new();
     private readonly Dictionary<int, int> _equipmentSlotToObjectId = new(); // slot -> objectInstanceId
     private readonly Dictionary<SkillType, byte> _skills = new(); // skill -> proficiency (0-100)
+    private readonly Dictionary<SkillType, DateTime> _lastSkillgainTime = new(); // skill -> last improvement time
 
     public PlayerState(
         int id,
@@ -308,20 +309,54 @@ public sealed class PlayerState : ICombatant
     /// <summary>
     /// Improve skill by 1% if improvement check passes.
     /// Legacy: improve_skill(ch, skill) - act.other.c:52-74
+    /// 
+    /// Improvement conditions:
+    /// 1. Skill must not be maxed (100%)
+    /// 2. Skillgain cooldown must have passed (60 seconds since last improvement)
+    /// 3. Random roll must succeed (harder at higher proficiency)
     /// </summary>
     public bool TryImproveSkill(SkillType skillType)
     {
         var currentPercent = GetSkill(skillType);
         if (currentPercent >= 100) return false; // Already maxed
         
+        // Check skillgain cooldown
+        if (_lastSkillgainTime.TryGetValue(skillType, out var lastImprovement))
+        {
+            var timeSinceLastGain = DateTime.UtcNow - lastImprovement;
+            if (timeSinceLastGain.TotalSeconds < CombatConstants.SkillgainCooldownSeconds)
+            {
+                return false; // Still on cooldown
+            }
+        }
+        
         // Legacy: if (number(0, 99) > percent) { percent++; SET_SKILL(ch, skill, percent); }
         if (Random.Shared.Next(0, 100) > currentPercent)
         {
             SetSkill(skillType, (byte)(currentPercent + 1));
+            _lastSkillgainTime[skillType] = DateTime.UtcNow;
             return true;
         }
         
         return false;
+    }
+    
+    /// <summary>
+    /// Get all skillgain timestamps as a read-only dictionary.
+    /// Used for persistence and skill cooldown tracking.
+    /// </summary>
+    public IReadOnlyDictionary<SkillType, DateTime> GetAllSkillgainTimes()
+    {
+        return _lastSkillgainTime;
+    }
+    
+    /// <summary>
+    /// Set skillgain timestamp for a specific skill.
+    /// Used when loading character data from database.
+    /// </summary>
+    public void SetSkillgainTime(SkillType skillType, DateTime timestamp)
+    {
+        _lastSkillgainTime[skillType] = timestamp;
     }
     
     // ===== Combat Lag (WAIT_STATE) =====

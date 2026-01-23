@@ -98,6 +98,29 @@ public static class CharacterMapper
                 // If skills JSON is invalid, just skip it
             }
         }
+        
+        // Load skillgain cooldown times from JSON
+        if (!string.IsNullOrWhiteSpace(character.LastSkillgainTimes))
+        {
+            try
+            {
+                var skillgainDict = JsonSerializer.Deserialize<Dictionary<string, DateTime>>(character.LastSkillgainTimes);
+                if (skillgainDict != null)
+                {
+                    foreach (var (skillName, timestamp) in skillgainDict)
+                    {
+                        if (Enum.TryParse<SkillType>(skillName, out var skillType))
+                        {
+                            player.SetSkillgainTime(skillType, timestamp);
+                        }
+                    }
+                }
+            }
+            catch (JsonException)
+            {
+                // If JSON is invalid, just skip it (no cooldowns loaded)
+            }
+        }
 
         // Load inventory items
         foreach (var invItem in character.Inventory)
@@ -198,6 +221,21 @@ public static class CharacterMapper
         else
         {
             character.Skills = null;
+        }
+        
+        // Skillgain cooldown times - serialize to JSON
+        var allSkillgainTimes = playerState.GetAllSkillgainTimes();
+        if (allSkillgainTimes.Count > 0)
+        {
+            var skillgainDict = allSkillgainTimes.ToDictionary(
+                kvp => kvp.Key.ToString(),
+                kvp => kvp.Value
+            );
+            character.LastSkillgainTimes = JsonSerializer.Serialize(skillgainDict);
+        }
+        else
+        {
+            character.LastSkillgainTimes = null;
         }
 
         // Location & Resources

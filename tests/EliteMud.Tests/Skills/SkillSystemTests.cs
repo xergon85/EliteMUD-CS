@@ -166,6 +166,55 @@ public class SkillSystemTests
         Assert.Equal(25, player2.GetSkill(SkillType.Kick));
     }
 
+    [Fact]
+    public void TryImproveSkill_WithinCooldown_ReturnsFalse()
+    {
+        // Arrange
+        var player = CreatePlayer();
+        player.SetSkill(SkillType.Kick, 10); // Low skill, high improvement chance
+
+        // Act - First improvement should succeed (eventually)
+        bool firstImproved = false;
+        for (int i = 0; i < 1000 && !firstImproved; i++)
+        {
+            firstImproved = player.TryImproveSkill(SkillType.Kick);
+        }
+        
+        // Second immediate attempt should fail (cooldown active)
+        bool secondImproved = player.TryImproveSkill(SkillType.Kick);
+
+        // Assert
+        Assert.True(firstImproved, "First improvement should succeed with low skill");
+        Assert.False(secondImproved, "Second improvement should fail due to cooldown");
+    }
+
+    [Fact]
+    public void TryImproveSkill_DifferentSkills_IndependentCooldowns()
+    {
+        // Arrange
+        var player = CreatePlayer();
+        player.SetSkill(SkillType.Kick, 10);
+        player.SetSkill(SkillType.Dodge, 10);
+
+        // Act - Improve kick
+        bool kickImproved = false;
+        for (int i = 0; i < 1000 && !kickImproved; i++)
+        {
+            kickImproved = player.TryImproveSkill(SkillType.Kick);
+        }
+        
+        // Improve dodge immediately (should work - different skill)
+        bool dodgeImproved = false;
+        for (int i = 0; i < 1000 && !dodgeImproved; i++)
+        {
+            dodgeImproved = player.TryImproveSkill(SkillType.Dodge);
+        }
+
+        // Assert
+        Assert.True(kickImproved, "Kick should improve");
+        Assert.True(dodgeImproved, "Dodge should improve independently of kick cooldown");
+    }
+
     private static PlayerState CreatePlayer(string name = "TestPlayer")
     {
         return new PlayerState(

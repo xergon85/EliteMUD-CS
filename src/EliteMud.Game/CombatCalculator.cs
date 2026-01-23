@@ -27,6 +27,15 @@ public static class CombatConstants
         public const int Backstab = PULSE_VIOLENCE * 2;  // 2 rounds (4 seconds)
         public const int Flee = PULSE_VIOLENCE * 1;      // 1 round (2 seconds)
     }
+    
+    /// <summary>
+    /// Skillgain cooldown in seconds.
+    /// Minimum time between skill improvements for the same skill.
+    /// 
+    /// Legacy: Used ch->specials.skillgain accumulator (0-100) that incremented each tick.
+    /// EliteMUD-CS: Simplified to timestamp-based cooldown for predictability.
+    /// </summary>
+    public const int SkillgainCooldownSeconds = 60;
 }
 
 /// <summary>

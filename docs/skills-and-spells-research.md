@@ -822,13 +822,22 @@ public class CombatService
    - Auto-discovers IPassiveSkillHandler (passive skills)
    - Dependency injection integration
 
-3. ⏳ **WAIT_STATE System** - NEXT STEP
-   - Add WaitState property to PlayerState
-   - Prevent actions while waiting (cooldown system)
-   - Integrate with combat tick (decrement each tick)
-   - Block skill/command usage during wait state
+3. ✅ **WAIT_STATE System** - IMPLEMENTED
+   - Added WaitState property to PlayerState (PlayerState.WaitState:230)
+   - Prevents actions while waiting (CommandRouter checks CanAct():74-80)
+   - Integrated with combat tick (GameTickService decrements each tick:116)
+   - Block skill/command usage during wait state (exempts informational commands)
+   - Implementation details in WorldModels.cs:334-345 and CombatCalculator.cs:7-30
 
-4. ⏳ **Skill Metadata Schema** - TODO
+4. ✅ **Skillgain Cooldown System** - IMPLEMENTED
+   - Added LastSkillgainTime tracking (Dictionary<SkillType, DateTime>)
+   - 60-second cooldown between improvements for same skill
+   - Stored in database as JSON (Character.LastSkillgainTimes)
+   - Checked in PlayerState.TryImproveSkill() before allowing improvement
+   - Implementation details in WorldModels.cs:312-361, CombatConstants:33-36
+   - Player notified when skill improves: "Your skill - kick - just improved!"
+
+5. ⏳ **Skill Metadata Schema** - TODO
    - Create `content/skills.json` format
    - Define: name, type, damage, cooldown, level requirements
    - Include class restrictions and skill caps
