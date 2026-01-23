@@ -249,7 +249,7 @@ public class CombatCalculator
         // Legacy: fight.c:1543-1551 (dodge), fight.c:1523-1535 (parry)
         var dodgeResult = _dodgeSkill.TryActivate(victim, damage);
         bool dodged = dodgeResult.Activated;
-        string defenseMessage = dodgeResult.Message;
+        string? defenseMessage = dodgeResult.Message;
         
         if (dodged)
         {
