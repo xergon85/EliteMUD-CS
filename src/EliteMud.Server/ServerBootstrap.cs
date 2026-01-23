@@ -2,6 +2,7 @@ using System.Net;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Session;
 using EliteMud.Application.Session.Authentication;
+using EliteMud.Application.Spells;
 using EliteMud.Application.World;
 using EliteMud.Data;
 using EliteMud.Data.Repositories;
@@ -79,12 +80,15 @@ internal static class ServerBootstrap
         }
 
         var skillMetadata = ContentLoader.LoadSkills(contentRoot);
-        var skillRegistry = new SkillMetadataRegistry(skillMetadata);
+        var skillMetadataRegistry = new SkillMetadataRegistry(skillMetadata);
         
         var spellMetadata = ContentLoader.LoadSpells(contentRoot);
-        var spellRegistry = new SpellMetadataRegistry(spellMetadata);
+        var spellMetadataRegistry = new SpellMetadataRegistry(spellMetadata);
         
         var formulaEvaluator = new FormulaEvaluator();
+        
+        var skillRegistry = new Application.Skills.SkillRegistry(skillMetadataRegistry, formulaEvaluator);
+        var spellRegistry = new SpellRegistry(spellMetadataRegistry, formulaEvaluator);
 
         var worldState = BuildWorldState(world, mobs, objects, zones);
         var scriptEngine = BuildScriptEngine(scripts);
@@ -97,6 +101,8 @@ internal static class ServerBootstrap
             // World and scripting
             .AddSingleton<IWorldState>(worldState)
             .AddSingleton(scriptEngine)
+            .AddSingleton(skillMetadataRegistry)
+            .AddSingleton(spellMetadataRegistry)
             .AddSingleton(skillRegistry)
             .AddSingleton(spellRegistry)
             .AddSingleton(formulaEvaluator)

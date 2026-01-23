@@ -121,6 +121,52 @@ public static class CharacterMapper
                 // If JSON is invalid, just skip it (no cooldowns loaded)
             }
         }
+        
+        // Load spells from JSON
+        if (!string.IsNullOrWhiteSpace(character.Spells))
+        {
+            try
+            {
+                var spellDict = JsonSerializer.Deserialize<Dictionary<string, byte>>(character.Spells);
+                if (spellDict != null)
+                {
+                    foreach (var (spellName, proficiency) in spellDict)
+                    {
+                        if (Enum.TryParse<SpellType>(spellName, out var spellType))
+                        {
+                            player.SetSpell(spellType, proficiency);
+                        }
+                    }
+                }
+            }
+            catch (JsonException)
+            {
+                // If spells JSON is invalid, just skip it
+            }
+        }
+        
+        // Load spellgain cooldown times from JSON
+        if (!string.IsNullOrWhiteSpace(character.LastSpellgainTimes))
+        {
+            try
+            {
+                var spellgainDict = JsonSerializer.Deserialize<Dictionary<string, DateTime>>(character.LastSpellgainTimes);
+                if (spellgainDict != null)
+                {
+                    foreach (var (spellName, timestamp) in spellgainDict)
+                    {
+                        if (Enum.TryParse<SpellType>(spellName, out var spellType))
+                        {
+                            player.SetSpellgainTime(spellType, timestamp);
+                        }
+                    }
+                }
+            }
+            catch (JsonException)
+            {
+                // If JSON is invalid, just skip it (no cooldowns loaded)
+            }
+        }
 
         // Load inventory items
         foreach (var invItem in character.Inventory)
@@ -236,6 +282,36 @@ public static class CharacterMapper
         else
         {
             character.LastSkillgainTimes = null;
+        }
+        
+        // Spells - serialize to JSON
+        var allSpells = playerState.GetAllSpells();
+        if (allSpells.Count > 0)
+        {
+            var spellDict = allSpells.ToDictionary(
+                kvp => kvp.Key.ToString(),
+                kvp => kvp.Value
+            );
+            character.Spells = JsonSerializer.Serialize(spellDict);
+        }
+        else
+        {
+            character.Spells = null;
+        }
+        
+        // Spellgain cooldown times - serialize to JSON
+        var allSpellgainTimes = playerState.GetAllSpellgainTimes();
+        if (allSpellgainTimes.Count > 0)
+        {
+            var spellgainDict = allSpellgainTimes.ToDictionary(
+                kvp => kvp.Key.ToString(),
+                kvp => kvp.Value
+            );
+            character.LastSpellgainTimes = JsonSerializer.Serialize(spellgainDict);
+        }
+        else
+        {
+            character.LastSpellgainTimes = null;
         }
 
         // Location & Resources

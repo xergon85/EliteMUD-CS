@@ -45,6 +45,12 @@ public class Character
     
     // Skillgain cooldown - stored as JSON string: {"Kick":"2026-01-23T12:34:56Z","Dodge":"2026-01-23T12:35:10Z"}
     public string? LastSkillgainTimes { get; set; }
+    
+    // Spells - stored as JSON string: {"MagicMissile":75,"CureLightWounds":90}
+    public string? Spells { get; set; }
+    
+    // Spellgain cooldown - stored as JSON string: {"MagicMissile":"2026-01-23T12:34:56Z","CureLightWounds":"2026-01-23T12:35:10Z"}
+    public string? LastSpellgainTimes { get; set; }
 
     // Location & Resources
     public int RoomId { get; set; }
