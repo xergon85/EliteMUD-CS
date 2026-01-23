@@ -3,6 +3,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Wimpy;
 
+[Command("wimpy")]
 internal sealed class WimpyCommandHandler : ICommandHandler
 {
     public CommandKind Kind => CommandKind.Wimpy;

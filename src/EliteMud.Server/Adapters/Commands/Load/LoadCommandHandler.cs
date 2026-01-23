@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Load;
 
+[Command("load")]
 internal sealed class LoadCommandHandler : ICommandHandler
 {
     private readonly LoadHandler _loadHandler;

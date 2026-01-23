@@ -6,6 +6,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.ResetZone;
 
+[Command("zreset", Aliases = new[] { "reset" })]
 internal sealed class ResetZoneCommandHandler : ICommandHandler
 {
     private readonly CommandCatalog _catalog;

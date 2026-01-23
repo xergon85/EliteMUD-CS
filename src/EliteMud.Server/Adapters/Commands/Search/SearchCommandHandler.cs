@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Search;
 
+[Command("search")]
 internal sealed class SearchCommandHandler : ICommandHandler
 {
     private readonly SearchHandler _searchHandler;

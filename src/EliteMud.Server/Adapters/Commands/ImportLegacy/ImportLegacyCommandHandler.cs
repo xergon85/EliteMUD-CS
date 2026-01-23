@@ -4,6 +4,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.ImportLegacy;
 
+[Command("import-legacy")]
 internal sealed class ImportLegacyCommandHandler : ICommandHandler
 {
     private readonly ImportLegacyHandler _handler;
