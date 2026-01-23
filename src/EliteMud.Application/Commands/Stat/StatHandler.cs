@@ -26,12 +26,12 @@ public sealed class StatHandler
     {
         var output = new StringBuilder();
 
-        // Line 1: Level, name, title, race, class
+        // Line 1: Level in red, name and title in cyan
         var title = player.Title ?? "the newbie";
         var raceClass = $"{player.Race.ToLower()} {player.CharacterClass.ToLower()}";
-        output.AppendLine($"#RLevel {player.Level}#N - #B{player.Name}#N #Cthe {title}#N -");
+        output.AppendLine($"Level #R{player.Level}#N - #C{player.Name} {title}#N -");
 
-        // Line 2: Age, sex, race, class, "player"
+        // Line 2: Age, sex, race, class, "player" - all green
         // TODO: Calculate actual age from Birth/CreatedAt field
         var age = 17; // Placeholder
         var sex = player.Sex switch
@@ -40,9 +40,9 @@ public sealed class StatHandler
             2 => "female",
             _ => "neutral"
         };
-        output.AppendLine($"{age} year old {sex} {raceClass} player");
+        output.AppendLine($"#G{age} year old {sex} {raceClass} player#N");
 
-        // Line 3: Stats with modifiers from affects
+        // Line 3: Stats - values in cyan
         var strMod = GetStatModifier(player, AffectLocation.Strength);
         var intMod = GetStatModifier(player, AffectLocation.Intelligence);
         var wisMod = GetStatModifier(player, AffectLocation.Wisdom);
@@ -59,7 +59,7 @@ public sealed class StatHandler
 
         output.AppendLine($"Str: {strDisplay}  Int: {intDisplay}  Wis: {wisDisplay}  Dex: {dexDisplay}  Con: {conDisplay}  Cha: {chaDisplay}");
 
-        // Line 4: AC, Hitroll, Damroll, THAC0
+        // Line 4: AC, Hitroll, Damroll, THAC0 - all values in red
         var baseAC = player.ArmorClass;
         var acMod = GetStatModifier(player, AffectLocation.ArmorClass);
         var effectiveAC = player.GetEffectiveArmorClass();
@@ -75,13 +75,13 @@ public sealed class StatHandler
         // THAC0 calculation (legacy DikuMUD formula)
         var thac0 = CalculateTHAC0(player.Level, effectiveHitroll);
 
-        var acDisplay = acMod != 0 ? $"[#G{effectiveAC}#N/#Y{baseAC / 10}#N  Mod: #C{acMod}#N/#Y10#N]" : $"[#G{effectiveAC}#N/#Y{baseAC / 10}#N]";
-        var hitrollDisplay = hitrollMod != 0 ? $"[#G{effectiveHitroll}#N  Mod: #C{hitrollMod}#N]" : $"[#G{effectiveHitroll}#N]";
-        var damrollDisplay = damrollMod != 0 ? $"[#G{effectiveDamroll}#N  Mod: #C{damrollMod}#N]" : $"[#G{effectiveDamroll}#N]";
+        var acDisplay = acMod != 0 ? $"[#R{effectiveAC}/{baseAC / 10}#N  Mod: #w{acMod}/10#N]" : $"[#R{effectiveAC}/{baseAC / 10}#N]";
+        var hitrollDisplay = hitrollMod != 0 ? $"[#R{effectiveHitroll}#N  Mod: #w{hitrollMod}#N]" : $"[#R{effectiveHitroll}#N]";
+        var damrollDisplay = damrollMod != 0 ? $"[#R{effectiveDamroll}#N  Mod: #w{damrollMod}#N]" : $"[#R{effectiveDamroll}#N]";
 
         output.AppendLine($"AC{acDisplay} Hitroll{hitrollDisplay} Damroll{damrollDisplay} THAC0[#R{thac0}#N]");
 
-        // Line 5: Saving throws and magic resistance
+        // Line 5: Saving throws and magic resistance - all values in red
         // TODO: Implement saving throw fields in PlayerState
         var savingPhysical = GetStatModifier(player, AffectLocation.SavingPhysical);
         var savingMental = GetStatModifier(player, AffectLocation.SavingMental);
@@ -89,17 +89,17 @@ public sealed class StatHandler
         var savingPoison = GetStatModifier(player, AffectLocation.SavingPoison);
         var magicResist = GetStatModifier(player, AffectLocation.MagicResistance);
 
-        output.AppendLine($"Saves[Physical: #Y{savingPhysical}#N / Mental: #Y{savingMental}#N / Magic: #Y{savingMagic}#N / Poison: #Y{savingPoison}#N] Magic Resistance[#C{magicResist}#N]");
+        output.AppendLine($"Saves[Physical: #R{savingPhysical}#N / Mental: #R{savingMental}#N / Magic: #R{savingMagic}#N / Poison: #R{savingPoison}#N] Magic Resistance[#R{magicResist}#N]");
 
-        // Line 6: Clan, ClanLevel, Hometown, Pracs
+        // Line 6: Clan, ClanLevel, Hometown, Pracs - all values in blue
         // TODO: Implement Clan, Hometown, Practices fields
-        output.AppendLine($"Clan[#mNone#N] ClanLevel[#m0#N] Hometown[#GUnknown#N] Pracs[#Y0#N]");
+        output.AppendLine($"Clan[#BNone#N] ClanLevel[#B0#N] Hometown[#BMidgaard#N] Pracs[#B0#N]");
 
-        // Line 7: Worships (deity)
+        // Line 7: Worships (deity) - value in bold blue
         // TODO: Implement Deity field
         output.AppendLine($"Worships[#bNone#N]");
 
-        // Lines 8+: Magic abilities (from items, spells, and innate)
+        // Lines 8+: Magic abilities - all white/gray
         // Show active affects
         if (player.Affects.Count > 0)
         {
@@ -124,7 +124,7 @@ public sealed class StatHandler
                     sourceLabel = $"{affect.DurationHours} {hoursText}";
                 }
                 
-                output.AppendLine($"Magic: #C({sourceLabel})#N    #G{affectName.ToLower()}#N");
+                output.AppendLine($"Magic: ({sourceLabel})    {affectName.ToLower()}");
             }
         }
 
@@ -133,14 +133,14 @@ public sealed class StatHandler
         // For now, add some placeholder innate abilities based on race
         if (player.Race.Equals("Troll", StringComparison.OrdinalIgnoreCase))
         {
-            output.AppendLine($"Magic: #C(innate)#N    #Gregeneration#N");
+            output.AppendLine($"Magic: (innate)    regeneration");
         }
         
         if (player.Race.Equals("Elf", StringComparison.OrdinalIgnoreCase) ||
             player.Race.Equals("Drow", StringComparison.OrdinalIgnoreCase) ||
             player.Race.Equals("Dwarf", StringComparison.OrdinalIgnoreCase))
         {
-            output.AppendLine($"Magic: #C(innate)#N    #Ginfravision#N");
+            output.AppendLine($"Magic: (innate)    infravision");
         }
 
         return CommandResult.Ok(output.ToString());
@@ -159,17 +159,18 @@ public sealed class StatHandler
     /// <summary>
     /// Format a stat value with optional modifier display.
     /// Examples: "[20]" or "[20+2]" or "[20-3]"
+    /// Legacy format: stat values in cyan (#C)
     /// </summary>
     private static string FormatStatWithModifier(sbyte baseValue, int modifier)
     {
         if (modifier == 0)
         {
-            return $"[#Y{baseValue}#N]";
+            return $"[#C{baseValue}#N]";
         }
 
         var effectiveValue = baseValue + modifier;
         var modSign = modifier > 0 ? "+" : "";
-        return $"[#G{effectiveValue}#N (#Y{baseValue}#N#C{modSign}{modifier}#N)]";
+        return $"[#C{effectiveValue}#N (#C{baseValue}#N{modSign}{modifier})]";
     }
 
     /// <summary>
