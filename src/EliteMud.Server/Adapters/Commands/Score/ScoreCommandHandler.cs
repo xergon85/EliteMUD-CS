@@ -8,10 +8,11 @@ internal sealed class ScoreCommandHandler : ICommandHandler
 {
     private readonly EliteMud.Application.Commands.Score.ScoreHandler _scoreHandler;
 
-    public ScoreCommandHandler(EliteMud.Application.Commands.Score.ScoreHandler scoreHandler)
+    public ScoreCommandHandler()
     {
-        _scoreHandler = scoreHandler;
+        _scoreHandler = new EliteMud.Application.Commands.Score.ScoreHandler();
     }
+    
     public async ValueTask<CommandOutcome> HandleAsync(CommandRequest request, ConnectionContext context, CancellationToken cancellationToken)
     {
         var result = _scoreHandler.Handle(context.Player);

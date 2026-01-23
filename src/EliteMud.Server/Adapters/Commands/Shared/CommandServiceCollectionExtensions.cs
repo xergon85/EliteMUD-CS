@@ -1,6 +1,5 @@
 using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.ImportLegacy;
-using EliteMud.Application.Commands.Score;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
 using EliteMud.Application.Session;
@@ -39,7 +38,6 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<LegacyContentImporter>()
             .AddSingleton<ImportLegacyHandler>()
             .AddSingleton<FleeHandler>()
-            .AddSingleton<ScoreHandler>()
 
             // Auto-discover all command handlers with [Command] attribute
             .AddCommandHandlersViaReflection()
