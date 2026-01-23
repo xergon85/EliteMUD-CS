@@ -4,26 +4,27 @@ using EliteMud.Scripting;
 namespace EliteMud.Application.Spells;
 
 /// <summary>
-/// Cure Light Wounds spell - channels healing energy to restore minor wounds.
+/// Armor spell - surrounds the target with a protective magical barrier.
 /// 
-/// This is a basic healing spell that restores hit points to the target.
-/// Formula: 1d8 + level/2 healing
+/// This is a defensive buff spell that reduces armor class (lower AC = better defense).
+/// Provides -20 AC bonus for 24 + level hours (MUD hours).
+/// Legacy messages: "You feel someone protecting you." (no room message)
 /// 
 /// Metadata and formulas loaded from content/spells/spells.json
 /// </summary>
-public sealed class CureLightWoundsSpell : ISpellHandler
+public sealed class ArmorSpell : ISpellHandler
 {
     private readonly SpellMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
 
-    public CureLightWoundsSpell(SpellMetadataRegistry registry, FormulaEvaluator formulaEvaluator)
+    public ArmorSpell(SpellMetadataRegistry registry, FormulaEvaluator formulaEvaluator)
     {
-        _metadata = registry.GetBySpellType(SpellType.CureLightWounds)
-            ?? throw new InvalidOperationException("Cure Light Wounds spell metadata not found in registry");
+        _metadata = registry.GetBySpellType(SpellType.Armor)
+            ?? throw new InvalidOperationException("Armor spell metadata not found in registry");
         _formulaEvaluator = formulaEvaluator;
     }
 
-    public SpellType SpellType => SpellType.CureLightWounds;
+    public SpellType SpellType => SpellType.Armor;
 
     public string Name => _metadata.Name;
 
@@ -40,7 +41,7 @@ public sealed class CureLightWoundsSpell : ISpellHandler
     public bool CanCast(ICombatant caster)
     {
         // Must have learned the spell (proficiency > 0)
-        if (caster is PlayerState player && player.GetSpell(SpellType.CureLightWounds) == 0)
+        if (caster is PlayerState player && player.GetSpell(SpellType.Armor) == 0)
         {
             return false;
         }
@@ -68,7 +69,7 @@ public sealed class CureLightWoundsSpell : ISpellHandler
 
     public string GetCannotCastMessage(ICombatant caster)
     {
-        if (caster is PlayerState player && player.GetSpell(SpellType.CureLightWounds) == 0)
+        if (caster is PlayerState player && player.GetSpell(SpellType.Armor) == 0)
         {
             return "You don't know that spell!";
         }
@@ -92,7 +93,7 @@ public sealed class CureLightWoundsSpell : ISpellHandler
     }
 
     /// <summary>
-    /// Cure Light Wounds does not deal damage.
+    /// Armor does not deal damage.
     /// </summary>
     public int CalculateDamage(ICombatant caster, ICombatant? target = null)
     {
@@ -100,26 +101,16 @@ public sealed class CureLightWoundsSpell : ISpellHandler
     }
 
     /// <summary>
-    /// Calculate healing amount using Lua formula from spells.json.
-    /// Formula: "return random(1, 8) + math.floor(level / 2)" (1d8 + level/2)
-    /// Cure Light Wounds always succeeds (no failure chance).
+    /// Armor does not heal.
     /// </summary>
     public int CalculateHealing(ICombatant caster, ICombatant? target = null)
     {
-        if (_metadata.Mechanics?.HealingFormula == null)
-        {
-            throw new InvalidOperationException("Cure Light Wounds healing formula not found in metadata");
-        }
-
-        return _formulaEvaluator.EvaluateInt(
-            _metadata.Mechanics.HealingFormula,
-            new { level = caster.Level }
-        );
+        return 0;
     }
 
     /// <summary>
     /// Determine if the spell succeeds using Lua formula from spells.json.
-    /// Formula: "return true" (Cure Light Wounds always succeeds)
+    /// Armor typically always succeeds unless the formula specifies otherwise.
     /// </summary>
     public bool RollSuccess(ICombatant caster, ICombatant? target = null)
     {
@@ -133,16 +124,49 @@ public sealed class CureLightWoundsSpell : ISpellHandler
             new
             {
                 level = caster.Level,
-                spellPercent = caster is PlayerState player ? player.GetSpell(SpellType.CureLightWounds) : 100
+                spellPercent = caster is PlayerState player ? player.GetSpell(SpellType.Armor) : 100
             }
         );
     }
 
     /// <summary>
-    /// Cure Light Wounds does not apply affects.
+    /// Creates the Armor affect to apply to the target.
+    /// Provides -20 AC (lower is better) for 24 + level hours.
+    /// Legacy: "You feel someone protecting you." (to char only)
     /// </summary>
     public List<Affect> CreateAffects(ICombatant caster, ICombatant target)
     {
-        return new List<Affect>();
+        // Calculate duration using Lua formula from spells.json
+        // Expected formula: "return 24 + level"
+        var duration = _metadata.Mechanics?.DurationFormula != null
+            ? _formulaEvaluator.EvaluateInt(
+                _metadata.Mechanics.DurationFormula,
+                new { level = caster.Level }
+            )
+            : 24 + caster.Level; // Fallback to legacy default
+
+        // Calculate AC modifier using Lua formula from spells.json
+        // Expected formula: "return -20"
+        var modifier = _metadata.Mechanics?.ArmorClassBonusFormula != null
+            ? _formulaEvaluator.EvaluateInt(
+                _metadata.Mechanics.ArmorClassBonusFormula,
+                new { level = caster.Level }
+            )
+            : -20; // Fallback to legacy default
+
+        return new List<Affect>
+        {
+            new Affect
+            {
+                Type = AffectType.Armor,
+                Location = AffectLocation.ArmorClass,
+                Modifier = modifier,
+                DurationHours = duration,
+                Source = "armor",
+                ToCharMessage = "You feel someone protecting you.",
+                ToRoomMessage = null, // Legacy: no room message for Armor
+                WearOffMessage = "You feel less protected."
+            }
+        };
     }
 }

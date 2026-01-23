@@ -138,4 +138,12 @@ public sealed class LightningBoltSpell : ISpellHandler
             }
         );
     }
+
+    /// <summary>
+    /// Lightning Bolt does not apply affects.
+    /// </summary>
+    public List<Affect> CreateAffects(ICombatant caster, ICombatant target)
+    {
+        return new List<Affect>();
+    }
 }

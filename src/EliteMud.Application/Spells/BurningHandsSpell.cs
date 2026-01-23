@@ -137,4 +137,12 @@ public sealed class BurningHandsSpell : ISpellHandler
             }
         );
     }
+
+    /// <summary>
+    /// Burning Hands does not apply affects.
+    /// </summary>
+    public List<Affect> CreateAffects(ICombatant caster, ICombatant target)
+    {
+        return new List<Affect>();
+    }
 }

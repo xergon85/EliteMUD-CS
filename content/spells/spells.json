@@ -284,8 +284,9 @@
       "mechanics": {
         "durationFormula": "return 6 + level",
         "hitrollBonusFormula": "return 2",
+        "savingMagicBonusFormula": "return 5",
         "successFormula": "return true",
-        "note": "Bless grants +2 hitroll for 6 + level hours"
+        "note": "Bless grants +2 hitroll and +5 saving vs magic for 6 + level hours"
       }
     }
   ]

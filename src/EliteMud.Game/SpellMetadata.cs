@@ -41,6 +41,7 @@ public sealed class SpellMechanics
     public string? HitrollBonusFormula { get; init; }
     public string? DamrollBonusFormula { get; init; }
     public string? StrengthBonusFormula { get; init; }
+    public string? SavingMagicBonusFormula { get; init; }
     public string? Note { get; init; }
 }
 

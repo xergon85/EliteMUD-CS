@@ -137,4 +137,12 @@ public sealed class MagicMissileSpell : ISpellHandler
             }
         );
     }
+
+    /// <summary>
+    /// Magic Missile does not apply affects.
+    /// </summary>
+    public List<Affect> CreateAffects(ICombatant caster, ICombatant target)
+    {
+        return new List<Affect>();
+    }
 }

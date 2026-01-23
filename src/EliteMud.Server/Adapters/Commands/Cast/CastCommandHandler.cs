@@ -310,6 +310,7 @@ internal sealed class CastCommandHandler : ICommandHandler
         // Apply spell effects
         var damage = spell.CalculateDamage(caster, target);
         var healing = spell.CalculateHealing(caster, target);
+        var affects = spell.CreateAffects(caster, target);
 
         if (damage > 0)
         {
@@ -319,9 +320,14 @@ internal sealed class CastCommandHandler : ICommandHandler
         {
             await CastHealingSpellAsync(spell, metadata, caster, target, healing, context, targetConnectionId, cancellationToken);
         }
+        else if (affects.Count > 0)
+        {
+            // Buff/debuff spell - apply affects
+            await CastAffectSpellAsync(spell, metadata, caster, target, affects, context, targetConnectionId, cancellationToken);
+        }
         else
         {
-            // Buff spell or other effect (not yet implemented)
+            // Unknown spell type (no damage, healing, or affects)
             await context.Session.SendLineAsync($"You cast {metadata.Name}.", cancellationToken);
             await BroadcastToRoomAsync(context, $"$n casts {metadata.Name}.", cancellationToken);
         }
@@ -480,6 +486,93 @@ internal sealed class CastCommandHandler : ICommandHandler
                     targetConnectionId,
                     $"$n casts {metadata.Name} on {target.Name}.",
                     cancellationToken);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Cast an affect spell (buff/debuff) and apply affects to target.
+    /// </summary>
+    private async Task CastAffectSpellAsync(
+        ISpellHandler spell,
+        SpellMetadata metadata,
+        PlayerState caster,
+        ICombatant target,
+        List<Affect> affects,
+        ConnectionContext context,
+        int? targetConnectionId,
+        CancellationToken cancellationToken)
+    {
+        // Apply all affects to target
+        foreach (var affect in affects)
+        {
+            target.AddAffect(affect);
+
+            // Send messages only if they exist (first affect typically has messages)
+            if (target == caster)
+            {
+                // Casting on self
+                if (affect.ToCharMessage != null)
+                {
+                    await context.Session.SendLineAsync(affect.ToCharMessage, cancellationToken);
+                }
+
+                if (affect.ToRoomMessage != null)
+                {
+                    await BroadcastToRoomAsync(context, affect.ToRoomMessage, cancellationToken);
+                }
+            }
+            else
+            {
+                // Casting on another target
+                if (affect.ToCharMessage != null)
+                {
+                    // Send spell cast message to caster
+                    await context.Session.SendLineAsync($"You cast {metadata.Name} on {target.Name}.", cancellationToken);
+
+                    // Send affect message to target
+                    if (targetConnectionId != null)
+                    {
+                        var targetConnection = _connectionRegistry.GetConnections().FirstOrDefault(c => c.Id == targetConnectionId.Value);
+                        if (targetConnection != null)
+                        {
+                            await targetConnection.Session.SendLineAsync(affect.ToCharMessage, cancellationToken);
+                        }
+                    }
+                }
+
+                if (affect.ToRoomMessage != null)
+                {
+                    await BroadcastToRoomExceptAsync(context, targetConnectionId, affect.ToRoomMessage, cancellationToken);
+                }
+            }
+
+            // Only show messages from the first affect (to avoid spam from multi-affect spells like Bless)
+            break;
+        }
+
+        // If no affect had messages, send generic cast messages
+        if (affects.All(a => a.ToCharMessage == null))
+        {
+            if (target == caster)
+            {
+                await context.Session.SendLineAsync($"You cast {metadata.Name} on yourself.", cancellationToken);
+                await BroadcastToRoomAsync(context, $"$n casts {metadata.Name}.", cancellationToken);
+            }
+            else
+            {
+                await context.Session.SendLineAsync($"You cast {metadata.Name} on {target.Name}.", cancellationToken);
+                
+                if (targetConnectionId != null)
+                {
+                    var targetConnection = _connectionRegistry.GetConnections().FirstOrDefault(c => c.Id == targetConnectionId.Value);
+                    if (targetConnection != null)
+                    {
+                        await targetConnection.Session.SendLineAsync($"{caster.Name} casts {metadata.Name} on you.", cancellationToken);
+                    }
+                }
+
+                await BroadcastToRoomExceptAsync(context, targetConnectionId, $"$n casts {metadata.Name} on {target.Name}.", cancellationToken);
             }
         }
     }

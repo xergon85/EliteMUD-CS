@@ -105,4 +105,14 @@ public interface ISpellHandler
     /// <param name="target">The target of the spell (optional)</param>
     /// <returns>True if spell succeeds, false if it fails</returns>
     bool RollSuccess(ICombatant caster, ICombatant? target = null);
+    
+    /// <summary>
+    /// Creates affects to apply to the target (for buff/debuff spells).
+    /// Returns empty list if this spell doesn't apply affects.
+    /// Some spells (like Bless) may apply multiple affects simultaneously.
+    /// </summary>
+    /// <param name="caster">The combatant casting the spell</param>
+    /// <param name="target">The target of the spell</param>
+    /// <returns>List of affects to apply (empty if none)</returns>
+    List<Affect> CreateAffects(ICombatant caster, ICombatant target);
 }

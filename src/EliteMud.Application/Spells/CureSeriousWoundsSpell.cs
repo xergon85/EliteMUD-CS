@@ -137,4 +137,12 @@ public sealed class CureSeriousWoundsSpell : ISpellHandler
             }
         );
     }
+
+    /// <summary>
+    /// Cure Serious Wounds does not apply affects.
+    /// </summary>
+    public List<Affect> CreateAffects(ICombatant caster, ICombatant target)
+    {
+        return new List<Affect>();
+    }
 }
