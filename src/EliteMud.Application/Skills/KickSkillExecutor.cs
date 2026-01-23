@@ -1,20 +1,8 @@
+using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
 namespace EliteMud.Application.Skills;
-
-/// <summary>
-/// Result of executing a kick skill.
-/// </summary>
-public sealed record KickSkillResult(
-    bool CanUse,
-    string? CannotUseMessage,
-    bool Hit,
-    int Damage,
-    bool VictimDodged,
-    string? DodgeMessage,
-    bool VictimDied,
-    bool ImprovedSkill);
 
 /// <summary>
 /// Executes kick skill logic in the Application layer.
@@ -23,13 +11,17 @@ public sealed record KickSkillResult(
 /// This follows clean architecture:
 /// - Application layer (this class): Business logic, skill execution
 /// - Game layer (KickSkill): Pure domain logic (formulas, calculations)
-/// - Server layer (KickCommandHandler): Thin adapter (routing, message formatting)
+/// - Server layer (generic SkillCommandHandler): Routing, message formatting
 /// </summary>
-public sealed class KickSkillExecutor
+public sealed class KickSkillExecutor : ISkillExecutor
 {
     private readonly ISkillHandler _kickSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
+
+    public SkillType SkillType => SkillType.Kick;
+    public CommandKind CommandKind => CommandKind.Kick;
+    public TargetingMode Targeting => TargetingMode.CurrentFightTarget;
 
     public KickSkillExecutor(
         SkillRegistry skillRegistry,
@@ -45,47 +37,39 @@ public sealed class KickSkillExecutor
     /// Execute kick against a target (player or mob).
     /// Handles combat initiation, damage calculation, death, and skill improvement.
     /// </summary>
-    /// <param name="attacker">Player performing kick</param>
-    /// <param name="victim">Target of kick (player or mob)</param>
-    /// <param name="attackerConnectionId">Attacker's connection ID</param>
-    /// <param name="victimConnectionId">Victim's connection ID (null for mobs)</param>
-    /// <returns>Result with all information needed for message formatting</returns>
-    public KickSkillResult Execute(
-        PlayerState attacker,
-        ICombatant victim,
-        int attackerConnectionId,
-        int? victimConnectionId)
+    public SkillResult Execute(SkillContext context)
     {
+        var attacker = context.Actor;
+        var victim = context.Victim;
+        
+        // Victim is required for kick
+        if (victim == null)
+        {
+            return SkillResult.Failed("Kick who?");
+        }
+
         // Check if player can use kick
         if (!_kickSkill.CanUse(attacker))
         {
-            return new KickSkillResult(
-                CanUse: false,
-                CannotUseMessage: _kickSkill.GetCannotUseMessage(attacker),
-                Hit: false,
-                Damage: 0,
-                VictimDodged: false,
-                DodgeMessage: null,
-                VictimDied: false,
-                ImprovedSkill: false);
+            return SkillResult.Failed(_kickSkill.GetCannotUseMessage(attacker));
         }
 
         // Start combat if not already fighting
         if (attacker.FightingConnectionId == null)
         {
-            if (victimConnectionId != null)
+            if (context.VictimConnectionId != null)
             {
                 // PvP - both players fight each other
                 var victimPlayer = (PlayerState)victim;
-                _combatCalculator.SetFighting(attacker, victimConnectionId.Value);
-                _combatCalculator.SetFighting(victimPlayer, attackerConnectionId);
+                _combatCalculator.SetFighting(attacker, context.VictimConnectionId.Value);
+                _combatCalculator.SetFighting(victimPlayer, context.ActorConnectionId);
             }
             else
             {
                 // PvE - player fights mob
                 var mobInstance = (MobInstance)victim;
                 _combatCalculator.SetFighting(attacker, -mobInstance.InstanceId);
-                mobInstance.FightingConnectionId = attackerConnectionId;
+                mobInstance.FightingConnectionId = context.ActorConnectionId;
             }
         }
 
@@ -93,34 +77,34 @@ public sealed class KickSkillExecutor
         var hit = KickSkill.RollHit(attacker, victim);
         if (!hit)
         {
-            return new KickSkillResult(
-                CanUse: true,
-                CannotUseMessage: null,
-                Hit: false,
-                Damage: 0,
-                VictimDodged: false,
-                DodgeMessage: null,
-                VictimDied: false,
-                ImprovedSkill: false);
+            return SkillResult.Succeeded(
+                new SkillMessage(SkillMessageTarget.Actor, "you try to kick $N, but miss!", victim),
+                new SkillMessage(SkillMessageTarget.Victim, "$n tries to kick you, but misses!"),
+                new SkillMessage(SkillMessageTarget.Others, "$n tries to kick $N, but misses!", victim)
+            );
         }
 
         // Calculate damage
         var damage = KickSkill.CalculateDamage(attacker);
 
         // Apply damage
-        var dodged = false;
-        string? dodgeMessage = null;
         var victimDied = false;
+        var messages = new List<SkillMessage>();
 
-        if (victimConnectionId != null)
+        if (context.VictimConnectionId != null)
         {
             // Player victim - use CombatCalculator for dodge support
             var victimPlayer = (PlayerState)victim;
             var damageResult = _combatCalculator.ApplyDamage(victimPlayer, damage);
 
             damage = damageResult.Damage;
-            dodged = damageResult.Dodged;
-            dodgeMessage = damageResult.Message;
+            
+            // Show dodge message if dodged
+            if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
+            {
+                messages.Add(new SkillMessage(SkillMessageTarget.Victim, damageResult.Message));
+            }
+
             victimDied = victimPlayer.Position == Position.Dead;
 
             // Stop fighting if victim died
@@ -150,17 +134,21 @@ public sealed class KickSkillExecutor
             }
         }
 
-        // Improve skill on successful hit
-        var improved = attacker.TryImproveSkill(SkillType.Kick);
+        // Add hit messages
+        messages.Add(new SkillMessage(SkillMessageTarget.Actor, $"your kick hits $N [{damage}]", victim));
+        messages.Add(new SkillMessage(SkillMessageTarget.Victim, $"$n kicks you! [{damage}]"));
+        messages.Add(new SkillMessage(SkillMessageTarget.Others, "$n kicks $N!", victim));
 
-        return new KickSkillResult(
-            CanUse: true,
-            CannotUseMessage: null,
-            Hit: true,
-            Damage: damage,
-            VictimDodged: dodged,
-            DodgeMessage: dodgeMessage,
-            VictimDied: victimDied,
-            ImprovedSkill: improved);
+        // Add death messages if victim died
+        if (victimDied)
+        {
+            messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
+            messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead! R.I.P.", victim));
+        }
+
+        // Improve skill on successful hit
+        attacker.TryImproveSkill(SkillType.Kick);
+
+        return new SkillResult(Success: true, Messages: messages.ToArray());
     }
 }

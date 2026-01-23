@@ -13,6 +13,7 @@ using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Move;
 using EliteMud.Server.Adapters.Commands.ResetZone;
 using EliteMud.Server.Adapters.Commands.Say;
+using EliteMud.Server.Adapters.Commands.Skills;
 using EliteMud.Server.Adapters.Commands.Who;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,7 +25,7 @@ internal static class CommandServiceCollectionExtensions
     public static IServiceCollection AddCommandHandlers(this IServiceCollection services)
     {
         return services
-            // Skills
+            // Skills infrastructure
             .AddSingleton<SkillRegistry>()
             .AddSingleton<CombatCalculator>(provider =>
             {
@@ -32,7 +33,9 @@ internal static class CommandServiceCollectionExtensions
                 var dodgeSkill = skillRegistry.GetPassiveSkill(SkillType.Dodge);
                 return new CombatCalculator(dodgeSkill);
             })
-            .AddSingleton<KickSkillExecutor>()
+            
+            // Auto-register all skill executors (makes them available as commands)
+            .AddSkillExecutors()
             
             .AddSingleton<CommandCatalog>()
             .AddSingleton<PromptCatalog>()
@@ -62,5 +65,24 @@ internal static class CommandServiceCollectionExtensions
                 var handlers = handlerRegistry.BuildHandlers(modules, provider);
                 return new CommandRouter(handlers);
             });
+    }
+    
+    /// <summary>
+    /// Auto-discover and register all ISkillExecutor implementations.
+    /// This makes skill executors automatically available as commands.
+    /// </summary>
+    private static IServiceCollection AddSkillExecutors(this IServiceCollection services)
+    {
+        var executorTypes = typeof(ISkillExecutor).Assembly
+            .GetTypes()
+            .Where(t => !t.IsAbstract && !t.IsInterface && typeof(ISkillExecutor).IsAssignableFrom(t));
+        
+        foreach (var type in executorTypes)
+        {
+            // Register the executor itself
+            services.AddSingleton(type);
+        }
+        
+        return services;
     }
 }
