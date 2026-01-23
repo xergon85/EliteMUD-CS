@@ -212,7 +212,7 @@ public static class AllowedClasses
 }
 
 /// <summary>
-/// Skills and spells in EliteMUD
+/// Skills and spells enumeration.
 /// Based on legacy system - 300 spells (0-299) + 100 skills (300-399)
 /// For now, only defining what we need for proof of concept
 /// </summary>
@@ -220,8 +220,10 @@ public enum SkillType
 {
     // === PROOF OF CONCEPT SKILLS ===
     // Active combat skills
-    Kick = 323,
-    Bash = 324,
+    Backstab = 315,   // Legacy: SKILL_BACKSTAB = 315
+    Kick = 323,       // Legacy: SKILL_KICK = 323
+    Bash = 324,       // Legacy: SKILL_BASH = 324
+    Rescue = 325,     // Legacy: SKILL_RESCUE = 325
     
     // Passive defensive skills  
     Dodge = 360,

@@ -12,9 +12,10 @@ public class DodgeSkillTests
 
     public DodgeSkillTests()
     {
-        // Create CombatCalculator with dodge skill for tests
+        // Create CombatCalculator with dodge and parry skills for tests
         var dodgeSkill = new DodgeSkill();
-        _combatCalculator = new CombatCalculator(dodgeSkill);
+        var parrySkill = new ParrySkill();
+        _combatCalculator = new CombatCalculator(dodgeSkill, parrySkill);
     }
 
     [Fact]

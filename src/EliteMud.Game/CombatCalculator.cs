@@ -49,14 +49,17 @@ public static class CombatConstants
 public class CombatCalculator
 {
     private readonly IPassiveSkillHandler _dodgeSkill;
+    private readonly IPassiveSkillHandler _parrySkill;
 
     /// <summary>
     /// Constructor for dependency injection.
     /// </summary>
     /// <param name="dodgeSkill">Dodge skill handler (injected from SkillRegistry)</param>
-    public CombatCalculator(IPassiveSkillHandler dodgeSkill)
+    /// <param name="parrySkill">Parry skill handler (injected from SkillRegistry)</param>
+    public CombatCalculator(IPassiveSkillHandler dodgeSkill, IPassiveSkillHandler parrySkill)
     {
         _dodgeSkill = dodgeSkill;
+        _parrySkill = parrySkill;
     }
     /// <summary>
     /// Set a player to fighting another player.
@@ -242,16 +245,33 @@ public class CombatCalculator
         // Apply position multiplier before capping damage
         damage = CalculateDamageWithPositionMultiplier(damage, victim.Position);
         
-        // Check for passive defensive skills (dodge)
-        // Legacy: fight.c:1543-1551
+        // Check for passive defensive skills (dodge, then parry)
+        // Legacy: fight.c:1543-1551 (dodge), fight.c:1523-1535 (parry)
         var dodgeResult = _dodgeSkill.TryActivate(victim, damage);
         bool dodged = dodgeResult.Activated;
+        string defenseMessage = dodgeResult.Message;
+        
         if (dodged)
         {
             damage = dodgeResult.ModifiedValue;
             
             // Improve skill on successful dodge
             victim.TryImproveSkill(SkillType.Dodge);
+        }
+        else
+        {
+            // Try parry if dodge failed
+            var parryResult = _parrySkill.TryActivate(victim, damage);
+            bool parried = parryResult.Activated;
+            
+            if (parried)
+            {
+                damage = parryResult.ModifiedValue;
+                defenseMessage = parryResult.Message;
+                
+                // Improve skill on successful parry
+                victim.TryImproveSkill(SkillType.Parry);
+            }
         }
         
         // Cap damage
@@ -264,7 +284,7 @@ public class CombatCalculator
         // Update position based on HP
         UpdatePosition(victim);
 
-        return new DamageResult(damage, dodged, dodgeResult.Message);
+        return new DamageResult(damage, dodged, defenseMessage);
     }
 
     /// <summary>

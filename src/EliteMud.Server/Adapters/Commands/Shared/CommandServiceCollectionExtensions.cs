@@ -25,7 +25,8 @@ internal static class CommandServiceCollectionExtensions
             {
                 var skillRegistry = provider.GetRequiredService<SkillRegistry>();
                 var dodgeSkill = skillRegistry.GetPassiveSkill(SkillType.Dodge);
-                return new CombatCalculator(dodgeSkill);
+                var parrySkill = skillRegistry.GetPassiveSkill(SkillType.Parry);
+                return new CombatCalculator(dodgeSkill, parrySkill);
             })
             .AddSkillExecutors()
             
