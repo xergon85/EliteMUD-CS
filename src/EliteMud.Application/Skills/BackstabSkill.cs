@@ -5,14 +5,28 @@ namespace EliteMud.Application.Skills;
 /// <summary>
 /// Backstab skill - high damage attack that can only be used on unsuspecting victims.
 /// Legacy reference: act.offensive.c:203-256 (do_backstab)
+/// 
+/// Metadata loaded from content/skills/skills.json
 /// </summary>
 public sealed class BackstabSkill : ISkillHandler
 {
+    private readonly SkillMetadata _metadata;
+
+    public BackstabSkill(SkillMetadataRegistry registry)
+    {
+        _metadata = registry.GetBySkillType(SkillType.Backstab)
+            ?? throw new InvalidOperationException("Backstab skill metadata not found in registry");
+    }
+
     public SkillType SkillType => SkillType.Backstab;
-    public string Name => "Backstab";
-    public string Description => "A devastating surprise attack dealing massive damage to an unsuspecting victim.";
-    public int MinimumLevel => 1;
-    public int WaitStateRounds => CombatConstants.WaitStates.Backstab;
+    
+    public string Name => _metadata.Name;
+    
+    public string Description => _metadata.Description;
+    
+    public int MinimumLevel => _metadata.MinimumLevel;
+    
+    public int WaitStateRounds => _metadata.WaitStateRounds;
 
     public bool CanUse(ICombatant user)
     {

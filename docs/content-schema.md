@@ -15,6 +15,8 @@ content/
     zones.json
   scripts/
     scripts.json
+  skills/
+    skills.json
   meta/
     schema.json
 ```
@@ -225,6 +227,118 @@ content/
   ]
 }
 ```
+
+## Skills and Spells
+**File:** `content/skills/skills.json`
+
+This file defines metadata for all skills and spells in the game, including mechanics, class restrictions, and formulas.
+
+```json
+{
+  "version": 1,
+  "description": "Skill and spell metadata for EliteMUD",
+  "skills": [
+    {
+      "id": 323,
+      "name": "kick",
+      "aliases": [],
+      "description": "A powerful kick attack that can start or continue combat",
+      "type": "Active",
+      "category": "Combat",
+      "minimumLevel": 1,
+      "waitStateRounds": 3,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {
+          "class": "Warrior",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Thief",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        }
+      ],
+      "mechanics": {
+        "damageFormula": "level / 2",
+        "hitFormula": "((10 - victimAC/10) * 2) + random(1,101)",
+        "requirements": [
+          {
+            "type": "position",
+            "value": "Fighting",
+            "message": "You can't kick while sitting down!"
+          }
+        ],
+        "effects": []
+      }
+    }
+  ]
+}
+```
+
+### Field Descriptions
+
+#### Root Level
+- `version` - Schema version (integer)
+- `description` - Human-readable description
+- `skills` - Array of skill/spell definitions
+
+#### Skill Definition
+- `id` - Numeric skill ID (matches `SkillType` enum value, e.g., 323 for Kick)
+- `name` - Canonical skill name (lowercase, e.g., "kick", "backstab")
+- `aliases` - Alternative command names (e.g., `["bs"]` for backstab)
+- `description` - Human-readable description shown to players
+- `type` - Skill type: `"Active"` or `"Passive"`
+- `category` - Skill category: `"Combat"`, `"Stealth"`, `"Defensive"`, `"Support"`, etc.
+- `minimumLevel` - Base minimum level to learn (before class modifiers)
+- `waitStateRounds` - Rounds of WAIT_STATE applied after use (0 for passive skills)
+- `skillgainCooldown` - Seconds between skill improvements (typically 60)
+
+#### Class Restrictions
+Each skill has an array of 20 class restriction entries (one per class):
+- `class` - Class name (e.g., `"Warrior"`, `"Thief"`, `"MagicUser"`)
+- `minLevel` - Minimum level to learn this skill (`null` if class cannot learn)
+- `maxProficiency` - Maximum skill percentage (0-100, typically 95)
+- `difficulty` - Practice improvement rate (typically 10)
+
+**Class Order**: MagicUser, Cleric, Thief, Warrior, Psionicist, Monk, Bard, Knight, Wizard, Druid, Assassin, Ranger, Illusionist, Paladin, Mariner, Cavalier, Unused17, Unused18, Ninja, Unused20
+
+#### Mechanics (Active Skills)
+- `damageFormula` - Damage calculation (e.g., `"level / 2"`, `"10"`)
+- `damageMultiplierFormula` - Damage multiplier (e.g., `"MIN(level / 10 + 1, 5)"` for backstab)
+- `hitFormula` - Hit chance calculation (e.g., `"random(1,101)"`)
+- `requirements` - Array of requirement objects (position, equipment, victim state)
+- `effects` - Array of effect objects (position changes, combat redirection, etc.)
+
+#### Mechanics (Passive Skills)
+- `activationFormula` - When skill activates (e.g., `"(random(1,250) + damage) < skillPercent"`)
+- `effectFormula` - Effect calculation (e.g., `"damage - (level * 2)"`)
+- `requirements` - Array of requirement objects
+- `effects` - Array of effect objects
+
+#### Requirement Object
+- `type` - Requirement type: `"position"`, `"equipment"`, `"victimState"`
+- `value` - Required value (e.g., `"Fighting"`, `"Shield"`, `"notFighting"`)
+- `message` - Error message if requirement not met
+- `implemented` - Boolean flag (false if requirement check not yet coded)
+
+#### Effect Object
+- `type` - Effect trigger: `"onHit"`, `"onMiss"`, `"onSuccess"`, `"victimAsleep"`
+- `target` - Effect target: `"self"`, `"victim"`, `"ally"`
+- `effect` - Effect name: `"setPosition"`, `"waitState"`, `"redirectCombat"`, `"autoHit"`
+- `value` - Effect value (position name, rounds, boolean)
+- `description` - Human-readable effect description
+
+### Notes
+- Formulas use string expressions for flexibility (can be parsed/evaluated at runtime)
+- All 20 class entries are stored even if `minLevel` is `null` (for easy lookup)
+- Equipment requirements (shield, weapon type) are defined but may not be enforced until equipment system is complete
+- Legacy skill IDs from EliteMUD constants.c are preserved (Spells: 0-299, Skills: 300-399)
+- Skills without implemented mechanics (e.g., Tumble) have `"NOT_YET_IMPLEMENTED"` placeholders
+
 
 ## Flag Maps (v1)
 

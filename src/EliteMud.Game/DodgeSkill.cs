@@ -4,19 +4,29 @@ namespace EliteMud.Game;
 /// Dodge skill - passive defensive skill that reduces incoming damage.
 /// 
 /// Legacy: fight.c:1543-1551
-/// - Activation: random(1, 250) + damage &lt; skill%
+/// - Activation: random(1, 250) + damage < skill%
 /// - Effect: Reduce damage by (level * 2)
 /// - Improves on successful dodge
+/// 
+/// Metadata loaded from content/skills/skills.json
 /// </summary>
 public sealed class DodgeSkill : IPassiveSkillHandler
 {
+    private readonly SkillMetadata _metadata;
+
+    public DodgeSkill(SkillMetadataRegistry registry)
+    {
+        _metadata = registry.GetBySkillType(SkillType.Dodge)
+            ?? throw new InvalidOperationException("Dodge skill metadata not found in registry");
+    }
+
     public SkillType SkillType => SkillType.Dodge;
 
-    public string Name => "Dodge";
+    public string Name => _metadata.Name;
 
-    public string Description => "Passively avoid incoming attacks, reducing damage taken";
+    public string Description => _metadata.Description;
 
-    public int MinimumLevel => 1;
+    public int MinimumLevel => _metadata.MinimumLevel;
 
     public bool CanActivate(ICombatant user)
     {

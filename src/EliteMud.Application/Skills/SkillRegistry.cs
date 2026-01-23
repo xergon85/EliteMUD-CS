@@ -19,10 +19,10 @@ public sealed class SkillRegistry
     private readonly Dictionary<SkillType, ISkillHandler> _activeSkills;
     private readonly Dictionary<SkillType, IPassiveSkillHandler> _passiveSkills;
 
-    public SkillRegistry()
+    public SkillRegistry(SkillMetadataRegistry metadataRegistry)
     {
-        _activeSkills = DiscoverActiveSkills();
-        _passiveSkills = DiscoverPassiveSkills();
+        _activeSkills = DiscoverActiveSkills(metadataRegistry);
+        _passiveSkills = DiscoverPassiveSkills(metadataRegistry);
     }
 
     /// <summary>
@@ -91,7 +91,7 @@ public sealed class SkillRegistry
     /// Auto-discover all ISkillHandler implementations via reflection.
     /// Searches EliteMud.Application assembly for concrete classes implementing ISkillHandler.
     /// </summary>
-    private static Dictionary<SkillType, ISkillHandler> DiscoverActiveSkills()
+    private static Dictionary<SkillType, ISkillHandler> DiscoverActiveSkills(SkillMetadataRegistry metadataRegistry)
     {
         var skills = new Dictionary<SkillType, ISkillHandler>();
         var assembly = Assembly.GetExecutingAssembly(); // EliteMud.Application
@@ -101,8 +101,8 @@ public sealed class SkillRegistry
 
         foreach (var type in skillTypes)
         {
-            // Instantiate the skill (must have parameterless constructor)
-            if (Activator.CreateInstance(type) is ISkillHandler skill)
+            // Instantiate the skill with SkillMetadataRegistry parameter
+            if (Activator.CreateInstance(type, metadataRegistry) is ISkillHandler skill)
             {
                 if (skills.TryGetValue(skill.SkillType, out var skill1))
                 {
@@ -122,7 +122,7 @@ public sealed class SkillRegistry
     /// Auto-discover all IPassiveSkillHandler implementations via reflection.
     /// Searches EliteMud.Game assembly for concrete classes implementing IPassiveSkillHandler.
     /// </summary>
-    private static Dictionary<SkillType, IPassiveSkillHandler> DiscoverPassiveSkills()
+    private static Dictionary<SkillType, IPassiveSkillHandler> DiscoverPassiveSkills(SkillMetadataRegistry metadataRegistry)
     {
         var skills = new Dictionary<SkillType, IPassiveSkillHandler>();
 
@@ -134,8 +134,8 @@ public sealed class SkillRegistry
 
         foreach (var type in skillTypes)
         {
-            // Instantiate the skill (must have parameterless constructor)
-            if (Activator.CreateInstance(type) is IPassiveSkillHandler skill)
+            // Instantiate the skill with SkillMetadataRegistry parameter
+            if (Activator.CreateInstance(type, metadataRegistry) is IPassiveSkillHandler skill)
             {
                 if (skills.TryGetValue(skill.SkillType, out var skill1))
                 {

@@ -258,6 +258,108 @@ internal static class ContentLoader
         return zones;
     }
 
+    public static IReadOnlyDictionary<int, SkillMetadata> LoadSkills(string contentRoot)
+    {
+        var skillsPath = Path.Combine(contentRoot, "skills", "skills.json");
+        if (!File.Exists(skillsPath))
+        {
+            Console.WriteLine($"Skills file not found: {skillsPath}");
+            return new Dictionary<int, SkillMetadata>();
+        }
+
+        SkillsFile? file;
+        try
+        {
+            var json = File.ReadAllText(skillsPath);
+            file = JsonSerializer.Deserialize<SkillsFile>(json, JsonOptions);
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine($"Failed to load skills: {exception.Message}");
+            return new Dictionary<int, SkillMetadata>();
+        }
+
+        if (file?.Skills is null || file.Skills.Count == 0)
+        {
+            Console.WriteLine("Skills file is empty or invalid");
+            return new Dictionary<int, SkillMetadata>();
+        }
+
+        var skills = new Dictionary<int, SkillMetadata>();
+        foreach (var skill in file.Skills)
+        {
+            var classRestrictions = new Dictionary<string, ClassSkillRestriction>();
+            if (skill.ClassRestrictions is not null)
+            {
+                foreach (var restriction in skill.ClassRestrictions)
+                {
+                    if (!string.IsNullOrWhiteSpace(restriction.Class))
+                    {
+                        classRestrictions[restriction.Class] = new ClassSkillRestriction(
+                            restriction.MinLevel,
+                            restriction.MaxProficiency,
+                            restriction.Difficulty);
+                    }
+                }
+            }
+
+            SkillMechanics? mechanics = null;
+            if (skill.Mechanics is not null)
+            {
+                var requirements = skill.Mechanics.Requirements?
+                    .Select(r => new SkillRequirement
+                    {
+                        Type = r.Type ?? string.Empty,
+                        Value = r.Value ?? string.Empty,
+                        Message = r.Message ?? string.Empty,
+                        Implemented = r.Implemented
+                    })
+                    .ToList();
+
+                var effects = skill.Mechanics.Effects?
+                    .Select(e => new SkillEffect
+                    {
+                        Type = e.Type ?? string.Empty,
+                        Target = e.Target,
+                        Effect = e.Effect,
+                        Value = e.Value?.ToString(),
+                        Description = e.Description
+                    })
+                    .ToList();
+
+                mechanics = new SkillMechanics
+                {
+                    DamageFormula = skill.Mechanics.DamageFormula,
+                    DamageMultiplierFormula = skill.Mechanics.DamageMultiplierFormula,
+                    HitFormula = skill.Mechanics.HitFormula,
+                    ActivationFormula = skill.Mechanics.ActivationFormula,
+                    EffectFormula = skill.Mechanics.EffectFormula,
+                    Requirements = requirements,
+                    Effects = effects,
+                    Note = skill.Mechanics.Note
+                };
+            }
+
+            var metadata = new SkillMetadata(
+                skill.Id,
+                skill.Name ?? string.Empty,
+                skill.Aliases ?? new List<string>(),
+                skill.Description ?? string.Empty,
+                skill.Type ?? string.Empty,
+                skill.Category ?? string.Empty,
+                skill.MinimumLevel,
+                skill.WaitStateRounds,
+                skill.SkillgainCooldown,
+                classRestrictions,
+                mechanics);
+
+            skills[skill.Id] = metadata;
+        }
+
+        Console.WriteLine($"Loaded {skills.Count} skill definitions from {skillsPath}");
+        return skills;
+    }
+
     public static (WorldDefinition? World, IReadOnlyList<MobDefinition> Mobs, IReadOnlyList<ObjectDefinition> Objects, IReadOnlyList<ZoneDefinition> Zones) LoadFromZoneFiles(string zonesDirectory)
     {
         if (!Directory.Exists(zonesDirectory))
@@ -797,5 +899,64 @@ internal static class ContentLoader
         public int? ContainerId { get; set; }
         public int? DoorDirection { get; set; }
         public int? DoorState { get; set; }
+    }
+
+    private sealed class SkillsFile
+    {
+        public int Version { get; set; }
+        public string? Description { get; set; }
+        public List<SkillContent> Skills { get; set; } = new();
+    }
+
+    private sealed class SkillContent
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public List<string>? Aliases { get; set; }
+        public string? Description { get; set; }
+        public string? Type { get; set; }
+        public string? Category { get; set; }
+        public int MinimumLevel { get; set; }
+        public int WaitStateRounds { get; set; }
+        public int SkillgainCooldown { get; set; }
+        public List<ClassRestrictionContent>? ClassRestrictions { get; set; }
+        public SkillMechanicsContent? Mechanics { get; set; }
+    }
+
+    private sealed class ClassRestrictionContent
+    {
+        public string? Class { get; set; }
+        public int? MinLevel { get; set; }
+        public int MaxProficiency { get; set; }
+        public int Difficulty { get; set; }
+    }
+
+    private sealed class SkillMechanicsContent
+    {
+        public string? DamageFormula { get; set; }
+        public string? DamageMultiplierFormula { get; set; }
+        public string? HitFormula { get; set; }
+        public string? ActivationFormula { get; set; }
+        public string? EffectFormula { get; set; }
+        public List<SkillRequirementContent>? Requirements { get; set; }
+        public List<SkillEffectContent>? Effects { get; set; }
+        public string? Note { get; set; }
+    }
+
+    private sealed class SkillRequirementContent
+    {
+        public string? Type { get; set; }
+        public string? Value { get; set; }
+        public string? Message { get; set; }
+        public bool Implemented { get; set; } = true;
+    }
+
+    private sealed class SkillEffectContent
+    {
+        public string? Type { get; set; }
+        public string? Target { get; set; }
+        public string? Effect { get; set; }
+        public object? Value { get; set; } // Can be string or number
+        public string? Description { get; set; }
     }
 }

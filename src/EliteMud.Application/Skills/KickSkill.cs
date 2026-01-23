@@ -10,18 +10,28 @@ namespace EliteMud.Application.Skills;
 /// - Success roll: ((10 - victim_ac) * 2) + random(1, 102) vs skill proficiency
 /// - Can initiate combat or attack current fighting target
 /// - Improves on successful hit
+/// 
+/// Metadata loaded from content/skills/skills.json
 /// </summary>
 public sealed class KickSkill : ISkillHandler
 {
+    private readonly SkillMetadata _metadata;
+
+    public KickSkill(SkillMetadataRegistry registry)
+    {
+        _metadata = registry.GetBySkillType(SkillType.Kick)
+            ?? throw new InvalidOperationException("Kick skill metadata not found in registry");
+    }
+
     public SkillType SkillType => SkillType.Kick;
 
-    public string Name => "Kick";
+    public string Name => _metadata.Name;
 
-    public string Description => "A powerful kick attack that can start or continue combat";
+    public string Description => _metadata.Description;
 
-    public int MinimumLevel => 1;
+    public int MinimumLevel => _metadata.MinimumLevel;
 
-    public int WaitStateRounds => 3; // TODO: Should be 3 rounds (6 seconds) in production
+    public int WaitStateRounds => _metadata.WaitStateRounds;
 
     public bool CanUse(ICombatant user)
     {

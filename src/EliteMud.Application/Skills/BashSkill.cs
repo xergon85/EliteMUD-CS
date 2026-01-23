@@ -20,18 +20,28 @@ namespace EliteMud.Application.Skills;
 /// - 0 damage
 /// - Attacker knocked to sitting position
 /// - Attacker gets 2 rounds WAIT_STATE
+/// 
+/// Metadata loaded from content/skills/skills.json
 /// </summary>
 public sealed class BashSkill : ISkillHandler
 {
+    private readonly SkillMetadata _metadata;
+
+    public BashSkill(SkillMetadataRegistry registry)
+    {
+        _metadata = registry.GetBySkillType(SkillType.Bash)
+            ?? throw new InvalidOperationException("Bash skill metadata not found in registry");
+    }
+
     public SkillType SkillType => SkillType.Bash;
 
-    public string Name => "Bash";
+    public string Name => _metadata.Name;
 
-    public string Description => "A shield attack that knocks your opponent down";
+    public string Description => _metadata.Description;
 
-    public int MinimumLevel => 1;
+    public int MinimumLevel => _metadata.MinimumLevel;
 
-    public int WaitStateRounds => 2; // Attacker wait state (PULSE_VIOLENCE * 2)
+    public int WaitStateRounds => _metadata.WaitStateRounds;
 
     public bool CanUse(ICombatant user)
     {

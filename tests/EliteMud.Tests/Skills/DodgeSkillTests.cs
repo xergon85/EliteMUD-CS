@@ -12,9 +12,12 @@ public class DodgeSkillTests
 
     public DodgeSkillTests()
     {
+        // Create skill registry from JSON
+        var registry = CreateSkillRegistry();
+        
         // Create CombatCalculator with dodge and parry skills for tests
-        var dodgeSkill = new DodgeSkill();
-        var parrySkill = new ParrySkill();
+        var dodgeSkill = new DodgeSkill(registry);
+        var parrySkill = new ParrySkill(registry);
         _combatCalculator = new CombatCalculator(dodgeSkill, parrySkill);
     }
 
@@ -221,5 +224,29 @@ public class DodgeSkillTests
             race: "Human",
             sex: 1
         );
+    }
+
+    private static SkillMetadataRegistry CreateSkillRegistry()
+    {
+        var contentRoot = FindContentRoot();
+        var skillsById = EliteMud.Server.ContentLoader.LoadSkills(contentRoot);
+        return new SkillMetadataRegistry(skillsById);
+    }
+
+    private static string FindContentRoot()
+    {
+        var directory = new DirectoryInfo(Environment.CurrentDirectory);
+        while (directory is not null)
+        {
+            var candidate = Path.Combine(directory.FullName, "content");
+            if (Directory.Exists(candidate))
+            {
+                return candidate;
+            }
+
+            directory = directory.Parent;
+        }
+
+        throw new DirectoryNotFoundException("Could not find content directory");
     }
 }

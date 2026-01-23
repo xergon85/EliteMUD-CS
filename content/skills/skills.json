@@ -1,0 +1,300 @@
+{
+  "version": 1,
+  "description": "Skill and spell metadata for EliteMUD",
+  "skills": [
+    {
+      "id": 323,
+      "name": "kick",
+      "aliases": [],
+      "description": "A powerful kick attack that can start or continue combat",
+      "type": "Active",
+      "category": "Combat",
+      "minimumLevel": 1,
+      "waitStateRounds": 3,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {"class": "MagicUser", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cleric", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Thief", "minLevel": 18, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Warrior", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Psionicist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Monk", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Bard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Knight", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Wizard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Druid", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Assassin", "minLevel": 9, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Ranger", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Illusionist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Paladin", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Mariner", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cavalier", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Unused17", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused18", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ninja", "minLevel": 9, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
+      ],
+      "mechanics": {
+        "damageFormula": "level / 2",
+        "hitFormula": "((10 - victimAC/10) * 2) + random(1,101)",
+        "requirements": [
+          {"type": "position", "value": "Fighting", "message": "You can't kick while sitting down!"}
+        ],
+        "effects": []
+      }
+    },
+    {
+      "id": 324,
+      "name": "bash",
+      "aliases": [],
+      "description": "A shield attack that knocks your opponent down",
+      "type": "Active",
+      "category": "Combat",
+      "minimumLevel": 1,
+      "waitStateRounds": 2,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {"class": "MagicUser", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cleric", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Thief", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Warrior", "minLevel": 12, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Psionicist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Monk", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Bard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Knight", "minLevel": 6, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Wizard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Druid", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Assassin", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ranger", "minLevel": 18, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Illusionist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Paladin", "minLevel": 12, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Mariner", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cavalier", "minLevel": 6, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Unused17", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused18", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ninja", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
+      ],
+      "mechanics": {
+        "damageFormula": "10",
+        "hitFormula": "random(1,101)",
+        "requirements": [
+          {"type": "position", "value": "Fighting", "message": "You can't bash while sitting down!"},
+          {"type": "equipment", "value": "Shield", "message": "You need a shield to bash!", "implemented": false}
+        ],
+        "effects": [
+          {"type": "onHit", "target": "victim", "effect": "setPosition", "value": "Sitting"},
+          {"type": "onHit", "target": "victim", "effect": "waitState", "value": 1},
+          {"type": "onMiss", "target": "self", "effect": "setPosition", "value": "Sitting"}
+        ]
+      }
+    },
+    {
+      "id": 315,
+      "name": "backstab",
+      "aliases": ["bs"],
+      "description": "A devastating surprise attack dealing massive damage to an unsuspecting victim",
+      "type": "Active",
+      "category": "Stealth",
+      "minimumLevel": 1,
+      "waitStateRounds": 3,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {"class": "MagicUser", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cleric", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Thief", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Warrior", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Psionicist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Monk", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Bard", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Knight", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Wizard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Druid", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Assassin", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Ranger", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Illusionist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Paladin", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Mariner", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cavalier", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused17", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused18", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ninja", "minLevel": 5, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
+      ],
+      "mechanics": {
+        "damageMultiplierFormula": "MIN(level / 10 + 1, 5)",
+        "hitFormula": "random(1,101)",
+        "requirements": [
+          {"type": "position", "value": "Fighting", "message": "You can't backstab from this position."},
+          {"type": "victimState", "value": "notFighting", "message": "You can't backstab a fighting person - they're too alert!"},
+          {"type": "equipment", "value": "PiercingWeapon", "message": "You need a piercing weapon to backstab!", "implemented": false}
+        ],
+        "effects": [
+          {"type": "victimAsleep", "effect": "autoHit", "value": true}
+        ]
+      }
+    },
+    {
+      "id": 325,
+      "name": "rescue",
+      "aliases": [],
+      "description": "Heroically take over combat to protect an ally being attacked",
+      "type": "Active",
+      "category": "Support",
+      "minimumLevel": 1,
+      "waitStateRounds": 2,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {"class": "MagicUser", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cleric", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Thief", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Warrior", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Psionicist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Monk", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Bard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Knight", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Wizard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Druid", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Assassin", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ranger", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Illusionist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Paladin", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Mariner", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cavalier", "minLevel": 1, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Unused17", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused18", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ninja", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
+      ],
+      "mechanics": {
+        "hitFormula": "random(1,101)",
+        "requirements": [
+          {"type": "position", "value": "Fighting", "message": "You can't rescue from this position."}
+        ],
+        "effects": [
+          {"type": "onSuccess", "effect": "redirectCombat", "description": "Stops ally's combat, redirects attacker to rescuer"}
+        ]
+      }
+    },
+    {
+      "id": 360,
+      "name": "dodge",
+      "aliases": [],
+      "description": "Passively avoid incoming attacks, reducing damage taken",
+      "type": "Passive",
+      "category": "Defensive",
+      "minimumLevel": 1,
+      "waitStateRounds": 0,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {"class": "MagicUser", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cleric", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Thief", "minLevel": 15, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Warrior", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Psionicist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Monk", "minLevel": 30, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Bard", "minLevel": 45, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Knight", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Wizard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Druid", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Assassin", "minLevel": 12, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Ranger", "minLevel": 15, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Illusionist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Paladin", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Mariner", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cavalier", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused17", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused18", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ninja", "minLevel": 12, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
+      ],
+      "mechanics": {
+        "activationFormula": "(random(1,250) + damage) < skillPercent",
+        "effectFormula": "damage - (level * 2)",
+        "requirements": [],
+        "effects": []
+      }
+    },
+    {
+      "id": 361,
+      "name": "parry",
+      "aliases": [],
+      "description": "Passively block incoming attacks with your shield, reducing damage taken",
+      "type": "Passive",
+      "category": "Defensive",
+      "minimumLevel": 1,
+      "waitStateRounds": 0,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {"class": "MagicUser", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cleric", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Thief", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Warrior", "minLevel": 15, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Psionicist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Monk", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Bard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Knight", "minLevel": 15, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Wizard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Druid", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Assassin", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ranger", "minLevel": 30, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Illusionist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Paladin", "minLevel": 18, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Mariner", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cavalier", "minLevel": 18, "maxProficiency": 95, "difficulty": 10},
+        {"class": "Unused17", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused18", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ninja", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
+      ],
+      "mechanics": {
+        "activationFormula": "(random(1,300) + damage) < skillPercent",
+        "effectFormula": "damage - level",
+        "requirements": [
+          {"type": "equipment", "value": "Shield", "message": "You need a shield to parry!", "implemented": false}
+        ],
+        "effects": []
+      }
+    },
+    {
+      "id": 362,
+      "name": "tumble",
+      "aliases": [],
+      "description": "Passively tumble away from attacks, reducing damage taken",
+      "type": "Passive",
+      "category": "Defensive",
+      "minimumLevel": 1,
+      "waitStateRounds": 0,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {"class": "MagicUser", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cleric", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Thief", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Warrior", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Psionicist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Monk", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Bard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Knight", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Wizard", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Druid", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Assassin", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ranger", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Illusionist", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Paladin", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Mariner", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Cavalier", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused17", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused18", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Ninja", "minLevel": null, "maxProficiency": 0, "difficulty": 0},
+        {"class": "Unused20", "minLevel": null, "maxProficiency": 0, "difficulty": 0}
+      ],
+      "mechanics": {
+        "activationFormula": "NOT_YET_IMPLEMENTED",
+        "effectFormula": "NOT_YET_IMPLEMENTED",
+        "requirements": [],
+        "effects": [],
+        "note": "Tumble is defined in SkillType enum but not yet implemented"
+      }
+    }
+  ]
+}

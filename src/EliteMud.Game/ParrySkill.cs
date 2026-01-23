@@ -9,16 +9,26 @@ namespace EliteMud.Game;
 /// - Effect: Reduce damage by (level) - so victim takes (damage - level)
 /// - Improves on successful parry
 /// - TODO: Shield/weapon durability damage (not yet implemented)
+/// 
+/// Metadata loaded from content/skills/skills.json
 /// </summary>
 public sealed class ParrySkill : IPassiveSkillHandler
 {
+    private readonly SkillMetadata _metadata;
+
+    public ParrySkill(SkillMetadataRegistry registry)
+    {
+        _metadata = registry.GetBySkillType(SkillType.Parry)
+            ?? throw new InvalidOperationException("Parry skill metadata not found in registry");
+    }
+
     public SkillType SkillType => SkillType.Parry;
     
-    public string Name => "Parry";
+    public string Name => _metadata.Name;
     
-    public string Description => "Passively block incoming attacks with your shield, reducing damage taken";
+    public string Description => _metadata.Description;
     
-    public int MinimumLevel => 1;
+    public int MinimumLevel => _metadata.MinimumLevel;
     
     public bool CanActivate(ICombatant user)
     {
