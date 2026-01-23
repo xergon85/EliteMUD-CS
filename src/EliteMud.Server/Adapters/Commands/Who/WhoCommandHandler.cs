@@ -4,6 +4,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Who;
 
+[Command("who")]
 internal sealed class WhoCommandHandler : ICommandHandler, IConnectionDirectory
 {
     private readonly Func<IEnumerable<ConnectionContext>> _connections;

@@ -6,6 +6,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Say;
 
+[Command("say")]
 internal sealed class SayCommandHandler : ICommandHandler
 {
     private readonly IScriptEngine _scriptEngine;

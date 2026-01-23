@@ -7,6 +7,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Look;
 
+[Command("look", Aliases = new[] { "l" })]
 internal sealed class LookCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;

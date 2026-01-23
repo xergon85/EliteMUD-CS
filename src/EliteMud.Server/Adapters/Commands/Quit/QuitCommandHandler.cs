@@ -3,6 +3,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Quit;
 
+[Command("quit")]
 internal sealed class QuitCommandHandler : ICommandHandler
 {
     public CommandKind Kind => CommandKind.Quit;

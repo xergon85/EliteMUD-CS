@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Inventory;
 
+[Command("inventory", Aliases = new[] { "inv", "i" })]
 internal sealed class InventoryCommandHandler : ICommandHandler
 {
     private readonly InventoryHandler _inventoryHandler;

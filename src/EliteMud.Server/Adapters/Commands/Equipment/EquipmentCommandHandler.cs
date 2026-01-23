@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Equipment;
 
+[Command("equipment", Aliases = new[] { "eq" })]
 internal sealed class EquipmentCommandHandler : ICommandHandler
 {
     private readonly EquipmentHandler _equipmentHandler;
