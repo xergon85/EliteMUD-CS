@@ -1,4 +1,5 @@
 using EliteMud.Game;
+using EliteMud.Scripting;
 
 namespace EliteMud.Application.Skills;
 
@@ -16,11 +17,13 @@ namespace EliteMud.Application.Skills;
 public sealed class RescueSkill : ISkillHandler
 {
     private readonly SkillMetadata _metadata;
+    private readonly FormulaEvaluator _formulaEvaluator;
 
-    public RescueSkill(SkillMetadataRegistry registry)
+    public RescueSkill(SkillMetadataRegistry registry, FormulaEvaluator formulaEvaluator)
     {
         _metadata = registry.GetBySkillType(SkillType.Rescue)
             ?? throw new InvalidOperationException("Rescue skill metadata not found in registry");
+        _formulaEvaluator = formulaEvaluator;
     }
 
     public SkillType SkillType => SkillType.Rescue;
@@ -58,14 +61,26 @@ public sealed class RescueSkill : ISkillHandler
     }
 
     /// <summary>
-    /// Roll to see if rescue succeeds.
+    /// Roll to see if rescue succeeds using Lua formula from skills.json.
+    /// Formula: "return random(1,101) <= skillPercent"
     /// Legacy formula: random(1, 101) vs skill_percent
     /// Reference: act.offensive.c:625-626
     /// </summary>
-    public static bool RollSuccess(ICombatant rescuer)
+    public bool RollSuccess(ICombatant rescuer)
     {
-        var roll = Random.Shared.Next(1, 102); // 1-101
-        var skillPercent = rescuer.GetSkill(SkillType.Rescue);
-        return roll <= skillPercent;
+        var hitFormula = _metadata.Mechanics?.HitFormula;
+        if (string.IsNullOrEmpty(hitFormula))
+        {
+            // Fallback to legacy hardcoded logic
+            var roll = Random.Shared.Next(1, 102);
+            return roll <= rescuer.GetSkill(SkillType.Rescue);
+        }
+
+        var context = new
+        {
+            skillPercent = rescuer.GetSkill(SkillType.Rescue)
+        };
+
+        return _formulaEvaluator.EvaluateBool(hitFormula, context);
     }
 }

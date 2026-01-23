@@ -16,7 +16,7 @@ namespace EliteMud.Application.Skills;
 [Command("kick")]
 public sealed class KickSkillExecutor : ISkillExecutor
 {
-    private readonly ISkillHandler _kickSkill;
+    private readonly KickSkill _kickSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
 
@@ -28,7 +28,7 @@ public sealed class KickSkillExecutor : ISkillExecutor
         CombatCalculator combatCalculator,
         IWorldState worldState)
     {
-        _kickSkill = skillRegistry.GetActiveSkill(SkillType.Kick);
+        _kickSkill = (KickSkill)skillRegistry.GetActiveSkill(SkillType.Kick);
         _combatCalculator = combatCalculator;
         _worldState = worldState;
     }
@@ -74,7 +74,7 @@ public sealed class KickSkillExecutor : ISkillExecutor
         }
 
         // Roll hit/miss
-        var hit = KickSkill.RollHit(attacker, victim);
+        var hit = _kickSkill.RollHit(attacker, victim);
         if (!hit)
         {
             // Apply combat lag even on miss (legacy: WAIT_STATE applied after damage())
@@ -88,7 +88,7 @@ public sealed class KickSkillExecutor : ISkillExecutor
         }
 
         // Calculate damage
-        var damage = KickSkill.CalculateDamage(attacker);
+        var damage = _kickSkill.CalculateDamage(attacker);
 
         // Apply damage
         var victimDied = false;

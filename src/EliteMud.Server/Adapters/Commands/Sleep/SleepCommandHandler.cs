@@ -5,7 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Sleep;
 
-[Command("sleep")]
+[Command("sleep", Aliases = new[] { "sleep", "sl" })]
 internal sealed class SleepCommandHandler : ICommandHandler
 {
     private readonly ConnectionRegistry _connectionRegistry;

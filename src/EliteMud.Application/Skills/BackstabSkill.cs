@@ -1,4 +1,5 @@
 using EliteMud.Game;
+using EliteMud.Scripting;
 
 namespace EliteMud.Application.Skills;
 
@@ -11,11 +12,13 @@ namespace EliteMud.Application.Skills;
 public sealed class BackstabSkill : ISkillHandler
 {
     private readonly SkillMetadata _metadata;
+    private readonly FormulaEvaluator _formulaEvaluator;
 
-    public BackstabSkill(SkillMetadataRegistry registry)
+    public BackstabSkill(SkillMetadataRegistry registry, FormulaEvaluator formulaEvaluator)
     {
         _metadata = registry.GetBySkillType(SkillType.Backstab)
             ?? throw new InvalidOperationException("Backstab skill metadata not found in registry");
+        _formulaEvaluator = formulaEvaluator;
     }
 
     public SkillType SkillType => SkillType.Backstab;
@@ -53,33 +56,52 @@ public sealed class BackstabSkill : ISkillHandler
     }
 
     /// <summary>
-    /// Calculate backstab damage multiplier based on attacker level.
+    /// Calculate backstab damage multiplier using Lua formula from skills.json.
+    /// Formula: "return math.min(math.floor(level / 10) + 1, 5)"
     /// Legacy formula: MIN(level / 10 + 1, 5)
     /// Reference: fight.c:1520-1521
     /// </summary>
-    public static int CalculateDamageMultiplier(ICombatant attacker)
+    public int CalculateDamageMultiplier(ICombatant attacker)
     {
-        // Level 1-9: 1x multiplier
-        // Level 10-19: 2x multiplier
-        // Level 20-29: 3x multiplier
-        // Level 30-39: 4x multiplier
-        // Level 40+: 5x multiplier (capped)
-        return Math.Min(attacker.Level / 10 + 1, 5);
+        var multiplierFormula = _metadata.Mechanics?.DamageMultiplierFormula;
+        if (string.IsNullOrEmpty(multiplierFormula))
+        {
+            // Fallback to legacy hardcoded logic
+            return Math.Min(attacker.Level / 10 + 1, 5);
+        }
+
+        var context = new
+        {
+            level = attacker.Level
+        };
+
+        return _formulaEvaluator.EvaluateInt(multiplierFormula, context);
     }
 
     /// <summary>
-    /// Roll to see if backstab hits.
+    /// Roll to see if backstab hits using Lua formula from skills.json.
+    /// Formula: "return random(1,101) <= skillPercent"
     /// Legacy formula: random(1, 101) vs skill_percent
     /// 101 is automatic failure.
     /// Reference: act.offensive.c:244-251
     /// </summary>
-    public static bool RollHit(ICombatant attacker)
+    public bool RollHit(ICombatant attacker)
     {
-        var roll = Random.Shared.Next(1, 102); // 1-101
-        var skillPercent = attacker.GetSkill(SkillType.Backstab);
+        var hitFormula = _metadata.Mechanics?.HitFormula;
+        if (string.IsNullOrEmpty(hitFormula))
+        {
+            // Fallback to legacy hardcoded logic
+            var roll = Random.Shared.Next(1, 102);
+            return roll <= attacker.GetSkill(SkillType.Backstab);
+        }
+
+        var context = new
+        {
+            skillPercent = attacker.GetSkill(SkillType.Backstab)
+        };
 
         // If victim is asleep, auto-hit
         // (checked in executor - if awake, use normal roll)
-        return roll <= skillPercent;
+        return _formulaEvaluator.EvaluateBool(hitFormula, context);
     }
 }

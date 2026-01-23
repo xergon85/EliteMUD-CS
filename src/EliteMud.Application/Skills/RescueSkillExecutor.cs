@@ -21,7 +21,7 @@ namespace EliteMud.Application.Skills;
 [Command("rescue")]
 public sealed class RescueSkillExecutor : ISkillExecutor
 {
-    private readonly ISkillHandler _rescueSkill;
+    private readonly RescueSkill _rescueSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
 
@@ -33,7 +33,7 @@ public sealed class RescueSkillExecutor : ISkillExecutor
         CombatCalculator combatCalculator,
         IWorldState worldState)
     {
-        _rescueSkill = skillRegistry.GetActiveSkill(SkillType.Rescue);
+        _rescueSkill = (RescueSkill)skillRegistry.GetActiveSkill(SkillType.Rescue);
         _combatCalculator = combatCalculator;
         _worldState = worldState;
     }
@@ -134,7 +134,7 @@ public sealed class RescueSkillExecutor : ISkillExecutor
         }
 
         // Roll for success
-        if (!RescueSkill.RollSuccess(rescuer))
+        if (!_rescueSkill.RollSuccess(rescuer))
         {
             // Apply wait state even on failure
             rescuer.WaitState = CombatConstants.WaitStates.Rescue;

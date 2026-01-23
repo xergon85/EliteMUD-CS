@@ -1,4 +1,6 @@
+using EliteMud.Application.Skills;
 using EliteMud.Game;
+using EliteMud.Scripting;
 
 namespace EliteMud.Tests.Skills;
 
@@ -15,9 +17,12 @@ public class DodgeSkillTests
         // Create skill registry from JSON
         var registry = CreateSkillRegistry();
         
+        // Create formula evaluator for Lua formulas
+        var formulaEvaluator = new FormulaEvaluator();
+        
         // Create CombatCalculator with dodge and parry skills for tests
-        var dodgeSkill = new DodgeSkill(registry);
-        var parrySkill = new ParrySkill(registry);
+        var dodgeSkill = new DodgeSkill(registry, formulaEvaluator);
+        var parrySkill = new ParrySkill(registry, formulaEvaluator);
         _combatCalculator = new CombatCalculator(dodgeSkill, parrySkill);
     }
 

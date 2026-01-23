@@ -1,4 +1,7 @@
-namespace EliteMud.Game;
+using EliteMud.Game;
+using EliteMud.Scripting;
+
+namespace EliteMud.Application.Skills;
 
 /// <summary>
 /// Parry skill - passive defensive skill that blocks incoming damage with a shield.
@@ -15,11 +18,13 @@ namespace EliteMud.Game;
 public sealed class ParrySkill : IPassiveSkillHandler
 {
     private readonly SkillMetadata _metadata;
+    private readonly FormulaEvaluator _formulaEvaluator;
 
-    public ParrySkill(SkillMetadataRegistry registry)
+    public ParrySkill(SkillMetadataRegistry registry, FormulaEvaluator formulaEvaluator)
     {
         _metadata = registry.GetBySkillType(SkillType.Parry)
             ?? throw new InvalidOperationException("Parry skill metadata not found in registry");
+        _formulaEvaluator = formulaEvaluator;
     }
 
     public SkillType SkillType => SkillType.Parry;
@@ -52,7 +57,9 @@ public sealed class ParrySkill : IPassiveSkillHandler
     }
     
     /// <summary>
-    /// Attempt to parry incoming damage.
+    /// Attempt to parry incoming damage using Lua formulas from skills.json.
+    /// Activation formula: "return (random(1,300) + damage) < skillPercent"
+    /// Effect formula: "return math.max(0, damage - level)"
     /// Legacy formula: (random(1, 300) + damage) < GET_SKILL(victim, SKILL_PARRY)
     /// If successful, reduce damage by user level.
     /// </summary>
@@ -70,16 +77,47 @@ public sealed class ParrySkill : IPassiveSkillHandler
         int damage = inputValue;
         int parrySkillLevel = user.GetSkill(SkillType.Parry);
         
-        // Legacy: if ((number(1, 300) + dam) < GET_SKILL(victim, SKILL_PARRY))
-        // Note: Parry uses 1-300 range (harder to activate than dodge's 1-250)
-        int check = Random.Shared.Next(1, 301) + damage;
-        
-        if (check < parrySkillLevel)
+        // Check if parry activates using Lua formula
+        var activationFormula = _metadata.Mechanics?.ActivationFormula;
+        bool activated;
+
+        if (string.IsNullOrEmpty(activationFormula))
         {
-            // Parry successful - reduce damage by user level
-            // Legacy: damage(ch, victim, dam - GET_LEVEL(victim), SKILL_PARRY)
-            int reduction = user.Level;
-            int modifiedDamage = Math.Max(0, damage - reduction);
+            // Fallback to legacy hardcoded logic
+            int check = Random.Shared.Next(1, 301) + damage;
+            activated = check < parrySkillLevel;
+        }
+        else
+        {
+            var context = new
+            {
+                damage = damage,
+                skillPercent = parrySkillLevel
+            };
+            activated = _formulaEvaluator.EvaluateBool(activationFormula, context);
+        }
+        
+        if (activated)
+        {
+            // Calculate reduced damage using Lua formula
+            var effectFormula = _metadata.Mechanics?.EffectFormula;
+            int modifiedDamage;
+
+            if (string.IsNullOrEmpty(effectFormula))
+            {
+                // Fallback to legacy hardcoded logic
+                int reduction = user.Level;
+                modifiedDamage = Math.Max(0, damage - reduction);
+            }
+            else
+            {
+                var context = new
+                {
+                    damage = damage,
+                    level = user.Level
+                };
+                modifiedDamage = _formulaEvaluator.EvaluateInt(effectFormula, context);
+            }
             
             return new PassiveSkillResult(
                 Activated: true,

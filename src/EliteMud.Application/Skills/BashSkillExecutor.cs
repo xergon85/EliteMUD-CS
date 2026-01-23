@@ -15,7 +15,7 @@ namespace EliteMud.Application.Skills;
 [Command("bash")]
 public sealed class BashSkillExecutor : ISkillExecutor
 {
-    private readonly ISkillHandler _bashSkill;
+    private readonly BashSkill _bashSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
 
@@ -27,7 +27,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
         CombatCalculator combatCalculator,
         IWorldState worldState)
     {
-        _bashSkill = skillRegistry.GetActiveSkill(SkillType.Bash);
+        _bashSkill = (BashSkill)skillRegistry.GetActiveSkill(SkillType.Bash);
         _combatCalculator = combatCalculator;
         _worldState = worldState;
     }
@@ -76,7 +76,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
         }
 
         // Roll hit/miss
-        var hit = BashSkill.RollHit(attacker);
+        var hit = _bashSkill.RollHit(attacker);
         var messages = new List<SkillMessage>();
 
         if (!hit)
@@ -106,7 +106,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
         }
 
         // Success: Victim falls down and takes damage
-        var damage = BashSkill.CalculateDamage();
+        var damage = _bashSkill.CalculateDamage();
         var victimDied = false;
 
         // Knock victim down

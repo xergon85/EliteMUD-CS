@@ -1,4 +1,7 @@
-namespace EliteMud.Game;
+using EliteMud.Game;
+using EliteMud.Scripting;
+
+namespace EliteMud.Application.Skills;
 
 /// <summary>
 /// Dodge skill - passive defensive skill that reduces incoming damage.
@@ -13,11 +16,13 @@ namespace EliteMud.Game;
 public sealed class DodgeSkill : IPassiveSkillHandler
 {
     private readonly SkillMetadata _metadata;
+    private readonly FormulaEvaluator _formulaEvaluator;
 
-    public DodgeSkill(SkillMetadataRegistry registry)
+    public DodgeSkill(SkillMetadataRegistry registry, FormulaEvaluator formulaEvaluator)
     {
         _metadata = registry.GetBySkillType(SkillType.Dodge)
             ?? throw new InvalidOperationException("Dodge skill metadata not found in registry");
+        _formulaEvaluator = formulaEvaluator;
     }
 
     public SkillType SkillType => SkillType.Dodge;
@@ -46,7 +51,9 @@ public sealed class DodgeSkill : IPassiveSkillHandler
     }
 
     /// <summary>
-    /// Attempt to dodge incoming damage.
+    /// Attempt to dodge incoming damage using Lua formulas from skills.json.
+    /// Activation formula: "return (random(1,250) + damage) < skillPercent"
+    /// Effect formula: "return math.max(0, damage - (level * 2))"
     /// Legacy formula: (random(1, 250) + damage) &lt; GET_SKILL(victim, SKILL_DODGE)
     /// If successful, reduce damage by (level * 2).
     /// </summary>
@@ -64,15 +71,47 @@ public sealed class DodgeSkill : IPassiveSkillHandler
         int damage = inputValue;
         int dodgeSkillLevel = user.GetSkill(SkillType.Dodge);
 
-        // Legacy: if ((number(1, 250) + damage) < GET_SKILL(victim, SKILL_DODGE))
-        int check = Random.Shared.Next(1, 251) + damage;
+        // Check if dodge activates using Lua formula
+        var activationFormula = _metadata.Mechanics?.ActivationFormula;
+        bool activated;
 
-        if (check < dodgeSkillLevel)
+        if (string.IsNullOrEmpty(activationFormula))
         {
-            // Dodge successful - reduce damage by 2x user level
-            // Legacy: dam -= (GET_LEVEL(victim) * 2)
-            int reduction = user.Level * 2;
-            int modifiedDamage = Math.Max(0, damage - reduction);
+            // Fallback to legacy hardcoded logic
+            int check = Random.Shared.Next(1, 251) + damage;
+            activated = check < dodgeSkillLevel;
+        }
+        else
+        {
+            var context = new
+            {
+                damage = damage,
+                skillPercent = dodgeSkillLevel
+            };
+            activated = _formulaEvaluator.EvaluateBool(activationFormula, context);
+        }
+
+        if (activated)
+        {
+            // Calculate reduced damage using Lua formula
+            var effectFormula = _metadata.Mechanics?.EffectFormula;
+            int modifiedDamage;
+
+            if (string.IsNullOrEmpty(effectFormula))
+            {
+                // Fallback to legacy hardcoded logic
+                int reduction = user.Level * 2;
+                modifiedDamage = Math.Max(0, damage - reduction);
+            }
+            else
+            {
+                var context = new
+                {
+                    damage = damage,
+                    level = user.Level
+                };
+                modifiedDamage = _formulaEvaluator.EvaluateInt(effectFormula, context);
+            }
 
             return new PassiveSkillResult(
                 Activated: true,
