@@ -3,41 +3,62 @@
 Comprehensive documentation of all playable races in EliteMUD, extracted from legacy codebase.
 
 **Source Files:**
-- `/Users/christofferisenberg/Dev/elitemud/src/constants.c` (lines 115-180)
-- `/Users/christofferisenberg/Dev/elitemud/src/structs.h` (lines 285-312)
-- `/Users/christofferisenberg/Dev/elitemud/src/act.wizard.c` (lines 2200-2320)
+- `/Users/christofferisenberg/Dev/elitemud/src/constants.c` (lines 115-180) - Race tables and stat maxes
+- `/Users/christofferisenberg/Dev/elitemud/src/structs.h` (lines 285-312) - Race constants
+- `/Users/christofferisenberg/Dev/elitemud/src/act.wizard.c` (lines 2200-2320) - Racial abilities
+- `/Users/christofferisenberg/Dev/elitemud/src/interpreter.c` (lines 1364-1368, 1891-1905) - Character creation races
 
 ---
 
 ## Race List (25 Total)
 
-| ID | Name       | Title Display | Title Color |
-|----|------------|---------------|-------------|
-| 0  | god        | Divine        | #r (red)    |
-| 1  | human      | Human         | #w (white)  |
-| 2  | elf        | Elven         | #b (blue)   |
-| 3  | half-elf   | Half-elven    | #c (cyan)   |
-| 4  | dwarf      | Dwarven       | #R (bold red) |
-| 5  | gnome      | Gnome         | #g (green)  |
-| 6  | halfling   | Halfling      | #Y (bold yellow) |
-| 7  | half-troll | Half-troll    | #y (yellow) |
-| 8  | half-orc   | Half-orc      | #M (bold magenta) |
-| 9  | half-ogre  | Half-ogre     | #m (magenta) |
-| 10 | duck       | Duck          | #Y (bold yellow) |
-| 11 | fairy      | Fairy         | #R (bold red) |
-| 12 | minotaur   | Minotaur      | #R (bold red) |
-| 13 | ratman     | Ratman        | #M (bold magenta) |
-| 14 | drow       | Drow          | #R (bold red) |
-| 15 | lizard     | Lizard        | #G (bold green) |
-| 16 | vampire    | Vampire       | #m (magenta) |
-| 17 | troll      | Troll         | #y (yellow) |
-| 18 | draconian  | Draconian     | #G (bold green) |
-| 19 | avatar     | Avatar        | #r (red)    |
-| 20 | werewolf   | Werewolf      | #m (magenta) |
-| 21 | demon      | Demon         | #w (white)  |
-| 22 | dragon     | Dragon        | #G (bold green) |
-| 23 | feline     | Feline        | #G (bold green) |
-| 24 | angel      | Angel         | #w (white)  |
+### Races Available at Character Creation (13 Races)
+
+These races can be selected during character creation via the race selection menu:
+
+| ID | Name       | Menu | Title Display | Title Color |
+|----|------------|------|---------------|-------------|
+| 1  | human      | [a]  | Human         | #w (white)  |
+| 17 | troll      | [b]  | Troll         | #y (yellow) |
+| 6  | halfling   | [c]  | Halfling      | #Y (bold yellow) |
+| 4  | dwarf      | [d]  | Dwarven       | #R (bold red) |
+| 5  | gnome      | [e]  | Gnome         | #g (green)  |
+| 2  | elf        | [f]  | Elven         | #b (blue)   |
+| 3  | half-elf   | [g]  | Half-elven    | #c (cyan)   |
+| 11 | fairy      | [h]  | Fairy         | #R (bold red) |
+| 12 | minotaur   | [i]  | Minotaur      | #R (bold red) |
+| 13 | ratman     | [j]  | Ratman        | #M (bold magenta) |
+| 14 | drow       | [k]  | Drow          | #R (bold red) |
+| 15 | lizard     | [l]  | Lizard        | #G (bold green) |
+| 18 | draconian  | [m]  | Draconian     | #G (bold green) |
+
+**Source:** `interpreter.c` lines 1364-1368, 1891-1905
+
+### Special Races (12 Races - Not Available at Creation)
+
+These races cannot be selected at character creation and are typically granted by immortals or through special game mechanics:
+
+| ID | Name       | Title Display | Title Color | Notes |
+|----|------------|---------------|-------------|-------|
+| 0  | god        | Divine        | #r (red)    | Admin only |
+| 7  | half-troll | Half-troll    | #y (yellow) | Special unlock |
+| 8  | half-orc   | Half-orc      | #M (bold magenta) | Special unlock |
+| 9  | half-ogre  | Half-ogre     | #m (magenta) | Special unlock |
+| 10 | duck       | Duck          | #Y (bold yellow) | Special unlock |
+| 16 | vampire    | Vampire       | #m (magenta) | Special unlock |
+| 19 | avatar     | Avatar        | #r (red)    | Special unlock |
+| 20 | werewolf   | Werewolf      | #m (magenta) | Special unlock |
+| 21 | demon      | Demon         | #w (white)  | Special unlock |
+| 22 | dragon     | Dragon        | #G (bold green) | Special unlock |
+| 23 | feline     | Feline        | #G (bold green) | Special unlock |
+| 24 | angel      | Angel         | #w (white)  | Special unlock |
+
+**How to Obtain:**
+- Immortal command: `set <player> race <racename>` (act.wizard.c:4257)
+- Quest rewards (specifics not documented in base code)
+- Special game events (specifics not documented in base code)
+
+**Note:** In legacy EliteMUD, these special races were often granted as rewards for difficult quests, remort milestones, or special achievements. The exact unlock conditions may have been server-specific.
 
 ---
 
@@ -164,6 +185,32 @@ Each race has average height and weight values (gender-adjusted):
 - Height: average - 40 to average + 20 inches
 
 *(Exact values would need to be extracted from `height_average[]` and `weight_average[]` arrays)*
+
+---
+
+## Remort System
+
+### Remort Benefits
+
+**Remort 4+:**
+- Characters with 4 or more remorts automatically receive **maximum stats for their race**
+- Stats are set to race maximums (from the stat caps table above)
+- Warriors, Cavaliers, Knights, and Rangers also get STR/ADD = 100
+- Hunger and thirst can be toggled off
+
+**Source:** `act.wizard.c` lines 2129-2140
+
+**Example:**
+- Human with 4 remorts: All stats set to 18 (human max)
+- Troll with 4 remorts: STR=20, CON=20, DEX=16, INT=9, WIS=9, CHA=12
+- Avatar with 4 remorts: All stats set to 23 (avatar max)
+
+### Remort and Race Changes
+
+Remorts do NOT automatically unlock special races. Race changes are handled separately by:
+1. Immortal commands (`set <player> race <racename>`)
+2. Quest rewards or special events
+3. Server-specific unlock mechanics
 
 ---
 
