@@ -387,6 +387,17 @@
 - `mobact.c`, `mobcmd.c` → ❌ AI + scripting hooks (TODO)
 - `boards.c`, `mail.c`, `clan.c` → ❌ Feature services (TODO)
 
+## UI/UX Improvements
+
+### Stat Display Cleanup
+- ❌ **TODO:** Remove redundant base stat display in parentheses when showing modifiers
+  - Current: `Dex: [13 (11+2)]` shows both effective (13) and breakdown (11+2)
+  - Issue: The effective value 13 is already shown, the parenthetical breakdown is redundant
+  - Proposed: `Dex: [11+2]` or `Dex: [11 Eq:+2]` (show only the breakdown when modifiers exist)
+  - Alternative: `Dex: [13]` with separate modifier line or hover info
+  - Affects: Str, Int, Wis, Dex, Con, Cha display in stat command
+  - File: `src/EliteMud.Application/Commands/Stat/StatHandler.cs` FormatStatWithModifier method
+
 ## Implementation Status Summary
 
 ### ✅ COMPLETE (Production Ready)
