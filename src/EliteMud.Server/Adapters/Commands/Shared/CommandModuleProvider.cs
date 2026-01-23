@@ -9,7 +9,6 @@ using EliteMud.Server.Adapters.Commands.Flee;
 using EliteMud.Server.Adapters.Commands.Get;
 using EliteMud.Server.Adapters.Commands.Hold;
 using EliteMud.Server.Adapters.Commands.Inventory;
-using EliteMud.Server.Adapters.Commands.Kill;
 using EliteMud.Server.Adapters.Commands.Load;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Move;
@@ -62,7 +61,7 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new ResetZoneCommandModule(),
             new SayCommandModule(),
             new MoveCommandModule(),
-            new KillCommandModule(),
+            // new KillCommandModule(), // REMOVED - now auto-registered via MeleeAttackExecutor
             // new KickCommandModule(), // REMOVED - now auto-registered via ISkillExecutor
             new FleeCommandModule(),
             new WimpyCommandModule(),
