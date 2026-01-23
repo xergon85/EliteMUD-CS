@@ -704,6 +704,18 @@ internal static class ContentLoader
             affects.Add(new ObjectAffect(AffectLocation.ArmorClass, acBonus));
         }
 
+        // Legacy compatibility: Convert HitPoints from armor/weapon Details to MaxHit affect
+        // In legacy EliteMUD, items could have HP/Mana/Move bonuses stored in Details
+        if (details?.Armor != null && details.Armor.HitPoints != 0)
+        {
+            affects.Add(new ObjectAffect(AffectLocation.MaxHit, details.Armor.HitPoints));
+        }
+        
+        if (details?.Weapon != null && details.Weapon.HitPoints != 0)
+        {
+            affects.Add(new ObjectAffect(AffectLocation.MaxHit, details.Weapon.HitPoints));
+        }
+
         return new ObjectDefinition(
             obj.Id,
             obj.Name,
