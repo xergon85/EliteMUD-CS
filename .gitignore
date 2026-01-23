@@ -15,3 +15,8 @@
 *.db
 *.db-shm
 *.db-wal
+
+# Legacy import tool output directories
+# (content/ is the canonical source, imported/ and output/ are temporary)
+imported/
+output/
