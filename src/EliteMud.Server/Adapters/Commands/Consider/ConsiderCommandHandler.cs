@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Consider;
 
+[Command("consider", Aliases = new[] { "con" })]
 internal sealed class ConsiderCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;

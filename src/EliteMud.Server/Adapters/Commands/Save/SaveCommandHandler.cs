@@ -6,6 +6,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Save;
 
+[Command("save")]
 internal sealed class SaveCommandHandler : ICommandHandler
 {
     private readonly ICharacterRepository _characterRepository;
