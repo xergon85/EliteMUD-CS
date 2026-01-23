@@ -45,7 +45,7 @@ internal sealed class ResetZoneCommandHandler : ICommandHandler
         await context.Session.SendLineAsync(result.Message, cancellationToken);
         if (result.Success)
         {
-            await _lookHandler.HandleAsync(new CommandRequest(CommandKind.Look, null, null), context, cancellationToken);
+            await _lookHandler.HandleAsync(new CommandRequest(CommandKind.Look, "look", null, null), context, cancellationToken);
         }
 
         return CommandOutcome.Continue;

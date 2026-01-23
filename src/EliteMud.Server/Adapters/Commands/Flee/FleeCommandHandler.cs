@@ -75,7 +75,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
 
         // Show new room by looking (same as move command)
         await _lookHandler.HandleAsync(
-            new CommandRequest(CommandKind.Look, null, null),
+            new CommandRequest(CommandKind.Look, "look", null, null),
             context,
             cancellationToken);
 

@@ -47,7 +47,7 @@ internal sealed class MoveCommandHandler : ICommandHandler
 
         var room = _worldState.World.GetRoom(context.Player.RoomId);
         await context.ExecuteScriptHookAsync(_scriptEngine, ScriptHook.OnEnterRoom, room, null, cancellationToken);
-        await _lookHandler.HandleAsync(new CommandRequest(CommandKind.Look, null, null), context, cancellationToken);
+        await _lookHandler.HandleAsync(new CommandRequest(CommandKind.Look, "look", null, null), context, cancellationToken);
         return CommandOutcome.Continue;
     }
 }

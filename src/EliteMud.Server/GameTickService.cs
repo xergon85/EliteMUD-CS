@@ -659,7 +659,7 @@ internal sealed class GameTickService
 
         // Show new room using LookCommandHandler (same as manual flee and move)
         await _lookHandler.HandleAsync(
-            new CommandRequest(CommandKind.Look, null, null),
+            new CommandRequest(CommandKind.Look, "look", null, null),
             player,
             cancellationToken);
     }
