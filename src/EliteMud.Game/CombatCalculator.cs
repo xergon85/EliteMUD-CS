@@ -4,15 +4,28 @@ namespace EliteMud.Game;
 /// Pure domain service for combat calculations.
 /// Contains stateless combat logic: damage, hit/miss, position updates.
 /// Based on legacy EliteMUD fight.c logic.
+/// 
+/// Note: This class is now instance-based to support dependency injection of SkillRegistry.
+/// However, it remains stateless - all methods are pure functions with no mutable state.
 /// </summary>
-public static class CombatCalculator
+public class CombatCalculator
 {
+    private readonly IPassiveSkillHandler _dodgeSkill;
+
+    /// <summary>
+    /// Constructor for dependency injection.
+    /// </summary>
+    /// <param name="dodgeSkill">Dodge skill handler (injected from SkillRegistry)</param>
+    public CombatCalculator(IPassiveSkillHandler dodgeSkill)
+    {
+        _dodgeSkill = dodgeSkill;
+    }
     /// <summary>
     /// Set a player to fighting another player.
     /// Auto-stands the player if they are sitting/resting/sleeping.
     /// Legacy: set_fighting(ch, victim)
     /// </summary>
-    public static void SetFighting(PlayerState attacker, int targetConnectionId)
+    public void SetFighting(PlayerState attacker, int targetConnectionId)
     {
         if (attacker.FightingConnectionId != null)
         {
@@ -35,7 +48,7 @@ public static class CombatCalculator
     /// Stop a player from fighting.
     /// Legacy: stop_fighting(ch)
     /// </summary>
-    public static void StopFighting(PlayerState player)
+    public void StopFighting(PlayerState player)
     {
         player.FightingConnectionId = null;
         if (player.Position == Position.Fighting)
@@ -48,7 +61,7 @@ public static class CombatCalculator
     /// Roll dice (e.g., 2d6 = 2 dice of 6 sides each).
     /// Legacy: dice(num, size)
     /// </summary>
-    public static int RollDice(int number, int size)
+    public int RollDice(int number, int size)
     {
         if (number <= 0 || size <= 0) return 0;
         
@@ -65,7 +78,7 @@ public static class CombatCalculator
     /// Legacy: fight.c:1439-1458
     /// Formula: str_todam + damroll + random(0,2)
     /// </summary>
-    public static int CalculateBareDamage(PlayerState attacker)
+    public int CalculateBareDamage(PlayerState attacker)
     {
         // Legacy: dam = str_todam + damroll + number(0, 2) for bare hands
         int strBonus = GetStrengthDamageBonus(attacker.Strength);
@@ -77,7 +90,7 @@ public static class CombatCalculator
     /// Get damage bonus from strength.
     /// Legacy: str_app[str].todam
     /// </summary>
-    private static int GetStrengthDamageBonus(sbyte strength)
+    private int GetStrengthDamageBonus(sbyte strength)
     {
         // Simplified strength to-damage table
         if (strength <= 5) return -2;
@@ -92,7 +105,7 @@ public static class CombatCalculator
     /// Get to-hit bonus from strength.
     /// Legacy: str_app[str].tohit
     /// </summary>
-    private static int GetStrengthHitBonus(sbyte strength)
+    private int GetStrengthHitBonus(sbyte strength)
     {
         // Simplified strength to-hit table
         if (strength <= 5) return -2;
@@ -108,7 +121,7 @@ public static class CombatCalculator
     /// Legacy uses class and level tables.
     /// Lower is better (easier to hit).
     /// </summary>
-    public static int CalculateThac0(PlayerState attacker)
+    public int CalculateThac0(PlayerState attacker)
     {
         // Simplified THAC0: 20 - level
         // In legacy, warriors have better THAC0 than mages
@@ -120,7 +133,7 @@ public static class CombatCalculator
     /// Determine if an attack hits.
     /// Legacy: calculates based on THAC0, AC, dexterity, hitroll (fight.c:1380-1418)
     /// </summary>
-    public static bool AttackHits(PlayerState attacker, PlayerState victim)
+    public bool AttackHits(PlayerState attacker, PlayerState victim)
     {
         // Calculate base THAC0
         int calcThac0 = CalculateThac0(attacker);
@@ -162,7 +175,7 @@ public static class CombatCalculator
     /// <param name="baseDamage">Base damage before multipliers</param>
     /// <param name="victimPosition">Victim's current position</param>
     /// <returns>Damage after position multiplier</returns>
-    public static int CalculateDamageWithPositionMultiplier(int baseDamage, Position victimPosition)
+    public int CalculateDamageWithPositionMultiplier(int baseDamage, Position victimPosition)
     {
         // If victim is not in fighting position, apply damage multiplier
         // Legacy formula: dam *= (3 + POS_FIGHTING - GET_POS(victim)) / 3
@@ -186,17 +199,21 @@ public static class CombatCalculator
     /// Apply damage to a player and update their position.
     /// Legacy: damage() function
     /// </summary>
-    public static DamageResult ApplyDamage(PlayerState victim, int damage)
+    public DamageResult ApplyDamage(PlayerState victim, int damage)
     {
         // Apply position multiplier before capping damage
         damage = CalculateDamageWithPositionMultiplier(damage, victim.Position);
         
         // Check for passive defensive skills (dodge)
         // Legacy: fight.c:1543-1551
-        var dodgeResult = TryDodge(victim, damage);
-        if (dodgeResult.Dodged)
+        var dodgeResult = _dodgeSkill.TryActivate(victim, damage);
+        bool dodged = dodgeResult.Activated;
+        if (dodged)
         {
-            damage = dodgeResult.ModifiedDamage;
+            damage = dodgeResult.ModifiedValue;
+            
+            // Improve skill on successful dodge
+            victim.TryImproveSkill(SkillType.Dodge);
         }
         
         // Cap damage
@@ -209,39 +226,14 @@ public static class CombatCalculator
         // Update position based on HP
         UpdatePosition(victim);
 
-        return new DamageResult(damage, dodgeResult.Dodged, dodgeResult.Message);
-    }
-
-    /// <summary>
-    /// Try to dodge an attack (passive defensive skill).
-    /// Legacy: fight.c:1543-1551
-    /// Formula: (random(1,250) + damage) &lt; GET_SKILL(victim, SKILL_DODGE)
-    /// </summary>
-    private static DodgeResult TryDodge(PlayerState victim, int damage)
-    {
-        var dodgeSkill = victim.GetSkill(SkillType.Dodge);
-        if (dodgeSkill == 0)
-        {
-            return new DodgeResult(false, damage, null);
-        }
-
-        int check = Random.Shared.Next(1, 251) + damage;
-        if (check < dodgeSkill)
-        {
-            // Dodge successful - reduce damage by 2x victim level
-            victim.TryImproveSkill(SkillType.Dodge);
-            int reduction = victim.Level * 2;
-            return new DodgeResult(true, damage - reduction, "You dodge the attack!");
-        }
-
-        return new DodgeResult(false, damage, null);
+        return new DamageResult(damage, dodged, dodgeResult.Message);
     }
 
     /// <summary>
     /// Update character position based on current HP.
     /// Legacy: update_pos(ch)
     /// </summary>
-    public static void UpdatePosition(PlayerState character)
+    public void UpdatePosition(PlayerState character)
     {
         if (character.HitPoints > 0)
         {
@@ -275,7 +267,7 @@ public static class CombatCalculator
     /// Returns damage dealt.
     /// Legacy: hit() function
     /// </summary>
-    public static AttackResult PerformAttack(PlayerState attacker, PlayerState victim)
+    public AttackResult PerformAttack(PlayerState attacker, PlayerState victim)
     {
         // Check if out of moves (too tired to fight)
         if (attacker.Movement < 1)
@@ -306,7 +298,7 @@ public static class CombatCalculator
     /// Award experience for damage dealt.
     /// Legacy: GET_EXP(ch) += GET_LEVEL(victim) * dam / 2
     /// </summary>
-    public static int CalculateExperienceGain(PlayerState victim, int damage)
+    public int CalculateExperienceGain(PlayerState victim, int damage)
     {
         return victim.Level * damage / 2;
     }
@@ -321,11 +313,6 @@ public sealed record AttackResult(bool Hit, int Damage, string? Message);
 /// Result of applying damage (includes dodge check).
 /// </summary>
 public sealed record DamageResult(int Damage, bool Dodged, string? Message);
-
-/// <summary>
-/// Result of a dodge attempt.
-/// </summary>
-internal sealed record DodgeResult(bool Dodged, int ModifiedDamage, string? Message);
 
 /// <summary>
 /// Message perspective for combat messages.

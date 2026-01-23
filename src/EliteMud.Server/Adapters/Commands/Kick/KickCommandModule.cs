@@ -1,5 +1,7 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Skills;
 using EliteMud.Application.World;
+using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,7 +16,8 @@ internal sealed class KickCommandModule : ICommandModule
         var worldState = serviceProvider.GetRequiredService<IWorldState>();
         var actService = serviceProvider.GetRequiredService<ActMessageService>();
         var connectionRegistry = serviceProvider.GetRequiredService<ConnectionRegistry>();
+        var kickExecutor = serviceProvider.GetRequiredService<KickSkillExecutor>();
         
-        return new KickCommandHandler(worldState, actService, connectionRegistry);
+        return new KickCommandHandler(worldState, actService, connectionRegistry, kickExecutor);
     }
 }

@@ -26,6 +26,7 @@ internal sealed class GameTickService
     private readonly ActMessageService _actService;
     private readonly Application.Commands.Flee.FleeHandler _fleeService;
     private readonly LookCommandHandler _lookHandler;
+    private readonly CombatCalculator _combatCalculator;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
     private readonly TimeSpan _gainInterval = TimeSpan.FromSeconds(6); // PULSE_GAIN - increment gain_count based on position (legacy: 6 seconds)
@@ -43,7 +44,8 @@ internal sealed class GameTickService
         IWorldState worldState,
         ActMessageService actService,
         Application.Commands.Flee.FleeHandler fleeService,
-        LookCommandHandler lookHandler)
+        LookCommandHandler lookHandler,
+        CombatCalculator combatCalculator)
     {
         _connectionRegistry = connectionRegistry;
         _serviceProvider = serviceProvider;
@@ -51,6 +53,7 @@ internal sealed class GameTickService
         _actService = actService;
         _fleeService = fleeService;
         _lookHandler = lookHandler;
+        _combatCalculator = combatCalculator;
     }
 
     public async Task RunAsync(CancellationToken stoppingToken)
@@ -139,7 +142,7 @@ internal sealed class GameTickService
                     if (victim == null || victim.Player.RoomId != attacker.Player.RoomId)
                     {
                         // Target left room or disconnected
-                        CombatCalculator.StopFighting(attacker.Player);
+                        _combatCalculator.StopFighting(attacker.Player);
                         await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
                         continue;
                     }
@@ -208,7 +211,7 @@ internal sealed class GameTickService
     {
         // Mob does damage
         var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-        var damageResult = CombatCalculator.ApplyDamage(victim.Player, mobDamage);
+        var damageResult = _combatCalculator.ApplyDamage(victim.Player, mobDamage);
         
         // Show dodge message if dodged
         if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
@@ -273,11 +276,11 @@ internal sealed class GameTickService
         if (victim.Player.Position == Position.Dead)
         {
             // Victim died (possibly from concurrent kick command)
-            CombatCalculator.StopFighting(attacker.Player);
+            _combatCalculator.StopFighting(attacker.Player);
             return;
         }
         
-        var result = CombatCalculator.PerformAttack(attacker.Player, victim.Player);
+        var result = _combatCalculator.PerformAttack(attacker.Player, victim.Player);
         
         // Format legacy combat messages
         var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
@@ -334,7 +337,7 @@ internal sealed class GameTickService
             }
 
             // Award experience
-            attacker.Player.Experience += CombatCalculator.CalculateExperienceGain(victim.Player, result.Damage);
+            attacker.Player.Experience += _combatCalculator.CalculateExperienceGain(victim.Player, result.Damage);
 
             // Check if victim died
             if (victim.Player.Position == Position.Dead)
@@ -363,7 +366,7 @@ internal sealed class GameTickService
         if (mob == null)
         {
             // Mob is gone (killed by someone else, or despawned)
-            CombatCalculator.StopFighting(attacker.Player);
+            _combatCalculator.StopFighting(attacker.Player);
             await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
             return;
         }
@@ -372,7 +375,7 @@ internal sealed class GameTickService
         int mobMaxHp = mob.Definition.MaxHitPoints;
         
         // Player attacks mob
-        int damage = CombatCalculator.CalculateBareDamage(attacker.Player);
+        int damage = _combatCalculator.CalculateBareDamage(attacker.Player);
         mob.HitPoints -= (short)damage;
         
         // Format legacy combat messages for player hitting mob
@@ -413,7 +416,7 @@ internal sealed class GameTickService
         {
             // Mob fights back
             var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-            var mobDamageResult = CombatCalculator.ApplyDamage(attacker.Player, mobDamage);
+            var mobDamageResult = _combatCalculator.ApplyDamage(attacker.Player, mobDamage);
             
             // Show dodge message if dodged
             if (mobDamageResult.Dodged && !string.IsNullOrEmpty(mobDamageResult.Message))
@@ -467,8 +470,8 @@ internal sealed class GameTickService
         CancellationToken cancellationToken)
     {
         // Stop combat
-        CombatCalculator.StopFighting(killer.Player);
-        CombatCalculator.StopFighting(victim.Player);
+        _combatCalculator.StopFighting(killer.Player);
+        _combatCalculator.StopFighting(victim.Player);
 
         // Award full experience (bonus for kill)
         int killBonus = victim.Player.Level * 100;
@@ -516,7 +519,7 @@ internal sealed class GameTickService
         CancellationToken cancellationToken)
     {
         // Stop combat
-        CombatCalculator.StopFighting(victim.Player);
+        _combatCalculator.StopFighting(victim.Player);
         mob.FightingConnectionId = null;
         mob.Position = Position.Standing;
 
@@ -595,7 +598,7 @@ internal sealed class GameTickService
                 cancellationToken);
             
             // Stop player from fighting, but mob keeps attacking
-            CombatCalculator.StopFighting(player.Player);
+            _combatCalculator.StopFighting(player.Player);
         }
         else if (position == Position.Incapacitated)
         {
@@ -605,7 +608,7 @@ internal sealed class GameTickService
                 cancellationToken);
             
             // Stop player from fighting, but mob keeps attacking
-            CombatCalculator.StopFighting(player.Player);
+            _combatCalculator.StopFighting(player.Player);
         }
         else if (position == Position.Stunned)
         {
@@ -615,7 +618,7 @@ internal sealed class GameTickService
                 cancellationToken);
             
             // Stop player from fighting, but mob keeps attacking
-            CombatCalculator.StopFighting(player.Player);
+            _combatCalculator.StopFighting(player.Player);
         }
         // else: player is still conscious and fighting
     }
@@ -667,7 +670,7 @@ internal sealed class GameTickService
         CancellationToken cancellationToken)
     {
         // Stop combat
-        CombatCalculator.StopFighting(killer.Player);
+        _combatCalculator.StopFighting(killer.Player);
         mob.FightingConnectionId = null;
 
         // Award kill experience

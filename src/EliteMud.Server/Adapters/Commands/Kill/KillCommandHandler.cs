@@ -11,15 +11,18 @@ internal sealed class KillCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly ActMessageService _actService;
     private readonly ConnectionRegistry _connectionRegistry;
+    private readonly CombatCalculator _combatCalculator;
 
     public KillCommandHandler(
         IWorldState worldState,
         ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        ConnectionRegistry connectionRegistry,
+        CombatCalculator combatCalculator)
     {
         _worldState = worldState;
         _actService = actService;
         _connectionRegistry = connectionRegistry;
+        _combatCalculator = combatCalculator;
     }
 
     public CommandKind Kind => CommandKind.Kill;
@@ -81,8 +84,8 @@ internal sealed class KillCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         // Set both to fighting
-        CombatCalculator.SetFighting(attacker.Player, victim.Id);
-        CombatCalculator.SetFighting(victim.Player, attacker.Id);
+        _combatCalculator.SetFighting(attacker.Player, victim.Id);
+        _combatCalculator.SetFighting(victim.Player, attacker.Id);
 
         // Broadcast "You attack" messages
         await attacker.Session.SendLineAsync(
@@ -103,7 +106,7 @@ internal sealed class KillCommandHandler : ICommandHandler
         }
 
         // Perform initial attack
-        var result = CombatCalculator.PerformAttack(attacker.Player, victim.Player);
+        var result = _combatCalculator.PerformAttack(attacker.Player, victim.Player);
         
         // Format legacy combat messages
         var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
@@ -140,7 +143,7 @@ internal sealed class KillCommandHandler : ICommandHandler
             }
 
             // Award experience
-            attacker.Player.Experience += CombatCalculator.CalculateExperienceGain(victim.Player, result.Damage);
+            attacker.Player.Experience += _combatCalculator.CalculateExperienceGain(victim.Player, result.Damage);
         }
     }
 
@@ -150,7 +153,7 @@ internal sealed class KillCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         // Set player to fighting
-        CombatCalculator.SetFighting(attacker.Player, -mob.InstanceId); // Negative ID for mobs
+        _combatCalculator.SetFighting(attacker.Player, -mob.InstanceId); // Negative ID for mobs
 
         // Set mob to fighting player
         mob.FightingConnectionId = attacker.Id;
@@ -173,7 +176,7 @@ internal sealed class KillCommandHandler : ICommandHandler
 
         // Perform initial attack
         int mobMaxHp = mob.Definition.MaxHitPoints;
-        int damage = CombatCalculator.CalculateBareDamage(attacker.Player);
+        int damage = _combatCalculator.CalculateBareDamage(attacker.Player);
         mob.HitPoints -= (short)damage;
         
         // Format legacy combat messages

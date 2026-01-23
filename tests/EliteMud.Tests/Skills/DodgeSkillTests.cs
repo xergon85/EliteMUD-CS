@@ -8,6 +8,15 @@ namespace EliteMud.Tests.Skills;
 /// </summary>
 public class DodgeSkillTests
 {
+    private readonly CombatCalculator _combatCalculator;
+
+    public DodgeSkillTests()
+    {
+        // Create CombatCalculator with dodge skill for tests
+        var dodgeSkill = new DodgeSkill();
+        _combatCalculator = new CombatCalculator(dodgeSkill);
+    }
+
     [Fact]
     public void ApplyDamage_NoDodgeSkill_TakesFullDamage()
     {
@@ -16,7 +25,7 @@ public class DodgeSkillTests
         victim.SetSkill(SkillType.Dodge, 0); // No dodge skill
 
         // Act
-        var result = CombatCalculator.ApplyDamage(victim, 20);
+        var result = _combatCalculator.ApplyDamage(victim, 20);
 
         // Assert
         Assert.Equal(20, result.Damage);
@@ -40,7 +49,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 100; i++)
         {
             victim.HitPoints = 100; // Reset HP
-            var result = CombatCalculator.ApplyDamage(victim, 1);
+            var result = _combatCalculator.ApplyDamage(victim, 1);
             if (result.Dodged)
             {
                 dodgeCount++;
@@ -68,7 +77,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 1000; i++)
         {
             victim.HitPoints = 100;
-            var result = CombatCalculator.ApplyDamage(victim, 50);
+            var result = _combatCalculator.ApplyDamage(victim, 50);
             if (result.Dodged)
             {
                 dodgeResult = result;
@@ -99,7 +108,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 10000 && !skillImproved; i++)
         {
             victim.HitPoints = 100;
-            var result = CombatCalculator.ApplyDamage(victim, 10);
+            var result = _combatCalculator.ApplyDamage(victim, 10);
             
             if (result.Dodged && victim.GetSkill(SkillType.Dodge) > skillBefore)
             {
@@ -128,7 +137,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 100; i++)
         {
             victim.HitPoints = 1000;
-            var result = CombatCalculator.ApplyDamage(victim, 200);
+            var result = _combatCalculator.ApplyDamage(victim, 200);
             if (result.Dodged)
             {
                 dodgeCount++;
@@ -153,7 +162,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 1000; i++)
         {
             victim.HitPoints = 100;
-            var r = CombatCalculator.ApplyDamage(victim, 50);
+            var r = _combatCalculator.ApplyDamage(victim, 50);
             if (r.Dodged)
             {
                 result = r;
@@ -177,7 +186,7 @@ public class DodgeSkillTests
         victim.HitPoints = 1000;
 
         // Act - Try to apply 600 damage
-        var result = CombatCalculator.ApplyDamage(victim, 600);
+        var result = _combatCalculator.ApplyDamage(victim, 600);
 
         // Assert - Should cap at 500
         Assert.Equal(500, result.Damage);
@@ -193,7 +202,7 @@ public class DodgeSkillTests
         victim.Position = Position.Fighting;
 
         // Act - Deal lethal damage (10 - 25 = -15, which is <= -11 for Dead)
-        CombatCalculator.ApplyDamage(victim, 25);
+        _combatCalculator.ApplyDamage(victim, 25);
 
         // Assert - Should update position to Dead
         Assert.True(victim.HitPoints <= -11);

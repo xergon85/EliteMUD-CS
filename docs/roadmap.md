@@ -460,25 +460,26 @@
 ### 🎯 IMMEDIATE NEXT STEPS (Skills Framework Extraction)
 **Priority:** Extract working POC into production framework
 
-1. **Create ISkillHandler Interface** (Short-term)
-   - Extract interface from KickCommandHandler
-   - Define: CanUse(), Execute(), GetCooldown(), GetDescription()
-   - Support both active skills (kick) and passive skills (dodge)
+1. ✅ **Create ISkillHandler Interface** (Short-term) - DONE
+   - ✅ Extracted interface for active skills (kick, bash, backstab)
+   - ✅ Define: CanUse(), GetCannotUseMessage(), Name, Description, MinimumLevel
+   - ✅ Uses ICombatant (supports players and mobs)
 
-2. **Create IPassiveSkillHandler Interface** (Short-term)
-   - Extract interface from dodge implementation in CombatCalculator
-   - Define: OnDamage(), OnAttack(), OnDefend() hooks
-   - Support automatic triggering in combat flow
+2. ✅ **Create IPassiveSkillHandler Interface** (Short-term) - DONE
+   - ✅ Extracted interface for passive skills (dodge, parry, riposte)
+   - ✅ Define: CanActivate(), TryActivate() returning PassiveSkillResult
+   - ✅ Support automatic triggering in combat flow
 
-3. **Build SkillRegistry** (Short-term)
-   - Auto-discover skill handlers via reflection
-   - Register handlers with dependency injection
-   - Load skill metadata from configuration
+3. ✅ **Extract POC Skills to Framework** (Short-term) - DONE
+   - ✅ Created KickSkill implementing ISkillHandler
+   - ✅ Created DodgeSkill implementing IPassiveSkillHandler
+   - ✅ Removed inline logic from CombatCalculator
 
-4. **Refactor POC Skills** (Short-term)
-   - Convert KickCommandHandler to implement ISkillHandler
-   - Convert dodge logic to implement IPassiveSkillHandler
-   - Move skill data to SkillRegistry
+4. 🔄 **Build SkillRegistry** (Short-term) - IN PROGRESS
+   - ⏳ Auto-discover skill handlers via reflection
+   - ⏳ Register handlers with dependency injection
+   - ⏳ Replace `new KickSkill()` with injected instances
+   - ⚠️ **TODO: Handle session takeover on reconnect** (preserve fight state, wait states, skill cooldowns)
 
 5. **Design Skill Metadata Schema** (Medium-term)
    - Create `content/skills.json` format

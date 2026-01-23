@@ -11,10 +11,12 @@ namespace EliteMud.Application.Commands.Flee;
 public sealed class FleeHandler
 {
     private readonly IWorldState _worldState;
+    private readonly CombatCalculator _combatCalculator;
 
-    public FleeHandler(IWorldState worldState)
+    public FleeHandler(IWorldState worldState, CombatCalculator combatCalculator)
     {
         _worldState = worldState;
+        _combatCalculator = combatCalculator;
     }
 
     /// <summary>
@@ -84,7 +86,7 @@ public sealed class FleeHandler
         player.RoomId = result.NewRoomId;
 
         // Stop fighting
-        CombatCalculator.StopFighting(player);
+        _combatCalculator.StopFighting(player);
 
         // Apply experience loss
         if (result.ExperienceLoss > 0)
@@ -108,7 +110,7 @@ public sealed class FleeHandler
             .Where(p => p.RoomId == result.OldRoomId && p.FightingConnectionId == playerConnectionId);
         foreach (var otherPlayer in playersInOldRoom)
         {
-            CombatCalculator.StopFighting(otherPlayer);
+            _combatCalculator.StopFighting(otherPlayer);
         }
     }
 

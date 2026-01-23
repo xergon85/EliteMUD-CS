@@ -1,5 +1,6 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
+using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,7 +15,8 @@ internal sealed class KillCommandModule : ICommandModule
         var worldState = serviceProvider.GetRequiredService<IWorldState>();
         var actService = serviceProvider.GetRequiredService<ActMessageService>();
         var connectionRegistry = serviceProvider.GetRequiredService<ConnectionRegistry>();
+        var combatCalculator = serviceProvider.GetRequiredService<CombatCalculator>();
         
-        return new KillCommandHandler(worldState, actService, connectionRegistry);
+        return new KillCommandHandler(worldState, actService, connectionRegistry, combatCalculator);
     }
 }

@@ -6,22 +6,33 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Kick;
 
+/// <summary>
+/// Thin adapter for kick command - routes to Application layer for execution.
+/// 
+/// CLEAN ARCHITECTURE PATTERN:
+/// - Server layer (this class): Routing, message formatting, I/O
+/// - Application layer (KickSkillExecutor): Business logic, skill execution
+/// - Game layer (KickSkill): Pure domain logic (formulas, calculations)
+/// 
+/// This handler should contain MINIMAL logic - just routing and presentation.
+/// </summary>
 internal sealed class KickCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
     private readonly ActMessageService _actService;
     private readonly ConnectionRegistry _connectionRegistry;
-    private readonly KickSkill _kickSkill;
+    private readonly KickSkillExecutor _kickExecutor;
 
     public KickCommandHandler(
         IWorldState worldState,
         ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        ConnectionRegistry connectionRegistry,
+        KickSkillExecutor kickExecutor)
     {
         _worldState = worldState;
         _actService = actService;
         _connectionRegistry = connectionRegistry;
-        _kickSkill = new KickSkill(); // TODO: Inject from SkillRegistry when available
+        _kickExecutor = kickExecutor;
     }
 
     public CommandKind Kind => CommandKind.Kick;
@@ -49,16 +60,15 @@ internal sealed class KickCommandHandler : ICommandHandler
             {
                 var currentTarget = _connectionRegistry.GetConnections()
                     .FirstOrDefault(c => c.Id == player.FightingConnectionId.Value);
-                    
+
                 if (currentTarget != null)
                 {
                     // Fighting a player - kick them
                     return await ExecuteKick(context, currentTarget.Player, currentTarget, cancellationToken);
                 }
-                
-                // Connection not found - stop fighting
+
+                // Connection not found
                 await context.Session.SendLineAsync("They aren't here.", cancellationToken);
-                CombatCalculator.StopFighting(player);
                 return CommandOutcome.Continue;
             }
 
@@ -66,11 +76,10 @@ internal sealed class KickCommandHandler : ICommandHandler
             var mobInstanceId = -player.FightingConnectionId.Value;
             var mobs = _worldState.GetMobsInRoom(player.RoomId);
             var currentMob = mobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
-            
+
             if (currentMob == null)
             {
                 await context.Session.SendLineAsync("They aren't here.", cancellationToken);
-                CombatCalculator.StopFighting(player);
                 return CommandOutcome.Continue;
             }
 
@@ -79,7 +88,7 @@ internal sealed class KickCommandHandler : ICommandHandler
         }
 
         // Case 2: Target specified - can start combat or kick current target by name
-        
+
         // If already fighting, check if they're trying to kick their current target
         if (player.FightingConnectionId != null)
         {
@@ -88,8 +97,9 @@ internal sealed class KickCommandHandler : ICommandHandler
             {
                 var currentTarget = _connectionRegistry.GetConnections()
                     .FirstOrDefault(c => c.Id == player.FightingConnectionId.Value);
-                    
-                if (currentTarget != null && currentTarget.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase))
+
+                if (currentTarget != null &&
+                    currentTarget.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase))
                 {
                     // Kicking current player opponent
                     return await ExecuteKick(context, currentTarget.Player, currentTarget, cancellationToken);
@@ -100,9 +110,10 @@ internal sealed class KickCommandHandler : ICommandHandler
                 // Fighting a mob (negative ID)
                 var mobInstanceId = -player.FightingConnectionId.Value;
                 var currentMob = _worldState.GetMobsInRoom(player.RoomId)
-                    .FirstOrDefault(m => m.InstanceId == mobInstanceId 
-                        && m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-                
+                    .FirstOrDefault(m => m.InstanceId == mobInstanceId
+                                         && m.Definition.ShortDescription.Contains(targetName,
+                                             StringComparison.OrdinalIgnoreCase));
+
                 if (currentMob != null)
                 {
                     // Kicking current mob opponent
@@ -118,10 +129,10 @@ internal sealed class KickCommandHandler : ICommandHandler
         // Not fighting - try to start combat with kick
         // First check for player target in room
         var targetPlayer = _connectionRegistry.GetConnections()
-            .FirstOrDefault(c => c.Player.RoomId == player.RoomId 
-                && c.Id != context.Id 
-                && c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-        
+            .FirstOrDefault(c => c.Player.RoomId == player.RoomId
+                                 && c.Id != context.Id
+                                 && c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
+
         if (targetPlayer != null)
         {
             return await ExecuteKick(context, targetPlayer.Player, targetPlayer, cancellationToken);
@@ -129,8 +140,9 @@ internal sealed class KickCommandHandler : ICommandHandler
 
         // Check for mob target in room
         var targetMob = _worldState.GetMobsInRoom(player.RoomId)
-            .FirstOrDefault(m => m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-        
+            .FirstOrDefault(m =>
+                m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
+
         if (targetMob != null)
         {
             return await ExecuteKick(context, targetMob, victimConnection: null, cancellationToken);
@@ -141,7 +153,7 @@ internal sealed class KickCommandHandler : ICommandHandler
     }
 
     /// <summary>
-    /// Unified kick execution for any combatant type (player or mob).
+    /// Thin adapter: routes kick execution to Application layer and formats messages.
     /// </summary>
     private async ValueTask<CommandOutcome> ExecuteKick(
         ConnectionContext attacker,
@@ -150,157 +162,160 @@ internal sealed class KickCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         var player = attacker.Player;
+        var victimConnectionId = victimConnection?.Id;
 
-        // Check if player can use kick skill
-        if (!_kickSkill.CanUse(player))
+        // Execute kick in Application layer
+        var result = _kickExecutor.Execute(player, victim, attacker.Id, victimConnectionId);
+
+        // Handle cannot use
+        if (!result.CanUse)
         {
-            await attacker.Session.SendLineAsync(
-                _kickSkill.GetCannotUseMessage(player), cancellationToken);
+            await attacker.Session.SendLineAsync(result.CannotUseMessage!, cancellationToken);
             return CommandOutcome.Continue;
         }
 
-        // If not already fighting, start combat
-        if (player.FightingConnectionId == null)
+        // Handle miss
+        if (!result.Hit)
         {
-            if (victimConnection != null)
-            {
-                // PvP - both sides fight each other
-                CombatCalculator.SetFighting(player, victimConnection.Id);
-                CombatCalculator.SetFighting(victimConnection.Player, attacker.Id);
-            }
-            else
-            {
-                // PvE - player fights mob (mob fights back handled elsewhere)
-                var mobInstance = (MobInstance)victim;
-                CombatCalculator.SetFighting(player, -mobInstance.InstanceId);
-                mobInstance.FightingConnectionId = attacker.Id;
-            }
+            await SendActMessageAsync(
+                "you try to kick $N, but miss!",
+                player,
+                victim,
+                victimConnection,
+                ActTarget.ToChar,
+                cancellationToken);
+
+            await SendActMessageAsync(
+                "$n tries to kick you, but misses!",
+                player,
+                victim,
+                victimConnection,
+                ActTarget.ToVict,
+                cancellationToken);
+
+            await SendActMessageAsync(
+                "$n tries to kick $N, but misses!",
+                player,
+                victim,
+                victimConnection,
+                ActTarget.ToNotVict,
+                cancellationToken);
+
+            return CommandOutcome.Continue;
         }
 
-        // Execute kick using unified combat logic
-        bool hit = KickSkill.RollHit(player, victim);
-        int damage = hit ? KickSkill.CalculateDamage(player) : 0;
-
-        if (!hit)
+        // Handle hit - show dodge message if dodged
+        if (result is { VictimDodged: true, DodgeMessage: not null } && victimConnection != null)
         {
-            // Miss
-            await attacker.Session.SendLineAsync(
-                $"You try to kick {victim.Name}, but miss!", cancellationToken);
-            
-            if (victimConnection != null)
-            {
-                await victimConnection.Session.SendLineAsync(
-                    $"{player.Name} tries to kick you, but misses!", cancellationToken);
-                await BroadcastToRoomPvP(attacker, victimConnection,
-                    $"{player.Name} tries to kick {victim.Name}, but misses!", cancellationToken);
-            }
-            else
-            {
-                await BroadcastToRoomPvE(attacker,
-                    $"{player.Name} tries to kick {victim.Name}, but misses!", cancellationToken);
-            }
+            await victimConnection.Session.SendLineAsync(result.DodgeMessage, cancellationToken);
         }
-        else
-        {
-            // Hit - apply damage
-            if (victimConnection != null)
-            {
-                // Player victim - use CombatCalculator for dodge support
-                var damageResult = CombatCalculator.ApplyDamage(victimConnection.Player, damage);
-                
-                // Build messages
-                string attackerMsg = $"Your kick hits {victim.Name} [{damageResult.Damage}]";
-                string victimMsg = $"{player.Name} kicks you! [{damageResult.Damage}]";
-                
-                // Add dodge notification if dodged
-                if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
-                {
-                    victimMsg = damageResult.Message + " " + victimMsg;
-                }
 
-                await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
-                await victimConnection.Session.SendLineAsync(victimMsg, cancellationToken);
-                await BroadcastToRoomPvP(attacker, victimConnection,
-                    $"{player.Name} kicks {victim.Name}!", cancellationToken);
-                
-                // Check if victim died
-                if (victim.Position == Position.Dead)
-                {
-                    await attacker.Session.SendLineAsync(
-                        $"{victim.Name} is DEAD!!", cancellationToken);
-                    CombatCalculator.StopFighting(player);
-                    CombatCalculator.StopFighting(victimConnection.Player);
-                }
-            }
-            else
-            {
-                // Mob victim - direct damage application
-                var mobInstance = (MobInstance)victim;
-                mobInstance.HitPoints -= (short)damage;
-                
-                if (mobInstance.HitPoints <= 0)
-                {
-                    mobInstance.Position = Position.Dead;
-                }
+        // Send hit messages with damage
+        await SendActMessageAsync(
+            $"your kick hits $N [{result.Damage}]",
+            player,
+            victim,
+            victimConnection,
+            ActTarget.ToChar,
+            cancellationToken);
 
-                await attacker.Session.SendLineAsync(
-                    $"Your kick hits {victim.Name} [{damage}]", cancellationToken);
-                await BroadcastToRoomPvE(attacker,
-                    $"{player.Name} kicks {victim.Name}!", cancellationToken);
+        await SendActMessageAsync(
+            $"$n kicks you! [{result.Damage}]",
+            player,
+            victim,
+            victimConnection,
+            ActTarget.ToVict,
+            cancellationToken);
 
-                // Check if mob died
-                if (mobInstance.Position == Position.Dead)
-                {
-                    await attacker.Session.SendLineAsync(
-                        $"{victim.Name} is DEAD!!", cancellationToken);
-                    
-                    CombatCalculator.StopFighting(player);
-                    mobInstance.FightingConnectionId = null;
-                    
-                    _worldState.CreateMobCorpse(mobInstance, player.RoomId);
-                    _worldState.RemoveMob(mobInstance.InstanceId, player.RoomId);
-                    
-                    await BroadcastToRoomPvE(attacker,
-                        $"{victim.Name} is dead! R.I.P.", cancellationToken);
-                }
-            }
+        await SendActMessageAsync(
+            "$n kicks $N!",
+            player,
+            victim,
+            victimConnection,
+            ActTarget.ToNotVict,
+            cancellationToken);
 
-            // Improve skill on successful hit
-            player.TryImproveSkill(SkillType.Kick);
-        }
+        // Handle death
+        if (!result.VictimDied) return CommandOutcome.Continue;
+
+        await SendActMessageAsync(
+            "$N is DEAD!!",
+            player,
+            victim,
+            victimConnection,
+            ActTarget.ToChar,
+            cancellationToken);
+
+        await SendActMessageAsync(
+            "$N is dead! R.I.P.",
+            player,
+            victim,
+            victimConnection,
+            ActTarget.ToNotVict,
+            cancellationToken);
 
         return CommandOutcome.Continue;
     }
 
-    private async Task BroadcastToRoomPvP(
-        ConnectionContext attacker,
-        ConnectionContext victim,
+    /// <summary>
+    /// Send an act() message to appropriate targets based on ActTarget flags.
+    /// Handles both player and mob victims.
+    /// </summary>
+    private async Task SendActMessageAsync(
         string message,
+        PlayerState actor,
+        object victim,
+        ConnectionContext? victimConnection,
+        ActTarget target,
         CancellationToken cancellationToken)
     {
-        var otherPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == attacker.Player.RoomId 
-                     && c.Id != attacker.Id 
-                     && c.Id != victim.Id);
-        
-        foreach (var observer in otherPlayers)
+        // Send to actor (ToChar)
+        if (target.HasFlag(ActTarget.ToChar))
         {
-            await observer.Session.SendLineAsync(message, cancellationToken);
-        }
-    }
+            var actorConnection = _connectionRegistry.GetConnections()
+                .FirstOrDefault(c => c.Player.Id == actor.Id);
 
-    private async Task BroadcastToRoomPvE(
-        ConnectionContext attacker,
-        string message,
-        CancellationToken cancellationToken)
-    {
-        var otherPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == attacker.Player.RoomId 
-                     && c.Id != attacker.Id);
-        
-        foreach (var observer in otherPlayers)
+            if (actorConnection != null)
+            {
+                var formattedMsg = _actService.FormatMessage(message, actor, actor, victim);
+                await actorConnection.Session.SendLineAsync(formattedMsg, cancellationToken);
+            }
+        }
+
+        // Send to victim (ToVict) - only if victim is a player
+        if (target.HasFlag(ActTarget.ToVict) && victimConnection != null)
         {
-            await observer.Session.SendLineAsync(message, cancellationToken);
+            var formattedMsg =
+                _actService.FormatMessage(message, victimConnection.Player, actor, victimConnection.Player);
+            await victimConnection.Session.SendLineAsync(formattedMsg, cancellationToken);
+        }
+
+        // Send to everyone in room (ToRoom)
+        if (target.HasFlag(ActTarget.ToRoom))
+        {
+            var roomPlayers = _connectionRegistry.GetConnections()
+                .Where(c => c.Player.RoomId == actor.RoomId);
+
+            foreach (var observer in roomPlayers)
+            {
+                var formattedMsg = _actService.FormatMessage(message, observer.Player, actor, victim);
+                await observer.Session.SendLineAsync(formattedMsg, cancellationToken);
+            }
+        }
+
+        // Send to everyone in room except actor and victim (ToNotVict)
+        if (target.HasFlag(ActTarget.ToNotVict))
+        {
+            var observers = _connectionRegistry.GetConnections()
+                .Where(c => c.Player.RoomId == actor.RoomId
+                            && c.Player.Id != actor.Id
+                            && (victimConnection == null || c.Id != victimConnection.Id));
+
+            foreach (var observer in observers)
+            {
+                var formattedMsg = _actService.FormatMessage(message, observer.Player, actor, victim);
+                await observer.Session.SendLineAsync(formattedMsg, cancellationToken);
+            }
         }
     }
 }

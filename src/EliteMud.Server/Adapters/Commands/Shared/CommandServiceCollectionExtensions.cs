@@ -4,6 +4,8 @@ using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
 using EliteMud.Application.Commands.Score;
 using EliteMud.Application.Session;
+using EliteMud.Application.Skills;
+using EliteMud.Game;
 using EliteMud.Legacy.Import;
 using EliteMud.Scripting;
 using EliteMud.Server.Adapters.Commands.ImportLegacy;
@@ -22,6 +24,16 @@ internal static class CommandServiceCollectionExtensions
     public static IServiceCollection AddCommandHandlers(this IServiceCollection services)
     {
         return services
+            // Skills
+            .AddSingleton<SkillRegistry>()
+            .AddSingleton<CombatCalculator>(provider =>
+            {
+                var skillRegistry = provider.GetRequiredService<SkillRegistry>();
+                var dodgeSkill = skillRegistry.GetPassiveSkill(SkillType.Dodge);
+                return new CombatCalculator(dodgeSkill);
+            })
+            .AddSingleton<KickSkillExecutor>()
+            
             .AddSingleton<CommandCatalog>()
             .AddSingleton<PromptCatalog>()
             .AddSingleton<LegacyContentImporter>()
