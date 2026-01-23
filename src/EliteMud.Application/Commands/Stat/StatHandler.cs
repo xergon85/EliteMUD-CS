@@ -99,20 +99,37 @@ public sealed class StatHandler
         // TODO: Implement Deity field
         output.AppendLine($"Worships[#bNone#N]");
 
-        // Lines 8+: Magic abilities (from items and innate)
+        // Lines 8+: Magic abilities (from items, spells, and innate)
         // Show active affects
         if (player.Affects.Count > 0)
         {
             foreach (var affect in player.Affects)
             {
                 var affectName = GetAffectName(affect.Type);
-                var source = affect.Source ?? "unknown";
-                var sourceLabel = source == "item" ? "from item" : "innate";
+                
+                // Determine source label based on affect source
+                string sourceLabel;
+                if (affect.Source == "item")
+                {
+                    sourceLabel = "from item";
+                }
+                else if (affect.Source == "innate" || affect.Source == "racial")
+                {
+                    sourceLabel = "innate";
+                }
+                else
+                {
+                    // Spell affects show duration in hours
+                    var hoursText = affect.DurationHours == 1 ? "hour" : "hours";
+                    sourceLabel = $"{affect.DurationHours} {hoursText}";
+                }
+                
                 output.AppendLine($"Magic: #C({sourceLabel})#N    #G{affectName.ToLower()}#N");
             }
         }
 
         // TODO: Show innate racial abilities (regeneration, infravision, etc.)
+        // These would be permanent affects with source="innate" or separate racial ability system
         // For now, add some placeholder innate abilities based on race
         if (player.Race.Equals("Troll", StringComparison.OrdinalIgnoreCase))
         {
