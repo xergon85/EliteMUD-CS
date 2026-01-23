@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Drop;
 
+[Command("drop")]
 internal sealed class DropCommandHandler : ICommandHandler
 {
     private readonly DropHandler _dropHandler;
