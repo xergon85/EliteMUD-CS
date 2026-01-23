@@ -6,6 +6,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Get;
 
+[Command("get", Aliases = new[] { "take" })]
 internal sealed class GetCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
