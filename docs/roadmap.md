@@ -160,50 +160,53 @@
 - ✅ `rescue` - take aggro from group member (COMPLETE - PvE only for now)
 - ❌ `consider` - estimate mob difficulty
 
-#### 4.3 Skills & Spells Framework - POC COMPLETE ✅
-**POC Status:** Fully validated and ready for framework extraction (see `docs/skills-poc-documentation.md`)
+#### 4.3 Skills & Spells Framework - COMPLETE ✅
+**Status:** Data-driven Lua formula system fully implemented and merged to main (Jan 23, 2026)
 
-**POC Proven Working:**
-- ✅ Active skill system (kick)
-- ✅ Passive skill system (dodge)
+**Completed Infrastructure:**
+- ✅ FormulaEvaluator - Thread-safe Lua formula engine
+- ✅ SkillMetadataRegistry - Fast lookups by ID, name, or alias
+- ✅ SkillRegistry - Auto-discovery of skills via reflection
+- ✅ ISkillHandler interface for active skills
+- ✅ IPassiveSkillHandler interface for passive skills
+- ✅ All skills use Lua formulas from `content/skills/skills.json`
+- ✅ Formula fallback to hardcoded logic if JSON missing
 - ✅ Skill proficiency tracking (0-100%)
 - ✅ Skill improvement on use
 - ✅ Skill persistence (database JSON)
-- ✅ PvP and PvE integration
+- ✅ WAIT_STATE system (action cooldowns)
+- ✅ Skillgain cooldown system (60 seconds between improvements)
 
-**Next Steps - Framework Extraction:**
-1. ⏳ Create `ISkillHandler` interface from working kick implementation
-2. ⏳ Create `IPassiveSkillHandler` interface from working dodge implementation
-3. ⏳ Build `SkillRegistry` with auto-discovery via reflection
-4. ⏳ Add dependency injection for skill handlers
-5. ⏳ Refactor kick to implement `ISkillHandler`
-6. ⏳ Refactor dodge to implement `IPassiveSkillHandler`
+**Implemented Skills (6 of 6 core skills):**
+- ✅ `kick` - Basic combat skill with formula-driven damage
+- ✅ `bash` - Shield bash with knockdown effect
+- ✅ `backstab` - Rogue sneak attack with level-based multiplier
+- ✅ `rescue` - Tank skill to redirect combat (PvE only)
+- ✅ `dodge` - Passive damage reduction
+- ✅ `parry` - Passive block with weapon
 
-**Next Steps - Content-Driven System:**
-1. ⏳ Design skill metadata JSON schema
-2. ⏳ Move skill definitions to `content/skills.json`
-3. ⏳ Add class-based skill caps and availability
-4. ⏳ Implement WAIT_STATE system (action cooldowns)
-5. ⏳ Implement skillgain cooldown system
-6. ⏳ Add position-based skill restrictions
+**Future Skill Expansion:**
+- ❌ `disarm` - Remove opponent's weapon
+- ❌ `trip` - Knock opponent down
+- ❌ `circle` - Circle around to backstab again
+- ❌ `tumble` - Passive dodge improvement
+- ❌ `riposte` - Counter-attack on successful parry
+- ❌ `berserk` - Warrior rage mode
+- ❌ Additional legacy skills from original MUD
 
-**Future - Expand Skill Set:**
-- ✅ `bash` - shield bash skill (COMPLETE - Jan 23, 2026)
-- ✅ `backstab` - rogue sneak attack (COMPLETE - Jan 23, 2026)
-- ✅ `parry` - passive block with weapon (COMPLETE - Jan 23, 2026)
-- ✅ `rescue` - take over combat from ally (COMPLETE - Jan 23, 2026)
-- ❌ `circle` - circle around to backstab again
-- ❌ `tumble` - passive dodge improvement
-- ❌ `disarm` - remove opponent's weapon
-- ❌ `trip` - knock opponent down
-
-**Spell System (Similar Architecture):**
-- ❌ Spell casting framework
+**Spell System (Next Major Feature):**
+- ❌ Spell metadata schema in `content/spells/spells.json`
+- ❌ `ISpellHandler` interface
 - ❌ `cast` command
-- ❌ Mana cost system
-- ❌ Spell success/failure rolls
+- ❌ Mana cost system with formula support
+- ❌ Spell success/failure rolls (INT/WIS based)
+- ❌ Damage spells (Magic Missile, Fireball, Lightning Bolt)
+- ❌ Healing spells (Cure Light/Serious/Critical Wounds)
+- ❌ Buff spells (Armor, Bless, Haste, Strength)
+- ❌ Debuff spells (Curse, Weaken, Slow, Poison)
+- ❌ Utility spells (Detect Magic, Invisibility, Teleport)
 - ❌ `practice` command - train skills/spells with guildmaster
-- ❌ Cooldown system
+- ❌ Spell cooldown system
 - ❌ Resist tables (saves vs spell/paralysis/breath/etc.)
 
 #### 4.4 Combat Events & Hooks
@@ -418,6 +421,20 @@
   - Mob death (corpse creation with equipment transfer)
   - Combat messaging with ActMessage integration
 
+### ✅ RECENTLY COMPLETED (Jan 23, 2026 - Session 3)
+- ✅ **Data-Driven Skill System with Lua Formulas - COMPLETE**
+  - ✅ Created FormulaEvaluator (thread-safe Lua formula engine with 20 comprehensive tests)
+  - ✅ All 6 skills now use Lua formulas from `content/skills/skills.json`
+  - ✅ Active skills: kick, bash, backstab, rescue use formula-driven damage/success calculations
+  - ✅ Passive skills: dodge, parry use formula-driven activation and damage reduction
+  - ✅ Centralized all skills in EliteMud.Application/Skills/ (moved DodgeSkill & ParrySkill from Game layer)
+  - ✅ Changed skill methods from static to instance for FormulaEvaluator access
+  - ✅ All formulas have fallback to hardcoded logic if missing from JSON
+  - ✅ Added sleep/wake command aliases (sl, wa)
+  - ✅ Added hot reload documentation to SkillMetadataRegistry
+  - ✅ All 109 tests passing, 0 warnings, 0 errors
+  - ✅ Merged to main branch and pushed to GitHub
+
 ### ✅ RECENTLY COMPLETED (Jan 23, 2026 - Session 2)
 - ✅ **Additional Combat Skills - COMPLETE**
   - ✅ Bash skill (shield attack, knocks victim sitting, 10 damage, 2 rounds WAIT_STATE)
@@ -460,71 +477,80 @@
 - Shops, mail, boards, clans (Phase 6.4-6.8)
 - Admin tools and OLC (Phase 7)
 
-## Next Execution Checklist (Updated Jan 23, 2026)
+## Next Execution Checklist (Updated Jan 23, 2026 - Session 3)
 
-### ✅ RECENTLY COMPLETED (Jan 23, 2026)
-- ✅ **Skills & Spells POC - COMPLETE & VALIDATED**
-  - ✅ Active skill: kick (combat skill with damage calculation)
-  - ✅ Passive skill: dodge (automatic damage reduction)
-  - ✅ Skill proficiency tracking and improvement
-  - ✅ Skill persistence (JSON in database)
-  - ✅ Testing commands: setskill, skills, setlevel
-  - ✅ Fixed dead player attacking bug (combat tick race condition)
-  - ✅ All 4 manual test scenarios passed
-  - ✅ POC fully documented (see `docs/skills-poc-documentation.md`)
+### 🎯 IMMEDIATE NEXT STEPS (Spell System)
+**Priority:** Implement spell system using proven Lua formula architecture
 
-### 🎯 IMMEDIATE NEXT STEPS (Skills System Completion)
-**Priority:** Complete skills system infrastructure
+1. **Design Spell Metadata Schema** (Short-term) - NEXT
+   - Create `content/spells/spells.json` format (similar to skills.json)
+   - Define fields: id, name, aliases, type, manaCost, damage, healing, duration
+   - Include Lua formulas: damageFormula, healingFormula, successFormula, durationFormula
+   - Support multiple spell types: damage, healing, buff, debuff, utility
+   - Add class restrictions and minimum levels
 
-1. ✅ **Create ISkillHandler Interface** (Short-term) - DONE
-   - ✅ Extracted interface for active skills (kick, bash, backstab)
-   - ✅ Define: CanUse(), GetCannotUseMessage(), Name, Description, MinimumLevel
-   - ✅ Uses ICombatant (supports players and mobs)
+2. **Create ISpellHandler Interface** (Short-term)
+   - Define: CanCast(), GetCannotCastMessage(), ManaCost, CastTime
+   - Support target types: self, single enemy, single ally, area, room
+   - Return SpellResult with success/failure, damage/healing, effects applied
+   - Uses ICombatant (supports players and mobs)
 
-2. ✅ **Create IPassiveSkillHandler Interface** (Short-term) - DONE
-   - ✅ Extracted interface for passive skills (dodge, parry, riposte)
-   - ✅ Define: CanActivate(), TryActivate() returning PassiveSkillResult
-   - ✅ Support automatic triggering in combat flow
+3. **Implement SpellRegistry** (Short-term)
+   - Auto-discover spell handlers via reflection
+   - Register handlers with dependency injection
+   - Load spell metadata from JSON at startup
+   - Use FormulaEvaluator for formula evaluation (same as skills)
 
-3. ✅ **Extract POC Skills to Framework** (Short-term) - DONE
-   - ✅ Created KickSkill implementing ISkillHandler
-   - ✅ Created DodgeSkill implementing IPassiveSkillHandler
-   - ✅ Removed inline logic from CombatCalculator
+4. **Create Basic Damage Spells** (Medium-term)
+   - Magic Missile (low damage, always hits)
+   - Shocking Grasp (medium damage, touch attack)
+   - Lightning Bolt (high damage, dex save for half)
+   - Fireball (area damage, dex save for half)
 
-4. ✅ **Build SkillRegistry** (Short-term) - DONE
-   - ✅ Auto-discover skill handlers via reflection (ISkillHandler + IPassiveSkillHandler)
-   - ✅ Register handlers with dependency injection (SkillRegistry singleton)
-   - ✅ Skills injected into CombatCalculator and other consumers
-   - ✅ ISkillExecutor auto-discovery with SkillCommandHandler wrapping
-   - ⚠️ **TODO: Handle session takeover on reconnect** (preserve fight state, wait states, skill cooldowns)
+5. **Create Basic Healing Spells** (Medium-term)
+   - Cure Light Wounds (1d8 + level healing)
+   - Cure Serious Wounds (2d8 + level healing)
+   - Cure Critical Wounds (3d8 + level healing)
+   - Heal (full HP restoration)
 
-5. ✅ **Implement WAIT_STATE System** (Medium-term) - COMPLETE
-   - ✅ Added WaitState property to PlayerState (PlayerState.WaitState:230)
-   - ✅ Prevent actions while waiting (CommandRouter checks CanAct():74-80)
-   - ✅ Integrated with combat tick (GameTickService decrements each tick:116)
-   - ✅ Block skill/command usage during wait state (exempts informational commands)
-   - ✅ Implementation: WorldModels.cs:334-345, CombatCalculator.cs:7-30
+6. **Create Basic Buff Spells** (Medium-term)
+   - Armor (increase AC)
+   - Bless (increase hitroll)
+   - Strength (increase STR stat)
+   - Haste (extra attacks)
 
-6. **Design Skill Metadata Schema** (Medium-term) - NEXT
-   - Create `content/skills.json` format
-   - Define: name, type, damage, cooldown, level requirements, wait_state
-   - Include class restrictions and skill caps
+7. **Implement `cast` Command** (Medium-term)
+   - Parse spell name and target
+   - Check mana cost and availability
+   - Check spell proficiency
+   - Execute spell with FormulaEvaluator
+   - Apply WAIT_STATE based on spell metadata
+   - Integrate with combat system
 
-7. ✅ **Implement Skillgain Cooldown** (Medium-term) - COMPLETE
-   - ✅ Added LastSkillgainTime tracking (Dictionary<SkillType, DateTime>)
-   - ✅ 60-second cooldown between improvements for same skill
-   - ✅ Stored in database as JSON (Character.LastSkillgainTimes)
-   - ✅ Checked in PlayerState.TryImproveSkill() before allowing improvement
-   - ✅ Player notified when skill improves: "Your skill - kick - just improved!"
-   - ✅ Implementation: WorldModels.cs:312-361, CombatConstants:33-36
-   - ✅ Tests: SkillSystemTests.cs (2 new tests for cooldown verification)
+8. **Add Spell Proficiency & Improvement** (Long-term)
+   - Track spell proficiency like skills (0-100%)
+   - Improve on successful casts
+   - Formula variables include spellPercent
+   - Store in database alongside skill proficiencies
 
-8. ✅ **Add More Skills** (Long-term) - IN PROGRESS (4 of 8 core skills complete)
-   - ✅ bash (shield attack) - COMPLETE
-   - ✅ backstab (rogue skill) - COMPLETE
-   - ✅ parry (passive defense) - COMPLETE
-   - ✅ rescue (tank skill) - COMPLETE (PvE only)
-   - ❌ disarm, trip, circle, tumble (deferred to later phase)
+### 📋 FOLLOW-UP FEATURES (After Spells)
+9. **Expand Formula Variables** (Medium-term)
+   - Add stat variables: strength, dexterity, intelligence, wisdom, constitution
+   - Add gear variables: weaponDamage, armorClass, magicBonus
+   - Add combat state: isBlind, isPoisoned, isHasted
+   - Add environment: roomType, weather, timeOfDay
+
+10. **Practice Command** (Long-term)
+    - Find guildmaster mobs
+    - List available skills/spells for class
+    - Practice to improve proficiency (costs gold)
+    - Class/level restrictions
+
+11. **Hot Reload Command** (Long-term)
+    - Implement `/sreload` admin command for skills
+    - Implement `/splreload` admin command for spells
+    - Thread-safe metadata/formula reloading
+    - Error handling and rollback on invalid JSON
 
 ### 📋 DEFERRED (Future Phases)
 - Spell system (similar to skills but with mana costs)
