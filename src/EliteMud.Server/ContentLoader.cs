@@ -686,6 +686,16 @@ internal static class ContentLoader
             .Select(a => new ObjectAffect(ParseAffectLocation(a.Location), a.Modifier))
             .ToList();
 
+        // Legacy compatibility: If armor has ArmorClass in Details, automatically add it as an affect
+        // In legacy EliteMUD, armor pieces had AC value that would apply when worn
+        // Modern format uses Affects array, but old content has AC in Details.Armor.ArmorClass
+        if (details?.Armor != null && details.Armor.ArmorClass != 0)
+        {
+            // ArmorClass from armor Details is already negative (lower is better)
+            // Add it as an ArmorClass affect so it applies when equipped
+            affects.Add(new ObjectAffect(AffectLocation.ArmorClass, -details.Armor.ArmorClass));
+        }
+
         return new ObjectDefinition(
             obj.Id,
             obj.Name,
