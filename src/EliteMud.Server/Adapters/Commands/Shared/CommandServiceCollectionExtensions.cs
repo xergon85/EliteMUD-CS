@@ -5,6 +5,7 @@ using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
 using EliteMud.Application.Session;
 using EliteMud.Application.Skills;
+using EliteMud.Application.World;
 using EliteMud.Game;
 using EliteMud.Legacy.Import;
 using EliteMud.Scripting;
@@ -13,8 +14,10 @@ using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Move;
 using EliteMud.Server.Adapters.Commands.ResetZone;
 using EliteMud.Server.Adapters.Commands.Say;
+using EliteMud.Server.Adapters.Commands.Skills;
 using EliteMud.Server.Adapters.Commands.Who;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace EliteMud.Server.Adapters.Commands.Shared;
 
@@ -53,13 +56,14 @@ internal static class CommandServiceCollectionExtensions
                 ))
             .AddSingleton<IConnectionDirectory>(provider => provider.GetRequiredService<WhoCommandHandler>())
             .AddSingleton<ConnectionRegistry>()
-            .AddSingleton<ICommandModuleProvider, CommandModuleProvider>()
-            .AddSingleton<CommandHandlerRegistry>()
+            
+            // Auto-discover and register all command handlers
+            .AddCommandHandlersViaReflection()
+            
+            // Build command router from all registered handlers
             .AddSingleton<CommandRouter>(provider =>
             {
-                var modules = provider.GetRequiredService<ICommandModuleProvider>().GetModules();
-                var handlerRegistry = provider.GetRequiredService<CommandHandlerRegistry>();
-                var handlers = handlerRegistry.BuildHandlers(modules, provider);
+                var handlers = provider.GetServices<ICommandHandler>();
                 return new CommandRouter(handlers);
             });
     }
@@ -78,6 +82,38 @@ internal static class CommandServiceCollectionExtensions
         {
             // Register the executor itself
             services.AddSingleton(type);
+            
+            // Wrap in SkillCommandHandler and register as ICommandHandler
+            services.AddSingleton<ICommandHandler>(provider =>
+            {
+                var executor = (ISkillExecutor)provider.GetRequiredService(type);
+                var worldState = provider.GetRequiredService<IWorldState>();
+                var actService = provider.GetRequiredService<ActMessageService>();
+                var connectionRegistry = provider.GetRequiredService<ConnectionRegistry>();
+                
+                return new SkillCommandHandler(executor, worldState, actService, connectionRegistry);
+            });
+        }
+
+        return services;
+    }
+    
+    /// <summary>
+    /// Auto-discover all command handlers decorated with [Command] attribute.
+    /// This eliminates the need for manual registration or CommandModule factories.
+    /// </summary>
+    private static IServiceCollection AddCommandHandlersViaReflection(this IServiceCollection services)
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+        var handlerTypes = assembly.GetTypes()
+            .Where(t => 
+                t is { IsAbstract: false, IsInterface: false, IsClass: true } && 
+                typeof(ICommandHandler).IsAssignableFrom(t) &&
+                t.GetCustomAttribute<CommandAttribute>() != null);
+
+        foreach (var type in handlerTypes)
+        {
+            services.AddSingleton(typeof(ICommandHandler), type);
         }
 
         return services;
