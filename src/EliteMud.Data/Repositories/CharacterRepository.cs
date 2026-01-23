@@ -58,14 +58,48 @@ public class CharacterRepository : ICharacterRepository
         }
         catch (DbUpdateConcurrencyException)
         {
-            // Character was already saved by another process (auto-save)
-            // Reload the entity and try again
+            // Character was modified or deleted by another process
+            // Detach the stale entity and re-fetch
             var entry = _context.Entry(character);
-            await entry.ReloadAsync(cancellationToken);
+            entry.State = EntityState.Detached;
             
-            // Re-apply changes
-            entry.CurrentValues.SetValues(character);
-            await _context.SaveChangesAsync(cancellationToken);
+            // Re-fetch the latest version
+            var freshCharacter = await _context.Characters
+                .Include(c => c.Inventory)
+                .Include(c => c.Equipment)
+                .FirstOrDefaultAsync(c => c.CharacterId == character.CharacterId, cancellationToken);
+                
+            if (freshCharacter == null)
+            {
+                // Character was deleted - nothing to update
+                return;
+            }
+            
+            // Apply our changes to the fresh entity
+            _context.Entry(freshCharacter).CurrentValues.SetValues(character);
+            
+            // Clear and rebuild navigation properties
+            freshCharacter.Inventory.Clear();
+            foreach (var item in character.Inventory)
+            {
+                freshCharacter.Inventory.Add(item);
+            }
+            
+            freshCharacter.Equipment.Clear();
+            foreach (var item in character.Equipment)
+            {
+                freshCharacter.Equipment.Add(item);
+            }
+            
+            try
+            {
+                await _context.SaveChangesAsync(cancellationToken);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                // If it fails again, just give up to avoid infinite loops
+                // The next auto-save will catch it
+            }
         }
     }
 

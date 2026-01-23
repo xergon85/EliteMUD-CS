@@ -220,6 +220,14 @@ public sealed class PlayerState : ICombatant
     /// Legacy: ch->specials2.wimp_level
     /// </summary>
     public short WimpyLevel { get; set; } = 0;
+    
+    /// <summary>
+    /// Combat lag timer. Number of combat rounds the character must wait before acting.
+    /// Decremented each combat tick (every 2 seconds).
+    /// When > 0, the character cannot execute commands or skills.
+    /// Legacy: ch->char_specials.wait_state
+    /// </summary>
+    public int WaitState { get; set; } = 0;
 
     // ===== Inventory & Equipment =====
     public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
@@ -315,6 +323,26 @@ public sealed class PlayerState : ICombatant
         
         return false;
     }
+    
+    // ===== Combat Lag (WAIT_STATE) =====
+    
+    /// <summary>
+    /// Decrement WaitState by one tick if it's greater than zero.
+    /// Called every combat tick (2 seconds) by GameTickService.
+    /// Legacy: Implicit in the wait_state decrement in game loop
+    /// </summary>
+    public void DecrementWaitState()
+    {
+        if (WaitState > 0)
+        {
+            WaitState--;
+        }
+    }
+    
+    /// <summary>
+    /// Check if the character can act (not waiting).
+    /// </summary>
+    public bool CanAct() => WaitState <= 0;
 }
 
 public sealed class WorldDefinition

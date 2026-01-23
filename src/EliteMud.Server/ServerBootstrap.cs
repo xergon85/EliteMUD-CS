@@ -105,6 +105,7 @@ internal static class ServerBootstrap
             .AddSingleton<AuthenticationHandler>()
             .AddSingleton<ActMessageService>()
             .AddSingleton<GameTickService>()
+            .AddSingleton<CharacterSaveQueue>()
             
             // Commands and other services
             .AddCommandHandlers()
@@ -125,8 +126,9 @@ internal static class ServerBootstrap
         var authHandler = services.GetRequiredService<AuthenticationHandler>();
         var ipBanService = services.GetRequiredService<IpBanService>();
         var tickService = services.GetRequiredService<GameTickService>();
+        var saveQueue = services.GetRequiredService<CharacterSaveQueue>();
 
-        var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry, authHandler, services, ipBanService, worldState);
+        var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry, authHandler, services, ipBanService, worldState, saveQueue);
         return (server, tickService);
     }
 

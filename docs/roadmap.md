@@ -429,10 +429,11 @@
   - ✅ Fixed dead player attacking bug (race condition in combat tick)
   - ✅ All manual test scenarios passed
 
-### 🔄 IN PROGRESS (Phase 4: Combat + Skills)
-- **CURRENT FOCUS:** Extract skills framework from working POC
+### ✅ RECENTLY COMPLETED (Phase 4: Combat + Skills Framework)
+- **Skills Framework Extraction:** COMPLETE (Jan 23, 2026)
 - **POC Status:** Complete and validated (see `docs/skills-poc-documentation.md`)
-- **Next Step:** Framework extraction (interfaces, registry, DI)
+- **Framework Status:** ISkillHandler, IPassiveSkillHandler, SkillRegistry, ISkillExecutor all implemented
+- **Next Phase:** WAIT_STATE system, skill metadata schema, additional skills
 
 ### ❌ NOT STARTED
 - Advanced combat skills (Phase 4.2)
@@ -457,8 +458,8 @@
   - ✅ All 4 manual test scenarios passed
   - ✅ POC fully documented (see `docs/skills-poc-documentation.md`)
 
-### 🎯 IMMEDIATE NEXT STEPS (Skills Framework Extraction)
-**Priority:** Extract working POC into production framework
+### 🎯 IMMEDIATE NEXT STEPS (Skills System Completion)
+**Priority:** Complete skills system infrastructure
 
 1. ✅ **Create ISkillHandler Interface** (Short-term) - DONE
    - ✅ Extracted interface for active skills (kick, bash, backstab)
@@ -475,21 +476,23 @@
    - ✅ Created DodgeSkill implementing IPassiveSkillHandler
    - ✅ Removed inline logic from CombatCalculator
 
-4. 🔄 **Build SkillRegistry** (Short-term) - IN PROGRESS
-   - ⏳ Auto-discover skill handlers via reflection
-   - ⏳ Register handlers with dependency injection
-   - ⏳ Replace `new KickSkill()` with injected instances
+4. ✅ **Build SkillRegistry** (Short-term) - DONE
+   - ✅ Auto-discover skill handlers via reflection (ISkillHandler + IPassiveSkillHandler)
+   - ✅ Register handlers with dependency injection (SkillRegistry singleton)
+   - ✅ Skills injected into CombatCalculator and other consumers
+   - ✅ ISkillExecutor auto-discovery with SkillCommandHandler wrapping
    - ⚠️ **TODO: Handle session takeover on reconnect** (preserve fight state, wait states, skill cooldowns)
 
-5. **Design Skill Metadata Schema** (Medium-term)
-   - Create `content/skills.json` format
-   - Define: name, type, damage, cooldown, level requirements
-   - Include class restrictions and skill caps
-
-6. **Implement WAIT_STATE System** (Medium-term)
+5. **Implement WAIT_STATE System** (Medium-term) - NEXT
    - Add WaitState property to PlayerState
    - Prevent actions while waiting (cooldown system)
    - Integrate with combat tick (decrement each tick)
+   - Block skill/command usage during wait state
+
+6. **Design Skill Metadata Schema** (Medium-term)
+   - Create `content/skills.json` format
+   - Define: name, type, damage, cooldown, level requirements
+   - Include class restrictions and skill caps
 
 7. **Implement Skillgain Cooldown** (Medium-term)
    - Add SkillGain timestamp tracking

@@ -1,6 +1,35 @@
 namespace EliteMud.Game;
 
 /// <summary>
+/// Combat timing constants.
+/// Legacy: PULSE_VIOLENCE and related wait state values from structs.h
+/// </summary>
+public static class CombatConstants
+{
+    /// <summary>
+    /// One combat round (PULSE_VIOLENCE).
+    /// Skills apply wait states in multiples of this value.
+    /// </summary>
+    public const int PULSE_VIOLENCE = 1;
+    
+    /// <summary>
+    /// Wait state constants for common actions.
+    /// Legacy values from act.offensive.c:
+    /// - Kick: WAIT_STATE(ch, PULSE_VIOLENCE * 3) = 3 rounds
+    /// - Bash: WAIT_STATE(ch, PULSE_VIOLENCE * 2) = 2 rounds
+    /// - Most attacks: PULSE_VIOLENCE * 2-3
+    /// </summary>
+    public static class WaitStates
+    {
+        public const int Kick = PULSE_VIOLENCE * 3;      // 3 rounds (6 seconds)
+        public const int Bash = PULSE_VIOLENCE * 2;      // 2 rounds (4 seconds)
+        public const int Rescue = PULSE_VIOLENCE * 2;    // 2 rounds (4 seconds)
+        public const int Backstab = PULSE_VIOLENCE * 2;  // 2 rounds (4 seconds)
+        public const int Flee = PULSE_VIOLENCE * 1;      // 1 round (2 seconds)
+    }
+}
+
+/// <summary>
 /// Pure domain service for combat calculations.
 /// Contains stateless combat logic: damage, hit/miss, position updates.
 /// Based on legacy EliteMUD fight.c logic.

@@ -771,45 +771,81 @@ public class CombatService
 
 ## Implementation Roadmap
 
-### Phase 1: Core Infrastructure (NEXT)
-1. Create `SkillType` enum with all skill/spell numbers
-2. Create `SkillDefinition` and `SpellDefinition` records
-3. Add `Skills` dictionary to `MobInstance`
-4. Create `SkillHandlerBase` abstract class
-5. Create skill registry/factory for handlers
+### ✅ Phase 1: Core Infrastructure - COMPLETE
+1. ✅ Create `SkillType` enum with all skill/spell numbers - DONE
+2. ✅ Add `Skills` dictionary to `PlayerState` - DONE (Dictionary<SkillType, byte>)
+3. ✅ Create `ISkillHandler` interface - DONE (active skills)
+4. ✅ Create `IPassiveSkillHandler` interface - DONE (passive skills)
+5. ✅ Create `SkillRegistry` with auto-discovery - DONE (via reflection)
 
-### Phase 2: First Combat Skills
-1. Implement `KickSkillHandler`
-   - Legacy formula: `((10 - AC/10) * 2) + random(1,101) vs skill%`
-   - Damage: `level / 2`
-   - Lag: 3 rounds
-2. Implement `BashSkillHandler`
+### ✅ Phase 2: First Combat Skills - COMPLETE (POC)
+1. ✅ Implement Kick skill
+   - ✅ Legacy formula: `((10 - AC/10) * 2) + random(1,101) vs skill%`
+   - ✅ Damage: `level / 2`
+   - ✅ Command integration via `ISkillExecutor` + `SkillCommandHandler`
+2. ⏳ Implement Bash skill - TODO
    - Requires shield check
    - Position changes (victim → sitting)
    - Damage: fixed 10
-   - Lag: 2 rounds
-3. Implement `RescueSkillHandler`
+3. ⏳ Implement Rescue skill - TODO
    - Switch combat targets
-   - Lag: 2 rounds
 
-### Phase 3: Skill Improvement
-1. Implement `improve_skill()` logic in `SkillHandlerBase`
-2. Add skillgain cooldown to character state
-3. Hook improvement into skill success
-4. Add player notifications
+### ✅ Phase 3: Skill Improvement - COMPLETE (POC)
+1. ✅ Implement skill improvement logic - DONE
+   - ✅ Improvement chance: `random(0,99) > current_percent`
+   - ✅ Rate: +1% per successful check
+2. ✅ Add skill proficiency tracking - DONE (Dictionary<SkillType, byte> in PlayerState)
+3. ✅ Hook improvement into skill success - DONE (KickExecutor)
+4. ✅ Player notifications - DONE (via ActMessage)
+5. ⏳ Skillgain cooldown - TODO (needs WAIT_STATE system)
 
-### Phase 4: Passive Skills
-1. Integrate dodge/parry into combat system
-2. Research legacy fight.c for exact mechanics
-3. Implement automatic skill checks during combat rounds
+### ✅ Phase 4: Passive Skills - COMPLETE (POC)
+1. ✅ Implement Dodge passive skill - DONE
+   - ✅ Formula: `(random(1,250) + damage) < skill_percent`
+   - ✅ Damage reduction: 2× level
+   - ✅ Integrated into CombatCalculator
+2. ✅ Research legacy fight.c - DONE (see Phase 4 documentation above)
+3. ✅ Automatic skill checks in combat - DONE
+4. ⏳ Parry passive skill - TODO
+5. ⏳ Tumble passive skill - TODO
 
-### Phase 5: Spell System
+### 🔄 Phase 5: Skills Framework Production (IN PROGRESS)
+**Current Status**: POC complete, framework extraction complete, needs WAIT_STATE system
+
+1. ✅ **ISkillExecutor interface** - DONE
+   - Auto-discovered via reflection
+   - Wrapped in generic `SkillCommandHandler`
+   - Automatically available as commands
+
+2. ✅ **SkillRegistry** - DONE
+   - Auto-discovers ISkillHandler (active skills)
+   - Auto-discovers IPassiveSkillHandler (passive skills)
+   - Dependency injection integration
+
+3. ⏳ **WAIT_STATE System** - NEXT STEP
+   - Add WaitState property to PlayerState
+   - Prevent actions while waiting (cooldown system)
+   - Integrate with combat tick (decrement each tick)
+   - Block skill/command usage during wait state
+
+4. ⏳ **Skill Metadata Schema** - TODO
+   - Create `content/skills.json` format
+   - Define: name, type, damage, cooldown, level requirements
+   - Include class restrictions and skill caps
+
+5. ⏳ **Additional Skills** - TODO
+   - bash (shield attack)
+   - backstab (rogue skill)
+   - parry (passive defense)
+   - rescue (tank skill)
+
+### ⏳ Phase 6: Spell System - NOT STARTED
 1. Create `SpellHandlerBase` (similar to skills but with mana)
 2. Implement spell targeting system
 3. Implement spell effect system (affects, damage, etc.)
 4. Add first test spell (e.g., magic missile, cure light)
 
-### Phase 6: Content Data
+### ⏳ Phase 7: Content Data - NOT STARTED
 1. Create JSON schema for skills/spells
 2. Load skill definitions from `content/skills.json`
 3. Load spell definitions from `content/spells.json`

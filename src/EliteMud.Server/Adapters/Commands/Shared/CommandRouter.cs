@@ -59,7 +59,7 @@ internal sealed class CommandRouter
         }
     }
 
-    public ValueTask<CommandOutcome> HandleAsync(
+    public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,
         CancellationToken cancellationToken)
@@ -68,16 +68,52 @@ internal sealed class CommandRouter
         if (string.IsNullOrEmpty(command.Verb))
         {
             return _emptyCommandHandler != null
-                ? _emptyCommandHandler.HandleAsync(command, context, cancellationToken)
-                : ValueTask.FromResult(CommandOutcome.Continue);
+                ? await _emptyCommandHandler.HandleAsync(command, context, cancellationToken)
+                : CommandOutcome.Continue;
+        }
+        
+        // Check if player is waiting (combat lag)
+        // Only block action commands, not informational commands like 'look', 'score', etc.
+        if (!context.Player.CanAct() && IsActionCommand(command.Verb))
+        {
+            await context.Session.SendLineAsync(
+                "You must wait before you can do that.",
+                cancellationToken);
+            return CommandOutcome.Continue;
         }
         
         // Handle normal commands
         if (_handlersByVerb.TryGetValue(command.Verb, out var handler))
         {
-            return handler.HandleAsync(command, context, cancellationToken);
+            return await handler.HandleAsync(command, context, cancellationToken);
         }
 
-        return ValueTask.FromResult(CommandOutcome.Unknown);
+        return CommandOutcome.Unknown;
+    }
+    
+    /// <summary>
+    /// Determine if a command is an "action" command that should be blocked by WaitState.
+    /// Informational commands (look, score, who, etc.) are not blocked.
+    /// </summary>
+    private static bool IsActionCommand(string verb)
+    {
+        // Allow informational commands even when waiting
+        var allowedDuringWait = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "look", "l",
+            "score", "sc",
+            "inventory", "i", "inv",
+            "equipment", "eq",
+            "who",
+            "skills",
+            "affects", "aff",
+            "examine", "exa", "ex",
+            "consider", "con",
+            "time",
+            "weather",
+            "help"
+        };
+        
+        return !allowedDuringWait.Contains(verb);
     }
 }

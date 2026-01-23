@@ -27,6 +27,7 @@ internal sealed class GameTickService
     private readonly Application.Commands.Flee.FleeHandler _fleeService;
     private readonly LookCommandHandler _lookHandler;
     private readonly CombatCalculator _combatCalculator;
+    private readonly CharacterSaveQueue _saveQueue;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
     private readonly TimeSpan _gainInterval = TimeSpan.FromSeconds(6); // PULSE_GAIN - increment gain_count based on position (legacy: 6 seconds)
@@ -45,7 +46,8 @@ internal sealed class GameTickService
         ActMessageService actService,
         Application.Commands.Flee.FleeHandler fleeService,
         LookCommandHandler lookHandler,
-        CombatCalculator combatCalculator)
+        CombatCalculator combatCalculator,
+        CharacterSaveQueue saveQueue)
     {
         _connectionRegistry = connectionRegistry;
         _serviceProvider = serviceProvider;
@@ -54,6 +56,7 @@ internal sealed class GameTickService
         _fleeService = fleeService;
         _lookHandler = lookHandler;
         _combatCalculator = combatCalculator;
+        _saveQueue = saveQueue;
     }
 
     public async Task RunAsync(CancellationToken stoppingToken)
@@ -106,6 +109,12 @@ internal sealed class GameTickService
     private async Task ProcessCombatRoundAsync(CancellationToken cancellationToken)
     {
         var connections = _connectionRegistry.GetConnections().ToList();
+        
+        // Decrement wait states for all players (happens every combat tick)
+        foreach (var connection in connections)
+        {
+            connection.Player.DecrementWaitState();
+        }
         
         // Find all players in combat
         var fightingPlayers = connections.Where(c => c.Player.FightingConnectionId != null).ToList();
@@ -765,45 +774,15 @@ internal sealed class GameTickService
             return; // No players to save
         }
 
-        Console.WriteLine($"[AutoSave] Saving {connections.Count} player(s)...");
+        Console.WriteLine($"[AutoSave] Queueing {connections.Count} player(s) for save...");
         
-        int savedCount = 0;
-        int errorCount = 0;
-        
-        // Create a scope to get the scoped repository
-        await using var scope = _serviceProvider.CreateAsyncScope();
-        var characterRepository = scope.ServiceProvider.GetRequiredService<ICharacterRepository>();
-        
+        // Queue all saves (fire-and-forget)
+        // The save queue handles deduplication automatically
         foreach (var connection in connections)
         {
-            try
-            {
-                // Load the character from database
-                var character = await characterRepository.GetByIdAsync(connection.CharacterId, cancellationToken);
-                if (character is null)
-                {
-                    Console.WriteLine($"[AutoSave] Warning: Character {connection.Player.Name} (ID:{connection.CharacterId}) not found in database");
-                    errorCount++;
-                    continue;
-                }
-                
-                // Update the character with current player state
-                CharacterMapper.UpdateCharacterFromPlayerState(character, connection.Player, _worldState);
-                
-                // Save to database
-                await characterRepository.UpdateAsync(character, cancellationToken);
-                savedCount++;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[AutoSave] Error saving {connection.Player.Name}: {ex.Message}");
-                errorCount++;
-            }
+            await _saveQueue.QueueSaveAsync(connection.CharacterId, connection.Player, cancellationToken);
         }
         
-        if (savedCount > 0)
-        {
-            Console.WriteLine($"[AutoSave] Complete: {savedCount} saved, {errorCount} errors");
-        }
+        Console.WriteLine($"[AutoSave] All saves queued");
     }
 }

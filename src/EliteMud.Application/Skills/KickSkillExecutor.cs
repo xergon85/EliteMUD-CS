@@ -148,6 +148,10 @@ public sealed class KickSkillExecutor : ISkillExecutor
 
         // Improve skill on successful hit
         attacker.TryImproveSkill(SkillType.Kick);
+        
+        // Apply combat lag (WAIT_STATE) - kick takes 3 rounds
+        // Legacy: WAIT_STATE(ch, PULSE_VIOLENCE * 3) in act.offensive.c:689
+        attacker.WaitState = CombatConstants.WaitStates.Kick;
 
         return new SkillResult(Success: true, Messages: messages.ToArray());
     }

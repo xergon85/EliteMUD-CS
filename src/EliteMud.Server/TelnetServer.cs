@@ -26,6 +26,7 @@ internal sealed class TelnetServer
     private readonly IServiceProvider _serviceProvider;
     private readonly IpBanService _ipBanService;
     private readonly IWorldState _worldState;
+    private readonly CharacterSaveQueue _saveQueue;
 
     public TelnetServer(
         IPAddress address,
@@ -37,7 +38,8 @@ internal sealed class TelnetServer
         AuthenticationHandler authHandler,
         IServiceProvider serviceProvider,
         IpBanService ipBanService,
-        IWorldState worldState)
+        IWorldState worldState,
+        CharacterSaveQueue saveQueue)
     {
         _listener = new TcpListener(address, port);
         _catalog = catalog;
@@ -48,6 +50,7 @@ internal sealed class TelnetServer
         _serviceProvider = serviceProvider;
         _ipBanService = ipBanService;
         _worldState = worldState;
+        _saveQueue = saveQueue;
     }
 
     public async Task RunAsync(CancellationToken cancellationToken)
@@ -190,23 +193,12 @@ internal sealed class TelnetServer
         }
         finally
         {
-            // Save character state to database
+            // Save character state to database using the save queue
+            // The queue automatically deduplicates saves within 2 seconds
             if (context?.Player is not null && sessionData.SelectedCharacterId.HasValue)
             {
-                try
-                {
-                    var character = await characterRepository.GetByIdAsync(sessionData.SelectedCharacterId.Value, cancellationToken);
-                    if (character is not null)
-                    {
-                        CharacterMapper.UpdateCharacterFromPlayerState(character, context.Player, _worldState);
-                        await characterRepository.UpdateAsync(character, cancellationToken);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // Log the error but don't crash the server
-                    Console.WriteLine($"Error saving character: {ex.Message}");
-                }
+                // Queue the save (fire-and-forget, don't wait)
+                await _saveQueue.QueueSaveAsync(sessionData.SelectedCharacterId.Value, context.Player, cancellationToken);
             }
             
             if (context is not null)

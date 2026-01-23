@@ -20,6 +20,10 @@ namespace EliteMud.Server.Adapters.Commands.Skills;
 /// - Skill Executor (Application): Business logic, returns SkillResult
 /// - This Handler (Server): Target resolution, message formatting, I/O
 /// - Formulas (Game): Pure calculations
+/// 
+/// NOTE: This class should NOT have a [Command] attribute because instances are
+/// registered per skill executor in AddSkillExecutors(). The [Command] attribute
+/// is placed on each ISkillExecutor implementation instead.
 /// </summary>
 internal sealed class SkillCommandHandler : ICommandHandler
 {
@@ -27,8 +31,8 @@ internal sealed class SkillCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly ActMessageService _actService;
     private readonly ConnectionRegistry _connectionRegistry;
-    
-    
+
+
     public SkillCommandHandler(
         ISkillExecutor executor,
         IWorldState worldState,
@@ -40,7 +44,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
         _actService = actService;
         _connectionRegistry = connectionRegistry;
     }
-    
+
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,
@@ -52,22 +56,22 @@ internal sealed class SkillCommandHandler : ICommandHandler
             command.Argument?.Trim(),
             context,
             cancellationToken);
-        
+
         if (skillContext == null)
         {
             // Target resolution failed (error message already sent)
             return CommandOutcome.Continue;
         }
-        
+
         // 2. Execute skill in Application layer
         var result = _executor.Execute(skillContext);
-        
+
         // 3. Format and send messages
         await SendMessagesAsync(result.Messages, context, cancellationToken);
-        
+
         return CommandOutcome.Continue;
     }
-    
+
     /// <summary>
     /// Resolve target based on targeting mode.
     /// Returns null if target resolution failed (error message sent to player).
@@ -80,25 +84,25 @@ internal sealed class SkillCommandHandler : ICommandHandler
     {
         return mode switch
         {
-            TargetingMode.CurrentFightTarget => 
+            TargetingMode.CurrentFightTarget =>
                 await ResolveCurrentOrNamedTargetAsync(argument, context, cancellationToken),
-            
-            TargetingMode.RequiredInRoom => 
+
+            TargetingMode.RequiredInRoom =>
                 await ResolveRequiredTargetAsync(argument, context, cancellationToken),
-            
-            TargetingMode.Direction => 
+
+            TargetingMode.Direction =>
                 ResolveDirection(argument, context, cancellationToken),
-            
-            TargetingMode.Self => 
+
+            TargetingMode.Self =>
                 ResolveSelf(context),
-            
-            TargetingMode.None => 
+
+            TargetingMode.None =>
                 new SkillContext(context.Player, context.Id, null, null, argument),
-            
+
             _ => null
         };
     }
-    
+
     /// <summary>
     /// Resolve target for CurrentFightTarget mode.
     /// If no target specified: use current fighting opponent.
@@ -110,7 +114,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         var player = context.Player;
-        
+
         // Case 1: No target specified - use current fighting target
         if (string.IsNullOrWhiteSpace(targetName))
         {
@@ -119,19 +123,19 @@ internal sealed class SkillCommandHandler : ICommandHandler
                 await context.Session.SendLineAsync("You aren't fighting anyone!", cancellationToken);
                 return null;
             }
-            
+
             // Find current fighting target
             if (player.FightingConnectionId.Value > 0)
             {
                 // Fighting a player
                 var currentTarget = _connectionRegistry.GetConnections()
                     .FirstOrDefault(c => c.Id == player.FightingConnectionId.Value);
-                    
+
                 if (currentTarget != null)
                 {
                     return new SkillContext(player, context.Id, currentTarget.Player, currentTarget.Id, null);
                 }
-                
+
                 await context.Session.SendLineAsync("They aren't here.", cancellationToken);
                 return null;
             }
@@ -141,19 +145,19 @@ internal sealed class SkillCommandHandler : ICommandHandler
                 var mobInstanceId = -player.FightingConnectionId.Value;
                 var currentMob = _worldState.GetMobsInRoom(player.RoomId)
                     .FirstOrDefault(m => m.InstanceId == mobInstanceId);
-                
+
                 if (currentMob == null)
                 {
                     await context.Session.SendLineAsync("They aren't here.", cancellationToken);
                     return null;
                 }
-                
+
                 return new SkillContext(player, context.Id, currentMob, null, null);
             }
         }
-        
+
         // Case 2: Target specified
-        
+
         // If already fighting, check if targeting current opponent
         if (player.FightingConnectionId != null)
         {
@@ -161,8 +165,9 @@ internal sealed class SkillCommandHandler : ICommandHandler
             {
                 var currentTarget = _connectionRegistry.GetConnections()
                     .FirstOrDefault(c => c.Id == player.FightingConnectionId.Value);
-                    
-                if (currentTarget != null && currentTarget.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase))
+
+                if (currentTarget != null &&
+                    currentTarget.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase))
                 {
                     return new SkillContext(player, context.Id, currentTarget.Player, currentTarget.Id, targetName);
                 }
@@ -171,43 +176,45 @@ internal sealed class SkillCommandHandler : ICommandHandler
             {
                 var mobInstanceId = -player.FightingConnectionId.Value;
                 var currentMob = _worldState.GetMobsInRoom(player.RoomId)
-                    .FirstOrDefault(m => m.InstanceId == mobInstanceId 
-                        && m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-                
+                    .FirstOrDefault(m => m.InstanceId == mobInstanceId
+                                         && m.Definition.ShortDescription.Contains(targetName,
+                                             StringComparison.OrdinalIgnoreCase));
+
                 if (currentMob != null)
                 {
                     return new SkillContext(player, context.Id, currentMob, null, targetName);
                 }
             }
-            
+
             // Trying to switch targets mid-combat
             await context.Session.SendLineAsync("You're already fighting someone else!", cancellationToken);
             return null;
         }
-        
+
         // Not fighting - find target in room
         var targetPlayer = _connectionRegistry.GetConnections()
-            .FirstOrDefault(c => c.Player.RoomId == player.RoomId 
-                && c.Id != context.Id 
-                && c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-        
+            .FirstOrDefault(c => c.Player.RoomId == player.RoomId
+                                 && c.Id != context.Id
+                                 && c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
+
         if (targetPlayer != null)
         {
             return new SkillContext(player, context.Id, targetPlayer.Player, targetPlayer.Id, targetName);
         }
-        
+
         var targetMob = _worldState.GetMobsInRoom(player.RoomId)
-            .FirstOrDefault(m => m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-        
+            .FirstOrDefault(m =>
+                m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
+
         if (targetMob != null)
         {
             return new SkillContext(player, context.Id, targetMob, null, targetName);
         }
-        
+
         await context.Session.SendLineAsync($"You don't see '{targetName}' here.", cancellationToken);
         return null;
     }
-    
+
     /// <summary>
     /// Resolve target for RequiredInRoom mode.
     /// Must specify target name - cannot auto-target fighting opponent.
@@ -218,37 +225,38 @@ internal sealed class SkillCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         var player = context.Player;
-        
+
         if (string.IsNullOrWhiteSpace(targetName))
         {
             await context.Session.SendLineAsync("Who do you want to target?", cancellationToken);
             return null;
         }
-        
+
         // Find player target
         var targetPlayer = _connectionRegistry.GetConnections()
-            .FirstOrDefault(c => c.Player.RoomId == player.RoomId 
-                && c.Id != context.Id 
-                && c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-        
+            .FirstOrDefault(c => c.Player.RoomId == player.RoomId
+                                 && c.Id != context.Id
+                                 && c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
+
         if (targetPlayer != null)
         {
             return new SkillContext(player, context.Id, targetPlayer.Player, targetPlayer.Id, targetName);
         }
-        
+
         // Find mob target
         var targetMob = _worldState.GetMobsInRoom(player.RoomId)
-            .FirstOrDefault(m => m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-        
+            .FirstOrDefault(m =>
+                m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
+
         if (targetMob != null)
         {
             return new SkillContext(player, context.Id, targetMob, null, targetName);
         }
-        
+
         await context.Session.SendLineAsync($"You don't see '{targetName}' here.", cancellationToken);
         return null;
     }
-    
+
     /// <summary>
     /// Resolve direction argument (north, south, east, west, up, down).
     /// </summary>
@@ -258,24 +266,25 @@ internal sealed class SkillCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         var player = context.Player;
-        
+
         if (string.IsNullOrWhiteSpace(direction))
         {
             context.Session.SendLineAsync("Which direction?", cancellationToken).AsTask().Wait(cancellationToken);
             return null;
         }
-        
+
         // Validate direction (basic validation - executor can do more specific checks)
         var validDirections = new[] { "north", "south", "east", "west", "up", "down", "n", "s", "e", "w", "u", "d" };
         if (!validDirections.Contains(direction.ToLowerInvariant()))
         {
-            context.Session.SendLineAsync("That's not a valid direction.", cancellationToken).AsTask().Wait(cancellationToken);
+            context.Session.SendLineAsync("That's not a valid direction.", cancellationToken).AsTask()
+                .Wait(cancellationToken);
             return null;
         }
-        
+
         return new SkillContext(player, context.Id, null, null, direction);
     }
-    
+
     /// <summary>
     /// Resolve self-targeting (skill targets the user).
     /// </summary>
@@ -284,7 +293,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
         var player = context.Player;
         return new SkillContext(player, context.Id, player, context.Id, null);
     }
-    
+
     /// <summary>
     /// Send skill result messages to appropriate players.
     /// </summary>
@@ -298,7 +307,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
             await SendMessageAsync(message, context, cancellationToken);
         }
     }
-    
+
     /// <summary>
     /// Send a single skill message to appropriate target(s).
     /// </summary>
@@ -308,27 +317,27 @@ internal sealed class SkillCommandHandler : ICommandHandler
         CancellationToken cancellationToken)
     {
         var actor = context.Player;
-        
+
         switch (message.Target)
         {
             case SkillMessageTarget.Actor:
                 await SendToActorAsync(message.Template, actor, message.Victim, context, cancellationToken);
                 break;
-            
+
             case SkillMessageTarget.Victim:
                 await SendToVictimAsync(message.Template, actor, message.Victim, cancellationToken);
                 break;
-            
+
             case SkillMessageTarget.Room:
                 await SendToRoomAsync(message.Template, actor, message.Victim, cancellationToken);
                 break;
-            
+
             case SkillMessageTarget.Others:
                 await SendToOthersAsync(message.Template, actor, message.Victim, context, cancellationToken);
                 break;
         }
     }
-    
+
     private async Task SendToActorAsync(
         string template,
         PlayerState actor,
@@ -339,7 +348,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
         var formatted = _actService.FormatMessage(template, actor, actor, victim);
         await actorConnection.Session.SendLineAsync(formatted, cancellationToken);
     }
-    
+
     private async Task SendToVictimAsync(
         string template,
         PlayerState actor,
@@ -350,7 +359,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
         {
             var victimConnection = _connectionRegistry.GetConnections()
                 .FirstOrDefault(c => c.Player.Id == victimPlayer.Id);
-            
+
             if (victimConnection != null)
             {
                 var formatted = _actService.FormatMessage(template, victimPlayer, actor, victimPlayer);
@@ -358,7 +367,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
             }
         }
     }
-    
+
     private async Task SendToRoomAsync(
         string template,
         PlayerState actor,
@@ -367,14 +376,14 @@ internal sealed class SkillCommandHandler : ICommandHandler
     {
         var roomPlayers = _connectionRegistry.GetConnections()
             .Where(c => c.Player.RoomId == actor.RoomId);
-        
+
         foreach (var observer in roomPlayers)
         {
             var formatted = _actService.FormatMessage(template, observer.Player, actor, victim);
             await observer.Session.SendLineAsync(formatted, cancellationToken);
         }
     }
-    
+
     private async Task SendToOthersAsync(
         string template,
         PlayerState actor,
@@ -385,12 +394,12 @@ internal sealed class SkillCommandHandler : ICommandHandler
         var victimConnectionId = victim is PlayerState victimPlayer
             ? _connectionRegistry.GetConnections().FirstOrDefault(c => c.Player.Id == victimPlayer.Id)?.Id
             : null;
-        
+
         var observers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == actor.RoomId 
-                     && c.Id != actorConnection.Id 
-                     && (victimConnectionId == null || c.Id != victimConnectionId));
-        
+            .Where(c => c.Player.RoomId == actor.RoomId
+                        && c.Id != actorConnection.Id
+                        && (victimConnectionId == null || c.Id != victimConnectionId));
+
         foreach (var observer in observers)
         {
             var formatted = _actService.FormatMessage(template, observer.Player, actor, victim);

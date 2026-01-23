@@ -5,14 +5,9 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Skills;
 
+[Command("skills", Aliases = new[] { "skill" })]
 internal sealed class SkillsCommandHandler : ICommandHandler
 {
-    private readonly CommandCatalog _catalog;
-
-    public SkillsCommandHandler(CommandCatalog catalog)
-    {
-        _catalog = catalog;
-    }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,
