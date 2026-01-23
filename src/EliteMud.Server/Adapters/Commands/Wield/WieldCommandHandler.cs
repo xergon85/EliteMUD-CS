@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Wield;
 
+[Command("wield")]
 internal sealed class WieldCommandHandler : ICommandHandler
 {
     private readonly WieldHandler _wieldHandler;

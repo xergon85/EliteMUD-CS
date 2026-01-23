@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Remove;
 
+[Command("remove")]
 internal sealed class RemoveCommandHandler : ICommandHandler
 {
     private readonly RemoveHandler _removeHandler;

@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Hold;
 
+[Command("hold")]
 internal sealed class HoldCommandHandler : ICommandHandler
 {
     private readonly HoldHandler _holdHandler;
