@@ -180,6 +180,7 @@ internal static class ContentLoader
                 mob.Skills ?? new List<string>(),
                 armorClass,
                 maxHitPoints,
+                mob.Alignment,
                 attacks,
                 combat));
         }
@@ -628,6 +629,7 @@ internal static class ContentLoader
             mob.Skills ?? new List<string>(),
             armorClass,
             maxHitPoints,
+            mob.Alignment, // Alignment from JSON (defaults to 0 if not set)
             Array.Empty<MobAttack>(), // Bootstrap mobs have no attacks
             null); // Bootstrap mobs have no combat stats
     }
@@ -768,7 +770,7 @@ internal static class ContentLoader
         ObjectDetails? details = obj.Details; // Details are already deserialized from JSON
 
         // Convert object affects from content format to game format
-        var affects = obj.Affects
+        var affects = (obj.Affects ?? Enumerable.Empty<ObjectAffectContent>())
             .Select(a => new ObjectAffect(ParseAffectLocation(a.Location), a.Modifier))
             .ToList();
 
@@ -1041,6 +1043,7 @@ internal static class ContentLoader
         public List<string>? Resistances { get; set; }
         public List<string>? Skills { get; set; }
         public ResourcesContent? Resources { get; set; }
+        public int Alignment { get; set; }
         public CombatContent? Combat { get; set; }
         public List<AttackContent>? Attacks { get; set; }
     }

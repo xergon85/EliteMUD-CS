@@ -145,6 +145,45 @@ public class CombatCalculator
     }
     
     /// <summary>
+    /// Apply weapon special effects (blessed, evil, flaming).
+    /// Legacy: fight.c:1461-1468
+    /// BLESS: +3d6 damage vs evil targets
+    /// EVIL: +3d6 damage vs good targets
+    /// FLAME: +3d6 fire damage (should check save, but always applies for now)
+    /// </summary>
+    /// <param name="weaponFlags">The weapon's flags (e.g., "Bless", "Evil", "Flame")</param>
+    /// <param name="victim">The target combatant</param>
+    /// <returns>Bonus damage from weapon effects</returns>
+    public int ApplyWeaponEffects(IReadOnlyList<string> weaponFlags, ICombatant victim)
+    {
+        int bonusDamage = 0;
+        
+        // BLESS weapon: +3d6 vs evil
+        // Legacy: if (IS_OBJ_STAT(wielded, ITEM_BLESS) && IS_EVIL(victim)) dam += dice(3,6);
+        if (weaponFlags.Contains("Bless") && victim.IsEvil())
+        {
+            bonusDamage += RollDice(3, 6);
+        }
+        
+        // EVIL weapon: +3d6 vs good
+        // Legacy: if (IS_OBJ_STAT(wielded, ITEM_EVIL) && IS_GOOD(victim)) dam += dice(3,6);
+        if (weaponFlags.Contains("Evil") && victim.IsGood())
+        {
+            bonusDamage += RollDice(3, 6);
+        }
+        
+        // FLAME weapon: +3d6 fire damage (no save check for now)
+        // Legacy: if (IS_OBJ_STAT(wielded, ITEM_FLAME) && !saves_spell(...)) dam += dice(3,6);
+        // TODO: Implement saving throw system for SAVE_NEGATE check
+        if (weaponFlags.Contains("Flame"))
+        {
+            bonusDamage += RollDice(3, 6);
+        }
+        
+        return bonusDamage;
+    }
+    
+    /// <summary>
     /// Calculate base damage for an unarmed attack.
     /// Legacy: fight.c:1439-1458
     /// Formula: str_todam + damroll + random(0,2)

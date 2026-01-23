@@ -82,7 +82,7 @@ internal sealed class CastCommandHandler : ICommandHandler
 
         // Get spell handler (convert metadata ID to SpellType enum)
         var spellType = (SpellType)metadata.Id;
-        if (!_spellRegistry.TryGetSpell(spellType, out var spell))
+        if (!_spellRegistry.TryGetSpell(spellType, out var spell) || spell == null)
         {
             await context.Session.SendLineAsync($"The spell '{metadata.Name}' is not implemented yet.", cancellationToken);
             return CommandOutcome.Continue;

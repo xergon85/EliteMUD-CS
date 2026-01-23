@@ -119,6 +119,7 @@ public class KillTargetingTests
             Skills: new List<string>(),
             ArmorClass: 50,
             MaxHitPoints: 50,
+            Alignment: 0,
             Attacks: new List<MobAttack>(),
             Combat: null
         );

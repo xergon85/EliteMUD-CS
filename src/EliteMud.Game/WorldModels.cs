@@ -119,6 +119,7 @@ public sealed record MobDefinition(
     IReadOnlyList<string> Skills,
     int ArmorClass,
     int MaxHitPoints,
+    int Alignment,
     IReadOnlyList<MobAttack> Attacks,
     MobCombat? Combat)
 {
@@ -697,4 +698,29 @@ public sealed class WorldDefinition
         targetRoomId = currentRoomId;
         return false;
     }
+}
+
+/// <summary>
+/// Extension methods for alignment-based combat checks.
+/// Legacy thresholds from utils.h:195-197
+/// </summary>
+public static class AlignmentExtensions
+{
+    /// <summary>
+    /// Check if a combatant is good-aligned.
+    /// Legacy: IS_GOOD(ch) = GET_ALIGNMENT(ch) >= 350
+    /// </summary>
+    public static bool IsGood(this ICombatant combatant) => combatant.Alignment >= 350;
+    
+    /// <summary>
+    /// Check if a combatant is evil-aligned.
+    /// Legacy: IS_EVIL(ch) = GET_ALIGNMENT(ch) <= -350
+    /// </summary>
+    public static bool IsEvil(this ICombatant combatant) => combatant.Alignment <= -350;
+    
+    /// <summary>
+    /// Check if a combatant is neutral-aligned.
+    /// Legacy: IS_NEUTRAL(ch) = !IS_GOOD(ch) && !IS_EVIL(ch)
+    /// </summary>
+    public static bool IsNeutral(this ICombatant combatant) => !combatant.IsGood() && !combatant.IsEvil();
 }

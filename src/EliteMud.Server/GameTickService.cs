@@ -228,7 +228,8 @@ internal sealed class GameTickService
         
         // Get wielded weapon
         ObjectWeapon? weaponDetails = null;
-        if (mob.Equipment.TryGetValue(EquipmentSlot.Wield, out var weapon))
+        ObjectInstance? weapon = null;
+        if (mob.Equipment.TryGetValue(EquipmentSlot.Wield, out weapon))
         {
             weaponDetails = weapon.Definition.Details?.Weapon;
         }
@@ -244,6 +245,13 @@ internal sealed class GameTickService
                 var primaryAttack = mob.Definition.Attacks[0]; // Use first attack
                 damage += _combatCalculator.RollDice(primaryAttack.DamageDiceCount, primaryAttack.DamageDiceSides);
                 damage += primaryAttack.DamageBonus;
+            }
+            
+            // Apply weapon special effects (bless/evil/flame) for mobs too!
+            if (weapon != null)
+            {
+                int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim.Player);
+                damage += weaponEffectDamage;
             }
         }
         else
@@ -333,26 +341,41 @@ internal sealed class GameTickService
         
         // Get wielded weapon for damage calculation
         ObjectWeapon? weaponDetails = null;
+        ObjectInstance? weapon = null;
         if (attacker.Player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
         {
-            var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+            weapon = _worldState.GetObjectInstance(weaponInstanceId);
             weaponDetails = weapon?.Definition.Details?.Weapon;
         }
         
         var result = _combatCalculator.PerformAttack(attacker.Player, victim.Player, weaponDetails);
         
+        // Apply weapon special effects (bless/evil/flame) to damage
+        int totalDamage = result.Damage;
+        if (weapon != null && result.Hit)
+        {
+            int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim.Player);
+            totalDamage += weaponEffectDamage;
+            // Apply additional damage to victim
+            if (weaponEffectDamage > 0)
+            {
+                victim.Player.HitPoints -= (short)weaponEffectDamage;
+                _combatCalculator.UpdatePosition(victim.Player);
+            }
+        }
+        
         // Format legacy combat messages
         var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
             victim.Player.Name,
-            result.Damage,
+            totalDamage,
             victim.Player.MaxHitPoints,
             MessagePerspective.ToChar);
             
         var victimMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
             victim.Player.Name,
-            result.Damage,
+            totalDamage,
             victim.Player.MaxHitPoints,
             MessagePerspective.ToVict);
         
@@ -363,12 +386,12 @@ internal sealed class GameTickService
             cancellationToken);
         
         // Show damage feedback to victim (HURT/bleeding messages)
-        if (result.Hit && result.Damage > 0)
+        if (result.Hit && totalDamage > 0)
         {
             var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
                 victim.Player.MaxHitPoints,
                 victim.Player.HitPoints,
-                result.Damage);
+                totalDamage);
             if (feedbackMsg != null)
             {
                 await victim.Session.SendLineAsync(feedbackMsg, cancellationToken);
@@ -381,7 +404,7 @@ internal sealed class GameTickService
             var roomMsg = CombatMessageFormatter.FormatCombatMessage(
                 attacker.Player.Name,
                 victim.Player.Name,
-                result.Damage,
+                totalDamage,
                 victim.Player.MaxHitPoints,
                 MessagePerspective.ToRoom);
                 
@@ -396,7 +419,7 @@ internal sealed class GameTickService
             }
 
             // Award experience
-            attacker.Player.Experience += _combatCalculator.CalculateExperienceGain(victim.Player, result.Damage);
+            attacker.Player.Experience += _combatCalculator.CalculateExperienceGain(victim.Player, totalDamage);
 
             // Check if victim died
             if (victim.Player.Position == Position.Dead)
@@ -435,14 +458,23 @@ internal sealed class GameTickService
         
         // Get wielded weapon for damage calculation
         ObjectWeapon? weaponDetails = null;
+        ObjectInstance? weapon = null;
         if (attacker.Player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
         {
-            var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+            weapon = _worldState.GetObjectInstance(weaponInstanceId);
             weaponDetails = weapon?.Definition.Details?.Weapon;
         }
         
         // Player attacks mob
         int damage = _combatCalculator.CalculateDamage(attacker.Player, weaponDetails);
+        
+        // Apply weapon special effects (bless/evil/flame)
+        if (weapon != null)
+        {
+            int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, mob);
+            damage += weaponEffectDamage;
+        }
+        
         mob.HitPoints -= (short)damage;
         
         // Format legacy combat messages for player hitting mob

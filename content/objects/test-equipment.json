@@ -609,6 +609,156 @@
       ],
       "Bitvectors": [],
       "SpecialProc": null
+    },
+    {
+      "Id": 99914,
+      "Name": "sword holy blessed test",
+      "ShortDescription": "a blessed holy sword",
+      "LongDescription": "A blessed holy sword radiates divine light here.",
+      "Description": "This holy weapon deals +3d6 extra damage against evil creatures.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": ["Bless"],
+      "WearFlags": ["Take", "Wield"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DamageDice": 3,
+          "DamageSides": 6,
+          "DamageType": 3
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 2000,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 5
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99915,
+      "Name": "dagger cursed evil test",
+      "ShortDescription": "a cursed evil dagger",
+      "LongDescription": "A cursed evil dagger pulses with dark energy here.",
+      "Description": "This cursed blade deals +3d6 extra damage against good creatures.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": ["Evil"],
+      "WearFlags": ["Take", "Wield"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DamageDice": 2,
+          "DamageSides": 6,
+          "DamageType": 3
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 1800,
+      "CostPerDay": 18,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 2
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 4
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99916,
+      "Name": "sword flaming fire test",
+      "ShortDescription": "a flaming sword",
+      "LongDescription": "A flaming sword burns with intense heat here.",
+      "Description": "This blazing weapon deals +3d6 fire damage to all targets.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": ["Flame"],
+      "WearFlags": ["Take", "Wield"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DamageDice": 3,
+          "DamageSides": 5,
+          "DamageType": 3
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 2200,
+      "CostPerDay": 22,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Hitroll",
+          "Modifier": 3
+        },
+        {
+          "Location": "Damroll",
+          "Modifier": 6
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
     }
   ]
 }

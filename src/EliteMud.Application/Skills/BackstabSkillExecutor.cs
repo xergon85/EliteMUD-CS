@@ -132,13 +132,22 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         
         // Get wielded weapon for damage calculation
         ObjectWeapon? weaponDetails = null;
+        ObjectInstance? weapon = null;
         if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
         {
-            var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+            weapon = _worldState.GetObjectInstance(weaponInstanceId);
             weaponDetails = weapon?.Definition.Details?.Weapon;
         }
         
         int baseDamage = _combatCalculator.CalculateDamage(attacker, weaponDetails);
+        
+        // Apply weapon special effects (bless/evil/flame) BEFORE multiplier
+        if (weapon != null)
+        {
+            int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim);
+            baseDamage += weaponEffectDamage;
+        }
+        
         int multiplier = _backstabSkill.CalculateDamageMultiplier(attacker);
         int damage = baseDamage * multiplier;
 

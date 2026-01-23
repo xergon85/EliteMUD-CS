@@ -40,6 +40,13 @@ public interface ICombatant
     byte Level { get; }
     
     /// <summary>
+    /// Alignment of the combatant. Range: -1000 (pure evil) to +1000 (pure good).
+    /// Good: >= 350, Evil: <= -350, Neutral: between -349 and +349.
+    /// Used for weapon special effects (blessed/evil weapons) and alignment-based spells.
+    /// </summary>
+    int Alignment { get; }
+    
+    /// <summary>
     /// Gets the proficiency level (0-100) for a specific skill.
     /// Returns 0 if the combatant doesn't have the skill.
     /// </summary>

@@ -127,15 +127,24 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
 
             // Get wielded weapon for damage calculation
             ObjectWeapon? weaponDetails = null;
+            ObjectInstance? weapon = null;
             if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
             {
-                var weapon = _worldState.GetObjectInstance(weaponInstanceId);
+                weapon = _worldState.GetObjectInstance(weaponInstanceId);
                 weaponDetails = weapon?.Definition.Details?.Weapon;
             }
 
             // Perform initial attack
             int mobMaxHp = mobInstance.Definition.MaxHitPoints;
             int damage = _combatCalculator.CalculateDamage(attacker, weaponDetails);
+            
+            // Apply weapon special effects (bless/evil/flame)
+            if (weapon != null)
+            {
+                int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, mobInstance);
+                damage += weaponEffectDamage;
+            }
+            
             mobInstance.HitPoints -= (short)damage;
 
             // Format combat messages
