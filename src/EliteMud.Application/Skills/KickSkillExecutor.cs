@@ -77,6 +77,9 @@ public sealed class KickSkillExecutor : ISkillExecutor
         var hit = KickSkill.RollHit(attacker, victim);
         if (!hit)
         {
+            // Apply combat lag even on miss (legacy: WAIT_STATE applied after damage())
+            attacker.WaitState = CombatConstants.WaitStates.Kick;
+            
             return SkillResult.Succeeded(
                 new SkillMessage(SkillMessageTarget.Actor, "you try to kick $N, but miss!", victim),
                 new SkillMessage(SkillMessageTarget.Victim, "$n tries to kick you, but misses!"),
