@@ -417,6 +417,148 @@
       ],
       "Bitvectors": [],
       "SpecialProc": null
+    },
+    {
+      "Id": 99910,
+      "Name": "boots saving test",
+      "ShortDescription": "test boots of protection",
+      "LongDescription": "Sturdy test boots of protection rest here.",
+      "Description": "These magical boots improve your saving throws.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Feet"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 2
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 1200,
+      "CostPerDay": 12,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "SavingPhysical",
+          "Modifier": -5
+        },
+        {
+          "Location": "SavingMental",
+          "Modifier": -3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99911,
+      "Name": "bracers magic test",
+      "ShortDescription": "test bracers of magic resistance",
+      "LongDescription": "Glowing test bracers of magic resistance are here.",
+      "Description": "These bracers protect against magic and poison.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Arms"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3
+        },
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 2,
+      "Cost": 1500,
+      "CostPerDay": 15,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": 10
+        },
+        {
+          "Location": "SavingMagic",
+          "Modifier": -4
+        },
+        {
+          "Location": "SavingPoison",
+          "Modifier": -3
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 99912,
+      "Name": "robe flat armor test",
+      "ShortDescription": "test robe with flat armor bonus",
+      "LongDescription": "A test robe with flat armor bonus lies here.",
+      "Description": "This robe provides a flat -10 AC bonus with NO slot multiplier.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": ["Take", "Body"],
+      "Values": [0, 0, 0, 0, 0, 0],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Liquid": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 5,
+      "Cost": 500,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [],
+      "Affects": [
+        {
+          "Location": "Armor",
+          "Modifier": -10
+        }
+      ],
+      "Bitvectors": [],
+      "SpecialProc": null
     }
   ]
 }

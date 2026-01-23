@@ -876,7 +876,8 @@ internal static class ContentLoader
             "wisdom" or "wis" => AffectLocation.Wisdom,
             "constitution" or "con" => AffectLocation.Constitution,
             "charisma" or "cha" => AffectLocation.Charisma,
-            "armorclass" or "armor" or "ac" => AffectLocation.ArmorClass,
+            "armor" or "ac" => AffectLocation.Armor,  // Flat AC from Affects, no multiplier
+            "armorclass" => AffectLocation.ArmorClass, // Reserved for Details conversion with multiplier
             "hitroll" => AffectLocation.Hitroll,
             "damroll" => AffectLocation.Damroll,
             "saving_physical" or "savingphysical" => AffectLocation.SavingPhysical,

@@ -338,6 +338,7 @@ public static class WorldStateExtensions
     /// <summary>
     /// Get effective armor class including spell affects AND equipment bonuses.
     /// Lower is better (negative AC is good).
+    /// Includes both Armor (flat) and ArmorClass (with slot multiplier) locations.
     /// Use this instead of player.GetEffectiveArmorClass() to include equipment.
     /// </summary>
     public static short GetTotalEffectiveArmorClass(this IWorldState worldState, PlayerState player)
@@ -345,13 +346,14 @@ public static class WorldStateExtensions
         // Start with base AC
         short effectiveAC = player.ArmorClass;
         
-        // Add spell affect modifiers
-        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.ArmorClass))
+        // Add spell affect modifiers (both Armor and ArmorClass)
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Armor || a.Location == AffectLocation.ArmorClass))
         {
             effectiveAC += (short)affect.Modifier;
         }
         
-        // Add equipment bonuses
+        // Add equipment bonuses (both Armor and ArmorClass)
+        effectiveAC += (short)worldState.GetEquipmentBonus(player, AffectLocation.Armor);
         effectiveAC += (short)worldState.GetEquipmentBonus(player, AffectLocation.ArmorClass);
         
         return effectiveAC;

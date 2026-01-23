@@ -295,12 +295,13 @@ public enum AffectLocation
     Charisma = 6,
     
     // === VITALS ===
-    MaxHit = 13,           // Max HP bonus
     MaxMana = 12,          // Max Mana bonus
+    MaxHit = 13,           // Max HP bonus
     MaxMovement = 14,      // Max Movement bonus
     
     // === COMBAT STATS ===
-    ArmorClass = 17,       // AC modifier (negative is better)
+    Armor = 15,            // Flat AC bonus (no slot multiplier from items)
+    ArmorClass = 17,       // AC modifier (negative is better, gets slot multiplier from Details)
     Hitroll = 18,          // To-hit bonus
     Damroll = 19,          // Damage bonus
     

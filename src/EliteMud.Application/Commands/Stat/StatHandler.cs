@@ -86,8 +86,12 @@ public sealed class StatHandler
 
         // Line 4: AC, Hitroll, Damroll, THAC0 - all values in red
         var baseAC = player.ArmorClass;
-        var acSpellMod = GetSpellModifier(player, AffectLocation.ArmorClass);
-        var acEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.ArmorClass);
+        var acSpellModArmor = GetSpellModifier(player, AffectLocation.Armor);
+        var acSpellModArmorClass = GetSpellModifier(player, AffectLocation.ArmorClass);
+        var acEquipModArmor = _worldState.GetEquipmentBonus(player, AffectLocation.Armor);
+        var acEquipModArmorClass = _worldState.GetEquipmentBonus(player, AffectLocation.ArmorClass);
+        var acSpellMod = acSpellModArmor + acSpellModArmorClass;
+        var acEquipMod = acEquipModArmor + acEquipModArmorClass;
         var acTotalMod = acSpellMod + acEquipMod;
         var effectiveAC = _worldState.GetTotalEffectiveArmorClass(player);
         
