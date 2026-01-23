@@ -29,13 +29,13 @@ public sealed class RegenerationService
     /// Calculate hit point gain for a player.
     /// Legacy formula: MaxHP * gain_count / (480 - 12 * CON) + CON/2
     /// </summary>
-    public static int CalculateHitPointGain(PlayerState player)
+    public static int CalculateHitPointGain(PlayerState player, int effectiveMaxHP)
     {
         // Legacy formula: gain = GET_MAX_HIT(ch) * ch->specials.gain_count / (480 - 12 * GET_CON(ch)) + GET_CON(ch)/2
         int divisor = 480 - 12 * player.Constitution;
         if (divisor <= 0) divisor = 1;  // Prevent divide by zero for very high CON
         
-        int gain = player.MaxHitPoints * player.GainCount / divisor + player.Constitution / 2;
+        int gain = effectiveMaxHP * player.GainCount / divisor + player.Constitution / 2;
         
         // TODO: Add bonuses for AFF_REGENERATION or REGEN room flag when affects system exists
         // if (IS_AFFECTED(ch, AFF_REGENERATION) || ROOM_FLAGGED(IN_ROOM(ch), REGEN))
@@ -51,13 +51,13 @@ public sealed class RegenerationService
     /// Calculate mana point gain for a player.
     /// Legacy formula: MaxMana * gain_count / (480 - 12 * WIS) + WIS/2
     /// </summary>
-    public static int CalculateManaGain(PlayerState player)
+    public static int CalculateManaGain(PlayerState player, int effectiveMaxMana)
     {
         // Legacy formula: gain = GET_MAX_MANA(ch) * ch->specials.gain_count / (480 - 12 * GET_WIS(ch)) + GET_WIS(ch)/2
         int divisor = 480 - 12 * player.Wisdom;
         if (divisor <= 0) divisor = 1;  // Prevent divide by zero for very high WIS
         
-        int gain = player.MaxMana * player.GainCount / divisor + player.Wisdom / 2;
+        int gain = effectiveMaxMana * player.GainCount / divisor + player.Wisdom / 2;
         
         // TODO: Reduce gain if poisoned (gain >>= 2) when affects system exists
         // TODO: Reduce gain if hungry/thirsty when hunger/thirst system exists
@@ -69,13 +69,13 @@ public sealed class RegenerationService
     /// Calculate movement point gain for a player.
     /// Legacy formula: MaxMove * gain_count / (70 - STR) + STR/2
     /// </summary>
-    public static int CalculateMovementGain(PlayerState player)
+    public static int CalculateMovementGain(PlayerState player, int effectiveMaxMove)
     {
         // Legacy formula: gain = GET_MAX_MOVE(ch) * ch->specials.gain_count / (70 - GET_STR(ch)) + GET_STR(ch)/2
         int divisor = 70 - player.Strength;
         if (divisor <= 0) divisor = 1;  // Prevent divide by zero for very high STR
         
-        int gain = player.MaxMovement * player.GainCount / divisor + player.Strength / 2;
+        int gain = effectiveMaxMove * player.GainCount / divisor + player.Strength / 2;
         
         // TODO: Reduce gain if poisoned (gain >>= 2) when affects system exists
         // TODO: Reduce gain if hungry/thirsty when hunger/thirst system exists
@@ -89,7 +89,7 @@ public sealed class RegenerationService
     /// After regeneration, resets gain_count to 0.
     /// Returns true if any regeneration occurred.
     /// </summary>
-    public static bool RegeneratePlayer(PlayerState player)
+    public static bool RegeneratePlayer(PlayerState player, int effectiveMaxHP, int effectiveMaxMana, int effectiveMaxMove)
     {
         // Only regenerate if player is stunned or better (not dead/incap/mortally wounded)
         // Legacy: if (GET_POS(i) >= POS_STUNNED)
@@ -101,28 +101,28 @@ public sealed class RegenerationService
         bool anyChange = false;
         
         // Calculate gains using accumulated gain_count
-        int hitGain = CalculateHitPointGain(player);
-        int manaGain = CalculateManaGain(player);
-        int moveGain = CalculateMovementGain(player);
+        int hitGain = CalculateHitPointGain(player, effectiveMaxHP);
+        int manaGain = CalculateManaGain(player, effectiveMaxMana);
+        int moveGain = CalculateMovementGain(player, effectiveMaxMove);
         
-        // Apply HP regeneration (capped at max)
-        if (player.HitPoints < player.MaxHitPoints)
+        // Apply HP regeneration (capped at effective max)
+        if (player.HitPoints < effectiveMaxHP)
         {
-            player.HitPoints = (short)Math.Min(player.HitPoints + hitGain, player.MaxHitPoints);
+            player.HitPoints = (short)Math.Min(player.HitPoints + hitGain, effectiveMaxHP);
             anyChange = true;
         }
         
-        // Apply mana regeneration (capped at max)
-        if (player.Mana < player.MaxMana)
+        // Apply mana regeneration (capped at effective max)
+        if (player.Mana < effectiveMaxMana)
         {
-            player.Mana = (short)Math.Min(player.Mana + manaGain, player.MaxMana);
+            player.Mana = (short)Math.Min(player.Mana + manaGain, effectiveMaxMana);
             anyChange = true;
         }
         
-        // Apply movement regeneration (capped at max)
-        if (player.Movement < player.MaxMovement)
+        // Apply movement regeneration (capped at effective max)
+        if (player.Movement < effectiveMaxMove)
         {
-            player.Movement = (short)Math.Min(player.Movement + moveGain, player.MaxMovement);
+            player.Movement = (short)Math.Min(player.Movement + moveGain, effectiveMaxMove);
             anyChange = true;
         }
         

@@ -453,8 +453,9 @@ internal sealed class CastCommandHandler : ICommandHandler
         // Apply healing (only players can be healed for now)
         if (target is PlayerState targetPlayer)
         {
+            var effectiveMaxHP = _worldState.GetTotalEffectiveMaxHitPoints(targetPlayer);
             var oldHp = targetPlayer.HitPoints;
-            targetPlayer.HitPoints = (short)Math.Min(targetPlayer.HitPoints + healing, targetPlayer.MaxHitPoints);
+            targetPlayer.HitPoints = (short)Math.Min(targetPlayer.HitPoints + healing, effectiveMaxHP);
             var actualHealing = targetPlayer.HitPoints - oldHp;
 
             if (target == caster)

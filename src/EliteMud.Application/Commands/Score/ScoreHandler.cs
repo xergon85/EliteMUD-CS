@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.World;
 using EliteMud.Game;
 using System.Text;
 
@@ -6,7 +7,7 @@ namespace EliteMud.Application.Commands.Score;
 
 public sealed class ScoreHandler
 {
-    public CommandResult Handle(PlayerState player)
+    public CommandResult Handle(PlayerState player, IWorldState worldState)
     {
         var output = new StringBuilder();
         
@@ -28,7 +29,10 @@ public sealed class ScoreHandler
         //   output.AppendLine($"You are the devout worshipper of {player.Deity}.");
         
         // Line 3: HP, Mana, Movement
-        output.AppendLine($"You have #R{player.HitPoints}#N(#G{player.MaxHitPoints}#N) hp, #C{player.Mana}#N(#B{player.MaxMana}#N) mana and #Y{player.Movement}#N(#G{player.MaxMovement}#N) movement points.");
+        var effectiveMaxHP = worldState.GetTotalEffectiveMaxHitPoints(player);
+        var effectiveMaxMana = worldState.GetTotalEffectiveMaxMana(player);
+        var effectiveMaxMove = worldState.GetTotalEffectiveMaxMovement(player);
+        output.AppendLine($"You have #R{player.HitPoints}#N(#G{effectiveMaxHP}#N) hp, #C{player.Mana}#N(#B{effectiveMaxMana}#N) mana and #Y{player.Movement}#N(#G{effectiveMaxMove}#N) movement points.");
         
         // Line 4: Alignment
         var alignDesc = GetAlignmentDescription(player.Alignment);

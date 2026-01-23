@@ -398,4 +398,64 @@ public static class WorldStateExtensions
         
         return (sbyte)Math.Clamp(effectiveDamroll, sbyte.MinValue, sbyte.MaxValue);
     }
+    
+    /// <summary>
+    /// Get effective max HP including spell affects AND equipment bonuses.
+    /// Use this to display max HP with equipment bonuses.
+    /// </summary>
+    public static short GetTotalEffectiveMaxHitPoints(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveMaxHP = player.MaxHitPoints;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.MaxHit))
+        {
+            effectiveMaxHP += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveMaxHP += worldState.GetEquipmentBonus(player, AffectLocation.MaxHit);
+        
+        return (short)Math.Max(effectiveMaxHP, 1); // Min 1 HP
+    }
+    
+    /// <summary>
+    /// Get effective max Mana including spell affects AND equipment bonuses.
+    /// Use this to display max Mana with equipment bonuses.
+    /// </summary>
+    public static short GetTotalEffectiveMaxMana(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveMaxMana = player.MaxMana;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.MaxMana))
+        {
+            effectiveMaxMana += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveMaxMana += worldState.GetEquipmentBonus(player, AffectLocation.MaxMana);
+        
+        return (short)Math.Max(effectiveMaxMana, 0);
+    }
+    
+    /// <summary>
+    /// Get effective max Movement including spell affects AND equipment bonuses.
+    /// Use this to display max Movement with equipment bonuses.
+    /// </summary>
+    public static short GetTotalEffectiveMaxMovement(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveMaxMove = player.MaxMovement;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.MaxMovement))
+        {
+            effectiveMaxMove += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveMaxMove += worldState.GetEquipmentBonus(player, AffectLocation.MaxMovement);
+        
+        return (short)Math.Max(effectiveMaxMove, 0);
+    }
 }

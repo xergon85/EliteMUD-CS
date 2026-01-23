@@ -512,9 +512,9 @@ internal sealed class GameTickService
         victim.Player.Experience = Math.Max(0, victim.Player.Experience - expLoss);
 
         // Respawn the player at starting room
-        victim.Player.HitPoints = victim.Player.MaxHitPoints;
-        victim.Player.Mana = victim.Player.MaxMana;
-        victim.Player.Movement = victim.Player.MaxMovement;
+        victim.Player.HitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
+        victim.Player.Mana = _worldState.GetTotalEffectiveMaxMana(victim.Player);
+        victim.Player.Movement = _worldState.GetTotalEffectiveMaxMovement(victim.Player);
         victim.Player.Position = Position.Standing;
         victim.Player.RoomId = 1; // Respawn at starting room
         
@@ -556,9 +556,9 @@ internal sealed class GameTickService
         victim.Player.Experience = Math.Max(0, victim.Player.Experience - expLoss);
 
         // Respawn the player
-        victim.Player.HitPoints = victim.Player.MaxHitPoints;
-        victim.Player.Mana = victim.Player.MaxMana;
-        victim.Player.Movement = victim.Player.MaxMovement;
+        victim.Player.HitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
+        victim.Player.Mana = _worldState.GetTotalEffectiveMaxMana(victim.Player);
+        victim.Player.Movement = _worldState.GetTotalEffectiveMaxMovement(victim.Player);
         victim.Player.Position = Position.Standing;
         victim.Player.RoomId = 1; // Respawn at starting room
         
@@ -746,7 +746,10 @@ internal sealed class GameTickService
             try
             {
                 // Apply regeneration
-                bool didRegen = RegenerationService.RegeneratePlayer(connection.Player);
+                var effectiveMaxHP = _worldState.GetTotalEffectiveMaxHitPoints(connection.Player);
+                var effectiveMaxMana = _worldState.GetTotalEffectiveMaxMana(connection.Player);
+                var effectiveMaxMove = _worldState.GetTotalEffectiveMaxMovement(connection.Player);
+                bool didRegen = RegenerationService.RegeneratePlayer(connection.Player, effectiveMaxHP, effectiveMaxMana, effectiveMaxMove);
                 
                 if (didRegen)
                 {
