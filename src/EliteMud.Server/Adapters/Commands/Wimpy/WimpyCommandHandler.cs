@@ -4,9 +4,9 @@ using EliteMud.Server.Adapters.Commands.Shared;
 namespace EliteMud.Server.Adapters.Commands.Wimpy;
 
 [Command("wimpy")]
+// ReSharper disable once UnusedMember.Global
 internal sealed class WimpyCommandHandler : ICommandHandler
 {
-
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,
@@ -29,6 +29,7 @@ internal sealed class WimpyCommandHandler : ICommandHandler
                     "At the moment, you're not a wimp.  (sure, sure...)",
                     cancellationToken);
             }
+
             return CommandOutcome.Continue;
         }
 

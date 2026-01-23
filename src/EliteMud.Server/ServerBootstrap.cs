@@ -1,6 +1,5 @@
 using System.Net;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.Commands.Who;
 using EliteMud.Application.Session;
 using EliteMud.Application.Session.Authentication;
 using EliteMud.Application.World;
@@ -23,19 +22,19 @@ internal static class ServerBootstrap
     public static (TelnetServer Server, GameTickService TickService) CreateServer(int port)
     {
         var contentRoot = ResolveContentRoot();
-        
+
         WorldDefinition? world;
         IReadOnlyList<MobDefinition> mobs;
         IReadOnlyList<ObjectDefinition> objects;
         IReadOnlyList<ZoneDefinition> zones;
-        
+
         // Try loading from zone-grouped files first
         var zonesDirectory = Path.Combine(contentRoot, "..", "zones");
         if (Directory.Exists(zonesDirectory))
         {
             Console.WriteLine($"Found zone-grouped content in {zonesDirectory}");
             (world, mobs, objects, zones) = ContentLoader.LoadFromZoneFiles(zonesDirectory);
-            
+
             if (world is not null)
             {
                 return CreateServerFromContent(port, world, mobs, objects, zones, contentRoot);
@@ -90,15 +89,15 @@ internal static class ServerBootstrap
             // World and scripting
             .AddSingleton<IWorldState>(worldState)
             .AddSingleton(scriptEngine)
-            
+
             // Database
             .AddDbContext<EliteMudDbContext>(options =>
                 options.UseSqlite(connectionString))
-            
+
             // Repositories
             .AddScoped<IAccountRepository, AccountRepository>()
             .AddScoped<ICharacterRepository, CharacterRepository>()
-            
+
             // Services
             .AddSingleton<IPasswordService, PasswordServiceAdapter>()
             .AddSingleton<IpBanService>(new IpBanService(banDurationMinutes: 15, maxFailedAttempts: 3))
@@ -106,7 +105,7 @@ internal static class ServerBootstrap
             .AddSingleton<ActMessageService>()
             .AddSingleton<GameTickService>()
             .AddSingleton<CharacterSaveQueue>()
-            
+
             // Commands and other services
             .AddCommandHandlers()
             .BuildServiceProvider();
@@ -128,7 +127,8 @@ internal static class ServerBootstrap
         var tickService = services.GetRequiredService<GameTickService>();
         var saveQueue = services.GetRequiredService<CharacterSaveQueue>();
 
-        var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry, authHandler, services, ipBanService, worldState, saveQueue);
+        var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry,
+            authHandler, services, ipBanService, worldState, saveQueue);
         return (server, tickService);
     }
 

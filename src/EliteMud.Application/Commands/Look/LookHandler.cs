@@ -27,7 +27,7 @@ public sealed class LookHandler
                 : mob.Definition.LongDescription;
 
             // Trim all whitespace and newlines
-            line = line?.Trim();
+            line = line.Trim();
 
             if (!string.IsNullOrWhiteSpace(line))
             {
