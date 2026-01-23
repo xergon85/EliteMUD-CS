@@ -5,7 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Wake;
 
-[Command("wake")]
+[Command("wake", Aliases = new[] { "wake", "wa" })]
 internal sealed class WakeCommandHandler : ICommandHandler
 {
     private readonly ConnectionRegistry _connectionRegistry;
