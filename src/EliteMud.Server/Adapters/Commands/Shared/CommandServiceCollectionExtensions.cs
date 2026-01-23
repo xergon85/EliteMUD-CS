@@ -8,11 +8,6 @@ using EliteMud.Application.Skills;
 using EliteMud.Application.World;
 using EliteMud.Game;
 using EliteMud.Legacy.Import;
-using EliteMud.Server.Adapters.Commands.ImportLegacy;
-using EliteMud.Server.Adapters.Commands.Look;
-using EliteMud.Server.Adapters.Commands.Move;
-using EliteMud.Server.Adapters.Commands.ResetZone;
-using EliteMud.Server.Adapters.Commands.Say;
 using EliteMud.Server.Adapters.Commands.Skills;
 using EliteMud.Server.Adapters.Commands.Who;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,34 +28,29 @@ internal static class CommandServiceCollectionExtensions
                 var dodgeSkill = skillRegistry.GetPassiveSkill(SkillType.Dodge);
                 return new CombatCalculator(dodgeSkill);
             })
-
-            // Auto-register all skill executors (makes them available as commands)
             .AddSkillExecutors()
             
-            // Infrastructure services
+            // Infrastructure
             .AddSingleton<CommandCatalog>()
             .AddSingleton<PromptCatalog>()
             .AddSingleton<ConnectionRegistry>()
             
-            // Helper classes (not command handlers themselves)
+            // Business logic helpers (not command handlers)
             .AddSingleton<LegacyContentImporter>()
             .AddSingleton<ImportLegacyHandler>()
             .AddSingleton<FleeHandler>()
             .AddSingleton<ScoreHandler>()
 
-            // Auto-discover and register all command handlers with [Command] attribute
+            // Auto-discover all command handlers with [Command] attribute
             .AddCommandHandlersViaReflection()
             
-            // Register WhoCommandHandler as IConnectionDirectory
-            // (deferred resolution to avoid issues during container build)
+            // Special interface registration
             .AddSingleton<IConnectionDirectory>(provider =>
                 provider.GetRequiredService<WhoCommandHandler>())
 
-            // Build command router from all registered handlers
-            // Use factory with IServiceProvider to enable lazy resolution
+            // Command routing
             .AddSingleton<CommandRouter>(provider =>
             {
-                // Lazy enumeration - handlers won't be created until first use
                 var handlers = provider.GetServices<ICommandHandler>();
                 return new CommandRouter(handlers);
             });
