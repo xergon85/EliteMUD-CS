@@ -26,7 +26,7 @@ public enum EquipmentSlot
     BothHands = 19
 }
 
-public sealed class MobInstance
+public sealed class MobInstance : ICombatant
 {
     private readonly Dictionary<EquipmentSlot, ObjectInstance> _equipment = new();
 
@@ -35,7 +35,7 @@ public sealed class MobInstance
         InstanceId = instanceId;
         Definition = definition;
         // Initialize HP from mob definition's MaxHitPoints
-        HitPoints = definition.MaxHitPoints;
+        HitPoints = (short)Math.Min(definition.MaxHitPoints, short.MaxValue);
     }
 
     public int InstanceId { get; }
@@ -46,7 +46,34 @@ public sealed class MobInstance
     public int? FightingConnectionId { get; set; } // The player connection ID this mob is fighting
     public int? FightingMobInstanceId { get; set; } // The mob instance ID this mob is fighting (for mob-vs-mob combat)
     public Position Position { get; set; } = Position.Standing;
-    public int HitPoints { get; set; } // Current HP
+    
+    // ICombatant implementation
+    public string Name => Definition.ShortDescription;
+    public short HitPoints { get; set; } // Current HP
+    public short MaxHitPoints => (short)Math.Min(Definition.MaxHitPoints, short.MaxValue);
+    public short ArmorClass => (short)Math.Clamp(Definition.ArmorClass, short.MinValue, short.MaxValue);
+    public byte Level => (byte)Math.Min(Definition.Level, byte.MaxValue);
+    
+    /// <summary>
+    /// Get skill proficiency for this mob.
+    /// TODO: Parse Definition.Skills list and return actual proficiency.
+    /// For now, mobs don't have skills - returns 0.
+    /// </summary>
+    public byte GetSkill(SkillType skillType)
+    {
+        // TODO: Parse Definition.Skills string list to SkillType and proficiency
+        return 0;
+    }
+    
+    /// <summary>
+    /// Check if mob has a skill.
+    /// TODO: Parse Definition.Skills list.
+    /// For now, mobs don't have skills - returns false.
+    /// </summary>
+    public bool HasSkill(SkillType skillType)
+    {
+        return false;
+    }
 
     public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> Equipment => _equipment;
 

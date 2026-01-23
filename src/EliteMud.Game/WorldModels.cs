@@ -98,10 +98,11 @@ public sealed record ZoneDefinition(
     string ResetMode,
     IReadOnlyList<ZoneResetDefinition> ResetCommands);
 
-public sealed class PlayerState
+public sealed class PlayerState : ICombatant
 {
     private readonly List<int> _inventoryObjectIds = new();
     private readonly Dictionary<int, int> _equipmentSlotToObjectId = new(); // slot -> objectInstanceId
+    private readonly Dictionary<SkillType, byte> _skills = new(); // skill -> proficiency (0-100)
 
     public PlayerState(
         int id,
@@ -251,6 +252,67 @@ public sealed class PlayerState
             return true;
         }
         objectInstanceId = 0;
+        return false;
+    }
+
+    // ===== Skills & Spells =====
+    
+    /// <summary>
+    /// Get skill proficiency (0-100 percentage).
+    /// Legacy: GET_SKILL(ch, skill) macro
+    /// </summary>
+    public byte GetSkill(SkillType skillType)
+    {
+        if (_skills.TryGetValue(skillType, out var proficiency))
+        {
+            return proficiency;
+        }
+        return 0;
+    }
+
+    /// <summary>
+    /// Set skill proficiency (0-100 percentage).
+    /// Legacy: SET_SKILL(ch, skill, percent) macro
+    /// </summary>
+    public void SetSkill(SkillType skillType, byte proficiency)
+    {
+        _skills[skillType] = Math.Min((byte)100, proficiency);
+    }
+
+    /// <summary>
+    /// Checks if the character has learned a specific skill (proficiency > 0).
+    /// Part of ICombatant interface.
+    /// </summary>
+    public bool HasSkill(SkillType skillType)
+    {
+        return GetSkill(skillType) > 0;
+    }
+
+    /// <summary>
+    /// Get all learned skills as a read-only dictionary.
+    /// Used for persistence and skill display.
+    /// </summary>
+    public IReadOnlyDictionary<SkillType, byte> GetAllSkills()
+    {
+        return _skills;
+    }
+
+    /// <summary>
+    /// Improve skill by 1% if improvement check passes.
+    /// Legacy: improve_skill(ch, skill) - act.other.c:52-74
+    /// </summary>
+    public bool TryImproveSkill(SkillType skillType)
+    {
+        var currentPercent = GetSkill(skillType);
+        if (currentPercent >= 100) return false; // Already maxed
+        
+        // Legacy: if (number(0, 99) > percent) { percent++; SET_SKILL(ch, skill, percent); }
+        if (Random.Shared.Next(0, 100) > currentPercent)
+        {
+            SetSkill(skillType, (byte)(currentPercent + 1));
+            return true;
+        }
+        
         return false;
     }
 }

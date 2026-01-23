@@ -208,13 +208,19 @@ internal sealed class GameTickService
     {
         // Mob does damage
         var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-        var actualDamage = CombatCalculator.ApplyDamage(victim.Player, mobDamage);
+        var damageResult = CombatCalculator.ApplyDamage(victim.Player, mobDamage);
+        
+        // Show dodge message if dodged
+        if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
+        {
+            await victim.Session.SendLineAsync(damageResult.Message, cancellationToken);
+        }
         
         // Format legacy combat messages
         var victimMsg = CombatMessageFormatter.FormatCombatMessage(
             mob.Definition.ShortDescription,
             victim.Player.Name,
-            actualDamage,
+            damageResult.Damage,
             victim.Player.MaxHitPoints,
             MessagePerspective.ToVict);
         
@@ -226,7 +232,7 @@ internal sealed class GameTickService
         var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
             victim.Player.MaxHitPoints, 
             victim.Player.HitPoints, 
-            actualDamage);
+            damageResult.Damage);
         if (feedbackMsg != null)
         {
             await victim.Session.SendLineAsync(feedbackMsg, cancellationToken);
@@ -236,7 +242,7 @@ internal sealed class GameTickService
         var roomMsg = CombatMessageFormatter.FormatCombatMessage(
             mob.Definition.ShortDescription,
             victim.Player.Name,
-            actualDamage,
+            damageResult.Damage,
             victim.Player.MaxHitPoints,
             MessagePerspective.ToRoom);
             
@@ -257,6 +263,20 @@ internal sealed class GameTickService
         ConnectionContext victim,
         CancellationToken cancellationToken)
     {
+        // Double-check that both players are still in fighting state
+        // (guards against race conditions with kick/kill commands)
+        if (attacker.Player.Position < Position.Fighting || attacker.Player.FightingConnectionId == null)
+        {
+            return;
+        }
+        
+        if (victim.Player.Position == Position.Dead)
+        {
+            // Victim died (possibly from concurrent kick command)
+            CombatCalculator.StopFighting(attacker.Player);
+            return;
+        }
+        
         var result = CombatCalculator.PerformAttack(attacker.Player, victim.Player);
         
         // Format legacy combat messages
@@ -329,6 +349,13 @@ internal sealed class GameTickService
         int mobInstanceId,
         CancellationToken cancellationToken)
     {
+        // Double-check that player is still in fighting state
+        // (guards against race conditions with commands)
+        if (attacker.Player.Position < Position.Fighting || attacker.Player.FightingConnectionId == null)
+        {
+            return;
+        }
+        
         // Find the mob in the player's room
         var mobs = _worldState.GetMobsInRoom(attacker.Player.RoomId);
         var mob = mobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
@@ -346,7 +373,7 @@ internal sealed class GameTickService
         
         // Player attacks mob
         int damage = CombatCalculator.CalculateBareDamage(attacker.Player);
-        mob.HitPoints -= damage;
+        mob.HitPoints -= (short)damage;
         
         // Format legacy combat messages for player hitting mob
         var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
@@ -386,13 +413,19 @@ internal sealed class GameTickService
         {
             // Mob fights back
             var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-            var actualDamage = CombatCalculator.ApplyDamage(attacker.Player, mobDamage);
+            var mobDamageResult = CombatCalculator.ApplyDamage(attacker.Player, mobDamage);
+            
+            // Show dodge message if dodged
+            if (mobDamageResult.Dodged && !string.IsNullOrEmpty(mobDamageResult.Message))
+            {
+                await attacker.Session.SendLineAsync(mobDamageResult.Message, cancellationToken);
+            }
             
             // Format legacy combat messages for mob hitting player
             var mobAttackMsg = CombatMessageFormatter.FormatCombatMessage(
                 mob.Definition.ShortDescription,
                 attacker.Player.Name,
-                actualDamage,
+                mobDamageResult.Damage,
                 attacker.Player.MaxHitPoints,
                 MessagePerspective.ToVict);
             
@@ -404,7 +437,7 @@ internal sealed class GameTickService
             var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
                 attacker.Player.MaxHitPoints,
                 attacker.Player.HitPoints,
-                actualDamage);
+                mobDamageResult.Damage);
             if (feedbackMsg != null)
             {
                 await attacker.Session.SendLineAsync(feedbackMsg, cancellationToken);
@@ -414,7 +447,7 @@ internal sealed class GameTickService
             var mobRoomMsg = CombatMessageFormatter.FormatCombatMessage(
                 mob.Definition.ShortDescription,
                 attacker.Player.Name,
-                actualDamage,
+                mobDamageResult.Damage,
                 attacker.Player.MaxHitPoints,
                 MessagePerspective.ToRoom);
                 

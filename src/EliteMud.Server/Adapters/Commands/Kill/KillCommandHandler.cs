@@ -174,7 +174,7 @@ internal sealed class KillCommandHandler : ICommandHandler
         // Perform initial attack
         int mobMaxHp = mob.Definition.MaxHitPoints;
         int damage = CombatCalculator.CalculateBareDamage(attacker.Player);
-        mob.HitPoints -= damage;
+        mob.HitPoints -= (short)damage;
         
         // Format legacy combat messages
         var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
