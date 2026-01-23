@@ -155,9 +155,9 @@
 - ✅ `wimpy` command - auto-flee at low HP threshold - DONE
 
 #### 4.2 Combat Commands
-- ✅ `kick` - unarmed attack (POC COMPLETE, ready for framework extraction)
-- ❌ `bash` - shield bash attack
-- ❌ `rescue` - take aggro from group member
+- ✅ `kick` - unarmed attack (COMPLETE)
+- ✅ `bash` - shield bash attack (COMPLETE)
+- ✅ `rescue` - take aggro from group member (COMPLETE - PvE only for now)
 - ❌ `consider` - estimate mob difficulty
 
 #### 4.3 Skills & Spells Framework - POC COMPLETE ✅
@@ -188,10 +188,11 @@
 6. ⏳ Add position-based skill restrictions
 
 **Future - Expand Skill Set:**
-- ❌ `bash` - shield bash skill
-- ❌ `backstab` - rogue sneak attack
+- ✅ `bash` - shield bash skill (COMPLETE - Jan 23, 2026)
+- ✅ `backstab` - rogue sneak attack (COMPLETE - Jan 23, 2026)
+- ✅ `parry` - passive block with weapon (COMPLETE - Jan 23, 2026)
+- ✅ `rescue` - take over combat from ally (COMPLETE - Jan 23, 2026)
 - ❌ `circle` - circle around to backstab again
-- ❌ `parry` - passive block with weapon
 - ❌ `tumble` - passive dodge improvement
 - ❌ `disarm` - remove opponent's weapon
 - ❌ `trip` - knock opponent down
@@ -417,7 +418,19 @@
   - Mob death (corpse creation with equipment transfer)
   - Combat messaging with ActMessage integration
 
-### ✅ RECENTLY COMPLETED (Jan 23, 2026)
+### ✅ RECENTLY COMPLETED (Jan 23, 2026 - Session 2)
+- ✅ **Additional Combat Skills - COMPLETE**
+  - ✅ Bash skill (shield attack, knocks victim sitting, 10 damage, 2 rounds WAIT_STATE)
+  - ✅ Backstab skill (surprise attack with 1x-5x damage multiplier, requires unsuspecting victim, 3 rounds WAIT_STATE)
+  - ✅ Parry passive skill (block attacks with shield, reduces damage by level, harder to trigger than dodge)
+  - ✅ Rescue skill (redirect combat from ally to rescuer, PvE only for now, 2 rounds WAIT_STATE)
+  - ✅ Integrated parry into CombatCalculator damage pipeline (checked after dodge fails)
+  - ✅ Fixed setskill command to support all new skills (backstab, bs alias, rescue)
+  - ✅ Resolved nullable reference warnings in CombatCalculator
+  - ✅ All 70 tests passing, 0 warnings, 0 errors
+  - ✅ Committed: 4 new active skills + 1 passive skill with full legacy mechanics
+
+### ✅ RECENTLY COMPLETED (Jan 23, 2026 - Session 1)
 - ✅ **Skills & Spells POC - COMPLETE & VALIDATED**
   - ✅ Active skill system (kick command with damage calculation)
   - ✅ Passive skill system (dodge with damage reduction)
@@ -506,12 +519,12 @@
    - ✅ Implementation: WorldModels.cs:312-361, CombatConstants:33-36
    - ✅ Tests: SkillSystemTests.cs (2 new tests for cooldown verification)
 
-8. **Add More Skills** (Long-term)
-   - bash (shield attack)
-   - backstab (rogue skill)
-   - parry (passive defense)
-   - rescue (tank skill)
-   - disarm, trip, circle, etc.
+8. ✅ **Add More Skills** (Long-term) - IN PROGRESS (4 of 8 core skills complete)
+   - ✅ bash (shield attack) - COMPLETE
+   - ✅ backstab (rogue skill) - COMPLETE
+   - ✅ parry (passive defense) - COMPLETE
+   - ✅ rescue (tank skill) - COMPLETE (PvE only)
+   - ❌ disarm, trip, circle, tumble (deferred to later phase)
 
 ### 📋 DEFERRED (Future Phases)
 - Spell system (similar to skills but with mana costs)
