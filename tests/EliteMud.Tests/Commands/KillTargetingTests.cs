@@ -118,7 +118,9 @@ public class KillTargetingTests
             Resistances: new List<string>(),
             Skills: new List<string>(),
             ArmorClass: 50,
-            MaxHitPoints: 50
+            MaxHitPoints: 50,
+            Attacks: new List<MobAttack>(),
+            Combat: null
         );
 
         return new MobInstance(instanceId, def);

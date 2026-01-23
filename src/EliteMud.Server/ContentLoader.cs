@@ -133,6 +133,32 @@ internal static class ContentLoader
             int armorClass = mob.Combat?.Armor ?? Math.Min(100, mob.Level * 10);
             int maxHitPoints = ParseHitDice(mob.Resources?.HitDice, mob.Level);
             
+            // Parse attacks
+            var attacks = new List<MobAttack>();
+            if (mob.Attacks != null)
+            {
+                foreach (var attack in mob.Attacks)
+                {
+                    var (diceCount, diceSides, bonus) = ParseDiceString(attack.DamageDice);
+                    attacks.Add(new MobAttack(
+                        attack.Type ?? "Hit",
+                        attack.DamageType,
+                        attack.Chance,
+                        diceCount,
+                        diceSides,
+                        bonus));
+                }
+            }
+            
+            // Parse combat stats
+            MobCombat? combat = null;
+            if (mob.Combat != null)
+            {
+                combat = new MobCombat(
+                    mob.Combat.Hitroll,
+                    mob.Combat.Damroll);
+            }
+            
             mobs.Add(new MobDefinition(
                 mob.Id,
                 mob.Name ?? string.Empty,
@@ -153,7 +179,9 @@ internal static class ContentLoader
                 mob.Resistances ?? new List<string>(),
                 mob.Skills ?? new List<string>(),
                 armorClass,
-                maxHitPoints));
+                maxHitPoints,
+                attacks,
+                combat));
         }
 
         return mobs;
@@ -599,7 +627,9 @@ internal static class ContentLoader
             mob.Resistances ?? new List<string>(),
             mob.Skills ?? new List<string>(),
             armorClass,
-            maxHitPoints);
+            maxHitPoints,
+            Array.Empty<MobAttack>(), // Bootstrap mobs have no attacks
+            null); // Bootstrap mobs have no combat stats
     }
 
     /// <summary>
@@ -663,6 +693,68 @@ internal static class ContentLoader
         catch
         {
             return level * 10;
+        }
+    }
+
+    /// <summary>
+    /// Parse dice string format "XdY+Z" into components.
+    /// Example: "4d30+10" returns (4, 30, 10)
+    /// </summary>
+    private static (int diceCount, int diceSides, int bonus) ParseDiceString(string? diceString)
+    {
+        if (string.IsNullOrWhiteSpace(diceString))
+        {
+            return (0, 0, 0);
+        }
+
+        try
+        {
+            // Format: "XdY+Z" or "XdY" or "XdY-Z"
+            var parts = diceString.Split('d');
+            if (parts.Length != 2)
+            {
+                return (0, 0, 0);
+            }
+
+            if (!int.TryParse(parts[0], out int numDice))
+            {
+                return (0, 0, 0);
+            }
+
+            var secondPart = parts[1];
+            int bonus = 0;
+            int diceSize;
+
+            if (secondPart.Contains('+'))
+            {
+                var subParts = secondPart.Split('+');
+                if (!int.TryParse(subParts[0], out diceSize) || !int.TryParse(subParts[1], out bonus))
+                {
+                    return (0, 0, 0);
+                }
+            }
+            else if (secondPart.Contains('-'))
+            {
+                var subParts = secondPart.Split('-');
+                if (!int.TryParse(subParts[0], out diceSize) || !int.TryParse(subParts[1], out int penalty))
+                {
+                    return (0, 0, 0);
+                }
+                bonus = -penalty;
+            }
+            else
+            {
+                if (!int.TryParse(secondPart, out diceSize))
+                {
+                    return (0, 0, 0);
+                }
+            }
+
+            return (numDice, diceSize, bonus);
+        }
+        catch
+        {
+            return (0, 0, 0);
         }
     }
 
@@ -950,6 +1042,15 @@ internal static class ContentLoader
         public List<string>? Skills { get; set; }
         public ResourcesContent? Resources { get; set; }
         public CombatContent? Combat { get; set; }
+        public List<AttackContent>? Attacks { get; set; }
+    }
+    
+    private sealed class AttackContent
+    {
+        public string? Type { get; set; }
+        public int DamageType { get; set; }
+        public int Chance { get; set; }
+        public string? DamageDice { get; set; }
     }
     
     private sealed class ResourcesContent

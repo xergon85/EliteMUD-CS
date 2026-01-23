@@ -84,6 +84,26 @@ public sealed record StatBlock(
     int Constitution,
     int Charisma);
 
+/// <summary>
+/// Represents a mob's natural attack (claws, bite, etc.)
+/// Legacy: ch->mob_specials.attacks[] array
+/// </summary>
+public sealed record MobAttack(
+    string Type,
+    int DamageType,
+    int Chance,
+    int DamageDiceCount,
+    int DamageDiceSides,
+    int DamageBonus);
+
+/// <summary>
+/// Represents a mob's base combat stats (before equipment)
+/// Legacy: ch->points.armor, ch->points.hitroll, ch->points.damroll
+/// </summary>
+public sealed record MobCombat(
+    int Hitroll,
+    int Damroll);
+
 public sealed record MobDefinition(
     int Id,
     string Name,
@@ -98,7 +118,9 @@ public sealed record MobDefinition(
     IReadOnlyList<string> Resistances,
     IReadOnlyList<string> Skills,
     int ArmorClass,
-    int MaxHitPoints)
+    int MaxHitPoints,
+    IReadOnlyList<MobAttack> Attacks,
+    MobCombat? Combat)
 {
     // Clean string properties on construction
     public string Name { get; init; } = TextCleaner.Clean(Name);

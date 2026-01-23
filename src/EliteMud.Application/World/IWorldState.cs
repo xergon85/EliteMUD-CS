@@ -460,4 +460,91 @@ public static class WorldStateExtensions
         
         return (short)Math.Max(effectiveMaxMove, 0);
     }
+    
+    // ===== Mob Equipment Bonuses =====
+    
+    /// <summary>
+    /// Get total equipment bonus for a mob's specific affect location.
+    /// Sums all modifiers from equipped items affecting that location.
+    /// </summary>
+    public static int GetMobEquipmentBonus(MobInstance mob, AffectLocation location)
+    {
+        int total = 0;
+        
+        foreach (var (slot, obj) in mob.Equipment)
+        {
+            foreach (var affect in obj.Definition.Affects)
+            {
+                if (affect.Location == location)
+                {
+                    total += affect.Modifier;
+                }
+            }
+        }
+        
+        return total;
+    }
+    
+    /// <summary>
+    /// Get effective armor class for a mob including equipment bonuses.
+    /// Lower is better (negative AC is good).
+    /// Includes both Armor (flat) and ArmorClass (with slot multiplier) locations.
+    /// </summary>
+    public static short GetMobEffectiveArmorClass(MobInstance mob)
+    {
+        // Start with base AC from mob definition
+        short effectiveAC = (short)mob.Definition.ArmorClass;
+        
+        // Add spell affect modifiers (both Armor and ArmorClass)
+        foreach (var affect in mob.Affects.Where(a => a.Location == AffectLocation.Armor || a.Location == AffectLocation.ArmorClass))
+        {
+            effectiveAC += (short)affect.Modifier;
+        }
+        
+        // Add equipment bonuses (both Armor and ArmorClass)
+        effectiveAC += (short)GetMobEquipmentBonus(mob, AffectLocation.Armor);
+        effectiveAC += (short)GetMobEquipmentBonus(mob, AffectLocation.ArmorClass);
+        
+        return effectiveAC;
+    }
+    
+    /// <summary>
+    /// Get effective hitroll for a mob including equipment bonuses.
+    /// Combines base hitroll from Combat stats with equipment and affects.
+    /// </summary>
+    public static int GetMobEffectiveHitroll(MobInstance mob)
+    {
+        int effectiveHitroll = mob.Definition.Combat?.Hitroll ?? 0;
+        
+        // Add spell affects
+        foreach (var affect in mob.Affects.Where(a => a.Location == AffectLocation.Hitroll))
+        {
+            effectiveHitroll += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveHitroll += GetMobEquipmentBonus(mob, AffectLocation.Hitroll);
+        
+        return effectiveHitroll;
+    }
+    
+    /// <summary>
+    /// Get effective damroll for a mob including equipment bonuses.
+    /// Combines base damroll from Combat stats with equipment and affects.
+    /// </summary>
+    public static int GetMobEffectiveDamroll(MobInstance mob)
+    {
+        int effectiveDamroll = mob.Definition.Combat?.Damroll ?? 0;
+        
+        // Add spell affects
+        foreach (var affect in mob.Affects.Where(a => a.Location == AffectLocation.Damroll))
+        {
+            effectiveDamroll += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveDamroll += GetMobEquipmentBonus(mob, AffectLocation.Damroll);
+        
+        return effectiveDamroll;
+    }
 }

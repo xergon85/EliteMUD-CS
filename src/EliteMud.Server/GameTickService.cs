@@ -218,9 +218,51 @@ internal sealed class GameTickService
         ConnectionContext victim,
         CancellationToken cancellationToken)
     {
-        // Mob does damage
-        var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-        var damageResult = _combatCalculator.ApplyDamage(victim.Player, mobDamage);
+        // Calculate mob damage (legacy: fight.c:1440-1473)
+        // Base: str_todam + damroll
+        int damage = 0;
+        
+        // Get mob's effective damroll (base + equipment + affects)
+        int mobDamroll = WorldStateExtensions.GetMobEffectiveDamroll(mob);
+        damage += mobDamroll;
+        
+        // Get wielded weapon
+        ObjectWeapon? weaponDetails = null;
+        if (mob.Equipment.TryGetValue(EquipmentSlot.Wield, out var weapon))
+        {
+            weaponDetails = weapon.Definition.Details?.Weapon;
+        }
+        
+        if (weaponDetails != null)
+        {
+            // Wielded weapon: dam += dice(weapon.DiceCount, weapon.DiceSides)
+            damage += _combatCalculator.RollDice(weaponDetails.DiceCount, weaponDetails.DiceSides);
+            
+            // Mobs ALSO add their natural attack dice when wielding weapons (legacy: fight.c:1471)
+            if (mob.Definition.Attacks.Count > 0)
+            {
+                var primaryAttack = mob.Definition.Attacks[0]; // Use first attack
+                damage += _combatCalculator.RollDice(primaryAttack.DamageDiceCount, primaryAttack.DamageDiceSides);
+                damage += primaryAttack.DamageBonus;
+            }
+        }
+        else
+        {
+            // No weapon: use natural attacks (legacy: fight.c:1443-1444)
+            if (mob.Definition.Attacks.Count > 0)
+            {
+                var primaryAttack = mob.Definition.Attacks[0]; // Use first attack
+                damage += _combatCalculator.RollDice(primaryAttack.DamageDiceCount, primaryAttack.DamageDiceSides);
+                damage += primaryAttack.DamageBonus;
+            }
+            else
+            {
+                // Fallback for mobs with no attack data
+                damage += mob.Definition.Level + Random.Shared.Next(1, 5);
+            }
+        }
+        
+        var damageResult = _combatCalculator.ApplyDamage(victim.Player, damage);
         
         // Show dodge message if dodged
         if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))

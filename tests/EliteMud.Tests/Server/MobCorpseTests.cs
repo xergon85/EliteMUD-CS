@@ -17,7 +17,7 @@ public class MobCorpseTests
         var mobDef = new MobDefinition(
             100, "rat", "a small rat", "A small rat is here.", "Desc", 1, "Animal", "None",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
-            new List<string>(), new List<string>(), 10, 10);
+            new List<string>(), new List<string>(), 10, 10, new List<MobAttack>(), null);
 
         var swordDef = new ObjectDefinition(
             200, "sword", "a rusty sword", "A rusty sword is here.", "Desc", "weapon",
@@ -67,7 +67,7 @@ public class MobCorpseTests
         var mobDef = new MobDefinition(
             100, "rat", "a small rat", "A small rat is here.", "Desc", 1, "Animal", "None",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
-            new List<string>(), new List<string>(), 10, 10);
+            new List<string>(), new List<string>(), 10, 10, new List<MobAttack>(), null);
 
         var mobDefs = new Dictionary<int, MobDefinition> { [100] = mobDef };
         var objDefs = new Dictionary<int, ObjectDefinition>();
@@ -100,7 +100,7 @@ public class MobCorpseTests
         var mobDef = new MobDefinition(
             100, "rat", "a small rat", "A small rat is here.", "Desc", 1, "Animal", "None",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
-            new List<string>(), new List<string>(), 10, 10);
+            new List<string>(), new List<string>(), 10, 10, new List<MobAttack>(), null);
 
         var mobDefs = new Dictionary<int, MobDefinition> { [100] = mobDef };
         var objDefs = new Dictionary<int, ObjectDefinition>();

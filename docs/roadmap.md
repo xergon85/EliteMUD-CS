@@ -433,6 +433,16 @@
   - Combat messaging with ActMessage integration
 
 ### ✅ RECENTLY COMPLETED (Jan 24, 2026 - Session 4)
+- ✅ **Mob Combat Equipment System - COMPLETE**
+  - ✅ Added MobAttack and MobCombat records to MobDefinition
+  - ✅ Parse mob Attacks array from content JSON (Type, DamageType, Chance, DamageDice)
+  - ✅ Parse mob Combat stats from content JSON (Hitroll, Damroll)
+  - ✅ Updated mob damage calculation to use attack dice + equipped weapons
+  - ✅ Mobs add BOTH weapon dice AND natural attack dice (legacy: fight.c:1471)
+  - ✅ Added GetMobEffectiveArmorClass/Hitroll/Damroll extension methods
+  - ✅ Mob equipment bonuses now apply (AC, hitroll, damroll from equipped items)
+  - ✅ Updated all tests to include empty Attacks and null Combat
+  - ✅ All 109 tests passing, 0 errors
 - ✅ **Weapon Damage System - COMPLETE**
   - ✅ Updated CombatCalculator.CalculateDamage() to use weapon dice (XdY from ObjectWeapon.DiceCount/DiceSides)
   - ✅ Legacy formula implemented: `str_todam + damroll + dice(weapon.DiceCount, weapon.DiceSides)` (fight.c:1464)
