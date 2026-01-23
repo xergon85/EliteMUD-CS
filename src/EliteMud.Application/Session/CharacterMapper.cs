@@ -1,6 +1,7 @@
 using EliteMud.Application.World;
 using EliteMud.Data.Entities;
 using EliteMud.Game;
+using System.Text.Json;
 
 namespace EliteMud.Application.Session;
 
@@ -74,6 +75,29 @@ public static class CharacterMapper
             BankGold = character.BankGold,
             Experience = character.Experience
         };
+
+        // Load skills from JSON
+        if (!string.IsNullOrWhiteSpace(character.Skills))
+        {
+            try
+            {
+                var skillDict = JsonSerializer.Deserialize<Dictionary<string, byte>>(character.Skills);
+                if (skillDict != null)
+                {
+                    foreach (var (skillName, proficiency) in skillDict)
+                    {
+                        if (Enum.TryParse<SkillType>(skillName, out var skillType))
+                        {
+                            player.SetSkill(skillType, proficiency);
+                        }
+                    }
+                }
+            }
+            catch (JsonException)
+            {
+                // If skills JSON is invalid, just skip it
+            }
+        }
 
         // Load inventory items
         foreach (var invItem in character.Inventory)
@@ -160,6 +184,21 @@ public static class CharacterMapper
         // Position & Regeneration
         character.Position = playerState.Position.ToString();
         character.GainCount = playerState.GainCount;
+
+        // Skills - serialize to JSON
+        var allSkills = playerState.GetAllSkills();
+        if (allSkills.Count > 0)
+        {
+            var skillDict = allSkills.ToDictionary(
+                kvp => kvp.Key.ToString(), 
+                kvp => kvp.Value
+            );
+            character.Skills = JsonSerializer.Serialize(skillDict);
+        }
+        else
+        {
+            character.Skills = null;
+        }
 
         // Location & Resources
         character.RoomId = playerState.RoomId;

@@ -6,6 +6,7 @@ using EliteMud.Server.Adapters.Commands.Flee;
 using EliteMud.Server.Adapters.Commands.Get;
 using EliteMud.Server.Adapters.Commands.Hold;
 using EliteMud.Server.Adapters.Commands.Inventory;
+using EliteMud.Server.Adapters.Commands.Kick;
 using EliteMud.Server.Adapters.Commands.Kill;
 using EliteMud.Server.Adapters.Commands.Load;
 using EliteMud.Server.Adapters.Commands.Look;
@@ -19,7 +20,10 @@ using EliteMud.Server.Adapters.Commands.Save;
 using EliteMud.Server.Adapters.Commands.Say;
 using EliteMud.Server.Adapters.Commands.Score;
 using EliteMud.Server.Adapters.Commands.Search;
+using EliteMud.Server.Adapters.Commands.SetLevel;
+using EliteMud.Server.Adapters.Commands.SetSkill;
 using EliteMud.Server.Adapters.Commands.Sit;
+using EliteMud.Server.Adapters.Commands.Skills;
 using EliteMud.Server.Adapters.Commands.Sleep;
 using EliteMud.Server.Adapters.Commands.Stand;
 using EliteMud.Server.Adapters.Commands.Wake;
@@ -57,6 +61,7 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new SayCommandModule(),
             new MoveCommandModule(),
             new KillCommandModule(),
+            new KickCommandModule(),
             new FleeCommandModule(),
             new WimpyCommandModule(),
             new SleepCommandModule(),
@@ -64,7 +69,10 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new SitCommandModule(),
             new WakeCommandModule(),
             new StandCommandModule(),
-            new ConsiderCommandModule()
+            new ConsiderCommandModule(),
+            new SetSkillCommandModule(),
+            new SetLevelCommandModule(),
+            new SkillsCommandModule()
         };
     }
 }

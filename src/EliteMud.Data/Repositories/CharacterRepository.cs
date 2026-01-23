@@ -51,8 +51,22 @@ public class CharacterRepository : ICharacterRepository
     {
         character.LastPlayed = DateTime.UtcNow;
         
-        _context.Characters.Update(character);
-        await _context.SaveChangesAsync(cancellationToken);
+        try
+        {
+            _context.Characters.Update(character);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            // Character was already saved by another process (auto-save)
+            // Reload the entity and try again
+            var entry = _context.Entry(character);
+            await entry.ReloadAsync(cancellationToken);
+            
+            // Re-apply changes
+            entry.CurrentValues.SetValues(character);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
     }
 
     public async Task DeleteAsync(int characterId, CancellationToken cancellationToken = default)

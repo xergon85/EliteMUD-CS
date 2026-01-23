@@ -40,6 +40,9 @@ public class Character
     public string Position { get; set; } = "Standing";  // Position enum as string for DB
     public int GainCount { get; set; } = 0;  // Accumulator for position-based regen
 
+    // Skills - stored as JSON string: {"Kick":75,"Dodge":90}
+    public string? Skills { get; set; }
+
     // Location & Resources
     public int RoomId { get; set; }
     public int Gold { get; set; } = 0;

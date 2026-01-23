@@ -210,3 +210,25 @@ public static class AllowedClasses
         };
     }
 }
+
+/// <summary>
+/// Skills and spells in EliteMUD
+/// Based on legacy system - 300 spells (0-299) + 100 skills (300-399)
+/// For now, only defining what we need for proof of concept
+/// </summary>
+public enum SkillType
+{
+    // === PROOF OF CONCEPT SKILLS ===
+    // Active combat skills
+    Kick = 323,
+    Bash = 324,
+    
+    // Passive defensive skills  
+    Dodge = 360,
+    Parry = 361,
+    Tumble = 362,
+    
+    // TODO: Add remaining 394 skills/spells as needed
+    // Spells: 0-299
+    // Skills: 300-399 (SKILL_START = 300 in legacy)
+}

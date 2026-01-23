@@ -35,6 +35,10 @@ public enum CommandKind
     Wake,
     Stand,
     Consider,
+    Kick,
+    SetSkill,
+    SetLevel,
+    Skills,
     Unknown
 }
 
@@ -250,6 +254,47 @@ public sealed class CommandParser
             var spaceIndex = trimmed.IndexOf(' ');
             var target = trimmed[(spaceIndex + 1)..].Trim();
             return new CommandRequest(CommandKind.Consider, target, null);
+        }
+
+        if (trimmed.Equals("kick", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Kick, null, null);
+        }
+
+        if (trimmed.StartsWith("kick ", StringComparison.OrdinalIgnoreCase))
+        {
+            var target = trimmed[5..].Trim();
+            return new CommandRequest(CommandKind.Kick, target, null);
+        }
+
+        if (trimmed.StartsWith("setskill ", StringComparison.OrdinalIgnoreCase))
+        {
+            var argument = trimmed[9..].Trim();
+            return new CommandRequest(CommandKind.SetSkill, argument, null);
+        }
+
+        if (trimmed.StartsWith("setlevel ", StringComparison.OrdinalIgnoreCase))
+        {
+            var argument = trimmed[9..].Trim();
+            return new CommandRequest(CommandKind.SetLevel, argument, null);
+        }
+
+        if (trimmed.Equals("skills", StringComparison.OrdinalIgnoreCase) ||
+            trimmed.Equals("skill", StringComparison.OrdinalIgnoreCase))
+        {
+            return new CommandRequest(CommandKind.Skills, null, null);
+        }
+
+        if (trimmed.StartsWith("skills ", StringComparison.OrdinalIgnoreCase))
+        {
+            var argument = trimmed[7..].Trim();
+            return new CommandRequest(CommandKind.Skills, argument, null);
+        }
+
+        if (trimmed.StartsWith("skill ", StringComparison.OrdinalIgnoreCase))
+        {
+            var argument = trimmed[6..].Trim();
+            return new CommandRequest(CommandKind.Skills, argument, null);
         }
 
         if (TryParseDirection(trimmed, out var direction))

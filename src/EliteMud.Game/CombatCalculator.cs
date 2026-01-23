@@ -186,10 +186,18 @@ public static class CombatCalculator
     /// Apply damage to a player and update their position.
     /// Legacy: damage() function
     /// </summary>
-    public static int ApplyDamage(PlayerState victim, int damage)
+    public static DamageResult ApplyDamage(PlayerState victim, int damage)
     {
         // Apply position multiplier before capping damage
         damage = CalculateDamageWithPositionMultiplier(damage, victim.Position);
+        
+        // Check for passive defensive skills (dodge)
+        // Legacy: fight.c:1543-1551
+        var dodgeResult = TryDodge(victim, damage);
+        if (dodgeResult.Dodged)
+        {
+            damage = dodgeResult.ModifiedDamage;
+        }
         
         // Cap damage
         damage = Math.Min(damage, 500);
@@ -201,7 +209,32 @@ public static class CombatCalculator
         // Update position based on HP
         UpdatePosition(victim);
 
-        return damage;
+        return new DamageResult(damage, dodgeResult.Dodged, dodgeResult.Message);
+    }
+
+    /// <summary>
+    /// Try to dodge an attack (passive defensive skill).
+    /// Legacy: fight.c:1543-1551
+    /// Formula: (random(1,250) + damage) &lt; GET_SKILL(victim, SKILL_DODGE)
+    /// </summary>
+    private static DodgeResult TryDodge(PlayerState victim, int damage)
+    {
+        var dodgeSkill = victim.GetSkill(SkillType.Dodge);
+        if (dodgeSkill == 0)
+        {
+            return new DodgeResult(false, damage, null);
+        }
+
+        int check = Random.Shared.Next(1, 251) + damage;
+        if (check < dodgeSkill)
+        {
+            // Dodge successful - reduce damage by 2x victim level
+            victim.TryImproveSkill(SkillType.Dodge);
+            int reduction = victim.Level * 2;
+            return new DodgeResult(true, damage - reduction, "You dodge the attack!");
+        }
+
+        return new DodgeResult(false, damage, null);
     }
 
     /// <summary>
@@ -260,13 +293,13 @@ public static class CombatCalculator
         // Calculate damage
         int damage = CalculateBareDamage(attacker);
         
-        // Apply damage
-        int actualDamage = ApplyDamage(victim, damage);
+        // Apply damage (includes passive defensive skills)
+        var damageResult = ApplyDamage(victim, damage);
 
         // Consume 1 movement point per attack
         attacker.Movement = (short)Math.Max(0, attacker.Movement - 1);
 
-        return new AttackResult(true, actualDamage, null);
+        return new AttackResult(true, damageResult.Damage, damageResult.Message);
     }
 
     /// <summary>
@@ -283,6 +316,16 @@ public static class CombatCalculator
 /// Result of an attack.
 /// </summary>
 public sealed record AttackResult(bool Hit, int Damage, string? Message);
+
+/// <summary>
+/// Result of applying damage (includes dodge check).
+/// </summary>
+public sealed record DamageResult(int Damage, bool Dodged, string? Message);
+
+/// <summary>
+/// Result of a dodge attempt.
+/// </summary>
+internal sealed record DodgeResult(bool Dodged, int ModifiedDamage, string? Message);
 
 /// <summary>
 /// Message perspective for combat messages.
