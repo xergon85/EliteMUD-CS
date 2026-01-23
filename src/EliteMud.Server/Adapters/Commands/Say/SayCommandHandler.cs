@@ -10,15 +10,16 @@ namespace EliteMud.Server.Adapters.Commands.Say;
 internal sealed class SayCommandHandler : ICommandHandler
 {
     private readonly IScriptEngine _scriptEngine;
-    private readonly Func<IEnumerable<ConnectionContext>> _connections;
+    private readonly ConnectionRegistry _connectionRegistry;
     private readonly SayHandler _sayHandler;
 
-    public SayCommandHandler(IScriptEngine scriptEngine, Func<IEnumerable<ConnectionContext>> connections)
+    public SayCommandHandler(IScriptEngine scriptEngine, ConnectionRegistry connectionRegistry)
     {
         _scriptEngine = scriptEngine;
-        _connections = connections;
+        _connectionRegistry = connectionRegistry;
         _sayHandler = new SayHandler();
     }
+    
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,
@@ -46,7 +47,7 @@ internal sealed class SayCommandHandler : ICommandHandler
     private async ValueTask BroadcastRoomAsync(ConnectionContext speaker, string message,
         CancellationToken cancellationToken)
     {
-        foreach (var connection in _connections())
+        foreach (var connection in _connectionRegistry.GetConnections())
         {
             if (connection.Id == speaker.Id)
             {

@@ -7,17 +7,18 @@ namespace EliteMud.Server.Adapters.Commands.Who;
 [Command("who")]
 internal sealed class WhoCommandHandler : ICommandHandler, IConnectionDirectory
 {
-    private readonly Func<IEnumerable<ConnectionContext>> _connections;
+    private readonly ConnectionRegistry _connectionRegistry;
     private readonly WhoHandler _whoHandler;
 
-    public WhoCommandHandler(Func<IEnumerable<ConnectionContext>> connections)
+    public WhoCommandHandler(ConnectionRegistry connectionRegistry)
     {
-        _connections = connections;
+        _connectionRegistry = connectionRegistry;
         _whoHandler = new WhoHandler(this);
     }
+    
     public IReadOnlyList<string> GetPlayerNames()
     {
-        return _connections()
+        return _connectionRegistry.GetConnections()
             .Select(connection => connection.Player.Name)
             .OrderBy(name => name, StringComparer.OrdinalIgnoreCase)
             .ToList();

@@ -45,21 +45,10 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<LookCommandHandler>()
             .AddSingleton<MoveCommandHandler>()
             .AddSingleton<FleeHandler>()
-            
-            // Handlers with custom factory requirements (Func<> dependencies)
-            .AddSingleton<SayCommandHandler>(provider => new SayCommandHandler(
-                provider.GetRequiredService<IScriptEngine>(),
-                provider.GetRequiredService<ConnectionRegistry>().GetConnections
-            ))
-            .AddSingleton<ICommandHandler>(provider => provider.GetRequiredService<SayCommandHandler>())
-            
+            .AddSingleton<SayCommandHandler>()
             .AddSingleton<ResetZoneCommandHandler>()
             .AddSingleton<ScoreHandler>()
-            
-            .AddSingleton<WhoCommandHandler>(provider =>
-                new WhoCommandHandler(provider.GetRequiredService<ConnectionRegistry>().GetConnections
-                ))
-            .AddSingleton<ICommandHandler>(provider => provider.GetRequiredService<WhoCommandHandler>())
+            .AddSingleton<WhoCommandHandler>()
             .AddSingleton<IConnectionDirectory>(provider => provider.GetRequiredService<WhoCommandHandler>())
             .AddSingleton<ConnectionRegistry>()
             
@@ -106,25 +95,17 @@ internal static class CommandServiceCollectionExtensions
     
     /// <summary>
     /// Auto-discover all command handlers decorated with [Command] attribute.
-    /// Skips handlers that require custom factory registration (e.g., with Func<> dependencies).
+    /// This eliminates the need for manual registration or CommandModule factories.
     /// </summary>
     private static IServiceCollection AddCommandHandlersViaReflection(this IServiceCollection services)
     {
         var assembly = Assembly.GetExecutingAssembly();
         
-        // Handlers that need custom factory registration (skip auto-discovery)
-        var manuallyRegisteredTypes = new[]
-        {
-            typeof(WhoCommandHandler),  // Requires Func<IEnumerable<ConnectionContext>>
-            typeof(SayCommandHandler)   // Requires Func<IEnumerable<ConnectionContext>>
-        };
-        
         var handlerTypes = assembly.GetTypes()
             .Where(t => 
                 t is { IsAbstract: false, IsInterface: false, IsClass: true } && 
                 typeof(ICommandHandler).IsAssignableFrom(t) &&
-                t.GetCustomAttribute<CommandAttribute>() != null &&
-                !manuallyRegisteredTypes.Contains(t));
+                t.GetCustomAttribute<CommandAttribute>() != null);
 
         foreach (var type in handlerTypes)
         {
