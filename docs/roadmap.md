@@ -155,19 +155,53 @@
 - ✅ `wimpy` command - auto-flee at low HP threshold - DONE
 
 #### 4.2 Combat Commands
+- ✅ `kick` - unarmed attack (POC COMPLETE, ready for framework extraction)
 - ❌ `bash` - shield bash attack
-- ❌ `kick` - unarmed attack
 - ❌ `rescue` - take aggro from group member
 - ❌ `consider` - estimate mob difficulty
 
-#### 4.3 Skills & Spells Framework
-- ❌ Skill definition system
-- ❌ Skill learning/practice
-- ❌ `practice` command - train skills with guildmaster
+#### 4.3 Skills & Spells Framework - POC COMPLETE ✅
+**POC Status:** Fully validated and ready for framework extraction (see `docs/skills-poc-documentation.md`)
+
+**POC Proven Working:**
+- ✅ Active skill system (kick)
+- ✅ Passive skill system (dodge)
+- ✅ Skill proficiency tracking (0-100%)
+- ✅ Skill improvement on use
+- ✅ Skill persistence (database JSON)
+- ✅ PvP and PvE integration
+
+**Next Steps - Framework Extraction:**
+1. ⏳ Create `ISkillHandler` interface from working kick implementation
+2. ⏳ Create `IPassiveSkillHandler` interface from working dodge implementation
+3. ⏳ Build `SkillRegistry` with auto-discovery via reflection
+4. ⏳ Add dependency injection for skill handlers
+5. ⏳ Refactor kick to implement `ISkillHandler`
+6. ⏳ Refactor dodge to implement `IPassiveSkillHandler`
+
+**Next Steps - Content-Driven System:**
+1. ⏳ Design skill metadata JSON schema
+2. ⏳ Move skill definitions to `content/skills.json`
+3. ⏳ Add class-based skill caps and availability
+4. ⏳ Implement WAIT_STATE system (action cooldowns)
+5. ⏳ Implement skillgain cooldown system
+6. ⏳ Add position-based skill restrictions
+
+**Future - Expand Skill Set:**
+- ❌ `bash` - shield bash skill
+- ❌ `backstab` - rogue sneak attack
+- ❌ `circle` - circle around to backstab again
+- ❌ `parry` - passive block with weapon
+- ❌ `tumble` - passive dodge improvement
+- ❌ `disarm` - remove opponent's weapon
+- ❌ `trip` - knock opponent down
+
+**Spell System (Similar Architecture):**
 - ❌ Spell casting framework
 - ❌ `cast` command
 - ❌ Mana cost system
 - ❌ Spell success/failure rolls
+- ❌ `practice` command - train skills/spells with guildmaster
 - ❌ Cooldown system
 - ❌ Resist tables (saves vs spell/paralysis/breath/etc.)
 
@@ -383,9 +417,22 @@
   - Mob death (corpse creation with equipment transfer)
   - Combat messaging with ActMessage integration
 
+### ✅ RECENTLY COMPLETED (Jan 23, 2026)
+- ✅ **Skills & Spells POC - COMPLETE & VALIDATED**
+  - ✅ Active skill system (kick command with damage calculation)
+  - ✅ Passive skill system (dodge with damage reduction)
+  - ✅ Skill proficiency tracking (Dictionary<SkillType, byte> 0-100%)
+  - ✅ Skill improvement on successful use
+  - ✅ Skill persistence (JSON in database Skills column)
+  - ✅ Testing commands: `setskill`, `skills`, `setlevel`
+  - ✅ PvP and PvE combat integration verified
+  - ✅ Fixed dead player attacking bug (race condition in combat tick)
+  - ✅ All manual test scenarios passed
+
 ### 🔄 IN PROGRESS (Phase 4: Combat + Skills)
-- **CURRENT FOCUS:** Basic combat is complete, moving to advanced combat features
-- Next up: Combat skills (bash, kick, rescue), consider command
+- **CURRENT FOCUS:** Extract skills framework from working POC
+- **POC Status:** Complete and validated (see `docs/skills-poc-documentation.md`)
+- **Next Step:** Framework extraction (interfaces, registry, DI)
 
 ### ❌ NOT STARTED
 - Advanced combat skills (Phase 4.2)
@@ -397,9 +444,71 @@
 - Shops, mail, boards, clans (Phase 6.4-6.8)
 - Admin tools and OLC (Phase 7)
 
-## Next Execution Checklist (Updated Jan 22, 2026)
+## Next Execution Checklist (Updated Jan 23, 2026)
 
-### ✅ RECENTLY COMPLETED (Jan 22, 2026)
+### ✅ RECENTLY COMPLETED (Jan 23, 2026)
+- ✅ **Skills & Spells POC - COMPLETE & VALIDATED**
+  - ✅ Active skill: kick (combat skill with damage calculation)
+  - ✅ Passive skill: dodge (automatic damage reduction)
+  - ✅ Skill proficiency tracking and improvement
+  - ✅ Skill persistence (JSON in database)
+  - ✅ Testing commands: setskill, skills, setlevel
+  - ✅ Fixed dead player attacking bug (combat tick race condition)
+  - ✅ All 4 manual test scenarios passed
+  - ✅ POC fully documented (see `docs/skills-poc-documentation.md`)
+
+### 🎯 IMMEDIATE NEXT STEPS (Skills Framework Extraction)
+**Priority:** Extract working POC into production framework
+
+1. **Create ISkillHandler Interface** (Short-term)
+   - Extract interface from KickCommandHandler
+   - Define: CanUse(), Execute(), GetCooldown(), GetDescription()
+   - Support both active skills (kick) and passive skills (dodge)
+
+2. **Create IPassiveSkillHandler Interface** (Short-term)
+   - Extract interface from dodge implementation in CombatCalculator
+   - Define: OnDamage(), OnAttack(), OnDefend() hooks
+   - Support automatic triggering in combat flow
+
+3. **Build SkillRegistry** (Short-term)
+   - Auto-discover skill handlers via reflection
+   - Register handlers with dependency injection
+   - Load skill metadata from configuration
+
+4. **Refactor POC Skills** (Short-term)
+   - Convert KickCommandHandler to implement ISkillHandler
+   - Convert dodge logic to implement IPassiveSkillHandler
+   - Move skill data to SkillRegistry
+
+5. **Design Skill Metadata Schema** (Medium-term)
+   - Create `content/skills.json` format
+   - Define: name, type, damage, cooldown, level requirements
+   - Include class restrictions and skill caps
+
+6. **Implement WAIT_STATE System** (Medium-term)
+   - Add WaitState property to PlayerState
+   - Prevent actions while waiting (cooldown system)
+   - Integrate with combat tick (decrement each tick)
+
+7. **Implement Skillgain Cooldown** (Medium-term)
+   - Add SkillGain timestamp tracking
+   - Prevent rapid skill improvement
+   - Match legacy improvement rates
+
+8. **Add More Skills** (Long-term)
+   - bash (shield attack)
+   - backstab (rogue skill)
+   - parry (passive defense)
+   - rescue (tank skill)
+   - disarm, trip, circle, etc.
+
+### 📋 DEFERRED (Future Phases)
+- Spell system (similar to skills but with mana costs)
+- Guild trainers and practice command
+- Class-based skill restrictions
+- Position-based skill requirements
+
+### ✅ COMPLETED (Jan 22, 2026)
 - ✅ **MAJOR FIX:** Fixed equipment persistence bug (was storing instance IDs, now stores definition IDs)
 - ✅ Database migration: renamed ObjectId → ObjectDefinitionId in inventory/equipment tables
 - ✅ CharacterMapper now uses IWorldState to convert between instance IDs and definition IDs
