@@ -673,13 +673,7 @@ internal static class ContentLoader
             return null;
         }
 
-        ObjectDetails? details = null;
-        if (obj.Details is not null)
-        {
-            // Parse object details from the JSON structure
-            // For now, we'll skip the complex details parsing
-            // TODO: Implement full ObjectDetails parsing
-        }
+        ObjectDetails? details = obj.Details; // Details are already deserialized from JSON
 
         // Convert object affects from content format to game format
         var affects = obj.Affects
