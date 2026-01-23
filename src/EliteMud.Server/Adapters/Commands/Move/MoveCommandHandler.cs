@@ -8,7 +8,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Move;
 
-[Command("north", Aliases = new[] { "n", "east", "e", "south", "s", "west", "w", "up", "u", "down", "d", "go" })]
+[Command("move", Aliases = new[] { "north", "n", "east", "e", "south", "s", "west", "w", "up", "u", "down", "d", "go" })]
 internal sealed class MoveCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
