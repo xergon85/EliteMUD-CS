@@ -11,13 +11,13 @@ namespace EliteMud.Game;
 public sealed class DodgeSkill : IPassiveSkillHandler
 {
     public SkillType SkillType => SkillType.Dodge;
-    
+
     public string Name => "Dodge";
-    
+
     public string Description => "Passively avoid incoming attacks, reducing damage taken";
-    
+
     public int MinimumLevel => 1;
-    
+
     public bool CanActivate(ICombatant user)
     {
         // Must have the skill
@@ -25,16 +25,16 @@ public sealed class DodgeSkill : IPassiveSkillHandler
         {
             return false;
         }
-        
+
         // Must be at minimum level
         if (user.Level < MinimumLevel)
         {
             return false;
         }
-        
+
         return true;
     }
-    
+
     /// <summary>
     /// Attempt to dodge incoming damage.
     /// Legacy formula: (random(1, 250) + damage) &lt; GET_SKILL(victim, SKILL_DODGE)
@@ -50,26 +50,26 @@ public sealed class DodgeSkill : IPassiveSkillHandler
         {
             return new PassiveSkillResult(false, inputValue, null);
         }
-        
+
         int damage = inputValue;
         int dodgeSkillLevel = user.GetSkill(SkillType.Dodge);
-        
+
         // Legacy: if ((number(1, 250) + damage) < GET_SKILL(victim, SKILL_DODGE))
         int check = Random.Shared.Next(1, 251) + damage;
-        
+
         if (check < dodgeSkillLevel)
         {
             // Dodge successful - reduce damage by 2x user level
             // Legacy: dam -= (GET_LEVEL(victim) * 2)
             int reduction = user.Level * 2;
             int modifiedDamage = Math.Max(0, damage - reduction);
-            
+
             return new PassiveSkillResult(
                 Activated: true,
                 ModifiedValue: modifiedDamage,
                 Message: "You dodge the attack!");
         }
-        
+
         // Dodge failed
         return new PassiveSkillResult(false, damage, null);
     }

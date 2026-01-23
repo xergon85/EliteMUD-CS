@@ -25,7 +25,7 @@ internal sealed class SetSkillCommandHandler : ICommandHandler
         if (string.IsNullOrWhiteSpace(command.Argument))
         {
             await context.Session.SendLineAsync("Usage: setskill <skill> <proficiency>", cancellationToken);
-            await context.Session.SendLineAsync("Available skills: kick, bash, dodge, parry, tumble", cancellationToken);
+            await context.Session.SendLineAsync("Available skills: kick, bash, backstab (bs), dodge, parry, tumble, rescue", cancellationToken);
             await context.Session.SendLineAsync("Proficiency: 0-100", cancellationToken);
             return CommandOutcome.Continue;
         }
@@ -41,7 +41,7 @@ internal sealed class SetSkillCommandHandler : ICommandHandler
         if (!TryParseSkill(skillName, out var skillType))
         {
             await context.Session.SendLineAsync($"Unknown skill: {skillName}", cancellationToken);
-            await context.Session.SendLineAsync("Available skills: kick, bash, dodge, parry, tumble", cancellationToken);
+            await context.Session.SendLineAsync("Available skills: kick, bash, backstab (bs), dodge, parry, tumble, rescue", cancellationToken);
             return CommandOutcome.Continue;
         }
 
@@ -62,6 +62,8 @@ internal sealed class SetSkillCommandHandler : ICommandHandler
         {
             "kick" => Set(out skillType, SkillType.Kick),
             "bash" => Set(out skillType, SkillType.Bash),
+            "backstab" or "bs" => Set(out skillType, SkillType.Backstab),
+            "rescue" => Set(out skillType, SkillType.Rescue),
             "dodge" => Set(out skillType, SkillType.Dodge),
             "parry" => Set(out skillType, SkillType.Parry),
             "tumble" => Set(out skillType, SkillType.Tumble),
