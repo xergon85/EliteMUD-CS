@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Wear;
 
+[Command("wear")]
 internal sealed class WearCommandHandler : ICommandHandler
 {
     private readonly WearHandler _wearHandler;
