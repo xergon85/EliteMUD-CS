@@ -685,9 +685,23 @@ internal static class ContentLoader
         // Modern format uses Affects array, but old content has AC in Details.Armor.ArmorClass
         if (details?.Armor != null && details.Armor.ArmorClass != 0)
         {
-            // ArmorClass from armor Details is already negative (lower is better)
-            // Add it as an ArmorClass affect so it applies when equipped
-            affects.Add(new ObjectAffect(AffectLocation.ArmorClass, -details.Armor.ArmorClass));
+            // Legacy EliteMUD applies slot-based multipliers to armor AC:
+            // WEAR_BODY (chest): 3x, WEAR_HEAD (helm): 2x, WEAR_LEGS (pants): 2x, all others: 1x
+            // Determine multiplier from WearFlags
+            int multiplier = 1;
+            var wearFlags = obj.WearFlags ?? new List<string>();
+            
+            if (wearFlags.Any(f => f.Equals("Body", StringComparison.OrdinalIgnoreCase)))
+                multiplier = 3;
+            else if (wearFlags.Any(f => f.Equals("Head", StringComparison.OrdinalIgnoreCase)))
+                multiplier = 2;
+            else if (wearFlags.Any(f => f.Equals("Legs", StringComparison.OrdinalIgnoreCase)))
+                multiplier = 2;
+            
+            // Apply multiplier: armor with AC 3 on body gives -9 AC bonus (3 × 3)
+            // Negate because lower AC is better in EliteMUD
+            int acBonus = -(details.Armor.ArmorClass * multiplier);
+            affects.Add(new ObjectAffect(AffectLocation.ArmorClass, acBonus));
         }
 
         return new ObjectDefinition(
