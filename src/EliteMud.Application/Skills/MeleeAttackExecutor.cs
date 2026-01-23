@@ -14,6 +14,7 @@ namespace EliteMud.Application.Skills;
 /// 
 /// Legacy: do_kill() in act.offensive.c
 /// </summary>
+[Command("kill", Aliases = new[] { "k", "hit" })]
 public sealed class MeleeAttackExecutor : ISkillExecutor
 {
     private readonly CombatCalculator _combatCalculator;

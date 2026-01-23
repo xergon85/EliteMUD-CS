@@ -13,6 +13,7 @@ namespace EliteMud.Application.Skills;
 /// - Game layer (KickSkill): Pure domain logic (formulas, calculations)
 /// - Server layer (generic SkillCommandHandler): Routing, message formatting
 /// </summary>
+[Command("kick")]
 public sealed class KickSkillExecutor : ISkillExecutor
 {
     private readonly ISkillHandler _kickSkill;

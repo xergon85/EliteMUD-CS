@@ -1,17 +1,58 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Server.Adapters.Commands.Skills;
+using System.Reflection;
 
 namespace EliteMud.Server.Adapters.Commands.Shared;
 
 internal sealed class CommandRouter
 {
-    private readonly Dictionary<CommandKind, ICommandHandler> _handlers;
+    private readonly Dictionary<CommandKind, ICommandHandler> _handlersByKind;
+    private readonly Dictionary<string, ICommandHandler> _handlersByVerb;
 
     public CommandRouter(IEnumerable<ICommandHandler> handlers)
     {
-        _handlers = new Dictionary<CommandKind, ICommandHandler>();
+        _handlersByKind = new Dictionary<CommandKind, ICommandHandler>();
+        _handlersByVerb = new Dictionary<string, ICommandHandler>(StringComparer.OrdinalIgnoreCase);
+        
         foreach (var handler in handlers)
         {
-            _handlers[handler.Kind] = handler;
+            // Legacy routing by CommandKind
+            _handlersByKind[handler.Kind] = handler;
+            
+            // New routing by verb from [Command] attribute
+            CommandAttribute? attribute = null;
+            
+            // Check if handler itself has [Command] attribute
+            attribute = handler.GetType().GetCustomAttribute<CommandAttribute>();
+            
+            // If not, check if it's a SkillCommandHandler wrapping an executor
+            if (attribute == null && handler is SkillCommandHandler skillHandler)
+            {
+                // Use reflection to get the executor and check its type for [Command] attribute
+                var executorField = typeof(SkillCommandHandler)
+                    .GetField("_executor", BindingFlags.NonPublic | BindingFlags.Instance);
+                    
+                if (executorField != null)
+                {
+                    var executor = executorField.GetValue(skillHandler);
+                    if (executor != null)
+                    {
+                        attribute = executor.GetType().GetCustomAttribute<CommandAttribute>();
+                    }
+                }
+            }
+            
+            if (attribute != null)
+            {
+                // Register primary command name
+                _handlersByVerb[attribute.Name] = handler;
+                
+                // Register all aliases
+                foreach (var alias in attribute.Aliases)
+                {
+                    _handlersByVerb[alias] = handler;
+                }
+            }
         }
     }
 
@@ -20,7 +61,15 @@ internal sealed class CommandRouter
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
-        if (_handlers.TryGetValue(command.Kind, out var handler))
+        // Try verb-based routing first (attribute-based)
+        if (!string.IsNullOrEmpty(command.Verb) && 
+            _handlersByVerb.TryGetValue(command.Verb, out var handler))
+        {
+            return handler.HandleAsync(command, context, cancellationToken);
+        }
+        
+        // Fall back to legacy CommandKind routing
+        if (_handlersByKind.TryGetValue(command.Kind, out handler))
         {
             return handler.HandleAsync(command, context, cancellationToken);
         }
