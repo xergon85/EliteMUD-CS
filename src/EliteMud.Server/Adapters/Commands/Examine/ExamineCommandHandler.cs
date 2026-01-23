@@ -5,6 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Examine;
 
+[Command("examine", Aliases = new[] { "ex", "exa" })]
 internal sealed class ExamineCommandHandler : ICommandHandler
 {
     private readonly LookHandler _lookHandler;
