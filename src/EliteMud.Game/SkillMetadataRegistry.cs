@@ -3,6 +3,16 @@ namespace EliteMud.Game;
 /// <summary>
 /// Registry for skill metadata loaded from content/skills/skills.json
 /// Provides fast lookups by skill ID, name, or alias.
+/// 
+/// NOTE: Skill metadata is loaded once at server startup. To reload skill formulas
+/// after editing skills.json, restart the server with: dotnet run --project src/EliteMud.Server
+/// 
+/// Hot reload (without restart) would require:
+/// - Making this registry mutable with ReaderWriterLockSlim for thread safety
+/// - Adding a Reload() method to atomically replace metadata and rebuild indexes
+/// - Creating a new SkillRegistry instance (which uses reflection to instantiate skills)
+/// - Implementing an admin command (e.g., /sreload) to trigger the reload
+/// - Proper error handling to rollback if new JSON is invalid
 /// </summary>
 public sealed class SkillMetadataRegistry
 {
