@@ -316,3 +316,16 @@ public enum AffectLocation
     
     // TODO: Add more APPLY_* locations as needed (see LegacyImportLookup.ApplyFromIndex)
 }
+
+/// <summary>
+/// Types of saving throws.
+/// Legacy: SAVING_PARA (paralysis/physical), SAVING_ROD, SAVING_PETRI, SAVING_BREATH, SAVING_SPELL
+/// EliteMUD simplified to 4 types matching AffectLocation values.
+/// </summary>
+public enum SavingThrowType
+{
+    Physical = 0,  // Physical attacks, paralysis, petrification
+    Mental = 1,    // Mind-affecting spells, charm, sleep
+    Magic = 2,     // General magic spells
+    Poison = 3     // Poison and disease
+}

@@ -172,15 +172,74 @@ public class CombatCalculator
             bonusDamage += RollDice(3, 6);
         }
         
-        // FLAME weapon: +3d6 fire damage (no save check for now)
-        // Legacy: if (IS_OBJ_STAT(wielded, ITEM_FLAME) && !saves_spell(...)) dam += dice(3,6);
-        // TODO: Implement saving throw system for SAVE_NEGATE check
+        // FLAME weapon: +3d6 fire damage (victim can save to negate)
+        // Legacy: if (IS_OBJ_STAT(wielded, ITEM_FLAME) && !saves_spell(victim, SAVING_PHYSICAL, NULL, SAVE_NEGATE))
         if (weaponFlags.Contains("Flame"))
         {
-            bonusDamage += RollDice(3, 6);
+            // Victim gets a physical saving throw to avoid fire damage
+            if (!MakesSavingThrow(victim, SavingThrowType.Physical))
+            {
+                bonusDamage += RollDice(3, 6);
+            }
         }
         
         return bonusDamage;
+    }
+    
+    /// <summary>
+    /// Check if a combatant makes a saving throw.
+    /// Legacy: saves_spell(victim, save_type, caster, save_modifier)
+    /// 
+    /// Saving throw system:
+    /// - Base save determined by level (improves every 3 levels)
+    /// - Equipment bonuses from affects (SavingPhysical, etc.)
+    /// - Roll d20, success if roll >= target number
+    /// - Lower save values are better (easier to make the save)
+    /// 
+    /// Save modifiers:
+    /// - SAVE_NEGATE (0): Normal save
+    /// - SAVE_HALF (1): Half damage on failed save (not used here)
+    /// </summary>
+    /// <param name="victim">The combatant making the save</param>
+    /// <param name="saveType">Type of saving throw</param>
+    /// <returns>True if the save succeeds, false if it fails</returns>
+    public bool MakesSavingThrow(ICombatant victim, SavingThrowType saveType)
+    {
+        // Base saving throw by level (starts at 16, improves by 1 every 3 levels)
+        // Legacy used class-based saving throw tables, this is simplified
+        // Lower is better: level 1 = 16, level 3 = 15, level 6 = 14, etc.
+        int baseSave = 16 - (victim.Level / 3);
+        baseSave = Math.Max(1, baseSave); // Minimum save of 1
+        
+        // Apply equipment/affect bonuses
+        // Saving throw affects are negative (e.g., -5 to save = 5 bonus to roll)
+        int saveBonus = 0;
+        foreach (var affect in victim.Affects)
+        {
+            if (saveType == SavingThrowType.Physical && affect.Location == AffectLocation.SavingPhysical)
+            {
+                saveBonus -= affect.Modifier; // Negative modifier = bonus
+            }
+            else if (saveType == SavingThrowType.Mental && affect.Location == AffectLocation.SavingMental)
+            {
+                saveBonus -= affect.Modifier;
+            }
+            else if (saveType == SavingThrowType.Magic && affect.Location == AffectLocation.SavingMagic)
+            {
+                saveBonus -= affect.Modifier;
+            }
+            else if (saveType == SavingThrowType.Poison && affect.Location == AffectLocation.SavingPoison)
+            {
+                saveBonus -= affect.Modifier;
+            }
+        }
+        
+        // Roll d20
+        int roll = RollDice(1, 20);
+        
+        // Success if roll + bonus >= base save threshold
+        // Example: base save 10, roll 12, bonus 2 → 12+2=14 >= 10 → success
+        return (roll + saveBonus) >= baseSave;
     }
     
     /// <summary>
