@@ -99,7 +99,7 @@ public sealed class StatHandler
         // TODO: Implement Deity field
         output.AppendLine($"Worships[#bNone#N]");
 
-        // Lines 8+: Magic abilities - all white/gray
+        // Lines 8+: Magic abilities - spell names in cyan
         // Show active affects
         if (player.Affects.Count > 0)
         {
@@ -124,7 +124,7 @@ public sealed class StatHandler
                     sourceLabel = $"{affect.DurationHours} {hoursText}";
                 }
                 
-                output.AppendLine($"Magic: ({sourceLabel})    {affectName.ToLower()}");
+                output.AppendLine($"Magic: ({sourceLabel})    #C{affectName.ToLower()}#N");
             }
         }
 
@@ -133,14 +133,14 @@ public sealed class StatHandler
         // For now, add some placeholder innate abilities based on race
         if (player.Race.Equals("Troll", StringComparison.OrdinalIgnoreCase))
         {
-            output.AppendLine($"Magic: (innate)    regeneration");
+            output.AppendLine($"Magic: (innate)    #Cregeneration#N");
         }
         
         if (player.Race.Equals("Elf", StringComparison.OrdinalIgnoreCase) ||
             player.Race.Equals("Drow", StringComparison.OrdinalIgnoreCase) ||
             player.Race.Equals("Dwarf", StringComparison.OrdinalIgnoreCase))
         {
-            output.AppendLine($"Magic: (innate)    infravision");
+            output.AppendLine($"Magic: (innate)    #Cinfravision#N");
         }
 
         return CommandResult.Ok(output.ToString());
