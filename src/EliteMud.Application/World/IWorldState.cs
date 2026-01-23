@@ -306,3 +306,96 @@ public interface IWorldState
     /// </summary>
     bool RemoveMob(int mobInstanceId, int roomId);
 }
+
+/// <summary>
+/// Extension methods for calculating effective stats including equipment bonuses.
+/// </summary>
+public static class WorldStateExtensions
+{
+    /// <summary>
+    /// Get total equipment bonus for a specific affect location.
+    /// Sums all modifiers from equipped items affecting that location.
+    /// </summary>
+    public static int GetEquipmentBonus(this IWorldState worldState, PlayerState player, AffectLocation location)
+    {
+        var equipment = worldState.GetPlayerEquipment(player);
+        int total = 0;
+        
+        foreach (var (slot, obj) in equipment)
+        {
+            foreach (var affect in obj.Definition.Affects)
+            {
+                if (affect.Location == location)
+                {
+                    total += affect.Modifier;
+                }
+            }
+        }
+        
+        return total;
+    }
+
+    /// <summary>
+    /// Get effective armor class including spell affects AND equipment bonuses.
+    /// Lower is better (negative AC is good).
+    /// Use this instead of player.GetEffectiveArmorClass() to include equipment.
+    /// </summary>
+    public static short GetTotalEffectiveArmorClass(this IWorldState worldState, PlayerState player)
+    {
+        // Start with base AC
+        short effectiveAC = player.ArmorClass;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.ArmorClass))
+        {
+            effectiveAC += (short)affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveAC += (short)worldState.GetEquipmentBonus(player, AffectLocation.ArmorClass);
+        
+        return effectiveAC;
+    }
+    
+    /// <summary>
+    /// Get effective hitroll including spell affects AND equipment bonuses.
+    /// Higher is better (bonus to hit).
+    /// Use this instead of player.GetEffectiveHitroll() to include equipment.
+    /// </summary>
+    public static sbyte GetTotalEffectiveHitroll(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveHitroll = player.Hitroll;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Hitroll))
+        {
+            effectiveHitroll += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveHitroll += worldState.GetEquipmentBonus(player, AffectLocation.Hitroll);
+        
+        return (sbyte)Math.Clamp(effectiveHitroll, sbyte.MinValue, sbyte.MaxValue);
+    }
+    
+    /// <summary>
+    /// Get effective damroll including spell affects AND equipment bonuses.
+    /// Higher is better (bonus to damage).
+    /// Use this instead of player.GetEffectiveDamroll() to include equipment.
+    /// </summary>
+    public static sbyte GetTotalEffectiveDamroll(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveDamroll = player.Damroll;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Damroll))
+        {
+            effectiveDamroll += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveDamroll += worldState.GetEquipmentBonus(player, AffectLocation.Damroll);
+        
+        return (sbyte)Math.Clamp(effectiveDamroll, sbyte.MinValue, sbyte.MaxValue);
+    }
+}

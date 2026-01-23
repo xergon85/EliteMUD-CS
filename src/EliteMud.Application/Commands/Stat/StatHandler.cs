@@ -70,21 +70,21 @@ public sealed class StatHandler
         // Line 4: AC, Hitroll, Damroll, THAC0 - all values in red
         var baseAC = player.ArmorClass;
         var acSpellMod = GetStatModifier(player, AffectLocation.ArmorClass);
-        var acEquipMod = GetEquipmentBonus(player, AffectLocation.ArmorClass);
+        var acEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.ArmorClass);
         var acTotalMod = acSpellMod + acEquipMod;
-        var effectiveAC = baseAC + acTotalMod;
+        var effectiveAC = _worldState.GetTotalEffectiveArmorClass(player);
         
         var baseHitroll = player.Hitroll;
         var hitrollSpellMod = GetStatModifier(player, AffectLocation.Hitroll);
-        var hitrollEquipMod = GetEquipmentBonus(player, AffectLocation.Hitroll);
+        var hitrollEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Hitroll);
         var hitrollTotalMod = hitrollSpellMod + hitrollEquipMod;
-        var effectiveHitroll = (sbyte)Math.Clamp(baseHitroll + hitrollTotalMod, sbyte.MinValue, sbyte.MaxValue);
+        var effectiveHitroll = _worldState.GetTotalEffectiveHitroll(player);
         
         var baseDamroll = player.Damroll;
         var damrollSpellMod = GetStatModifier(player, AffectLocation.Damroll);
-        var damrollEquipMod = GetEquipmentBonus(player, AffectLocation.Damroll);
+        var damrollEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Damroll);
         var damrollTotalMod = damrollSpellMod + damrollEquipMod;
-        var effectiveDamroll = (sbyte)Math.Clamp(baseDamroll + damrollTotalMod, sbyte.MinValue, sbyte.MaxValue);
+        var effectiveDamroll = _worldState.GetTotalEffectiveDamroll(player);
 
         // THAC0 calculation (legacy DikuMUD formula)
         var thac0 = CalculateTHAC0(player.Level, effectiveHitroll);
@@ -231,28 +231,6 @@ public sealed class StatHandler
         return player.Affects
             .Where(a => a.Location == location)
             .Sum(a => a.Modifier);
-    }
-
-    /// <summary>
-    /// Get total modifier from equipped items for a specific location.
-    /// </summary>
-    private int GetEquipmentBonus(PlayerState player, AffectLocation location)
-    {
-        var equipment = _worldState.GetPlayerEquipment(player);
-        int total = 0;
-        
-        foreach (var (slot, obj) in equipment)
-        {
-            foreach (var affect in obj.Definition.Affects)
-            {
-                if (affect.Location == location)
-                {
-                    total += affect.Modifier;
-                }
-            }
-        }
-        
-        return total;
     }
 
     /// <summary>
