@@ -1,5 +1,6 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
+using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Who;
@@ -16,11 +17,10 @@ internal sealed class WhoCommandHandler : ICommandHandler, IConnectionDirectory
         _whoHandler = new WhoHandler(this);
     }
     
-    public IReadOnlyList<string> GetPlayerNames()
+    public IReadOnlyList<PlayerState> GetPlayers()
     {
         return _connectionRegistry.GetConnections()
-            .Select(connection => connection.Player.Name)
-            .OrderBy(name => name, StringComparer.OrdinalIgnoreCase)
+            .Select(connection => connection.Player)
             .ToList();
     }
 
@@ -30,12 +30,7 @@ internal sealed class WhoCommandHandler : ICommandHandler, IConnectionDirectory
         CancellationToken cancellationToken)
     {
         var result = _whoHandler.Handle();
-        await context.Session.SendLineAsync("Players:", cancellationToken);
-        foreach (var name in result.Names)
-        {
-            await context.Session.SendLineAsync($" - {name}", cancellationToken);
-        }
-
+        await context.Session.SendAsync(result.Message, cancellationToken);
         return CommandOutcome.Continue;
     }
 }
