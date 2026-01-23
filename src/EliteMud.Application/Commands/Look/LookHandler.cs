@@ -25,10 +25,10 @@ public sealed class LookHandler
             var line = string.IsNullOrWhiteSpace(mob.Definition.LongDescription)
                 ? mob.Definition.ShortDescription
                 : mob.Definition.LongDescription;
-            
+
             // Trim all whitespace and newlines
             line = line?.Trim();
-            
+
             if (!string.IsNullOrWhiteSpace(line))
             {
                 // Add yellow color for NPCs (legacy: #Y...#N)
@@ -43,10 +43,10 @@ public sealed class LookHandler
             var line = string.IsNullOrWhiteSpace(obj.Definition.LongDescription)
                 ? obj.Definition.ShortDescription
                 : obj.Definition.LongDescription;
-            
+
             // Trim all whitespace and newlines
             line = line?.Trim();
-            
+
             if (!string.IsNullOrWhiteSpace(line))
             {
                 // Add green color for objects (legacy: #G...#N)
@@ -60,7 +60,7 @@ public sealed class LookHandler
         {
             var otherPlayers = _getPlayersInRoom()
                 .Where(p => p.RoomId == player.RoomId && p.Name != player.Name);
-            
+
             foreach (var otherPlayer in otherPlayers)
             {
                 // Format: "<Name> is standing here." with cyan color
@@ -86,7 +86,7 @@ public sealed class LookHandler
         {
             var otherPlayers = _getPlayersInRoom()
                 .Where(p => p.RoomId == player.RoomId && p.Name != player.Name);
-            
+
             foreach (var otherPlayer in otherPlayers)
             {
                 if (MatchesTarget(otherPlayer, target))
@@ -120,20 +120,20 @@ public sealed class LookHandler
     private static bool MatchesTarget(PlayerState player, string target)
     {
         var targetLower = target.ToLowerInvariant();
-        
+
         // Check if target matches player name (case-insensitive)
         return player.Name.ToLowerInvariant().StartsWith(targetLower);
     }
 
     private static CommandResult FormatObjectDescription(ObjectDefinition obj)
     {
-        var description = obj.Description ?? obj.LongDescription ?? obj.ShortDescription ?? "You see nothing special.";
+        var description = obj.Description;
         return CommandResult.Ok(description.Trim());
     }
 
     private static CommandResult FormatMobDescription(MobInstance mob)
     {
-        var description = mob.Definition.Description ?? mob.Definition.LongDescription ?? mob.Definition.ShortDescription ?? "You see nothing special.";
+        var description = mob.Definition.Description;
         var result = description.Trim();
 
         // Show equipped items
@@ -152,7 +152,7 @@ public sealed class LookHandler
     private static CommandResult FormatPlayerDescription(PlayerState player, IWorldState worldState)
     {
         var result = new System.Text.StringBuilder();
-        
+
         // Show player's custom description if set, otherwise default message
         if (!string.IsNullOrWhiteSpace(player.Description))
         {
@@ -162,7 +162,7 @@ public sealed class LookHandler
         {
             result.AppendLine("You see nothing special about them.");
         }
-        
+
         // Show health condition (legacy: diag_char_to_char)
         var healthCondition = GetHealthCondition(player);
         result.AppendLine();
@@ -178,7 +178,7 @@ public sealed class LookHandler
             result.AppendLine();
             result.Append(player.Name);
             result.Append(" is using:");
-            
+
             foreach (var (slotId, objectInstanceId) in player.EquipmentSlotToObjectId.OrderBy(x => x.Key))
             {
                 var obj = worldState.GetObjectInstance(objectInstanceId);
@@ -196,19 +196,19 @@ public sealed class LookHandler
 
         return CommandResult.Ok(result.ToString());
     }
-    
+
     private static string GetHealthCondition(PlayerState player)
     {
         // Legacy formula: cond = (8 * current_hp) / max_hp
         // Returns conditions: excellent, few scratches, small wounds, quite wounded, nasty wounds, pretty hurt, awful, near death
         if (player.MaxHitPoints <= 0)
             return " is in unknown condition.";
-            
+
         var cond = (8 * player.HitPoints) / player.MaxHitPoints;
-        
+
         if (cond > 8) cond = 8;
         if (cond < 0) cond = 0;
-        
+
         return cond switch
         {
             8 => " is in excellent condition.",

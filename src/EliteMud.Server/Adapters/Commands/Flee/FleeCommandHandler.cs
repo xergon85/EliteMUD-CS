@@ -2,7 +2,6 @@ using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
-using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
 
@@ -76,8 +75,8 @@ internal sealed class FleeCommandHandler : ICommandHandler
 
         // Show new room by looking (same as move command)
         await _lookHandler.HandleAsync(
-            new CommandRequest(CommandKind.Look, null, null), 
-            context, 
+            new CommandRequest(CommandKind.Look, null, null),
+            context,
             cancellationToken);
 
         return CommandOutcome.Continue;

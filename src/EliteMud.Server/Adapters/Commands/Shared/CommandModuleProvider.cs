@@ -1,4 +1,3 @@
-using System.Reflection;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Skills;
 using EliteMud.Server.Adapters.Commands.Consider;
@@ -61,8 +60,6 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new ResetZoneCommandModule(),
             new SayCommandModule(),
             new MoveCommandModule(),
-            // new KillCommandModule(), // REMOVED - now auto-registered via MeleeAttackExecutor
-            // new KickCommandModule(), // REMOVED - now auto-registered via ISkillExecutor
             new FleeCommandModule(),
             new WimpyCommandModule(),
             new SleepCommandModule(),
@@ -75,13 +72,13 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
             new SetLevelCommandModule(),
             new SkillsCommandModule()
         };
-        
+
         // Auto-discover skill executor modules
         var skillModules = GetSkillExecutorModules();
-        
+
         return staticModules.Concat(skillModules).ToList();
     }
-    
+
     /// <summary>
     /// Auto-discover all ISkillExecutor implementations and create modules for them.
     /// This makes adding new skills trivial - just implement ISkillExecutor.
@@ -93,22 +90,22 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
     {
         var executorTypes = typeof(ISkillExecutor).Assembly
             .GetTypes()
-            .Where(t => !t.IsAbstract && !t.IsInterface && typeof(ISkillExecutor).IsAssignableFrom(t));
-        
+            .Where(t => t is { IsAbstract: false, IsInterface: false } && typeof(ISkillExecutor).IsAssignableFrom(t));
+
         foreach (var type in executorTypes)
         {
             // Get CommandKind by convention from type name
             // KickSkillExecutor -> CommandKind.Kick
             // BashSkillExecutor -> CommandKind.Bash
             var commandKind = GetCommandKindFromTypeName(type.Name);
-            
+
             if (commandKind.HasValue)
             {
                 yield return new SkillCommandModule(commandKind.Value, type);
             }
         }
     }
-    
+
     /// <summary>
     /// Extract CommandKind from executor type name by convention.
     /// KickSkillExecutor -> Kick, BashSkillExecutor -> Bash, etc.
@@ -118,15 +115,15 @@ internal sealed class CommandModuleProvider : ICommandModuleProvider
         // Remove "SkillExecutor" suffix to get skill name
         if (!typeName.EndsWith("SkillExecutor"))
             return null;
-        
-        var skillName = typeName.Substring(0, typeName.Length - "SkillExecutor".Length);
-        
+
+        var skillName = typeName[..^"SkillExecutor".Length];
+
         // Try to parse as CommandKind enum
         if (Enum.TryParse<CommandKind>(skillName, ignoreCase: true, out var commandKind))
         {
             return commandKind;
         }
-        
+
         return null;
     }
 }
