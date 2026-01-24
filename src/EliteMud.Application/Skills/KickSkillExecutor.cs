@@ -132,6 +132,22 @@ public sealed class KickSkillExecutor : ISkillExecutor
                 _combatCalculator.StopFighting(attacker);
                 mobInstance.FightingConnectionId = null;
 
+                // Calculate and apply alignment shift
+                int alignmentShift = _combatCalculator.CalculateAlignmentShift(attacker, mobInstance, isPvP: false);
+                if (alignmentShift != 0)
+                {
+                    _combatCalculator.ApplyAlignmentShift(attacker, alignmentShift);
+                    
+                    // Add alignment shift message if significant
+                    if (Math.Abs(alignmentShift) >= 50)
+                    {
+                        string alignmentMsg = alignmentShift > 0 
+                            ? $"#GYou feel more virtuous.#N ({alignmentShift:+0})"
+                            : $"#RYou feel more sinister.#N ({alignmentShift})";
+                        messages.Add(new SkillMessage(SkillMessageTarget.Actor, alignmentMsg));
+                    }
+                }
+
                 _worldState.CreateMobCorpse(mobInstance, attacker.RoomId);
                 _worldState.RemoveMob(mobInstance.InstanceId, attacker.RoomId);
             }

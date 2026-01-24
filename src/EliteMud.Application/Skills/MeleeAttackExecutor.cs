@@ -1,3 +1,4 @@
+using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
@@ -19,16 +20,19 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
 {
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
+    private readonly MobAiService _mobAiService;
 
     public SkillType SkillType => SkillType.Kick; // Not actually a skill, just needs a value
     public TargetingMode Targeting => TargetingMode.RequiredInRoom;
 
     public MeleeAttackExecutor(
         CombatCalculator combatCalculator,
-        IWorldState worldState)
+        IWorldState worldState,
+        MobAiService mobAiService)
     {
         _combatCalculator = combatCalculator;
         _worldState = worldState;
+        _mobAiService = mobAiService;
     }
 
     /// <summary>
@@ -79,18 +83,19 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             var result = _combatCalculator.PerformAttack(attacker, victimPlayer, weaponDetails);
 
             // Format combat messages (legacy format with damage/health)
+            var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victimPlayer);
             var attackerCombatMsg = CombatMessageFormatter.FormatCombatMessage(
                 attacker.Name,
                 victimPlayer.Name,
                 result.Damage,
-                victimPlayer.MaxHitPoints,
+                victimEffectiveMaxHp,
                 MessagePerspective.ToChar);
 
             var victimCombatMsg = CombatMessageFormatter.FormatCombatMessage(
                 attacker.Name,
                 victimPlayer.Name,
                 result.Damage,
-                victimPlayer.MaxHitPoints,
+                victimEffectiveMaxHp,
                 MessagePerspective.ToVict);
 
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, attackerCombatMsg));
@@ -102,7 +107,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
                     attacker.Name,
                     victimPlayer.Name,
                     result.Damage,
-                    victimPlayer.MaxHitPoints,
+                    victimEffectiveMaxHp,
                     MessagePerspective.ToRoom);
 
                 messages.Add(new SkillMessage(SkillMessageTarget.Others, roomCombatMsg));
@@ -118,6 +123,11 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             _combatCalculator.SetFighting(attacker, -mobInstance.InstanceId);
             mobInstance.FightingConnectionId = context.ActorConnectionId;
             mobInstance.Position = Position.Fighting;
+
+            // Trigger MOB_HELPER mobs to assist this mob
+            // Legacy: fight.c:1575-1600 - called from hit() when combat starts
+            var emptyConnections = new Dictionary<int, PlayerConnection>();
+            _mobAiService.ProcessAssist(mobInstance, attacker.RoomId, _worldState, emptyConnections);
 
             var mobDesc = mobInstance.Definition.ShortDescription?.Trim() ?? "something";
 
@@ -146,6 +156,13 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             }
             
             mobInstance.HitPoints -= (short)damage;
+
+            // MOB_MEMORY: mob remembers this attacker
+            // Legacy: fight.c:824-827 - remember_attack() called when hit
+            if (mobInstance.Definition.ParsedFlags.HasFlag(MobFlags.Memory))
+            {
+                mobInstance.RememberPlayer(attacker.Id);
+            }
 
             // Format combat messages
             var attackerCombatMsg = CombatMessageFormatter.FormatCombatMessage(
