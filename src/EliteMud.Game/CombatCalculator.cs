@@ -428,18 +428,38 @@ public class CombatCalculator
 
     /// <summary>
     /// Update character position based on current HP.
-    /// Legacy: update_pos(ch)
+    /// Legacy: update_pos(ch) from fight.c:160
+    /// 
+    /// Auto-stand behavior:
+    /// - If HP > 0 and position is Sleeping/Resting/Sitting → force to Standing
+    /// - If HP > 0 and position is Fighting/Standing → keep current position
+    /// - If HP <= 0 → set to dying/dead positions
+    /// 
+    /// This prevents the bug where victims get stuck sitting/sleeping while fighting.
     /// </summary>
     public void UpdatePosition(PlayerState character)
     {
         if (character.HitPoints > 0)
         {
-            // Still conscious
-            if (character.Position > Position.Stunned)
+            // Still conscious - check if we need to auto-stand
+            // Legacy: if (GET_HIT(victim) > 0 && GET_POS(victim) > POS_STUNNED) return;
+            //         else if (GET_HIT(victim) > 0) GET_POS(victim) = POS_STANDING;
+            
+            if (character.Position > Position.Stunned && character.Position < Position.Fighting)
             {
-                return; // No change
+                // Sleeping/Resting/Sitting → auto-stand when taking damage
+                character.Position = Position.Standing;
             }
-            character.Position = Position.Standing;
+            else if (character.Position >= Position.Fighting)
+            {
+                // Already Fighting or Standing → keep current position
+                return;
+            }
+            else
+            {
+                // Stunned or worse → stand up
+                character.Position = Position.Standing;
+            }
         }
         else if (character.HitPoints > -3)
         {

@@ -17,6 +17,13 @@
   - Fix: Add position check in LookCommandHandler (require Position.Resting or higher)
   - Related: May affect other info commands (examine, inventory, equipment, etc.)
 
+- ✅ **Players can get stuck sitting/sleeping while fighting** - FIXED (Jan 25, 2026)
+  - Impact: Player ended up in Position.Sitting while FightingConnectionId was set, making them unable to act
+  - Root cause: Victim didn't auto-stand when attacked/damaged
+  - Legacy behavior: Getting hit forces victim to Position.Standing (fight.c update_pos())
+  - Fix: Updated CombatCalculator.UpdatePosition() to auto-stand victims in Sleeping/Resting/Sitting positions
+  - Details: Position.Fighting and Position.Standing are preserved, but Sleeping/Resting/Sitting → Standing on damage
+
 ### ✅ Phase 1: COMPLETE
 - ✅ Telnet session handling and input pipeline
 - ✅ Basic login (name entry only, no creation flow)
