@@ -28,6 +28,14 @@
   - Fix: Updated CombatCalculator.UpdatePosition() to auto-stand victims in Sleeping/Resting/Sitting positions
   - Details: Position.Fighting and Position.Standing are preserved, but Sleeping/Resting/Sitting → Standing on damage
 
+### Persistence Bugs
+- ❌ **Player position/room not saved on logout** - CRITICAL
+  - Impact: Players always spawn in "The Void" (room 0) on login instead of their saved location
+  - Root cause: Position and RoomId not being persisted to database on logout/save
+  - Expected: Player should resume at last saved location with saved position
+  - Fix needed: Update CharacterMapper to include Position and RoomId in Entity ↔ PlayerState conversion
+  - Related: May affect other character state that isn't being persisted
+
 ### ✅ Phase 1: COMPLETE
 - ✅ Telnet session handling and input pipeline
 - ✅ Basic login (name entry only, no creation flow)
