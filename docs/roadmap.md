@@ -61,9 +61,18 @@
 - ✅ ActMessage integration for all equipment commands (wear/wield/hold/remove)
 - ✅ Proper "already equipped" messages showing currently equipped item ("You're already wielding $p.")
 - ❌ Item level/class/race restrictions - prevent equipping items above level or wrong class - **TODO**
-- ❌ Item stat bonuses - apply +STR, +HP, +AC, etc. from equipped items - **TODO**
+- ✅ Item stat bonuses storage - equipment affects stored and displayed in `stat` command - **COMPLETE**
+- ✅ Equipment vitals bonuses - MaxHit, MaxMana, MaxMove applied to effective stats - **COMPLETE**
+- ✅ Equipment combat bonuses - AC, Hitroll, Damroll applied in combat - **COMPLETE**
+- ✅ Equipment saving throw bonuses - SavingPhysical/Mental/Magic/Poison applied - **COMPLETE**
+- ❌ Apply equipment attribute bonuses to formulas - STR/DEX/INT/WIS/CON/CHA should affect combat calculations - **TODO**
+  - CombatCalculator should use effective stats (base + equipment + spell) instead of base stats
+  - Strength affects tohit and todam (str_app tables)
+  - Dexterity affects AC and dodge chance
+  - Intelligence affects spell damage and mana costs
+  - Wisdom affects spell success and saving throws
+  - Constitution affects HP regeneration rate
 - ❌ Item affects - apply buffs/debuffs from equipped items (e.g., DETECT_INVIS, INVISIBLE) - **TODO**
-- ❌ Equipment stat calculation - recalculate total stats when equipping/removing - **TODO**
 - ❌ Cursed items - can't remove once equipped - **TODO**
 - ❌ Item durability - equipment degrades over time - **TODO**
 - ❌ Item repair system - repair damaged equipment - **TODO**
