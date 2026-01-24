@@ -1,4 +1,5 @@
 using System.Net;
+using EliteMud.Application.Ai;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Session;
 using EliteMud.Application.Session.Authentication;
@@ -120,6 +121,7 @@ internal static class ServerBootstrap
             .AddSingleton<IpBanService>(new IpBanService(banDurationMinutes: 15, maxFailedAttempts: 3))
             .AddSingleton<AuthenticationHandler>()
             .AddSingleton<ActMessageService>()
+            .AddSingleton<MobAiService>()
             .AddSingleton<GameTickService>()
             .AddSingleton<CharacterSaveQueue>()
 
