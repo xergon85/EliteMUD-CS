@@ -9,6 +9,14 @@
 
 ## Current Status (As of Jan 19, 2026)
 
+## Known Issues / Bugs
+
+### Position/State Bugs
+- ❌ **`look` command works while sleeping** - Should require awake state (legacy: act.informative.c checks GET_POS >= RESTING)
+  - Impact: Players can see room details while asleep
+  - Fix: Add position check in LookCommandHandler (require Position.Resting or higher)
+  - Related: May affect other info commands (examine, inventory, equipment, etc.)
+
 ### ✅ Phase 1: COMPLETE
 - ✅ Telnet session handling and input pipeline
 - ✅ Basic login (name entry only, no creation flow)
