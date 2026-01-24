@@ -12,7 +12,13 @@ public enum Direction
 
 public sealed record ExitDefinition(Direction Direction, int TargetRoomId);
 
-public sealed record RoomDefinition(int Id, string Name, string Description, IReadOnlyList<ExitDefinition> Exits)
+public sealed record RoomDefinition(
+    int Id, 
+    string Name, 
+    string Description, 
+    IReadOnlyList<ExitDefinition> Exits, 
+    RoomFlags Flags = RoomFlags.None, 
+    int? ZoneId = null)
 {
     // Clean string properties on construction
     public string Name { get; init; } = TextCleaner.Clean(Name);
@@ -121,7 +127,8 @@ public sealed record MobDefinition(
     int MaxHitPoints,
     int Alignment,
     IReadOnlyList<MobAttack> Attacks,
-    MobCombat? Combat)
+    MobCombat? Combat,
+    int? Hometown = null)
 {
     // Clean string properties on construction
     public string Name { get; init; } = TextCleaner.Clean(Name);
@@ -130,6 +137,39 @@ public sealed record MobDefinition(
     public string Description { get; init; } = TextCleaner.Clean(Description);
     public string Race { get; init; } = TextCleaner.Clean(Race);
     public string Class { get; init; } = TextCleaner.Clean(Class);
+    
+    /// <summary>
+    /// Parses legacy string flags into MobFlags enum.
+    /// Examples: "SENTINEL", "AGGRESSIVE", "MEMORY"
+    /// </summary>
+    public MobFlags ParsedFlags { get; init; } = ParseFlags(Flags);
+    
+    private static MobFlags ParseFlags(IReadOnlyList<string> flags)
+    {
+        var result = MobFlags.None;
+        
+        foreach (var flag in flags)
+        {
+            var normalized = flag.ToUpperInvariant().Replace("MOB_", "").Replace(" ", "");
+            
+            result |= normalized switch
+            {
+                "SENTINEL" => MobFlags.Sentinel,
+                "SCAVENGER" => MobFlags.Scavenger,
+                "AGGRESSIVE" => MobFlags.Aggressive,
+                "STAYZONE" or "STAY_ZONE" => MobFlags.StayZone,
+                "WIMPY" => MobFlags.Wimpy,
+                "AGGRESSIVEEVIL" or "AGGRESSIVE_EVIL" => MobFlags.AggressiveEvil,
+                "AGGRESSIVEGOOD" or "AGGRESSIVE_GOOD" => MobFlags.AggressiveGood,
+                "AGGRESSIVENEUTRAL" or "AGGRESSIVE_NEUTRAL" => MobFlags.AggressiveNeutral,
+                "MEMORY" => MobFlags.Memory,
+                "HELPER" => MobFlags.Helper,
+                _ => MobFlags.None
+            };
+        }
+        
+        return result;
+    }
 }
 
 /// <summary>

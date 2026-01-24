@@ -56,7 +56,9 @@ internal static class ContentLoader
                 room.Id, 
                 room.Name ?? string.Empty, 
                 room.Description ?? string.Empty, 
-                exits);
+                exits,
+                ParseRoomFlags(room.Flags),
+                room.ZoneId);
         }
 
         return new WorldDefinition(rooms);
@@ -526,7 +528,13 @@ internal static class ContentLoader
                             }
                         }
 
-                        allRooms[room.Id] = new RoomDefinition(room.Id, room.Name ?? "", room.Description ?? "", exits);
+                        allRooms[room.Id] = new RoomDefinition(
+                            room.Id, 
+                            room.Name ?? "", 
+                            room.Description ?? "", 
+                            exits,
+                            ParseRoomFlags(room.Flags),
+                            room.ZoneId);
                     }
                 }
 
@@ -986,6 +994,28 @@ internal static class ContentLoader
         };
     }
 
+    /// <summary>
+    /// Parse room flags from JSON string array to RoomFlags enum.
+    /// Example: ["Dark", "Indoors", "Lawful"] -> RoomFlags.Dark | RoomFlags.Indoors | RoomFlags.Lawful
+    /// </summary>
+    private static RoomFlags ParseRoomFlags(List<string>? flags)
+    {
+        if (flags == null || flags.Count == 0)
+        {
+            return RoomFlags.None;
+        }
+
+        RoomFlags result = RoomFlags.None;
+        foreach (var flag in flags)
+        {
+            if (Enum.TryParse<RoomFlags>(flag, true, out var parsed))
+            {
+                result |= parsed;
+            }
+        }
+        return result;
+    }
+
     private sealed class RoomsFile
     {
         public List<RoomContent> Rooms { get; set; } = new();
@@ -997,6 +1027,8 @@ internal static class ContentLoader
         public string? Name { get; set; }
         public string? Description { get; set; }
         public List<ExitContent>? Exits { get; set; }
+        public int? ZoneId { get; set; }
+        public List<string>? Flags { get; set; }
     }
 
     private sealed class ExitContent
