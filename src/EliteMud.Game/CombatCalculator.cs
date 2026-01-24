@@ -119,13 +119,17 @@ public class CombatCalculator
     /// Legacy: fight.c:1439-1476
     /// Formula (bare hands): str_todam + damroll + random(0,2)
     /// Formula (with weapon): str_todam + damroll + dice(weapon.DiceCount, weapon.DiceSides)
+    /// 
+    /// IMPORTANT: effectiveStrength should include base + equipment + spell bonuses.
+    /// Use IWorldState.GetTotalEffectiveStrength() to calculate this before calling.
     /// </summary>
     /// <param name="attacker">The attacking player</param>
+    /// <param name="effectiveStrength">Total effective strength (base + equipment + spell)</param>
     /// <param name="weaponDetails">The wielded weapon details (null for bare hands)</param>
     /// <returns>Base damage before modifiers</returns>
-    public int CalculateDamage(PlayerState attacker, ObjectWeapon? weaponDetails = null)
+    public int CalculateDamage(PlayerState attacker, sbyte effectiveStrength, ObjectWeapon? weaponDetails = null)
     {
-        int strBonus = GetStrengthDamageBonus(attacker.Strength);
+        int strBonus = GetStrengthDamageBonus(effectiveStrength);
         int baseDamage;
         
         if (weaponDetails != null)
@@ -247,10 +251,10 @@ public class CombatCalculator
     /// Legacy: fight.c:1439-1458
     /// Formula: str_todam + damroll + random(0,2)
     /// </summary>
-    [Obsolete("Use CalculateDamage(attacker, weaponDetails) instead")]
+    [Obsolete("Use CalculateDamage(attacker, effectiveStrength, weaponDetails) instead")]
     public int CalculateBareDamage(PlayerState attacker)
     {
-        return CalculateDamage(attacker, null);
+        return CalculateDamage(attacker, attacker.Strength, null);
     }
 
     /// <summary>
@@ -299,17 +303,26 @@ public class CombatCalculator
     /// <summary>
     /// Determine if an attack hits.
     /// Legacy: calculates based on THAC0, AC, dexterity, hitroll (fight.c:1380-1418)
+    /// 
+    /// IMPORTANT: Effective stats should include base + equipment + spell bonuses.
+    /// Use IWorldState.GetTotalEffective*() methods to calculate these before calling.
     /// </summary>
-    public bool AttackHits(PlayerState attacker, PlayerState victim)
+    public bool AttackHits(
+        PlayerState attacker,
+        sbyte attackerEffectiveStrength,
+        sbyte attackerEffectiveIntelligence,
+        sbyte attackerEffectiveWisdom,
+        PlayerState victim,
+        sbyte victimEffectiveDexterity)
     {
         // Calculate base THAC0
         int calcThac0 = CalculateThac0(attacker);
         
         // Apply bonuses (subtract from THAC0 - lower is better)
         // Legacy: calc_thaco -= (str_tohit + hitroll + int_bonus + wis_bonus + skillbonus - drunk)
-        int strBonus = GetStrengthHitBonus(attacker.Strength);
-        int intBonus = (attacker.Intelligence - 13) / 3;
-        int wisBonus = (attacker.Wisdom - 13) / 3;
+        int strBonus = GetStrengthHitBonus(attackerEffectiveStrength);
+        int intBonus = (attackerEffectiveIntelligence - 13) / 3;
+        int wisBonus = (attackerEffectiveWisdom - 13) / 3;
         
         calcThac0 -= (strBonus + attacker.Hitroll + intBonus + wisBonus);
         
@@ -323,9 +336,9 @@ public class CombatCalculator
         // Calculate victim AC (legacy: fight.c:1395-1415)
         int victimAc = victim.ArmorClass;
         
-        // Dexterity bonus (if awake)
+        // Dexterity bonus (if awake) - uses EFFECTIVE dex (base + equipment + spell)
         // Legacy: victim_ac -= (GET_DEX(victim)) * 10 / 6
-        victimAc -= (victim.Dexterity * 10) / 6;
+        victimAc -= (victimEffectiveDexterity * 10) / 6;
         
         // Divide by 10 (legacy: victim_ac = MAX(-200, victim_ac / 10))
         victimAc = Math.Max(-200, victimAc / 10);
@@ -450,12 +463,26 @@ public class CombatCalculator
     /// Perform a full attack from attacker to victim.
     /// Returns damage dealt.
     /// Legacy: hit() function
+    /// 
+    /// IMPORTANT: Effective stats should include base + equipment + spell bonuses.
+    /// Use IWorldState.GetTotalEffective*() methods to calculate these before calling.
     /// </summary>
     /// <param name="attacker">The attacking player</param>
+    /// <param name="attackerEffectiveStrength">Total effective strength (base + equipment + spell)</param>
+    /// <param name="attackerEffectiveIntelligence">Total effective intelligence</param>
+    /// <param name="attackerEffectiveWisdom">Total effective wisdom</param>
     /// <param name="victim">The target player</param>
+    /// <param name="victimEffectiveDexterity">Total effective dexterity</param>
     /// <param name="weaponDetails">The wielded weapon details (null for bare hands)</param>
     /// <returns>Attack result including hit/miss and damage</returns>
-    public AttackResult PerformAttack(PlayerState attacker, PlayerState victim, ObjectWeapon? weaponDetails = null)
+    public AttackResult PerformAttack(
+        PlayerState attacker,
+        sbyte attackerEffectiveStrength,
+        sbyte attackerEffectiveIntelligence,
+        sbyte attackerEffectiveWisdom,
+        PlayerState victim,
+        sbyte victimEffectiveDexterity,
+        ObjectWeapon? weaponDetails = null)
     {
         // Check if out of moves (too tired to fight)
         if (attacker.Movement < 1)
@@ -463,15 +490,15 @@ public class CombatCalculator
             return new AttackResult(false, 0, "You are too exhausted to attack!");
         }
 
-        // Check if attack hits
-        bool hits = AttackHits(attacker, victim);
+        // Check if attack hits (using effective stats)
+        bool hits = AttackHits(attacker, attackerEffectiveStrength, attackerEffectiveIntelligence, attackerEffectiveWisdom, victim, victimEffectiveDexterity);
         if (!hits)
         {
             return new AttackResult(false, 0, "You miss!");
         }
 
-        // Calculate damage (with weapon if equipped)
-        int damage = CalculateDamage(attacker, weaponDetails);
+        // Calculate damage (with weapon if equipped, using effective STR)
+        int damage = CalculateDamage(attacker, attackerEffectiveStrength, weaponDetails);
         
         // Apply damage (includes passive defensive skills)
         var damageResult = ApplyDamage(victim, damage);

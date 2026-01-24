@@ -356,7 +356,20 @@ internal sealed class GameTickService
             weaponDetails = weapon?.Definition.Details?.Weapon;
         }
         
-        var result = _combatCalculator.PerformAttack(attacker.Player, victim.Player, weaponDetails);
+        // Calculate effective stats (base + equipment + spell bonuses)
+        var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker.Player);
+        var attackerEffectiveInt = _worldState.GetTotalEffectiveIntelligence(attacker.Player);
+        var attackerEffectiveWis = _worldState.GetTotalEffectiveWisdom(attacker.Player);
+        var victimEffectiveDex = _worldState.GetTotalEffectiveDexterity(victim.Player);
+        
+        var result = _combatCalculator.PerformAttack(
+            attacker.Player,
+            attackerEffectiveStr,
+            attackerEffectiveInt,
+            attackerEffectiveWis,
+            victim.Player,
+            victimEffectiveDex,
+            weaponDetails);
         
         // Apply weapon special effects (bless/evil/flame) to damage
         int totalDamage = result.Damage;
@@ -474,8 +487,11 @@ internal sealed class GameTickService
             weaponDetails = weapon?.Definition.Details?.Weapon;
         }
         
-        // Player attacks mob
-        int damage = _combatCalculator.CalculateDamage(attacker.Player, weaponDetails);
+        // Calculate effective STR (base + equipment + spell bonuses)
+        var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker.Player);
+        
+        // Player attacks mob (using effective STR for damage)
+        int damage = _combatCalculator.CalculateDamage(attacker.Player, attackerEffectiveStr, weaponDetails);
         
         // Apply weapon special effects (bless/evil/flame)
         if (weapon != null)

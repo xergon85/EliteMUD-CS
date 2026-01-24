@@ -139,7 +139,10 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
             weaponDetails = weapon?.Definition.Details?.Weapon;
         }
         
-        int baseDamage = _combatCalculator.CalculateDamage(attacker, weaponDetails);
+        // Calculate effective STR (base + equipment + spell bonuses)
+        var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
+        
+        int baseDamage = _combatCalculator.CalculateDamage(attacker, attackerEffectiveStr, weaponDetails);
         
         // Apply weapon special effects (bless/evil/flame) BEFORE multiplier
         if (weapon != null)

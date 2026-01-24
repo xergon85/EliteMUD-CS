@@ -79,8 +79,21 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
                 weaponDetails = weapon?.Definition.Details?.Weapon;
             }
 
-            // Perform initial attack
-            var result = _combatCalculator.PerformAttack(attacker, victimPlayer, weaponDetails);
+            // Calculate effective stats (base + equipment + spell bonuses)
+            var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
+            var attackerEffectiveInt = _worldState.GetTotalEffectiveIntelligence(attacker);
+            var attackerEffectiveWis = _worldState.GetTotalEffectiveWisdom(attacker);
+            var victimEffectiveDex = _worldState.GetTotalEffectiveDexterity(victimPlayer);
+
+            // Perform initial attack (using effective stats)
+            var result = _combatCalculator.PerformAttack(
+                attacker,
+                attackerEffectiveStr,
+                attackerEffectiveInt,
+                attackerEffectiveWis,
+                victimPlayer,
+                victimEffectiveDex,
+                weaponDetails);
 
             // Format combat messages (legacy format with damage/health)
             var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victimPlayer);
@@ -144,9 +157,12 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
                 weaponDetails = weapon?.Definition.Details?.Weapon;
             }
 
-            // Perform initial attack
+            // Calculate effective stats (base + equipment + spell bonuses)
+            var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
+
+            // Perform initial attack (using effective STR for damage)
             int mobMaxHp = mobInstance.Definition.MaxHitPoints;
-            int damage = _combatCalculator.CalculateDamage(attacker, weaponDetails);
+            int damage = _combatCalculator.CalculateDamage(attacker, attackerEffectiveStr, weaponDetails);
             
             // Apply weapon special effects (bless/evil/flame)
             if (weapon != null)

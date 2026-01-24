@@ -65,7 +65,7 @@
 - ✅ Equipment vitals bonuses - MaxHit, MaxMana, MaxMove applied to effective stats - **COMPLETE**
 - ✅ Equipment combat bonuses - AC, Hitroll, Damroll applied in combat - **COMPLETE**
 - ✅ Equipment saving throw bonuses - SavingPhysical/Mental/Magic/Poison applied - **COMPLETE**
-- ❌ Apply equipment attribute bonuses to formulas - STR/DEX/INT/WIS/CON/CHA should affect combat calculations - **TODO**
+- ✅ Apply equipment attribute bonuses to formulas - STR/DEX/INT/WIS/CON/CHA affect combat calculations - **COMPLETE**
   - CombatCalculator should use effective stats (base + equipment + spell) instead of base stats
   - Strength affects tohit and todam (str_app tables)
   - Dexterity affects AC and dodge chance

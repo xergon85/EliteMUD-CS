@@ -537,6 +537,140 @@ public static class WorldStateExtensions
         return (short)Math.Max(effectiveMaxMove, 0);
     }
     
+    // ===== Effective Attribute Stats (for combat calculations) =====
+    
+    /// <summary>
+    /// Get effective Strength including spell affects AND equipment bonuses.
+    /// Used in combat calculations (damage, to-hit).
+    /// Legacy: EliteMUD applies str_app tables to total stats (base + equipment + spell).
+    /// </summary>
+    public static sbyte GetTotalEffectiveStrength(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveStr = player.Strength;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Strength))
+        {
+            effectiveStr += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveStr += worldState.GetEquipmentBonus(player, AffectLocation.Strength);
+        
+        // Clamp to valid attribute range (3-25, matching legacy)
+        return (sbyte)Math.Clamp(effectiveStr, 3, 25);
+    }
+    
+    /// <summary>
+    /// Get effective Dexterity including spell affects AND equipment bonuses.
+    /// Used in combat calculations (AC, dodge).
+    /// Legacy: EliteMUD applies dex_app tables to total stats (base + equipment + spell).
+    /// </summary>
+    public static sbyte GetTotalEffectiveDexterity(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveDex = player.Dexterity;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Dexterity))
+        {
+            effectiveDex += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveDex += worldState.GetEquipmentBonus(player, AffectLocation.Dexterity);
+        
+        // Clamp to valid attribute range (3-25, matching legacy)
+        return (sbyte)Math.Clamp(effectiveDex, 3, 25);
+    }
+    
+    /// <summary>
+    /// Get effective Intelligence including spell affects AND equipment bonuses.
+    /// Used in combat calculations (to-hit bonus for smart characters).
+    /// Legacy: EliteMUD applies int_app tables to total stats (base + equipment + spell).
+    /// </summary>
+    public static sbyte GetTotalEffectiveIntelligence(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveInt = player.Intelligence;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Intelligence))
+        {
+            effectiveInt += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveInt += worldState.GetEquipmentBonus(player, AffectLocation.Intelligence);
+        
+        // Clamp to valid attribute range (3-25, matching legacy)
+        return (sbyte)Math.Clamp(effectiveInt, 3, 25);
+    }
+    
+    /// <summary>
+    /// Get effective Wisdom including spell affects AND equipment bonuses.
+    /// Used in combat calculations (to-hit bonus for wise characters).
+    /// Legacy: EliteMUD applies wis_app tables to total stats (base + equipment + spell).
+    /// </summary>
+    public static sbyte GetTotalEffectiveWisdom(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveWis = player.Wisdom;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Wisdom))
+        {
+            effectiveWis += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveWis += worldState.GetEquipmentBonus(player, AffectLocation.Wisdom);
+        
+        // Clamp to valid attribute range (3-25, matching legacy)
+        return (sbyte)Math.Clamp(effectiveWis, 3, 25);
+    }
+    
+    /// <summary>
+    /// Get effective Constitution including spell affects AND equipment bonuses.
+    /// Currently used for display only (future: HP regen, poison resistance).
+    /// Legacy: EliteMUD applies con_app tables to total stats (base + equipment + spell).
+    /// </summary>
+    public static sbyte GetTotalEffectiveConstitution(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveCon = player.Constitution;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Constitution))
+        {
+            effectiveCon += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveCon += worldState.GetEquipmentBonus(player, AffectLocation.Constitution);
+        
+        // Clamp to valid attribute range (3-25, matching legacy)
+        return (sbyte)Math.Clamp(effectiveCon, 3, 25);
+    }
+    
+    /// <summary>
+    /// Get effective Charisma including spell affects AND equipment bonuses.
+    /// Currently used for display only (future: shop prices, NPC reactions).
+    /// Legacy: EliteMUD applies cha_app tables to total stats (base + equipment + spell).
+    /// </summary>
+    public static sbyte GetTotalEffectiveCharisma(this IWorldState worldState, PlayerState player)
+    {
+        int effectiveCha = player.Charisma;
+        
+        // Add spell affect modifiers
+        foreach (var affect in player.Affects.Where(a => a.Location == AffectLocation.Charisma))
+        {
+            effectiveCha += affect.Modifier;
+        }
+        
+        // Add equipment bonuses
+        effectiveCha += worldState.GetEquipmentBonus(player, AffectLocation.Charisma);
+        
+        // Clamp to valid attribute range (3-25, matching legacy)
+        return (sbyte)Math.Clamp(effectiveCha, 3, 25);
+    }
+    
     // ===== Mob Equipment Bonuses =====
     
     /// <summary>
