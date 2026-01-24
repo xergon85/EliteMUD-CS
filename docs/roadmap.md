@@ -64,6 +64,9 @@
 - ❌ Item stat bonuses - apply +STR, +HP, +AC, etc. from equipped items - **TODO**
 - ❌ Item affects - apply buffs/debuffs from equipped items (e.g., DETECT_INVIS, INVISIBLE) - **TODO**
 - ❌ Equipment stat calculation - recalculate total stats when equipping/removing - **TODO**
+- ❌ Cursed items - can't remove once equipped - **TODO**
+- ❌ Item durability - equipment degrades over time - **TODO**
+- ❌ Item repair system - repair damaged equipment - **TODO**
 
 #### 3.3 Character Stats & Resources - COMPLETE ✅
 - ✅ PlayerState has: HP, MaxHP, Mana, MaxMana, Movement, MaxMovement
@@ -90,9 +93,12 @@
 - ✅ `stand` command - stand up from sitting/resting/sleeping - **COMPLETE**
 - ✅ Position-based regen rates (sleeping > resting > sitting > standing) - **COMPLETE** (legacy formulas: sleeping +4, resting +3, sitting +2, standing +1)
 - ❌ Hunger/thirst system - track fullness and thirst levels - **TODO**
+- ❌ `drink` / `eat` commands for consumables - **TODO** (see Phase 6.2 for full implementation)
 - ❌ Hunger/thirst messages and warnings - **TODO**
 - ❌ Hunger/thirst effects on regen and combat - **TODO**
 - ❌ Death from starvation/dehydration - **TODO**
+- ❌ Drunk status effects - **TODO**
+- ❌ Poison status effects - **TODO**
 
 #### 3.4 Persistence Layer (SQLite) - COMPLETE ✅
 - ✅ Database schema with EF Core (Account + Character entities)
@@ -133,11 +139,23 @@
 - ✅ IpBanService with auto-expiring bans
 - ✅ Failed attempt tracking per IP address
 - ✅ Ban status checking before connection acceptance
-- ❌ Idle timeout - disconnect users after X minutes of inactivity - **TODO**
 - ❌ Password recovery system - **Documented in FUTURE_IMPROVEMENTS.md**
 - ❌ Email registration (optional) - **TODO**
 - ❌ Permission/immortal level system - **TODO**
-- ❌ Affects/buffs/debuffs system - **TODO**
+
+#### 3.7 Idle & Connection Management - PLANNED
+- ❌ Idle timeout - disconnect users after X minutes of inactivity - **TODO**
+- ❌ `idle` command - show player idle time - **TODO**
+- ❌ Link-dead state handling (disconnected but still in-game) - **TODO**
+- ❌ Reconnection to link-dead characters - **TODO**
+- ❌ Auto-quit on extended link-death - **TODO**
+
+#### 3.8 Site Ban System - PLANNED
+- ❌ Site-wide bans by IP or hostname pattern - **TODO** (legacy: ban.c)
+- ❌ `ban` command - add site ban (admin) - **TODO**
+- ❌ `unban` command - remove site ban (admin) - **TODO**
+- ❌ Ban list persistence in database - **TODO**
+- ❌ New character creation blocking vs play blocking - **TODO**
 
 ### 🔄 Phase 4: IN PROGRESS (Combat + Skills)
 **Milestone:** Core combat parity
@@ -159,6 +177,17 @@
 - ✅ `bash` - shield bash attack (COMPLETE)
 - ✅ `rescue` - take aggro from group member (COMPLETE - PvE only for now)
 - ❌ `consider` - estimate mob difficulty
+- ❌ `assist` - join combat alongside ally
+
+#### 4.6 Advanced Combat Mechanics - PLANNED
+- ❌ Combat rounds counter (track round number) - **TODO**
+- ❌ First strike bonus for initiator - **TODO**
+- ❌ Sneak attack from hidden state - **TODO**
+- ❌ Multi-attack system (dual-wield, extra attacks) - **TODO**
+- ❌ Attack types (slash, pierce, bludgeon) vs armor types - **TODO**
+- ❌ Critical hits and fumbles - **TODO**
+- ❌ Weapon proficiencies - **TODO**
+- ❌ Combat stance system (offensive/defensive/berserker) - **TODO**
 
 #### 4.3 Skills & Spells Framework - COMPLETE ✅
 **Status:** Data-driven Lua formula system fully implemented and merged to main (Jan 23, 2026)
@@ -194,29 +223,70 @@
 - ❌ `berserk` - Warrior rage mode
 - ❌ Additional legacy skills from original MUD
 
-**Spell System (Next Major Feature):**
-- ❌ Spell metadata schema in `content/spells/spells.json`
-- ❌ `ISpellHandler` interface
-- ❌ `cast` command
-- ❌ Mana cost system with formula support
-- ❌ Spell success/failure rolls (INT/WIS based)
-- ❌ Damage spells (Magic Missile, Fireball, Lightning Bolt)
-- ❌ Healing spells (Cure Light/Serious/Critical Wounds)
-- ❌ Buff spells (Armor, Bless, Haste, Strength)
+**Spell System - COMPLETE ✅**
+**Status:** Data-driven spell system fully implemented (Jan 23, 2026)
+
+**Completed Infrastructure:**
+- ✅ Spell metadata schema in `content/spells/spells.json`
+- ✅ `ISpellHandler` interface
+- ✅ `cast` command
+- ✅ Mana cost system with formula support
+- ✅ Spell success/failure rolls (INT/WIS based)
+- ✅ SpellRegistry - Auto-discovery via reflection
+- ✅ Spell proficiency tracking (0-100%)
+- ✅ Spell persistence (database JSON)
+- ✅ WAIT_STATE system for spells
+- ✅ Saving throw system (Physical, Mental, Magic, Poison)
+
+**Implemented Spells (8 working spells):**
+- ✅ **Damage spells:** Magic Missile, Lightning Bolt, Burning Hands
+- ✅ **Healing spells:** Cure Light Wounds, Cure Serious Wounds
+- ✅ **Buff spells:** Armor (AC bonus), Bless (hitroll bonus + extra damage vs evil)
+
+**Affect/Buff System - COMPLETE ✅**
+- ✅ Active affects tracking (PlayerState.ActiveAffects)
+- ✅ Multi-affect support (multiple affects per spell)
+- ✅ Timed affects with duration tracking
+- ✅ Affect expiration system (GameTickService)
+- ✅ `affects` command - display active buffs/debuffs
+- ✅ Equipment stat bonuses (STR, DEX, INT, WIS, CON, CHA)
+- ✅ Equipment affect bonuses (MaxHit, MaxMana, MaxMove, Armor, Hitroll, Damroll)
+- ✅ Equipment saving throw bonuses (SavingPhysical, SavingMental, SavingMagic, SavingPoison)
+- ✅ `stat` command - display detailed character stats with equipment bonuses
+
+**Weapon Effects System - COMPLETE ✅**
+- ✅ BLESS weapon: +3d6 damage vs evil targets (alignment ≤ -350)
+- ✅ EVIL weapon: +3d6 damage vs good targets (alignment ≥ 350)
+- ✅ FLAME weapon: +3d6 fire damage (victim saves vs Physical to negate)
+- ✅ Integrated into all combat paths (kill, backstab, kick, bash, combat tick)
+
+**Future Spell Expansion:**
 - ❌ Debuff spells (Curse, Weaken, Slow, Poison)
 - ❌ Utility spells (Detect Magic, Invisibility, Teleport)
 - ❌ `practice` command - train skills/spells with guildmaster
-- ❌ Spell cooldown system
-- ❌ Resist tables (saves vs spell/paralysis/breath/etc.)
+- ❌ Area effect spells (Fireball, Earthquake)
+- ❌ Summoning spells
+- ❌ Charm/control spells
 
-#### 4.4 Combat Events & Hooks
+#### 4.4 Alignment System - COMPLETE ✅
+**Status:** Legacy-accurate alignment dynamics (Jan 24, 2026)
+
+- ✅ Alignment shift formula from legacy fight.c:445-460
+- ✅ Convergent formula: shift = (-victim_alignment - killer_alignment) / 16
+- ✅ Integration into all combat paths (5 kill locations)
+- ✅ Player feedback messages for significant shifts (|shift| ≥ 50)
+- ✅ Alignment display in score command (9 descriptive states)
+- ✅ Comprehensive test coverage (17 unit tests)
+- ✅ Weapon alignment effects (BLESS/EVIL weapons)
+
+#### 4.5 Combat Events & Hooks
 - ❌ Lua hook: OnCombatStart
 - ❌ Lua hook: OnDamage
 - ❌ Lua hook: OnDeath
 - ❌ Lua hook: OnKill
 - ❌ Combat logging and messaging
 
-### ⏳ Phase 5: NPCs + AI (PLANNED)
+### 🔄 Phase 5: NPCs + AI (IN PROGRESS)
 **Milestone:** Mobs behave like legacy
 
 #### 5.1 Mob AI Foundation
@@ -251,6 +321,12 @@
 - ❌ Quest-giving mobs
 - ❌ Sentinel/guard behavior
 - ❌ Scavenger behavior (pick up items)
+
+#### 5.5 Pathfinding & Navigation - PLANNED
+- ❌ Shortest path algorithm for mobs - **TODO** (legacy: graph.c)
+- ❌ Track system - mobs hunt players across rooms - **TODO**
+- ❌ Guard behavior - mobs prevent passage - **TODO**
+- ❌ Patrol routes for mobs - **TODO**
 
 ### ⏳ Phase 6: World Systems (PLANNED)
 **Milestone:** Social and world features
@@ -321,12 +397,16 @@
 
 #### 6.8 Board & Mail System
 - ❌ Bulletin board object type
-- ❌ `read` command - read board messages
-- ❌ `write` command - post to board
-- ❌ `remove` command - delete own posts
+- ❌ `look board` - see board description
+- ❌ `read <number>` - read board message by number
+- ❌ `write <subject>` - compose new message
+- ❌ `remove <number>` - delete own posts
+- ❌ Board message list display
+- ❌ Board persistence in SQLite
 - ❌ `mail` command - send persistent mail
 - ❌ Mail retrieval at post offices
 - ❌ Mail storage in SQLite
+- ❌ Mail notification on login
 
 #### 6.9 Quest System
 - ❌ Quest definition format
@@ -347,6 +427,66 @@
 - ❌ `wizhelp` - list immortal commands
 - ❌ Immortal visibility toggle
 - ❌ Command logging for auditing
+
+#### 6.11 History System - PLANNED
+- ❌ Command history buffer (scroll through previous commands) - **TODO** (legacy: history.c)
+- ❌ `history` command - show recent command history - **TODO**
+- ❌ Arrow key support for command recall (up/down) - **TODO**
+- ❌ History persistence per session - **TODO**
+
+#### 6.12 Ignore System - PLANNED
+- ❌ `ignore` command - block messages from specific players - **TODO** (legacy: ignore.c)
+- ❌ `unignore` command - remove player from ignore list - **TODO**
+- ❌ Ignored player list persistence - **TODO**
+- ❌ Apply to: tell, say, shout, gossip, emote - **TODO**
+
+#### 6.13 Social Commands - PLANNED
+- ❌ Social command system (smile, laugh, cry, hug, etc.) - **TODO** (legacy: act.social.c)
+- ❌ Load socials from data file - **TODO**
+- ❌ Self-target vs other-target messaging - **TODO**
+- ❌ Room broadcast for socials - **TODO**
+- ❌ Custom social editor (OLC) - **TODO**
+
+#### 6.14 Casino/Games System - PLANNED
+- ❌ Casino room flags - **TODO** (legacy: casino.c, gen_cards.c)
+- ❌ Card game mechanics (poker, blackjack) - **TODO**
+- ❌ Dice games - **TODO**
+- ❌ Gambling with gold - **TODO**
+- ❌ House odds and payout tables - **TODO**
+
+#### 6.15 Special Areas/Quests - PLANNED
+- ❌ Castle zone with special mechanics - **TODO** (legacy: castle.c)
+- ❌ Quest-specific mob programs - **TODO**
+- ❌ Special zone reset logic - **TODO**
+- ❌ Legacy special procedures mapping - **TODO**
+
+#### 6.16 Player Commands (Information & Utility) - PLANNED
+**High Priority Commands:**
+- ❌ `time` - show in-game time and real time - **TODO**
+- ❌ `weather` - show current weather in zone - **TODO**
+- ❌ `title` - set custom title - **TODO**
+- ❌ `prompt` - customize combat/movement prompt - **TODO**
+- ❌ `brief` / `compact` / `noshout` - toggle display modes - **TODO**
+- ❌ `clear` - clear screen - **TODO**
+- ❌ `color` - toggle ANSI color mode - **TODO**
+- ❌ `afk` - mark as away from keyboard - **TODO**
+- ❌ `reply` - reply to last tell - **TODO**
+- ❌ `visible` - break invisibility/hide - **TODO**
+
+**Information Commands:**
+- ❌ `areas` / `zones` - list all zones with level ranges - **TODO**
+- ❌ `help` - help file system - **TODO**
+- ❌ `commands` - list available commands - **TODO**
+- ❌ `spells` - list known spells - **TODO**
+- ❌ `gen` - show generation stats (total kills, deaths, etc.) - **TODO**
+- ❌ `where` - show nearby players in zone - **TODO**
+- ❌ `track` - find path to target - **TODO**
+- ❌ `scan` - look in all directions - **TODO**
+
+**Advanced Commands:**
+- ❌ `alias` - create command aliases - **TODO**
+- ❌ `trigger` - create simple triggers - **TODO**
+- ❌ `config` - show/set configuration options - **TODO**
 
 ### ⏳ Phase 7: Tools + Extensibility (PLANNED)
 **Milestone:** Modern content workflow
@@ -377,17 +517,68 @@
 - ❌ Validation tools for content integrity
 - ❌ Content backup/restore utilities
 
+### ⏳ Phase 8: Performance & Optimization (PLANNED)
+**Milestone:** Production-ready performance
+
+- ❌ Object pooling for frequently created instances
+- ❌ Combat tick optimization (reduce allocations)
+- ❌ Room cache system (hot rooms stay in memory)
+- ❌ Player index for fast lookups by name
+- ❌ Benchmark suite for critical paths
+- ❌ Memory profiling and leak detection
+- ❌ Connection pooling optimizations
+- ❌ Zone reset performance tuning
+
+### ⏳ Phase 9: Testing & Quality (PLANNED)
+**Milestone:** Comprehensive test coverage
+
+- ❌ Integration test suite for commands
+- ❌ Combat simulation tests
+- ❌ Load testing (100+ concurrent players)
+- ❌ Zone content validation tests
+- ❌ Regression test suite
+- ❌ CI/CD pipeline setup
+- ❌ Automated smoke tests
+- ❌ Performance regression tests
+
+### ⏳ Phase 10: Documentation (PLANNED)
+**Milestone:** Complete documentation suite
+
+- ❌ Player guide (basic commands, getting started)
+- ❌ Builder guide (zone creation, OLC usage)
+- ❌ Immortal guide (admin commands, permissions)
+- ❌ Lua scripting guide (hooks, API reference)
+- ❌ Content schema documentation (comprehensive)
+- ❌ Architecture documentation (layer diagrams)
+- ❌ Deployment guide (Linux setup, systemd)
+- ❌ Troubleshooting guide
+
 
 ## Legacy Module Mapping (C → C# Targets)
 - `comm.c` → ✅ Server networking + session handling (DONE)
 - `interpreter.c` → ✅ Command routing (DONE) + ❌ permissions (TODO)
 - `db.c` → ✅ World loading (DONE) + ✅ persistence layer (DONE)
 - `structs.h` → ✅ Domain model + enums (DONE)
-- `fight.c`, `magic.c` → 🔄 Combat services (IN PROGRESS - basic combat DONE, spells TODO)
+- `fight.c`, `magic.c` → ✅ Combat services (DONE) + 🔄 Spells (IN PROGRESS)
 - `mobact.c`, `mobcmd.c` → ❌ AI + scripting hooks (TODO)
 - `boards.c`, `mail.c`, `clan.c` → ❌ Feature services (TODO)
+- `act.social.c` → ❌ Social commands (TODO - Phase 6.13)
+- `casino.c`, `gen_cards.c` → ❌ Casino/games system (TODO - Phase 6.14)
+- `castle.c` → ❌ Special areas (TODO - Phase 6.15)
+- `history.c` → ❌ Command history (TODO - Phase 6.11)
+- `ignore.c` → ❌ Ignore system (TODO - Phase 6.12)
+- `graph.c` → ❌ Pathfinding (TODO - Phase 5.5)
+- `ban.c` → ❌ Site ban system (TODO - Phase 3.8)
 
 ## UI/UX Improvements
+
+### Wait-State Messages
+- ❌ **TODO:** Revisit wait-state/action cooldown messaging
+  - Current: Shows technical message when trying to act during WAIT_STATE
+  - Issue: User finds the message annoying/unclear
+  - Proposed: Review legacy messages and improve player feedback
+  - File: `src/EliteMud.Application/Skills/` (all skill executors)
+  - Related: WAIT_STATE system tracks cooldowns in PlayerState
 
 ### Stat Display Cleanup
 - ❌ **TODO:** Remove redundant base stat display in parentheses when showing modifiers
@@ -432,7 +623,45 @@
   - Mob death (corpse creation with equipment transfer)
   - Combat messaging with ActMessage integration
 
-### ✅ RECENTLY COMPLETED (Jan 24, 2026 - Session 4)
+### ✅ RECENTLY COMPLETED (Jan 24, 2026 - Sessions 4-5)
+
+#### Session 5: Alignment Dynamics System - COMPLETE ✅
+- ✅ **Legacy-Accurate Alignment Shift Formula - COMPLETE**
+  - ✅ Researched legacy `change_alignment()` from fight.c:445-460
+  - ✅ Implemented convergent formula: `shift = (-victim_alignment - killer_alignment) / 16`
+  - ✅ "Move 1/16th of the way toward opposite of victim's alignment"
+  - ✅ No level multipliers (victim level doesn't affect shift)
+  - ✅ No PvP special handling (same formula for all kills)
+  - ✅ Convergent behavior (shifts decrease as you approach target)
+- ✅ **Integration into All Combat Paths - COMPLETE**
+  - ✅ GameTickService.HandleMobDeath() - combat tick PvE kills
+  - ✅ GameTickService.HandlePlayerDeath() - combat tick PvP kills
+  - ✅ BackstabSkillExecutor - instant backstab kills
+  - ✅ KickSkillExecutor - instant kick kills
+  - ✅ BashSkillExecutor - instant bash kills
+  - ✅ Player feedback: significant shifts (|shift| ≥ 50) show messages
+- ✅ **Comprehensive Test Coverage - COMPLETE**
+  - ✅ Created AlignmentShiftTests.cs with 17 unit tests
+  - ✅ Tests cover: neutral vs evil/good/neutral, convergent behavior, level independence, PvP=PvE
+  - ✅ All 126 tests passing (109 existing + 17 new), 0 errors
+- ✅ **Alignment Display Already Present - VERIFIED**
+  - ✅ ScoreHandler.GetAlignmentDescription() matches legacy exactly
+  - ✅ 9 alignment descriptions from "horns showing" to "developed a halo"
+  - ✅ Thresholds: Good ≥350, Evil ≤-350, Neutral -349 to +349
+
+#### Session 4: Weapon Effects & Combat Enhancements - COMPLETE ✅
+- ✅ **Weapon Special Effects - COMPLETE**
+  - ✅ BLESS weapon: +3d6 damage vs evil targets (alignment ≤ -350)
+  - ✅ EVIL weapon: +3d6 damage vs good targets (alignment ≥ 350)
+  - ✅ FLAME weapon: +3d6 fire damage (victim saves vs Physical to negate)
+  - ✅ Integrated into all combat paths (kill, backstab, kick, bash, combat tick)
+  - ✅ Created test weapons: blessed holy sword, cursed evil dagger, flaming sword
+- ✅ **Saving Throw System - COMPLETE**
+  - ✅ Added SavingThrowType enum (Physical, Mental, Magic, Poison)
+  - ✅ Implemented MakesSavingThrow() in CombatCalculator
+  - ✅ Base save by level: 16 - (level/3), minimum 1
+  - ✅ Equipment bonuses from SavingPhysical/Mental/Magic/Poison affects
+  - ✅ d20 roll system: success if roll + bonus ≥ base_save
 - ✅ **Mob Combat Equipment System - COMPLETE**
   - ✅ Added MobAttack and MobCombat records to MobDefinition
   - ✅ Parse mob Attacks array from content JSON (Type, DamageType, Chance, DamageDice)
@@ -442,7 +671,6 @@
   - ✅ Added GetMobEffectiveArmorClass/Hitroll/Damroll extension methods
   - ✅ Mob equipment bonuses now apply (AC, hitroll, damroll from equipped items)
   - ✅ Updated all tests to include empty Attacks and null Combat
-  - ✅ All 109 tests passing, 0 errors
 - ✅ **Weapon Damage System - COMPLETE**
   - ✅ Updated CombatCalculator.CalculateDamage() to use weapon dice (XdY from ObjectWeapon.DiceCount/DiceSides)
   - ✅ Legacy formula implemented: `str_todam + damroll + dice(weapon.DiceCount, weapon.DiceSides)` (fight.c:1464)
@@ -450,7 +678,10 @@
   - ✅ Updated all combat attack paths: PvP, PvE, kick, backstab, GameTickService
   - ✅ Marked CalculateBareDamage() as obsolete in favor of CalculateDamage(weaponDetails)
   - ✅ Added test greatsword (ID 99913): 5d8 damage + 5 hitroll + 10 damroll
-  - ✅ All 109 tests passing, 0 errors
+- ✅ **Repository Cleanup - COMPLETE**
+  - ✅ Removed duplicate imported/ and output/ directories (~37MB, 1.4M lines)
+  - ✅ Added to .gitignore to prevent re-commit
+  - ✅ Established content/ as single source of truth
 
 ### ✅ RECENTLY COMPLETED (Jan 23, 2026 - Session 3)
 - ✅ **Data-Driven Skill System with Lua Formulas - COMPLETE**
