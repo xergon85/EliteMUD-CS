@@ -27,6 +27,19 @@ internal sealed class LookCommandHandler : ICommandHandler
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
+        // Position checks (legacy: act.informative.c:661-667)
+        // Must be at least Resting to look around
+        if (context.Player.Position < Position.Sleeping)
+        {
+            await context.Session.SendLineAsync("You can't see anything but stars!", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        else if (context.Player.Position == Position.Sleeping)
+        {
+            await context.Session.SendLineAsync("You can't see anything, you're sleeping!", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
         // If a target is specified
         if (!string.IsNullOrWhiteSpace(command.Argument))
         {

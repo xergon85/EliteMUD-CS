@@ -5,7 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Remove;
 
-[Command("remove")]
+[Command("remove", Aliases = new[] { "remove", "rem" })]
 internal sealed class RemoveCommandHandler : ICommandHandler
 {
     private readonly RemoveHandler _removeHandler;
@@ -21,13 +21,14 @@ internal sealed class RemoveCommandHandler : ICommandHandler
         _actService = actService;
         _connectionRegistry = connectionRegistry;
     }
+
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
         var result = _removeHandler.Handle(context.Player, command.Argument ?? string.Empty);
-        
+
         if (result.Object is not null)
         {
             await context.SendEquipMessageAsync(
@@ -39,12 +40,12 @@ internal sealed class RemoveCommandHandler : ICommandHandler
                 cancellationToken);
             return CommandOutcome.Continue;
         }
-        
+
         if (!string.IsNullOrEmpty(result.Message))
         {
             await context.Session.SendLineAsync(result.Message, cancellationToken);
         }
-        
+
         return CommandOutcome.Continue;
     }
 }

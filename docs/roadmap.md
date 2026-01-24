@@ -12,10 +12,14 @@
 ## Known Issues / Bugs
 
 ### Position/State Bugs
-- ❌ **`look` command works while sleeping** - Should require awake state (legacy: act.informative.c checks GET_POS >= RESTING)
-  - Impact: Players can see room details while asleep
-  - Fix: Add position check in LookCommandHandler (require Position.Resting or higher)
-  - Related: May affect other info commands (examine, inventory, equipment, etc.)
+- ✅ **`look` command works while sleeping** - FIXED (Jan 25, 2026)
+  - Impact: Players could see room details while asleep
+  - Legacy behavior: Look requires Position.Resting or higher (act.informative.c:661-667)
+  - Fix: Added position checks in LookCommandHandler
+    - Position < Sleeping (Stunned/Incap/Mortally/Dead) → "You can't see anything but stars!"
+    - Position == Sleeping → "You can't see anything, you're sleeping!"
+    - Position >= Resting → Look works normally
+  - Note: Other info commands (examine, inventory, equipment) don't have position restrictions in legacy
 
 - ✅ **Players can get stuck sitting/sleeping while fighting** - FIXED (Jan 25, 2026)
   - Impact: Player ended up in Position.Sitting while FightingConnectionId was set, making them unable to act
