@@ -490,6 +490,59 @@ public class CombatCalculator
     {
         return victim.Level * damage / 2;
     }
+    
+    /// <summary>
+    /// Calculate alignment shift from killing a combatant.
+    /// Legacy: change_alignment() in fight.c:445-460
+    /// 
+    /// Formula: "If you kill a monster with alignment A, you move 1/16th of the way
+    /// to having alignment -A."
+    /// 
+    /// shift = (-victim_alignment - killer_alignment) >> 4
+    /// 
+    /// This creates a convergent system where:
+    /// - Killing evil creatures shifts you toward good
+    /// - Killing good creatures shifts you toward evil
+    /// - The closer you are to the target alignment, the smaller the shift
+    /// - No distinction between PvE and PvP
+    /// - No level-based multipliers
+    /// 
+    /// Examples:
+    /// - Neutral (0) kills evil (-500): shift = (500 - 0) / 16 = +31
+    /// - Neutral (0) kills very evil (-1000): shift = (1000 - 0) / 16 = +62
+    /// - Good (500) kills evil (-500): shift = (500 - 500) / 16 = 0 (already at target)
+    /// </summary>
+    /// <param name="killer">The combatant performing the kill</param>
+    /// <param name="victim">The combatant being killed</param>
+    /// <param name="isPvP">True if this is player-vs-player combat (unused in legacy)</param>
+    /// <returns>Alignment change (positive = toward good, negative = toward evil)</returns>
+    public int CalculateAlignmentShift(ICombatant killer, ICombatant victim, bool isPvP)
+    {
+        // Legacy formula: GET_ALIGNMENT(ch) += (-GET_ALIGNMENT(victim) - GET_ALIGNMENT(ch)) >> 4;
+        // The >> 4 is a right shift by 4 bits, equivalent to division by 16
+        // In C, right shift on signed integers is implementation-defined for negative numbers,
+        // but typically performs arithmetic shift (sign extension), effectively dividing by 16 and rounding toward zero
+        
+        int targetAlignment = -victim.Alignment;
+        int currentAlignment = killer.Alignment;
+        int difference = targetAlignment - currentAlignment;
+        
+        // Divide by 16, matching C's behavior (rounds toward zero for both positive and negative)
+        int shift = difference / 16;
+        
+        return shift;
+    }
+    
+    /// <summary>
+    /// Apply alignment shift to a player, clamping to valid range.
+    /// Alignment range: -1000 (pure evil) to +1000 (pure good).
+    /// </summary>
+    /// <param name="player">The player whose alignment is changing</param>
+    /// <param name="shift">The alignment change (positive = good, negative = evil)</param>
+    public void ApplyAlignmentShift(PlayerState player, int shift)
+    {
+        player.Alignment = (short)Math.Clamp(player.Alignment + shift, -1000, 1000);
+    }
 }
 
 /// <summary>

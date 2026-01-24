@@ -1,3 +1,4 @@
+using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
@@ -28,6 +29,7 @@ internal sealed class GameTickService
     private readonly LookCommandHandler _lookHandler;
     private readonly CombatCalculator _combatCalculator;
     private readonly CharacterSaveQueue _saveQueue;
+    private readonly MobAiService _mobAiService;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
     private readonly TimeSpan _gainInterval = TimeSpan.FromSeconds(6); // PULSE_GAIN - increment gain_count based on position (legacy: 6 seconds)
@@ -47,7 +49,8 @@ internal sealed class GameTickService
         Application.Commands.Flee.FleeHandler fleeService,
         LookCommandHandler lookHandler,
         CombatCalculator combatCalculator,
-        CharacterSaveQueue saveQueue)
+        CharacterSaveQueue saveQueue,
+        MobAiService mobAiService)
     {
         _connectionRegistry = connectionRegistry;
         _serviceProvider = serviceProvider;
@@ -57,6 +60,7 @@ internal sealed class GameTickService
         _lookHandler = lookHandler;
         _combatCalculator = combatCalculator;
         _saveQueue = saveQueue;
+        _mobAiService = mobAiService;
     }
 
     public async Task RunAsync(CancellationToken stoppingToken)
@@ -73,6 +77,9 @@ internal sealed class GameTickService
                 
                 // Combat runs every tick (2 seconds)
                 await ProcessCombatRoundAsync(stoppingToken);
+                
+                // Mob AI runs every tick (same as combat)
+                ProcessMobAi();
                 
                 // Gain count increment runs every 2 seconds (same as combat for simplicity)
                 if (DateTime.UtcNow - _lastGain >= _gainInterval)
@@ -279,20 +286,21 @@ internal sealed class GameTickService
         }
         
         // Format legacy combat messages
+        var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
         var victimMsg = CombatMessageFormatter.FormatCombatMessage(
             mob.Definition.ShortDescription,
             victim.Player.Name,
             damageResult.Damage,
-            victim.Player.MaxHitPoints,
+            victimEffectiveMaxHp,
             MessagePerspective.ToVict);
         
         await victim.Session.SendLineAsync(
-            $"{victimMsg} [{victim.Player.HitPoints}/{victim.Player.MaxHitPoints} HP]",
+            $"{victimMsg} [{victim.Player.HitPoints}/{victimEffectiveMaxHp} HP]",
             cancellationToken);
         
         // Show damage feedback (HURT/bleeding messages)
         var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
-            victim.Player.MaxHitPoints, 
+            victimEffectiveMaxHp, 
             victim.Player.HitPoints, 
             damageResult.Damage);
         if (feedbackMsg != null)
@@ -305,7 +313,7 @@ internal sealed class GameTickService
             mob.Definition.ShortDescription,
             victim.Player.Name,
             damageResult.Damage,
-            victim.Player.MaxHitPoints,
+            victimEffectiveMaxHp,
             MessagePerspective.ToRoom);
             
         var otherPlayers = _connectionRegistry.GetConnections()
@@ -365,31 +373,32 @@ internal sealed class GameTickService
         }
         
         // Format legacy combat messages
+        var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
         var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
             victim.Player.Name,
             totalDamage,
-            victim.Player.MaxHitPoints,
+            victimEffectiveMaxHp,
             MessagePerspective.ToChar);
             
         var victimMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
             victim.Player.Name,
             totalDamage,
-            victim.Player.MaxHitPoints,
+            victimEffectiveMaxHp,
             MessagePerspective.ToVict);
         
         // Send messages
         await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
         await victim.Session.SendLineAsync(
-            $"{victimMsg} [{victim.Player.HitPoints}/{victim.Player.MaxHitPoints} HP]", 
+            $"{victimMsg} [{victim.Player.HitPoints}/{victimEffectiveMaxHp} HP]", 
             cancellationToken);
         
         // Show damage feedback to victim (HURT/bleeding messages)
         if (result.Hit && totalDamage > 0)
         {
             var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
-                victim.Player.MaxHitPoints,
+                victimEffectiveMaxHp,
                 victim.Player.HitPoints,
                 totalDamage);
             if (feedbackMsg != null)
@@ -405,7 +414,7 @@ internal sealed class GameTickService
                 attacker.Player.Name,
                 victim.Player.Name,
                 totalDamage,
-                victim.Player.MaxHitPoints,
+                victimEffectiveMaxHp,
                 MessagePerspective.ToRoom);
                 
             var otherPlayers = _connectionRegistry.GetConnections()
@@ -477,6 +486,13 @@ internal sealed class GameTickService
         
         mob.HitPoints -= (short)damage;
         
+        // MOB_MEMORY: mob remembers this attacker
+        // Legacy: fight.c:824-827 - remember_attack() called when hit
+        if (mob.Definition.ParsedFlags.HasFlag(MobFlags.Memory))
+        {
+            mob.RememberPlayer(attacker.Player.Id);
+        }
+        
         // Format legacy combat messages for player hitting mob
         var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
             attacker.Player.Name,
@@ -524,20 +540,21 @@ internal sealed class GameTickService
             }
             
             // Format legacy combat messages for mob hitting player
+            var attackerEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(attacker.Player);
             var mobAttackMsg = CombatMessageFormatter.FormatCombatMessage(
                 mob.Definition.ShortDescription,
                 attacker.Player.Name,
                 mobDamageResult.Damage,
-                attacker.Player.MaxHitPoints,
+                attackerEffectiveMaxHp,
                 MessagePerspective.ToVict);
             
             await attacker.Session.SendLineAsync(
-                $"{mobAttackMsg} [{attacker.Player.HitPoints}/{attacker.Player.MaxHitPoints} HP]",
+                $"{mobAttackMsg} [{attacker.Player.HitPoints}/{attackerEffectiveMaxHp} HP]",
                 cancellationToken);
             
             // Show damage feedback (HURT/bleeding messages)
             var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
-                attacker.Player.MaxHitPoints,
+                attackerEffectiveMaxHp,
                 attacker.Player.HitPoints,
                 mobDamageResult.Damage);
             if (feedbackMsg != null)
@@ -550,7 +567,7 @@ internal sealed class GameTickService
                 mob.Definition.ShortDescription,
                 attacker.Player.Name,
                 mobDamageResult.Damage,
-                attacker.Player.MaxHitPoints,
+                attackerEffectiveMaxHp,
                 MessagePerspective.ToRoom);
                 
             foreach (var observer in otherPlayers)
@@ -576,9 +593,15 @@ internal sealed class GameTickService
         int killBonus = victim.Player.Level * 100;
         killer.Player.Experience += killBonus;
 
+        // PvP kills always shift killer toward evil
+        int alignmentShift = _combatCalculator.CalculateAlignmentShift(killer.Player, victim.Player, isPvP: true);
+        _combatCalculator.ApplyAlignmentShift(killer.Player, alignmentShift);
+
         // Messages
         await killer.Session.SendLineAsync(
             $"You have slain {victim.Player.Name}! (+{killBonus} exp)", cancellationToken);
+        await killer.Session.SendLineAsync(
+            $"#rYour soul darkens from the murder.#N ({alignmentShift})", cancellationToken);
         await victim.Session.SendLineAsync(
             "You are dead!  Sorry...", cancellationToken);
 
@@ -776,10 +799,24 @@ internal sealed class GameTickService
         int killBonus = mob.Definition.Level * 100;
         killer.Player.Experience += killBonus;
 
+        // Calculate and apply alignment shift
+        int alignmentShift = _combatCalculator.CalculateAlignmentShift(killer.Player, mob, isPvP: false);
+        if (alignmentShift != 0)
+        {
+            _combatCalculator.ApplyAlignmentShift(killer.Player, alignmentShift);
+        }
+
         // Messages
         var mobDesc = mob.Definition.ShortDescription?.Trim() ?? "something";
+        string alignmentMsg = alignmentShift switch
+        {
+            >= 50 => $" #GYou feel more virtuous.#N ({alignmentShift:+0})",
+            <= -50 => $" #RYou feel more sinister.#N ({alignmentShift})",
+            _ => ""
+        };
+        
         await killer.Session.SendLineAsync(
-            $"You have slain {mobDesc}! (+{killBonus} exp)", cancellationToken);
+            $"You have slain {mobDesc}! (+{killBonus} exp){alignmentMsg}", cancellationToken);
 
         // Broadcast to room (fight.c:967)
         var roomMessage = $"{mobDesc} is dead!";
@@ -889,5 +926,40 @@ internal sealed class GameTickService
         }
         
         Console.WriteLine($"[AutoSave] All saves queued");
+    }
+
+    /// <summary>
+    /// Process mob AI for all mobs in the world.
+    /// Legacy: mobile_activity() in mobact.c:347-386
+    /// </summary>
+    private void ProcessMobAi()
+    {
+        // Build player connection dictionary for aggro/memory checks
+        var connections = _connectionRegistry.GetConnections()
+            .Select(c => new Application.Ai.PlayerConnection 
+            { 
+                ConnectionId = c.Id, 
+                Player = c.Player 
+            })
+            .ToDictionary(pc => pc.ConnectionId);
+        
+        // Process each room's mobs
+        foreach (var room in _worldState.World.Rooms.Values)
+        {
+            var mobs = _worldState.GetMobsInRoom(room.Id);
+            
+            // ToList to avoid modification during iteration (mobs may move to different rooms)
+            foreach (var mob in mobs.ToList())
+            {
+                try
+                {
+                    _mobAiService.ProcessMobTick(mob, room.Id, _worldState, connections);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[MobAI] Error processing mob {mob.InstanceId} in room {room.Id}: {ex.Message}");
+                }
+            }
+        }
     }
 }

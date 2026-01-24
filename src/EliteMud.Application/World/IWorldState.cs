@@ -30,6 +30,7 @@ public sealed class MobInstance : ICombatant
 {
     private readonly Dictionary<EquipmentSlot, ObjectInstance> _equipment = new();
     private readonly List<Affect> _affects = new(); // Mobs can have affects too!
+    private readonly List<long> _memory = new(); // Player IDs this mob remembers (for MOB_MEMORY)
 
     public MobInstance(int instanceId, MobDefinition definition)
     {
@@ -37,16 +38,77 @@ public sealed class MobInstance : ICombatant
         Definition = definition;
         // Initialize HP from mob definition's MaxHitPoints
         HitPoints = (short)Math.Min(definition.MaxHitPoints, short.MaxValue);
+        
+        // Initialize hometown to current spawn location (will be set by zone reset)
+        Hometown = null;
     }
 
     public int InstanceId { get; }
     
     public MobDefinition Definition { get; }
     
-    // Combat state
+    // ===== Combat state =====
     public int? FightingConnectionId { get; set; } // The player connection ID this mob is fighting
     public int? FightingMobInstanceId { get; set; } // The mob instance ID this mob is fighting (for mob-vs-mob combat)
     public Position Position { get; set; } = Position.Standing;
+    
+    // ===== Mob AI state (legacy mobact.c) =====
+    
+    /// <summary>
+    /// Last direction this mob moved (for anti-bounce logic).
+    /// -1 means no recent movement.
+    /// Legacy: ch->mob_specials.last_direction
+    /// </summary>
+    public int LastDirection { get; set; } = -1;
+    
+    /// <summary>
+    /// Player IDs this mob remembers (for MOB_MEMORY flag).
+    /// Populated when players attack this mob.
+    /// Legacy: ch->mob_specials.memory (linked list of memory_rec)
+    /// </summary>
+    public IReadOnlyList<long> Memory => _memory;
+    
+    /// <summary>
+    /// Add a player to this mob's memory.
+    /// Used by MOB_MEMORY flag to track attackers.
+    /// </summary>
+    public void RememberPlayer(long playerId)
+    {
+        if (!_memory.Contains(playerId))
+        {
+            _memory.Add(playerId);
+        }
+    }
+    
+    /// <summary>
+    /// Remove a player from this mob's memory.
+    /// </summary>
+    public void ForgetPlayer(long playerId)
+    {
+        _memory.Remove(playerId);
+    }
+    
+    /// <summary>
+    /// Clear all memory of attackers.
+    /// </summary>
+    public void ClearMemory()
+    {
+        _memory.Clear();
+    }
+    
+    /// <summary>
+    /// Hometown room ID for sentinel mobs to return to.
+    /// Set by zone reset when mob is spawned.
+    /// Legacy: ch->player.hometown
+    /// </summary>
+    public int? Hometown { get; set; }
+    
+    /// <summary>
+    /// Pathfinding queue for tracking/returning home.
+    /// Mob follows this path each tick until reaching destination.
+    /// Legacy: ch->trackdir (stack-based in C)
+    /// </summary>
+    public Queue<int>? TrackingPath { get; set; }
     
     // ICombatant implementation
     public string Name => Definition.ShortDescription;
@@ -306,6 +368,19 @@ public interface IWorldState
     /// Legacy: extract_char() in handler.c
     /// </summary>
     bool RemoveMob(int mobInstanceId, int roomId);
+
+    /// <summary>
+    /// Move a mob from one room to another.
+    /// Returns true if successful, false if mob not found or invalid rooms.
+    /// Legacy: char_from_room() + char_to_room() in handler.c
+    /// </summary>
+    bool MoveMob(int mobInstanceId, int fromRoomId, int toRoomId);
+
+    /// <summary>
+    /// Get a mob instance by its instance ID and room ID.
+    /// Returns null if not found.
+    /// </summary>
+    MobInstance? GetMobInstance(int mobInstanceId, int roomId);
 }
 
 /// <summary>

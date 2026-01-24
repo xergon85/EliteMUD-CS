@@ -717,4 +717,55 @@ public sealed class WorldState : IWorldState
         mobs.Remove(mob);
         return true;
     }
+
+    /// <summary>
+    /// Move a mob from one room to another.
+    /// Legacy: char_from_room() + char_to_room() in handler.c
+    /// </summary>
+    public bool MoveMob(int mobInstanceId, int fromRoomId, int toRoomId)
+    {
+        // Validate rooms exist
+        if (!World.Rooms.ContainsKey(fromRoomId) || !World.Rooms.ContainsKey(toRoomId))
+        {
+            return false;
+        }
+
+        // Find and remove mob from source room
+        if (!_roomMobs.TryGetValue(fromRoomId, out var fromMobs))
+        {
+            return false;
+        }
+
+        var mob = fromMobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
+        if (mob is null)
+        {
+            return false;
+        }
+
+        fromMobs.Remove(mob);
+
+        // Add mob to destination room
+        if (!_roomMobs.TryGetValue(toRoomId, out var toMobs))
+        {
+            toMobs = new List<MobInstance>();
+            _roomMobs[toRoomId] = toMobs;
+        }
+
+        toMobs.Add(mob);
+        return true;
+    }
+
+    /// <summary>
+    /// Get a mob instance by its instance ID and room ID.
+    /// Returns null if not found.
+    /// </summary>
+    public MobInstance? GetMobInstance(int mobInstanceId, int roomId)
+    {
+        if (!_roomMobs.TryGetValue(roomId, out var mobs))
+        {
+            return null;
+        }
+
+        return mobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
+    }
 }

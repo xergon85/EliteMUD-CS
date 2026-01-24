@@ -39,49 +39,71 @@ public sealed class WearHandler
             return new WearResult(false, "You don't have that.");
         }
 
-        // Determine which slot to wear it in
-        var slot = DetermineSlot(obj.Definition);
-        if (slot is null)
+        // Determine which slot(s) to try wearing it in
+        var slots = DetermineSlots(obj.Definition);
+        if (slots.Count == 0)
         {
             return new WearResult(false, $"{obj.Definition.ShortDescription} cannot be worn.");
         }
 
-        // Try to equip the object
-        if (_worldState.EquipObject(player, obj.InstanceId, slot.Value))
+        // Try each potential slot until we find one that works
+        var equipment = _worldState.GetPlayerEquipment(player);
+        foreach (var slot in slots)
         {
-            // Return object so CommandHandler can use ActMessage
-            return new WearResult(true, string.Empty, obj.Definition);
+            // Check if slot is available
+            if (!equipment.ContainsKey(slot))
+            {
+                // Try to equip the object
+                if (_worldState.EquipObject(player, obj.InstanceId, slot))
+                {
+                    // Return object so CommandHandler can use ActMessage
+                    return new WearResult(true, string.Empty, obj.Definition);
+                }
+            }
         }
-        else
-        {
-            return new WearResult(false, $"You are already wearing something on your {GetSlotName(slot.Value)}.");
-        }
+
+        // All slots occupied
+        return new WearResult(false, $"You are already wearing something on your {GetSlotName(slots[0])}.");
     }
 
     private WearResult WearAll(PlayerState player)
     {
         var inventory = _worldState.GetPlayerInventory(player);
         var wornObjects = new List<ObjectDefinition>();
+        var equipment = _worldState.GetPlayerEquipment(player);
 
         // Try to wear each wearable item in inventory
         foreach (var obj in inventory.ToList())
         {
-            // Determine which slot to wear it in
-            var slot = DetermineSlot(obj.Definition);
-            if (slot is null)
+            // Determine which slot(s) to try wearing it in
+            var slots = DetermineSlots(obj.Definition);
+            if (slots.Count == 0)
             {
                 // Not wearable, skip silently (matches legacy behavior)
                 continue;
             }
 
-            // Try to equip the object
-            if (_worldState.EquipObject(player, obj.InstanceId, slot.Value))
+            // Try each potential slot until we find one that works
+            bool equipped = false;
+            foreach (var slot in slots)
             {
-                wornObjects.Add(obj.Definition);
+                // Check if slot is available
+                if (!equipment.ContainsKey(slot))
+                {
+                    // Try to equip the object
+                    if (_worldState.EquipObject(player, obj.InstanceId, slot))
+                    {
+                        wornObjects.Add(obj.Definition);
+                        equipment = _worldState.GetPlayerEquipment(player); // Refresh equipment state
+                        equipped = true;
+                        break;
+                    }
+                }
             }
-            else
+            
+            if (!equipped)
             {
-                // Slot already occupied, skip silently (matches legacy behavior)
+                // All slots occupied, skip silently (matches legacy behavior)
                 continue;
             }
         }
@@ -95,31 +117,52 @@ public sealed class WearHandler
         return new WearResult(true, string.Empty, Objects: wornObjects);
     }
 
-    private static EquipmentSlot? DetermineSlot(ObjectDefinition obj)
+    /// <summary>
+    /// Determine all potential equipment slots for an object.
+    /// Returns slots in priority order (e.g., Neck1 before Neck2).
+    /// Legacy: handler.c wear command tries primary slot, then alternative slots.
+    /// </summary>
+    private static List<EquipmentSlot> DetermineSlots(ObjectDefinition obj)
     {
-        // Map wear slot names to EquipmentSlot enum
-        // Prioritize common slots first
-        if (obj.WearSlots.Contains("Body")) return EquipmentSlot.Body;
-        if (obj.WearSlots.Contains("Head")) return EquipmentSlot.Head;
-        if (obj.WearSlots.Contains("Legs")) return EquipmentSlot.Legs;
-        if (obj.WearSlots.Contains("Feet")) return EquipmentSlot.Feet;
-        if (obj.WearSlots.Contains("Hands")) return EquipmentSlot.Hands;
-        if (obj.WearSlots.Contains("Arms")) return EquipmentSlot.Arms;
-        if (obj.WearSlots.Contains("About")) return EquipmentSlot.About;
-        if (obj.WearSlots.Contains("Waist")) return EquipmentSlot.Waist;
+        var slots = new List<EquipmentSlot>();
         
-        // Handle both legacy single slots and split slots
-        if (obj.WearSlots.Contains("Neck") || obj.WearSlots.Contains("Neck1")) return EquipmentSlot.Neck1;
-        if (obj.WearSlots.Contains("Neck2")) return EquipmentSlot.Neck2;
-        if (obj.WearSlots.Contains("Wrist") || obj.WearSlots.Contains("WristRight")) return EquipmentSlot.WristRight;
-        if (obj.WearSlots.Contains("WristLeft")) return EquipmentSlot.WristLeft;
-        if (obj.WearSlots.Contains("Finger") || obj.WearSlots.Contains("FingerRight")) return EquipmentSlot.FingerRight;
-        if (obj.WearSlots.Contains("FingerLeft")) return EquipmentSlot.FingerLeft;
-        if (obj.WearSlots.Contains("Shield")) return EquipmentSlot.Shield;
-        if (obj.WearSlots.Contains("Light")) return EquipmentSlot.Light;
+        // Map wear slot names to EquipmentSlot enum
+        // Prioritize common single slots first
+        if (obj.WearSlots.Contains("Body")) { slots.Add(EquipmentSlot.Body); return slots; }
+        if (obj.WearSlots.Contains("Head")) { slots.Add(EquipmentSlot.Head); return slots; }
+        if (obj.WearSlots.Contains("Legs")) { slots.Add(EquipmentSlot.Legs); return slots; }
+        if (obj.WearSlots.Contains("Feet")) { slots.Add(EquipmentSlot.Feet); return slots; }
+        if (obj.WearSlots.Contains("Hands")) { slots.Add(EquipmentSlot.Hands); return slots; }
+        if (obj.WearSlots.Contains("Arms")) { slots.Add(EquipmentSlot.Arms); return slots; }
+        if (obj.WearSlots.Contains("About")) { slots.Add(EquipmentSlot.About); return slots; }
+        if (obj.WearSlots.Contains("Waist")) { slots.Add(EquipmentSlot.Waist); return slots; }
+        if (obj.WearSlots.Contains("Shield")) { slots.Add(EquipmentSlot.Shield); return slots; }
+        if (obj.WearSlots.Contains("Light")) { slots.Add(EquipmentSlot.Light); return slots; }
+        
+        // Handle dual slots (neck, wrist, finger) - try both slots
+        if (obj.WearSlots.Contains("Neck") || obj.WearSlots.Contains("Neck1") || obj.WearSlots.Contains("Neck2"))
+        {
+            slots.Add(EquipmentSlot.Neck1);
+            slots.Add(EquipmentSlot.Neck2);
+            return slots;
+        }
+        
+        if (obj.WearSlots.Contains("Wrist") || obj.WearSlots.Contains("WristRight") || obj.WearSlots.Contains("WristLeft"))
+        {
+            slots.Add(EquipmentSlot.WristRight);
+            slots.Add(EquipmentSlot.WristLeft);
+            return slots;
+        }
+        
+        if (obj.WearSlots.Contains("Finger") || obj.WearSlots.Contains("FingerRight") || obj.WearSlots.Contains("FingerLeft"))
+        {
+            slots.Add(EquipmentSlot.FingerRight);
+            slots.Add(EquipmentSlot.FingerLeft);
+            return slots;
+        }
         
         // Don't auto-wear weapons/held items - use wield/hold instead
-        return null;
+        return slots;
     }
 
     private static string GetSlotName(EquipmentSlot slot)
