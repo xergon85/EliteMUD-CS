@@ -370,6 +370,13 @@ public interface IWorldState
 
     IReadOnlyList<ObjectInstance> GetPlayerInventory(PlayerState player);
 
+    /// <summary>
+    /// Get all items accessible to the player (including items inside containers).
+    /// This recursively includes container contents for targeting purposes.
+    /// Use this when searching for items/containers that might be nested.
+    /// </summary>
+    IReadOnlyList<ObjectInstance> GetAllPlayerItems(PlayerState player);
+
     IReadOnlyDictionary<EquipmentSlot, ObjectInstance> GetPlayerEquipment(PlayerState player);
 
     ObjectInstance? GetObjectInstance(int instanceId);

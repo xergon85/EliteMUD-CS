@@ -54,6 +54,9 @@ public class Character
     
     // Affects (buffs/debuffs) - stored as JSON string: [{"Type":"Armor","Location":"ArmorClass","Modifier":-20,"DurationHours":25}]
     public string? Affects { get; set; }
+    
+    // Inventory - stored as JSON tree structure: [{"ObjectDefinitionId":3010,"Quantity":1,"State":{"IsClosed":false},"Contents":[...]}]
+    public string? InventoryJson { get; set; }
 
     // Location & Resources
     public int RoomId { get; set; }
@@ -68,6 +71,5 @@ public class Character
 
     // Navigation properties
     public Account Account { get; set; } = null!;
-    public ICollection<CharacterInventoryItem> Inventory { get; set; } = new List<CharacterInventoryItem>();
     public ICollection<CharacterEquipmentItem> Equipment { get; set; } = new List<CharacterEquipmentItem>();
 }

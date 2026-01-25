@@ -114,6 +114,7 @@ public sealed class PutHandler
     /// <summary>
     /// Find a container in the player's inventory or room.
     /// Supports indexed targeting (e.g., "2.bag" for second bag).
+    /// Searches recursively including items inside containers.
     /// Legacy: generic_find() with FIND_OBJ_INV | FIND_OBJ_ROOM
     /// </summary>
     private ObjectInstance? FindContainer(PlayerState player, string containerName)
@@ -122,9 +123,9 @@ public sealed class PutHandler
         if (index == 0)
             return null; // Invalid format
 
-        // Check inventory first
-        var inventory = _worldState.GetPlayerInventory(player);
-        var inventoryMatch = TargetParser.FindNthMatch(inventory, name, index);
+        // Check inventory first (including items inside containers)
+        var allItems = _worldState.GetAllPlayerItems(player);
+        var inventoryMatch = TargetParser.FindNthMatch(allItems, name, index);
         if (inventoryMatch != null)
             return inventoryMatch;
 

@@ -7,7 +7,6 @@ public class EliteMudDbContext : DbContext
 {
     public DbSet<Account> Accounts => Set<Account>();
     public DbSet<Character> Characters => Set<Character>();
-    public DbSet<CharacterInventoryItem> CharacterInventory => Set<CharacterInventoryItem>();
     public DbSet<CharacterEquipmentItem> CharacterEquipment => Set<CharacterEquipmentItem>();
 
     public EliteMudDbContext(DbContextOptions<EliteMudDbContext> options) : base(options)
@@ -53,33 +52,11 @@ public class EliteMudDbContext : DbContext
             entity.Property(e => e.IsDeleted).HasDefaultValue(false);
             entity.Property(e => e.CreatedAt).IsRequired();
 
-            // One-to-many relationship with Inventory
-            entity.HasMany(e => e.Inventory)
-                .WithOne(e => e.Character)
-                .HasForeignKey(e => e.CharacterId)
-                .OnDelete(DeleteBehavior.Cascade);
-
             // One-to-many relationship with Equipment
             entity.HasMany(e => e.Equipment)
                 .WithOne(e => e.Character)
                 .HasForeignKey(e => e.CharacterId)
                 .OnDelete(DeleteBehavior.Cascade);
-        });
-
-        // CharacterInventoryItem configuration
-        modelBuilder.Entity<CharacterInventoryItem>(entity =>
-        {
-            entity.HasKey(e => e.InventoryId);
-            entity.HasIndex(e => e.CharacterId);
-            entity.HasIndex(e => e.ContainerId);
-            entity.Property(e => e.Quantity).HasDefaultValue(1);
-            entity.Property(e => e.SequenceOrder).HasDefaultValue(0);
-            
-            // Self-referencing relationship for container hierarchy
-            entity.HasOne(e => e.Container)
-                .WithMany(e => e.Contents)
-                .HasForeignKey(e => e.ContainerId)
-                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete of contents
         });
 
         // CharacterEquipmentItem configuration

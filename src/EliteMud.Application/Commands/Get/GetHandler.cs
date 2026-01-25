@@ -221,9 +221,9 @@ public sealed class GetHandler
         if (index == -1)
             return null; // Not supported yet
         
-        // Check inventory first
-        var inventory = _worldState.GetPlayerInventory(player);
-        var inventoryMatch = TargetParser.FindNthMatch(inventory, name, index);
+        // Check inventory first (including nested items in containers)
+        var allItems = _worldState.GetAllPlayerItems(player);
+        var inventoryMatch = TargetParser.FindNthMatch(allItems, name, index);
         if (inventoryMatch != null)
             return inventoryMatch;
 

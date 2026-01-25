@@ -77,6 +77,31 @@ public sealed class WorldState : IWorldState
         return inventory;
     }
 
+    public IReadOnlyList<ObjectInstance> GetAllPlayerItems(PlayerState player)
+    {
+        var allItems = new List<ObjectInstance>();
+        foreach (var objectId in player.InventoryObjectIds)
+        {
+            if (_objectInstances.TryGetValue(objectId, out var obj))
+            {
+                allItems.Add(obj);
+                // Recursively add container contents
+                AddContainerContents(obj, allItems);
+            }
+        }
+        return allItems;
+    }
+
+    private static void AddContainerContents(ObjectInstance obj, List<ObjectInstance> list)
+    {
+        foreach (var item in obj.Contents)
+        {
+            list.Add(item);
+            // Recursively add nested container contents
+            AddContainerContents(item, list);
+        }
+    }
+
     public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> GetPlayerEquipment(PlayerState player)
     {
         var equipment = new Dictionary<EquipmentSlot, ObjectInstance>();

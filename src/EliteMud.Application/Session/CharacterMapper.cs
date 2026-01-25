@@ -202,58 +202,28 @@ public static class CharacterMapper
                 // If affects JSON is invalid, just skip it
             }
         }
-
-        // Load inventory items with container hierarchy
-        // First pass: create all object instances and map InventoryId -> ObjectInstance
-        var inventoryIdToObjectInstance = new Dictionary<int, ObjectInstance>();
-        foreach (var invItem in character.Inventory.OrderBy(i => i.SequenceOrder))
+        
+        // Load inventory from JSON
+        if (!string.IsNullOrWhiteSpace(character.InventoryJson))
         {
-            // Create object instance from definition ID
-            var objectInstance = worldState.CreateObjectInstance(invItem.ObjectDefinitionId);
-            if (objectInstance != null)
+            try
             {
-                // Restore object state (for containers)
-                if (!string.IsNullOrWhiteSpace(invItem.ObjectState))
+                var inventoryItems = JsonSerializer.Deserialize<List<InventoryItemDto>>(character.InventoryJson);
+                if (inventoryItems != null)
                 {
-                    try
+                    foreach (var itemDto in inventoryItems)
                     {
-                        var stateDto = JsonSerializer.Deserialize<ObjectStateDto>(invItem.ObjectState);
-                        if (stateDto != null)
+                        var objectInstance = LoadInventoryItemRecursive(itemDto, worldState);
+                        if (objectInstance != null)
                         {
-                            objectInstance.IsClosed = stateDto.IsClosed;
-                            objectInstance.IsLocked = stateDto.IsLocked;
+                            player.AddToInventory(objectInstance.InstanceId);
                         }
                     }
-                    catch (JsonException)
-                    {
-                        // If state JSON is invalid, just use defaults
-                    }
-                }
-                
-                inventoryIdToObjectInstance[invItem.InventoryId] = objectInstance;
-            }
-        }
-        
-        // Second pass: build container hierarchy and add top-level items to player inventory
-        foreach (var invItem in character.Inventory)
-        {
-            if (!inventoryIdToObjectInstance.TryGetValue(invItem.InventoryId, out var objectInstance))
-            {
-                continue; // Skip if we failed to create this object instance
-            }
-            
-            if (invItem.ContainerId.HasValue)
-            {
-                // This item is inside a container
-                if (inventoryIdToObjectInstance.TryGetValue(invItem.ContainerId.Value, out var containerInstance))
-                {
-                    containerInstance.AddItem(objectInstance);
                 }
             }
-            else
+            catch (JsonException)
             {
-                // This is a top-level inventory item
-                player.AddToInventory(objectInstance.InstanceId);
+                // If inventory JSON is invalid, just skip it (empty inventory)
             }
         }
 
@@ -422,18 +392,19 @@ public static class CharacterMapper
         // Update last played
         character.LastPlayed = DateTime.UtcNow;
 
-        // Update inventory
-        // Clear existing inventory and rebuild from current state
-        character.Inventory.Clear();
-        var sequenceOrder = 0;
+        // Update inventory - serialize to JSON
+        var inventoryItems = new List<InventoryItemDto>();
         foreach (var objectInstanceId in playerState.InventoryObjectIds)
         {
             var objectInstance = worldState.GetObjectInstance(objectInstanceId);
             if (objectInstance != null)
             {
-                SaveInventoryItemRecursive(character, objectInstance, null, ref sequenceOrder);
+                inventoryItems.Add(SaveInventoryItemRecursive(objectInstance));
             }
         }
+        character.InventoryJson = inventoryItems.Count > 0 
+            ? JsonSerializer.Serialize(inventoryItems) 
+            : null;
 
         // Update equipment
         // Clear existing equipment and rebuild from current state
@@ -455,51 +426,61 @@ public static class CharacterMapper
     }
 
     /// <summary>
-    /// Recursively saves an inventory item and all its container contents to the database.
+    /// Recursively loads an inventory item and its container contents from JSON.
     /// </summary>
-    /// <param name="character">The character entity</param>
-    /// <param name="objectInstance">The object instance to save</param>
-    /// <param name="containerInventoryId">The InventoryId of the container holding this item (null for top-level)</param>
-    /// <param name="sequenceOrder">Current sequence order counter (incremented for each item)</param>
-    /// <returns>The InventoryId of the saved item</returns>
-    private static int SaveInventoryItemRecursive(
-        Character character, 
-        ObjectInstance objectInstance, 
-        int? containerInventoryId, 
-        ref int sequenceOrder)
+    private static ObjectInstance? LoadInventoryItemRecursive(InventoryItemDto itemDto, IWorldState worldState)
     {
-        // Serialize object state if it's a container with state
-        string? objectState = null;
+        var objectInstance = worldState.CreateObjectInstance(itemDto.ObjectDefinitionId);
+        if (objectInstance == null) return null;
+        
+        // Restore state
+        if (itemDto.State != null)
+        {
+            objectInstance.IsClosed = itemDto.State.IsClosed;
+            objectInstance.IsLocked = itemDto.State.IsLocked;
+        }
+        
+        // Recursively load contents
+        foreach (var contentDto in itemDto.Contents)
+        {
+            var contentInstance = LoadInventoryItemRecursive(contentDto, worldState);
+            if (contentInstance != null)
+            {
+                objectInstance.AddItem(contentInstance);
+            }
+        }
+        
+        return objectInstance;
+    }
+
+    /// <summary>
+    /// Recursively saves an inventory item and its container contents to DTO for JSON serialization.
+    /// </summary>
+    private static InventoryItemDto SaveInventoryItemRecursive(ObjectInstance objectInstance)
+    {
+        ObjectStateDto? state = null;
         if (objectInstance.Definition.Details?.Container != null)
         {
-            var stateDto = new ObjectStateDto
+            state = new ObjectStateDto
             {
                 IsClosed = objectInstance.IsClosed,
                 IsLocked = objectInstance.IsLocked
             };
-            objectState = JsonSerializer.Serialize(stateDto);
         }
-
-        // Create the inventory item
-        var invItem = new CharacterInventoryItem
-        {
-            CharacterId = character.CharacterId,
-            ObjectDefinitionId = objectInstance.Definition.Id,
-            Quantity = 1,
-            ContainerId = containerInventoryId,
-            ObjectState = objectState,
-            SequenceOrder = sequenceOrder++
-        };
-
-        character.Inventory.Add(invItem);
-
-        // Recursively save container contents
+        
+        var contents = new List<InventoryItemDto>();
         foreach (var contentItem in objectInstance.Contents)
         {
-            SaveInventoryItemRecursive(character, contentItem, invItem.InventoryId, ref sequenceOrder);
+            contents.Add(SaveInventoryItemRecursive(contentItem));
         }
-
-        return invItem.InventoryId;
+        
+        return new InventoryItemDto
+        {
+            ObjectDefinitionId = objectInstance.Definition.Id,
+            Quantity = 1,
+            State = state,
+            Contents = contents
+        };
     }
 }
 
@@ -523,8 +504,20 @@ internal sealed record AffectDto
 /// DTO for serializing/deserializing ObjectInstance runtime state to JSON.
 /// Used for persisting container state (IsClosed, IsLocked).
 /// </summary>
-internal sealed record ObjectStateDto
+public sealed record ObjectStateDto
 {
     public bool IsClosed { get; init; }
     public bool IsLocked { get; init; }
+}
+
+/// <summary>
+/// DTO for serializing/deserializing inventory items to JSON.
+/// Represents a tree structure with nested containers.
+/// </summary>
+public sealed record InventoryItemDto
+{
+    public int ObjectDefinitionId { get; init; }
+    public int Quantity { get; init; } = 1;
+    public ObjectStateDto? State { get; init; }
+    public List<InventoryItemDto> Contents { get; init; } = new();
 }

@@ -15,7 +15,6 @@ public class CharacterRepository : ICharacterRepository
     public async Task<Character?> GetByIdAsync(int characterId, CancellationToken cancellationToken = default)
     {
         return await _context.Characters
-            .Include(c => c.Inventory)
             .Include(c => c.Equipment)
             .FirstOrDefaultAsync(c => c.CharacterId == characterId && !c.IsDeleted, cancellationToken);
     }
@@ -23,7 +22,6 @@ public class CharacterRepository : ICharacterRepository
     public async Task<Character?> GetByNameAsync(string name, CancellationToken cancellationToken = default)
     {
         return await _context.Characters
-            .Include(c => c.Inventory)
             .Include(c => c.Equipment)
             .FirstOrDefaultAsync(c => c.Name == name && !c.IsDeleted, cancellationToken);
     }
@@ -65,7 +63,6 @@ public class CharacterRepository : ICharacterRepository
             
             // Re-fetch the latest version
             var freshCharacter = await _context.Characters
-                .Include(c => c.Inventory)
                 .Include(c => c.Equipment)
                 .FirstOrDefaultAsync(c => c.CharacterId == character.CharacterId, cancellationToken);
                 
@@ -78,13 +75,7 @@ public class CharacterRepository : ICharacterRepository
             // Apply our changes to the fresh entity
             _context.Entry(freshCharacter).CurrentValues.SetValues(character);
             
-            // Clear and rebuild navigation properties
-            freshCharacter.Inventory.Clear();
-            foreach (var item in character.Inventory)
-            {
-                freshCharacter.Inventory.Add(item);
-            }
-            
+            // Clear and rebuild equipment navigation property
             freshCharacter.Equipment.Clear();
             foreach (var item in character.Equipment)
             {
