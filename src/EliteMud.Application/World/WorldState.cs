@@ -2,6 +2,23 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.World;
 
+/// <summary>
+/// Runtime state for a door.
+/// Doors are bidirectional - opening/closing/locking one side affects both sides.
+/// </summary>
+public sealed class DoorState
+{
+    public bool IsClosed { get; set; }
+    public bool IsLocked { get; set; }
+    
+    /// <summary>
+    /// Indicates if the door has been broken by the bash command.
+    /// Legacy: EX_BROKEN flag
+    /// Once broken, the door cannot be closed or locked again.
+    /// </summary>
+    public bool IsBroken { get; set; }
+}
+
 public sealed class WorldState : IWorldState
 {
     private readonly Dictionary<int, MobDefinition> _mobDefinitions;
@@ -10,6 +27,7 @@ public sealed class WorldState : IWorldState
     private readonly Dictionary<int, List<ObjectInstance>> _roomObjects;
     private readonly Dictionary<int, ObjectInstance> _objectInstances = new();
     private readonly IReadOnlyList<ZoneDefinition> _zones;
+    private readonly Dictionary<(int roomId, Direction direction), DoorState> _doorStates = new();
     private int _nextMobInstanceId;
     private int _nextObjectInstanceId;
 
@@ -39,6 +57,26 @@ public sealed class WorldState : IWorldState
                 if (obj.InstanceId >= _nextObjectInstanceId)
                 {
                     _nextObjectInstanceId = obj.InstanceId + 1;
+                }
+            }
+        }
+        
+        // Initialize door states from room definitions
+        foreach (var (roomId, room) in world.Rooms)
+        {
+            foreach (var exit in room.Exits)
+            {
+                if (exit.IsDoor)
+                {
+                    var key = (roomId, exit.Direction);
+                    if (!_doorStates.ContainsKey(key))
+                    {
+                        _doorStates[key] = new DoorState
+                        {
+                            IsClosed = exit.InitiallyClosed,
+                            IsLocked = exit.InitiallyLocked
+                        };
+                    }
                 }
             }
         }
@@ -868,5 +906,111 @@ public sealed class WorldState : IWorldState
         }
 
         return mobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
+    }
+    
+    // ===== Door State Management =====
+    
+    /// <summary>
+    /// Get the runtime state of a door.
+    /// Returns null if the exit doesn't exist or isn't a door.
+    /// Legacy: EXIT(ch, door)->exit_info flags (EX_CLOSED, EX_LOCKED)
+    /// </summary>
+    public DoorState? GetDoorState(int roomId, Direction direction)
+    {
+        var key = (roomId, direction);
+        return _doorStates.TryGetValue(key, out var state) ? state : null;
+    }
+    
+    /// <summary>
+    /// Set door state (open/close, lock/unlock) for both sides of the door.
+    /// Doors are bidirectional - changing one side changes both.
+    /// Legacy: OPEN_DOOR/CLOSE_DOOR/LOCK_DOOR/UNLOCK_DOOR macros in act.movement.c
+    /// </summary>
+    public void SetDoorState(int roomId, Direction direction, bool isClosed, bool isLocked)
+    {
+        var room = World.Rooms.GetValueOrDefault(roomId);
+        if (room == null) return;
+        
+        var exit = room.Exits.FirstOrDefault(e => e.Direction == direction);
+        if (exit == null || !exit.IsDoor) return;
+        
+        // Set state for this side
+        var key = (roomId, direction);
+        if (_doorStates.TryGetValue(key, out var state))
+        {
+            state.IsClosed = isClosed;
+            state.IsLocked = isLocked;
+        }
+        
+        // Set state for reverse side (bidirectional doors)
+        var reverseDirection = GetReverseDirection(direction);
+        var targetRoom = World.Rooms.GetValueOrDefault(exit.TargetRoomId);
+        if (targetRoom != null)
+        {
+            var reverseExit = targetRoom.Exits.FirstOrDefault(e => e.Direction == reverseDirection && e.TargetRoomId == roomId);
+            if (reverseExit != null && reverseExit.IsDoor)
+            {
+                var reverseKey = (exit.TargetRoomId, reverseDirection);
+                if (_doorStates.TryGetValue(reverseKey, out var reverseState))
+                {
+                    reverseState.IsClosed = isClosed;
+                    reverseState.IsLocked = isLocked;
+                }
+            }
+        }
+    }
+    
+    public void BreakDoor(int roomId, Direction direction)
+    {
+        var room = World.Rooms.GetValueOrDefault(roomId);
+        if (room == null) return;
+        
+        var exit = room.Exits.FirstOrDefault(e => e.Direction == direction);
+        if (exit == null || !exit.IsDoor) return;
+        
+        // Break this side: unlock, open, and mark as broken
+        var key = (roomId, direction);
+        if (_doorStates.TryGetValue(key, out var state))
+        {
+            state.IsClosed = false;
+            state.IsLocked = false;
+            state.IsBroken = true;
+        }
+        
+        // Break reverse side (bidirectional doors)
+        var reverseDirection = GetReverseDirection(direction);
+        var targetRoom = World.Rooms.GetValueOrDefault(exit.TargetRoomId);
+        if (targetRoom != null)
+        {
+            var reverseExit = targetRoom.Exits.FirstOrDefault(e => e.Direction == reverseDirection && e.TargetRoomId == roomId);
+            if (reverseExit != null && reverseExit.IsDoor)
+            {
+                var reverseKey = (exit.TargetRoomId, reverseDirection);
+                if (_doorStates.TryGetValue(reverseKey, out var reverseState))
+                {
+                    reverseState.IsClosed = false;
+                    reverseState.IsLocked = false;
+                    reverseState.IsBroken = true;
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Get the opposite direction.
+    /// Legacy: rev_dir[] array in constants.c
+    /// </summary>
+    private static Direction GetReverseDirection(Direction direction)
+    {
+        return direction switch
+        {
+            Direction.North => Direction.South,
+            Direction.East => Direction.West,
+            Direction.South => Direction.North,
+            Direction.West => Direction.East,
+            Direction.Up => Direction.Down,
+            Direction.Down => Direction.Up,
+            _ => direction
+        };
     }
 }

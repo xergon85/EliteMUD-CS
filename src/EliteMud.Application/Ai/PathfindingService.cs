@@ -1,3 +1,4 @@
+using System.Linq;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -83,6 +84,16 @@ public class PathfindingService
                 if (visited.Contains(neighborRoomId))
                 {
                     continue;
+                }
+
+                // Check if there is a closed door blocking this exit
+                if (exit.IsDoor)
+                {
+                    var doorState = worldState.GetDoorState(currentRoomId, exit.Direction);
+                    if (doorState?.IsClosed == true)
+                    {
+                        continue; // Door is closed, can't path through it
+                    }
                 }
 
                 // Get neighbor room

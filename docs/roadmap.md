@@ -11,6 +11,69 @@
 
 ## Known Issues / Bugs
 
+### ⚠️ CRITICAL: Zone File Format Must Match Schema (Jan 25, 2026)
+- **Impact:** Zone files load rooms/mobs/objects but silently fail to create ZoneDefinition (breaks zreset command)
+- **Severity:** CRITICAL - Silent failure, no error messages, zone appears "half-loaded"
+- **Root Cause:** Two different zone file formats exist with no validation or clear documentation
+  - **Monolithic format:** `content/zones/zones.json` (old format)
+  - **Grouped format:** `zones/zone_*.json` (one file per zone - current format)
+  - Grouped format requires specific JSON schema or `zoneData.Zone` will be null
+- **Symptoms:**
+  - Zone file exists and rooms are accessible (`goto` works)
+  - Object/mob definitions load correctly
+  - `zreset <zoneId>` fails with "Zone not found."
+  - No error messages in console during load
+- **Required JSON Structure for Grouped Format:**
+  ```json
+  {
+    "Zone": {
+      "Id": 999,
+      "Name": "Zone Name",
+      "TopRoomId": 99999,
+      "Lifespan": 30,
+      "ResetMode": "Normal",
+      "RoomRange": { "Min": 99900, "Max": 99999 },
+      "ResetCommands": [ ... ]
+    },
+    "Rooms": [ ... ],
+    "Mobs": [ ... ],
+    "Objects": [ ... ]
+  }
+  ```
+- **INCORRECT Structure (silently fails):**
+  ```json
+  {
+    "Id": 999,
+    "Name": "Zone Name",
+    "Rooms": [ ... ],
+    ...
+  }
+  ```
+- **Location:** `src/EliteMud.Server/ContentLoader.cs:593` - Only adds zone if `zoneData.Zone is not null`
+- **TODO - High Priority:**
+  - [ ] Add validation and error logging when zone schema is invalid
+  - [ ] Document zone file format in `docs/content-schema.md`
+  - [ ] Add JSON schema validation on startup
+  - [ ] Consider consolidating to single format instead of two parallel systems
+  - [ ] Print warning when rooms load but zone definition doesn't
+- **Workaround:** Ensure all zone files match the required schema with `"Zone"` wrapper object
+
+### ⚠️ Zone Reset LoadObject Missing MaxExisting Check (Jan 25, 2026)
+- **Impact:** LoadObject reset unconditionally spawns objects every reset, ignoring MaxExisting limit
+- **Severity:** MEDIUM - Can cause object proliferation if zreset is called repeatedly
+- **Root Cause:** `ExecuteLoadObject()` in WorldState doesn't check `MaxExisting` parameter
+  - `ExecuteLoadMob()` properly checks MaxExisting (lines 521-534)
+  - `ExecuteLoadObject()` just spawns unconditionally (lines 541-567)
+- **Location:** `src/EliteMud.Application/World/WorldState.cs:541-567`
+- **Legacy Behavior:** "O" command uses Arg2 as SpawnChance (0-100%), not MaxExisting
+- **TODO:**
+  - [ ] Add MaxExisting check to ExecuteLoadObject() similar to ExecuteLoadMob()
+  - [ ] OR document that LoadObject uses SpawnChance instead of MaxExisting
+  - [ ] Clarify reset command semantics in docs/content-schema.md
+- **Workaround:** Avoid using MaxExisting with LoadObject resets (it's ignored); use SpawnChance if needed
+
+## Known Issues / Bugs
+
 ### ✅ FIXED: Container Contents Not Persisting to Database (Jan 25, 2026)
 - **Impact:** Players lost all items placed inside containers (bags, chests) when logging out
 - **Severity:** HIGH - Major gameplay blocker for inventory management

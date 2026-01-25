@@ -76,6 +76,15 @@ internal sealed class RecallCommandHandler : ICommandHandler
             $"The gods reach down and escort {player.Name} to safety!",
             cancellationToken);
         
+        // Validate recall room exists (safety check)
+        if (!_worldState.World.Rooms.ContainsKey(RecallRoomId))
+        {
+            await context.Session.SendLineAsync(
+                "The gods seem to be unavailable. Please contact an immortal.",
+                cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
         // Move player to recall room
         player.RoomId = RecallRoomId;
         

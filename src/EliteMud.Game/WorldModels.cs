@@ -10,7 +10,46 @@ public enum Direction
     Down
 }
 
-public sealed record ExitDefinition(Direction Direction, int TargetRoomId);
+public sealed record ExitDefinition(
+    Direction Direction, 
+    int TargetRoomId,
+    string? Description = null,
+    IReadOnlyList<string>? Keywords = null,
+    IReadOnlyList<string>? ExitFlags = null,
+    int? KeyId = null)
+{
+    /// <summary>
+    /// Check if this exit is a door.
+    /// Legacy: EX_ISDOOR flag
+    /// </summary>
+    public bool IsDoor => ExitFlags?.Contains("IsDoor", StringComparer.OrdinalIgnoreCase) ?? false;
+    
+    /// <summary>
+    /// Check if this door is initially closed (defined in content).
+    /// Legacy: EX_CLOSED flag
+    /// Note: Runtime state is tracked separately in WorldState.
+    /// </summary>
+    public bool InitiallyClosed => ExitFlags?.Contains("Closed", StringComparer.OrdinalIgnoreCase) ?? false;
+    
+    /// <summary>
+    /// Check if this door is initially locked (defined in content).
+    /// Legacy: EX_LOCKED flag
+    /// Note: Runtime state is tracked separately in WorldState.
+    /// </summary>
+    public bool InitiallyLocked => ExitFlags?.Contains("Locked", StringComparer.OrdinalIgnoreCase) ?? false;
+    
+    /// <summary>
+    /// Check if this door is pickproof (cannot be picked).
+    /// Legacy: EX_PICKPROOF flag
+    /// </summary>
+    public bool Pickproof => ExitFlags?.Contains("Pickproof", StringComparer.OrdinalIgnoreCase) ?? false;
+    
+    /// <summary>
+    /// Check if this door is bashproof (cannot be bashed open).
+    /// Legacy: EX_BASHPROOF flag
+    /// </summary>
+    public bool Bashproof => ExitFlags?.Contains("Bashproof", StringComparer.OrdinalIgnoreCase) ?? false;
+}
 
 public sealed record RoomDefinition(
     int Id, 

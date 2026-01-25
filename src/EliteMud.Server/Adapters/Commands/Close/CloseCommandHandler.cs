@@ -35,12 +35,28 @@ internal sealed class CloseCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
-        // Find the container in inventory or room
+        // Try to find a door first
+        var doorResult = DoorFinder.FindDoor(_worldState, context.Player, argument);
+        
+        if (doorResult.Found && doorResult.Direction.HasValue && doorResult.Exit != null)
+        {
+            return await HandleDoorClose(context, doorResult.Direction.Value, doorResult.Exit, cancellationToken);
+        }
+
+        // Not a door, try to find a container in inventory or room
         var container = FindContainer(context.Player, argument);
         
         if (container is null)
         {
-            await context.Session.SendLineAsync($"You don't see that here.", cancellationToken);
+            // If we tried to find a door and it had an error message, use that
+            if (doorResult.ErrorMessage != null)
+            {
+                await context.Session.SendLineAsync(doorResult.ErrorMessage, cancellationToken);
+            }
+            else
+            {
+                await context.Session.SendLineAsync($"You don't see that here.", cancellationToken);
+            }
             return CommandOutcome.Continue;
         }
 
@@ -77,6 +93,57 @@ internal sealed class CloseCommandHandler : ICommandHandler
         // TODO: Notify room when act() system is fully implemented
         // Legacy: act("$n closes $p.", FALSE, ch, obj, 0, TO_ROOM);
 
+        return CommandOutcome.Continue;
+    }
+    
+    /// <summary>
+    /// Handle closing a door.
+    /// Legacy: do_gen_door() in act.movement.c with SCMD_CLOSE
+    /// </summary>
+    private async ValueTask<CommandOutcome> HandleDoorClose(
+        ConnectionContext context,
+        Direction direction,
+        ExitDefinition exit,
+        CancellationToken cancellationToken)
+    {
+        // Check if it's actually a door
+        if (!exit.IsDoor)
+        {
+            await context.Session.SendLineAsync("That's not a door.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Get current door state
+        var doorState = _worldState.GetDoorState(context.Player.RoomId, direction);
+        if (doorState == null)
+        {
+            await context.Session.SendLineAsync("That's not a door.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Check if door is broken
+        if (doorState.IsBroken)
+        {
+            await context.Session.SendLineAsync("The door is broken and cannot be closed.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Check if already closed
+        if (doorState.IsClosed)
+        {
+            await context.Session.SendLineAsync("It's already closed!", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Close the door (updates both sides)
+        _worldState.SetDoorState(context.Player.RoomId, direction, isClosed: true, isLocked: doorState.IsLocked);
+        
+        // Send success message
+        await context.Session.SendLineAsync("Ok.", cancellationToken);
+        
+        // TODO: Notify room when act() system is fully implemented
+        // Legacy: act("$n closes the $F $T.", FALSE, ch, 0, obj, TO_ROOM);
+        
         return CommandOutcome.Continue;
     }
 

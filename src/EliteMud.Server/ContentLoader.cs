@@ -48,7 +48,13 @@ internal static class ContentLoader
                         continue;
                     }
 
-                    exits.Add(new ExitDefinition(direction, exit.TargetId));
+                    exits.Add(new ExitDefinition(
+                        direction,
+                        exit.TargetId,
+                        exit.Description,
+                        exit.Keywords,
+                        exit.ExitFlags,
+                        exit.KeyId));
                 }
             }
 
@@ -536,7 +542,13 @@ internal static class ContentLoader
                             {
                                 if (Enum.TryParse<Direction>(exit.Direction ?? string.Empty, true, out var direction))
                                 {
-                                    exits.Add(new ExitDefinition(direction, exit.TargetId));
+                                    exits.Add(new ExitDefinition(
+                                        direction,
+                                        exit.TargetId,
+                                        exit.Description,
+                                        exit.Keywords,
+                                        exit.ExitFlags,
+                                        exit.KeyId));
                                 }
                             }
                         }
@@ -1083,6 +1095,10 @@ internal static class ContentLoader
     {
         public string? Direction { get; set; }
         public int TargetId { get; set; }
+        public string? Description { get; set; }
+        public List<string>? Keywords { get; set; }
+        public List<string>? ExitFlags { get; set; }
+        public int? KeyId { get; set; }
     }
 
     private sealed class ScriptsFile

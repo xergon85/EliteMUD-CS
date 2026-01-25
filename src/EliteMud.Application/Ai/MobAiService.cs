@@ -335,6 +335,16 @@ public class MobAiService
             }
         }
 
+        // Check if there is a closed door blocking the exit
+        if (exit.IsDoor)
+        {
+            var doorState = worldState.GetDoorState(roomId, direction);
+            if (doorState?.IsClosed == true)
+            {
+                return; // Door is closed, can't wander through
+            }
+        }
+
         // Attempt to move
         if (worldState.MoveMob(mob.InstanceId, roomId, targetRoomId))
         {

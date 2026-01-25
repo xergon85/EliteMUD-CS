@@ -447,6 +447,25 @@ public interface IWorldState
     /// Returns null if not found.
     /// </summary>
     MobInstance? GetMobInstance(int mobInstanceId, int roomId);
+    
+    /// <summary>
+    /// Get the runtime state of a door.
+    /// Returns null if the exit doesn't exist or isn't a door.
+    /// </summary>
+    DoorState? GetDoorState(int roomId, Direction direction);
+    
+    /// <summary>
+    /// Set door state (open/close, lock/unlock) for both sides of the door.
+    /// Doors are bidirectional - changing one side changes both.
+    /// </summary>
+    void SetDoorState(int roomId, Direction direction, bool isClosed, bool isLocked);
+    
+    /// <summary>
+    /// Break a door (bash command), removing closed/locked states and setting broken flag.
+    /// Legacy: Removes EX_CLOSED and EX_LOCKED, sets EX_BROKEN.
+    /// Doors are bidirectional - breaking one side breaks both.
+    /// </summary>
+    void BreakDoor(int roomId, Direction direction);
 }
 
 /// <summary>

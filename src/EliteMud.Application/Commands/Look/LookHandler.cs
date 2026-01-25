@@ -68,7 +68,7 @@ public sealed class LookHandler
             }
         }
 
-        return new RoomView(room.Name, room.Description, mobLines, objectLines, playerLines, BuildExitLine(room));
+        return new RoomView(room.Name, room.Description, mobLines, objectLines, playerLines, BuildExitLine(room, player.RoomId));
     }
 
     public CommandResult HandleLookAt(PlayerState player, string target)
@@ -301,7 +301,7 @@ public sealed class LookHandler
         };
     }
 
-    private static string BuildExitLine(RoomDefinition room)
+    private string BuildExitLine(RoomDefinition room, int currentRoomId)
     {
         if (room.Exits.Count == 0)
         {
@@ -311,9 +311,33 @@ public sealed class LookHandler
         var names = new List<string>(room.Exits.Count);
         foreach (var exit in room.Exits)
         {
+            // Skip exits to NOWHERE or invalid rooms
+            // Legacy: act.informative.c:926 checks to_room != NOWHERE
+            if (exit.TargetRoomId < 0 || !_worldState.World.Rooms.ContainsKey(exit.TargetRoomId))
+            {
+                continue;
+            }
+
+            // Skip closed doors (legacy: act.informative.c:927)
+            // Closed doors are hidden from regular players in the exit list
+            if (exit.IsDoor)
+            {
+                var doorState = _worldState.GetDoorState(currentRoomId, exit.Direction);
+                if (doorState?.IsClosed == true)
+                {
+                    continue; // Don't show closed doors in exit list
+                }
+            }
+
             // Use single-letter abbreviations matching legacy (n/e/s/w/u/d)
             var dir = exit.Direction.ToString().ToLowerInvariant();
             names.Add(dir.Substring(0, 1));
+        }
+
+        // If no visible exits after filtering, show "None!"
+        if (names.Count == 0)
+        {
+            return "[Exits: #CNone!#N]";
         }
 
         // Legacy format: [Exits: #C{exits}#N]

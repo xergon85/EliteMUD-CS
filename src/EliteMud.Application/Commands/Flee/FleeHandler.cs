@@ -1,3 +1,4 @@
+using System.Linq;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -44,6 +45,19 @@ public sealed class FleeHandler
             if (!_worldState.World.TryMove(currentRoomId, attemptDirection, out var targetRoomId))
             {
                 continue;
+            }
+
+            // Check if there is a closed door blocking the exit
+            var room = _worldState.World.GetRoom(currentRoomId);
+            var exit = room.Exits.FirstOrDefault(e => e.Direction == attemptDirection);
+            
+            if (exit?.IsDoor == true)
+            {
+                var doorState = _worldState.GetDoorState(currentRoomId, attemptDirection);
+                if (doorState?.IsClosed == true)
+                {
+                    continue; // Try another direction
+                }
             }
 
             // Calculate experience loss if fighting (legacy: act.offensive.c:425-427)

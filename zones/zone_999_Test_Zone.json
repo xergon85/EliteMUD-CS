@@ -1,0 +1,190 @@
+{
+  "Zone": {
+    "Id": 999,
+    "Name": "Test Zone",
+    "TopRoomId": 99999,
+    "Lifespan": 30,
+    "ResetMode": "Normal",
+    "RoomRange": {
+      "Min": 99900,
+      "Max": 99999
+    },
+    "ResetCommands": [
+      {
+        "Type": "LoadObject",
+        "RoomId": 99901,
+        "ObjectId": 99901
+      },
+      {
+        "Type": "LoadObject",
+        "RoomId": 99903,
+        "ObjectId": 99902
+      }
+    ]
+  },
+  "Rooms": [
+    {
+      "Id": 99900,
+      "Name": "Test Room - Starting Point",
+      "Description": "\n   This is a simple test room. There is a door to the north.\nYou can use this room to test door commands: open, close, lock, unlock, bash.\n\nTry:\n  #Ylook#N          - See the exits (closed doors are hidden)\n  #Yopen north#N     - Open the north door\n  #Yclose north#N    - Close the north door\n  #Ylock north#N     - Lock the north door (requires key 99901)\n  #Yunlock north#N   - Unlock the north door (requires key 99901)\n  #Ybash north#N     - Bash the door open (requires shield equipped)\n  #Ygoto 99901#N     - Teleport to get the key\n  #Ygoto 99903#N     - Teleport to get the shield\n",
+      "ZoneId": 999,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "North",
+          "TargetId": 99902,
+          "Description": "A simple wooden door.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 99901
+        }
+      ]
+    },
+    {
+      "Id": 99901,
+      "Name": "Test Room - Key Storage",
+      "Description": "\n   This room contains the test key. Pick it up to test locking/unlocking.\n\nCommands:\n  #Yget key#N        - Pick up the key\n  #Ygoto 99900#N     - Go back to the test room\n",
+      "ZoneId": 999,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": []
+    },
+    {
+      "Id": 99902,
+      "Name": "Test Room - Behind the Door",
+      "Description": "\n   You successfully opened the door! This room is behind the locked door.\n\nThe door leads back south. There is a sturdy iron door to the east.\n",
+      "ZoneId": 999,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 99900,
+          "Description": "The wooden door you came through.",
+          "Keywords": [
+            "door",
+            "wooden"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Locked"
+          ],
+          "KeyId": 99901
+        },
+        {
+          "Direction": "East",
+          "TargetId": 99903,
+          "Description": "A reinforced iron door that looks impossible to break.",
+          "Keywords": [
+            "door",
+            "iron",
+            "reinforced"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Bashproof"
+          ],
+          "KeyId": -1
+        }
+      ]
+    },
+    {
+      "Id": 99903,
+      "Name": "Test Room - Bash Test Area",
+      "Description": "\n   This room is for testing the bash command.\nThere is a test shield on the ground and a bashable door to the west.\n\nTry:\n  #Yget shield#N     - Pick up the test shield\n  #Ywear shield#N    - Equip the shield\n  #Ygoto 99900#N     - Go to starting room\n  #Ybash north#N     - Try to bash the wooden door\n",
+      "ZoneId": 999,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 99902,
+          "Description": "The reinforced iron door.",
+          "Keywords": [
+            "door",
+            "iron",
+            "reinforced"
+          ],
+          "ExitFlags": [
+            "IsDoor",
+            "Closed",
+            "Bashproof"
+          ],
+          "KeyId": -1
+        }
+      ]
+    }
+  ],
+  "Mobs": [],
+  "Objects": [
+    {
+      "Id": 99901,
+      "Name": "key test wooden",
+      "ShortDescription": "a wooden test key",
+      "LongDescription": "A simple wooden key lies here.",
+      "Description": "This is a test key for the test zone door. Use it to lock/unlock the north door in room 99900.",
+      "Type": "key",
+      "WearSlots": [
+        "take",
+        "hold"
+      ],
+      "Flags": [],
+      "Details": null,
+      "Values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "Weight": 1,
+      "Cost": 0,
+      "Affects": []
+    },
+    {
+      "Id": 99902,
+      "Name": "shield test wooden",
+      "ShortDescription": "a wooden test shield",
+      "LongDescription": "A simple wooden shield lies on the ground.",
+      "Description": "This is a test shield. Equip it to test the bash command.",
+      "Type": "armor",
+      "WearSlots": [
+        "take",
+        "shield"
+      ],
+      "Flags": [],
+      "Details": null,
+      "Values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "Weight": 10,
+      "Cost": 0,
+      "Affects": [
+        {
+          "Location": "ArmorClass",
+          "Modifier": -5
+        }
+      ]
+    }
+  ]
+}

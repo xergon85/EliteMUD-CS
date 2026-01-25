@@ -29,11 +29,22 @@ public static class CharacterMapper
             _ => 0
         };
 
+        // Validate and fix room ID if needed
+        // Legacy: interpreter.c:2071-2088 validates load room and falls back to start rooms
+        int validatedRoomId = character.RoomId;
+        if (validatedRoomId < 0 || !worldState.World.Rooms.ContainsKey(validatedRoomId))
+        {
+            // If saved room is invalid (NOWHERE/-1 or doesn't exist), use mortal start room
+            // Legacy: mortal_start_room = 3001 (Temple of Midgaard)
+            const int MortalStartRoom = 3001;
+            validatedRoomId = MortalStartRoom;
+        }
+
         // Create PlayerState with mapped values
         var player = new PlayerState(
             id: connectionId,
             name: character.Name,
-            roomId: character.RoomId,
+            roomId: validatedRoomId,
             level: (byte)character.Level,
             characterClass: character.CharacterClass,
             race: character.Race,

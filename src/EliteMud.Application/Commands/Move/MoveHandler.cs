@@ -1,3 +1,4 @@
+using System.Linq;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Game;
@@ -38,6 +39,25 @@ public sealed class MoveHandler
         if (!_worldState.World.TryMove(player.RoomId, direction, out var targetRoomId))
         {
             return MoveResult.Failed("You cannot go that way.");
+        }
+
+        // Validate that the target room exists (some exits may point to -1 or invalid rooms)
+        if (!_worldState.World.Rooms.ContainsKey(targetRoomId))
+        {
+            return MoveResult.Failed("You cannot go that way.");
+        }
+
+        // Check if there is a closed door blocking the exit
+        var room = _worldState.World.GetRoom(player.RoomId);
+        var exit = room.Exits.FirstOrDefault(e => e.Direction == direction);
+        
+        if (exit?.IsDoor == true)
+        {
+            var doorState = _worldState.GetDoorState(player.RoomId, direction);
+            if (doorState?.IsClosed == true)
+            {
+                return MoveResult.Failed("The door is closed.");
+            }
         }
 
         player.RoomId = targetRoomId;

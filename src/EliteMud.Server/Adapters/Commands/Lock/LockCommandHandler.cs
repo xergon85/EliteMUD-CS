@@ -3,16 +3,16 @@ using EliteMud.Application.World;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 
-namespace EliteMud.Server.Adapters.Commands.Open;
+namespace EliteMud.Server.Adapters.Commands.Lock;
 
-[Command("open")]
-internal sealed class OpenCommandHandler : ICommandHandler
+[Command("lock")]
+internal sealed class LockCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
     private readonly ActMessageService _actService;
     private readonly ConnectionRegistry _connectionRegistry;
 
-    public OpenCommandHandler(
+    public LockCommandHandler(
         IWorldState worldState,
         ActMessageService actService,
         ConnectionRegistry connectionRegistry)
@@ -31,17 +31,16 @@ internal sealed class OpenCommandHandler : ICommandHandler
 
         if (string.IsNullOrWhiteSpace(argument))
         {
-            await context.Session.SendLineAsync("Open what?", cancellationToken);
+            await context.Session.SendLineAsync("Lock what?", cancellationToken);
             return CommandOutcome.Continue;
         }
 
-        // Try to find a door first (legacy order: container checked first, then door)
-        // But we'll check door if the argument looks like a direction
+        // Try to find a door first
         var doorResult = DoorFinder.FindDoor(_worldState, context.Player, argument);
         
         if (doorResult.Found && doorResult.Direction.HasValue && doorResult.Exit != null)
         {
-            return await HandleDoorOpen(context, doorResult.Direction.Value, doorResult.Exit, cancellationToken);
+            return await HandleDoorLock(context, doorResult.Direction.Value, doorResult.Exit, cancellationToken);
         }
 
         // Not a door, try to find a container in inventory or room
@@ -70,45 +69,50 @@ internal sealed class OpenCommandHandler : ICommandHandler
 
         var containerDetails = container.Definition.Details.Container;
 
-        // Check if container is closeable
-        if (!containerDetails.Flags.Contains("Closeable", StringComparer.OrdinalIgnoreCase))
-        {
-            await context.Session.SendLineAsync($"You can't open that.", cancellationToken);
-            return CommandOutcome.Continue;
-        }
-
-        // Check if already open
+        // Check if container is closed first (must be closed before locking)
         if (!container.IsClosed)
         {
-            await context.Session.SendLineAsync($"It's already open.", cancellationToken);
+            await context.Session.SendLineAsync($"Maybe you should close it first...", cancellationToken);
             return CommandOutcome.Continue;
         }
 
-        // Check if locked
+        // Check if container can be locked (has a key)
+        if (containerDetails.KeyId < 0)
+        {
+            await context.Session.SendLineAsync($"That thing can't be locked.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+
+        // Check if player has the key
+        if (!HasKey(context.Player, containerDetails.KeyId))
+        {
+            await context.Session.SendLineAsync($"You don't seem to have the proper key.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+
+        // Check if already locked
         if (container.IsLocked)
         {
-            await context.Session.SendLineAsync($"It seems to be locked.", cancellationToken);
+            await context.Session.SendLineAsync($"It is locked already.", cancellationToken);
             return CommandOutcome.Continue;
         }
 
-        // Open the container
-        container.IsClosed = false;
+        // Lock the container
+        container.IsLocked = true;
 
-        await context.Session.SendLineAsync(
-            $"You open the {container.Definition.ShortDescription}.", 
-            cancellationToken);
+        await context.Session.SendLineAsync("*Cluck*", cancellationToken);
 
         // TODO: Notify room when act() system is fully implemented
-        // Legacy: act("$n opens $p.", FALSE, ch, obj, 0, TO_ROOM);
+        // Legacy: act("$n locks $p - 'cluck', it says.", FALSE, ch, obj, 0, TO_ROOM);
 
         return CommandOutcome.Continue;
     }
     
     /// <summary>
-    /// Handle opening a door.
-    /// Legacy: do_gen_door() in act.movement.c with SCMD_OPEN
+    /// Handle locking a door.
+    /// Legacy: do_lock() in act.movement.c for doors
     /// </summary>
-    private async ValueTask<CommandOutcome> HandleDoorOpen(
+    private async ValueTask<CommandOutcome> HandleDoorLock(
         ConnectionContext context,
         Direction direction,
         ExitDefinition exit,
@@ -117,7 +121,7 @@ internal sealed class OpenCommandHandler : ICommandHandler
         // Check if it's actually a door
         if (!exit.IsDoor)
         {
-            await context.Session.SendLineAsync("That's not a door.", cancellationToken);
+            await context.Session.SendLineAsync("That's absurd.", cancellationToken);
             return CommandOutcome.Continue;
         }
         
@@ -125,35 +129,67 @@ internal sealed class OpenCommandHandler : ICommandHandler
         var doorState = _worldState.GetDoorState(context.Player.RoomId, direction);
         if (doorState == null)
         {
-            await context.Session.SendLineAsync("That's not a door.", cancellationToken);
+            await context.Session.SendLineAsync("That's absurd.", cancellationToken);
             return CommandOutcome.Continue;
         }
         
-        // Check if already open
+        // Check if door is broken
+        if (doorState.IsBroken)
+        {
+            await context.Session.SendLineAsync("The door is broken and cannot be locked.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Check if door is closed first
         if (!doorState.IsClosed)
         {
-            await context.Session.SendLineAsync("It's already open!", cancellationToken);
+            await context.Session.SendLineAsync("You have to close it first, I'm afraid.", cancellationToken);
             return CommandOutcome.Continue;
         }
         
-        // Check if locked
+        // Check if door has a keyhole
+        if (exit.KeyId == null || exit.KeyId < 0)
+        {
+            await context.Session.SendLineAsync("There does not seem to be any keyholes.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Check if player has the key
+        if (!HasKey(context.Player, exit.KeyId.Value))
+        {
+            await context.Session.SendLineAsync("You don't have the proper key.", cancellationToken);
+            return CommandOutcome.Continue;
+        }
+        
+        // Check if already locked
         if (doorState.IsLocked)
         {
-            await context.Session.SendLineAsync("It seems to be locked.", cancellationToken);
+            await context.Session.SendLineAsync("It's already locked!", cancellationToken);
             return CommandOutcome.Continue;
         }
         
-        // Open the door (updates both sides)
-        _worldState.SetDoorState(context.Player.RoomId, direction, isClosed: false, isLocked: false);
+        // Lock the door (updates both sides)
+        _worldState.SetDoorState(context.Player.RoomId, direction, isClosed: true, isLocked: true);
         
         // Send success message
-        await context.Session.SendLineAsync("Ok.", cancellationToken);
+        await context.Session.SendLineAsync("*Click*", cancellationToken);
         
         // TODO: Notify room when act() system is fully implemented
-        // Legacy: act("$n opens the $F $T.", FALSE, ch, 0, obj, TO_ROOM);
-        // where $F is door name/keyword, $T is direction
+        // Legacy: act("$n locks the $F.", FALSE, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
         
         return CommandOutcome.Continue;
+    }
+    
+    /// <summary>
+    /// Check if player has a key with the specified object ID in their inventory.
+    /// Legacy: has_key() function
+    /// </summary>
+    private bool HasKey(PlayerState player, int keyId)
+    {
+        if (keyId < 0) return false;
+        
+        var inventory = _worldState.GetPlayerInventory(player);
+        return inventory.Any(obj => obj.Definition.Id == keyId);
     }
 
     /// <summary>

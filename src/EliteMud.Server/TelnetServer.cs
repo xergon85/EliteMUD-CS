@@ -93,6 +93,8 @@ internal sealed class TelnetServer
 
         try
         {
+            Console.WriteLine($"[Session {connectionId}] Client connected from {clientIp}");
+            
             // Check if IP is banned before allowing connection
             if (_ipBanService.IsBanned(clientIp))
             {
@@ -190,6 +192,11 @@ internal sealed class TelnetServer
                     await context.Session.SendLineAsync(_catalog.GetUnknownCommandMessage(), cancellationToken);
                 }
             }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Session {connectionId}] ERROR: {ex.GetType().Name}: {ex.Message}");
+            Console.WriteLine(ex.StackTrace);
         }
         finally
         {
