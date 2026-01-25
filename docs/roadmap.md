@@ -562,13 +562,16 @@
 - ❌ Haggling / charisma price modifiers
 
 #### 6.5 Communication Commands
-- ❌ `tell` command - private messaging
-- ❌ `shout` command - zone-wide broadcast
-- ❌ `gossip` command - global chat channel
-- ❌ `emote` / `me` command - roleplay actions
+- ✅ `tell` command - private messaging - COMPLETE (Jan 25, 2026)
+- ✅ `reply` command - respond to last tell sender - COMPLETE (Jan 25, 2026)
+- ✅ `shout` / `yell` command - zone-wide broadcast (costs 10 movement) - COMPLETE (Jan 25, 2026)
+- ✅ `gossip` command - global chat channel - COMPLETE (Jan 25, 2026)
+- ✅ `emote` / `me` command - roleplay actions - COMPLETE (Jan 25, 2026)
 - ❌ `pose` command - set room presence
 - ❌ `auction` command - auction channel
 - ❌ Ignore list system
+- ❌ Channel history system (tell/gossip/shout history)
+- **Commit:** `c443f71` - "Add communication commands: tell, reply, emote, gossip, shout"
 
 #### 6.6 Social Systems
 - ❌ `follow` command - follow another player (⚠️ **needs indexed targeting** for mobs: `follow 2.guard`)
@@ -813,6 +816,37 @@
   - Player death (corpse creation, XP loss, respawn at recall point)
   - Mob death (corpse creation with equipment transfer)
   - Combat messaging with ActMessage integration
+
+### ✅ RECENTLY COMPLETED (Jan 25, 2026 - Session 8)
+
+#### Session 8: Communication Commands System - COMPLETE ✅
+- ✅ **Core Communication Commands Implemented - COMPLETE**
+  - ✅ `tell <player> <message>` - private player-to-player messaging (blue color #b)
+  - ✅ `reply <message>` - respond to last tell sender (tracks LastTellSender)
+  - ✅ `emote <action>` / `me <action>` - roleplay actions broadcast to room
+  - ✅ `gossip <message>` - global chat channel (bright yellow #Y)
+  - ✅ `shout <message>` / `yell <message>` - zone-wide broadcast (cyan #c, costs 10 movement)
+  - ✅ Added LastTellSender to PlayerState for reply tracking
+  - ✅ All commands support legacy color codes matching original EliteMUD
+  - ✅ Message routing: tell=targeted, gossip=global, shout=zone-wide, emote=room
+  - ✅ Command handlers: TellHandler, ReplyHandler, EmoteHandler, GossipHandler, ShoutHandler
+  - ✅ Result types: TellResult, ReplyResult, EmoteResult, GossipResult, ShoutResult
+  - ✅ All 227 tests passing (no new tests yet - manual testing required)
+  - ✅ Commit: `c443f71` - "Add communication commands: tell, reply, emote, gossip, shout"
+- **Legacy Compliance:**
+  - ✅ Color codes match legacy: #b (blue tell), #Y (yellow gossip), #c (cyan yell)
+  - ✅ Message formats match legacy: "Name tells you '...'", "Name gossips, '...'"
+  - ✅ Shout costs movement points (10) like legacy holler_move_cost
+  - ✅ Reply tracks last sender like legacy GET_LAST_TELL(ch)
+  - ✅ Emote uses "$n action" format like legacy act.wizard.c
+- **Not Yet Implemented:**
+  - ❌ Channel history (tell/gossip/shout history display)
+  - ❌ Ignore list system
+  - ❌ NOTELL/NOGOSSIP preferences
+  - ❌ Racial speech additions (grunt, hiss, etc.) for gossip/shout
+  - ❌ SILENT room flag blocking communication
+  - ❌ Writing flag preventing message receipt
+  - ❌ Idle timer warning for tell recipients
 
 ### ✅ RECENTLY COMPLETED (Jan 25, 2026 - Session 7)
 
