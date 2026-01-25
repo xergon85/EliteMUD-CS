@@ -233,8 +233,31 @@ public static class CharacterMapper
             // Parse slot name back to enum, then to int
             if (Enum.TryParse<EquipmentSlot>(eqItem.Slot, out var slotEnum))
             {
-                // Create object instance from definition ID
-                var objectInstance = worldState.CreateObjectInstance(eqItem.ObjectDefinitionId);
+                ObjectInstance? objectInstance = null;
+                
+                // Try to load from ItemData JSON first (includes container contents and state)
+                if (!string.IsNullOrWhiteSpace(eqItem.ItemData))
+                {
+                    try
+                    {
+                        var itemDto = JsonSerializer.Deserialize<InventoryItemDto>(eqItem.ItemData);
+                        if (itemDto != null)
+                        {
+                            objectInstance = LoadInventoryItemRecursive(itemDto, worldState);
+                        }
+                    }
+                    catch (JsonException)
+                    {
+                        // If JSON is invalid, fall back to creating from definition
+                    }
+                }
+                
+                // Fallback: Create fresh instance from definition (for old data or JSON errors)
+                if (objectInstance == null)
+                {
+                    objectInstance = worldState.CreateObjectInstance(eqItem.ObjectDefinitionId);
+                }
+                
                 if (objectInstance != null)
                 {
                     var slotId = (int)slotEnum;
@@ -415,11 +438,17 @@ public static class CharacterMapper
             if (objectInstance != null)
             {
                 var slotEnum = (EquipmentSlot)slotId;
+                
+                // Serialize item data (including container contents and state)
+                var itemDto = SaveInventoryItemRecursive(objectInstance);
+                var itemData = JsonSerializer.Serialize(itemDto);
+                
                 character.Equipment.Add(new CharacterEquipmentItem
                 {
                     CharacterId = character.CharacterId,
                     Slot = slotEnum.ToString(),
-                    ObjectDefinitionId = objectInstance.Definition.Id
+                    ObjectDefinitionId = objectInstance.Definition.Id,
+                    ItemData = itemData
                 });
             }
         }

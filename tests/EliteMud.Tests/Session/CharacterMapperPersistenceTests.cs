@@ -432,6 +432,72 @@ public class CharacterMapperPersistenceTests : IDisposable
         Assert.Equal(3, loadedBag!.Contents.Count);
     }
 
+    [Fact]
+    public void SaveAndLoad_EquippedContainerWithContents_PersistsCorrectly()
+    {
+        // Arrange - Create account first (required by foreign key)
+        var account = CreateAccount("testuser");
+        _dbContext.Accounts.Add(account);
+        _dbContext.SaveChanges();
+
+        // Create character and player state
+        var character = CreateCharacter("TestPlayer", account.AccountId);
+        _dbContext.Characters.Add(character);
+        _dbContext.SaveChanges();
+
+        var player = new PlayerState(1, "TestPlayer", roomId: 1);
+        
+        // Create bag and items
+        var bag = _worldState.CreateObjectInstance(1)!; // bag (wearable at waist)
+        var sword = _worldState.CreateObjectInstance(3)!; // sword
+        var wheat = _worldState.CreateObjectInstance(2)!; // wheat
+
+        // Put items in bag FIRST, then equip the bag
+        bag.AddItem(sword);
+        bag.AddItem(wheat);
+        player.AddToInventory(bag.InstanceId);
+        
+        // Equip the bag at waist
+        player.EquipToSlot((int)EquipmentSlot.Waist, bag.InstanceId);
+
+        // Act - Save
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        _dbContext.SaveChanges();
+
+        // Verify database has ItemData JSON for equipped item
+        var savedEquipment = _dbContext.CharacterEquipment
+            .FirstOrDefault(e => e.CharacterId == character.CharacterId);
+        Assert.NotNull(savedEquipment);
+        Assert.NotNull(savedEquipment.ItemData);
+        Assert.Equal("Waist", savedEquipment.Slot);
+        
+        // Verify JSON contains the bag with its contents
+        var itemDto = JsonSerializer.Deserialize<InventoryItemDto>(savedEquipment.ItemData);
+        Assert.NotNull(itemDto);
+        Assert.Equal(1, itemDto.ObjectDefinitionId); // bag
+        Assert.Equal(2, itemDto.Contents.Count); // sword and wheat
+        
+        var contentIds = itemDto.Contents.Select(c => c.ObjectDefinitionId).ToList();
+        Assert.Contains(2, contentIds); // wheat
+        Assert.Contains(3, contentIds); // sword
+
+        // Act - Load into new player state
+        var loadedPlayer = CharacterMapper.ToPlayerState(character, 2, _worldState);
+
+        // Assert - Check equipped bag still has contents
+        var equipment = _worldState.GetPlayerEquipment(loadedPlayer);
+        Assert.Single(equipment); // One equipped item
+        
+        var loadedBag = equipment[EquipmentSlot.Waist];
+        Assert.NotNull(loadedBag);
+        Assert.Equal("bag", loadedBag.Definition.Name);
+        Assert.Equal(2, loadedBag.Contents.Count); // sword and wheat still there!
+        
+        var loadedContentNames = loadedBag.Contents.Select(c => c.Definition.Name).ToList();
+        Assert.Contains("sword", loadedContentNames);
+        Assert.Contains("wheat", loadedContentNames);
+    }
+
     // Helper methods
 
     private Account CreateAccount(string username)
@@ -475,7 +541,7 @@ public class CharacterMapperPersistenceTests : IDisposable
             LongDescription: $"A {name} is here.",
             Description: $"You see a {name}.",
             Type: "container",
-            WearSlots: Array.Empty<string>(),
+            WearSlots: new[] { "Waist" }, // Make it wearable at waist
             Flags: Array.Empty<string>(),
             Details: new ObjectDetails
             {
