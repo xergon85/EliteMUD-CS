@@ -11,6 +11,18 @@
 
 ## Known Issues / Bugs
 
+### ✅ FIXED Mob AI Position Bug
+- ✅ **Mob attacks don't set player to Fighting position** - FIXED (Jan 25, 2026)
+  - Impact: Standing players stayed in Position.Standing when attacked by aggressive mobs
+  - Root cause: Incorrect comparison `Position < Fighting` (Standing=8 > Fighting=7 in enum)
+  - Legacy behavior: Victims should be set to Position.Fighting when combat starts
+  - Fix: Changed condition to `Position > Fighting` in MobAiService
+    - Now correctly sets Standing/Sitting/Resting players to Fighting when attacked
+    - Preserves Fighting position if already fighting
+    - Preserves worse positions (Dead/Mortally/Incap/Stunned)
+  - Affected: ProcessAggressive() and ProcessMemory() in MobAiService
+  - All 174 tests passing (154 existing + 20 new mob AI tests)
+
 ### Position/State Bugs
 - ✅ **`look` command works while sleeping** - FIXED (Jan 25, 2026)
   - Impact: Players could see room details while asleep
@@ -325,13 +337,66 @@
 ### 🔄 Phase 5: NPCs + AI (IN PROGRESS)
 **Milestone:** Mobs behave like legacy
 
-#### 5.1 Mob AI Foundation
-- ❌ Mob tick system (periodic AI updates)
-- ❌ Aggro system - mobs attack on sight
-- ❌ Wandering/roaming behavior
-- ❌ Memory system - mobs remember attackers
-- ❌ Assist system - mobs help each other
-- ❌ Mob inventory system (for GiveMob zone reset)
+#### 5.1 Mob AI Foundation - PARTIALLY COMPLETE ✅
+**Status:** Core AI behaviors implemented and tested (Jan 25, 2026)
+
+**Completed & Tested:**
+- ✅ **Mob tick system** - ProcessMobTick() processes AI every 2 seconds (PULSE_VIOLENCE)
+- ✅ **Aggressive behavior** - Mobs attack players on sight
+  - ✅ Basic AGGRESSIVE flag (attack anyone)
+  - ✅ AGGRESSIVE_EVIL flag (attack evil players, alignment ≤ -350)
+  - ✅ AGGRESSIVE_GOOD flag (attack good players, alignment ≥ 350)
+  - ✅ AGGRESSIVE_NEUTRAL flag (attack neutral players)
+  - ✅ WIMPY flag (won't attack awake players)
+  - ✅ Respects fighting state (won't switch targets mid-combat)
+- ✅ **Wandering behavior** - Random movement with anti-bounce logic
+  - ✅ ~13% chance to move per tick (6/46 dice roll)
+  - ✅ Anti-bounce: won't immediately reverse direction
+  - ✅ STAY_ZONE flag prevents leaving zone
+  - ✅ Respects NO_MOB room flag
+  - ✅ Respects DEATH room flag
+  - ✅ Only wanders when Position.Standing
+- ✅ **Memory system** - Mobs remember and hunt attackers
+  - ✅ MEMORY flag enables player tracking
+  - ✅ RememberPlayer() / ForgetPlayer() API
+  - ✅ Attacks remembered players in same room
+  - ✅ Respects LAWFUL room flag (won't attack in lawful rooms)
+  - ✅ Tracks victim across rooms (pathfinding TODO)
+- ✅ **Assist/Helper system** - Mobs help allies in combat
+  - ✅ HELPER flag enables ally assistance
+  - ✅ Assists mobs with similar alignment (within 750 points)
+  - ✅ Won't assist if already fighting
+  - ✅ ProcessAssist() called when combat starts
+- ✅ **Position handling** - Skips AI when not awake or in invalid room
+- ✅ **Comprehensive test coverage** - 20 integration tests for all AI behaviors
+
+**Test Coverage (20 tests in MobAiServiceTests.cs):**
+- 8 aggressive behavior tests (basic, evil, good, neutral, wimpy, fighting state)
+- 3 memory/hunting tests (attack remembered, lawful room, unremembered)
+- 4 wandering tests (movement, position check, NO_MOB flag, STAY_ZONE flag)
+- 3 helper/assist tests (basic assist, alignment check, already fighting)
+- 2 position/state tests (not awake, invalid room)
+
+**Partially Implemented:**
+- 🔄 **Scavenger behavior** - Implemented but not tested
+  - ✅ Code exists in ProcessScavenger() (9% chance per tick)
+  - ✅ Picks up most valuable item in room
+  - ❌ Missing TODO: MOB_CAN_GET_OBJ check (weight limits, item flags)
+  - ❌ Missing TODO: Transfer object to mob inventory
+  - ❌ Missing TODO: ActMessage for scavenge action
+- 🔄 **Sentinel return home** - Implemented but not tested
+  - ✅ Code exists in ProcessSentinelReturnHome()
+  - ✅ SENTINEL flag defined and parsed
+  - ✅ Hometown tracking in MobInstance
+  - ❌ Missing TODO: Pathfinding to hometown (perform_track)
+- 🔄 **Tracking/Pathfinding** - Stubbed but not implemented
+  - ✅ TrackingPath queue in MobInstance
+  - ✅ ProcessTracking() consumes path and moves mob
+  - ❌ Missing TODO: Pathfinding algorithm (graph.c)
+  - ❌ Missing TODO: Memory victim tracking across rooms
+
+**Not Started:**
+- ❌ Mob inventory system (for GiveMob zone reset, scavenger storage)
 
 #### 5.2 Mob Programs (Legacy Triggers)
 - ❌ Map legacy mob programs to Lua scripts
@@ -659,6 +724,32 @@
   - Mob death (corpse creation with equipment transfer)
   - Combat messaging with ActMessage integration
 
+### ✅ RECENTLY COMPLETED (Jan 25, 2026 - Session 6)
+
+#### Session 6: Mob AI Tests & Position Bugfix - COMPLETE ✅
+- ✅ **Comprehensive Mob AI Test Coverage - COMPLETE**
+  - ✅ Created MobAiServiceTests.cs with 20 integration tests
+  - ✅ Tests cover all 5 core AI behaviors (aggressive, memory, wandering, helper, position)
+  - ✅ Uses reflection to access WorldState internal collections for test setup
+  - ✅ MockScriptEngine for Lua hook testing
+  - ✅ All 174 tests passing (154 existing + 20 new)
+- ✅ **Fixed Critical Position Bug in Mob Combat - COMPLETE**
+  - ✅ Issue: Standing players stayed in Position.Standing when attacked by aggressive mobs
+  - ✅ Root cause: Wrong comparison `if (player.Position < Position.Fighting)` 
+    - Standing=8 > Fighting=7 in enum, so condition was false
+  - ✅ Fix: Changed to `if (player.Position > Position.Fighting)` in MobAiService
+  - ✅ Now correctly sets Standing/Sitting/Resting → Fighting when attacked
+  - ✅ Preserves Fighting position if already fighting
+  - ✅ Preserves worse positions (Dead/Mortally/Incap/Stunned)
+  - ✅ Applied fix to both ProcessAggressive() and ProcessMemory()
+- ✅ **Test Implementation Details**
+  - ✅ Test wandering with random movement tracking (100 tick attempts)
+  - ✅ Test alignment-specific aggro (evil, good, neutral)
+  - ✅ Test memory system with player ID tracking
+  - ✅ Test helper alignment difference calculations (≤750 threshold)
+  - ✅ Test room flag checks (LAWFUL, NO_MOB)
+  - ✅ Test zone restriction (STAY_ZONE flag)
+
 ### ✅ RECENTLY COMPLETED (Jan 24, 2026 - Sessions 4-5)
 
 #### Session 5: Alignment Dynamics System - COMPLETE ✅
@@ -830,6 +921,37 @@
    - Improve on successful casts
    - Formula variables include spellPercent
    - Store in database alongside skill proficiencies
+
+### 📋 FOLLOW-UP FEATURES (After Mob AI Testing)
+
+**Mob AI Next Steps:**
+1. **Add Scavenger Tests** (Short-term)
+   - Test item pickup behavior (9% chance per tick)
+   - Test value-based selection (picks most valuable item)
+   - Test room scanning and object detection
+   - Requires: Mob inventory system implementation
+
+2. **Add Sentinel/Return Home Tests** (Medium-term)
+   - Test hometown tracking
+   - Test return path calculation
+   - Requires: Pathfinding implementation
+
+3. **Add Tracking Tests** (Medium-term)
+   - Test memory victim tracking across rooms
+   - Test path calculation and following
+   - Requires: Pathfinding implementation (graph.c port)
+
+4. **Implement Mob Inventory System** (Medium-term)
+   - Add Inventory property to MobInstance (like PlayerState)
+   - Update GiveMob zone reset to populate inventory
+   - Update scavenger to store picked items
+   - Add mob loot drop on death (currently only equipment drops)
+
+5. **Complete Pathfinding System** (Long-term)
+   - Port graph.c pathfinding algorithm
+   - Implement perform_track() for mob tracking
+   - Test with sentinel return home and memory tracking
+   - Add zone-aware pathfinding
 
 ### 📋 FOLLOW-UP FEATURES (After Spells)
 9. **Expand Formula Variables** (Medium-term)
