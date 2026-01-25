@@ -4,7 +4,7 @@ using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Drop;
 
-public sealed record DropResult(bool Success, string Message, ObjectDefinition? Object = null);
+public sealed record DropResult(bool Success, string Message, ObjectDefinition? Object = null, List<ObjectDefinition>? Objects = null);
 
 public sealed class DropHandler
 {
@@ -24,19 +24,77 @@ public sealed class DropHandler
 
         var inventory = _worldState.GetPlayerInventory(player);
 
-        // Find matching object in inventory using indexed targeting (e.g., "2.sword")
-        // Legacy: handler.c:1020-1040 (get_obj_in_list with get_number)
-        var obj = TargetParser.FindObject(inventory, target);
+        // Handle "drop all" - drop all items from inventory
+        if (target.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            if (inventory.Count == 0)
+            {
+                return new DropResult(false, "You aren't carrying anything.");
+            }
+
+            var droppedObjects = new List<ObjectDefinition>();
+            foreach (var obj in inventory.ToList())
+            {
+                if (_worldState.DropObject(player, obj.InstanceId))
+                {
+                    droppedObjects.Add(obj.Definition);
+                }
+            }
+
+            if (droppedObjects.Count == 0)
+            {
+                return new DropResult(false, "You can't seem to drop anything.");
+            }
+
+            return new DropResult(true, string.Empty, Objects: droppedObjects);
+        }
+
+        // Parse indexed targeting (e.g., "2.sword" or "all.sword")
+        var (index, name) = TargetParser.ParseTarget(target);
+
+        if (index == 0)
+        {
+            return new DropResult(false, $"Invalid target: {target}");
+        }
+
+        // Handle "drop all.item" - drop all matching items
+        if (index == -1)
+        {
+            var matchingItems = TargetParser.FindAllMatches(inventory, name);
+            if (matchingItems.Count == 0)
+            {
+                return new DropResult(false, $"You don't have any {name}.");
+            }
+
+            var droppedObjects = new List<ObjectDefinition>();
+            foreach (var obj in matchingItems)
+            {
+                if (_worldState.DropObject(player, obj.InstanceId))
+                {
+                    droppedObjects.Add(obj.Definition);
+                }
+            }
+
+            if (droppedObjects.Count == 0)
+            {
+                return new DropResult(false, $"You can't drop any {name}.");
+            }
+
+            return new DropResult(true, string.Empty, Objects: droppedObjects);
+        }
+
+        // Find specific Nth matching object in inventory
+        var targetObj = TargetParser.FindNthMatch(inventory, name, index);
         
-        if (obj == null)
+        if (targetObj == null)
         {
             return new DropResult(false, "You don't have that.");
         }
 
         // Try to drop the object
-        if (_worldState.DropObject(player, obj.InstanceId))
+        if (_worldState.DropObject(player, targetObj.InstanceId))
         {
-            return new DropResult(true, string.Empty, obj.Definition);
+            return new DropResult(true, string.Empty, targetObj.Definition);
         }
         else
         {

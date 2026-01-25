@@ -36,11 +36,20 @@ internal sealed class PutCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
-        // Success - send message to player and room
+        // Handle multiple objects (put all, put all.item)
+        if (result.Objects != null && result.Objects.Count > 0 && result.ContainerName != null)
+        {
+            foreach (var obj in result.Objects)
+            {
+                await context.Session.SendLineAsync(
+                    $"You put {obj.ShortDescription} in {result.ContainerName}.", 
+                    cancellationToken);
+            }
+            return CommandOutcome.Continue;
+        }
+
+        // Handle single object - send message
         await context.Session.SendLineAsync(result.Message, cancellationToken);
-        
-        // TODO: Add act() messages to room when act() system is fully implemented
-        // Legacy: act("$n puts $p in $P.", FALSE, ch, obj, cont, TO_ROOM);
         
         return CommandOutcome.Continue;
     }

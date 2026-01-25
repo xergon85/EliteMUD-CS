@@ -34,9 +34,28 @@ internal sealed class DropCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
-        // Success - use ActMessage to broadcast
-        // To actor: "You drop $o."
-        // To room: "$n drops $o."
+        // Handle multiple objects (drop all, drop all.item)
+        if (result.Objects != null && result.Objects.Count > 0)
+        {
+            foreach (var obj in result.Objects)
+            {
+                await context.ActToCharAsync(
+                    _actService,
+                    "you drop $p.",
+                    obj: obj,
+                    cancellationToken: cancellationToken);
+
+                await context.ActToNotCharAsync(
+                    _actService,
+                    _connectionRegistry,
+                    "$n drops $p.",
+                    obj: obj,
+                    cancellationToken: cancellationToken);
+            }
+            return CommandOutcome.Continue;
+        }
+
+        // Handle single object
         await context.ActToCharAsync(
             _actService,
             "you drop $p.",

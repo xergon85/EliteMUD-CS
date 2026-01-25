@@ -97,7 +97,21 @@ public sealed class GetHandler
     /// </summary>
     private GetResult GetFromContainer(PlayerState player, string itemName, string containerName)
     {
-        // Find the container in room or inventory
+        // Parse container name to check for "all.X" pattern
+        var (containerIndex, containerTargetName) = TargetParser.ParseTarget(containerName);
+        
+        if (containerIndex == 0)
+        {
+            return new GetResult(false, $"Invalid container target: {containerName}");
+        }
+        
+        // Handle "get <item> all.container" or "get all.item all.container"
+        if (containerIndex == -1)
+        {
+            return GetFromAllContainers(player, itemName, containerTargetName);
+        }
+        
+        // Find specific container
         var container = FindContainer(player, containerName);
         
         if (container is null)
@@ -135,30 +149,136 @@ public sealed class GetHandler
             return new GetResult(false, $"Invalid target: {itemName}");
         }
         
-        // TODO: Support "get all.wheat container" pattern
+        // Support "get all.wheat container" pattern
         if (index == -1)
         {
-            return new GetResult(false, "The 'all.item' pattern is not yet supported.");
+            var matchingItems = TargetParser.FindAllMatches(container.Contents, name);
+            if (matchingItems.Count == 0)
+            {
+                return new GetResult(false, $"There doesn't seem to be any {name} in the {container.Definition.ShortDescription}.");
+            }
+            
+            var takenObjects = new List<ObjectDefinition>();
+            foreach (var matchingItem in matchingItems)
+            {
+                if (container.RemoveItem(matchingItem))
+                {
+                    player.AddToInventory(matchingItem.InstanceId);
+                    takenObjects.Add(matchingItem.Definition);
+                }
+            }
+            
+            if (takenObjects.Count == 0)
+            {
+                return new GetResult(false, $"You can't get any {name} from the {container.Definition.ShortDescription}.");
+            }
+            
+            return new GetResult(true, string.Empty, Objects: takenObjects, ContainerName: container.Definition.ShortDescription);
         }
 
         // Find the Nth matching item in container
-        var item = TargetParser.FindNthMatch(container.Contents, name, index);
+        var targetItem = TargetParser.FindNthMatch(container.Contents, name, index);
         
-        if (item == null)
+        if (targetItem == null)
         {
             return new GetResult(false, $"There doesn't seem to be {GetArticle(name)} {index}.{name} in the {container.Definition.ShortDescription}.");
         }
 
         // Remove from container and add to player inventory
-        if (container.RemoveItem(item))
+        if (container.RemoveItem(targetItem))
         {
-            player.AddToInventory(item.InstanceId);
-            return new GetResult(true, string.Empty, item.Definition, container.Definition.ShortDescription);
+            player.AddToInventory(targetItem.InstanceId);
+            return new GetResult(true, string.Empty, targetItem.Definition, container.Definition.ShortDescription);
         }
         else
         {
             return new GetResult(false, "You can't take that.");
         }
+    }
+
+    /// <summary>
+    /// Get items from all matching containers (e.g., "get all.wheat all.corpse").
+    /// </summary>
+    private GetResult GetFromAllContainers(PlayerState player, string itemName, string containerTargetName)
+    {
+        // Find all matching containers in inventory and room
+        var allItems = _worldState.GetAllPlayerItems(player);
+        var room = _worldState.World.GetRoom(player.RoomId);
+        var roomObjects = _worldState.GetObjectsInRoom(room.Id);
+        
+        var allPotentialContainers = allItems.Concat(roomObjects).ToList();
+        var matchingContainers = TargetParser.FindAllMatches(allPotentialContainers, containerTargetName)
+            .Where(obj => obj.Definition.Type.Equals("container", StringComparison.OrdinalIgnoreCase))
+            .ToList();
+        
+        if (matchingContainers.Count == 0)
+        {
+            return new GetResult(false, $"You don't see any {containerTargetName} here.");
+        }
+        
+        var takenObjects = new List<ObjectDefinition>();
+        
+        foreach (var container in matchingContainers)
+        {
+            var containerDetails = container.Definition.Details?.Container;
+            
+            // Skip closed containers
+            bool isCorpse = containerDetails?.CorpseType > 0;
+            if (!isCorpse && containerDetails?.Flags.Contains("Closeable", StringComparer.OrdinalIgnoreCase) == true && container.IsClosed)
+            {
+                continue;
+            }
+            
+            // Get items from this container
+            if (itemName.Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                // Get all items from container
+                foreach (var item in container.Contents.ToList())
+                {
+                    if (container.RemoveItem(item))
+                    {
+                        player.AddToInventory(item.InstanceId);
+                        takenObjects.Add(item.Definition);
+                    }
+                }
+            }
+            else
+            {
+                // Get all matching items from container
+                var (index, name) = TargetParser.ParseTarget(itemName);
+                
+                if (index == -1)
+                {
+                    // "all.wheat" pattern
+                    var matchingItems = TargetParser.FindAllMatches(container.Contents, name);
+                    foreach (var item in matchingItems)
+                    {
+                        if (container.RemoveItem(item))
+                        {
+                            player.AddToInventory(item.InstanceId);
+                            takenObjects.Add(item.Definition);
+                        }
+                    }
+                }
+                else if (index > 0)
+                {
+                    // "2.wheat" pattern - get specific item from this container
+                    var item = TargetParser.FindNthMatch(container.Contents, name, index);
+                    if (item != null && container.RemoveItem(item))
+                    {
+                        player.AddToInventory(item.InstanceId);
+                        takenObjects.Add(item.Definition);
+                    }
+                }
+            }
+        }
+        
+        if (takenObjects.Count == 0)
+        {
+            return new GetResult(false, $"You don't find anything to get from the {containerTargetName}.");
+        }
+        
+        return new GetResult(true, string.Empty, Objects: takenObjects);
     }
 
     /// <summary>

@@ -29,6 +29,23 @@ internal sealed class RemoveCommandHandler : ICommandHandler
     {
         var result = _removeHandler.Handle(context.Player, command.Argument ?? string.Empty);
 
+        // Handle multiple objects (remove all, remove all.item)
+        if (result.Objects != null && result.Objects.Count > 0)
+        {
+            foreach (var obj in result.Objects)
+            {
+                await context.SendEquipMessageAsync(
+                    _actService,
+                    _connectionRegistry,
+                    "You stop using $p.",
+                    "$n stops using $p.",
+                    obj,
+                    cancellationToken);
+            }
+            return CommandOutcome.Continue;
+        }
+
+        // Handle single object
         if (result.Object is not null)
         {
             await context.SendEquipMessageAsync(
@@ -41,6 +58,7 @@ internal sealed class RemoveCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
+        // Handle error message
         if (!string.IsNullOrEmpty(result.Message))
         {
             await context.Session.SendLineAsync(result.Message, cancellationToken);
