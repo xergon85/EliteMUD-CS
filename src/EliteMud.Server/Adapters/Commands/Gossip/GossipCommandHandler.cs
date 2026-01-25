@@ -4,7 +4,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Gossip;
 
-[Command("gossip")]
+[Command("gossip", Aliases = new[] { "gos" })]
 internal sealed class GossipCommandHandler : ICommandHandler
 {
     private readonly ConnectionRegistry _connectionRegistry;
