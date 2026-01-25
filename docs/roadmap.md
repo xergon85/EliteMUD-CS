@@ -36,6 +36,29 @@
 - **Next:** Needs in-game testing to verify edge cases
 - **Estimated Effort:** COMPLETE (1 session - schema, migration, save/load, build verification)
 
+### ✅ FIXED: Equipped Container Contents Not Persisting (Jan 25, 2026)
+- **Impact:** Players lost all items stored in equipped containers (e.g., girdles, bags worn as equipment) when logging out
+- **Severity:** CRITICAL - Data loss bug affecting equipped container items
+- **Root Cause:** Equipment persistence only stored `ObjectDefinitionId` (blueprint ID)
+  - When loading, created fresh empty instance from definition
+  - Container contents and state (IsClosed, IsLocked) were not persisted
+- **Solution Implemented:**
+  - Added `ItemData` (nullable JSON string) column to `CharacterEquipmentItem` entity
+  - Save logic serializes full item tree using `InventoryItemDto` format (same as inventory)
+  - Load logic deserializes from JSON with fallback to legacy behavior (backwards compatible)
+  - Reuses existing `SaveInventoryItemRecursive()` and `LoadInventoryItemRecursive()` helpers
+- **Files Modified:**
+  - `CharacterEquipmentItem.cs` - Added ItemData column with XML documentation
+  - `CharacterMapper.cs` - Updated save/load logic (lines ~230-265, ~409-431)
+  - Migration: `20260125120339_AddEquipmentItemData.cs`
+  - Test: `CharacterMapperPersistenceTests.cs` - Added comprehensive equipped container test
+- **Features Working:**
+  - Equipped containers persist contents across logout/login
+  - Container state persists (IsClosed, IsLocked)
+  - Nested containers inside equipped containers supported
+  - Backwards compatible with old saves (null ItemData → legacy behavior)
+- **Commit:** `b3b998b` - "Fix: Persist equipped container contents across logout/login"
+- **Test Coverage:** All 227 tests passing (226 existing + 1 new equipped container persistence test)
 
 ### ✅ FIXED Mob AI Position Bug
 - ✅ **Mob attacks don't set player to Fighting position** - FIXED (Jan 25, 2026)
@@ -175,8 +198,8 @@
 - ✅ Database schema with EF Core (Account + Character entities)
 - ✅ Account table (username, password hash, last login)
 - ✅ Character table (name, stats, vitals, location, resources, metadata)
-- ✅ CharacterInventoryItem table (character inventory persistence) - **stores ObjectDefinitionId**
-- ✅ CharacterEquipmentItem table (character equipment persistence) - **stores ObjectDefinitionId**
+- ✅ CharacterInventoryItem table (character inventory persistence) - **stores full item tree as JSON**
+- ✅ CharacterEquipmentItem table (character equipment persistence) - **stores full item tree as JSON with contents** (Jan 25, 2026)
 - ✅ Repository pattern (IAccountRepository, ICharacterRepository)
 - ✅ PasswordService with BCrypt hashing
 - ✅ CharacterMapper (Entity ↔ PlayerState conversion with IWorldState)
@@ -790,6 +813,29 @@
   - Player death (corpse creation, XP loss, respawn at recall point)
   - Mob death (corpse creation with equipment transfer)
   - Combat messaging with ActMessage integration
+
+### ✅ RECENTLY COMPLETED (Jan 25, 2026 - Session 7)
+
+#### Session 7: Equipment Container Persistence & 'All' Targeting - COMPLETE ✅
+- ✅ **Fixed Critical Equipped Container Persistence Bug - COMPLETE**
+  - ✅ Issue: Equipped containers (girdles, bags worn as equipment) lost contents on logout/login
+  - ✅ Root cause: Equipment only stored ObjectDefinitionId, created fresh empty instances on load
+  - ✅ Solution: Added `ItemData` JSON column to CharacterEquipmentItem entity
+  - ✅ Unified persistence: Both inventory and equipment now use `InventoryItemDto` JSON format
+  - ✅ Backwards compatible: Null ItemData falls back to legacy behavior
+  - ✅ Full item tree serialization: Containers + contents + state (IsClosed, IsLocked)
+  - ✅ Migration: `20260125120339_AddEquipmentItemData` (additive, non-destructive)
+  - ✅ Test: `SaveAndLoad_EquippedContainerWithContents_PersistsCorrectly` validates fix
+  - ✅ All 227 tests passing (226 existing + 1 new)
+  - ✅ Commit: `b3b998b`
+- ✅ **Comprehensive 'All' Targeting Support - COMPLETE**
+  - ✅ Enhanced GET command: `get all.wheat container`, `get all.wheat all.corpse`
+  - ✅ Enhanced DROP command: `drop all`, `drop all.sword`
+  - ✅ Enhanced PUT command: `put all bag`, `put all.wheat bag`
+  - ✅ Enhanced REMOVE command: `remove all`, `remove all.ring`
+  - ✅ Updated 5 command handlers with multi-object support
+  - ✅ Result records include `List<ObjectDefinition>?` for batch operations
+  - ✅ Commit: `4c0e492`
 
 ### ✅ RECENTLY COMPLETED (Jan 25, 2026 - Session 6)
 

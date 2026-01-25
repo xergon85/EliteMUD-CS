@@ -359,6 +359,15 @@ public sealed class PlayerState : ICombatant
     /// Legacy: ch->char_specials.wait_state
     /// </summary>
     public int WaitState { get; set; } = 0;
+    
+    // ===== Communication State =====
+    
+    /// <summary>
+    /// Connection ID of the last player who sent this character a tell.
+    /// Used by the 'reply' command to respond to the last tell sender.
+    /// Legacy: GET_LAST_TELL(ch)
+    /// </summary>
+    public int? LastTellSender { get; set; }
 
     // ===== Inventory & Equipment =====
     public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
