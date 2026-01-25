@@ -26,6 +26,7 @@ public static class CombatConstants
         public const int Rescue = PULSE_VIOLENCE * 2;    // 2 rounds (4 seconds)
         public const int Backstab = PULSE_VIOLENCE * 2;  // 2 rounds (4 seconds)
         public const int Flee = PULSE_VIOLENCE * 1;      // 1 round (2 seconds)
+        public const int Track = PULSE_VIOLENCE * 1;     // 1 round (2 seconds)
     }
     
     /// <summary>

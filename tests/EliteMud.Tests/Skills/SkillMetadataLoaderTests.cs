@@ -17,7 +17,7 @@ public sealed class SkillMetadataLoaderTests
         // Assert
         Assert.NotNull(skills);
         Assert.NotEmpty(skills);
-        Assert.Equal(7, skills.Count); // kick, bash, backstab, rescue, dodge, parry, tumble
+        Assert.Equal(8, skills.Count); // kick, bash, backstab, rescue, track, dodge, parry, tumble
     }
     
     [Fact]

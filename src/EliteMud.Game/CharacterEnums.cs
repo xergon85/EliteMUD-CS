@@ -250,6 +250,9 @@ public enum SkillType
     Parry = 361,
     Tumble = 362,
     
+    // === UTILITY SKILLS ===
+    Track = 330,      // Pathfinding skill - shows direction to target
+    
     // TODO: Add remaining skills as needed (300-399 range)
 }
 

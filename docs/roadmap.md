@@ -41,12 +41,9 @@
   - Details: Position.Fighting and Position.Standing are preserved, but Sleeping/Resting/Sitting → Standing on damage
 
 ### Persistence Bugs
-- ❌ **Player position/room not saved on logout** - CRITICAL
-  - Impact: Players always spawn in "The Void" (room 0) on login instead of their saved location
-  - Root cause: Position and RoomId not being persisted to database on logout/save
-  - Expected: Player should resume at last saved location with saved position
-  - Fix needed: Update CharacterMapper to include Position and RoomId in Entity ↔ PlayerState conversion
-  - Related: May affect other character state that isn't being persisted
+- ✅ **Player position/room persistence** - Working as intended (Jan 25, 2026)
+  - Players spawn correctly at their saved location
+  - Position and RoomId are properly persisted to database
 
 ### ✅ Phase 1: COMPLETE
 - ✅ Telnet session handling and input pipeline
@@ -254,13 +251,28 @@
 - ✅ WAIT_STATE system (action cooldowns)
 - ✅ Skillgain cooldown system (60 seconds between improvements)
 
-**Implemented Skills (6 of 6 core skills):**
+**Implemented Skills (7 skills - 6 core + 1 utility):**
 - ✅ `kick` - Basic combat skill with formula-driven damage
 - ✅ `bash` - Shield bash with knockdown effect
 - ✅ `backstab` - Rogue sneak attack with level-based multiplier
 - ✅ `rescue` - Tank skill to redirect combat (PvE only)
 - ✅ `dodge` - Passive damage reduction
 - ✅ `parry` - Passive block with weapon
+- ✅ `track` - Pathfinding utility skill (shows direction to target mob)
+
+**Track Skill Implementation (COMPLETE ✅ - Jan 25, 2026):**
+- ✅ TrackSkill class with metadata from skills.json
+- ✅ TrackSkillExecutor with PathfindingService integration
+- ✅ Skill check based on proficiency (random 1-101 vs skill%)
+- ✅ Max distance calculation: min(50 + skillPercent/2 + level, 200)
+- ✅ Case-insensitive partial name search for mobs
+- ✅ Failure modes: "Track whom?", "right here!", "can't find a trail", "too faint to follow", "lose the trail"
+- ✅ Success: "You sense a trail [direction]"
+- ✅ Skill improvement on successful tracking
+- ✅ WAIT_STATE: 1 round (2 seconds)
+- ✅ 8 comprehensive unit tests in TrackSkillExecutorTests.cs
+- ✅ Auto-registered via ISkillExecutor interface (no manual registration needed)
+- ✅ Ranger class has track skill (ID 330, max 95% proficiency, difficulty 8)
 
 **Future Skill Expansion:**
 - ❌ `disarm` - Remove opponent's weapon
@@ -337,8 +349,8 @@
 ### 🔄 Phase 5: NPCs + AI (IN PROGRESS)
 **Milestone:** Mobs behave like legacy
 
-#### 5.1 Mob AI Foundation - PARTIALLY COMPLETE ✅
-**Status:** Core AI behaviors implemented and tested (Jan 25, 2026)
+#### 5.1 Mob AI Foundation - COMPLETE ✅
+**Status:** Core AI behaviors fully implemented and tested (Jan 25, 2026)
 
 **Completed & Tested:**
 - ✅ **Mob tick system** - ProcessMobTick() processes AI every 2 seconds (PULSE_VIOLENCE)
@@ -361,42 +373,71 @@
   - ✅ RememberPlayer() / ForgetPlayer() API
   - ✅ Attacks remembered players in same room
   - ✅ Respects LAWFUL room flag (won't attack in lawful rooms)
-  - ✅ Tracks victim across rooms (pathfinding TODO)
+  - ✅ Tracks victim across rooms with pathfinding
 - ✅ **Assist/Helper system** - Mobs help allies in combat
   - ✅ HELPER flag enables ally assistance
   - ✅ Assists mobs with similar alignment (within 750 points)
   - ✅ Won't assist if already fighting
   - ✅ ProcessAssist() called when combat starts
-- ✅ **Position handling** - Skips AI when not awake or in invalid room
-- ✅ **Comprehensive test coverage** - 20 integration tests for all AI behaviors
-
-**Test Coverage (20 tests in MobAiServiceTests.cs):**
-- 8 aggressive behavior tests (basic, evil, good, neutral, wimpy, fighting state)
-- 3 memory/hunting tests (attack remembered, lawful room, unremembered)
-- 4 wandering tests (movement, position check, NO_MOB flag, STAY_ZONE flag)
-- 3 helper/assist tests (basic assist, alignment check, already fighting)
-- 2 position/state tests (not awake, invalid room)
-
-**Partially Implemented:**
-- 🔄 **Scavenger behavior** - Implemented but not tested
-  - ✅ Code exists in ProcessScavenger() (9% chance per tick)
+- ✅ **Scavenger behavior** - Picks up valuable items (COMPLETE)
+  - ✅ ProcessScavenger() with 9% chance per tick
   - ✅ Picks up most valuable item in room
-  - ❌ Missing TODO: MOB_CAN_GET_OBJ check (weight limits, item flags)
-  - ❌ Missing TODO: Transfer object to mob inventory
-  - ❌ Missing TODO: ActMessage for scavenge action
-- 🔄 **Sentinel return home** - Implemented but not tested
-  - ✅ Code exists in ProcessSentinelReturnHome()
+  - ✅ Stores in mob inventory (MobInstance.InventoryObjectIds)
+  - ✅ WorldState.TakeObjectForMob() transfers objects
+  - ✅ 5 comprehensive tests
+  - ❌ TODO: ActMessage for scavenge action (low priority)
+  - ❌ TODO: MOB_CAN_GET_OBJ check for weight limits (future)
+- ✅ **Sentinel return home** - Mobs return to spawn location (COMPLETE)
+  - ✅ ProcessSentinelReturnHome() uses pathfinding
   - ✅ SENTINEL flag defined and parsed
   - ✅ Hometown tracking in MobInstance
-  - ❌ Missing TODO: Pathfinding to hometown (perform_track)
-- 🔄 **Tracking/Pathfinding** - Stubbed but not implemented
+  - ✅ Uses PathfindingService with max distance 100
+- ✅ **Tracking/Pathfinding** - Full BFS pathfinding implementation (COMPLETE)
+  - ✅ PathfindingService with BFS algorithm
   - ✅ TrackingPath queue in MobInstance
   - ✅ ProcessTracking() consumes path and moves mob
-  - ❌ Missing TODO: Pathfinding algorithm (graph.c)
-  - ❌ Missing TODO: Memory victim tracking across rooms
+  - ✅ Memory victim tracking across rooms
+  - ✅ Respects NO_MOB and DEATH room flags
+  - ✅ Zone-aware pathfinding (optional)
+  - ✅ Max distance parameter
+  - ✅ 17 comprehensive pathfinding tests
+- ✅ **Mob inventory system** - COMPLETE
+  - ✅ MobInstance.InventoryObjectIds list
+  - ✅ AddToInventory() / RemoveFromInventory() methods
+  - ✅ Used by scavenger and GiveMob zone reset
+- ✅ **Position handling** - Skips AI when not awake or in invalid room
+- ✅ **Comprehensive test coverage** - 24 mob AI tests + 17 pathfinding tests + 8 track skill tests
+
+**Test Coverage (49 tests total):**
+- **MobAiServiceTests.cs (24 tests):**
+  - 8 aggressive behavior tests (basic, evil, good, neutral, wimpy, fighting state)
+  - 3 memory/hunting tests (attack remembered, lawful room, unremembered)
+  - 4 wandering tests (movement, position check, NO_MOB flag, STAY_ZONE flag)
+  - 3 helper/assist tests (basic assist, alignment check, already fighting)
+  - 5 scavenger tests (picks valuable, random chance, empty room, stores inventory, transfers from room)
+  - 2 position/state tests (not awake, invalid room)
+- **PathfindingServiceTests.cs (17 tests):**
+  - 5 basic pathfinding tests (linear path, same room, no path, invalid rooms)
+  - 2 complex graph tests (multiple paths, cyclic graph)
+  - 2 NO_MOB flag tests (respect vs ignore)
+  - 1 DEATH flag test (skips death rooms)
+  - 2 zone restriction tests (stay in zone, allow crossing)
+  - 2 max distance tests (exceeds, within)
+  - 3 GetNextDirection tests (correct direction, no path, same room)
+- **TrackSkillExecutorTests.cs (8 tests):**
+  - No argument error
+  - No skill proficiency error
+  - Target not found error
+  - Target in same room error
+  - Successful track shows direction
+  - Applies WAIT_STATE correctly
+  - Case-insensitive search
+  - Partial name matching
 
 **Not Started:**
-- ❌ Mob inventory system (for GiveMob zone reset, scavenger storage)
+- ❌ Mob Programs (legacy triggers) - Phase 5.2
+- ❌ GiveMob zone reset (requires picking item from inventory)
+- ❌ ActMessage integration for scavenger (low priority)
 
 #### 5.2 Mob Programs (Legacy Triggers)
 - ❌ Map legacy mob programs to Lua scripts

@@ -545,7 +545,8 @@ public class MobAiServiceTests
             bool differentZones = false)
     {
         var scriptEngine = new MockScriptEngine();
-        var service = new MobAiService(scriptEngine);
+        var pathfinding = new PathfindingService();
+        var service = new MobAiService(scriptEngine, pathfinding);
 
         var roomFlags = lawfulRoom ? RoomFlags.Lawful : RoomFlags.None;
         var targetRoomFlags = noMobTarget ? RoomFlags.NoMob : RoomFlags.None;

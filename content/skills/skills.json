@@ -634,6 +634,149 @@
       }
     },
     {
+      "id": 330,
+      "name": "track",
+      "aliases": [],
+      "description": "Find the path to a target creature or player",
+      "type": "Active",
+      "category": "Utility",
+      "minimumLevel": 1,
+      "waitStateRounds": 1,
+      "skillgainCooldown": 60,
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cleric",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Thief",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Warrior",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Psionicist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Monk",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Bard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Knight",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Wizard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Druid",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Assassin",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Ranger",
+          "minLevel": 1,
+          "maxProficiency": 95,
+          "difficulty": 8
+        },
+        {
+          "class": "Illusionist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Paladin",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Mariner",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cavalier",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Unused17",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Unused18",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Ninja",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Unused20",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "hitFormula": "return random(1,101) <= skillPercent",
+        "requirements": [
+          {
+            "type": "position",
+            "value": "Resting",
+            "message": "You can't track from this position."
+          }
+        ]
+      }
+    },
+    {
       "id": 360,
       "name": "dodge",
       "aliases": [],

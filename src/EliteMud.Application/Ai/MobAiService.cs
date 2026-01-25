@@ -22,11 +22,13 @@ namespace EliteMud.Application.Ai;
 public class MobAiService
 {
     private readonly IScriptEngine _scriptEngine;
+    private readonly PathfindingService _pathfinding;
     private readonly Random _random = new();
 
-    public MobAiService(IScriptEngine scriptEngine)
+    public MobAiService(IScriptEngine scriptEngine, PathfindingService pathfinding)
     {
         _scriptEngine = scriptEngine;
+        _pathfinding = pathfinding;
     }
 
     /// <summary>
@@ -355,9 +357,20 @@ public class MobAiService
             return; // Don't return home while fighting
         }
 
-        // TODO: Implement pathfinding
-        // perform_track(ch, ch->player.hometown, 100);
-        // This should set mob.TrackingPath to path back to hometown
+        // Use pathfinding to find way home
+        // Legacy: perform_track(ch, ch->player.hometown, 100);
+        var path = _pathfinding.FindPath(
+            worldState,
+            startRoomId: roomId,
+            targetRoomId: mob.Hometown.Value,
+            maxDistance: 100,
+            respectNoMob: true,
+            stayInZone: false);
+
+        if (path != null)
+        {
+            mob.TrackingPath = path;
+        }
     }
 
     private void ProcessAggressive(
@@ -514,8 +527,23 @@ public class MobAiService
                 mob.HitPoints + mob.Level > mob.MaxHitPoints)
             {
                 // TODO: Implement annoy_hunted_victim() - random taunts
-                // TODO: Implement perform_track(ch, IN_ROOM(vict), GET_LEVEL(ch))
-                // This should set mob.TrackingPath to path to victim
+                
+                // Use pathfinding to hunt down the victim
+                // Legacy: perform_track(ch, IN_ROOM(vict), GET_LEVEL(ch))
+                var maxDistance = Math.Max((int)mob.Level, 10); // Use mob level as max distance, minimum 10
+                
+                var path = _pathfinding.FindPath(
+                    worldState,
+                    startRoomId: roomId,
+                    targetRoomId: victim.RoomId,
+                    maxDistance: maxDistance,
+                    respectNoMob: true,
+                    stayInZone: false);
+
+                if (path != null)
+                {
+                    mob.TrackingPath = path;
+                }
             }
         }
     }
