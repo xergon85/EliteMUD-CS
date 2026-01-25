@@ -5,7 +5,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Open;
 
-[Command("open")]
+[Command("open", Aliases = new[] { "o" })]
 internal sealed class OpenCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
