@@ -67,10 +67,58 @@ internal sealed class TelnetServer
         }
         catch (OperationCanceledException)
         {
+            // Graceful shutdown initiated
+            await ShutdownGracefullyAsync();
         }
         finally
         {
             _listener.Stop();
+        }
+    }
+    
+    private async Task ShutdownGracefullyAsync()
+    {
+        Console.WriteLine("\n=== Server shutdown initiated ===");
+        Console.WriteLine($"Saving {_connections.Count} connected players...");
+        
+        // Notify all connected players
+        var disconnectTasks = new List<Task>();
+        foreach (var (connectionId, context) in _connections)
+        {
+            disconnectTasks.Add(NotifyAndDisconnectAsync(connectionId, context));
+        }
+        
+        // Wait for all players to be notified and saved (with timeout)
+        var timeoutTask = Task.Delay(5000); // 5 second timeout
+        var completedTask = await Task.WhenAny(Task.WhenAll(disconnectTasks), timeoutTask);
+        
+        if (completedTask == timeoutTask)
+        {
+            Console.WriteLine("WARNING: Shutdown timeout reached, some players may not have been saved");
+        }
+        else
+        {
+            Console.WriteLine($"All {_connections.Count} players saved successfully");
+        }
+        
+        Console.WriteLine("Server shutdown complete");
+    }
+    
+    private async Task NotifyAndDisconnectAsync(int connectionId, ConnectionContext context)
+    {
+        try
+        {
+            // Notify player of shutdown
+            await context.Session.SendLineAsync("\n\n*** SERVER SHUTTING DOWN ***", CancellationToken.None);
+            await context.Session.SendLineAsync("Your character has been saved. Goodbye!", CancellationToken.None);
+            
+            // Save player state using the save queue
+            await _saveQueue.QueueSaveAndWaitAsync(context.CharacterId, context.Player, CancellationToken.None);
+            Console.WriteLine($"[Session {connectionId}] Saved character: {context.Player.Name}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Session {connectionId}] Error during graceful disconnect: {ex.Message}");
         }
     }
 
