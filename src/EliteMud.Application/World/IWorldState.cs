@@ -31,6 +31,7 @@ public sealed class MobInstance : ICombatant
     private readonly Dictionary<EquipmentSlot, ObjectInstance> _equipment = new();
     private readonly List<Affect> _affects = new(); // Mobs can have affects too!
     private readonly List<long> _memory = new(); // Player IDs this mob remembers (for MOB_MEMORY)
+    private readonly List<int> _inventoryObjectIds = new(); // Object instance IDs in mob inventory
 
     public MobInstance(int instanceId, MobDefinition definition)
     {
@@ -236,6 +237,29 @@ public sealed class MobInstance : ICombatant
     }
 
     public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> Equipment => _equipment;
+    
+    /// <summary>
+    /// Object instance IDs carried by this mob (for scavenger and GiveMob zone reset).
+    /// Legacy: ch->carrying (linked list)
+    /// </summary>
+    public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
+    
+    /// <summary>
+    /// Add an object to this mob's inventory.
+    /// </summary>
+    public void AddToInventory(int objectInstanceId)
+    {
+        _inventoryObjectIds.Add(objectInstanceId);
+    }
+    
+    /// <summary>
+    /// Remove an object from this mob's inventory.
+    /// Returns true if object was found and removed.
+    /// </summary>
+    public bool RemoveFromInventory(int objectInstanceId)
+    {
+        return _inventoryObjectIds.Remove(objectInstanceId);
+    }
 
     public bool Equip(ObjectInstance obj, EquipmentSlot slot)
     {
@@ -330,6 +354,18 @@ public interface IWorldState
     bool TakeObject(PlayerState player, int objectInstanceId);
 
     bool DropObject(PlayerState player, int objectInstanceId);
+
+    /// <summary>
+    /// Transfer object from room to mob inventory.
+    /// Used by scavenger AI.
+    /// </summary>
+    bool TakeObjectForMob(MobInstance mob, int objectInstanceId, int roomId);
+
+    /// <summary>
+    /// Drop object from mob inventory to room.
+    /// Used when mob dies (loot drop).
+    /// </summary>
+    bool DropObjectForMob(MobInstance mob, int objectInstanceId, int roomId);
 
     bool EquipObject(PlayerState player, int objectInstanceId, EquipmentSlot slot);
 

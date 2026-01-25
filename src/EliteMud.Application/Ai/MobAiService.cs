@@ -213,8 +213,11 @@ public class MobAiService
 
         if (bestObject != null)
         {
-            // TODO: Transfer object from room to mob inventory
+            // Transfer object from room to mob inventory
+            worldState.TakeObjectForMob(mob, bestObject.InstanceId, roomId);
+            
             // TODO: Send act() message: "$n gets $p."
+            // Will need ActMessage service injection in constructor
         }
     }
 

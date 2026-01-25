@@ -133,6 +133,58 @@ public sealed class WorldState : IWorldState
         return true;
     }
 
+    public bool TakeObjectForMob(MobInstance mob, int objectInstanceId, int roomId)
+    {
+        // Find the object in the room
+        if (!_roomObjects.TryGetValue(roomId, out var roomObjects))
+        {
+            return false;
+        }
+
+        var obj = roomObjects.FirstOrDefault(o => o.InstanceId == objectInstanceId);
+        if (obj is null)
+        {
+            return false;
+        }
+
+        // Remove from room
+        roomObjects.Remove(obj);
+
+        // Add to mob inventory
+        mob.AddToInventory(objectInstanceId);
+
+        return true;
+    }
+
+    public bool DropObjectForMob(MobInstance mob, int objectInstanceId, int roomId)
+    {
+        // Check if mob has the object
+        if (!mob.InventoryObjectIds.Contains(objectInstanceId))
+        {
+            return false;
+        }
+
+        // Get the object instance
+        if (!_objectInstances.TryGetValue(objectInstanceId, out var obj))
+        {
+            return false;
+        }
+
+        // Remove from mob inventory
+        mob.RemoveFromInventory(objectInstanceId);
+
+        // Add to room
+        if (!_roomObjects.TryGetValue(roomId, out var roomObjects))
+        {
+            roomObjects = new List<ObjectInstance>();
+            _roomObjects[roomId] = roomObjects;
+        }
+
+        roomObjects.Add(obj);
+
+        return true;
+    }
+
     public bool EquipObject(PlayerState player, int objectInstanceId, EquipmentSlot slot)
     {
         // Check if player has the object in inventory
@@ -650,6 +702,15 @@ public sealed class WorldState : IWorldState
         {
             var obj = mob.Unequip(slot);
             if (obj is not null)
+            {
+                corpse.AddItem(obj);
+            }
+        }
+
+        // Transfer mob inventory to corpse (loot from scavenged items)
+        foreach (var objectId in mob.InventoryObjectIds.ToList())
+        {
+            if (_objectInstances.TryGetValue(objectId, out var obj))
             {
                 corpse.AddItem(obj);
             }

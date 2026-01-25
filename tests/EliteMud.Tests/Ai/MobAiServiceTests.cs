@@ -425,6 +425,116 @@ public class MobAiServiceTests
         Assert.Null(mob.FightingConnectionId);
     }
 
+    // ===== Scavenger Tests =====
+
+    [Fact]
+    public void Scavenger_PicksUpMostValuableItem()
+    {
+        // Arrange
+        var (service, worldState, connections) = CreateTestEnvironment();
+        var mob = CreateMob(1, "rat", flags: new[] { "SCAVENGER" });
+        AddMobToWorld(worldState, mob, 100);
+        
+        // Create objects with different values
+        var cheapSword = CreateTestObject(1, "sword", cost: 10);
+        var valuableRing = CreateTestObject(2, "ring", cost: 100);
+        var cheapBread = CreateTestObject(3, "bread", cost: 1);
+        AddObjectToRoom(worldState, cheapSword, 100);
+        AddObjectToRoom(worldState, valuableRing, 100);
+        AddObjectToRoom(worldState, cheapBread, 100);
+        
+        // Act - Try multiple times (9% chance per tick)
+        bool picked = false;
+        for (int i = 0; i < 200; i++)
+        {
+            service.ProcessMobTick(mob, 100, worldState, connections);
+            if (mob.InventoryObjectIds.Any())
+            {
+                picked = true;
+                break;
+            }
+        }
+        
+        // Assert - Should pick most valuable (ring)
+        Assert.True(picked, "Scavenger should have picked up an item");
+        Assert.Contains(2, mob.InventoryObjectIds); // Ring instance ID
+        Assert.Single(mob.InventoryObjectIds);
+    }
+
+    [Fact]
+    public void Scavenger_HasRandomChance()
+    {
+        // Arrange
+        var (service, worldState, connections) = CreateTestEnvironment();
+        var mob = CreateMob(1, "rat", flags: new[] { "SCAVENGER" });
+        AddMobToWorld(worldState, mob, 100);
+        
+        var obj = CreateTestObject(1, "coin", cost: 10);
+        AddObjectToRoom(worldState, obj, 100);
+        
+        // Act - Try 200 times, scavenger should pick up item at least once (9% chance per tick)
+        bool pickedUp = false;
+        for (int i = 0; i < 200; i++)
+        {
+            service.ProcessMobTick(mob, 100, worldState, connections);
+            if (mob.InventoryObjectIds.Any())
+            {
+                pickedUp = true;
+                break;
+            }
+        }
+        
+        // Assert - Should have picked up item (statistically very likely in 200 tries)
+        Assert.True(pickedUp, "Scavenger should pick up item with 9% chance (200 tries)");
+    }
+
+    [Fact]
+    public void Scavenger_IgnoresEmptyRoom()
+    {
+        // Arrange
+        var (service, worldState, connections) = CreateTestEnvironment();
+        var mob = CreateMob(1, "rat", flags: new[] { "SCAVENGER" });
+        AddMobToWorld(worldState, mob, 100);
+        
+        // Act - Try multiple times with no objects in room
+        for (int i = 0; i < 50; i++)
+        {
+            service.ProcessMobTick(mob, 100, worldState, connections);
+        }
+        
+        // Assert - Mob inventory should be empty
+        Assert.Empty(mob.InventoryObjectIds);
+    }
+
+    [Fact]
+    public void Scavenger_StoresInInventory()
+    {
+        // Arrange
+        var (service, worldState, connections) = CreateTestEnvironment();
+        var mob = CreateMob(1, "rat", flags: new[] { "SCAVENGER" });
+        AddMobToWorld(worldState, mob, 100);
+        
+        var obj = CreateTestObject(1, "gold", cost: 50);
+        AddObjectToRoom(worldState, obj, 100);
+        
+        // Act - Keep trying until object is picked up (9% chance)
+        for (int i = 0; i < 200; i++)
+        {
+            service.ProcessMobTick(mob, 100, worldState, connections);
+            if (mob.InventoryObjectIds.Any())
+            {
+                break;
+            }
+        }
+        
+        // Assert - Object should be in mob inventory
+        Assert.Contains(1, mob.InventoryObjectIds);
+        
+        // Object should NOT be in room anymore
+        var roomObjects = worldState.GetObjectsInRoom(100);
+        Assert.DoesNotContain(roomObjects, o => o.InstanceId == 1);
+    }
+
     // ===== Helper Methods =====
 
     private (MobAiService service, WorldState worldState, Dictionary<int, EliteMud.Application.Ai.PlayerConnection> connections) 
@@ -544,6 +654,50 @@ public class MobAiServiceTests
             ConnectionId = connectionId,
             Player = player 
         };
+    }
+
+    private ObjectInstance CreateTestObject(int instanceId, string name, int cost)
+    {
+        var def = new ObjectDefinition(
+            Id: instanceId,
+            Name: name,
+            ShortDescription: $"a {name}",
+            LongDescription: $"A {name} is here.",
+            Description: $"A simple {name}.",
+            Type: "treasure",
+            WearSlots: new List<string> { "take" },
+            Flags: new List<string>(),
+            Details: null,
+            Values: new List<int> { 0, 0, 0, 0 },
+            Weight: 1,
+            Cost: cost,
+            Affects: new List<ObjectAffect>()
+        );
+        
+        return new ObjectInstance(instanceId, def);
+    }
+
+    private void AddObjectToRoom(WorldState worldState, ObjectInstance obj, int roomId)
+    {
+        // Use reflection to access _roomObjects and _objectInstances
+        var roomObjectsField = typeof(WorldState).GetField("_roomObjects", 
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        var objectInstancesField = typeof(WorldState).GetField("_objectInstances",
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        
+        if (roomObjectsField != null && objectInstancesField != null)
+        {
+            var roomObjects = (Dictionary<int, List<ObjectInstance>>)roomObjectsField.GetValue(worldState)!;
+            var objectInstances = (Dictionary<int, ObjectInstance>)objectInstancesField.GetValue(worldState)!;
+            
+            if (!roomObjects.ContainsKey(roomId))
+            {
+                roomObjects[roomId] = new List<ObjectInstance>();
+            }
+            
+            roomObjects[roomId].Add(obj);
+            objectInstances[obj.InstanceId] = obj;
+        }
     }
 }
 
