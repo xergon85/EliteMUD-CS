@@ -426,7 +426,7 @@ public class MobAiService
                 
                 // Set player to fight mob (victim fights back automatically)
                 player.FightingConnectionId = -mob.InstanceId; // Negative for mobs
-                if (player.Position < Position.Fighting)
+                if (player.Position > Position.Fighting)
                 {
                     player.Position = Position.Fighting;
                 }
@@ -488,7 +488,7 @@ public class MobAiService
                     
                     // Set player to fight mob
                     victim.FightingConnectionId = -mob.InstanceId;
-                    if (victim.Position < Position.Fighting)
+                    if (victim.Position > Position.Fighting)
                     {
                         victim.Position = Position.Fighting;
                     }
