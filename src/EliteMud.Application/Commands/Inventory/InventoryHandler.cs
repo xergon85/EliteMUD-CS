@@ -25,14 +25,10 @@ public sealed class InventoryHandler
         }
 
         var items = new List<string> { "You are carrying:" };
-        foreach (var obj in inventory)
-        {
-            var description = obj.Definition.ShortDescription?.Trim() ?? "";
-            if (!string.IsNullOrWhiteSpace(description))
-            {
-                items.Add($"  {description}");
-            }
-        }
+        
+        // Use ObjectFormatter for stacking and proper ordering (newest first)
+        var formattedItems = ObjectFormatter.FormatObjectList(inventory, "");
+        items.AddRange(formattedItems);
 
         return new InventoryResult(items);
     }

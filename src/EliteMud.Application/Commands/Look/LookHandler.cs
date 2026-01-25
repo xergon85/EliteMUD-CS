@@ -96,13 +96,22 @@ public sealed class LookHandler
             }
         }
 
+        // Try to find object in inventory first (you can examine what you're carrying)
+        // Legacy: generic_find() checks inventory before room
+        var inventory = _worldState.GetPlayerInventory(player);
+        var inventoryObj = TargetParser.FindObject(inventory, target);
+        if (inventoryObj != null)
+        {
+            return FormatObjectDescription(inventoryObj);
+        }
+
         // Try to find object in room using indexed targeting (e.g., "look 2.corpse")
         // Legacy: handler.c:1020-1040 (get_obj_in_list with get_number)
         var objects = _worldState.GetObjectsInRoom(room.Id);
         var obj = TargetParser.FindObject(objects, target);
         if (obj != null)
         {
-            return FormatObjectDescription(obj.Definition);
+            return FormatObjectDescription(obj);
         }
 
         // Try to find mob in room using indexed targeting (e.g., "look 2.guard")
@@ -125,10 +134,50 @@ public sealed class LookHandler
         return player.Name.ToLowerInvariant().StartsWith(targetLower);
     }
 
-    private static CommandResult FormatObjectDescription(ObjectDefinition obj)
+    private static CommandResult FormatObjectDescription(ObjectInstance obj)
     {
-        var description = obj.Description;
-        return CommandResult.Ok(description.Trim());
+        var result = new System.Text.StringBuilder();
+        var description = obj.Definition.Description;
+        result.Append(description.Trim());
+
+        // Show container contents if this is a container
+        var containerDetails = obj.Definition.Details?.Container;
+        if (containerDetails != null)
+        {
+            // Check if container is open or if it's a corpse (corpses always show contents)
+            bool isCorpse = containerDetails.CorpseType > 0;
+            bool canSeeContents = isCorpse || !obj.IsClosed;
+
+            if (canSeeContents && obj.Contents.Count > 0)
+            {
+                result.AppendLine();
+                result.AppendLine();
+                result.Append($"The {obj.Definition.ShortDescription} contains:");
+                
+                // Use ObjectFormatter for stacking and proper ordering (newest first)
+                var formattedItems = ObjectFormatter.FormatObjectList(obj.Contents, "");
+                foreach (var item in formattedItems)
+                {
+                    result.AppendLine();
+                    result.Append(item);
+                }
+            }
+            else if (canSeeContents && obj.Contents.Count == 0)
+            {
+                result.AppendLine();
+                result.AppendLine();
+                result.Append($"The {obj.Definition.ShortDescription} is empty.");
+            }
+            else if (!canSeeContents)
+            {
+                // Container is closed
+                result.AppendLine();
+                result.AppendLine();
+                result.Append($"The {obj.Definition.ShortDescription} is closed.");
+            }
+        }
+
+        return CommandResult.Ok(result.ToString());
     }
 
     private static CommandResult FormatMobDescription(MobInstance mob)

@@ -11,6 +11,32 @@
 
 ## Known Issues / Bugs
 
+### ✅ FIXED: Container Contents Not Persisting to Database (Jan 25, 2026)
+- **Impact:** Players lost all items placed inside containers (bags, chests) when logging out
+- **Severity:** HIGH - Major gameplay blocker for inventory management
+- **Root Cause:** Database schema only stored `ObjectDefinitionId` and `Quantity` for inventory items
+  - No tracking of containment relationships (which items are inside which containers)
+  - No tracking of object state (IsClosed, IsLocked)
+- **Solution Implemented:**
+  - Added `ContainerId` (nullable int) to `CharacterInventoryItem` - tracks which container holds the item (null = top-level inventory)
+  - Added `ObjectState` (JSON string) to store IsClosed, IsLocked runtime state
+  - Added `SequenceOrder` (int) to preserve item order when loading
+  - Self-referencing relationship: items can point to their container via ContainerId
+  - Updated CharacterMapper save/load logic with recursive container handling
+- **Files Modified:**
+  - `CharacterInventoryItem.cs` - Added ContainerId, ObjectState, SequenceOrder fields
+  - `EliteMudDbContext.cs` - Configured self-referencing relationship
+  - `CharacterMapper.cs` - Recursive save/load for container hierarchy
+  - Migration: `20260125105420_AddContainerPersistence.cs`
+- **Features Working:**
+  - Container contents persist across logout/login
+  - Nested containers supported (bag in bag with items)
+  - Container state persists (closed/locked status)
+  - Item order preserved (newest first)
+- **Next:** Needs in-game testing to verify edge cases
+- **Estimated Effort:** COMPLETE (1 session - schema, migration, save/load, build verification)
+
+
 ### ✅ FIXED Mob AI Position Bug
 - ✅ **Mob attacks don't set player to Fighting position** - FIXED (Jan 25, 2026)
   - Impact: Standing players stayed in Position.Standing when attacked by aggressive mobs

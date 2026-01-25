@@ -295,10 +295,33 @@ public sealed class ObjectInstance
     {
         InstanceId = instanceId;
         Definition = definition;
+        
+        // Initialize container state from definition flags
+        if (definition.Details?.Container != null)
+        {
+            var container = definition.Details.Container;
+            IsClosed = container.Flags.Contains("Closed", StringComparer.OrdinalIgnoreCase);
+            IsLocked = container.Flags.Contains("Locked", StringComparer.OrdinalIgnoreCase);
+        }
     }
 
     public int InstanceId { get; }
     public ObjectDefinition Definition { get; }
+    
+    /// <summary>
+    /// Runtime state: Is this container currently closed?
+    /// Only applies to containers with "Closeable" flag.
+    /// Legacy: GET_OBJ_VAL(obj, 1) & CONT_CLOSED
+    /// </summary>
+    public bool IsClosed { get; set; }
+    
+    /// <summary>
+    /// Runtime state: Is this container currently locked?
+    /// Only applies to containers with "Closeable" flag.
+    /// Requires a key (KeyId in container details) to unlock.
+    /// Legacy: GET_OBJ_VAL(obj, 1) & CONT_LOCKED
+    /// </summary>
+    public bool IsLocked { get; set; }
 
     /// <summary>
     /// Items contained within this object (for containers like corpses, bags, etc.)

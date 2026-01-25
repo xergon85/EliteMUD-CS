@@ -111,8 +111,15 @@ public sealed class GetHandler
             return new GetResult(false, $"The {container.Definition.ShortDescription} is not a container.");
         }
 
-        // Check if container is closed (value[1] is CONT_CLOSED flag in legacy)
-        // For now, we'll assume containers are open (corpses are always open)
+        var containerDetails = container.Definition.Details?.Container;
+        
+        // Check if container is closed (only if it's closeable and not a corpse)
+        // Corpses are always open (CorpseType > 0 means it's a corpse)
+        bool isCorpse = containerDetails?.CorpseType > 0;
+        if (!isCorpse && containerDetails?.Flags.Contains("Closeable", StringComparer.OrdinalIgnoreCase) == true && container.IsClosed)
+        {
+            return new GetResult(false, $"The {container.Definition.ShortDescription} is closed.");
+        }
         
         // Handle "get all <container>"
         if (itemName.Equals("all", StringComparison.OrdinalIgnoreCase))
@@ -120,25 +127,38 @@ public sealed class GetHandler
             return GetAllFromContainer(player, container);
         }
 
-        // Find item in container
-        foreach (var item in container.Contents)
+        // Parse indexed targeting (e.g., "2.wheat" for second wheat in container)
+        var (index, name) = TargetParser.ParseTarget(itemName);
+        
+        if (index == 0)
         {
-            if (MatchesTarget(item.Definition, itemName))
-            {
-                // Remove from container and add to player inventory
-                if (container.RemoveItem(item))
-                {
-                    player.AddToInventory(item.InstanceId);
-                    return new GetResult(true, string.Empty, item.Definition, container.Definition.ShortDescription);
-                }
-                else
-                {
-                    return new GetResult(false, "You can't take that.");
-                }
-            }
+            return new GetResult(false, $"Invalid target: {itemName}");
+        }
+        
+        // TODO: Support "get all.wheat container" pattern
+        if (index == -1)
+        {
+            return new GetResult(false, "The 'all.item' pattern is not yet supported.");
         }
 
-        return new GetResult(false, $"There doesn't seem to be {GetArticle(itemName)} {itemName} in the {container.Definition.ShortDescription}.");
+        // Find the Nth matching item in container
+        var item = TargetParser.FindNthMatch(container.Contents, name, index);
+        
+        if (item == null)
+        {
+            return new GetResult(false, $"There doesn't seem to be {GetArticle(name)} {index}.{name} in the {container.Definition.ShortDescription}.");
+        }
+
+        // Remove from container and add to player inventory
+        if (container.RemoveItem(item))
+        {
+            player.AddToInventory(item.InstanceId);
+            return new GetResult(true, string.Empty, item.Definition, container.Definition.ShortDescription);
+        }
+        else
+        {
+            return new GetResult(false, "You can't take that.");
+        }
     }
 
     /// <summary>

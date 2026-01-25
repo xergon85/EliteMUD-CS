@@ -27,6 +27,21 @@ public sealed class WorldState : IWorldState
         _roomMobs = roomMobs;
         _roomObjects = roomObjects;
         _zones = zones;
+        
+        // Register all room objects in _objectInstances for lookup
+        foreach (var (roomId, objects) in roomObjects)
+        {
+            foreach (var obj in objects)
+            {
+                _objectInstances[obj.InstanceId] = obj;
+                
+                // Track next instance ID to avoid collisions
+                if (obj.InstanceId >= _nextObjectInstanceId)
+                {
+                    _nextObjectInstanceId = obj.InstanceId + 1;
+                }
+            }
+        }
     }
 
     public WorldDefinition World { get; }

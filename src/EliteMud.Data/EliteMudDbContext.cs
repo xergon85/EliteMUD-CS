@@ -71,7 +71,15 @@ public class EliteMudDbContext : DbContext
         {
             entity.HasKey(e => e.InventoryId);
             entity.HasIndex(e => e.CharacterId);
+            entity.HasIndex(e => e.ContainerId);
             entity.Property(e => e.Quantity).HasDefaultValue(1);
+            entity.Property(e => e.SequenceOrder).HasDefaultValue(0);
+            
+            // Self-referencing relationship for container hierarchy
+            entity.HasOne(e => e.Container)
+                .WithMany(e => e.Contents)
+                .HasForeignKey(e => e.ContainerId)
+                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete of contents
         });
 
         // CharacterEquipmentItem configuration

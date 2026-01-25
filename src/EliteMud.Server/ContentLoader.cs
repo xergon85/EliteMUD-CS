@@ -222,6 +222,19 @@ internal static class ContentLoader
             var wearSlots = obj.WearSlots ?? obj.WearFlags ?? new List<string>();
             var flags = obj.Flags ?? obj.ExtraFlags ?? new List<string>();
             
+            // Parse affects from JSON
+            var affects = new List<ObjectAffect>();
+            if (obj.Affects != null)
+            {
+                foreach (var aff in obj.Affects)
+                {
+                    if (aff.Location != null && Enum.TryParse<AffectLocation>(aff.Location, true, out var location))
+                    {
+                        affects.Add(new ObjectAffect(location, aff.Modifier));
+                    }
+                }
+            }
+            
             objects.Add(new ObjectDefinition(
                 obj.Id,
                 obj.Name ?? string.Empty,
@@ -235,7 +248,7 @@ internal static class ContentLoader
                 obj.Values ?? new List<int>(),
                 obj.Weight,
                 obj.Cost,
-                new List<ObjectAffect>())); // Bootstrap objects have no affects
+                affects));
         }
 
         return objects;
@@ -592,6 +605,41 @@ internal static class ContentLoader
             catch (Exception ex)
             {
                 Console.WriteLine($"  Error loading {Path.GetFileName(zoneFile)}: {ex.Message}");
+            }
+        }
+
+        // Also load standalone objects.json (for quest equipment and other non-zone objects)
+        var contentRoot = Path.Combine(zonesDirectory, "..", "content");
+        var objectsPath = Path.Combine(contentRoot, "objects", "objects.json");
+        if (File.Exists(objectsPath))
+        {
+            try
+            {
+                var json = File.ReadAllText(objectsPath);
+                var objectsFile = JsonSerializer.Deserialize<ObjectsFile>(json, JsonOptions);
+                
+                if (objectsFile?.Objects != null)
+                {
+                    int loadedCount = 0;
+                    foreach (var obj in objectsFile.Objects)
+                    {
+                        var objectDef = ParseObjectDefinition(obj);
+                        if (objectDef is not null)
+                        {
+                            // Only add if not already loaded from a zone file
+                            if (!allObjects.ContainsKey(objectDef.Id))
+                            {
+                                allObjects[objectDef.Id] = objectDef;
+                                loadedCount++;
+                            }
+                        }
+                    }
+                    Console.WriteLine($"Loaded {loadedCount} standalone objects from objects.json");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading standalone objects.json: {ex.Message}");
             }
         }
 
