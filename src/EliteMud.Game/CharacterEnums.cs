@@ -245,6 +245,13 @@ public enum SkillType
     Bash = 324,       // Legacy: SKILL_BASH = 324
     Rescue = 325,     // Legacy: SKILL_RESCUE = 325
     
+    // === MULTI-ATTACK SKILLS ===
+    // Legacy: Used in perform_violence() loop for extra attacks per round
+    SecondAttack = 326,   // Legacy: SKILL_2ATTACK = 326, difficulty 120
+    ThirdAttack = 327,    // Legacy: SKILL_3ATTACK = 327, difficulty 140
+    FourthAttack = 328,   // Legacy: SKILL_4ATTACK = 328, difficulty 160
+    DualWield = 329,      // Legacy: SKILL_DUAL = 329, difficulty 160 (requires offhand weapon)
+    
     // === PASSIVE DEFENSIVE SKILLS ===
     Dodge = 360,
     Parry = 361,

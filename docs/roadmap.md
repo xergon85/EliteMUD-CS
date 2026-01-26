@@ -7,7 +7,14 @@
 - Store world content (rooms, mobs, objects, zones, scripts) as versioned files.
 - Use SQLite for runtime/player data (players, mail, logs).
 
-## Current Status (As of Jan 19, 2026)
+## Current Status (As of Jan 25, 2026)
+
+### Latest Updates
+- **Multi-Attack Combat System (Jan 25, 2026):** Implemented legacy-accurate multi-attack system matching `fight.c:1664-1729`
+  - Players can now execute up to 5 attacks per combat round (2-second interval)
+  - Skill-based activation: 2nd/3rd/4th attacks and dual-wield with legacy difficulty curves
+  - Full class support: Warriors/Monks/Knights/Thieves/Rangers gain multi-attack skills at appropriate levels
+  - Files modified: `GameTickService.cs`, `CharacterEnums.cs`, `SetSkillCommandHandler.cs`, `skills.json`
 
 ## Known Issues / Bugs
 
@@ -336,11 +343,26 @@
 - ❌ `consider` - estimate mob difficulty
 - ❌ `assist` - join combat alongside ally
 
-#### 4.6 Advanced Combat Mechanics - PLANNED
+#### 4.6 Advanced Combat Mechanics - IN PROGRESS
 - ❌ Combat rounds counter (track round number) - **TODO**
 - ❌ First strike bonus for initiator - **TODO**
 - ❌ Sneak attack from hidden state - **TODO**
-- ❌ Multi-attack system (dual-wield, extra attacks) - **TODO**
+- ✅ **Multi-attack system (dual-wield, extra attacks)** - **COMPLETE (Jan 25, 2026)**
+  - ✅ Implemented legacy-accurate multi-attack combat system
+  - ✅ Up to 5 attacks per combat round (every 2 seconds)
+  - ✅ Attack chain: Primary → 2nd → 3rd → 4th → Dual-wield
+  - ✅ Skill-based activation with legacy difficulty curves:
+    - 2nd Attack (skill 326): `random(1,120) < skill%` (~79% at 95%)
+    - 3rd Attack (skill 327): `random(1,140) < skill%` (~68% at 95%)
+    - 4th Attack (skill 328): `random(1,160) < skill%` (~59% at 95%)
+    - Dual-Wield (skill 329): `random(1,160) < skill%` + requires HOLD weapon
+  - ✅ All 4 skills added to SkillType enum and skills.json metadata
+  - ✅ Warriors/Monks/Knights get 2nd/3rd/4th attacks (levels 6/12/18)
+  - ✅ Thieves/Warriors/Rangers get dual-wield (level 15)
+  - ✅ Combat loop processes all attacks sequentially per combatant
+  - ✅ Target validity checked before each attack (handles mid-round deaths)
+  - ✅ setskill command updated to support multi-attack skills
+  - ✅ Reference: `fight.c:1664-1729` (perform_violence)
 - ❌ Attack types (slash, pierce, bludgeon) vs armor types - **TODO**
 - ❌ Critical hits and fumbles - **TODO**
 - ❌ Weapon proficiencies - **TODO**
@@ -363,7 +385,7 @@
 - ✅ WAIT_STATE system (action cooldowns)
 - ✅ Skillgain cooldown system (60 seconds between improvements)
 
-**Implemented Skills (7 skills - 6 core + 1 utility):**
+**Implemented Skills (11 skills - 6 active + 4 multi-attack + 1 utility):**
 - ✅ `kick` - Basic combat skill with formula-driven damage
 - ✅ `bash` - Shield bash with knockdown effect
 - ✅ `backstab` - Rogue sneak attack with level-based multiplier
@@ -371,6 +393,10 @@
 - ✅ `dodge` - Passive damage reduction
 - ✅ `parry` - Passive block with weapon
 - ✅ `track` - Pathfinding utility skill (shows direction to target mob)
+- ✅ **SecondAttack** (ID 326) - Passive multi-attack skill (Warriors/Monks/Knights @ lvl 6)
+- ✅ **ThirdAttack** (ID 327) - Passive multi-attack skill (Warriors/Monks/Knights @ lvl 12)
+- ✅ **FourthAttack** (ID 328) - Passive multi-attack skill (Warriors/Monks/Knights @ lvl 18)
+- ✅ **DualWield** (ID 329) - Passive multi-attack skill (Thieves/Warriors/Rangers @ lvl 15)
 
 **Track Skill Implementation (COMPLETE ✅ - Jan 25, 2026):**
 - ✅ TrackSkill class with metadata from skills.json

@@ -1200,6 +1200,554 @@
         "effects": [],
         "note": "Tumble is defined in SkillType enum but not yet implemented"
       }
+    },
+    {
+      "id": 326,
+      "name": "second attack",
+      "aliases": [],
+      "description": "Passively attack twice per round during combat",
+      "type": "Passive",
+      "category": "Multi-Attack",
+      "minimumLevel": 1,
+      "waitStateRounds": 0,
+      "skillgainCooldown": 0,
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cleric",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Thief",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Warrior",
+          "minLevel": 6,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Psionicist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Monk",
+          "minLevel": 6,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Bard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Knight",
+          "minLevel": 6,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Wizard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Druid",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Assassin",
+          "minLevel": 6,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Ranger",
+          "minLevel": 6,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Illusionist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Paladin",
+          "minLevel": 6,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Mariner",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cavalier",
+          "minLevel": 6,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Unused17",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Unused18",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Ninja",
+          "minLevel": 6,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Unused20",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "activationFormula": "return random(1,120) < skillPercent",
+        "note": "Legacy fight.c:1784-1786 - 2nd attack requires skill > random(1,120)"
+      }
+    },
+    {
+      "id": 327,
+      "name": "third attack",
+      "aliases": [],
+      "description": "Passively attack three times per round during combat",
+      "type": "Passive",
+      "category": "Multi-Attack",
+      "minimumLevel": 1,
+      "waitStateRounds": 0,
+      "skillgainCooldown": 0,
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cleric",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Thief",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Warrior",
+          "minLevel": 12,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Psionicist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Monk",
+          "minLevel": 12,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Bard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Knight",
+          "minLevel": 12,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Wizard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Druid",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Assassin",
+          "minLevel": 12,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Ranger",
+          "minLevel": 12,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Illusionist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Paladin",
+          "minLevel": 12,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Mariner",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cavalier",
+          "minLevel": 12,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Unused17",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Unused18",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Ninja",
+          "minLevel": 12,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Unused20",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "activationFormula": "return random(1,140) < skillPercent",
+        "note": "Legacy fight.c:1788-1790 - 3rd attack requires skill > random(1,140)"
+      }
+    },
+    {
+      "id": 328,
+      "name": "fourth attack",
+      "aliases": [],
+      "description": "Passively attack four times per round during combat",
+      "type": "Passive",
+      "category": "Multi-Attack",
+      "minimumLevel": 1,
+      "waitStateRounds": 0,
+      "skillgainCooldown": 0,
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cleric",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Thief",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Warrior",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Psionicist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Monk",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Bard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Knight",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Wizard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Druid",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Assassin",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Ranger",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Illusionist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Paladin",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Mariner",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cavalier",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Unused17",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Unused18",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Ninja",
+          "minLevel": 18,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Unused20",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "activationFormula": "return random(1,160) < skillPercent",
+        "note": "Legacy fight.c:1792-1794 - 4th attack requires skill > random(1,160)"
+      }
+    },
+    {
+      "id": 329,
+      "name": "dual wield",
+      "aliases": [],
+      "description": "Passively attack with your offhand weapon during combat",
+      "type": "Passive",
+      "category": "Multi-Attack",
+      "minimumLevel": 1,
+      "waitStateRounds": 0,
+      "skillgainCooldown": 0,
+      "classRestrictions": [
+        {
+          "class": "MagicUser",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cleric",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Thief",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Warrior",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Psionicist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Monk",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Bard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Knight",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Wizard",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Druid",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Assassin",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Ranger",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Illusionist",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Paladin",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Mariner",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Cavalier",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Unused17",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Unused18",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        },
+        {
+          "class": "Ninja",
+          "minLevel": 15,
+          "maxProficiency": 95,
+          "difficulty": 10
+        },
+        {
+          "class": "Unused20",
+          "minLevel": null,
+          "maxProficiency": 0,
+          "difficulty": 0
+        }
+      ],
+      "mechanics": {
+        "activationFormula": "return random(1,160) < skillPercent",
+        "note": "Legacy fight.c:1796-1800 - Dual wield requires skill > random(1,160) AND weapon in HOLD slot"
+      }
     }
   ]
 }

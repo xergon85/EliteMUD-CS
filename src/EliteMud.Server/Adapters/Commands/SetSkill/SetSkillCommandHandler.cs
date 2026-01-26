@@ -26,6 +26,7 @@ internal sealed class SetSkillCommandHandler : ICommandHandler
         {
             await context.Session.SendLineAsync("Usage: setskill <skill> <proficiency>", cancellationToken);
             await context.Session.SendLineAsync("Available skills: kick, bash, backstab (bs), dodge, parry, tumble, rescue", cancellationToken);
+            await context.Session.SendLineAsync("Multi-attack: 2ndattack, 3rdattack, 4thattack, dualwield", cancellationToken);
             await context.Session.SendLineAsync("Proficiency: 0-100", cancellationToken);
             return CommandOutcome.Continue;
         }
@@ -42,6 +43,7 @@ internal sealed class SetSkillCommandHandler : ICommandHandler
         {
             await context.Session.SendLineAsync($"Unknown skill: {skillName}", cancellationToken);
             await context.Session.SendLineAsync("Available skills: kick, bash, backstab (bs), dodge, parry, tumble, rescue", cancellationToken);
+            await context.Session.SendLineAsync("Multi-attack: 2ndattack, 3rdattack, 4thattack, dualwield", cancellationToken);
             return CommandOutcome.Continue;
         }
 
@@ -67,6 +69,10 @@ internal sealed class SetSkillCommandHandler : ICommandHandler
             "dodge" => Set(out skillType, SkillType.Dodge),
             "parry" => Set(out skillType, SkillType.Parry),
             "tumble" => Set(out skillType, SkillType.Tumble),
+            "2ndattack" or "2nd" => Set(out skillType, SkillType.SecondAttack),
+            "3rdattack" or "3rd" => Set(out skillType, SkillType.ThirdAttack),
+            "4thattack" or "4th" => Set(out skillType, SkillType.FourthAttack),
+            "dualwield" or "dual" => Set(out skillType, SkillType.DualWield),
             _ => Unset(out skillType)
         };
 

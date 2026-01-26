@@ -131,6 +131,13 @@ internal sealed class GameTickService
         var fightingPlayers = connections.Where(c => c.Player.FightingConnectionId != null).ToList();
         
         // Process player attacks
+        // Legacy: perform_violence() in fight.c:1664-1729
+        // Each combatant can perform up to 5 attacks per round:
+        // 1. Primary attack (always)
+        // 2. 2nd attack (requires SKILL_2ATTACK > random(1,120))
+        // 3. 3rd attack (requires SKILL_3ATTACK > random(1,140))
+        // 4. 4th attack (requires SKILL_4ATTACK > random(1,160))
+        // 5. Dual-wield attack (requires SKILL_DUAL > random(1,160) AND weapon in HOLD slot)
         foreach (var attacker in fightingPlayers)
         {
             try
@@ -148,26 +155,49 @@ internal sealed class GameTickService
                     continue; // No longer fighting
                 }
 
-                // Check if fighting a mob (negative ID) or player (positive ID)
-                if (targetConnectionId.Value < 0)
+                // Process up to 5 attacks per round
+                for (int attackNum = 1; attackNum <= 5; attackNum++)
                 {
-                    // Fighting a mob
-                    var mobInstanceId = -targetConnectionId.Value;
-                    await ProcessPlayerVsMobAttack(attacker, mobInstanceId, cancellationToken);
-                }
-                else
-                {
-                    // Fighting another player
-                    var victim = connections.FirstOrDefault(c => c.Id == targetConnectionId.Value);
-                    if (victim == null || victim.Player.RoomId != attacker.Player.RoomId)
+                    // Check if target is still valid before each attack
+                    if (attacker.Player.FightingConnectionId == null)
                     {
-                        // Target left room or disconnected
-                        _combatCalculator.StopFighting(attacker.Player);
-                        await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
-                        continue;
+                        break; // Combat ended (target died or fled)
                     }
 
-                    await ProcessPlayerVsPlayerAttack(attacker, victim, cancellationToken);
+                    // First attack always happens, subsequent attacks require skill checks
+                    bool canAttack = true;
+                    
+                    if (attackNum > 1)
+                    {
+                        canAttack = CanPerformExtraAttack(attacker.Player, attackNum);
+                    }
+
+                    if (!canAttack)
+                    {
+                        continue; // Skip this attack, but continue loop to check remaining attacks
+                    }
+
+                    // Execute the attack
+                    if (targetConnectionId.Value < 0)
+                    {
+                        // Fighting a mob
+                        var mobInstanceId = -targetConnectionId.Value;
+                        await ProcessPlayerVsMobAttack(attacker, mobInstanceId, cancellationToken);
+                    }
+                    else
+                    {
+                        // Fighting another player
+                        var victim = connections.FirstOrDefault(c => c.Id == targetConnectionId.Value);
+                        if (victim == null || victim.Player.RoomId != attacker.Player.RoomId)
+                        {
+                            // Target left room or disconnected
+                            _combatCalculator.StopFighting(attacker.Player);
+                            await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
+                            break;
+                        }
+
+                        await ProcessPlayerVsPlayerAttack(attacker, victim, cancellationToken);
+                    }
                 }
             }
             catch (Exception ex)
@@ -981,5 +1011,57 @@ internal sealed class GameTickService
                 }
             }
         }
+    }
+    
+    /// <summary>
+    /// Check if a player can perform an extra attack beyond the primary attack.
+    /// Legacy: fight.c:1778-1803 (perform_violence multi-attack loop)
+    /// </summary>
+    /// <param name="player">The attacking player</param>
+    /// <param name="attackNumber">Which attack this is (2-5)</param>
+    /// <returns>True if the attack can proceed, false otherwise</returns>
+    private bool CanPerformExtraAttack(PlayerState player, int attackNumber)
+    {
+        SkillType requiredSkill;
+        int difficulty;
+        
+        switch (attackNumber)
+        {
+            case 2:
+                requiredSkill = SkillType.SecondAttack;
+                difficulty = 120;
+                break;
+            case 3:
+                requiredSkill = SkillType.ThirdAttack;
+                difficulty = 140;
+                break;
+            case 4:
+                requiredSkill = SkillType.FourthAttack;
+                difficulty = 160;
+                break;
+            case 5:
+                requiredSkill = SkillType.DualWield;
+                difficulty = 160;
+                // Dual-wield also requires a weapon in the HOLD slot
+                if (!player.EquipmentSlotToObjectId.ContainsKey((int)EquipmentSlot.Hold))
+                {
+                    return false; // No offhand weapon
+                }
+                break;
+            default:
+                return false; // Invalid attack number
+        }
+        
+        // Check if player has this skill (0-100)
+        var skillPercent = player.GetSkill(requiredSkill);
+        if (skillPercent == 0)
+        {
+            return false; // Don't have this skill or it's at 0%
+        }
+        
+        // Legacy skill check: number(1, difficulty) < skill_percent
+        // Example: 95% skill vs difficulty 120 → random(1,120) < 95 → ~79% chance
+        int roll = Random.Shared.Next(1, difficulty + 1);
+        return roll < skillPercent;
     }
 }
