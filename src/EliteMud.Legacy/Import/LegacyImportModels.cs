@@ -23,8 +23,13 @@ internal sealed record RoomContent(
     IReadOnlyList<ExitContent> Exits,
     IReadOnlyList<ExtraDescriptionContent> ExtraDescriptions,
     string? SpecialProc,
-    IReadOnlyList<string> RoomPrograms,
+    IReadOnlyList<RoomProgramContent> RoomPrograms,
     bool CrashRoom);
+
+internal sealed record RoomProgramContent(
+    string Type,
+    string Arguments,
+    string Commands);
 
 internal sealed record ExitContent(
     string Direction,

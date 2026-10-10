@@ -50,7 +50,7 @@ internal static class LegacyRoomImporter
                 var extras = new List<ExtraDescriptionContent>();
                 var crashRoom = false;
                 string? specialProc = null;
-                var roomPrograms = new List<string>();
+                var roomPrograms = new List<RoomProgramContent>();
                 var sectionIterations = 0;
 
                 while (true)
@@ -67,55 +67,54 @@ internal static class LegacyRoomImporter
                         break;
                     }
 
-                    if (marker == "S")
+                    // Legacy: load_rooms() in db.c:878-898 dispatches on the marker's first
+                    // character, case-sensitive. Unknown markers are skipped (and logged here).
+                    switch (marker[0])
                     {
-                        break;
+                        case 'S':
+                            break;
+
+                        case 'D':
+                            exits.Add(ReadExit(parser, marker));
+                            continue;
+
+                        case 'E':
+                        {
+                            var keywords = parser.ReadTildeString();
+                            var extraDesc = parser.ReadTildeString();
+                            extras.Add(new ExtraDescriptionContent(LegacyImportUtilities.SplitKeywords(keywords), extraDesc));
+                            continue;
+                        }
+
+                        case 'C':
+                            crashRoom = true;
+                            continue;
+
+                        case 'P':
+                            // Legacy: special_assign() reads the name from the marker itself, e.g. "P(bank)"
+                            specialProc = ParseSpecialName(marker);
+                            if (specialProc is null)
+                            {
+                                Console.WriteLine($"  Warning: {Path.GetFileName(file)} room #{vnum}: unreadable special '{marker}'");
+                            }
+
+                            continue;
+
+                        case '>':
+                            // Legacy: rprog_read_programs() in db.c:3595. The type is part of the
+                            // marker (">push"), followed by tilde-terminated arguments and commands.
+                            roomPrograms.Add(new RoomProgramContent(
+                                marker[1..],
+                                parser.ReadTildeString(),
+                                parser.ReadTildeString()));
+                            continue;
+
+                        default:
+                            Console.WriteLine($"  Warning: {Path.GetFileName(file)} room #{vnum}: ignored unknown marker '{marker}'");
+                            continue;
                     }
 
-                    if (marker.StartsWith("D", StringComparison.OrdinalIgnoreCase))
-                    {
-                        var dir = LegacyImportLookup.ParseInt(marker[1..]);
-                        var exitDesc = parser.ReadTildeString();
-                        var keywords = parser.ReadTildeString();
-                        var exitFlags = parser.ReadNumber();
-                        var keyId = parser.ReadNumber();
-                        var toRoom = parser.ReadNumber();
-
-                        exits.Add(new ExitContent(
-                            LegacyImportLookup.DirectionFromIndex(dir),
-                            toRoom,
-                            exitDesc,
-                            LegacyImportUtilities.SplitKeywords(keywords),
-                            LegacyImportLookup.ExitFlags(exitFlags),
-                            keyId < 0 ? null : keyId));
-                        continue;
-                    }
-
-                    if (marker == "E")
-                    {
-                        var keywords = parser.ReadTildeString();
-                        var extraDesc = parser.ReadTildeString();
-                        extras.Add(new ExtraDescriptionContent(LegacyImportUtilities.SplitKeywords(keywords), extraDesc));
-                        continue;
-                    }
-
-                    if (marker == "C")
-                    {
-                        crashRoom = true;
-                        continue;
-                    }
-
-                    if (marker == "P")
-                    {
-                        specialProc = parser.ReadToken();
-                        continue;
-                    }
-
-                    if (marker == ">")
-                    {
-                        roomPrograms.Add(parser.ReadProgramBlock());
-                        continue;
-                    }
+                    break;
                 }
 
                 rooms.Add(new RoomContent(
@@ -134,5 +133,36 @@ internal static class LegacyRoomImporter
         }
 
         return rooms;
+    }
+
+    // Legacy: setup_dir() in db.c:947
+    private static ExitContent ReadExit(LegacyImportParser parser, string marker)
+    {
+        var dir = LegacyImportLookup.ParseInt(marker[1..]);
+        var exitDesc = parser.ReadTildeString();
+        var keywords = parser.ReadTildeString();
+        var exitFlags = parser.ReadNumber();
+        var keyId = parser.ReadNumber();
+        var toRoom = parser.ReadNumber();
+
+        return new ExitContent(
+            LegacyImportLookup.DirectionFromIndex(dir),
+            toRoom,
+            exitDesc,
+            LegacyImportUtilities.SplitKeywords(keywords),
+            LegacyImportLookup.ExitFlags(exitFlags),
+            keyId < 0 ? null : keyId);
+    }
+
+    private static string? ParseSpecialName(string marker)
+    {
+        var open = marker.IndexOf('(');
+        var close = marker.IndexOf(')', open + 1);
+        if (open < 0 || close <= open + 1)
+        {
+            return null;
+        }
+
+        return marker[(open + 1)..close];
     }
 }
