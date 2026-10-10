@@ -22,7 +22,7 @@ _Date: Oct 10, 2026 · Scope: `zones/*.json` (115 files) compared with the legac
 |---|---|---|
 | 1. Tabs break reset parsing | ✅ Fixed. Reset lines are parsed like `load_reset_cmds`. All 478 mangled resets restored, comments kept. | `de561a0`, data `3da2761` |
 | 2. Mob records dropped | ✅ Fixed. All 2,658 legacy mob records import; 38 more mobs in the zones. The causes were parser differences, not unknown formats (see below). | `976a25e`, data `be6be66` |
-| 3. Zone-less objects dropped | ⬜ Open | |
+| 3. Zone-less objects dropped | ✅ Not a bug. All 2,827 objects are imported and loaded from `content/objects/objects.json`; the audit missed that file. The real question, which objects nothing creates, is answered in `unsourced-objects-2026-10-11.md`. | |
 | 4. Broken references | 🔶 Partly. Rooms swallowed by misparsed room programs are recovered (20 rooms), including 7716, 12951, and the bogus exit to 4474912. Not re-measured as a whole yet. | `15d0ff1`, data `f94b678` |
 | 5. Server hides problems | 🔶 Importer now logs unparseable reset lines and unknown room markers. Server side unchanged. | |
 
@@ -102,6 +102,11 @@ Never skip a record without logging the file, record number and reason.
 
 ## Finding 3: Objects without a zone file dropped
 
+> **Correction (Oct 11, 2026):** these objects are not dropped. The server also loads `content/objects/objects.json`,
+> which holds all 2,827 legacy objects. The 464 are objects that no zone file contains. Which of them nothing in the
+> world creates (quest, clan and admin items, plus 18 door keys and 28 portals to check) is covered in
+> `docs/reports/unsourced-objects-2026-10-11.md`.
+
 464 objects exist in `lib/world/obj/*.obj` but weren't imported. Most come from `.obj` files that have **no matching `.zon` file**:
 
 | File | Objects lost | Has `.zon`? |
@@ -148,7 +153,7 @@ Each layer quietly passes broken data on. That's how a shopkeeper can be missing
 
 1. ✅ **Fix the tokenizer** (Finding 1). Small change, biggest effect. Add an importer test using real legacy lines with tabs.
 2. 🔶 **Make the importer loud.** Every skipped record or unparseable field is logged with file, record and reason, and summarized at the end. *(Reset lines and room markers done; mobs, objects and a summary still to do.)*
-3. ✅ **Fix mob format variants** (Finding 2). ⬜ **Decide where zone-less objects live** (Finding 3).
+3. ✅ **Fix mob format variants** (Finding 2). ✅ **Zone-less objects** (Finding 3): already loaded from the shared file; see the unsourced objects report.
 4. ⬜ **Re-import and re-run this audit.** What remains should be real legacy breakage.
 5. ⬜ **Build the reference checker** for world content, starting in warning mode. Fix or mark what's left, then switch to errors.
 
