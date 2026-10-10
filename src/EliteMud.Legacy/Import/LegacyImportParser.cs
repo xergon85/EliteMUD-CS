@@ -56,8 +56,28 @@ internal sealed class LegacyImportParser
             return 0;
         }
 
-        return ParseLegacyNumber(token);
+        return ParseLegacyNumber(SplitGluedNumber(token));
     }
+
+    /// <summary>
+    /// Legacy reads list values with fscanf("%ld"), which stops at the first non-digit. Some
+    /// files glue the list terminator onto the last value ("385-1"), so split off the remainder
+    /// and push it back as the next token.
+    /// </summary>
+    private string SplitGluedNumber(string token)
+    {
+        var match = GluedNumberPattern.Match(token);
+        if (!match.Success)
+        {
+            return token;
+        }
+
+        PushToken(match.Groups[2].Value);
+        return match.Groups[1].Value;
+    }
+
+    private static readonly System.Text.RegularExpressions.Regex GluedNumberPattern =
+        new(@"^(-?\d+)(-\d+)$");
 
     public bool TryReadNumber(out int value)
     {
@@ -79,23 +99,27 @@ internal sealed class LegacyImportParser
         return true;
     }
 
+    /// <summary>
+    /// Reads a tilde-terminated string.
+    /// Legacy: fread_string() in db.c:2726 reads whole lines and stops at the first line whose
+    /// last non-whitespace character is '~'. Only that final '~' is removed; a '~' elsewhere is
+    /// content, and nothing after the terminator on its line is kept (e.g. a stray "~~").
+    /// </summary>
     public string ReadTildeString()
     {
         var builder = new System.Text.StringBuilder();
-        int next;
-        while ((next = _reader.Read()) != -1)
+        string? line;
+        while ((line = _reader.ReadLine()) is not null)
         {
-            if (next == '~')
+            line = line.Replace("\r", string.Empty);
+            var trimmedEnd = line.TrimEnd();
+            if (trimmedEnd.EndsWith('~'))
             {
+                builder.Append(trimmedEnd[..^1]);
                 break;
             }
 
-            if (next == '\r')
-            {
-                continue;
-            }
-
-            builder.Append((char)next);
+            builder.Append(line).Append('\n');
         }
 
         return builder.ToString().Trim();
@@ -133,11 +157,32 @@ internal sealed class LegacyImportParser
         return builder.ToString().TrimEnd();
     }
 
+    /// <summary>
+    /// Reads dice in the form "XdY+Z".
+    /// Legacy reads dice with fscanf("%ldd%ld+%ld"), which stops after Z. Some files have the
+    /// next value glued on (e.g. "3d6+9-1" where "-1" ends the attack list), so any remainder
+    /// is pushed back as the next token.
+    /// </summary>
     public string ReadDiceString()
     {
         var token = ReadToken();
-        return token ?? string.Empty;
+        if (token is null)
+        {
+            return string.Empty;
+        }
+
+        var match = DicePattern.Match(token);
+        if (match.Success && match.Length < token.Length)
+        {
+            PushToken(token[match.Length..]);
+            return match.Value;
+        }
+
+        return token;
     }
+
+    private static readonly System.Text.RegularExpressions.Regex DicePattern =
+        new(@"^\d+d\d+\+-?\d+");
 
     private static int ParseLegacyNumber(string token)
     {
