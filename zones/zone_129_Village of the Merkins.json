@@ -1700,7 +1700,13 @@
       ],
       "ExtraDescriptions": [],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12905 2",
+          "Commands": "Stumbling through the murky bog, you suddenly find yourself in a foul\nsmelling bog-goblin lair!"
+        }
+      ],
       "CrashRoom": false
     },
     {
@@ -1802,7 +1808,13 @@
       ],
       "ExtraDescriptions": [],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12905 1",
+          "Commands": "Stumbling through the murky bog, you suddenly find yourself in a foul\nsmelling bog-goblin lair!"
+        }
+      ],
       "CrashRoom": false
     },
     {
@@ -1898,7 +1910,13 @@
         }
       ],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12905 3",
+          "Commands": "Stumbling through the murky bog, you suddenly find yourself in a foul\nsmelling bog-goblin lair!"
+        }
+      ],
       "CrashRoom": false
     },
     {
@@ -1994,7 +2012,13 @@
       ],
       "ExtraDescriptions": [],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12905 0",
+          "Commands": "Stumbling through the murky bog, you suddenly find yourself in a foul\nsmelling bog-goblin lair!"
+        }
+      ],
       "CrashRoom": false
     },
     {
@@ -2504,7 +2528,13 @@
       ],
       "ExtraDescriptions": [],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "20 12920 3",
+          "Commands": ""
+        }
+      ],
       "CrashRoom": false
     },
     {
@@ -3466,41 +3496,32 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12909 2",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "5",
-            "12909",
-            "0"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
-        {
-          "Direction": "North",
-          "TargetId": 1181957,
-          "Description": "into the bog below.",
-          "Keywords": [
-            "S",
-            "#12949",
-            "Corner",
-            "Platform"
-          ],
-          "ExitFlags": [
-            "Wall",
-            "BashProof",
-            "Broken"
-          ],
-          "KeyId": 448
-        },
+          "Type": "trans",
+          "Arguments": "5 12909 0",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12949,
+      "Name": "Corner Platform",
+      "Description": "This high circular platform is firmly anchored by an elaborate \narrangement of struts and braces so that even in high winds it remains\nstable. East and north, walkways are suspended by long vine ropes\nand oscillate in the occasional gusts of wind.",
+      "ZoneId": 129,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
         {
           "Direction": "North",
           "TargetId": 12948,
@@ -3546,69 +3567,43 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12910 1",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "5",
-            "12910",
-            "3"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
+          "Type": "trans",
+          "Arguments": "5 12910 3",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12951,
+      "Name": "Swaying Platform",
+      "Description": "Long ropes woven from vines suspend this narrow walkway from the \nlimbs of a mighty oak tree high above. The walkway twitches and lurches\nin the occasional gusts of wind, which makes walking difficult. To the\nnorth is a squat round house, with a rough wooden gate across the\nentrance. The wooden walkway continues both east and west.",
+      "ZoneId": 129,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
         {
           "Direction": "North",
-          "TargetId": 6316048,
-          "Description": "into the bog below.",
+          "TargetId": 12997,
+          "Description": "A squat round house is suspended from the trees to the north.",
           "Keywords": [
-            "S",
-            "#12951",
-            "Swaying",
-            "Platform"
+            "gate"
           ],
           "ExitFlags": [
-            "PickProof",
-            "Trap",
-            "Broken"
+            "IsDoor"
           ],
-          "KeyId": 442384
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "To the\nnorth is a squat round house, with a rough wooden gate across the\nentrance. The wooden walkway continues both east and west.",
-          "Keywords": [
-            "129",
-            "0",
-            "1",
-            "D0",
-            "A",
-            "squat",
-            "round",
-            "house",
-            "is",
-            "suspended",
-            "from",
-            "the",
-            "trees",
-            "to",
-            "the",
-            "north."
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "ResetLocked",
-            "Trap"
-          ],
-          "KeyId": 1
+          "KeyId": null
         },
         {
           "Direction": "East",
@@ -3625,66 +3620,39 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12911 1",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "5",
-            "12911",
-            "3"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
+          "Type": "trans",
+          "Arguments": "5 12911 3",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12952,
+      "Name": "Swaying Walkway",
+      "Description": "The walkway wobbles slightly underfoot, and sways as your weight\nshifts from side to side. Over the wooden railings, far below, the \nground is covered by a thick blanket of dark mist and creeping sounds\nof insects echo around. The walkway continues unsteadily westwards, \nwhile to the east the wooden structure seems to be anchored to the\ntrunk of a large blackened oak tree.",
+      "ZoneId": 129,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
         {
-          "Direction": "North",
-          "TargetId": 4474898,
-          "Description": "into the bog below.",
-          "Keywords": [
-            "S",
-            "#12952",
-            "Swaying",
-            "Walkway"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "mist and creeping sounds\nof insects echo around. The walkway continues unsteadily westwards, \nwhile to the east the wooden structure seems to be anchored to the\ntrunk of a large blackened oak tree.",
-          "Keywords": [
-            "129",
-            "0",
-            "1",
-            "D1",
-            "The",
-            "walkway",
-            "to",
-            "the",
-            "east",
-            "has",
-            "been",
-            "anchored",
-            "to",
-            "a",
-            "mighty",
-            "dark",
-            "oak."
-          ],
+          "Direction": "East",
+          "TargetId": 12953,
+          "Description": "The walkway to the east has been anchored to a mighty dark oak.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "West",
@@ -3693,62 +3661,39 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12911 1",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "5",
-            "12911",
-            "3"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
+          "Type": "trans",
+          "Arguments": "5 12911 3",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12953,
+      "Name": "Anchored Walkway",
+      "Description": "Wide wooden struts brace this section of walkway against the trunk\nof an oak tree, whose bark is blackened as if scorched. The tree seems\nto be otherwise healthy - higher branches are covered with new leaves, \ndespite the burned appearance of the tree. To the east is a wide \nplatform with reinforced railings. The walkway to the west sways gently\nin the breeze.",
+      "ZoneId": 129,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
         {
-          "Direction": "North",
-          "TargetId": 1966080,
-          "Description": "into the bog below.",
-          "Keywords": [
-            "S",
-            "#12953",
-            "Anchored",
-            "Walkway"
-          ],
-          "ExitFlags": [
-            "ResetClosed",
-            "ResetLocked",
-            "BashProof"
-          ],
-          "KeyId": 4218904
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "the burned appearance of the tree. To the east is a wide \nplatform with reinforced railings. The walkway to the west sways gently\nin the breeze.",
-          "Keywords": [
-            "129",
-            "0",
-            "1",
-            "D1",
-            "There",
-            "is",
-            "a",
-            "steady",
-            "corner",
-            "platform",
-            "to",
-            "the",
-            "east."
-          ],
+          "Direction": "East",
+          "TargetId": 12954,
+          "Description": "There is a steady corner platform to the east.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "West",
@@ -4115,41 +4060,32 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12904 0",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "5",
-            "12904",
-            "2"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
-        {
-          "Direction": "North",
-          "TargetId": 710689,
-          "Description": "into the bog below.",
-          "Keywords": [
-            "S",
-            "#12964",
-            "Intersecting",
-            "Platform"
-          ],
-          "ExitFlags": [
-            "Wall",
-            "BashProof",
-            "Broken"
-          ],
-          "KeyId": 1204232
-        },
+          "Type": "trans",
+          "Arguments": "5 12904 2",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12964,
+      "Name": "Intersecting Platform",
+      "Description": "This round platform has other walkways leaving to the east, south \nand north. Although the platform is suspended from the branches high\nabove, the connected walkways make it stable, even though the breeze\nripples through the leaves of the two giant oaks to the north and south.",
+      "ZoneId": 129,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
         {
           "Direction": "North",
           "TargetId": 12972,
@@ -4203,41 +4139,32 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "10 12925 1",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "10",
-            "12925",
-            "3"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
-        {
-          "Direction": "North",
-          "TargetId": 133393,
-          "Description": "into the bog below.",
-          "Keywords": [
-            "S",
-            "#12966",
-            "Narrow",
-            "Walkway"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 4349953
-        },
+          "Type": "trans",
+          "Arguments": "10 12925 3",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12966,
+      "Name": "Narrow Walkway",
+      "Description": "The narrow aerial walkway flips and lurches in the slight breeze. To\nthe east towers the mightiest oak in the forest - the Holy Oak of the \nMerkins. The swaying walkway continues to the west, but to the east the\nplatform is firmly anchored to the holy tree.",
+      "ZoneId": 129,
+      "Sector": "Field",
+      "Flags": [],
+      "Exits": [
         {
           "Direction": "East",
           "TargetId": 12967,
@@ -4253,61 +4180,39 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "10 12926 1",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "10",
-            "12926",
-            "3"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
+          "Type": "trans",
+          "Arguments": "10 12926 3",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12967,
+      "Name": "Before the Great Tree",
+      "Description": "A wide wooden platform curves north and south around the trunk of \nthe Sacred Tree. The bark is pale and fairly smooth (considering the\nobvious age of the tree) and covered in fine black markings, which look\nhand drawn. A narrow unsteady looking walkway leads west away from the\ntree.",
+      "ZoneId": 129,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
         {
           "Direction": "North",
-          "TargetId": 4218904,
-          "Description": "into the bog below.",
-          "Keywords": [
-            "S",
-            "#12967",
-            "Before",
-            "the",
-            "Great",
-            "Tree"
-          ],
+          "TargetId": 12968,
+          "Description": "The walkway curves north and east around the Great Tree.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 4194584
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "A narrow unsteady looking walkway leads west away from the\ntree.",
-          "Keywords": [
-            "129",
-            "0",
-            "1",
-            "D0",
-            "The",
-            "walkway",
-            "curves",
-            "north",
-            "and",
-            "east",
-            "around",
-            "the",
-            "Great",
-            "Tree."
-          ],
-          "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "South",
@@ -5310,42 +5215,32 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12916 0",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "5",
-            "12916",
-            "2"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
-        {
-          "Direction": "North",
-          "TargetId": 524432,
-          "Description": "into the bog below.",
-          "Keywords": [
-            "S",
-            "#12995",
-            "Swaying",
-            "Walkway"
-          ],
-          "ExitFlags": [
-            "ResetClosed",
-            "ResetLocked",
-            "Secret",
-            "Broken"
-          ],
-          "KeyId": 151584
-        },
+          "Type": "trans",
+          "Arguments": "5 12916 2",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12995,
+      "Name": "Swaying Walkway",
+      "Description": "Suspended from the huge boughs of a great oak high above, this narrow\nwooden walkway swings gently in the breeze. Over railings on either side\ntendrils of fog obscure the view of the marsh far below. There is some \nkind of main platform to the south, while the walkway continues to the\nnorth.",
+      "ZoneId": 129,
+      "Sector": "City",
+      "Flags": [],
+      "Exits": [
         {
           "Direction": "North",
           "TargetId": 12994,
@@ -5361,71 +5256,45 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "trans",
+          "Arguments": "5 12922 0",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
         },
         {
-          "Direction": "North",
-          "TargetId": 4980992,
-          "Description": "into the bog below.",
-          "Keywords": [
-            ">trans",
-            "5",
-            "12922",
-            "2"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 20974593
-        },
+          "Type": "trans",
+          "Arguments": "5 12922 2",
+          "Commands": "The walkway twists awkwardly in a sudden gust of wind, flipping you over\nthe rail and down into the bog below."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 12996,
+      "Name": "Inside a Merkin Hovel",
+      "Description": "This tiny room is the dwelling of some hapless impoverished merkin, \nalthough the three brightly coloured rocks and the eagles feather\ndisplayed proudly above the squalid bed suggests that the inhabitant\nis content with his lot in life. To the east the roundhouse opens up\ninto a more spacious communal area.",
+      "ZoneId": 129,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
         {
-          "Direction": "North",
-          "TargetId": 151552,
-          "Description": "into the bog below.",
+          "Direction": "East",
+          "TargetId": 12997,
+          "Description": "A curtain separates the hovel from the rest of the roundhouse.",
           "Keywords": [
-            "S",
-            "#12996",
-            "Inside",
-            "a",
-            "Merkin",
-            "Hovel"
+            "curtain"
           ],
           "ExitFlags": [
-            "Wall",
-            "BashProof",
-            "Broken"
+            "IsDoor"
           ],
-          "KeyId": 17309952
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "of some hapless impoverished merkin, \nalthough the three brightly coloured rocks and the eagles feather\ndisplayed proudly above the squalid bed suggests that the inhabitant\nis content with his lot in life. To the east the roundhouse opens up\ninto a more spacious communal area.",
-          "Keywords": [
-            "129",
-            "d",
-            "1",
-            "D1",
-            "A",
-            "curtain",
-            "separates",
-            "the",
-            "hovel",
-            "from",
-            "the",
-            "rest",
-            "of",
-            "the",
-            "roundhouse."
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Locked",
-            "BashProof",
-            "Broken"
-          ],
-          "KeyId": 1
+          "KeyId": null
         }
       ],
       "ExtraDescriptions": [],

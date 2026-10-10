@@ -898,45 +898,36 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "push",
+          "Arguments": "10 1",
+          "Commands": "You lose your balance and slide down the muddy hill side."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7716,
+      "Name": "On the River",
+      "Description": "The river flows quietly south. On the east bank is a dark forest, \nand to the west you can see a small hill. The water is clean and \npure, but looking downwards, you are unable to see the river bed. \nWho knows what kind of creature lurks down there?",
+      "ZoneId": 77,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
         {
           "Direction": "North",
-          "TargetId": 4474912,
-          "Description": "the muddy hill side.",
-          "Keywords": [
-            "S",
-            "#7716",
-            "On",
-            "the",
-            "River"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 2228496
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "forest, \nand to the west you can see a small hill. The water is clean and \npure, but looking downwards, you are unable to see the river bed. \nWho knows what kind of creature lurks down there?",
-          "Keywords": [
-            "77",
-            "r",
-            "6",
-            "D0",
-            "The",
-            "river",
-            "gently",
-            "flows",
-            "from",
-            "north",
-            "to",
-            "south."
-          ],
+          "TargetId": 7710,
+          "Description": "The river gently flows from north to south.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "East",
@@ -1148,46 +1139,36 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "push",
+          "Arguments": "10 1",
+          "Commands": "You lose your balance and slide down the muddy hill side."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7721,
+      "Name": "On the River",
+      "Description": "Quietly, the river runs from north to south. On the east side\nof the river grows a plain of long grass and on the west, dense \nvegetation grows. The water is clean and pure, but looking \ndownwards, you are unable to see the river bed. Who knows what\nkind of creature lurks down there?",
+      "ZoneId": 77,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
         {
           "Direction": "North",
-          "TargetId": 2228496,
-          "Description": "the muddy hill side.",
-          "Keywords": [
-            "S",
-            "#7721",
-            "On",
-            "the",
-            "River"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "BashProof",
-            "PassProof",
-            "TrapSet"
-          ],
-          "KeyId": 524432
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "vegetation grows. The water is clean and pure, but looking \ndownwards, you are unable to see the river bed. Who knows what\nkind of creature lurks down there?",
-          "Keywords": [
-            "77",
-            "r",
-            "6",
-            "D0",
-            "The",
-            "river",
-            "gently",
-            "flows",
-            "from",
-            "north",
-            "to",
-            "south."
-          ],
+          "TargetId": 7716,
+          "Description": "The river gently flows from north to south.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "East",
@@ -1481,46 +1462,36 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "push",
+          "Arguments": "10 1",
+          "Commands": "You lose your balance and slide down the muddy hill side."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 7727,
+      "Name": "On the River",
+      "Description": "Quietly, the river runs from north to south. On the east side\nof the river there tall grass dances in the breeze and to the west\nstands a small hill. The water is clean and pure, but looking \ndownwards, you are unable to see the river bed. Who knows what\nkind of creature lurks down there?",
+      "ZoneId": 77,
+      "Sector": "WaterSwim",
+      "Flags": [
+        "PkOk"
+      ],
+      "Exits": [
         {
           "Direction": "North",
-          "TargetId": 2228496,
-          "Description": "the muddy hill side.",
-          "Keywords": [
-            "S",
-            "#7727",
-            "On",
-            "the",
-            "River"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "BashProof",
-            "PassProof",
-            "TrapSet"
-          ],
-          "KeyId": 524432
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "in the breeze and to the west\nstands a small hill. The water is clean and pure, but looking \ndownwards, you are unable to see the river bed. Who knows what\nkind of creature lurks down there?",
-          "Keywords": [
-            "77",
-            "r",
-            "6",
-            "D0",
-            "The",
-            "river",
-            "gently",
-            "flows",
-            "from",
-            "north",
-            "to",
-            "south."
-          ],
+          "TargetId": 7721,
+          "Description": "The river gently flows from north to south.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "East",

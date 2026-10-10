@@ -1162,44 +1162,6 @@
             "IsDoor"
           ],
           "KeyId": null
-        },
-        {
-          "Direction": "North",
-          "TargetId": 131209,
-          "Description": "have an appointment, you will just have \nto sit and wait.",
-          "Keywords": [
-            "S",
-            "#28013",
-            "#RDa",
-            "#BFuzzy",
-            "#YOne",
-            "#C,",
-            "High",
-            "Lord",
-            "of",
-            "#G(HEMP)",
-            "#COutdoors",
-            "Indoors#N"
-          ],
-          "ExitFlags": [
-            "Locked"
-          ],
-          "KeyId": 262400
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "the heat of the day, \nor when da Wolf seeks #Bnight#N, the glass ceiling darkens until the \nroom has the comfort of a shaded spot in a deep #Gforest#N or a cave \nburied in the face of a mountain. The roof slants gradually from its \npeak 20 feet up the side of the tree to a bare 8 inches from the thick \ndark green moss, which cushions the floor. A very fine screen forms \nthe short remaining wall. The mesh seems to disappear when you attempt \nto look closely at it. A bubbling stream fills the pond at the center \nof the room, and the force of the water forms a small magical \n#Bfountain#N that seems to be altered.",
-          "Keywords": [
-            "280",
-            "dtuz",
-            "0",
-            "D2"
-          ],
-          "ExitFlags": [
-            "ResetClosed"
-          ],
-          "KeyId": 1
         }
       ],
       "ExtraDescriptions": [
@@ -1229,7 +1191,45 @@
             "Statue!"
           ],
           "Description": "This is a statue of Kaitlyn our most precious prize. This buxom blonde \nstatue is a long legged seducer that boasts a stellar 34D-24-35 figure \nat 5'5''."
-        },
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "echo",
+          "Arguments": "15",
+          "Commands": "I'm sorry but since you don't have an appointment, you will just have \nto sit and wait."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28013,
+      "Name": "#RDa #BFuzzy #YOne #C, High Lord of #G(HEMP) #COutdoors Indoors#N",
+      "Description": "It is hard to tell if you just stepped outdoors or you are still \ninside the clanhouse. This room rests against an enormous #Rredwood \n#Rtree#N, which forms the inner wall. Some lower branches reach out \nacross the room towards the sunlight, which streams through the glass \nceiling. Large #wratton basket chairs#N filled with enormous soft \ncushions swing from the tree's branches. During the heat of the day, \nor when da Wolf seeks #Bnight#N, the glass ceiling darkens until the \nroom has the comfort of a shaded spot in a deep #Gforest#N or a cave \nburied in the face of a mountain. The roof slants gradually from its \npeak 20 feet up the side of the tree to a bare 8 inches from the thick \ndark green moss, which cushions the floor. A very fine screen forms \nthe short remaining wall. The mesh seems to disappear when you attempt \nto look closely at it. A bubbling stream fills the pond at the center \nof the room, and the force of the water forms a small magical \n#Bfountain#N that seems to be altered.",
+      "ZoneId": 280,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "Regen",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "South",
+          "TargetId": 28012,
+          "Description": "",
+          "Keywords": [
+            "door"
+          ],
+          "ExitFlags": [
+            "IsDoor"
+          ],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
         {
           "Keywords": [
             "redwood",

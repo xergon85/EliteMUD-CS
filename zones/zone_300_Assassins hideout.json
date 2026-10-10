@@ -1328,38 +1328,33 @@
             "IsDoor"
           ],
           "KeyId": null
-        },
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 30017,
+      "Name": "The food storage room",
+      "Description": "This room is very damp and the walls is made of packed earth. The \nroom is filled with sacks and barrels with food and wine. With all this \nfood this organization will not be starving for years. The only exit is \nthrough the door to the east.",
+      "ZoneId": 300,
+      "Sector": "Inside",
+      "Flags": [
+        "Dark",
+        "Indoors"
+      ],
+      "Exits": [
         {
-          "Direction": "North",
-          "TargetId": 262400,
-          "Description": "The door is very very fragile and would probably break if you bash it.",
-          "Keywords": [
-            "S",
-            "#30017",
-            "The",
-            "food",
-            "storage",
-            "room"
-          ],
+          "Direction": "East",
+          "TargetId": 30016,
+          "Description": "",
+          "Keywords": [],
           "ExitFlags": [
-            "Wall",
-            "BashProof",
-            "Broken"
+            "IsDoor"
           ],
-          "KeyId": 151552
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "and the walls is made of packed earth. The \nroom is filled with sacks and barrels with food and wine. With all this \nfood this organization will not be starving for years. The only exit is \nthrough the door to the east.",
-          "Keywords": [
-            "300",
-            "ad",
-            "0",
-            "D1"
-          ],
-          "ExitFlags": [],
-          "KeyId": 1
+          "KeyId": null
         }
       ],
       "ExtraDescriptions": [],

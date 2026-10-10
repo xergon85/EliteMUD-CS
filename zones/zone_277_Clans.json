@@ -278,7 +278,18 @@
         }
       ],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "echo",
+          "Arguments": "10",
+          "Commands": "\"Jimbo! - Bring me a beer will you?\" can be heard from one of the beds."
+        },
+        {
+          "Type": "echo",
+          "Arguments": "1",
+          "Commands": "\"Hey, Jimbo! - Where is that Beer I told you to bring ?"
+        }
+      ],
       "CrashRoom": false
     },
     {
@@ -533,7 +544,13 @@
       ],
       "ExtraDescriptions": [],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "echo",
+          "Arguments": "25",
+          "Commands": "ni..ni..ni..ni..."
+        }
+      ],
       "CrashRoom": false
     },
     {
@@ -665,49 +682,38 @@
           ],
           "ExitFlags": [],
           "KeyId": null
-        },
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [
         {
-          "Direction": "North",
-          "TargetId": 2236432,
-          "Description": "You Really answer the questions correctly ???\n   Lucky you to still be alive - and inside the Ni Clan House !",
-          "Keywords": [
-            "S",
-            "#27711",
-            "#YThe",
-            "Holy",
-            "Grail#N",
-            "!!!"
-          ],
-          "ExitFlags": [
-            "Locked",
-            "Broken"
-          ],
-          "KeyId": 786816
-        },
+          "Type": "trans",
+          "Arguments": "100 27710 3",
+          "Commands": "Did You Really answer the questions correctly ???\n   Lucky you to still be alive - and inside the Ni Clan House !"
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27711,
+      "Name": "#YThe Holy Grail#N !!!",
+      "Description": "In this never to be accessed room the devine Knights might gather\nwhen they want to draft some new plans in privacy. Their long and very\ndangerous path finally led them to their ultimate goal.\n                      #RThe #YHoly #GGrail#N.\nNo mortal may ever enter this room as it most certainly would cause\ncertain death to those still unworthy.",
+      "ZoneId": 277,
+      "Sector": "City",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
         {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "Knights might gather\nwhen they want to draft some new plans in privacy. Their long and very\ndangerous path finally led them to their ultimate goal.\n                      #RThe #YHoly #GGrail#N.\nNo mortal may ever enter this room as it most certainly would cause\ncertain death to those still unworthy.",
-          "Keywords": [
-            "277",
-            "uzd",
-            "1",
-            "D1",
-            "Walk",
-            "out",
-            "into",
-            "the",
-            "realm",
-            "of",
-            "the",
-            "mortal",
-            "#RKnights",
-            "#Ywho",
-            "say",
-            "#GNi#N."
-          ],
+          "Direction": "East",
+          "TargetId": 27710,
+          "Description": "Walk out into the realm of the mortal #RKnights #Ywho say #GNi#N.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         }
       ],
       "ExtraDescriptions": [],
@@ -862,7 +868,13 @@
         }
       ],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "echo",
+          "Arguments": "15",
+          "Commands": "ni..ni..."
+        }
+      ],
       "CrashRoom": false
     }
   ],

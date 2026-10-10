@@ -1450,92 +1450,6 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
-        {
-          "Direction": "North",
-          "TargetId": 524432,
-          "Description": "basking in the storm.",
-          "Keywords": [
-            ">echo",
-            "1"
-          ],
-          "ExitFlags": [],
-          "KeyId": 131217
-        },
-        {
-          "Direction": "North",
-          "TargetId": 2049,
-          "Description": "enjoying the storm.",
-          "Keywords": [
-            ">echo",
-            "1"
-          ],
-          "ExitFlags": [
-            "PickProof",
-            "Trap",
-            "Wall",
-            "BashProof",
-            "Broken"
-          ],
-          "KeyId": 264369
-        },
-        {
-          "Direction": "North",
-          "TargetId": 17842176,
-          "Description": "within the fortress comes a deep rumbling roar\nand suddenly everything is calm once again.",
-          "Keywords": [
-            ">echo",
-            "1"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Locked",
-            "Trap",
-            "BashProof",
-            "TrapSet",
-            "Broken"
-          ],
-          "KeyId": 1204233
-        },
-        {
-          "Direction": "North",
-          "TargetId": 16416,
-          "Description": "dragon\nbefore swooping low overhead and disappearing into the storm.",
-          "Keywords": [
-            "S",
-            "#27822",
-            "The",
-            "Basement"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 798739
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "room. The walls are\nhidden behind stacks of unused equipment, armour and weapons. In the \nlight cast by flickering torches, the discarded junk takes on a life of \nits own, with peculiar and fearsome shadow shapes dancing on the walls.\nThis room is where the Storm Dragons leave all the lesser treasures \nthat they pick up on their adventures - not worth donating, but worth\nhaving around just in case.",
-          "Keywords": [
-            "278",
-            "duz",
-            "0",
-            "D4",
-            "A",
-            "spiral",
-            "staircase",
-            "leads",
-            "up",
-            "to",
-            "the",
-            "clan",
-            "Donation",
-            "room."
-          ],
-          "ExitFlags": [],
-          "KeyId": 0
         }
       ],
       "ExtraDescriptions": [
@@ -1550,6 +1464,58 @@
           "Description": "Several round viking shields still cling to the bulwarks of the wrecked \nlongship. The splinted mast and shreds of the once-square sail lie \nforlornly to one side. A cluster of barrels thrown from the wreckage are\nscattered around here."
         }
       ],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "echo",
+          "Arguments": "1",
+          "Commands": "Thunder rumbles all around you. High in the storm clouds you think you\nsee the outline of a huge dragon basking in the storm."
+        },
+        {
+          "Type": "echo",
+          "Arguments": "1",
+          "Commands": "You hear the sound of giant wings beating. Glancing back at the fortress\nyou think you see one of the Drakes enjoying the storm."
+        },
+        {
+          "Type": "echo",
+          "Arguments": "1",
+          "Commands": "Lightning flashes all around you, crackling off the magical barriers \nsurrounding the balcony."
+        },
+        {
+          "Type": "echo",
+          "Arguments": "1",
+          "Commands": "Magic crackles all around you, and suddenly the full force of the storm\nbuffets you. From deep within the fortress comes a deep rumbling roar\nand suddenly everything is calm once again."
+        },
+        {
+          "Type": "echo",
+          "Arguments": "1",
+          "Commands": "Glancing around, you see a person at one of the windows. Before your\neyes, the figure shimmers and changes shape into a huge dark dragon\nbefore swooping low overhead and disappearing into the storm."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 27822,
+      "Name": "The Basement",
+      "Description": "The basement of the fortress is one huge dusty room. The walls are\nhidden behind stacks of unused equipment, armour and weapons. In the \nlight cast by flickering torches, the discarded junk takes on a life of \nits own, with peculiar and fearsome shadow shapes dancing on the walls.\nThis room is where the Storm Dragons leave all the lesser treasures \nthat they pick up on their adventures - not worth donating, but worth\nhaving around just in case.",
+      "ZoneId": 278,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoSweep"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": 27803,
+          "Description": "A spiral staircase leads up to the clan Donation room.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
       "SpecialProc": null,
       "RoomPrograms": [],
       "CrashRoom": false

@@ -4017,34 +4017,46 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "water"
+          ],
+          "Description": "The water is cool and without much of a stir other than the one you\nbring. The lack of lighting over the harbour basin cave makes it\nvery dark down here, even though it is close to the surface."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "push",
+          "Arguments": "20 2",
+          "Commands": "Something drags you south."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13218,
+      "Name": "Underwater",
+      "Description": "A big hole leads east into the mountain wall. It is as dark and silent\ndown here as if you would have put your head into your waterskin. You can\nnot detect any more dangers in this place than inside the waterskin...",
+      "ZoneId": 132,
+      "Sector": "Underwater",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Silent",
+        "NoScout"
+      ],
+      "Exits": [
         {
           "Direction": "North",
-          "TargetId": 18576,
-          "Description": "you south.",
-          "Keywords": [
-            "S",
-            "#13218",
-            "Underwater"
-          ],
+          "TargetId": 13217,
+          "Description": "Below the surface.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 322
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "and silent\ndown here as if you would have put your head into your waterskin. You can\nnot detect any more dangers in this place than inside the waterskin...",
-          "Keywords": [
-            "132",
-            "Aoad",
-            "8",
-            "D0",
-            "Below",
-            "the",
-            "surface."
-          ],
-          "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "East",
@@ -4077,38 +4089,46 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "water"
+          ],
+          "Description": "The water is cool and without much of a stir other than the one you\nbring. The lack of lighting over the harbour basin cave makes it\nvery dark down here, even though it is close to the surface."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "push",
+          "Arguments": "20 1",
+          "Commands": "Something takes you into the dark cave."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13219,
+      "Name": "Underwater Blubb, blubb!",
+      "Description": "It is silent and dark and there is almost no activity here, well under\nthe surface. It is a little bit brighter above and much less below and\neast as the excavated mountain connects to the east wall. Water stretches\nout in all other directions.",
+      "ZoneId": 132,
+      "Sector": "Underwater",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Silent",
+        "NoScout"
+      ],
+      "Exits": [
         {
           "Direction": "North",
-          "TargetId": 796944,
-          "Description": "cave.",
-          "Keywords": [
-            "S",
-            "#13219",
-            "Underwater",
-            "Blubb,",
-            "blubb!"
-          ],
-          "ExitFlags": [
-            "Locked"
-          ],
-          "KeyId": 262400
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "and there is almost no activity here, well under\nthe surface. It is a little bit brighter above and much less below and\neast as the excavated mountain connects to the east wall. Water stretches\nout in all other directions.",
-          "Keywords": [
-            "132",
-            "Aoad",
-            "8",
-            "D0",
-            "Below",
-            "the",
-            "surface."
-          ],
+          "TargetId": 13218,
+          "Description": "Below the surface.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "South",
@@ -4133,48 +4153,6 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
-        {
-          "Direction": "North",
-          "TargetId": 24576,
-          "Description": "you north.",
-          "Keywords": [
-            "S",
-            "#13220",
-            "In",
-            "an",
-            "underwater",
-            "cave"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "ResetLocked",
-            "PassProof",
-            "Broken"
-          ],
-          "KeyId": 659485
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "place and feeding ground.",
-          "Keywords": [
-            "132",
-            "Aoad",
-            "8",
-            "D3",
-            "An",
-            "open",
-            "bulk",
-            "of",
-            "just",
-            "slightly",
-            "more",
-            "penetrateble",
-            "water."
-          ],
-          "ExitFlags": [],
-          "KeyId": 0
         }
       ],
       "ExtraDescriptions": [
@@ -4183,20 +4161,41 @@
             "water"
           ],
           "Description": "The water is cool and without much of a stir other than the one you\nbring. The lack of lighting over the harbour basin cave makes it\nvery dark down here, even though it is close to the surface."
-        },
-        {
-          "Keywords": [
-            "water"
-          ],
-          "Description": "The water is cool and without much of a stir other than the one you\nbring. The lack of lighting over the harbour basin cave makes it\nvery dark down here, even though it is close to the surface."
-        },
-        {
-          "Keywords": [
-            "water"
-          ],
-          "Description": "The water is cool and without much of a stir other than the one you\nbring. The lack of lighting over the harbour basin cave makes it\nvery dark down here, even though it is close to the surface."
         }
       ],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "push",
+          "Arguments": "20 0",
+          "Commands": "Something drags you north."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13220,
+      "Name": "In an underwater cave",
+      "Description": "Darkness... Scattered on the ground are small metal parts and broken\nboats. Looks like something or someone used this place as a combined\ndumping place and feeding ground.",
+      "ZoneId": 132,
+      "Sector": "Underwater",
+      "Flags": [
+        "Dark",
+        "Indoors",
+        "Silent",
+        "NoScout"
+      ],
+      "Exits": [
+        {
+          "Direction": "West",
+          "TargetId": 13218,
+          "Description": "An open bulk of just slightly more penetrateble water.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [],
       "SpecialProc": null,
       "RoomPrograms": [],
       "CrashRoom": false
@@ -6780,38 +6779,43 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pillar"
+          ],
+          "Description": "It is BIG!  Go closer and have a look it will not harm you."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [
+        {
+          "Type": "push",
+          "Arguments": "50 3",
+          "Commands": "Fritz drags you into his shop filled with various useful wares."
+        }
+      ],
+      "CrashRoom": false
+    },
+    {
+      "Id": 13274,
+      "Name": "King Way",
+      "Description": "The King Way tunnel takes you in a north south direction. The\noccasional smoothed walls show graphic interpretations of the great deeds\nperformed by the dwarven ruler. Two small stone wheels indicate passages\ninto what seem to be little shops.",
+      "ZoneId": 132,
+      "Sector": "City",
+      "Flags": [
+        "Indoors"
+      ],
+      "Exits": [
         {
           "Direction": "North",
-          "TargetId": 16842753,
-          "Description": "you into his shop filled with various useful wares.",
-          "Keywords": [
-            "S",
-            "#13274",
-            "King",
-            "Way"
-          ],
-          "ExitFlags": [
-            "ResetLocked",
-            "Wall",
-            "Broken"
-          ],
-          "KeyId": 8528
-        },
-        {
-          "Direction": "North",
-          "TargetId": -1,
-          "Description": "The\noccasional smoothed walls show graphic interpretations of the great deeds\nperformed by the dwarven ruler. Two small stone wheels indicate passages\ninto what seem to be little shops.",
-          "Keywords": [
-            "132",
-            "d",
-            "1",
-            "D0",
-            "Parade",
-            "Street."
-          ],
+          "TargetId": 13245,
+          "Description": "Parade Street.",
+          "Keywords": [],
           "ExitFlags": [],
-          "KeyId": 0
+          "KeyId": null
         },
         {
           "Direction": "East",
@@ -6849,12 +6853,6 @@
         }
       ],
       "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "pillar"
-          ],
-          "Description": "It is BIG!  Go closer and have a look it will not harm you."
-        },
         {
           "Keywords": [
             "ruler",
@@ -7118,7 +7116,13 @@
         }
       ],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "echo",
+          "Arguments": "10",
+          "Commands": "Something peeks out at you from the face of the stone."
+        }
+      ],
       "CrashRoom": false
     },
     {
@@ -7365,7 +7369,13 @@
         }
       ],
       "SpecialProc": null,
-      "RoomPrograms": [],
+      "RoomPrograms": [
+        {
+          "Type": "echo",
+          "Arguments": "2",
+          "Commands": "#RFritz tells you 'What can I get you people?'#N"
+        }
+      ],
       "CrashRoom": false
     },
     {
