@@ -16,6 +16,31 @@ _Date: Oct 10, 2026 · Scope: `zones/*.json` (115 files) compared with the legac
 
 **Recommendation:** fix the importer and re-import *before* building the reference checker. Then run the checker as warnings first, and only make it strict once the remaining legacy problems are fixed or marked.
 
+## Progress (Oct 11, 2026, branch `fix/legacy-import`)
+
+| Finding | Status | Commits |
+|---|---|---|
+| 1. Tabs break reset parsing | ✅ Fixed. Reset lines are parsed like `load_reset_cmds`. All 478 mangled resets restored, comments kept. | `de561a0`, data `3da2761` |
+| 2. Mob records dropped | ✅ Fixed. All 2,658 legacy mob records import; 38 more mobs in the zones. The causes were parser differences, not unknown formats (see below). | `976a25e`, data `be6be66` |
+| 3. Zone-less objects dropped | ⬜ Open | |
+| 4. Broken references | 🔶 Partly. Rooms swallowed by misparsed room programs are recovered (20 rooms), including 7716, 12951, and the bogus exit to 4474912. Not re-measured as a whole yet. | `15d0ff1`, data `f94b678` |
+| 5. Server hides problems | 🔶 Importer now logs unparseable reset lines and unknown room markers. Server side unchanged. | |
+
+Also done: the in-game `import-legacy` command was removed; importing is CLI-only (`bce5a6c`).
+
+**What actually caused the dropped mobs and rooms.** The importer read the files differently from the original C code in four places:
+
+- **Room markers** were matched case-insensitively with `StartsWith("D")`, and programs only on an exact `>`. Real programs look like `>push 10 1~`, so the program text was read word by word, and "down" became an exit that swallowed the next room. Now ported from `load_rooms`.
+- **Tilde strings** ended at any `~`. Legacy `fread_string` ends only on a line whose last non-space character is `~`, and discards the rest of that line. A stray `~~` (93.mob #9308) shifted every following field.
+- **Dice** like `3d6+9-1` (terminator glued on, 5.mob #501) were read as one token.
+- **List values** like `385-1` (terminator glued on) were parsed as flag bits.
+
+**New findings while fixing:**
+
+- **Hand-fix list:** ~80 import warnings are genuine errors in the legacy files that the original also misreads, e.g. text placed before an exit marker (66.wld #6644), stray `~` lines, the wrapped zone comment `request` (26.zon) and `O o 3034 …` (289.zon). Because of the last one, the clan hall ATM (object 3034, room 28906) no longer loads; the old importer read the typo as `0` by accident.
+- **Duplicate ids:** 65 room ids and 12 mob ids are defined twice in the legacy files. Legacy keeps the later definition; we haven't checked which one we keep. Separately, 378 room ids appear in more than one grouped zone file (this predates the fixes and comes from the grouping step).
+- **Not bugs:** the color-coded door keywords in clan zone 275 are intentional builder work. The mob with id 0 ("Noname Monster") is a real legacy record in `0.mob`.
+
 ---
 
 ## Finding 1: Tabs break zone reset parsing
@@ -121,11 +146,11 @@ Each layer quietly passes broken data on. That's how a shopkeeper can be missing
 
 ## Suggested Order
 
-1. **Fix the tokenizer** (Finding 1). Small change, biggest effect. Add an importer test using real legacy lines with tabs.
-2. **Make the importer loud.** Every skipped record or unparseable field is logged with file, record and reason, and summarized at the end.
-3. **Fix mob format variants** (Finding 2) and **decide where zone-less objects live** (Finding 3).
-4. **Re-import and re-run this audit.** What remains should be real legacy breakage.
-5. **Build the reference checker** for world content, starting in warning mode. Fix or mark what's left, then switch to errors.
+1. ✅ **Fix the tokenizer** (Finding 1). Small change, biggest effect. Add an importer test using real legacy lines with tabs.
+2. 🔶 **Make the importer loud.** Every skipped record or unparseable field is logged with file, record and reason, and summarized at the end. *(Reset lines and room markers done; mobs, objects and a summary still to do.)*
+3. ✅ **Fix mob format variants** (Finding 2). ⬜ **Decide where zone-less objects live** (Finding 3).
+4. ⬜ **Re-import and re-run this audit.** What remains should be real legacy breakage.
+5. ⬜ **Build the reference checker** for world content, starting in warning mode. Fix or mark what's left, then switch to errors.
 
 ## Method
 
