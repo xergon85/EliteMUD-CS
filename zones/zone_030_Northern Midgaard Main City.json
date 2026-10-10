@@ -7569,6 +7569,60 @@
       "Programs": []
     },
     {
+      "Id": 3097,
+      "Name": "claneq shopkeeper",
+      "ShortDescription": "Clan eq Shopkeeper",
+      "LongDescription": "A Clan equipment shopkeeper",
+      "Description": "He is an old man, but you should still not take him for granted, after all,\nhe is the shopkeeper of the clan eq, and he probably knows how to make the\nbest of the equipment he is selling.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Sentinel",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -2000,
+        "Hitroll": 120,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "100d100+100"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 150000,
+      "Experience": 50000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
       "Id": 3098,
       "Name": "questeq shopkeeper",
       "ShortDescription": "Quest eq Shopkeeper",

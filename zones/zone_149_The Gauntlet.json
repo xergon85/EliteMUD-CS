@@ -3102,54 +3102,89 @@
       "Skills": [
         "Skill_315:95",
         "Skill_372:95",
-        "Skill_322:951"
+        "Skill_322:95"
       ],
-      "Resistances": [
-        "Resist_10000:2000000",
-        "Resist_8:8",
-        "Resist_1:14921",
-        "Resist_0:8336",
-        "Resist_0:8336",
-        "Resist_0:262400",
-        "Resist_0:1476625",
-        "Resist_0:1",
-        "Resist_0:0",
-        "Resist_0:28736",
-        "Resist_0:8196",
-        "Resist_0:397333",
-        "Resist_0:17842176",
-        "Resist_0:524289",
-        "Resist_0:1059136",
-        "Resist_0:1204233",
-        "Resist_0:151552",
-        "Resist_0:24576",
-        "Resist_0:8201",
-        "Resist_0:292160",
-        "Resist_0:8448",
-        "Resist_0:8329",
-        "Resist_0:655385",
-        "Resist_0:4598080",
-        "Resist_0:524432",
-        "Resist_0:151584",
-        "Resist_0:8710416",
-        "Resist_0:1835520",
-        "Resist_0:0",
-        "Resist_18:4",
-        "Resist_0:687867016",
-        "Resist_750:4096",
-        "Resist_109:-55",
-        "Resist_-65:8012000",
-        "Resist_400:407",
-        "Resist_60:1010100",
-        "Resist_400:408",
-        "Resist_20:1010120",
-        "Resist_103:0",
-        "Resist_20:9095"
+      "Resistances": [],
+      "Gold": 10000,
+      "Experience": 2000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 14921,
+      "Name": "genious",
+      "ShortDescription": "The Genious",
+      "LongDescription": "The Genious is awaiting pleasure from a vamp.",
+      "Description": "THAT MUST BE IT, he screams as you glance at him. Running frantically\naround the room, hair on end and a smoking bottle in his hand.\nHis tattered robes swirling in the dust from the explosion that just\noccured.",
+      "Level": 109,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "AggressiveEvil",
+        "AggressiveGood",
+        "AggressiveNeutral",
+        "Memory",
+        "Helper"
       ],
-      "Gold": 322,
-      "Experience": 95,
-      "DefaultPosition": "Position_-1",
-      "Sex": "Neutral",
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared",
+        "Fly",
+        "Regeneration"
+      ],
+      "Alignment": 750,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+12000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -650,
+        "Hitroll": 75,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 407,
+          "Chance": 60,
+          "DamageDice": "10d10+100"
+        },
+        {
+          "Type": "Hit",
+          "DamageType": 408,
+          "Chance": 20,
+          "DamageDice": "10d10+120"
+        },
+        {
+          "Type": "Attack_103",
+          "DamageType": 0,
+          "Chance": 20,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [
+        "Skill_322:95"
+      ],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 1000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
       "ActionScript": null,
       "SpecialProc": null,
       "Programs": []

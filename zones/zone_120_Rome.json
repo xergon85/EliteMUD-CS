@@ -9393,13 +9393,19 @@
         },
         {
           "Direction": "South",
-          "TargetId": 1073741829,
+          "TargetId": 12143,
           "Description": "",
           "Keywords": [],
-          "ExitFlags": [
-            "IsDoor"
-          ],
-          "KeyId": 12143
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 12144,
+          "Description": "",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
         }
       ],
       "ExtraDescriptions": [],
@@ -12575,21 +12581,70 @@
           "Type": "Attack_26",
           "DamageType": 0,
           "Chance": 20,
-          "DamageDice": "1d0+99-1"
+          "DamageDice": "1d0+99"
         }
       ],
       "Skills": [],
-      "Resistances": [
-        "Resist_22000:500000",
-        "Resist_8:8",
-        "Resist_2:67108864",
-        "Resist_0:1708048",
-        "Resist_0:-1"
+      "Resistances": [],
+      "Gold": 22000,
+      "Experience": 500000,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
+      "ActionScript": "%%8 mutter",
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 12026,
+      "Name": "Titus romemob",
+      "ShortDescription": "Titus Andronicus",
+      "LongDescription": "Titus Andronicus is standing here, polishing a few swords.",
+      "Description": "The master swordsmith, Titus Andronicus retired after 30 years of\nsoldiering with the Roman Army to open his weapons-and-armor shops.  He\nsells nothing but the best, he will tell you.",
+      "Level": 24,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
       ],
-      "Gold": -1,
-      "Experience": -1,
-      "DefaultPosition": "Position_12026",
-      "Sex": "Neutral",
+      "Affects": [
+        "Light",
+        "Dodge",
+        "Sneak"
+      ],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+354",
+        "Mana": 340,
+        "Move": 440
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 12,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d12+13"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 576,
+      "Experience": 50001,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
       "ActionScript": null,
       "SpecialProc": null,
       "Programs": []
@@ -13146,50 +13201,67 @@
         }
       ],
       "Skills": [
-        "Skill_384:3851"
+        "Skill_384:385"
       ],
-      "Resistances": [
-        "Resist_425:145000",
-        "Resist_8:8",
-        "Resist_1:12036",
-        "Resist_0:151570",
-        "Resist_0:134349841",
-        "Resist_0:134349841",
-        "Resist_0:524289",
-        "Resist_0:16783365",
-        "Resist_0:147488",
-        "Resist_0:540672",
-        "Resist_0:0",
-        "Resist_0:1",
-        "Resist_0:2352",
-        "Resist_0:1",
-        "Resist_0:270720",
-        "Resist_0:267281",
-        "Resist_0:26688",
-        "Resist_0:16416",
-        "Resist_0:262145",
-        "Resist_0:262145",
-        "Resist_0:1181957",
-        "Resist_0:286736",
-        "Resist_0:4718976",
-        "Resist_0:8201",
-        "Resist_0:4202512",
-        "Resist_0:144",
-        "Resist_0:10565",
-        "Resist_0:33581077",
-        "Resist_0:1",
-        "Resist_4:66",
-        "Resist_0:900",
-        "Resist_0:109",
-        "Resist_-50:-100",
-        "Resist_0:400",
-        "Resist_500:100",
-        "Resist_0:-1"
-      ],
-      "Gold": -1,
-      "Experience": 60000,
+      "Resistances": [],
+      "Gold": 425,
+      "Experience": 145000,
       "DefaultPosition": "Standing",
-      "Sex": "Neutral",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 12036,
+      "Name": "baker romemob",
+      "ShortDescription": "the Baker",
+      "LongDescription": "The Baker looks at you calmly, waiting for you to decide.",
+      "Description": "It's a hard life, being a baker.  This one makes nice long loaves of\nbread as well as the circular flat ones topped with cheese and a new\ninvention he is calling a calzone.",
+      "Level": 109,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary"
+      ],
+      "Alignment": 900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+30000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -1000,
+        "Hitroll": 70,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d54+54"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 60000,
+      "Experience": 500000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
       "ActionScript": null,
       "SpecialProc": null,
       "Programs": []
@@ -15371,64 +15443,63 @@
           "Type": "Hit",
           "DamageType": 500,
           "Chance": 100,
-          "DamageDice": "3d6+9-1"
+          "DamageDice": "3d6+9"
         }
       ],
       "Skills": [],
-      "Resistances": [
-        "Resist_1000:100000",
-        "Resist_8:8",
-        "Resist_1:12078",
-        "Resist_0:30721",
-        "Resist_0:133145",
-        "Resist_0:8336",
-        "Resist_0:1728788",
-        "Resist_0:30721",
-        "Resist_0:919604",
-        "Resist_0:524432",
-        "Resist_0:8201",
-        "Resist_0:147488",
-        "Resist_0:0",
-        "Resist_0:1",
-        "Resist_0:530576",
-        "Resist_0:4718976",
-        "Resist_0:131096",
-        "Resist_0:524432",
-        "Resist_0:1728788",
-        "Resist_0:524289",
-        "Resist_0:153",
-        "Resist_0:262528",
-        "Resist_100:12289",
-        "Resist_0:8336",
-        "Resist_0:16912385",
-        "Resist_0:262145",
-        "Resist_0:1312820",
-        "Resist_0:524432",
-        "Resist_0:262400",
-        "Resist_0:303448",
-        "Resist_0:1335298",
-        "Resist_0:4196608",
-        "Resist_0:18",
-        "Resist_0:1",
-        "Resist_0:12289",
-        "Resist_0:2244665",
-        "Resist_0:1",
-        "Resist_0:917953",
-        "Resist_0:262402",
-        "Resist_0:262400",
-        "Resist_0:8201",
-        "Resist_0:1589440",
-        "Resist_0:393235",
-        "Resist_0:393221",
-        "Resist_0:1",
-        "Resist_4:64",
-        "Resist_0:0",
-        "Resist_0:25",
-        "Resist_9:-4",
-        "Resist_0:400",
-        "Resist_500:100",
-        "Resist_0:-1"
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 12078,
+      "Name": "centurion Roman soldier leader romemob",
+      "ShortDescription": "The Roman centurion",
+      "LongDescription": "The Roman centurion reflects on the campaign and looks for relaxation.",
+      "Description": "Wearing a bronze helmet topped with bright red feathers, the Roman\ncenturion struts at the head of his 100 man command.  The Roman army\nwas, as always, successful, and the centurion is mentally spending the\nbonus he will receive.  He is a tall man, well favored, with a long\nstraight nose.  His skin is well-tanned and firm, though it bears many\nscars.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone"
       ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d150+250",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 11,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+7"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
       "Gold": 400,
       "Experience": 60000,
       "DefaultPosition": "Standing",
@@ -15476,49 +15547,64 @@
           "Type": "Hit",
           "DamageType": 500,
           "Chance": 100,
-          "DamageDice": "3d4+5-1"
+          "DamageDice": "3d4+5"
         }
       ],
       "Skills": [],
-      "Resistances": [
-        "Resist_400:33000",
-        "Resist_8:8",
-        "Resist_1:12080",
-        "Resist_0:30721",
-        "Resist_0:30721",
-        "Resist_0:8336",
-        "Resist_0:30721",
-        "Resist_0:1966080",
-        "Resist_0:18008072",
-        "Resist_0:262528",
-        "Resist_0:8448",
-        "Resist_0:0",
-        "Resist_0:4718976",
-        "Resist_0:917792",
-        "Resist_0:524432",
-        "Resist_0:4342017",
-        "Resist_0:144",
-        "Resist_0:1638685",
-        "Resist_0:4718976",
-        "Resist_0:18",
-        "Resist_0:17958965",
-        "Resist_0:262528",
-        "Resist_0:262528",
-        "Resist_0:16416",
-        "Resist_0:8201",
-        "Resist_0:4196608",
-        "Resist_0:524417",
-        "Resist_0:540672",
-        "Resist_0:16783649",
-        "Resist_0:1",
-        "Resist_4:4160",
-        "Resist_0:0",
-        "Resist_0:22",
-        "Resist_11:-3",
-        "Resist_0:400",
-        "Resist_500:100",
-        "Resist_0:-1"
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 33000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 12080,
+      "Name": "warrior Roman",
+      "ShortDescription": "The Roman warrior",
+      "LongDescription": "The young Roman warrior struts along proudly with his comrades in arms.",
+      "Description": "Finished with his first campaign, the young warrior feels he has\nacquitted himself with honor.  He has carefully guarded his salarium,\nhis ration of salt, and he will bring that back to his family.",
+      "Level": 22,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "StayZone",
+        "Helper"
       ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+220",
+        "Mana": 320,
+        "Move": 410
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 9,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
       "Gold": 400,
       "Experience": 33000,
       "DefaultPosition": "Standing",
@@ -15625,63 +15711,63 @@
           "Type": "Hit",
           "DamageType": 500,
           "Chance": 100,
-          "DamageDice": "3d6+9-1"
+          "DamageDice": "3d6+9"
         }
       ],
       "Skills": [],
-      "Resistances": [
-        "Resist_1000:100000",
-        "Resist_8:8",
-        "Resist_1:12083",
-        "Resist_0:2099472",
-        "Resist_0:151570",
-        "Resist_0:2099472",
-        "Resist_0:8336",
-        "Resist_0:139523",
-        "Resist_0:14609",
-        "Resist_0:147488",
-        "Resist_0:4202512",
-        "Resist_0:0",
-        "Resist_0:526337",
-        "Resist_0:0",
-        "Resist_0:2049",
-        "Resist_0:65",
-        "Resist_0:4098",
-        "Resist_0:4718976",
-        "Resist_0:24594",
-        "Resist_0:8201",
-        "Resist_0:8504",
-        "Resist_0:524432",
-        "Resist_0:4196608",
-        "Resist_0:264208",
-        "Resist_0:1",
-        "Resist_0:164116",
-        "Resist_0:524432",
-        "Resist_0:660497",
-        "Resist_0:3416209",
-        "Resist_0:1835520",
-        "Resist_0:4718976",
-        "Resist_0:8201",
-        "Resist_0:1460376",
-        "Resist_0:1507345",
-        "Resist_0:1031",
-        "Resist_0:18",
-        "Resist_0:4325393",
-        "Resist_0:262528",
-        "Resist_0:8201",
-        "Resist_0:16777218",
-        "Resist_0:1835009",
-        "Resist_0:1",
-        "Resist_1:64",
-        "Resist_0:0",
-        "Resist_0:25",
-        "Resist_7:-5",
-        "Resist_0:400",
-        "Resist_500:100",
-        "Resist_0:-1"
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 12083,
+      "Name": "barbarian evil slave romemob",
+      "ShortDescription": "The evil barbarian",
+      "LongDescription": "The evil barbarian performs menial tasks for his new owner.",
+      "Description": "A tall human ... perhaps all of 6.5' (about 2m.) ... with heavy bone\nstructure and well defined musculature, the captive will undoubtedly\nsell for a high price at the slave market.  His unshaven chin juts out\nwith pride, and his shoulders remain square, his back straight.  He is\naware of his worth and uncowed by his status.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "MagicUser",
+      "Flags": [
+        "StayZone"
       ],
-      "Gold": -1,
-      "Experience": 0,
+      "Affects": [],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "4d38+262",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 29167,
       "DefaultPosition": "Standing",
       "Sex": "Neutral",
       "ActionScript": null,

@@ -7773,63 +7773,86 @@
         }
       ],
       "Skills": [
-        "Skill_322:951"
+        "Skill_322:95"
       ],
-      "Resistances": [
-        "Resist_20000:3750000",
-        "Resist_8:8",
-        "Resist_1:18221",
-        "Resist_0:157769",
-        "Resist_0:132121",
-        "Resist_0:67117056",
-        "Resist_0:537028681",
-        "Resist_0:17301952",
-        "Resist_0:537028681",
-        "Resist_0:131216",
-        "Resist_0:18",
-        "Resist_0:524432",
-        "Resist_0:262402",
-        "Resist_0:262400",
-        "Resist_0:1572866",
-        "Resist_0:1730821",
-        "Resist_0:262402",
-        "Resist_0:270674",
-        "Resist_0:8210",
-        "Resist_0:16777218",
-        "Resist_0:4589824",
-        "Resist_0:1198084",
-        "Resist_0:151584",
-        "Resist_0:262528",
-        "Resist_0:16777218",
-        "Resist_0:524417",
-        "Resist_0:8201",
-        "Resist_0:262145",
-        "Resist_0:2379792",
-        "Resist_0:281600",
-        "Resist_0:17842176",
-        "Resist_0:1",
-        "Resist_0:143377",
-        "Resist_0:4718976",
-        "Resist_0:17565712",
-        "Resist_0:16416",
-        "Resist_0:1228808",
-        "Resist_0:17306048",
-        "Resist_0:18",
-        "Resist_4:4096",
-        "Resist_0:500",
-        "Resist_0:109",
-        "Resist_-45:-60",
-        "Resist_0:400",
-        "Resist_407:60",
-        "Resist_0:400",
-        "Resist_408:20",
-        "Resist_0:26",
-        "Resist_0:10",
-        "Resist_0:103",
-        "Resist_0:10",
-        "Resist_0:-1",
-        "Resist_322:951"
+      "Resistances": [],
+      "Gold": 20000,
+      "Experience": 3750000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 18221,
+      "Name": "GrandDrake dragonlord grand drake sdzone",
+      "ShortDescription": "An Avatar Dragonlord",
+      "LongDescription": "A Mighty Avatar Dragonlord stands here.",
+      "Description": "He dominates the surroundings. His size is unsurprising but his \ncolouration is! His humble beginnings have been replaced by magnificent\nswirls of colour, lit from within his body by light that flickers and\ndances as he moves. He looks at you in a kindly manner but with the \nsteely gaze of the proud and mighty.",
+      "Level": 109,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Helper"
       ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared",
+        "Fly",
+        "Regeneration"
+      ],
+      "Alignment": 500,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "0d0+10000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -600,
+        "Hitroll": 65,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 407,
+          "Chance": 60,
+          "DamageDice": "10d10+80"
+        },
+        {
+          "Type": "Hit",
+          "DamageType": 408,
+          "Chance": 20,
+          "DamageDice": "10d10+100"
+        },
+        {
+          "Type": "Attack_26",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        },
+        {
+          "Type": "Attack_103",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [
+        "Skill_322:95"
+      ],
+      "Resistances": [],
       "Gold": 20000,
       "Experience": 3750000,
       "DefaultPosition": "Standing",
@@ -7978,54 +8001,84 @@
       "Skills": [
         "Skill_315:95",
         "Skill_372:95",
-        "Skill_322:951"
+        "Skill_322:95"
       ],
-      "Resistances": [
-        "Resist_25000:6000000",
-        "Resist_8:8",
-        "Resist_1:18224",
-        "Resist_0:132121",
-        "Resist_0:157769",
-        "Resist_0:8336",
-        "Resist_0:537028681",
-        "Resist_0:168209",
-        "Resist_0:794633",
-        "Resist_0:0",
-        "Resist_0:168209",
-        "Resist_0:794633",
-        "Resist_0:17842176",
-        "Resist_0:1",
-        "Resist_0:3079",
-        "Resist_0:18",
-        "Resist_0:549120",
-        "Resist_0:17039376",
-        "Resist_0:17842176",
-        "Resist_0:55324",
-        "Resist_0:4197377",
-        "Resist_0:4480",
-        "Resist_0:532624",
-        "Resist_0:262160",
-        "Resist_0:526353",
-        "Resist_0:16416",
-        "Resist_0:2265361",
-        "Resist_0:786688",
-        "Resist_0:526353",
-        "Resist_0:18",
-        "Resist_4:4130",
-        "Resist_0:-900",
-        "Resist_0:109",
-        "Resist_-55:-65",
-        "Resist_0:400",
-        "Resist_402:80",
-        "Resist_0:372",
-        "Resist_0:10",
-        "Resist_0:103",
-        "Resist_0:10",
-        "Resist_0:-1",
-        "Resist_315:95",
-        "Resist_372:95",
-        "Resist_322:951"
+      "Resistances": [],
+      "Gold": 25000,
+      "Experience": 6000000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 18224,
+      "Name": "high drake vampire dragonlord sdzone",
+      "ShortDescription": "The Vampire Dragonlord",
+      "LongDescription": "The Vampire Dragonlord stands here.",
+      "Description": "The Vampire Dragonlord stands before you, wearing a pitch black cloak. \nHe looks into your eyes and you feel compelled to walk towards him - \nthen you see the telltale fangs of a vampire, but it's too late...",
+      "Level": 109,
+      "Race": "Dragon",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "Aggressive",
+        "Helper"
       ],
+      "Affects": [
+        "DetectInvis",
+        "Sanctuary",
+        "Light",
+        "Infrared",
+        "Fly",
+        "Regeneration"
+      ],
+      "Alignment": -900,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "10d10+12000",
+        "Mana": 1190,
+        "Move": 1715
+      },
+      "Combat": {
+        "Armor": -650,
+        "Hitroll": 75,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 402,
+          "Chance": 80,
+          "DamageDice": "10d10+100"
+        },
+        {
+          "Type": "Attack_372",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "0d0+0"
+        },
+        {
+          "Type": "Attack_103",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "1d0+95"
+        }
+      ],
+      "Skills": [
+        "Skill_315:95",
+        "Skill_372:95",
+        "Skill_322:95"
+      ],
+      "Resistances": [],
       "Gold": 25000,
       "Experience": 6000000,
       "DefaultPosition": "Standing",

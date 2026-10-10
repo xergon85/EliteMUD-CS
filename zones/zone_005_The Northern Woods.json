@@ -4089,67 +4089,69 @@
           "Type": "Hit",
           "DamageType": 500,
           "Chance": 100,
-          "DamageDice": "3d6+9-1"
+          "DamageDice": "3d6+9"
         }
       ],
       "Skills": [],
-      "Resistances": [
-        "Resist_1000:100000",
-        "Resist_8:8",
-        "Resist_1:502",
-        "Resist_0:655408",
-        "Resist_0:8336",
-        "Resist_0:655408",
-        "Resist_0:17050880",
-        "Resist_0:264211",
-        "Resist_0:655408",
-        "Resist_0:1720512",
-        "Resist_0:393281",
-        "Resist_0:67108864",
-        "Resist_0:1058985",
-        "Resist_0:802848",
-        "Resist_0:1179680",
-        "Resist_0:16820545",
-        "Resist_0:655408",
-        "Resist_0:8448",
-        "Resist_0:393281",
-        "Resist_0:524432",
-        "Resist_0:16416",
-        "Resist_0:147465",
-        "Resist_0:524546",
-        "Resist_0:16416",
-        "Resist_0:540704",
-        "Resist_0:24576",
-        "Resist_0:147465",
-        "Resist_0:144",
-        "Resist_0:19005456",
-        "Resist_0:590208",
-        "Resist_0:292865",
-        "Resist_0:139586",
-        "Resist_0:397585",
-        "Resist_0:26689",
-        "Resist_0:147465",
-        "Resist_0:17301648",
-        "Resist_0:282640",
-        "Resist_0:17317890",
-        "Resist_0:24592",
-        "Resist_0:655760",
-        "Resist_0:786465",
-        "Resist_0:524544",
-        "Resist_0:270339",
-        "Resist_0:3",
-        "Resist_0:194",
-        "Resist_0:0",
-        "Resist_0:7",
-        "Resist_17:7",
-        "Resist_0:408",
-        "Resist_500:100",
-        "Resist_0:-1"
-      ],
-      "Gold": -1,
-      "Experience": 100,
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 100000,
       "DefaultPosition": "Standing",
-      "Sex": "Neutral",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 502,
+      "Name": "sable ferret m502",
+      "ShortDescription": "The sable ferret",
+      "LongDescription": "A slinky soft sable black ferret slips through the grass.",
+      "Description": "A double handful of soft black fur is playing silly ferret games in the\ngrass by the side of the road.  A bit shy of the foot traffic on the\nroad, still he is very curious.  With the Romans frequently bringing\ntheir armies back along this road, sometimes they drop some interesting\nbooty from one of their campaigns.  Last time it was bananas!",
+      "Level": 7,
+      "Race": "Catbeast",
+      "Class": "Normal",
+      "Flags": [
+        "Sentinel",
+        "StayZone",
+        "Wimpy"
+      ],
+      "Affects": [
+        "Infrared"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d7+109",
+        "Mana": 170,
+        "Move": 185
+      },
+      "Combat": {
+        "Armor": 70,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bite",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d6+3"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 100,
+      "Experience": 1066,
+      "DefaultPosition": "Standing",
+      "Sex": "Female",
       "ActionScript": "%%3 hop",
       "SpecialProc": null,
       "Programs": []
@@ -4247,62 +4249,119 @@
           "Type": "Hit",
           "DamageType": 500,
           "Chance": 100,
-          "DamageDice": "3d4+7-1"
+          "DamageDice": "3d4+7"
         }
       ],
       "Skills": [],
-      "Resistances": [
-        "Resist_400:60000",
-        "Resist_8:8",
-        "Resist_1:505",
-        "Resist_0:131091",
-        "Resist_0:411928",
-        "Resist_0:4096505",
-        "Resist_0:30721",
-        "Resist_0:139717",
-        "Resist_0:524432",
-        "Resist_0:16416",
-        "Resist_0:1228864",
-        "Resist_0:925723",
-        "Resist_0:4718976",
-        "Resist_0:0",
-        "Resist_0:32792",
-        "Resist_0:155650",
-        "Resist_0:1861652",
-        "Resist_0:827408",
-        "Resist_0:4202512",
-        "Resist_0:942085",
-        "Resist_0:4718976",
-        "Resist_0:276",
-        "Resist_0:17039376",
-        "Resist_0:26634",
-        "Resist_0:2207",
-        "Resist_0:4718992",
-        "Resist_0:524432",
-        "Resist_0:8336",
-        "Resist_0:16416",
-        "Resist_0:2361361",
-        "Resist_0:143417",
-        "Resist_0:34349332",
-        "Resist_0:655825",
-        "Resist_0:19005456",
-        "Resist_0:540802",
-        "Resist_0:262528",
-        "Resist_0:262145",
-        "Resist_0:262145",
-        "Resist_0:401716",
-        "Resist_0:526355",
-        "Resist_0:1",
-        "Resist_4:66",
-        "Resist_0:0",
-        "Resist_0:22",
-        "Resist_11:-3",
-        "Resist_0:400",
-        "Resist_500:100",
-        "Resist_0:-1"
+      "Resistances": [],
+      "Gold": 400,
+      "Experience": 60000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 505,
+      "Name": "standard bearer roman soldier standard-bearer m505",
+      "ShortDescription": "The Roman standard-bearer",
+      "LongDescription": "Marching at the head of his group, the standard-bearer moves with\npride.",
+      "Description": "A deep tan born of countless summers spent conquering new territory\ncontrasts sharply with the ice blue eyes and blond hair bleached almost\nwhite by the sun.  The son of a slave turned freedman, this citizen's\nNordic heritage is very clear both in his coloring as well as his\nfierceness in battle.",
+      "Level": 22,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
       ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d100+220",
+        "Mana": 320,
+        "Move": 410
+      },
+      "Combat": {
+        "Armor": -30,
+        "Hitroll": 9,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d4+5"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
       "Gold": 400,
       "Experience": 33000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 507,
+      "Name": "warrior roman carrier soldier m507",
+      "ShortDescription": "The Roman soldier",
+      "LongDescription": "The Roman soldier carries a large gold chest filled with precious gems.",
+      "Description": "Roman soldiers have earned enough for the republic in their many\ncampaigns of conquest that Roman citizens no longer must pay heavy\ntaxes or work as slaves due to their poverty.  This soldier is proud to\nbe carrying back part of the bounty of war, although the chest is quite\nheavy.",
+      "Level": 25,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
+      ],
+      "Affects": [
+        "Berzerk"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "3d38+262",
+        "Mana": 350,
+        "Move": 455
+      },
+      "Combat": {
+        "Armor": -50,
+        "Hitroll": 13,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d5+6"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 29167,
       "DefaultPosition": "Standing",
       "Sex": "Male",
       "ActionScript": null,
@@ -4464,60 +4523,65 @@
           "Type": "Hit",
           "DamageType": 500,
           "Chance": 100,
-          "DamageDice": "3d6+9-1"
+          "DamageDice": "3d6+9"
         }
       ],
       "Skills": [],
-      "Resistances": [
-        "Resist_1000:100000",
-        "Resist_8:8",
-        "Resist_1:511",
-        "Resist_0:159745",
-        "Resist_0:4096511",
-        "Resist_0:17306048",
-        "Resist_0:8336",
-        "Resist_0:1732865",
-        "Resist_0:4342017",
-        "Resist_0:24576",
-        "Resist_0:262145",
-        "Resist_0:417920",
-        "Resist_0:0",
-        "Resist_0:34349332",
-        "Resist_0:8448",
-        "Resist_0:295057",
-        "Resist_0:33816848",
-        "Resist_0:1995009",
-        "Resist_0:4456449",
-        "Resist_0:1188168",
-        "Resist_0:16910353",
-        "Resist_0:24576",
-        "Resist_0:18",
-        "Resist_0:4196368",
-        "Resist_0:1",
-        "Resist_0:139601",
-        "Resist_0:1909009",
-        "Resist_0:18504",
-        "Resist_0:1",
-        "Resist_0:672149",
-        "Resist_0:524432",
-        "Resist_0:147456",
-        "Resist_0:528401",
-        "Resist_0:4456449",
-        "Resist_0:8201",
-        "Resist_0:286720",
-        "Resist_0:417865",
-        "Resist_0:4325392",
-        "Resist_0:540672",
-        "Resist_0:34349332",
-        "Resist_0:1",
-        "Resist_4:66",
-        "Resist_0:600",
-        "Resist_0:30",
-        "Resist_6:-4",
-        "Resist_0:400",
-        "Resist_500:100",
-        "Resist_0:-1"
+      "Resistances": [],
+      "Gold": 1000,
+      "Experience": 100000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 511,
+      "Name": "minotaur roman warrior m511",
+      "ShortDescription": "The mighty warrior",
+      "LongDescription": "The mighty minotaur Roman warrior needs no helmet as his horns suffice.",
+      "Description": "Roman citizens come in all shapes and sizes.  The minotaur's grandsire\nwas captured during an early raid on Crete.  He did well as a slave,\nearning great quantities of gold as a favored charioteer (of the leek,\nor green team).  He was freed, and his son and grandson thereby were\nable to be citizens.",
+      "Level": 30,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Sentinel",
+        "StayZone"
       ],
+      "Affects": [
+        "Light",
+        "Infrared"
+      ],
+      "Alignment": 600,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "2d100+350",
+        "Mana": 400,
+        "Move": 530
+      },
+      "Combat": {
+        "Armor": -40,
+        "Hitroll": 14,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "3d6+9"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
       "Gold": 1000,
       "Experience": 100000,
       "DefaultPosition": "Standing",

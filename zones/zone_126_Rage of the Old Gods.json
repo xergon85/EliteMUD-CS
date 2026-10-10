@@ -4576,56 +4576,70 @@
       ],
       "Skills": [
         "Skill_372:95",
-        "Skill_315:951"
+        "Skill_315:95"
       ],
-      "Resistances": [
-        "Resist_1300:539724",
-        "Resist_8:8",
-        "Resist_1:12620",
-        "Resist_0:1050952",
-        "Resist_0:1",
-        "Resist_0:533952",
-        "Resist_0:290120",
-        "Resist_0:794633",
-        "Resist_0:131216",
-        "Resist_0:18",
-        "Resist_0:16915475",
-        "Resist_0:147488",
-        "Resist_0:803008",
-        "Resist_0:144",
-        "Resist_0:262400",
-        "Resist_0:0",
-        "Resist_0:1835520",
-        "Resist_0:655808",
-        "Resist_0:1",
-        "Resist_0:1057924",
-        "Resist_0:17199105",
-        "Resist_0:262400",
-        "Resist_0:8448",
-        "Resist_0:525700",
-        "Resist_0:1200129",
-        "Resist_0:1",
-        "Resist_0:8201",
-        "Resist_0:1",
-        "Resist_0:405968",
-        "Resist_0:16512",
-        "Resist_0:144",
-        "Resist_0:4210816",
-        "Resist_0:1310736",
-        "Resist_0:540672",
-        "Resist_0:1",
-        "Resist_4:2400",
-        "Resist_0:220",
-        "Resist_0:80",
-        "Resist_-20:-34",
-        "Resist_0:401",
-        "Resist_500:100",
-        "Resist_0:-1"
-      ],
-      "Gold": -1,
-      "Experience": 1275,
+      "Resistances": [],
+      "Gold": 1300,
+      "Experience": 539724,
       "DefaultPosition": "Standing",
-      "Sex": "Neutral",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 12620,
+      "Name": "knight guildg ghost",
+      "ShortDescription": "a ghostly knight",
+      "LongDescription": "A solid-looking ghost stands guard here.",
+      "Description": "He appears remarkably solid for a ghost, though he obviously is one - \nhe just walked right through a large chunk of masonry! He is dressed in \nthe thick protective armour of a knight, and carries a huge shimmering \nsword. No doubt he knows how to use it too.",
+      "Level": 80,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Aggressive",
+        "StayZone",
+        "AggressiveEvil",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis",
+        "Light",
+        "Dodge"
+      ],
+      "Alignment": 220,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d1+1550",
+        "Mana": 900,
+        "Move": 1280
+      },
+      "Combat": {
+        "Armor": -340,
+        "Hitroll": 40,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Bludgeon",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d42+46"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 1275,
+      "Experience": 522932,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
       "ActionScript": null,
       "SpecialProc": null,
       "Programs": []
