@@ -178,7 +178,8 @@ The suggested order, aiming at a **playable loop from level 1 upwards**.
 - ✅ `say`, `tell`, `reply`, `gossip`/`gos`, `shout`/`yell` (costs 10 move), `emote`/`me`, `who`
 
 ### Admin
-- ✅ `goto`, `load`, `zreset`, `import-legacy`
+- ✅ `goto`, `load`, `zreset`
+- ✅ Legacy world import as a CLI tool (`src/EliteMud.Cli`)
 
 ---
 

@@ -1,12 +1,10 @@
 using EliteMud.Application.Commands.Flee;
-using EliteMud.Application.Commands.ImportLegacy;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
 using EliteMud.Application.Session;
 using EliteMud.Application.Skills;
 using EliteMud.Application.World;
 using EliteMud.Game;
-using EliteMud.Legacy.Import;
 using EliteMud.Server.Adapters.Commands.Skills;
 using EliteMud.Server.Adapters.Commands.Who;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,8 +34,6 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<ConnectionRegistry>()
             
             // Business logic helpers (not command handlers)
-            .AddSingleton<LegacyContentImporter>()
-            .AddSingleton<ImportLegacyHandler>()
             .AddSingleton<FleeHandler>()
 
             // Auto-discover all command handlers with [Command] attribute
