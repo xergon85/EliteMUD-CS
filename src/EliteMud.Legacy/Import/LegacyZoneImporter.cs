@@ -61,29 +61,19 @@ internal static class LegacyZoneImporter
                         break;
                     }
 
-                    if (line.StartsWith("*"))
+                    // Legacy skips blank lines (fscanf(" ") in load_reset_cmds)
+                    if (string.IsNullOrWhiteSpace(line) || line.StartsWith("*"))
                     {
                         continue;
                     }
 
-                    var pieces = LegacyImportUtilities.SplitTokens(line);
-                    if (pieces.Count < 4)
+                    if (!LegacyZoneResetParser.TryParse(line, out var command))
                     {
+                        Console.WriteLine($"  Warning: {Path.GetFileName(file)} zone #{zoneId}: skipped unparseable reset line: {line.Trim()}");
                         continue;
                     }
 
-                    var command = pieces[0];
-                    var ifFlag = LegacyImportLookup.ParseInt(pieces[1]);
-                    var arg1 = LegacyImportLookup.ParseInt(pieces[2]);
-                    var arg2 = LegacyImportLookup.ParseInt(pieces[3]);
-                    int? arg3 = null;
-                    if (pieces.Count > 4 && int.TryParse(pieces[4], out var parsedArg3))
-                    {
-                        arg3 = parsedArg3;
-                    }
-
-                    var comment = LegacyImportUtilities.ExtractComment(line);
-                    commands.Add(new ZoneResetCommandContent(command, ifFlag, arg1, arg2, arg3, comment));
+                    commands.Add(command);
                 }
 
                 zones.Add(new ZoneContent(zoneId, name, topRoom, lifespan, LegacyImportLookup.ResetMode(resetMode), commands));

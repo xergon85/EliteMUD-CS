@@ -12,7 +12,7 @@ internal static class LegacyImportUtilities
     public static List<string> SplitKeywords(string keywords)
     {
         return keywords
-            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries)
             .Select(keyword => keyword.Trim())
             .Where(keyword => keyword.Length > 0)
             .ToList();
@@ -20,17 +20,7 @@ internal static class LegacyImportUtilities
 
     public static List<string> SplitTokens(string line)
     {
-        return line.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
-    }
-
-    public static string? ExtractComment(string line)
-    {
-        var index = line.IndexOf('*');
-        if (index <= 0)
-        {
-            return null;
-        }
-
-        return line[(index + 1)..].Trim();
+        // Split on any whitespace: legacy files mix spaces and tabs.
+        return line.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries).ToList();
     }
 }
