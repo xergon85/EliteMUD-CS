@@ -82,7 +82,7 @@
         "Command": "G",
         "IfFlag": 1,
         "Arg1": 2903,
-        "Arg2": 0,
+        "Arg2": 100,
         "Arg3": null,
         "Comment": "Young Adult's card (ml 25)"
       },
@@ -90,7 +90,7 @@
         "Command": "G",
         "IfFlag": 1,
         "Arg1": 2904,
-        "Arg2": 0,
+        "Arg2": 100,
         "Arg3": null,
         "Comment": "Adult's card (ml 50)"
       },
@@ -98,7 +98,7 @@
         "Command": "G",
         "IfFlag": 1,
         "Arg1": 2905,
-        "Arg2": 0,
+        "Arg2": 100,
         "Arg3": null,
         "Comment": "Scholar's card (ml 80)"
       },
@@ -107,7 +107,7 @@
         "IfFlag": 0,
         "Arg1": 2906,
         "Arg2": 2910,
-        "Arg3": null,
+        "Arg3": 11000,
         "Comment": "Nursery Rhymes/Children's"
       },
       {
@@ -115,8 +115,8 @@
         "IfFlag": 1,
         "Arg1": 2906,
         "Arg2": 1,
-        "Arg3": null,
-        "Comment": ""
+        "Arg3": 2902,
+        "Comment": null
       },
       {
         "Command": "L",
@@ -156,7 +156,7 @@
     {
       "Id": 2900,
       "Name": "Fiction for Young Adults",
-      "Description": "\n   Not quite children, but not quite adults, those that fall in\nbetween seem to have their own taste in reading materials.  This\ncollection was created just for the young adult crowd.  Several small\ntables stand covered with books in the center of the room, surrounded\nby the enormous bookshelves that fill the library.  The stacks\ncontinue to the south, and an open doorway leads east to a quiet\nhallway.",
+      "Description": "Not quite children, but not quite adults, those that fall in\nbetween seem to have their own taste in reading materials.  This\ncollection was created just for the young adult crowd.  Several small\ntables stand covered with books in the center of the room, surrounded\nby the enormous bookshelves that fill the library.  The stacks\ncontinue to the south, and an open doorway leads east to a quiet\nhallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -189,7 +189,7 @@
     {
       "Id": 2901,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north.  A small wooden staircase leads up to the next floor of\nthe library.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north.  A small wooden staircase leads up to the next floor of\nthe library.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -238,7 +238,7 @@
     {
       "Id": 2902,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -271,7 +271,7 @@
     {
       "Id": 2903,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads east to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads east to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -312,7 +312,7 @@
     {
       "Id": 2904,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -361,7 +361,7 @@
     {
       "Id": 2905,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads west to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads west to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -402,7 +402,7 @@
     {
       "Id": 2906,
       "Name": "Nursery Rhymes, Fables, and Other Children's Books",
-      "Description": "\n   This library is known far and wide for its magnificent\ncollection of children's books.  Here the young, and young at\nheart, may browse through wonderful picture books, fairy tales,\nand much more.  Several wooden toys are scattered about on the\nfloor, probably left here by some of the younger patrons.  Large\nwooden shelves line the walls, housing the many volumes owned by\nthis fine library.  The stacks continue to the north and south, and\nan open doorway leads to a hallway to the east.",
+      "Description": "This library is known far and wide for its magnificent\ncollection of children's books.  Here the young, and young at\nheart, may browse through wonderful picture books, fairy tales,\nand much more.  Several wooden toys are scattered about on the\nfloor, probably left here by some of the younger patrons.  Large\nwooden shelves line the walls, housing the many volumes owned by\nthis fine library.  The stacks continue to the north and south, and\nan open doorway leads to a hallway to the east.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -443,7 +443,7 @@
     {
       "Id": 2907,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east   \nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -492,7 +492,7 @@
     {
       "Id": 2908,
       "Name": "Rare Books and Historical Volumes",
-      "Description": "\n   History buffs from all around flock to this library for a chance\nto browse through the magnificent collection of rare books and\nhistorical volumes.  Ancient literary masterpieces sit safely inside\nlarge glass cases, taken out only rarely.  Several volumes detailing\nthe history of the known world line the shelves, beckoning you to\nenjoy their tales of days gone by.  The stacks continue to the north\nand south, and a small doorway leads west to a quiet hallway.",
+      "Description": "History buffs from all around flock to this library for a chance\nto browse through the magnificent collection of rare books and\nhistorical volumes.  Ancient literary masterpieces sit safely inside\nlarge glass cases, taken out only rarely.  Several volumes detailing\nthe history of the known world line the shelves, beckoning you to\nenjoy their tales of days gone by.  The stacks continue to the north\nand south, and a small doorway leads west to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -533,7 +533,7 @@
     {
       "Id": 2909,
       "Name": "New Arrivals",
-      "Description": "\n   As new volumes are acquired by the library, they are temporarily\nhoused in this section.  This allows visitors easy access to the\nlatest books and scrolls.  Several patrons sit around a large round\ntable, avidly reading their selections.  Large wooden shelves line\nthe walls, housing the many volumes owned by this fine library.  The\nstacks, as the main collection is called by the wonderful librarians,\ncontinue to the north, and an open doorway leads to a hallway to the\neast.",
+      "Description": "As new volumes are acquired by the library, they are temporarily\nhoused in this section.  This allows visitors easy access to the\nlatest books and scrolls.  Several patrons sit around a large round\ntable, avidly reading their selections.  Large wooden shelves line\nthe walls, housing the many volumes owned by this fine library.  The\nstacks, as the main collection is called by the wonderful librarians,\ncontinue to the north, and an open doorway leads to a hallway to the\neast.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -566,7 +566,7 @@
     {
       "Id": 2910,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -615,7 +615,7 @@
     {
       "Id": 2911,
       "Name": "The Reference Room",
-      "Description": "\n   Dictionaries, encyclopediae, indices, and various other reference\nvolumes make their home in the reference room.  Conveniently located\nnext to the librarian's office, the reference room holds a wealth of\ninformation about everything under the sun.  A large wooden table\nsits in the center of the room, covered with several enormous books,\nsome of which appear to be quite ancient.  The stacks, which make up\nthe bulk of the library's collection, continue to the north.  An open\ndoorway leads west to a quiet hallway.",
+      "Description": "Dictionaries, encyclopediae, indices, and various other reference\nvolumes make their home in the reference room.  Conveniently located\nnext to the librarian's office, the reference room holds a wealth of\ninformation about everything under the sun.  A large wooden table\nsits in the center of the room, covered with several enormous books,\nsome of which appear to be quite ancient.  The stacks, which make up\nthe bulk of the library's collection, continue to the north.  An open\ndoorway leads west to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -648,7 +648,7 @@
     {
       "Id": 2912,
       "Name": "The Circulation Desk",
-      "Description": "\n   A small desk, covered with piles of books and scrolls, sits in the\nmiddle of this room.  The plush carpeting on the floor muffles any\nfootsteps that would otherwise be heard here.  This is a library\nafter all!  A large plaque hangs on the wall next to the doorway,\nwhich leads to a hallway to the east.",
+      "Description": "A small desk, covered with piles of books and scrolls, sits in the\nmiddle of this room.  The plush carpeting on the floor muffles any\nfootsteps that would otherwise be heard here.  This is a library\nafter all!  A large plaque hangs on the wall next to the doorway,\nwhich leads to a hallway to the east.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -670,7 +670,7 @@
           "Keywords": [
             "plaque"
           ],
-          "Description": "\nThe plaque reads:\n\n\tWelcome patrons!\n\n\tA library card is required to check out any books.\n\tRead our books at your own risk!\n\tThe library will not be held responsible for any loss\n\tof life and/or limb from use of our books.\n\n\tThank You,\n\tThe Head Librarian"
+          "Description": "The plaque reads:\n\n\tWelcome patrons!\n\n\tA library card is required to check out any books.\n\tRead our books at your own risk!\n\tThe library will not be held responsible for any loss\n\tof life and/or limb from use of our books.\n\n\tThank You,\n\tThe Head Librarian"
         }
       ],
       "SpecialProc": null,
@@ -680,7 +680,7 @@
     {
       "Id": 2913,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  A small office is just\neast of here, and to the west is the Circulation Desk.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  A small office is just\neast of here, and to the west is the Circulation Desk.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -729,7 +729,7 @@
     {
       "Id": 2914,
       "Name": "The Librarian's Office",
-      "Description": "\n   A small desk sits in one corner of the room, covered with numerous\nbooks, scrolls, and bits of paper.  While the librarian's office\nappears to be quite messy, the librarian knows exactly where\neverything is.  Through the doorway to the west, you can see a\ncarpeted hallway.",
+      "Description": "A small desk sits in one corner of the room, covered with numerous\nbooks, scrolls, and bits of paper.  While the librarian's office\nappears to be quite messy, the librarian knows exactly where\neverything is.  Through the doorway to the west, you can see a\ncarpeted hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -754,7 +754,7 @@
     {
       "Id": 2915,
       "Name": "Mythology and Legend",
-      "Description": "\n   Volumes filled with tales of the ancient gods and their mighty\ndeeds are stacked neatly on the large shelves in what is said to be\nthe largest single collection of mythological literature.  A large\ntable stands in the center of the room, covered with books containing\ntales of ancient heroes and gods.  The stacks that make up the main\ncollection of the library continue to the south, and an open doorway\nstands east, leading to a quiet hallway.",
+      "Description": "Volumes filled with tales of the ancient gods and their mighty\ndeeds are stacked neatly on the large shelves in what is said to be\nthe largest single collection of mythological literature.  A large\ntable stands in the center of the room, covered with books containing\ntales of ancient heroes and gods.  The stacks that make up the main\ncollection of the library continue to the south, and an open doorway\nstands east, leading to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -795,7 +795,7 @@
     {
       "Id": 2916,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the south.  A small wooden staircase leads down to the first floor\nof the library.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the south.  A small wooden staircase leads down to the first floor\nof the library.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -844,7 +844,7 @@
     {
       "Id": 2917,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -877,7 +877,7 @@
     {
       "Id": 2918,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads east to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads east to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -918,7 +918,7 @@
     {
       "Id": 2919,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -967,7 +967,7 @@
     {
       "Id": 2920,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the south, and an \nopen doorway leads west to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1008,7 +1008,7 @@
     {
       "Id": 2921,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads east to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads east to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1049,7 +1049,7 @@
     {
       "Id": 2922,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1098,7 +1098,7 @@
     {
       "Id": 2923,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads west to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of\nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and\nsouth, and an open doorway leads west to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1139,7 +1139,7 @@
     {
       "Id": 2924,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads east to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads east to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1180,7 +1180,7 @@
     {
       "Id": 2925,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north and south.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1229,7 +1229,7 @@
     {
       "Id": 2926,
       "Name": "Fiction",
-      "Description": "\n   Various books, filled with tales that could only come from the\nmost creative minds in the land, are spread out across a large table\nthat dominates the center of this room.  The fiction collection in\nthis library is one of the most comprehensive known to exist.  Large\nbookcases line the walls, filled with hundreds of literary\nmasterpieces.  The stacks continue to the north from here, and an\nopen doorway leads to a quiet hallway to the east.",
+      "Description": "Various books, filled with tales that could only come from the\nmost creative minds in the land, are spread out across a large table\nthat dominates the center of this room.  The fiction collection in\nthis library is one of the most comprehensive known to exist.  Large\nbookcases line the walls, filled with hundreds of literary\nmasterpieces.  The stacks continue to the north from here, and an\nopen doorway leads to a quiet hallway to the east.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1270,7 +1270,7 @@
     {
       "Id": 2927,
       "Name": "The Stacks",
-      "Description": "\n   Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads west to a quiet hallway.",
+      "Description": "Several large shelves line the walls, reaching from the floor to\nthe ceiling.  Each shelf is filled to capacity with all sorts of     \nbooks and scrolls.  This large collection of reading materials is\nconsidered to be one of the finest in the land, an opinion shared by\nthe librarians who work here.  The stacks continue to the north and \nsouth, and an open doorway leads west to a quiet hallway.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1303,7 +1303,7 @@
     {
       "Id": 2928,
       "Name": "A Quiet Hallway",
-      "Description": "\n   The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north.",
+      "Description": "The quiet hallway leads through the center of the library.  Plush\ncarpeting on the floors, and large tapestries on the walls muffle any\nnoise that might otherwise be heard here.  Open doorways lead east\nand west from the hallway into the stacks, and the hallway continues\nto the north.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1344,7 +1344,7 @@
     {
       "Id": 2929,
       "Name": "The Classics",
-      "Description": "\n   Ahhh the classics!  These literary masterpieces have become an\nintegral part of our culture.  Read by every schoolchild, these\nvolumes can take you to far-off lands and mystical places.  The books\nand scrolls that make up the classics collection are very diverse and\nintended for a wide range of audiences.  The stacks that hold this\ncollection contunie to the northm and an open doorway leads to a\nhallway to the west.",
+      "Description": "Ahhh the classics!  These literary masterpieces have become an\nintegral part of our culture.  Read by every schoolchild, these\nvolumes can take you to far-off lands and mystical places.  The books\nand scrolls that make up the classics collection are very diverse and\nintended for a wide range of audiences.  The stacks that hold this\ncollection contunie to the northm and an open doorway leads to a\nhallway to the west.",
       "ZoneId": 29,
       "Sector": "Inside",
       "Flags": [
@@ -1379,9 +1379,9 @@
     {
       "Id": 2900,
       "Name": "librarian library",
-      "ShortDescription": "\na librarian",
-      "LongDescription": "\nA librarian wanders through the stacks.",
-      "Description": "\nThe librarian wears her long hair back in a tight bun, apparently in\nthe style common to all female librarians.  She smiles quietly as she\ngoes about her business, glaring at any troublemakers and noisy\npatrons.",
+      "ShortDescription": "a librarian",
+      "LongDescription": "A librarian wanders through the stacks.",
+      "Description": "The librarian wears her long hair back in a tight bun, apparently in\nthe style common to all female librarians.  She smiles quietly as she\ngoes about her business, glaring at any troublemakers and noisy\npatrons.",
       "Level": 109,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -1424,9 +1424,9 @@
     {
       "Id": 2901,
       "Name": "student girl",
-      "ShortDescription": "\na student",
-      "LongDescription": "\nA young girl sits quietly, studying for an exam.",
-      "Description": "\nThe young girl must be a student.  She sits quietly with her books,\nstudying as if her life (or at least her grades) depended on it.  She\nappears to be oblivious to anything going on around her.",
+      "ShortDescription": "a student",
+      "LongDescription": "A young girl sits quietly, studying for an exam.",
+      "Description": "The young girl must be a student.  She sits quietly with her books,\nstudying as if her life (or at least her grades) depended on it.  She\nappears to be oblivious to anything going on around her.",
       "Level": 109,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -1470,9 +1470,9 @@
     {
       "Id": 2902,
       "Name": "boy little",
-      "ShortDescription": "\na little boy",
-      "LongDescription": "\nA little boy stares in awe at the life-like pictures in his book.",
-      "Description": "\nThe wide-eyed fellow smiles with glee as he flips through his\nfavorite picture book.  He learned the joys of literature at an early\nage, and hopefully he will continue to make use of the library as he\ngrows older.",
+      "ShortDescription": "a little boy",
+      "LongDescription": "A little boy stares in awe at the life-like pictures in his book.",
+      "Description": "The wide-eyed fellow smiles with glee as he flips through his\nfavorite picture book.  He learned the joys of literature at an early\nage, and hopefully he will continue to make use of the library as he\ngrows older.",
       "Level": 109,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -1516,9 +1516,9 @@
     {
       "Id": 2903,
       "Name": "librarian head",
-      "ShortDescription": "\nthe Head Librarian",
-      "LongDescription": "\nThe head librarian monitors all activity in the library.",
-      "Description": "\nThe head librarian loves her job.  She enjoys wandering through the\nstacks of books, sifting through the scrolls and papers, and watching\nthe patrons wander through \"her\" library.",
+      "ShortDescription": "the Head Librarian",
+      "LongDescription": "The head librarian monitors all activity in the library.",
+      "Description": "The head librarian loves her job.  She enjoys wandering through the\nstacks of books, sifting through the scrolls and papers, and watching\nthe patrons wander through \"her\" library.",
       "Level": 109,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -1562,9 +1562,9 @@
     {
       "Id": 2904,
       "Name": "circulation lady librarian head",
-      "ShortDescription": "\nthe Head of Circulation",
-      "LongDescription": "\nA pretty young lady sits behind the desk selling library cards.",
-      "Description": "\nThis young lady is the person to see if you'd like to check out any\nbooks in the library.  She controls the circulation of books in the\nlibrary, and sells the library cards needed to check the books out.",
+      "ShortDescription": "the Head of Circulation",
+      "LongDescription": "A pretty young lady sits behind the desk selling library cards.",
+      "Description": "This young lady is the person to see if you'd like to check out any\nbooks in the library.  She controls the circulation of books in the\nlibrary, and sells the library cards needed to check the books out.",
       "Level": 109,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -1610,8 +1610,8 @@
     {
       "Id": 2902,
       "Name": "library card child children's^",
-      "ShortDescription": "\na Children's library card",
-      "Description": "\nSomeone seems to have dropped a library card.",
+      "ShortDescription": "a Children's library card",
+      "Description": "Someone seems to have dropped a library card.",
       "ActionDescription": "",
       "Type": "Key",
       "Level": 1,
@@ -1659,7 +1659,7 @@
             "children's",
             "child"
           ],
-          "Description": "\nThis library card is used to \"check out\" the books in the library\nthat are appropriate for a younger audience, particularly for\nchildren."
+          "Description": "This library card is used to \"check out\" the books in the library\nthat are appropriate for a younger audience, particularly for\nchildren."
         }
       ],
       "Affects": [],
@@ -1669,8 +1669,8 @@
     {
       "Id": 2903,
       "Name": "library card young adult",
-      "ShortDescription": "\na Young Adult's library card",
-      "Description": "\nSomeone seems to have dropped a library card.",
+      "ShortDescription": "a Young Adult's library card",
+      "Description": "Someone seems to have dropped a library card.",
       "ActionDescription": "",
       "Type": "Key",
       "Level": 25,
@@ -1718,7 +1718,7 @@
             "young",
             "adult"
           ],
-          "Description": "\nThis library card is used to \"check out\" the books in the library\nthat are appropriate for Young Adults."
+          "Description": "This library card is used to \"check out\" the books in the library\nthat are appropriate for Young Adults."
         }
       ],
       "Affects": [],
@@ -1728,8 +1728,8 @@
     {
       "Id": 2904,
       "Name": "library card adult",
-      "ShortDescription": "\nan Adult's library card",
-      "Description": "\nSomeone seems to have dropped a library card.",
+      "ShortDescription": "an Adult's library card",
+      "Description": "Someone seems to have dropped a library card.",
       "ActionDescription": "",
       "Type": "Key",
       "Level": 50,
@@ -1776,7 +1776,7 @@
             "card",
             "adult"
           ],
-          "Description": "\nThis library card is used to \"check out\" the books in the library\nthat are appropriate for Adults."
+          "Description": "This library card is used to \"check out\" the books in the library\nthat are appropriate for Adults."
         }
       ],
       "Affects": [],
@@ -1786,8 +1786,8 @@
     {
       "Id": 2905,
       "Name": "library card scholar",
-      "ShortDescription": "\na Scholar's library card",
-      "Description": "\nSomeone seems to have dropped a library card.",
+      "ShortDescription": "a Scholar's library card",
+      "Description": "Someone seems to have dropped a library card.",
       "ActionDescription": "",
       "Type": "Key",
       "Level": 80,
@@ -1834,7 +1834,7 @@
             "card",
             "scholar"
           ],
-          "Description": "\nThis library card is used to check out the books in the library that\nare desigated for Scholars."
+          "Description": "This library card is used to check out the books in the library that\nare desigated for Scholars."
         }
       ],
       "Affects": [],

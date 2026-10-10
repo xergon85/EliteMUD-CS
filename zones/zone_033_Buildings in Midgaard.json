@@ -12,7 +12,7 @@
         "Arg1": 3300,
         "Arg2": 3,
         "Arg3": 2,
-        "Comment": null
+        "Comment": "Close and lock from cottage to street"
       },
       {
         "Command": "D",
@@ -20,7 +20,7 @@
         "Arg1": 3118,
         "Arg2": 1,
         "Arg3": 2,
-        "Comment": null
+        "Comment": "Close and lock from Park Road."
       },
       {
         "Command": "O",
@@ -28,7 +28,7 @@
         "Arg1": 3100,
         "Arg2": 777,
         "Arg3": 3300,
-        "Comment": null
+        "Comment": "Load a cup of tea into Papi's Cottage."
       },
       {
         "Command": "D",
@@ -36,7 +36,7 @@
         "Arg1": 6904,
         "Arg2": 3,
         "Arg3": 2,
-        "Comment": null
+        "Comment": "Close and lock from Quifael to street"
       },
       {
         "Command": "D",
@@ -44,7 +44,7 @@
         "Arg1": 3126,
         "Arg2": 1,
         "Arg3": 2,
-        "Comment": null
+        "Comment": "Close and lock from Park Road."
       }
     ]
   },
@@ -52,7 +52,7 @@
     {
       "Id": 3300,
       "Name": "Papi's Cozy Cottage",
-      "Description": "\n   You are inside Papi's living room, a light room at around three by four\nt(meters in size. The nicely carved oaken front door is set in the middle of\nthe western wall, just between two windows. A small fire crackles in the\nfireplace which is set against the northern wall.",
+      "Description": "You are inside Papi's living room, a light room at around three by four\nt(meters in size. The nicely carved oaken front door is set in the middle of\nthe western wall, just between two windows. A small fire crackles in the\nfireplace which is set against the northern wall.",
       "ZoneId": 33,
       "Sector": "Inside",
       "Flags": [
@@ -83,8 +83,8 @@
     {
       "Id": 3100,
       "Name": "tea cup",
-      "ShortDescription": "\na cup",
-      "Description": "\nA cup has been set here.",
+      "ShortDescription": "a cup",
+      "Description": "A cup has been set here.",
       "ActionDescription": "",
       "Type": "DrinkContainer",
       "Level": 0,
@@ -130,7 +130,7 @@
           "Keywords": [
             "cup"
           ],
-          "Description": "\nIt is a small simple cup."
+          "Description": "It is a small simple cup."
         }
       ],
       "Affects": [],

@@ -362,9 +362,9 @@
         "Command": "R",
         "IfFlag": 0,
         "Arg1": 1548,
-        "Arg2": 0,
+        "Arg2": 4,
         "Arg3": null,
-        "Comment": null
+        "Comment": "; maze these hallways"
       },
       {
         "Command": "R",
@@ -988,7 +988,7 @@
     {
       "Id": 1501,
       "Name": "Entrance to Gnome Village",
-      "Description": "\n  You stand on a dusty path that leads south and east. To the east you hear\nthe sounds of a small village and to the south you can enter the forest of\nNamir.",
+      "Description": "You stand on a dusty path that leads south and east. To the east you hear\nthe sounds of a small village and to the south you can enter the forest of\nNamir.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -1021,7 +1021,7 @@
     {
       "Id": 1502,
       "Name": "A Dusty Path",
-      "Description": "\n   This is a path leading into the village. It continues east and west and\nthere is a small house to the north.",
+      "Description": "This is a path leading into the village. It continues east and west and\nthere is a small house to the north.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1061,7 +1061,7 @@
     {
       "Id": 1503,
       "Name": "A Road in the Village",
-      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "Description": "This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1109,7 +1109,7 @@
     {
       "Id": 1504,
       "Name": "A Dusty Path",
-      "Description": "\n   You are on a dusty path on the far side of the village. Houses are to the\nnorth and south, while the path continues east. There is a sign here.",
+      "Description": "You are on a dusty path on the far side of the village. Houses are to the\nnorth and south, while the path continues east. There is a sign here.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1154,7 +1154,7 @@
           "Keywords": [
             "sign"
           ],
-          "Description": "\n   Warning:  The area to the east was written mostly by Vougon\n                    (giggle)    - Sandman"
+          "Description": "Warning:  The area to the east was written mostly by Vougon\n                    (giggle)    - Sandman"
         }
       ],
       "SpecialProc": null,
@@ -1164,7 +1164,7 @@
     {
       "Id": 1505,
       "Name": "A Road in the Village",
-      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "Description": "This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1212,7 +1212,7 @@
     {
       "Id": 1506,
       "Name": "A Road in the Village",
-      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "Description": "This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1244,7 +1244,7 @@
     {
       "Id": 1507,
       "Name": "A Road in the Village",
-      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "Description": "This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1284,7 +1284,7 @@
     {
       "Id": 1508,
       "Name": "A Road in the Village",
-      "Description": "\n   This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
+      "Description": "This road runs north and south through the center of the village. There are\na few people moving around, but not many.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1332,7 +1332,7 @@
     {
       "Id": 1509,
       "Name": "A Small Gnome House",
-      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "Description": "This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1357,7 +1357,7 @@
     {
       "Id": 1510,
       "Name": "A Small Gnome House",
-      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "Description": "This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1382,7 +1382,7 @@
     {
       "Id": 1511,
       "Name": "A Small Gnome House",
-      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "Description": "This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1407,7 +1407,7 @@
     {
       "Id": 1512,
       "Name": "A Small Gnome House",
-      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "Description": "This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1432,7 +1432,7 @@
     {
       "Id": 1513,
       "Name": "A Small Gnome House",
-      "Description": "\n   This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
+      "Description": "This is a small suburban house made from quality wood. You can see the\nexpert workmanship that went into making it, but it lacks creativity.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1457,7 +1457,7 @@
     {
       "Id": 1514,
       "Name": "A Gnome Shop",
-      "Description": "\n   You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
+      "Description": "You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1482,7 +1482,7 @@
     {
       "Id": 1515,
       "Name": "A Gnome Shop",
-      "Description": "\n   You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
+      "Description": "You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1507,7 +1507,7 @@
     {
       "Id": 1516,
       "Name": "A Gnome Shop",
-      "Description": "\n   You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
+      "Description": "You are in one of the several shops of this fine town. The wares look fine,\nbut unfortunately the gnomes don't do business with outsiders.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1532,7 +1532,7 @@
     {
       "Id": 1517,
       "Name": "Path by a Stream",
-      "Description": "\n   You are on a small path leading north and west, that is surrounded on the\nother two sides by a small stream. The water looks mighty cold.",
+      "Description": "You are on a small path leading north and west, that is surrounded on the\nother two sides by a small stream. The water looks mighty cold.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -1570,7 +1570,7 @@
           "Keywords": [
             "stream"
           ],
-          "Description": "\nThe stream is pretty small, but it looks too cold to swim."
+          "Description": "The stream is pretty small, but it looks too cold to swim."
         }
       ],
       "SpecialProc": null,
@@ -1580,7 +1580,7 @@
     {
       "Id": 1518,
       "Name": "Path by a Stream",
-      "Description": "\n   You are on a small east-west path. The path shows new grass, as if it has\nstopped being used sometime in the recent past. A river is to the south, and a\nsmall hut is to the west.",
+      "Description": "You are on a small east-west path. The path shows new grass, as if it has\nstopped being used sometime in the recent past. A river is to the south, and a\nsmall hut is to the west.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -1617,13 +1617,13 @@
           "Keywords": [
             "hut"
           ],
-          "Description": "\nThe hut looks well built, but it seems to have taken some damage."
+          "Description": "The hut looks well built, but it seems to have taken some damage."
         },
         {
           "Keywords": [
             "stream"
           ],
-          "Description": "\nThe stream is pretty small, but it looks too cold to swim."
+          "Description": "The stream is pretty small, but it looks too cold to swim."
         }
       ],
       "SpecialProc": null,
@@ -1633,7 +1633,7 @@
     {
       "Id": 1519,
       "Name": "A Small Hut",
-      "Description": "\n   The hut is a mess! Blood has stained the grass walls into a dark rich\ncrimson color. Torn clothes and trash lie all around, and you think you see a\nskeleton in the corner.",
+      "Description": "The hut is a mess! Blood has stained the grass walls into a dark rich\ncrimson color. Torn clothes and trash lie all around, and you think you see a\nskeleton in the corner.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1655,7 +1655,7 @@
           "Keywords": [
             "skeleton"
           ],
-          "Description": "\nThe skeleton still has a little flesh clinging to it and it is definitely\nhumanoid.  The skull has been cracked open, but it is otherwise undamaged,\nexcept by time."
+          "Description": "The skeleton still has a little flesh clinging to it and it is definitely\nhumanoid.  The skull has been cracked open, but it is otherwise undamaged,\nexcept by time."
         }
       ],
       "SpecialProc": null,
@@ -1665,7 +1665,7 @@
     {
       "Id": 1520,
       "Name": "On the Stream",
-      "Description": "\n   The stream is cold and frigid, yet it supports plenty of life beneath its\nsurface. The current trickles west and there is a field to the south.",
+      "Description": "The stream is cold and frigid, yet it supports plenty of life beneath its\nsurface. The current trickles west and there is a field to the south.",
       "ZoneId": 15,
       "Sector": "WaterNoSwim",
       "Flags": [
@@ -1705,7 +1705,7 @@
     {
       "Id": 1521,
       "Name": "On the Stream",
-      "Description": "\n   The current here flows from the east, but a logjam blocks you from\ncontinuing onward.",
+      "Description": "The current here flows from the east, but a logjam blocks you from\ncontinuing onward.",
       "ZoneId": 15,
       "Sector": "WaterNoSwim",
       "Flags": [
@@ -1737,7 +1737,7 @@
     {
       "Id": 1522,
       "Name": "The Field of Mice's Dreams",
-      "Description": "\n   This is a large green field of waist high grass. You feel something scurry\nover your feet. There is a cave to the east.",
+      "Description": "This is a large green field of waist high grass. You feel something scurry\nover your feet. There is a cave to the east.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -1769,7 +1769,7 @@
     {
       "Id": 1523,
       "Name": "The Dark Cave",
-      "Description": "\n   The cave gleams as your light reflects off of it. As you squint your eyes\nand try to look ahead, you think you see something move.",
+      "Description": "The cave gleams as your light reflects off of it. As you squint your eyes\nand try to look ahead, you think you see something move.",
       "ZoneId": 15,
       "Sector": "Forest",
       "Flags": [
@@ -1802,7 +1802,7 @@
     {
       "Id": 1524,
       "Name": "Darker Cave",
-      "Description": "\n   The cave gets even darker as your terror grows stronger. You fear for your\nlife as something emerges out of the shadows.",
+      "Description": "The cave gets even darker as your terror grows stronger. You fear for your\nlife as something emerges out of the shadows.",
       "ZoneId": 15,
       "Sector": "Forest",
       "Flags": [
@@ -1827,7 +1827,7 @@
     {
       "Id": 1526,
       "Name": "A Dusty Path",
-      "Description": "\n   You are on a well traveled path that leads in many directions. To the north\nis a large house, and to the west is a fortress.",
+      "Description": "You are on a well traveled path that leads in many directions. To the north\nis a large house, and to the west is a fortress.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1865,7 +1865,7 @@
           "Keywords": [
             "fortress"
           ],
-          "Description": "\nThe fortress is a large gnome stronghold to defend the city."
+          "Description": "The fortress is a large gnome stronghold to defend the city."
         }
       ],
       "SpecialProc": null,
@@ -1875,7 +1875,7 @@
     {
       "Id": 1527,
       "Name": "The Iron Gateway",
-      "Description": "\n   You stand at the entrance to the gnome fortress. The place seems to be well\nfortified.",
+      "Description": "You stand at the entrance to the gnome fortress. The place seems to be well\nfortified.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -1907,7 +1907,7 @@
     {
       "Id": 1528,
       "Name": "A Long Hallway",
-      "Description": "\n   You are now inside of the fortress; you must be lucky that the guards\nhaven't killed you. As you glance around, you notice that the walls and floors\nare spotlessly cleaned. The barracks are to the north and a storage room is to\nthe south.",
+      "Description": "You are now inside of the fortress; you must be lucky that the guards\nhaven't killed you. As you glance around, you notice that the walls and floors\nare spotlessly cleaned. The barracks are to the north and a storage room is to\nthe south.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1956,7 +1956,7 @@
     {
       "Id": 1529,
       "Name": "A Long Hallway",
-      "Description": "\n   You are now inside of the fortress; you must be lucky that the guards\nhaven't killed you. As you glance around, you notice that the walls and floors\nare spotlessly cleaned. A mess hall is to the south.",
+      "Description": "You are now inside of the fortress; you must be lucky that the guards\nhaven't killed you. As you glance around, you notice that the walls and floors\nare spotlessly cleaned. A mess hall is to the south.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -1997,7 +1997,7 @@
     {
       "Id": 1530,
       "Name": "The Barracks",
-      "Description": "\n   You now stand in the sleeping quarters of the gnome guards. Every bed is\nmade perfectly, and not single article of clothing is on the floor. There is a\nsmall storage room to the east.",
+      "Description": "You now stand in the sleeping quarters of the gnome guards. Every bed is\nmade perfectly, and not single article of clothing is on the floor. There is a\nsmall storage room to the east.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -2030,7 +2030,7 @@
     {
       "Id": 1531,
       "Name": "A Small Storage Room",
-      "Description": "\n   This is where the gnomes store all their spare clothing and armor. There is\nnot much here, but you might come up with something.",
+      "Description": "This is where the gnomes store all their spare clothing and armor. There is\nnot much here, but you might come up with something.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -2055,7 +2055,7 @@
     {
       "Id": 1532,
       "Name": "A Small Storage Room",
-      "Description": "\n   This is where the gnomes store all their spare weapons. A door leads off to\nthe east.",
+      "Description": "This is where the gnomes store all their spare weapons. A door leads off to\nthe east.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -2088,7 +2088,7 @@
     {
       "Id": 1533,
       "Name": "A Small Storage Room",
-      "Description": "\n   This is yet another room for storing gnome stuff. Maps and battle plans are\nstored in neat stacks on the shelves.",
+      "Description": "This is yet another room for storing gnome stuff. Maps and battle plans are\nstored in neat stacks on the shelves.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -2113,7 +2113,7 @@
     {
       "Id": 1534,
       "Name": "The Mess Hall",
-      "Description": "\n   You are in the room where the guards come to get their grub. The benches and\ntables are neatly cleaned and straightened, while shiny plates line the walls.",
+      "Description": "You are in the room where the guards come to get their grub. The benches and\ntables are neatly cleaned and straightened, while shiny plates line the walls.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -2138,7 +2138,7 @@
     {
       "Id": 1535,
       "Name": "A Small Room",
-      "Description": "\n   This is a small plain room. Its only interesting feature is a ladder down.",
+      "Description": "This is a small plain room. Its only interesting feature is a ladder down.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -2171,7 +2171,7 @@
     {
       "Id": 1536,
       "Name": "A Small Unused Room",
-      "Description": "\n   You stand in a small room in an unused section of the fortress. The whole\nroom is coated with dust and cobwebs. The ladder leads back up, and a rusty\ndoor is to the east.",
+      "Description": "You stand in a small room in an unused section of the fortress. The whole\nroom is coated with dust and cobwebs. The ladder leads back up, and a rusty\ndoor is to the east.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -2213,7 +2213,7 @@
     {
       "Id": 1537,
       "Name": "Dark Hallway",
-      "Description": "\n   You find yourself in a very old section of the fortress. You must be the\nfirst person to pass through here in years. The hallway continues south and a\ndoor leads off to the east.",
+      "Description": "You find yourself in a very old section of the fortress. You must be the\nfirst person to pass through here in years. The hallway continues south and a\ndoor leads off to the east.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2260,7 +2260,7 @@
     {
       "Id": 1538,
       "Name": "Torture Chamber",
-      "Description": "\n   This is a room that was once used to extract lies out of helpless victims.\nThe machines look unused, but could still work.",
+      "Description": "This is a room that was once used to extract lies out of helpless victims.\nThe machines look unused, but could still work.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2283,7 +2283,7 @@
           "Keywords": [
             "machine"
           ],
-          "Description": "\nThe machine consists of a large rack with winches on each end.  You can \nalmost feel them pulling your arms out of their sockets."
+          "Description": "The machine consists of a large rack with winches on each end.  You can \nalmost feel them pulling your arms out of their sockets."
         }
       ],
       "SpecialProc": null,
@@ -2293,7 +2293,7 @@
     {
       "Id": 1539,
       "Name": "Dark Hallway",
-      "Description": "\n   The hall continues in a north-south direction. The floor is coated with some\nkind of molded slime. Doors lead east and west.",
+      "Description": "The hall continues in a north-south direction. The floor is coated with some\nkind of molded slime. Doors lead east and west.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2343,7 +2343,7 @@
     {
       "Id": 1540,
       "Name": "Dark Hallway",
-      "Description": "\n   The hall continues in a north-south direction. The floor is coated with some\nkind of molded slime. Doors lead east and west.",
+      "Description": "The hall continues in a north-south direction. The floor is coated with some\nkind of molded slime. Doors lead east and west.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2393,7 +2393,7 @@
     {
       "Id": 1541,
       "Name": "Prison Cell",
-      "Description": "\n   You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
+      "Description": "You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2419,7 +2419,7 @@
     {
       "Id": 1542,
       "Name": "Prison Cell",
-      "Description": "\n   You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
+      "Description": "You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2445,7 +2445,7 @@
     {
       "Id": 1543,
       "Name": "Prison Cell",
-      "Description": "\n   You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
+      "Description": "You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2471,7 +2471,7 @@
     {
       "Id": 1544,
       "Name": "Prison Cell",
-      "Description": "\n   You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
+      "Description": "You are in a dark and nasty prison cell. Bodies lying on the floor give off\nan unbearable stench.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2497,7 +2497,7 @@
     {
       "Id": 1545,
       "Name": "End of the Dark Hallway",
-      "Description": "\n   You have reached the end of the dark hallway and maybe the end of your puny\nlife. Something lumbers its way out of the shadows.",
+      "Description": "You have reached the end of the dark hallway and maybe the end of your puny\nlife. Something lumbers its way out of the shadows.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2538,7 +2538,7 @@
     {
       "Id": 1546,
       "Name": "A Ladder",
-      "Description": "\n   You have come into a vertical tunnel with a ladder.",
+      "Description": "You have come into a vertical tunnel with a ladder.",
       "ZoneId": 15,
       "Sector": "Forest",
       "Flags": [
@@ -2579,7 +2579,7 @@
     {
       "Id": 1547,
       "Name": "Lair",
-      "Description": "\n   You have entered a new lair in the fortress. Anything could be lurking\naround the corner.",
+      "Description": "You have entered a new lair in the fortress. Anything could be lurking\naround the corner.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2613,7 +2613,7 @@
     {
       "Id": 1548,
       "Name": "A Damp Hallway",
-      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "Description": "You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2656,7 +2656,7 @@
     {
       "Id": 1549,
       "Name": "A Damp Hallway",
-      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "Description": "You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2691,7 +2691,7 @@
     {
       "Id": 1550,
       "Name": "A Damp Hallway",
-      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "Description": "You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2726,7 +2726,7 @@
     {
       "Id": 1551,
       "Name": "A Damp Hallway",
-      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "Description": "You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2761,7 +2761,7 @@
     {
       "Id": 1552,
       "Name": "A Damp Hallway",
-      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "Description": "You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2796,7 +2796,7 @@
     {
       "Id": 1553,
       "Name": "A Damp Hallway",
-      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "Description": "You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2831,7 +2831,7 @@
     {
       "Id": 1554,
       "Name": "A Damp Hallway",
-      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "Description": "You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2874,7 +2874,7 @@
     {
       "Id": 1555,
       "Name": "A Damp Hallway",
-      "Description": "\n   You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
+      "Description": "You are wandering in a dark, damp, twisting hallway. The temperature seems\nto be greater here, as well as your fear.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2909,7 +2909,7 @@
     {
       "Id": 1556,
       "Name": "The End of the Hallway",
-      "Description": "\n   You make your way out of the hallway, just to find yourself in greater\ndanger. Before you looms the source of the great heat.",
+      "Description": "You make your way out of the hallway, just to find yourself in greater\ndanger. Before you looms the source of the great heat.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2944,7 +2944,7 @@
     {
       "Id": 1557,
       "Name": "The Altar",
-      "Description": "\n   You finally reach the end of the maze. There is a great altar here in the\nshape of a bat. A passageway leads off to the west.",
+      "Description": "You finally reach the end of the maze. There is a great altar here in the\nshape of a bat. A passageway leads off to the west.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -2971,7 +2971,7 @@
     {
       "Id": 1558,
       "Name": "The Chief's House",
-      "Description": "\n   You enter into a large and luxurious house. The floor is coated with carpets\nand the walls are covered in paintings. You feel privileged just for stepping\ninside.",
+      "Description": "You enter into a large and luxurious house. The floor is coated with carpets\nand the walls are covered in paintings. You feel privileged just for stepping\ninside.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -2996,7 +2996,7 @@
     {
       "Id": 1559,
       "Name": "The Unused Path",
-      "Description": "\n   You are now on a fairly unused path that leads east out of the village. You\nwonder what could be out this way.",
+      "Description": "You are now on a fairly unused path that leads east out of the village. You\nwonder what could be out this way.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -3029,7 +3029,7 @@
     {
       "Id": 1560,
       "Name": "The Overgrown Path",
-      "Description": "\n   As the path continues on, the grass grows higher. You can't imagine what\ncould possibly be out this way.",
+      "Description": "As the path continues on, the grass grows higher. You can't imagine what\ncould possibly be out this way.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3061,7 +3061,7 @@
     {
       "Id": 1561,
       "Name": "The Clearing",
-      "Description": "\n   Your progress is suddenly stopped by mountains on all sides. The path leads\nback to the west, and there appears to be an old mine shaft to the north.",
+      "Description": "Your progress is suddenly stopped by mountains on all sides. The path leads\nback to the west, and there appears to be an old mine shaft to the north.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3093,7 +3093,7 @@
     {
       "Id": 1562,
       "Name": "Entrance to the Mine Shaft",
-      "Description": "\n   As you enter the mine shaft, you get a sudden fear of the walls closing in\non you. You are surprised to notice that you don't need a light.",
+      "Description": "As you enter the mine shaft, you get a sudden fear of the walls closing in\non you. You are surprised to notice that you don't need a light.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3126,7 +3126,7 @@
     {
       "Id": 1563,
       "Name": "Mine Shaft",
-      "Description": "\n   This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions.",
+      "Description": "This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3175,7 +3175,7 @@
     {
       "Id": 1564,
       "Name": "Mine Shaft",
-      "Description": "\n   This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions.",
+      "Description": "This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3224,7 +3224,7 @@
     {
       "Id": 1565,
       "Name": "Mine Shaft",
-      "Description": "\n   This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions except\nnorth.",
+      "Description": "This mine shaft looks stable, at least in this area. The wooden supports are\nthick and strong. Torches line the walls. Exits lead in all directions except\nnorth.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3265,7 +3265,7 @@
     {
       "Id": 1566,
       "Name": "Walkway",
-      "Description": "\n   You are on a well built path in the middle of a mountain. You sense\nsomething great up ahead, considering the hard work that must have gone into\ncreating this passage.",
+      "Description": "You are on a well built path in the middle of a mountain. You sense\nsomething great up ahead, considering the hard work that must have gone into\ncreating this passage.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -3298,7 +3298,7 @@
     {
       "Id": 1567,
       "Name": "Walkway",
-      "Description": "\n   You are on a well built path in the middle of a mountain. You sense\nsomething great up ahead, considering the hard work that must have gone into\ncreating this passage.",
+      "Description": "You are on a well built path in the middle of a mountain. You sense\nsomething great up ahead, considering the hard work that must have gone into\ncreating this passage.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -3331,7 +3331,7 @@
     {
       "Id": 1568,
       "Name": "The Grand Hall",
-      "Description": "\n   You have stepped into the Grand Hall of the hobgoblin kingdom; your luck\nmust be running low by now. Golden pillars span the hallway, and you notice a\nred carpet beneath your feet.",
+      "Description": "You have stepped into the Grand Hall of the hobgoblin kingdom; your luck\nmust be running low by now. Golden pillars span the hallway, and you notice a\nred carpet beneath your feet.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -3364,7 +3364,7 @@
     {
       "Id": 1569,
       "Name": "The Throne Room",
-      "Description": "\n   This is large bright room filled with Hobgoblins. To the south there is a\nlarge golden throne against the wall.",
+      "Description": "This is large bright room filled with Hobgoblins. To the south there is a\nlarge golden throne against the wall.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -3389,7 +3389,7 @@
     {
       "Id": 1570,
       "Name": "The Treasury",
-      "Description": "\n   You are inside the hobgoblin's treasury. Your eyes are almost blinded by the\ngold, silver and copper coins.",
+      "Description": "You are inside the hobgoblin's treasury. Your eyes are almost blinded by the\ngold, silver and copper coins.",
       "ZoneId": 15,
       "Sector": "Inside",
       "Flags": [
@@ -3414,7 +3414,7 @@
     {
       "Id": 1571,
       "Name": "Guarded Room",
-      "Description": "\n   You are inside a well guarded room. The place is slightly better built than\nthe mine shafts, and is lit by lanterns.",
+      "Description": "You are inside a well guarded room. The place is slightly better built than\nthe mine shafts, and is lit by lanterns.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -3447,7 +3447,7 @@
     {
       "Id": 1572,
       "Name": "Guarded Room",
-      "Description": "\n   You are inside a well guarded room. The place is slightly better built than\nthe mine shafts, and is lit by lanterns.",
+      "Description": "You are inside a well guarded room. The place is slightly better built than\nthe mine shafts, and is lit by lanterns.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -3480,7 +3480,7 @@
     {
       "Id": 1573,
       "Name": "Hobgoblin Armory",
-      "Description": "\n   The guards store their spare weapons and armor here. There are rusty swords\non rotting shelves, and armor hanging from hooks or laying on the floor.",
+      "Description": "The guards store their spare weapons and armor here. There are rusty swords\non rotting shelves, and armor hanging from hooks or laying on the floor.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -3505,7 +3505,7 @@
     {
       "Id": 1574,
       "Name": "Mine Shaft",
-      "Description": "\n   You enter a part of the mine shaft where the torches have grown dim and are\nalmost ready to go out. From what you can see, there are plenty of cobwebs on\nthe walls and rats at your feet.",
+      "Description": "You enter a part of the mine shaft where the torches have grown dim and are\nalmost ready to go out. From what you can see, there are plenty of cobwebs on\nthe walls and rats at your feet.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3538,7 +3538,7 @@
     {
       "Id": 1575,
       "Name": "Entrance to a Dungeon",
-      "Description": "\n   The floor dips slightly as you walk into this dark and nasty place. Your\nskin crawls as you look at the filth on the walls and see it move. Most of the\nexits lead into jail cells.",
+      "Description": "The floor dips slightly as you walk into this dark and nasty place. Your\nskin crawls as you look at the filth on the walls and see it move. Most of the\nexits lead into jail cells.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3587,7 +3587,7 @@
     {
       "Id": 1576,
       "Name": "A Dungeon",
-      "Description": "\n   You are in the deepest and darkest part of the mine shafts. The light from\nthe torches barely reaches to where you are. Most directions from here lead to\njail cells.",
+      "Description": "You are in the deepest and darkest part of the mine shafts. The light from\nthe torches barely reaches to where you are. Most directions from here lead to\njail cells.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3636,7 +3636,7 @@
     {
       "Id": 1577,
       "Name": "A Jail Cell",
-      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "Description": "You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3661,7 +3661,7 @@
     {
       "Id": 1578,
       "Name": "The Jail Cell",
-      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "Description": "You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3686,7 +3686,7 @@
     {
       "Id": 1579,
       "Name": "The Jail Cell",
-      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "Description": "You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3711,7 +3711,7 @@
     {
       "Id": 1580,
       "Name": "The Jail Cell",
-      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "Description": "You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3736,7 +3736,7 @@
     {
       "Id": 1581,
       "Name": "The Jail Cell",
-      "Description": "\n   You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
+      "Description": "You are in a musty, dark jail cell. Wet and dirty straw covers the floor.\nThe walls glisten with slime. You see something stir in the straw.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3761,7 +3761,7 @@
     {
       "Id": 1582,
       "Name": "Small Mine Shaft",
-      "Description": "\n   You are in a small extension of the mine shaft. The dust on the floor is\nundisturbed by footprints.",
+      "Description": "You are in a small extension of the mine shaft. The dust on the floor is\nundisturbed by footprints.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3794,7 +3794,7 @@
     {
       "Id": 1583,
       "Name": "Hobgoblin Barracks",
-      "Description": "\n   You are suddenly surrounded by a small army of hobgoblin guards. The room\nitself is a mess with clothes and armor everywhere. The beds are unmade and\nstained.",
+      "Description": "You are suddenly surrounded by a small army of hobgoblin guards. The room\nitself is a mess with clothes and armor everywhere. The beds are unmade and\nstained.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3835,7 +3835,7 @@
     {
       "Id": 1584,
       "Name": "Hobgoblin Barracks",
-      "Description": "\n   Yech! As you continue forward, the smell just keeps getting worse. What are\nyou DOING here?",
+      "Description": "Yech! As you continue forward, the smell just keeps getting worse. What are\nyou DOING here?",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3860,7 +3860,7 @@
     {
       "Id": 1585,
       "Name": "Mess Hall",
-      "Description": "\n   You stand in the hobgoblin eating area. There are a few rotting tables and\nmany broken dishes scattered around the room. You almost slip on a rotten piece\nof meat, but catch yourself just in time.",
+      "Description": "You stand in the hobgoblin eating area. There are a few rotting tables and\nmany broken dishes scattered around the room. You almost slip on a rotten piece\nof meat, but catch yourself just in time.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3901,7 +3901,7 @@
     {
       "Id": 1586,
       "Name": "A Store Room",
-      "Description": "\n   You stand in a small room filled with flour, grain, fruit, and bat\ndroppings.",
+      "Description": "You stand in a small room filled with flour, grain, fruit, and bat\ndroppings.",
       "ZoneId": 15,
       "Sector": "City",
       "Flags": [
@@ -3926,7 +3926,7 @@
     {
       "Id": 1587,
       "Name": "The Kitchen",
-      "Description": "\n   This kitchen hasn't been cleaned since the creation of humans. The trash and\nspoiled food laying on the floor reach up to your knees. Off to the side a pot\nis boiling over. A human hand floats in it.",
+      "Description": "This kitchen hasn't been cleaned since the creation of humans. The trash and\nspoiled food laying on the floor reach up to your knees. Off to the side a pot\nis boiling over. A human hand floats in it.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3951,7 +3951,7 @@
     {
       "Id": 1588,
       "Name": "A Small Mine Shaft",
-      "Description": "\n   You come to a place in the mine shaft where a tunnel leads down. The small\npassage continues north and south.",
+      "Description": "You come to a place in the mine shaft where a tunnel leads down. The small\npassage continues north and south.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -3992,7 +3992,7 @@
     {
       "Id": 1589,
       "Name": "Hermit's Lair",
-      "Description": "\n   You are in a small section where the mine wall has collapsed to reveal a\ntiny one-room cave. The area is barely lit, but you can make out something\nmoving towards you.",
+      "Description": "You are in a small section where the mine wall has collapsed to reveal a\ntiny one-room cave. The area is barely lit, but you can make out something\nmoving towards you.",
       "ZoneId": 15,
       "Sector": "Field",
       "Flags": [
@@ -4017,7 +4017,7 @@
     {
       "Id": 1590,
       "Name": "A Hole",
-      "Description": "\n   You are in a hole.",
+      "Description": "You are in a hole.",
       "ZoneId": 15,
       "Sector": "Forest",
       "Flags": [
@@ -4044,9 +4044,9 @@
     {
       "Id": 1500,
       "Name": "child gnome",
-      "ShortDescription": "\na gnome child",
-      "LongDescription": "\nA gnome child is playing around here.",
-      "Description": "\nThe little tyke looks so innocent playing with his boomerang that you \njust want to pick him up and hug him.",
+      "ShortDescription": "a gnome child",
+      "LongDescription": "A gnome child is playing around here.",
+      "Description": "The little tyke looks so innocent playing with his boomerang that you \njust want to pick him up and hug him.",
       "Level": 3,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4095,9 +4095,9 @@
     {
       "Id": 1501,
       "Name": "woman gnome",
-      "ShortDescription": "\na gnome woman",
-      "LongDescription": "\nA gnome woman is standing here, trying to look beautiful.",
-      "Description": "\nThe woman is short and gnarled, but acts like a woman several times her beauty.\nShe's starting to look pretty attractive to you ...",
+      "ShortDescription": "a gnome woman",
+      "LongDescription": "A gnome woman is standing here, trying to look beautiful.",
+      "Description": "The woman is short and gnarled, but acts like a woman several times her beauty.\nShe's starting to look pretty attractive to you ...",
       "Level": 8,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4146,9 +4146,9 @@
     {
       "Id": 1502,
       "Name": "man gnome",
-      "ShortDescription": "\na gnome man",
-      "LongDescription": "\nA gnome man is walking here, on his way to work.",
-      "Description": "\nThis is a prime example of a gnome.  He looks short and weak, but at the\nsame time an intelligent creature who could outsmart you.",
+      "ShortDescription": "a gnome man",
+      "LongDescription": "A gnome man is walking here, on his way to work.",
+      "Description": "This is a prime example of a gnome.  He looks short and weak, but at the\nsame time an intelligent creature who could outsmart you.",
       "Level": 11,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4196,9 +4196,9 @@
     {
       "Id": 1503,
       "Name": "scientist gnome",
-      "ShortDescription": "\na gnome scientist",
-      "LongDescription": "\nA scientist wanders around deep in thought.",
-      "Description": "\nYou see a gnome who is lost deep into some invention that he is about\nto make.  His hair is white, but he looks fairly strong.",
+      "ShortDescription": "a gnome scientist",
+      "LongDescription": "A scientist wanders around deep in thought.",
+      "Description": "You see a gnome who is lost deep into some invention that he is about\nto make.  His hair is white, but he looks fairly strong.",
       "Level": 13,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4247,9 +4247,9 @@
     {
       "Id": 1504,
       "Name": "guard gnome",
-      "ShortDescription": "\na gnome guard",
-      "LongDescription": "\nA gnome guard stands here guarding something.",
-      "Description": "\nThis is a well trained gnome.  He might not have a lot of strength but\nhe makes up for it with his weapons skill.",
+      "ShortDescription": "a gnome guard",
+      "LongDescription": "A gnome guard stands here guarding something.",
+      "Description": "This is a well trained gnome.  He might not have a lot of strength but\nhe makes up for it with his weapons skill.",
       "Level": 16,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4297,9 +4297,9 @@
     {
       "Id": 1505,
       "Name": "chief gnome",
-      "ShortDescription": "\nthe chief gnome",
-      "LongDescription": "\nA powerful looking gnome stands here wearing ornate clothes.",
-      "Description": "\nThe Chief looks like he could whap you hard.  He looks not only powerful\nbut wise and resourceful.  You better not mess with him.",
+      "ShortDescription": "the chief gnome",
+      "LongDescription": "A powerful looking gnome stands here wearing ornate clothes.",
+      "Description": "The Chief looks like he could whap you hard.  He looks not only powerful\nbut wise and resourceful.  You better not mess with him.",
       "Level": 18,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4347,9 +4347,9 @@
     {
       "Id": 1507,
       "Name": "troll small",
-      "ShortDescription": "\na small troll",
-      "LongDescription": "\nA small troll grunts as he takes a swing at you.",
-      "Description": "\nThe small troll is a short and stocky beast with a human-like face\nbut with the eyes and fangs of a wild beast.",
+      "ShortDescription": "a small troll",
+      "LongDescription": "A small troll grunts as he takes a swing at you.",
+      "Description": "The small troll is a short and stocky beast with a human-like face\nbut with the eyes and fangs of a wild beast.",
       "Level": 18,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4401,9 +4401,9 @@
     {
       "Id": 1508,
       "Name": "mouse field",
-      "ShortDescription": "\na field mouse",
-      "LongDescription": "\nA small mouse runs across your foot.",
-      "Description": "\nThe Mouse is a cute little creature.",
+      "ShortDescription": "a field mouse",
+      "LongDescription": "A small mouse runs across your foot.",
+      "Description": "The Mouse is a cute little creature.",
       "Level": 1,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4452,9 +4452,9 @@
     {
       "Id": 1509,
       "Name": "rat",
-      "ShortDescription": "\na rat",
-      "LongDescription": "\nA small rat shrieks and runs around.",
-      "Description": "\nThe rat is a little evil creature that deserves death.",
+      "ShortDescription": "a rat",
+      "LongDescription": "A small rat shrieks and runs around.",
+      "Description": "The rat is a little evil creature that deserves death.",
       "Level": 2,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4504,9 +4504,9 @@
     {
       "Id": 1510,
       "Name": "rat large",
-      "ShortDescription": "\na large rat",
-      "LongDescription": "\nA large rat runs up to you and nibbles on your boots.",
-      "Description": "\nYou have the urge to kill this vile creature.",
+      "ShortDescription": "a large rat",
+      "LongDescription": "A large rat runs up to you and nibbles on your boots.",
+      "Description": "You have the urge to kill this vile creature.",
       "Level": 4,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4556,9 +4556,9 @@
     {
       "Id": 1511,
       "Name": "rat giant",
-      "ShortDescription": "\na giant rat",
-      "LongDescription": "\nA giant rat growls at you and prepares to attack.",
-      "Description": "\nThis rat has grown up to be the size of an average dog.",
+      "ShortDescription": "a giant rat",
+      "LongDescription": "A giant rat growls at you and prepares to attack.",
+      "Description": "This rat has grown up to be the size of an average dog.",
       "Level": 6,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4608,9 +4608,9 @@
     {
       "Id": 1512,
       "Name": "troll",
-      "ShortDescription": "\nthe troll",
-      "LongDescription": "\nA giant troll lumbers around.",
-      "Description": "\nYou see before you a huge mass of living flesh.  You cringe in fear as\nhe lifts his powerful arm to bludgeon you.",
+      "ShortDescription": "the troll",
+      "LongDescription": "A giant troll lumbers around.",
+      "Description": "You see before you a huge mass of living flesh.  You cringe in fear as\nhe lifts his powerful arm to bludgeon you.",
       "Level": 30,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4661,9 +4661,9 @@
     {
       "Id": 1513,
       "Name": "bat black",
-      "ShortDescription": "\na black bat",
-      "LongDescription": "\nA black bat hangs from the ceiling.",
-      "Description": "\nThe bat is a grotesque little creature with large wings and fangs.",
+      "ShortDescription": "a black bat",
+      "LongDescription": "A black bat hangs from the ceiling.",
+      "Description": "The bat is a grotesque little creature with large wings and fangs.",
       "Level": 5,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4711,9 +4711,9 @@
     {
       "Id": 1514,
       "Name": "zombie gnome",
-      "ShortDescription": "\nthe zombie gnome",
-      "LongDescription": "\nA zombie gnome shuffles his way towards you.",
-      "Description": "\nThis is a creature which has passed away long ago.  His body has been\npulled out of its resting place by some evil force.",
+      "ShortDescription": "the zombie gnome",
+      "LongDescription": "A zombie gnome shuffles his way towards you.",
+      "Description": "This is a creature which has passed away long ago.  His body has been\npulled out of its resting place by some evil force.",
       "Level": 18,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4762,9 +4762,9 @@
     {
       "Id": 1515,
       "Name": "bat fire",
-      "ShortDescription": "\nthe fire bat",
-      "LongDescription": "\nThe fire bat flames brightly and prepares to attack.",
-      "Description": "\nYou see a huge flame which resembles the shape of a bat.  The creature\nhangs from the ceiling and bites at you.",
+      "ShortDescription": "the fire bat",
+      "LongDescription": "The fire bat flames brightly and prepares to attack.",
+      "Description": "You see a huge flame which resembles the shape of a bat.  The creature\nhangs from the ceiling and bites at you.",
       "Level": 24,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4817,9 +4817,9 @@
     {
       "Id": 1517,
       "Name": "soldier hobgoblin",
-      "ShortDescription": "\nthe hobgoblin soldier",
-      "LongDescription": "\nA hobgoblin soldier stands here.",
-      "Description": "\nThis is just a low life hobgoblin, who couldn't make it to the ranks\nof the elite guards.  He looks pissed.",
+      "ShortDescription": "the hobgoblin soldier",
+      "LongDescription": "A hobgoblin soldier stands here.",
+      "Description": "This is just a low life hobgoblin, who couldn't make it to the ranks\nof the elite guards.  He looks pissed.",
       "Level": 28,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4868,9 +4868,9 @@
     {
       "Id": 1518,
       "Name": "bodyguard hobgoblin",
-      "ShortDescription": "\nthe hobgoblin bodyguard",
-      "LongDescription": "\nA hobgoblin bodyguard guards the king with his life.",
-      "Description": "\nThis is one of the elite hobgoblin guards.  He stands tall for his short\nstature.  He grins a toothy grin as he prepares to attack.",
+      "ShortDescription": "the hobgoblin bodyguard",
+      "LongDescription": "A hobgoblin bodyguard guards the king with his life.",
+      "Description": "This is one of the elite hobgoblin guards.  He stands tall for his short\nstature.  He grins a toothy grin as he prepares to attack.",
       "Level": 35,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4919,9 +4919,9 @@
     {
       "Id": 1519,
       "Name": "king hobgoblin",
-      "ShortDescription": "\nthe king of the hobgoblins",
-      "LongDescription": "\nThere is a great king here, sitting in his throne.",
-      "Description": "\nThe king is a silly looking hobgoblin whose muscles bulge out of his robes,\ndestroying the sophisticated effect he was trying to create.",
+      "ShortDescription": "the king of the hobgoblins",
+      "LongDescription": "There is a great king here, sitting in his throne.",
+      "Description": "The king is a silly looking hobgoblin whose muscles bulge out of his robes,\ndestroying the sophisticated effect he was trying to create.",
       "Level": 42,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -4969,9 +4969,9 @@
     {
       "Id": 1520,
       "Name": "miner hobgoblin",
-      "ShortDescription": "\na hobgoblin miner",
-      "LongDescription": "\nA hobgoblin miner stands here looking for gold.",
-      "Description": "\nThe miner is totally covered in dust.",
+      "ShortDescription": "a hobgoblin miner",
+      "LongDescription": "A hobgoblin miner stands here looking for gold.",
+      "Description": "The miner is totally covered in dust.",
       "Level": 25,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -5020,9 +5020,9 @@
     {
       "Id": 1521,
       "Name": "treasurer hobgoblin",
-      "ShortDescription": "\nthe treasurer",
-      "LongDescription": "\nA treasurer is here counting out money.",
-      "Description": "\nThe hobgoblin treasurer is an old goblin with glasses.  It appears that he\ncan only see a couple feet in front of him.",
+      "ShortDescription": "the treasurer",
+      "LongDescription": "A treasurer is here counting out money.",
+      "Description": "The hobgoblin treasurer is an old goblin with glasses.  It appears that he\ncan only see a couple feet in front of him.",
       "Level": 34,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -5071,9 +5071,9 @@
     {
       "Id": 1522,
       "Name": "prisoner gnome",
-      "ShortDescription": "\na gnome prisoner",
-      "LongDescription": "\nA gnome prisoner is here resting in the straw.",
-      "Description": "\nThe prisoner is just barely alive.",
+      "ShortDescription": "a gnome prisoner",
+      "LongDescription": "A gnome prisoner is here resting in the straw.",
+      "Description": "The prisoner is just barely alive.",
       "Level": 23,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -5122,9 +5122,9 @@
     {
       "Id": 1523,
       "Name": "prisoner human",
-      "ShortDescription": "\na human prisoner",
-      "LongDescription": "\nA human prisoner is here resting in the straw.",
-      "Description": "\nThe prisoner is just barely alive.",
+      "ShortDescription": "a human prisoner",
+      "LongDescription": "A human prisoner is here resting in the straw.",
+      "Description": "The prisoner is just barely alive.",
       "Level": 23,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -5173,9 +5173,9 @@
     {
       "Id": 1524,
       "Name": "hermit crab",
-      "ShortDescription": "\na hermit",
-      "LongDescription": "\nA hermit crab crawls towards you.",
-      "Description": "\nThe hermit crab is about 5 feet high and looks mad that you had the nerve\nto wake it up.",
+      "ShortDescription": "a hermit",
+      "LongDescription": "A hermit crab crawls towards you.",
+      "Description": "The hermit crab is about 5 feet high and looks mad that you had the nerve\nto wake it up.",
       "Level": 35,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -5224,9 +5224,9 @@
     {
       "Id": 1526,
       "Name": "cook hobgoblin",
-      "ShortDescription": "\nthe cook",
-      "LongDescription": "\nA hobgoblin cook stands here cooking something.",
-      "Description": "\nThe cook is a dirty and fat hobgoblin.  He burps as he stirs up something\nin a pot.",
+      "ShortDescription": "the cook",
+      "LongDescription": "A hobgoblin cook stands here cooking something.",
+      "Description": "The cook is a dirty and fat hobgoblin.  He burps as he stirs up something\nin a pot.",
       "Level": 27,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -5277,8 +5277,8 @@
     {
       "Id": 1500,
       "Name": "key bloody",
-      "ShortDescription": "\na bloody key",
-      "Description": "\nA bloody key is stuck to the floor.",
+      "ShortDescription": "a bloody key",
+      "Description": "A bloody key is stuck to the floor.",
       "ActionDescription": "",
       "Type": "Key",
       "Level": 2,
@@ -5326,8 +5326,8 @@
     {
       "Id": 1501,
       "Name": "key dirty",
-      "ShortDescription": "\na dirty key",
-      "Description": "\nA dirty key lies here.",
+      "ShortDescription": "a dirty key",
+      "Description": "A dirty key lies here.",
       "ActionDescription": "",
       "Type": "Key",
       "Level": 2,
@@ -5375,8 +5375,8 @@
     {
       "Id": 1502,
       "Name": "toy boomerang",
-      "ShortDescription": "\nA toy boomerang",
-      "Description": "\nA toy boomerang wants to be picked up.",
+      "ShortDescription": "A toy boomerang",
+      "Description": "A toy boomerang wants to be picked up.",
       "ActionDescription": "",
       "Type": "Weapon",
       "Level": 1,
@@ -5426,8 +5426,8 @@
     {
       "Id": 1503,
       "Name": "staff gnarled",
-      "ShortDescription": "\nA gnarled staff",
-      "Description": "\nA gnarled staff is here.",
+      "ShortDescription": "A gnarled staff",
+      "Description": "A gnarled staff is here.",
       "ActionDescription": "",
       "Type": "Weapon",
       "Level": 1,
@@ -5477,8 +5477,8 @@
     {
       "Id": 1504,
       "Name": "sword gnome",
-      "ShortDescription": "\nA gnome sword",
-      "Description": "\nA gnome sword catches your eye.",
+      "ShortDescription": "A gnome sword",
+      "Description": "A gnome sword catches your eye.",
       "ActionDescription": "",
       "Type": "Weapon",
       "Level": 1,
@@ -5528,8 +5528,8 @@
     {
       "Id": 1505,
       "Name": "shield studded",
-      "ShortDescription": "\na studded shield",
-      "Description": "\nA studded wooden shield lies here.",
+      "ShortDescription": "a studded shield",
+      "Description": "A studded wooden shield lies here.",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 1,
@@ -5577,8 +5577,8 @@
     {
       "Id": 1506,
       "Name": "potion bloody",
-      "ShortDescription": "\na bloody potion",
-      "Description": "\nA bloody potion lies here.",
+      "ShortDescription": "a bloody potion",
+      "Description": "A bloody potion lies here.",
       "ActionDescription": "",
       "Type": "Potion",
       "Level": 1,
@@ -5629,8 +5629,8 @@
     {
       "Id": 1507,
       "Name": "cloak bloody",
-      "ShortDescription": "\na bloody cloak",
-      "Description": "\nA bloody cloak lies in a corner.",
+      "ShortDescription": "a bloody cloak",
+      "Description": "A bloody cloak lies in a corner.",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 1,
@@ -5680,8 +5680,8 @@
     {
       "Id": 1508,
       "Name": "ring bat",
-      "ShortDescription": "\nA bat ring",
-      "Description": "\nA ring in the shape of a bat lies here.",
+      "ShortDescription": "A bat ring",
+      "Description": "A ring in the shape of a bat lies here.",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 4,
@@ -5736,8 +5736,8 @@
     {
       "Id": 1509,
       "Name": "necklace bead",
-      "ShortDescription": "\nA bead necklace",
-      "Description": "\nA string of beads is here.",
+      "ShortDescription": "A bead necklace",
+      "Description": "A string of beads is here.",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 5,
@@ -5790,8 +5790,8 @@
     {
       "Id": 1510,
       "Name": "sword electrum",
-      "ShortDescription": "\nAn electrum sword",
-      "Description": "\nAn electrum sword lies here.",
+      "ShortDescription": "An electrum sword",
+      "Description": "An electrum sword lies here.",
       "ActionDescription": "",
       "Type": "Weapon",
       "Level": 6,
@@ -5844,8 +5844,8 @@
     {
       "Id": 1511,
       "Name": "basket wicker",
-      "ShortDescription": "\na wicker basket",
-      "Description": "\nA wicker basket sits here.",
+      "ShortDescription": "a wicker basket",
+      "Description": "A wicker basket sits here.",
       "ActionDescription": "",
       "Type": "Container",
       "Level": 1,
@@ -5896,8 +5896,8 @@
     {
       "Id": 1512,
       "Name": "peanuts",
-      "ShortDescription": "\nsome peanuts",
-      "Description": "\nPeanuts lie here.",
+      "ShortDescription": "some peanuts",
+      "Description": "Peanuts lie here.",
       "ActionDescription": "",
       "Type": "Food",
       "Level": 1,
@@ -5944,8 +5944,8 @@
     {
       "Id": 1513,
       "Name": "grain",
-      "ShortDescription": "\nsome grain",
-      "Description": "\nThere is some grain here.",
+      "ShortDescription": "some grain",
+      "Description": "There is some grain here.",
       "ActionDescription": "",
       "Type": "Food",
       "Level": 1,
@@ -5992,8 +5992,8 @@
     {
       "Id": 1514,
       "Name": "skiff",
-      "ShortDescription": "\na skiff",
-      "Description": "\nA small skiff is here.",
+      "ShortDescription": "a skiff",
+      "Description": "A small skiff is here.",
       "ActionDescription": "",
       "Type": "Boat",
       "Level": 1,
@@ -6022,8 +6022,8 @@
     {
       "Id": 1516,
       "Name": "coins",
-      "ShortDescription": "\na pile of coins",
-      "Description": "\nA pile of coins.",
+      "ShortDescription": "a pile of coins",
+      "Description": "A pile of coins.",
       "ActionDescription": "",
       "Type": "Money",
       "Level": 0,
@@ -6069,8 +6069,8 @@
     {
       "Id": 1517,
       "Name": "coins",
-      "ShortDescription": "\na pile of coins",
-      "Description": "\nA pile of coins.",
+      "ShortDescription": "a pile of coins",
+      "Description": "A pile of coins.",
       "ActionDescription": "",
       "Type": "Money",
       "Level": 0,
@@ -6116,8 +6116,8 @@
     {
       "Id": 1518,
       "Name": "coins",
-      "ShortDescription": "\na pile of coins",
-      "Description": "\nA pile of coins.",
+      "ShortDescription": "a pile of coins",
+      "Description": "A pile of coins.",
       "ActionDescription": "",
       "Type": "Money",
       "Level": 0,
@@ -6163,8 +6163,8 @@
     {
       "Id": 1520,
       "Name": "mail heavy banded",
-      "ShortDescription": "\nheavy banded mail",
-      "Description": "\nA large suit of heavy banded mail is here",
+      "ShortDescription": "heavy banded mail",
+      "Description": "A large suit of heavy banded mail is here",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 1,
@@ -6212,8 +6212,8 @@
     {
       "Id": 1521,
       "Name": "club large",
-      "ShortDescription": "\na large club",
-      "Description": "\nA large club sits here.",
+      "ShortDescription": "a large club",
+      "Description": "A large club sits here.",
       "ActionDescription": "",
       "Type": "Weapon",
       "Level": 1,

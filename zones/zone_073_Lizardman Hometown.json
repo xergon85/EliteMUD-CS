@@ -740,7 +740,7 @@
         "Arg1": 7327,
         "Arg2": 2,
         "Arg3": 1,
-        "Comment": "close door south to 7328  (added by Nymph)"
+        "Comment": "close door south to 7328 (added by Nymph)"
       },
       {
         "Command": "D",
@@ -892,7 +892,7 @@
     {
       "Id": 7300,
       "Name": "Faint Track",
-      "Description": "\n   You are on a faint track in the forest.  As you look around you\nnotice that the ground is sloping down to the south.  There are\nsigns of recent use too, the occasional odd-shaped footprint can\nbe discerned.  The track leads northward uphill into a dense \nforest.  To the south the path becomes muddier and more\nindistinct.",
+      "Description": "You are on a faint track in the forest.  As you look around you\nnotice that the ground is sloping down to the south.  There are\nsigns of recent use too, the occasional odd-shaped footprint can\nbe discerned.  The track leads northward uphill into a dense \nforest.  To the south the path becomes muddier and more\nindistinct.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -923,7 +923,7 @@
             "track,",
             "earth"
           ],
-          "Description": "\nThe ground is wet and soft, giving easily under pressure.  Vague\noutlines of some strange footprints can just be made out."
+          "Description": "The ground is wet and soft, giving easily under pressure.  Vague\noutlines of some strange footprints can just be made out."
         },
         {
           "Keywords": [
@@ -932,7 +932,7 @@
             "tracks",
             "spoor"
           ],
-          "Description": "\nThe footprints are too faint to make out in any detail but appear\nto have indentations reminiscent of claw marks."
+          "Description": "The footprints are too faint to make out in any detail but appear\nto have indentations reminiscent of claw marks."
         }
       ],
       "SpecialProc": null,
@@ -942,7 +942,7 @@
     {
       "Id": 7301,
       "Name": "Boggy Path",
-      "Description": "\n   The surrounding vegetation has turned to tall reeds which make\nit difficult to see much detail in the surrounding area.  From the\nsouth comes the roar of a river in full flood, and it is clear\nthat you are on marshy ground next to the river bank.  The earth\nhere is very wet and has been churned up by quite a lot of use in\nrecent days.  To the north the path firms up a bit as it heads up\na slight incline and to the south it disappears from sight into\ndense reeds.",
+      "Description": "The surrounding vegetation has turned to tall reeds which make\nit difficult to see much detail in the surrounding area.  From the\nsouth comes the roar of a river in full flood, and it is clear\nthat you are on marshy ground next to the river bank.  The earth\nhere is very wet and has been churned up by quite a lot of use in\nrecent days.  To the north the path firms up a bit as it heads up\na slight incline and to the south it disappears from sight into\ndense reeds.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -976,7 +976,7 @@
             "footprint",
             "footprints"
           ],
-          "Description": "\nThe ground is waterlogged, leaving only a large patch of churned-up\nmud."
+          "Description": "The ground is waterlogged, leaving only a large patch of churned-up\nmud."
         }
       ],
       "SpecialProc": null,
@@ -986,7 +986,7 @@
     {
       "Id": 7302,
       "Name": "River Bank",
-      "Description": "\n   You are standing on the northern bank of a large fast flowing\nriver.  It comes from the east and turns south just as it reaches\nyou.  A small channel crosses in front of you isolating a small\nisland of ground.  It is barely 20 feet across the channel and a\nfallen tree 'happens' to bridge the gap to the island.  To the\nnorth a boggy path leads into a dense cluster of reeds.",
+      "Description": "You are standing on the northern bank of a large fast flowing\nriver.  It comes from the east and turns south just as it reaches\nyou.  A small channel crosses in front of you isolating a small\nisland of ground.  It is barely 20 feet across the channel and a\nfallen tree 'happens' to bridge the gap to the island.  To the\nnorth a boggy path leads into a dense cluster of reeds.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -1013,13 +1013,13 @@
           "Keywords": [
             "river"
           ],
-          "Description": "\nLarge and fearsome as the river is, you can't help wondering what its\ninhabitants might be."
+          "Description": "Large and fearsome as the river is, you can't help wondering what its\ninhabitants might be."
         },
         {
           "Keywords": [
             "channel"
           ],
-          "Description": "\nThe channel is about 20 feet across and filled with relatively slow\nmoving water. The main force of the water flows down the eastern\nside of the island."
+          "Description": "The channel is about 20 feet across and filled with relatively slow\nmoving water. The main force of the water flows down the eastern\nside of the island."
         },
         {
           "Keywords": [
@@ -1029,13 +1029,13 @@
             "log",
             "trunk"
           ],
-          "Description": "\nAt first glance the tree seems quite innocent.  Closer inspection\nreveals that a number of footholds and handholds have been\ncunningly cut into the surface to facilitate crossing."
+          "Description": "At first glance the tree seems quite innocent.  Closer inspection\nreveals that a number of footholds and handholds have been\ncunningly cut into the surface to facilitate crossing."
         },
         {
           "Keywords": [
             "island"
           ],
-          "Description": "\nFrom here the island appears to be a heavily wooded patch of firmer\nground.  The trees and reeds prevent you seeing much more."
+          "Description": "From here the island appears to be a heavily wooded patch of firmer\nground.  The trees and reeds prevent you seeing much more."
         }
       ],
       "SpecialProc": null,
@@ -1045,7 +1045,7 @@
     {
       "Id": 7303,
       "Name": "Faint Soggy Path",
-      "Description": "\n   You are standing on the northern shore of what appears to be a\nsmall island. The ground is marshy and an all-pervading air of\ndampness and mold hangs around you. A large tree trunk has been\nused to bridge the narrow channel to the far bank to the north. To\nthe south a faint soggy path wends its way into dense marshy\nwoodland.",
+      "Description": "You are standing on the northern shore of what appears to be a\nsmall island. The ground is marshy and an all-pervading air of\ndampness and mold hangs around you. A large tree trunk has been\nused to bridge the narrow channel to the far bank to the north. To\nthe south a faint soggy path wends its way into dense marshy\nwoodland.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -1072,13 +1072,13 @@
           "Keywords": [
             "river"
           ],
-          "Description": "\nThe full force of a major river flows north to south down the\neastern side of this island."
+          "Description": "The full force of a major river flows north to south down the\neastern side of this island."
         },
         {
           "Keywords": [
             "channel"
           ],
-          "Description": "\nThe channel is about 20 feet across and filled with relatively slow\nmoving water. The main force of the water flows down the eastern\nside of the island."
+          "Description": "The channel is about 20 feet across and filled with relatively slow\nmoving water. The main force of the water flows down the eastern\nside of the island."
         },
         {
           "Keywords": [
@@ -1088,7 +1088,7 @@
             "log",
             "trunk"
           ],
-          "Description": "\nAt first glance the tree seems quite innocent.  Closer inspection\nreveals that a number of footholds and handholds have been\ncunningly cut into the surface to facilitate crossing."
+          "Description": "At first glance the tree seems quite innocent.  Closer inspection\nreveals that a number of footholds and handholds have been\ncunningly cut into the surface to facilitate crossing."
         }
       ],
       "SpecialProc": null,
@@ -1098,7 +1098,7 @@
     {
       "Id": 7304,
       "Name": "Muddy Clearing",
-      "Description": "\n   You are standing in a small muddy clearing.  The ground is firm\nbut damp and large bare patches have been worn in the turf.  Three\nfaint trails wind off to the north, east and west. A larger and\nmore established track leads due south.",
+      "Description": "You are standing in a small muddy clearing.  The ground is firm\nbut damp and large bare patches have been worn in the turf.  Three\nfaint trails wind off to the north, east and west. A larger and\nmore established track leads due south.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -1148,7 +1148,7 @@
             "footprint",
             "footprints"
           ],
-          "Description": "\nMany feet have trodden this ground. Numerous impressions have been\nleft some definitely clear enough to be identified as the tracks of\nLizardmen. This is most unexpected as Lizardmen are considered\nsolitary, anti-social creatures with no cohesive community to speak\nof."
+          "Description": "Many feet have trodden this ground. Numerous impressions have been\nleft some definitely clear enough to be identified as the tracks of\nLizardmen. This is most unexpected as Lizardmen are considered\nsolitary, anti-social creatures with no cohesive community to speak\nof."
         }
       ],
       "SpecialProc": null,
@@ -1158,7 +1158,7 @@
     {
       "Id": 7305,
       "Name": "Outside A Burrow",
-      "Description": "\n   You are standing to the east of a small mud mound with a hole in\nit just about big enough for a large human to stoop through. The\ntrees grow so closely together here that you are permanently in the\ngloom of twilight.  The ground is so wet that you can't imagine\nthat the burrow is not flooded.  A swaying in the reeds to the east\nmakes you wonder if something isn't waiting to greet you should you\nenter them.",
+      "Description": "You are standing to the east of a small mud mound with a hole in\nit just about big enough for a large human to stoop through. The\ntrees grow so closely together here that you are permanently in the\ngloom of twilight.  The ground is so wet that you can't imagine\nthat the burrow is not flooded.  A swaying in the reeds to the east\nmakes you wonder if something isn't waiting to greet you should you\nenter them.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -1189,13 +1189,13 @@
             "house",
             "lair"
           ],
-          "Description": "\nThe burrow is a mound of mud about 6 foot high in a rough dome. The\nentrance hole is about four foot high and two foot across. A tunnel\nleads down into darkness."
+          "Description": "The burrow is a mound of mud about 6 foot high in a rough dome. The\nentrance hole is about four foot high and two foot across. A tunnel\nleads down into darkness."
         },
         {
           "Keywords": [
             "reeds"
           ],
-          "Description": "\nIt is just the wind! Stop being a big baby!"
+          "Description": "It is just the wind! Stop being a big baby!"
         }
       ],
       "SpecialProc": null,
@@ -1205,7 +1205,7 @@
     {
       "Id": 7306,
       "Name": "Small Clearing",
-      "Description": "\n   You are standing in a small clearing. The ground is much firmer\nhere and a mud hut has been erected to the east. The door is simply\na flap made of animal skin. Signs of a small cottage industry are\nall around. A skilled potter lives here.",
+      "Description": "You are standing in a small clearing. The ground is much firmer\nhere and a mud hut has been erected to the east. The door is simply\na flap made of animal skin. Signs of a small cottage industry are\nall around. A skilled potter lives here.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -1244,7 +1244,7 @@
             "building",
             "cottage"
           ],
-          "Description": "\nThe hut is fairly large and has several shuttered windows."
+          "Description": "The hut is fairly large and has several shuttered windows."
         },
         {
           "Keywords": [
@@ -1252,7 +1252,7 @@
             "flap",
             "skin"
           ],
-          "Description": "\nAlthough the house has several shuttered windows the door is simply\nan animal skin fastened loosely across the door. It will not\npresent any difficulty to entering the hut."
+          "Description": "Although the house has several shuttered windows the door is simply\nan animal skin fastened loosely across the door. It will not\npresent any difficulty to entering the hut."
         },
         {
           "Keywords": [
@@ -1260,7 +1260,7 @@
             "kiln",
             "industry"
           ],
-          "Description": "\nTwo small, wood-fired kilns, sit next to the house. They have wisps\nof smoke rising from them indicating that they are in use."
+          "Description": "Two small, wood-fired kilns, sit next to the house. They have wisps\nof smoke rising from them indicating that they are in use."
         }
       ],
       "SpecialProc": null,
@@ -1270,7 +1270,7 @@
     {
       "Id": 7307,
       "Name": "Inside the Burrow",
-      "Description": "\n   You wish that you hadn't entered here. You are standing waste\ndeep in murky, brackish water and it really isn't very warm. The\noccupier has a strange idea of what a home should be like. The\nburrow is a single semi- submerged room. A hammock has been slung\nin one corner between pegs hammered into the earthen walls. You can\nsee many of the trappings of civilized life though, cutlery etc.\nstacked on shelves around the edge of the room.",
+      "Description": "You wish that you hadn't entered here. You are standing waste\ndeep in murky, brackish water and it really isn't very warm. The\noccupier has a strange idea of what a home should be like. The\nburrow is a single semi- submerged room. A hammock has been slung\nin one corner between pegs hammered into the earthen walls. You can\nsee many of the trappings of civilized life though, cutlery etc.\nstacked on shelves around the edge of the room.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [
@@ -1292,7 +1292,7 @@
           "Keywords": [
             "hammock"
           ],
-          "Description": "\nThe hammock is damp and slimy and the pegs are starting to pull out\nof the soft earth."
+          "Description": "The hammock is damp and slimy and the pegs are starting to pull out\nof the soft earth."
         }
       ],
       "SpecialProc": null,
@@ -1302,7 +1302,7 @@
     {
       "Id": 7308,
       "Name": "Mud Hut",
-      "Description": "\n   You are inside a mud hut. The light from several torches show a\nsingle large room with a firm dry floor. A pile of animal skins in\none corner provide a rather comfortable looking bed. In the center\nof the hut is a small table with a couple of chairs. Various nice\nlittle touches, such as decorations on the wall suggest that this\nis the scene of a recent party!  A doorway covered with an animal\nskin to the west appears to be the only exit.",
+      "Description": "You are inside a mud hut. The light from several torches show a\nsingle large room with a firm dry floor. A pile of animal skins in\none corner provide a rather comfortable looking bed. In the center\nof the hut is a small table with a couple of chairs. Various nice\nlittle touches, such as decorations on the wall suggest that this\nis the scene of a recent party!  A doorway covered with an animal\nskin to the west appears to be the only exit.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [
@@ -1334,7 +1334,7 @@
             "animal",
             "skins"
           ],
-          "Description": "\nThe bed is empty but would certainly contain two or three adults\nquite comfortably."
+          "Description": "The bed is empty but would certainly contain two or three adults\nquite comfortably."
         },
         {
           "Keywords": [
@@ -1342,7 +1342,7 @@
             "flap",
             "skin"
           ],
-          "Description": "\nAlthough the house has several shuttered windows the door is simply\nan animal skin fastened loosely across the door. It will not  \npresent any difficulty to leaving the hut."
+          "Description": "Although the house has several shuttered windows the door is simply\nan animal skin fastened loosely across the door. It will not  \npresent any difficulty to leaving the hut."
         }
       ],
       "SpecialProc": null,
@@ -1352,7 +1352,7 @@
     {
       "Id": 7309,
       "Name": "Well Trodden Clearing",
-      "Description": "\n   This clearing is obviously something of a cross-roads for the\nLizardmen that live on this island. Paths lead north, south, east\nand west. The path to the south is broad and well kept. The trees\nhave been cut back to ensure that during daylight the area is well\nlit and the impression you get is of a well organized, well cared\nfor, public highway.",
+      "Description": "This clearing is obviously something of a cross-roads for the\nLizardmen that live on this island. Paths lead north, south, east\nand west. The path to the south is broad and well kept. The trees\nhave been cut back to ensure that during daylight the area is well\nlit and the impression you get is of a well organized, well cared\nfor, public highway.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -1400,7 +1400,7 @@
             "track",
             "trail"
           ],
-          "Description": "\nThe hard packed earth shows few spoor but you are certain that some\nof the footprints are those of the lizardchildren."
+          "Description": "The hard packed earth shows few spoor but you are certain that some\nof the footprints are those of the lizardchildren."
         }
       ],
       "SpecialProc": null,
@@ -1410,7 +1410,7 @@
     {
       "Id": 7310,
       "Name": "A Garden",
-      "Description": "\n   You are now standing in a small garden. The owner obviously\ndoesn't spend much time on it. Weeds grow everywhere and the\nomnipresent reeds crowd around the edges. A small paved path leads\nup to a small shack to the west.  The path goes east as a muddy\ntrack.",
+      "Description": "You are now standing in a small garden. The owner obviously\ndoesn't spend much time on it. Weeds grow everywhere and the\nomnipresent reeds crowd around the edges. A small paved path leads\nup to a small shack to the west.  The path goes east as a muddy\ntrack.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -1449,7 +1449,7 @@
             "flowers",
             "flora"
           ],
-          "Description": "\nAn rather unsuccessful attempt has been made to grow some root\ncrops. A few rather scraggly inedible looking roots have recently\nbeen torn up and thrown to one side. This again is something of a\nsurprise, Lizardmen are known as voracious carnivores."
+          "Description": "An rather unsuccessful attempt has been made to grow some root\ncrops. A few rather scraggly inedible looking roots have recently\nbeen torn up and thrown to one side. This again is something of a\nsurprise, Lizardmen are known as voracious carnivores."
         }
       ],
       "SpecialProc": null,
@@ -1459,7 +1459,7 @@
     {
       "Id": 7311,
       "Name": "Another Muddy Clearing",
-      "Description": "\n   You are standing in a particularly drab, uninteresting but\nrather boggy clearing. A path leads back into the reeds to the west\nand up to the door of a nice, neat wooden building to the east. The\ndoor has no visible locking mechanism. Don't they have crime around\nhere? Obviously not until now!",
+      "Description": "You are standing in a particularly drab, uninteresting but\nrather boggy clearing. A path leads back into the reeds to the west\nand up to the door of a nice, neat wooden building to the east. The\ndoor has no visible locking mechanism. Don't they have crime around\nhere? Obviously not until now!",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -1494,7 +1494,7 @@
     {
       "Id": 7312,
       "Name": "Shack",
-      "Description": "\n   The inside of the shack is virtually empty. The floor is soft\nand spongy, covered in some form of dry mossy growth. Apart from a\nfew animal skins dumped in one corner the only other furnishing is\na large wooden chair.  If it wasn't for the cleanliness it would\nlook abandoned.",
+      "Description": "The inside of the shack is virtually empty. The floor is soft\nand spongy, covered in some form of dry mossy growth. Apart from a\nfew animal skins dumped in one corner the only other furnishing is\na large wooden chair.  If it wasn't for the cleanliness it would\nlook abandoned.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [
@@ -1526,13 +1526,13 @@
             "animal",
             "furs"
           ],
-          "Description": "\nA simple bed using the springiness of the floor as a mattress and\nfurs as blankets."
+          "Description": "A simple bed using the springiness of the floor as a mattress and\nfurs as blankets."
         },
         {
           "Keywords": [
             "chair"
           ],
-          "Description": "\nThe chair is large, wooden and has been around for a long time.\nSomeone, or something, has spent a lot of time sitting in it.\nCuriously enough, the back has had a large hole punched in it."
+          "Description": "The chair is large, wooden and has been around for a long time.\nSomeone, or something, has spent a lot of time sitting in it.\nCuriously enough, the back has had a large hole punched in it."
         }
       ],
       "SpecialProc": null,
@@ -1542,7 +1542,7 @@
     {
       "Id": 7313,
       "Name": "Log Cabin",
-      "Description": "\n   You are inside a large, roomy log cabin. You wonder if there is\nsomething about lizardmen that makes them live in single room\ndwellings. The room is tastefully appointed, with table, chairs and\na pile of furs in the corner for a bed. A soft, gentle light comes\nfrom small crystal balls embedded in the timber of the walls.",
+      "Description": "You are inside a large, roomy log cabin. You wonder if there is\nsomething about lizardmen that makes them live in single room\ndwellings. The room is tastefully appointed, with table, chairs and\na pile of furs in the corner for a bed. A soft, gentle light comes\nfrom small crystal balls embedded in the timber of the walls.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [
@@ -1579,7 +1579,7 @@
             "lights",
             "crystals"
           ],
-          "Description": "\nThe globes are obviously enchanted and are quite impossible to\nremove from the walls."
+          "Description": "The globes are obviously enchanted and are quite impossible to\nremove from the walls."
         }
       ],
       "SpecialProc": null,
@@ -1589,7 +1589,7 @@
     {
       "Id": 7314,
       "Name": "Large Clearing",
-      "Description": "\n   You are in the middle of a large clearing. The earth has been\ncompacted by many feet and some parts are paved. In the Southwest\ncorner is a small shelter which you assume is some kind of communal\nlatrine. From the markings on the ground you guess that some\nchildren have been playing games and messing about. Broad tracks\nlead north, west and east. A wide paved road runs due south from\nhere.",
+      "Description": "You are in the middle of a large clearing. The earth has been\ncompacted by many feet and some parts are paved. In the Southwest\ncorner is a small shelter which you assume is some kind of communal\nlatrine. From the markings on the ground you guess that some\nchildren have been playing games and messing about. Broad tracks\nlead north, west and east. A wide paved road runs due south from\nhere.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -1641,7 +1641,7 @@
             "john",
             "head"
           ],
-          "Description": "\nIt looks pretty primitive and smells awful. You decide not to\ninvestigate further!"
+          "Description": "It looks pretty primitive and smells awful. You decide not to\ninvestigate further!"
         }
       ],
       "SpecialProc": null,
@@ -1651,7 +1651,7 @@
     {
       "Id": 7315,
       "Name": "Little Lane",
-      "Description": "\n   You are standing at the end of a tidy little lane outside a\nlong, low wooden building. There is no door, but a yellow\nshimmering light fills the doorway blocking your view. The building\nitself it stark and squat, quite out of character in the lush\ngreenery here.",
+      "Description": "You are standing at the end of a tidy little lane outside a\nlong, low wooden building. There is no door, but a yellow\nshimmering light fills the doorway blocking your view. The building\nitself it stark and squat, quite out of character in the lush\ngreenery here.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -1683,7 +1683,7 @@
             "force",
             "field"
           ],
-          "Description": "\nThe yellow glare seems to pulsate, gradually rising and falling in\nintensity.  You cannot see a handle or a keyhole and nothing can be\ndiscerned on the other side."
+          "Description": "The yellow glare seems to pulsate, gradually rising and falling in\nintensity.  You cannot see a handle or a keyhole and nothing can be\ndiscerned on the other side."
         }
       ],
       "SpecialProc": null,
@@ -1693,7 +1693,7 @@
     {
       "Id": 7316,
       "Name": "Paved Path",
-      "Description": "\n   You are standing at the east end of a long, straight, paved\nroad. To the east stand a large wooden building. It appears to be a\nsingle story and there is a large, metal reinforced, wooden door.\nThe road, building and the surrounds are all in immaculate\ncondition.",
+      "Description": "You are standing at the east end of a long, straight, paved\nroad. To the east stand a large wooden building. It appears to be a\nsingle story and there is a large, metal reinforced, wooden door.\nThe road, building and the surrounds are all in immaculate\ncondition.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -1732,7 +1732,7 @@
     {
       "Id": 7317,
       "Name": "Mage's House",
-      "Description": "\n   The inside of this building is a single room split by curtains\ninto a series of sections. Several smaller sections have bedding\nand furs but a few have tables, benches, cauldrons and other\nparaphernalia clearly related to magic. Another surprise as\nLizardmen are not known for scholastic pursuits!  Lighting is\nsupplied by numerous glowing globes embedded in the walls and\nceiling. The walls are decorated with runes and symbols that\nsuggest that the owner might well be versed in the mystic arts.\nThis belief is further supported by the 'door' to the east. A\nyellow shimmering wall keeps out the wind and sounds of the world\noutside.",
+      "Description": "The inside of this building is a single room split by curtains\ninto a series of sections. Several smaller sections have bedding\nand furs but a few have tables, benches, cauldrons and other\nparaphernalia clearly related to magic. Another surprise as\nLizardmen are not known for scholastic pursuits!  Lighting is\nsupplied by numerous glowing globes embedded in the walls and\nceiling. The walls are decorated with runes and symbols that\nsuggest that the owner might well be versed in the mystic arts.\nThis belief is further supported by the 'door' to the east. A\nyellow shimmering wall keeps out the wind and sounds of the world\noutside.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [
@@ -1756,7 +1756,7 @@
     {
       "Id": 7318,
       "Name": "Communal Housing",
-      "Description": "\n   You are standing in a large dormitory cum kitchen cum living\nroom. The room is divided into areas by large curtains strung from\nthe ceiling on hooks and rails. At least 20 people must sleep, eat\nand live here and the general mess and clutter bares this out. One\nlarge area serves as the kitchen. You quickly realize that\nLizardmen tend to eat raw unprepared meat and fish judging from the\nimplements and remains on a bench. The only exit is to the west,\nthrough a large doorway.",
+      "Description": "You are standing in a large dormitory cum kitchen cum living\nroom. The room is divided into areas by large curtains strung from\nthe ceiling on hooks and rails. At least 20 people must sleep, eat\nand live here and the general mess and clutter bares this out. One\nlarge area serves as the kitchen. You quickly realize that\nLizardmen tend to eat raw unprepared meat and fish judging from the\nimplements and remains on a bench. The only exit is to the west,\nthrough a large doorway.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [
@@ -1782,7 +1782,7 @@
     {
       "Id": 7319,
       "Name": "Large Cleared Area",
-      "Description": "\n   You are in a very large clearing that serves as the village\ngreen of the Lizardmen settlement. A patch of cultivated grass\nprovides an area for the young and old alike to relax on. Various\ntables are arranged around the square, presumably to act as a\nmarket when needed. To the north a broad, paved road leads away\nthrough the trees. To the east a short paved path leads to some\nwater and to the west a less used track disappears from sight into\nthe marsh. Almost directly south lies a large stone building.\nAlthough only a single story high it is large in area and you\nwonder how the stone was brought here to build it.",
+      "Description": "You are in a very large clearing that serves as the village\ngreen of the Lizardmen settlement. A patch of cultivated grass\nprovides an area for the young and old alike to relax on. Various\ntables are arranged around the square, presumably to act as a\nmarket when needed. To the north a broad, paved road leads away\nthrough the trees. To the east a short paved path leads to some\nwater and to the west a less used track disappears from sight into\nthe marsh. Almost directly south lies a large stone building.\nAlthough only a single story high it is large in area and you\nwonder how the stone was brought here to build it.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -1838,7 +1838,7 @@
             "lawn",
             "village"
           ],
-          "Description": "\nThe grass is lush and well tended. Several skins are stacked in one\ncorner and others are strewn around for people to lie on. You\nrealize that this point probably gets more sun than any other on\nthe island. You wonder if the Lizardmen used to be cold blooded in\ntheir ancestral past."
+          "Description": "The grass is lush and well tended. Several skins are stacked in one\ncorner and others are strewn around for people to lie on. You\nrealize that this point probably gets more sun than any other on\nthe island. You wonder if the Lizardmen used to be cold blooded in\ntheir ancestral past."
         }
       ],
       "SpecialProc": null,
@@ -1848,7 +1848,7 @@
     {
       "Id": 7320,
       "Name": "Pets Corner",
-      "Description": "\n   You are standing on the west shore of the island. The river\nflows in a slow trickle through a narrow channel before rejoining\nthe main flow to the south of the island. A large fence has been\nbuilt out into the water to build a water filled pen. Apparently\nthe lizardmen keep crocodiles as pets!  The only exit appears to be\nto the east.",
+      "Description": "You are standing on the west shore of the island. The river\nflows in a slow trickle through a narrow channel before rejoining\nthe main flow to the south of the island. A large fence has been\nbuilt out into the water to build a water filled pen. Apparently\nthe lizardmen keep crocodiles as pets!  The only exit appears to be\nto the east.",
       "ZoneId": 73,
       "Sector": "Forest",
       "Flags": [],
@@ -1870,7 +1870,7 @@
             "paddock",
             "enclosure"
           ],
-          "Description": "\nThe fence is constructed from heavy wooden posts and a wire mesh.\nThe area encircled is large enough to comfortably hold several\ncrocodiles and encompasses a length of the shoreline too. You are\nrelieved to see that the fence is unbroken!"
+          "Description": "The fence is constructed from heavy wooden posts and a wire mesh.\nThe area encircled is large enough to comfortably hold several\ncrocodiles and encompasses a length of the shoreline too. You are\nrelieved to see that the fence is unbroken!"
         }
       ],
       "SpecialProc": null,
@@ -1880,7 +1880,7 @@
     {
       "Id": 7321,
       "Name": "Paved Junction",
-      "Description": "\n   You have arrived at a junction. The paved road goes east, west\nand south from here. To the west you can see a large cleared area.\nTo the east you can see a large pool of water and to the south the\npath curves out of sight to the east.",
+      "Description": "You have arrived at a junction. The paved road goes east, west\nand south from here. To the west you can see a large cleared area.\nTo the east you can see a large pool of water and to the south the\npath curves out of sight to the east.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -1918,7 +1918,7 @@
     {
       "Id": 7322,
       "Name": "Swimming Pool",
-      "Description": "\n   A large shallow pool has been made by diverting some of the\nrivers flow. Tress have been cut back to allow the sunshine to\nreach the pool. A path leads north beside the influx. Swimming\nacross the lake gives access to a ledge used for diving to the east\nand the outflow back to the river to the south. To the Southwest a\nlarge fence has sectioned off a small area of the pool to provide a\nshallower region for the young to play in.",
+      "Description": "A large shallow pool has been made by diverting some of the\nrivers flow. Tress have been cut back to allow the sunshine to\nreach the pool. A path leads north beside the influx. Swimming\nacross the lake gives access to a ledge used for diving to the east\nand the outflow back to the river to the south. To the Southwest a\nlarge fence has sectioned off a small area of the pool to provide a\nshallower region for the young to play in.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -1964,7 +1964,7 @@
             "platform",
             "shelf"
           ],
-          "Description": "\nOn the east side of the lake a ledge accessed by a short, steep\nramp can be used as a diving platform about 2 man-lengths high."
+          "Description": "On the east side of the lake a ledge accessed by a short, steep\nramp can be used as a diving platform about 2 man-lengths high."
         },
         {
           "Keywords": [
@@ -1972,7 +1972,7 @@
             "paddling",
             "pool"
           ],
-          "Description": "\nThis part of the lake is only knee deep and the fence makes an\nideal area for the young to play in with only minimal supervision."
+          "Description": "This part of the lake is only knee deep and the fence makes an\nideal area for the young to play in with only minimal supervision."
         }
       ],
       "SpecialProc": null,
@@ -1982,7 +1982,7 @@
     {
       "Id": 7323,
       "Name": "Creche",
-      "Description": "\n   A patch of ground and a shallow part of a large swimming pool\nhave been cordoned off using a fence here. Several chairs are here\nfor mothers to sit on and the area is ideal for children to play\nin. The bulk of the pool is off to the Northeast and the water is\npretty cold, fed as it is, by the nearby river. A paved path goes\nnorth to a T-junction and a small channel drains the paddling pool\nto the south.",
+      "Description": "A patch of ground and a shallow part of a large swimming pool\nhave been cordoned off using a fence here. Several chairs are here\nfor mothers to sit on and the area is ideal for children to play\nin. The bulk of the pool is off to the Northeast and the water is\npretty cold, fed as it is, by the nearby river. A paved path goes\nnorth to a T-junction and a small channel drains the paddling pool\nto the south.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -2017,7 +2017,7 @@
     {
       "Id": 7324,
       "Name": "Safety Net",
-      "Description": "\n   You have ended up inside a large open topped cage. You realize\nthat you are now in the main flow of the river. From the north and\nwest you see water flowing into the river. Quite a lot of rubbish\nis trapped in the netting, you assume it has been carried in from\nthe north and west. It seems that this is to stop anything being\nlost for ever in the river. You are quite worried to see some holes\nhave been chewed in the netting.",
+      "Description": "You have ended up inside a large open topped cage. You realize\nthat you are now in the main flow of the river. From the north and\nwest you see water flowing into the river. Quite a lot of rubbish\nis trapped in the netting, you assume it has been carried in from\nthe north and west. It seems that this is to stop anything being\nlost for ever in the river. You are quite worried to see some holes\nhave been chewed in the netting.",
       "ZoneId": 73,
       "Sector": "WaterSwim",
       "Flags": [
@@ -2055,7 +2055,7 @@
             "gap",
             "gaps"
           ],
-          "Description": "\nThe netting looks quite strong but powerful jaws have made short\nwork of it. You wouldn't be surprised to learn that crocodiles\noccasionally found edible things trapped in here."
+          "Description": "The netting looks quite strong but powerful jaws have made short\nwork of it. You wouldn't be surprised to learn that crocodiles\noccasionally found edible things trapped in here."
         }
       ],
       "SpecialProc": null,
@@ -2065,7 +2065,7 @@
     {
       "Id": 7325,
       "Name": "Diving Ledge",
-      "Description": "\n   You are standing above a deep, inviting swimming pool. It looks\na little cold but very invigorating. It is perhaps two or three\ntimes a typical humans height to the water. You have a strong urge\nto show off your diving prowess! You can dive in and head west\nacross the lake.",
+      "Description": "You are standing above a deep, inviting swimming pool. It looks\na little cold but very invigorating. It is perhaps two or three\ntimes a typical humans height to the water. You have a strong urge\nto show off your diving prowess! You can dive in and head west\nacross the lake.",
       "ZoneId": 73,
       "Sector": "WaterSwim",
       "Flags": [],
@@ -2087,7 +2087,7 @@
     {
       "Id": 7326,
       "Name": "Jetty",
-      "Description": "\n   You have arrived at the villagers main source of food, a small\nand quite unstable jetty in a sheltered cove. Several nets are\nstrung across the river here and large numbers of fish are already\nstruggling in them. You imagine one of the main problems is keeping\nlarge predators out of the nets. The don't seem to be any boats\nabout at the moment though and the fish are not being collected.\nYou wonder if they are stored here alive to provide fresh food as\nrequired.",
+      "Description": "You have arrived at the villagers main source of food, a small\nand quite unstable jetty in a sheltered cove. Several nets are\nstrung across the river here and large numbers of fish are already\nstruggling in them. You imagine one of the main problems is keeping\nlarge predators out of the nets. The don't seem to be any boats\nabout at the moment though and the fish are not being collected.\nYou wonder if they are stored here alive to provide fresh food as\nrequired.",
       "ZoneId": 73,
       "Sector": "City",
       "Flags": [],
@@ -2106,7 +2106,7 @@
           "Keywords": [
             "jetty"
           ],
-          "Description": "\nOld and constructed from wood now starting to rot the jetty is not\nas sturdy as once it was. Several nets are tied to its legs and to\nposts hammered into the river bed to provide a means of catching\nand storing fish."
+          "Description": "Old and constructed from wood now starting to rot the jetty is not\nas sturdy as once it was. Several nets are tied to its legs and to\nposts hammered into the river bed to provide a means of catching\nand storing fish."
         },
         {
           "Keywords": [
@@ -2115,7 +2115,7 @@
             "trap",
             "traps"
           ],
-          "Description": "\nTough and plentiful these nets are full of fish. Some further into\nthe river are obviously for catching fish, ones nearer the bank\nwhere the water is calmer for storage. You might be able to catch a\nfew if you had your own net but otherwise...."
+          "Description": "Tough and plentiful these nets are full of fish. Some further into\nthe river are obviously for catching fish, ones nearer the bank\nwhere the water is calmer for storage. You might be able to catch a\nfew if you had your own net but otherwise...."
         }
       ],
       "SpecialProc": null,
@@ -2125,7 +2125,7 @@
     {
       "Id": 7327,
       "Name": "Chieftains House",
-      "Description": "\n   You are impressed by the size of this building. Only a single\nfloor but one at least five times the height of a human. Some\nsections have been cordoned off using magnificent colorful\ntapestries. A long, polished wooden table occupies the central\nsection of the room. At the end is a particularly big and ornate\nchair. You are in no doubt that this is the seat of power in this\nsettlement. Broad double doors to the north leads outside.",
+      "Description": "You are impressed by the size of this building. Only a single\nfloor but one at least five times the height of a human. Some\nsections have been cordoned off using magnificent colorful\ntapestries. A long, polished wooden table occupies the central\nsection of the room. At the end is a particularly big and ornate\nchair. You are in no doubt that this is the seat of power in this\nsettlement. Broad double doors to the north leads outside.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [
@@ -2172,7 +2172,7 @@
             "wall",
             "illusion"
           ],
-          "Description": "\nYou marvel at the detail and craftsmanship displayed here. A\nbeautiful rendering of a cliff and sheltered pool capture your\nattention. The picture is vibrant and life-like and the water from\nthe inlet spills into a pool just about large enough to act as a\nbath."
+          "Description": "You marvel at the detail and craftsmanship displayed here. A\nbeautiful rendering of a cliff and sheltered pool capture your\nattention. The picture is vibrant and life-like and the water from\nthe inlet spills into a pool just about large enough to act as a\nbath."
         },
         {
           "Keywords": [
@@ -2180,7 +2180,7 @@
             "throne",
             "seat"
           ],
-          "Description": "\nIt may not have throne stamped on it but ......."
+          "Description": "It may not have throne stamped on it but ......."
         }
       ],
       "SpecialProc": null,
@@ -2190,7 +2190,7 @@
     {
       "Id": 7328,
       "Name": "Chieftains Sanctuary",
-      "Description": "\n   You find yourself in a small pool partly outside a large\nbuilding to the north.  A wooden fence has been erected around the\npool and by peering through the cracks you notice that it has been\ncamouflaged with reeds on the outside. It is very close to the\nriver with flows past east to west just south of here. On a small\nbank you can see a few items of simple furniture and a few personal\neffects. The only exit would appear to be to duck under the water\nand swim though to the north.",
+      "Description": "You find yourself in a small pool partly outside a large\nbuilding to the north.  A wooden fence has been erected around the\npool and by peering through the cracks you notice that it has been\ncamouflaged with reeds on the outside. It is very close to the\nriver with flows past east to west just south of here. On a small\nbank you can see a few items of simple furniture and a few personal\neffects. The only exit would appear to be to duck under the water\nand swim though to the north.",
       "ZoneId": 73,
       "Sector": "WaterSwim",
       "Flags": [
@@ -2218,7 +2218,7 @@
             "items",
             "personal"
           ],
-          "Description": "\nA small table with a chair sits on the bank. Several boxes of\npapers sit next to it. On the table are more papers. The owner\nwould appear to be quite studious."
+          "Description": "A small table with a chair sits on the bank. Several boxes of\npapers sit next to it. On the table are more papers. The owner\nwould appear to be quite studious."
         }
       ],
       "SpecialProc": null,
@@ -2228,7 +2228,7 @@
     {
       "Id": 7329,
       "Name": "MOB Room",
-      "Description": "\n   If you can see this I hope you're an immortal otherwise\nsomething has gone wrong! This room has exits but no entrance in\norder to randomly place a few MOBS around this zone.",
+      "Description": "If you can see this I hope you're an immortal otherwise\nsomething has gone wrong! This room has exits but no entrance in\norder to randomly place a few MOBS around this zone.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [
@@ -2294,7 +2294,7 @@
     {
       "Id": 7330,
       "Name": "Crossing the River",
-      "Description": "\n   A large tree has fallen across the river, bridging the gap between the\nnorth and south banks.  Curiously enough, the tree has several holes cut\ninto it, as if the bridge is not some sort of coincidence.  The marshy\nground on the river banks north and south of this makeshift bridge appear\nto have been recently flooded.",
+      "Description": "A large tree has fallen across the river, bridging the gap between the\nnorth and south banks.  Curiously enough, the tree has several holes cut\ninto it, as if the bridge is not some sort of coincidence.  The marshy\nground on the river banks north and south of this makeshift bridge appear\nto have been recently flooded.",
       "ZoneId": 73,
       "Sector": "Inside",
       "Flags": [],
@@ -2334,9 +2334,9 @@
     {
       "Id": 7300,
       "Name": "lizardman man lizard",
-      "ShortDescription": "\nthe Lizardman",
-      "LongDescription": "\nThe Lizardman is standing here, eyeing you unblinkingly.",
-      "Description": "\nThe Lizardman is tall, athletic and looks extremely strong. His\njaws are well stocked with sharp incisors and his tail twitches\nfrom side to side as if seeking a target.",
+      "ShortDescription": "the Lizardman",
+      "LongDescription": "The Lizardman is standing here, eyeing you unblinkingly.",
+      "Description": "The Lizardman is tall, athletic and looks extremely strong. His\njaws are well stocked with sharp incisors and his tail twitches\nfrom side to side as if seeking a target.",
       "Level": 21,
       "Race": "Humanoid",
       "Class": "Normal",
@@ -2377,9 +2377,9 @@
     {
       "Id": 7301,
       "Name": "lizardwoman lizardman woman lizard",
-      "ShortDescription": "\nthe Lizardwoman",
-      "LongDescription": "\nThe Lizardwoman is standing here, keeping an eye open for danger.",
-      "Description": "\nThe Lizardwoman is strong and alert. She is keeping a wary\nlookout, intent on protecting her young.",
+      "ShortDescription": "the Lizardwoman",
+      "LongDescription": "The Lizardwoman is standing here, keeping an eye open for danger.",
+      "Description": "The Lizardwoman is strong and alert. She is keeping a wary\nlookout, intent on protecting her young.",
       "Level": 15,
       "Race": "Humanoid",
       "Class": "Normal",
@@ -2420,9 +2420,9 @@
     {
       "Id": 7302,
       "Name": "lizardchild lizardman child lizard",
-      "ShortDescription": "\nthe Lizardchild",
-      "LongDescription": "\nThe Lizardchild is playing soldiers here, guarding the settlement from intruders!",
-      "Description": "\nThe Lizardchild is running around playing happily. It is quite\nsmall and not really a threat to anyone.",
+      "ShortDescription": "the Lizardchild",
+      "LongDescription": "The Lizardchild is playing soldiers here, guarding the settlement from intruders!",
+      "Description": "The Lizardchild is running around playing happily. It is quite\nsmall and not really a threat to anyone.",
       "Level": 10,
       "Race": "Humanoid",
       "Class": "Normal",
@@ -2463,9 +2463,9 @@
     {
       "Id": 7303,
       "Name": "lizardman hunter lizard",
-      "ShortDescription": "\nthe Lizardman Hunter",
-      "LongDescription": "\nThe Lizardman Hunter is idling away some time waiting for the next sortie.",
-      "Description": "\nThe Lizardman Hunter is impressive indeed. Rippling muscles and a\nwell trained arm are backed by his heavy, club-like, tail. You\nrealize that even unarmed he would be quite formidable.",
+      "ShortDescription": "the Lizardman Hunter",
+      "LongDescription": "The Lizardman Hunter is idling away some time waiting for the next sortie.",
+      "Description": "The Lizardman Hunter is impressive indeed. Rippling muscles and a\nwell trained arm are backed by his heavy, club-like, tail. You\nrealize that even unarmed he would be quite formidable.",
       "Level": 25,
       "Race": "Humanoid",
       "Class": "Normal",
@@ -2506,9 +2506,9 @@
     {
       "Id": 7304,
       "Name": "lizardman fisherman man lizard",
-      "ShortDescription": "\nthe Lizardman Fisherman",
-      "LongDescription": "\nThe Lizardman Fisherman is standing here talking to the world in general.",
-      "Description": "\nThe Lizardman Fisherman is tall and strong. Hours of patiently\nwaiting to strike, plucking his prey from the water have given him\na steady, steely gaze. At the moment, however, he is describing\nthe one that got away. It was this big!",
+      "ShortDescription": "the Lizardman Fisherman",
+      "LongDescription": "The Lizardman Fisherman is standing here talking to the world in general.",
+      "Description": "The Lizardman Fisherman is tall and strong. Hours of patiently\nwaiting to strike, plucking his prey from the water have given him\na steady, steely gaze. At the moment, however, he is describing\nthe one that got away. It was this big!",
       "Level": 25,
       "Race": "Humanoid",
       "Class": "Normal",
@@ -2549,9 +2549,9 @@
     {
       "Id": 7305,
       "Name": "lizardman mage lizard",
-      "ShortDescription": "\nthe Lizardman Mage",
-      "LongDescription": "\nThe lizardman mage is standing here.",
-      "Description": "\nThe mage looks surprisingly intelligent for a lizardman. You\nrealize from his garb and manner that he really is a magician to\nbe reckoned with.",
+      "ShortDescription": "the Lizardman Mage",
+      "LongDescription": "The lizardman mage is standing here.",
+      "Description": "The mage looks surprisingly intelligent for a lizardman. You\nrealize from his garb and manner that he really is a magician to\nbe reckoned with.",
       "Level": 30,
       "Race": "Humanoid",
       "Class": "MagicUser",
@@ -2598,9 +2598,9 @@
     {
       "Id": 7306,
       "Name": "lizardman apprentice mage lizard",
-      "ShortDescription": "\nthe Lizardman Apprentice Mage",
-      "LongDescription": "\nThe Lizardman Apprentice is standing quietly waiting for inspiration.",
-      "Description": "\nThe Lizardman Apprentice is dressed in an outlandish robe. You\nfeel that she may be trying just a little too hard to fit the\npart.",
+      "ShortDescription": "the Lizardman Apprentice Mage",
+      "LongDescription": "The Lizardman Apprentice is standing quietly waiting for inspiration.",
+      "Description": "The Lizardman Apprentice is dressed in an outlandish robe. You\nfeel that she may be trying just a little too hard to fit the\npart.",
       "Level": 20,
       "Race": "Humanoid",
       "Class": "MagicUser",
@@ -2641,9 +2641,9 @@
     {
       "Id": 7307,
       "Name": "lizardman guard lizard",
-      "ShortDescription": "\nthe Lizardman Guard",
-      "LongDescription": "\nThe Lizardman Guard is patiently standing to attention here.",
-      "Description": "\nThe guard is large, even for a lizardman, and he is held rigidly\nto attention.",
+      "ShortDescription": "the Lizardman Guard",
+      "LongDescription": "The Lizardman Guard is patiently standing to attention here.",
+      "Description": "The guard is large, even for a lizardman, and he is held rigidly\nto attention.",
       "Level": 30,
       "Race": "Humanoid",
       "Class": "Normal",
@@ -2684,9 +2684,9 @@
     {
       "Id": 7308,
       "Name": "lizardman chief ruler king chieftain lizard",
-      "ShortDescription": "\nthe Lizardman Chieftain",
-      "LongDescription": "\nThe Lizardman Chieftain is standing here surveying his domain.",
-      "Description": "\nThe Lizardman Chieftain is surprisingly young. He stands tall and\nhis eyes shine with a wisdom unexpected for his years. You feel\nthat he is a good, just and compassionate soul, tempered with\nsteel and possessing an unflinching will.",
+      "ShortDescription": "the Lizardman Chieftain",
+      "LongDescription": "The Lizardman Chieftain is standing here surveying his domain.",
+      "Description": "The Lizardman Chieftain is surprisingly young. He stands tall and\nhis eyes shine with a wisdom unexpected for his years. You feel\nthat he is a good, just and compassionate soul, tempered with\nsteel and possessing an unflinching will.",
       "Level": 35,
       "Race": "Humanoid",
       "Class": "Normal",
@@ -2727,9 +2727,9 @@
     {
       "Id": 7309,
       "Name": "crocodile lizardman",
-      "ShortDescription": "\na Crocodile",
-      "LongDescription": "\nThe Crocodile is lying here, waiting for prey.",
-      "Description": "\nThe Crocodile is a dark green, scaly eating machine.",
+      "ShortDescription": "a Crocodile",
+      "LongDescription": "The Crocodile is lying here, waiting for prey.",
+      "Description": "The Crocodile is a dark green, scaly eating machine.",
       "Level": 25,
       "Race": "Undefined",
       "Class": "Normal",
@@ -2772,9 +2772,9 @@
     {
       "Id": 7310,
       "Name": "river monster lizardman huge thing lizard",
-      "ShortDescription": "\na Monster",
-      "LongDescription": "\nA Huge Monster rises from the water.",
-      "Description": "\nThe thing is mottled green and brown and huge. It is hard to make\nit out as it rises and falls below the surface but it has a large\nsquat head on a long neck and hundreds of teeth. You think that\nyou see flippers too but it is hard to see in the spray being\ngenerated.",
+      "ShortDescription": "a Monster",
+      "LongDescription": "A Huge Monster rises from the water.",
+      "Description": "The thing is mottled green and brown and huge. It is hard to make\nit out as it rises and falls below the surface but it has a large\nsquat head on a long neck and hundreds of teeth. You think that\nyou see flippers too but it is hard to see in the spray being\ngenerated.",
       "Level": 35,
       "Race": "Undefined",
       "Class": "Normal",
@@ -2821,9 +2821,9 @@
     {
       "Id": 7300,
       "Name": "sword long lizardman",
-      "ShortDescription": "\na long sword",
-      "Description": "\nA long sword is lying on the ground here.",
-      "ActionDescription": "\nslash",
+      "ShortDescription": "a long sword",
+      "Description": "A long sword is lying on the ground here.",
+      "ActionDescription": "slash",
       "Type": "Weapon",
       "Level": 1,
       "AntiClass": "None",
@@ -2872,8 +2872,8 @@
     {
       "Id": 7301,
       "Name": "reinforced shield lizardman",
-      "ShortDescription": "\na reinforced shield",
-      "Description": "\nA wooden shield reinforced with metal strips is lying here",
+      "ShortDescription": "a reinforced shield",
+      "Description": "A wooden shield reinforced with metal strips is lying here",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 18,
@@ -2921,8 +2921,8 @@
     {
       "Id": 7302,
       "Name": "grappling net lizardman",
-      "ShortDescription": "\na grappling net",
-      "Description": "\nA small hand held net is lying here.",
+      "ShortDescription": "a grappling net",
+      "Description": "A small hand held net is lying here.",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 18,
@@ -2970,8 +2970,8 @@
     {
       "Id": 7303,
       "Name": "trident lizardman",
-      "ShortDescription": "\na trident",
-      "Description": "\nA trident is propped up here.",
+      "ShortDescription": "a trident",
+      "Description": "A trident is propped up here.",
       "ActionDescription": "",
       "Type": "Weapon",
       "Level": 18,
@@ -3030,8 +3030,8 @@
     {
       "Id": 7304,
       "Name": "globe light lizardman",
-      "ShortDescription": "\na glowing globe",
-      "Description": "\nA globe glows here casting a gentle light all around.",
+      "ShortDescription": "a glowing globe",
+      "Description": "A globe glows here casting a gentle light all around.",
       "ActionDescription": "",
       "Type": "Light",
       "Level": 30,
@@ -3085,8 +3085,8 @@
     {
       "Id": 7305,
       "Name": "sword bastard lizardman",
-      "ShortDescription": "\na bastard sword",
-      "Description": "\nA long, sharp sword lies here.",
+      "ShortDescription": "a bastard sword",
+      "Description": "A long, sharp sword lies here.",
       "ActionDescription": "",
       "Type": "Weapon",
       "Level": 30,
@@ -3151,8 +3151,8 @@
     {
       "Id": 7306,
       "Name": "halberd lizardman",
-      "ShortDescription": "\na halberd",
-      "Description": "\nA halberd lies on the floor posing a hazard to passing toes.",
+      "ShortDescription": "a halberd",
+      "Description": "A halberd lies on the floor posing a hazard to passing toes.",
       "ActionDescription": "",
       "Type": "Weapon",
       "Level": 25,

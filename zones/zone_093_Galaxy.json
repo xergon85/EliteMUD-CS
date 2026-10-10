@@ -419,8 +419,8 @@
         "IfFlag": 0,
         "Arg1": 9315,
         "Arg2": 1,
-        "Arg3": null,
-        "Comment": null
+        "Arg3": 9342,
+        "Comment": "Load Aries"
       },
       {
         "Command": "G",
@@ -428,15 +428,15 @@
         "Arg1": 9324,
         "Arg2": 1,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him spring key"
       },
       {
         "Command": "D",
         "IfFlag": 1,
         "Arg1": 9339,
         "Arg2": 4,
-        "Arg3": null,
-        "Comment": null
+        "Arg3": 2,
+        "Comment": "Lock door only if key is resetted"
       },
       {
         "Command": "E",
@@ -491,24 +491,24 @@
         "IfFlag": 0,
         "Arg1": 9319,
         "Arg2": 1,
-        "Arg3": null,
-        "Comment": null
+        "Arg3": 9345,
+        "Comment": "Load Cancer"
       },
       {
         "Command": "G",
         "IfFlag": 1,
         "Arg1": 9325,
-        "Arg2": 0,
+        "Arg2": 1,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him key"
       },
       {
         "Command": "D",
         "IfFlag": 1,
         "Arg1": 9354,
         "Arg2": 4,
-        "Arg3": null,
-        "Comment": null
+        "Arg3": 2,
+        "Comment": "Lock door only if key is resetted"
       },
       {
         "Command": "E",
@@ -555,24 +555,24 @@
         "IfFlag": 0,
         "Arg1": 9322,
         "Arg2": 1,
-        "Arg3": null,
-        "Comment": null
+        "Arg3": 9348,
+        "Comment": "Load Libra"
       },
       {
         "Command": "G",
         "IfFlag": 1,
         "Arg1": 9326,
-        "Arg2": 0,
+        "Arg2": 1,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give key"
       },
       {
         "Command": "D",
         "IfFlag": 1,
         "Arg1": 9359,
         "Arg2": 1,
-        "Arg3": null,
-        "Comment": null
+        "Arg3": 2,
+        "Comment": "Lock door only if key is resetted"
       },
       {
         "Command": "G",
@@ -635,24 +635,24 @@
         "IfFlag": 0,
         "Arg1": 9325,
         "Arg2": 1,
-        "Arg3": null,
-        "Comment": null
+        "Arg3": 9351,
+        "Comment": "Load Capricon"
       },
       {
         "Command": "G",
         "IfFlag": 1,
         "Arg1": 9327,
-        "Arg2": 0,
+        "Arg2": 1,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give key"
       },
       {
         "Command": "D",
         "IfFlag": 1,
         "Arg1": 9363,
         "Arg2": 2,
-        "Arg3": null,
-        "Comment": null
+        "Arg3": 2,
+        "Comment": "Lock door only if ..."
       },
       {
         "Command": "E",
@@ -772,7 +772,7 @@
     {
       "Id": 9301,
       "Name": "Inside a Tavern",
-      "Description": "\n   You are inside a dimly-lit room. The atmosphere makes you feel\nuncomfortable. In front of you stands a mysterious gypsy. She whispers 'Your\nfate and destiny lie beyond this world.' You are still wondering what she means\nwhen you suddenly notice the crystal ball ... it glows fiercely and displays\nthe Universe!",
+      "Description": "You are inside a dimly-lit room. The atmosphere makes you feel\nuncomfortable. In front of you stands a mysterious gypsy. She whispers 'Your\nfate and destiny lie beyond this world.' You are still wondering what she means\nwhen you suddenly notice the crystal ball ... it glows fiercely and displays\nthe Universe!",
       "ZoneId": -1,
       "Sector": "Inside",
       "Flags": [
@@ -796,7 +796,7 @@
     {
       "Id": 9302,
       "Name": "Inside the Crystal Ball",
-      "Description": "\n   You have touched the crystal ball and find that you have gone inside it: a\nworld of stars and wonders! As you look back you figure out there is no choice\nbut to go forward.",
+      "Description": "You have touched the crystal ball and find that you have gone inside it: a\nworld of stars and wonders! As you look back you figure out there is no choice\nbut to go forward.",
       "ZoneId": 93,
       "Sector": "Field",
       "Flags": [],
@@ -818,7 +818,7 @@
     {
       "Id": 9303,
       "Name": "Inside the Galaxy",
-      "Description": "\n   You are now inside the galaxy, around you you see stars and nebulae smiling\nat your presence, and comets and meteors wandering around you. You realize that\nthis world may not be the true galaxy after all, but just another fantasy zone.\nExits lie virtually in all directions.",
+      "Description": "You are now inside the galaxy, around you you see stars and nebulae smiling\nat your presence, and comets and meteors wandering around you. You realize that\nthis world may not be the true galaxy after all, but just another fantasy zone.\nExits lie virtually in all directions.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -864,7 +864,7 @@
     {
       "Id": 9304,
       "Name": "On an InterGalactic Walkway",
-      "Description": "\n   You are on a well-paved path which seems that it was made deliberately for\nvisitors like you. The walkway continues north and a small exit lies west.",
+      "Description": "You are on a well-paved path which seems that it was made deliberately for\nvisitors like you. The walkway continues north and a small exit lies west.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -902,7 +902,7 @@
     {
       "Id": 9305,
       "Name": "End of the InterGalactic Walkway",
-      "Description": "\n   You notice the walkway has come to an abrupt end and you wonder why. You see\nthat there is still a small path which leads north and one to the west. To the\neast lies a bridge.",
+      "Description": "You notice the walkway has come to an abrupt end and you wonder why. You see\nthat there is still a small path which leads north and one to the west. To the\neast lies a bridge.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -948,7 +948,7 @@
     {
       "Id": 9306,
       "Name": "At the Undeveloped Part of the Galaxy",
-      "Description": "\n   This place looks deserted, covered with space debris. Not a sign of life is\naround.",
+      "Description": "This place looks deserted, covered with space debris. Not a sign of life is\naround.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -978,7 +978,7 @@
     {
       "Id": 9308,
       "Name": "On the Bridge of Stars",
-      "Description": "\n   This bridge has been made by the stars to honour their ancestors. The bridge\nitself shines brightly and makes you feel that you are walking on a path of\nlight. An entrance to an ancient building lies north and to the east lies the\nMilky Way.",
+      "Description": "This bridge has been made by the stars to honour their ancestors. The bridge\nitself shines brightly and makes you feel that you are walking on a path of\nlight. An entrance to an ancient building lies north and to the east lies the\nMilky Way.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1016,7 +1016,7 @@
     {
       "Id": 9309,
       "Name": "On the Bridge of Nebulae",
-      "Description": "\n   This bridge, like the other, was made as a memorial. The nebulae had to make\none just to show that they are as capable as the stars. North lies a throne\nroom.",
+      "Description": "This bridge, like the other, was made as a memorial. The nebulae had to make\none just to show that they are as capable as the stars. North lies a throne\nroom.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [
@@ -1056,7 +1056,7 @@
     {
       "Id": 9310,
       "Name": "The Throne Room of the Nebula King",
-      "Description": "\n   You can only faintly make out that it is a throne room as it is too dark in\nhere. In the middle is an empty throne. You wonder where the King has gone,\nmaybe he is hiding from you?",
+      "Description": "You can only faintly make out that it is a throne room as it is too dark in\nhere. In the middle is an empty throne. You wonder where the King has gone,\nmaybe he is hiding from you?",
       "ZoneId": 93,
       "Sector": "Inside",
       "Flags": [
@@ -1081,7 +1081,7 @@
     {
       "Id": 9312,
       "Name": "At the Start of the Milky Way",
-      "Description": "\n   It is here that the famous old Milky Way starts flowing. You are surrounded\nby streams of mist the moment you tread on it. You can't see well in here ...\nluckily you haven't fallen yet!",
+      "Description": "It is here that the famous old Milky Way starts flowing. You are surrounded\nby streams of mist the moment you tread on it. You can't see well in here ...\nluckily you haven't fallen yet!",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [],
@@ -1111,7 +1111,7 @@
     {
       "Id": 9313,
       "Name": "Along the Milky Way",
-      "Description": "\n   You are still travelling inside this path of mist. You notice a small\nopening to the east.",
+      "Description": "You are still travelling inside this path of mist. You notice a small\nopening to the east.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [],
@@ -1149,7 +1149,7 @@
     {
       "Id": 9314,
       "Name": "At the End of the Milky Way",
-      "Description": "\n   Just as you started enjoying this journey inside the mist, you have come to\nthe end of it. West leads to a bridge and east leads to somewhere else.",
+      "Description": "Just as you started enjoying this journey inside the mist, you have come to\nthe end of it. West leads to a bridge and east leads to somewhere else.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [],
@@ -1187,7 +1187,7 @@
     {
       "Id": 9317,
       "Name": "A Small Clearing",
-      "Description": "\n   You are inside a small clearing. You can see that there are signs of a\nliving creature nearby.",
+      "Description": "You are inside a small clearing. You can see that there are signs of a\nliving creature nearby.",
       "ZoneId": 93,
       "Sector": "Field",
       "Flags": [],
@@ -1217,7 +1217,7 @@
     {
       "Id": 9318,
       "Name": "An Edge of the Galaxy",
-      "Description": "\n   You are on the very edge of the galaxy. Nothing is here except that there is\na path which leads down.",
+      "Description": "You are on the very edge of the galaxy. Nothing is here except that there is\na path which leads down.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1255,7 +1255,7 @@
     {
       "Id": 9319,
       "Name": "Very Near to a Gigantic Star",
-      "Description": "\n   You are very near to a gigantic red star. While you are still fascinated by\nits beauty, the star keeps on growing ... suddenly you realize that you'd\nbetter leave.",
+      "Description": "You are very near to a gigantic red star. While you are still fascinated by\nits beauty, the star keeps on growing ... suddenly you realize that you'd\nbetter leave.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [
@@ -1303,7 +1303,7 @@
     {
       "Id": 9320,
       "Name": "Too Bright to Tell",
-      "Description": "\n   Indeed it is too bright to tell. Because what you are witnessing is the rare\nevent of a Supernova, how a star explodes itself into galactic dust. You may\nfind yourself lucky to witness this rare event but even luckier, you have\nfinally got out of this galaxy as your body turns into dust. That really HURTS!",
+      "Description": "Indeed it is too bright to tell. Because what you are witnessing is the rare\nevent of a Supernova, how a star explodes itself into galactic dust. You may\nfind yourself lucky to witness this rare event but even luckier, you have\nfinally got out of this galaxy as your body turns into dust. That really HURTS!",
       "ZoneId": 93,
       "Sector": "Inside",
       "Flags": [
@@ -1319,7 +1319,7 @@
     {
       "Id": 9321,
       "Name": "The Star Cluster",
-      "Description": "\n   You are inside the home of the stars. All you can see around you are stars\nand nothing else. You eyes become pretty hurt as you look at them.",
+      "Description": "You are inside the home of the stars. All you can see around you are stars\nand nothing else. You eyes become pretty hurt as you look at them.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [
@@ -1351,7 +1351,7 @@
     {
       "Id": 9322,
       "Name": "Another Edge of the Galaxy",
-      "Description": "\n   This is another uninhabited place. Exits lie north, east and south.",
+      "Description": "This is another uninhabited place. Exits lie north, east and south.",
       "ZoneId": 93,
       "Sector": "Field",
       "Flags": [],
@@ -1389,7 +1389,7 @@
     {
       "Id": 9323,
       "Name": "Corner of the Galaxy",
-      "Description": "\n   You wonder why the galaxy is limited. All you have done in Astronomy courses\nnow prove worthless. Well who told you to take one at the start?",
+      "Description": "You wonder why the galaxy is limited. All you have done in Astronomy courses\nnow prove worthless. Well who told you to take one at the start?",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1427,7 +1427,7 @@
     {
       "Id": 9324,
       "Name": "Lost in Space",
-      "Description": "\n   You are now lost in space. Compasses don't work here, sorry. What's more you\ncan sense darkness engulfing you. You'd better get out quick.",
+      "Description": "You are now lost in space. Compasses don't work here, sorry. What's more you\ncan sense darkness engulfing you. You'd better get out quick.",
       "ZoneId": 93,
       "Sector": "Field",
       "Flags": [
@@ -1467,7 +1467,7 @@
     {
       "Id": 9325,
       "Name": "Black Hole",
-      "Description": "\n   Well you have chosen the wrong path, sorry. Nothing can escape from this\nmonster, not even light. PANIC! You can't escape!",
+      "Description": "Well you have chosen the wrong path, sorry. Nothing can escape from this\nmonster, not even light. PANIC! You can't escape!",
       "ZoneId": 93,
       "Sector": "Inside",
       "Flags": [
@@ -1484,7 +1484,7 @@
     {
       "Id": 9326,
       "Name": "The Homes of the Pleiades",
-      "Description": "\n   This is where the famous Seven Sisters live. You'd better not disturb them.",
+      "Description": "This is where the famous Seven Sisters live. You'd better not disturb them.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1514,7 +1514,7 @@
     {
       "Id": 9327,
       "Name": "Western Side of the Temple",
-      "Description": "\n   You are still wandering around this temple. You notice exits lie in all\ndirections except west.",
+      "Description": "You are still wandering around this temple. You notice exits lie in all\ndirections except west.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1552,7 +1552,7 @@
     {
       "Id": 9328,
       "Name": "Orion's Hunting Lodge",
-      "Description": "\n   This is dedicated to the Great Hunter of all time -- Orion. Scattered on the\nfloor is the famous hunting equipment used by him.",
+      "Description": "This is dedicated to the Great Hunter of all time -- Orion. Scattered on the\nfloor is the famous hunting equipment used by him.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1582,7 +1582,7 @@
     {
       "Id": 9329,
       "Name": "Northern Side of the Temple",
-      "Description": "\n   You are still wandering around this temple. You notice exits lie in all\ndirections except north.",
+      "Description": "You are still wandering around this temple. You notice exits lie in all\ndirections except north.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1620,7 +1620,7 @@
     {
       "Id": 9330,
       "Name": "The Offering Chamber",
-      "Description": "\n   This is the sacred offering chamber in which sacrifices are made. You see a\nyoung girl here, chained to the wall, as if she is waiting for execution. You\nlook up and realize the chains are sent down directly from above. Below you\nrecognize the temple of Thalos.",
+      "Description": "This is the sacred offering chamber in which sacrifices are made. You see a\nyoung girl here, chained to the wall, as if she is waiting for execution. You\nlook up and realize the chains are sent down directly from above. Below you\nrecognize the temple of Thalos.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1682,7 +1682,7 @@
     {
       "Id": 9331,
       "Name": "The Entrance of the Ancient Temple",
-      "Description": "\n   You have entered into this old temple, which was built originally for the\ngods in Mount Olympia, but it is now deserted as someone took over this part of\nthe Universe.",
+      "Description": "You have entered into this old temple, which was built originally for the\ngods in Mount Olympia, but it is now deserted as someone took over this part of\nthe Universe.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1728,7 +1728,7 @@
     {
       "Id": 9332,
       "Name": "Hercules' Mighty Throne",
-      "Description": "\n   You stand before the throne of a long-forgotten hero. It is full of bounty\nthat he got from the Ten Labours.",
+      "Description": "You stand before the throne of a long-forgotten hero. It is full of bounty\nthat he got from the Ten Labours.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1758,7 +1758,7 @@
     {
       "Id": 9333,
       "Name": "Eastern Side of the Temple",
-      "Description": "\n   You are still wandering around this temple. You notice exits lie in all\ndirections except east.",
+      "Description": "You are still wandering around this temple. You notice exits lie in all\ndirections except east.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1796,7 +1796,7 @@
     {
       "Id": 9334,
       "Name": "Perseus' Chamber",
-      "Description": "\n   It is the chamber of the prince, Perseus. However, he seems not to be here.\nMaybe he has gone to get Pegasus to save Andromeda?",
+      "Description": "It is the chamber of the prince, Perseus. However, he seems not to be here.\nMaybe he has gone to get Pegasus to save Andromeda?",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -1826,7 +1826,7 @@
     {
       "Id": 9339,
       "Name": "On the Mystic Chains",
-      "Description": "\n   You are dangling on the chains. You notice exits lie in all directions. Up\nabove you see the chains continue upwards. But a forcefield prevents you from\ngoing further upwards.",
+      "Description": "You are dangling on the chains. You notice exits lie in all directions. Up\nabove you see the chains continue upwards. But a forcefield prevents you from\ngoing further upwards.",
       "ZoneId": 93,
       "Sector": "Mountain",
       "Flags": [],
@@ -1892,7 +1892,7 @@
     {
       "Id": 9342,
       "Name": "On a Hill",
-      "Description": "\n   Suddenly you find yourself on a hillside. As you look around, you notice\nthat Spring has descended upon you.",
+      "Description": "Suddenly you find yourself on a hillside. As you look around, you notice\nthat Spring has descended upon you.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [],
@@ -1930,7 +1930,7 @@
     {
       "Id": 9343,
       "Name": "Inside a Spanish Bull-Ring",
-      "Description": "\n   You are inside what used to be a ground for bull fighting. But you notice\nthere are no Matadors around. Maybe they are all dead?",
+      "Description": "You are inside what used to be a ground for bull fighting. But you notice\nthere are no Matadors around. Maybe they are all dead?",
       "ZoneId": 93,
       "Sector": "Field",
       "Flags": [],
@@ -1960,7 +1960,7 @@
     {
       "Id": 9344,
       "Name": "Inside a study",
-      "Description": "\n   This is a strange study. Besides the desks and chairs you also see a large\nmirror in the middle. So, you wonder, is this how you make a Gemini into two\nGemini?",
+      "Description": "This is a strange study. Besides the desks and chairs you also see a large\nmirror in the middle. So, you wonder, is this how you make a Gemini into two\nGemini?",
       "ZoneId": 93,
       "Sector": "Inside",
       "Flags": [],
@@ -1982,7 +1982,7 @@
     {
       "Id": 9345,
       "Name": "Along the seashore",
-      "Description": "\n   You start to feel the heat of Summer. Amongst the rocky beach you notice\nhidden forms which could be camouflaged crabs.",
+      "Description": "You start to feel the heat of Summer. Amongst the rocky beach you notice\nhidden forms which could be camouflaged crabs.",
       "ZoneId": 93,
       "Sector": "Field",
       "Flags": [],
@@ -2012,7 +2012,7 @@
     {
       "Id": 9346,
       "Name": "Within the Deep Jungle",
-      "Description": "\n   Nearby you can hear the roar of an animal. Peering through the dense\novergrowth you think you glimpse a pair of menacing eyes.",
+      "Description": "Nearby you can hear the roar of an animal. Peering through the dense\novergrowth you think you glimpse a pair of menacing eyes.",
       "ZoneId": 93,
       "Sector": "Forest",
       "Flags": [],
@@ -2034,7 +2034,7 @@
     {
       "Id": 9347,
       "Name": "Inside a Luxurious Bedroom",
-      "Description": "\n   A peaceful feeling overtakes you. You see a magnificent four-poster bed.\nIt's a double bed and there is only room for one more! Well, what now ... ?",
+      "Description": "A peaceful feeling overtakes you. You see a magnificent four-poster bed.\nIt's a double bed and there is only room for one more! Well, what now ... ?",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [
@@ -2058,7 +2058,7 @@
     {
       "Id": 9348,
       "Name": "The Supreme Court",
-      "Description": "\n   You are standing inside the dock of a court. You feel an overwhelming sense\nof guilt and you want to protest your innocence! You fear retribution and feel\nyourself exposed, just like the trees in Autumn.",
+      "Description": "You are standing inside the dock of a court. You feel an overwhelming sense\nof guilt and you want to protest your innocence! You fear retribution and feel\nyourself exposed, just like the trees in Autumn.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [
@@ -2098,7 +2098,7 @@
     {
       "Id": 9349,
       "Name": "In the Dry Desert",
-      "Description": "\n   You are confused by the shifting sands around you. Through the shimmering\nheat you see the hazy outline of a giant scorpion ... is this a mirage?",
+      "Description": "You are confused by the shifting sands around you. Through the shimmering\nheat you see the hazy outline of a giant scorpion ... is this a mirage?",
       "ZoneId": 93,
       "Sector": "Field",
       "Flags": [],
@@ -2128,7 +2128,7 @@
     {
       "Id": 9350,
       "Name": "In the Woods",
-      "Description": "\n   You find yourself in the center of a Centaurion hunting party. You'd better\nhide yourself before you become the 'center attraction'!",
+      "Description": "You find yourself in the center of a Centaurion hunting party. You'd better\nhide yourself before you become the 'center attraction'!",
       "ZoneId": 93,
       "Sector": "Forest",
       "Flags": [],
@@ -2150,7 +2150,7 @@
     {
       "Id": 9351,
       "Name": "On a Mountain Peak",
-      "Description": "\n   You are on the highest peak of the Universe. You look around and notice\nclouds below you. One of the clouds resembles a goat-like form.",
+      "Description": "You are on the highest peak of the Universe. You look around and notice\nclouds below you. One of the clouds resembles a goat-like form.",
       "ZoneId": 93,
       "Sector": "Mountain",
       "Flags": [],
@@ -2180,7 +2180,7 @@
     {
       "Id": 9352,
       "Name": "Inside a Waterfall",
-      "Description": "\n   The noise is deafening. You are about to take a drink when you realize that\nthe water is being poured out of a vessel of mind-boggling proportions!",
+      "Description": "The noise is deafening. You are about to take a drink when you realize that\nthe water is being poured out of a vessel of mind-boggling proportions!",
       "ZoneId": 93,
       "Sector": "Mountain",
       "Flags": [],
@@ -2202,7 +2202,7 @@
     {
       "Id": 9353,
       "Name": "Inside a Gigantic Clam",
-      "Description": "\n   You feel uneasy here as if some evil magic is being cast on you. You suspect\nsomething fishy is going on in here.",
+      "Description": "You feel uneasy here as if some evil magic is being cast on you. You suspect\nsomething fishy is going on in here.",
       "ZoneId": 93,
       "Sector": "Mountain",
       "Flags": [],
@@ -2224,7 +2224,7 @@
     {
       "Id": 9354,
       "Name": "End of the Mystic Chains",
-      "Description": "\n   You have reached the end of the mystic chains. Looking up, you notice a\nsmall landing on which you can climb. However, there seems to be another\nforcefield blocking your way.",
+      "Description": "You have reached the end of the mystic chains. Looking up, you notice a\nsmall landing on which you can climb. However, there seems to be another\nforcefield blocking your way.",
       "ZoneId": 93,
       "Sector": "Mountain",
       "Flags": [],
@@ -2260,7 +2260,7 @@
     {
       "Id": 9355,
       "Name": "On the Draco",
-      "Description": "\n   You realize you are standing on scaly ground. As you wonder what the ground\nis made of, you feel the ground move.",
+      "Description": "You realize you are standing on scaly ground. As you wonder what the ground\nis made of, you feel the ground move.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2294,7 +2294,7 @@
     {
       "Id": 9356,
       "Name": "Tail of the Draco",
-      "Description": "\n   At last you realize that you are on a giant snake-like dragon called the\nDraco, the guardian of the inner galaxy. You realize that the Draco is actually\nflying now!",
+      "Description": "At last you realize that you are on a giant snake-like dragon called the\nDraco, the guardian of the inner galaxy. You realize that the Draco is actually\nflying now!",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2326,7 +2326,7 @@
     {
       "Id": 9357,
       "Name": "Path of the Draco",
-      "Description": "\n   As you struggle along this scaly creature you realize that the only way you\ncan reach to the inner galaxy is by going all the way to the head.",
+      "Description": "As you struggle along this scaly creature you realize that the only way you\ncan reach to the inner galaxy is by going all the way to the head.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2358,7 +2358,7 @@
     {
       "Id": 9358,
       "Name": "Near the Legs of Draco",
-      "Description": "\n   You are approaching the leg part of this creature. You look around and see\nthat the surrounding is all dark except for some faint lights from the distant\nstars.",
+      "Description": "You are approaching the leg part of this creature. You look around and see\nthat the surrounding is all dark except for some faint lights from the distant\nstars.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2390,7 +2390,7 @@
     {
       "Id": 9359,
       "Name": "On the Back of Draco",
-      "Description": "\n   At last you are half way through this long, weary journey. You can see the\nwings are to the east but it seems that another forcefield is in the way.",
+      "Description": "At last you are half way through this long, weary journey. You can see the\nwings are to the east but it seems that another forcefield is in the way.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2426,7 +2426,7 @@
     {
       "Id": 9360,
       "Name": "Between the Wings of Draco",
-      "Description": "\n   You hear some giant flapping sounds nearby. You desperately try to get hold\nof something as the forceful gusts sweep you away.",
+      "Description": "You hear some giant flapping sounds nearby. You desperately try to get hold\nof something as the forceful gusts sweep you away.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2460,7 +2460,7 @@
     {
       "Id": 9361,
       "Name": "Near the Arms of Draco",
-      "Description": "\n   From above you can faintly make out the gigantic arms which extend far\nbeyond into the darkness.",
+      "Description": "From above you can faintly make out the gigantic arms which extend far\nbeyond into the darkness.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2492,7 +2492,7 @@
     {
       "Id": 9362,
       "Name": "On the Neck of Draco",
-      "Description": "\n   Your journey is now approaching the end. However, this neck seems to be\nendless.",
+      "Description": "Your journey is now approaching the end. However, this neck seems to be\nendless.",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2524,7 +2524,7 @@
     {
       "Id": 9363,
       "Name": "Approaching the Head of Draco",
-      "Description": "\n   You have come to the end of Draco, but you can't find the head! You see a\nforcefield to the south, some distance away, beyond reach. If only the head\nwere here ...",
+      "Description": "You have come to the end of Draco, but you can't find the head! You see a\nforcefield to the south, some distance away, beyond reach. If only the head\nwere here ...",
       "ZoneId": 93,
       "Sector": "Hills",
       "Flags": [
@@ -2560,7 +2560,7 @@
     {
       "Id": 9364,
       "Name": "At the Entrance of the Great Dipper",
-      "Description": "\n   Now you are in the innermost part of the galaxy. What you are walking on now\nis the path of the Great Dipper or the Plough. You notice that there are seven\nrooms in this zone, representing the seven stars of the Dipper.",
+      "Description": "Now you are in the innermost part of the galaxy. What you are walking on now\nis the path of the Great Dipper or the Plough. You notice that there are seven\nrooms in this zone, representing the seven stars of the Dipper.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -2602,7 +2602,7 @@
     {
       "Id": 9365,
       "Name": "Cassiopeia's Throne",
-      "Description": "\n   This is the Throne room of the Queen of the Universe. From here you can see\nevery star and constellation in the Universe.",
+      "Description": "This is the Throne room of the Queen of the Universe. From here you can see\nevery star and constellation in the Universe.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -2632,7 +2632,7 @@
     {
       "Id": 9366,
       "Name": "Along the Path of the Dipper",
-      "Description": "\n   You see stars around you but nothing of special interest.",
+      "Description": "You see stars around you but nothing of special interest.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -2662,7 +2662,7 @@
     {
       "Id": 9367,
       "Name": "Cepheus' Throne",
-      "Description": "\n   This is the Throne room of the King of the Universe. From here you can see\nevery star and constellation in the Universe.",
+      "Description": "This is the Throne room of the King of the Universe. From here you can see\nevery star and constellation in the Universe.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -2700,7 +2700,7 @@
     {
       "Id": 9368,
       "Name": "Along the path of the Dipper",
-      "Description": "\n   You see stars around you but nothing of special interest.",
+      "Description": "You see stars around you but nothing of special interest.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -2730,7 +2730,7 @@
     {
       "Id": 9369,
       "Name": "Along the path of the Dipper",
-      "Description": "\n   You see stars around you but nothing of special interest.",
+      "Description": "You see stars around you but nothing of special interest.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -2760,7 +2760,7 @@
     {
       "Id": 9370,
       "Name": "End of the Dipper",
-      "Description": "\n   You have finished the path of the Dipper. Here, the most prominent feature\nis a set of claw-marks. You also notice a room to the south; it looks as if\nPolaris could lie here.",
+      "Description": "You have finished the path of the Dipper. Here, the most prominent feature\nis a set of claw-marks. You also notice a room to the south; it looks as if\nPolaris could lie here.",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -2790,7 +2790,7 @@
     {
       "Id": 9371,
       "Name": "The Polar Star",
-      "Description": "\n   You have entered the private chamber of Polaris. This is a room of great\nsignificance. You can see a powerful telescope pointing down towards the\nUniverse (SNOOPING!). It is from here that Polaris commands the Universe. You\nfeel you have come to end of your search in this galaxy ...",
+      "Description": "You have entered the private chamber of Polaris. This is a room of great\nsignificance. You can see a powerful telescope pointing down towards the\nUniverse (SNOOPING!). It is from here that Polaris commands the Universe. You\nfeel you have come to end of your search in this galaxy ...",
       "ZoneId": 93,
       "Sector": "City",
       "Flags": [],
@@ -2814,9 +2814,9 @@
     {
       "Id": 9301,
       "Name": "poor mudder",
-      "ShortDescription": "\na poor mudder",
-      "LongDescription": "\nA poor mudder, lost in this place.",
-      "Description": "\nYou will become her if you are not careful.",
+      "ShortDescription": "a poor mudder",
+      "LongDescription": "A poor mudder, lost in this place.",
+      "Description": "You will become her if you are not careful.",
       "Level": 72,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -2858,9 +2858,9 @@
     {
       "Id": 9302,
       "Name": "star",
-      "ShortDescription": "\na beautiful star",
-      "LongDescription": "\nA beautiful white star smiles at you.",
-      "Description": "\nYou can't tell what the star looks like, it is too bright!",
+      "ShortDescription": "a beautiful star",
+      "LongDescription": "A beautiful white star smiles at you.",
+      "Description": "You can't tell what the star looks like, it is too bright!",
       "Level": 80,
       "Race": "Undefined",
       "Class": "Warrior",
@@ -2902,9 +2902,9 @@
     {
       "Id": 9303,
       "Name": "nebula young",
-      "ShortDescription": "\na young nebula",
-      "LongDescription": "\nA young nebula, waiting to become a star.",
-      "Description": "\nIt hasn't got a definite shape, it is just a cloud of mist.",
+      "ShortDescription": "a young nebula",
+      "LongDescription": "A young nebula, waiting to become a star.",
+      "Description": "It hasn't got a definite shape, it is just a cloud of mist.",
       "Level": 81,
       "Race": "Undefined",
       "Class": "Warrior",
@@ -2945,9 +2945,9 @@
     {
       "Id": 9304,
       "Name": "comet speedy",
-      "ShortDescription": "\na speedy comet",
-      "LongDescription": "\nA speedy comet is waiting to crush your head in.",
-      "Description": "\nYou see the offspring of Halley's comet, here just to wipe everything out.",
+      "ShortDescription": "a speedy comet",
+      "LongDescription": "A speedy comet is waiting to crush your head in.",
+      "Description": "You see the offspring of Halley's comet, here just to wipe everything out.",
       "Level": 82,
       "Race": "Undefined",
       "Class": "Warrior",
@@ -2990,9 +2990,9 @@
     {
       "Id": 9305,
       "Name": "red supergiant",
-      "ShortDescription": "\na red supergiant",
-      "LongDescription": "\nAn enormous, red supergiant is forced to protect the galaxy.",
-      "Description": "\nYou notice the giant is not as tough as his name sounds ...\nStill he can be very powerful.",
+      "ShortDescription": "a red supergiant",
+      "LongDescription": "An enormous, red supergiant is forced to protect the galaxy.",
+      "Description": "You notice the giant is not as tough as his name sounds ...\nStill he can be very powerful.",
       "Level": 90,
       "Race": "Undefined",
       "Class": "Warrior",
@@ -3035,9 +3035,9 @@
     {
       "Id": 9306,
       "Name": "white dwarf",
-      "ShortDescription": "\na white dwarf",
-      "LongDescription": "\nA tiny white dwarf is trying to sneak away from duty.",
-      "Description": "\nLike the red giant, he is also appointed to stand guard for the galaxy.\nBut somehow he manages to escape.  Though tiny, it can take a lot of hits!",
+      "ShortDescription": "a white dwarf",
+      "LongDescription": "A tiny white dwarf is trying to sneak away from duty.",
+      "Description": "Like the red giant, he is also appointed to stand guard for the galaxy.\nBut somehow he manages to escape.  Though tiny, it can take a lot of hits!",
       "Level": 88,
       "Race": "Undefined",
       "Class": "Warrior",
@@ -3079,9 +3079,9 @@
     {
       "Id": 9307,
       "Name": "horsehead nebula",
-      "ShortDescription": "\na horsehead nebula",
-      "LongDescription": "\nA huge nebula is here, resembling a horsehead.",
-      "Description": "\nYou can only make out its shape from the darkness.  He was cursed to stay in\nhere and his face may never be seen by anyone again.",
+      "ShortDescription": "a horsehead nebula",
+      "LongDescription": "A huge nebula is here, resembling a horsehead.",
+      "Description": "You can only make out its shape from the darkness.  He was cursed to stay in\nhere and his face may never be seen by anyone again.",
       "Level": 86,
       "Race": "Undefined",
       "Class": "Warrior",
@@ -3126,9 +3126,9 @@
     {
       "Id": 9308,
       "Name": "andromeda",
-      "ShortDescription": "\npoor Andromeda",
-      "LongDescription": "\nThe poor Andromeda is chained to the wall, suffering ...",
-      "Description": "\nShe was once a princess of beauty.  However, her beauty has led to a Goddess's\njealousy and she has to suffer here endlessly until Perseus comes.",
+      "ShortDescription": "poor Andromeda",
+      "LongDescription": "The poor Andromeda is chained to the wall, suffering ...",
+      "Description": "She was once a princess of beauty.  However, her beauty has led to a Goddess's\njealousy and she has to suffer here endlessly until Perseus comes.",
       "Level": 262528,
       "Race": "Undefined",
       "Class": "Normal",

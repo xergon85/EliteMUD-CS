@@ -92,7 +92,7 @@
         "Arg1": 7040,
         "Arg2": 1,
         "Arg3": 7428,
-        "Comment": null
+        "Comment": "Load The Red Dragon"
       },
       {
         "Command": "M",
@@ -100,7 +100,7 @@
         "Arg1": 7041,
         "Arg2": 2,
         "Arg3": 7444,
-        "Comment": null
+        "Comment": "Load The Sea Hag"
       },
       {
         "Command": "M",
@@ -108,7 +108,7 @@
         "Arg1": 7042,
         "Arg2": 2,
         "Arg3": 7435,
-        "Comment": null
+        "Comment": "Load The Good Guardian Naga"
       },
       {
         "Command": "M",
@@ -116,7 +116,7 @@
         "Arg1": 7043,
         "Arg2": 3,
         "Arg3": 7439,
-        "Comment": null
+        "Comment": "Load The Basilisk"
       },
       {
         "Command": "M",
@@ -124,7 +124,7 @@
         "Arg1": 7044,
         "Arg2": 6,
         "Arg3": 7406,
-        "Comment": null
+        "Comment": "Load The Lemure Blob"
       },
       {
         "Command": "M",
@@ -132,7 +132,7 @@
         "Arg1": 7045,
         "Arg2": 1,
         "Arg3": 7419,
-        "Comment": null
+        "Comment": "Load Jones"
       },
       {
         "Command": "M",
@@ -140,7 +140,7 @@
         "Arg1": 7046,
         "Arg2": 1,
         "Arg3": 7424,
-        "Comment": null
+        "Comment": "Load Herald"
       },
       {
         "Command": "M",
@@ -148,7 +148,7 @@
         "Arg1": 7010,
         "Arg2": 2,
         "Arg3": 7429,
-        "Comment": null
+        "Comment": "Load Chr \"something\""
       }
     ]
   },
@@ -156,7 +156,7 @@
     {
       "Id": 7400,
       "Name": "Cave entrance",
-      "Description": "\n   You are standing in the cave entrance. It is very dark down here.\nThere is writing at the wall. There is an exit to the north. A stairway\nleads up.",
+      "Description": "You are standing in the cave entrance. It is very dark down here.\nThere is writing at the wall. There is an exit to the north. A stairway\nleads up.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -189,7 +189,7 @@
             "writing",
             "wall"
           ],
-          "Description": "\nThe writing says 'BEWARE adventurer!'"
+          "Description": "The writing says 'BEWARE adventurer!'"
         }
       ],
       "SpecialProc": null,
@@ -199,7 +199,7 @@
     {
       "Id": 7401,
       "Name": "Cave tunnel",
-      "Description": "\n   You are walking in a tunnel. It is very cold. You can feel the\npresence of a living thing ... SOMEWHERE.",
+      "Description": "You are walking in a tunnel. It is very cold. You can feel the\npresence of a living thing ... SOMEWHERE.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -232,7 +232,7 @@
     {
       "Id": 7402,
       "Name": "Cave room",
-      "Description": "\n   You are standing in a room. It's much cooler now. The walls are\nglowing.",
+      "Description": "You are standing in a room. It's much cooler now. The walls are\nglowing.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -272,7 +272,7 @@
     {
       "Id": 7403,
       "Name": "Cave T-cross",
-      "Description": "\n   You are standing in a mudlike substance. The smell here is awful, it\nis rotten. To the west you can see some light.",
+      "Description": "You are standing in a mudlike substance. The smell here is awful, it\nis rotten. To the west you can see some light.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -310,13 +310,13 @@
           "Keywords": [
             "mud"
           ],
-          "Description": "\nWhen you examine the mud, you notice small worms crawling around."
+          "Description": "When you examine the mud, you notice small worms crawling around."
         },
         {
           "Keywords": [
             "worms"
           ],
-          "Description": "\nThe worms are purple.  They do not look edible."
+          "Description": "The worms are purple.  They do not look edible."
         }
       ],
       "SpecialProc": null,
@@ -326,7 +326,7 @@
     {
       "Id": 7404,
       "Name": "Cave turning-point",
-      "Description": "\n   The mud are getting deeper. You are wondering, 'Would it be an idea\nto leave, before I disappear?'. To the south you notice a flat round\nstone are blocking the way. To the west you can see mud.",
+      "Description": "The mud are getting deeper. You are wondering, 'Would it be an idea\nto leave, before I disappear?'. To the south you notice a flat round\nstone are blocking the way. To the west you can see mud.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -364,7 +364,7 @@
             "round",
             "stone"
           ],
-          "Description": "\nThe stone looks very uninteresting.  BUT as you are about to turn away,\nyou see a light stripe coming through a small hole.  Conclusion: The\nstone is moveable."
+          "Description": "The stone looks very uninteresting.  BUT as you are about to turn away,\nyou see a light stripe coming through a small hole.  Conclusion: The\nstone is moveable."
         }
       ],
       "SpecialProc": null,
@@ -374,7 +374,7 @@
     {
       "Id": 7405,
       "Name": "The secret room",
-      "Description": "\n   There is dust all over the place. It looks like nobody has been here\nfor ages. In the middle of the room you see a socket with a crystal\nglobe. The globe glows with a pulsing light. To the north you see a\nstone door. To the south you see a gray block.",
+      "Description": "There is dust all over the place. It looks like nobody has been here\nfor ages. In the middle of the room you see a socket with a crystal\nglobe. The globe glows with a pulsing light. To the north you see a\nstone door. To the south you see a gray block.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -414,14 +414,14 @@
           "Keywords": [
             "socket"
           ],
-          "Description": "\nThe socket looks like the work of a dwarf.  It is VERY beautiful."
+          "Description": "The socket looks like the work of a dwarf.  It is VERY beautiful."
         },
         {
           "Keywords": [
             "crystal",
             "globe"
           ],
-          "Description": "\nThe crystal globe is glowing with a pulsing light. It looks like there\nis smoke inside it."
+          "Description": "The crystal globe is glowing with a pulsing light. It looks like there\nis smoke inside it."
         }
       ],
       "SpecialProc": null,
@@ -431,7 +431,7 @@
     {
       "Id": 7406,
       "Name": "The mudhole",
-      "Description": "\n   You are standing in a lot of mud. The mud goes to your chest. You\nfeel the presence of something IN the mud. The only obvious exit is to\nthe west.",
+      "Description": "You are standing in a lot of mud. The mud goes to your chest. You\nfeel the presence of something IN the mud. The only obvious exit is to\nthe west.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -469,7 +469,7 @@
     {
       "Id": 7407,
       "Name": "Tunnel",
-      "Description": "\n   The mud goes to your knees. Otherwise the tunnel looks very normal.",
+      "Description": "The mud goes to your knees. Otherwise the tunnel looks very normal.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -510,7 +510,7 @@
     {
       "Id": 7408,
       "Name": "The long tunnel",
-      "Description": "\n   Here there is almost no mud, as you stand at the top of a small\nrock. Just beside you there are a sign which says 'WARNING! The worms\nare dangerous!'.",
+      "Description": "Here there is almost no mud, as you stand at the top of a small\nrock. Just beside you there are a sign which says 'WARNING! The worms\nare dangerous!'.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -543,7 +543,7 @@
     {
       "Id": 7409,
       "Name": "The hot room",
-      "Description": "\n   You are very surprised, as this room for a change are hot instead of\ncold. To the north it goes downwards into some mud. There are also an\nexit to the west.",
+      "Description": "You are very surprised, as this room for a change are hot instead of\ncold. To the north it goes downwards into some mud. There are also an\nexit to the west.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -576,7 +576,7 @@
     {
       "Id": 7410,
       "Name": "The small room",
-      "Description": "\n   As you look around you notice a small statue. There are exits to the\nwest and to the east.",
+      "Description": "As you look around you notice a small statue. There are exits to the\nwest and to the east.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -607,7 +607,7 @@
             "small",
             "statue"
           ],
-          "Description": "\nThis is a statue of a imp, pointing to the west.  The imp looks like a\nman with horns and a tail."
+          "Description": "This is a statue of a imp, pointing to the west.  The imp looks like a\nman with horns and a tail."
         }
       ],
       "SpecialProc": null,
@@ -617,7 +617,7 @@
     {
       "Id": 7411,
       "Name": "The stalagmite cave",
-      "Description": "\n   You are standing in a stalagmite cave. Water is dripping from the\nwalls. It is very cold in here.",
+      "Description": "You are standing in a stalagmite cave. Water is dripping from the\nwalls. It is very cold in here.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -655,7 +655,7 @@
           "Keywords": [
             "stalagmite"
           ],
-          "Description": "\nThe stalagmites are very tall, and looks very beautiful."
+          "Description": "The stalagmites are very tall, and looks very beautiful."
         }
       ],
       "SpecialProc": null,
@@ -665,7 +665,7 @@
     {
       "Id": 7412,
       "Name": "The stalagmite tunnel",
-      "Description": "\n   You has entered a small tunnel. Here it is quite dry. Maybe it would\nbe a good idea to rest here.",
+      "Description": "You has entered a small tunnel. Here it is quite dry. Maybe it would\nbe a good idea to rest here.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -698,7 +698,7 @@
     {
       "Id": 7413,
       "Name": "The spongy room",
-      "Description": "\n   You definitely NOT like this area. It is very dank, and in most of\nthe room it is wet.",
+      "Description": "You definitely NOT like this area. It is very dank, and in most of\nthe room it is wet.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -731,7 +731,7 @@
     {
       "Id": 7414,
       "Name": "The stalagmite T-cross",
-      "Description": "\n   You are standing in a cross. To the north you can see some light.\nOtherwise it is dark.",
+      "Description": "You are standing in a cross. To the north you can see some light.\nOtherwise it is dark.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -772,7 +772,7 @@
     {
       "Id": 7415,
       "Name": "The blind end room",
-      "Description": "\n   This room is obviously a blind end. To the north you see a primitive\npicture.",
+      "Description": "This room is obviously a blind end. To the north you see a primitive\npicture.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -807,7 +807,7 @@
             "primitive",
             "picture"
           ],
-          "Description": "\nYou see some people dancing around a huge sun.  The sun is about 7 feet\nin diameter, which shows the size of the picture."
+          "Description": "You see some people dancing around a huge sun.  The sun is about 7 feet\nin diameter, which shows the size of the picture."
         }
       ],
       "SpecialProc": null,
@@ -817,7 +817,7 @@
     {
       "Id": 7416,
       "Name": "The treasure room",
-      "Description": "\n   This room is richly ornamented. The walls has been carved to show\npeople dancing around a sun which is drawn on the floor. It looks very\nold, and it is very dusty. To the south you see a secret door.",
+      "Description": "This room is richly ornamented. The walls has been carved to show\npeople dancing around a sun which is drawn on the floor. It looks very\nold, and it is very dusty. To the south you see a secret door.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -849,7 +849,7 @@
     {
       "Id": 7417,
       "Name": "The square lair",
-      "Description": "\n   You are standing in the south-east part of the lair. You can see a\nskeleton lying in the corner.",
+      "Description": "You are standing in the south-east part of the lair. You can see a\nskeleton lying in the corner.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -886,7 +886,7 @@
           "Keywords": [
             "skeleton"
           ],
-          "Description": "\nIt looks like a adventurer who wasn't lucky.  You'd better watch out..."
+          "Description": "It looks like a adventurer who wasn't lucky.  You'd better watch out..."
         }
       ],
       "SpecialProc": null,
@@ -896,7 +896,7 @@
     {
       "Id": 7418,
       "Name": "The square lair",
-      "Description": "\n   You are standing in the north-east part of the lair. You see a sign\non the wall.",
+      "Description": "You are standing in the north-east part of the lair. You see a sign\non the wall.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -940,7 +940,7 @@
             "sign",
             "wall"
           ],
-          "Description": "\nThe sign says 'Gods of War I call you, my sword is by my side,\n               I seek a light free from all false pride'\n                       Reyemle Grug....."
+          "Description": "The sign says 'Gods of War I call you, my sword is by my side,\n               I seek a light free from all false pride'\n                       Reyemle Grug....."
         }
       ],
       "SpecialProc": null,
@@ -950,7 +950,7 @@
     {
       "Id": 7419,
       "Name": "The square lair",
-      "Description": "\n   You are standing in the north-west part of the lair. Here there is\nanother sign. There is an exit from the lair to the north.",
+      "Description": "You are standing in the north-west part of the lair. Here there is\nanother sign. There is an exit from the lair to the north.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -988,7 +988,7 @@
           "Keywords": [
             "sign"
           ],
-          "Description": "\nThe sign says 'I'm wandering around in a everlasting tale,\n               seeking the light to regain my pride\n                           Corama..."
+          "Description": "The sign says 'I'm wandering around in a everlasting tale,\n               seeking the light to regain my pride\n                           Corama..."
         }
       ],
       "SpecialProc": null,
@@ -998,7 +998,7 @@
     {
       "Id": 7420,
       "Name": "The lair end",
-      "Description": "\n   You can see a table in front of you. It's very dusty. Five skeletons\nare sitting around the table. Exits are north and east.",
+      "Description": "You can see a table in front of you. It's very dusty. Five skeletons\nare sitting around the table. Exits are north and east.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1028,21 +1028,21 @@
           "Keywords": [
             "table"
           ],
-          "Description": "\nOn the table there is dust, in the center there is a small statue of a\nDragon sleeping."
+          "Description": "On the table there is dust, in the center there is a small statue of a\nDragon sleeping."
         },
         {
           "Keywords": [
             "skeleton",
             "skeletons"
           ],
-          "Description": "\nThey've obviously been killed somehow, but it doesn't look like it was\nby sword or club."
+          "Description": "They've obviously been killed somehow, but it doesn't look like it was\nby sword or club."
         },
         {
           "Keywords": [
             "dragon",
             "statue"
           ],
-          "Description": "\nIt looks like a silver dragon.  It is nailed onto the table.  The\ndragon sits on a red dragon that looks dead.  But the eyes of the red\ndragon are glowing, pulsating red.  You feel drained."
+          "Description": "It looks like a silver dragon.  It is nailed onto the table.  The\ndragon sits on a red dragon that looks dead.  But the eyes of the red\ndragon are glowing, pulsating red.  You feel drained."
         }
       ],
       "SpecialProc": null,
@@ -1052,7 +1052,7 @@
     {
       "Id": 7421,
       "Name": "East tunnel",
-      "Description": "\n   You are standing in dark tunnel, the exits are east and west. To the\nwest you see a wooden door.",
+      "Description": "You are standing in dark tunnel, the exits are east and west. To the\nwest you see a wooden door.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1090,7 +1090,7 @@
     {
       "Id": 7422,
       "Name": "North tunnel",
-      "Description": "\n   You are standing in a dark tunnel, it leads upwards.",
+      "Description": "You are standing in a dark tunnel, it leads upwards.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1131,7 +1131,7 @@
     {
       "Id": 7423,
       "Name": "The L-shaped room",
-      "Description": "\n   You are standing in deep darkness. To the south there is a small\nexit. To the east you can see a gaping hole.",
+      "Description": "You are standing in deep darkness. To the south there is a small\nexit. To the east you can see a gaping hole.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1164,7 +1164,7 @@
     {
       "Id": 7424,
       "Name": "The Circular hall",
-      "Description": "\n   You are standing in round hall. To the north, east and south you can\nsee a stone head hanging on the walls.",
+      "Description": "You are standing in round hall. To the north, east and south you can\nsee a stone head hanging on the walls.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1203,25 +1203,25 @@
             "head",
             "heads"
           ],
-          "Description": "\nWhen you study the faces of the heads you see that they are faces of\ndragons. The face to the north is red, the face to the east is green,\nand the face to the south is blue."
+          "Description": "When you study the faces of the heads you see that they are faces of\ndragons. The face to the north is red, the face to the east is green,\nand the face to the south is blue."
         },
         {
           "Keywords": [
             "green"
           ],
-          "Description": "\nThis looks like an evil dragon."
+          "Description": "This looks like an evil dragon."
         },
         {
           "Keywords": [
             "red"
           ],
-          "Description": "\nThis looks like a neutral dragon."
+          "Description": "This looks like a neutral dragon."
         },
         {
           "Keywords": [
             "blue"
           ],
-          "Description": "\nThis looks like a good dragon."
+          "Description": "This looks like a good dragon."
         }
       ],
       "SpecialProc": null,
@@ -1231,7 +1231,7 @@
     {
       "Id": 7425,
       "Name": "Dusty tunnel",
-      "Description": "\n   You are standing in dust. This place has not been touched for a long\ntime. Otherwise it is quite boring here, looks like a place to rest! To\nthe west you see the outline of a door. A tunnel leads to the east.",
+      "Description": "You are standing in dust. This place has not been touched for a long\ntime. Otherwise it is quite boring here, looks like a place to rest! To\nthe west you see the outline of a door. A tunnel leads to the east.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1268,7 +1268,7 @@
     {
       "Id": 7426,
       "Name": "The crossing",
-      "Description": "\n   You are standing in a crossing of hallways. You can leave this place\nin every direction, except up and down. In the dust you notice strange\nfootprints.",
+      "Description": "You are standing in a crossing of hallways. You can leave this place\nin every direction, except up and down. In the dust you notice strange\nfootprints.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -1315,7 +1315,7 @@
             "footprints",
             "foot"
           ],
-          "Description": "\nYou have never seen this kind of footprints before!"
+          "Description": "You have never seen this kind of footprints before!"
         }
       ],
       "SpecialProc": null,
@@ -1325,7 +1325,7 @@
     {
       "Id": 7427,
       "Name": "The L-shaped room",
-      "Description": "\n   You are standing in a L-shaped room. You can hear noises from the\nlong tunnel to the east. You feel very afraid! A sign is hanging on the\nwall.",
+      "Description": "You are standing in a L-shaped room. You can hear noises from the\nlong tunnel to the east. You feel very afraid! A sign is hanging on the\nwall.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -1355,7 +1355,7 @@
           "Keywords": [
             "sign"
           ],
-          "Description": "\nThe sign says 'DANGER!!'."
+          "Description": "The sign says 'DANGER!!'."
         }
       ],
       "SpecialProc": null,
@@ -1365,7 +1365,7 @@
     {
       "Id": 7428,
       "Name": "Dragons lair",
-      "Description": "\n   You can see burned walls, the floor stones are fiery red. All kinds\nof bones are scattered all over the floor. On the walls you can see\nsome burned shapes. You smell burnt flesh. Two creatures are sort of\nmelted into the floor.",
+      "Description": "You can see burned walls, the floor stones are fiery red. All kinds\nof bones are scattered all over the floor. On the walls you can see\nsome burned shapes. You smell burnt flesh. Two creatures are sort of\nmelted into the floor.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -1397,7 +1397,7 @@
     {
       "Id": 7429,
       "Name": "The burned room",
-      "Description": "\n   You are in a room, which once had been quite burned. There is\nwriting on the wall.",
+      "Description": "You are in a room, which once had been quite burned. There is\nwriting on the wall.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1427,7 +1427,7 @@
           "Keywords": [
             "writing"
           ],
-          "Description": "\nThe writing says 'DANGER!!!'"
+          "Description": "The writing says 'DANGER!!!'"
         }
       ],
       "SpecialProc": null,
@@ -1437,7 +1437,7 @@
     {
       "Id": 7430,
       "Name": "The wind tunnel",
-      "Description": "\n   You are standing in a tunnel. Above you, you can feel a breeze.",
+      "Description": "You are standing in a tunnel. Above you, you can feel a breeze.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1467,7 +1467,7 @@
           "Keywords": [
             "breeze"
           ],
-          "Description": "\nThe breeze comes from a hole above you.  NO way to get up there."
+          "Description": "The breeze comes from a hole above you.  NO way to get up there."
         }
       ],
       "SpecialProc": null,
@@ -1477,7 +1477,7 @@
     {
       "Id": 7431,
       "Name": "The glittering room",
-      "Description": "\n   This room are all bright. In the walls you can see some silver.\nExits are west, east and south.",
+      "Description": "This room are all bright. In the walls you can see some silver.\nExits are west, east and south.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1516,7 +1516,7 @@
             "walls",
             "silver"
           ],
-          "Description": "\nThe glittering silver looks like it is INSIDE the walls."
+          "Description": "The glittering silver looks like it is INSIDE the walls."
         }
       ],
       "SpecialProc": null,
@@ -1526,7 +1526,7 @@
     {
       "Id": 7432,
       "Name": "The secret passage room",
-      "Description": "\n   You have entered a tiny room. There is an exit down, and an exit to\nthe west.",
+      "Description": "You have entered a tiny room. There is an exit down, and an exit to\nthe west.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1548,7 +1548,7 @@
           "Keywords": [
             "down"
           ],
-          "Description": "\nA sign is blocking the way. It says 'This has not been implemented\nyet....'"
+          "Description": "A sign is blocking the way. It says 'This has not been implemented\nyet....'"
         }
       ],
       "SpecialProc": null,
@@ -1558,7 +1558,7 @@
     {
       "Id": 7433,
       "Name": "End of long tunnel",
-      "Description": "\n   You are at a end of a long tunnel. Right in front of you, you can\nsee a gray mass. To the east you can see a tremendously long tunnel,\nbut you know that, you were just there.",
+      "Description": "You are at a end of a long tunnel. Right in front of you, you can\nsee a gray mass. To the east you can see a tremendously long tunnel,\nbut you know that, you were just there.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -1589,7 +1589,7 @@
             "gray",
             "mass"
           ],
-          "Description": "\nThe mass is nothing but a mass, but it is quite suspicious!"
+          "Description": "The mass is nothing but a mass, but it is quite suspicious!"
         }
       ],
       "SpecialProc": null,
@@ -1599,7 +1599,7 @@
     {
       "Id": 7434,
       "Name": "Stair-room",
-      "Description": "\n   You are standing in a small room. Drawings of faces in pain are on\nthe walls. You can fell darkness is ruling the place. There are two\nexits: south and down.  But apparently the exit down is blocked and\nimpossible to get by.",
+      "Description": "You are standing in a small room. Drawings of faces in pain are on\nthe walls. You can fell darkness is ruling the place. There are two\nexits: south and down.  But apparently the exit down is blocked and\nimpossible to get by.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1632,7 +1632,7 @@
     {
       "Id": 7435,
       "Name": "Dark tunnel",
-      "Description": "\n   You are standing in a dark tunnel. It continues to the north and to\nthe south. Bones are spread on the floor.",
+      "Description": "You are standing in a dark tunnel. It continues to the north and to\nthe south. Bones are spread on the floor.",
       "ZoneId": 74,
       "Sector": "City",
       "Flags": [
@@ -1663,7 +1663,7 @@
             "bones",
             "bone"
           ],
-          "Description": "\nIt looks like bones of a human."
+          "Description": "It looks like bones of a human."
         }
       ],
       "SpecialProc": null,
@@ -1673,7 +1673,7 @@
     {
       "Id": 7436,
       "Name": "Entrance to lair",
-      "Description": "\n   The smell here is awful. To the south you can see some smoke. A\ntunnel leads north and east.",
+      "Description": "The smell here is awful. To the south you can see some smoke. A\ntunnel leads north and east.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -1715,7 +1715,7 @@
     {
       "Id": 7437,
       "Name": "North-eastern part of Basilisk's cave",
-      "Description": "\n   It is hard to see here because of the smoke. To the north you can\nbarely see a small tunnel. Other exits are to the south and to the\nwest.",
+      "Description": "It is hard to see here because of the smoke. To the north you can\nbarely see a small tunnel. Other exits are to the south and to the\nwest.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -1756,7 +1756,7 @@
     {
       "Id": 7438,
       "Name": "South-eastern part of Basilisk's cave",
-      "Description": "\n   There are a very small hole in wall from which the smoke is coming\nfrom. Otherwise it is pitch black. Exits are north and west.",
+      "Description": "There are a very small hole in wall from which the smoke is coming\nfrom. Otherwise it is pitch black. Exits are north and west.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -1787,7 +1787,7 @@
             "hole",
             "small"
           ],
-          "Description": "\nIt's a small hole, about one foot in diameter."
+          "Description": "It's a small hole, about one foot in diameter."
         }
       ],
       "SpecialProc": null,
@@ -1797,7 +1797,7 @@
     {
       "Id": 7439,
       "Name": "North-western part of Basilisk's cave",
-      "Description": "\n   You can see some hay spread on the floor. The smell is awful here,\nand it makes you feel sick. This place where the Basilisk sleeps. Watch\nout... maybe it is not far from here..",
+      "Description": "You can see some hay spread on the floor. The smell is awful here,\nand it makes you feel sick. This place where the Basilisk sleeps. Watch\nout... maybe it is not far from here..",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -1827,7 +1827,7 @@
           "Keywords": [
             "hay"
           ],
-          "Description": "\nThe hay is very dirty.  The smell of it makes you feel sick."
+          "Description": "The hay is very dirty.  The smell of it makes you feel sick."
         }
       ],
       "SpecialProc": null,
@@ -1837,7 +1837,7 @@
     {
       "Id": 7440,
       "Name": "South-western part of Basilisk's cave",
-      "Description": "\n   You can see nothing but smoke.",
+      "Description": "You can see nothing but smoke.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -1878,7 +1878,7 @@
     {
       "Id": 7441,
       "Name": "The small cave",
-      "Description": "\n   You are standing in small cave. You can see some light at the end.\nExits are north and south.",
+      "Description": "You are standing in small cave. You can see some light at the end.\nExits are north and south.",
       "ZoneId": 74,
       "Sector": "Field",
       "Flags": [
@@ -1912,7 +1912,7 @@
     {
       "Id": 7442,
       "Name": "The northern end of the pool",
-      "Description": "\n   You have wet feet, you are standing in water. The water looks calm.\nYou can see that it's a big lake. Light seeps from the water.",
+      "Description": "You have wet feet, you are standing in water. The water looks calm.\nYou can see that it's a big lake. Light seeps from the water.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -1952,7 +1952,7 @@
     {
       "Id": 7443,
       "Name": "The pool",
-      "Description": "\n   You are swimming in water. It is getting deep here. It is also dark\nin this end.",
+      "Description": "You are swimming in water. It is getting deep here. It is also dark\nin this end.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -1985,7 +1985,7 @@
     {
       "Id": 7444,
       "Name": "The south end of the pool",
-      "Description": "\n   You standing in water up to your neck! You can only see water.",
+      "Description": "You standing in water up to your neck! You can only see water.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -2017,7 +2017,7 @@
     {
       "Id": 7445,
       "Name": "The pool",
-      "Description": "\n   You are swimming in DARKNESS. You feel something touching your right\nleg.",
+      "Description": "You are swimming in DARKNESS. You feel something touching your right\nleg.",
       "ZoneId": 74,
       "Sector": "Forest",
       "Flags": [
@@ -2060,9 +2060,9 @@
     {
       "Id": 7010,
       "Name": "chr-eff'n chr",
-      "ShortDescription": "\nthe evil chr-eff'n",
-      "LongDescription": "\nThe chr-eff'n are crawling here, looking around with its yellow eyes.",
-      "Description": "\nThe head and torso of a chr-eff'n is copper-covered, with yellow,\nglowing eyes.  The lower body is in an orange shading.",
+      "ShortDescription": "the evil chr-eff'n",
+      "LongDescription": "The chr-eff'n are crawling here, looking around with its yellow eyes.",
+      "Description": "The head and torso of a chr-eff'n is copper-covered, with yellow,\nglowing eyes.  The lower body is in an orange shading.",
       "Level": 14,
       "Race": "Undefined",
       "Class": "Normal",
@@ -2113,9 +2113,9 @@
     {
       "Id": 7040,
       "Name": "red dragon",
-      "ShortDescription": "\nthe red dragon",
-      "LongDescription": "\nThe Red fierce-looking dragon stares at you angrily.",
-      "Description": "\nThe red dragon stares at you, angrily, as it wakes when you arrive.  It says\n'Oh, human YOU woke me up...Hsssss', while it moves closer, 'Can one NEVER\nsleep in peace...Hssss'.",
+      "ShortDescription": "the red dragon",
+      "LongDescription": "The Red fierce-looking dragon stares at you angrily.",
+      "Description": "The red dragon stares at you, angrily, as it wakes when you arrive.  It says\n'Oh, human YOU woke me up...Hsssss', while it moves closer, 'Can one NEVER\nsleep in peace...Hssss'.",
       "Level": 35,
       "Race": "Dragon",
       "Class": "Normal",
@@ -2172,9 +2172,9 @@
     {
       "Id": 7041,
       "Name": "sea hag",
-      "ShortDescription": "\nthe sea hag",
-      "LongDescription": "\nThe Sea Hag is here, swimming around.",
-      "Description": "\nThe sea hag is so ghastly looking that you feel the deepest fear: Big yellow\neyes and sharp teeth.  Its ears are very big, and it has small sharp horns.\nThis type of monster is one of the greatest haters of beauty (next after\nMedusa).",
+      "ShortDescription": "the sea hag",
+      "LongDescription": "The Sea Hag is here, swimming around.",
+      "Description": "The sea hag is so ghastly looking that you feel the deepest fear: Big yellow\neyes and sharp teeth.  Its ears are very big, and it has small sharp horns.\nThis type of monster is one of the greatest haters of beauty (next after\nMedusa).",
       "Level": 20,
       "Race": "Humanoid",
       "Class": "MagicUser",
@@ -2222,9 +2222,9 @@
     {
       "Id": 7042,
       "Name": "guardian naga",
-      "ShortDescription": "\nthe guardian naga",
-      "LongDescription": "\nThe Guardian Naga looks kindly at you.",
-      "Description": "\nThe naga are a snake-liked creature.  She is covered in green-gold scales with\nsilvery triangles along her back.  Her eyes are golden.  She notices that you\nare staring at her, and she says: 'Watch out.  This way leads to some evil\ncreatures'.",
+      "ShortDescription": "the guardian naga",
+      "LongDescription": "The Guardian Naga looks kindly at you.",
+      "Description": "The naga are a snake-liked creature.  She is covered in green-gold scales with\nsilvery triangles along her back.  Her eyes are golden.  She notices that you\nare staring at her, and she says: 'Watch out.  This way leads to some evil\ncreatures'.",
       "Level": 22,
       "Race": "Undefined",
       "Class": "Normal",
@@ -2272,9 +2272,9 @@
     {
       "Id": 7043,
       "Name": "scaled basilisk",
-      "ShortDescription": "\nthe scaled basilisk",
-      "LongDescription": "\nThe scaled Basilisk crawls towards you slowly.",
-      "Description": "\nThe basilisk is a reptilian monster.  It has eight legs, and a strong, toothy\njaws.  It is dull brown with yellowish underbelly.  Its eyes are glowing pale\ngreen.",
+      "ShortDescription": "the scaled basilisk",
+      "LongDescription": "The scaled Basilisk crawls towards you slowly.",
+      "Description": "The basilisk is a reptilian monster.  It has eight legs, and a strong, toothy\njaws.  It is dull brown with yellowish underbelly.  Its eyes are glowing pale\ngreen.",
       "Level": 21,
       "Race": "Undefined",
       "Class": "Normal",
@@ -2324,9 +2324,9 @@
     {
       "Id": 7044,
       "Name": "lemure blob",
-      "ShortDescription": "\nthe lemure",
-      "LongDescription": "\nThe lemure blob slithers towards you for an attack!",
-      "Description": "\nThis looks like a vaguely human blob.  Big black yellow eyes, and a mouth going\na little bit out from the face.  The lemure does not look interested in you at\nall, but it attacks anyway.  It looks like its mind has been burned out.",
+      "ShortDescription": "the lemure",
+      "LongDescription": "The lemure blob slithers towards you for an attack!",
+      "Description": "This looks like a vaguely human blob.  Big black yellow eyes, and a mouth going\na little bit out from the face.  The lemure does not look interested in you at\nall, but it attacks anyway.  It looks like its mind has been burned out.",
       "Level": 9,
       "Race": "Undefined",
       "Class": "Normal",
@@ -2374,9 +2374,9 @@
     {
       "Id": 7045,
       "Name": "jones cruncher ettin",
-      "ShortDescription": "\nJones 'cruncher' the ettin",
-      "LongDescription": "\nJones is standing here glaring at you.",
-      "Description": "\nAt the first sight you thought Jones was an Orc, but when it came closer you\nsaw his second head.  He wears an animal skin dress, filthy and moth eaten. \nJones really stinks...",
+      "ShortDescription": "Jones 'cruncher' the ettin",
+      "LongDescription": "Jones is standing here glaring at you.",
+      "Description": "At the first sight you thought Jones was an Orc, but when it came closer you\nsaw his second head.  He wears an animal skin dress, filthy and moth eaten. \nJones really stinks...",
       "Level": 20,
       "Race": "Humanoid",
       "Class": "Warrior",
@@ -2424,9 +2424,9 @@
     {
       "Id": 7046,
       "Name": "herald mouse killer ettin",
-      "ShortDescription": "\nHerald 'the mouse-killer' ettin",
-      "LongDescription": "\nHerald is standing here looking confused at you.",
-      "Description": "\nWhen you look at Herald, you feel petty.  His clothes are really poor, and one\nof his heads hangs down.  At the rope around his stomach hangs dead mice and\nrats.  He does not smell good.",
+      "ShortDescription": "Herald 'the mouse-killer' ettin",
+      "LongDescription": "Herald is standing here looking confused at you.",
+      "Description": "When you look at Herald, you feel petty.  His clothes are really poor, and one\nof his heads hangs down.  At the rope around his stomach hangs dead mice and\nrats.  He does not smell good.",
       "Level": 18,
       "Race": "Humanoid",
       "Class": "Warrior",

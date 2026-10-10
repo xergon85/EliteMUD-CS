@@ -12,7 +12,7 @@
         "Arg1": 6910,
         "Arg2": 1,
         "Arg3": 6900,
-        "Comment": null
+        "Comment": "Isha the Dark Elf"
       },
       {
         "Command": "E",
@@ -20,7 +20,7 @@
         "Arg1": 6910,
         "Arg2": 5,
         "Arg3": 5,
-        "Comment": null
+        "Comment": "Dragon scale shirt Equipped (BODY)"
       },
       {
         "Command": "E",
@@ -28,7 +28,7 @@
         "Arg1": 6911,
         "Arg2": 5,
         "Arg3": 7,
-        "Comment": null
+        "Comment": "Dragon scale skirt Equipped (LEGS)"
       },
       {
         "Command": "E",
@@ -36,7 +36,7 @@
         "Arg1": 6912,
         "Arg2": 5,
         "Arg3": 3,
-        "Comment": null
+        "Comment": "Black cloak Equipped (NECK_1)"
       },
       {
         "Command": "E",
@@ -44,7 +44,7 @@
         "Arg1": 6913,
         "Arg2": 5,
         "Arg3": 13,
-        "Comment": null
+        "Comment": "Silver belt Equipped (WAISTE)"
       },
       {
         "Command": "E",
@@ -52,7 +52,7 @@
         "Arg1": 6914,
         "Arg2": 5,
         "Arg3": 16,
-        "Comment": null
+        "Comment": "Long, slender sword Equipped (Wield)"
       },
       {
         "Command": "M",
@@ -60,7 +60,7 @@
         "Arg1": 6999,
         "Arg2": 1,
         "Arg3": 6999,
-        "Comment": null
+        "Comment": "Death"
       },
       {
         "Command": "E",
@@ -68,7 +68,7 @@
         "Arg1": 6999,
         "Arg2": 5,
         "Arg3": 16,
-        "Comment": null
+        "Comment": "Scythe Equipped (Wield)"
       }
     ]
   },
@@ -76,7 +76,7 @@
     {
       "Id": 6900,
       "Name": "Quifael's monster pen",
-      "Description": "\n   You are in a big, subterranean room with heavy massive stone walls and no\nwindows whatsoever. A virtual ladder leads upwards.",
+      "Description": "You are in a big, subterranean room with heavy massive stone walls and no\nwindows whatsoever. A virtual ladder leads upwards.",
       "ZoneId": 69,
       "Sector": "Inside",
       "Flags": [
@@ -101,7 +101,7 @@
     {
       "Id": 6901,
       "Name": "Quifael's study",
-      "Description": "\n   You are in a small, comfortable study room. The walls are lined with\nbookcases filled with dusty volumes of all sizes. In the fireplace burns a\ncrackling fire that makes the room warm and cozy, and in front of an oakwood\nreading desk is a large old-fashioned chair.",
+      "Description": "You are in a small, comfortable study room. The walls are lined with\nbookcases filled with dusty volumes of all sizes. In the fireplace burns a\ncrackling fire that makes the room warm and cozy, and in front of an oakwood\nreading desk is a large old-fashioned chair.",
       "ZoneId": 69,
       "Sector": "Inside",
       "Flags": [
@@ -129,25 +129,25 @@
             "book",
             "books"
           ],
-          "Description": "\nMost of the books are heavy, leather-bound and covered in a thin layer of dust.\nThere are many titles on necromancy, conjuring and other spheres of Magic,\nbut also some on computer science (although these seem to be VERY dusty\nindeed) and a fair collection of horror literature, ranging from Bram Stoker\nand H. P. Lovecraft to Anne Rice and Stephen King."
+          "Description": "Most of the books are heavy, leather-bound and covered in a thin layer of dust.\nThere are many titles on necromancy, conjuring and other spheres of Magic,\nbut also some on computer science (although these seem to be VERY dusty\nindeed) and a fair collection of horror literature, ranging from Bram Stoker\nand H. P. Lovecraft to Anne Rice and Stephen King."
         },
         {
           "Keywords": [
             "fireplace"
           ],
-          "Description": "\nThe fireplace isn't particularly big, but the fire crackles merrily in it."
+          "Description": "The fireplace isn't particularly big, but the fire crackles merrily in it."
         },
         {
           "Keywords": [
             "desk"
           ],
-          "Description": "\nIt is very massive and but seems worn from many years of use."
+          "Description": "It is very massive and but seems worn from many years of use."
         },
         {
           "Keywords": [
             "chair"
           ],
-          "Description": "\nIt is big and old-fashioned, but quite comfortable nevertheless."
+          "Description": "It is big and old-fashioned, but quite comfortable nevertheless."
         }
       ],
       "SpecialProc": null,
@@ -157,7 +157,7 @@
     {
       "Id": 6902,
       "Name": "Quifael's laboratory",
-      "Description": "\n   You are in a room filled with shelves containing all sorts of weird\nequipment. The walls are lined with numerous shelves and a massive working desk\nis by the north wall. The air smells of rare chemicals and spices. A virtual\nladder leads downwards. A magical portal is hovering in the air just in front\nof the east wall.",
+      "Description": "You are in a room filled with shelves containing all sorts of weird\nequipment. The walls are lined with numerous shelves and a massive working desk\nis by the north wall. The air smells of rare chemicals and spices. A virtual\nladder leads downwards. A magical portal is hovering in the air just in front\nof the east wall.",
       "ZoneId": 69,
       "Sector": "Inside",
       "Flags": [
@@ -196,13 +196,13 @@
           "Keywords": [
             "shelves"
           ],
-          "Description": "\nThe shelves contain a mass of bottles, jars and boxes of different shapes and\nsizes, of which some contain powders and liquids in various colors.  Others\ncontain dragon's claws, giant's eyes, rabbit's ears and other body parts of\ndifferent monsters."
+          "Description": "The shelves contain a mass of bottles, jars and boxes of different shapes and\nsizes, of which some contain powders and liquids in various colors.  Others\ncontain dragon's claws, giant's eyes, rabbit's ears and other body parts of\ndifferent monsters."
         },
         {
           "Keywords": [
             "desk"
           ],
-          "Description": "\nOn the desk is a peculiar apparatus of glass bottles and globes connected by\nsmall pipelines.  The green liquid inside the apparatus' globes and pipelines\nis bubbling steadily."
+          "Description": "On the desk is a peculiar apparatus of glass bottles and globes connected by\nsmall pipelines.  The green liquid inside the apparatus' globes and pipelines\nis bubbling steadily."
         }
       ],
       "SpecialProc": null,
@@ -212,7 +212,7 @@
     {
       "Id": 6903,
       "Name": "Quifael's virtual balcony",
-      "Description": "\n   You are on a transparent balcony hanging in mid-air. You notice a faint blue\nglow surrounding everything, even yourself, making it seem as transparent as\nthe balcony itself. From here, you have a terrific view of the whole Forest of\nHaon-Dor. A transparent bronze plate has been bolted to the balcony railing. A\nmagical portal is hovering in the air to the west.",
+      "Description": "You are on a transparent balcony hanging in mid-air. You notice a faint blue\nglow surrounding everything, even yourself, making it seem as transparent as\nthe balcony itself. From here, you have a terrific view of the whole Forest of\nHaon-Dor. A transparent bronze plate has been bolted to the balcony railing. A\nmagical portal is hovering in the air to the west.",
       "ZoneId": 69,
       "Sector": "Inside",
       "Flags": [
@@ -235,13 +235,13 @@
             "balcony",
             "railing"
           ],
-          "Description": "\nQuite transparent, but visible anyway, because of the blue glow that surrounds\nthe whole place."
+          "Description": "Quite transparent, but visible anyway, because of the blue glow that surrounds\nthe whole place."
         },
         {
           "Keywords": [
             "plate"
           ],
-          "Description": "\nThe transparent bronze plate looks quite strange, but the engraved letters are\nquite easy to read, nevertheless :-\n\n              Quifael's Virtual Balcony\n\n                   Do not lean out!\n\n  Please do not try to attract the attention of any\n      adventurers in the forest, as you are not\n         really in existence at the moment.\n\n        (This could possibly mess up Reality,\n      and we wouldn't want to do that, would we?)"
+          "Description": "The transparent bronze plate looks quite strange, but the engraved letters are\nquite easy to read, nevertheless :-\n\n              Quifael's Virtual Balcony\n\n                   Do not lean out!\n\n  Please do not try to attract the attention of any\n      adventurers in the forest, as you are not\n         really in existence at the moment.\n\n        (This could possibly mess up Reality,\n      and we wouldn't want to do that, would we?)"
         },
         {
           "Keywords": [
@@ -249,7 +249,7 @@
             "Haon-Dor",
             "view"
           ],
-          "Description": "\nThrough the tree crowns, you see fellow adventurers walking around in the\nforest, gathering mushrooms, eating blackberries, committing rabbit genocide\nand generally having a good time."
+          "Description": "Through the tree crowns, you see fellow adventurers walking around in the\nforest, gathering mushrooms, eating blackberries, committing rabbit genocide\nand generally having a good time."
         }
       ],
       "SpecialProc": null,
@@ -259,7 +259,7 @@
     {
       "Id": 6904,
       "Name": "Quifael's hall",
-      "Description": "\n   You are in sparsely decorated and quite dusty hall. Old wooden doors lead\nnorth, east and south and to the west is the front door. An old mirror hangs on\nthe wall.",
+      "Description": "You are in sparsely decorated and quite dusty hall. Old wooden doors lead\nnorth, east and south and to the west is the front door. An old mirror hangs on\nthe wall.",
       "ZoneId": 69,
       "Sector": "Inside",
       "Flags": [
@@ -309,7 +309,7 @@
           "Keywords": [
             "mirror"
           ],
-          "Description": "\nYou see yourself looking back at you."
+          "Description": "You see yourself looking back at you."
         }
       ],
       "SpecialProc": null,
@@ -319,7 +319,7 @@
     {
       "Id": 6905,
       "Name": "Quifael's kitchen",
-      "Description": "\n   You are in an old-fashioned kitchen.",
+      "Description": "You are in an old-fashioned kitchen.",
       "ZoneId": 69,
       "Sector": "Inside",
       "Flags": [
@@ -344,7 +344,7 @@
     {
       "Id": 6999,
       "Name": "The Realm of the Dead",
-      "Description": "\n   You are standing on an immense, gray stone floor that stretches as far as\nyou can see in all directions. Rough winds plunging from the dark, starless sky\ntear savagely at your fragile body.",
+      "Description": "You are standing on an immense, gray stone floor that stretches as far as\nyou can see in all directions. Rough winds plunging from the dark, starless sky\ntear savagely at your fragile body.",
       "ZoneId": 69,
       "Sector": "Inside",
       "Flags": [
@@ -391,7 +391,7 @@
           "Keywords": [
             "floor"
           ],
-          "Description": "\nThe stone floor is the same shade of gray as the sky and is completely plain\nand unscratched.  It is probably too hard for anything to leave as much as a\nscratch on it."
+          "Description": "The stone floor is the same shade of gray as the sky and is completely plain\nand unscratched.  It is probably too hard for anything to leave as much as a\nscratch on it."
         },
         {
           "Keywords": [
@@ -399,7 +399,7 @@
             "wind",
             "winds"
           ],
-          "Description": "\nCold winds plunge ceaselessly at you from the dark, cloudless sky."
+          "Description": "Cold winds plunge ceaselessly at you from the dark, cloudless sky."
         }
       ],
       "SpecialProc": null,
@@ -411,9 +411,9 @@
     {
       "Id": 6910,
       "Name": "isha elf",
-      "ShortDescription": "\nIsha the Dark Elf",
-      "LongDescription": "\nIsha the Dark Elf is here, observing you silently.",
-      "Description": "\nShe is no less than beautiful, skin as dark as the night and hair shining like\nsilver in the moonlight.  Her slender body is adorned with a sleeveless shirt\nand a short skirt made from black scales joined with silver threads.  Her back\nis covered by a large, hooded cloak as black as her skin and in her broad\nsilver belt hangs a long, slender sword in a silver scabbard.",
+      "ShortDescription": "Isha the Dark Elf",
+      "LongDescription": "Isha the Dark Elf is here, observing you silently.",
+      "Description": "She is no less than beautiful, skin as dark as the night and hair shining like\nsilver in the moonlight.  Her slender body is adorned with a sleeveless shirt\nand a short skirt made from black scales joined with silver threads.  Her back\nis covered by a large, hooded cloak as black as her skin and in her broad\nsilver belt hangs a long, slender sword in a silver scabbard.",
       "Level": 20,
       "Race": "Humanoid",
       "Class": "MagicUser",
@@ -471,9 +471,9 @@
     {
       "Id": 6999,
       "Name": "death reaper",
-      "ShortDescription": "\nDeath",
-      "LongDescription": "\nDeath the Grim Reaper is observing you silently from empty eye sockets.",
-      "Description": "\nThe dark-robed skeletal figure radiates an unendurable coldness.",
+      "ShortDescription": "Death",
+      "LongDescription": "Death the Grim Reaper is observing you silently from empty eye sockets.",
+      "Description": "The dark-robed skeletal figure radiates an unendurable coldness.",
       "Level": 30,
       "Race": "Undefined",
       "Class": "Warrior",
@@ -533,8 +533,8 @@
     {
       "Id": 6910,
       "Name": "shirt scale",
-      "ShortDescription": "\na black dragon scale shirt",
-      "Description": "\nA black dragon scale shirt has been left here.",
+      "ShortDescription": "a black dragon scale shirt",
+      "Description": "A black dragon scale shirt has been left here.",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 25,
@@ -582,7 +582,7 @@
             "shirt",
             "scale"
           ],
-          "Description": "\nIt is a sleeveless shirt made from big, black dragon scales joined with silver\nthreads.  Its inside has been made from the soft skin on the dragon's belly,\nmaking it very comfortable to wear.  The name \"Isha\" has been engraved on one\nof the scales."
+          "Description": "It is a sleeveless shirt made from big, black dragon scales joined with silver\nthreads.  Its inside has been made from the soft skin on the dragon's belly,\nmaking it very comfortable to wear.  The name \"Isha\" has been engraved on one\nof the scales."
         }
       ],
       "Affects": [],
@@ -592,8 +592,8 @@
     {
       "Id": 6911,
       "Name": "skirt scale",
-      "ShortDescription": "\na black dragon scale skirt",
-      "Description": "\nA black dragon scale skirt has been left here.",
+      "ShortDescription": "a black dragon scale skirt",
+      "Description": "A black dragon scale skirt has been left here.",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 15,
@@ -641,7 +641,7 @@
             "skirt",
             "scale"
           ],
-          "Description": "\nIt is a short skirt made from big, black dragon scales joined with silver\nthreads.  Its inside has been made from the soft skin on the dragon's belly,\nmaking it very comfortable to wear.  The name \"Isha\" has been engraved on one\nof the scales."
+          "Description": "It is a short skirt made from big, black dragon scales joined with silver\nthreads.  Its inside has been made from the soft skin on the dragon's belly,\nmaking it very comfortable to wear.  The name \"Isha\" has been engraved on one\nof the scales."
         }
       ],
       "Affects": [],
@@ -651,8 +651,8 @@
     {
       "Id": 6912,
       "Name": "cloak black",
-      "ShortDescription": "\na black, hooded cloak",
-      "Description": "\nA large, hooded cloak, as dark as the night, has been left here.",
+      "ShortDescription": "a black, hooded cloak",
+      "Description": "A large, hooded cloak, as dark as the night, has been left here.",
       "ActionDescription": "",
       "Type": "Worn",
       "Level": 20,
@@ -682,7 +682,7 @@
             "cloak",
             "black"
           ],
-          "Description": "\nIt is a heavy, black cloak with a large hood.  The name \"Isha\" is written\ninside it with a silver thread."
+          "Description": "It is a heavy, black cloak with a large hood.  The name \"Isha\" is written\ninside it with a silver thread."
         }
       ],
       "Affects": [
@@ -701,8 +701,8 @@
     {
       "Id": 6913,
       "Name": "belt silver",
-      "ShortDescription": "\na broad silver belt",
-      "Description": "\nA broad silver belt has been left here.",
+      "ShortDescription": "a broad silver belt",
+      "Description": "A broad silver belt has been left here.",
       "ActionDescription": "",
       "Type": "Armor",
       "Level": 15,
@@ -750,7 +750,7 @@
             "belt",
             "silver"
           ],
-          "Description": "\nIt is a broad belt made from tiny silver rings woven together."
+          "Description": "It is a broad belt made from tiny silver rings woven together."
         }
       ],
       "Affects": [],
@@ -760,9 +760,9 @@
     {
       "Id": 6914,
       "Name": "sword long slender",
-      "ShortDescription": "\na long, slender sword",
-      "Description": "\nA long, slender sword lies on the ground.",
-      "ActionDescription": "\nslash",
+      "ShortDescription": "a long, slender sword",
+      "Description": "A long, slender sword lies on the ground.",
+      "ActionDescription": "slash",
       "Type": "Weapon",
       "Level": 21,
       "AntiClass": "13107",
@@ -815,7 +815,7 @@
             "long",
             "slender"
           ],
-          "Description": "\nIt is a long, slender sword that seems to be made from silver.  The name\n\"Isha\" has been engraved on the hilt."
+          "Description": "It is a long, slender sword that seems to be made from silver.  The name\n\"Isha\" has been engraved on the hilt."
         }
       ],
       "Affects": [
@@ -834,9 +834,9 @@
     {
       "Id": 6999,
       "Name": "axe",
-      "ShortDescription": "\nKael's axe",
-      "Description": "\nKael's axe rests heavily on the ground.",
-      "ActionDescription": "\nreaps",
+      "ShortDescription": "Kael's axe",
+      "Description": "Kael's axe rests heavily on the ground.",
+      "ActionDescription": "reaps",
       "Type": "Weapon",
       "Level": 27,
       "AntiClass": "None",
@@ -884,7 +884,7 @@
           "Keywords": [
             "axe"
           ],
-          "Description": "\nIt is a very heavy axe.  The grey handle is made from hard wood and the long\niron axehead is completely smooth from countless years of use.  It feels cold \nto the touch."
+          "Description": "It is a very heavy axe.  The grey handle is made from hard wood and the long\niron axehead is completely smooth from countless years of use.  It feels cold \nto the touch."
         }
       ],
       "Affects": [],

@@ -12,7 +12,7 @@
         "Arg1": 21,
         "Arg2": 100,
         "Arg3": 28300,
-        "Comment": null
+        "Comment": "Guard Statue Colossus (Guard before Elysium)"
       },
       {
         "Command": "O",
@@ -20,7 +20,7 @@
         "Arg1": 17,
         "Arg2": 100,
         "Arg3": 28301,
-        "Comment": null
+        "Comment": "ELYSIUM board"
       },
       {
         "Command": "O",
@@ -28,7 +28,7 @@
         "Arg1": 3135,
         "Arg2": 100,
         "Arg3": 28302,
-        "Comment": null
+        "Comment": "Fountain in Elysium"
       },
       {
         "Command": "M",
@@ -36,7 +36,7 @@
         "Arg1": 28300,
         "Arg2": 1,
         "Arg3": 28303,
-        "Comment": null
+        "Comment": "Clan Bartender"
       },
       {
         "Command": "G",
@@ -44,7 +44,7 @@
         "Arg1": 28312,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -52,7 +52,7 @@
         "Arg1": 28310,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -60,7 +60,7 @@
         "Arg1": 28313,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -68,7 +68,7 @@
         "Arg1": 28300,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -76,7 +76,7 @@
         "Arg1": 28301,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -84,7 +84,7 @@
         "Arg1": 28302,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -92,7 +92,7 @@
         "Arg1": 28303,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -100,7 +100,7 @@
         "Arg1": 28307,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -108,7 +108,7 @@
         "Arg1": 28308,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "G",
@@ -116,7 +116,7 @@
         "Arg1": 28311,
         "Arg2": 99,
         "Arg3": null,
-        "Comment": null
+        "Comment": "Give him stuff to sell"
       },
       {
         "Command": "D",
@@ -124,7 +124,7 @@
         "Arg1": 28303,
         "Arg2": 0,
         "Arg3": 1,
-        "Comment": null
+        "Comment": "Door to clan zone"
       }
     ]
   },
@@ -132,7 +132,7 @@
     {
       "Id": 28300,
       "Name": "#bThe Gateway to Elysium#N",
-      "Description": "\n   An iron gate is to the north. An inscription on the marble arch\nabove the gate says: \n\n         \"The realm of peace, Elysium. Only those \n            pure of heart may enter this land.\"",
+      "Description": "An iron gate is to the north. An inscription on the marble arch\nabove the gate says: \n\n         \"The realm of peace, Elysium. Only those \n            pure of heart may enter this land.\"",
       "ZoneId": 283,
       "Sector": "City",
       "Flags": [
@@ -171,7 +171,7 @@
     {
       "Id": 28301,
       "Name": "#bThe Great Fields of Elysium#N",
-      "Description": "\n  A tree lined marble walkway leads to a pillared temple. The walkway\nis about 100 yards long. The trees and lawn are well kept and shaped by\nmaster gardeners. A pool of water is nearby. All about you on the lawn\nnear the walkway are strewn armor, weapons, and shields of all kinds.\nThey are old and rusted as if the owners entered this land, cast them\noff, and never returned to claim them. Off in the distance you see\nhorses grazing peacefully in  the lush green grass. You also see the\nglint of what appears to be a sparkling chariot, racing across the open\nfields of grass.",
+      "Description": "A tree lined marble walkway leads to a pillared temple. The walkway\nis about 100 yards long. The trees and lawn are well kept and shaped by\nmaster gardeners. A pool of water is nearby. All about you on the lawn\nnear the walkway are strewn armor, weapons, and shields of all kinds.\nThey are old and rusted as if the owners entered this land, cast them\noff, and never returned to claim them. Off in the distance you see\nhorses grazing peacefully in  the lush green grass. You also see the\nglint of what appears to be a sparkling chariot, racing across the open\nfields of grass.",
       "ZoneId": 283,
       "Sector": "City",
       "Flags": [
@@ -211,7 +211,7 @@
     {
       "Id": 28302,
       "Name": "#bThe Great Hall of Zeus#N",
-      "Description": "\n   This mammoth marble pillared hall is a breathtaking masterpiece in\narchitecture. You are humbled by its sheer size and volume. The\nceiling arches three floors above you, and is covered with paintings of\nepic battles and valiant deeds. The chandeliers are made from diamonds\nand silver, and their light gives the hall a mystical aura. Every sound\nyou make is echoed throughout this massive structure. The walls and\nfloors are made of the same beautiful blue marble as the columns. In\nits center is a huge statue of the God of Storms, Zeus. Plush red\ncarpets cover the floors, and statues of some of #bElysiums#N' lost and\nfallen clansmen line the walls. A broad, plush red carpeted stairway\ncurves gracefully up either side of the hall, leading to the personal\nrooms on the upper floors. Beautifully crafted mahogany double doors\nare set into each of the north, west, and east walls. The main\nentrance, to the south, is formed by two enormous intricately carved\nmahogany doors, flanked by two huge blue marble columns.",
+      "Description": "This mammoth marble pillared hall is a breathtaking masterpiece in\narchitecture. You are humbled by its sheer size and volume. The\nceiling arches three floors above you, and is covered with paintings of\nepic battles and valiant deeds. The chandeliers are made from diamonds\nand silver, and their light gives the hall a mystical aura. Every sound\nyou make is echoed throughout this massive structure. The walls and\nfloors are made of the same beautiful blue marble as the columns. In\nits center is a huge statue of the God of Storms, Zeus. Plush red\ncarpets cover the floors, and statues of some of #bElysiums#N' lost and\nfallen clansmen line the walls. A broad, plush red carpeted stairway\ncurves gracefully up either side of the hall, leading to the personal\nrooms on the upper floors. Beautifully crafted mahogany double doors\nare set into each of the north, west, and east walls. The main\nentrance, to the south, is formed by two enormous intricately carved\nmahogany doors, flanked by two huge blue marble columns.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -286,43 +286,43 @@
             "statue",
             "statues"
           ],
-          "Description": "\nStatues of some of #bElysiums#N' lost and fallen clansmen stand against\nthe walls. Some that you recognize are Gutless, Pennyroyal, Creb,\nRakshar, Haegar and Eris. Feel free to take a closer look if you like."
+          "Description": "Statues of some of #bElysiums#N' lost and fallen clansmen stand against\nthe walls. Some that you recognize are Gutless, Pennyroyal, Creb,\nRakshar, Haegar and Eris. Feel free to take a closer look if you like."
         },
         {
           "Keywords": [
             "gutless"
           ],
-          "Description": "\nA statue of Gutless, #bElysiums#N' founding immortal, stands here\noozing entrails."
+          "Description": "A statue of Gutless, #bElysiums#N' founding immortal, stands here\noozing entrails."
         },
         {
           "Keywords": [
             "pennyroyal"
           ],
-          "Description": "\nA statue of Pennyroyal, one of #bElysiums#N' founding fathers,\nstands here looking menacing."
+          "Description": "A statue of Pennyroyal, one of #bElysiums#N' founding fathers,\nstands here looking menacing."
         },
         {
           "Keywords": [
             "creb"
           ],
-          "Description": "\nA statue of Creb, one of #bElysiums#N' founding fathers, stands here\ninsulting the world."
+          "Description": "A statue of Creb, one of #bElysiums#N' founding fathers, stands here\ninsulting the world."
         },
         {
           "Keywords": [
             "rakshar"
           ],
-          "Description": "\nA statue of the Ferret Lord Rakshar stands here squeaking at you."
+          "Description": "A statue of the Ferret Lord Rakshar stands here squeaking at you."
         },
         {
           "Keywords": [
             "haegar"
           ],
-          "Description": "\nA statue of Haegar, one of #bElysiums#N' greatest heroes, stands here\nas inspiration to all."
+          "Description": "A statue of Haegar, one of #bElysiums#N' greatest heroes, stands here\nas inspiration to all."
         },
         {
           "Keywords": [
             "eris"
           ],
-          "Description": "\nA statue of Eris, #bElysiums#N' most beautiful immortal, stands here\nsmiling."
+          "Description": "A statue of Eris, #bElysiums#N' most beautiful immortal, stands here\nsmiling."
         }
       ],
       "SpecialProc": null,
@@ -332,7 +332,7 @@
     {
       "Id": 28303,
       "Name": "#bThe Elysium Bar#N",
-      "Description": "\n   You are standing at the most grandiose bar you have ever seen.  The\nsmell in the air gives you a euphoria that far surpasses anything you\nhave encountered in your short, miserable life. As you scan the bar,\nyou see a hardy group of warriors laughing and enjoying themselves with\ngreat vigor. As you get a closer look, you notice a glow of valor and\ndignity that is not seen on mere mortals. You quickly realize that they\nare your fellow ELYSIUM clansmen. In this bar, the drinks are always on\nthe house, CLAN house that is!",
+      "Description": "You are standing at the most grandiose bar you have ever seen.  The\nsmell in the air gives you a euphoria that far surpasses anything you\nhave encountered in your short, miserable life. As you scan the bar,\nyou see a hardy group of warriors laughing and enjoying themselves with\ngreat vigor. As you get a closer look, you notice a glow of valor and\ndignity that is not seen on mere mortals. You quickly realize that they\nare your fellow ELYSIUM clansmen. In this bar, the drinks are always on\nthe house, CLAN house that is!",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -378,7 +378,7 @@
     {
       "Id": 28304,
       "Name": "#bThe Armory of Legends#N",
-      "Description": "\n   This large room is filled with the instruments of war.",
+      "Description": "This large room is filled with the instruments of war.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -404,7 +404,7 @@
     {
       "Id": 28305,
       "Name": "#bThe Rose Garden#N",
-      "Description": "\n     You are standing in the middle of the most beautiful rose garden\nyou've ever seen. There are beautifully arranged roses of every color\nand variety covering the entire roof of the clan house. There are\nmarble walkways stretching off in every direction, meandering around\nthe garden. Large hedges and bushes are everywhere, giving visitors\nmany quiet little private areas. The garden is magically protected\nagainst the harsher elements, so no matter what the weather outside,\nthere's never more than a light breeze or gentle rainfall.",
+      "Description": "You are standing in the middle of the most beautiful rose garden\nyou've ever seen. There are beautifully arranged roses of every color\nand variety covering the entire roof of the clan house. There are\nmarble walkways stretching off in every direction, meandering around\nthe garden. Large hedges and bushes are everywhere, giving visitors\nmany quiet little private areas. The garden is magically protected\nagainst the harsher elements, so no matter what the weather outside,\nthere's never more than a light breeze or gentle rainfall.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -431,7 +431,7 @@
     {
       "Id": 28306,
       "Name": "#bThe Arena#N",
-      "Description": "\n   This is an enormous room housing the clan arena. A huge battlefield\nsurrounded by large braziers dominates the room. Comfortable padded\nseating runs along each wall, providing enough space for the entire\nclan, as  well as numerous guests.",
+      "Description": "This is an enormous room housing the clan arena. A huge battlefield\nsurrounded by large braziers dominates the room. Comfortable padded\nseating runs along each wall, providing enough space for the entire\nclan, as  well as numerous guests.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -457,7 +457,7 @@
     {
       "Id": 28307,
       "Name": "#bPath of Heroes#N",
-      "Description": "\n   You come from the Great Hall of Zeus into this vast circular room\nwith pillars all around it.  In between each pillar you see statues of\ngreat heroes and displays of weapons and armor of great value and\ndistinction.  You also see 3 doors at ground level and, and a spiral\nstaircase going up and down, each going into the domain of a great\nchampion resurrected from the past.",
+      "Description": "You come from the Great Hall of Zeus into this vast circular room\nwith pillars all around it.  In between each pillar you see statues of\ngreat heroes and displays of weapons and armor of great value and\ndistinction.  You also see 3 doors at ground level and, and a spiral\nstaircase going up and down, each going into the domain of a great\nchampion resurrected from the past.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -530,7 +530,7 @@
     {
       "Id": 28308,
       "Name": "Empty",
-      "Description": "\nNo description.",
+      "Description": "No description.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -547,7 +547,7 @@
     {
       "Id": 28309,
       "Name": "#bHall of Zeus#N",
-      "Description": "\n   You start the trek up the marvelous stairs going up the sides of\nthe hall.  As you climb higher, you take your time to look at the\npictures and artifacts of heroes past.  You finally reach a walkway\nwith 4 doors, each going into the personal domain of a great hero of\nElysium. You then decide to see how far you have climbed and notice\nthat you are only to about Zeus's waist, even after all the climbing!\nYou almost faint thinking about climbing higher to reach the rooms of\nmore great heroes and also the beautiful Rose Garden that is famous\nthroughout ELITE.",
+      "Description": "You start the trek up the marvelous stairs going up the sides of\nthe hall.  As you climb higher, you take your time to look at the\npictures and artifacts of heroes past.  You finally reach a walkway\nwith 4 doors, each going into the personal domain of a great hero of\nElysium. You then decide to see how far you have climbed and notice\nthat you are only to about Zeus's waist, even after all the climbing!\nYou almost faint thinking about climbing higher to reach the rooms of\nmore great heroes and also the beautiful Rose Garden that is famous\nthroughout ELITE.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -641,7 +641,7 @@
     {
       "Id": 28310,
       "Name": "#bDarquon's #rRed Room#N",
-      "Description": "\n     You've walk through a set of large gilded double doors to enter a\nlarge, lavishly furnished room, dimly lit with a dull red light.  On\nthe south side of the room is a large, red velvet #ccouch#N, and a bar\nmade of black marble is set against the wall, complete with padded\nstools. In each corner is a large ivory #cpillar#N, with the #cvisage#N\nof Darquon carved into each one, facing into the center of the room.\nAs you walk across the marble tiles, you are greeted by the wail of a\njazz band, which seems to originate from nowhere.  Across from the\ncouch are a couple easy chairs made out of red suede and a glass coffee\ntable, upon which sits a crumpled leisure suit and sunglasses.  On the\nother side of the room is a large king-sized futon mattress, which is\nset on an elevated portion of the floor, next to which stands a large\nmarble hot tub, bubbling over with hot steam and suds.  On the edge of\nthe tub is a small framed #cpicture#N of an attractive young woman.\nThe only thing that seems to be missing is the hazy shade of cigarette\n#csmoke#N.  Yes, this is truly the decadent room of a\ndemon-turned-avatar.",
+      "Description": "You've walk through a set of large gilded double doors to enter a\nlarge, lavishly furnished room, dimly lit with a dull red light.  On\nthe south side of the room is a large, red velvet #ccouch#N, and a bar\nmade of black marble is set against the wall, complete with padded\nstools. In each corner is a large ivory #cpillar#N, with the #cvisage#N\nof Darquon carved into each one, facing into the center of the room.\nAs you walk across the marble tiles, you are greeted by the wail of a\njazz band, which seems to originate from nowhere.  Across from the\ncouch are a couple easy chairs made out of red suede and a glass coffee\ntable, upon which sits a crumpled leisure suit and sunglasses.  On the\nother side of the room is a large king-sized futon mattress, which is\nset on an elevated portion of the floor, next to which stands a large\nmarble hot tub, bubbling over with hot steam and suds.  On the edge of\nthe tub is a small framed #cpicture#N of an attractive young woman.\nThe only thing that seems to be missing is the hazy shade of cigarette\n#csmoke#N.  Yes, this is truly the decadent room of a\ndemon-turned-avatar.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -671,31 +671,31 @@
             "couch",
             "sofa"
           ],
-          "Description": "\nAin't no couch.  Ain't no sofa.  It's a looooove seat.  Awwe\nyeah, baby."
+          "Description": "Ain't no couch.  Ain't no sofa.  It's a looooove seat.  Awwe\nyeah, baby."
         },
         {
           "Keywords": [
             "pillar"
           ],
-          "Description": "\nThese massive marble pillars seem to serve no other purpose than to\nglorify the excess within this room."
+          "Description": "These massive marble pillars seem to serve no other purpose than to\nglorify the excess within this room."
         },
         {
           "Keywords": [
             "visage"
           ],
-          "Description": "\nEach set of eyes seems to follow you around the room, each face\nfrozen in an insane cackle."
+          "Description": "Each set of eyes seems to follow you around the room, each face\nfrozen in an insane cackle."
         },
         {
           "Keywords": [
             "picture"
           ],
-          "Description": "\nThe nameplate says, \"Melody.\"  She appears to be wearing a wedding\nband."
+          "Description": "The nameplate says, \"Melody.\"  She appears to be wearing a wedding\nband."
         },
         {
           "Keywords": [
             "smoke"
           ],
-          "Description": "\nYou see no smoke here, which is odd.  Rumor has it, Darquon's new\nsqueeze made him quit."
+          "Description": "You see no smoke here, which is odd.  Rumor has it, Darquon's new\nsqueeze made him quit."
         }
       ],
       "SpecialProc": null,
@@ -705,7 +705,7 @@
     {
       "Id": 28311,
       "Name": "#bThe Hall of Zeus#N",
-      "Description": "\n     There are three doors leading from this hall.  To the east is \nWolvendar, NightWolf's chamber. To the south is the Darquon's #rRed\nRoom#N.  To the west is the chamber of the Myth Tynstar.",
+      "Description": "There are three doors leading from this hall.  To the east is \nWolvendar, NightWolf's chamber. To the south is the Darquon's #rRed\nRoom#N.  To the west is the chamber of the Myth Tynstar.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -784,7 +784,7 @@
     {
       "Id": 28312,
       "Name": "#bThe Chamber of the Myth Tynstar#N",
-      "Description": "\n     You enter a room with plush couches, carpets from around the\nworld, and other rare and wonderful furnishings. It is a very\ncomfortable place to crash for a good peaceful nap or just relax.\nTynstar invites you to stay for a while and shrug off the pressures of\nthe MUD world.",
+      "Description": "You enter a room with plush couches, carpets from around the\nworld, and other rare and wonderful furnishings. It is a very\ncomfortable place to crash for a good peaceful nap or just relax.\nTynstar invites you to stay for a while and shrug off the pressures of\nthe MUD world.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -817,7 +817,7 @@
     {
       "Id": 28313,
       "Name": "#bWolvendar#N",
-      "Description": "\n   You are in a small clearing in a dark forest. It is surrounded by\nmassive #Gtrees#N many feet in diameter and many hundreds of feet tall.\nMany of the trees have intricate #Gcarvings#N in them, giving the area\na mystical feel.  There is a light layer of fog over the ground, giving\nthe area a foreboding feeling. You notice that some of the shrubbery is\nformed into the semblance of comfortable looking furniture. Directly\nopposite the door is a large altar to Gaea, the Mother Earth, whom\nNightWolf worships above all others.  This place has a strong calming\neffect on all who come here, as if the very trees themselves ensure the\npeace. Many small woodland #Ycreatures#N wander in and out of the\nclearing, as well as the occasional stag. Things can be heard moving in\nthe trees beyond sight, and every once in awhile a pair of softly\nglowing red or gold eyes can be seen looking out into the clearing and\nthen away. A large pitch black #Bwolf#N sits and silently watches the\nclearing from between two trees, implying that leaving this clearing\nany way other than the way you came in is an extremely bad idea.",
+      "Description": "You are in a small clearing in a dark forest. It is surrounded by\nmassive #Gtrees#N many feet in diameter and many hundreds of feet tall.\nMany of the trees have intricate #Gcarvings#N in them, giving the area\na mystical feel.  There is a light layer of fog over the ground, giving\nthe area a foreboding feeling. You notice that some of the shrubbery is\nformed into the semblance of comfortable looking furniture. Directly\nopposite the door is a large altar to Gaea, the Mother Earth, whom\nNightWolf worships above all others.  This place has a strong calming\neffect on all who come here, as if the very trees themselves ensure the\npeace. Many small woodland #Ycreatures#N wander in and out of the\nclearing, as well as the occasional stag. Things can be heard moving in\nthe trees beyond sight, and every once in awhile a pair of softly\nglowing red or gold eyes can be seen looking out into the clearing and\nthen away. A large pitch black #Bwolf#N sits and silently watches the\nclearing from between two trees, implying that leaving this clearing\nany way other than the way you came in is an extremely bad idea.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -848,25 +848,25 @@
             "carving",
             "carvings"
           ],
-          "Description": "\nThere are many carvings on the trees surrounding this clearing. The\ncarvings depict a great many things, ranging from small woodland\ncreatures to famous heroes of the past to strange abstract designs that\nalmost have a life of their own. The most impressive of these carvings\nis a very detailed life size carving of a radiantly beautiful young\nwoman. She looks vaguely familiar..."
+          "Description": "There are many carvings on the trees surrounding this clearing. The\ncarvings depict a great many things, ranging from small woodland\ncreatures to famous heroes of the past to strange abstract designs that\nalmost have a life of their own. The most impressive of these carvings\nis a very detailed life size carving of a radiantly beautiful young\nwoman. She looks vaguely familiar..."
         },
         {
           "Keywords": [
             "woman"
           ],
-          "Description": "\nThis is the most beautiful carving you've ever seen. The wood is\npolished smooth as glass, and the wood is burned in just the right\nplaces to give the carving a life of it's own. The woman is simply\nstriking. Her dark hair falls gently down over her shoulders and her\neyes stare intently back at you. Her body is beautifully proportioned,\nsoftly curving back to become one with the tree. You can do nothing but\nstand in awe of the sheer beauty of this woman. It must have taken many\nmany long months of work to create such a work."
+          "Description": "This is the most beautiful carving you've ever seen. The wood is\npolished smooth as glass, and the wood is burned in just the right\nplaces to give the carving a life of it's own. The woman is simply\nstriking. Her dark hair falls gently down over her shoulders and her\neyes stare intently back at you. Her body is beautifully proportioned,\nsoftly curving back to become one with the tree. You can do nothing but\nstand in awe of the sheer beauty of this woman. It must have taken many\nmany long months of work to create such a work."
         },
         {
           "Keywords": [
             "wolf"
           ],
-          "Description": "\nThis is the largest wolf you've ever seen. As he sits there calmly\nwatching you, you guess his height to be at least 3 feet. His beautiful\nblack coat shines in the gentle light of this place, and his eyes shine\nwith a soft red glow. It's hard to tell, but it seems as if a look of\nadoration spreads across this wolves face whenever he looks at\nNightWolf. While he remains gentle and calm, you feel that this wolf\nwould have no problem dispatching a Hell Hound. And you know he's not\nalone."
+          "Description": "This is the largest wolf you've ever seen. As he sits there calmly\nwatching you, you guess his height to be at least 3 feet. His beautiful\nblack coat shines in the gentle light of this place, and his eyes shine\nwith a soft red glow. It's hard to tell, but it seems as if a look of\nadoration spreads across this wolves face whenever he looks at\nNightWolf. While he remains gentle and calm, you feel that this wolf\nwould have no problem dispatching a Hell Hound. And you know he's not\nalone."
         },
         {
           "Keywords": [
             "creatures"
           ],
-          "Description": "\nSmall squirrels, ferrets, and Fuzzy Bunnies, as well as numerous\nother woodland creatures, are constantly wandering in and out of the\nclearing. They are completely comfortable here, and will even come\nup to you and let you pet them. They know they are completely safe here \nunder the watchful gaze of NightWolf and his lupine companions."
+          "Description": "Small squirrels, ferrets, and Fuzzy Bunnies, as well as numerous\nother woodland creatures, are constantly wandering in and out of the\nclearing. They are completely comfortable here, and will even come\nup to you and let you pet them. They know they are completely safe here \nunder the watchful gaze of NightWolf and his lupine companions."
         }
       ],
       "SpecialProc": null,
@@ -876,7 +876,7 @@
     {
       "Id": 28314,
       "Name": "#bFlyn's Royal Chamber#N",
-      "Description": "\n     You find yourself in a large room, with a giant window covering\nthe west wall, overlooking the forest of Haon-dor. Suits of glowing\ngolden elven plate armor line the north wall, seemingly illuminating\nthe entire room. A large throne made of gold sits in front of the\nstatues of armor, decorated with lion heads carved into the armrests. A\ncomfortable looking couch made of leather sits neatly against the east\nwall. Tapestries with pictures of Elven heroes of old decorate the\nroom, along with other little odds and ends of furniture. You feel very\nsafe and comfortable here, and are welcome to stay as long as you wish.",
+      "Description": "You find yourself in a large room, with a giant window covering\nthe west wall, overlooking the forest of Haon-dor. Suits of glowing\ngolden elven plate armor line the north wall, seemingly illuminating\nthe entire room. A large throne made of gold sits in front of the\nstatues of armor, decorated with lion heads carved into the armrests. A\ncomfortable looking couch made of leather sits neatly against the east\nwall. Tapestries with pictures of Elven heroes of old decorate the\nroom, along with other little odds and ends of furniture. You feel very\nsafe and comfortable here, and are welcome to stay as long as you wish.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -924,7 +924,7 @@
     {
       "Id": 28315,
       "Name": "#bFoetus and Nehemia's Dream House#N",
-      "Description": "\n   As you walk into this seemingly small room, you are amazed by\nits actual size. You are standing in a nice sized two-story house.\nTastefully decorated and tidy, excepting the strewn about computer \nhardware, disks, and CDs, and the frightening number of wires creating \nsome sort of networked abomination of the occupants computers. You feel\nthe deep desire to rent a room in this wonderful place, or at least\nhangout with us for awhile.",
+      "Description": "As you walk into this seemingly small room, you are amazed by\nits actual size. You are standing in a nice sized two-story house.\nTastefully decorated and tidy, excepting the strewn about computer \nhardware, disks, and CDs, and the frightening number of wires creating \nsome sort of networked abomination of the occupants computers. You feel\nthe deep desire to rent a room in this wonderful place, or at least\nhangout with us for awhile.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -957,7 +957,7 @@
     {
       "Id": 28316,
       "Name": "#bThe Lion's Den#N",
-      "Description": "\n   As you walk in the room, you are startled by the richness that\nappears in front of you.  Besides the tremendous wealth that lies in\nfront of you, your eyes are attracted to the golden superior statue of\nthe Mighty Leo in the center of the room.  You are overwhelmed with joy\nas you touch the statue of the superior Leo because you know that this\nis the closest you will ever get to him.  As you look around the room,\nyou notice there are many women's bras and underwear lying about.\nSeems like Leo is a pretty busy guy at night.  If you are dying to see\nyour superhero, leave your name and number, and Leo will be with you\nshortly.",
+      "Description": "As you walk in the room, you are startled by the richness that\nappears in front of you.  Besides the tremendous wealth that lies in\nfront of you, your eyes are attracted to the golden superior statue of\nthe Mighty Leo in the center of the room.  You are overwhelmed with joy\nas you touch the statue of the superior Leo because you know that this\nis the closest you will ever get to him.  As you look around the room,\nyou notice there are many women's bras and underwear lying about.\nSeems like Leo is a pretty busy guy at night.  If you are dying to see\nyour superhero, leave your name and number, and Leo will be with you\nshortly.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -989,7 +989,7 @@
     {
       "Id": 28317,
       "Name": "#bHouse of Hambone#N",
-      "Description": "\n   Welcome to the House of Hambone.  As you walk into this luxurious\nplace you are amazed by the sheer opulence.  Rare artifacts and\nantiques adorn this room.  As you scan the room you see the richly\ndecorated walls with an occasional stuffed orc or goblin head that fell\nvictim to Hambone's swift blade.  Relics from past battles are evident,\na whole treasure trove of mighty armor and weapons are polished and are\non display.  Over on a table is a decanter of fine brandy and a large\ncrystal snifter.  Come! Get a drink, sit by the fire and relax in a\ncomfortable chair until the host arrives.",
+      "Description": "Welcome to the House of Hambone.  As you walk into this luxurious\nplace you are amazed by the sheer opulence.  Rare artifacts and\nantiques adorn this room.  As you scan the room you see the richly\ndecorated walls with an occasional stuffed orc or goblin head that fell\nvictim to Hambone's swift blade.  Relics from past battles are evident,\na whole treasure trove of mighty armor and weapons are polished and are\non display.  Over on a table is a decanter of fine brandy and a large\ncrystal snifter.  Come! Get a drink, sit by the fire and relax in a\ncomfortable chair until the host arrives.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -1021,7 +1021,7 @@
     {
       "Id": 28318,
       "Name": "Empty",
-      "Description": "\nNo Description.",
+      "Description": "No Description.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -1038,7 +1038,7 @@
     {
       "Id": 28319,
       "Name": "#bAnnie's #gArboretum#N",
-      "Description": "\n   A soft grass green carpet covers the floor of this small, cozy room.\nThe walls and ceiling are both painted a soft eggshell blue, deeper\nnear the floor and paling almost to white in the center of the slightly\ndomed ceiling.  Young trees of all shapes and sizes sit in huge pots\nscattered about the room, waiting to be repatriated to their forests.\nFrom her comfy bed next to the outside wall, Annie can gaze out at the\nstars, but she is more likely to be found chatting with some visiting\nelves, resting on gigantic floor cushions or tending her trees.",
+      "Description": "A soft grass green carpet covers the floor of this small, cozy room.\nThe walls and ceiling are both painted a soft eggshell blue, deeper\nnear the floor and paling almost to white in the center of the slightly\ndomed ceiling.  Young trees of all shapes and sizes sit in huge pots\nscattered about the room, waiting to be repatriated to their forests.\nFrom her comfy bed next to the outside wall, Annie can gaze out at the\nstars, but she is more likely to be found chatting with some visiting\nelves, resting on gigantic floor cushions or tending her trees.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -1087,7 +1087,7 @@
     {
       "Id": 28320,
       "Name": "#bRoro's Lair#N",
-      "Description": "\n     As you enter the room, you are blinded by many shining objects\nscattered all over the room.  Once your eyes adjust you see that this\nis a cave filled with treasure and a big hole in the roof where the sun\nis coming down and reflecting off all the rubies, diamonds and\nemeralds.  Even though it is a Dragon's lair, you notice that for some\nstrange reason, there is a desk and a leather couch off to one side.\nThis is Roro's place to relax, chat and think for various things.",
+      "Description": "As you enter the room, you are blinded by many shining objects\nscattered all over the room.  Once your eyes adjust you see that this\nis a cave filled with treasure and a big hole in the roof where the sun\nis coming down and reflecting off all the rubies, diamonds and\nemeralds.  Even though it is a Dragon's lair, you notice that for some\nstrange reason, there is a desk and a leather couch off to one side.\nThis is Roro's place to relax, chat and think for various things.",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -1120,7 +1120,7 @@
     {
       "Id": 28321,
       "Name": "#bGreco's Field of Sunshine#N",
-      "Description": "\nYou step through the portal into sunshine and flowers.  The sky is a deep, cloudless blue.  The sun is drenching the earth with warmth and light.  Large oaks sprinkle the gently rolling meadow, providing shade and a resting place for the many songbirds.  A hollow in one of the oaks conceals a library containing every Marvel comic ever published, and the grass seems particularly soft under that tree.\n\n#GA black and white marble chessboard waits in the shade.#N\n#YA streak of blue and red across the sky just might be one of the heroes.#N",
+      "Description": "You step through the portal into sunshine and flowers.  The sky is a deep, cloudless blue.  The sun is drenching the earth with warmth and light.  Large oaks sprinkle the gently rolling meadow, providing shade and a resting place for the many songbirds.  A hollow in one of the oaks conceals a library containing every Marvel comic ever published, and the grass seems particularly soft under that tree.\n\n#GA black and white marble chessboard waits in the shade.#N\n#YA streak of blue and red across the sky just might be one of the heroes.#N",
       "ZoneId": 283,
       "Sector": "Inside",
       "Flags": [
@@ -1155,9 +1155,9 @@
     {
       "Id": 28300,
       "Name": "warrior bartender elysium",
-      "ShortDescription": "\nthe Elysium bartender",
-      "LongDescription": "\nThe old warrior listens intently to tales of battles lost and won.",
-      "Description": "\nThe old warrior has long since retired, but gladly serves drinks \nhere at the clan's bar.  He is always here, whenever he is needed.\nThe faint points of his ears and delicate bone structure betray\nhis elven origins as surely as his leathered skin and knowledge of \nthe forest do his years as a ranger.",
+      "ShortDescription": "the Elysium bartender",
+      "LongDescription": "The old warrior listens intently to tales of battles lost and won.",
+      "Description": "The old warrior has long since retired, but gladly serves drinks \nhere at the clan's bar.  He is always here, whenever he is needed.\nThe faint points of his ears and delicate bone structure betray\nhis elven origins as surely as his leathered skin and knowledge of \nthe forest do his years as a ranger.",
       "Level": 110,
       "Race": "Humanoid",
       "Class": "Normal",
@@ -1211,8 +1211,8 @@
     {
       "Id": 17,
       "Name": "board bulletin elysium",
-      "ShortDescription": "\na ELYSIUM clan bulletin board",
-      "Description": "\nThe ELYSIUM clan bulletin board is mounted on a wall here.",
+      "ShortDescription": "a ELYSIUM clan bulletin board",
+      "Description": "The ELYSIUM clan bulletin board is mounted on a wall here.",
       "ActionDescription": "",
       "Type": "Trash",
       "Level": 0,
@@ -1238,7 +1238,7 @@
           "Keywords": [
             "board"
           ],
-          "Description": "\nThis is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
         }
       ],
       "Affects": [],
@@ -1248,8 +1248,8 @@
     {
       "Id": 21,
       "Name": "statue clossus Rhodes",
-      "ShortDescription": "\nthe statue of the Colossus of Rhodes",
-      "Description": "\nBefore you stands the Colossus from Rhodes, rebuilt from the \nruins by the members of the clan Elysium to be their guardian",
+      "ShortDescription": "the statue of the Colossus of Rhodes",
+      "Description": "Before you stands the Colossus from Rhodes, rebuilt from the \nruins by the members of the clan Elysium to be their guardian",
       "ActionDescription": "",
       "Type": "Other",
       "Level": 114,
@@ -1280,8 +1280,8 @@
     {
       "Id": 3135,
       "Name": "fountain",
-      "ShortDescription": "\na fountain",
-      "Description": "\nA small white fountain is standing here, gurgling happily.",
+      "ShortDescription": "a fountain",
+      "Description": "A small white fountain is standing here, gurgling happily.",
       "ActionDescription": "",
       "Type": "Fountain",
       "Level": 0,
@@ -1329,7 +1329,7 @@
           "Keywords": [
             "fountain"
           ],
-          "Description": "\nIt is very nice.  Made from fine white marble."
+          "Description": "It is very nice.  Made from fine white marble."
         }
       ],
       "Affects": [],
@@ -1339,8 +1339,8 @@
     {
       "Id": 28300,
       "Name": "sandwich sprout annies",
-      "ShortDescription": "\nAnnie's avocado and alfalfa sprout sandwich",
-      "Description": "\nAnnie has made some avocado and alfalfa sprout sandwiches to eat.",
+      "ShortDescription": "Annie's avocado and alfalfa sprout sandwich",
+      "Description": "Annie has made some avocado and alfalfa sprout sandwiches to eat.",
       "ActionDescription": "",
       "Type": "Food",
       "Level": 1,
@@ -1389,7 +1389,7 @@
             "sprout",
             "annies"
           ],
-          "Description": "\nThick, moist slices of Annie's homemade bread have been spread with a\nripe avocado and some crunchy sprouts.  Thinly sliced tomatoes,\ncucumbers, mushrooms and some unidentifiable green stuff complete the\nsandwich."
+          "Description": "Thick, moist slices of Annie's homemade bread have been spread with a\nripe avocado and some crunchy sprouts.  Thinly sliced tomatoes,\ncucumbers, mushrooms and some unidentifiable green stuff complete the\nsandwich."
         }
       ],
       "Affects": [],
@@ -1399,8 +1399,8 @@
     {
       "Id": 28301,
       "Name": "sandwich ham",
-      "ShortDescription": "\na thickly sliced ham sandwich",
-      "Description": "\nThick slices of ham rest between hand cut slices of homemade bread.",
+      "ShortDescription": "a thickly sliced ham sandwich",
+      "Description": "Thick slices of ham rest between hand cut slices of homemade bread.",
       "ActionDescription": "",
       "Type": "Food",
       "Level": 1,
@@ -1448,7 +1448,7 @@
             "ham",
             "sandwich"
           ],
-          "Description": "\nEverything you ever loved about a ham sandwich is here in this one.\nEnjoy!"
+          "Description": "Everything you ever loved about a ham sandwich is here in this one.\nEnjoy!"
         }
       ],
       "Affects": [],
@@ -1458,8 +1458,8 @@
     {
       "Id": 28302,
       "Name": "moussaka",
-      "ShortDescription": "\na large square of moussaka",
-      "Description": "\nHot and juicy, smelling of eggplant and lamb, a large square of moussaka\ntempts you.",
+      "ShortDescription": "a large square of moussaka",
+      "Description": "Hot and juicy, smelling of eggplant and lamb, a large square of moussaka\ntempts you.",
       "ActionDescription": "",
       "Type": "Food",
       "Level": 1,
@@ -1506,7 +1506,7 @@
           "Keywords": [
             "moussaka"
           ],
-          "Description": "\nAn Elysium house specialty, this moussaka will fill you up and give you\nenergy for fighting for many hours to come."
+          "Description": "An Elysium house specialty, this moussaka will fill you up and give you\nenergy for fighting for many hours to come."
         }
       ],
       "Affects": [],
@@ -1516,8 +1516,8 @@
     {
       "Id": 28303,
       "Name": "U-235 local speciality",
-      "ShortDescription": "\na glowing U-235 glass",
-      "Description": "\nTynstar's special drink, U-235, sits here smokin'.",
+      "ShortDescription": "a glowing U-235 glass",
+      "Description": "Tynstar's special drink, U-235, sits here smokin'.",
       "ActionDescription": "",
       "Type": "DrinkContainer",
       "Level": 1,
@@ -1567,7 +1567,7 @@
           "Keywords": [
             "U-235"
           ],
-          "Description": "\nSmoke slowly spirals from the strange, greenish liquid in this glass.\nTynstar's not telling exactly what's in it, just that it's responsible\nfor his glow."
+          "Description": "Smoke slowly spirals from the strange, greenish liquid in this glass.\nTynstar's not telling exactly what's in it, just that it's responsible\nfor his glow."
         }
       ],
       "Affects": [],
@@ -1577,8 +1577,8 @@
     {
       "Id": 28307,
       "Name": "retsina",
-      "ShortDescription": "\na bottle of retsina",
-      "Description": "\nAdd some water to this retsina to watch it cloud.",
+      "ShortDescription": "a bottle of retsina",
+      "Description": "Add some water to this retsina to watch it cloud.",
       "ActionDescription": "",
       "Type": "DrinkContainer",
       "Level": 1,
@@ -1626,7 +1626,7 @@
           "Keywords": [
             "retsina"
           ],
-          "Description": "\nAnother prize brought back from campaigns far away, this retsina has a\nfaint taste of licorice."
+          "Description": "Another prize brought back from campaigns far away, this retsina has a\nfaint taste of licorice."
         }
       ],
       "Affects": [],
@@ -1636,8 +1636,8 @@
     {
       "Id": 28308,
       "Name": "Irish whiskey shot",
-      "ShortDescription": "\na shot of Irish",
-      "Description": "\nThis strong Irish whiskey is a favorite of the elves.",
+      "ShortDescription": "a shot of Irish",
+      "Description": "This strong Irish whiskey is a favorite of the elves.",
       "ActionDescription": "",
       "Type": "DrinkContainer",
       "Level": 1,
@@ -1686,7 +1686,7 @@
             "Irish",
             "whiskey"
           ],
-          "Description": "\nGolden in the bottle, golden fire as you swallow it.  Potent as an elf\nking."
+          "Description": "Golden in the bottle, golden fire as you swallow it.  Potent as an elf\nking."
         }
       ],
       "Affects": [],
@@ -1696,8 +1696,8 @@
     {
       "Id": 28310,
       "Name": "forget-me-not flower scroll recall",
-      "ShortDescription": "\na forget-me-not flower",
-      "Description": "\nThe soft blue petals of the forget-me-not are the color of the sky on a\nsummer morning.",
+      "ShortDescription": "a forget-me-not flower",
+      "Description": "The soft blue petals of the forget-me-not are the color of the sky on a\nsummer morning.",
       "ActionDescription": "",
       "Type": "Scroll",
       "Level": 0,
@@ -1748,7 +1748,7 @@
             "flower",
             "scroll"
           ],
-          "Description": "\nJellie gives Flyn one of these flowers every morning so he'll always\nhave a safe way home."
+          "Description": "Jellie gives Flyn one of these flowers every morning so he'll always\nhave a safe way home."
         }
       ],
       "Affects": [],
@@ -1758,8 +1758,8 @@
     {
       "Id": 28311,
       "Name": "scroll encyclopedia book",
-      "ShortDescription": "\nan encyclopedia",
-      "Description": "\nThe Encyclopedia of Strange and Unusual Items looks like it might be\ngood reading - for the sleep-deprived.",
+      "ShortDescription": "an encyclopedia",
+      "Description": "The Encyclopedia of Strange and Unusual Items looks like it might be\ngood reading - for the sleep-deprived.",
       "ActionDescription": "",
       "Type": "Scroll",
       "Level": 1,
@@ -1808,7 +1808,7 @@
             "book",
             "encyclopedia"
           ],
-          "Description": "\nThis heavy tome contains information about just about everything you\nare likely to run into in Tynstri."
+          "Description": "This heavy tome contains information about just about everything you\nare likely to run into in Tynstri."
         }
       ],
       "Affects": [],
@@ -1818,8 +1818,8 @@
     {
       "Id": 28312,
       "Name": "powdered bat dust wings spoonful",
-      "ShortDescription": "\na spoonful of powdered bat wings",
-      "Description": "\nA small pile of gray dust should be swept up.",
+      "ShortDescription": "a spoonful of powdered bat wings",
+      "Description": "A small pile of gray dust should be swept up.",
       "ActionDescription": "",
       "Type": "Potion",
       "Level": 15,
@@ -1873,7 +1873,7 @@
             "powdered",
             "wing"
           ],
-          "Description": "\nA small amount of this sticky powder is all that is left of what used to\nbe the wings of a healthy vampire bat.  The bat is enchanted and fed\nsome powerful drugs over a period of several months.  His final feeding\nis from an elven virgin (male or female).  His wings are then cut from\nhis body while he is still alive, carefully burned on an altar of\nobsidian, then ground into this powder."
+          "Description": "A small amount of this sticky powder is all that is left of what used to\nbe the wings of a healthy vampire bat.  The bat is enchanted and fed\nsome powerful drugs over a period of several months.  His final feeding\nis from an elven virgin (male or female).  His wings are then cut from\nhis body while he is still alive, carefully burned on an altar of\nobsidian, then ground into this powder."
         }
       ],
       "Affects": [],
@@ -1883,8 +1883,8 @@
     {
       "Id": 28313,
       "Name": "truesight clear potion romeobj",
-      "ShortDescription": "\na clear potion of truesight",
-      "Description": "\nThere is a beaker of truesight, lying discarded.",
+      "ShortDescription": "a clear potion of truesight",
+      "Description": "There is a beaker of truesight, lying discarded.",
       "ActionDescription": "",
       "Type": "Potion",
       "Level": 1,
@@ -1932,7 +1932,7 @@
           "Keywords": [
             "potion"
           ],
-          "Description": "\nThe label reads,\n\n       #wSometimes clarity of vision is a curse, not a blessing.#N"
+          "Description": "The label reads,\n\n       #wSometimes clarity of vision is a curse, not a blessing.#N"
         }
       ],
       "Affects": [],
