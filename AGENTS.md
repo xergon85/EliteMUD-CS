@@ -145,6 +145,18 @@ protected override void Up(MigrationBuilder migrationBuilder)
 - Keep bootstrap content as fallback if `content/` is missing.
 - When adding new content types, update `docs/content-schema.md`.
 
+## Legacy Source Lookup
+- Original C source: `~/Dev/elitemud/src` (frozen; several files are ISO-8859-1, so plain `grep` misses matches).
+- Indexed UTF-8 copy: `~/Dev/elitemud-index` (read-only, same line numbers as the original, cscope index prebuilt).
+- Prefer cscope over grep (`cd ~/Dev/elitemud-index` first):
+  - Definition: `cscope -d -L -1 advance_level`
+  - Callers: `cscope -d -L -3 gain_exp`
+  - Functions called by: `cscope -d -L -2 group_gain`
+  - All uses of a symbol: `cscope -d -L -0 titles`
+  - Text search: `cscope -d -L -4 "You receive"`
+- Commands defined with `ACMD(do_x)` / `SPECIAL(x)` show the macro name as the enclosing function; use the line number.
+- The index never needs rebuilding unless the legacy source changes.
+
 ## Documentation
 - Keep roadmap in `docs/roadmap.md`.
 - Keep content schema in `docs/content-schema.md`.
