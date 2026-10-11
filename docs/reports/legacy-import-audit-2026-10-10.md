@@ -210,7 +210,7 @@ room 28421 twice in `284.wld`; rooms 12 and 1260 redefined in `ocs.wld`; Wedding
 4. ✅ **Re-import.** What remains in `import-log.txt` is real legacy breakage: the hand-fix list.
 5. ✅ **Build the reference checker** (`ContentValidator`, `--validate`). Everything it found is fixed (`fixes` in `legacy-import.json`) or accepted with a reason (`accepted-findings.json`). A test keeps it at zero open findings.
 
-**Next (found by the checker):** the server ignores `D` (door state) resets, so 868 doors that should start closed and 301 that should start locked start open. It also only blocks closed exits that are doors, so the Desert Moongate barrier (room 2747 up) can be walked through.
+**Found by the checker, fixed on `fix/door-states`:** the server ignored `D` (door state) resets, so 868 doors that should start closed and 301 that should start locked started open. It also only blocked closed exits that are doors, so the Desert Moongate barrier (room 2747 up) could be walked through.
 
 ## Method
 

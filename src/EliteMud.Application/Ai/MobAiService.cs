@@ -310,6 +310,12 @@ public class MobAiService
             return; // No exit in this direction
         }
 
+        // Mobs can't wander through closed exits (legacy: do_simple_move checks EX_CLOSED)
+        if (worldState.IsExitClosed(roomId, direction))
+        {
+            return;
+        }
+
         var targetRoomId = exit.TargetRoomId;
 
         // Validate target room exists
@@ -334,16 +340,6 @@ public class MobAiService
                 currentRoom.ZoneId != targetRoom.ZoneId)
             {
                 return; // Don't leave zone
-            }
-        }
-
-        // Check if there is a closed door blocking the exit
-        if (exit.IsDoor)
-        {
-            var doorState = worldState.GetDoorState(roomId, direction);
-            if (doorState?.IsClosed == true)
-            {
-                return; // Door is closed, can't wander through
             }
         }
 

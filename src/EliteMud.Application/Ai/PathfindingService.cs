@@ -86,14 +86,10 @@ public class PathfindingService
                     continue;
                 }
 
-                // Check if there is a closed door blocking this exit
-                if (exit.IsDoor)
+                // Closed exits block the path, doors or not
+                if (worldState.IsExitClosed(currentRoomId, exit.Direction))
                 {
-                    var doorState = worldState.GetDoorState(currentRoomId, exit.Direction);
-                    if (doorState?.IsClosed == true)
-                    {
-                        continue; // Door is closed, can't path through it
-                    }
+                    continue;
                 }
 
                 // Get neighbor room
