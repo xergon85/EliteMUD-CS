@@ -21,3 +21,9 @@ public sealed record DefenseEffectInputs(int Damage, int Level);
 
 /// <summary>For formulas that take no variables, e.g. "return 10".</summary>
 public sealed record NoInputs;
+
+/// <summary>
+/// For level-up gains (hit points, mana, movement). Level is the level before advancing, as in legacy
+/// advance_level(); the stats are the character's current ones.
+/// </summary>
+public sealed record LevelUpInputs(int Level, int Str, int Int, int Wis, int Dex, int Con, int Cha);

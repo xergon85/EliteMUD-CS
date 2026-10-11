@@ -17,6 +17,13 @@ content/
     scripts.json
   skills/
     skills.json
+  classes/
+    <id>.json          one file per class
+  races/
+    <id>.json          one file per race
+  progression/
+    xp-curves/<id>.json
+    level-up/<id>.json
   meta/
     schema.json
 ```
@@ -402,6 +409,7 @@ Each skill has an array of 20 class restriction entries (one per class):
   | `DefenseCheckInputs` | `damage`, `skillPercent` | dodge/parry activation |
   | `DefenseEffectInputs` | `damage`, `level` | dodge/parry effect |
   | `KickSkill.HitInputs` | `victimAC`, `skillPercent` | kick hit check |
+  | `LevelUpInputs` | `level`, `str`, `int`, `wis`, `dex`, `con`, `cha` | level-up gains (`level` is before advancing) |
   | `NoInputs` | none | constant formulas, e.g. `return 10` |
 - **Built-ins:** `math` (Lua's), `random(min, max)` (inclusive, like legacy `number()`), and `div(a, b)`: integer
   division truncating toward zero, like C. Lua's `/` is real division, so use `div` where legacy C divides integers
@@ -413,6 +421,46 @@ Each skill has an array of 20 class restriction entries (one per class):
   problem stops the server with a message naming the formula; `--validate` reports them too. The result type of
   branches the sample doesn't take isn't guaranteed; the content editor's live preview covers that.
 
+
+## Classes, Races and Progression
+
+Generated from the legacy source by `elitemud-import rules <legacy> <content>` (log in
+`content/meta/legacy-rules-import-log.txt`), then edited as content. One file per item; the file name is the `id`.
+Loaded by `RulesContentLoader` into one `RulesContent` snapshot. Every problem below stops the server at startup and
+is listed by `--validate`.
+
+### Class (`content/classes/<id>.json`)
+| Field | Type | Notes |
+|---|---|---|
+| `id` | string | e.g. `paladin` |
+| `name`, `abbreviation` | string | abbreviation keeps legacy colour codes (`#bPa#N`) |
+| `legacyNumber` | int | the legacy CLASS_ number, for importing player files |
+| `xpCurve` | string | id of an XP curve; must exist |
+| `levelUpProfile` | string | id of a level-up profile; must exist |
+| `primeStats` | string[] | `str`, `int`, `wis`, `dex`, `con`, `cha` |
+| `strengthBonus` | bool | gets exceptional strength (18/xx) |
+| `titles` | `{male, female}`[] | exactly 40 rows, one per 3 levels as in legacy `titles[][]` |
+
+### Race (`content/races/<id>.json`)
+| Field | Type | Notes |
+|---|---|---|
+| `id`, `name`, `titleName`, `legacyNumber` | | as for classes |
+| `availability` | string | `creation`, `granted`, `remort`, `unused` or `unknown` |
+| `availabilityNote` | string? | how a non-creation race is obtained |
+| `statMax` | `{str, int, wis, dex, con, cha}` | racial stat maximums |
+| `start` | `{hp, mana, move}` | starting points |
+| `allowedClasses` | string[] | class ids; each must exist |
+| `averages` | `{age, heightInches, weightPounds}` | |
+
+### XP curve (`content/progression/xp-curves/<id>.json`)
+- `thresholds`: XP needed for each level 1–109, exactly 109 values (index 0 = level 1).
+- `legacyRows`: the legacy XP column the thresholds were generated from (reference only).
+- `classes`: the classes using this curve. Must match the classes whose `xpCurve` is this id.
+
+### Level-up profile (`content/progression/level-up/<id>.json`)
+- `hpGain`, `manaGain`, `moveGain`: number formulas with `LevelUpInputs` (see Formulas).
+- `source`: where in legacy the formulas come from.
+- `classes`: as for XP curves, must match the classes using this profile.
 
 ## Flag Maps (v1)
 

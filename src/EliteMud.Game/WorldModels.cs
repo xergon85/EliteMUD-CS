@@ -167,7 +167,8 @@ public sealed record MobDefinition(
     int Alignment,
     IReadOnlyList<MobAttack> Attacks,
     MobCombat? Combat,
-    int? Hometown = null)
+    int? Hometown = null,
+    int Experience = 0)
 {
     // Clean string properties on construction
     public string Name { get; init; } = TextCleaner.Clean(Name);
