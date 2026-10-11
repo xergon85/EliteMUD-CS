@@ -44,10 +44,13 @@ internal sealed class SetLevelCommandHandler : ICommandHandler
         }
 
         var result = _progression.SetLevel(context.Player, level);
-        var message = result.ToLevel > result.FromLevel
-            ? $"Level {result.FromLevel} -> {result.ToLevel}: +{result.HitPointGain} hp, +{result.ManaGain} mana, " +
-              $"+{result.MovementGain} move."
-            : $"Level set to {result.ToLevel}. Points and stats are unchanged when going down.";
+        var gains = $"+{result.HitPointGain} hp, +{result.ManaGain} mana, +{result.MovementGain} move.";
+        var message = result switch
+        {
+            { Rebuilt: true, ToLevel: 1 } => "Rebuilt as a new level 1 character.",
+            { Rebuilt: true } => $"Rebuilt as a new level 1 character, then raised to level {result.ToLevel}: {gains}",
+            _ => $"Level {result.FromLevel} -> {result.ToLevel}: {gains}"
+        };
         await context.Session.SendLineAsync(message, cancellationToken);
         
         return CommandOutcome.Continue;

@@ -37,14 +37,22 @@ public sealed class PlayerProgression
     }
 
     /// <summary>
-    /// Set the level directly (the setlevel test command). Going up runs the real level-up once per level, so
-    /// points and stats grow as if earned; going down only changes the level and title. XP resets to 0.
+    /// Set the level directly (the setlevel test command), like legacy do_advance. Going up runs the real level-up
+    /// once per level, so points and stats grow as if earned. Going to the same or a lower level first rebuilds the
+    /// character as a new level 1 (legacy do_start) and then levels up from there. XP resets to 0.
+    /// Unlike do_start, skills and affects are kept: clearing them would only get in the way of testing.
     /// </summary>
     public SetLevelResult SetLevel(PlayerState player, int level)
     {
         var characterClass = Lookup(_rules.Classes, player.CharacterClass, "class", player);
         var race = Lookup(_rules.Races, player.Race, "race", player);
         var from = player.Level;
+        var rebuilt = level <= player.Level;
+        if (rebuilt)
+        {
+            Restart(player);
+        }
+
         int hitPoints = 0, mana = 0, movement = 0;
         while (player.Level < level)
         {
@@ -58,7 +66,22 @@ public sealed class PlayerProgression
         player.Experience = 0;
         player.Title = ExperienceService.Title(characterClass, race, (Sex)player.Sex, player.Level);
         player.SaveRequested = true;
-        return new SetLevelResult(from, level, hitPoints, mana, movement);
+        return new SetLevelResult(from, level, rebuilt, hitPoints, mana, movement);
+    }
+
+    /// <summary>Back to a new level 1 character: starting stats and points (legacy do_start).</summary>
+    private static void Restart(PlayerState player)
+    {
+        player.Level = 1;
+        player.Strength = player.Intelligence = player.Wisdom = CharacterStart.Stat;
+        player.Dexterity = player.Constitution = player.Charisma = CharacterStart.Stat;
+        player.StrengthAdd = 0;
+        player.MaxHitPoints = CharacterStart.HitPoints;
+        player.MaxMana = CharacterStart.Mana;
+        player.MaxMovement = CharacterStart.Movement;
+        player.HitPoints = Math.Min(player.HitPoints, player.MaxHitPoints);
+        player.Mana = Math.Min(player.Mana, player.MaxMana);
+        player.Movement = Math.Min(player.Movement, player.MaxMovement);
     }
 
     /// <summary>

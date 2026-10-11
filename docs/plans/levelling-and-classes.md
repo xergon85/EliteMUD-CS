@@ -135,7 +135,7 @@ reload). Tracked in #22; editing goes through the content editor (#28).
 - ☑ **E4. `setlevel`** (test command) goes through `AdvanceLevel` repeatedly, so gains apply when jumping levels.
 
   _Done Oct 12, 2026 (#26):_ characters without a stored title show the class title for their level until #25 sets
-  one at creation. `setlevel` takes 1–109; going down only changes level and title. E3 waits for practices (#27).
+  one at creation. `setlevel` takes 1–109; going to the same or a lower level rebuilds the character as a new level 1 first (legacy `do_advance` → `do_start`), keeping skills and affects. E3 waits for practices (#27).
 
 ### F. Practices (groundwork only)
 

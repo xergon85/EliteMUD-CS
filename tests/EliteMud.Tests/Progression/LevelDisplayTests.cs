@@ -105,15 +105,37 @@ public class LevelDisplayTests
     }
 
     [Fact]
-    public void SetLevel_Down_OnlyChangesLevelAndTitle()
+    public void SetLevel_Down_RebuildsFromANewLevelOne()
     {
-        var player = Warrior(level: 30);
+        var player = Warrior(level: 60);
+        player.Strength = 17;
+        player.StrengthAdd = 50;
+        player.MaxHitPoints = 600;
+        player.HitPoints = 600;
 
         var result = Progression().SetLevel(player, 5);
 
+        Assert.True(result.Rebuilt);
         Assert.Equal(5, player.Level);
-        Assert.Equal(20, player.MaxHitPoints);
-        Assert.Equal(0, result.HitPointGain);
+        Assert.Equal(CharacterStart.HitPoints + result.HitPointGain, player.MaxHitPoints);
+        Assert.InRange(result.HitPointGain, 4 * 6, 4 * 11); // 1d5 + con/2 from con 11 for 4 levels
+        Assert.InRange(player.Strength, CharacterStart.Stat, CharacterStart.Stat + 1);
+        Assert.Equal(0, player.StrengthAdd);
+        Assert.True(player.HitPoints <= player.MaxHitPoints);
         Assert.Equal(ExperienceService.Title(Rules.Classes["warrior"], Rules.Races["human"], Sex.Male, 5), player.Title);
+    }
+
+    [Fact]
+    public void SetLevel_ToOne_IsANewCharacter()
+    {
+        var player = Warrior(level: 30);
+
+        var result = Progression().SetLevel(player, 1);
+
+        Assert.True(result.Rebuilt);
+        Assert.Equal(1, player.Level);
+        Assert.Equal(CharacterStart.HitPoints, player.MaxHitPoints);
+        Assert.Equal(CharacterStart.Mana, player.MaxMana);
+        Assert.Equal(CharacterStart.Stat, player.Constitution);
     }
 }

@@ -1,3 +1,4 @@
+using EliteMud.Application.Progression;
 using EliteMud.Data;
 using EliteMud.Data.Entities;
 using EliteMud.Game;
@@ -457,21 +458,19 @@ public class AuthenticationHandler
             Level = 1,
             Experience = 0,
             
-            // Base stats (all start at 11 like legacy)
-            Strength = 11,
-            Intelligence = 11,
-            Wisdom = 11,
-            Dexterity = 11,
-            Constitution = 11,
-            Charisma = 11,
-            
-            // Initial vitals (will be calculated based on class/race later)
-            HitPoints = 20,
-            MaxHitPoints = 20,
-            Mana = 100,
-            MaxMana = 100,
-            Movement = 100,
-            MaxMovement = 100,
+            // Base stats and vitals (shared with setlevel's rebuild)
+            Strength = CharacterStart.Stat,
+            Intelligence = CharacterStart.Stat,
+            Wisdom = CharacterStart.Stat,
+            Dexterity = CharacterStart.Stat,
+            Constitution = CharacterStart.Stat,
+            Charisma = CharacterStart.Stat,
+            HitPoints = CharacterStart.HitPoints,
+            MaxHitPoints = CharacterStart.HitPoints,
+            Mana = CharacterStart.Mana,
+            MaxMana = CharacterStart.Mana,
+            Movement = CharacterStart.Movement,
+            MaxMovement = CharacterStart.Movement,
             
             // Combat stats
             ArmorClass = 100,
