@@ -289,6 +289,56 @@ public class PathfindingServiceTests
 
     // ===== Helper Methods =====
 
+    // ===== Closed Exit Tests =====
+
+    [Theory]
+    [InlineData(true)]  // closed door
+    [InlineData(false)] // closed exit that isn't a door (a barrier)
+    public void FindPath_OnlyRouteIsClosed_ReturnsNull(bool isDoor)
+    {
+        // Arrange: Room 1 -> Room 2 -(closed)-> Room 3
+        var exitFlags = isDoor ? new[] { "IsDoor", "Closed" } : new[] { "Closed" };
+        var worldState = CreateLinearWorldWithClosedExit(exitFlags);
+        var service = new PathfindingService();
+
+        // Act
+        var path = service.FindPath(worldState, startRoomId: 1, targetRoomId: 3);
+
+        // Assert
+        Assert.Null(path);
+    }
+
+    [Fact]
+    public void FindPath_OpenDoor_IsPassable()
+    {
+        // Arrange: same route, but the door is open
+        var worldState = CreateLinearWorldWithClosedExit(new[] { "IsDoor" });
+        var service = new PathfindingService();
+
+        // Act
+        var path = service.FindPath(worldState, startRoomId: 1, targetRoomId: 3);
+
+        // Assert
+        Assert.NotNull(path);
+        Assert.Equal(2, path.Count);
+    }
+
+    private WorldState CreateLinearWorldWithClosedExit(string[] exitFlags)
+    {
+        // Room 1 --(north)--> Room 2 --(north, given flags)--> Room 3
+        var rooms = new Dictionary<int, RoomDefinition>
+        {
+            [1] = new(1, "Room 1", "First room",
+                new List<ExitDefinition> { new(Direction.North, 2) }),
+            [2] = new(2, "Room 2", "Second room",
+                new List<ExitDefinition> { new(Direction.South, 1), new(Direction.North, 3, ExitFlags: exitFlags) }),
+            [3] = new(3, "Room 3", "Third room",
+                new List<ExitDefinition> { new(Direction.South, 2) })
+        };
+
+        return CreateWorldState(rooms);
+    }
+
     private WorldState CreateLinearWorld()
     {
         // Room 1 --(north)--> Room 2 --(north)--> Room 3

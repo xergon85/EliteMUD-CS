@@ -465,8 +465,10 @@ public interface IWorldState
     MobInstance? GetMobInstance(int mobInstanceId, int roomId);
     
     /// <summary>
-    /// Get the runtime state of a door.
-    /// Returns null if the exit doesn't exist or isn't a door.
+    /// Get the runtime closed/locked state of an exit.
+    /// Doors always have one. A closed exit that isn't a door (a barrier) has one too, since legacy keeps
+    /// EX_CLOSED/EX_LOCKED on any exit. Returns null for exits that can't be closed.
+    /// Commands that act on doors (open, close, lock, unlock, bash) check <see cref="ExitDefinition.IsDoor"/> first.
     /// </summary>
     DoorState? GetDoorState(int roomId, Direction direction);
 

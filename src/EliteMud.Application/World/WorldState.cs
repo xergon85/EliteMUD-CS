@@ -1073,9 +1073,8 @@ public sealed class WorldState : IWorldState
     // ===== Door State Management =====
     
     /// <summary>
-    /// Get the runtime state of a door.
-    /// Returns null if the exit doesn't exist or isn't a door.
-    /// Legacy: EXIT(ch, door)->exit_info flags (EX_CLOSED, EX_LOCKED)
+    /// True if the exit is closed: a closed door, or a closed exit that isn't a door (a barrier).
+    /// Legacy blocks movement on EX_CLOSED alone (do_simple_move() in act.movement.c).
     /// </summary>
     public bool IsExitClosed(int roomId, Direction direction) =>
         _doorStates.TryGetValue((roomId, direction), out var state) && state.IsClosed;
@@ -1112,6 +1111,12 @@ public sealed class WorldState : IWorldState
         return true;
     }
 
+    /// <summary>
+    /// Get the runtime closed/locked state of an exit.
+    /// Doors always have one. A closed exit that isn't a door (a barrier, e.g. the Desert Moongate) has one
+    /// too, since legacy keeps EX_CLOSED/EX_LOCKED on any exit. Returns null for exits that can't be closed.
+    /// Legacy: EXIT(ch, door)->exit_info flags (EX_CLOSED, EX_LOCKED)
+    /// </summary>
     public DoorState? GetDoorState(int roomId, Direction direction)
     {
         var key = (roomId, direction);
