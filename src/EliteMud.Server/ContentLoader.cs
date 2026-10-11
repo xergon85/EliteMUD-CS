@@ -506,6 +506,7 @@ internal static class ContentLoader
                     HitrollBonusFormula = spell.Mechanics.HitrollBonusFormula,
                     DamrollBonusFormula = spell.Mechanics.DamrollBonusFormula,
                     StrengthBonusFormula = spell.Mechanics.StrengthBonusFormula,
+                    SavingMagicBonusFormula = spell.Mechanics.SavingMagicBonusFormula,
                     Note = spell.Mechanics.Note
                 };
             }
@@ -1429,6 +1430,7 @@ internal static class ContentLoader
         public string? HitrollBonusFormula { get; set; }
         public string? DamrollBonusFormula { get; set; }
         public string? StrengthBonusFormula { get; set; }
+        public string? SavingMagicBonusFormula { get; set; }
         public string? Note { get; set; }
     }
 }
