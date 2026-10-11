@@ -110,8 +110,8 @@ public class CombatExperienceTests
 
         var result = _combat.Killed(mob, victim);
 
-        // Capped like a player's gain on the warrior curve for the mob's level; no messages for mobs
-        var cap = _experience.ExpNeeded(Rules.Classes["warrior"], 10) / 10;
+        // Capped like a player's gain, on the mob XP curve (fighter) for the mob's level; no messages for mobs
+        var cap = Rules.XpCurves["fighter"].XpNeeded(10) / 10;
         Assert.Equal(cap, mob.Experience);
         Assert.Empty(result.Messages);
     }

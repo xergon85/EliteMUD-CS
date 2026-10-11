@@ -41,7 +41,7 @@ public sealed class CombatExperience
 
     /// <summary>
     /// Experience for a kill: a quarter of the victim's experience, at least 1. Players gain through the normal
-    /// rules (cap, messages, level-up); mobs gain capped and silently.
+    /// rules (cap, messages, level-up); mobs gain capped on the content's mob XP curve, silently.
     /// Call before <see cref="Died"/>, so the killer's share comes from the victim's experience before the penalty.
     /// </summary>
     public ProgressionResult Killed(ICombatant killer, ICombatant victim)

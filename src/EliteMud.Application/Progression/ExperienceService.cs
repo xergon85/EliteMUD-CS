@@ -16,9 +16,6 @@ public sealed class ExperienceService
 
     private const int ImmortalLevel = MaxMortalLevel + 1;
 
-    /// <summary>Mobs use this class's XP curve (legacy exp_needed()); the content check requires it.</summary>
-    public const string MobClassId = "warrior";
-
     // A stat improves when number(threshold, 100) < level: 0 for the class's prime stats, 25 for the others
     private const int PrimeStatThreshold = 0;
     private const int OtherStatThreshold = 25;
@@ -95,7 +92,7 @@ public sealed class ExperienceService
 
     /// <summary>
     /// What a mob actually gains from a kill (legacy gain_exp() on an NPC): capped like a player's gain, using the
-    /// warrior XP curve for the mob's level, with no level-up. Mobs of level 110+ gain nothing.
+    /// content's mobXpCurve for the mob's level, with no level-up. Mobs of level 110+ gain nothing.
     /// </summary>
     public int MobGain(int level, int amount)
     {
@@ -104,8 +101,7 @@ public sealed class ExperienceService
             return 0;
         }
 
-        // Legacy exp_needed(): "MObs will be Wa"
-        var needed = ExpNeeded(_rules.Classes[MobClassId], level);
+        var needed = _rules.Progression.MobXpCurve.XpNeeded(level);
         var cap = _formulas.EvaluateInt(
             _rules.Progression.MaxGainFormula, new GainCapInputs(needed, level), "progression/rules.maxGainFormula");
         return Math.Min(cap, amount);
