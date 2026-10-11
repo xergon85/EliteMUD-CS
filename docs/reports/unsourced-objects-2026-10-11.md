@@ -16,6 +16,33 @@ Not covered:
 - **saved room contents** (see "Not checked yet")
 - **immortals loading items by hand**
 
+## Update: code scan and live check (Oct 11, 2026)
+
+A scan of the legacy C code and saved files, plus a check on the live server (`live-server-checklist-2026-10-11.md`),
+explained 93 of the 462. **369 remain without any source.**
+
+| Source | Explains | Notes |
+|---|---|---|
+| `L` portal reset command | 22 portals | Zone files place portals with `L <if> <room> <obj> <dest>` and set the key with `A`. Covers Rome's entrances, the library books, the Iron Mill's way in, the PK zone portal and the Ultima moongates. **Our server ignores `L` and `A`, so none of these portals exist in the rewrite yet.** |
+| Quest shop (`questeq_shopkeeper`, spec_procs.c:1171, mob 3098) | 47 | Sells every object with the Quest flag and a price > 0 (built at boot by `boot_questeq`, db.c:650). That's 47, not the 53 estimated below: 99013, 99016, 99017, 99098 cost 0, 99099 is a portal, 99064 is sold. |
+| Clan shop (`claneq_shopkeeper`, spec_procs.c:1317, mob 3097) | 24 | Exchanges clan gear for an item handed in; pairs come from `E` lines in `world/cln/*.cln`. Five clan items have exchange -1 and are never offered. |
+
+**Settled by the live check:**
+- **Samurai gear:** *the Kusari* and the samurai sword, dagger, mace, shield and cloak are unused content. The live mobs carry only what our zone resets load.
+- **Redferne's Residence and the Amazeing Maze:** unfinished zones. Their keys (7900, 7901, 15400–15410) are unused.
+- **Keys 3300, 3301, 1007:** personal items for old player or immortal homes.
+
+**Not found anywhere:**
+- **Random-drop mechanism:** none exists in the legacy C code.
+- **Quest file loader:** none exists either.
+- **Saved room contents** (`lib/roomobjs`): only one object, 99001. The files are plain text, not binary.
+
+**Importer and server bugs found along the way** (to fix on `fix/legacy-import`):
+1. **`L`/`A` portal resets** aren't supported by the server (22 portals missing).
+2. **`R` reset is mis-mapped:** it means "randomize a room's exits" in legacy, but we treat it as "remove object" (89 commands, mostly mazes).
+3. **Room 28703 is missing:** "The Guild Donation Room" is lost to a glued terminator (`0 -1 28701S` in 287.wld).
+4. **Door type 2 is mis-imported:** it means "pick-proof door" in legacy, but we import it as raw flag bits, so ~180 exits are "Closed" without being doors.
+
 ## Summary
 
 - **No objects are missing from the import.** All 2,827 legacy objects are in `content/objects/objects.json`, which the
