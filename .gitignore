@@ -20,3 +20,6 @@
 # (content/ is the canonical source, imported/ and output/ are temporary)
 imported/
 output/
+
+# OpenCode tooling (installed locally)
+.opencode/package-lock.json
