@@ -90,6 +90,40 @@ public sealed class RulesContentLoaderTests : IDisposable
         Assert.Contains(errors, e => e.Contains("races/dwarf.json") && e.Contains("availability 'sometimes'"));
     }
 
+    [Theory]
+    [InlineData("1")]
+    [InlineData("999")]
+    public void NumericAvailability_IsReported(string value)
+    {
+        Edit("races/dwarf.json", json => json["availability"] = value);
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains(errors, e => e.Contains("races/dwarf.json") && e.Contains($"availability '{value}'"));
+    }
+
+    [Fact]
+    public void UnknownPrimeStat_IsReported()
+    {
+        Edit("classes/paladin.json", json => json["primeStats"]!.AsArray().Add("constitution"));
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains(errors, e => e.Contains("classes/paladin.json") && e.Contains("primeStats 'constitution'"));
+    }
+
+    [Fact]
+    public void IdClashingWithAnotherFile_IsReportedWithoutCrashing()
+    {
+        Edit("progression/xp-curves/mage.json", json => json["id"] = "fighter");
+
+        var (rules, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains(errors, e => e.Contains("xp-curves/mage.json: id 'fighter'"));
+        Assert.Equal("fighter", rules.XpCurves["fighter"].Id);
+        Assert.False(rules.XpCurves.ContainsKey("mage"));
+    }
+
     [Fact]
     public void IdNotMatchingFileName_IsReported()
     {

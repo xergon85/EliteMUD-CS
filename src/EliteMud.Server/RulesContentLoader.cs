@@ -13,6 +13,8 @@ internal static class RulesContentLoader
     private const int CurveLevels = 109;
     private const int TitleRows = 40;
 
+    private static readonly string[] StatIds = { "str", "int", "wis", "dex", "con", "cha" };
+
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNameCaseInsensitive = true,
@@ -49,6 +51,11 @@ internal static class RulesContentLoader
         {
             var curve = Resolve(curves, data.XpCurve, path, "xpCurve", errors);
             var profile = Resolve(profiles, data.LevelUpProfile, path, "levelUpProfile", errors);
+            foreach (var stat in data.PrimeStats.Where(stat => !StatIds.Contains(stat)))
+            {
+                errors.Add($"{path}: primeStats '{stat}' isn't one of {string.Join(", ", StatIds)}");
+            }
+
             if (data.Titles.Count != TitleRows)
             {
                 errors.Add($"{path}: {data.Titles.Count} titles, expected {TitleRows}");
@@ -69,7 +76,11 @@ internal static class RulesContentLoader
                 .Select(classId => Resolve(classes, classId, path, "allowedClasses", errors))
                 .OfType<ClassDefinition>()
                 .ToList();
-            if (!Enum.TryParse<RaceAvailability>(data.Availability, ignoreCase: true, out var availability))
+            // Names only: Enum.TryParse would also accept numbers ("1" = Granted, "999" = undefined)
+            var availabilityName = Enum.GetNames<RaceAvailability>()
+                .FirstOrDefault(name => string.Equals(name, data.Availability, StringComparison.OrdinalIgnoreCase));
+            var availability = availabilityName is null ? default : Enum.Parse<RaceAvailability>(availabilityName);
+            if (availabilityName is null)
             {
                 errors.Add($"{path}: availability '{data.Availability}' isn't one of {string.Join(", ", Enum.GetNames<RaceAvailability>())}");
             }
@@ -126,7 +137,7 @@ internal static class RulesContentLoader
         return null;
     }
 
-    /// <summary>Every *.json file in a folder; the file name must match the id inside.</summary>
+    /// <summary>Every *.json file in a folder; the file name must match the id inside, or the file is skipped.</summary>
     private static List<(string Path, T Data)> ReadAll<T>(string contentRoot, string folder, List<string> errors)
         where T : IdentifiedFile
     {
@@ -145,9 +156,11 @@ internal static class RulesContentLoader
             {
                 var data = JsonSerializer.Deserialize<T>(File.ReadAllText(file), JsonOptions)
                            ?? throw new JsonException("empty file");
+                // Left out when it doesn't match: file names are unique in a folder, so ids can't clash
                 if (data.Id != Path.GetFileNameWithoutExtension(file))
                 {
-                    errors.Add($"{path}: id '{data.Id}' doesn't match the file name");
+                    errors.Add($"{path}: id '{data.Id}' doesn't match the file name; file skipped");
+                    continue;
                 }
 
                 result.Add((path, data));
