@@ -284,8 +284,8 @@ public sealed class PlayerState : ICombatant
         string name,
         int roomId,
         byte level = 1,
-        string characterClass = "Warrior",
-        string race = "Human",
+        string characterClass = "warrior",
+        string race = "human",
         byte sex = 0)
     {
         Id = id;

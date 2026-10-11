@@ -87,19 +87,23 @@ reload). Tracked in #22; editing goes through the content editor (#28).
 
 ### B. Core XP rules
 
-- ☐ **B1. `ExperienceService.ExpNeeded(level, class)`**, matching `exp_needed` including the `/3` interpolation and the deity cap.
+- ☑ **B1. `ExperienceService.ExpNeeded(level, class)`**, matching `exp_needed` including the `/3` interpolation and the deity cap.
   Unit-test it against hand-computed values from the table.
-- ☐ **B2. `GainExperience(player, amount)`**, porting `gain_exp`:
+- ☑ **B2. `GainExperience(player, amount)`**, porting `gain_exp`:
   - per-gain cap
   - messages ("You receive N experience points." / "1 lousy experience point")
   - level-up when over `needed`, then XP resets to 0
   - negative gains clamp at 0 and print "You lose N experience points."
   - no gain at 110+
-- ☐ **B3. `AdvanceLevel(player)`**, porting `advance_level`: HP/mana/move gains by class group, attribute improvement
+- ☑ **B3. `AdvanceLevel(player)`**, porting `advance_level`: HP/mana/move gains by class group, attribute improvement
   capped by race maximum, the level-up message, and a save.
   Return a result record so callers and tests can see what changed.
-- ☐ **B4. Titles.** Build "the {Race} {Title}" from the class table using sex for male/female, as `set_title` does.
+- ☑ **B4. Titles.** Build "the {Race} {Title}" from the class table using sex for male/female, as `set_title` does.
   Respect a future NOTITLE flag; for now, always set it on level-up.
+
+  _Done Oct 11, 2026 (#23):_ the per-gain cap is a content formula (`content/progression/rules.json`). Saving
+  after a level-up moves to C (the caller saves). Practices from `advance_level` moved to F (#27). Not ported, since
+  their systems don't exist yet: the remort gain of 1, the worship message, clan power tracking and autowiz.
 
 ### C. Wire XP into the game
 
