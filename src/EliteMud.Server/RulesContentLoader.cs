@@ -64,7 +64,7 @@ internal static class RulesContentLoader
             if (curve is not null && profile is not null)
             {
                 classes[data.Id] = new ClassDefinition(
-                    data.Id, data.Name, data.Abbreviation, data.LegacyNumber, curve, profile, data.PrimeStats,
+                    data.Id, data.Name, data.Abbreviation, data.LegacyNumber, data.MenuKey, curve, profile, data.PrimeStats,
                     data.StrengthBonus, data.Titles.Select(t => new ClassTitle(t.Male, t.Female)).ToList());
             }
         }
@@ -92,10 +92,19 @@ internal static class RulesContentLoader
                 data.LegacyNumber,
                 availability,
                 data.AvailabilityNote,
+                data.MenuKey,
                 new StatBlock(data.StatMax.Str, data.StatMax.Dex, data.StatMax.Int, data.StatMax.Wis, data.StatMax.Con, data.StatMax.Cha),
                 new StartingPoints(data.Start.Hp, data.Start.Mana, data.Start.Move),
                 allowed,
                 new PhysicalAverages(data.Averages.Age, data.Averages.HeightInches, data.Averages.WeightPounds));
+        }
+
+        CheckMenuKeys("classes", classes.Values.Select(c => (c.Id, (string?)c.MenuKey)), errors);
+        CheckMenuKeys("races", races.Values.Where(r => r.Availability == RaceAvailability.Creation)
+            .Select(r => (r.Id, r.MenuKey)), errors);
+        foreach (var race in races.Values.Where(r => r.Availability != RaceAvailability.Creation && r.MenuKey is not null))
+        {
+            errors.Add($"races/{race.Id}.json: menuKey '{race.MenuKey}' but availability is {race.Availability}; only creation races are in the menu");
         }
 
         // Curves and profiles list their classes too (handy when reading them); that list must match the class files
@@ -103,6 +112,21 @@ internal static class RulesContentLoader
         CheckClassLists(profiles.Keys, "progression/level-up", id => profileClassLists[id], classes.Values, c => c.LevelUpProfile.Id, errors);
 
         return (new RulesContent(classes, races, curves, profiles), errors);
+    }
+
+    /// <summary>Every menu entry needs one lowercase letter, different from the others in its menu.</summary>
+    private static void CheckMenuKeys(string folder, IEnumerable<(string Id, string? MenuKey)> entries, List<string> errors)
+    {
+        var list = entries.ToList();
+        foreach (var (id, key) in list.Where(e => e.MenuKey is not { Length: 1 } || !char.IsAsciiLetterLower(e.MenuKey[0])))
+        {
+            errors.Add($"{folder}/{id}.json: menuKey '{key}' must be one letter a-z");
+        }
+
+        foreach (var clash in list.Where(e => e.MenuKey is not null).GroupBy(e => e.MenuKey).Where(g => g.Count() > 1))
+        {
+            errors.Add($"{folder}: menuKey '{clash.Key}' is used by {string.Join(", ", clash.Select(e => e.Id).Order(StringComparer.Ordinal))}");
+        }
     }
 
     private static void CheckClassLists(
@@ -191,6 +215,7 @@ internal static class RulesContentLoader
         public string Name { get; set; } = "";
         public string Abbreviation { get; set; } = "";
         public int LegacyNumber { get; set; }
+        public string MenuKey { get; set; } = "";
         public string XpCurve { get; set; } = "";
         public string LevelUpProfile { get; set; } = "";
         public List<string> PrimeStats { get; set; } = new();
@@ -211,6 +236,7 @@ internal static class RulesContentLoader
         public int LegacyNumber { get; set; }
         public string Availability { get; set; } = "";
         public string? AvailabilityNote { get; set; }
+        public string? MenuKey { get; set; }
         public StatsFile StatMax { get; set; } = new();
         public StartFile Start { get; set; } = new();
         public List<string> AllowedClasses { get; set; } = new();

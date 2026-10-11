@@ -16,6 +16,10 @@ public sealed class RulesContent
         Races = races;
         XpCurves = xpCurves;
         LevelUpProfiles = levelUpProfiles;
+        CreationRaces = races.Values
+            .Where(race => race.Availability == RaceAvailability.Creation)
+            .OrderBy(race => race.MenuKey, StringComparer.Ordinal)
+            .ToList();
     }
 
     public IReadOnlyDictionary<string, ClassDefinition> Classes { get; }
@@ -25,6 +29,15 @@ public sealed class RulesContent
     public IReadOnlyDictionary<string, XpCurveDefinition> XpCurves { get; }
 
     public IReadOnlyDictionary<string, LevelUpProfileDefinition> LevelUpProfiles { get; }
+
+    /// <summary>The races offered at character creation, in menu order.</summary>
+    public IReadOnlyList<RaceDefinition> CreationRaces { get; }
+
+    /// <summary>A class's display name, or the id itself when the content doesn't have it.</summary>
+    public string ClassName(string classId) => Classes.TryGetValue(classId, out var definition) ? definition.Name : classId;
+
+    /// <summary>A race's display name, or the id itself when the content doesn't have it.</summary>
+    public string RaceName(string raceId) => Races.TryGetValue(raceId, out var definition) ? definition.Name : raceId;
 
     public static RulesContent Empty { get; } = new(
         new Dictionary<string, ClassDefinition>(),
