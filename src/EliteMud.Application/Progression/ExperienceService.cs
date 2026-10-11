@@ -81,7 +81,8 @@ public sealed class ExperienceService
                 return new ExperienceGain(0, 0, false, messages);
             }
 
-            var loss = Math.Min(-amount, experience);
+            // Negate as long: -int.MinValue overflows back to int.MinValue
+            var loss = (int)Math.Min(-(long)amount, experience);
             messages.Add($"You lose {loss} experience point{(loss == 1 ? "" : "s")}.");
             return new ExperienceGain(experience - loss, -loss, false, messages);
         }

@@ -90,6 +90,7 @@ public class ExperienceServiceTests
     [InlineData(100, -1, 99, "You lose 1 experience point.")]
     [InlineData(10, -50, 0, "You lose 10 experience points.")]
     [InlineData(0, -5, 0, "You have no experience to lose.")]
+    [InlineData(100, int.MinValue, 0, "You lose 100 experience points.")]
     public void Loss_NeverGoesBelowZero(int experience, int amount, int expected, string message)
     {
         var gain = Service().GainExperience(Warrior, 109, experience, amount); // losses apply at 109 too

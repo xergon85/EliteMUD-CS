@@ -94,7 +94,7 @@ reload). Tracked in #22; editing goes through the content editor (#28).
   - messages ("You receive N experience points." / "1 lousy experience point")
   - level-up when over `needed`, then XP resets to 0
   - negative gains clamp at 0 and print "You lose N experience points."
-  - no gain at 110+
+  - no gain at 109 (the mortal cap); immortals (110+) are unaffected by gains and losses
 - ☑ **B3. `AdvanceLevel(player)`**, porting `advance_level`: HP/mana/move gains by class group, attribute improvement
   capped by race maximum, the level-up message, and a save.
   Return a result record so callers and tests can see what changed.
