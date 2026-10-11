@@ -91,7 +91,7 @@ public class TrackSkillExecutorTests
     {
         // Arrange
         var (executor, worldState, tracker) = CreateTestEnvironment();
-        tracker.SetSkill(SkillType.Track, 100); // 100% success rate
+        tracker.SetSkill(SkillType.Track, 100);
         
         // Add goblin in room 101 (north of tracker in room 100)
         var goblin = CreateMob(1, "goblin warrior");
@@ -214,7 +214,13 @@ public class TrackSkillExecutorTests
 
         // Create skill registry with track skill
         var contentRoot = FindContentRoot();
-        var skills = ContentLoader.LoadSkills(contentRoot);
+        var skills = ContentLoader.LoadSkills(contentRoot).ToDictionary(pair => pair.Key, pair => pair.Value);
+
+        // The real roll is random(1,101) <= skill, so even 100% fails 1 time in 101 (legacy behavior).
+        // Always succeed here so these tests don't fail at random; they test tracking, not the roll.
+        var trackId = (int)SkillType.Track;
+        skills[trackId] = skills[trackId] with { Mechanics = new SkillMechanics { HitFormula = "return true" } };
+
         var metadataRegistry = new SkillMetadataRegistry(skills);
         var formulaEvaluator = new FormulaEvaluator();
         var skillRegistry = new SkillRegistry(metadataRegistry, formulaEvaluator);

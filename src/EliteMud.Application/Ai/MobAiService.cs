@@ -23,12 +23,14 @@ public class MobAiService
 {
     private readonly IScriptEngine _scriptEngine;
     private readonly PathfindingService _pathfinding;
-    private readonly Random _random = new();
+    private readonly Random _random;
 
-    public MobAiService(IScriptEngine scriptEngine, PathfindingService pathfinding)
+    /// <param name="random">Random source; tests can pass a fixed one. Defaults to a new Random.</param>
+    public MobAiService(IScriptEngine scriptEngine, PathfindingService pathfinding, Random? random = null)
     {
         _scriptEngine = scriptEngine;
         _pathfinding = pathfinding;
+        _random = random ?? new Random();
     }
 
     /// <summary>

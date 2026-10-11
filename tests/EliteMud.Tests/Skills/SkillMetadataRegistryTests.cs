@@ -152,7 +152,7 @@ public sealed class SkillMetadataRegistryTests
         var allSkills = registry.GetAll().ToList();
         
         // Assert
-        Assert.Equal(8, allSkills.Count);
+        Assert.Equal(12, allSkills.Count);
         Assert.Contains(allSkills, s => s.Name == "kick");
         Assert.Contains(allSkills, s => s.Name == "bash");
         Assert.Contains(allSkills, s => s.Name == "backstab");
@@ -161,6 +161,10 @@ public sealed class SkillMetadataRegistryTests
         Assert.Contains(allSkills, s => s.Name == "dodge");
         Assert.Contains(allSkills, s => s.Name == "parry");
         Assert.Contains(allSkills, s => s.Name == "tumble");
+        Assert.Contains(allSkills, s => s.Name == "second attack");
+        Assert.Contains(allSkills, s => s.Name == "third attack");
+        Assert.Contains(allSkills, s => s.Name == "fourth attack");
+        Assert.Contains(allSkills, s => s.Name == "dual wield");
     }
     
     [Fact]
@@ -173,7 +177,7 @@ public sealed class SkillMetadataRegistryTests
         var count = registry.Count;
         
         // Assert
-        Assert.Equal(8, count);
+        Assert.Equal(12, count);
     }
     
     [Fact]

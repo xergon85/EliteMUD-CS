@@ -225,34 +225,17 @@ public class MobAiServiceTests
     [Fact]
     public void Wandering_MobCanMoveToAdjacentRoom()
     {
-        // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment(roomsWithExits: true);
+        // Arrange - a roll of 0 is "north", the only exit from room 100
+        var (service, worldState, connections) = CreateTestEnvironment(roomsWithExits: true, random: new FixedRandom(0));
         var mob = CreateMob(1, "wanderer");
         AddMobToWorld(worldState, mob, 100);
 
-        // Act - Try multiple times since wandering is random (~13% per tick)
-        bool moved = false;
-        for (int i = 0; i < 100; i++)
-        {
-            // Find which room the mob is currently in
-            int currentRoomId = 100;
-            if (worldState.GetMobsInRoom(101).Any(m => m.InstanceId == 1))
-            {
-                currentRoomId = 101;
-            }
-            
-            service.ProcessMobTick(mob, currentRoomId, worldState, connections);
-            
-            // Check if mob is now in room 101
-            if (worldState.GetMobsInRoom(101).Any(m => m.InstanceId == 1))
-            {
-                moved = true;
-                break;
-            }
-        }
+        // Act
+        service.ProcessMobTick(mob, 100, worldState, connections);
 
-        // Assert - Mob should eventually move (with high probability)
-        Assert.True(moved, "Mob should have wandered to adjacent room after 100 ticks");
+        // Assert
+        Assert.Contains(worldState.GetMobsInRoom(101), m => m.InstanceId == 1);
+        Assert.DoesNotContain(worldState.GetMobsInRoom(100), m => m.InstanceId == 1);
     }
 
     [Fact]
@@ -542,11 +525,12 @@ public class MobAiServiceTests
             bool roomsWithExits = false, 
             bool lawfulRoom = false,
             bool noMobTarget = false,
-            bool differentZones = false)
+            bool differentZones = false,
+            Random? random = null)
     {
         var scriptEngine = new MockScriptEngine();
         var pathfinding = new PathfindingService();
-        var service = new MobAiService(scriptEngine, pathfinding);
+        var service = new MobAiService(scriptEngine, pathfinding, random);
 
         var roomFlags = lawfulRoom ? RoomFlags.Lawful : RoomFlags.None;
         var targetRoomFlags = noMobTarget ? RoomFlags.NoMob : RoomFlags.None;
@@ -711,4 +695,25 @@ internal class MockScriptEngine : IScriptEngine
     {
         return ValueTask.CompletedTask;
     }
+}
+
+/// <summary>
+/// Random source that always returns the same roll (clamped to the requested range).
+/// </summary>
+internal sealed class FixedRandom : Random
+{
+    private readonly int _value;
+
+    public FixedRandom(int value)
+    {
+        _value = value;
+    }
+
+    public override int Next(int minValue, int maxValue) => Math.Clamp(_value, minValue, maxValue - 1);
+
+    public override int Next(int maxValue) => Math.Clamp(_value, 0, maxValue - 1);
+
+    public override int Next() => _value;
+
+    public override double NextDouble() => 0;
 }
