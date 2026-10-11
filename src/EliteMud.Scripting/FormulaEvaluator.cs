@@ -10,8 +10,11 @@ namespace EliteMud.Scripting;
 /// 
 /// Formula Examples:
 /// - Damage: "return math.max(1, level / 2)"
-/// - Hit: "return ((10 - victimAC/10) * 2) + random(1, 101) &lt;= skillPercent"
+/// - Hit: "return ((10 - div(victimAC, 10)) * 2) + random(1, 101) &lt;= skillPercent"
 /// - Dodge: "return (random(1, 250) + damage) &lt; skillPercent"
+///
+/// Use div(a, b) where legacy C divides integers; "/" is real division in Lua.
+/// Each evaluation sees only its context's variables and the built-ins (math, random, div).
 /// </summary>
 public sealed class FormulaEvaluator
 {
@@ -27,75 +30,41 @@ public sealed class FormulaEvaluator
     /// <summary>
     /// Evaluate a formula that returns an integer.
     /// </summary>
-    /// <param name="formula">Lua code that returns a number (e.g., "return level / 2")</param>
-    /// <param name="context">Anonymous object with variables (e.g., new { level = 10 })</param>
-    /// <returns>Integer result</returns>
-    /// <exception cref="FormulaEvaluationException">If formula fails to execute or returns wrong type</exception>
-    public int EvaluateInt(string formula, object context)
+    /// <param name="formula">Lua code that returns a number (e.g., "return div(level, 2)")</param>
+    /// <param name="context">Object whose properties are the formula's variables (e.g., new { level = 10 })</param>
+    /// <param name="name">Name used in error messages, e.g. "kick.damageFormula"</param>
+    /// <returns>Integer result (truncated toward zero)</returns>
+    /// <exception cref="FormulaEvaluationException">If the formula fails, reads an unknown variable or returns the wrong type</exception>
+    public int EvaluateInt(string formula, object context, string? name = null)
     {
-        lock (_lock)
+        var result = Evaluate(formula, context, name);
+        if (result.Type != DataType.Number)
         {
-            try
-            {
-                SetContext(context);
-                var result = _script.DoString(formula);
-
-                if (result.Type != DataType.Number)
-                {
-                    throw new FormulaEvaluationException(
-                        $"Formula returned {result.Type} but expected Number. Formula: {formula}");
-                }
-
-                return (int)result.Number;
-            }
-            catch (ScriptRuntimeException ex)
-            {
-                throw new FormulaEvaluationException(
-                    $"Lua runtime error in formula: {formula}\nError: {ex.DecoratedMessage}", ex);
-            }
-            catch (SyntaxErrorException ex)
-            {
-                throw new FormulaEvaluationException(
-                    $"Lua syntax error in formula: {formula}\nError: {ex.DecoratedMessage}", ex);
-            }
+            throw new FormulaEvaluationException(
+                $"{Describe(formula, name)} returned {result.Type} but expected a number.");
         }
+
+        return (int)result.Number;
     }
 
     /// <summary>
     /// Evaluate a formula that returns a boolean.
     /// </summary>
     /// <param name="formula">Lua code that returns true/false (e.g., "return level > 10")</param>
-    /// <param name="context">Anonymous object with variables (e.g., new { level = 10 })</param>
+    /// <param name="context">Object whose properties are the formula's variables</param>
+    /// <param name="name">Name used in error messages, e.g. "kick.hitFormula"</param>
     /// <returns>Boolean result</returns>
-    /// <exception cref="FormulaEvaluationException">If formula fails to execute or returns wrong type</exception>
-    public bool EvaluateBool(string formula, object context)
+    /// <exception cref="FormulaEvaluationException">If the formula fails, reads an unknown variable or returns the wrong type</exception>
+    public bool EvaluateBool(string formula, object context, string? name = null)
     {
-        lock (_lock)
+        var result = Evaluate(formula, context, name);
+        if (result.Type != DataType.Boolean)
         {
-            try
-            {
-                SetContext(context);
-                var result = _script.DoString(formula);
-
-                if (result.Type != DataType.Boolean)
-                {
-                    throw new FormulaEvaluationException(
-                        $"Formula returned {result.Type} but expected Boolean. Formula: {formula}");
-                }
-
-                return result.Boolean;
-            }
-            catch (ScriptRuntimeException ex)
-            {
-                throw new FormulaEvaluationException(
-                    $"Lua runtime error in formula: {formula}\nError: {ex.DecoratedMessage}", ex);
-            }
-            catch (SyntaxErrorException ex)
-            {
-                throw new FormulaEvaluationException(
-                    $"Lua syntax error in formula: {formula}\nError: {ex.DecoratedMessage}", ex);
-            }
+            throw new FormulaEvaluationException(
+                $"{Describe(formula, name)} returned {result.Type} but expected true or false.");
         }
+
+        return result.Boolean;
     }
 
     /// <summary>
@@ -128,27 +97,57 @@ public sealed class FormulaEvaluator
     }
 
     /// <summary>
-    /// Set context variables in Lua globals from anonymous object properties.
-    /// Example: new { level = 10, skillPercent = 75 } sets globals: level=10, skillPercent=75
-    /// 
-    /// Note: We don't clear globals because that removes built-in Lua libraries (math, string, etc).
-    /// Variables are overwritten each time, so no leakage occurs.
+    /// Run a formula in its own environment: the context's properties plus the built-ins (math, random, div).
+    /// Reading any other name is an error, so a typo or a variable from another formula can't silently
+    /// pick up a leftover value.
     /// </summary>
-    private void SetContext(object context)
+    private DynValue Evaluate(string formula, object context, string? name)
     {
-        if (context == null)
+        lock (_lock)
         {
-            return;
-        }
-
-        // Use reflection to set Lua globals from anonymous object properties
-        var properties = context.GetType().GetProperties();
-        foreach (var prop in properties)
-        {
-            var value = prop.GetValue(context);
-            _script.Globals[prop.Name] = value;
+            try
+            {
+                return _script.DoString(formula, CreateEnvironment(context, formula, name));
+            }
+            catch (ScriptRuntimeException ex)
+            {
+                throw new FormulaEvaluationException(
+                    $"Lua runtime error in {Describe(formula, name)}\nError: {ex.DecoratedMessage}", ex);
+            }
+            catch (SyntaxErrorException ex)
+            {
+                throw new FormulaEvaluationException(
+                    $"Lua syntax error in {Describe(formula, name)}\nError: {ex.DecoratedMessage}", ex);
+            }
         }
     }
+
+    private Table CreateEnvironment(object context, string formula, string? name)
+    {
+        var environment = new Table(_script);
+        foreach (var property in context.GetType().GetProperties())
+        {
+            environment[property.Name] = property.GetValue(context);
+        }
+
+        // Unknown names fall back to the built-ins in the script's globals, and fail if they aren't there either
+        var metatable = new Table(_script);
+        metatable["__index"] = (Func<Table, DynValue, DynValue>)((_, key) =>
+        {
+            var builtin = _script.Globals.Get(key);
+            if (builtin.IsNil())
+            {
+                throw new ScriptRuntimeException($"unknown variable '{key.ToPrintString()}'");
+            }
+
+            return builtin;
+        });
+        environment.MetaTable = metatable;
+        return environment;
+    }
+
+    private static string Describe(string formula, string? name) =>
+        name is null ? $"formula \"{formula}\"" : $"formula {name} (\"{formula}\")";
 
     /// <summary>
     /// Register helper functions available to all formulas.
@@ -160,6 +159,18 @@ public sealed class FormulaEvaluator
         _script.Globals["random"] = (Func<int, int, int>)((min, max) =>
         {
             return Random.Shared.Next(min, max + 1); // +1 because Random.Next is exclusive on upper bound
+        });
+
+        // div(a, b): integer division like C, truncating toward zero (-55 / 10 = -5).
+        // Lua's "/" is real division (-5.5), so formulas ported from legacy C use div where C divides.
+        _script.Globals["div"] = (Func<double, double, double>)((a, b) =>
+        {
+            if (b == 0)
+            {
+                throw new ScriptRuntimeException("div: division by zero");
+            }
+
+            return Math.Truncate(a / b);
         });
 
         // Lua already has math.min, math.max, math.floor, math.ceil, math.abs, etc.

@@ -314,7 +314,7 @@ This file defines metadata for all skills and spells in the game, including mech
       ],
       "mechanics": {
         "damageFormula": "level / 2",
-        "hitFormula": "((10 - victimAC/10) * 2) + random(1,101)",
+        "hitFormula": "return ((10 - div(victimAC, 10)) * 2) + random(1,101) <= skillPercent",
         "requirements": [
           {
             "type": "position",

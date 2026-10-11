@@ -47,7 +47,7 @@ public sealed class SkillMetadataLoaderTests
         // Check mechanics
         Assert.NotNull(kick.Mechanics);
         Assert.Equal("return math.max(1, level / 2)", kick.Mechanics.DamageFormula);
-        Assert.Equal("return ((10 - victimAC/10) * 2) + random(1,101) <= skillPercent", kick.Mechanics.HitFormula);
+        Assert.Equal("return ((10 - div(victimAC, 10)) * 2) + random(1,101) <= skillPercent", kick.Mechanics.HitFormula);
     }
     
     [Fact]

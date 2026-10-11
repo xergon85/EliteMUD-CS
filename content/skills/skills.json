@@ -136,7 +136,7 @@
       ],
       "mechanics": {
         "damageFormula": "return math.max(1, level / 2)",
-        "hitFormula": "return ((10 - victimAC/10) * 2) + random(1,101) <= skillPercent",
+        "hitFormula": "return ((10 - div(victimAC, 10)) * 2) + random(1,101) <= skillPercent",
         "requirements": [
           {
             "type": "position",

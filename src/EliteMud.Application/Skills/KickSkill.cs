@@ -98,7 +98,8 @@ public sealed class KickSkill : ISkillHandler
 
     /// <summary>
     /// Determine if a kick attack hits the target using Lua formula from skills.json.
-    /// Formula: "return ((10 - victimAC/10) * 2) + random(1,101) <= skillPercent"
+    /// Formula: "return ((10 - div(victimAC, 10)) * 2) + random(1,101) <= skillPercent"
+    /// Legacy: act.offensive.c:672, percent = ((10 - (GET_AC(victim) / 10)) << 1) + number(1, 101)
     /// Works for any combatant (player, mob, etc.) attacking any target.
     /// </summary>
     public bool RollHit(ICombatant attacker, ICombatant victim)
