@@ -42,7 +42,7 @@ public sealed class LegacyContentImporter
         if (importOptions.IncludeRooms)
         {
             roomFiles = LegacyWorldFiles.Resolve(Path.Combine(worldPath, "wld"), "wld", config, log);
-            rooms = LegacyRoomImporter.Load(roomFiles, log, cancellationToken);
+            rooms = LegacyRoomImporter.ApplyFixes(LegacyRoomImporter.Load(roomFiles, log, cancellationToken), config, log);
             Directory.CreateDirectory(Path.Combine(outputContentPath, "rooms"));
             await WriteAsync(Path.Combine(outputContentPath, "rooms", "rooms.json"), new RoomsFile(rooms), cancellationToken);
         }

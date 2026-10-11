@@ -17,7 +17,8 @@ public static class ContentValidator
         WorldDefinition world,
         IReadOnlyDictionary<int, MobDefinition> mobs,
         IReadOnlyDictionary<int, ObjectDefinition> objects,
-        IReadOnlyList<ZoneDefinition> zones)
+        IReadOnlyList<ZoneDefinition> zones,
+        IReadOnlyList<AcceptedFinding>? accepted = null)
     {
         var findings = new List<ContentFinding>();
         var zoneOfRoom = BuildRoomZoneLookup(world, zones);
@@ -30,7 +31,37 @@ public static class ContentValidator
 
         CheckKeysAreCreated(world, zones, zoneOfRoom, findings);
         CheckReachability(world, zones, zoneOfRoom, findings);
-        return findings;
+        return ApplyAccepted(findings, accepted ?? Array.Empty<AcceptedFinding>());
+    }
+
+    /// <summary>
+    /// Mark findings that are known and accepted, with the reason. An accept entry that matches nothing
+    /// is reported, so the list can't silently go stale.
+    /// </summary>
+    private static IReadOnlyList<ContentFinding> ApplyAccepted(List<ContentFinding> findings, IReadOnlyList<AcceptedFinding> accepted)
+    {
+        var used = new HashSet<AcceptedFinding>();
+        var result = new List<ContentFinding>(findings.Count);
+        foreach (var finding in findings)
+        {
+            var match = accepted.FirstOrDefault(entry => entry.Matches(finding));
+            if (match is null)
+            {
+                result.Add(finding);
+                continue;
+            }
+
+            used.Add(match);
+            result.Add(finding with { AcceptedReason = match.Reason });
+        }
+
+        foreach (var entry in accepted.Where(entry => !used.Contains(entry)))
+        {
+            result.Add(new(ContentSeverity.Warning, "Accepted finding not found", entry.Category,
+                $"no finding matches location \"{entry.Location}\" / message \"{entry.Message}\"; remove or update the entry"));
+        }
+
+        return result;
     }
 
     private static void CheckExits(
@@ -157,6 +188,11 @@ public static class ContentValidator
         }
     }
 
+    /// <summary>
+    /// Legacy 'D' (reset_zone() in db.c) sets the closed/locked bits on any exit, door or not; it only fails
+    /// when there's no exit. Movement is blocked by "closed" alone, but open/close need a door, so closing
+    /// an exit that isn't a door makes a barrier players can't open with commands.
+    /// </summary>
     private static void CheckDoorReset(ZoneResetDefinition reset, WorldDefinition world, string location, List<ContentFinding> findings)
     {
         if (!reset.RoomId.HasValue || !world.Rooms.TryGetValue(reset.RoomId.Value, out var room))
@@ -167,16 +203,21 @@ public static class ContentValidator
 
         if (reset.DoorDirection is not { } direction || direction < 0 || direction > (int)Direction.Down)
         {
-            findings.Add(new(ContentSeverity.Error, "Door reset on missing door", location, $"invalid direction {reset.DoorDirection}"));
+            findings.Add(new(ContentSeverity.Error, "Door reset on missing exit", location, $"invalid direction {reset.DoorDirection}"));
             return;
         }
 
+        var directionName = ((Direction)direction).ToString().ToLowerInvariant();
         var exit = room.Exits.FirstOrDefault(e => e.Direction == (Direction)direction);
-        if (exit is null || !exit.IsDoor)
+        if (exit is null)
         {
-            var what = exit is null ? "no exit" : "an exit that isn't a door";
-            findings.Add(new(ContentSeverity.Error, "Door reset on missing door", location,
-                $"room {room.Id} has {what} to the {((Direction)direction).ToString().ToLowerInvariant()}"));
+            findings.Add(new(ContentSeverity.Error, "Door reset on missing exit", location,
+                $"room {room.Id} has no exit to the {directionName}"));
+        }
+        else if (!exit.IsDoor && reset.DoorState is > 0)
+        {
+            findings.Add(new(ContentSeverity.Info, "Barrier exit", location,
+                $"closes room {room.Id}'s {directionName} exit, which isn't a door; players can't open it with commands"));
         }
     }
 

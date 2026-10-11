@@ -12,4 +12,13 @@ public enum ContentSeverity
 /// </summary>
 /// <param name="Category">Short stable name, e.g. "Exit to missing room"; used to group the report.</param>
 /// <param name="Location">Where it is, e.g. "zone 30 Northern Midgaard, room 3001".</param>
-public sealed record ContentFinding(ContentSeverity Severity, string Category, string Location, string Message);
+/// <param name="AcceptedReason">Set when the finding is known and accepted (content/meta/accepted-findings.json).</param>
+public sealed record ContentFinding(
+    ContentSeverity Severity,
+    string Category,
+    string Location,
+    string Message,
+    string? AcceptedReason = null)
+{
+    public bool IsAccepted => AcceptedReason is not null;
+}

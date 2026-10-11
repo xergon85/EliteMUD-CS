@@ -1,4 +1,5 @@
 using System.Text.Json;
+using EliteMud.Application.World.Validation;
 using EliteMud.Game;
 
 namespace EliteMud.Server;
@@ -258,6 +259,42 @@ internal static class ContentLoader
         }
 
         return objects;
+    }
+
+    /// <summary>
+    /// Known content findings that were looked at and accepted (content/meta/accepted-findings.json).
+    /// Missing file means nothing is accepted.
+    /// </summary>
+    public static IReadOnlyList<AcceptedFinding> LoadAcceptedFindings(string contentRoot)
+    {
+        var path = Path.Combine(contentRoot, "meta", "accepted-findings.json");
+        if (!File.Exists(path))
+        {
+            return Array.Empty<AcceptedFinding>();
+        }
+
+        var file = JsonSerializer.Deserialize<AcceptedFindingsFile>(File.ReadAllText(path), new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+            ReadCommentHandling = JsonCommentHandling.Skip
+        });
+
+        return file?.Accepted
+            .Select(entry => new AcceptedFinding(entry.Category, entry.Location ?? "", entry.Message ?? "", entry.Reason))
+            .ToList() ?? new List<AcceptedFinding>();
+    }
+
+    private sealed class AcceptedFindingsFile
+    {
+        public List<AcceptedFindingContent> Accepted { get; set; } = new();
+    }
+
+    private sealed class AcceptedFindingContent
+    {
+        public string Category { get; set; } = "";
+        public string? Location { get; set; }
+        public string? Message { get; set; }
+        public string Reason { get; set; } = "";
     }
 
     public static IReadOnlyList<ZoneDefinition> LoadZones(string contentRoot)

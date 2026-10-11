@@ -267,7 +267,7 @@ internal static class ServerBootstrap
             Console.WriteLine($"  {line}");
         }
 
-        return findings.Count(finding => finding.Severity == ContentSeverity.Error);
+        return ContentValidationReport.CountErrors(findings);
     }
 
     // Warning mode: problems are reported, but the server still starts.
@@ -300,7 +300,8 @@ internal static class ServerBootstrap
             world,
             mobs.GroupBy(mob => mob.Id).ToDictionary(group => group.Key, group => group.First()),
             objects.GroupBy(obj => obj.Id).ToDictionary(group => group.Key, group => group.First()),
-            zones);
+            zones,
+            ContentLoader.LoadAcceptedFindings(ResolveContentRoot()));
 
     private static WorldState BuildWorldState(
         WorldDefinition world,

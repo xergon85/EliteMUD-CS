@@ -19,17 +19,54 @@ public class ContentValidatorTests
     }
 
     [Fact]
-    public void Validate_DoorResetOnPlainExit_IsAnError()
+    public void Validate_DoorResetOnMissingExit_IsAnError()
     {
+        // Closes a north exit the room doesn't have (legacy logs this as SYSERR)
+        var rooms = Rooms(new RoomDefinition(Temple, "Temple", "", Array.Empty<ExitDefinition>()));
+
+        var findings = Validate(rooms, zones: Zone(DoorReset(doorState: 1)));
+
+        Assert.Contains(findings, f => f.Category == "Door reset on missing exit" && f.Severity == ContentSeverity.Error);
+    }
+
+    [Fact]
+    public void Validate_ClosingAPlainExit_IsABarrier_AndOpeningItIsFine()
+    {
+        // Legacy 'D' sets closed/locked on any exit; on a non-door that makes a barrier (e.g. the Desert Moongate)
         var rooms = Rooms(
             new RoomDefinition(Temple, "Temple", "", new[] { new ExitDefinition(Direction.North, 2) }),
             new RoomDefinition(2, "Shrine", "", Array.Empty<ExitDefinition>()));
-        var zone = Zone(new ZoneResetDefinition("DoorState", null, null, Temple, null, null, null, null,
-            DoorDirection: 0, DoorState: 1, IfFlag: false));
 
-        var findings = Validate(rooms, zones: zone);
+        var closed = Validate(rooms, zones: Zone(DoorReset(doorState: 2)));
+        var opened = Validate(rooms, zones: Zone(DoorReset(doorState: 0)));
 
-        Assert.Contains(findings, f => f.Category == "Door reset on missing door" && f.Severity == ContentSeverity.Error);
+        Assert.Equal(ContentSeverity.Info, Assert.Single(closed, f => f.Category == "Barrier exit").Severity);
+        Assert.DoesNotContain(opened, f => f.Category.StartsWith("Door reset") || f.Category == "Barrier exit");
+    }
+
+    [Fact]
+    public void Validate_AcceptedFinding_IsMarkedWithItsReason()
+    {
+        var rooms = Rooms(new RoomDefinition(Temple, "Temple", "", new[] { new ExitDefinition(Direction.North, 1501) }));
+        var accepted = new[] { new AcceptedFinding("Exit to missing room", "room 3001", "room 1501", "old Gnome City copy") };
+
+        var findings = Validate(rooms, accepted: accepted);
+
+        var finding = Assert.Single(findings, f => f.Category == "Exit to missing room");
+        Assert.True(finding.IsAccepted);
+        Assert.Equal("old Gnome City copy", finding.AcceptedReason);
+        Assert.Equal(0, ContentValidationReport.CountErrors(findings));
+    }
+
+    [Fact]
+    public void Validate_AcceptedEntryThatMatchesNothing_IsReported()
+    {
+        var rooms = Rooms(new RoomDefinition(Temple, "Temple", "", Array.Empty<ExitDefinition>()));
+        var accepted = new[] { new AcceptedFinding("Exit to missing room", "room 23038", "", "fixed long ago") };
+
+        var findings = Validate(rooms, accepted: accepted);
+
+        Assert.Contains(findings, f => f.Category == "Accepted finding not found" && f.Severity == ContentSeverity.Warning);
     }
 
     [Fact]
@@ -88,35 +125,46 @@ public class ContentValidatorTests
     }
 
     /// <summary>
-    /// The real zone data, checked like the server does. These are known legacy data problems, listed in
-    /// docs/reports/legacy-import-audit-2026-10-10.md. A hand fix lowers the count; anything new fails here.
+    /// The real zone data, checked like the server does, with content/meta/accepted-findings.json.
+    /// Every error and warning must be fixed or accepted with a reason; a new one fails here, and so does
+    /// an accept entry that no longer matches anything.
     /// </summary>
     [Fact]
-    public void Validate_RealZones_HaveOnlyTheKnownErrors()
+    public void Validate_RealZones_HaveNoOpenErrorsOrWarnings()
     {
-        var (world, mobs, objects, zones) = ContentLoader.LoadFromZoneFiles(Path.Combine(FindRepositoryRoot(), "zones"));
+        var root = FindRepositoryRoot();
+        var (world, mobs, objects, zones) = ContentLoader.LoadFromZoneFiles(Path.Combine(root, "zones"));
         Assert.NotNull(world);
 
         var findings = ContentValidator.Validate(
             world,
             mobs.GroupBy(mob => mob.Id).ToDictionary(group => group.Key, group => group.First()),
             objects.GroupBy(obj => obj.Id).ToDictionary(group => group.Key, group => group.First()),
-            zones);
+            zones,
+            ContentLoader.LoadAcceptedFindings(Path.Combine(root, "content")));
 
-        var errors = findings.Where(f => f.Severity == ContentSeverity.Error).Select(f => $"{f.Location}: {f.Message}").ToList();
-        Assert.True(errors.Count == 13, "Content errors changed:\n" + string.Join("\n", errors));
+        var open = findings
+            .Where(f => !f.IsAccepted && f.Severity != ContentSeverity.Info)
+            .Select(f => $"{f.Severity} {f.Category}: {f.Location}: {f.Message}")
+            .ToList();
+        Assert.True(open.Count == 0, "Open content findings:\n" + string.Join("\n", open));
     }
 
     private static IReadOnlyList<ContentFinding> Validate(
         Dictionary<int, RoomDefinition> rooms,
         Dictionary<int, ObjectDefinition>? objects = null,
         ZoneDefinition? zones = null,
-        IReadOnlyList<ZoneDefinition>? zoneList = null) =>
+        IReadOnlyList<ZoneDefinition>? zoneList = null,
+        IReadOnlyList<AcceptedFinding>? accepted = null) =>
         ContentValidator.Validate(
             new WorldDefinition(rooms),
             new Dictionary<int, MobDefinition>(),
             objects ?? new Dictionary<int, ObjectDefinition>(),
-            zoneList ?? (zones is null ? Array.Empty<ZoneDefinition>() : new[] { zones }));
+            zoneList ?? (zones is null ? Array.Empty<ZoneDefinition>() : new[] { zones }),
+            accepted);
+
+    private static ZoneResetDefinition DoorReset(int doorState) =>
+        new("DoorState", null, null, Temple, null, null, null, null, DoorDirection: 0, DoorState: doorState, IfFlag: false);
 
     private static Dictionary<int, RoomDefinition> Rooms(params RoomDefinition[] rooms) => rooms.ToDictionary(room => room.Id);
 

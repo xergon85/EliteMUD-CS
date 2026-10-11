@@ -20,5 +20,14 @@
   // Zones missing from the snapshot's index files that are live on the current server.
   // New Thalos (57) was listed here, but the live Thalos turned out to be zone 52 (The City of Thalos).
   // New Thalos has no way in and nothing else mentions it, so it looks unfinished; it stays inactive.
-  "activeZones": []
+  "activeZones": [],
+
+  // Corrections to legacy data, applied after parsing and written to import-log.txt.
+  // doorType uses the legacy door number: 0 = no door, 1 = door, 2 = pick-proof door.
+  "fixes": [
+    {
+      "room": 6461, "exit": "east", "doorType": 1,
+      "reason": "The Playroom's east exit is described as 'a bright green door' with keyword 'door', and the other side (room 6460 west) is a door, but this side had door type 0. 64.zon closes it with 'D 0 6461 1 1'."
+    }
+  ]
 }

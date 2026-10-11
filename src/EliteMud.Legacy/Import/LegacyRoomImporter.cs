@@ -142,6 +142,36 @@ internal static class LegacyRoomImporter
         return rooms.ToList();
     }
 
+    /// <summary>
+    /// Apply the config's data fixes to the imported rooms. Every fix is logged; one whose room or exit
+    /// doesn't exist is a warning.
+    /// </summary>
+    public static List<RoomContent> ApplyFixes(List<RoomContent> rooms, LegacyImportConfig config, LegacyImportLog log)
+    {
+        foreach (var fix in config.Fixes)
+        {
+            var source = $"room #{fix.Room} {fix.Exit}";
+            var index = rooms.FindIndex(room => room.Id == fix.Room);
+            var exitIndex = index < 0
+                ? -1
+                : rooms[index].Exits.ToList().FindIndex(exit => string.Equals(exit.Direction, fix.Exit, StringComparison.OrdinalIgnoreCase));
+            if (exitIndex < 0)
+            {
+                log.Warn("Fix not applied", source, $"room or exit not found ({fix.Reason})");
+                continue;
+            }
+
+            var exits = rooms[index].Exits.ToList();
+            var flags = LegacyImportLookup.ExitFlags(DoorTypeToFlags(fix.DoorType));
+            log.Info("Fix applied", source,
+                $"door type {fix.DoorType}: [{string.Join(", ", exits[exitIndex].ExitFlags)}] -> [{string.Join(", ", flags)}] ({fix.Reason})");
+            exits[exitIndex] = exits[exitIndex] with { ExitFlags = flags };
+            rooms[index] = rooms[index] with { Exits = exits };
+        }
+
+        return rooms;
+    }
+
     private const int ExitIsDoor = 1 << 0;
     private const int ExitPickProof = 1 << 5;
     private const int NoRoom = -1;
@@ -153,13 +183,7 @@ internal static class LegacyRoomImporter
         var exitDesc = parser.ReadTildeString();
         var keywords = parser.ReadTildeString();
 
-        // Door type: 1 = door, 2 = pick-proof door, anything else is raw EX_* bits (db.c:958-967)
-        var exitFlags = parser.ReadNumber() switch
-        {
-            1 => ExitIsDoor,
-            2 => ExitIsDoor | ExitPickProof,
-            var bits => bits
-        };
+        var exitFlags = DoorTypeToFlags(parser.ReadNumber());
 
         // Legacy reads these with fscanf(" %d "), which stops at a glued room terminator ("28701S").
         // If the value isn't a number at all, the exit leads nowhere rather than to room 0.
@@ -174,6 +198,14 @@ internal static class LegacyRoomImporter
             LegacyImportLookup.ExitFlags(exitFlags),
             keyId < 0 ? null : keyId);
     }
+
+    // Door type: 1 = door, 2 = pick-proof door, anything else is raw EX_* bits (db.c:958-967)
+    private static int DoorTypeToFlags(int doorType) => doorType switch
+    {
+        1 => ExitIsDoor,
+        2 => ExitIsDoor | ExitPickProof,
+        var bits => bits
+    };
 
     private static string? ParseSpecialName(string marker)
     {

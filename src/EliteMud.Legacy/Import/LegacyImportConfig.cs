@@ -14,6 +14,9 @@ public sealed class LegacyImportConfig
     /// <summary>Zones the index doesn't list but that are live anyway (the snapshot predates them).</summary>
     public List<int> ActiveZones { get; init; } = new();
 
+    /// <summary>Corrections to legacy data, applied after parsing and logged, each with a reason.</summary>
+    public List<DataFix> Fixes { get; init; } = new();
+
     public bool IsSkipped(string fileName, out string reason)
     {
         var match = Skip.FirstOrDefault(skip => string.Equals(skip.File, fileName, StringComparison.OrdinalIgnoreCase));
@@ -32,4 +35,10 @@ public sealed class LegacyImportConfig
     }
 
     public sealed record SkippedFile(string File, string Reason);
+
+    /// <summary>
+    /// One correction. Currently supported: set an exit's door type, like the legacy door number
+    /// (0 = no door, 1 = door, 2 = pick-proof door).
+    /// </summary>
+    public sealed record DataFix(int Room, string Exit, int DoorType, string Reason);
 }

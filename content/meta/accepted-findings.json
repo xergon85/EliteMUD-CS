@@ -1,0 +1,77 @@
+{
+  // Content findings that were looked at and accepted. The server's content check (and
+  // "dotnet run --project src/EliteMud.Server -- --validate") marks matching findings as accepted.
+  // An entry matches by category, plus text contained in the location and the message (empty = anything).
+  // An entry that no longer matches anything is reported, so this list can't silently go stale.
+  // Background: docs/reports/legacy-import-audit-2026-10-10.md
+
+  "accepted": [
+    // ===== Errors that are legacy data problems; the original game has them too =====
+    {
+      "category": "Reset uses missing object", "location": "zone 120 Rome", "message": "portal 12054",
+      "reason": "Rome's 'L' lines for portal 12054 refer to an object that doesn't exist in the legacy files either; the original skipped them."
+    },
+    {
+      "category": "Reset uses missing object", "location": "zone 98 Rand's Tower", "message": "object 9812",
+      "reason": "'P 1 9812 5 9818 /* occluded lens */': 9812 is a room number in this zone, not an object. The intended lens object is unknown."
+    },
+    {
+      "category": "Reset uses missing room", "location": "zone 125 The Lost City of Delray", "message": "room 12582",
+      "reason": "Loads mob 12517 into room 12582, but Delray's rooms stop at 12581. The intended room is unknown."
+    },
+    {
+      "category": "Door reset on missing exit", "location": "zone 280 Clans DoP", "message": "room 28029",
+      "reason": "Closes a north exit that room 28029 ('Title (free room)') doesn't have. The original logs this as SYSERR too."
+    },
+    {
+      "category": "Exit to missing room", "location": "zone 230 Elven Forest, room 23038", "message": "room 1501",
+      "reason": "Points into the old Gnome City copy (zone 15, not loaded by the original). Open question: should it lead to the live Gnome City (1701)? Unknown as of Oct 11, 2026."
+    },
+    {
+      "category": "Door key missing", "location": "zone 236 Troll Caves", "message": "key object 23699",
+      "reason": "Key 23699 doesn't exist in the legacy files. Not checked on the live server (too dangerous for a mortal)."
+    },
+
+    // ===== Keys that nothing creates =====
+    {
+      "category": "Door key never created", "location": "zone 154 The Amazeing Maze", "message": "",
+      "reason": "Unfinished zone: its zone file loads no mobs or keys, and it has no way in."
+    },
+    {
+      "category": "Door key never created", "location": "zone 79 Redferne's Residence", "message": "",
+      "reason": "Unfinished zone: its chest, rings and key loads are commented out in 79.zon. Live check: empty zone, gate bashable."
+    },
+    {
+      "category": "Door key never created", "location": "zone 33 Buildings in Midgaard", "message": "key object 3300",
+      "reason": "Papi's Cozy Cottage: a personal home of an old player or immortal; the key was handed out by hand."
+    },
+    {
+      "category": "Door key never created", "location": "zone 69 Quifael-Custom-Rooms", "message": "key object 3301",
+      "reason": "Quifael's hall: a personal home of an old player or immortal; the key was handed out by hand."
+    },
+    {
+      "category": "Door key never created", "location": "zone 236 Troll Caves", "message": "",
+      "reason": "Troll Caves keys 23603, 23604 and 23699: the zone loads the Queen and guards but gives them no keys. Not checked on the live server."
+    },
+
+    // ===== Unreachable zones =====
+    {
+      "category": "Zone unreachable", "location": "zone 149 The Gauntlet", "message": "",
+      "reason": "No exit or portal leads in. How it's entered on the live server is unknown as of Oct 11, 2026."
+    },
+    {
+      "category": "Zone unreachable", "location": "zone 154 The Amazeing Maze", "message": "",
+      "reason": "Unfinished zone (see its keys above)."
+    },
+    {
+      "category": "Zone unreachable", "location": "zone 999 Test Zone", "message": "",
+      "reason": "Hand-made test zone, reached with goto."
+    },
+
+    // ===== Groups =====
+    {
+      "category": "Exit leads nowhere", "location": "", "message": "",
+      "reason": "Exits with target -1 (NOWHERE) are in the legacy files; they lead nowhere in the original too, and movement refuses them."
+    }
+  ]
+}
