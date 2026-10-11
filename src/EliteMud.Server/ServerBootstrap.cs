@@ -86,7 +86,11 @@ internal static class ServerBootstrap
             BuildRules(contentRoot);
 
         // Fail fast: a broken class/race file or formula would otherwise only show up in the middle of play
-        var (rulesContent, rulesErrors) = RulesContentLoader.Load(contentRoot);
+        var (rulesContent, loadErrors) = RulesContentLoader.Load(contentRoot);
+        var rulesErrors = loadErrors
+            .Concat(RulesContentLoader.CheckClassReferences(
+                rulesContent, skillMetadataRegistry.GetAll(), spellMetadataRegistry.GetAll()))
+            .ToList();
         if (rulesErrors.Count > 0)
         {
             throw new ContentConfigurationException(
@@ -272,8 +276,11 @@ internal static class ServerBootstrap
             Console.WriteLine(line);
         }
 
-        var (_, _, formulaEvaluator, skillRegistry, spellRegistry) = BuildRules(ResolveContentRoot());
-        var (rulesContent, rulesErrors) = RulesContentLoader.Load(ResolveContentRoot());
+        var (skillMetadata, spellMetadata, formulaEvaluator, skillRegistry, spellRegistry) = BuildRules(ResolveContentRoot());
+        var (rulesContent, loadErrors) = RulesContentLoader.Load(ResolveContentRoot());
+        var rulesErrors = loadErrors
+            .Concat(RulesContentLoader.CheckClassReferences(rulesContent, skillMetadata.GetAll(), spellMetadata.GetAll()))
+            .ToList();
         foreach (var error in rulesErrors)
         {
             Console.WriteLine($"Error\tBroken rules content\t{error}");

@@ -125,6 +125,78 @@ public sealed class RulesContentLoaderTests : IDisposable
     }
 
     [Fact]
+    public void RealSkillsAndSpells_NameOnlyKnownClasses()
+    {
+        var (rules, _) = RulesContentLoader.Load(RealContent);
+
+        var errors = RulesContentLoader.CheckClassReferences(
+            rules, ContentLoader.LoadSkills(RealContent).Values, ContentLoader.LoadSpells(RealContent).Values);
+
+        Assert.Empty(errors);
+    }
+
+    [Fact]
+    public void SkillNamingAnUnknownClass_IsReported()
+    {
+        var (rules, _) = RulesContentLoader.Load(RealContent);
+        var kick = ContentLoader.LoadSkills(RealContent).Values.Single(skill => skill.Name == "kick");
+        var typo = kick with
+        {
+            ClassRestrictions = new Dictionary<string, ClassSkillRestriction>(kick.ClassRestrictions)
+            {
+                ["MagicUser"] = new(null, 0, 0)
+            }
+        };
+
+        var errors = RulesContentLoader.CheckClassReferences(rules, new[] { typo }, Array.Empty<SpellMetadata>());
+
+        Assert.StartsWith("skill 'kick': class 'MagicUser' doesn't exist", Assert.Single(errors));
+    }
+
+    [Fact]
+    public void DuplicateMenuKey_IsReported()
+    {
+        Edit("races/troll.json", json => json["menuKey"] = "a"); // human's letter
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains(errors, e => e == "races: menuKey 'a' is used by human, troll");
+    }
+
+    [Theory]
+    [InlineData("A")]
+    [InlineData("ab")]
+    [InlineData("1")]
+    public void MenuKeyThatIsNotOneLowercaseLetter_IsReported(string key)
+    {
+        Edit("classes/paladin.json", json => json["menuKey"] = key);
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains(errors, e => e.StartsWith($"classes/paladin.json: menuKey '{key}'"));
+    }
+
+    [Fact]
+    public void CreationRaceWithoutMenuKey_IsReported()
+    {
+        Edit("races/dwarf.json", json => json["menuKey"] = null);
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains(errors, e => e.StartsWith("races/dwarf.json: menuKey ''"));
+    }
+
+    [Fact]
+    public void MenuKeyOnARaceOutsideTheMenu_IsReported()
+    {
+        Edit("races/vampire.json", json => json["menuKey"] = "v");
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains(errors, e => e.StartsWith("races/vampire.json: menuKey 'v' but availability is Granted"));
+    }
+
+    [Fact]
     public void IdNotMatchingFileName_IsReported()
     {
         Edit("races/dwarf.json", json => json["id"] = "dwarves");

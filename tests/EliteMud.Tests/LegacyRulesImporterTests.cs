@@ -39,6 +39,7 @@ public sealed class LegacyRulesImporterTests : IDisposable
         Assert.Equal("Magic-User", mage.GetProperty("name").GetString());
         Assert.Equal("#MMu#N", mage.GetProperty("abbreviation").GetString());
         Assert.Equal(1, mage.GetProperty("legacyNumber").GetInt32());
+        Assert.Equal("a", mage.GetProperty("menuKey").GetString()); // 'a' + class number - 1
         Assert.Equal("mage", mage.GetProperty("xpCurve").GetString());
         Assert.Equal("mage", mage.GetProperty("levelUpProfile").GetString());
         Assert.Equal(new[] { "int", "wis" }, Strings(mage.GetProperty("primeStats")));
@@ -47,6 +48,7 @@ public sealed class LegacyRulesImporterTests : IDisposable
         Assert.Equal("Mage 1ess", mage.GetProperty("titles")[1].GetProperty("female").GetString());
 
         var warrior = Read("classes/warrior.json");
+        Assert.Equal("b", warrior.GetProperty("menuKey").GetString());
         Assert.Equal("fighter", warrior.GetProperty("xpCurve").GetString());
         Assert.Equal(new[] { "str", "con" }, Strings(warrior.GetProperty("primeStats")));
         Assert.True(warrior.GetProperty("strengthBonus").GetBoolean());
@@ -96,6 +98,7 @@ public sealed class LegacyRulesImporterTests : IDisposable
 
         var dwarf = Read("races/dwarf.json");
         Assert.Equal("creation", dwarf.GetProperty("availability").GetString()); // the menu beats the config
+        Assert.Equal("b", dwarf.GetProperty("menuKey").GetString()); // the letter in the race menu
         Assert.Equal("#RDwarven#N", dwarf.GetProperty("titleName").GetString());
         Assert.Equal(20, dwarf.GetProperty("statMax").GetProperty("str").GetInt32());
         Assert.Equal(16, dwarf.GetProperty("statMax").GetProperty("int").GetInt32());
@@ -106,6 +109,7 @@ public sealed class LegacyRulesImporterTests : IDisposable
         var god = Read("races/god.json");
         Assert.Equal("unused", god.GetProperty("availability").GetString());
         Assert.Equal("not used", god.GetProperty("availabilityNote").GetString());
+        Assert.Equal(JsonValueKind.Null, god.GetProperty("menuKey").ValueKind);
 
         var angel = Read("races/angel.json");
         Assert.Equal("granted", angel.GetProperty("availability").GetString());

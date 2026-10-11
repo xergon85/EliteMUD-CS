@@ -6,12 +6,14 @@ namespace EliteMud.Application.Commands.Look;
 
 public sealed class LookHandler
 {
+    private readonly RulesContent _rules;
     private readonly IWorldState _worldState;
     private readonly Func<IEnumerable<PlayerState>>? _getPlayersInRoom;
 
-    public LookHandler(IWorldState worldState, Func<IEnumerable<PlayerState>>? getPlayersInRoom = null)
+    public LookHandler(IWorldState worldState, RulesContent rules, Func<IEnumerable<PlayerState>>? getPlayersInRoom = null)
     {
         _worldState = worldState;
+        _rules = rules;
         _getPlayersInRoom = getPlayersInRoom;
     }
 
@@ -198,7 +200,7 @@ public sealed class LookHandler
         return CommandResult.Ok(result);
     }
 
-    private static CommandResult FormatPlayerDescription(PlayerState player, IWorldState worldState)
+    private CommandResult FormatPlayerDescription(PlayerState player, IWorldState worldState)
     {
         var result = new System.Text.StringBuilder();
 
@@ -217,7 +219,7 @@ public sealed class LookHandler
         result.AppendLine();
         result.Append(player.Name);
         result.Append(" the ");
-        result.Append(player.Race);
+        result.Append(_rules.RaceName(player.Race));
         result.Append(healthCondition);
 
         // Show equipped items if any

@@ -16,25 +16,25 @@
       "targetType": "SingleEnemy",
       "classRestrictions": [
         {
-          "class": "MagicUser",
+          "class": "magic-user",
           "minLevel": 1,
           "maxProficiency": 95,
           "difficulty": 5
         },
         {
-          "class": "Wizard",
+          "class": "wizard",
           "minLevel": 1,
           "maxProficiency": 95,
           "difficulty": 5
         },
         {
-          "class": "Cleric",
+          "class": "cleric",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0
         },
         {
-          "class": "Warrior",
+          "class": "warrior",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0
@@ -60,25 +60,25 @@
       "targetType": "SingleAlly",
       "classRestrictions": [
         {
-          "class": "Cleric",
+          "class": "cleric",
           "minLevel": 1,
           "maxProficiency": 95,
           "difficulty": 5
         },
         {
-          "class": "Druid",
+          "class": "druid",
           "minLevel": 1,
           "maxProficiency": 95,
           "difficulty": 5
         },
         {
-          "class": "MagicUser",
+          "class": "magic-user",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0
         },
         {
-          "class": "Warrior",
+          "class": "warrior",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0
@@ -104,25 +104,25 @@
       "targetType": "SingleAlly",
       "classRestrictions": [
         {
-          "class": "MagicUser",
+          "class": "magic-user",
           "minLevel": 1,
           "maxProficiency": 95,
           "difficulty": 5
         },
         {
-          "class": "Cleric",
+          "class": "cleric",
           "minLevel": 1,
           "maxProficiency": 95,
           "difficulty": 5
         },
         {
-          "class": "Wizard",
+          "class": "wizard",
           "minLevel": 1,
           "maxProficiency": 95,
           "difficulty": 5
         },
         {
-          "class": "Warrior",
+          "class": "warrior",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0
@@ -149,19 +149,19 @@
       "targetType": "SingleEnemy",
       "classRestrictions": [
         {
-          "class": "MagicUser",
+          "class": "magic-user",
           "minLevel": 5,
           "maxProficiency": 95,
           "difficulty": 8
         },
         {
-          "class": "Wizard",
+          "class": "wizard",
           "minLevel": 5,
           "maxProficiency": 95,
           "difficulty": 8
         },
         {
-          "class": "Warrior",
+          "class": "warrior",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0
@@ -187,19 +187,19 @@
       "targetType": "SingleEnemy",
       "classRestrictions": [
         {
-          "class": "MagicUser",
+          "class": "magic-user",
           "minLevel": 10,
           "maxProficiency": 95,
           "difficulty": 10
         },
         {
-          "class": "Wizard",
+          "class": "wizard",
           "minLevel": 10,
           "maxProficiency": 95,
           "difficulty": 10
         },
         {
-          "class": "Warrior",
+          "class": "warrior",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0
@@ -225,19 +225,19 @@
       "targetType": "SingleAlly",
       "classRestrictions": [
         {
-          "class": "Cleric",
+          "class": "cleric",
           "minLevel": 8,
           "maxProficiency": 95,
           "difficulty": 8
         },
         {
-          "class": "Druid",
+          "class": "druid",
           "minLevel": 8,
           "maxProficiency": 95,
           "difficulty": 8
         },
         {
-          "class": "Warrior",
+          "class": "warrior",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0
@@ -263,19 +263,19 @@
       "targetType": "SingleAlly",
       "classRestrictions": [
         {
-          "class": "Cleric",
+          "class": "cleric",
           "minLevel": 3,
           "maxProficiency": 95,
           "difficulty": 6
         },
         {
-          "class": "Druid",
+          "class": "druid",
           "minLevel": 5,
           "maxProficiency": 90,
           "difficulty": 7
         },
         {
-          "class": "Warrior",
+          "class": "warrior",
           "minLevel": null,
           "maxProficiency": 0,
           "difficulty": 0

@@ -85,6 +85,8 @@ public sealed partial class LegacyRulesImporter
                 c.Name,
                 c.Abbreviation,
                 c.Number,
+                // Legacy CON_QCLASS: letter 'a' + class number - 1 (interpreter.c)
+                ((char)('a' + c.Number - 1)).ToString(),
                 xpCurves.Single(curve => curve.Classes.Contains(c.Id)).Id,
                 profiles.SingleOrDefault(profile => profile.Classes.Contains(c.Id))?.Id
                     ?? throw new InvalidDataException($"class {c.Id} is in no advance_level() case"),
@@ -272,7 +274,9 @@ public sealed partial class LegacyRulesImporter
         var allowed = PerRace(ReadAllowedClasses(source, defines).ToArray(), "allowed_classes", names, log);
 
         var (menu, menuLine) = source.Find("interpreter.c", RaceMenuCase());
-        var playable = menu.Select(m => defines[m.Groups[1].Value]).ToHashSet();
+        // The letter a player types for each race in the creation menu
+        var menuKeys = menu.ToDictionary(m => defines[m.Groups["race"].Value], m => m.Groups["key"].Value);
+        var playable = menuKeys.Keys.ToHashSet();
         log.Info("Playable races", $"interpreter.c:{menuLine}", $"{playable.Count} races in the creation menu");
 
         var races = new List<RaceRulesContent>();
@@ -307,6 +311,7 @@ public sealed partial class LegacyRulesImporter
                 number,
                 availability,
                 note,
+                menuKeys.GetValueOrDefault(number),
                 new StatBlockContent(str[number], intel[number], wis[number], dex[number], con[number], cha[number]),
                 new StartingPointsContent(hp[number], mana[number], move[number]),
                 allowedIds,
@@ -598,6 +603,6 @@ public sealed partial class LegacyRulesImporter
     [GeneratedRegex(@"\b(str|con|dex|intel|wis|cha)\s*=\s*0\s*;")]
     private static partial Regex ZeroedStat();
 
-    [GeneratedRegex(@"case\s+'\w'\s*:\s*GET_RACE\(d->character\)\s*=\s*(RACE_\w+)")]
+    [GeneratedRegex(@"case\s+'(?<key>\w)'\s*:\s*GET_RACE\(d->character\)\s*=\s*(?<race>RACE_\w+)")]
     private static partial Regex RaceMenuCase();
 }

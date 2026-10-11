@@ -130,7 +130,7 @@ public class PortalCommandTests : IDisposable
         var connectionRegistry = new ConnectionRegistry();
         connectionRegistry.SetProvider(() => new[] { context });
 
-        var lookHandler = new LookCommandHandler(worldState, new MockScriptEngine(), connectionRegistry);
+        var lookHandler = new LookCommandHandler(worldState, new MockScriptEngine(), connectionRegistry, RulesContent.Empty);
 
         return new TestEnvironment(
             new EnterCommandHandler(worldState, lookHandler, connectionRegistry),

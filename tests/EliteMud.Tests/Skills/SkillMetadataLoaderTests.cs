@@ -88,15 +88,15 @@ public sealed class SkillMetadataLoaderTests
         Assert.NotNull(kick.ClassRestrictions);
         
         // Warriors can learn kick at level 1
-        Assert.True(kick.ClassRestrictions.ContainsKey("Warrior"));
-        var warriorRestriction = kick.ClassRestrictions["Warrior"];
+        Assert.True(kick.ClassRestrictions.ContainsKey("warrior"));
+        var warriorRestriction = kick.ClassRestrictions["warrior"];
         Assert.Equal(1, warriorRestriction.MinLevel);
         Assert.Equal(95, warriorRestriction.MaxProficiency);
         Assert.Equal(10, warriorRestriction.Difficulty);
         
         // Magic Users cannot learn kick
-        Assert.True(kick.ClassRestrictions.ContainsKey("MagicUser"));
-        var magicUserRestriction = kick.ClassRestrictions["MagicUser"];
+        Assert.True(kick.ClassRestrictions.ContainsKey("magic-user"));
+        var magicUserRestriction = kick.ClassRestrictions["magic-user"];
         Assert.Null(magicUserRestriction.MinLevel);
         Assert.Equal(0, magicUserRestriction.MaxProficiency);
     }

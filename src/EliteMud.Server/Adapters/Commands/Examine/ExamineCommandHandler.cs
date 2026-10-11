@@ -1,6 +1,7 @@
 using EliteMud.Application.Commands.Look;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
+using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Examine;
@@ -10,9 +11,9 @@ internal sealed class ExamineCommandHandler : ICommandHandler
 {
     private readonly LookHandler _lookHandler;
 
-    public ExamineCommandHandler(IWorldState worldState)
+    public ExamineCommandHandler(IWorldState worldState, RulesContent rules)
     {
-        _lookHandler = new LookHandler(worldState);
+        _lookHandler = new LookHandler(worldState, rules);
     }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,

@@ -6,6 +6,7 @@ namespace EliteMud.Game;
 /// <param name="Id">Content id, e.g. "half-elf".</param>
 /// <param name="TitleName">Name used in titles, with color codes, e.g. "#cHalf-elven#N".</param>
 /// <param name="LegacyNumber">RACE_* number in the legacy code.</param>
+/// <param name="MenuKey">The letter a player types to pick it at character creation; only creation races have one.</param>
 public sealed record RaceDefinition(
     string Id,
     string Name,
@@ -13,6 +14,7 @@ public sealed record RaceDefinition(
     int LegacyNumber,
     RaceAvailability Availability,
     string? AvailabilityNote,
+    string? MenuKey,
     StatBlock StatMax,
     StartingPoints Start,
     IReadOnlyList<ClassDefinition> AllowedClasses,

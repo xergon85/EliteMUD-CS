@@ -7,6 +7,13 @@ namespace EliteMud.Application.Commands.Score;
 
 public sealed class ScoreHandler
 {
+    private readonly RulesContent _rules;
+
+    public ScoreHandler(RulesContent rules)
+    {
+        _rules = rules;
+    }
+
     public CommandResult Handle(PlayerState player, IWorldState worldState)
     {
         var output = new StringBuilder();
@@ -18,7 +25,7 @@ public sealed class ScoreHandler
         // Line 2: Age and race
         // TODO: Calculate actual age from Birth field (not yet implemented)
         var age = 17; // Default starting age - will be replaced with actual calculation
-        output.AppendLine($"You are a {age} year old {player.Race}.");
+        output.AppendLine($"You are a {age} year old {_rules.RaceName(player.Race)}.");
         
         // TODO: Birthday check - requires Birth field
         // if ((age(ch).month == 0) && (age(ch).day == 0))

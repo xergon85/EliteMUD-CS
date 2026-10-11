@@ -435,6 +435,7 @@ is listed by `--validate`.
 | `id` | string | e.g. `paladin` |
 | `name`, `abbreviation` | string | abbreviation keeps legacy colour codes (`#bPa#N`) |
 | `legacyNumber` | int | the legacy CLASS_ number, for importing player files |
+| `menuKey` | string | letter picked at character creation (legacy: `'a'` + class number − 1); unique |
 | `xpCurve` | string | id of an XP curve; must exist |
 | `levelUpProfile` | string | id of a level-up profile; must exist |
 | `primeStats` | string[] | `str`, `int`, `wis`, `dex`, `con`, `cha` |
@@ -447,6 +448,7 @@ is listed by `--validate`.
 | `id`, `name`, `titleName`, `legacyNumber` | | as for classes |
 | `availability` | string | `creation`, `granted`, `remort`, `unused` or `unknown` |
 | `availabilityNote` | string? | how a non-creation race is obtained |
+| `menuKey` | string? | letter picked at character creation (legacy race menu); required and unique for `creation` races, absent for the others |
 | `statMax` | `{str, int, wis, dex, con, cha}` | racial stat maximums |
 | `start` | `{hp, mana, move}` | starting points |
 | `allowedClasses` | string[] | class ids; each must exist |
