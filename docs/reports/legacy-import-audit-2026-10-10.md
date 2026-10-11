@@ -24,7 +24,7 @@ _Date: Oct 10, 2026 · Scope: `zones/*.json` (115 files) compared with the legac
 | 2. Mob records dropped | ✅ Fixed. All 2,658 legacy mob records import; 38 more mobs in the zones. The causes were parser differences, not unknown formats (see below). | `976a25e`, data `be6be66` |
 | 3. Zone-less objects dropped | ✅ Not a bug. All 2,827 objects are imported and loaded from `content/objects/objects.json`; the audit missed that file. The real question, which objects nothing creates, is answered in `unsourced-objects-2026-10-11.md`. | |
 | 4. Broken references | 🔶 Partly. Rooms swallowed by misparsed room programs are recovered (20 rooms), including 7716, 12951, and the bogus exit to 4474912. Not re-measured as a whole yet. | `15d0ff1`, data `f94b678` |
-| 5. Server hides problems | 🔶 Importer now logs unparseable reset lines and unknown room markers. Server side unchanged. | |
+| 5. Server hides problems | 🔶 The importer now logs everything it skips or resolves to `import-log.txt`, with a summary. Server side unchanged. | branch `fix/import-quality` |
 
 Also done: the in-game `import-legacy` command was removed; importing is CLI-only (`bce5a6c`).
 
@@ -38,7 +38,7 @@ Also done: the in-game `import-legacy` command was removed; importing is CLI-onl
 **New findings while fixing:**
 
 - **Hand-fix list:** ~80 import warnings are genuine errors in the legacy files that the original also misreads, e.g. text placed before an exit marker (66.wld #6644), stray `~` lines, the wrapped zone comment `request` (26.zon) and `O o 3034 …` (289.zon). Because of the last one, the clan hall ATM (object 3034, room 28906) no longer loads; the old importer read the typo as `0` by accident.
-- **Duplicate ids:** 65 room ids and 12 mob ids are defined twice in the legacy files. Legacy keeps the later definition; we haven't checked which one we keep. Separately, 378 room ids appear in more than one grouped zone file (this predates the fixes and comes from the grouping step).
+- **Duplicate ids:** ✅ resolved, see "Index files and zone status" below. Most came from files the original didn't load.
 - **Not bugs:** the color-coded door keywords in clan zone 275 are intentional builder work. The mob with id 0 ("Noname Monster") is a real legacy record in `0.mob`.
 
 ---
@@ -149,12 +149,65 @@ Each layer quietly passes broken data on. That's how a shopkeeper can be missing
 
 ---
 
+## Index files and zone status (Oct 11, 2026)
+
+**The original game only loads files listed in each folder's `index` file** (`index_boot()` in db.c). The importer
+used to load every file in the folder, which brought in old copies and zones the original never loaded. It now
+follows the index, with decisions the index can't make in `content/meta/legacy-import.json`.
+
+| Zone | Status | Why |
+|---|---|---|
+| Galaxy 93 (rooms, zone) | Skipped | Old copy; the live Galaxy is zone 94. Its mobs stay in `93.mob`, which is loaded. |
+| Gnome City 15 | Skipped | Old copy; the live Gnome City is zone 17 (`14n 10e` from the Temple). |
+| Dwarven Kingdom `65.*` | Skipped | Old copy of rooms, mobs and objects that loaded files also define (the source of 12 duplicate mobs). |
+| Tynstri catwalk `67.zon` | Skipped | Old reset file; merged into `66.zon`, which loads the same mobs. Our data ran both, spawning 103 kinds of catwalk mobs twice. The catwalk's rooms, mobs and objects (`67.wld/.mob/.obj`) are loaded. |
+| New Thalos 57 | Active | Not in this snapshot's index, but live on the current server (the snapshot is older than live). |
+| Clan Zone 1, Clan Zone 2 | Inactive | Older clan areas (Garden of Valhalla, a Kai Citadel). Not loaded by the original. |
+| Clans 289 | Inactive | Hall of *Dark Legion*, a retired clan. Contains the ATM with the `O o` typo. |
+| Honeymoon Resort 229, Wedding Chapel 6 | Inactive | Likely RP areas switched on when needed. The Wedding Chapel had no zone file; the importer creates an empty one. |
+
+**Other fixes from this:**
+- **Zone ranges:** the grouper now gives each zone the legacy range (previous zone's top + 1 up to its own top). The
+  old `id × 100` rule put 378 rooms in two zone files. Zone files now carry their `RoomRange`; before, every range
+  was 0–0, so `zreset` by room never found its zone and resets never cleared rooms.
+- **Zone 99:** the end-of-file marker in `98.zon` (`#99` then `$~`) was imported as a bogus zone 99 named `$`.
+- **Mob `R` section:** 131 mobs have resistance overrides (`R` + five numbers) that were silently dropped.
+- **Object 6550** (*a deep green key*) only existed in the skipped `65.obj`, so it's gone, as in the original. It opens
+  doors in rooms 6505 and 6513 (Dwarven Empire). Hand-fix candidate.
+
+**Remaining duplicate ids** (all real legacy quirks, resolved the original's way, later definition wins):
+room 28421 twice in `284.wld`; rooms 12 and 1260 redefined in `ocs.wld`; Wedding Chapel rooms 666–671 in both
+`2.wld` and `6.wld` (both inactive).
+
+**Clans in this snapshot** (from `world/cln/*.cln`; for when clans are built). Live clans today: 100 Elite, 107 TRI,
+111 The Inquisitors, 112 Storm Dragons, 113 Minions of Chaos, 114 Dragoons of Phos, 116 Thrill Kill Kult, 117 Kai,
+118 Elysium, 121 Night Tribe, 122 Shamhna.
+
+| Clan file | Name in snapshot | Hall zone | Loaded |
+|---|---|---|---|
+| 100 | Adventurers Guild (live: Elite) | 287 (recall 3001) | yes |
+| 107 | TRI | 276 | yes |
+| 110 | The Midnight Sun | 275 | yes |
+| 111 | Knights who say Ni (live: The Inquisitors) | 277 | yes |
+| 112 | Storm Dragons | 278 | yes |
+| 113 | The Amber Circle (live: Minions of Chaos) | 279 | yes |
+| 114 | Dragoons of Phos | 280 | yes |
+| 116 | Thrill Kill Kult | 281 | yes |
+| 117 | Kai | 282 | yes |
+| 118 | Elysium | 283 | yes |
+| 119 | West Wind | 288 | yes |
+| 121 | Night Tribe | 285 | yes |
+| 122 | Shamhna | 286 | yes |
+| 120 | Artemisians | 284 | no |
+| 115 | Dark Legion | 289 | no |
+| 1 | ELITE (old) | 275 | no |
+
 ## Suggested Order
 
 1. ✅ **Fix the tokenizer** (Finding 1). Small change, biggest effect. Add an importer test using real legacy lines with tabs.
-2. 🔶 **Make the importer loud.** Every skipped record or unparseable field is logged with file, record and reason, and summarized at the end. *(Reset lines and room markers done; mobs, objects and a summary still to do.)*
+2. ✅ **Make the importer loud.** Every skipped record or unparseable field is logged with file, record and reason to `import-log.txt`, and summarized at the end.
 3. ✅ **Fix mob format variants** (Finding 2). ✅ **Zone-less objects** (Finding 3): already loaded from the shared file; see the unsourced objects report.
-4. ⬜ **Re-import and re-run this audit.** What remains should be real legacy breakage.
+4. ✅ **Re-import.** What remains in `import-log.txt` is real legacy breakage: the hand-fix list.
 5. ⬜ **Build the reference checker** for world content, starting in warning mode. Fix or mark what's left, then switch to errors.
 
 ## Method

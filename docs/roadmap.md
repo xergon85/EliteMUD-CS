@@ -88,13 +88,16 @@ The suggested order, aiming at a **playable loop from level 1 upwards**.
   - [ ] Document the zone file format in `docs/content-schema.md`
   - [ ] Decide on one format and retire the other
 
-### 🟡 `LoadObject` resets ignore `MaxExisting`
-- **What happens:** Every reset spawns the object again, so repeated `zreset` piles up copies.
-- **Where:** `ExecuteLoadObject()` in `src/EliteMud.Application/World/WorldState.cs`. `ExecuteLoadMob()` does check the limit.
-- **Note:** In legacy, the "O" command's Arg2 is a spawn chance, not a max count.
+### 🟡 Zone resets clear rooms, which the original doesn't
+- **What happens:** `ResetZone` empties the zone's rooms (mobs and objects) before reloading. Until Oct 2026 every
+  zone's room range was 0–0, so nothing was cleared and repeated `zreset` piled up objects. Ranges are now correct,
+  so `zreset` really clears the zone.
+- **Legacy:** `reset_zone` never clears rooms. It only loads a mob or object when it's missing (`O` checks the room,
+  `M` checks the max count).
+- **Why it matters:** fine for the admin `zreset`, but timed zone resets (not implemented yet) must not wipe items
+  players dropped or mobs they're fighting.
 - **To do:**
-  - [ ] Either add the `MaxExisting` check or document that `LoadObject` uses `SpawnChance` only
-  - [ ] Clarify reset command semantics in `docs/content-schema.md`
+  - [ ] Port legacy reset semantics before adding timed resets (`O` only if the object isn't already in the room)
 
 ### Needs in-game verification
 - [ ] Container persistence edge cases (nested bags, closed/locked state, equipped containers). Unit tests pass, but this hasn't been play-tested thoroughly.
