@@ -1,3 +1,4 @@
+using EliteMud.Application.Formulas;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
@@ -14,7 +15,7 @@ namespace EliteMud.Application.Skills;
 /// 
 /// Metadata and formulas loaded from content/skills/skills.json
 /// </summary>
-public sealed class KickSkill : ISkillHandler
+public sealed class KickSkill : ISkillHandler, IFormulaSource
 {
     private readonly SkillMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
@@ -92,7 +93,8 @@ public sealed class KickSkill : ISkillHandler
 
         return _formulaEvaluator.EvaluateInt(
             _metadata.Mechanics.DamageFormula,
-            new { level = user.Level }
+            new LevelInputs(Level: user.Level),
+            $"{_metadata.Name}.damageFormula"
         );
     }
 
@@ -111,11 +113,20 @@ public sealed class KickSkill : ISkillHandler
 
         return _formulaEvaluator.EvaluateBool(
             _metadata.Mechanics.HitFormula,
-            new
-            {
-                victimAC = victim.ArmorClass,
-                skillPercent = attacker.GetSkill(SkillType.Kick)
-            }
+            new HitInputs(VictimAC: victim.ArmorClass, SkillPercent: attacker.GetSkill(SkillType.Kick)),
+            $"{_metadata.Name}.hitFormula"
         );
     }
+
+    /// <summary>The content formulas this skill uses, for the load-time check.</summary>
+    public IEnumerable<FormulaSlot> FormulaSlots =>
+    [
+        new($"{_metadata.Name}.damageFormula", _metadata.Mechanics?.DamageFormula,
+            typeof(LevelInputs), FormulaResult.Number),
+        new($"{_metadata.Name}.hitFormula", _metadata.Mechanics?.HitFormula,
+            typeof(HitInputs), FormulaResult.Boolean)
+    ];
+
+    /// <summary>Inputs for kick's hit formula: the victim's armor class and the kicker's skill.</summary>
+    public sealed record HitInputs(int VictimAC, int SkillPercent);
 }

@@ -18,7 +18,19 @@ internal static class Program
             cancellationTokenSource.Cancel();
         };
 
-        var (server, tickService) = ServerBootstrap.CreateServer(port);
+        TelnetServer server;
+        GameTickService tickService;
+        try
+        {
+            (server, tickService) = ServerBootstrap.CreateServer(port);
+        }
+        catch (ContentConfigurationException ex)
+        {
+            // Fail fast with a clear message instead of a stack trace
+            Console.Error.WriteLine($"Server not started: {ex.Message}");
+            return 1;
+        }
+
         Console.WriteLine($"EliteMUD Telnet server listening on {port}.");
         
         // Start the game tick service in background

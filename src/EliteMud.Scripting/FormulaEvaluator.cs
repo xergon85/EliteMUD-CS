@@ -127,7 +127,7 @@ public sealed class FormulaEvaluator
         var environment = new Table(_script);
         foreach (var property in context.GetType().GetProperties())
         {
-            environment[property.Name] = property.GetValue(context);
+            environment[ToVariableName(property.Name)] = property.GetValue(context);
         }
 
         // Unknown names fall back to the built-ins in the script's globals, and fail if they aren't there either
@@ -145,6 +145,12 @@ public sealed class FormulaEvaluator
         environment.MetaTable = metatable;
         return environment;
     }
+
+    /// <summary>
+    /// Formula variables are camelCase: an input record's VictimAC is "victimAC" in the formula.
+    /// </summary>
+    public static string ToVariableName(string propertyName) =>
+        propertyName.Length == 0 ? propertyName : char.ToLowerInvariant(propertyName[0]) + propertyName[1..];
 
     private static string Describe(string formula, string? name) =>
         name is null ? $"formula \"{formula}\"" : $"formula {name} (\"{formula}\")";

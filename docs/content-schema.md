@@ -389,6 +389,26 @@ Each skill has an array of 20 class restriction entries (one per class):
 - Legacy skill IDs from EliteMUD constants.c are preserved (Spells: 0-299, Skills: 300-399)
 - Skills without implemented mechanics (e.g., Tumble) have `"NOT_YET_IMPLEMENTED"` placeholders
 
+### Formulas
+- Formulas are Lua and must `return` a value: a number, or true/false for checks (e.g. `hitFormula`).
+- **Variables:** each formula slot gets a fixed set of variables, in camelCase, from its input record
+  (`src/EliteMud.Application/Formulas/FormulaInputs.cs`, or a record nested in the skill/spell class):
+
+  | Inputs | Variables | Used by |
+  |---|---|---|
+  | `LevelInputs` | `level` | damage, healing, duration and bonus formulas |
+  | `SkillCheckInputs` | `skillPercent` | skill hit checks |
+  | `SpellCheckInputs` | `level`, `spellPercent` | spell success checks |
+  | `DefenseCheckInputs` | `damage`, `skillPercent` | dodge/parry activation |
+  | `DefenseEffectInputs` | `damage`, `level` | dodge/parry effect |
+  | `KickSkill.HitInputs` | `victimAC`, `skillPercent` | kick hit check |
+  | `NoInputs` | none | constant formulas, e.g. `return 10` |
+- **Built-ins:** `math` (Lua's), `random(min, max)` (inclusive, like legacy `number()`), and `div(a, b)`: integer
+  division truncating toward zero, like C. Lua's `/` is real division, so use `div` where legacy C divides integers
+  (e.g. kick: `div(victimAC, 10)`; -55 / 10 is -5 in C, -5.5 with `/`).
+- **Checked at startup:** every formula runs once with sample inputs. A syntax error, an unknown variable or the wrong
+  result type stops the server with a message naming the formula; `--validate` reports them too.
+
 
 ## Flag Maps (v1)
 
