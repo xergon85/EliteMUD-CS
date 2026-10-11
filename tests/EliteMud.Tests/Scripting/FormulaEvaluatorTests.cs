@@ -249,6 +249,30 @@ public class FormulaEvaluatorTests
         Assert.Throws<FormulaEvaluationException>(() => _evaluator.EvaluateInt("return div(1, 0)", new { }));
     }
 
+    [Theory]
+    [InlineData("return io.open('x')")]
+    [InlineData("return os.execute('ls')")]
+    [InlineData("return load('return 1')()")]
+    [InlineData("return require('io')")]
+    [InlineData("return string.len('x')")]
+    public void Evaluate_OnlyBuiltInsAreReachable(string formula)
+    {
+        // Formulas get math, random and div, nothing else: no files, OS commands or code loading
+        var exception = Assert.Throws<FormulaEvaluationException>(() => _evaluator.EvaluateInt(formula, new { }));
+
+        Assert.Contains("unknown variable", exception.Message);
+    }
+
+    [Fact]
+    public void Evaluate_MathIsReadOnly()
+    {
+        var exception = Assert.Throws<FormulaEvaluationException>(() =>
+            _evaluator.EvaluateBool("math.floor = function() return 999 end return true", new { }));
+
+        Assert.Contains("math is read-only", exception.Message);
+        Assert.Equal(2, _evaluator.EvaluateInt("return math.floor(2.5)", new { })); // other formulas unaffected
+    }
+
     [Fact]
     public void ValidateFormula_ValidFormula_DoesNotThrow()
     {

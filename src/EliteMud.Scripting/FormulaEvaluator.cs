@@ -14,17 +14,28 @@ namespace EliteMud.Scripting;
 /// - Dodge: "return (random(1, 250) + damage) &lt; skillPercent"
 ///
 /// Use div(a, b) where legacy C divides integers; "/" is real division in Lua.
-/// Each evaluation sees only its context's variables and the built-ins (math, random, div).
+///
+/// Sandbox: each evaluation sees only its context's variables and the built-ins (math, random, div).
+/// No file, OS or code-loading functions exist, and math is read-only, so a formula can't reach outside
+/// the game or change math for other formulas.
 /// </summary>
 public sealed class FormulaEvaluator
 {
+    /// <summary>The names every formula can use besides its own variables.</summary>
+    public static readonly IReadOnlySet<string> BuiltInNames = new HashSet<string>(StringComparer.Ordinal)
+    {
+        "math", "random", "div"
+    };
+
     private readonly Script _script;
+    private readonly Table _builtIns;
     private readonly object _lock = new();
 
     public FormulaEvaluator()
     {
-        _script = new Script();
-        RegisterHelpers();
+        // Only Lua's math library: no io, os, load, require or debug
+        _script = new Script(CoreModules.Math);
+        _builtIns = CreateBuiltIns();
     }
 
     /// <summary>
@@ -130,11 +141,11 @@ public sealed class FormulaEvaluator
             environment[ToVariableName(property.Name)] = property.GetValue(context);
         }
 
-        // Unknown names fall back to the built-ins in the script's globals, and fail if they aren't there either
+        // Names that aren't the formula's own variables can only be the built-ins
         var metatable = new Table(_script);
         metatable["__index"] = (Func<Table, DynValue, DynValue>)((_, key) =>
         {
-            var builtin = _script.Globals.Get(key);
+            var builtin = _builtIns.Get(key);
             if (builtin.IsNil())
             {
                 throw new ScriptRuntimeException($"unknown variable '{key.ToPrintString()}'");
@@ -156,20 +167,23 @@ public sealed class FormulaEvaluator
         name is null ? $"formula \"{formula}\"" : $"formula {name} (\"{formula}\")";
 
     /// <summary>
-    /// Register helper functions available to all formulas.
+    /// The built-ins every formula can use: math (read-only), random and div.
     /// </summary>
-    private void RegisterHelpers()
+    private Table CreateBuiltIns()
     {
-        // Register random(min, max) - inclusive range
+        var builtIns = new Table(_script);
+        builtIns["math"] = ReadOnly(_script.Globals.Get("math").Table, "math");
+
+        // random(min, max) - inclusive range
         // Legacy EliteMUD: number(from, to) returns from..to inclusive
-        _script.Globals["random"] = (Func<int, int, int>)((min, max) =>
+        builtIns["random"] = (Func<int, int, int>)((min, max) =>
         {
             return Random.Shared.Next(min, max + 1); // +1 because Random.Next is exclusive on upper bound
         });
 
         // div(a, b): integer division like C, truncating toward zero (-55 / 10 = -5).
         // Lua's "/" is real division (-5.5), so formulas ported from legacy C use div where C divides.
-        _script.Globals["div"] = (Func<double, double, double>)((a, b) =>
+        builtIns["div"] = (Func<double, double, double>)((a, b) =>
         {
             if (b == 0)
             {
@@ -179,22 +193,21 @@ public sealed class FormulaEvaluator
             return Math.Truncate(a / b);
         });
 
-        // Lua already has math.min, math.max, math.floor, math.ceil, math.abs, etc.
-        // No need to register those - they're built into MoonSharp
-    }
-}
-
-/// <summary>
-/// Exception thrown when formula evaluation fails.
-/// </summary>
-public sealed class FormulaEvaluationException : Exception
-{
-    public FormulaEvaluationException(string message) : base(message)
-    {
+        return builtIns;
     }
 
-    public FormulaEvaluationException(string message, Exception innerException) 
-        : base(message, innerException)
+    /// <summary>
+    /// An empty table that reads through to <paramref name="source"/> and refuses writes, so a formula can't
+    /// replace e.g. math.floor for every other formula.
+    /// </summary>
+    private Table ReadOnly(Table source, string name)
     {
+        var proxy = new Table(_script);
+        var metatable = new Table(_script);
+        metatable["__index"] = source;
+        metatable["__newindex"] = (Action<Table, DynValue, DynValue>)((_, key, _) =>
+            throw new ScriptRuntimeException($"{name} is read-only (tried to set {name}.{key.ToPrintString()})"));
+        proxy.MetaTable = metatable;
+        return proxy;
     }
 }
