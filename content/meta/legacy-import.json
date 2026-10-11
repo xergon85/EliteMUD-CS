@@ -1,0 +1,24 @@
+{
+  // Decisions for the legacy importer (src/EliteMud.Cli) that the legacy index files can't make.
+  // See docs/reports/legacy-import-audit-2026-10-10.md.
+
+  // Old copies of zones: not in the original's index files, and replaced by a newer version that is.
+  "skip": [
+    { "file": "wld/93.wld", "reason": "old copy of Galaxy; the live version is zone 94 (94.wld)" },
+    { "file": "zon/93.zon", "reason": "old copy of Galaxy; the live version is zone 94 (94.zon). Galaxy's mobs stay in 93.mob, which is loaded" },
+    { "file": "wld/15.wld", "reason": "old copy of The Gnome City; the live version is zone 17" },
+    { "file": "zon/15.zon", "reason": "old copy of The Gnome City; the live version is zone 17" },
+    { "file": "mob/15.mob", "reason": "older version of The Gnome City's mobs (15 of 25 also in 17.mob); only the skipped 15.zon loads them" },
+    { "file": "wld/65.wld", "reason": "old copy of Dwarven Kingdom rooms that the loaded files also define" },
+    { "file": "zon/65.zon", "reason": "old copy of the Dwarven Kingdom zone" },
+    { "file": "mob/65.mob", "reason": "old copy of Dwarven Kingdom mobs that the loaded files also define" },
+    { "file": "obj/65.obj", "reason": "old copy of Dwarven Kingdom objects that the loaded files also define" },
+    { "file": "zon/67.zon", "reason": "old reset file for the Tynstri catwalk; merged into 66.zon (Village of Tynstri), which loads the same mobs" },
+    { "file": "wld/default.wld", "reason": "template room #0, already defined in 0.wld" }
+  ],
+
+  // Zones missing from the snapshot's index files that are live on the current server.
+  "activeZones": [
+    57  // New Thalos
+  ]
+}

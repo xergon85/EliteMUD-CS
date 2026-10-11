@@ -6,11 +6,15 @@ namespace EliteMud.Legacy.Import;
 
 internal static class LegacyObjectImporter
 {
-    public static List<ObjectContent> Load(string objectsPath, CancellationToken cancellationToken)
+    public static List<ObjectContent> Load(
+        IReadOnlyList<LegacySourceFile> files,
+        LegacyImportLog log,
+        CancellationToken cancellationToken)
     {
-        var objects = new List<ObjectContent>();
-        foreach (var file in Directory.EnumerateFiles(objectsPath, "*.obj"))
+        var objects = new LegacyRecordSet<ObjectContent>("object", log);
+        foreach (var source in files)
         {
+            var file = source.Path;
             using var reader = LegacyImportUtilities.CreateReader(file);
             var parser = new LegacyImportParser(reader);
             var iterations = 0;
@@ -28,13 +32,15 @@ internal static class LegacyObjectImporter
                     break;
                 }
 
-                if (token == "$")
+                // Legacy end-of-file marker; some files write it as "$~"
+                if (token.StartsWith('$'))
                 {
                     break;
                 }
 
                 if (!token.StartsWith('#'))
                 {
+                    log.Warn("Stray text", source.Name, $"ignored '{token}' between object records");
                     continue;
                 }
 
@@ -71,12 +77,12 @@ internal static class LegacyObjectImporter
                 var bitvectors = new List<string>();
                 string? specialProc = null;
 
-                ParseObjectExtensions(parser, extras, affects, bitvectors, ref specialProc);
+                ParseObjectExtensions(parser, extras, affects, bitvectors, ref specialProc, log, $"{source.Name} #{vnum}");
 
                 var typeName = LegacyImportLookup.ItemTypeFromIndex(type);
                 var wearFlagsList = LegacyImportLookup.ItemWearFlags(wearFlags);
 
-                objects.Add(new ObjectContent
+                objects.Add(vnum, new ObjectContent
                 {
                     Id = vnum,
                     Name = name,
@@ -97,11 +103,11 @@ internal static class LegacyObjectImporter
                     Affects = affects,
                     Bitvectors = bitvectors,
                     SpecialProc = specialProc
-                });
+                }, source);
             }
         }
 
-        return objects;
+        return objects.ToList();
     }
 
     private static ObjectDetails? BuildObjectDetails(string typeName, IReadOnlyList<int> values)
@@ -201,7 +207,9 @@ internal static class LegacyObjectImporter
         List<ExtraDescriptionContent> extras,
         List<ObjectAffectContent> affects,
         List<string> bitvectors,
-        ref string? specialProc)
+        ref string? specialProc,
+        LegacyImportLog log,
+        string source)
     {
         while (true)
         {
@@ -211,7 +219,7 @@ internal static class LegacyObjectImporter
                 break;
             }
 
-            if (token.StartsWith('#') || token == "$")
+            if (token.StartsWith('#') || token.StartsWith('$'))
             {
                 parser.PushToken(token);
                 break;
@@ -251,7 +259,11 @@ internal static class LegacyObjectImporter
                         specialProc = specialProc[1..^1];
                     }
                 }
+
+                continue;
             }
+
+            log.Warn("Object fields", source, $"ignored unexpected token '{token}'");
         }
     }
 }

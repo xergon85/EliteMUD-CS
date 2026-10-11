@@ -24,7 +24,8 @@ internal sealed record RoomContent(
     IReadOnlyList<ExtraDescriptionContent> ExtraDescriptions,
     string? SpecialProc,
     IReadOnlyList<RoomProgramContent> RoomPrograms,
-    bool CrashRoom);
+    bool CrashRoom,
+    string SourceFile);
 
 internal sealed record RoomProgramContent(
     string Type,
@@ -57,7 +58,9 @@ internal sealed record ZoneContent(
     int TopRoomId,
     int Lifespan,
     string ResetMode,
-    IReadOnlyList<ZoneResetCommandContent> ResetCommands);
+    IReadOnlyList<ZoneResetCommandContent> ResetCommands,
+    bool Active,
+    string SourceFile);
 
 internal sealed record ZoneResetCommandContent(
     string Command,

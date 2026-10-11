@@ -139,8 +139,10 @@ public class LegacyRoomImporterTests
         Directory.CreateDirectory(directory);
         try
         {
-            File.WriteAllText(Path.Combine(directory, "test.wld"), wld);
-            return LegacyRoomImporter.Load(directory, CancellationToken.None);
+            var path = Path.Combine(directory, "test.wld");
+            File.WriteAllText(path, wld);
+            var file = new LegacySourceFile(path, "wld/test.wld", IsIndexed: true);
+            return LegacyRoomImporter.Load(new[] { file }, new LegacyImportLog(), CancellationToken.None);
         }
         finally
         {

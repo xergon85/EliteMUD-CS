@@ -119,7 +119,7 @@ internal sealed class LegacyImportParser
             return false;
         }
 
-        if (token.StartsWith('#') || token == "$")
+        if (token.StartsWith('#') || token.StartsWith('$'))
         {
             PushToken(token);
             value = 0;

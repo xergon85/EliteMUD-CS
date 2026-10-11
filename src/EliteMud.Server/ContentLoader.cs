@@ -530,6 +530,13 @@ internal static class ContentLoader
                     continue;
                 }
 
+                // Zones the original game didn't load are kept but inactive (see content/meta/legacy-import.json)
+                if (zoneData.Zone?.Active == false)
+                {
+                    Console.WriteLine($"  Skipped (inactive): {Path.GetFileName(zoneFile)}");
+                    continue;
+                }
+
                 // Load rooms
                 if (zoneData.Rooms is not null)
                 {
@@ -1260,6 +1267,9 @@ internal static class ContentLoader
         public RoomRangeContent? RoomRange { get; set; }
         public string? ResetMode { get; set; }
         public List<ZoneResetContent>? ResetCommands { get; set; }
+
+        /// <summary>False for zones kept from legacy files the original didn't load. Missing means active.</summary>
+        public bool? Active { get; set; }
     }
 
     private sealed class RoomRangeContent

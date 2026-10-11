@@ -5,11 +5,15 @@ namespace EliteMud.Legacy.Import;
 
 internal static class LegacyMobImporter
 {
-    public static List<MobContent> Load(string mobsPath, CancellationToken cancellationToken)
+    public static List<MobContent> Load(
+        IReadOnlyList<LegacySourceFile> files,
+        LegacyImportLog log,
+        CancellationToken cancellationToken)
     {
-        var mobs = new List<MobContent>();
-        foreach (var file in Directory.EnumerateFiles(mobsPath, "*.mob"))
+        var mobs = new LegacyRecordSet<MobContent>("mob", log);
+        foreach (var source in files)
         {
+            var file = source.Path;
             using var reader = LegacyImportUtilities.CreateReader(file);
             var parser = new LegacyImportParser(reader);
             var iterations = 0;
@@ -27,13 +31,15 @@ internal static class LegacyMobImporter
                     break;
                 }
 
-                if (token == "$")
+                // Legacy end-of-file marker; some files write it as "$~"
+                if (token.StartsWith('$'))
                 {
                     break;
                 }
 
                 if (!token.StartsWith('#'))
                 {
+                    log.Warn("Stray text", source.Name, $"ignored '{token}' between mob records");
                     continue;
                 }
 
@@ -85,12 +91,12 @@ internal static class LegacyMobImporter
                 };
 
                 ParseMobBody(parser, mob, format);
-                ParseMobExtensions(parser, mob);
-                mobs.Add(mob);
+                ParseMobExtensions(parser, mob, log, $"{source.Name} #{vnum}");
+                mobs.Add(vnum, mob, source);
             }
         }
 
-        return mobs;
+        return mobs.ToList();
     }
 
     private static void ParseMobBody(LegacyImportParser parser, MobContent mob, string format)
@@ -304,7 +310,7 @@ internal static class LegacyMobImporter
         mob.Resistances = resistances;
     }
 
-    private static void ParseMobExtensions(LegacyImportParser parser, MobContent mob)
+    private static void ParseMobExtensions(LegacyImportParser parser, MobContent mob, LegacyImportLog log, string source)
     {
         while (true)
         {
@@ -314,7 +320,7 @@ internal static class LegacyMobImporter
                 break;
             }
 
-            if (token.StartsWith('#') || token == "$")
+            if (token.StartsWith('#') || token.StartsWith('$'))
             {
                 parser.PushToken(token);
                 break;
@@ -343,10 +349,43 @@ internal static class LegacyMobImporter
                 continue;
             }
 
+            if (token == "R")
+            {
+                ReadResistanceOverrides(parser, mob);
+                continue;
+            }
+
             if (token == ">")
             {
                 mob.Programs.Add(parser.ReadProgramBlock());
+                continue;
             }
+
+            log.Warn("Mob fields", source, $"ignored unexpected token '{token}'");
         }
+    }
+
+    /// <summary>
+    /// The 'R' section: five resistance values; -1 keeps the default, others are capped at 100.
+    /// Legacy: load_mobiles() in db.c ("New Mob Resistances -Helm"). Stored like the five
+    /// resistances of old-format mobs, as "Resist_{slot}:{value}".
+    /// </summary>
+    private static void ReadResistanceOverrides(LegacyImportParser parser, MobContent mob)
+    {
+        var resistances = mob.Resistances.ToList();
+        for (var slot = 0; slot < 5; slot++)
+        {
+            var value = parser.ReadNumber();
+            if (value < 0)
+            {
+                continue;
+            }
+
+            var label = LegacyImportLookup.ResistanceLabel(slot);
+            resistances.RemoveAll(entry => entry.StartsWith($"{label}:", StringComparison.Ordinal));
+            resistances.Add($"{label}:{Math.Min(value, 100)}");
+        }
+
+        mob.Resistances = resistances;
     }
 }

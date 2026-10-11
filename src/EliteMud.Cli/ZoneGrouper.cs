@@ -35,23 +35,18 @@ internal static class ZoneGrouper
 
         Directory.CreateDirectory(outputPath);
 
+        var activeRanges = ComputeActiveRanges(zones);
+        var roomsByZone = AssignRoomsToZones(zones, rooms, activeRanges);
+
         foreach (var zone in zones)
         {
             var zoneId = zone.GetProperty("Id").GetInt32();
             var zoneName = zone.GetProperty("Name").GetString() ?? $"Zone_{zoneId}";
-            var topRoomId = zone.GetProperty("TopRoomId").GetInt32();
+            var active = !zone.TryGetProperty("Active", out var activeProp) || activeProp.GetBoolean();
 
-            var minRoomId = (zoneId * 100);
-            var maxRoomId = topRoomId;
+            Console.WriteLine($"Processing Zone {zoneId}: {zoneName}{(active ? "" : " (inactive)")}");
 
-            Console.WriteLine($"Processing Zone {zoneId}: {zoneName} (rooms {minRoomId}-{maxRoomId})");
-
-            var zoneRooms = rooms.Where(r => 
-            {
-                var roomId = r.GetProperty("Id").GetInt32();
-                return roomId >= minRoomId && roomId <= maxRoomId;
-            }).ToList();
-
+            var zoneRooms = roomsByZone.TryGetValue(zoneId, out var assigned) ? assigned : new List<JsonElement>();
             var roomIds = zoneRooms.Select(r => r.GetProperty("Id").GetInt32()).ToHashSet();
 
             var zoneMobs = GetMobsForZone(mobs, zone, roomIds);
@@ -59,8 +54,8 @@ internal static class ZoneGrouper
 
             var zoneData = new
             {
-                Zone = JsonSerializer.Deserialize<JsonElement>(zone.GetRawText()),
-                Rooms = zoneRooms.Select(r => JsonSerializer.Deserialize<JsonElement>(r.GetRawText())).ToList(),
+                Zone = WithRoomRange(zone, activeRanges, roomIds),
+                Rooms = zoneRooms.Select(WithoutSourceFile).ToList(),
                 Mobs = zoneMobs.Select(m => JsonSerializer.Deserialize<JsonElement>(m.GetRawText())).ToList(),
                 Objects = zoneObjects.Select(o => JsonSerializer.Deserialize<JsonElement>(o.GetRawText())).ToList()
             };
@@ -76,6 +71,125 @@ internal static class ZoneGrouper
 
         Console.WriteLine();
         Console.WriteLine($"Created {zones.Count} zone files in {outputPath}");
+    }
+
+    /// <summary>
+    /// Decide which zone each room belongs to.
+    /// Rooms from a file the original didn't load go to the inactive zone with the same number
+    /// (1.wld -> zone 1). All other rooms use the legacy rule: a zone owns the rooms after the
+    /// previous zone's top room, up to its own top room (zone_table in db.c).
+    /// </summary>
+    private static Dictionary<int, List<JsonElement>> AssignRoomsToZones(
+        List<JsonElement> zones,
+        List<JsonElement> rooms,
+        List<(int ZoneId, int Min, int Max)> activeRanges)
+    {
+        var inactiveZoneByFileNumber = zones
+            .Where(zone => zone.TryGetProperty("Active", out var active) && !active.GetBoolean())
+            .Select(zone => (Zone: zone, FileNumber: FileNumber(zone)))
+            .Where(entry => entry.FileNumber is not null)
+            .ToDictionary(entry => entry.FileNumber!.Value, entry => entry.Zone.GetProperty("Id").GetInt32());
+
+        var result = new Dictionary<int, List<JsonElement>>();
+        foreach (var room in rooms)
+        {
+            var roomId = room.GetProperty("Id").GetInt32();
+            var zoneId = FileNumber(room) is { } fileNumber && inactiveZoneByFileNumber.TryGetValue(fileNumber, out var inactiveZone)
+                ? inactiveZone
+                : FindZoneByRange(activeRanges, roomId);
+
+            if (zoneId is null)
+            {
+                Console.WriteLine($"  Warning: room #{roomId} is outside every zone's range; not grouped");
+                continue;
+            }
+
+            if (!result.TryGetValue(zoneId.Value, out var list))
+            {
+                list = new List<JsonElement>();
+                result[zoneId.Value] = list;
+            }
+
+            list.Add(room);
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// Legacy zone ranges: each active zone owns the rooms after the previous zone's top room,
+    /// up to its own top room.
+    /// </summary>
+    private static List<(int ZoneId, int Min, int Max)> ComputeActiveRanges(List<JsonElement> zones)
+    {
+        var ranges = new List<(int ZoneId, int Min, int Max)>();
+        var previousTop = -1;
+        foreach (var zone in zones
+                     .Where(zone => !zone.TryGetProperty("Active", out var active) || active.GetBoolean())
+                     .OrderBy(zone => zone.GetProperty("TopRoomId").GetInt32()))
+        {
+            var top = zone.GetProperty("TopRoomId").GetInt32();
+            ranges.Add((zone.GetProperty("Id").GetInt32(), previousTop + 1, top));
+            previousTop = top;
+        }
+
+        return ranges;
+    }
+
+    /// <summary>
+    /// Copy the zone with its RoomRange filled in: the legacy range for active zones,
+    /// otherwise the span of the rooms assigned to it. The server uses it to find a room's zone.
+    /// </summary>
+    private static JsonElement WithRoomRange(
+        JsonElement zone,
+        List<(int ZoneId, int Min, int Max)> activeRanges,
+        HashSet<int> roomIds)
+    {
+        var zoneId = zone.GetProperty("Id").GetInt32();
+        var range = activeRanges.FirstOrDefault(r => r.ZoneId == zoneId);
+        var (min, max) = activeRanges.Any(r => r.ZoneId == zoneId)
+            ? (range.Min, range.Max)
+            : roomIds.Count > 0 ? (roomIds.Min(), roomIds.Max()) : (0, -1);
+
+        var copy = new Dictionary<string, object>();
+        foreach (var property in zone.EnumerateObject().Where(property => property.Name != "RoomRange"))
+        {
+            copy[property.Name] = property.Value.Clone();
+        }
+
+        copy["RoomRange"] = new { Min = min, Max = max };
+        return JsonSerializer.SerializeToElement(copy);
+    }
+
+    private static int? FindZoneByRange(List<(int ZoneId, int Min, int Max)> ranges, int roomId)
+    {
+        foreach (var (zoneId, min, max) in ranges)
+        {
+            if (roomId >= min && roomId <= max)
+            {
+                return zoneId;
+            }
+        }
+
+        return null;
+    }
+
+    /// <summary>The number of the legacy file a record came from ("wld/57.wld" -> 57).</summary>
+    private static int? FileNumber(JsonElement element) =>
+        element.TryGetProperty("SourceFile", out var source)
+        && int.TryParse(Path.GetFileNameWithoutExtension(source.GetString()), out var number)
+            ? number
+            : null;
+
+    private static JsonElement WithoutSourceFile(JsonElement room)
+    {
+        var copy = new Dictionary<string, JsonElement>();
+        foreach (var property in room.EnumerateObject().Where(property => property.Name != "SourceFile"))
+        {
+            copy[property.Name] = property.Value.Clone();
+        }
+
+        return JsonSerializer.SerializeToElement(copy);
     }
 
     private static List<JsonElement> GetMobsForZone(List<JsonElement> mobs, JsonElement zone, HashSet<int> roomIds)

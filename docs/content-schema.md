@@ -214,6 +214,26 @@ content/
 - Optional `expanded` data can be added later for readability while keeping raw tuples.
 - `ifFlag: 1` means "only run if the previous reset command succeeded" (legacy `last_cmd` in `reset_zone`).
 
+### Grouped zone files (`zones/zone_NNN_Name.json`)
+The server loads these. Each has a `Zone` block plus the zone's `Rooms`, `Mobs` and `Objects`.
+Extra fields in the `Zone` block:
+- `Active` (bool, default `true`): `false` keeps the zone's data but the server skips it. Zones the original
+  game didn't load are imported as inactive (Clan Zone 1 and 2, the Dark Legion hall, Honeymoon Resort, Wedding
+  Chapel). Set it to `true` to switch a zone on.
+- `RoomRange` (`Min`, `Max`): the rooms the zone owns. Used to find a room's zone (e.g. `zreset` without a number)
+  and to clear the zone's rooms on reset. Active zones use the legacy rule: from the previous zone's top room + 1
+  up to their own `TopRoomId`.
+- `SourceFile`: the legacy file the zone was imported from, e.g. `zon/66.zon`.
+
+### Legacy import decisions (`content/meta/legacy-import.json`)
+The importer (`src/EliteMud.Cli`) follows the legacy `index` files, which list the files the original game loaded.
+This config covers what the index can't decide:
+- `skip`: files not to import at all, each with a reason (old copies of zones, e.g. Galaxy 93 and Gnome City 15).
+- `activeZones`: zones missing from the snapshot's index that are live anyway (New Thalos, 57).
+
+Each import writes `import-log.txt` next to its output, listing every skipped file, duplicate id and malformed
+record, and prints a summary.
+
 ### Reset commands
 | Command | Args (`arg1`, `arg2`, `arg3`) | Meaning | Server support |
 |---|---|---|---|

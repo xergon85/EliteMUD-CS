@@ -61,9 +61,24 @@ internal static class Program
             Console.WriteLine($"Output path: {outputPath}");
             Console.WriteLine();
 
-            var importer = new LegacyContentImporter();
-            await importer.ImportAsync(legacyPath, outputPath, CancellationToken.None, options);
+            if (options.Config is not null)
+            {
+                Console.WriteLine($"Config: {options.Config.Skip.Count} skipped files, active zones [{string.Join(", ", options.Config.ActiveZones)}]");
+            }
 
+            Console.WriteLine();
+
+            var importer = new LegacyContentImporter();
+            var log = await importer.ImportAsync(legacyPath, outputPath, CancellationToken.None, options);
+
+            Console.WriteLine();
+            Console.WriteLine("Import summary:");
+            foreach (var line in log.Summarize())
+            {
+                Console.WriteLine($"  {line}");
+            }
+
+            Console.WriteLine($"Details: {Path.Combine(outputPath, "import-log.txt")}");
             Console.WriteLine();
             Console.WriteLine("Import completed successfully!");
             return 0;
@@ -115,17 +130,24 @@ internal static class Program
         }
     }
 
+    private const string DefaultConfigPath = "content/meta/legacy-import.json";
+
     private static LegacyImportOptions ParseOptions(string[] args)
     {
         var includeRooms = true;
         var includeZones = true;
         var includeMobs = true;
         var includeObjects = true;
+        string? configPath = null;
 
-        foreach (var arg in args)
+        for (var i = 0; i < args.Length; i++)
         {
+            var arg = args[i];
             switch (arg.ToLowerInvariant())
             {
+                case "--config" when i + 1 < args.Length:
+                    configPath = args[++i];
+                    break;
                 case "--no-rooms":
                     includeRooms = false;
                     break;
@@ -144,7 +166,11 @@ internal static class Program
             }
         }
 
-        return new LegacyImportOptions(includeRooms, includeZones, includeMobs, includeObjects);
+        // Default: the import decisions checked into the repository
+        configPath ??= File.Exists(DefaultConfigPath) ? DefaultConfigPath : null;
+        var config = configPath is null ? null : LegacyImportConfig.Load(configPath);
+
+        return new LegacyImportOptions(includeRooms, includeZones, includeMobs, includeObjects, config);
     }
 
     private static void ShowUsage()
@@ -170,6 +196,7 @@ internal static class Program
         Console.WriteLine("  --no-zones      Skip importing zones");
         Console.WriteLine("  --no-mobs       Skip importing mobs");
         Console.WriteLine("  --no-objects    Skip importing objects");
+        Console.WriteLine($"  --config <file> Import decisions (skipped files, active zones). Default: {DefaultConfigPath}");
         Console.WriteLine();
         Console.WriteLine("Examples:");
         Console.WriteLine("  elitemud-import import ../EliteMUD ./content");

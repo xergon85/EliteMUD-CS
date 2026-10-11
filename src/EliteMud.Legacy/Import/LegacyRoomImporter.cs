@@ -2,11 +2,15 @@ namespace EliteMud.Legacy.Import;
 
 internal static class LegacyRoomImporter
 {
-    public static List<RoomContent> Load(string roomsPath, CancellationToken cancellationToken)
+    public static List<RoomContent> Load(
+        IReadOnlyList<LegacySourceFile> files,
+        LegacyImportLog log,
+        CancellationToken cancellationToken)
     {
-        var rooms = new List<RoomContent>();
-        foreach (var file in Directory.EnumerateFiles(roomsPath, "*.wld"))
+        var rooms = new LegacyRecordSet<RoomContent>("room", log);
+        foreach (var source in files)
         {
+            var file = source.Path;
             using var reader = LegacyImportUtilities.CreateReader(file);
             var parser = new LegacyImportParser(reader);
             var iterations = 0;
@@ -24,13 +28,15 @@ internal static class LegacyRoomImporter
                     break;
                 }
 
-                if (token == "$")
+                // Legacy end-of-file marker; some files write it as "$~"
+                if (token.StartsWith('$'))
                 {
                     break;
                 }
 
                 if (!token.StartsWith('#'))
                 {
+                    log.Warn("Stray text", source.Name, $"ignored '{token}' between room records");
                     continue;
                 }
 
@@ -95,7 +101,7 @@ internal static class LegacyRoomImporter
                             specialProc = ParseSpecialName(marker);
                             if (specialProc is null)
                             {
-                                Console.WriteLine($"  Warning: {Path.GetFileName(file)} room #{vnum}: unreadable special '{marker}'");
+                                log.Warn("Room markers", source.Name, $"room #{vnum}: unreadable special '{marker}'");
                             }
 
                             continue;
@@ -110,14 +116,14 @@ internal static class LegacyRoomImporter
                             continue;
 
                         default:
-                            Console.WriteLine($"  Warning: {Path.GetFileName(file)} room #{vnum}: ignored unknown marker '{marker}'");
+                            log.Warn("Room markers", source.Name, $"room #{vnum}: ignored unknown marker '{marker}'");
                             continue;
                     }
 
                     break;
                 }
 
-                rooms.Add(new RoomContent(
+                rooms.Add(vnum, new RoomContent(
                     vnum,
                     name,
                     description,
@@ -128,11 +134,12 @@ internal static class LegacyRoomImporter
                     extras,
                     specialProc,
                     roomPrograms,
-                    crashRoom));
+                    crashRoom,
+                    source.Name), source);
             }
         }
 
-        return rooms;
+        return rooms.ToList();
     }
 
     private const int ExitIsDoor = 1 << 0;

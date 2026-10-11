@@ -2,11 +2,16 @@ namespace EliteMud.Legacy.Import;
 
 internal static class LegacyZoneImporter
 {
-    public static List<ZoneContent> Load(string zonesPath, CancellationToken cancellationToken)
+    public static List<ZoneContent> Load(
+        IReadOnlyList<LegacySourceFile> files,
+        LegacyImportConfig config,
+        LegacyImportLog log,
+        CancellationToken cancellationToken)
     {
-        var zones = new List<ZoneContent>();
-        foreach (var file in Directory.EnumerateFiles(zonesPath, "*.zon"))
+        var zones = new LegacyRecordSet<ZoneContent>("zone", log);
+        foreach (var source in files)
         {
+            var file = source.Path;
             using var reader = LegacyImportUtilities.CreateReader(file);
             var parser = new LegacyImportParser(reader);
             var iterations = 0;
@@ -36,6 +41,12 @@ internal static class LegacyZoneImporter
                 }
 
                 var name = parser.ReadTildeString();
+                if (name.StartsWith('$'))
+                {
+                    // Legacy end-of-file marker: a zone number followed by "$~" (load_zones() in db.c)
+                    break;
+                }
+
                 var topRoom = parser.ReadNumber();
                 var lifespan = parser.ReadNumber();
                 var resetMode = parser.ReadNumber();
@@ -69,17 +80,27 @@ internal static class LegacyZoneImporter
 
                     if (!LegacyZoneResetParser.TryParse(line, out var command))
                     {
-                        Console.WriteLine($"  Warning: {Path.GetFileName(file)} zone #{zoneId}: skipped unparseable reset line: {line.Trim()}");
+                        log.Warn("Zone resets", source.Name, $"zone #{zoneId}: skipped unparseable reset line: {line.Trim()}");
                         continue;
                     }
 
                     commands.Add(command);
                 }
 
-                zones.Add(new ZoneContent(zoneId, name, topRoom, lifespan, LegacyImportLookup.ResetMode(resetMode), commands));
+                // Zones the original didn't load stay inactive unless the config says they're live
+                var active = source.IsIndexed || config.ActiveZones.Contains(zoneId);
+                zones.Add(zoneId, new ZoneContent(
+                    zoneId,
+                    name,
+                    topRoom,
+                    lifespan,
+                    LegacyImportLookup.ResetMode(resetMode),
+                    commands,
+                    active,
+                    source.Name), source);
             }
         }
 
-        return zones;
+        return zones.ToList();
     }
 }
