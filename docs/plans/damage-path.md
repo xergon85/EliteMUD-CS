@@ -1,7 +1,7 @@
 # One damage path for all combat (#42)
 
 Handover and plan, written Oct 12, 2026 at the end of the levelling session. Start here in a new session, then
-read card #42 and #40 on GitHub. Nothing is implemented yet; the branch `feat/damage-path` holds only this file.
+read card #42 and #40 on GitHub. See Progress below for what is done.
 
 ## How we work (short version)
 
@@ -94,11 +94,20 @@ Each step is its own commit, ideally its own PR if it gets large.
 - **Fighting ids:** `FightingConnectionId` is a connection id for players and `-InstanceId` for mobs.
 - **`ApplyDamage(PlayerState, …)`** includes dodge/parry and position; mobs only get `HitPoints -=`.
 
-## Questions to ask the user at the start
+## Decisions (Oct 12, 2026)
 
-1. Should mobs get dodge/parry like players? Legacy checks the victim's skill, and mobs can have skills.
-2. One alignment message format for every source, e.g. the tick's suffix vs the skills' own line?
-3. Keep the non-legacy "You have slain X!" line, or use legacy's "X is dead! R.I.P." only?
+1. **Dodge/parry: melee only, as in legacy.** Legacy has them in `hit()` (fight.c:1523–1540), not `damage()`, and
+   checks the victim's skill, so mobs with the skill dodge too. Skills and spells can't be dodged. They stay in
+   `ApplyDamage` for player victims until the tick switches (step 6), then move to the melee hit.
+2. **No alignment message**, as in legacy (`change_alignment` is silent). Drop "You feel more virtuous/sinister"
+   and "Your soul darkens from the murder." Rounding of the shift is card #47.
+3. **Legacy kill lines only:** room "$n is dead!  R.I.P.", victim "You are dead!  Sorry...". Drop "You have slain X!".
+
+Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob never rolls to hit).
+
+## Progress
+
+- PR 1: steps 0–2 (characterization tests, `CombatDamage` with mob death, kick/bash/backstab).
 
 ## Other open cards (for orientation)
 
