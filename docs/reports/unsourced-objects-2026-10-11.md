@@ -37,11 +37,11 @@ explained 93 of the 462. **369 remain without any source.**
 - **Quest file loader:** none exists either.
 - **Saved room contents** (`lib/roomobjs`): only one object, 99001. The files are plain text, not binary.
 
-**Importer and server bugs found along the way** (to fix on `fix/legacy-import`):
-1. **`L`/`A` portal resets** aren't supported by the server (22 portals missing).
-2. **`R` reset is mis-mapped:** it means "randomize a room's exits" in legacy, but we treat it as "remove object" (89 commands, mostly mazes).
-3. **Room 28703 is missing:** "The Guild Donation Room" is lost to a glued terminator (`0 -1 28701S` in 287.wld).
-4. **Door type 2 is mis-imported:** it means "pick-proof door" in legacy, but we import it as raw flag bits, so ~180 exits are "Closed" without being doors.
+**Importer and server bugs found along the way** (all fixed on `fix/legacy-import`):
+1. ✅ **`L`/`A` portal resets** weren't supported by the server (22 portals missing). Fixed in `a399f1e`, which also adds `enter` and `activate`.
+2. ✅ **`R` reset was mis-mapped:** it means "shuffle a room's exits" in legacy, but was treated as "remove object" (89 commands, mostly mazes). Fixed in `2e1cf32`.
+3. ✅ **Room 28703 was missing:** "The Guild Donation Room" was lost to a glued terminator (`0 -1 28701S` in 287.wld). Fixed in `1228c92`.
+4. ✅ **Door type 2 was mis-imported:** it means "pick-proof door" in legacy, but was imported as raw flag bits (174 exits). Fixed in `1228c92`.
 
 ## Summary
 
