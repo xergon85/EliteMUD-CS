@@ -63,15 +63,22 @@ internal sealed class TelnetSession
     public async ValueTask SendLineAsync(string message, CancellationToken cancellationToken)
     {
         // Translate color codes (#X format) to ANSI escape sequences
-        var translatedMessage = ColorTranslator.TranslateColors(message);
+        var translatedMessage = ColorTranslator.TranslateColors(ToTelnetLineEndings(message));
         var payload = _encoding.GetBytes(translatedMessage + "\r\n");
         await _stream.WriteAsync(payload, cancellationToken);
     }
 
+    /// <summary>
+    /// Telnet needs "\r\n" for a new line; a bare "\n" (multi-line descriptions, StringBuilder.AppendLine on Linux)
+    /// moves down without returning to the start of the line on some clients.
+    /// </summary>
+    internal static string ToTelnetLineEndings(string message) =>
+        message.Contains('\n') ? message.Replace("\r\n", "\n").Replace("\n", "\r\n") : message;
+
     public async ValueTask SendAsync(string message, CancellationToken cancellationToken)
     {
         // Translate color codes (#X format) to ANSI escape sequences
-        var translatedMessage = ColorTranslator.TranslateColors(message);
+        var translatedMessage = ColorTranslator.TranslateColors(ToTelnetLineEndings(message));
         var payload = _encoding.GetBytes(translatedMessage);
         await _stream.WriteAsync(payload, cancellationToken);
     }

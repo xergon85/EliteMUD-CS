@@ -61,7 +61,7 @@ public sealed record RoomDefinition(
 {
     // Clean string properties on construction
     public string Name { get; init; } = TextCleaner.Clean(Name);
-    public string Description { get; init; } = TextCleaner.Clean(Description);
+    public string Description { get; init; } = TextCleaner.CleanMultiline(Description);
 }
 
 public sealed record ScriptDefinition(string Id, string Hook, string Body, int? RoomId);
@@ -174,7 +174,7 @@ public sealed record MobDefinition(
     public string Name { get; init; } = TextCleaner.Clean(Name);
     public string ShortDescription { get; init; } = TextCleaner.Clean(ShortDescription);
     public string LongDescription { get; init; } = TextCleaner.Clean(LongDescription);
-    public string Description { get; init; } = TextCleaner.Clean(Description);
+    public string Description { get; init; } = TextCleaner.CleanMultiline(Description);
     public string Race { get; init; } = TextCleaner.Clean(Race);
     public string Class { get; init; } = TextCleaner.Clean(Class);
     
@@ -239,7 +239,7 @@ public sealed record ObjectDefinition(
     public string Name { get; init; } = TextCleaner.Clean(Name);
     public string ShortDescription { get; init; } = TextCleaner.Clean(ShortDescription);
     public string LongDescription { get; init; } = TextCleaner.Clean(LongDescription);
-    public string Description { get; init; } = TextCleaner.Clean(Description);
+    public string Description { get; init; } = TextCleaner.CleanMultiline(Description);
     public string Type { get; init; } = TextCleaner.Clean(Type);
 }
 
