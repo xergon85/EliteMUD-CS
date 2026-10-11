@@ -46,15 +46,28 @@ public sealed class AdminCommandTests : IDisposable
     }
 
     [Fact]
-    public async Task Admin_CanUseAdminCommands_IgnoringCase()
+    public async Task Admin_CanUseAdminCommands()
     {
         var secret = new SecretHandler();
-        var router = new CommandRouter(new ICommandHandler[] { secret }, new AdminPolicy(new[] { "Xergon" }));
+        var router = new CommandRouter(new ICommandHandler[] { secret }, new AdminPolicy(new[] { "xergon" }));
 
         var outcome = await router.HandleAsync(new CommandRequest("secret", null, null), Context("xergon"), CancellationToken.None);
 
         Assert.Equal(CommandOutcome.Continue, outcome);
         Assert.True(secret.Ran);
+    }
+
+    [Fact]
+    public async Task LookAlikeAccount_IsNotAdmin()
+    {
+        // Accounts are told apart by case today (#46): "Xergon" is someone else's account, not the admin's
+        var secret = new SecretHandler();
+        var router = new CommandRouter(new ICommandHandler[] { secret }, new AdminPolicy(new[] { "xergon" }));
+
+        var outcome = await router.HandleAsync(new CommandRequest("secret", null, null), Context("Xergon"), CancellationToken.None);
+
+        Assert.Equal(CommandOutcome.Unknown, outcome);
+        Assert.False(secret.Ran);
     }
 
     [Fact]
@@ -87,8 +100,8 @@ public sealed class AdminCommandTests : IDisposable
 
         var policy = AdminPolicy.Load(path);
 
-        Assert.True(policy.IsAdmin(Context("XERGON")));
-        Assert.True(policy.IsAdmin(Context("other")));
+        Assert.True(policy.IsAdmin(Context("xergon")));
+        Assert.True(policy.IsAdmin(Context("other"))); // surrounding spaces in the file are trimmed
         Assert.False(policy.IsAdmin(Context("player")));
     }
 
@@ -100,6 +113,26 @@ public sealed class AdminCommandTests : IDisposable
         var error = Assert.Throws<ContentConfigurationException>(() => AdminPolicy.Load(path));
 
         Assert.StartsWith(AdminPolicy.ConfigFileName, error.Message);
+    }
+
+    [Fact]
+    public void MissingDirectory_MeansNoAdmins()
+    {
+        var policy = AdminPolicy.Load(Path.Combine(_directory, "nowhere", AdminPolicy.ConfigFileName));
+
+        Assert.Empty(policy.AdminAccounts);
+    }
+
+    [Fact]
+    public void ConfigThatIsADirectory_StopsTheServerWithAClearError()
+    {
+        // An existing path that can't be read as a file (like a permissions error) must not count as "missing"
+        var path = Path.Combine(_directory, AdminPolicy.ConfigFileName);
+        Directory.CreateDirectory(path);
+
+        var error = Assert.Throws<ContentConfigurationException>(() => AdminPolicy.Load(path));
+
+        Assert.StartsWith($"{AdminPolicy.ConfigFileName} can't be read", error.Message);
     }
 
     [Fact]

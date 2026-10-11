@@ -21,7 +21,9 @@ internal sealed class AdminPolicy
 
     public AdminPolicy(IEnumerable<string> adminAccounts)
     {
-        _adminAccounts = new HashSet<string>(adminAccounts, StringComparer.OrdinalIgnoreCase);
+        // Exact match, as logins identify accounts today: "Xergon" is a different account from "xergon", so
+        // ignoring case would let anyone register a look-alike and get admin. Revisit with #46.
+        _adminAccounts = new HashSet<string>(adminAccounts, StringComparer.Ordinal);
     }
 
     public IReadOnlyCollection<string> AdminAccounts => _adminAccounts;
@@ -34,16 +36,27 @@ internal sealed class AdminPolicy
     /// </summary>
     public static AdminPolicy Load(string path)
     {
-        if (!File.Exists(path))
+        // Read directly instead of checking File.Exists first: an existing file we can't read must be an error,
+        // not quietly treated as missing
+        string json;
+        try
+        {
+            json = File.ReadAllText(path);
+        }
+        catch (Exception ex) when (ex is FileNotFoundException or DirectoryNotFoundException)
         {
             Console.WriteLine($"No {ConfigFileName} found; admin commands are disabled for everyone.");
             return new AdminPolicy(Array.Empty<string>());
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+        {
+            throw new ContentConfigurationException($"{ConfigFileName} can't be read: {ex.Message}");
         }
 
         ServerConfigFile? file;
         try
         {
-            file = JsonSerializer.Deserialize<ServerConfigFile>(File.ReadAllText(path), JsonOptions);
+            file = JsonSerializer.Deserialize<ServerConfigFile>(json, JsonOptions);
         }
         catch (JsonException ex)
         {
