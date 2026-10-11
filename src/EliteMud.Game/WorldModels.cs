@@ -340,6 +340,12 @@ public sealed class PlayerState : ICombatant
     public byte Level { get; set; }
     public int Experience { get; set; }
 
+    /// <summary>
+    /// Set when the character should be saved soon, e.g. after a level-up (legacy PLR_SAVECHR / save_char).
+    /// The game loop saves and clears it.
+    /// </summary>
+    public bool SaveRequested { get; set; }
+
     // ===== Core Abilities (Stats) =====
     public sbyte Strength { get; set; }
     public sbyte StrengthAdd { get; set; } // 0-100 if Strength == 18

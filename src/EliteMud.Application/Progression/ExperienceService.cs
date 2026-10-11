@@ -91,6 +91,23 @@ public sealed class ExperienceService
     }
 
     /// <summary>
+    /// What a mob actually gains from a kill (legacy gain_exp() on an NPC): capped like a player's gain, using the
+    /// content's mobXpCurve for the mob's level, with no level-up. Mobs of level 110+ gain nothing.
+    /// </summary>
+    public int MobGain(int level, int amount)
+    {
+        if (level >= ImmortalLevel || amount <= 0)
+        {
+            return 0;
+        }
+
+        var needed = _rules.Progression.MobXpCurve.XpNeeded(level);
+        var cap = _formulas.EvaluateInt(
+            _rules.Progression.MaxGainFormula, new GainCapInputs(needed, level), "progression/rules.maxGainFormula");
+        return Math.Min(cap, amount);
+    }
+
+    /// <summary>
     /// The gains for advancing from <paramref name="level"/> to the next (legacy advance_level() and
     /// improve_abilities()). Hit points, mana and movement come from the class's level-up profile; each stat may
     /// improve by one, up to the race's maximum, more often for the class's prime stats.

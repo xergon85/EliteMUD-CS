@@ -119,7 +119,7 @@ internal static class RulesContentLoader
         CheckClassLists(curves.Keys, "progression/xp-curves", id => curveClassLists[id], classes.Values, c => c.XpCurve.Id, errors);
         CheckClassLists(profiles.Keys, "progression/level-up", id => profileClassLists[id], classes.Values, c => c.LevelUpProfile.Id, errors);
 
-        var progression = ReadProgression(contentRoot, errors);
+        var progression = ReadProgression(contentRoot, curves, errors);
 
         return (new RulesContent(classes, races, curves, profiles, progression), errors);
     }
@@ -132,14 +132,17 @@ internal static class RulesContentLoader
         }
     }
 
-    private static ProgressionRules ReadProgression(string contentRoot, List<string> errors)
+    private static ProgressionRules ReadProgression(
+        string contentRoot, IReadOnlyDictionary<string, XpCurveDefinition> curves, List<string> errors)
     {
         const string path = "progression/rules.json";
+        // Only returned alongside errors, which stop the server
+        var invalid = new ProgressionRules("", new XpCurveDefinition("", new[] { 0 }, Array.Empty<int>()), "");
         var file = Path.Combine(contentRoot, path);
         if (!File.Exists(file))
         {
             errors.Add($"{path}: file not found");
-            return new ProgressionRules("", "");
+            return invalid;
         }
 
         try
@@ -147,12 +150,15 @@ internal static class RulesContentLoader
             var data = JsonSerializer.Deserialize<ProgressionFile>(File.ReadAllText(file), JsonOptions)
                        ?? throw new JsonException("empty file");
             RequireFormula(path, "maxGainFormula", data.MaxGainFormula, errors);
-            return new ProgressionRules(data.MaxGainFormula, data.Source ?? "");
+            var mobXpCurve = Resolve(curves, data.MobXpCurve, path, "mobXpCurve", errors);
+            return mobXpCurve is null
+                ? invalid
+                : new ProgressionRules(data.MaxGainFormula, mobXpCurve, data.Source ?? "");
         }
         catch (JsonException ex)
         {
             errors.Add($"{path}: {ex.Message}");
-            return new ProgressionRules("", "");
+            return invalid;
         }
     }
 
@@ -334,6 +340,7 @@ internal static class RulesContentLoader
     private sealed class ProgressionFile
     {
         public string MaxGainFormula { get; set; } = "";
+        public string MobXpCurve { get; set; } = "";
         public string? Source { get; set; }
     }
 

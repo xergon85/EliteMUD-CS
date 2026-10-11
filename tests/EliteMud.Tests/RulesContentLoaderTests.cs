@@ -181,6 +181,17 @@ public sealed class RulesContentLoaderTests : IDisposable
         var (rules, _) = RulesContentLoader.Load(RealContent);
 
         Assert.Equal("return div(needed, 10 + div(level, 15))", rules.Progression.MaxGainFormula);
+        Assert.Equal("fighter", rules.Progression.MobXpCurve.Id);
+    }
+
+    [Fact]
+    public void UnknownMobXpCurve_IsReported()
+    {
+        Edit("progression/rules.json", json => json["mobXpCurve"] = "warrior"); // a class id, not a curve
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains(errors, e => e.StartsWith("progression/rules.json: mobXpCurve 'warrior' doesn't exist"));
     }
 
     [Fact]

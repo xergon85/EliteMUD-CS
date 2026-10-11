@@ -48,5 +48,5 @@ public sealed class RulesContent
         new Dictionary<string, RaceDefinition>(),
         new Dictionary<string, XpCurveDefinition>(),
         new Dictionary<string, LevelUpProfileDefinition>(),
-        new ProgressionRules("return 0", ""));
+        new ProgressionRules("return 0", new XpCurveDefinition("", new[] { 0 }, Array.Empty<int>()), ""));
 }

@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -18,6 +19,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
     private readonly BashSkill _bashSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
+    private readonly CombatExperience _combatExperience;
 
     public SkillType SkillType => SkillType.Bash;
     public TargetingMode Targeting => TargetingMode.CurrentFightTarget;
@@ -25,8 +27,10 @@ public sealed class BashSkillExecutor : ISkillExecutor
     public BashSkillExecutor(
         SkillRegistry skillRegistry,
         CombatCalculator combatCalculator,
-        IWorldState worldState)
+        IWorldState worldState,
+        CombatExperience combatExperience)
     {
+        _combatExperience = combatExperience;
         _bashSkill = (BashSkill)skillRegistry.GetActiveSkill(SkillType.Bash);
         _combatCalculator = combatCalculator;
         _worldState = worldState;
@@ -78,6 +82,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
         // Roll hit/miss
         var hit = _bashSkill.RollHit(attacker);
         var messages = new List<SkillMessage>();
+        ProgressionResult? killReward = null;
 
         if (!hit)
         {
@@ -120,6 +125,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
             var damageResult = _combatCalculator.ApplyDamage(victimPlayer, damage);
 
             damage = damageResult.Damage;
+            _combatExperience.DamageDealt(attacker, victimPlayer, damage); // none between players; shared path
             victimDied = victimPlayer.Position == Position.Dead;
 
             // Apply victim WAIT_STATE (1 round)
@@ -137,6 +143,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
             // Mob victim - direct damage application
             var mobInstance = (MobInstance)victim;
             mobInstance.HitPoints -= (short)damage;
+            _combatExperience.DamageDealt(attacker, mobInstance, damage);
 
             // Apply victim WAIT_STATE (mobs don't track this in POC)
             // mobInstance.WaitState = CombatConstants.PULSE_VIOLENCE;
@@ -166,6 +173,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
                     }
                 }
 
+                killReward = _combatExperience.Killed(attacker, mobInstance);
                 _worldState.CreateMobCorpse(mobInstance, attacker.RoomId);
                 _worldState.RemoveMob(mobInstance.InstanceId, attacker.RoomId);
             }
@@ -181,6 +189,12 @@ public sealed class BashSkillExecutor : ISkillExecutor
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
             messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead! R.I.P.", victim));
+        }
+
+        // Kill XP messages come after the death messages, as in legacy
+        foreach (var line in killReward?.Messages ?? Array.Empty<string>())
+        {
+            messages.Add(new SkillMessage(SkillMessageTarget.Actor, line));
         }
 
         // Improve skill on successful hit

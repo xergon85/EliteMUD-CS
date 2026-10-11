@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.Spells;
 using EliteMud.Application.World;
 using EliteMud.Game;
@@ -23,14 +24,17 @@ internal sealed class CastCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly ConnectionRegistry _connectionRegistry;
     private readonly ActMessageService _actService;
+    private readonly CombatExperience _combatExperience;
 
     public CastCommandHandler(
         SpellRegistry spellRegistry,
         SpellMetadataRegistry metadataRegistry,
         IWorldState worldState,
         ConnectionRegistry connectionRegistry,
-        ActMessageService actService)
+        ActMessageService actService,
+        CombatExperience combatExperience)
     {
+        _combatExperience = combatExperience;
         _spellRegistry = spellRegistry;
         _metadataRegistry = metadataRegistry;
         _worldState = worldState;
@@ -374,12 +378,14 @@ internal sealed class CastCommandHandler : ICommandHandler
 
         // Apply damage
         var victimDied = false;
+        ProgressionResult? killReward = null;
 
         if (targetConnectionId != null)
         {
             // Player victim
             var targetPlayer = (PlayerState)target;
             targetPlayer.HitPoints -= (short)damage;
+            _combatExperience.DamageDealt(caster, targetPlayer, damage); // none between players; shared path
 
             if (targetPlayer.HitPoints <= 0)
             {
@@ -395,6 +401,7 @@ internal sealed class CastCommandHandler : ICommandHandler
             // Mob victim
             var mobInstance = (MobInstance)target;
             mobInstance.HitPoints -= (short)damage;
+            _combatExperience.DamageDealt(caster, mobInstance, damage);
 
             if (mobInstance.HitPoints <= 0)
             {
@@ -402,6 +409,8 @@ internal sealed class CastCommandHandler : ICommandHandler
                 victimDied = true;
                 caster.FightingConnectionId = null;
                 mobInstance.FightingConnectionId = null;
+
+                killReward = _combatExperience.Killed(caster, mobInstance);
 
                 _worldState.CreateMobCorpse(mobInstance, caster.RoomId);
                 _worldState.RemoveMob(mobInstance.InstanceId, caster.RoomId);
@@ -434,6 +443,12 @@ internal sealed class CastCommandHandler : ICommandHandler
         {
             await context.Session.SendLineAsync($"{target.Name} is DEAD!!", cancellationToken);
             await BroadcastToRoomAsync(context, $"{target.Name} is dead! R.I.P.", cancellationToken);
+        }
+
+        // Kill XP messages come after the death messages, as in legacy
+        foreach (var line in killReward?.Messages ?? Array.Empty<string>())
+        {
+            await context.Session.SendLineAsync(line, cancellationToken);
         }
     }
 

@@ -41,9 +41,14 @@ public sealed class PlayerProgression
         // Legacy skips this for players with NOTITLE; that flag doesn't exist yet
         player.Title = ExperienceService.Title(characterClass, race, (Sex)player.Sex, player.Level);
 
+        player.SaveRequested = true;
         Console.WriteLine($"{player.Name} advanced to level {player.Level}");
         return new ProgressionResult(gain.Messages.Concat(levelUp.Messages).ToList(), true);
     }
+
+    /// <summary>XP the player needs for the next level.</summary>
+    public int ExpNeeded(PlayerState player) =>
+        _experience.ExpNeeded(Lookup(_rules.Classes, player.CharacterClass, "class", player), player.Level);
 
     // Characters with an unknown class or race are refused at login, so this means content changed under a player
     private static T Lookup<T>(IReadOnlyDictionary<string, T> definitions, string id, string kind, PlayerState player) =>

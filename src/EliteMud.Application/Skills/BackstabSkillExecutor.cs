@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -26,6 +27,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
     private readonly BackstabSkill _backstabSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
+    private readonly CombatExperience _combatExperience;
 
     public SkillType SkillType => SkillType.Backstab;
     public TargetingMode Targeting => TargetingMode.RequiredInRoom; // Must specify target
@@ -33,8 +35,10 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
     public BackstabSkillExecutor(
         SkillRegistry skillRegistry,
         CombatCalculator combatCalculator,
-        IWorldState worldState)
+        IWorldState worldState,
+        CombatExperience combatExperience)
     {
+        _combatExperience = combatExperience;
         _backstabSkill = (BackstabSkill)skillRegistry.GetActiveSkill(SkillType.Backstab);
         _combatCalculator = combatCalculator;
         _worldState = worldState;
@@ -157,6 +161,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         // Apply damage
         var victimDied = false;
         var messages = new List<SkillMessage>();
+        ProgressionResult? killReward = null;
 
         // Start combat if not already fighting
         if (attacker.FightingConnectionId == null)
@@ -184,6 +189,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
             var damageResult = _combatCalculator.ApplyDamage(victimPlayer, damage);
 
             damage = damageResult.Damage;
+            _combatExperience.DamageDealt(attacker, victimPlayer, damage); // none between players; shared path
 
             // Show dodge message if dodged (though unlikely with backstab multiplier)
             if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
@@ -205,6 +211,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
             // Mob victim - direct damage application
             var mobInstance = (MobInstance)victim;
             mobInstance.HitPoints -= (short)damage;
+            _combatExperience.DamageDealt(attacker, mobInstance, damage);
 
             if (mobInstance.HitPoints <= 0)
             {
@@ -231,6 +238,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
                     }
                 }
 
+                killReward = _combatExperience.Killed(attacker, mobInstance);
                 _worldState.CreateMobCorpse(mobInstance, attacker.RoomId);
                 _worldState.RemoveMob(mobInstance.InstanceId, attacker.RoomId);
             }
@@ -246,6 +254,12 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
             messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead! R.I.P.", victim));
+        }
+
+        // Kill XP messages come after the death messages, as in legacy
+        foreach (var line in killReward?.Messages ?? Array.Empty<string>())
+        {
+            messages.Add(new SkillMessage(SkillMessageTarget.Actor, line));
         }
 
         // Improve skill on successful hit

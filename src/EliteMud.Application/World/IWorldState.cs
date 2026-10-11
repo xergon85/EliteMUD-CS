@@ -39,6 +39,9 @@ public sealed class MobInstance : ICombatant
         Definition = definition;
         // Initialize HP from mob definition's MaxHitPoints
         HitPoints = (short)Math.Min(definition.MaxHitPoints, short.MaxValue);
+
+        // Starts at the content value and grows as the mob damages and kills (legacy GET_EXP on an NPC)
+        Experience = definition.Experience;
         
         // Initialize hometown to current spawn location (will be set by zone reset)
         Hometown = null;
@@ -117,6 +120,7 @@ public sealed class MobInstance : ICombatant
     public short MaxHitPoints => (short)Math.Min(Definition.MaxHitPoints, short.MaxValue);
     public short ArmorClass => (short)Math.Clamp(Definition.ArmorClass, short.MinValue, short.MaxValue);
     public byte Level => (byte)Math.Min(Definition.Level, byte.MaxValue);
+    public int Experience { get; set; }
     public int Alignment => Definition.Alignment;
     
     /// <summary>
