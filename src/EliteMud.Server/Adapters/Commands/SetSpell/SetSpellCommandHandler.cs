@@ -4,7 +4,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.SetSpell;
 
-[Command("setspell")]
+[Command("setspell", Admin = true)]
 internal sealed class SetSpellCommandHandler : ICommandHandler
 {
     private readonly SpellMetadataRegistry _metadataRegistry;

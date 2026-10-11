@@ -21,6 +21,8 @@ This file guides agentic coding assistants working in this repository.
 ### Run the server
 - `dotnet run --project src/EliteMud.Server`
 - Optional port override: `dotnet run --project src/EliteMud.Server -- 7600`
+- Admin commands (`zreset`, `goto`, `load`, `setlevel`, `setskill`, `setspell`) only work for accounts listed in
+  `elitemud.config.json` at the repo root (gitignored; copy `elitemud.config.example.json`). No file = no admins.
 
 ### Run all tests
 - `dotnet test EliteMUD.sln`

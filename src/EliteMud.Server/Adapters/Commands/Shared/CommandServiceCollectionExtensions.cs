@@ -47,7 +47,7 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<CommandRouter>(provider =>
             {
                 var handlers = provider.GetServices<ICommandHandler>();
-                return new CommandRouter(handlers);
+                return new CommandRouter(handlers, provider.GetRequiredService<AdminPolicy>());
             });
     }
 

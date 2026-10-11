@@ -24,4 +24,25 @@ public static class TextCleaner
             .Replace("\\t", " ")
             .Trim();
     }
+
+    /// <summary>
+    /// Clean a multi-line text (room, mob and object descriptions) but keep its line breaks. Legacy text is
+    /// hand-wrapped at about 75 columns, so it's shown line by line as written; joining the lines would leave
+    /// the client to break one long line mid-word. Line endings become "\n" (the telnet layer sends "\r\n"),
+    /// tabs become spaces, and trailing spaces and blank lines at the start and end are removed.
+    /// </summary>
+    public static string CleanMultiline(string? input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        var text = input
+            .Replace("\\r", "")
+            .Replace("\\n", "\n")
+            .Replace("\\t", " ")
+            .Replace("\r", "")
+            .Replace("\t", " ");
+        var lines = text.Split('\n').Select(line => line.TrimEnd());
+        return string.Join('\n', lines).Trim('\n');
+    }
 }

@@ -5,9 +5,10 @@ using EliteMud.Server.Adapters.Commands.Shared;
 namespace EliteMud.Server.Adapters.Commands.SetLevel;
 
 /// <summary>
-/// Test command: jump to a mortal level. Going up runs the real level-up for every level in between.
+/// Admin test command: jump to a mortal level. Going up runs the real level-up for every level in between; going
+/// to the same or a lower level rebuilds the character from a new level 1 first (legacy advance).
 /// </summary>
-[Command("setlevel")]
+[Command("setlevel", Admin = true)]
 internal sealed class SetLevelCommandHandler : ICommandHandler
 {
     private readonly PlayerProgression _progression;
