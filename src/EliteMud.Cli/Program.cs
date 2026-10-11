@@ -32,6 +32,10 @@ internal static class Program
         {
             return await HandleGroup(args);
         }
+        else if (command == "rules")
+        {
+            return await HandleRules(args);
+        }
         else
         {
             Console.Error.WriteLine($"Unknown command: {command}");
@@ -130,6 +134,35 @@ internal static class Program
         }
     }
 
+    private static async Task<int> HandleRules(string[] args)
+    {
+        if (args.Length < 3)
+        {
+            Console.Error.WriteLine("Error: rules requires <legacy-path> and <content-path>");
+            ShowUsage();
+            return 1;
+        }
+
+        try
+        {
+            var config = File.Exists(DefaultConfigPath) ? LegacyImportConfig.Load(DefaultConfigPath) : null;
+            var log = await new LegacyRulesImporter().ImportAsync(args[1], args[2], CancellationToken.None, config);
+            Console.WriteLine("Rules import summary:");
+            foreach (var line in log.Summarize())
+            {
+                Console.WriteLine($"  {line}");
+            }
+
+            Console.WriteLine($"Details: {Path.Combine(args[2], "meta", "legacy-rules-import-log.txt")}");
+            return 0;
+        }
+        catch (Exception ex) when (ex is InvalidDataException or DirectoryNotFoundException or IOException)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
+            return 1;
+        }
+    }
+
     private const string DefaultConfigPath = "content/meta/legacy-import.json";
 
     private static LegacyImportOptions ParseOptions(string[] args)
@@ -178,10 +211,12 @@ internal static class Program
         Console.WriteLine("Usage:");
         Console.WriteLine("  elitemud-import import <legacy-path> <output-path> [options]");
         Console.WriteLine("  elitemud-import group <input-path> <output-path>");
+        Console.WriteLine("  elitemud-import rules <legacy-path> <content-path>");
         Console.WriteLine();
         Console.WriteLine("Commands:");
         Console.WriteLine("  import  Import legacy EliteMUD world files to JSON");
         Console.WriteLine("  group   Group imported JSON by zone (one file per zone)");
+        Console.WriteLine("  rules   Extract classes, races, XP curves and level-up profiles from the legacy C source");
         Console.WriteLine();
         Console.WriteLine("Arguments (import):");
         Console.WriteLine("  <legacy-path>   Path to legacy EliteMUD root directory (tool will automatically find lib/world subdirectory) or direct path to world directory (containing wld, mob, obj, zon folders)");
