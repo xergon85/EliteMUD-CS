@@ -180,10 +180,14 @@ Agreed so far (Oct 10, 2026):
   max proficiency and difficulty), like legacy `spellconst.c` (`spell_minlevel`, `spell_max`, `spell_difficulty`:
   one row per skill, one column per class). The editor shows it by skill, by class, or as the skill × class grid.
   Balancing one skill stays a small diff in one file.
+- **Q3, XP table** (Oct 11, 2026): explicit XP-needed values for each level (1–109) per XP curve, generated once from
+  the legacy rows (`titles[][]` in constants.c, one row per 3 levels, interpolated as in `exp_needed`) so day one
+  matches exactly. Titles stay as 40 rows per class. The editor shows the curve as a chart and can regenerate it from
+  the legacy rows.
 - **Q2, schemas** (Oct 11, 2026): no hand-written JSON Schemas. The C# model and the content check are the contract,
   used by the editor, the server and CI. Generated schemas are optional documentation.
 
 ## Open Questions
 
-Tracked in #21. Q1 and Q2 are decided (see above). Still open: explicit XP values vs interpolation (Q3), formula
+Tracked in #21. Q1–Q3 are decided (see above). Still open: formula
 variables (Q4), reload behavior for online players (Q5), and reload scope (Q6).
