@@ -135,15 +135,29 @@ internal static class LegacyRoomImporter
         return rooms;
     }
 
+    private const int ExitIsDoor = 1 << 0;
+    private const int ExitPickProof = 1 << 5;
+    private const int NoRoom = -1;
+
     // Legacy: setup_dir() in db.c:947
     private static ExitContent ReadExit(LegacyImportParser parser, string marker)
     {
         var dir = LegacyImportLookup.ParseInt(marker[1..]);
         var exitDesc = parser.ReadTildeString();
         var keywords = parser.ReadTildeString();
-        var exitFlags = parser.ReadNumber();
-        var keyId = parser.ReadNumber();
-        var toRoom = parser.ReadNumber();
+
+        // Door type: 1 = door, 2 = pick-proof door, anything else is raw EX_* bits (db.c:958-967)
+        var exitFlags = parser.ReadNumber() switch
+        {
+            1 => ExitIsDoor,
+            2 => ExitIsDoor | ExitPickProof,
+            var bits => bits
+        };
+
+        // Legacy reads these with fscanf(" %d "), which stops at a glued room terminator ("28701S").
+        // If the value isn't a number at all, the exit leads nowhere rather than to room 0.
+        var keyId = parser.ReadInteger(fallback: -1);
+        var toRoom = parser.ReadInteger(fallback: NoRoom);
 
         return new ExitContent(
             LegacyImportLookup.DirectionFromIndex(dir),

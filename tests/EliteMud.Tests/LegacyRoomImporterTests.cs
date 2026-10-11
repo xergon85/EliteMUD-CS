@@ -79,6 +79,60 @@ public class LegacyRoomImporterTests
         Assert.Equal("bank", Assert.Single(rooms).SpecialProc);
     }
 
+    [Fact]
+    public void Load_RoomTerminatorGluedToExitTarget_KeepsNextRoom()
+    {
+        // Legacy 287.wld: "0 -1 28701S" ends room 28702 right before room 28703
+        var rooms = LoadRooms("""
+            #28702
+            A Hallway~
+            Quiet.
+            ~
+            287 0 0
+            D0
+            ~
+            ~
+            0 -1 28701S
+            #28703
+            The Guild Donation Room~
+            Donations.
+            ~
+            287 0 0
+            S
+            $~
+            """);
+
+        Assert.Equal(new[] { 28702, 28703 }, rooms.Select(r => r.Id));
+        Assert.Equal(28701, Assert.Single(rooms[0].Exits).TargetId);
+        Assert.Equal("The Guild Donation Room", rooms[1].Name);
+    }
+
+    [Theory]
+    [InlineData(0, new string[0])]
+    [InlineData(1, new[] { "IsDoor" })]
+    [InlineData(2, new[] { "IsDoor", "PickProof" })]
+    [InlineData(259, new[] { "IsDoor", "Closed", "BashProof" })]
+    public void Load_DoorType_MapsLikeLegacySetupDir(int doorType, string[] expectedFlags)
+    {
+        var rooms = LoadRooms($"""
+            #100
+            A Room~
+            Text.
+            ~
+            1 0 0
+            D0
+            ~
+            door~
+            {doorType} 5 101
+            S
+            $~
+            """);
+
+        var exit = Assert.Single(Assert.Single(rooms).Exits);
+        Assert.Equal(expectedFlags, exit.ExitFlags);
+        Assert.Equal(5, exit.KeyId);
+    }
+
     private static List<RoomContent> LoadRooms(string wld)
     {
         var directory = Path.Combine(Path.GetTempPath(), $"elitemud-wld-{Guid.NewGuid():N}");

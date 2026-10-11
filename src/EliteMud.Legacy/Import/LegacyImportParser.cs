@@ -60,6 +60,37 @@ internal sealed class LegacyImportParser
     }
 
     /// <summary>
+    /// Reads a plain integer the way fscanf("%d") does: the leading sign and digits only.
+    /// Anything glued on (e.g. the room terminator in "28701S") is pushed back as the next token.
+    /// If the token doesn't start with a number, it is pushed back and <paramref name="fallback"/> is returned.
+    /// </summary>
+    public int ReadInteger(int fallback = 0)
+    {
+        var token = ReadToken();
+        if (token is null)
+        {
+            return fallback;
+        }
+
+        var match = LeadingIntegerPattern.Match(token);
+        if (!match.Success)
+        {
+            PushToken(token);
+            return fallback;
+        }
+
+        if (match.Length < token.Length)
+        {
+            PushToken(token[match.Length..]);
+        }
+
+        return int.TryParse(match.Value, out var value) ? value : fallback;
+    }
+
+    private static readonly System.Text.RegularExpressions.Regex LeadingIntegerPattern =
+        new(@"^-?\d+");
+
+    /// <summary>
     /// Legacy reads list values with fscanf("%ld"), which stops at the first non-digit. Some
     /// files glue the list terminator onto the last value ("385-1"), so split off the remainder
     /// and push it back as the next token.
