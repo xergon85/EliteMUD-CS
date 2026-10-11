@@ -1,3 +1,4 @@
+using EliteMud.Application.Formulas;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
@@ -15,7 +16,7 @@ namespace EliteMud.Application.Skills;
 /// 
 /// Metadata loaded from content/skills/skills.json
 /// </summary>
-public sealed class ParrySkill : IPassiveSkillHandler
+public sealed class ParrySkill : IPassiveSkillHandler, IFormulaSource
 {
     private readonly SkillMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
@@ -89,12 +90,9 @@ public sealed class ParrySkill : IPassiveSkillHandler
         }
         else
         {
-            var context = new
-            {
-                damage = damage,
-                skillPercent = parrySkillLevel
-            };
-            activated = _formulaEvaluator.EvaluateBool(activationFormula, context);
+            var context = new DefenseCheckInputs(Damage: damage, SkillPercent: parrySkillLevel);
+            activated = _formulaEvaluator.EvaluateBool(activationFormula, context,
+                $"{_metadata.Name}.activationFormula");
         }
         
         if (activated)
@@ -111,12 +109,9 @@ public sealed class ParrySkill : IPassiveSkillHandler
             }
             else
             {
-                var context = new
-                {
-                    damage = damage,
-                    level = user.Level
-                };
-                modifiedDamage = _formulaEvaluator.EvaluateInt(effectFormula, context);
+                var context = new DefenseEffectInputs(Damage: damage, Level: user.Level);
+                modifiedDamage = _formulaEvaluator.EvaluateInt(effectFormula, context,
+                    $"{_metadata.Name}.effectFormula");
             }
             
             return new PassiveSkillResult(
@@ -128,4 +123,13 @@ public sealed class ParrySkill : IPassiveSkillHandler
         // Parry failed
         return new PassiveSkillResult(false, damage, null);
     }
+
+    /// <summary>The content formulas this skill uses, for the load-time check.</summary>
+    public IEnumerable<FormulaSlot> FormulaSlots =>
+    [
+        new($"{_metadata.Name}.activationFormula", _metadata.Mechanics?.ActivationFormula,
+            typeof(DefenseCheckInputs), FormulaResult.Boolean),
+        new($"{_metadata.Name}.effectFormula", _metadata.Mechanics?.EffectFormula,
+            typeof(DefenseEffectInputs), FormulaResult.Number)
+    ];
 }

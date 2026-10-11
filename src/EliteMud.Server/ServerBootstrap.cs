@@ -82,16 +82,16 @@ internal static class ServerBootstrap
             scripts = BuildBootstrapScriptDefinitions();
         }
 
-        var skillMetadata = ContentLoader.LoadSkills(contentRoot);
-        var skillMetadataRegistry = new SkillMetadataRegistry(skillMetadata);
-        
-        var spellMetadata = ContentLoader.LoadSpells(contentRoot);
-        var spellMetadataRegistry = new SpellMetadataRegistry(spellMetadata);
-        
-        var formulaEvaluator = new FormulaEvaluator();
-        
-        var skillRegistry = new Application.Skills.SkillRegistry(skillMetadataRegistry, formulaEvaluator);
-        var spellRegistry = new SpellRegistry(spellMetadataRegistry, formulaEvaluator);
+        var (skillMetadataRegistry, spellMetadataRegistry, formulaEvaluator, skillRegistry, spellRegistry) =
+            BuildRules(contentRoot);
+
+        // Fail fast: a broken formula would otherwise only show up in the middle of a fight
+        var formulaErrors = CheckFormulas(formulaEvaluator, skillRegistry, spellRegistry);
+        if (formulaErrors.Count > 0)
+        {
+            throw new ContentConfigurationException(
+                $"{formulaErrors.Count} content formula(s) are broken:\n  " + string.Join("\n  ", formulaErrors));
+        }
 
         var worldState = BuildWorldState(world, mobs, objects, zones);
         var scriptEngine = BuildScriptEngine(scripts);
@@ -260,6 +260,13 @@ internal static class ServerBootstrap
             Console.WriteLine(line);
         }
 
+        var (_, _, formulaEvaluator, skillRegistry, spellRegistry) = BuildRules(ResolveContentRoot());
+        var formulaErrors = CheckFormulas(formulaEvaluator, skillRegistry, spellRegistry);
+        foreach (var error in formulaErrors)
+        {
+            Console.WriteLine($"Error\tBroken formula\t{error.ReplaceLineEndings(" ")}");
+        }
+
         Console.WriteLine();
         Console.WriteLine("Summary:");
         foreach (var line in ContentValidationReport.Summarize(findings))
@@ -267,7 +274,46 @@ internal static class ServerBootstrap
             Console.WriteLine($"  {line}");
         }
 
-        return ContentValidationReport.CountErrors(findings);
+        if (formulaErrors.Count > 0)
+        {
+            Console.WriteLine($"  Error    {formulaErrors.Count,5}  Broken formula");
+        }
+
+        return ContentValidationReport.CountErrors(findings) + formulaErrors.Count;
+    }
+
+    /// <summary>
+    /// Load skill and spell metadata and create their handlers. Used by startup and by "--validate".
+    /// </summary>
+    private static (SkillMetadataRegistry Skills, SpellMetadataRegistry Spells, FormulaEvaluator Formulas,
+        Application.Skills.SkillRegistry SkillRegistry, SpellRegistry SpellRegistry) BuildRules(string contentRoot)
+    {
+        var skillMetadataRegistry = new SkillMetadataRegistry(ContentLoader.LoadSkills(contentRoot));
+        var spellMetadataRegistry = new SpellMetadataRegistry(ContentLoader.LoadSpells(contentRoot));
+        var formulaEvaluator = new FormulaEvaluator();
+
+        return (
+            skillMetadataRegistry,
+            spellMetadataRegistry,
+            formulaEvaluator,
+            new Application.Skills.SkillRegistry(skillMetadataRegistry, formulaEvaluator),
+            new SpellRegistry(spellMetadataRegistry, formulaEvaluator));
+    }
+
+    /// <summary>
+    /// Run every skill and spell formula once with sample inputs (syntax, unknown variables, result type).
+    /// </summary>
+    private static IReadOnlyList<string> CheckFormulas(
+        FormulaEvaluator formulaEvaluator,
+        Application.Skills.SkillRegistry skillRegistry,
+        SpellRegistry spellRegistry)
+    {
+        var sources = skillRegistry.GetAllActiveSkills().Cast<object>()
+            .Concat(skillRegistry.GetAllPassiveSkills())
+            .Concat(spellRegistry.GetAllSpells())
+            .OfType<IFormulaSource>();
+
+        return FormulaChecker.Check(formulaEvaluator, sources.SelectMany(source => source.FormulaSlots));
     }
 
     // Warning mode: problems are reported, but the server still starts.

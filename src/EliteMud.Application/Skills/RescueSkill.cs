@@ -1,3 +1,4 @@
+using EliteMud.Application.Formulas;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
@@ -14,7 +15,7 @@ namespace EliteMud.Application.Skills;
 /// 
 /// Metadata loaded from content/skills/skills.json
 /// </summary>
-public sealed class RescueSkill : ISkillHandler
+public sealed class RescueSkill : ISkillHandler, IFormulaSource
 {
     private readonly SkillMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
@@ -76,11 +77,15 @@ public sealed class RescueSkill : ISkillHandler
             return roll <= rescuer.GetSkill(SkillType.Rescue);
         }
 
-        var context = new
-        {
-            skillPercent = rescuer.GetSkill(SkillType.Rescue)
-        };
+        var context = new SkillCheckInputs(SkillPercent: rescuer.GetSkill(SkillType.Rescue));
 
-        return _formulaEvaluator.EvaluateBool(hitFormula, context);
+        return _formulaEvaluator.EvaluateBool(hitFormula, context, $"{_metadata.Name}.hitFormula");
     }
+
+    /// <summary>The content formulas this skill uses, for the load-time check.</summary>
+    public IEnumerable<FormulaSlot> FormulaSlots =>
+    [
+        new($"{_metadata.Name}.hitFormula", _metadata.Mechanics?.HitFormula,
+            typeof(SkillCheckInputs), FormulaResult.Boolean)
+    ];
 }

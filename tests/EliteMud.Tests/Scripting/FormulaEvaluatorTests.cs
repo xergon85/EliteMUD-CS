@@ -131,8 +131,8 @@ public class FormulaEvaluatorTests
     [Fact]
     public void EvaluateBool_KickHitFormula_ReturnsBoolean()
     {
-        // Arrange - Legacy kick: ((10 - victimAC/10) * 2) + random(1, 101) <= skillPercent
-        var formula = "return ((10 - victimAC/10) * 2) + random(1, 101) <= skillPercent";
+        // Arrange - Legacy kick: ((10 - AC / 10) << 1) + number(1, 101) <= skill (C integer division)
+        var formula = "return ((10 - div(victimAC, 10)) * 2) + random(1, 101) <= skillPercent";
 
         // Act - High skill should often hit
         var result = _evaluator.EvaluateBool(formula, new { victimAC = 100, skillPercent = 95 });
@@ -190,7 +190,7 @@ public class FormulaEvaluatorTests
         var exception = Assert.Throws<FormulaEvaluationException>(() =>
             _evaluator.EvaluateInt(formula, new { }));
 
-        Assert.Contains("expected Number", exception.Message);
+        Assert.Contains("expected a number", exception.Message);
     }
 
     [Fact]
@@ -203,7 +203,74 @@ public class FormulaEvaluatorTests
         var exception = Assert.Throws<FormulaEvaluationException>(() =>
             _evaluator.EvaluateBool(formula, new { }));
 
-        Assert.Contains("expected Boolean", exception.Message);
+        Assert.Contains("expected true or false", exception.Message);
+    }
+
+    [Fact]
+    public void Evaluate_UnknownVariable_ThrowsWithItsName()
+    {
+        // A typo must fail instead of reading nil or a leftover value
+        var exception = Assert.Throws<FormulaEvaluationException>(() =>
+            _evaluator.EvaluateInt("return victimAc * 2", new { victimAC = 10 }, "kick.hitFormula"));
+
+        Assert.Contains("unknown variable 'victimAc'", exception.Message);
+        Assert.Contains("kick.hitFormula", exception.Message);
+    }
+
+    [Fact]
+    public void Evaluate_VariablesDoNotLeakBetweenFormulas()
+    {
+        // First formula provides 'level'; the second doesn't, so it must not see the old value
+        _evaluator.EvaluateInt("return level", new { level = 50 });
+
+        Assert.Throws<FormulaEvaluationException>(() => _evaluator.EvaluateInt("return level", new { }));
+    }
+
+    [Fact]
+    public void Evaluate_BuiltInsStayAvailable()
+    {
+        Assert.Equal(7, _evaluator.EvaluateInt("return math.max(1, math.floor(15 / 2))", new { }));
+        Assert.InRange(_evaluator.EvaluateInt("return random(1, 6)", new { }), 1, 6);
+    }
+
+    [Theory]
+    [InlineData(55, 10, 5)]
+    [InlineData(-55, 10, -5)]  // C truncates toward zero; math.floor would give -6
+    [InlineData(7, -2, -3)]
+    [InlineData(18, 4, 4)]
+    public void Div_MatchesCIntegerDivision(int a, int b, int expected)
+    {
+        Assert.Equal(expected, _evaluator.EvaluateInt("return div(a, b)", new { a, b }));
+    }
+
+    [Fact]
+    public void Div_ByZero_Throws()
+    {
+        Assert.Throws<FormulaEvaluationException>(() => _evaluator.EvaluateInt("return div(1, 0)", new { }));
+    }
+
+    [Theory]
+    [InlineData("return io.open('x')")]
+    [InlineData("return os.execute('ls')")]
+    [InlineData("return load('return 1')()")]
+    [InlineData("return require('io')")]
+    [InlineData("return string.len('x')")]
+    public void Evaluate_OnlyBuiltInsAreReachable(string formula)
+    {
+        // Formulas get math, random and div, nothing else: no files, OS commands or code loading
+        var exception = Assert.Throws<FormulaEvaluationException>(() => _evaluator.EvaluateInt(formula, new { }));
+
+        Assert.Contains("unknown variable", exception.Message);
+    }
+
+    [Fact]
+    public void Evaluate_MathIsReadOnly()
+    {
+        var exception = Assert.Throws<FormulaEvaluationException>(() =>
+            _evaluator.EvaluateBool("math.floor = function() return 999 end return true", new { }));
+
+        Assert.Contains("math is read-only", exception.Message);
+        Assert.Equal(2, _evaluator.EvaluateInt("return math.floor(2.5)", new { })); // other formulas unaffected
     }
 
     [Fact]

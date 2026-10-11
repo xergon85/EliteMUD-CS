@@ -1,3 +1,4 @@
+using EliteMud.Application.Formulas;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
@@ -9,7 +10,7 @@ namespace EliteMud.Application.Skills;
 /// 
 /// Metadata loaded from content/skills/skills.json
 /// </summary>
-public sealed class BackstabSkill : ISkillHandler
+public sealed class BackstabSkill : ISkillHandler, IFormulaSource
 {
     private readonly SkillMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
@@ -70,12 +71,9 @@ public sealed class BackstabSkill : ISkillHandler
             return Math.Min(attacker.Level / 10 + 1, 5);
         }
 
-        var context = new
-        {
-            level = attacker.Level
-        };
+        var context = new LevelInputs(Level: attacker.Level);
 
-        return _formulaEvaluator.EvaluateInt(multiplierFormula, context);
+        return _formulaEvaluator.EvaluateInt(multiplierFormula, context, $"{_metadata.Name}.damageMultiplierFormula");
     }
 
     /// <summary>
@@ -95,13 +93,19 @@ public sealed class BackstabSkill : ISkillHandler
             return roll <= attacker.GetSkill(SkillType.Backstab);
         }
 
-        var context = new
-        {
-            skillPercent = attacker.GetSkill(SkillType.Backstab)
-        };
+        var context = new SkillCheckInputs(SkillPercent: attacker.GetSkill(SkillType.Backstab));
 
         // If victim is asleep, auto-hit
         // (checked in executor - if awake, use normal roll)
-        return _formulaEvaluator.EvaluateBool(hitFormula, context);
+        return _formulaEvaluator.EvaluateBool(hitFormula, context, $"{_metadata.Name}.hitFormula");
     }
+
+    /// <summary>The content formulas this skill uses, for the load-time check.</summary>
+    public IEnumerable<FormulaSlot> FormulaSlots =>
+    [
+        new($"{_metadata.Name}.damageMultiplierFormula", _metadata.Mechanics?.DamageMultiplierFormula,
+            typeof(LevelInputs), FormulaResult.Number),
+        new($"{_metadata.Name}.hitFormula", _metadata.Mechanics?.HitFormula,
+            typeof(SkillCheckInputs), FormulaResult.Boolean)
+    ];
 }

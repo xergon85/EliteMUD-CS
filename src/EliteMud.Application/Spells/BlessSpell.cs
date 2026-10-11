@@ -1,3 +1,4 @@
+using EliteMud.Application.Formulas;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
@@ -15,7 +16,7 @@ namespace EliteMud.Application.Spells;
 /// 
 /// Metadata and formulas loaded from content/spells/spells.json
 /// </summary>
-public sealed class BlessSpell : ISpellHandler
+public sealed class BlessSpell : ISpellHandler, IFormulaSource
 {
     private readonly SpellMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
@@ -124,11 +125,10 @@ public sealed class BlessSpell : ISpellHandler
 
         return _formulaEvaluator.EvaluateBool(
             _metadata.Mechanics.SuccessFormula,
-            new
-            {
-                level = caster.Level,
-                spellPercent = caster is PlayerState player ? player.GetSpell(SpellType.Bless) : 100
-            }
+            new SpellCheckInputs(
+                Level: caster.Level,
+                SpellPercent: caster is PlayerState player ? player.GetSpell(SpellType.Bless) : 100),
+            $"{_metadata.Name}.successFormula"
         );
     }
 
@@ -147,7 +147,8 @@ public sealed class BlessSpell : ISpellHandler
         var duration = _metadata.Mechanics?.DurationFormula != null
             ? _formulaEvaluator.EvaluateInt(
                 _metadata.Mechanics.DurationFormula,
-                new { level = caster.Level }
+                new LevelInputs(Level: caster.Level),
+                $"{_metadata.Name}.durationFormula"
             )
             : 6 + caster.Level; // Fallback to legacy default
 
@@ -156,7 +157,8 @@ public sealed class BlessSpell : ISpellHandler
         var hitrollBonus = _metadata.Mechanics?.HitrollBonusFormula != null
             ? _formulaEvaluator.EvaluateInt(
                 _metadata.Mechanics.HitrollBonusFormula,
-                new { level = caster.Level }
+                new LevelInputs(Level: caster.Level),
+                $"{_metadata.Name}.hitrollBonusFormula"
             )
             : 2; // Fallback to legacy default
 
@@ -165,7 +167,8 @@ public sealed class BlessSpell : ISpellHandler
         var savingMagicBonus = _metadata.Mechanics?.SavingMagicBonusFormula != null
             ? _formulaEvaluator.EvaluateInt(
                 _metadata.Mechanics.SavingMagicBonusFormula,
-                new { level = caster.Level }
+                new LevelInputs(Level: caster.Level),
+                $"{_metadata.Name}.savingMagicBonusFormula"
             )
             : 5; // Fallback to legacy default
 
@@ -197,4 +200,17 @@ public sealed class BlessSpell : ISpellHandler
             }
         };
     }
+
+    /// <summary>The content formulas this spell uses, for the load-time check.</summary>
+    public IEnumerable<FormulaSlot> FormulaSlots =>
+    [
+        new($"{_metadata.Name}.successFormula", _metadata.Mechanics?.SuccessFormula,
+            typeof(SpellCheckInputs), FormulaResult.Boolean),
+        new($"{_metadata.Name}.durationFormula", _metadata.Mechanics?.DurationFormula,
+            typeof(LevelInputs), FormulaResult.Number),
+        new($"{_metadata.Name}.hitrollBonusFormula", _metadata.Mechanics?.HitrollBonusFormula,
+            typeof(LevelInputs), FormulaResult.Number),
+        new($"{_metadata.Name}.savingMagicBonusFormula", _metadata.Mechanics?.SavingMagicBonusFormula,
+            typeof(LevelInputs), FormulaResult.Number)
+    ];
 }

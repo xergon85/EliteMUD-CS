@@ -314,7 +314,7 @@ This file defines metadata for all skills and spells in the game, including mech
       ],
       "mechanics": {
         "damageFormula": "level / 2",
-        "hitFormula": "((10 - victimAC/10) * 2) + random(1,101)",
+        "hitFormula": "return ((10 - div(victimAC, 10)) * 2) + random(1,101) <= skillPercent",
         "requirements": [
           {
             "type": "position",
@@ -388,6 +388,30 @@ Each skill has an array of 20 class restriction entries (one per class):
 - Equipment requirements (shield, weapon type) are defined but may not be enforced until equipment system is complete
 - Legacy skill IDs from EliteMUD constants.c are preserved (Spells: 0-299, Skills: 300-399)
 - Skills without implemented mechanics (e.g., Tumble) have `"NOT_YET_IMPLEMENTED"` placeholders
+
+### Formulas
+- Formulas are Lua and must `return` a value: a number, or true/false for checks (e.g. `hitFormula`).
+- **Variables:** each formula slot gets a fixed set of variables, in camelCase, from its input record
+  (`src/EliteMud.Application/Formulas/FormulaInputs.cs`, or a record nested in the skill/spell class):
+
+  | Inputs | Variables | Used by |
+  |---|---|---|
+  | `LevelInputs` | `level` | damage, healing, duration and bonus formulas |
+  | `SkillCheckInputs` | `skillPercent` | skill hit checks |
+  | `SpellCheckInputs` | `level`, `spellPercent` | spell success checks |
+  | `DefenseCheckInputs` | `damage`, `skillPercent` | dodge/parry activation |
+  | `DefenseEffectInputs` | `damage`, `level` | dodge/parry effect |
+  | `KickSkill.HitInputs` | `victimAC`, `skillPercent` | kick hit check |
+  | `NoInputs` | none | constant formulas, e.g. `return 10` |
+- **Built-ins:** `math` (Lua's), `random(min, max)` (inclusive, like legacy `number()`), and `div(a, b)`: integer
+  division truncating toward zero, like C. Lua's `/` is real division, so use `div` where legacy C divides integers
+  (e.g. kick: `div(victimAC, 10)`; -55 / 10 is -5 in C, -5.5 with `/`).
+- **Sandbox:** formulas can only use their variables and the built-ins; there's no file, OS or code-loading access, and
+  `math` is read-only.
+- **Checked at startup:** every name a formula reads must be one of its variables or a built-in, checked in every branch
+  without running it. Then one sample run catches syntax errors and the result type of the branch it takes. Any
+  problem stops the server with a message naming the formula; `--validate` reports them too. The result type of
+  branches the sample doesn't take isn't guaranteed; the content editor's live preview covers that.
 
 
 ## Flag Maps (v1)

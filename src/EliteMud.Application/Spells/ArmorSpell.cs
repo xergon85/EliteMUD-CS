@@ -1,3 +1,4 @@
+using EliteMud.Application.Formulas;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
@@ -12,7 +13,7 @@ namespace EliteMud.Application.Spells;
 /// 
 /// Metadata and formulas loaded from content/spells/spells.json
 /// </summary>
-public sealed class ArmorSpell : ISpellHandler
+public sealed class ArmorSpell : ISpellHandler, IFormulaSource
 {
     private readonly SpellMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
@@ -121,11 +122,10 @@ public sealed class ArmorSpell : ISpellHandler
 
         return _formulaEvaluator.EvaluateBool(
             _metadata.Mechanics.SuccessFormula,
-            new
-            {
-                level = caster.Level,
-                spellPercent = caster is PlayerState player ? player.GetSpell(SpellType.Armor) : 100
-            }
+            new SpellCheckInputs(
+                Level: caster.Level,
+                SpellPercent: caster is PlayerState player ? player.GetSpell(SpellType.Armor) : 100),
+            $"{_metadata.Name}.successFormula"
         );
     }
 
@@ -141,7 +141,8 @@ public sealed class ArmorSpell : ISpellHandler
         var duration = _metadata.Mechanics?.DurationFormula != null
             ? _formulaEvaluator.EvaluateInt(
                 _metadata.Mechanics.DurationFormula,
-                new { level = caster.Level }
+                new LevelInputs(Level: caster.Level),
+                $"{_metadata.Name}.durationFormula"
             )
             : 24 + caster.Level; // Fallback to legacy default
 
@@ -150,7 +151,8 @@ public sealed class ArmorSpell : ISpellHandler
         var modifier = _metadata.Mechanics?.ArmorClassBonusFormula != null
             ? _formulaEvaluator.EvaluateInt(
                 _metadata.Mechanics.ArmorClassBonusFormula,
-                new { level = caster.Level }
+                new LevelInputs(Level: caster.Level),
+                $"{_metadata.Name}.armorClassBonusFormula"
             )
             : -20; // Fallback to legacy default
 
@@ -169,4 +171,15 @@ public sealed class ArmorSpell : ISpellHandler
             }
         };
     }
+
+    /// <summary>The content formulas this spell uses, for the load-time check.</summary>
+    public IEnumerable<FormulaSlot> FormulaSlots =>
+    [
+        new($"{_metadata.Name}.successFormula", _metadata.Mechanics?.SuccessFormula,
+            typeof(SpellCheckInputs), FormulaResult.Boolean),
+        new($"{_metadata.Name}.durationFormula", _metadata.Mechanics?.DurationFormula,
+            typeof(LevelInputs), FormulaResult.Number),
+        new($"{_metadata.Name}.armorClassBonusFormula", _metadata.Mechanics?.ArmorClassBonusFormula,
+            typeof(LevelInputs), FormulaResult.Number)
+    ];
 }

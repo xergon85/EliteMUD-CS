@@ -1,3 +1,4 @@
+using EliteMud.Application.Formulas;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
@@ -16,7 +17,7 @@ namespace EliteMud.Application.Skills;
 /// 
 /// Metadata loaded from content/skills/skills.json
 /// </summary>
-public sealed class TrackSkill : ISkillHandler
+public sealed class TrackSkill : ISkillHandler, IFormulaSource
 {
     private readonly SkillMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
@@ -77,12 +78,9 @@ public sealed class TrackSkill : ISkillHandler
             return roll <= tracker.GetSkill(SkillType.Track);
         }
 
-        var context = new
-        {
-            skillPercent = tracker.GetSkill(SkillType.Track)
-        };
+        var context = new SkillCheckInputs(SkillPercent: tracker.GetSkill(SkillType.Track));
 
-        return _formulaEvaluator.EvaluateBool(hitFormula, context);
+        return _formulaEvaluator.EvaluateBool(hitFormula, context, $"{_metadata.Name}.hitFormula");
     }
 
     /// <summary>
@@ -100,4 +98,11 @@ public sealed class TrackSkill : ISkillHandler
         var distance = 50 + (skillPercent / 2) + level;
         return Math.Min(distance, 200);
     }
+
+    /// <summary>The content formulas this skill uses, for the load-time check.</summary>
+    public IEnumerable<FormulaSlot> FormulaSlots =>
+    [
+        new($"{_metadata.Name}.hitFormula", _metadata.Mechanics?.HitFormula,
+            typeof(SkillCheckInputs), FormulaResult.Boolean)
+    ];
 }

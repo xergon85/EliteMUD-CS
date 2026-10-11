@@ -1,3 +1,4 @@
+using EliteMud.Application.Formulas;
 using EliteMud.Game;
 using EliteMud.Scripting;
 
@@ -11,7 +12,7 @@ namespace EliteMud.Application.Spells;
 /// 
 /// Metadata and formulas loaded from content/spells/spells.json
 /// </summary>
-public sealed class LightningBoltSpell : ISpellHandler
+public sealed class LightningBoltSpell : ISpellHandler, IFormulaSource
 {
     private readonly SpellMetadata _metadata;
     private readonly FormulaEvaluator _formulaEvaluator;
@@ -106,7 +107,8 @@ public sealed class LightningBoltSpell : ISpellHandler
 
         return _formulaEvaluator.EvaluateInt(
             _metadata.Mechanics.DamageFormula,
-            new { level = caster.Level }
+            new LevelInputs(Level: caster.Level),
+            $"{_metadata.Name}.damageFormula"
         );
     }
 
@@ -131,11 +133,10 @@ public sealed class LightningBoltSpell : ISpellHandler
 
         return _formulaEvaluator.EvaluateBool(
             _metadata.Mechanics.SuccessFormula,
-            new
-            {
-                level = caster.Level,
-                spellPercent = caster is PlayerState player ? player.GetSpell(SpellType.LightningBolt) : 100
-            }
+            new SpellCheckInputs(
+                Level: caster.Level,
+                SpellPercent: caster is PlayerState player ? player.GetSpell(SpellType.LightningBolt) : 100),
+            $"{_metadata.Name}.successFormula"
         );
     }
 
@@ -146,4 +147,13 @@ public sealed class LightningBoltSpell : ISpellHandler
     {
         return new List<Affect>();
     }
+
+    /// <summary>The content formulas this spell uses, for the load-time check.</summary>
+    public IEnumerable<FormulaSlot> FormulaSlots =>
+    [
+        new($"{_metadata.Name}.damageFormula", _metadata.Mechanics?.DamageFormula,
+            typeof(LevelInputs), FormulaResult.Number),
+        new($"{_metadata.Name}.successFormula", _metadata.Mechanics?.SuccessFormula,
+            typeof(SpellCheckInputs), FormulaResult.Boolean)
+    ];
 }
