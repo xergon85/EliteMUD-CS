@@ -196,7 +196,7 @@ public class RecallCommandTests : IDisposable
         var scriptEngine = new MockScriptEngine();
         
         // Create look handler (uses same world state)
-        var lookHandler = new LookCommandHandler(worldState, scriptEngine, connectionRegistry);
+        var lookHandler = new LookCommandHandler(worldState, scriptEngine, connectionRegistry, RulesContent.Empty);
 
         // Create recall handler
         var handler = new RecallCommandHandler(worldState, lookHandler, connectionRegistry);

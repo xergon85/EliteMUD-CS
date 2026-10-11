@@ -68,19 +68,21 @@ Ordered so each step is testable on its own. ☐ = to do.
 Rewritten Oct 11, 2026 to match the decisions above (string ids, one file per thing, explicit XP values, rules
 reload). Tracked in #22; editing goes through the content editor (#28).
 
-- ☐ **A1. Content model.** C# records for classes, races, XP curves, level-up profiles and progression rules, with
+- ☑ **A1. Content model.** C# records for classes, races, XP curves, level-up profiles and progression rules, with
   string ids. Formula slots declare their variables (Q4, needs #29).
-- ☐ **A2. Extract the legacy tables** with a one-off, logged extractor (like the importer, with an import-log):
+- ☑ **A2. Extract the legacy tables** with a one-off, logged extractor (like the importer, with an import-log):
   - one file per class from `titles[][]` (40 title rows) plus its XP curve and level-up profile names
   - the 6 XP curves with explicit values per level 1–109, generated with the `exp_needed` interpolation
   - the 4 level-up profiles from `advance_level`, and the progression rules from `gain_exp` / `die` / fight.c
   - one file per race from `str_max[]`…`cha_max[]`, `hp_start[]`/`mn_start[]`/`mv_start[]`, `allowed_classes[]`
   _Done when:_ a test recomputes `exp_needed` from the legacy rows and matches every stored value.
-- ☐ **A3. Load and check.** Registries for the new kinds; the content check validates every reference (class → curve,
-  race → classes, skill → classes) and formula variables. One atomic rules reload (Q6) that refuses ids still in use (Q5).
-- ☐ **A4. Replace the `CharacterClass` and `Race` enums** with ids from the registries (4 files use them today). The DB
+- ☑ **A3. Load and check.** Registries for the new kinds; the content check validates every reference (class → curve,
+  race → classes, skill → classes) and formula variables. The atomic rules reload (Q6) that refuses ids still in use
+  (Q5) moved to its own card, #35.
+- ☑ **A4. Replace the `CharacterClass` and `Race` enums** with ids from the registries (4 files use them today). The DB
   already stores names. Map the names to the new ids (e.g. `MagicUser` → `magic-user`) with an additive migration.
-- ☐ **A5. Load mob XP from content.** Add `Experience` to `MobDefinition` and read it in `ContentLoader`.
+  Creation menus use the legacy letters, stored as `menuKey` in the content.
+- ☑ **A5. Load mob XP from content.** Add `Experience` to `MobDefinition` and read it in `ContentLoader`.
   _Done when:_ a Midgaard mob reports its file value.
 
 ### B. Core XP rules
@@ -151,6 +153,10 @@ reload). Tracked in #22; editing goes through the content editor (#28).
 - **Mortal level cap:** 109. Levels 110+ are immortal only. (Oct 10, 2026)
 - **Stat rolling:** deferred. The architecture isn't settled yet; keep the fixed 11s for now. (Oct 10, 2026)
 - **Multi-class / dual-class:** deferred, same reason. (Oct 10, 2026)
+- **Allowed classes per race:** the legacy `allowed_classes[]` table is correct for the live game: no playable race
+  can start as Magic-user, Cleric or Thief, and Humans get 13 advanced classes. (Oct 11, 2026)
+- **Creation menu letters:** keep the legacy letters (races from the interpreter.c menu, class letter = `'a'` + class
+  number − 1), stored as `menuKey` in the content so new races and classes can pick a free letter. (Oct 11, 2026)
 
 **Keep in mind for later:** don't design anything that assumes a player has exactly one class and one level.
 Write the XP and level-up functions to take `(class, level)` as inputs rather than reading `player.Class`,

@@ -24,10 +24,12 @@ namespace EliteMud.Application.Commands.Stat;
 public sealed class StatHandler
 {
     private readonly IWorldState _worldState;
+    private readonly RulesContent _rules;
 
-    public StatHandler(IWorldState worldState)
+    public StatHandler(IWorldState worldState, RulesContent rules)
     {
         _worldState = worldState;
+        _rules = rules;
     }
 
     public CommandResult Handle(PlayerState player)
@@ -36,7 +38,7 @@ public sealed class StatHandler
 
         // Line 1: Level in red, name and title in cyan
         var title = player.Title ?? "the newbie";
-        var raceClass = $"{player.Race.ToLower()} {player.CharacterClass.ToLower()}";
+        var raceClass = $"{_rules.RaceName(player.Race).ToLower()} {_rules.ClassName(player.CharacterClass).ToLower()}";
         output.AppendLine($"Level #R{player.Level}#N - #C{player.Name} {title}#N -");
 
         // Line 2: Age, sex, race, class, "player" - all green
@@ -229,14 +231,12 @@ public sealed class StatHandler
         // TODO: Show innate racial abilities (regeneration, infravision, etc.)
         // These would be permanent affects with source="innate" or separate racial ability system
         // For now, add some placeholder innate abilities based on race
-        if (player.Race.Equals("Troll", StringComparison.OrdinalIgnoreCase))
+        if (player.Race == "troll")
         {
             output.AppendLine($"Magic: (innate)    #Cregeneration#N");
         }
         
-        if (player.Race.Equals("Elf", StringComparison.OrdinalIgnoreCase) ||
-            player.Race.Equals("Drow", StringComparison.OrdinalIgnoreCase) ||
-            player.Race.Equals("Dwarf", StringComparison.OrdinalIgnoreCase))
+        if (player.Race is "elf" or "drow" or "dwarf")
         {
             output.AppendLine($"Magic: (innate)    #Cinfravision#N");
         }

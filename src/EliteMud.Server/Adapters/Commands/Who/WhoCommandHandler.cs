@@ -11,10 +11,10 @@ internal sealed class WhoCommandHandler : ICommandHandler, IConnectionDirectory
     private readonly ConnectionRegistry _connectionRegistry;
     private readonly WhoHandler _whoHandler;
 
-    public WhoCommandHandler(ConnectionRegistry connectionRegistry)
+    public WhoCommandHandler(ConnectionRegistry connectionRegistry, RulesContent rules)
     {
         _connectionRegistry = connectionRegistry;
-        _whoHandler = new WhoHandler(this);
+        _whoHandler = new WhoHandler(this, rules);
     }
     
     public IReadOnlyList<PlayerState> GetPlayers()

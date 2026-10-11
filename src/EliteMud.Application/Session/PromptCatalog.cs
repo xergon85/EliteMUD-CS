@@ -1,9 +1,17 @@
+using System.Text;
 using EliteMud.Game;
 
 namespace EliteMud.Application.Session;
 
 public sealed class PromptCatalog
 {
+    private readonly RulesContent _rules;
+
+    public PromptCatalog(RulesContent rules)
+    {
+        _rules = rules;
+    }
+
     public string GetWelcomeMessage()
     {
         return @"
@@ -57,58 +65,33 @@ public sealed class PromptCatalog
         return "What is your sex? (M/F): ";
     }
     
+    /// <summary>The creation races from content, three per row, with their legacy menu letters.</summary>
     public string GetRacePrompt()
     {
-        return @"
-Select a race:
-  [a] Human       [b] Troll       [c] Halfling
-  [d] Dwarf       [e] Gnome       [f] Elf
-  [g] Half-elf    [h] Fairy       [i] Minotaur
-  [j] Ratman      [k] Drow        [l] Lizardman
-  [m] Draconian
-
-Enter capital letter to get info about race
-Race: ";
-    }
-    
-    public string GetClassPrompt(List<CharacterClass> allowedClasses)
-    {
-        var prompt = "\nSelect Class:\n";
-        
-        var classOptions = new Dictionary<char, CharacterClass>
+        var prompt = new StringBuilder("\nSelect a race:\n");
+        foreach (var row in _rules.CreationRaces.Chunk(3))
         {
-            { 'a', CharacterClass.MagicUser },
-            { 'b', CharacterClass.Cleric },
-            { 'c', CharacterClass.Thief },
-            { 'd', CharacterClass.Warrior },
-            { 'e', CharacterClass.Psionicist },
-            { 'f', CharacterClass.Monk },
-            { 'g', CharacterClass.Bard },
-            { 'h', CharacterClass.Knight },
-            { 'i', CharacterClass.Wizard },
-            { 'j', CharacterClass.Druid },
-            { 'k', CharacterClass.Assassin },
-            { 'l', CharacterClass.Ranger },
-            { 'm', CharacterClass.Illusionist },
-            { 'n', CharacterClass.Paladin },
-            { 'o', CharacterClass.Mariner },
-            { 'p', CharacterClass.Cavalier },
-            { 's', CharacterClass.Ninja }
-        };
-        
-        foreach (var kvp in classOptions)
-        {
-            if (allowedClasses.Contains(kvp.Value))
-            {
-                prompt += $"  [{kvp.Key}] {ClassNames.Names[kvp.Value]}\n";
-            }
+            var entries = row.Select(race => $"[{race.MenuKey}] {race.Name}".PadRight(16));
+            prompt.Append("  ").Append(string.Concat(entries).TrimEnd()).Append('\n');
         }
-        
-        prompt += "\nEnter [-] to go back to race selection\n";
-        prompt += "Enter capital letter to get info about class\n";
-        prompt += "Class: ";
-        
-        return prompt;
+
+        prompt.Append("\nEnter capital letter to get info about race\nRace: ");
+        return prompt.ToString();
+    }
+
+    /// <summary>The race's allowed classes, by menu letter.</summary>
+    public string GetClassPrompt(RaceDefinition race)
+    {
+        var prompt = new StringBuilder("\nSelect Class:\n");
+        foreach (var characterClass in race.AllowedClasses.OrderBy(c => c.MenuKey, StringComparer.Ordinal))
+        {
+            prompt.Append($"  [{characterClass.MenuKey}] {characterClass.Name}\n");
+        }
+
+        prompt.Append("\nEnter [-] to go back to race selection\n");
+        prompt.Append("Enter capital letter to get info about class\n");
+        prompt.Append("Class: ");
+        return prompt.ToString();
     }
     
     public string GetCharacterSelectionMenu(List<CharacterListItem> characters)
@@ -120,7 +103,7 @@ Race: ";
         for (int i = 0; i < characters.Count; i++)
         {
             var ch = characters[i];
-            menu += $"  [{i + 1}] {ch.Name} (Level {ch.Level} {ch.CharacterClass})\n";
+            menu += $"  [{i + 1}] {ch.Name} (Level {ch.Level} {_rules.ClassName(ch.CharacterClass)})\n";
         }
         
         menu += $"\n  [N] Create new character\n";

@@ -102,8 +102,10 @@ public class SessionData
     public string? PendingCharacterName { get; set; }
     public string? PendingPassword { get; set; }
     public Sex? PendingSex { get; set; }
-    public Race? PendingRace { get; set; }
-    public CharacterClass? PendingClass { get; set; }
+    /// <summary>Race id chosen during creation.</summary>
+    public string? PendingRace { get; set; }
+    /// <summary>Class id chosen during creation.</summary>
+    public string? PendingClass { get; set; }
     
     // Current selected character
     public int? SelectedCharacterId { get; set; }
@@ -122,4 +124,6 @@ public class SessionData
 /// <summary>
 /// Simplified character info for the selection menu
 /// </summary>
-public record CharacterListItem(int CharacterId, string Name, int Level, string CharacterClass);
+/// <param name="CharacterClass">Class id.</param>
+/// <param name="Race">Race id.</param>
+public record CharacterListItem(int CharacterId, string Name, int Level, string CharacterClass, string Race);

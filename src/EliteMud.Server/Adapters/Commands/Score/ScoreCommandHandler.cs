@@ -1,5 +1,6 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
+using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Score;
@@ -10,10 +11,10 @@ internal sealed class ScoreCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly EliteMud.Application.Commands.Score.ScoreHandler _scoreHandler;
 
-    public ScoreCommandHandler(IWorldState worldState)
+    public ScoreCommandHandler(IWorldState worldState, RulesContent rules)
     {
         _worldState = worldState;
-        _scoreHandler = new EliteMud.Application.Commands.Score.ScoreHandler();
+        _scoreHandler = new EliteMud.Application.Commands.Score.ScoreHandler(rules);
     }
     
     public async ValueTask<CommandOutcome> HandleAsync(CommandRequest request, ConnectionContext context, CancellationToken cancellationToken)

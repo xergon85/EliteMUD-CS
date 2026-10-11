@@ -15,6 +15,7 @@ public class AuthenticationHandler
     private readonly IPasswordService _passwordService;
     private readonly IpBanService _ipBanService;
     private readonly PromptCatalog _prompts;
+    private readonly RulesContent _rules;
     private const int MaxCharactersPerAccount = 10;
     private const int MaxPasswordAttempts = 3;
 
@@ -23,8 +24,10 @@ public class AuthenticationHandler
         ICharacterRepository characterRepository,
         IPasswordService passwordService,
         IpBanService ipBanService,
-        PromptCatalog prompts)
+        PromptCatalog prompts,
+        RulesContent rules)
     {
+        _rules = rules;
         _accountRepository = accountRepository;
         _characterRepository = characterRepository;
         _passwordService = passwordService;
@@ -183,7 +186,8 @@ public class AuthenticationHandler
             c.CharacterId, 
             c.Name, 
             c.Level, 
-            c.CharacterClass)).ToList();
+            c.CharacterClass,
+            c.Race)).ToList();
 
         return (ConnectionState.CharacterSelection, 
             _prompts.GetCharacterSelectionMenu(session.Characters), 
@@ -285,6 +289,19 @@ public class AuthenticationHandler
         if (int.TryParse(choice, out int charIndex) && charIndex > 0 && charIndex <= session.Characters!.Count)
         {
             var selectedChar = session.Characters[charIndex - 1];
+
+            // Removing a class or race that characters use is refused (#35), so this only happens if the content
+            // was edited by hand. Stop here rather than play a character the rules don't know.
+            var unknown = UnknownRulesIds(selectedChar);
+            if (unknown is not null)
+            {
+                Console.WriteLine($"Character {selectedChar.CharacterId} ({selectedChar.Name}) can't be played: {unknown}");
+                return (ConnectionState.CharacterSelection,
+                    $"{selectedChar.Name} can't be played right now ({unknown}). Please contact an immortal.\n" +
+                    _prompts.GetCharacterSelectionMenu(session.Characters),
+                    session);
+            }
+
             session.SelectedCharacterId = selectedChar.CharacterId;
             
             return (ConnectionState.ShowMotd, _prompts.GetMotd(), session);
@@ -293,6 +310,22 @@ public class AuthenticationHandler
         return (ConnectionState.CharacterSelection, 
             _prompts.GetInvalidOption() + _prompts.GetCharacterSelectionMenu(session.Characters!), 
             session);
+    }
+
+    private string? UnknownRulesIds(CharacterListItem character)
+    {
+        var problems = new List<string>();
+        if (!_rules.Classes.ContainsKey(character.CharacterClass))
+        {
+            problems.Add($"unknown class '{character.CharacterClass}'");
+        }
+
+        if (!_rules.Races.ContainsKey(character.Race))
+        {
+            problems.Add($"unknown race '{character.Race}'");
+        }
+
+        return problems.Count == 0 ? null : string.Join(", ", problems);
     }
 
     private async Task<(ConnectionState, string, SessionData)> HandleGetCharacterNameAsync(
@@ -375,38 +408,16 @@ public class AuthenticationHandler
     {
         var choice = input.Trim().ToLower();
 
-        // Map input to race
-        var race = choice switch
-        {
-            "a" => Race.Human,
-            "b" => Race.Troll,
-            "c" => Race.Halfling,
-            "d" => Race.Dwarf,
-            "e" => Race.Gnome,
-            "f" => Race.Elf,
-            "g" => Race.HalfElf,
-            "h" => Race.Fairy,
-            "i" => Race.Minotaur,
-            "j" => Race.Ratman,
-            "k" => Race.Drow,
-            "l" => Race.Lizardman,
-            "m" => Race.Draconian,
-            _ => (Race?)null
-        };
-
-        if (race == null)
+        var race = _rules.CreationRaces.FirstOrDefault(r => r.MenuKey == choice);
+        if (race is null)
         {
             return Task.FromResult((ConnectionState.SelectRace, 
                 _prompts.GetInvalidOption() + _prompts.GetRacePrompt(), 
                 session));
         }
 
-        session.PendingRace = race.Value;
-        var allowedClasses = AllowedClasses.GetAllowedClasses(race.Value);
-        
-        return Task.FromResult((ConnectionState.SelectClass, 
-            _prompts.GetClassPrompt(allowedClasses), 
-            session));
+        session.PendingRace = race.Id;
+        return Task.FromResult((ConnectionState.SelectClass, _prompts.GetClassPrompt(race), session));
     }
 
     private async Task<(ConnectionState, string, SessionData)> HandleSelectClassAsync(
@@ -423,47 +434,17 @@ public class AuthenticationHandler
             return (ConnectionState.SelectRace, _prompts.GetRacePrompt(), session);
         }
 
-        // Map input to class
-        var characterClass = choice switch
+        // Only the race's allowed classes can be picked
+        var race = _rules.Races[session.PendingRace!];
+        var characterClass = race.AllowedClasses.FirstOrDefault(c => c.MenuKey == choice);
+        if (characterClass is null)
         {
-            "a" => CharacterClass.MagicUser,
-            "b" => CharacterClass.Cleric,
-            "c" => CharacterClass.Thief,
-            "d" => CharacterClass.Warrior,
-            "e" => CharacterClass.Psionicist,
-            "f" => CharacterClass.Monk,
-            "g" => CharacterClass.Bard,
-            "h" => CharacterClass.Knight,
-            "i" => CharacterClass.Wizard,
-            "j" => CharacterClass.Druid,
-            "k" => CharacterClass.Assassin,
-            "l" => CharacterClass.Ranger,
-            "m" => CharacterClass.Illusionist,
-            "n" => CharacterClass.Paladin,
-            "o" => CharacterClass.Mariner,
-            "p" => CharacterClass.Cavalier,
-            "s" => CharacterClass.Ninja,
-            _ => (CharacterClass?)null
-        };
-
-        if (characterClass == null)
-        {
-            var allowedClasses = AllowedClasses.GetAllowedClasses(session.PendingRace!.Value);
-            return (ConnectionState.SelectClass, 
-                _prompts.GetInvalidOption() + _prompts.GetClassPrompt(allowedClasses), 
+            return (ConnectionState.SelectClass,
+                _prompts.GetInvalidOption() + _prompts.GetClassPrompt(race),
                 session);
         }
 
-        // Verify class is allowed for selected race
-        var allowed = AllowedClasses.GetAllowedClasses(session.PendingRace!.Value);
-        if (!allowed.Contains(characterClass.Value))
-        {
-            return (ConnectionState.SelectClass, 
-                _prompts.GetInvalidOption() + _prompts.GetClassPrompt(allowed), 
-                session);
-        }
-
-        session.PendingClass = characterClass.Value;
+        session.PendingClass = characterClass.Id;
 
         // Create the character
         var character = new Character
@@ -471,8 +452,8 @@ public class AuthenticationHandler
             AccountId = session.AccountId!.Value,
             Name = session.PendingCharacterName!,
             Sex = session.PendingSex.ToString(),
-            Race = session.PendingRace.ToString()!,
-            CharacterClass = session.PendingClass.ToString()!,
+            Race = session.PendingRace!,
+            CharacterClass = session.PendingClass,
             Level = 1,
             Experience = 0,
             
@@ -568,7 +549,8 @@ public class AuthenticationHandler
                 c.CharacterId, 
                 c.Name, 
                 c.Level, 
-                c.CharacterClass)).ToList();
+                c.CharacterClass,
+                c.Race)).ToList();
 
             return (ConnectionState.CharacterSelection, 
                 $"Character '{charToDelete.Name}' deleted.\n" + 
