@@ -47,20 +47,28 @@ public sealed class MoveHandler
             return MoveResult.Failed("You cannot go that way.");
         }
 
-        // Check if there is a closed door blocking the exit
+        // Closed exits block movement, doors or not. Legacy: do_simple_move() in act.movement.c
         var room = _worldState.World.GetRoom(player.RoomId);
         var exit = room.Exits.FirstOrDefault(e => e.Direction == direction);
-        
-        if (exit?.IsDoor == true)
+
+        if (exit is not null && _worldState.IsExitClosed(player.RoomId, direction))
         {
-            var doorState = _worldState.GetDoorState(player.RoomId, direction);
-            if (doorState?.IsClosed == true)
-            {
-                return MoveResult.Failed("The door is closed.");
-            }
+            return MoveResult.Failed(ClosedExitMessage(exit));
         }
 
         player.RoomId = targetRoomId;
         return MoveResult.Success();
+    }
+
+    // Legacy messages: a secret exit doesn't reveal itself; otherwise name it by its first keyword
+    private static string ClosedExitMessage(ExitDefinition exit)
+    {
+        if (exit.ExitFlags?.Contains("Secret", StringComparer.OrdinalIgnoreCase) == true)
+        {
+            return "Alas, you cannot go that way...";
+        }
+
+        var keyword = exit.Keywords?.FirstOrDefault();
+        return keyword is null ? "It seems to be closed." : $"The {keyword} seems to be closed.";
     }
 }

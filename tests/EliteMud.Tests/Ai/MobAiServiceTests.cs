@@ -239,6 +239,22 @@ public class MobAiServiceTests
     }
 
     [Fact]
+    public void Wandering_DoesNotPassClosedExit()
+    {
+        // Arrange - same setup as above, but the north exit is closed
+        var (service, worldState, connections) = CreateTestEnvironment(roomsWithExits: true, random: new FixedRandom(0));
+        var mob = CreateMob(1, "wanderer");
+        AddMobToWorld(worldState, mob, 100);
+        CloseExit(worldState, 100, Direction.North);
+
+        // Act
+        service.ProcessMobTick(mob, 100, worldState, connections);
+
+        // Assert
+        Assert.Contains(worldState.GetMobsInRoom(100), m => m.InstanceId == 1);
+    }
+
+    [Fact]
     public void Wandering_DoesNotMoveWhenNotStanding()
     {
         // Arrange
@@ -609,6 +625,15 @@ public class MobAiServiceTests
             HitPoints = 100,
             MaxHitPoints = 100
         };
+    }
+
+    private static void CloseExit(WorldState worldState, int roomId, Direction direction)
+    {
+        // Like AddMobToWorld, set up state through the internal dictionary
+        var doorStatesField = typeof(WorldState).GetField("_doorStates",
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!;
+        var doorStates = (Dictionary<(int, Direction), DoorState>)doorStatesField.GetValue(worldState)!;
+        doorStates[(roomId, direction)] = new DoorState { IsClosed = true };
     }
 
     private void AddMobToWorld(WorldState worldState, MobInstance mob, int roomId)

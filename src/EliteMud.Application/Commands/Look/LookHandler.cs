@@ -318,15 +318,10 @@ public sealed class LookHandler
                 continue;
             }
 
-            // Skip closed doors (legacy: act.informative.c:927)
-            // Closed doors are hidden from regular players in the exit list
-            if (exit.IsDoor)
+            // Skip closed exits, doors or not (legacy: act.informative.c:927)
+            if (_worldState.IsExitClosed(currentRoomId, exit.Direction))
             {
-                var doorState = _worldState.GetDoorState(currentRoomId, exit.Direction);
-                if (doorState?.IsClosed == true)
-                {
-                    continue; // Don't show closed doors in exit list
-                }
+                continue;
             }
 
             // Use single-letter abbreviations matching legacy (n/e/s/w/u/d)

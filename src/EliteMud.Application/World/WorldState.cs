@@ -61,12 +61,13 @@ public sealed class WorldState : IWorldState
             }
         }
         
-        // Initialize door states from room definitions
+        // Initialize door states from room definitions. Closed exits that aren't doors (barriers, e.g.
+        // the Desert Moongate) get a state too: legacy blocks movement on EX_CLOSED alone.
         foreach (var (roomId, room) in world.Rooms)
         {
             foreach (var exit in room.Exits)
             {
-                if (exit.IsDoor)
+                if (exit.IsDoor || exit.InitiallyClosed)
                 {
                     var key = (roomId, exit.Direction);
                     if (!_doorStates.ContainsKey(key))
@@ -519,7 +520,7 @@ public sealed class WorldState : IWorldState
                     break;
 
                 case "DoorState":
-                    // TODO: Implement door state resets
+                    lastCommandSucceeded = ExecuteDoorState(reset);
                     break;
 
                 case "ShuffleExits":
@@ -1076,6 +1077,41 @@ public sealed class WorldState : IWorldState
     /// Returns null if the exit doesn't exist or isn't a door.
     /// Legacy: EXIT(ch, door)->exit_info flags (EX_CLOSED, EX_LOCKED)
     /// </summary>
+    public bool IsExitClosed(int roomId, Direction direction) =>
+        _doorStates.TryGetValue((roomId, direction), out var state) && state.IsClosed;
+
+    /// <summary>
+    /// Set the closed/locked state of one side of an exit: 0 open, 1 closed, 2 closed and locked.
+    /// Works on any exit, door or not, and also repairs a bashed door. The other side is set by its own
+    /// reset line, as in the zone files. Legacy: 'D' in reset_zone(), db.c:2143
+    /// </summary>
+    private bool ExecuteDoorState(ZoneResetDefinition reset)
+    {
+        if (!reset.RoomId.HasValue || !reset.DoorDirection.HasValue
+            || !World.Rooms.TryGetValue(reset.RoomId.Value, out var room))
+        {
+            return false;
+        }
+
+        var direction = (Direction)reset.DoorDirection.Value;
+        if (room.Exits.All(exit => exit.Direction != direction))
+        {
+            return false; // legacy logs "non-existant direction"
+        }
+
+        var key = (room.Id, direction);
+        if (!_doorStates.TryGetValue(key, out var state))
+        {
+            state = new DoorState();
+            _doorStates[key] = state;
+        }
+
+        state.IsClosed = reset.DoorState is 1 or 2;
+        state.IsLocked = reset.DoorState is 2;
+        state.IsBroken = false;
+        return true;
+    }
+
     public DoorState? GetDoorState(int roomId, Direction direction)
     {
         var key = (roomId, direction);

@@ -253,7 +253,7 @@ record, and prints a summary.
 | `G` | object, spawn chance % | Give an object to the last mob | Stub |
 | `E` | object, spawn chance %, wear slot | Equip the last mob | Yes |
 | `P` | object, spawn chance %, container object | Put an object in a container | Stub |
-| `D` | room, direction, state (0 open, 1 closed, 2 locked) | Set a door's state | Not yet |
+| `D` | room, direction, state (0 open, 1 closed, 2 locked) | Set one side of an exit's state. Works on any exit; closing a non-door makes a barrier that players can't open | Yes |
 | `R` | room, number of exits | Shuffle the room's first N exits (mazes) | Yes |
 | `L` | room, portal object, destination room | Load a portal (or reuse the one there) and set its destination | Yes |
 | `A` | room, portal flags, key object | Set the room's portal state (1 closed, 2 locked) and the object needed to `activate` it (-1 none) | Yes |

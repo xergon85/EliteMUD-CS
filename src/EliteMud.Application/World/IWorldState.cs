@@ -469,6 +469,12 @@ public interface IWorldState
     /// Returns null if the exit doesn't exist or isn't a door.
     /// </summary>
     DoorState? GetDoorState(int roomId, Direction direction);
+
+    /// <summary>
+    /// True if the exit is closed: a closed door, or a closed exit that isn't a door (a barrier).
+    /// Legacy blocks movement on EX_CLOSED alone.
+    /// </summary>
+    bool IsExitClosed(int roomId, Direction direction);
     
     /// <summary>
     /// Set door state (open/close, lock/unlock) for both sides of the door.

@@ -34,7 +34,7 @@ Detailed history lives in `git log`; design notes live in the other files under 
 | Skills | 🔶 | 11 skills, Lua formula driven. Many legacy skills still to port. |
 | Spells & affects | 🔶 | 7 spells, buffs with durations. No debuffs, area or utility spells. |
 | Mob AI | 🔶 | Aggro, wander, memory, helpers, scavenge, return-home, tracking. No mob programs. |
-| Doors | 🔶 | Open/close/lock/unlock/bash. No lockpicking, hidden doors or door resets. |
+| Doors | 🔶 | Open/close/lock/unlock/bash, door states set on zone reset. No lockpicking or hidden doors. |
 | Communication | 🔶 | say, tell, reply, gossip, shout, emote. No socials, ignore, history. |
 | Groups & clans | ⬜ | Nothing yet. |
 | Shops, consumables | ⬜ | Nothing yet. |
@@ -49,20 +49,18 @@ Detailed history lives in `git log`; design notes live in the other files under 
 
 The suggested order, aiming at a **playable loop from level 1 upwards**.
 
-1. **Door state resets:** the server ignores `D` resets, so 1,169 doors that should start closed or locked start
-   open, and closed non-door exits (barriers) don't block movement. Found by the content check.
-2. **Fix the open known issues** (below). They are small and silently break content.
-3. **Finish zone resets:** `GiveMob`, `PutObject`, `RemoveObject`.
+1. **Fix the open known issues** (below). They are small and silently break content.
+2. **Finish zone resets:** `GiveMob`, `PutObject`, `RemoveObject`.
    Mobs need loot and chests need contents.
-4. **Levelling:** XP table, level-up gains and messages. Without this, combat has no payoff.
+3. **Levelling:** XP table, level-up gains and messages. Without this, combat has no payoff.
    _In planning: [`docs/plans/levelling-and-classes.md`](plans/levelling-and-classes.md)_
-5. **Race & class tables:** stat modifiers, HP/mana/move gains, and which skills/spells each class gets.
+4. **Race & class tables:** stat modifiers, HP/mana/move gains, and which skills/spells each class gets.
    _Covered by the same plan._
-6. **Permission levels:** player vs immortal. Required before adding more admin commands.
-7. **`help` and `commands`:** new players currently can't discover anything.
-8. **Groups:** `follow`, `group`, `assist`, `gtell`, XP sharing.
-9. **Shops:** `list`, `buy`, `sell`, `value`, plus restocking.
-10. **Consumables & hunger/thirst:** `eat`, `drink`, `quaff`, `recite`, `fill`.
+5. **Permission levels:** player vs immortal. Required before adding more admin commands.
+6. **`help` and `commands`:** new players currently can't discover anything.
+7. **Groups:** `follow`, `group`, `assist`, `gtell`, XP sharing.
+8. **Shops:** `list`, `buy`, `sell`, `value`, plus restocking.
+9. **Consumables & hunger/thirst:** `eat`, `drink`, `quaff`, `recite`, `fill`.
 
 ---
 
@@ -178,6 +176,7 @@ The suggested order, aiming at a **playable loop from level 1 upwards**.
 ### Doors
 - ✅ Door state per exit: `open`/`o`, `close`, `lock`, `unlock`
 - ✅ `bash` doors open
+- ✅ Zone resets set door states (`D`); closed exits that aren't doors are barriers; closed exits block players, flee, mobs and pathfinding
 
 ### Communication
 - ✅ `say`, `tell`, `reply`, `gossip`/`gos`, `shout`/`yell` (costs 10 move), `emote`/`me`, `who`
@@ -202,7 +201,6 @@ Grouped by area. Checkboxes make this usable as a working list.
 ### World & Zone Resets
 - [ ] `GiveMob`: put items in a mob's inventory (inventory exists, the reset is a stub)
 - [ ] `PutObject`: put items in containers (stub)
-- [ ] `DoorState`: set doors open/closed/locked on reset (stub)
 - [ ] `RemoveObject` (stub)
 - [ ] Room regen flags (REGEN_HP / MANA / MOVE)
 - [ ] Hidden doors / secret exits, `pick` lockpicking

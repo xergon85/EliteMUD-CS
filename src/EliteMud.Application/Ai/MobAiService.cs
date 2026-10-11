@@ -310,6 +310,12 @@ public class MobAiService
             return; // No exit in this direction
         }
 
+        // Mobs can't wander through closed exits (legacy: do_simple_move checks EX_CLOSED)
+        if (worldState.IsExitClosed(roomId, direction))
+        {
+            return;
+        }
+
         var targetRoomId = exit.TargetRoomId;
 
         // Validate target room exists

@@ -47,17 +47,10 @@ public sealed class FleeHandler
                 continue;
             }
 
-            // Check if there is a closed door blocking the exit
-            var room = _worldState.World.GetRoom(currentRoomId);
-            var exit = room.Exits.FirstOrDefault(e => e.Direction == attemptDirection);
-            
-            if (exit?.IsDoor == true)
+            // Closed exits block fleeing, doors or not
+            if (_worldState.IsExitClosed(currentRoomId, attemptDirection))
             {
-                var doorState = _worldState.GetDoorState(currentRoomId, attemptDirection);
-                if (doorState?.IsClosed == true)
-                {
-                    continue; // Try another direction
-                }
+                continue; // Try another direction
             }
 
             // Calculate experience loss if fighting (legacy: act.offensive.c:425-427)
