@@ -36,7 +36,11 @@ namespace EliteMud.Data.Migrations
             migrationBuilder.Sql(Rename("CharacterClass", Classes.Select(c => (c.Old, c.Id))));
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Turns every content id back into its enum name, not only the rows Up() changed: characters created after
+        /// Up() store ids too, and the old code expects enum names. Ids can't predate Up(), since the only writer
+        /// before it was the enum's ToString().
+        /// </summary>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.Sql(Rename("Race", Races.Select(r => (r.Id, r.Old))));

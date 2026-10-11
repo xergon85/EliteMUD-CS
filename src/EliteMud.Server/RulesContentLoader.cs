@@ -114,6 +114,22 @@ internal static class RulesContentLoader
         return (new RulesContent(classes, races, curves, profiles), errors);
     }
 
+    /// <summary>
+    /// Skills and spells say which classes can learn them (Q1: access is stored on the skill). Every class named
+    /// there must exist, or a typo would quietly make the skill unlearnable.
+    /// </summary>
+    public static IReadOnlyList<string> CheckClassReferences(
+        RulesContent rules, IEnumerable<SkillMetadata> skills, IEnumerable<SpellMetadata> spells)
+    {
+        var known = string.Join(", ", rules.Classes.Keys.Order(StringComparer.Ordinal));
+        return skills.Select(skill => (Kind: "skill", skill.Name, Classes: skill.ClassRestrictions.Keys))
+            .Concat(spells.Select(spell => (Kind: "spell", spell.Name, Classes: spell.ClassRestrictions.Keys)))
+            .SelectMany(entry => entry.Classes
+                .Where(classId => !rules.Classes.ContainsKey(classId))
+                .Select(classId => $"{entry.Kind} '{entry.Name}': class '{classId}' doesn't exist (known: {known})"))
+            .ToList();
+    }
+
     /// <summary>Every menu entry needs one lowercase letter, different from the others in its menu.</summary>
     private static void CheckMenuKeys(string folder, IEnumerable<(string Id, string? MenuKey)> entries, List<string> errors)
     {
