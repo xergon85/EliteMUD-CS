@@ -27,6 +27,8 @@ public sealed class RulesContentLoaderTests : IDisposable
                 File.Copy(file, Path.Combine(_copy, folder, Path.GetFileName(file)));
             }
         }
+
+        File.Copy(Path.Combine(RealContent, "progression/rules.json"), Path.Combine(_copy, "progression/rules.json"));
     }
 
     public void Dispose() => Directory.Delete(_copy, recursive: true);
@@ -151,6 +153,34 @@ public sealed class RulesContentLoaderTests : IDisposable
         var errors = RulesContentLoader.CheckClassReferences(rules, new[] { typo }, Array.Empty<SpellMetadata>());
 
         Assert.StartsWith("skill 'kick': class 'MagicUser' doesn't exist", Assert.Single(errors));
+    }
+
+    [Fact]
+    public void BlankLevelUpFormula_IsReported()
+    {
+        Edit("progression/level-up/mage.json", json => json["hpGain"] = " ");
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains("progression/level-up/mage.json: hpGain is missing; it's required", errors);
+    }
+
+    [Fact]
+    public void MissingProgressionRules_IsReported()
+    {
+        File.Delete(Path.Combine(_copy, "progression/rules.json"));
+
+        var (_, errors) = RulesContentLoader.Load(_copy);
+
+        Assert.Contains("progression/rules.json: file not found", errors);
+    }
+
+    [Fact]
+    public void ProgressionRules_Load()
+    {
+        var (rules, _) = RulesContentLoader.Load(RealContent);
+
+        Assert.Equal("return div(needed, 10 + div(level, 15))", rules.Progression.MaxGainFormula);
     }
 
     [Fact]

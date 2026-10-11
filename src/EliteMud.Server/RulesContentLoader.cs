@@ -41,6 +41,14 @@ internal static class RulesContentLoader
 
         var profileFiles = ReadAll<LevelUpProfileFile>(contentRoot, "progression/level-up", errors);
         var profileClassLists = profileFiles.ToDictionary(f => f.Data.Id, f => (IReadOnlyList<string>)f.Data.Classes);
+        // The formula check skips blank formulas (skills may leave theirs out); these are required
+        foreach (var (path, data) in profileFiles)
+        {
+            RequireFormula(path, "hpGain", data.HpGain, errors);
+            RequireFormula(path, "manaGain", data.ManaGain, errors);
+            RequireFormula(path, "moveGain", data.MoveGain, errors);
+        }
+
         var profiles = profileFiles
             .Select(profile => new LevelUpProfileDefinition(
                 profile.Data.Id, profile.Data.HpGain, profile.Data.ManaGain, profile.Data.MoveGain, profile.Data.Source ?? ""))
@@ -111,7 +119,41 @@ internal static class RulesContentLoader
         CheckClassLists(curves.Keys, "progression/xp-curves", id => curveClassLists[id], classes.Values, c => c.XpCurve.Id, errors);
         CheckClassLists(profiles.Keys, "progression/level-up", id => profileClassLists[id], classes.Values, c => c.LevelUpProfile.Id, errors);
 
-        return (new RulesContent(classes, races, curves, profiles), errors);
+        var progression = ReadProgression(contentRoot, errors);
+
+        return (new RulesContent(classes, races, curves, profiles, progression), errors);
+    }
+
+    private static void RequireFormula(string path, string field, string formula, List<string> errors)
+    {
+        if (string.IsNullOrWhiteSpace(formula))
+        {
+            errors.Add($"{path}: {field} is missing; it's required");
+        }
+    }
+
+    private static ProgressionRules ReadProgression(string contentRoot, List<string> errors)
+    {
+        const string path = "progression/rules.json";
+        var file = Path.Combine(contentRoot, path);
+        if (!File.Exists(file))
+        {
+            errors.Add($"{path}: file not found");
+            return new ProgressionRules("", "");
+        }
+
+        try
+        {
+            var data = JsonSerializer.Deserialize<ProgressionFile>(File.ReadAllText(file), JsonOptions)
+                       ?? throw new JsonException("empty file");
+            RequireFormula(path, "maxGainFormula", data.MaxGainFormula, errors);
+            return new ProgressionRules(data.MaxGainFormula, data.Source ?? "");
+        }
+        catch (JsonException ex)
+        {
+            errors.Add($"{path}: {ex.Message}");
+            return new ProgressionRules("", "");
+        }
     }
 
     /// <summary>
@@ -287,6 +329,12 @@ internal static class RulesContentLoader
     {
         public List<int> Thresholds { get; set; } = new();
         public List<int> LegacyRows { get; set; } = new();
+    }
+
+    private sealed class ProgressionFile
+    {
+        public string MaxGainFormula { get; set; } = "";
+        public string? Source { get; set; }
     }
 
     private sealed class LevelUpProfileFile : SharedByClassesFile

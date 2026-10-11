@@ -29,10 +29,13 @@ public sealed class FormulaEvaluator
 
     private readonly Script _script;
     private readonly Table _builtIns;
+    private readonly Random _random;
     private readonly object _lock = new();
 
-    public FormulaEvaluator()
+    /// <param name="random">Source for random(); pass a seeded one in tests. Defaults to Random.Shared.</param>
+    public FormulaEvaluator(Random? random = null)
     {
+        _random = random ?? Random.Shared;
         // Only Lua's math library: no io, os, load, require or debug
         _script = new Script(CoreModules.Math);
         _builtIns = CreateBuiltIns();
@@ -178,7 +181,7 @@ public sealed class FormulaEvaluator
         // Legacy EliteMUD: number(from, to) returns from..to inclusive
         builtIns["random"] = (Func<int, int, int>)((min, max) =>
         {
-            return Random.Shared.Next(min, max + 1); // +1 because Random.Next is exclusive on upper bound
+            return _random.Next(min, max + 1); // +1 because Random.Next is exclusive on upper bound
         });
 
         // div(a, b): integer division like C, truncating toward zero (-55 / 10 = -5).
