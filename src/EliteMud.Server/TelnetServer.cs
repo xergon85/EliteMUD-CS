@@ -160,12 +160,19 @@ internal sealed class TelnetServer
             await session.SendLineAsync(_promptCatalog.GetAccountNamePrompt(), cancellationToken);
 
             // Authentication and character selection loop
+            var echoOff = false;
             while (!cancellationToken.IsCancellationRequested && sessionData.State != ConnectionState.Playing)
             {
                 var line = await session.ReadLineAsync(cancellationToken);
                 if (line is null)
                 {
                     return; // Client disconnected
+                }
+
+                // With echo off the client doesn't echo the Enter either, so end the line for it
+                if (echoOff)
+                {
+                    await session.SendAsync("\r\n", cancellationToken);
                 }
 
                 var (nextState, message, updatedSession) = await _authHandler.ProcessInputAsync(
@@ -175,6 +182,14 @@ internal sealed class TelnetServer
 
                 sessionData = updatedSession;
                 sessionData.State = nextState;
+
+                // Don't show passwords while they're typed (security issue #2)
+                var wantEchoOff = IsPasswordState(nextState);
+                if (wantEchoOff != echoOff)
+                {
+                    await session.SetEchoAsync(enabled: !wantEchoOff, cancellationToken);
+                    echoOff = wantEchoOff;
+                }
 
                 if (!string.IsNullOrEmpty(message))
                 {
@@ -264,4 +279,8 @@ internal sealed class TelnetServer
             client.Close();
         }
     }
+
+    /// <summary>States whose prompt asks for a password, so the client must not echo the input.</summary>
+    internal static bool IsPasswordState(ConnectionState state) =>
+        state is ConnectionState.GetPassword or ConnectionState.GetNewPassword or ConnectionState.ConfirmNewPassword;
 }

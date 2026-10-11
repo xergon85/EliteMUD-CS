@@ -7,6 +7,9 @@ namespace EliteMud.Server;
 internal sealed class TelnetSession
 {
     private const byte TelnetIac = 255;
+    private const byte TelnetWill = 251;
+    private const byte TelnetWont = 252;
+    private const byte TelnetOptionEcho = 1;
     private const byte TelnetCommandLength = 3;
 
     private readonly NetworkStream _stream;
@@ -71,6 +74,17 @@ internal sealed class TelnetSession
         var translatedMessage = ColorTranslator.TranslateColors(message);
         var payload = _encoding.GetBytes(translatedMessage);
         await _stream.WriteAsync(payload, cancellationToken);
+    }
+
+    /// <summary>
+    /// Turn the client's local echo on or off, e.g. off while a password is typed.
+    /// "IAC WILL ECHO" tells the client the server echoes (so the client stops); "IAC WONT ECHO" undoes it.
+    /// Legacy: echo_off() / echo_on() in utility.c
+    /// </summary>
+    public async ValueTask SetEchoAsync(bool enabled, CancellationToken cancellationToken)
+    {
+        var command = new[] { TelnetIac, enabled ? TelnetWont : TelnetWill, TelnetOptionEcho };
+        await _stream.WriteAsync(command, cancellationToken);
     }
 
     private static int SkipTelnetCommand(int cursor, int bytesRead)
