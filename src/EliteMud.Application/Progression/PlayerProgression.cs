@@ -76,12 +76,10 @@ public sealed class PlayerProgression
         player.Strength = player.Intelligence = player.Wisdom = CharacterStart.Stat;
         player.Dexterity = player.Constitution = player.Charisma = CharacterStart.Stat;
         player.StrengthAdd = 0;
-        player.MaxHitPoints = CharacterStart.HitPoints;
-        player.MaxMana = CharacterStart.Mana;
-        player.MaxMovement = CharacterStart.Movement;
-        player.HitPoints = Math.Min(player.HitPoints, player.MaxHitPoints);
-        player.Mana = Math.Min(player.Mana, player.MaxMana);
-        player.Movement = Math.Min(player.Movement, player.MaxMovement);
+        // Current and maximum, as character creation sets them; the level-ups after this raise the maximums only
+        player.HitPoints = player.MaxHitPoints = CharacterStart.HitPoints;
+        player.Mana = player.MaxMana = CharacterStart.Mana;
+        player.Movement = player.MaxMovement = CharacterStart.Movement;
     }
 
     /// <summary>
