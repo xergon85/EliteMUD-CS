@@ -1,0 +1,4 @@
+{
+  "maxGainFormula": "return div(needed, 10 + div(level, 15))",
+  "source": "limits.c:387 gain_exp(): gain = MIN(needed/(10+GET_LEVEL(ch)/15), gain); 'needed' is the XP for the next level"
+}

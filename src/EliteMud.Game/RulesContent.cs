@@ -10,8 +10,10 @@ public sealed class RulesContent
         IReadOnlyDictionary<string, ClassDefinition> classes,
         IReadOnlyDictionary<string, RaceDefinition> races,
         IReadOnlyDictionary<string, XpCurveDefinition> xpCurves,
-        IReadOnlyDictionary<string, LevelUpProfileDefinition> levelUpProfiles)
+        IReadOnlyDictionary<string, LevelUpProfileDefinition> levelUpProfiles,
+        ProgressionRules progression)
     {
+        Progression = progression;
         Classes = classes;
         Races = races;
         XpCurves = xpCurves;
@@ -30,6 +32,8 @@ public sealed class RulesContent
 
     public IReadOnlyDictionary<string, LevelUpProfileDefinition> LevelUpProfiles { get; }
 
+    public ProgressionRules Progression { get; }
+
     /// <summary>The races offered at character creation, in menu order.</summary>
     public IReadOnlyList<RaceDefinition> CreationRaces { get; }
 
@@ -43,5 +47,6 @@ public sealed class RulesContent
         new Dictionary<string, ClassDefinition>(),
         new Dictionary<string, RaceDefinition>(),
         new Dictionary<string, XpCurveDefinition>(),
-        new Dictionary<string, LevelUpProfileDefinition>());
+        new Dictionary<string, LevelUpProfileDefinition>(),
+        new ProgressionRules("return 0", ""));
 }

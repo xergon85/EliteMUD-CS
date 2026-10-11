@@ -1,6 +1,7 @@
 using System.Net;
 using EliteMud.Application.Ai;
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.Session;
 using EliteMud.Application.Session.Authentication;
 using EliteMud.Application.Spells;
@@ -125,6 +126,8 @@ internal static class ServerBootstrap
             .AddSingleton(spellRegistry)
             .AddSingleton(formulaEvaluator)
             .AddSingleton(rulesContent)
+            .AddSingleton<ExperienceService>()
+            .AddSingleton<PlayerProgression>()
 
             // Database
             .AddDbContext<EliteMudDbContext>(options =>
@@ -345,7 +348,12 @@ internal static class ServerBootstrap
             .OfType<IFormulaSource>();
 
         var slots = sources.SelectMany(source => source.FormulaSlots)
-            .Concat(rulesContent.LevelUpProfiles.Values.SelectMany(LevelUpFormulaSlots));
+            .Concat(rulesContent.LevelUpProfiles.Values.SelectMany(LevelUpFormulaSlots))
+            .Append(new FormulaSlot(
+                "progression/rules.maxGainFormula",
+                rulesContent.Progression.MaxGainFormula,
+                typeof(Application.Formulas.GainCapInputs),
+                FormulaResult.Number));
         return FormulaChecker.Check(formulaEvaluator, slots);
     }
 

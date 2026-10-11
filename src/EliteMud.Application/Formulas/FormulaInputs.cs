@@ -27,3 +27,6 @@ public sealed record NoInputs;
 /// advance_level(); the stats are the character's current ones.
 /// </summary>
 public sealed record LevelUpInputs(int Level, int Str, int Int, int Wis, int Dex, int Con, int Cha);
+
+/// <summary>For the per-gain XP cap: <c>needed</c> is the XP for the next level.</summary>
+public sealed record GainCapInputs(int Needed, int Level);
