@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -65,8 +66,10 @@ public sealed class LookHandler
 
             foreach (var otherPlayer in otherPlayers)
             {
-                // Format: "<Name> is standing here." with cyan color
-                playerLines.Add($"#C{otherPlayer.Name} is standing here.#N");
+                // Legacy list_char_to_char: "#CName#N title is standing here." (positions other than standing: not yet)
+                var title = PlayerProgression.DisplayTitle(otherPlayer, _rules);
+                var name = string.IsNullOrEmpty(title) ? $"#C{otherPlayer.Name}#N" : $"#C{otherPlayer.Name}#N {title}";
+                playerLines.Add($"{name} is standing here.");
             }
         }
 

@@ -129,10 +129,13 @@ reload). Tracked in #22; editing goes through the content editor (#28).
 
 ### E. Visible to the player
 
-- ☐ **E1. `score`:** real "exp to next level" from `ExpNeeded`, plus the title line.
-- ☐ **E2. `who` / `look`:** show the title.
+- ☑ **E1. `score`:** real "exp to next level" from `ExpNeeded`, plus the title line.
+- ☑ **E2. `who` / `look`:** show the title.
 - ☐ **E3. `stat`:** show practices once they exist.
-- ☐ **E4. `setlevel`** (test command) goes through `AdvanceLevel` repeatedly, so gains apply when jumping levels.
+- ☑ **E4. `setlevel`** (test command) goes through `AdvanceLevel` repeatedly, so gains apply when jumping levels.
+
+  _Done Oct 12, 2026 (#26):_ characters without a stored title show the class title for their level until #25 sets
+  one at creation. `setlevel` takes 1–109; going to the same or a lower level rebuilds the character as a new level 1 first (legacy `do_advance` → `do_start`), keeping skills and affects. E3 waits for practices (#27).
 
 ### F. Practices (groundwork only)
 
