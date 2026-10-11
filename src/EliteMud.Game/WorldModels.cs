@@ -255,7 +255,10 @@ public sealed record ZoneResetDefinition(
     int? ContainerId,
     int? DoorDirection,
     int? DoorState,
-    bool IfFlag);
+    bool IfFlag,
+    int? PortalDestination = null,
+    int? PortalFlags = null,
+    int? PortalKeyId = null);
 
 public sealed record ZoneDefinition(
     int Id,

@@ -102,6 +102,23 @@ public sealed class WorldState : IWorldState
             : Array.Empty<ObjectInstance>();
     }
 
+    public IReadOnlyList<(int RoomId, ObjectInstance Portal)> TickPortals()
+    {
+        var closed = new List<(int RoomId, ObjectInstance Portal)>();
+        foreach (var (roomId, objects) in _roomObjects)
+        {
+            foreach (var obj in objects)
+            {
+                if (obj.Portal?.TickHour() == true)
+                {
+                    closed.Add((roomId, obj));
+                }
+            }
+        }
+
+        return closed;
+    }
+
     public IReadOnlyList<ObjectInstance> GetPlayerInventory(PlayerState player)
     {
         var inventory = new List<ObjectInstance>();
@@ -459,10 +476,13 @@ public sealed class WorldState : IWorldState
         MobInstance? lastMob = null;
         var random = new Random();
 
+        // Legacy: reset_zone() in db.c:2020 tracks last_cmd. A command with the if-flag set only
+        // runs when the previous command succeeded.
+        var lastCommandSucceeded = false;
+
         foreach (var reset in zone.ResetCommands)
         {
-            // Skip if IfFlag is set but no previous mob loaded
-            if (reset.IfFlag && lastMob is null)
+            if (reset.IfFlag && !lastCommandSucceeded)
             {
                 continue;
             }
@@ -471,22 +491,31 @@ public sealed class WorldState : IWorldState
             {
                 case "LoadMob":
                     lastMob = ExecuteLoadMob(reset);
+                    lastCommandSucceeded = lastMob is not null;
                     break;
 
                 case "LoadObject":
-                    ExecuteLoadObject(reset, random);
+                    lastCommandSucceeded = ExecuteLoadObject(reset, random);
                     break;
 
                 case "EquipMob":
-                    ExecuteEquipMob(reset, lastMob, random);
+                    lastCommandSucceeded = ExecuteEquipMob(reset, lastMob, random);
                     break;
 
                 case "GiveMob":
-                    ExecuteGiveMob(reset, lastMob, random);
+                    lastCommandSucceeded = ExecuteGiveMob(reset, lastMob, random);
                     break;
 
                 case "PutObject":
-                    ExecutePutObject(reset, random);
+                    lastCommandSucceeded = ExecutePutObject(reset, random);
+                    break;
+
+                case "LoadPortal":
+                    lastCommandSucceeded = ExecuteLoadPortal(reset);
+                    break;
+
+                case "ActivatePortal":
+                    lastCommandSucceeded = ExecuteActivatePortal(reset);
                     break;
 
                 case "DoorState":
@@ -538,21 +567,21 @@ public sealed class WorldState : IWorldState
         return mob;
     }
 
-    private void ExecuteLoadObject(ZoneResetDefinition reset, Random random)
+    private bool ExecuteLoadObject(ZoneResetDefinition reset, Random random)
     {
         if (!reset.ObjectId.HasValue || !reset.RoomId.HasValue)
         {
-            return;
+            return false;
         }
 
         if (!CheckSpawnChance(reset.SpawnChance, random))
         {
-            return;
+            return false;
         }
 
         if (!_objectDefinitions.TryGetValue(reset.ObjectId.Value, out var objectDefinition))
         {
-            return;
+            return false;
         }
 
         if (!_roomObjects.TryGetValue(reset.RoomId.Value, out var list))
@@ -564,61 +593,129 @@ public sealed class WorldState : IWorldState
         var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
         _objectInstances[objectInstance.InstanceId] = objectInstance;
         list.Add(objectInstance);
+        return true;
     }
 
-    private void ExecuteEquipMob(ZoneResetDefinition reset, MobInstance? mob, Random random)
+    private bool ExecuteEquipMob(ZoneResetDefinition reset, MobInstance? mob, Random random)
     {
         if (mob is null || !reset.ObjectId.HasValue || !reset.EquipSlot.HasValue)
         {
-            return;
+            return false;
         }
 
         if (!CheckSpawnChance(reset.SpawnChance, random))
         {
-            return;
+            return false;
         }
 
         if (!_objectDefinitions.TryGetValue(reset.ObjectId.Value, out var objectDefinition))
         {
-            return;
+            return false;
         }
 
         var slot = (EquipmentSlot)reset.EquipSlot.Value;
         var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
         _objectInstances[objectInstance.InstanceId] = objectInstance;
         mob.Equip(objectInstance, slot);
+        return true;
     }
 
-    private void ExecuteGiveMob(ZoneResetDefinition reset, MobInstance? mob, Random random)
+    private bool ExecuteGiveMob(ZoneResetDefinition reset, MobInstance? mob, Random random)
     {
         if (mob is null || !reset.ObjectId.HasValue)
         {
-            return;
+            return false;
         }
 
         if (!CheckSpawnChance(reset.SpawnChance, random))
         {
-            return;
+            return false;
         }
 
         // TODO: Implement mob inventory storage
         // For now, this is a placeholder - need to add inventory to MobInstance
+        // Reports success like legacy would, so if-flag chains behave the same.
+        return true;
     }
 
-    private void ExecutePutObject(ZoneResetDefinition reset, Random random)
+    private bool ExecutePutObject(ZoneResetDefinition reset, Random random)
     {
         if (!reset.ObjectId.HasValue || !reset.ContainerId.HasValue)
         {
-            return;
+            return false;
         }
 
         if (!CheckSpawnChance(reset.SpawnChance, random))
         {
-            return;
+            return false;
         }
 
         // TODO: Implement container storage
         // For now, this is a placeholder - need to track object containers
+        // Reports success like legacy would, so if-flag chains behave the same.
+        return true;
+    }
+
+    /// <summary>
+    /// Load a portal into a room, or reuse the one already there, and set its destination.
+    /// Legacy: 'L' in reset_zone(), db.c:2185
+    /// </summary>
+    private bool ExecuteLoadPortal(ZoneResetDefinition reset)
+    {
+        if (!reset.RoomId.HasValue || !reset.ObjectId.HasValue || !reset.PortalDestination.HasValue
+            || reset.RoomId.Value < 0 || reset.ObjectId.Value <= 0 || reset.PortalDestination.Value < 0)
+        {
+            return false;
+        }
+
+        if (!_objectDefinitions.TryGetValue(reset.ObjectId.Value, out var objectDefinition))
+        {
+            return false;
+        }
+
+        if (!_roomObjects.TryGetValue(reset.RoomId.Value, out var list))
+        {
+            list = new List<ObjectInstance>();
+            _roomObjects[reset.RoomId.Value] = list;
+        }
+
+        var portal = list.FirstOrDefault(obj => obj.Portal is not null && obj.Definition.Id == objectDefinition.Id);
+        if (portal is null)
+        {
+            portal = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
+            if (portal.Portal is null)
+            {
+                return false;
+            }
+
+            _objectInstances[portal.InstanceId] = portal;
+            list.Add(portal);
+        }
+
+        portal.Portal!.Destination = reset.PortalDestination.Value;
+        return true;
+    }
+
+    /// <summary>
+    /// Set the state flags and key of the first portal in a room.
+    /// Legacy: 'A' in reset_zone(), db.c:2209
+    /// </summary>
+    private bool ExecuteActivatePortal(ZoneResetDefinition reset)
+    {
+        if (!reset.RoomId.HasValue || !_roomObjects.TryGetValue(reset.RoomId.Value, out var list))
+        {
+            return false;
+        }
+
+        var portal = list.FirstOrDefault(obj => obj.Portal is not null)?.Portal;
+        if (portal is null)
+        {
+            return false;
+        }
+
+        portal.Flags = Math.Max(0, reset.PortalFlags ?? 0);
+        portal.KeyObjectId = reset.PortalKeyId is > 0 ? reset.PortalKeyId.Value : -1;
+        return true;
     }
 
     private static bool CheckSpawnChance(int? spawnChance, Random random)

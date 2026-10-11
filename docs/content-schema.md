@@ -212,6 +212,25 @@ content/
 - `resetMode` maps to legacy 0/1/2 values.
 - `resetCommands` preserves the legacy tuple; loader can translate into typed actions.
 - Optional `expanded` data can be added later for readability while keeping raw tuples.
+- `ifFlag: 1` means "only run if the previous reset command succeeded" (legacy `last_cmd` in `reset_zone`).
+
+### Reset commands
+| Command | Args (`arg1`, `arg2`, `arg3`) | Meaning | Server support |
+|---|---|---|---|
+| `M` | mob, max existing, room | Load a mob | Yes |
+| `O` | object, spawn chance %, room | Load an object into a room | Yes |
+| `G` | object, spawn chance % | Give an object to the last mob | Stub |
+| `E` | object, spawn chance %, wear slot | Equip the last mob | Yes |
+| `P` | object, spawn chance %, container object | Put an object in a container | Stub |
+| `D` | room, direction, state (0 open, 1 closed, 2 locked) | Set a door's state | Not yet |
+| `R` | room, number of exits | Shuffle the room's first N exits (mazes) | Not yet |
+| `L` | room, portal object, destination room | Load a portal (or reuse the one there) and set its destination | Yes |
+| `A` | room, portal flags, key object | Set the room's portal state (1 closed, 2 locked) and the object needed to `activate` it (-1 none) | Yes |
+
+### Portal objects
+Objects of type `Portal` use their `values` as: `[0]` destination room, `[1]` flags (1 closed, 2 locked),
+`[2]` key object needed to `activate` it (-1 none), `[3]` minimum level, `[4]` maximum level (-1 none),
+`[5]` mud hours an activated portal stays open (-1 forever). Players use `enter <portal>` and `activate <portal>`.
 
 ## Scripts
 **File:** `content/scripts/scripts.json`

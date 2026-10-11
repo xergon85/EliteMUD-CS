@@ -96,6 +96,7 @@ internal sealed class GameTickService
                 if (DateTime.UtcNow - _lastRegen >= _regenInterval)
                 {
                     ProcessRegeneration();
+                    ProcessPortalTimeouts();
                     _lastRegen = DateTime.UtcNow;
                 }
                 
@@ -954,6 +955,29 @@ internal sealed class GameTickService
         if (playersRegenerated > 0)
         {
             Console.WriteLine($"[Regen] Tick #{_tickCount}: {playersRegenerated}/{connections.Count} players regenerated");
+        }
+    }
+
+    /// <summary>
+    /// Close activated portals whose open time has run out.
+    /// Legacy: portal timeout code in point_update(), limits.c:631
+    /// </summary>
+    private void ProcessPortalTimeouts()
+    {
+        var closedPortals = _worldState.TickPortals();
+        if (closedPortals.Count == 0)
+        {
+            return;
+        }
+
+        var connections = _connectionRegistry.GetConnections().ToList();
+        foreach (var (roomId, portal) in closedPortals)
+        {
+            var message = $"The {portal.Definition.ShortDescription} closes mysteriously.";
+            foreach (var connection in connections.Where(c => c.Player.RoomId == roomId))
+            {
+                _ = connection.Session.SendLineAsync(message, CancellationToken.None);
+            }
         }
     }
 

@@ -303,6 +303,11 @@ public sealed class ObjectInstance
             IsClosed = container.Flags.Contains("Closed", StringComparer.OrdinalIgnoreCase);
             IsLocked = container.Flags.Contains("Locked", StringComparer.OrdinalIgnoreCase);
         }
+
+        if (string.Equals(definition.Type, "Portal", StringComparison.OrdinalIgnoreCase))
+        {
+            Portal = PortalState.FromValues(definition.Values);
+        }
     }
 
     public int InstanceId { get; }
@@ -322,6 +327,11 @@ public sealed class ObjectInstance
     /// Legacy: GET_OBJ_VAL(obj, 1) & CONT_LOCKED
     /// </summary>
     public bool IsLocked { get; set; }
+
+    /// <summary>
+    /// Runtime state for portal objects; null for every other object type.
+    /// </summary>
+    public PortalState? Portal { get; }
 
     /// <summary>
     /// Items contained within this object (for containers like corpses, bags, etc.)
@@ -367,6 +377,12 @@ public interface IWorldState
     IReadOnlyList<MobInstance> GetMobsInRoom(int roomId);
 
     IReadOnlyList<ObjectInstance> GetObjectsInRoom(int roomId);
+
+    /// <summary>
+    /// Advance every portal's open timer by one mud hour.
+    /// Returns the portals that closed, with the room they're in.
+    /// </summary>
+    IReadOnlyList<(int RoomId, ObjectInstance Portal)> TickPortals();
 
     IReadOnlyList<ObjectInstance> GetPlayerInventory(PlayerState player);
 

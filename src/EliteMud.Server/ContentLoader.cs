@@ -1010,6 +1010,37 @@ internal static class ContentLoader
                 DoorState: null,
                 ifFlag),
 
+            // Legacy: 'L' loads or resets a portal in a room and sets its destination (db.c:2185)
+            "L" => new ZoneResetDefinition(
+                "LoadPortal",
+                ObjectId: cmd.Arg2,
+                MobId: null,
+                RoomId: cmd.Arg1,
+                MaxExisting: null,
+                SpawnChance: null,
+                EquipSlot: null,
+                ContainerId: null,
+                DoorDirection: null,
+                DoorState: null,
+                ifFlag,
+                PortalDestination: cmd.Arg3),
+
+            // Legacy: 'A' sets the state flags and key of the portal in a room (db.c:2209)
+            "A" => new ZoneResetDefinition(
+                "ActivatePortal",
+                ObjectId: null,
+                MobId: null,
+                RoomId: cmd.Arg1,
+                MaxExisting: null,
+                SpawnChance: null,
+                EquipSlot: null,
+                ContainerId: null,
+                DoorDirection: null,
+                DoorState: null,
+                ifFlag,
+                PortalFlags: cmd.Arg2,
+                PortalKeyId: cmd.Arg3),
+
             _ => new ZoneResetDefinition(
                 command,
                 null, null, null, null, null, null, null, null, null, ifFlag)
