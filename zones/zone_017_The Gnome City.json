@@ -2434,7 +2434,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 1700
         }
@@ -2693,7 +2694,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 1701
         }

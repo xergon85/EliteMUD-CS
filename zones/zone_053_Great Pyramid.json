@@ -1747,7 +1747,8 @@
             "sesame"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 5323
         },
@@ -1799,7 +1800,8 @@
           "Description": "Through the jaws of the tiger you see the blackness of the crevasse.",
           "Keywords": [],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 5323
         }
@@ -1919,7 +1921,8 @@
             "lid"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 5312
         }
@@ -1965,7 +1968,8 @@
             "lid"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": null
         },
@@ -3217,7 +3221,8 @@
             "riddle"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 5317
         }

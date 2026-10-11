@@ -4116,7 +4116,8 @@
           "Description": "A door is set in the east wall.",
           "Keywords": [],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 18200
         }
@@ -4547,7 +4548,8 @@
             "trapdoor"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 18240
         }
@@ -4663,7 +4665,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 18204
         }
@@ -4713,7 +4716,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 18204
         }
@@ -5546,7 +5550,8 @@
           "Description": "A door leads back to the west.",
           "Keywords": [],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 18239
         }

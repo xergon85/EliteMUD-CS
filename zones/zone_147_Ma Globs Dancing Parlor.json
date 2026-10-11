@@ -5404,7 +5404,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 14702
         },
@@ -5506,7 +5507,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 14702
         }
@@ -5692,7 +5694,8 @@
             "wine"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 14703
         },
@@ -5742,7 +5745,8 @@
             "wine"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 14703
         }
@@ -6368,7 +6372,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 14705
         }

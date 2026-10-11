@@ -316,86 +316,26 @@
           "Keywords": [],
           "ExitFlags": [],
           "KeyId": null
-        },
-        {
-          "Direction": "North",
-          "TargetId": 0,
-          "Description": "Room",
-          "Keywords": [
-            "Most",
-            "of",
-            "what",
-            "can",
-            "be",
-            "found",
-            "here",
-            "is",
-            "second-hand",
-            "equipment.",
-            "It",
-            "has",
-            "been",
-            "used",
-            "hard",
-            "and",
-            "then",
-            "given",
-            "away",
-            "to",
-            "someone",
-            "who",
-            "might",
-            "need",
-            "it.",
-            "That",
-            "someone",
-            "is",
-            "you.",
-            "While",
-            "the",
-            "majority",
-            "of",
-            "it",
-            "is",
-            "common,",
-            "and",
-            "therefore",
-            "worth",
-            "little,",
-            "you",
-            "might",
-            "get",
-            "lucky",
-            "and",
-            "find",
-            "something",
-            "really",
-            "valuable.",
-            "You",
-            "might",
-            "want",
-            "to",
-            "look",
-            "at",
-            "the",
-            "advice",
-            "board",
-            "before",
-            "you",
-            "change",
-            "your",
-            "kit."
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "ResetClosed",
-            "ResetLocked",
-            "BashProof"
-          ],
-          "KeyId": 51380232
-        },
+        }
+      ],
+      "ExtraDescriptions": [],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
+    },
+    {
+      "Id": 28703,
+      "Name": "The Guild Donation Room",
+      "Description": "Most of what can be found here is second-hand equipment.  It has been\nused hard and then given away to someone who might need it.  That\nsomeone is you.  While the majority of it is common, and therefore \nworth little, you might get lucky and find something really valuable.  \nYou might want to look at the advice board before you change your kit.",
+      "ZoneId": 287,
+      "Sector": "Inside",
+      "Flags": [
+        "Indoors",
+        "NoTeleport",
+        "NoTrack",
+        "NoSweep"
+      ],
+      "Exits": [
         {
           "Direction": "North",
           "TargetId": 28700,
@@ -632,7 +572,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 28717
         },
@@ -644,7 +585,8 @@
             "door"
           ],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": 28717
         },

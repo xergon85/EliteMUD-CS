@@ -178,7 +178,8 @@
           "Description": "You can see the stairs going up into darkness.",
           "Keywords": [],
           "ExitFlags": [
-            "Closed"
+            "IsDoor",
+            "PickProof"
           ],
           "KeyId": null
         }
