@@ -229,7 +229,18 @@ Extra fields in the `Zone` block:
 The importer (`src/EliteMud.Cli`) follows the legacy `index` files, which list the files the original game loaded.
 This config covers what the index can't decide:
 - `skip`: files not to import at all, each with a reason (old copies of zones, e.g. Galaxy 93 and Gnome City 15).
-- `activeZones`: zones missing from the snapshot's index that are live anyway (New Thalos, 57).
+- `activeZones`: zones missing from the snapshot's index that are live anyway (none at the moment; New Thalos turned
+  out to be unfinished).
+- `fixes`: corrections to legacy data, applied after parsing, each with a reason, e.g. setting an exit's door type.
+  Every applied fix is written to `import-log.txt`.
+
+### Content check (`content/meta/accepted-findings.json`)
+The server checks the loaded world at startup and prints a summary (warning mode).
+`dotnet run --project src/EliteMud.Server -- --validate` prints every finding and exits with the number of errors.
+It reports broken references (exits, door keys, every reset type, portals), door keys nothing creates, and zones that
+can't be reached from the Temple. Findings that were looked at and accepted go in `accepted-findings.json`, each with
+a reason; an entry matches by category plus text in the location and message. An entry that matches nothing is
+reported. A test fails on any open error or warning.
 
 Each import writes `import-log.txt` next to its output, listing every skipped file, duplicate id and malformed
 record, and prints a summary.

@@ -49,18 +49,20 @@ Detailed history lives in `git log`; design notes live in the other files under 
 
 The suggested order, aiming at a **playable loop from level 1 upwards**.
 
-1. **Fix the open known issues** (below). They are small and silently break content.
-2. **Finish zone resets:** `GiveMob`, `PutObject`, `DoorState`, `RemoveObject`.
-   Mobs need loot, chests need contents, and doors should start closed or locked.
-3. **Levelling:** XP table, level-up gains and messages. Without this, combat has no payoff.
+1. **Door state resets:** the server ignores `D` resets, so 1,169 doors that should start closed or locked start
+   open, and closed non-door exits (barriers) don't block movement. Found by the content check.
+2. **Fix the open known issues** (below). They are small and silently break content.
+3. **Finish zone resets:** `GiveMob`, `PutObject`, `RemoveObject`.
+   Mobs need loot and chests need contents.
+4. **Levelling:** XP table, level-up gains and messages. Without this, combat has no payoff.
    _In planning: [`docs/plans/levelling-and-classes.md`](plans/levelling-and-classes.md)_
-4. **Race & class tables:** stat modifiers, HP/mana/move gains, and which skills/spells each class gets.
+5. **Race & class tables:** stat modifiers, HP/mana/move gains, and which skills/spells each class gets.
    _Covered by the same plan._
-5. **Permission levels:** player vs immortal. Required before adding more admin commands.
-6. **`help` and `commands`:** new players currently can't discover anything.
-7. **Groups:** `follow`, `group`, `assist`, `gtell`, XP sharing.
-8. **Shops:** `list`, `buy`, `sell`, `value`, plus restocking.
-9. **Consumables & hunger/thirst:** `eat`, `drink`, `quaff`, `recite`, `fill`.
+6. **Permission levels:** player vs immortal. Required before adding more admin commands.
+7. **`help` and `commands`:** new players currently can't discover anything.
+8. **Groups:** `follow`, `group`, `assist`, `gtell`, XP sharing.
+9. **Shops:** `list`, `buy`, `sell`, `value`, plus restocking.
+10. **Consumables & hunger/thirst:** `eat`, `drink`, `quaff`, `recite`, `fill`.
 
 ---
 
