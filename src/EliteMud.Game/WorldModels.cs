@@ -258,7 +258,8 @@ public sealed record ZoneResetDefinition(
     bool IfFlag,
     int? PortalDestination = null,
     int? PortalFlags = null,
-    int? PortalKeyId = null);
+    int? PortalKeyId = null,
+    int? ExitCount = null);
 
 public sealed record ZoneDefinition(
     int Id,
@@ -755,14 +756,23 @@ public sealed class PlayerState : ICombatant
 
 public sealed class WorldDefinition
 {
-    private readonly IReadOnlyDictionary<int, RoomDefinition> _rooms;
+    private readonly Dictionary<int, RoomDefinition> _rooms;
 
     public WorldDefinition(IReadOnlyDictionary<int, RoomDefinition> rooms)
     {
-        _rooms = rooms ?? throw new ArgumentNullException(nameof(rooms));
+        ArgumentNullException.ThrowIfNull(rooms);
+        _rooms = new Dictionary<int, RoomDefinition>(rooms);
     }
 
     public IReadOnlyDictionary<int, RoomDefinition> Rooms => _rooms;
+
+    /// <summary>
+    /// Replace a room's exits at runtime, e.g. when a zone reset shuffles a maze.
+    /// </summary>
+    public void ReplaceRoomExits(int roomId, IReadOnlyList<ExitDefinition> exits)
+    {
+        _rooms[roomId] = GetRoom(roomId) with { Exits = exits };
+    }
 
     public RoomDefinition GetRoom(int id)
     {

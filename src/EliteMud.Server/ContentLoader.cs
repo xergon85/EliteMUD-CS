@@ -997,9 +997,11 @@ internal static class ContentLoader
                 DoorState: cmd.Arg3,
                 ifFlag),
 
+            // Legacy: 'R' shuffles a room's first N exits, used by mazes (db.c:2176).
+            // (In stock CircleMUD 'R' removes an object; EliteMUD reuses the letter.)
             "R" => new ZoneResetDefinition(
-                "RemoveObject",
-                ObjectId: cmd.Arg2,
+                "ShuffleExits",
+                ObjectId: null,
                 MobId: null,
                 RoomId: cmd.Arg1,
                 MaxExisting: null,
@@ -1008,7 +1010,8 @@ internal static class ContentLoader
                 ContainerId: null,
                 DoorDirection: null,
                 DoorState: null,
-                ifFlag),
+                ifFlag,
+                ExitCount: cmd.Arg2),
 
             // Legacy: 'L' loads or resets a portal in a room and sets its destination (db.c:2185)
             "L" => new ZoneResetDefinition(

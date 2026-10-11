@@ -522,6 +522,11 @@ public sealed class WorldState : IWorldState
                     // TODO: Implement door state resets
                     break;
 
+                case "ShuffleExits":
+                    // Legacy doesn't update last_cmd for 'R'
+                    ExecuteShuffleExits(reset, random);
+                    break;
+
                 case "RemoveObject":
                     // TODO: Implement object removal
                     break;
@@ -716,6 +721,65 @@ public sealed class WorldState : IWorldState
         portal.Flags = Math.Max(0, reset.PortalFlags ?? 0);
         portal.KeyObjectId = reset.PortalKeyId is > 0 ? reset.PortalKeyId.Value : -1;
         return true;
+    }
+
+    /// <summary>
+    /// Shuffle the exits in a room's first N directions (north, east, south, west, up, down).
+    /// Whole exits move, including their doors. Legacy: 'R' in reset_zone(), db.c:2176
+    /// </summary>
+    private void ExecuteShuffleExits(ZoneResetDefinition reset, Random random)
+    {
+        if (!reset.RoomId.HasValue || !reset.ExitCount.HasValue
+            || !World.Rooms.TryGetValue(reset.RoomId.Value, out var room))
+        {
+            return;
+        }
+
+        var roomId = room.Id;
+        var directionCount = Enum.GetValues<Direction>().Length;
+        var count = Math.Min(reset.ExitCount.Value, directionCount);
+
+        var slots = new ExitDefinition?[directionCount];
+        foreach (var exit in room.Exits)
+        {
+            slots[(int)exit.Direction] = exit;
+        }
+
+        for (var i = 0; i < count - 1; i++)
+        {
+            var j = random.Next(i, count); // legacy number(i, count - 1), inclusive
+            (slots[i], slots[j]) = (slots[j], slots[i]);
+            SwapDoorStates(roomId, (Direction)i, (Direction)j);
+        }
+
+        var exits = new List<ExitDefinition>();
+        for (var direction = 0; direction < directionCount; direction++)
+        {
+            if (slots[direction] is { } exit)
+            {
+                exits.Add(exit with { Direction = (Direction)direction });
+            }
+        }
+
+        World.ReplaceRoomExits(roomId, exits);
+    }
+
+    private void SwapDoorStates(int roomId, Direction first, Direction second)
+    {
+        var firstKey = (roomId, first);
+        var secondKey = (roomId, second);
+        _doorStates.Remove(firstKey, out var firstState);
+        _doorStates.Remove(secondKey, out var secondState);
+
+        if (firstState is not null)
+        {
+            _doorStates[secondKey] = firstState;
+        }
+
+        if (secondState is not null)
+        {
+            _doorStates[firstKey] = secondState;
+        }
     }
 
     private static bool CheckSpawnChance(int? spawnChance, Random random)
