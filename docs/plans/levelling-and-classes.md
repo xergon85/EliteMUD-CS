@@ -65,19 +65,21 @@ Ordered so each step is testable on its own. ☐ = to do.
 
 ### A. Data foundation
 
-- ☐ **A1. Port the class table to content.** Create `content/classes/classes.json` with, per class:
-  id, name, abbreviation, HP divisor (5/4/3/2), mana per level, prime stats for attribute gains,
-  and the 40 title/XP rows (male title, female title, exp) from `titles[][]`.
-  Write a small one-off extractor rather than hand-copying 800 rows.
-  _Done when:_ the file loads at startup and every playable class has 40 rows.
-- ☐ **A2. Port the race table to content.** Create `content/races/races.json` with:
-  stat maxima, starting HP/mana/move, allowed classes, title name, and average age/height/weight.
-  _Done when:_ the values match `constants.c` for all 25 races.
-- ☐ **A3. Registries.** Add `ClassRegistry` and `RaceRegistry` that load the JSON, following `SkillMetadataRegistry`.
-  Warn and fall back gracefully if a file is missing.
-  Update `docs/content-schema.md`.
-- ☐ **A4. Fix the `CharacterClass` enum** to match legacy numbering (17, 18, 20 = none; 21 Dual, 22 2Multi, 23 3Multi).
-  Check the DB stores class names, not numbers, so no migration is needed.
+Rewritten Oct 11, 2026 to match the decisions above (string ids, one file per thing, explicit XP values, rules
+reload). Tracked in #22; editing goes through the content editor (#28).
+
+- ☐ **A1. Content model.** C# records for classes, races, XP curves, level-up profiles and progression rules, with
+  string ids. Formula slots declare their variables (Q4, needs #29).
+- ☐ **A2. Extract the legacy tables** with a one-off, logged extractor (like the importer, with an import-log):
+  - one file per class from `titles[][]` (40 title rows) plus its XP curve and level-up profile names
+  - the 6 XP curves with explicit values per level 1–109, generated with the `exp_needed` interpolation
+  - the 4 level-up profiles from `advance_level`, and the progression rules from `gain_exp` / `die` / fight.c
+  - one file per race from `str_max[]`…`cha_max[]`, `hp_start[]`/`mn_start[]`/`mv_start[]`, `allowed_classes[]`
+  _Done when:_ a test recomputes `exp_needed` from the legacy rows and matches every stored value.
+- ☐ **A3. Load and check.** Registries for the new kinds; the content check validates every reference (class → curve,
+  race → classes, skill → classes) and formula variables. One atomic rules reload (Q6) that refuses ids still in use (Q5).
+- ☐ **A4. Replace the `CharacterClass` and `Race` enums** with ids from the registries (4 files use them today). The DB
+  already stores names. Map the names to the new ids (e.g. `MagicUser` → `magic-user`) with an additive migration.
 - ☐ **A5. Load mob XP from content.** Add `Experience` to `MobDefinition` and read it in `ContentLoader`.
   _Done when:_ a Midgaard mob reports its file value.
 
@@ -194,9 +196,14 @@ Agreed so far (Oct 10, 2026):
   known but stops improving. Removing or renaming an id that any character uses (saved ones included) is refused with a
   list of who uses it; renaming comes later as an explicit, logged migration in the editor. Reloads are logged and
   announced to online immortals.
+- **Q6, reload scope** (Oct 11, 2026): one atomic reload for all rules content (classes, races, XP curves, level-up
+  profiles, progression rules, skills, spells, accepted findings): load everything, run the full content check, then
+  swap it all in at once, or keep the old data and report errors. Rules refer to each other, so per-type reloads could
+  combine new and old content. The editor's Publish uses the same path. World data (zones, rooms, mobs, objects) stays
+  restart-only for now; live world reload is a separate card (#30).
 - **Q2, schemas** (Oct 11, 2026): no hand-written JSON Schemas. The C# model and the content check are the contract,
   used by the editor, the server and CI. Generated schemas are optional documentation.
 
 ## Open Questions
 
-Tracked in #21. Q1–Q5 are decided (see above). Still open: reload scope (Q6).
+All six questions (#21) are decided; see Data Design Requirements above.
