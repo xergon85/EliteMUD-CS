@@ -188,9 +188,15 @@ Agreed so far (Oct 10, 2026):
   attributes). Content that reads anything else is rejected at load, and the editor lists the variables with a live
   preview. Engine fixes this needs (#29): a fresh Lua environment per evaluation, and a `div(a, b)` helper with C integer
   division so ported formulas match legacy numbers exactly.
+- **Q5, reload and online players** (Oct 11, 2026): rule changes apply from now on; saved characters are never
+  rewritten. Caps apply when values are calculated (a lowered cap takes effect at once; the stored value stays), new
+  curves and formulas apply at the next gain or level-up, gains already received stay, and a skill a class loses stays
+  known but stops improving. Removing or renaming an id that any character uses (saved ones included) is refused with a
+  list of who uses it; renaming comes later as an explicit, logged migration in the editor. Reloads are logged and
+  announced to online immortals.
 - **Q2, schemas** (Oct 11, 2026): no hand-written JSON Schemas. The C# model and the content check are the contract,
   used by the editor, the server and CI. Generated schemas are optional documentation.
 
 ## Open Questions
 
-Tracked in #21. Q1–Q4 are decided (see above). Still open: reload behavior for online players (Q5), and reload scope (Q6).
+Tracked in #21. Q1–Q5 are decided (see above). Still open: reload scope (Q6).
