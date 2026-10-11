@@ -184,10 +184,13 @@ Agreed so far (Oct 10, 2026):
   the legacy rows (`titles[][]` in constants.c, one row per 3 levels, interpolated as in `exp_needed`) so day one
   matches exactly. Titles stay as 40 rows per class. The editor shows the curve as a chart and can regenerate it from
   the legacy rows.
+- **Q4, formula inputs** (Oct 11, 2026): every formula slot declares its variables (e.g. `hpGain`: level and the six
+  attributes). Content that reads anything else is rejected at load, and the editor lists the variables with a live
+  preview. Engine fixes this needs (#29): a fresh Lua environment per evaluation, and a `div(a, b)` helper with C integer
+  division so ported formulas match legacy numbers exactly.
 - **Q2, schemas** (Oct 11, 2026): no hand-written JSON Schemas. The C# model and the content check are the contract,
   used by the editor, the server and CI. Generated schemas are optional documentation.
 
 ## Open Questions
 
-Tracked in #21. Q1–Q3 are decided (see above). Still open: formula
-variables (Q4), reload behavior for online players (Q5), and reload scope (Q6).
+Tracked in #21. Q1–Q4 are decided (see above). Still open: reload behavior for online players (Q5), and reload scope (Q6).
