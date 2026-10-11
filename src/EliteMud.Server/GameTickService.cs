@@ -105,7 +105,7 @@ internal sealed class GameTickService
                 }
                 
                 // Characters that asked for a save (e.g. after a level-up) are saved right away
-                await ProcessRequestedSavesAsync(stoppingToken);
+                ProcessRequestedSaves(stoppingToken);
 
                 // Auto-save runs every 5 minutes
                 if (DateTime.UtcNow - _lastAutoSave >= _autoSaveInterval)
@@ -988,12 +988,25 @@ internal sealed class GameTickService
         }
     }
 
-    private async Task ProcessRequestedSavesAsync(CancellationToken cancellationToken)
+    private void ProcessRequestedSaves(CancellationToken cancellationToken)
     {
         foreach (var connection in _connectionRegistry.GetConnections().Where(c => c.Player.SaveRequested).ToList())
         {
             connection.Player.SaveRequested = false;
-            await _saveQueue.QueueSaveAsync(connection.CharacterId, connection.Player, cancellationToken);
+            var player = connection.Player;
+            var saved = _saveQueue.QueueSaveAndWaitAsync(connection.CharacterId, player, cancellationToken);
+
+            // Don't block the tick on the database; if the save fails, ask again so the next tick retries
+            _ = saved.ContinueWith(
+                task =>
+                {
+                    if (!task.IsCompletedSuccessfully || !task.Result)
+                    {
+                        Console.WriteLine($"[Save] Requested save of {player.Name} failed; retrying next tick");
+                        player.SaveRequested = true;
+                    }
+                },
+                TaskScheduler.Default);
         }
     }
 

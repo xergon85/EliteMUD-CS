@@ -54,8 +54,8 @@ internal sealed class CharacterSaveQueue : IDisposable
 
     private async Task ProcessSavesAsync(CancellationToken cancellationToken)
     {
-        // Dictionary to track last save time per character (deduplication)
-        var lastSaveTime = new Dictionary<int, DateTime>();
+        // When the last successful save of each character started (deduplication)
+        var lastSaveStart = new Dictionary<int, DateTime>();
 
         while (!cancellationToken.IsCancellationRequested)
         {
@@ -63,17 +63,16 @@ internal sealed class CharacterSaveQueue : IDisposable
             {
                 var request = await _channel.Reader.ReadAsync(cancellationToken);
 
-                // Deduplicate: Skip if we saved this character within last 2 seconds
-                if (lastSaveTime.TryGetValue(request.CharacterId, out var lastSave))
+                // Deduplicate: a save reads the live PlayerState, so one that started after this request was made
+                // already stored everything the request wanted. Anything older could miss changes, so save again.
+                if (lastSaveStart.TryGetValue(request.CharacterId, out var lastStart) && lastStart >= request.RequestTime)
                 {
-                    var timeSinceLastSave = request.RequestTime - lastSave;
-                    if (timeSinceLastSave.TotalSeconds < 2)
-                    {
-                        Console.WriteLine($"[SaveQueue] Deduplicating save for character {request.CharacterId} (saved {timeSinceLastSave.TotalSeconds:F1}s ago)");
-                        request.Complete(true);
-                        continue;
-                    }
+                    Console.WriteLine($"[SaveQueue] Skipping save for character {request.CharacterId}: a later save already covered it");
+                    request.Complete(true);
+                    continue;
                 }
+
+                var saveStart = DateTime.UtcNow;
 
                 // Process the save in a new scope
                 using var scope = _serviceProvider.CreateScope();
@@ -87,7 +86,7 @@ internal sealed class CharacterSaveQueue : IDisposable
                         CharacterMapper.UpdateCharacterFromPlayerState(character, request.PlayerState, _worldState);
                         await repository.UpdateAsync(character, cancellationToken);
                         
-                        lastSaveTime[request.CharacterId] = DateTime.UtcNow;
+                        lastSaveStart[request.CharacterId] = saveStart;
                         request.Complete(true);
                     }
                     else
@@ -104,6 +103,11 @@ internal sealed class CharacterSaveQueue : IDisposable
             }
             catch (OperationCanceledException)
             {
+                break;
+            }
+            catch (ChannelClosedException)
+            {
+                // Dispose() completed the channel: shut down without faulting the processing task
                 break;
             }
         }
