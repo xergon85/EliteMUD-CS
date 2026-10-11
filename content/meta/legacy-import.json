@@ -18,7 +18,7 @@
   ],
 
   // Zones missing from the snapshot's index files that are live on the current server.
-  "activeZones": [
-    57  // New Thalos
-  ]
+  // New Thalos (57) was listed here, but the live Thalos turned out to be zone 52 (The City of Thalos).
+  // New Thalos has no way in and nothing else mentions it, so it looks unfinished; it stays inactive.
+  "activeZones": []
 }
