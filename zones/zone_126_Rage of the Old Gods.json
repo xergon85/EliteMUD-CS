@@ -758,7 +758,13 @@
         "Arg3": 12634,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/126.zon",
+    "RoomRange": {
+      "Min": 12587,
+      "Max": 12699
+    }
   },
   "Rooms": [
     {
@@ -5740,7 +5746,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:30"
+      ],
       "Gold": 40000,
       "Experience": 1000000,
       "DefaultPosition": "Standing",
@@ -5810,7 +5818,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:25"
+      ],
       "Gold": 8000,
       "Experience": 613002,
       "DefaultPosition": "Standing",

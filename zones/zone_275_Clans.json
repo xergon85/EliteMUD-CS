@@ -110,7 +110,13 @@
         "Arg3": null,
         "Comment": "Identify"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/275.zon",
+    "RoomRange": {
+      "Min": 25200,
+      "Max": 27599
+    }
   },
   "Rooms": [
     {
@@ -1663,6 +1669,148 @@
   ],
   "Objects": [
     {
+      "Id": 8,
+      "Name": "board leadership academy midnight sun",
+      "ShortDescription": "a Midnight Sun leadership bulletin board",
+      "Description": "The Council discussion board isn't quite as large as the board \ndownstairs.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        110,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9,
+      "Name": "statue academy",
+      "ShortDescription": "a statue",
+      "Description": "A statue of a mythical Wise Immortal is standing here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27515,
+        1,
+        110,
+        7,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 10,
+      "Name": "statue academy",
+      "ShortDescription": "a statue",
+      "Description": "A statue of a mythical Wise Immortal is standing here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27501,
+        9,
+        110,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 15,
+      "Name": "board bulletin academy midnight sun",
+      "ShortDescription": "a Midnight Sun clan bulletin board",
+      "Description": "The large Academy notice board covers the whole wall.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        110,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 27500,
       "Name": "fountain water",
       "ShortDescription": "a fountain",
@@ -2060,148 +2208,6 @@
             "board"
           ],
           "Description": "This is a bulletin board. Use LOOK BOARD and READ <ITEM#>."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 8,
-      "Name": "board leadership academy midnight sun",
-      "ShortDescription": "a Midnight Sun leadership bulletin board",
-      "Description": "The Council discussion board isn't quite as large as the board \ndownstairs.",
-      "ActionDescription": "",
-      "Type": "Trash",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [],
-      "Values": [
-        110,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "board"
-          ],
-          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 9,
-      "Name": "statue academy",
-      "ShortDescription": "a statue",
-      "Description": "A statue of a mythical Wise Immortal is standing here.",
-      "ActionDescription": "",
-      "Type": "Other",
-      "Level": 114,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Glow",
-        "Hum",
-        "Magic",
-        "NoDrop",
-        "Donated"
-      ],
-      "WearFlags": [],
-      "Values": [
-        27515,
-        1,
-        110,
-        7,
-        1,
-        116
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": "roc(guard_object)"
-    },
-    {
-      "Id": 10,
-      "Name": "statue academy",
-      "ShortDescription": "a statue",
-      "Description": "A statue of a mythical Wise Immortal is standing here.",
-      "ActionDescription": "",
-      "Type": "Other",
-      "Level": 114,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Glow",
-        "Hum",
-        "Magic",
-        "NoDrop",
-        "Donated"
-      ],
-      "WearFlags": [],
-      "Values": [
-        27501,
-        9,
-        110,
-        2,
-        1,
-        116
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": "roc(guard_object)"
-    },
-    {
-      "Id": 15,
-      "Name": "board bulletin academy midnight sun",
-      "ShortDescription": "a Midnight Sun clan bulletin board",
-      "Description": "The large Academy notice board covers the whole wall.",
-      "ActionDescription": "",
-      "Type": "Trash",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [],
-      "Values": [
-        110,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "board"
-          ],
-          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
         }
       ],
       "Affects": [],

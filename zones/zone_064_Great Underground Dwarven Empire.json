@@ -3326,7 +3326,13 @@
         "Arg3": 17,
         "Comment": "big brush"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/64.zon",
+    "RoomRange": {
+      "Min": 6400,
+      "Max": 6599
+    }
   },
   "Rooms": [
     {
@@ -9610,1942 +9616,6 @@
       "SpecialProc": null,
       "RoomPrograms": [],
       "CrashRoom": false
-    },
-    {
-      "Id": 6500,
-      "Name": "The plateau",
-      "Description": "Here the narrow path leads to a plateau. On the plateau the path divides in\none branch going north up the mountain and one going east up the mountain.\nTo the south the path goes down to the valley.",
-      "ZoneId": 65,
-      "Sector": "Mountain",
-      "Flags": [
-        "NoMob"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6501,
-          "Description": "The path continues.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "East",
-          "TargetId": 9800,
-          "Description": "Mountain trail",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 4040,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6501,
-      "Name": "Narrow path up the mountain",
-      "Description": "You are on a narrow path leading up a ragged mountain. To the south the path\nmakes its way to a plateau.",
-      "ZoneId": 65,
-      "Sector": "Mountain",
-      "Flags": [],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6502,
-          "Description": "The path continues up the mountain.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6500,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6502,
-      "Name": "Narrow path at the middle of the mountain",
-      "Description": "Standing on the middle of the mountain, you can easily see the city of \nMidgaard far to the south, and the top of the mountain is very near to the\nnorth.",
-      "ZoneId": 65,
-      "Sector": "Mountain",
-      "Flags": [],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6503,
-          "Description": "The top of the mountain is easily seen from here.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6501,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6503,
-      "Name": "Top of Mountain",
-      "Description": "You are now on the top of the mountain. To the south you see a path leading\ndown the mountain. To the east and west you see entrances to what seems like\nmines.",
-      "ZoneId": 65,
-      "Sector": "Mountain",
-      "Flags": [],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6540,
-          "Description": "An entrance to the mountain which seems to lead underground.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6502,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6505,
-          "Description": "There is an entrance to the mountain.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6504,
-      "Name": "Narrow Path",
-      "Description": "This is a narrow path leading to the Dwarven Kingdom. It looks less\ntraveled than the others, and it is very creepy. The path opens up to the\nsouth, and continues to the north.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6506,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6540,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6505,
-      "Name": "Entrance to Mountain",
-      "Description": "Here is an entrance to the mountain. The door looks very well built, and you\ncan hear noise coming from within.",
-      "ZoneId": 65,
-      "Sector": "Field",
-      "Flags": [],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6503,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6513,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "PickProof"
-          ],
-          "KeyId": 6550
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6506,
-      "Name": "Bend in Narrow Path",
-      "Description": "This is a narrow path that bends to the east here. The trees hang over the\npath, and it is very overgrown. The narrow path continues to the south and to\nthe east.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6507,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6504,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "tree",
-            "trees"
-          ],
-          "Description": "They hang over the road in the most ominous of ways."
-        }
-      ],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6507,
-      "Name": "Narrow path",
-      "Description": "This path is very narrow, and it continues to the north and west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6508,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6506,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6508,
-      "Name": "Narrow north-south path",
-      "Description": "This path leads to the north and south. To the north you can see a door, and\nto the south the path continues.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6509,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6507,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6509,
-      "Name": "Door to Kingdom",
-      "Description": "Here the path turns to the west. You can see a door in front of you, and the\npath continues to the west and south.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6510,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "PickProof"
-          ],
-          "KeyId": 6503
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6508,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6522,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6510,
-      "Name": "Path to the Castle",
-      "Description": "You are on a path that will eventually lead to the castle. It continues\nnorth to the castle, and there is a door on the southern wall.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6511,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6509,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "PickProof"
-          ],
-          "KeyId": 6503
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6511,
-      "Name": "Still on the path to the Castle",
-      "Description": "You are still on the path to the castle, or back to the Dwarven village,\nwhichever way you wish to go. The path continues to the north and south.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6512,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6510,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6512,
-      "Name": "Door to Castle",
-      "Description": "Here there is a door to the castle to the east. The castle is elegantly\ndesigned, and looks much like a roll of toilet paper standing on it's end.\nThere is a sign which says: ****************************************** *\nWELCOME TO THE CASTLE OF STRANGELOVE * * Here, celibacy is uninvited *\n******************************************",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6525,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "PickProof"
-          ],
-          "KeyId": 6514
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6511,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6513,
-      "Name": "Inside the entrance",
-      "Description": "Everything here is covered in soot and very grimy. The path continues to the\neast and north, and there is a door to the west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6514,
-          "Description": "The little underground path continues to the north.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "East",
-          "TargetId": 6505,
-          "Description": "The path leads outside the entrance.",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "PickProof"
-          ],
-          "KeyId": 6550
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6526,
-          "Description": "This looks like an entrance to some type of store room.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6514,
-      "Name": "Path",
-      "Description": "You are on a path in the dwarven village which leads north to the shops and\nsouth to the corner of the area.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6515,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6513,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6515,
-      "Name": "Turn in road",
-      "Description": "You are on a path that leads to a Hide & Tooth shop to the west, and the\npath continues to the south.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "South",
-          "TargetId": 6514,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6516,
-          "Description": "The Hide & Tooth shop is seen to the west.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6516,
-      "Name": "Hide & Tooth Shop",
-      "Description": "You are in the Hide & Tooth shop. Here you may buy the finest in Dwarven\nweapons and armors. The path continues to the north and east.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6517,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "East",
-          "TargetId": 6515,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6517,
-      "Name": "Path to the north of shop",
-      "Description": "You are on a path to the north of the Hide & Tooth shop. The path continues\nto the north, and there is Granite Head's bakery to the west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6518,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6516,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6535,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6518,
-      "Name": "North of Shops",
-      "Description": "Here the path bends to the east towards the barracks. To the south you can\nsee the shops.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6519,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6517,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6519,
-      "Name": "Path by Hospital",
-      "Description": "Here the path passes by the Hospital to the north. It continues to the east\nto the barracks, and to the west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6534,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "East",
-          "TargetId": 6520,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6518,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6520,
-      "Name": "Path next to barracks",
-      "Description": "Here the path continues west, and east to the barracks.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6521,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6519,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6521,
-      "Name": "Entrance to barracks",
-      "Description": "Here there is an entrance to the barracks to the south, and the path\ncontinues to the west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "South",
-          "TargetId": 6523,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed"
-          ],
-          "KeyId": 0
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6520,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6522,
-      "Name": "Guard House",
-      "Description": "You are in the guard house to the west of the entrance to the castle. There\nare nudie posters covering the walls.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6509,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "poster"
-          ],
-          "Description": "There is a wall poster of a nude Minne Pearl."
-        }
-      ],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6523,
-      "Name": "First Barrack room",
-      "Description": "Here is the first of two main rooms of barracks. The barracks continue to\nthe south, and you can leave the room to the north.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6521,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed"
-          ],
-          "KeyId": 0
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6524,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6524,
-      "Name": "Back of Barracks",
-      "Description": "Here is the back of the dwarven barracks. There are rows of beds here, and\nthere is a stench that is unbearable.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6523,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6525,
-      "Name": "Inside of Castle Strangelove",
-      "Description": "You are just inside the castle. It is very tubular in shape, and it is very\nfeatureless. There is a set of stairs that lead up, and the door leads out of\nthe castle to the west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "West",
-          "TargetId": 6512,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "PickProof"
-          ],
-          "KeyId": 6514
-        },
-        {
-          "Direction": "Up",
-          "TargetId": 6528,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6526,
-      "Name": "A store room",
-      "Description": "There is a layer of dust on the floor at least 3 inches thick! It is\nprobable that not many people have been in here for many months.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6513,
-          "Description": "A lighted area that looks like a well worn path.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "Down",
-          "TargetId": 6527,
-          "Description": "",
-          "Keywords": [
-            "trapdoor"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "PickProof"
-          ],
-          "KeyId": 0
-        }
-      ],
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "floor",
-            "dust"
-          ],
-          "Description": "After blowing all the dust off the floor, you notice a trapdoor!"
-        }
-      ],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6527,
-      "Name": "Wine cellar",
-      "Description": "This room smells like wine, and you can only assume it used to be a wine\ncellar at one time.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "Up",
-          "TargetId": 6526,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [
-            "IsDoor",
-            "PickProof"
-          ],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6528,
-      "Name": "Stairs in castle",
-      "Description": "The stairs continue to circle up and down here.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "Up",
-          "TargetId": 6529,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "Down",
-          "TargetId": 6525,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6529,
-      "Name": "Stairs",
-      "Description": "You are still circling around on the stairs. You are starting to get dizzy\nfrom going around and around and around and around and around. The stairs\ncontinue up and down.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "Up",
-          "TargetId": 6530,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "Down",
-          "TargetId": 6528,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6530,
-      "Name": "Top of stairs",
-      "Description": "You are at the top of the stairs in the castle. There is an exit to the\neast, and the stairs lead down.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6531,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "Down",
-          "TargetId": 6529,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6531,
-      "Name": "Queen's waiting room",
-      "Description": "This is the Queen's waiting room. Here the men literally \"wait\" for the\nqueen. You've heard that the queen really likes to get to 'know' her people, in\nthe biblical sense. The queen's bedroom is to the north, and you can see stairs\nto the west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6532,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "PickProof"
-          ],
-          "KeyId": 0
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6530,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6532,
-      "Name": "Bedroom",
-      "Description": "This is the Queen's bedroom. The bed is all ruffled, and there is a stack of\ndirty sheets piled in the corner. There is a ladder that leads down, out of the\ncastle, and you can leave the room to the south. There is a sign that says:\n------------------------- | I'm busy right now, | | and don't know when | | Ill\nbe back, but if | | there is a key here | | take it and PLEASE, | | try to get\nmy birth | | control pills back! | | I've heard they can | | be found\nsomewhere, | | deep in the mines.. | -------------------------",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "South",
-          "TargetId": 6531,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "PickProof"
-          ],
-          "KeyId": 0
-        },
-        {
-          "Direction": "Down",
-          "TargetId": 6533,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6533,
-      "Name": "North side of Castle Strangelove",
-      "Description": "You are standing on the north side of Castle Strangelove. You notice that\nyou are no longer inside the mountain anymore either. Along the southern\nhorizon you see towering mountains. THIS AREA IS NOT OPEN SO GO BACK UP!",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [],
-      "Exits": [
-        {
-          "Direction": "Up",
-          "TargetId": 6532,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6534,
-      "Name": "Hospital",
-      "Description": "You are inside the Dwarven Hospital. It smells like rubbing alcohol, and\nthere is blood all over the walls.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "South",
-          "TargetId": 6519,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6535,
-      "Name": "Granite Head's Bakery",
-      "Description": "The aroma coming from this room is astonishing. You can almost taste the\npastry's dissolving in your mouth.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6517,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6540,
-      "Name": "Dark path",
-      "Description": "This path is very well worn, and there is an entrance to the mines to the\neast, while the path continues to the north and west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6504,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "East",
-          "TargetId": 6541,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked"
-          ],
-          "KeyId": 6502
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6503,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6541,
-      "Name": "Mine entrance",
-      "Description": "The little path here leads down toward the mines, while the worn path\ncontinues to the west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "West",
-          "TargetId": 6540,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked"
-          ],
-          "KeyId": 6502
-        },
-        {
-          "Direction": "Down",
-          "TargetId": 6542,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6542,
-      "Name": "Bottom of mineshaft",
-      "Description": "You are at the bottom of the mineshaft. The air here is very sooty, and it\nis very hard to breath. The mineshaft leads up and east.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6543,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "Up",
-          "TargetId": 6541,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6543,
-      "Name": "Path in the mine",
-      "Description": "You are deep inside the mine, and you feel very uncomfortable. The path\ncontinues to the east, and leads to the mineshaft to the west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6544,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6542,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6544,
-      "Name": "Mine crossroad",
-      "Description": "You are at a crossroad in the mine. There is a door to the north, and the\npath continues to the south, east, and west.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6546,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "PickProof"
-          ],
-          "KeyId": 6516
-        },
-        {
-          "Direction": "East",
-          "TargetId": 6545,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6551,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6543,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6545,
-      "Name": "Coal Room",
-      "Description": "You are inside the storage area for the raw materials that are found down\nhere. The room is very unsturdy as the supports are very rickety.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "West",
-          "TargetId": 6544,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6546,
-      "Name": "Mine Maze",
-      "Description": "You have entered the maze of the mines. To the east you can see some\ninscriptions, and you can exit to the south.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "East",
-          "TargetId": 6547,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6544,
-          "Description": "",
-          "Keywords": [
-            "door"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "Locked",
-            "PickProof"
-          ],
-          "KeyId": 6516
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6547,
-      "Name": "Maze inscription",
-      "Description": "You are inside the maze, but not far enough in that you could get lost.\nThere is an inscription on the wall which says: 1 3 2 4 N W N S This isn't too\ntough, so don't take it so rough.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6548,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "East",
-          "TargetId": 6544,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6546,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6548,
-      "Name": "Maze",
-      "Description": "You are in a maze.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6549,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6547,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6548,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6549,
-      "Name": "Maze",
-      "Description": "You are in a maze.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6548,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6548,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6550,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6550,
-      "Name": "Maze",
-      "Description": "You are in a maze.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6549,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "East",
-          "TargetId": 6549,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6552,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "West",
-          "TargetId": 6548,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6551,
-      "Name": "Mining equipment room",
-      "Description": "This is the storage room for equipment used by the Dwarven miners. It is\nvery small, and you can tell that not many miners actually use any equipment.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6544,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6552,
-      "Name": "Solved the Maze",
-      "Description": "You have solved the maze. You can tell by the last few moves that there is\nno way that a dumb worker could have figured that out. It seems pretty desolate\nhere. To the south is a bleak room. To the north, you see the maze. There is a\nsign above the south exit: THOSE WHO ENTER, PLAN ON A TIMELY DEATH. (ESPECIALLY\nIF YOU'RE LOYAL TO THE QUEEN)",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6550,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6553,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6553,
-      "Name": "The Mazekeeper's Room",
-      "Description": "You have entered the Mazekeeper's room. There are pictures of the Queen with\ndarts thrown in it. Spray painted on the wall are things like 'the queen shall\nsuffer' and 'Catholics Rule'.",
-      "ZoneId": 65,
-      "Sector": "Inside",
-      "Flags": [
-        "Dark",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6552,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6570,
-      "Name": "The Start of the Old Trail up the Mountains",
-      "Description": "You are standing at the base of the Moria mountains. A half cleared trail\nleads up the mountains to the north. To the south a trail leads back to\nMidgaard. Far to the west you can see the river flowing into the mountain and\nto the east you see the large forest of Namir. A large sign have been placed\non a pole here.",
-      "ZoneId": 65,
-      "Sector": "Hills",
-      "Flags": [
-        "NoMob"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6571,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 23013,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "sign",
-            "pole"
-          ],
-          "Description": "The sign reads\nNorth, Old Trail to the Dwarven mines.\nSouth, Trail to the city of Midgaard."
-        }
-      ],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6571,
-      "Name": "Old Trail up the Mountain",
-      "Description": "You are on a half cleared mountain trail. You are walking between high \ncliffs and large rocks. The trail makes its way upward to the north and to the\nsouth it goes down to the base of the mountain.",
-      "ZoneId": 65,
-      "Sector": "Mountain",
-      "Flags": [],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6572,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6570,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6572,
-      "Name": "Old Trail up the Mountain",
-      "Description": "You are walking on a old trail up the mountain. Large rocks and cliffs\nsurround you on both sides. The trail continues up to the north and down to\nthe south.",
-      "ZoneId": 65,
-      "Sector": "Mountain",
-      "Flags": [],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6573,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6571,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6573,
-      "Name": "Old Trail up the Mountain",
-      "Description": "You have almost reached the top of the mountain. To the south you see the\nforest of Namir. If you look very closely to the south-west you can see the\ncity of Midgaard. The trail continues up to the north and down to the south.",
-      "ZoneId": 65,
-      "Sector": "Mountain",
-      "Flags": [
-        "BfsMark"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 6574,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "East",
-          "TargetId": 27800,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6572,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 6574,
-      "Name": "Old Trail up the Mountain",
-      "Description": "You are walking on a trail going up the mountain. Further ahead the trail\nmakes a turn around a large cliff. If you walk north you will go around this\nrock and if you walk south you will go down the mountain to its base.",
-      "ZoneId": 65,
-      "Sector": "Mountain",
-      "Flags": [],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 9800,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "South",
-          "TargetId": 6573,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
     }
   ],
   "Mobs": [
@@ -11593,12 +9663,12 @@
       "Resistances": [
         "Resist_40:66",
         "Resist_7:66",
-        "Resist_4:100",
         "Resist_38:33",
         "Resist_301:90",
         "Resist_302:90",
         "Resist_303:90",
-        "Resist_300:90"
+        "Resist_300:90",
+        "Resist_4:10"
       ],
       "Gold": 441,
       "Experience": 30999,
@@ -17085,7 +15155,13 @@
         "Skill_326:100",
         "Skill_310:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_0:70",
+        "Resist_1:70",
+        "Resist_2:70",
+        "Resist_3:70",
+        "Resist_4:50"
+      ],
       "Gold": 10,
       "Experience": 884545,
       "DefaultPosition": "Standing",
@@ -17138,7 +15214,8 @@
       ],
       "Skills": [],
       "Resistances": [
-        "Resist_314:100"
+        "Resist_314:100",
+        "Resist_4:50"
       ],
       "Gold": 100,
       "Experience": 784545,
@@ -17192,7 +15269,8 @@
       ],
       "Skills": [],
       "Resistances": [
-        "Resist_314:100"
+        "Resist_314:100",
+        "Resist_4:50"
       ],
       "Gold": 100,
       "Experience": 784545,
@@ -17786,7 +15864,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 625,
       "Experience": 68332,
       "DefaultPosition": "Standing",
@@ -17794,636 +15874,423 @@
       "ActionScript": null,
       "SpecialProc": null,
       "Programs": []
-    },
-    {
-      "Id": 6500,
-      "Name": "dwarf dwarven guard",
-      "ShortDescription": "the dwarf guard",
-      "LongDescription": "A dwarven guard is here.",
-      "Description": "The guard looks very tough and mean. He wears his beard long, and he smells\nlike he hasn't bathed in over a month.",
-      "Level": 21,
-      "Race": "Humanoid",
-      "Class": "Warrior",
-      "Flags": [
-        "Spec",
-        "Sentinel",
-        "Memory"
-      ],
-      "Affects": [
-        "DetectInvis",
-        "Sanctuary"
-      ],
-      "Alignment": 1000,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "4d20+336",
-        "Mana": 310,
-        "Move": 395
-      },
-      "Combat": {
-        "Armor": -10,
-        "Hitroll": 7,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "2d8+9"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 1000,
-      "Experience": 30000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6501,
-      "Name": "dwarf dwarven worker",
-      "ShortDescription": "the dwarf worker",
-      "LongDescription": "A dwarven mining worker is here.",
-      "Description": "He is very dirty, and looks extremely over-worked.",
-      "Level": 13,
-      "Race": "Humanoid",
-      "Class": "Warrior",
-      "Flags": [
-        "StayZone",
-        "Memory"
-      ],
-      "Affects": [],
-      "Alignment": 900,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "25d5+170",
-        "Mana": 230,
-        "Move": 275
-      },
-      "Combat": {
-        "Armor": 20,
-        "Hitroll": 5,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "2d4+6"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 350,
-      "Experience": 6000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6502,
-      "Name": "wraith",
-      "ShortDescription": "the wraith",
-      "LongDescription": "A wraith is awaiting your first move here.",
-      "Description": "A black, almost transparent wraith.",
-      "Level": 25,
-      "Race": "Undead",
-      "Class": "MagicUser",
-      "Flags": [
-        "Spec",
-        "Sentinel",
-        "Aggressive"
-      ],
-      "Affects": [
-        "Invisible",
-        "DetectInvis",
-        "FlWpn",
-        "Fear"
-      ],
-      "Alignment": 0,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "9d7+500",
-        "Mana": 350,
-        "Move": 455
-      },
-      "Combat": {
-        "Armor": -60,
-        "Hitroll": 9,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "4d5+25"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 4578,
-      "Experience": 45000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6503,
-      "Name": "storekeeper",
-      "ShortDescription": "the Hide & Tooth storekeeper",
-      "LongDescription": "The Hide & Tooth storekeeper is standing here, waiting patiently.",
-      "Description": "The storekeeper is very rotund, but looks in excellent condition.",
-      "Level": 109,
-      "Race": "Humanoid",
-      "Class": "Warrior",
-      "Flags": [
-        "Spec",
-        "Sentinel",
-        "Memory"
-      ],
-      "Affects": [
-        "DetectInvis"
-      ],
-      "Alignment": 1000,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "1d1+30000",
-        "Mana": 1190,
-        "Move": 1715
-      },
-      "Combat": {
-        "Armor": -1000,
-        "Hitroll": 70,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "1d54+54"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 250000,
-      "Experience": 500000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6504,
-      "Name": "baker",
-      "ShortDescription": "Granite Head the baker",
-      "LongDescription": "Granite Head, the baker, is waiting for a customer here.",
-      "Description": "Granite Head is covered with flour and grains.",
-      "Level": 109,
-      "Race": "Humanoid",
-      "Class": "Warrior",
-      "Flags": [
-        "Sentinel"
-      ],
-      "Affects": [],
-      "Alignment": 900,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "1d1+30000",
-        "Mana": 1190,
-        "Move": 1715
-      },
-      "Combat": {
-        "Armor": -1000,
-        "Hitroll": 70,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "1d54+54"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 50000,
-      "Experience": 500000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6505,
-      "Name": "lizard",
-      "ShortDescription": "the giant lizard",
-      "LongDescription": "A giant lizard is foraging for food along the cavern floor here.",
-      "Description": "This scaly creature looks like it is well adapted to it's underground\nhabitat.  He looks very powerful.",
-      "Level": 21,
-      "Race": "Undefined",
-      "Class": "Normal",
-      "Flags": [
-        "StayZone"
-      ],
-      "Affects": [
-        "DetectInvis"
-      ],
-      "Alignment": 100,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "4d20+340",
-        "Mana": 310,
-        "Move": 395
-      },
-      "Combat": {
-        "Armor": 10,
-        "Hitroll": 7,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "3d7+4"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 200,
-      "Experience": 21000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6506,
-      "Name": "giant",
-      "ShortDescription": "the giant",
-      "LongDescription": "A giant is wandering around the mountainside here.",
-      "Description": "The giant is about 18 feet tall, with arms of steel, and looks in\nexcellent physical condition.",
-      "Level": 19,
-      "Race": "Giant",
-      "Class": "Warrior",
-      "Flags": [
-        "StayZone",
-        "Memory"
-      ],
-      "Affects": [],
-      "Alignment": 600,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "4d20+300",
-        "Mana": 290,
-        "Move": 365
-      },
-      "Combat": {
-        "Armor": 0,
-        "Hitroll": 6,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "3d3+8"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 200,
-      "Experience": 18000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6507,
-      "Name": "dwarven dwarf miner mineworker worker",
-      "ShortDescription": "the dwarven mineworker",
-      "LongDescription": "A dwarven mineworker is here.",
-      "Description": "The mineworker is very tired, and very dirty, and he has bulging muscles.",
-      "Level": 4,
-      "Race": "Dwarf",
-      "Class": "Warrior",
-      "Flags": [
-        "Sentinel",
-        "Memory"
-      ],
-      "Affects": [],
-      "Alignment": 500,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "3d13+40",
-        "Mana": 140,
-        "Move": 140
-      },
-      "Combat": {
-        "Armor": 70,
-        "Hitroll": 2,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "1d3+2"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 600,
-      "Experience": 600,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6508,
-      "Name": "dwarven mineleader dwarf mine leader",
-      "ShortDescription": "the mine leader",
-      "LongDescription": "A dwarven mine leader is here, supervising the work.",
-      "Description": "The mine leader is very big and very strong, though he must be fairly bright\nalso, to have gotten this job.",
-      "Level": 19,
-      "Race": "Dwarf",
-      "Class": "Warrior",
-      "Flags": [
-        "Sentinel",
-        "Memory"
-      ],
-      "Affects": [],
-      "Alignment": 700,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "50d2+270",
-        "Mana": 290,
-        "Move": 365
-      },
-      "Combat": {
-        "Armor": 0,
-        "Hitroll": 7,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "3d4+6"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 1800,
-      "Experience": 16000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6509,
-      "Name": "dwarven healer",
-      "ShortDescription": "the dwarven healer",
-      "LongDescription": "The dwarven healer is here, aiding the sick of his people.",
-      "Description": "He is a very skilled healer, and extremely faithful to his god.",
-      "Level": 22,
-      "Race": "Dwarf",
-      "Class": "Cleric",
-      "Flags": [
-        "Spec",
-        "Sentinel",
-        "Memory"
-      ],
-      "Affects": [
-        "DetectInvis",
-        "Sanctuary"
-      ],
-      "Alignment": 999,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "9d4+375",
-        "Mana": 320,
-        "Move": 410
-      },
-      "Combat": {
-        "Armor": -10,
-        "Hitroll": 5,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "3d8+4"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 2000,
-      "Experience": 20000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6510,
-      "Name": "dwarven peon",
-      "ShortDescription": "the dwarven peon",
-      "LongDescription": "A dwarven peon is awaiting help here.",
-      "Description": "",
-      "Level": 3,
-      "Race": "Dwarf",
-      "Class": "Warrior",
-      "Flags": [
-        "Sentinel"
-      ],
-      "Affects": [],
-      "Alignment": 500,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "10d3+35",
-        "Mana": 130,
-        "Move": 125
-      },
-      "Combat": {
-        "Armor": 70,
-        "Hitroll": 1,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "2d3+2"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 75,
-      "Experience": 350,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 6511,
-      "Name": "dwarf",
-      "ShortDescription": "the Dwarf",
-      "LongDescription": "A dwarf is here.",
-      "Description": "",
-      "Level": 6,
-      "Race": "Dwarf",
-      "Class": "Warrior",
-      "Flags": [
-        "Sentinel"
-      ],
-      "Affects": [],
-      "Alignment": 500,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "1d15+70",
-        "Mana": 160,
-        "Move": 170
-      },
-      "Combat": {
-        "Armor": 40,
-        "Hitroll": 2,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "3d3+1"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 625,
-      "Experience": 1000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
     }
   ],
   "Objects": [
+    {
+      "Id": 3000,
+      "Name": "beer barrel",
+      "ShortDescription": "a barrel",
+      "Description": "A beer barrel has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        50,
+        50,
+        1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 50,
+          "Amount": 50,
+          "Liquid": 1,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 65,
+      "Cost": 300,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3003,
+      "Name": "firebreather bottle",
+      "ShortDescription": "a firebreather",
+      "Description": "A firebreather has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        7,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 7,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 50,
+      "CostPerDay": 17,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3010,
+      "Name": "bread",
+      "ShortDescription": "a bread",
+      "Description": "A loaf of bread has been left here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3011,
+      "Name": "danish pastry",
+      "ShortDescription": "a danish pastry",
+      "Description": "A nice looking delicious danish pastry has been placed here.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 5,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 5,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3022,
+      "Name": "sword long",
+      "ShortDescription": "a long sword",
+      "Description": "A long sword has been left here.",
+      "ActionDescription": "slash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        8,
+        3,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 100
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 600,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3031,
+      "Name": "lantern",
+      "ShortDescription": "a lantern",
+      "Description": "A brass lantern is here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        0,
+        0,
+        96,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 96
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 50,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3083,
+      "Name": "scroll clan crecall",
+      "ShortDescription": "a scroll of clan recall",
+      "Description": "A scroll has carelessly been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        12,
+        109,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            109,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll"
+          ],
+          "Description": "The scroll has written a formulae of 'Clan Recall' upon it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5778,
+      "Name": "scroll recall",
+      "ShortDescription": "a scroll of recall",
+      "Description": "A scroll of recall lies here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        12,
+        42,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            42,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 2000,
+      "CostPerDay": 25,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
     {
       "Id": 6400,
       "Name": "boots stomping",
@@ -21896,1066 +19763,51 @@
       "SpecialProc": null
     },
     {
-      "Id": 6502,
-      "Name": "key mine",
-      "ShortDescription": "a mine key",
-      "Description": "There is a key to the mines lying here.",
+      "Id": 12005,
+      "Name": "hairpin romeobj",
+      "ShortDescription": "a jeweled hairpin",
+      "Description": "A beautifully jeweled hairpin is begging to be stolen.",
       "ActionDescription": "",
-      "Type": "Key",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoRent"
-      ],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        6502,
-        0,
-        0,
-        0,
-        0,
-        100
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": {
-          "KeyType": 6502,
-          "Timer": 0,
-          "TimerSet": 100
-        },
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6503,
-      "Name": "key bright gold",
-      "ShortDescription": "a bright golden key",
-      "Description": "There is a bright golden key lying here.",
-      "ActionDescription": "",
-      "Type": "Key",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoRent"
-      ],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        6503,
-        0,
-        0,
-        0,
-        0,
-        100
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": {
-          "KeyType": 6503,
-          "Timer": 0,
-          "TimerSet": 100
-        },
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 900,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6504,
-      "Name": "hammer dwarven",
-      "ShortDescription": "a hammer",
-      "Description": "There is a dwarven hammer lying here.",
-      "ActionDescription": "pummel",
-      "Type": "Weapon",
-      "Level": 4,
-      "AntiClass": "13107",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        2,
-        6,
-        7,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 2,
-          "DiceSides": 6,
-          "DamageType": 7,
-          "HitPoints": 0
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 13,
-      "Cost": 5500,
-      "CostPerDay": 1000,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6505,
-      "Name": "plate dwarven mail",
-      "ShortDescription": "dwarven plate mail",
-      "Description": "There is dwarven plate mail lying here.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 10,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Body"
-      ],
-      "Values": [
-        6,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 6,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 80,
-      "Cost": 4500,
-      "CostPerDay": 300,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6506,
-      "Name": "stick",
-      "ShortDescription": "a long, black stick",
-      "Description": "There is a long, black stick lying here.",
-      "ActionDescription": "",
-      "Type": "Staff",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        4,
-        2,
-        2,
-        28,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": {
-          "SpellId": 28,
-          "Level": 4,
-          "Charges": 2,
-          "ChargesRemaining": 2
-        },
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 100,
-      "CostPerDay": 6000,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6507,
-      "Name": "stick",
-      "ShortDescription": "a long, black stick",
-      "Description": "There is a long, black stick here.",
-      "ActionDescription": "",
-      "Type": "Light",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": {
-          "Color": 0,
-          "Type": 0,
-          "Hours": 0
-        },
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 0,
-      "CostPerDay": 1,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6508,
-      "Name": "club",
-      "ShortDescription": "a dwarven club",
-      "Description": "There is a dwarven club lying here.",
-      "ActionDescription": "",
-      "Type": "Weapon",
+      "Type": "Worn",
       "Level": 1,
-      "AntiClass": "4369",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        2,
-        3,
-        3,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 2,
-          "DiceSides": 3,
-          "DamageType": 3,
-          "HitPoints": 0
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 12,
-      "Cost": 3000,
-      "CostPerDay": 300,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6509,
-      "Name": "two-handed dwarven axe",
-      "ShortDescription": "a two-handed dwarven axe",
-      "Description": "A two-handed dwarven axe is here.",
-      "ActionDescription": "slices",
-      "Type": "Weapon",
-      "Level": 15,
-      "AntiClass": "13107",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        2,
-        7,
-        3,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 2,
-          "DiceSides": 7,
-          "DamageType": 3,
-          "HitPoints": 0
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 14,
-      "Cost": 5000,
-      "CostPerDay": 3000,
-      "ExtraDescriptions": [],
-      "Affects": [
-        {
-          "Location": "Hitroll",
-          "Modifier": 2
-        },
-        {
-          "Location": "Strength",
-          "Modifier": 2
-        }
-      ],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6510,
-      "Name": "helmet",
-      "ShortDescription": "a dwarven helmet",
-      "Description": "A dwarven helmet is here.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 5,
       "AntiClass": "None",
-      "ExtraFlags": [],
+      "ExtraFlags": [
+        "Bless"
+      ],
       "WearFlags": [
         "Take",
         "Head"
       ],
       "Values": [
-        4,
+        0,
         0,
         0,
         0,
         0,
         0
       ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 4,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 4,
-      "Cost": 2500,
+      "Details": null,
+      "Weight": 1,
+      "Cost": 3000,
       "CostPerDay": 500,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6511,
-      "Name": "gold ring",
-      "ShortDescription": "a golden dwarven ring",
-      "Description": "A golden dwarven ring is lying here.",
-      "ActionDescription": "",
-      "Type": "Worn",
-      "Level": 10,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Finger"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 1,
-      "Cost": 4000,
-      "CostPerDay": 1000,
-      "ExtraDescriptions": [],
-      "Affects": [
-        {
-          "Location": "Hitroll",
-          "Modifier": 1
-        },
-        {
-          "Location": "Damroll",
-          "Modifier": 1
-        }
-      ],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6512,
-      "Name": "gloves",
-      "ShortDescription": "a pair of dwarven gloves",
-      "Description": "A pair of thick dwarven gloves lay here.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 10,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hands"
-      ],
-      "Values": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 1,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 2,
-      "Cost": 4000,
-      "CostPerDay": 200,
-      "ExtraDescriptions": [],
-      "Affects": [
-        {
-          "Location": "Constitution",
-          "Modifier": 1
-        },
-        {
-          "Location": "Dexterity",
-          "Modifier": 1
-        }
-      ],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6517,
-      "Name": "coal",
-      "ShortDescription": "a chunk of coal",
-      "Description": "There is a chunk of coal here.",
-      "ActionDescription": "",
-      "Type": "Trash",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 100,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6518,
-      "Name": "pick",
-      "ShortDescription": "a mining pick",
-      "Description": "There is a mining pick here.",
-      "ActionDescription": "picks",
-      "Type": "Weapon",
-      "Level": 0,
-      "AntiClass": "4369",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        2,
-        3,
-        11,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 2,
-          "DiceSides": 3,
-          "DamageType": 11,
-          "HitPoints": 0
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 9,
-      "Cost": 300,
-      "CostPerDay": 10,
       "ExtraDescriptions": [
         {
           "Keywords": [
-            "pick"
+            "hairpin"
           ],
-          "Description": "It looks almost blessed!"
+          "Description": "Diamonds and sapphires alternate on this lovely, large hairpin, meant to\nskewer some wealthy woman's hair to her lovely head.\n^"
         }
       ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 5778,
-      "Name": "scroll recall",
-      "ShortDescription": "a scroll of recall",
-      "Description": "A scroll of recall lies here.",
-      "ActionDescription": "",
-      "Type": "Scroll",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic"
-      ],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        12,
-        42,
-        -1,
-        -1,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": {
-          "Level": 12,
-          "SpellIds": [
-            42,
-            -1,
-            -1
-          ]
-        },
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 4,
-      "Cost": 2000,
-      "CostPerDay": 25,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3000,
-      "Name": "beer barrel",
-      "ShortDescription": "a barrel",
-      "Description": "A beer barrel has been left here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        50,
-        50,
-        1,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 50,
-          "Amount": 50,
-          "Liquid": 1,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 65,
-      "Cost": 300,
-      "CostPerDay": 100,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3003,
-      "Name": "firebreather bottle",
-      "ShortDescription": "a firebreather",
-      "Description": "A firebreather has been left here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        8,
-        8,
-        7,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 8,
-          "Amount": 8,
-          "Liquid": 7,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 10,
-      "Cost": 50,
-      "CostPerDay": 17,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3010,
-      "Name": "bread",
-      "ShortDescription": "a bread",
-      "Description": "A loaf of bread has been left here.",
-      "ActionDescription": "",
-      "Type": "Food",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        12,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": {
-          "Filling": 12,
-          "Poisoned": false
-        },
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 10,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3011,
-      "Name": "danish pastry",
-      "ShortDescription": "a danish pastry",
-      "Description": "A nice looking delicious danish pastry has been placed here.",
-      "ActionDescription": "",
-      "Type": "Food",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        5,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": {
-          "Filling": 5,
-          "Poisoned": false
-        },
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 5,
-      "CostPerDay": 5,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3022,
-      "Name": "sword long",
-      "ShortDescription": "a long sword",
-      "Description": "A long sword has been left here.",
-      "ActionDescription": "slash",
-      "Type": "Weapon",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        1,
-        8,
-        3,
-        0,
-        100
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 1,
-          "DiceSides": 8,
-          "DamageType": 3,
-          "HitPoints": 100
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 600,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3031,
-      "Name": "lantern",
-      "ShortDescription": "a lantern",
-      "Description": "A brass lantern is here.",
-      "ActionDescription": "",
-      "Type": "Light",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        0,
-        0,
-        96,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": {
-          "Color": 0,
-          "Type": 0,
-          "Hours": 96
-        },
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 50,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3083,
-      "Name": "scroll clan crecall",
-      "ShortDescription": "a scroll of clan recall",
-      "Description": "A scroll has carelessly been left here.",
-      "ActionDescription": "",
-      "Type": "Scroll",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic"
-      ],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        12,
-        109,
-        -1,
-        -1,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": {
-          "Level": 12,
-          "SpellIds": [
-            109,
-            -1,
-            -1
-          ]
-        },
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 4,
-      "Cost": 1500,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [
+      "Affects": [
         {
-          "Keywords": [
-            "scroll"
-          ],
-          "Description": "The scroll has written a formulae of 'Clan Recall' upon it."
+          "Location": "Strength",
+          "Modifier": -1
+        },
+        {
+          "Location": "Intelligence",
+          "Modifier": 1
         }
       ],
-      "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
     },
@@ -23426,55 +20278,6 @@
         {
           "Location": "Move",
           "Modifier": 20
-        }
-      ],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 12005,
-      "Name": "hairpin romeobj",
-      "ShortDescription": "a jeweled hairpin",
-      "Description": "A beautifully jeweled hairpin is begging to be stolen.",
-      "ActionDescription": "",
-      "Type": "Worn",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Bless"
-      ],
-      "WearFlags": [
-        "Take",
-        "Head"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 1,
-      "Cost": 3000,
-      "CostPerDay": 500,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "hairpin"
-          ],
-          "Description": "Diamonds and sapphires alternate on this lovely, large hairpin, meant to\nskewer some wealthy woman's hair to her lovely head.\n^"
-        }
-      ],
-      "Affects": [
-        {
-          "Location": "Strength",
-          "Modifier": -1
-        },
-        {
-          "Location": "Intelligence",
-          "Modifier": 1
         }
       ],
       "Bitvectors": [],

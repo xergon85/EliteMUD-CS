@@ -118,7 +118,13 @@
         "Arg3": 1,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/277.zon",
+    "RoomRange": {
+      "Min": 27700,
+      "Max": 27799
+    }
   },
   "Rooms": [
     {
@@ -881,6 +887,85 @@
   "Mobs": [],
   "Objects": [
     {
+      "Id": 46,
+      "Name": "shrubbery path kon",
+      "ShortDescription": "A beautiful shrubbery",
+      "Description": "A #Rcolourful #Ylittle #Gshrubbery#N, including path, open up westly.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        27701,
+        13,
+        111,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "shrubbery",
+            "path"
+          ],
+          "Description": "One of the nicest shrubberies,  perfectly aligned with a small but\ndelicate path through it show you the way to the sacred grounds of the\n#RKnight #Ywho say #GNi#N (#Gni ni#N...) Clan."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 47,
+      "Name": "board bulletin wooden paper ni kon",
+      "ShortDescription": "#RKnights #Ywho say #GNi#N Clan board",
+      "Description": "A wooden board have a huge amount of pieces of paper nailed to it.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 27701,
       "Name": "pond rainbow water",
       "ShortDescription": "A pond of #Rrainbow #Ycoloured #Gwater#N",
@@ -996,85 +1081,6 @@
             "sixpack"
           ],
           "Description": "Mmmmm, Beer !!!"
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 46,
-      "Name": "shrubbery path kon",
-      "ShortDescription": "A beautiful shrubbery",
-      "Description": "A #Rcolourful #Ylittle #Gshrubbery#N, including path, open up westly.",
-      "ActionDescription": "",
-      "Type": "Other",
-      "Level": 114,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Glow",
-        "Hum",
-        "Magic",
-        "NoDrop",
-        "Donated"
-      ],
-      "WearFlags": [],
-      "Values": [
-        27701,
-        13,
-        111,
-        2,
-        1,
-        116
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "shrubbery",
-            "path"
-          ],
-          "Description": "One of the nicest shrubberies,  perfectly aligned with a small but\ndelicate path through it show you the way to the sacred grounds of the\n#RKnight #Ywho say #GNi#N (#Gni ni#N...) Clan."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": "roc(guard_object)"
-    },
-    {
-      "Id": 47,
-      "Name": "board bulletin wooden paper ni kon",
-      "ShortDescription": "#RKnights #Ywho say #GNi#N Clan board",
-      "Description": "A wooden board have a huge amount of pieces of paper nailed to it.",
-      "ActionDescription": "",
-      "Type": "Trash",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "board"
-          ],
-          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
         }
       ],
       "Affects": [],

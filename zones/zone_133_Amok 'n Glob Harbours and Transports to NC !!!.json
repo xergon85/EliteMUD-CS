@@ -30,56 +30,15 @@
         "Arg3": 13301,
         "Comment": "- Turnstyle"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/133.zon",
+    "RoomRange": {
+      "Min": 13301,
+      "Max": 13399
+    }
   },
   "Rooms": [
-    {
-      "Id": 13300,
-      "Name": "Outlook",
-      "Description": "The view from this place up at the top of the ship is really nice. You\ncan not see much but what you see is the better. The illuminated corners\nof the town make up the margins and the glowing tunnels of life tube away\ninto the mountains as glowworm in a glass pipe. Just marvelous...",
-      "ZoneId": 132,
-      "Sector": "City",
-      "Flags": [
-        "NoMob",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "Up",
-          "TargetId": -1,
-          "Description": "The stone ceiling of the cave making up the harbour basin is not that\nfar away. This very ship must have been built with this specific place in\nmind.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "Down",
-          "TargetId": 13227,
-          "Description": "The hard deck of the cargo vessel. Better climb, than jump down.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "corner"
-          ],
-          "Description": "A brightly shining light comes from the two corners of the harbour."
-        },
-        {
-          "Keywords": [
-            "harbour",
-            "town"
-          ],
-          "Description": "The harbour town light make the tunnel shine and glow in a real nice\nfashion. The dwarfs must be a lucky race to have this at all times."
-        }
-      ],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
     {
       "Id": 13301,
       "Name": "Passenger ship gangplank",

@@ -238,7 +238,13 @@
         "Arg3": 7908,
         "Comment": "The barrel with water"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/79.zon",
+    "RoomRange": {
+      "Min": 7754,
+      "Max": 7999
+    }
   },
   "Rooms": [
     {
@@ -1191,6 +1197,56 @@
   ],
   "Objects": [
     {
+      "Id": 6013,
+      "Name": "water barrel",
+      "ShortDescription": "a barrel",
+      "Description": "A water barrel has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        40,
+        40,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 40,
+          "Amount": 40,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 45,
+      "Cost": 60,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 7090,
       "Name": "waybread food",
       "ShortDescription": "a waybread",
@@ -1766,56 +1822,6 @@
           "Description": "They seem to be made from silver or platinum. You see the outline of a rose."
         }
       ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 6013,
-      "Name": "water barrel",
-      "ShortDescription": "a barrel",
-      "Description": "A water barrel has been left here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        40,
-        40,
-        15,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 40,
-          "Amount": 40,
-          "Liquid": 15,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 45,
-      "Cost": 60,
-      "CostPerDay": 20,
-      "ExtraDescriptions": [],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

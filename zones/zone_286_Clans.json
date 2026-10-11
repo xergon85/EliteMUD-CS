@@ -158,7 +158,13 @@
         "Arg3": null,
         "Comment": "Skullbowl w/ wine"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/286.zon",
+    "RoomRange": {
+      "Min": 28600,
+      "Max": 28699
+    }
   },
   "Rooms": [
     {
@@ -1608,6 +1614,48 @@
       "SpecialProc": "roc(guard_object)"
     },
     {
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "an automatic teller machine",
+      "Description": "An automatic teller machine has been installed in the wall here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "There is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 28600,
       "Name": "fountain",
       "ShortDescription": "a fountain",
@@ -2338,48 +2386,6 @@
             "wine"
           ],
           "Description": "It's a skullshaped bowl with a bone handle."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3034,
-      "Name": "atm teller bank machine",
-      "ShortDescription": "an automatic teller machine",
-      "Description": "An automatic teller machine has been installed in the wall here.",
-      "ActionDescription": "",
-      "Type": "Other",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 5000,
-      "Cost": 100,
-      "CostPerDay": 100,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "atm",
-            "teller",
-            "bank",
-            "machine"
-          ],
-          "Description": "There is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
         }
       ],
       "Affects": [],

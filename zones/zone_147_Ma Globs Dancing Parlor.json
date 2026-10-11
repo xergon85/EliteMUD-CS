@@ -2902,7 +2902,13 @@
         "Arg3": 14798,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/147.zon",
+    "RoomRange": {
+      "Min": 14400,
+      "Max": 14798
+    }
   },
   "Rooms": [
     {
@@ -11137,6 +11143,56 @@
       "SpecialProc": null
     },
     {
+      "Id": 3003,
+      "Name": "firebreather bottle",
+      "ShortDescription": "a firebreather",
+      "Description": "A firebreather has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        7,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 7,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 50,
+      "CostPerDay": 17,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 14701,
       "Name": "ticket key",
       "ShortDescription": "a slightly torn ticket",
@@ -15524,56 +15580,6 @@
           "Modifier": 15
         }
       ],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3003,
-      "Name": "firebreather bottle",
-      "ShortDescription": "a firebreather",
-      "Description": "A firebreather has been left here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        8,
-        8,
-        7,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 8,
-          "Amount": 8,
-          "Liquid": 7,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 10,
-      "Cost": 50,
-      "CostPerDay": 17,
-      "ExtraDescriptions": [],
-      "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
     }

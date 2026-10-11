@@ -54,7 +54,13 @@
         "Arg3": 27614,
         "Comment": "Copy of Clan board in Drusians Room"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/276.zon",
+    "RoomRange": {
+      "Min": 27600,
+      "Max": 27699
+    }
   },
   "Rooms": [
     {
@@ -700,6 +706,102 @@
   "Mobs": [],
   "Objects": [
     {
+      "Id": 27,
+      "Name": "board bulletin tri",
+      "ShortDescription": "an TRI clan bulletin board",
+      "Description": "The TRI clan bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        107,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3135,
+      "Name": "fountain",
+      "ShortDescription": "a fountain",
+      "Description": "A small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 500,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "It is very nice.  Made from fine white marble."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 27600,
       "Name": "Monolith tri",
       "ShortDescription": "A large monolith",
@@ -821,102 +923,6 @@
       "Cost": 30,
       "CostPerDay": 0,
       "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 27,
-      "Name": "board bulletin tri",
-      "ShortDescription": "an TRI clan bulletin board",
-      "Description": "The TRI clan bulletin board is mounted on a wall here.",
-      "ActionDescription": "",
-      "Type": "Trash",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [],
-      "Values": [
-        107,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "board"
-          ],
-          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3135,
-      "Name": "fountain",
-      "ShortDescription": "a fountain",
-      "Description": "A small white fountain is standing here, gurgling happily.",
-      "ActionDescription": "",
-      "Type": "Fountain",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic",
-        "NoDrop",
-        "NoRent"
-      ],
-      "WearFlags": [],
-      "Values": [
-        99999,
-        99999,
-        15,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 99999,
-          "Amount": 99999,
-          "Liquid": 15,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 500,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "fountain"
-          ],
-          "Description": "It is very nice.  Made from fine white marble."
-        }
-      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

@@ -1086,7 +1086,13 @@
         "Arg3": 16,
         "Comment": "mace"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/34.zon",
+    "RoomRange": {
+      "Min": 3400,
+      "Max": 3499
+    }
   },
   "Rooms": [
     {
@@ -4991,69 +4997,6 @@
   ],
   "Objects": [
     {
-      "Id": 6004,
-      "Name": "lantern",
-      "ShortDescription": "a hooded brass lantern",
-      "Description": "A hooded brass lantern has been left here.",
-      "ActionDescription": "",
-      "Type": "Light",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        0,
-        0,
-        100,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": {
-          "Color": 0,
-          "Type": 0,
-          "Hours": 100
-        },
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 4,
-      "Cost": 60,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "lantern"
-          ],
-          "Description": "It is a large and robust but somewhat battered oil lantern made from brass,\nand it is equipped with a handle to make it handy and a hood to protect its\nflame.  Some letters have been scratched on its bottom."
-        },
-        {
-          "Keywords": [
-            "letters"
-          ],
-          "Description": "They say, \"Use 'hold lantern' to activate.\""
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
       "Id": 3002,
       "Name": "ale bottle dark",
       "ShortDescription": "a bottle",
@@ -6318,6 +6261,69 @@
       "Cost": 300,
       "CostPerDay": 30,
       "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 6004,
+      "Name": "lantern",
+      "ShortDescription": "a hooded brass lantern",
+      "Description": "A hooded brass lantern has been left here.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        0,
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 100
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 60,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "lantern"
+          ],
+          "Description": "It is a large and robust but somewhat battered oil lantern made from brass,\nand it is equipped with a handle to make it handy and a hood to protect its\nflame.  Some letters have been scratched on its bottom."
+        },
+        {
+          "Keywords": [
+            "letters"
+          ],
+          "Description": "They say, \"Use 'hold lantern' to activate.\""
+        }
+      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

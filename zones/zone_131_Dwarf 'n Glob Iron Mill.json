@@ -4942,7 +4942,13 @@
         "Arg3": 17,
         "Comment": "a sphere of white heat"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/131.zon",
+    "RoomRange": {
+      "Min": 13100,
+      "Max": 13199
+    }
   },
   "Rooms": [
     {
@@ -9669,7 +9675,8 @@
         "Resist_23:100",
         "Resist_88:0",
         "Resist_324:75",
-        "Resist_315:75"
+        "Resist_315:75",
+        "Resist_4:25"
       ],
       "Gold": 100,
       "Experience": 1184545,
@@ -9777,7 +9784,8 @@
         "Resist_105:90",
         "Resist_324:75",
         "Resist_315:75",
-        "Resist_57:100"
+        "Resist_57:100",
+        "Resist_4:50"
       ],
       "Gold": 12100,
       "Experience": 1601231,
@@ -9862,7 +9870,8 @@
         "Resist_40:100",
         "Resist_324:50",
         "Resist_103:80",
-        "Resist_72:50"
+        "Resist_72:50",
+        "Resist_3:75"
       ],
       "Gold": 201,
       "Experience": 1210574,
@@ -10309,7 +10318,8 @@
         "Resist_7:100",
         "Resist_38:100",
         "Resist_40:100",
-        "Resist_105:90"
+        "Resist_105:90",
+        "Resist_4:25"
       ],
       "Gold": 11236,
       "Experience": 1350395,
@@ -10626,7 +10636,11 @@
         "Resist_40:100",
         "Resist_105:90",
         "Resist_26:90",
-        "Resist_95:90"
+        "Resist_95:90",
+        "Resist_0:100",
+        "Resist_1:100",
+        "Resist_2:100",
+        "Resist_4:50"
       ],
       "Gold": 11664,
       "Experience": 1411134,
@@ -10887,7 +10901,8 @@
         "Resist_38:100",
         "Resist_40:100",
         "Resist_324:75",
-        "Resist_301:50"
+        "Resist_301:50",
+        "Resist_4:60"
       ],
       "Gold": 11881,
       "Experience": 1642602,
@@ -11014,7 +11029,8 @@
         "Resist_614:100",
         "Resist_7:100",
         "Resist_38:100",
-        "Resist_40:100"
+        "Resist_40:100",
+        "Resist_4:95"
       ],
       "Gold": 11881,
       "Experience": 1342602,
@@ -11863,7 +11879,8 @@
         "Resist_38:100",
         "Resist_40:100",
         "Resist_324:50",
-        "Resist_315:25"
+        "Resist_315:25",
+        "Resist_4:40"
       ],
       "Gold": 4,
       "Experience": 1611134,
@@ -12115,7 +12132,8 @@
       "Resistances": [
         "Resist_7:100",
         "Resist_38:100",
-        "Resist_40:100"
+        "Resist_40:100",
+        "Resist_4:65"
       ],
       "Gold": 31881,
       "Experience": 1742602,
@@ -12291,7 +12309,8 @@
         "Resist_324:90",
         "Resist_315:50",
         "Resist_321:50",
-        "Resist_329:50"
+        "Resist_329:50",
+        "Resist_4:20"
       ],
       "Gold": 12100,
       "Experience": 1902340,
@@ -12516,7 +12535,8 @@
         "Resist_38:100",
         "Resist_40:100",
         "Resist_79:75",
-        "Resist_324:50"
+        "Resist_324:50",
+        "Resist_3:75"
       ],
       "Gold": 16,
       "Experience": 1592470,
@@ -12681,7 +12701,8 @@
         "Resist_40:100",
         "Resist_324:90",
         "Resist_315:100",
-        "Resist_345:100"
+        "Resist_345:100",
+        "Resist_4:85"
       ],
       "Gold": 121,
       "Experience": 4865854,
@@ -12768,7 +12789,8 @@
         "Resist_40:100",
         "Resist_324:90",
         "Resist_315:100",
-        "Resist_345:100"
+        "Resist_345:100",
+        "Resist_4:85"
       ],
       "Gold": 111,
       "Experience": 4970621,
@@ -12867,7 +12889,8 @@
         "Resist_100:90",
         "Resist_76:100",
         "Resist_107:90",
-        "Resist_324:90"
+        "Resist_324:90",
+        "Resist_4:25"
       ],
       "Gold": 11881,
       "Experience": 1742602,
@@ -13066,7 +13089,8 @@
         "Resist_26:90",
         "Resist_56:90",
         "Resist_105:90",
-        "Resist_5:90"
+        "Resist_5:90",
+        "Resist_4:25"
       ],
       "Gold": 6149,
       "Experience": 1980405,
@@ -13187,7 +13211,8 @@
         "Resist_26:90",
         "Resist_56:90",
         "Resist_105:90",
-        "Resist_315:50"
+        "Resist_315:50",
+        "Resist_4:50"
       ],
       "Gold": 44444,
       "Experience": 3142602,
@@ -13374,7 +13399,8 @@
         "Resist_7:100",
         "Resist_38:100",
         "Resist_40:100",
-        "Resist_324:50"
+        "Resist_324:50",
+        "Resist_4:40"
       ],
       "Gold": 21881,
       "Experience": 1642602,
@@ -13652,7 +13678,8 @@
         "Resist_105:90",
         "Resist_106:90",
         "Resist_26:90",
-        "Resist_100:75"
+        "Resist_100:75",
+        "Resist_4:50"
       ],
       "Gold": 54321,
       "Experience": 4800021,
@@ -13763,7 +13790,7 @@
         "Resist_97:75",
         "Resist_98:75",
         "Resist_25:50",
-        "Resist_4:100"
+        "Resist_4:50"
       ],
       "Gold": 41881,
       "Experience": 1842602,
@@ -14389,7 +14416,8 @@
         "Resist_38:100",
         "Resist_40:100",
         "Resist_324:80",
-        "Resist_345:80"
+        "Resist_345:80",
+        "Resist_4:55"
       ],
       "Gold": 31188,
       "Experience": 1642602,
@@ -14665,7 +14693,8 @@
         "Resist_302:60",
         "Resist_345:60",
         "Resist_358:60",
-        "Resist_103:50"
+        "Resist_103:50",
+        "Resist_4:50"
       ],
       "Gold": 881,
       "Experience": 1242602,
@@ -14797,7 +14826,8 @@
         "Resist_302:60",
         "Resist_345:60",
         "Resist_358:60",
-        "Resist_103:50"
+        "Resist_103:50",
+        "Resist_4:50"
       ],
       "Gold": 881,
       "Experience": 1242602,
@@ -14938,7 +14968,9 @@
         "Resist_40:100",
         "Resist_8:90",
         "Resist_77:90",
-        "Resist_25:90"
+        "Resist_25:90",
+        "Resist_0:1",
+        "Resist_2:40"
       ],
       "Gold": 1,
       "Experience": 1480405,
@@ -15200,7 +15232,9 @@
         "Skill_338:100",
         "Skill_358:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_0:100"
+      ],
       "Gold": 0,
       "Experience": 1621089,
       "DefaultPosition": "Standing",
@@ -15517,7 +15551,12 @@
         "Resist_104:90",
         "Resist_79:90",
         "Resist_96:90",
-        "Resist_315:50"
+        "Resist_315:50",
+        "Resist_0:70",
+        "Resist_1:70",
+        "Resist_2:70",
+        "Resist_3:70",
+        "Resist_4:35"
       ],
       "Gold": 10816,
       "Experience": 1192470,

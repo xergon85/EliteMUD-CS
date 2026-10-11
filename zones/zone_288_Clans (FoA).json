@@ -78,7 +78,13 @@
         "Arg3": null,
         "Comment": "Det Invis"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/288.zon",
+    "RoomRange": {
+      "Min": 28800,
+      "Max": 28899
+    }
   },
   "Rooms": [
     {
@@ -790,6 +796,75 @@
   ],
   "Objects": [
     {
+      "Id": 23,
+      "Name": "knight templar blocker guard",
+      "ShortDescription": "#NA#R T#wemplar #RK#wnight#N",
+      "Description": "#NA #RT#wemplar #RK#wnight#G stands here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 114,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "Donated"
+      ],
+      "WearFlags": [],
+      "Values": [
+        28800,
+        5,
+        119,
+        2,
+        1,
+        116
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": "roc(guard_object)"
+    },
+    {
+      "Id": 42,
+      "Name": "board fields anarchy express",
+      "ShortDescription": "#CThe #CF#ci#Nel#cd#Cs #Nof#C A#cn#Nar#cch#Cy Daily Express#N",
+      "Description": "#CThe #CF#ci#Nel#cd#Cs #Nof#C A#cn#Nar#cch#Cy #GDaily Express stands \nhere.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        119,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 28800,
       "Name": "fountain fountanary izumo",
       "ShortDescription": "the fountanary of Izumo",
@@ -1146,75 +1221,6 @@
             "licor"
           ],
           "Description": "A bottle containing the fine licor made by elves. Elves say that\nthose who drink this licor will have better sight, as good and\naccurate as an elven archer. This was their gift to Izumo."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 23,
-      "Name": "knight templar blocker guard",
-      "ShortDescription": "#NA#R T#wemplar #RK#wnight#N",
-      "Description": "#NA #RT#wemplar #RK#wnight#G stands here.",
-      "ActionDescription": "",
-      "Type": "Other",
-      "Level": 114,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic",
-        "NoDrop",
-        "Donated"
-      ],
-      "WearFlags": [],
-      "Values": [
-        28800,
-        5,
-        119,
-        2,
-        1,
-        116
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": "roc(guard_object)"
-    },
-    {
-      "Id": 42,
-      "Name": "board fields anarchy express",
-      "ShortDescription": "#CThe #CF#ci#Nel#cd#Cs #Nof#C A#cn#Nar#cch#Cy Daily Express#N",
-      "Description": "#CThe #CF#ci#Nel#cd#Cs #Nof#C A#cn#Nar#cch#Cy #GDaily Express stands \nhere.",
-      "ActionDescription": "",
-      "Type": "Trash",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [],
-      "Values": [
-        119,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "board"
-          ],
-          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
         }
       ],
       "Affects": [],

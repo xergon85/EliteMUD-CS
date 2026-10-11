@@ -5,36 +5,15 @@
     "TopRoomId": 99,
     "Lifespan": 1,
     "ResetMode": "ResetNever",
-    "ResetCommands": []
+    "ResetCommands": [],
+    "Active": true,
+    "SourceFile": "zon/0.zon",
+    "RoomRange": {
+      "Min": 0,
+      "Max": 99
+    }
   },
   "Rooms": [
-    {
-      "Id": 12,
-      "Name": "The Wedding Chapel",
-      "Description": "The walls inside the chapel glow with a divine light.  You feel at\nease inside here, all of your worries left at the door.  Rows of\ncushioned silvery seats are here for your seating comfort.  Murals of\nElite's great gods line the walls, providing witness to this event.\nUpon closer inspection, you realize the stained glass windows are\nactually depictions of IO creating the very fabric of existance.  At\nthe far end of the room you see a magnificent altar constructed of an\nunknown, but enchanting alloy. A beautiful silken canopy covers the\nwedding platform, where the bride and groom to be will stand and speak\ntheir vows.\n§N",
-      "ZoneId": 0,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors",
-        "Lawful",
-        "Ocs",
-        "NoTeleport"
-      ],
-      "Exits": [
-        {
-          "Direction": "South",
-          "TargetId": 11,
-          "Description": "",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
     {
       "Id": 0,
       "Name": "The Void",
@@ -303,6 +282,7 @@
       "Flags": [
         "Indoors",
         "Lawful",
+        "Ocs",
         "NoTeleport"
       ],
       "Exits": [
@@ -405,30 +385,6 @@
       "SpecialProc": null,
       "RoomPrograms": [],
       "CrashRoom": false
-    },
-    {
-      "Id": 0,
-      "Name": "The Room that will be",
-      "Description": "This is the room that is the one that will be something when you have decided\nto do something about it,now that it has become something from nothing",
-      "ZoneId": 0,
-      "Sector": "City",
-      "Flags": [
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "Up",
-          "TargetId": 3001,
-          "Description": "room willbe",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": true
     }
   ],
   "Mobs": [],

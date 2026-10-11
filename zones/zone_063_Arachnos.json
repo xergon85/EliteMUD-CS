@@ -342,7 +342,13 @@
         "Arg3": 2,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/63.zon",
+    "RoomRange": {
+      "Min": 6200,
+      "Max": 6399
+    }
   },
   "Rooms": [
     {
@@ -2863,39 +2869,43 @@
   ],
   "Objects": [
     {
-      "Id": 7203,
-      "Name": "cloak purple",
-      "ShortDescription": "a purple cloak",
-      "Description": "A purple cloak lies on the floor.",
+      "Id": 6109,
+      "Name": "potion blue",
+      "ShortDescription": "a blue potion",
+      "Description": "A blue potion has been left here.",
       "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 18,
+      "Type": "Potion",
+      "Level": 20,
       "AntiClass": "None",
       "ExtraFlags": [
         "Magic"
       ],
       "WearFlags": [
         "Take",
-        "About"
+        "Hold"
       ],
       "Values": [
-        10,
-        0,
-        0,
-        0,
+        15,
+        28,
+        -1,
+        -1,
         0,
         0
       ],
       "Details": {
         "Light": null,
-        "SpellContainer": null,
+        "SpellContainer": {
+          "Level": 15,
+          "SpellIds": [
+            28,
+            -1,
+            -1
+          ]
+        },
         "Charges": null,
         "Weapon": null,
         "Missile": null,
-        "Armor": {
-          "ArmorClass": 10,
-          "HitPoints": 0
-        },
+        "Armor": null,
         "Trap": null,
         "Container": null,
         "Drink": null,
@@ -2905,24 +2915,19 @@
         "Money": null,
         "Portal": null
       },
-      "Weight": 20,
-      "Cost": 5000,
-      "CostPerDay": 6000,
+      "Weight": 2,
+      "Cost": 15000,
+      "CostPerDay": 5000,
       "ExtraDescriptions": [
         {
           "Keywords": [
-            "cloak",
-            "purple"
+            "potion",
+            "blue"
           ],
-          "Description": "This is a very fine made cloak from an unknown material, in a nice purple\ncolor."
+          "Description": "It has a nice deep blue color and a smell like peppermint."
         }
       ],
-      "Affects": [
-        {
-          "Location": "MagicResistance",
-          "Modifier": 10
-        }
-      ],
+      "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
     },
@@ -3265,43 +3270,39 @@
       "SpecialProc": null
     },
     {
-      "Id": 6109,
-      "Name": "potion blue",
-      "ShortDescription": "a blue potion",
-      "Description": "A blue potion has been left here.",
+      "Id": 7203,
+      "Name": "cloak purple",
+      "ShortDescription": "a purple cloak",
+      "Description": "A purple cloak lies on the floor.",
       "ActionDescription": "",
-      "Type": "Potion",
-      "Level": 20,
+      "Type": "Armor",
+      "Level": 18,
       "AntiClass": "None",
       "ExtraFlags": [
         "Magic"
       ],
       "WearFlags": [
         "Take",
-        "Hold"
+        "About"
       ],
       "Values": [
-        15,
-        28,
-        -1,
-        -1,
+        10,
+        0,
+        0,
+        0,
         0,
         0
       ],
       "Details": {
         "Light": null,
-        "SpellContainer": {
-          "Level": 15,
-          "SpellIds": [
-            28,
-            -1,
-            -1
-          ]
-        },
+        "SpellContainer": null,
         "Charges": null,
         "Weapon": null,
         "Missile": null,
-        "Armor": null,
+        "Armor": {
+          "ArmorClass": 10,
+          "HitPoints": 0
+        },
         "Trap": null,
         "Container": null,
         "Drink": null,
@@ -3311,19 +3312,24 @@
         "Money": null,
         "Portal": null
       },
-      "Weight": 2,
-      "Cost": 15000,
-      "CostPerDay": 5000,
+      "Weight": 20,
+      "Cost": 5000,
+      "CostPerDay": 6000,
       "ExtraDescriptions": [
         {
           "Keywords": [
-            "potion",
-            "blue"
+            "cloak",
+            "purple"
           ],
-          "Description": "It has a nice deep blue color and a smell like peppermint."
+          "Description": "This is a very fine made cloak from an unknown material, in a nice purple\ncolor."
         }
       ],
-      "Affects": [],
+      "Affects": [
+        {
+          "Location": "MagicResistance",
+          "Modifier": 10
+        }
+      ],
       "Bitvectors": [],
       "SpecialProc": null
     }

@@ -286,7 +286,13 @@
         "Arg3": 1268,
         "Comment": "Talons Board in Talons Room"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/12.zon",
+    "RoomRange": {
+      "Min": 1000,
+      "Max": 1299
+    }
   },
   "Rooms": [
     {
@@ -2439,7 +2445,7 @@
     {
       "Id": 1260,
       "Name": "Helm's Sanctuary",
-      "Description": "You have entered a large helmet shaped room of sorts. your \nfootsteps cause a strange echo as you walk around.  You notice that\nthis room would be entirely empty except for various pieces of \nheadgear which line the walls.  As you take a closer look you see \nthat the headwear ranges from simple caps to ornate battle helmets..\nprobably one of Helm's disguises that he uses while watching mortals. \nYou aren't sure but you could swear that one of the helms winked at \nyou... you feel like you are being watched.",
+      "Description": "You have entered a large helmet shaped room of sorts. your footsteps\ncause a strange echo as you walk around.  You notice that this room would\nbe entirely empty except for various pieces of headgear which line the\nwalls.  As you take a closer look you see that the headwear ranges from\nsimple caps to ornate battle helmets... probably one of Helm's disguises\nthat he uses while watching mortals.  You aren't sure but you could swear\nthat one of the helms winked at you... you feel like you are being watched.\n§N",
       "ZoneId": 12,
       "Sector": "City",
       "Flags": [
@@ -2447,7 +2453,8 @@
         "Lawful",
         "NoMagic",
         "Private",
-        "GodRoom"
+        "GodRoom",
+        "Ocs"
       ],
       "Exits": [],
       "ExtraDescriptions": [],
@@ -2951,26 +2958,6 @@
       "SpecialProc": null,
       "RoomPrograms": [],
       "CrashRoom": false
-    },
-    {
-      "Id": 1260,
-      "Name": "Helm's Sanctuary",
-      "Description": "You have entered a large helmet shaped room of sorts. your footsteps\ncause a strange echo as you walk around.  You notice that this room would\nbe entirely empty except for various pieces of headgear which line the\nwalls.  As you take a closer look you see that the headwear ranges from\nsimple caps to ornate battle helmets... probably one of Helm's disguises\nthat he uses while watching mortals.  You aren't sure but you could swear\nthat one of the helms winked at you... you feel like you are being watched.\n§N",
-      "ZoneId": 12,
-      "Sector": "City",
-      "Flags": [
-        "Indoors",
-        "Lawful",
-        "NoMagic",
-        "Private",
-        "GodRoom",
-        "Ocs"
-      ],
-      "Exits": [],
-      "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
     }
   ],
   "Mobs": [
@@ -3030,343 +3017,6 @@
     }
   ],
   "Objects": [
-    {
-      "Id": 1210,
-      "Name": "fractal french tickler condom",
-      "ShortDescription": "a fractal French tickler",
-      "Description": "An odd looking condom has been dropped by some careless person here.",
-      "ActionDescription": "This condom is covered with little rubber 'spines' to enhance feeling.  As\nyou look closer, you see that each of the spines is covered in smaller spines,\nand each of the smaller spines is covered by yet smaller spines...",
-      "Type": "Container",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Glow",
-        "Magic",
-        "NoDrop",
-        "NoRent"
-      ],
-      "WearFlags": [
-        "Take",
-        "Finger",
-        "Head",
-        "Hands",
-        "About",
-        "Waist",
-        "Wrist",
-        "Hold"
-      ],
-      "Values": [
-        1,
-        1,
-        9,
-        1,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": {
-          "Capacity": 1,
-          "Flags": [
-            "Closeable"
-          ],
-          "KeyId": 9,
-          "CorpseType": 1,
-          "CorpseBlood": 0,
-          "CorpseLevel": 0
-        },
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 50,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "THIS_IS_A_GOD_ONLY_ITEM",
-            "-",
-            "IT'D_BE_SILLY_FOR_A_MORTAL_TO_HAVE_IT"
-          ],
-          "Description": ""
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 1211,
-      "Name": "mandelbrot masturbator massager marvelous",
-      "ShortDescription": "Mandelbrot's marvelous hand-held massager",
-      "Description": "An odd looking device has been left here.",
-      "ActionDescription": "It looks rather alot like a magic wand or staff of some sort, but thicker, and\nwith a narrowed end.  The instructions on the box recommend daily use, \"to\nrelax stiff muscles and relieve stress\".  Somehow you don't think that the\ndirections shown here are followed all that strictly.",
-      "Type": "Wand",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Hum",
-        "Magic",
-        "NoDrop",
-        "NoRent"
-      ],
-      "WearFlags": [
-        "Wield"
-      ],
-      "Values": [
-        20,
-        1,
-        1,
-        4,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": {
-          "SpellId": 4,
-          "Level": 20,
-          "Charges": 1,
-          "ChargesRemaining": 1
-        },
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 50,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "THIS_IS_A_GOD_ONLY_ITEM",
-            "-",
-            "IT'D_BE_SILLY_FOR_A_MORTAL_TO_HAVE_IT"
-          ],
-          "Description": ""
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 1212,
-      "Name": "mandelbrot marital aid set box",
-      "ShortDescription": "a large box, labeled  'The Mandelbrot Marital Aids Set'",
-      "Description": "The Mandelbrot marital aids set is here in its box.",
-      "ActionDescription": "The box is covered in pictures portraying various fractal devices of dubious\nredeeming social value.  Some of the items seem quite interesting, tempting\nyou to rip open the box and toss your innocence out the window for good.",
-      "Type": "Container",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Glow",
-        "Magic",
-        "NoDrop",
-        "NoRent"
-      ],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        300,
-        5,
-        1,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": {
-          "Capacity": 300,
-          "Flags": [
-            "Closeable",
-            "Closed"
-          ],
-          "KeyId": 1,
-          "CorpseType": 0,
-          "CorpseBlood": 0,
-          "CorpseLevel": 0
-        },
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 100,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "THIS_IS_A_GOD_ONLY_ITEM",
-            "-",
-            "IT'D_BE_SILLY_FOR_A_MORTAL_TO_HAVE_IT"
-          ],
-          "Description": ""
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 1243,
-      "Name": "rose crystal",
-      "ShortDescription": "a crystal rose",
-      "Description": "#BA delicate hand crafted #ccrystalline#B rose hovers here.#N",
-      "ActionDescription": "",
-      "Type": "Light",
-      "Level": 110,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Glow",
-        "Hum",
-        "NoDrop",
-        "NoRent",
-        "NoDonate",
-        "NoInvis"
-      ],
-      "WearFlags": [],
-      "Values": [
-        0,
-        0,
-        -1,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": {
-          "Color": 0,
-          "Type": 0,
-          "Hours": -1
-        },
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "crystal"
-          ],
-          "Description": "To #CMelody#N, this rose with all it's beauty can never match your own.\n     Love, #CHelm#N"
-        },
-        {
-          "Keywords": [
-            "rose"
-          ],
-          "Description": "As you reach out to touch it, the rose changes hues resulting in a\nsplendid display.  The scintillation ends with a color that represents\nyour mood... how are you feeling now???"
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 9916,
-      "Name": "crate",
-      "ShortDescription": "a crate",
-      "Description": "A crate is stacked here.",
-      "ActionDescription": "",
-      "Type": "Container",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        200,
-        5,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": {
-          "Capacity": 200,
-          "Flags": [
-            "Closeable",
-            "Closed"
-          ],
-          "KeyId": 0,
-          "CorpseType": 0,
-          "CorpseBlood": 0,
-          "CorpseLevel": 0
-        },
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 50,
-      "Cost": 100,
-      "CostPerDay": 20,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "crate"
-          ],
-          "Description": "It's a standard wooden crate."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
     {
       "Id": 104,
       "Name": "board overseer bulletin",
@@ -3941,20 +3591,166 @@
       "SpecialProc": null
     },
     {
-      "Id": 23502,
-      "Name": "lemonade fountain",
-      "ShortDescription": "a yellow fountain",
-      "Description": "a fountain of lemonade stands here.",
-      "ActionDescription": "",
-      "Type": "Fountain",
+      "Id": 1210,
+      "Name": "fractal french tickler condom",
+      "ShortDescription": "a fractal French tickler",
+      "Description": "An odd looking condom has been dropped by some careless person here.",
+      "ActionDescription": "This condom is covered with little rubber 'spines' to enhance feeling.  As\nyou look closer, you see that each of the spines is covered in smaller spines,\nand each of the smaller spines is covered by yet smaller spines...",
+      "Type": "Container",
       "Level": 0,
       "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [],
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take",
+        "Finger",
+        "Head",
+        "Hands",
+        "About",
+        "Waist",
+        "Wrist",
+        "Hold"
+      ],
       "Values": [
-        9999,
-        9999,
-        6,
+        1,
+        1,
+        9,
+        1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 1,
+          "Flags": [
+            "Closeable"
+          ],
+          "KeyId": 9,
+          "CorpseType": 1,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "THIS_IS_A_GOD_ONLY_ITEM",
+            "-",
+            "IT'D_BE_SILLY_FOR_A_MORTAL_TO_HAVE_IT"
+          ],
+          "Description": ""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1211,
+      "Name": "mandelbrot masturbator massager marvelous",
+      "ShortDescription": "Mandelbrot's marvelous hand-held massager",
+      "Description": "An odd looking device has been left here.",
+      "ActionDescription": "It looks rather alot like a magic wand or staff of some sort, but thicker, and\nwith a narrowed end.  The instructions on the box recommend daily use, \"to\nrelax stiff muscles and relieve stress\".  Somehow you don't think that the\ndirections shown here are followed all that strictly.",
+      "Type": "Wand",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Hum",
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Wield"
+      ],
+      "Values": [
+        20,
+        1,
+        1,
+        4,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": {
+          "SpellId": 4,
+          "Level": 20,
+          "Charges": 1,
+          "ChargesRemaining": 1
+        },
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "THIS_IS_A_GOD_ONLY_ITEM",
+            "-",
+            "IT'D_BE_SILLY_FOR_A_MORTAL_TO_HAVE_IT"
+          ],
+          "Description": ""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1212,
+      "Name": "mandelbrot marital aid set box",
+      "ShortDescription": "a large box, labeled  'The Mandelbrot Marital Aids Set'",
+      "Description": "The Mandelbrot marital aids set is here in its box.",
+      "ActionDescription": "The box is covered in pictures portraying various fractal devices of dubious\nredeeming social value.  Some of the items seem quite interesting, tempting\nyou to rip open the box and toss your innocence out the window for good.",
+      "Type": "Container",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        300,
+        5,
+        1,
         0,
         0,
         0
@@ -3967,23 +3763,104 @@
         "Missile": null,
         "Armor": null,
         "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 9999,
-          "Amount": 9999,
-          "Liquid": 6,
-          "Poisoned": false
+        "Container": {
+          "Capacity": 300,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": 1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
         },
+        "Drink": null,
         "Note": null,
         "Key": null,
         "Food": null,
         "Money": null,
         "Portal": null
       },
-      "Weight": 9999,
-      "Cost": 1,
-      "CostPerDay": 1,
-      "ExtraDescriptions": [],
+      "Weight": 100,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "THIS_IS_A_GOD_ONLY_ITEM",
+            "-",
+            "IT'D_BE_SILLY_FOR_A_MORTAL_TO_HAVE_IT"
+          ],
+          "Description": ""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1243,
+      "Name": "rose crystal",
+      "ShortDescription": "a crystal rose",
+      "Description": "#BA delicate hand crafted #ccrystalline#B rose hovers here.#N",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 110,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Glow",
+        "Hum",
+        "NoDrop",
+        "NoRent",
+        "NoDonate",
+        "NoInvis"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": -1
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "crystal"
+          ],
+          "Description": "To #CMelody#N, this rose with all it's beauty can never match your own.\n     Love, #CHelm#N"
+        },
+        {
+          "Keywords": [
+            "rose"
+          ],
+          "Description": "As you reach out to touch it, the rose changes hues resulting in a\nsplendid display.  The scintillation ends with a color that represents\nyour mood... how are you feeling now???"
+        }
+      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
@@ -4323,6 +4200,116 @@
           "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
         }
       ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 9916,
+      "Name": "crate",
+      "ShortDescription": "a crate",
+      "Description": "A crate is stacked here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        200,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 200,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": 0,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 50,
+      "Cost": 100,
+      "CostPerDay": 20,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "crate"
+          ],
+          "Description": "It's a standard wooden crate."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 23502,
+      "Name": "lemonade fountain",
+      "ShortDescription": "a yellow fountain",
+      "Description": "a fountain of lemonade stands here.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [],
+      "Values": [
+        9999,
+        9999,
+        6,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 9999,
+          "Amount": 9999,
+          "Liquid": 6,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

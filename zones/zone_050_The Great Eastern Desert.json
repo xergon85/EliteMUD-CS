@@ -478,7 +478,13 @@
         "Arg3": 5010,
         "Comment": "(tattered map)"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/50.zon",
+    "RoomRange": {
+      "Min": 4700,
+      "Max": 5099
+    }
   },
   "Rooms": [
     {
@@ -5074,14 +5080,14 @@
   ],
   "Objects": [
     {
-      "Id": 7211,
-      "Name": "sword short",
-      "ShortDescription": "a short sword",
-      "Description": "A short sword is lying here.",
+      "Id": 3022,
+      "Name": "sword long",
+      "ShortDescription": "a long sword",
+      "Description": "A long sword has been left here.",
       "ActionDescription": "slash",
       "Type": "Weapon",
-      "Level": 6,
-      "AntiClass": "546",
+      "Level": 1,
+      "AntiClass": "None",
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
@@ -5089,21 +5095,21 @@
       ],
       "Values": [
         0,
-        2,
-        5,
-        11,
+        1,
+        8,
+        3,
         0,
-        0
+        100
       ],
       "Details": {
         "Light": null,
         "SpellContainer": null,
         "Charges": null,
         "Weapon": {
-          "DiceCount": 2,
-          "DiceSides": 5,
-          "DamageType": 11,
-          "HitPoints": 0
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 100
         },
         "Missile": null,
         "Armor": null,
@@ -5116,18 +5122,10 @@
         "Money": null,
         "Portal": null
       },
-      "Weight": 6,
-      "Cost": 2500,
-      "CostPerDay": 200,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "short",
-            "sword"
-          ],
-          "Description": "This is a very nice little weapon."
-        }
-      ],
+      "Weight": 8,
+      "Cost": 600,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
@@ -6664,14 +6662,14 @@
       "SpecialProc": null
     },
     {
-      "Id": 3022,
-      "Name": "sword long",
-      "ShortDescription": "a long sword",
-      "Description": "A long sword has been left here.",
+      "Id": 7211,
+      "Name": "sword short",
+      "ShortDescription": "a short sword",
+      "Description": "A short sword is lying here.",
       "ActionDescription": "slash",
       "Type": "Weapon",
-      "Level": 1,
-      "AntiClass": "None",
+      "Level": 6,
+      "AntiClass": "546",
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
@@ -6679,21 +6677,21 @@
       ],
       "Values": [
         0,
-        1,
-        8,
-        3,
+        2,
+        5,
+        11,
         0,
-        100
+        0
       ],
       "Details": {
         "Light": null,
         "SpellContainer": null,
         "Charges": null,
         "Weapon": {
-          "DiceCount": 1,
-          "DiceSides": 8,
-          "DamageType": 3,
-          "HitPoints": 100
+          "DiceCount": 2,
+          "DiceSides": 5,
+          "DamageType": 11,
+          "HitPoints": 0
         },
         "Missile": null,
         "Armor": null,
@@ -6706,10 +6704,18 @@
         "Money": null,
         "Portal": null
       },
-      "Weight": 8,
-      "Cost": 600,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [],
+      "Weight": 6,
+      "Cost": 2500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "short",
+            "sword"
+          ],
+          "Description": "This is a very nice little weapon."
+        }
+      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

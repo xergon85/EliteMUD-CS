@@ -2926,7 +2926,13 @@
         "Arg3": 12,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/143.zon",
+    "RoomRange": {
+      "Min": 14241,
+      "Max": 14399
+    }
   },
   "Rooms": [
     {
@@ -7731,7 +7737,9 @@
         "Skill_326:100",
         "Skill_327:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:25"
+      ],
       "Gold": 10000,
       "Experience": 2000000,
       "DefaultPosition": "Standing",
@@ -7799,7 +7807,9 @@
         "Skill_326:100",
         "Skill_327:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:25"
+      ],
       "Gold": 10000,
       "Experience": 2000000,
       "DefaultPosition": "Standing",
@@ -7867,7 +7877,9 @@
         "Skill_326:100",
         "Skill_327:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:25"
+      ],
       "Gold": 10000,
       "Experience": 2000000,
       "DefaultPosition": "Standing",
@@ -7935,7 +7947,9 @@
         "Skill_326:100",
         "Skill_327:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:25"
+      ],
       "Gold": 10000,
       "Experience": 1800000,
       "DefaultPosition": "Standing",
@@ -8870,7 +8884,9 @@
         "Skill_338:100",
         "Skill_328:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:33"
+      ],
       "Gold": 15000,
       "Experience": 2400000,
       "DefaultPosition": "Standing",
@@ -8935,7 +8951,8 @@
         "Skill_328:100"
       ],
       "Resistances": [
-        "Resist_1004:33"
+        "Resist_1004:33",
+        "Resist_4:40"
       ],
       "Gold": 15000,
       "Experience": 2400000,
@@ -9009,7 +9026,9 @@
         "Skill_328:100",
         "Skill_331:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:33"
+      ],
       "Gold": 15000,
       "Experience": 2100000,
       "DefaultPosition": "Standing",
@@ -9073,7 +9092,9 @@
         "Skill_338:100",
         "Skill_328:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:20"
+      ],
       "Gold": 15000,
       "Experience": 2000000,
       "DefaultPosition": "Standing",
@@ -9160,7 +9181,9 @@
         "Skill_321:100",
         "Skill_322:75"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:35"
+      ],
       "Gold": 50000,
       "Experience": 6500000,
       "DefaultPosition": "Standing",

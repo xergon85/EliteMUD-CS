@@ -358,7 +358,13 @@
         "Arg3": 3141,
         "Comment": "20 coins on Penny Lane"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/31.zon",
+    "RoomRange": {
+      "Min": 3100,
+      "Max": 3199
+    }
   },
   "Rooms": [
     {
@@ -2000,6 +2006,114 @@
   ],
   "Mobs": [
     {
+      "Id": 3060,
+      "Name": "cityguard guard",
+      "ShortDescription": "the Cityguard",
+      "LongDescription": "A cityguard stands here.",
+      "Description": "A big, strong, helpful, trustworthy guard.",
+      "Level": 10,
+      "Race": "Humanoid",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "StayZone",
+        "Wimpy",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 1000,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d12+160",
+        "Mana": 200,
+        "Move": 230
+      },
+      "Combat": {
+        "Armor": 10,
+        "Hitroll": 3,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 90,
+          "DamageDice": "1d8+5"
+        },
+        {
+          "Type": "Attack_345",
+          "DamageType": 0,
+          "Chance": 10,
+          "DamageDice": "0d0+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 500,
+      "Experience": 3000,
+      "DefaultPosition": "Standing",
+      "Sex": "Male",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 3068,
+      "Name": "green gelatinous blob",
+      "ShortDescription": "the green gelatinous blob",
+      "LongDescription": "An oozing green gelatinous blob is here, sucking in bits of debris.",
+      "Description": "A horrid looking thing; it's huge, greenish, and looks like the blob.",
+      "Level": 20,
+      "Race": "Earth",
+      "Class": "Warrior",
+      "Flags": [
+        "Spec",
+        "Wimpy",
+        "Memory"
+      ],
+      "Affects": [
+        "DetectInvis"
+      ],
+      "Alignment": 0,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "",
+        "Mana": 0,
+        "Move": 0
+      },
+      "Combat": {
+        "Armor": 0,
+        "Hitroll": 0,
+        "Damroll": 0
+      },
+      "Attacks": [],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 0,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
       "Id": 3100,
       "Name": "maid",
       "ShortDescription": "The Maid",
@@ -2563,117 +2677,60 @@
       "ActionScript": null,
       "SpecialProc": null,
       "Programs": []
-    },
-    {
-      "Id": 3060,
-      "Name": "cityguard guard",
-      "ShortDescription": "the Cityguard",
-      "LongDescription": "A cityguard stands here.",
-      "Description": "A big, strong, helpful, trustworthy guard.",
-      "Level": 10,
-      "Race": "Humanoid",
-      "Class": "Warrior",
-      "Flags": [
-        "Spec",
-        "StayZone",
-        "Wimpy",
-        "Memory"
-      ],
-      "Affects": [
-        "DetectInvis"
-      ],
-      "Alignment": 1000,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "1d12+160",
-        "Mana": 200,
-        "Move": 230
-      },
-      "Combat": {
-        "Armor": 10,
-        "Hitroll": 3,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 90,
-          "DamageDice": "1d8+5"
-        },
-        {
-          "Type": "Attack_345",
-          "DamageType": 0,
-          "Chance": 10,
-          "DamageDice": "0d0+0"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 500,
-      "Experience": 3000,
-      "DefaultPosition": "Standing",
-      "Sex": "Male",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
-      "Id": 3068,
-      "Name": "green gelatinous blob",
-      "ShortDescription": "the green gelatinous blob",
-      "LongDescription": "An oozing green gelatinous blob is here, sucking in bits of debris.",
-      "Description": "A horrid looking thing; it's huge, greenish, and looks like the blob.",
-      "Level": 20,
-      "Race": "Earth",
-      "Class": "Warrior",
-      "Flags": [
-        "Spec",
-        "Wimpy",
-        "Memory"
-      ],
-      "Affects": [
-        "DetectInvis"
-      ],
-      "Alignment": 0,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "",
-        "Mana": 0,
-        "Move": 0
-      },
-      "Combat": {
-        "Armor": 0,
-        "Hitroll": 0,
-        "Damroll": 0
-      },
-      "Attacks": [],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 0,
-      "Experience": 0,
-      "DefaultPosition": "Standing",
-      "Sex": "Neutral",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
     }
   ],
   "Objects": [
+    {
+      "Id": 3022,
+      "Name": "sword long",
+      "ShortDescription": "a long sword",
+      "Description": "A long sword has been left here.",
+      "ActionDescription": "slash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        8,
+        3,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 100
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 600,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
     {
       "Id": 3100,
       "Name": "tea cup",
@@ -3439,57 +3496,6 @@
       "Weight": 0,
       "Cost": 0,
       "CostPerDay": 0,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3022,
-      "Name": "sword long",
-      "ShortDescription": "a long sword",
-      "Description": "A long sword has been left here.",
-      "ActionDescription": "slash",
-      "Type": "Weapon",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        1,
-        8,
-        3,
-        0,
-        100
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 1,
-          "DiceSides": 8,
-          "DamageType": 3,
-          "HitPoints": 100
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 600,
-      "CostPerDay": 10,
       "ExtraDescriptions": [],
       "Affects": [],
       "Bitvectors": [],

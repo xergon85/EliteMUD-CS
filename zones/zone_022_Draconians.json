@@ -1094,7 +1094,13 @@
         "Arg3": 1,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/22.zon",
+    "RoomRange": {
+      "Min": 2200,
+      "Max": 2299
+    }
   },
   "Rooms": [
     {
@@ -3848,60 +3854,6 @@
   ],
   "Objects": [
     {
-      "Id": 7210,
-      "Name": "treasure coins",
-      "ShortDescription": "a huge treasure",
-      "Description": "There is a huge treasure here, looking very valuable.",
-      "ActionDescription": "",
-      "Type": "Money",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        14503,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": {
-          "Amount": 14503
-        },
-        "Portal": null
-      },
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "treasure"
-          ],
-          "Description": "This looks like a whole lot of coins."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
       "Id": 2200,
       "Name": "spear jagged",
       "ShortDescription": "a jagged spear",
@@ -6060,6 +6012,60 @@
       "Cost": 500,
       "CostPerDay": 1000,
       "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 7210,
+      "Name": "treasure coins",
+      "ShortDescription": "a huge treasure",
+      "Description": "There is a huge treasure here, looking very valuable.",
+      "ActionDescription": "",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        14503,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 14503
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "treasure"
+          ],
+          "Description": "This looks like a whole lot of coins."
+        }
+      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

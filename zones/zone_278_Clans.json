@@ -126,7 +126,13 @@
         "Arg3": null,
         "Comment": "clan milk (aw!)"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/278.zon",
+    "RoomRange": {
+      "Min": 27800,
+      "Max": 27899
+    }
   },
   "Rooms": [
     {
@@ -1617,6 +1623,65 @@
       "SpecialProc": null
     },
     {
+      "Id": 3135,
+      "Name": "fountain",
+      "ShortDescription": "a fountain",
+      "Description": "A small white fountain is standing here, gurgling happily.",
+      "ActionDescription": "",
+      "Type": "Fountain",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic",
+        "NoDrop",
+        "NoRent"
+      ],
+      "WearFlags": [],
+      "Values": [
+        99999,
+        99999,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 99999,
+          "Amount": 99999,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 500,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "fountain"
+          ],
+          "Description": "It is very nice.  Made from fine white marble."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 27800,
       "Name": "scroll identify knowledge dragons SDclan",
       "ShortDescription": "a scroll labelled #R'Dragon's Knowledge'#N",
@@ -2297,65 +2362,6 @@
             "base"
           ],
           "Description": "The inscription reads:\n\nWork hard - and you can be as great as SadSam!"
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3135,
-      "Name": "fountain",
-      "ShortDescription": "a fountain",
-      "Description": "A small white fountain is standing here, gurgling happily.",
-      "ActionDescription": "",
-      "Type": "Fountain",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic",
-        "NoDrop",
-        "NoRent"
-      ],
-      "WearFlags": [],
-      "Values": [
-        99999,
-        99999,
-        15,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 99999,
-          "Amount": 99999,
-          "Liquid": 15,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 500,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "fountain"
-          ],
-          "Description": "It is very nice.  Made from fine white marble."
         }
       ],
       "Affects": [],

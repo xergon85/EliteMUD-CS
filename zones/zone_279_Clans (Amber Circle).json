@@ -54,7 +54,13 @@
         "Arg3": 27926,
         "Comment": "Second Board (Council)"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/279.zon",
+    "RoomRange": {
+      "Min": 27900,
+      "Max": 27999
+    }
   },
   "Rooms": [
     {
@@ -932,6 +938,48 @@
       "SpecialProc": null
     },
     {
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "an automatic teller machine",
+      "Description": "An automatic teller machine has been installed in the wall here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "There is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 27900,
       "Name": "clockwork minotaurs",
       "ShortDescription": "two clockwork minotaurs",
@@ -1083,48 +1131,6 @@
             "board"
           ],
           "Description": "This is a bulletin board. Use LOOK BOARD and READ <ITEM>."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3034,
-      "Name": "atm teller bank machine",
-      "ShortDescription": "an automatic teller machine",
-      "Description": "An automatic teller machine has been installed in the wall here.",
-      "ActionDescription": "",
-      "Type": "Other",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 5000,
-      "Cost": 100,
-      "CostPerDay": 100,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "atm",
-            "teller",
-            "bank",
-            "machine"
-          ],
-          "Description": "There is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
         }
       ],
       "Affects": [],

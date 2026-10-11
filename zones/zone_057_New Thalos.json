@@ -3214,7 +3214,13 @@
         "Arg3": 1,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/57.zon",
+    "RoomRange": {
+      "Min": 5600,
+      "Max": 5999
+    }
   },
   "Rooms": [
     {
@@ -18086,6 +18092,122 @@
   ],
   "Objects": [
     {
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "an automatic teller machine",
+      "Description": "An automatic teller machine has been installed in the wall here.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "There is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3060,
+      "Name": "raft",
+      "ShortDescription": "a raft",
+      "Description": "A raft has been left here.",
+      "ActionDescription": "",
+      "Type": "Boat",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 75,
+      "Cost": 400,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "raft"
+          ],
+          "Description": "The raft looks very primitive."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3061,
+      "Name": "canoe",
+      "ShortDescription": "a canoe",
+      "Description": "A canoe has been left here.",
+      "ActionDescription": "",
+      "Type": "Boat",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 32,
+      "Cost": 1000,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "canoe"
+          ],
+          "Description": "The canoe is fairly light."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 5222,
       "Name": "robe black silk",
       "ShortDescription": "a black silk robe",
@@ -22946,122 +23068,6 @@
             "krishna"
           ],
           "Description": "This enormous weapon looks like it could pound the stuffing out of anything or\nanyone around."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3034,
-      "Name": "atm teller bank machine",
-      "ShortDescription": "an automatic teller machine",
-      "Description": "An automatic teller machine has been installed in the wall here.",
-      "ActionDescription": "",
-      "Type": "Other",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 5000,
-      "Cost": 100,
-      "CostPerDay": 100,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "atm",
-            "teller",
-            "bank",
-            "machine"
-          ],
-          "Description": "There is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3060,
-      "Name": "raft",
-      "ShortDescription": "a raft",
-      "Description": "A raft has been left here.",
-      "ActionDescription": "",
-      "Type": "Boat",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 75,
-      "Cost": 400,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "raft"
-          ],
-          "Description": "The raft looks very primitive."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3061,
-      "Name": "canoe",
-      "ShortDescription": "a canoe",
-      "Description": "A canoe has been left here.",
-      "ActionDescription": "",
-      "Type": "Boat",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 32,
-      "Cost": 1000,
-      "CostPerDay": 100,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "canoe"
-          ],
-          "Description": "The canoe is fairly light."
         }
       ],
       "Affects": [],

@@ -86,7 +86,13 @@
         "Arg3": 28132,
         "Comment": "Darklords Statue"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/281.zon",
+    "RoomRange": {
+      "Min": 28099,
+      "Max": 28199
+    }
   },
   "Rooms": [
     {
@@ -1900,49 +1906,43 @@
       "SpecialProc": null
     },
     {
-      "Id": 23502,
-      "Name": "lemonade fountain",
-      "ShortDescription": "a yellow fountain",
-      "Description": "a fountain of lemonade stands here.",
+      "Id": 3034,
+      "Name": "atm teller bank machine",
+      "ShortDescription": "an automatic teller machine",
+      "Description": "An automatic teller machine has been installed in the wall here.",
       "ActionDescription": "",
-      "Type": "Fountain",
+      "Type": "Other",
       "Level": 0,
       "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [],
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [
+        "Take"
+      ],
       "Values": [
-        9999,
-        9999,
-        6,
+        0,
+        0,
+        0,
         0,
         0,
         0
       ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 9999,
-          "Amount": 9999,
-          "Liquid": 6,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 9999,
-      "Cost": 1,
-      "CostPerDay": 1,
-      "ExtraDescriptions": [],
+      "Details": null,
+      "Weight": 5000,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "atm",
+            "teller",
+            "bank",
+            "machine"
+          ],
+          "Description": "There is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
+        }
+      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
@@ -2007,43 +2007,49 @@
       "SpecialProc": null
     },
     {
-      "Id": 3034,
-      "Name": "atm teller bank machine",
-      "ShortDescription": "an automatic teller machine",
-      "Description": "An automatic teller machine has been installed in the wall here.",
+      "Id": 23502,
+      "Name": "lemonade fountain",
+      "ShortDescription": "a yellow fountain",
+      "Description": "a fountain of lemonade stands here.",
       "ActionDescription": "",
-      "Type": "Other",
+      "Type": "Fountain",
       "Level": 0,
       "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [
-        "Take"
-      ],
+      "ExtraFlags": [],
+      "WearFlags": [],
       "Values": [
-        0,
-        0,
-        0,
+        9999,
+        9999,
+        6,
         0,
         0,
         0
       ],
-      "Details": null,
-      "Weight": 5000,
-      "Cost": 100,
-      "CostPerDay": 100,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "atm",
-            "teller",
-            "bank",
-            "machine"
-          ],
-          "Description": "There is a small note on the machine which says:\n\nTo use, type \"BALANCE\", \"WITHDRAW x\", or \"DEPOSIT x\".  Please report any\nstrange occurrences to the bank manager."
-        }
-      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 9999,
+          "Amount": 9999,
+          "Liquid": 6,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 9999,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

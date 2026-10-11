@@ -134,7 +134,13 @@
         "Arg3": 2006,
         "Comment": "Gremlin"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/20.zon",
+    "RoomRange": {
+      "Min": 1900,
+      "Max": 2099
+    }
   },
   "Rooms": [
     {
@@ -692,6 +698,161 @@
       "SpecialProc": null
     },
     {
+      "Id": 2000,
+      "Name": "bread",
+      "ShortDescription": "a bread",
+      "Description": "A small round bread is here smelling newly baked.",
+      "ActionDescription": "",
+      "Type": "Food",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": {
+          "Filling": 12,
+          "Poisoned": false
+        },
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2001,
+      "Name": "water waterskin",
+      "ShortDescription": "a waterskin",
+      "Description": "A waterskin has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        50,
+        50,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 50,
+          "Amount": 50,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 12,
+      "Cost": 15,
+      "CostPerDay": 5,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "waterskin"
+          ],
+          "Description": "It's made of leather of some animal.  Looks like it can hold a lot of liquid."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 2002,
+      "Name": "torch",
+      "ShortDescription": "a torch",
+      "Description": "A small torch.",
+      "ActionDescription": "",
+      "Type": "Light",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        0,
+        0,
+        12,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": {
+          "Color": 0,
+          "Type": 0,
+          "Hours": 12
+        },
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 1,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 3020,
       "Name": "dagger",
       "ShortDescription": "a dagger",
@@ -1038,161 +1199,6 @@
           "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
         }
       ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 2000,
-      "Name": "bread",
-      "ShortDescription": "a bread",
-      "Description": "A small round bread is here smelling newly baked.",
-      "ActionDescription": "",
-      "Type": "Food",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        12,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": {
-          "Filling": 12,
-          "Poisoned": false
-        },
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 1,
-      "CostPerDay": 1,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 2001,
-      "Name": "water waterskin",
-      "ShortDescription": "a waterskin",
-      "Description": "A waterskin has been left here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        50,
-        50,
-        15,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 50,
-          "Amount": 50,
-          "Liquid": 15,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 12,
-      "Cost": 15,
-      "CostPerDay": 5,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "waterskin"
-          ],
-          "Description": "It's made of leather of some animal.  Looks like it can hold a lot of liquid."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 2002,
-      "Name": "torch",
-      "ShortDescription": "a torch",
-      "Description": "A small torch.",
-      "ActionDescription": "",
-      "Type": "Light",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        0,
-        0,
-        12,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": {
-          "Color": 0,
-          "Type": 0,
-          "Hours": 12
-        },
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 1,
-      "CostPerDay": 1,
-      "ExtraDescriptions": [],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

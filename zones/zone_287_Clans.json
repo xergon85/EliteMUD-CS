@@ -198,7 +198,13 @@
         "Arg3": null,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/287.zon",
+    "RoomRange": {
+      "Min": 28700,
+      "Max": 28799
+    }
   },
   "Rooms": [
     {
@@ -852,6 +858,43 @@
       "WearFlags": [],
       "Values": [
         100,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 0,
+      "Cost": 0,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "board"
+          ],
+          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3087,
+      "Name": "board bulletin newbie",
+      "ShortDescription": "a newbie advice board",
+      "Description": "A newbie advice bulletin board is mounted on a wall here.",
+      "ActionDescription": "",
+      "Type": "Trash",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "NoDrop"
+      ],
+      "WearFlags": [],
+      "Values": [
+        0,
         0,
         0,
         0,
@@ -1869,43 +1912,6 @@
       "Cost": 1,
       "CostPerDay": 1,
       "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3087,
-      "Name": "board bulletin newbie",
-      "ShortDescription": "a newbie advice board",
-      "Description": "A newbie advice bulletin board is mounted on a wall here.",
-      "ActionDescription": "",
-      "Type": "Trash",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "NoDrop"
-      ],
-      "WearFlags": [],
-      "Values": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 0,
-      "Cost": 0,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "board"
-          ],
-          "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
-        }
-      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

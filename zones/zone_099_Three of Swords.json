@@ -1734,7 +1734,13 @@
         "Arg3": 9982,
         "Comment": "Bed"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/99.zon",
+    "RoomRange": {
+      "Min": 9900,
+      "Max": 9999
+    }
   },
   "Rooms": [
     {
@@ -6516,7 +6522,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 1200,
       "Experience": 181000,
       "DefaultPosition": "Standing",

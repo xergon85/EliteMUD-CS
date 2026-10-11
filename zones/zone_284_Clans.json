@@ -22,7 +22,13 @@
         "Arg3": 28404,
         "Comment": "Artemisians mob from Elysium zone (mokky)"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/284.zon",
+    "RoomRange": {
+      "Min": 28400,
+      "Max": 28499
+    }
   },
   "Rooms": [
     {
@@ -1114,57 +1120,6 @@
         }
       ],
       "ExtraDescriptions": [],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
-    {
-      "Id": 28421,
-      "Name": "#bUrd's Lounge#N",
-      "Description": "You come into a more dimly illuminated room and you find yourself\nhaving to adjust to the dim lighting for a few seconds. On a far side \nof the room you see a the light of a small candle burning over a book \nwhich glows in it's own distinct way. As you come further into the \nroom you catch the aroma of sweet spring flowers drifting in the air \nand you instantly feel relieved. You can now perceive a small desk on \na wall on which there appears to be little more then some old scrolls \nand a portrait. And on a wall on the opposite side of the room you \nsee a comfortable looking sofa with nice big pillows in it.",
-      "ZoneId": 284,
-      "Sector": "Inside",
-      "Flags": [
-        "Indoors",
-        "NoTeleport",
-        "NoSweep"
-      ],
-      "Exits": [
-        {
-          "Direction": "North",
-          "TargetId": 28420,
-          "Description": "Hallway of Secrets",
-          "Keywords": [
-            "urd"
-          ],
-          "ExitFlags": [
-            "IsDoor",
-            "Closed",
-            "ResetClosed"
-          ],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "portrait"
-          ],
-          "Description": "A family picture of Urd, her parents (daddy Xenos and mama Chani), \nand her grandparents (Helm and Brigantia)."
-        },
-        {
-          "Keywords": [
-            "candle"
-          ],
-          "Description": "You notice it has a magical air about it, it's flame doesn't seem to\nbe affected by the small turbulence in the air. It reads \"I am the \nlight that shines in the darkness.\""
-        },
-        {
-          "Keywords": [
-            "sofa"
-          ],
-          "Description": "It's not a particularly beautiful sofa but it looks comfortable in a\nstrange way with all the big many colored pillows in it. A small \nheart shaped pillow sits tucked away among the other pillows."
-        }
-      ],
       "SpecialProc": null,
       "RoomPrograms": [],
       "CrashRoom": false

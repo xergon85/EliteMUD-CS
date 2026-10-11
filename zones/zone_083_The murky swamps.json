@@ -302,7 +302,13 @@
         "Arg3": 8316,
         "Comment": null
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/83.zon",
+    "RoomRange": {
+      "Min": 8000,
+      "Max": 8399
+    }
   },
   "Rooms": [
     {
@@ -1981,6 +1987,57 @@
   ],
   "Objects": [
     {
+      "Id": 2200,
+      "Name": "spear jagged",
+      "ShortDescription": "a jagged spear",
+      "Description": "A jagged spear has been left here.",
+      "ActionDescription": "",
+      "Type": "Weapon",
+      "Level": 20,
+      "AntiClass": "4915",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        4,
+        6,
+        12,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 4,
+          "DiceSides": 6,
+          "DamageType": 12,
+          "HitPoints": 0
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 15,
+      "Cost": 1000,
+      "CostPerDay": 1500,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 8301,
       "Name": "spear long",
       "ShortDescription": "a long spear",
@@ -2285,57 +2342,6 @@
           "Description": "It looks really disgusting and doesn't smell very nice either."
         }
       ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 2200,
-      "Name": "spear jagged",
-      "ShortDescription": "a jagged spear",
-      "Description": "A jagged spear has been left here.",
-      "ActionDescription": "",
-      "Type": "Weapon",
-      "Level": 20,
-      "AntiClass": "4915",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        4,
-        6,
-        12,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 4,
-          "DiceSides": 6,
-          "DamageType": 12,
-          "HitPoints": 0
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 15,
-      "Cost": 1000,
-      "CostPerDay": 1500,
-      "ExtraDescriptions": [],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

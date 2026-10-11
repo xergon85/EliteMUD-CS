@@ -3990,7 +3990,13 @@
         "Arg3": 12197,
         "Comment": "Slave #6"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/120.zon",
+    "RoomRange": {
+      "Min": 11300,
+      "Max": 12199
+    }
   },
   "Rooms": [
     {
@@ -12585,7 +12591,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:5"
+      ],
       "Gold": 22000,
       "Experience": 500000,
       "DefaultPosition": "Standing",
@@ -12875,7 +12883,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:5"
+      ],
       "Gold": 25000,
       "Experience": 1500000,
       "DefaultPosition": "Standing",
@@ -12948,7 +12958,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:5"
+      ],
       "Gold": 8000,
       "Experience": 710000,
       "DefaultPosition": "Standing",
@@ -13015,7 +13027,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:5"
+      ],
       "Gold": 6000,
       "Experience": 620000,
       "DefaultPosition": "Standing",
@@ -13082,7 +13096,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:5"
+      ],
       "Gold": 2500,
       "Experience": 485000,
       "DefaultPosition": "Standing",
@@ -13636,7 +13652,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:5"
+      ],
       "Gold": 4900,
       "Experience": 532413,
       "DefaultPosition": "Standing",
@@ -13691,7 +13709,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:5"
+      ],
       "Gold": 4900,
       "Experience": 532413,
       "DefaultPosition": "Standing",
@@ -13852,7 +13872,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:5"
+      ],
       "Gold": 625,
       "Experience": 608332,
       "DefaultPosition": "Standing",
@@ -18331,48 +18353,6 @@
   ],
   "Objects": [
     {
-      "Id": 18014,
-      "Name": "pickled frog lips jar glass",
-      "ShortDescription": "a clear glass jar of pickled frog lips",
-      "Description": "You can see pickled frog lips clearly through the glass of this jar.",
-      "ActionDescription": "",
-      "Type": "Other",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": null,
-      "Weight": 2,
-      "Cost": 5,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "pickled",
-            "frog",
-            "lips",
-            "jar",
-            "glass"
-          ],
-          "Description": "These frog lips were \"harvested\" in a swamp infested with evil\ncreatures. It is said they possess great power when used in combination\nwith the right incantations and the right aspect of the moon."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
       "Id": 3000,
       "Name": "beer barrel",
       "ShortDescription": "a barrel",
@@ -22200,6 +22180,48 @@
       "Cost": 0,
       "CostPerDay": 0,
       "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 18014,
+      "Name": "pickled frog lips jar glass",
+      "ShortDescription": "a clear glass jar of pickled frog lips",
+      "Description": "You can see pickled frog lips clearly through the glass of this jar.",
+      "ActionDescription": "",
+      "Type": "Other",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": null,
+      "Weight": 2,
+      "Cost": 5,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "pickled",
+            "frog",
+            "lips",
+            "jar",
+            "glass"
+          ],
+          "Description": "These frog lips were \"harvested\" in a swamp infested with evil\ncreatures. It is said they possess great power when used in combination\nwith the right incantations and the right aspect of the moon."
+        }
+      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null

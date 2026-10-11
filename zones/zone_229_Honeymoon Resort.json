@@ -182,7 +182,13 @@
         "Arg3": 22905,
         "Comment": null
       }
-    ]
+    ],
+    "Active": false,
+    "SourceFile": "zon/229.zon",
+    "RoomRange": {
+      "Min": 22902,
+      "Max": 22925
+    }
   },
   "Rooms": [
     {
@@ -802,58 +808,6 @@
   ],
   "Mobs": [
     {
-      "Id": 6013,
-      "Name": "chipmunk",
-      "ShortDescription": "the small chipmunk",
-      "LongDescription": "A small brown-red chipmunk dashes from tree to tree here.",
-      "Description": "The absolute zenith of hyperactivity, this small rodent seems to never tire of\nrunning up, down, and around the trees in this area.  If you could ever catch\nit, you imagine it would make an easy meal.",
-      "Level": 1,
-      "Race": "Undefined",
-      "Class": "Normal",
-      "Flags": [
-        "StayZone"
-      ],
-      "Affects": [
-        "Light"
-      ],
-      "Alignment": 170,
-      "Stats": {
-        "Strength": 10,
-        "Dexterity": 10,
-        "Intelligence": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10
-      },
-      "Resources": {
-        "HitDice": "1d10+20",
-        "Mana": 110,
-        "Move": 95
-      },
-      "Combat": {
-        "Armor": 50,
-        "Hitroll": 1,
-        "Damroll": 0
-      },
-      "Attacks": [
-        {
-          "Type": "Hit",
-          "DamageType": 500,
-          "Chance": 100,
-          "DamageDice": "1d4+0"
-        }
-      ],
-      "Skills": [],
-      "Resistances": [],
-      "Gold": 0,
-      "Experience": 300,
-      "DefaultPosition": "Standing",
-      "Sex": "Neutral",
-      "ActionScript": null,
-      "SpecialProc": null,
-      "Programs": []
-    },
-    {
       "Id": 3904,
       "Name": "cardinal bird",
       "ShortDescription": "the cardinal",
@@ -997,6 +951,58 @@
       "Resistances": [],
       "Gold": 0,
       "Experience": 333,
+      "DefaultPosition": "Standing",
+      "Sex": "Neutral",
+      "ActionScript": null,
+      "SpecialProc": null,
+      "Programs": []
+    },
+    {
+      "Id": 6013,
+      "Name": "chipmunk",
+      "ShortDescription": "the small chipmunk",
+      "LongDescription": "A small brown-red chipmunk dashes from tree to tree here.",
+      "Description": "The absolute zenith of hyperactivity, this small rodent seems to never tire of\nrunning up, down, and around the trees in this area.  If you could ever catch\nit, you imagine it would make an easy meal.",
+      "Level": 1,
+      "Race": "Undefined",
+      "Class": "Normal",
+      "Flags": [
+        "StayZone"
+      ],
+      "Affects": [
+        "Light"
+      ],
+      "Alignment": 170,
+      "Stats": {
+        "Strength": 10,
+        "Dexterity": 10,
+        "Intelligence": 10,
+        "Wisdom": 10,
+        "Constitution": 10,
+        "Charisma": 10
+      },
+      "Resources": {
+        "HitDice": "1d10+20",
+        "Mana": 110,
+        "Move": 95
+      },
+      "Combat": {
+        "Armor": 50,
+        "Hitroll": 1,
+        "Damroll": 0
+      },
+      "Attacks": [
+        {
+          "Type": "Hit",
+          "DamageType": 500,
+          "Chance": 100,
+          "DamageDice": "1d4+0"
+        }
+      ],
+      "Skills": [],
+      "Resistances": [],
+      "Gold": 0,
+      "Experience": 300,
       "DefaultPosition": "Standing",
       "Sex": "Neutral",
       "ActionScript": null,

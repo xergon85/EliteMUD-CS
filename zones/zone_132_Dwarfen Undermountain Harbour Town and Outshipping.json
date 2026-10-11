@@ -2862,56 +2862,15 @@
         "Arg3": 12,
         "Comment": "Robe ninja priest"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/132.zon",
+    "RoomRange": {
+      "Min": 13200,
+      "Max": 13300
+    }
   },
   "Rooms": [
-    {
-      "Id": 13300,
-      "Name": "Outlook",
-      "Description": "The view from this place up at the top of the ship is really nice. You\ncan not see much but what you see is the better. The illuminated corners\nof the town make up the margins and the glowing tunnels of life tube away\ninto the mountains as glowworm in a glass pipe. Just marvelous...",
-      "ZoneId": 132,
-      "Sector": "City",
-      "Flags": [
-        "NoMob",
-        "Indoors"
-      ],
-      "Exits": [
-        {
-          "Direction": "Up",
-          "TargetId": -1,
-          "Description": "The stone ceiling of the cave making up the harbour basin is not that\nfar away. This very ship must have been built with this specific place in\nmind.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        },
-        {
-          "Direction": "Down",
-          "TargetId": 13227,
-          "Description": "The hard deck of the cargo vessel. Better climb, than jump down.",
-          "Keywords": [],
-          "ExitFlags": [],
-          "KeyId": null
-        }
-      ],
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "corner"
-          ],
-          "Description": "A brightly shining light comes from the two corners of the harbour."
-        },
-        {
-          "Keywords": [
-            "harbour",
-            "town"
-          ],
-          "Description": "The harbour town light make the tunnel shine and glow in a real nice\nfashion. The dwarfs must be a lucky race to have this at all times."
-        }
-      ],
-      "SpecialProc": null,
-      "RoomPrograms": [],
-      "CrashRoom": false
-    },
     {
       "Id": 13200,
       "Name": "CHUTE",
@@ -7959,6 +7918,53 @@
       "SpecialProc": null,
       "RoomPrograms": [],
       "CrashRoom": false
+    },
+    {
+      "Id": 13300,
+      "Name": "Outlook",
+      "Description": "The view from this place up at the top of the ship is really nice. You\ncan not see much but what you see is the better. The illuminated corners\nof the town make up the margins and the glowing tunnels of life tube away\ninto the mountains as glowworm in a glass pipe. Just marvelous...",
+      "ZoneId": 132,
+      "Sector": "City",
+      "Flags": [
+        "NoMob",
+        "Indoors"
+      ],
+      "Exits": [
+        {
+          "Direction": "Up",
+          "TargetId": -1,
+          "Description": "The stone ceiling of the cave making up the harbour basin is not that\nfar away. This very ship must have been built with this specific place in\nmind.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        },
+        {
+          "Direction": "Down",
+          "TargetId": 13227,
+          "Description": "The hard deck of the cargo vessel. Better climb, than jump down.",
+          "Keywords": [],
+          "ExitFlags": [],
+          "KeyId": null
+        }
+      ],
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "corner"
+          ],
+          "Description": "A brightly shining light comes from the two corners of the harbour."
+        },
+        {
+          "Keywords": [
+            "harbour",
+            "town"
+          ],
+          "Description": "The harbour town light make the tunnel shine and glow in a real nice\nfashion. The dwarfs must be a lucky race to have this at all times."
+        }
+      ],
+      "SpecialProc": null,
+      "RoomPrograms": [],
+      "CrashRoom": false
     }
   ],
   "Mobs": [
@@ -8316,7 +8322,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:40"
+      ],
       "Gold": 21881,
       "Experience": 1342602,
       "DefaultPosition": "Standing",
@@ -8374,7 +8382,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:20"
+      ],
       "Gold": 11025,
       "Experience": 1221089,
       "DefaultPosition": "Standing",
@@ -8491,7 +8501,9 @@
       "Skills": [
         "Skill_308:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:25"
+      ],
       "Gold": 139,
       "Experience": 440972,
       "DefaultPosition": "Standing",
@@ -8564,7 +8576,9 @@
       "Skills": [
         "Skill_308:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:10"
+      ],
       "Gold": 911,
       "Experience": 532413,
       "DefaultPosition": "Standing",
@@ -8953,7 +8967,9 @@
         "Skill_328:90",
         "Skill_322:90"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 51281,
       "Experience": 1942602,
       "DefaultPosition": "Standing",
@@ -9044,7 +9060,9 @@
         "Skill_345:80",
         "Skill_372:100"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:15"
+      ],
       "Gold": 3664,
       "Experience": 1311134,
       "DefaultPosition": "Standing",
@@ -9156,7 +9174,8 @@
         "Resist_105:90",
         "Resist_106:90",
         "Resist_26:90",
-        "Resist_100:75"
+        "Resist_100:75",
+        "Resist_4:20"
       ],
       "Gold": 54321,
       "Experience": 1700021,
@@ -9234,10 +9253,10 @@
       ],
       "Skills": [],
       "Resistances": [
-        "Resist_4:100",
         "Resist_7:100",
         "Resist_38:100",
-        "Resist_40:100"
+        "Resist_40:100",
+        "Resist_4:20"
       ],
       "Gold": 10232,
       "Experience": 1442602,
@@ -9766,7 +9785,9 @@
       "Skills": [
         "Skill_365:40"
       ],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:55"
+      ],
       "Gold": 69100,
       "Experience": 3700321,
       "DefaultPosition": "Standing",
@@ -12577,7 +12598,8 @@
       ],
       "Skills": [],
       "Resistances": [
-        "Resist_7:0"
+        "Resist_7:0",
+        "Resist_4:25"
       ],
       "Gold": 9216,
       "Experience": 986388,
@@ -12634,7 +12656,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:49"
+      ],
       "Gold": 12438,
       "Experience": 1342602,
       "DefaultPosition": "Standing",
@@ -13015,7 +13039,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13073,7 +13099,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13131,7 +13159,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13189,7 +13219,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13247,7 +13279,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13313,7 +13347,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13371,7 +13407,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13429,7 +13467,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13487,7 +13527,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13545,7 +13587,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13603,7 +13647,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13661,7 +13707,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13721,7 +13769,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13785,7 +13835,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13902,7 +13954,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -13960,7 +14014,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -14024,7 +14080,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:50"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -14083,7 +14141,9 @@
         }
       ],
       "Skills": [],
-      "Resistances": [],
+      "Resistances": [
+        "Resist_4:75"
+      ],
       "Gold": 9801,
       "Experience": 1059126,
       "DefaultPosition": "Standing",
@@ -14148,6 +14208,180 @@
     }
   ],
   "Objects": [
+    {
+      "Id": 3001,
+      "Name": "beer bottle",
+      "ShortDescription": "a bottle",
+      "Description": "A beer bottle has been left here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        8,
+        8,
+        1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 8,
+          "Amount": 8,
+          "Liquid": 1,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 10,
+      "Cost": 20,
+      "CostPerDay": 8,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3052,
+      "Name": "scroll recall",
+      "ShortDescription": "a scroll of recall",
+      "Description": "A scroll has carelessly been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        12,
+        42,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            42,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1000,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll"
+          ],
+          "Description": "The scroll has written a formulae of 'Word of Recall' upon it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3083,
+      "Name": "scroll clan crecall",
+      "ShortDescription": "a scroll of clan recall",
+      "Description": "A scroll has carelessly been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        12,
+        109,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            109,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll"
+          ],
+          "Description": "The scroll has written a formulae of 'Clan Recall' upon it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
     {
       "Id": 13200,
       "Name": "Pump fountain water clear",
@@ -20106,180 +20340,6 @@
           "Modifier": 14
         }
       ],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3001,
-      "Name": "beer bottle",
-      "ShortDescription": "a bottle",
-      "Description": "A beer bottle has been left here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        8,
-        8,
-        1,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 8,
-          "Amount": 8,
-          "Liquid": 1,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 10,
-      "Cost": 20,
-      "CostPerDay": 8,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3052,
-      "Name": "scroll recall",
-      "ShortDescription": "a scroll of recall",
-      "Description": "A scroll has carelessly been left here.",
-      "ActionDescription": "",
-      "Type": "Scroll",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic"
-      ],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        12,
-        42,
-        -1,
-        -1,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": {
-          "Level": 12,
-          "SpellIds": [
-            42,
-            -1,
-            -1
-          ]
-        },
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 4,
-      "Cost": 1000,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "scroll"
-          ],
-          "Description": "The scroll has written a formulae of 'Word of Recall' upon it."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3083,
-      "Name": "scroll clan crecall",
-      "ShortDescription": "a scroll of clan recall",
-      "Description": "A scroll has carelessly been left here.",
-      "ActionDescription": "",
-      "Type": "Scroll",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic"
-      ],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        12,
-        109,
-        -1,
-        -1,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": {
-          "Level": 12,
-          "SpellIds": [
-            109,
-            -1,
-            -1
-          ]
-        },
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 4,
-      "Cost": 1500,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "scroll"
-          ],
-          "Description": "The scroll has written a formulae of 'Clan Recall' upon it."
-        }
-      ],
-      "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
     }

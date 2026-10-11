@@ -1550,7 +1550,13 @@
         "Arg3": 15055,
         "Comment": "Shelf in guard's room"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/150.zon",
+    "RoomRange": {
+      "Min": 15000,
+      "Max": 15099
+    }
   },
   "Rooms": [
     {
@@ -8499,6 +8505,396 @@
   ],
   "Objects": [
     {
+      "Id": 3020,
+      "Name": "dagger",
+      "ShortDescription": "a dagger",
+      "Description": "A dagger with a long thin blade is here.",
+      "ActionDescription": "pierce",
+      "Type": "Weapon",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        4,
+        11,
+        0,
+        50
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 4,
+          "DamageType": 11,
+          "HitPoints": 50
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3021,
+      "Name": "sword small",
+      "ShortDescription": "a small sword",
+      "Description": "A small sword lies here.",
+      "ActionDescription": "slash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "13107",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        6,
+        11,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 6,
+          "DamageType": 11,
+          "HitPoints": 100
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 60,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "sword",
+            "small"
+          ],
+          "Description": "The small sword seems to have an inscription of some sort inscription..."
+        },
+        {
+          "Keywords": [
+            "inscription"
+          ],
+          "Description": "It says: \"May this sword be a good companion.\""
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3022,
+      "Name": "sword long",
+      "ShortDescription": "a long sword",
+      "Description": "A long sword has been left here.",
+      "ActionDescription": "slash",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        8,
+        3,
+        0,
+        100
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 8,
+          "DamageType": 3,
+          "HitPoints": 100
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 600,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3023,
+      "Name": "club wooden",
+      "ShortDescription": "a wooden club",
+      "Description": "A simple looking wooden club is here.",
+      "ActionDescription": "pound",
+      "Type": "Weapon",
+      "Level": 1,
+      "AntiClass": "4369",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Wield"
+      ],
+      "Values": [
+        0,
+        1,
+        3,
+        7,
+        0,
+        50
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": {
+          "DiceCount": 1,
+          "DiceSides": 3,
+          "DamageType": 7,
+          "HitPoints": 50
+        },
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 3,
+      "Cost": 12,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3050,
+      "Name": "scroll identify",
+      "ShortDescription": "a scroll of identify",
+      "Description": "A scroll has carelessly been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        12,
+        53,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            53,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2500,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll",
+            "identify"
+          ],
+          "Description": "The scroll has a magic formula drawn upon it:\n     ???\n    ?   ?\n       ?\n      ?\n      ?\n      *"
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3052,
+      "Name": "scroll recall",
+      "ShortDescription": "a scroll of recall",
+      "Description": "A scroll has carelessly been left here.",
+      "ActionDescription": "",
+      "Type": "Scroll",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [
+        "Magic"
+      ],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        12,
+        42,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": {
+          "Level": 12,
+          "SpellIds": [
+            42,
+            -1,
+            -1
+          ]
+        },
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 4,
+      "Cost": 1000,
+      "CostPerDay": 10,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "scroll"
+          ],
+          "Description": "The scroll has written a formulae of 'Word of Recall' upon it."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3132,
+      "Name": "gold coins",
+      "ShortDescription": "the gold",
+      "Description": "A lot of gold is here.",
+      "ActionDescription": "Looks like at least 10,000 coins.",
+      "Type": "Money",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        32385,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": {
+          "Amount": 32385
+        },
+        "Portal": null
+      },
+      "Weight": 0,
+      "Cost": 32385,
+      "CostPerDay": 0,
+      "ExtraDescriptions": [],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
       "Id": 15002,
       "Name": "sceptre royal golden",
       "ShortDescription": "a golden sceptre",
@@ -9996,396 +10392,6 @@
           "Modifier": 1
         }
       ],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3132,
-      "Name": "gold coins",
-      "ShortDescription": "the gold",
-      "Description": "A lot of gold is here.",
-      "ActionDescription": "Looks like at least 10,000 coins.",
-      "Type": "Money",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        32385,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": {
-          "Amount": 32385
-        },
-        "Portal": null
-      },
-      "Weight": 0,
-      "Cost": 32385,
-      "CostPerDay": 0,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3020,
-      "Name": "dagger",
-      "ShortDescription": "a dagger",
-      "Description": "A dagger with a long thin blade is here.",
-      "ActionDescription": "pierce",
-      "Type": "Weapon",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        1,
-        4,
-        11,
-        0,
-        50
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 1,
-          "DiceSides": 4,
-          "DamageType": 11,
-          "HitPoints": 50
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 10,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3021,
-      "Name": "sword small",
-      "ShortDescription": "a small sword",
-      "Description": "A small sword lies here.",
-      "ActionDescription": "slash",
-      "Type": "Weapon",
-      "Level": 1,
-      "AntiClass": "13107",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        1,
-        6,
-        11,
-        0,
-        100
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 1,
-          "DiceSides": 6,
-          "DamageType": 11,
-          "HitPoints": 100
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 3,
-      "Cost": 60,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "sword",
-            "small"
-          ],
-          "Description": "The small sword seems to have an inscription of some sort inscription..."
-        },
-        {
-          "Keywords": [
-            "inscription"
-          ],
-          "Description": "It says: \"May this sword be a good companion.\""
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3022,
-      "Name": "sword long",
-      "ShortDescription": "a long sword",
-      "Description": "A long sword has been left here.",
-      "ActionDescription": "slash",
-      "Type": "Weapon",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        1,
-        8,
-        3,
-        0,
-        100
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 1,
-          "DiceSides": 8,
-          "DamageType": 3,
-          "HitPoints": 100
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 600,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3023,
-      "Name": "club wooden",
-      "ShortDescription": "a wooden club",
-      "Description": "A simple looking wooden club is here.",
-      "ActionDescription": "pound",
-      "Type": "Weapon",
-      "Level": 1,
-      "AntiClass": "4369",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Wield"
-      ],
-      "Values": [
-        0,
-        1,
-        3,
-        7,
-        0,
-        50
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": {
-          "DiceCount": 1,
-          "DiceSides": 3,
-          "DamageType": 7,
-          "HitPoints": 50
-        },
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 3,
-      "Cost": 12,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3050,
-      "Name": "scroll identify",
-      "ShortDescription": "a scroll of identify",
-      "Description": "A scroll has carelessly been left here.",
-      "ActionDescription": "",
-      "Type": "Scroll",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic"
-      ],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        12,
-        53,
-        -1,
-        -1,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": {
-          "Level": 12,
-          "SpellIds": [
-            53,
-            -1,
-            -1
-          ]
-        },
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 2500,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "scroll",
-            "identify"
-          ],
-          "Description": "The scroll has a magic formula drawn upon it:\n     ???\n    ?   ?\n       ?\n      ?\n      ?\n      *"
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3052,
-      "Name": "scroll recall",
-      "ShortDescription": "a scroll of recall",
-      "Description": "A scroll has carelessly been left here.",
-      "ActionDescription": "",
-      "Type": "Scroll",
-      "Level": 1,
-      "AntiClass": "None",
-      "ExtraFlags": [
-        "Magic"
-      ],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        12,
-        42,
-        -1,
-        -1,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": {
-          "Level": 12,
-          "SpellIds": [
-            42,
-            -1,
-            -1
-          ]
-        },
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 4,
-      "Cost": 1000,
-      "CostPerDay": 10,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "scroll"
-          ],
-          "Description": "The scroll has written a formulae of 'Word of Recall' upon it."
-        }
-      ],
-      "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
     }

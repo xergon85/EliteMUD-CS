@@ -1470,7 +1470,13 @@
         "Arg3": 3092,
         "Comment": "Clan eq shopkeeper"
       }
-    ]
+    ],
+    "Active": true,
+    "SourceFile": "zon/30.zon",
+    "RoomRange": {
+      "Min": 3000,
+      "Max": 3099
+    }
   },
   "Rooms": [
     {
@@ -7724,335 +7730,6 @@
   ],
   "Objects": [
     {
-      "Id": 1001,
-      "Name": "rose red",
-      "ShortDescription": "a #rred#N rose",
-      "Description": "A red rose is lying on the ground.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        3,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 3,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 2000,
-      "CostPerDay": 200,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "rose"
-          ],
-          "Description": "This is no ordinary rose, as it is a gift from IO."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 1002,
-      "Name": "rose pink",
-      "ShortDescription": "a pink rose",
-      "Description": "A beautiful pink rose is lying on the ground.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        3,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 3,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 2000,
-      "CostPerDay": 200,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "rose"
-          ],
-          "Description": "This is no ordinary rose. It is a gift from IO."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 1003,
-      "Name": "rose yellow",
-      "ShortDescription": "an yellow rose",
-      "Description": "A bright yellow rose is lying on the ground.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        3,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 3,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 2000,
-      "CostPerDay": 200,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "rose"
-          ],
-          "Description": "This is no ordinary rose. It is a gift from IO as a token of friendship."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 1004,
-      "Name": "rose white",
-      "ShortDescription": "a white rose",
-      "Description": "A frosty white rose is lying on the ground.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        3,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 3,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 2500,
-      "CostPerDay": 200,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "rose"
-          ],
-          "Description": "This is no ordinary rose. It is a gift from IO as a token of eternal trust."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 1005,
-      "Name": "rose black",
-      "ShortDescription": "a black rose",
-      "Description": "An ill-boding black rose is lying on the ground.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        3,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 3,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 4000,
-      "CostPerDay": 200,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "rose"
-          ],
-          "Description": "This is no ordinary rose. It is a sign from IO.  Death is always near."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 1006,
-      "Name": "rose blue",
-      "ShortDescription": "a blue rose",
-      "Description": "An blue rose is lying on the ground.",
-      "ActionDescription": "",
-      "Type": "Armor",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take",
-        "Hold"
-      ],
-      "Values": [
-        3,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": {
-          "ArmorClass": 3,
-          "HitPoints": 0
-        },
-        "Trap": null,
-        "Container": null,
-        "Drink": null,
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 8,
-      "Cost": 4000,
-      "CostPerDay": 200,
-      "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
       "Id": 110,
       "Name": "wedding ring",
       "ShortDescription": "a golden wedding ring",
@@ -8723,23 +8400,23 @@
       "SpecialProc": null
     },
     {
-      "Id": 5736,
-      "Name": "backpack back pack",
-      "ShortDescription": "a backpack",
-      "Description": "A backpack lies here.",
+      "Id": 1001,
+      "Name": "rose red",
+      "ShortDescription": "a #rred#N rose",
+      "Description": "A red rose is lying on the ground.",
       "ActionDescription": "",
-      "Type": "Container",
-      "Level": 1,
+      "Type": "Armor",
+      "Level": 0,
       "AntiClass": "None",
       "ExtraFlags": [],
       "WearFlags": [
         "Take",
-        "About"
+        "Hold"
       ],
       "Values": [
-        150,
-        5,
-        -1,
+        3,
+        0,
+        0,
         0,
         0,
         0
@@ -8750,19 +8427,12 @@
         "Charges": null,
         "Weapon": null,
         "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": {
-          "Capacity": 150,
-          "Flags": [
-            "Closeable",
-            "Closed"
-          ],
-          "KeyId": -1,
-          "CorpseType": 0,
-          "CorpseBlood": 0,
-          "CorpseLevel": 0
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
         },
+        "Trap": null,
+        "Container": null,
         "Drink": null,
         "Note": null,
         "Key": null,
@@ -8771,186 +8441,289 @@
         "Portal": null
       },
       "Weight": 8,
-      "Cost": 100,
-      "CostPerDay": 100,
+      "Cost": 2000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rose"
+          ],
+          "Description": "This is no ordinary rose, as it is a gift from IO."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1002,
+      "Name": "rose pink",
+      "ShortDescription": "a pink rose",
+      "Description": "A beautiful pink rose is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 2000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rose"
+          ],
+          "Description": "This is no ordinary rose. It is a gift from IO."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1003,
+      "Name": "rose yellow",
+      "ShortDescription": "an yellow rose",
+      "Description": "A bright yellow rose is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 2000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rose"
+          ],
+          "Description": "This is no ordinary rose. It is a gift from IO as a token of friendship."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1004,
+      "Name": "rose white",
+      "ShortDescription": "a white rose",
+      "Description": "A frosty white rose is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 2500,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rose"
+          ],
+          "Description": "This is no ordinary rose. It is a gift from IO as a token of eternal trust."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1005,
+      "Name": "rose black",
+      "ShortDescription": "a black rose",
+      "Description": "An ill-boding black rose is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 4000,
+      "CostPerDay": 200,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "rose"
+          ],
+          "Description": "This is no ordinary rose. It is a sign from IO.  Death is always near."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 1006,
+      "Name": "rose blue",
+      "ShortDescription": "a blue rose",
+      "Description": "An blue rose is lying on the ground.",
+      "ActionDescription": "",
+      "Type": "Armor",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "Hold"
+      ],
+      "Values": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": {
+          "ArmorClass": 3,
+          "HitPoints": 0
+        },
+        "Trap": null,
+        "Container": null,
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 4000,
+      "CostPerDay": 200,
       "ExtraDescriptions": [],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3102,
-      "Name": "water cup",
-      "ShortDescription": "a cup",
-      "Description": "A cup has been set here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        12,
-        12,
-        15,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 12,
-          "Amount": 12,
-          "Liquid": 15,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 2,
-      "CostPerDay": 1,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "cup"
-          ],
-          "Description": "It is a large simple cup."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3103,
-      "Name": "water bottle",
-      "ShortDescription": "a bottle",
-      "Description": "A bottle of Evian natural spring water is here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        24,
-        24,
-        15,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 24,
-          "Amount": 24,
-          "Liquid": 15,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 1,
-      "Cost": 10,
-      "CostPerDay": 6,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "label"
-          ],
-          "Description": "You've been ripped off!  It says here at the bottom of the label, in really\nreally small letters, \"Bottled in the Midgaard branch of Evian Inc.  This\nwater is from the natural, mostly clean River of Midgaard.\""
-        },
-        {
-          "Keywords": [
-            "bottle"
-          ],
-          "Description": "It is a large, clean bottle."
-        }
-      ],
-      "Affects": [],
-      "Bitvectors": [],
-      "SpecialProc": null
-    },
-    {
-      "Id": 3104,
-      "Name": "water canteen",
-      "ShortDescription": "a canteen",
-      "Description": "A canteen has been set on the ground here.",
-      "ActionDescription": "",
-      "Type": "DrinkContainer",
-      "Level": 0,
-      "AntiClass": "None",
-      "ExtraFlags": [],
-      "WearFlags": [
-        "Take"
-      ],
-      "Values": [
-        80,
-        80,
-        15,
-        0,
-        0,
-        0
-      ],
-      "Details": {
-        "Light": null,
-        "SpellContainer": null,
-        "Charges": null,
-        "Weapon": null,
-        "Missile": null,
-        "Armor": null,
-        "Trap": null,
-        "Container": null,
-        "Drink": {
-          "Capacity": 80,
-          "Amount": 80,
-          "Liquid": 15,
-          "Poisoned": false
-        },
-        "Note": null,
-        "Key": null,
-        "Food": null,
-        "Money": null,
-        "Portal": null
-      },
-      "Weight": 20,
-      "Cost": 45,
-      "CostPerDay": 15,
-      "ExtraDescriptions": [
-        {
-          "Keywords": [
-            "canteen"
-          ],
-          "Description": "It's a fairly big canteen.  Looks like it can hold a lot of liquid."
-        }
-      ],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
@@ -11559,6 +11332,239 @@
           "Description": "This is a bulletin board.  Use LOOK BOARD and READ <ITEM#>."
         }
       ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3102,
+      "Name": "water cup",
+      "ShortDescription": "a cup",
+      "Description": "A cup has been set here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        12,
+        12,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 12,
+          "Amount": 12,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 2,
+      "CostPerDay": 1,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "cup"
+          ],
+          "Description": "It is a large simple cup."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3103,
+      "Name": "water bottle",
+      "ShortDescription": "a bottle",
+      "Description": "A bottle of Evian natural spring water is here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        24,
+        24,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 24,
+          "Amount": 24,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 1,
+      "Cost": 10,
+      "CostPerDay": 6,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "label"
+          ],
+          "Description": "You've been ripped off!  It says here at the bottom of the label, in really\nreally small letters, \"Bottled in the Midgaard branch of Evian Inc.  This\nwater is from the natural, mostly clean River of Midgaard.\""
+        },
+        {
+          "Keywords": [
+            "bottle"
+          ],
+          "Description": "It is a large, clean bottle."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 3104,
+      "Name": "water canteen",
+      "ShortDescription": "a canteen",
+      "Description": "A canteen has been set on the ground here.",
+      "ActionDescription": "",
+      "Type": "DrinkContainer",
+      "Level": 0,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take"
+      ],
+      "Values": [
+        80,
+        80,
+        15,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": null,
+        "Drink": {
+          "Capacity": 80,
+          "Amount": 80,
+          "Liquid": 15,
+          "Poisoned": false
+        },
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 20,
+      "Cost": 45,
+      "CostPerDay": 15,
+      "ExtraDescriptions": [
+        {
+          "Keywords": [
+            "canteen"
+          ],
+          "Description": "It's a fairly big canteen.  Looks like it can hold a lot of liquid."
+        }
+      ],
+      "Affects": [],
+      "Bitvectors": [],
+      "SpecialProc": null
+    },
+    {
+      "Id": 5736,
+      "Name": "backpack back pack",
+      "ShortDescription": "a backpack",
+      "Description": "A backpack lies here.",
+      "ActionDescription": "",
+      "Type": "Container",
+      "Level": 1,
+      "AntiClass": "None",
+      "ExtraFlags": [],
+      "WearFlags": [
+        "Take",
+        "About"
+      ],
+      "Values": [
+        150,
+        5,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Details": {
+        "Light": null,
+        "SpellContainer": null,
+        "Charges": null,
+        "Weapon": null,
+        "Missile": null,
+        "Armor": null,
+        "Trap": null,
+        "Container": {
+          "Capacity": 150,
+          "Flags": [
+            "Closeable",
+            "Closed"
+          ],
+          "KeyId": -1,
+          "CorpseType": 0,
+          "CorpseBlood": 0,
+          "CorpseLevel": 0
+        },
+        "Drink": null,
+        "Note": null,
+        "Key": null,
+        "Food": null,
+        "Money": null,
+        "Portal": null
+      },
+      "Weight": 8,
+      "Cost": 100,
+      "CostPerDay": 100,
+      "ExtraDescriptions": [],
       "Affects": [],
       "Bitvectors": [],
       "SpecialProc": null
