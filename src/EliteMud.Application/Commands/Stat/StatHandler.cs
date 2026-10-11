@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 using System.Text;
@@ -37,7 +38,7 @@ public sealed class StatHandler
         var output = new StringBuilder();
 
         // Line 1: Level in red, name and title in cyan
-        var title = player.Title ?? "the newbie";
+        var title = PlayerProgression.DisplayTitle(player, _rules);
         var raceClass = $"{_rules.RaceName(player.Race).ToLower()} {_rules.ClassName(player.CharacterClass).ToLower()}";
         output.AppendLine($"Level #R{player.Level}#N - #C{player.Name} {title}#N -");
 

@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 using System.Text;
@@ -19,7 +20,7 @@ public sealed class ScoreHandler
         var output = new StringBuilder();
         
         // Line 1: Name, title, level
-        var title = player.Title ?? "the newbie";
+        var title = PlayerProgression.DisplayTitle(player, _rules);
         output.AppendLine($"You are #B{player.Name}#N#C {title}#N (#Rlevel {player.Level}#N).");
         
         // Line 2: Age and race
@@ -48,12 +49,11 @@ public sealed class ScoreHandler
         // Line 5: Experience and gold
         output.AppendLine($"You have scored #G{player.Experience}#N exp, and have #B{player.Gold}#N gold coins.");
         
-        // Line 6: XP needed for next level
-        // TODO: Calculate exp_needed based on level table (for now, placeholder)
-        var expNeeded = player.Level * 1000; // Simplified calculation
-        var expRemaining = expNeeded - player.Experience;
-        if (player.Level < 100) // Assume 100 is max level
+        // Line 6: XP needed for next level (legacy shows it below LEVEL_DEITY, act.informative.c:1125)
+        if (player.Level <= ExperienceService.MaxMortalLevel
+            && _rules.Classes.TryGetValue(player.CharacterClass, out var characterClass))
         {
+            var expRemaining = characterClass.XpCurve.XpNeeded(player.Level) - player.Experience;
             output.AppendLine($"You need #R{expRemaining}#N exp to reach your next level.");
         }
         

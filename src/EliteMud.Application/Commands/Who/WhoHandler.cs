@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Game;
 using System.Text;
 
@@ -41,7 +42,7 @@ public sealed class WhoHandler
             var classAbbr = _rules.Classes.TryGetValue(player.CharacterClass, out var characterClass)
                 ? characterClass.Abbreviation
                 : player.CharacterClass;
-            var title = player.Title ?? "the newbie";
+            var title = PlayerProgression.DisplayTitle(player, _rules);
             
             // Format: [level class] #CName#N title
             output.AppendLine($"[#Y{player.Level,2}#N {classAbbr}] #C{player.Name}#N {title}");
