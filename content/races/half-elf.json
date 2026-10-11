@@ -1,0 +1,35 @@
+{
+  "id": "half-elf",
+  "name": "Half-elf",
+  "titleName": "#cHalf-elven#N",
+  "legacyNumber": 3,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 18,
+    "int": 18,
+    "wis": 18,
+    "dex": 18,
+    "con": 18,
+    "cha": 18
+  },
+  "start": {
+    "hp": 35,
+    "mana": 90,
+    "move": 90
+  },
+  "allowedClasses": [
+    "bard",
+    "knight",
+    "wizard",
+    "druid",
+    "ranger",
+    "paladin",
+    "ninja"
+  ],
+  "averages": {
+    "age": 60,
+    "heightInches": 68,
+    "weightPounds": 135
+  }
+}

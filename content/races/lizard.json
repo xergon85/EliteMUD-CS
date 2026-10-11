@@ -1,0 +1,32 @@
+{
+  "id": "lizard",
+  "name": "Lizard",
+  "titleName": "#GLizard#N",
+  "legacyNumber": 15,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 20,
+    "int": 16,
+    "wis": 18,
+    "dex": 18,
+    "con": 18,
+    "cha": 16
+  },
+  "start": {
+    "hp": 60,
+    "mana": 40,
+    "move": 110
+  },
+  "allowedClasses": [
+    "warrior",
+    "monk",
+    "druid",
+    "assassin"
+  ],
+  "averages": {
+    "age": 34,
+    "heightInches": 78,
+    "weightPounds": 110
+  }
+}

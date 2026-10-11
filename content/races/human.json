@@ -1,0 +1,41 @@
+{
+  "id": "human",
+  "name": "Human",
+  "titleName": "#wHuman#N",
+  "legacyNumber": 1,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 18,
+    "int": 18,
+    "wis": 18,
+    "dex": 18,
+    "con": 18,
+    "cha": 18
+  },
+  "start": {
+    "hp": 40,
+    "mana": 88,
+    "move": 90
+  },
+  "allowedClasses": [
+    "psionicist",
+    "monk",
+    "bard",
+    "knight",
+    "wizard",
+    "druid",
+    "assassin",
+    "ranger",
+    "illusionist",
+    "paladin",
+    "mariner",
+    "cavalier",
+    "ninja"
+  ],
+  "averages": {
+    "age": 18,
+    "heightInches": 72,
+    "weightPounds": 150
+  }
+}

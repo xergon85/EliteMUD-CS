@@ -17,6 +17,12 @@ public sealed class LegacyImportConfig
     /// <summary>Corrections to legacy data, applied after parsing and logged, each with a reason.</summary>
     public List<DataFix> Fixes { get; init; } = new();
 
+    /// <summary>
+    /// How races not in the creation menu were obtained (granted by immortals, remort, unused), which the code
+    /// doesn't show. Races in the menu are "creation"; races with no entry here are "unknown".
+    /// </summary>
+    public List<RaceAvailabilityEntry> RaceAvailability { get; init; } = new();
+
     public bool IsSkipped(string fileName, out string reason)
     {
         var match = Skip.FirstOrDefault(skip => string.Equals(skip.File, fileName, StringComparison.OrdinalIgnoreCase));
@@ -41,4 +47,9 @@ public sealed class LegacyImportConfig
     /// (0 = no door, 1 = door, 2 = pick-proof door).
     /// </summary>
     public sealed record DataFix(int Room, string Exit, int DoorType, string Reason);
+
+    /// <param name="Availability">granted, remort or unused.</param>
+    /// <param name="Note">Shown in the race file, e.g. "after an RP quest".</param>
+    /// <param name="Source">Where the knowledge comes from, for traceability.</param>
+    public sealed record RaceAvailabilityEntry(string Race, string Availability, string Note, string Source);
 }

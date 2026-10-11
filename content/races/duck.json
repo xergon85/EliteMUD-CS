@@ -1,0 +1,35 @@
+{
+  "id": "duck",
+  "name": "Duck",
+  "titleName": "#YDuck#N",
+  "legacyNumber": 10,
+  "availability": "granted",
+  "availabilityNote": "given by immortals on request (e.g. one player played a duck mariner)",
+  "statMax": {
+    "str": 16,
+    "int": 16,
+    "wis": 16,
+    "dex": 20,
+    "con": 18,
+    "cha": 16
+  },
+  "start": {
+    "hp": 30,
+    "mana": 60,
+    "move": 80
+  },
+  "allowedClasses": [
+    "magic-user",
+    "cleric",
+    "thief",
+    "warrior",
+    "bard",
+    "assassin",
+    "mariner"
+  ],
+  "averages": {
+    "age": 14,
+    "heightInches": 72,
+    "weightPounds": 130
+  }
+}

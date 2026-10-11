@@ -1,0 +1,33 @@
+{
+  "id": "gnome",
+  "name": "Gnome",
+  "titleName": "#gGnome#N",
+  "legacyNumber": 5,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 16,
+    "int": 20,
+    "wis": 18,
+    "dex": 20,
+    "con": 18,
+    "cha": 18
+  },
+  "start": {
+    "hp": 20,
+    "mana": 140,
+    "move": 75
+  },
+  "allowedClasses": [
+    "psionicist",
+    "monk",
+    "druid",
+    "ranger",
+    "illusionist"
+  ],
+  "averages": {
+    "age": 100,
+    "heightInches": 48,
+    "weightPounds": 115
+  }
+}

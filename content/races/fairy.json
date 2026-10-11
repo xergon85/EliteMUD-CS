@@ -1,0 +1,33 @@
+{
+  "id": "fairy",
+  "name": "Fairy",
+  "titleName": "#RFairy#N",
+  "legacyNumber": 11,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 15,
+    "int": 20,
+    "wis": 18,
+    "dex": 20,
+    "con": 16,
+    "cha": 18
+  },
+  "start": {
+    "hp": 20,
+    "mana": 120,
+    "move": 70
+  },
+  "allowedClasses": [
+    "psionicist",
+    "monk",
+    "wizard",
+    "druid",
+    "illusionist"
+  ],
+  "averages": {
+    "age": 300,
+    "heightInches": 24,
+    "weightPounds": 30
+  }
+}

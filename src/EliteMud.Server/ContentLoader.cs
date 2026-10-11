@@ -191,7 +191,8 @@ internal static class ContentLoader
                 maxHitPoints,
                 mob.Alignment,
                 attacks,
-                combat));
+                combat,
+                Experience: mob.Experience));
         }
 
         return mobs;
@@ -743,8 +744,9 @@ internal static class ContentLoader
             armorClass,
             maxHitPoints,
             mob.Alignment, // Alignment from JSON (defaults to 0 if not set)
-            Array.Empty<MobAttack>(), // Bootstrap mobs have no attacks
-            null); // Bootstrap mobs have no combat stats
+            Array.Empty<MobAttack>(), // Bootstrap mobs have no attacks (zone mobs too, see #34)
+            null, // Bootstrap mobs have no combat stats
+            Experience: mob.Experience);
     }
 
     /// <summary>
@@ -1211,6 +1213,7 @@ internal static class ContentLoader
         public string? LongDescription { get; set; }
         public string? Description { get; set; }
         public int Level { get; set; }
+        public int Experience { get; set; }
         public string? Race { get; set; }
         public string? Class { get; set; }
         public List<string>? Flags { get; set; }

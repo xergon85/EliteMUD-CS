@@ -85,8 +85,19 @@ internal static class ServerBootstrap
         var (skillMetadataRegistry, spellMetadataRegistry, formulaEvaluator, skillRegistry, spellRegistry) =
             BuildRules(contentRoot);
 
-        // Fail fast: a broken formula would otherwise only show up in the middle of a fight
-        var formulaErrors = CheckFormulas(formulaEvaluator, skillRegistry, spellRegistry);
+        // Fail fast: a broken class/race file or formula would otherwise only show up in the middle of play
+        var (rulesContent, rulesErrors) = RulesContentLoader.Load(contentRoot);
+        if (rulesErrors.Count > 0)
+        {
+            throw new ContentConfigurationException(
+                $"{rulesErrors.Count} problem(s) in class/race/progression content:\n  " + string.Join("\n  ", rulesErrors));
+        }
+
+        Console.WriteLine(
+            $"Rules content: {rulesContent.Classes.Count} classes, {rulesContent.Races.Count} races, " +
+            $"{rulesContent.XpCurves.Count} XP curves, {rulesContent.LevelUpProfiles.Count} level-up profiles.");
+
+        var formulaErrors = CheckFormulas(formulaEvaluator, skillRegistry, spellRegistry, rulesContent);
         if (formulaErrors.Count > 0)
         {
             throw new ContentConfigurationException(
@@ -109,6 +120,7 @@ internal static class ServerBootstrap
             .AddSingleton(skillRegistry)
             .AddSingleton(spellRegistry)
             .AddSingleton(formulaEvaluator)
+            .AddSingleton(rulesContent)
 
             // Database
             .AddDbContext<EliteMudDbContext>(options =>
@@ -261,7 +273,13 @@ internal static class ServerBootstrap
         }
 
         var (_, _, formulaEvaluator, skillRegistry, spellRegistry) = BuildRules(ResolveContentRoot());
-        var formulaErrors = CheckFormulas(formulaEvaluator, skillRegistry, spellRegistry);
+        var (rulesContent, rulesErrors) = RulesContentLoader.Load(ResolveContentRoot());
+        foreach (var error in rulesErrors)
+        {
+            Console.WriteLine($"Error\tBroken rules content\t{error}");
+        }
+
+        var formulaErrors = CheckFormulas(formulaEvaluator, skillRegistry, spellRegistry, rulesContent);
         foreach (var error in formulaErrors)
         {
             Console.WriteLine($"Error\tBroken formula\t{error.ReplaceLineEndings(" ")}");
@@ -274,12 +292,17 @@ internal static class ServerBootstrap
             Console.WriteLine($"  {line}");
         }
 
+        if (rulesErrors.Count > 0)
+        {
+            Console.WriteLine($"  Error    {rulesErrors.Count,5}  Broken rules content");
+        }
+
         if (formulaErrors.Count > 0)
         {
             Console.WriteLine($"  Error    {formulaErrors.Count,5}  Broken formula");
         }
 
-        return ContentValidationReport.CountErrors(findings) + formulaErrors.Count;
+        return ContentValidationReport.CountErrors(findings) + rulesErrors.Count + formulaErrors.Count;
     }
 
     /// <summary>
@@ -301,19 +324,30 @@ internal static class ServerBootstrap
     }
 
     /// <summary>
-    /// Run every skill and spell formula once with sample inputs (syntax, unknown variables, result type).
+    /// Run every skill, spell and level-up formula once with sample inputs (syntax, unknown variables, result type).
     /// </summary>
     private static IReadOnlyList<string> CheckFormulas(
         FormulaEvaluator formulaEvaluator,
         Application.Skills.SkillRegistry skillRegistry,
-        SpellRegistry spellRegistry)
+        SpellRegistry spellRegistry,
+        RulesContent rulesContent)
     {
         var sources = skillRegistry.GetAllActiveSkills().Cast<object>()
             .Concat(skillRegistry.GetAllPassiveSkills())
             .Concat(spellRegistry.GetAllSpells())
             .OfType<IFormulaSource>();
 
-        return FormulaChecker.Check(formulaEvaluator, sources.SelectMany(source => source.FormulaSlots));
+        var slots = sources.SelectMany(source => source.FormulaSlots)
+            .Concat(rulesContent.LevelUpProfiles.Values.SelectMany(LevelUpFormulaSlots));
+        return FormulaChecker.Check(formulaEvaluator, slots);
+    }
+
+    private static IEnumerable<FormulaSlot> LevelUpFormulaSlots(LevelUpProfileDefinition profile)
+    {
+        var inputs = typeof(Application.Formulas.LevelUpInputs);
+        yield return new FormulaSlot($"level-up/{profile.Id}.hpGain", profile.HpGainFormula, inputs, FormulaResult.Number);
+        yield return new FormulaSlot($"level-up/{profile.Id}.manaGain", profile.ManaGainFormula, inputs, FormulaResult.Number);
+        yield return new FormulaSlot($"level-up/{profile.Id}.moveGain", profile.MoveGainFormula, inputs, FormulaResult.Number);
     }
 
     // Warning mode: problems are reported, but the server still starts.

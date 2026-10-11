@@ -1,0 +1,32 @@
+{
+  "id": "troll",
+  "name": "Troll",
+  "titleName": "#yTroll#N",
+  "legacyNumber": 17,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 20,
+    "int": 9,
+    "wis": 9,
+    "dex": 16,
+    "con": 20,
+    "cha": 12
+  },
+  "start": {
+    "hp": 65,
+    "mana": 20,
+    "move": 100
+  },
+  "allowedClasses": [
+    "warrior",
+    "bard",
+    "druid",
+    "ranger"
+  ],
+  "averages": {
+    "age": 50,
+    "heightInches": 108,
+    "weightPounds": 275
+  }
+}

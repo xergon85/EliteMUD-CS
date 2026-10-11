@@ -1,0 +1,32 @@
+{
+  "id": "dwarf",
+  "name": "Dwarf",
+  "titleName": "#RDwarven#N",
+  "legacyNumber": 4,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 20,
+    "int": 16,
+    "wis": 18,
+    "dex": 16,
+    "con": 20,
+    "cha": 18
+  },
+  "start": {
+    "hp": 55,
+    "mana": 80,
+    "move": 75
+  },
+  "allowedClasses": [
+    "warrior",
+    "monk",
+    "druid",
+    "mariner"
+  ],
+  "averages": {
+    "age": 80,
+    "heightInches": 48,
+    "weightPounds": 135
+  }
+}
