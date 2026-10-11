@@ -1,0 +1,32 @@
+{
+  "id": "halfling",
+  "name": "Halfling",
+  "titleName": "#YHalfling#N",
+  "legacyNumber": 6,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 16,
+    "int": 18,
+    "wis": 18,
+    "dex": 20,
+    "con": 18,
+    "cha": 18
+  },
+  "start": {
+    "hp": 20,
+    "mana": 88,
+    "move": 75
+  },
+  "allowedClasses": [
+    "monk",
+    "druid",
+    "assassin",
+    "ranger"
+  ],
+  "averages": {
+    "age": 40,
+    "heightInches": 42,
+    "weightPounds": 100
+  }
+}

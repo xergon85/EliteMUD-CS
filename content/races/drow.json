@@ -1,0 +1,34 @@
+{
+  "id": "drow",
+  "name": "Drow",
+  "titleName": "#RDrow#N",
+  "legacyNumber": 14,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 18,
+    "int": 18,
+    "wis": 18,
+    "dex": 18,
+    "con": 18,
+    "cha": 16
+  },
+  "start": {
+    "hp": 30,
+    "mana": 110,
+    "move": 95
+  },
+  "allowedClasses": [
+    "bard",
+    "knight",
+    "wizard",
+    "druid",
+    "assassin",
+    "ranger"
+  ],
+  "averages": {
+    "age": 26,
+    "heightInches": 64,
+    "weightPounds": 115
+  }
+}

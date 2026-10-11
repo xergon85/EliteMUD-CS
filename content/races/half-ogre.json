@@ -1,0 +1,31 @@
+{
+  "id": "half-ogre",
+  "name": "Half-ogre",
+  "titleName": "#mHalf-ogre#N",
+  "legacyNumber": 9,
+  "availability": "unknown",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 18,
+    "int": 18,
+    "wis": 18,
+    "dex": 18,
+    "con": 18,
+    "cha": 18
+  },
+  "start": {
+    "hp": 55,
+    "mana": 40,
+    "move": 100
+  },
+  "allowedClasses": [
+    "thief",
+    "warrior",
+    "mariner"
+  ],
+  "averages": {
+    "age": 80,
+    "heightInches": 70,
+    "weightPounds": 250
+  }
+}

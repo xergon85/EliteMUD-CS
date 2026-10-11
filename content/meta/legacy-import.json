@@ -29,5 +29,19 @@
       "room": 6461, "exit": "east", "doorType": 1,
       "reason": "The Playroom's east exit is described as 'a bright green door' with keyword 'door', and the other side (room 6460 west) is a door, but this side had door type 0. 64.zon closes it with 'D 0 6461 1 1'."
     }
+  ],
+
+  // How races outside the creation menu were obtained; the code doesn't show this. Used by "elitemud-import rules".
+  // Races in the menu are "creation"; races not listed here are "unknown" (half-troll, half-orc, half-ogre).
+  "raceAvailability": [
+    { "race": "god", "availability": "unused", "note": "not used", "source": "project owner, from playing the live game (Oct 11, 2026)" },
+    { "race": "vampire", "availability": "granted", "note": "given by immortals after an RP quest", "source": "project owner, from playing the live game (Oct 11, 2026)" },
+    { "race": "werewolf", "availability": "granted", "note": "given by immortals after an RP quest", "source": "project owner, from playing the live game (Oct 11, 2026)" },
+    { "race": "demon", "availability": "granted", "note": "given by immortals after an RP quest", "source": "project owner, from playing the live game (Oct 11, 2026)" },
+    { "race": "dragon", "availability": "granted", "note": "given by immortals after an RP quest", "source": "project owner, from playing the live game (Oct 11, 2026)" },
+    { "race": "feline", "availability": "granted", "note": "given by immortals after an RP quest", "source": "project owner, from playing the live game (Oct 11, 2026)" },
+    { "race": "angel", "availability": "granted", "note": "given by immortals after an RP quest", "source": "project owner, from playing the live game (Oct 11, 2026)" },
+    { "race": "duck", "availability": "granted", "note": "given by immortals on request (e.g. one player played a duck mariner)", "source": "project owner, from playing the live game (Oct 11, 2026)" },
+    { "race": "avatar", "availability": "remort", "note": "awarded at the 4th remort", "source": "project owner, from playing the live game (Oct 11, 2026)" }
   ]
 }

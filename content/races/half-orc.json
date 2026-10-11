@@ -1,0 +1,32 @@
+{
+  "id": "half-orc",
+  "name": "Half-orc",
+  "titleName": "#MHalf-orc#N",
+  "legacyNumber": 8,
+  "availability": "unknown",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 19,
+    "int": 16,
+    "wis": 16,
+    "dex": 16,
+    "con": 18,
+    "cha": 16
+  },
+  "start": {
+    "hp": 50,
+    "mana": 40,
+    "move": 100
+  },
+  "allowedClasses": [
+    "thief",
+    "warrior",
+    "psionicist",
+    "mariner"
+  ],
+  "averages": {
+    "age": 26,
+    "heightInches": 84,
+    "weightPounds": 170
+  }
+}

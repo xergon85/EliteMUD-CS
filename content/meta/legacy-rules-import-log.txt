@@ -1,0 +1,90 @@
+Warning	Short race table	constants.c allowed_classes	no entry for race 24 (angel); using 0
+Info	Allowed class skipped	constants.c allowed_classes[10]	duck: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[12]	minotaur: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[13]	ratman: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[14]	drow: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[14]	drow: 3-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[15]	lizard: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[18]	draconian: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[2]	elf: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[2]	elf: 3-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[3]	half-elf: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[3]	half-elf: 3-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[4]	dwarf: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[5]	gnome: 2-multi-class (deferred or unused)
+Info	Allowed class skipped	constants.c allowed_classes[6]	halfling: 2-multi-class (deferred or unused)
+Info	Class	constants.c:987 titles[0]	magic-user = Magic-User, 40 title rows
+Info	Class	constants.c:987 titles[10]	assassin = Assassin, 40 title rows
+Info	Class	constants.c:987 titles[11]	ranger = Ranger, 40 title rows
+Info	Class	constants.c:987 titles[12]	illusionist = Illusionist, 40 title rows
+Info	Class	constants.c:987 titles[13]	paladin = Paladin, 40 title rows
+Info	Class	constants.c:987 titles[14]	mariner = Mariner, 40 title rows
+Info	Class	constants.c:987 titles[15]	cavalier = Cavalier, 40 title rows
+Info	Class	constants.c:987 titles[18]	ninja = Ninja, 40 title rows
+Info	Class	constants.c:987 titles[1]	cleric = Cleric, 40 title rows
+Info	Class	constants.c:987 titles[2]	thief = Thief, 40 title rows
+Info	Class	constants.c:987 titles[3]	warrior = Warrior, 40 title rows
+Info	Class	constants.c:987 titles[4]	psionicist = Psionicist, 40 title rows
+Info	Class	constants.c:987 titles[5]	monk = Monk, 40 title rows
+Info	Class	constants.c:987 titles[6]	bard = Bard, 40 title rows
+Info	Class	constants.c:987 titles[7]	knight = Knight, 40 title rows
+Info	Class	constants.c:987 titles[8]	wizard = Wizard, 40 title rows
+Info	Class	constants.c:987 titles[9]	druid = Druid, 40 title rows
+Info	Class skipped	constants.c:987 titles[16]	unused class slot (Unused MU)
+Info	Class skipped	constants.c:987 titles[17]	unused class slot (Unused CL)
+Info	Class skipped	constants.c:987 titles[19]	unused class slot (Unused WA)
+Info	Class skipped	pc_class_types[21]	dual-class: dual/multi-class, deferred (see the levelling plan)
+Info	Class skipped	pc_class_types[22]	2-multi-class: dual/multi-class, deferred (see the levelling plan)
+Info	Class skipped	pc_class_types[23]	3-multi-class: dual/multi-class, deferred (see the levelling plan)
+Info	Favored stats	limits.c:44 improve_abilities()	illusionist, psionicist, wizard, magic-user: int, wis
+Info	Favored stats	limits.c:44 improve_abilities()	monk, paladin, druid, cleric: wis, int
+Info	Favored stats	limits.c:44 improve_abilities()	assassin, mariner, bard, thief, ninja: dex, str
+Info	Favored stats	limits.c:44 improve_abilities()	cavalier, ranger, knight, warrior: str, con + strength bonus
+Info	Level-up profile	limits.c:245 advance_level()	mage: magic-user, illusionist, wizard, psionicist: hp 1d5 + con/5, mana 10
+Info	Level-up profile	limits.c:245 advance_level()	priest: cleric, monk, paladin, druid: hp 1d5 + con/4, mana 10
+Info	Level-up profile	limits.c:245 advance_level()	rogue: thief, bard, assassin, mariner, ninja: hp 1d5 + con/3, mana 5
+Info	Level-up profile	limits.c:245 advance_level()	fighter: warrior, knight, ranger, cavalier: hp 1d5 + con/2, mana 5
+Info	Playable races	interpreter.c:1889	13 races in the creation menu
+Info	Race	constants.c race_table[0]	god (unused): 0 allowed classes
+Info	Race	constants.c race_table[10]	duck (granted): 7 allowed classes
+Info	Race	constants.c race_table[11]	fairy (creation): 5 allowed classes
+Info	Race	constants.c race_table[12]	minotaur (creation): 5 allowed classes
+Info	Race	constants.c race_table[13]	ratman (creation): 3 allowed classes
+Info	Race	constants.c race_table[14]	drow (creation): 6 allowed classes
+Info	Race	constants.c race_table[15]	lizard (creation): 4 allowed classes
+Info	Race	constants.c race_table[16]	vampire (granted): 0 allowed classes
+Info	Race	constants.c race_table[17]	troll (creation): 4 allowed classes
+Info	Race	constants.c race_table[18]	draconian (creation): 5 allowed classes
+Info	Race	constants.c race_table[19]	avatar (remort): 0 allowed classes
+Info	Race	constants.c race_table[1]	human (creation): 13 allowed classes
+Info	Race	constants.c race_table[20]	werewolf (granted): 0 allowed classes
+Info	Race	constants.c race_table[21]	demon (granted): 0 allowed classes
+Info	Race	constants.c race_table[22]	dragon (granted): 0 allowed classes
+Info	Race	constants.c race_table[23]	feline (granted): 0 allowed classes
+Info	Race	constants.c race_table[24]	angel (granted): 0 allowed classes
+Info	Race	constants.c race_table[2]	elf (creation): 6 allowed classes
+Info	Race	constants.c race_table[3]	half-elf (creation): 7 allowed classes
+Info	Race	constants.c race_table[4]	dwarf (creation): 4 allowed classes
+Info	Race	constants.c race_table[5]	gnome (creation): 5 allowed classes
+Info	Race	constants.c race_table[6]	halfling (creation): 4 allowed classes
+Info	Race	constants.c race_table[7]	half-troll (unknown): 6 allowed classes
+Info	Race	constants.c race_table[8]	half-orc (unknown): 4 allowed classes
+Info	Race	constants.c race_table[9]	half-ogre (unknown): 3 allowed classes
+Info	Race availability	race angel	granted: given by immortals after an RP quest (source: project owner, from playing the live game (Oct 11, 2026))
+Info	Race availability	race avatar	remort: awarded at the 4th remort (source: project owner, from playing the live game (Oct 11, 2026))
+Info	Race availability	race demon	granted: given by immortals after an RP quest (source: project owner, from playing the live game (Oct 11, 2026))
+Info	Race availability	race dragon	granted: given by immortals after an RP quest (source: project owner, from playing the live game (Oct 11, 2026))
+Info	Race availability	race duck	granted: given by immortals on request (e.g. one player played a duck mariner) (source: project owner, from playing the live game (Oct 11, 2026))
+Info	Race availability	race feline	granted: given by immortals after an RP quest (source: project owner, from playing the live game (Oct 11, 2026))
+Info	Race availability	race god	unused: not used (source: project owner, from playing the live game (Oct 11, 2026))
+Info	Race availability	race half-ogre	not in the creation menu and not in legacy-import.json: unknown
+Info	Race availability	race half-orc	not in the creation menu and not in legacy-import.json: unknown
+Info	Race availability	race half-troll	not in the creation menu and not in legacy-import.json: unknown
+Info	Race availability	race vampire	granted: given by immortals after an RP quest (source: project owner, from playing the live game (Oct 11, 2026))
+Info	Race availability	race werewolf	granted: given by immortals after an RP quest (source: project owner, from playing the live game (Oct 11, 2026))
+Info	XP curve	limits.c exp_needed()	mage: magic-user, psionicist, wizard, illusionist (level 1 needs 3333, level 109 needs 40000000)
+Info	XP curve	limits.c exp_needed()	priest: cleric, monk, druid (level 1 needs 2000, level 109 needs 40000000)
+Info	XP curve	limits.c exp_needed()	rogue: thief, ninja (level 1 needs 2000, level 109 needs 40000000)
+Info	XP curve	limits.c exp_needed()	fighter: warrior, knight, ranger, paladin, cavalier (level 1 needs 2666, level 109 needs 40000000)
+Info	XP curve	limits.c exp_needed()	bard: bard, mariner (level 1 needs 2333, level 109 needs 40000000)
+Info	XP curve	limits.c exp_needed()	assassin: assassin (level 1 needs 2666, level 109 needs 40000000)

@@ -1,0 +1,33 @@
+{
+  "id": "minotaur",
+  "name": "Minotaur",
+  "titleName": "#RMinotaur#N",
+  "legacyNumber": 12,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 20,
+    "int": 16,
+    "wis": 16,
+    "dex": 18,
+    "con": 20,
+    "cha": 16
+  },
+  "start": {
+    "hp": 60,
+    "mana": 40,
+    "move": 120
+  },
+  "allowedClasses": [
+    "warrior",
+    "psionicist",
+    "monk",
+    "wizard",
+    "druid"
+  ],
+  "averages": {
+    "age": 40,
+    "heightInches": 120,
+    "weightPounds": 300
+  }
+}

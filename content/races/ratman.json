@@ -1,0 +1,31 @@
+{
+  "id": "ratman",
+  "name": "Ratman",
+  "titleName": "#MRatman#N",
+  "legacyNumber": 13,
+  "availability": "creation",
+  "availabilityNote": null,
+  "statMax": {
+    "str": 16,
+    "int": 16,
+    "wis": 18,
+    "dex": 20,
+    "con": 18,
+    "cha": 16
+  },
+  "start": {
+    "hp": 30,
+    "mana": 70,
+    "move": 85
+  },
+  "allowedClasses": [
+    "monk",
+    "assassin",
+    "illusionist"
+  ],
+  "averages": {
+    "age": 16,
+    "heightInches": 60,
+    "weightPounds": 120
+  }
+}
