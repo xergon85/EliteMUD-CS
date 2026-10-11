@@ -38,8 +38,26 @@ public sealed partial class LegacyRulesImporter
     };
 
     /// <summary>
+    /// The import decisions (race availability) in the target content tree, so a rerun from any folder gives the
+    /// same output. Without the file every race outside the creation menu comes out as unknown, so say so.
+    /// </summary>
+    private static LegacyImportConfig LoadConfig(string contentPath, LegacyImportLog log)
+    {
+        var path = Path.Combine(contentPath, "meta", "legacy-import.json");
+        if (File.Exists(path))
+        {
+            log.Info("Config", "meta/legacy-import.json", "import decisions loaded");
+            return LegacyImportConfig.Load(path);
+        }
+
+        log.Warn("Config", "meta/legacy-import.json", $"not found in {contentPath}; races outside the creation menu will be 'unknown'");
+        return new LegacyImportConfig();
+    }
+
+    /// <summary>
     /// Read the legacy source under <paramref name="legacyRoot"/> (its src/ folder) and write the rules content
     /// under <paramref name="contentPath"/>: classes/, races/, progression/xp-curves/ and progression/level-up/.
+    /// <paramref name="config"/> defaults to <paramref name="contentPath"/>/meta/legacy-import.json.
     /// </summary>
     public async ValueTask<LegacyImportLog> ImportAsync(
         string legacyRoot,
@@ -48,7 +66,7 @@ public sealed partial class LegacyRulesImporter
         LegacyImportConfig? config = null)
     {
         var log = new LegacyImportLog();
-        config ??= new LegacyImportConfig();
+        config ??= LoadConfig(contentPath, log);
         var source = new LegacySource(ResolveSourcePath(legacyRoot));
         var defines = ReadDefines(source.Read("structs.h"));
         var maxMortalLevel = defines["LEVEL_DEITY"] - 1;

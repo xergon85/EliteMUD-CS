@@ -145,8 +145,8 @@ internal static class Program
 
         try
         {
-            var config = File.Exists(DefaultConfigPath) ? LegacyImportConfig.Load(DefaultConfigPath) : null;
-            var log = await new LegacyRulesImporter().ImportAsync(args[1], args[2], CancellationToken.None, config);
+            // Import decisions are read from <content-path>/meta/legacy-import.json
+            var log = await new LegacyRulesImporter().ImportAsync(args[1], args[2], CancellationToken.None);
             Console.WriteLine("Rules import summary:");
             foreach (var line in log.Summarize())
             {
