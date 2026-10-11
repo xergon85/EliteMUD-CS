@@ -1,7 +1,8 @@
 namespace EliteMud.Server;
 
 /// <summary>
-/// Content that the server refuses to start with (e.g. a broken formula). The message says what to fix.
+/// Content or configuration that the server refuses to start with (e.g. a broken formula, an unreadable
+/// elitemud.config.json). The message says what to fix.
 /// </summary>
 internal sealed class ContentConfigurationException : Exception
 {

@@ -126,7 +126,7 @@ public class PortalCommandTests : IDisposable
         }
 
         var (_, stream) = await CreateRealTcpConnection();
-        var context = new ConnectionContext(1, new TelnetSession(stream), player, characterId: 1);
+        var context = new ConnectionContext(1, new TelnetSession(stream), player, characterId: 1, accountName: "test");
         var connectionRegistry = new ConnectionRegistry();
         connectionRegistry.SetProvider(() => new[] { context });
 

@@ -20,6 +20,12 @@ public sealed class CommandAttribute : Attribute
     /// Alternative names for this command (e.g., "k" for "kick", "i" for "inventory")
     /// </summary>
     public string[] Aliases { get; init; } = [];
+
+    /// <summary>
+    /// Admin and test commands (zreset, goto, setlevel, ...). Players who aren't admins get the unknown-command
+    /// reply, as if the command didn't exist (legacy "Huh?!" for commands above your level).
+    /// </summary>
+    public bool Admin { get; init; }
     
     public CommandAttribute(string name)
     {
