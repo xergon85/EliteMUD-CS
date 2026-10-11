@@ -173,8 +173,17 @@ Agreed so far (Oct 10, 2026):
   5. **Reachability warnings:** report things nothing references (a playable class no race allows, a skill no class
      learns, an object nothing loads). Entries can opt out as intentionally unreferenced.
   - Ids are exact matches in the format `^[a-z][a-z0-9-]*$`. No case-insensitive or fuzzy matching.
+- **Editing through a tool, not by hand** (Oct 11, 2026): content is changed with a local **web editor** built on the
+  same C# model and content check as the server, so it can't save something the server would reject. Files are a
+  storage format: readable in pull-request diffs, but not edited manually.
+- **Q1, skill access by class** (Oct 11, 2026): stored **on the skill** (each skill lists its classes with min level,
+  max proficiency and difficulty), like legacy `spellconst.c` (`spell_minlevel`, `spell_max`, `spell_difficulty`:
+  one row per skill, one column per class). The editor shows it by skill, by class, or as the skill × class grid.
+  Balancing one skill stays a small diff in one file.
+- **Q2, schemas** (Oct 11, 2026): no hand-written JSON Schemas. The C# model and the content check are the contract,
+  used by the editor, the server and CI. Generated schemas are optional documentation.
 
 ## Open Questions
 
-See the open questions on the data model page: skill ownership, generated vs hand-written schemas,
-explicit XP values vs interpolation, formula variables, reload behavior for online players, and reload scope.
+Tracked in #21. Q1 and Q2 are decided (see above). Still open: explicit XP values vs interpolation (Q3), formula
+variables (Q4), reload behavior for online players (Q5), and reload scope (Q6).
