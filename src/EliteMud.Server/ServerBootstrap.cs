@@ -128,6 +128,7 @@ internal static class ServerBootstrap
             .AddSingleton(rulesContent)
             .AddSingleton<ExperienceService>()
             .AddSingleton<PlayerProgression>()
+            .AddSingleton<CombatExperience>()
 
             // Database
             .AddDbContext<EliteMudDbContext>(options =>

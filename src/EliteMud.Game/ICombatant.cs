@@ -38,6 +38,12 @@ public interface ICombatant
     /// Level of the combatant. Affects skill availability and damage calculations.
     /// </summary>
     byte Level { get; }
+
+    /// <summary>
+    /// Experience points. Mobs have them too: they gain from damaging and killing, and a kill is worth a quarter
+    /// of the victim's experience (legacy fight.c).
+    /// </summary>
+    int Experience { get; set; }
     
     /// <summary>
     /// Alignment of the combatant. Range: -1000 (pure evil) to +1000 (pure good).

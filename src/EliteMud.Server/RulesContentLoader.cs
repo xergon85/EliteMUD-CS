@@ -107,6 +107,11 @@ internal static class RulesContentLoader
                 new PhysicalAverages(data.Averages.Age, data.Averages.HeightInches, data.Averages.WeightPounds));
         }
 
+        if (!classes.ContainsKey("warrior"))
+        {
+            errors.Add("classes/warrior.json: required, mobs use its XP curve (legacy exp_needed)");
+        }
+
         CheckMenuKeys("classes", classes.Values.Select(c => (c.Id, (string?)c.MenuKey)), errors);
         CheckMenuKeys("races", races.Values.Where(r => r.Availability == RaceAvailability.Creation)
             .Select(r => (r.Id, r.MenuKey)), errors);
