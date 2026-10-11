@@ -5,6 +5,7 @@ using EliteMud.Application.Session;
 using EliteMud.Application.Session.Authentication;
 using EliteMud.Application.Spells;
 using EliteMud.Application.World;
+using EliteMud.Application.World.Validation;
 using EliteMud.Data;
 using EliteMud.Data.Repositories;
 using EliteMud.Game;
@@ -39,6 +40,7 @@ internal static class ServerBootstrap
 
             if (world is not null)
             {
+                PrintValidationSummary(world, mobs, objects, zones);
                 return CreateServerFromContent(port, world, mobs, objects, zones, contentRoot);
             }
         }
@@ -236,6 +238,69 @@ internal static class ServerBootstrap
                 1)
         };
     }
+
+    /// <summary>
+    /// Load the zone files and check them, printing every finding. Returns the number of errors.
+    /// Used by "--validate".
+    /// </summary>
+    public static int ValidateContent()
+    {
+        var zonesDirectory = Path.Combine(ResolveContentRoot(), "..", "zones");
+        var (world, mobs, objects, zones) = ContentLoader.LoadFromZoneFiles(zonesDirectory);
+        if (world is null)
+        {
+            Console.WriteLine($"No world content found in {zonesDirectory}.");
+            return 1;
+        }
+
+        var findings = Validate(world, mobs, objects, zones);
+        Console.WriteLine();
+        foreach (var line in ContentValidationReport.Details(findings))
+        {
+            Console.WriteLine(line);
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("Summary:");
+        foreach (var line in ContentValidationReport.Summarize(findings))
+        {
+            Console.WriteLine($"  {line}");
+        }
+
+        return findings.Count(finding => finding.Severity == ContentSeverity.Error);
+    }
+
+    // Warning mode: problems are reported, but the server still starts.
+    private static void PrintValidationSummary(
+        WorldDefinition world,
+        IReadOnlyList<MobDefinition> mobs,
+        IReadOnlyList<ObjectDefinition> objects,
+        IReadOnlyList<ZoneDefinition> zones)
+    {
+        var findings = Validate(world, mobs, objects, zones);
+        if (findings.Count == 0)
+        {
+            Console.WriteLine("Content check: no problems found.");
+            return;
+        }
+
+        Console.WriteLine("Content check (run with --validate for details):");
+        foreach (var line in ContentValidationReport.Summarize(findings))
+        {
+            Console.WriteLine($"  {line}");
+        }
+    }
+
+    private static IReadOnlyList<ContentFinding> Validate(
+        WorldDefinition world,
+        IReadOnlyList<MobDefinition> mobs,
+        IReadOnlyList<ObjectDefinition> objects,
+        IReadOnlyList<ZoneDefinition> zones) =>
+        ContentValidator.Validate(
+            world,
+            mobs.GroupBy(mob => mob.Id).ToDictionary(group => group.Key, group => group.First()),
+            objects.GroupBy(obj => obj.Id).ToDictionary(group => group.Key, group => group.First()),
+            zones);
 
     private static WorldState BuildWorldState(
         WorldDefinition world,

@@ -2,8 +2,14 @@ namespace EliteMud.Server;
 
 internal static class Program
 {
-    public static async Task Main(string[] args)
+    public static async Task<int> Main(string[] args)
     {
+        // Check the world content and exit; the exit code is the number of errors (0 = clean)
+        if (args.Contains("--validate"))
+        {
+            return Math.Min(ServerBootstrap.ValidateContent(), 125);
+        }
+
         var port = ServerBootstrap.TryParsePort(args) ?? ServerBootstrap.DefaultPort;
         using var cancellationTokenSource = new CancellationTokenSource();
         Console.CancelKeyPress += (_, eventArgs) =>
@@ -23,5 +29,6 @@ internal static class Program
         
         // Wait for tick service to complete
         await tickTask;
+        return 0;
     }
 }
