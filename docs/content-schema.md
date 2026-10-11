@@ -406,8 +406,12 @@ Each skill has an array of 20 class restriction entries (one per class):
 - **Built-ins:** `math` (Lua's), `random(min, max)` (inclusive, like legacy `number()`), and `div(a, b)`: integer
   division truncating toward zero, like C. Lua's `/` is real division, so use `div` where legacy C divides integers
   (e.g. kick: `div(victimAC, 10)`; -55 / 10 is -5 in C, -5.5 with `/`).
-- **Checked at startup:** every formula runs once with sample inputs. A syntax error, an unknown variable or the wrong
-  result type stops the server with a message naming the formula; `--validate` reports them too.
+- **Sandbox:** formulas can only use their variables and the built-ins; there's no file, OS or code-loading access, and
+  `math` is read-only.
+- **Checked at startup:** every name a formula reads must be one of its variables or a built-in, checked in every branch
+  without running it. Then one sample run catches syntax errors and the result type of the branch it takes. Any
+  problem stops the server with a message naming the formula; `--validate` reports them too. The result type of
+  branches the sample doesn't take isn't guaranteed; the content editor's live preview covers that.
 
 
 ## Flag Maps (v1)

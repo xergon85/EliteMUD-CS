@@ -3,8 +3,11 @@ using System.Reflection;
 namespace EliteMud.Scripting;
 
 /// <summary>
-/// Runs every content formula once with sample inputs, so syntax errors, unknown variables and wrong result
-/// types are found when content loads instead of in the middle of a fight.
+/// Checks every content formula when content loads instead of in the middle of a fight:
+/// - statically, every name it reads must be one of its slot's variables or a built-in (all branches)
+/// - one sample run catches syntax errors and the result type of the branch that runs
+/// The result type of branches the sample doesn't take can't be guaranteed; the content editor's live
+/// preview covers that.
 /// </summary>
 public static class FormulaChecker
 {
@@ -14,6 +17,17 @@ public static class FormulaChecker
         var errors = new List<string>();
         foreach (var slot in slots.Where(slot => !string.IsNullOrWhiteSpace(slot.Formula)))
         {
+            // Static check first: catches unknown names in every branch, not just the one the sample run takes
+            var allowed = AllowedNames(slot.InputsType);
+            var unknown = FormulaNames.FindUnknown(slot.Formula!, allowed);
+            if (unknown.Count > 0)
+            {
+                errors.Add($"formula {slot.Name} (\"{slot.Formula}\") reads unknown variable(s) "
+                           + $"{string.Join(", ", unknown.Select(name => $"'{name}'"))}; "
+                           + $"available: {string.Join(", ", allowed.Order(StringComparer.Ordinal))}");
+                continue;
+            }
+
             try
             {
                 var inputs = CreateSample(slot.InputsType);
@@ -34,6 +48,13 @@ public static class FormulaChecker
 
         return errors;
     }
+
+    /// <summary>The slot's variables (camelCase input properties) plus the built-ins.</summary>
+    public static IReadOnlySet<string> AllowedNames(Type inputsType) =>
+        inputsType.GetProperties()
+            .Select(property => FormulaEvaluator.ToVariableName(property.Name))
+            .Concat(FormulaEvaluator.BuiltInNames)
+            .ToHashSet(StringComparer.Ordinal);
 
     /// <summary>
     /// Build an input record with sample values: numbers are 1 (so div can't divide by zero), booleans true,

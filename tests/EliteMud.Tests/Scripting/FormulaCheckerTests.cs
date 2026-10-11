@@ -22,7 +22,7 @@ public class FormulaCheckerTests
     }
 
     [Theory]
-    [InlineData("return level + bonus", "unknown variable 'bonus'")]   // variable the slot doesn't provide
+    [InlineData("return level + bonus", "unknown variable(s) 'bonus'")] // variable the slot doesn't provide (static check)
     [InlineData("return level > 5", "expected a number")]              // wrong result type
     [InlineData("return level +", "syntax error")]                     // broken Lua
     public void Check_BrokenFormula_ReportsWhy(string formula, string expected)
@@ -32,6 +32,18 @@ public class FormulaCheckerTests
         var error = Assert.Single(FormulaChecker.Check(_evaluator, new[] { slot }));
         Assert.Contains(expected, error);
         Assert.Contains("magic missile.damageFormula", error);
+    }
+
+    [Fact]
+    public void Check_UnknownVariableInUntakenBranch_IsReported()
+    {
+        // With level = 1 a sample run never reads 'typo'; the static check still catches it
+        var slot = new FormulaSlot("magic missile.damageFormula", "return level == 1 and 1 or typo",
+            typeof(LevelInputs), FormulaResult.Number);
+
+        var error = Assert.Single(FormulaChecker.Check(_evaluator, new[] { slot }));
+        Assert.Contains("unknown variable(s) 'typo'", error);
+        Assert.Contains("available: div, level, math, random", error);
     }
 
     [Fact]
