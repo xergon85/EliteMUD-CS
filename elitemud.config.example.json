@@ -1,0 +1,6 @@
+{
+  // Copy to elitemud.config.json (next to elitemud.db) and list the accounts that may use admin commands
+  // (zreset, goto, load, setlevel, setskill, setspell). Without the file nobody can use them.
+  // Temporary until permission levels exist (#11).
+  "adminAccounts": [ "your-account-name" ]
+}

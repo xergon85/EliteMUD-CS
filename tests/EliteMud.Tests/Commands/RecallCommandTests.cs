@@ -186,7 +186,7 @@ public class RecallCommandTests : IDisposable
         var (client, stream) = await CreateRealTcpConnection();
         var session = new TelnetSession(stream);
         
-        var context = new ConnectionContext(1, session, player, characterId: 1);
+        var context = new ConnectionContext(1, session, player, characterId: 1, accountName: "test");
 
         // Create connection registry
         var connectionRegistry = new ConnectionRegistry();

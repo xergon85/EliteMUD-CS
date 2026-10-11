@@ -4,7 +4,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.SetSkill;
 
-[Command("setskill")]
+[Command("setskill", Admin = true)]
 internal sealed class SetSkillCommandHandler : ICommandHandler
 {
     private readonly CommandCatalog _catalog;

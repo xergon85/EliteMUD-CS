@@ -3,7 +3,7 @@ using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.SetLevel;
 
-[Command("setlevel")]
+[Command("setlevel", Admin = true)]
 internal sealed class SetLevelCommandHandler : ICommandHandler
 {
 

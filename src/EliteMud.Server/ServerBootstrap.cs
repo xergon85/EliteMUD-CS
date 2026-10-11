@@ -116,7 +116,12 @@ internal static class ServerBootstrap
         var dbPath = Path.Combine(contentRoot, "..", "elitemud.db");
         var connectionString = $"Data Source={dbPath}";
 
+        var adminPolicy = AdminPolicy.Load(Path.Combine(contentRoot, "..", AdminPolicy.ConfigFileName));
+
         var services = new ServiceCollection()
+            // Who may use admin commands
+            .AddSingleton(adminPolicy)
+
             // World and scripting
             .AddSingleton<IWorldState>(worldState)
             .AddSingleton(scriptEngine)

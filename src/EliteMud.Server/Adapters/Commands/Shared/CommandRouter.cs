@@ -8,10 +8,13 @@ namespace EliteMud.Server.Adapters.Commands.Shared;
 internal sealed class CommandRouter
 {
     private readonly Dictionary<string, ICommandHandler> _handlersByVerb;
+    private readonly HashSet<string> _adminVerbs = new(StringComparer.OrdinalIgnoreCase);
     private readonly ICommandHandler? _emptyCommandHandler;
+    private readonly AdminPolicy _adminPolicy;
 
-    public CommandRouter(IEnumerable<ICommandHandler> handlers)
+    public CommandRouter(IEnumerable<ICommandHandler> handlers, AdminPolicy adminPolicy)
     {
+        _adminPolicy = adminPolicy;
         _handlersByVerb = new Dictionary<string, ICommandHandler>(StringComparer.OrdinalIgnoreCase);
 
         foreach (var handler in handlers)
@@ -53,6 +56,12 @@ internal sealed class CommandRouter
             {
                 _handlersByVerb[alias] = handler;
             }
+
+            if (attribute.Admin)
+            {
+                _adminVerbs.Add(attribute.Name);
+                _adminVerbs.UnionWith(attribute.Aliases);
+            }
         }
     }
 
@@ -67,6 +76,12 @@ internal sealed class CommandRouter
             return _emptyCommandHandler != null
                 ? await _emptyCommandHandler.HandleAsync(command, context, cancellationToken)
                 : CommandOutcome.Continue;
+        }
+
+        // Admin commands don't exist for other players: same reply as an unknown command
+        if (_adminVerbs.Contains(command.Verb) && !_adminPolicy.IsAdmin(context))
+        {
+            return CommandOutcome.Unknown;
         }
 
         // Check if player is waiting (combat lag)

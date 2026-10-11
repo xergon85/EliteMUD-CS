@@ -11,7 +11,7 @@ namespace EliteMud.Server.Adapters.Commands.Goto;
 /// Legacy: do_goto in act.wizard.c
 /// TODO: Add level restriction when immortal system is implemented
 /// </summary>
-[Command("goto")]
+[Command("goto", Admin = true)]
 internal sealed class GotoCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
