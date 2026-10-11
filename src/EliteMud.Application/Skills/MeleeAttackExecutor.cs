@@ -1,6 +1,7 @@
 using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -21,6 +22,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
     private readonly MobAiService _mobAiService;
+    private readonly CombatExperience _combatExperience;
 
     public SkillType SkillType => SkillType.Kick; // Not actually a skill, just needs a value
     public TargetingMode Targeting => TargetingMode.RequiredInRoom;
@@ -28,8 +30,10 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
     public MeleeAttackExecutor(
         CombatCalculator combatCalculator,
         IWorldState worldState,
-        MobAiService mobAiService)
+        MobAiService mobAiService,
+        CombatExperience combatExperience)
     {
+        _combatExperience = combatExperience;
         _combatCalculator = combatCalculator;
         _worldState = worldState;
         _mobAiService = mobAiService;
@@ -125,8 +129,8 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
 
                 messages.Add(new SkillMessage(SkillMessageTarget.Others, roomCombatMsg));
 
-                // Award experience
-                attacker.Experience += _combatCalculator.CalculateExperienceGain(victimPlayer, result.Damage);
+                // No damage XP between players (legacy); kept on the shared path
+                _combatExperience.DamageDealt(attacker, victimPlayer, result.Damage);
             }
         }
         else
@@ -198,8 +202,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, attackerCombatMsg));
             messages.Add(new SkillMessage(SkillMessageTarget.Others, roomCombatMsg));
 
-            // Award experience
-            attacker.Experience += mobInstance.Definition.Level * damage / 2;
+            _combatExperience.DamageDealt(attacker, mobInstance, damage);
         }
 
         return new SkillResult(Success: true, Messages: messages.ToArray());

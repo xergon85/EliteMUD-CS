@@ -2,6 +2,7 @@ using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.Session;
 using EliteMud.Application.World;
 using EliteMud.Data;
@@ -30,6 +31,7 @@ internal sealed class GameTickService
     private readonly CombatCalculator _combatCalculator;
     private readonly CharacterSaveQueue _saveQueue;
     private readonly MobAiService _mobAiService;
+    private readonly CombatExperience _combatExperience;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
     private readonly TimeSpan _gainInterval = TimeSpan.FromSeconds(6); // PULSE_GAIN - increment gain_count based on position (legacy: 6 seconds)
@@ -54,8 +56,10 @@ internal sealed class GameTickService
         LookCommandHandler lookHandler,
         CombatCalculator combatCalculator,
         CharacterSaveQueue saveQueue,
-        MobAiService mobAiService)
+        MobAiService mobAiService,
+        CombatExperience combatExperience)
     {
+        _combatExperience = combatExperience;
         _connectionRegistry = connectionRegistry;
         _serviceProvider = serviceProvider;
         _worldState = worldState;
@@ -100,6 +104,9 @@ internal sealed class GameTickService
                     _lastRegen = DateTime.UtcNow;
                 }
                 
+                // Characters that asked for a save (e.g. after a level-up) are saved right away
+                await ProcessRequestedSavesAsync(stoppingToken);
+
                 // Auto-save runs every 5 minutes
                 if (DateTime.UtcNow - _lastAutoSave >= _autoSaveInterval)
                 {
@@ -313,6 +320,7 @@ internal sealed class GameTickService
         }
         
         var damageResult = _combatCalculator.ApplyDamage(victim.Player, damage);
+        _combatExperience.DamageDealt(mob, victim.Player, damageResult.Damage);
         
         // Show dodge message if dodged
         if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
@@ -475,8 +483,8 @@ internal sealed class GameTickService
                 await observer.Session.SendLineAsync(roomMsg, cancellationToken);
             }
 
-            // Award experience
-            attacker.Player.Experience += _combatCalculator.CalculateExperienceGain(victim.Player, totalDamage);
+            // No damage XP between players (legacy); kept on the shared path so every source goes through it
+            _combatExperience.DamageDealt(attacker.Player, victim.Player, totalDamage);
 
             // Check if victim died
             if (victim.Player.Position == Position.Dead)
@@ -570,8 +578,7 @@ internal sealed class GameTickService
             await observer.Session.SendLineAsync(roomMsg, cancellationToken);
         }
 
-        // Award experience
-        attacker.Player.Experience += mob.Definition.Level * damage / 2;
+        _combatExperience.DamageDealt(attacker.Player, mob, damage);
 
         // Check if mob died
         if (mob.HitPoints <= 0)
@@ -583,6 +590,7 @@ internal sealed class GameTickService
             // Mob fights back
             var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
             var mobDamageResult = _combatCalculator.ApplyDamage(attacker.Player, mobDamage);
+            _combatExperience.DamageDealt(mob, attacker.Player, mobDamageResult.Damage);
             
             // Show dodge message if dodged
             if (mobDamageResult.Dodged && !string.IsNullOrEmpty(mobDamageResult.Message))
@@ -640,17 +648,16 @@ internal sealed class GameTickService
         _combatCalculator.StopFighting(killer.Player);
         _combatCalculator.StopFighting(victim.Player);
 
-        // Award full experience (bonus for kill)
-        int killBonus = victim.Player.Level * 100;
-        killer.Player.Experience += killBonus;
+        // Kill XP comes from the victim's XP before the death penalty (legacy damage() then die())
+        var killReward = _combatExperience.Killed(killer.Player, victim.Player);
 
         // PvP kills always shift killer toward evil
         int alignmentShift = _combatCalculator.CalculateAlignmentShift(killer.Player, victim.Player, isPvP: true);
         _combatCalculator.ApplyAlignmentShift(killer.Player, alignmentShift);
 
         // Messages
-        await killer.Session.SendLineAsync(
-            $"You have slain {victim.Player.Name}! (+{killBonus} exp)", cancellationToken);
+        await killer.Session.SendLineAsync($"You have slain {victim.Player.Name}!", cancellationToken);
+        await SendProgressionAsync(killer, killReward, cancellationToken);
         await killer.Session.SendLineAsync(
             $"#rYour soul darkens from the murder.#N ({alignmentShift})", cancellationToken);
         await victim.Session.SendLineAsync(
@@ -669,11 +676,8 @@ internal sealed class GameTickService
         // Create corpse (fight.c:530)
         _worldState.CreatePlayerCorpse(victim.Player, victim.Player.RoomId);
 
-        // Death experience loss - lose half of what's needed to level (fight.c:541)
-        // TODO: Implement exp_needed() function for proper calculation
-        // For now, use a simple penalty of 10% of current experience
-        int expLoss = victim.Player.Experience / 10;
-        victim.Player.Experience = Math.Max(0, victim.Player.Experience - expLoss);
+        // Death penalty: half the XP needed for the next level (fight.c:541 die())
+        var penalty = _combatExperience.Died(victim.Player);
 
         // Respawn the player at Temple of Midgaard
         victim.Player.HitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
@@ -682,8 +686,8 @@ internal sealed class GameTickService
         victim.Player.Position = Position.Standing;
         victim.Player.RoomId = MortalStartRoom;
         
-        await victim.Session.SendLineAsync(
-            $"You have been resurrected... (-{expLoss} exp)", cancellationToken);
+        await SendProgressionAsync(victim, penalty, cancellationToken);
+        await victim.Session.SendLineAsync("You have been resurrected...", cancellationToken);
     }
 
     private async Task HandlePlayerDeathFromMob(
@@ -695,6 +699,9 @@ internal sealed class GameTickService
         _combatCalculator.StopFighting(victim.Player);
         mob.FightingConnectionId = null;
         mob.Position = Position.Standing;
+
+        // The mob takes its share of the victim's XP before the death penalty (legacy damage() then die())
+        _combatExperience.Killed(mob, victim.Player);
 
         // Messages (fight.c:966-969)
         await victim.Session.SendLineAsync(
@@ -713,11 +720,8 @@ internal sealed class GameTickService
         // Create corpse (fight.c:530)
         _worldState.CreatePlayerCorpse(victim.Player, victim.Player.RoomId);
 
-        // Death experience loss - lose half of what's needed to level (fight.c:541)
-        // TODO: Implement exp_needed() function for proper calculation
-        // For now, use a simple penalty of 10% of current experience
-        int expLoss = victim.Player.Experience / 10;
-        victim.Player.Experience = Math.Max(0, victim.Player.Experience - expLoss);
+        // Death penalty: half the XP needed for the next level (fight.c:541 die())
+        var penalty = _combatExperience.Died(victim.Player);
 
         // Respawn the player at Temple of Midgaard
         victim.Player.HitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
@@ -726,8 +730,8 @@ internal sealed class GameTickService
         victim.Player.Position = Position.Standing;
         victim.Player.RoomId = MortalStartRoom;
         
-        await victim.Session.SendLineAsync(
-            $"You have been resurrected... (-{expLoss} exp)", cancellationToken);
+        await SendProgressionAsync(victim, penalty, cancellationToken);
+        await victim.Session.SendLineAsync("You have been resurrected...", cancellationToken);
     }
 
     /// <summary>
@@ -821,11 +825,16 @@ internal sealed class GameTickService
         }
 
         // Apply the flee result (moves player, stops combat, applies XP loss)
-        _fleeService.ApplyFleeResult(
+        var lossMessages = _fleeService.ApplyFleeResult(
             player.Player,
             result,
             () => _connectionRegistry.GetConnections().Select(c => c.Player),
             player.Id);
+
+        foreach (var line in lossMessages)
+        {
+            await player.Session.SendLineAsync(line, cancellationToken);
+        }
 
         // Send success message
         await player.Session.SendLineAsync("You flee head over heels.", cancellationToken);
@@ -846,9 +855,7 @@ internal sealed class GameTickService
         _combatCalculator.StopFighting(killer.Player);
         mob.FightingConnectionId = null;
 
-        // Award kill experience
-        int killBonus = mob.Definition.Level * 100;
-        killer.Player.Experience += killBonus;
+        var killReward = _combatExperience.Killed(killer.Player, mob);
 
         // Calculate and apply alignment shift
         int alignmentShift = _combatCalculator.CalculateAlignmentShift(killer.Player, mob, isPvP: false);
@@ -866,8 +873,8 @@ internal sealed class GameTickService
             _ => ""
         };
         
-        await killer.Session.SendLineAsync(
-            $"You have slain {mobDesc}! (+{killBonus} exp){alignmentMsg}", cancellationToken);
+        await killer.Session.SendLineAsync($"You have slain {mobDesc}!{alignmentMsg}", cancellationToken);
+        await SendProgressionAsync(killer, killReward, cancellationToken);
 
         // Broadcast to room (fight.c:967)
         var roomMessage = $"{mobDesc} is dead!";
@@ -978,6 +985,24 @@ internal sealed class GameTickService
             {
                 _ = connection.Session.SendLineAsync(message, CancellationToken.None);
             }
+        }
+    }
+
+    private async Task ProcessRequestedSavesAsync(CancellationToken cancellationToken)
+    {
+        foreach (var connection in _connectionRegistry.GetConnections().Where(c => c.Player.SaveRequested).ToList())
+        {
+            connection.Player.SaveRequested = false;
+            await _saveQueue.QueueSaveAsync(connection.CharacterId, connection.Player, cancellationToken);
+        }
+    }
+
+    private async Task SendProgressionAsync(
+        ConnectionContext connection, ProgressionResult result, CancellationToken cancellationToken)
+    {
+        foreach (var message in result.Messages)
+        {
+            await connection.Session.SendLineAsync(message, cancellationToken);
         }
     }
 

@@ -531,15 +531,6 @@ public class CombatCalculator
     }
 
     /// <summary>
-    /// Award experience for damage dealt.
-    /// Legacy: GET_EXP(ch) += GET_LEVEL(victim) * dam / 2
-    /// </summary>
-    public int CalculateExperienceGain(PlayerState victim, int damage)
-    {
-        return victim.Level * damage / 2;
-    }
-    
-    /// <summary>
     /// Calculate alignment shift from killing a combatant.
     /// Legacy: change_alignment() in fight.c:445-460
     /// 

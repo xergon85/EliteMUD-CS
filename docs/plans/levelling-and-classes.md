@@ -107,13 +107,18 @@ reload). Tracked in #22; editing goes through the content editor (#28).
 
 ### C. Wire XP into the game
 
-- ☐ **C1. Mob kill XP:** replace `mob.Level * 100` with `GainExperience(killer, max(1, mob.Experience / 4))`.
-- ☐ **C2. Damage XP:** stop giving it in PvP. Keep the legacy "add directly" behavior and leave a comment saying it's intentional.
+- ☑ **C1. Mob kill XP:** replace `mob.Level * 100` with `GainExperience(killer, max(1, mob.Experience / 4))`.
+- ☑ **C2. Damage XP:** stop giving it in PvP. Keep the legacy "add directly" behavior and leave a comment saying it's intentional.
   Unify the four places that currently do this (`GameTickService` ×2, `MeleeAttackExecutor` ×2) into one method.
-- ☐ **C3. PvP kill XP:** match legacy (`victim.exp / 4`) instead of `level * 100`.
-- ☐ **C4. Death penalty:** `GainExperience(victim, -ExpNeeded / 2)`.
-- ☐ **C5. Flee:** route the XP loss through `GainExperience` so the messages match.
-- ☐ **C6. Instant-kill skills** (backstab, kick, bash) use the same kill-reward path. Today they duplicate the logic.
+- ☑ **C3. PvP kill XP:** match legacy (`victim.exp / 4`) instead of `level * 100`.
+- ☑ **C4. Death penalty:** `GainExperience(victim, -ExpNeeded / 2)`.
+- ☑ **C5. Flee:** route the XP loss through `GainExperience` so the messages match.
+- ☑ **C6. Instant-kill skills** (backstab, kick, bash) use the same kill-reward path. Today they duplicate the logic.
+
+  _Done Oct 11, 2026 (#24):_ one `CombatExperience` path for melee, kick/bash/backstab and spells. Mobs gain
+  experience too, as in legacy: from damage they deal and (capped, on the warrior curve) from kills, so a mob that has
+  hurt players is worth more. A level-up sets `SaveRequested` and the game loop saves right away. Players killed by
+  skills or spells still lack death handling; that's #40. Death traps (`-exp/4`) wait until DEATH rooms are handled.
 
 ### D. Character creation
 

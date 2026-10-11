@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -19,6 +20,7 @@ public sealed class KickSkillExecutor : ISkillExecutor
     private readonly KickSkill _kickSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
+    private readonly CombatExperience _combatExperience;
 
     public SkillType SkillType => SkillType.Kick;
     public TargetingMode Targeting => TargetingMode.CurrentFightTarget;
@@ -26,8 +28,10 @@ public sealed class KickSkillExecutor : ISkillExecutor
     public KickSkillExecutor(
         SkillRegistry skillRegistry,
         CombatCalculator combatCalculator,
-        IWorldState worldState)
+        IWorldState worldState,
+        CombatExperience combatExperience)
     {
+        _combatExperience = combatExperience;
         _kickSkill = (KickSkill)skillRegistry.GetActiveSkill(SkillType.Kick);
         _combatCalculator = combatCalculator;
         _worldState = worldState;
@@ -93,6 +97,7 @@ public sealed class KickSkillExecutor : ISkillExecutor
         // Apply damage
         var victimDied = false;
         var messages = new List<SkillMessage>();
+        ProgressionResult? killReward = null;
 
         if (context.VictimConnectionId != null)
         {
@@ -101,6 +106,7 @@ public sealed class KickSkillExecutor : ISkillExecutor
             var damageResult = _combatCalculator.ApplyDamage(victimPlayer, damage);
 
             damage = damageResult.Damage;
+            _combatExperience.DamageDealt(attacker, victimPlayer, damage); // none between players; shared path
             
             // Show dodge message if dodged
             if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
@@ -122,6 +128,7 @@ public sealed class KickSkillExecutor : ISkillExecutor
             // Mob victim - direct damage application
             var mobInstance = (MobInstance)victim;
             mobInstance.HitPoints -= (short)damage;
+            _combatExperience.DamageDealt(attacker, mobInstance, damage);
 
             if (mobInstance.HitPoints <= 0)
             {
@@ -148,6 +155,7 @@ public sealed class KickSkillExecutor : ISkillExecutor
                     }
                 }
 
+                killReward = _combatExperience.Killed(attacker, mobInstance);
                 _worldState.CreateMobCorpse(mobInstance, attacker.RoomId);
                 _worldState.RemoveMob(mobInstance.InstanceId, attacker.RoomId);
             }
@@ -163,6 +171,12 @@ public sealed class KickSkillExecutor : ISkillExecutor
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
             messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead! R.I.P.", victim));
+        }
+
+        // Kill XP messages come after the death messages, as in legacy
+        foreach (var line in killReward?.Messages ?? Array.Empty<string>())
+        {
+            messages.Add(new SkillMessage(SkillMessageTarget.Actor, line));
         }
 
         // Improve skill on successful hit

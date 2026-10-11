@@ -62,11 +62,16 @@ internal sealed class FleeCommandHandler : ICommandHandler
         }
 
         // Apply the flee result (moves player, stops combat, applies XP loss)
-        _fleeHandler.ApplyFleeResult(
+        var lossMessages = _fleeHandler.ApplyFleeResult(
             player,
             result,
             () => _connectionRegistry.GetConnections().Select(c => c.Player),
             context.Id);
+
+        foreach (var line in lossMessages)
+        {
+            await context.Session.SendLineAsync(line, cancellationToken);
+        }
 
         // Send success message (legacy: act.offensive.c:454)
         await context.Session.SendLineAsync("You flee head over heels.", cancellationToken);

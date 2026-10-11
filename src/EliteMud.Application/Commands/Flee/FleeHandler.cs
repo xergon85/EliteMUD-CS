@@ -1,4 +1,5 @@
 using System.Linq;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -13,11 +14,13 @@ public sealed class FleeHandler
 {
     private readonly IWorldState _worldState;
     private readonly CombatCalculator _combatCalculator;
+    private readonly PlayerProgression _progression;
 
-    public FleeHandler(IWorldState worldState, CombatCalculator combatCalculator)
+    public FleeHandler(IWorldState worldState, CombatCalculator combatCalculator, PlayerProgression progression)
     {
         _worldState = worldState;
         _combatCalculator = combatCalculator;
+        _progression = progression;
     }
 
     /// <summary>
@@ -77,8 +80,10 @@ public sealed class FleeHandler
     /// <summary>
     /// Applies the flee result to the player and world state.
     /// Handles movement, combat cleanup, and experience loss.
+    /// Returns the experience messages for the player ("You lose N experience points."), to send before the
+    /// flee message as legacy does.
     /// </summary>
-    public void ApplyFleeResult(
+    public IReadOnlyList<string> ApplyFleeResult(
         PlayerState player,
         FleeResult result,
         Func<IEnumerable<PlayerState>> getOtherPlayers,
@@ -86,7 +91,7 @@ public sealed class FleeHandler
     {
         if (!result.Success)
         {
-            return;
+            return Array.Empty<string>();
         }
 
         // Move to new room
@@ -95,12 +100,10 @@ public sealed class FleeHandler
         // Stop fighting
         _combatCalculator.StopFighting(player);
 
-        // Apply experience loss
-        if (result.ExperienceLoss > 0)
-        {
-            player.Experience -= result.ExperienceLoss;
-            if (player.Experience < 0) player.Experience = 0;
-        }
+        // Experience loss through the normal rules: never below 0, immortals exempt (legacy gain_exp)
+        var loss = result.ExperienceLoss > 0
+            ? _progression.GainExperience(player, -result.ExperienceLoss).Messages
+            : Array.Empty<string>();
 
         // Stop all mobs/players that were fighting us in the old room
         var mobsInOldRoom = _worldState.GetMobsInRoom(result.OldRoomId);
@@ -119,6 +122,8 @@ public sealed class FleeHandler
         {
             _combatCalculator.StopFighting(otherPlayer);
         }
+
+        return loss;
     }
 
     private int CalculateExperienceLoss(
@@ -150,9 +155,8 @@ public sealed class FleeHandler
             var mob = getMobsInRoom().FirstOrDefault(m => m.InstanceId == mobInstanceId);
             if (mob != null)
             {
-                int mobMaxHp = Math.Max(mob.HitPoints, mob.Definition.Level * 10);
-                int damageDone = mobMaxHp - mob.HitPoints;
-                return damageDone * mob.Definition.Level;
+                int damageDone = mob.MaxHitPoints - mob.HitPoints;
+                return damageDone * mob.Level;
             }
         }
 
