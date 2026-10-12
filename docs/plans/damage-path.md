@@ -103,11 +103,16 @@ Each step is its own commit, ideally its own PR if it gets large.
    and "Your soul darkens from the murder." Rounding of the shift is card #47.
 3. **Legacy kill lines only:** room "$n is dead!  R.I.P.", victim "You are dead!  Sorry...". Drop "You have slain X!".
 
-Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob never rolls to hit).
+Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob never rolls to hit), #49.
 
 ## Progress
 
-- PR 1: steps 0–2 (characterization tests, `CombatDamage` with mob death, kick/bash/backstab).
+- PR 1: steps 0–2 done. `CombatDamage` (Application/Combat) handles fighting state, damage XP and mob death;
+  kick, bash and backstab use it. Characterization tests: `tests/EliteMud.Tests/Combat/DamagePathTests.cs`
+  (the player-victim and `kill` tests pin today's bugs and change in steps 4 and 5).
+- Next: step 3 (damage spells). `cast` sends messages directly, so it needs to render `DamageOutcome.Messages`
+  (act templates with `$N`) the way `SkillCommandHandler` does.
+- More side findings: #49 (bash doesn't knock a player down: `UpdatePosition` stands them up).
 
 ## Other open cards (for orientation)
 
