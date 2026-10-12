@@ -110,9 +110,14 @@ Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob ne
 - PR 1: steps 0–2 done. `CombatDamage` (Application/Combat) handles fighting state, damage XP and mob death;
   kick, bash and backstab use it. Characterization tests: `tests/EliteMud.Tests/Combat/DamagePathTests.cs`
   (the player-victim and `kill` tests pin today's bugs and change in steps 4 and 5).
-- Next: step 3 (damage spells). `cast` sends messages directly, so it needs to render `DamageOutcome.Messages`
-  (act templates with `$N`) the way `SkillCommandHandler` does.
-- More side findings: #49 (bash doesn't knock a player down: `UpdatePosition` stands them up).
+- PR 2: step 3 done. `cast` uses `CombatDamage`; its messages go through `SkillMessageSender` (Server), extracted
+  from `SkillCommandHandler` so the tick can use it too. `CombatDamage` no longer applies dodge/parry or the
+  position multiplier (decision 1; melee keeps them through `ApplyDamage`). A dying player gets "You are dead!
+  Sorry...". Handler tests can use `TestConnection` (loopback telnet session): `CastDamageTests`.
+- Next: step 4 (player death in `CombatDamage`, from `HandlePlayerDeath*` in the tick: corpse, `Died` penalty,
+  respawn at 3001 with effective max hp/mana/move from `IWorldState`).
+- More side findings: #49 (bash doesn't knock a player down: `UpdatePosition` stands them up), #51 (player
+  victims never see a skill's victim message).
 
 ## Other open cards (for orientation)
 
