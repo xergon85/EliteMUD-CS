@@ -35,7 +35,10 @@ public sealed class CombatDamage
         int? victimConnectionId,
         int damage)
     {
-        StartFighting(attacker, attackerConnectionId, victim, victimConnectionId);
+        if (!ReferenceEquals(attacker, victim))
+        {
+            StartFighting(attacker, attackerConnectionId, victim, victimConnectionId);
+        }
 
         return victimConnectionId != null
             ? DamagePlayer(attacker, (PlayerState)victim, damage)
@@ -66,28 +69,19 @@ public sealed class CombatDamage
     }
 
     /// <summary>
-    /// A player victim. Dodge/parry and the position multiplier still apply here until melee has its own hit
-    /// (#42 step 6); death is still only noticed, not handled (#42 step 4, #40).
+    /// A player victim. No dodge/parry here: legacy only has them in the melee hit, before damage().
+    /// Death is still only noticed, not handled (#42 step 4, #40).
     /// </summary>
     private DamageOutcome DamagePlayer(PlayerState attacker, PlayerState victim, int damage)
     {
+        damage = Math.Clamp(damage, 0, MaxDamage);
+        victim.HitPoints -= (short)damage;
+        _combatExperience.DamageDealt(attacker, victim, damage); // none between players; shared path
+        _combatCalculator.UpdatePosition(victim);
+
+        // A miss never kills, as for mobs
         var messages = new List<SkillMessage>();
-        if (damage <= 0)
-        {
-            // A miss: nothing to dodge, but the victim's position is still updated (legacy update_pos)
-            _combatCalculator.UpdatePosition(victim);
-            return new DamageOutcome(0, false, messages);
-        }
-
-        var result = _combatCalculator.ApplyDamage(victim, damage);
-        _combatExperience.DamageDealt(attacker, victim, result.Damage); // none between players; shared path
-
-        if (result.Dodged && !string.IsNullOrEmpty(result.Message))
-        {
-            messages.Add(new SkillMessage(SkillMessageTarget.Victim, result.Message));
-        }
-
-        var died = victim.Position == Position.Dead;
+        var died = damage > 0 && victim.Position == Position.Dead;
         if (died)
         {
             _combatCalculator.StopFighting(attacker);
@@ -95,7 +89,7 @@ public sealed class CombatDamage
             AddDeathMessages(messages, victim);
         }
 
-        return new DamageOutcome(result.Damage, died, messages);
+        return new DamageOutcome(damage, died, messages);
     }
 
     private DamageOutcome DamageMob(PlayerState attacker, MobInstance mob, int damage)
@@ -138,5 +132,9 @@ public sealed class CombatDamage
     {
         messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
         messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead!  R.I.P.", victim)); // fight.c:967
+        if (victim is PlayerState)
+        {
+            messages.Add(new SkillMessage(SkillMessageTarget.Victim, "You are dead!  Sorry...", victim)); // fight.c:968
+        }
     }
 }

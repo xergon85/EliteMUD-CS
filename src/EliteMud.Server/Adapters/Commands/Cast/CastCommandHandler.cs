@@ -1,5 +1,5 @@
+using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.Progression;
 using EliteMud.Application.Spells;
 using EliteMud.Application.World;
 using EliteMud.Game;
@@ -24,7 +24,8 @@ internal sealed class CastCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly ConnectionRegistry _connectionRegistry;
     private readonly ActMessageService _actService;
-    private readonly CombatExperience _combatExperience;
+    private readonly CombatDamage _combatDamage;
+    private readonly SkillMessageSender _messageSender;
 
     public CastCommandHandler(
         SpellRegistry spellRegistry,
@@ -32,9 +33,11 @@ internal sealed class CastCommandHandler : ICommandHandler
         IWorldState worldState,
         ConnectionRegistry connectionRegistry,
         ActMessageService actService,
-        CombatExperience combatExperience)
+        CombatDamage combatDamage,
+        SkillMessageSender messageSender)
     {
-        _combatExperience = combatExperience;
+        _combatDamage = combatDamage;
+        _messageSender = messageSender;
         _spellRegistry = spellRegistry;
         _metadataRegistry = metadataRegistry;
         _worldState = worldState;
@@ -357,69 +360,10 @@ internal sealed class CastCommandHandler : ICommandHandler
         int? targetConnectionId,
         CancellationToken cancellationToken)
     {
-        // Start combat if not already fighting
-        if (caster.FightingConnectionId == null && target != caster)
-        {
-            if (targetConnectionId != null)
-            {
-                // PvP
-                var targetPlayer = (PlayerState)target;
-                caster.FightingConnectionId = targetConnectionId.Value;
-                targetPlayer.FightingConnectionId = (int?)context.Id;
-            }
-            else
-            {
-                // PvE
-                var mobInstance = (MobInstance)target;
-                caster.FightingConnectionId = -mobInstance.InstanceId;
-                mobInstance.FightingConnectionId = (int?)context.Id;
-            }
-        }
+        var outcome = _combatDamage.Apply(caster, context.Id, target, targetConnectionId, damage);
 
-        // Apply damage
-        var victimDied = false;
-        ProgressionResult? killReward = null;
-
-        if (targetConnectionId != null)
-        {
-            // Player victim
-            var targetPlayer = (PlayerState)target;
-            targetPlayer.HitPoints -= (short)damage;
-            _combatExperience.DamageDealt(caster, targetPlayer, damage); // none between players; shared path
-
-            if (targetPlayer.HitPoints <= 0)
-            {
-                targetPlayer.Position = Position.Dead;
-                targetPlayer.HitPoints = 0;
-                victimDied = true;
-                caster.FightingConnectionId = null;
-                targetPlayer.FightingConnectionId = null;
-            }
-        }
-        else
-        {
-            // Mob victim
-            var mobInstance = (MobInstance)target;
-            mobInstance.HitPoints -= (short)damage;
-            _combatExperience.DamageDealt(caster, mobInstance, damage);
-
-            if (mobInstance.HitPoints <= 0)
-            {
-                mobInstance.Position = Position.Dead;
-                victimDied = true;
-                caster.FightingConnectionId = null;
-                mobInstance.FightingConnectionId = null;
-
-                killReward = _combatExperience.Killed(caster, mobInstance);
-
-                _worldState.CreateMobCorpse(mobInstance, caster.RoomId);
-                _worldState.RemoveMob(mobInstance.InstanceId, caster.RoomId);
-            }
-        }
-
-        // Send messages
         await context.Session.SendLineAsync(
-            $"Your {metadata.Name} hits {target.Name}! [{damage}]",
+            $"Your {metadata.Name} hits {target.Name}! [{outcome.Damage}]",
             cancellationToken);
 
         if (targetConnectionId != null)
@@ -428,7 +372,7 @@ internal sealed class CastCommandHandler : ICommandHandler
             if (targetConnection != null)
             {
                 await targetConnection.Session.SendLineAsync(
-                    $"{caster.Name} casts {metadata.Name} at you! [{damage}]",
+                    $"{caster.Name} casts {metadata.Name} at you! [{outcome.Damage}]",
                     cancellationToken);
             }
         }
@@ -436,20 +380,11 @@ internal sealed class CastCommandHandler : ICommandHandler
         await BroadcastToRoomExceptAsync(
             context,
             targetConnectionId,
-            $"$n casts {metadata.Name} at {target.Name}! [{damage}]",
+            $"$n casts {metadata.Name} at {target.Name}! [{outcome.Damage}]",
             cancellationToken);
 
-        if (victimDied)
-        {
-            await context.Session.SendLineAsync($"{target.Name} is DEAD!!", cancellationToken);
-            await BroadcastToRoomAsync(context, $"{target.Name} is dead! R.I.P.", cancellationToken);
-        }
-
-        // Kill XP messages come after the death messages, as in legacy
-        foreach (var line in killReward?.Messages ?? Array.Empty<string>())
-        {
-            await context.Session.SendLineAsync(line, cancellationToken);
-        }
+        // Death and kill XP follow the hit, as in legacy
+        await _messageSender.SendAsync(outcome.Messages, context, cancellationToken);
     }
 
     /// <summary>

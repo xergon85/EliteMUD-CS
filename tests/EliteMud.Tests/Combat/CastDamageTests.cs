@@ -1,5 +1,7 @@
+using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Progression;
+using EliteMud.Application.Skills;
 using EliteMud.Application.Spells;
 using EliteMud.Application.World;
 using EliteMud.Game;
@@ -34,9 +36,10 @@ public sealed class CastDamageTests : IDisposable
         var rules = RulesContentLoader.Load(Content).Rules;
         var formulas = new FormulaEvaluator(new Random(1));
         var spellMetadata = new SpellMetadataRegistry(ContentLoader.LoadSpells(Content));
+        var skillMetadata = new SkillMetadataRegistry(ContentLoader.LoadSkills(Content));
         var experience = new ExperienceService(rules, formulas, new Random(1));
 
-        // Alignment -1000 would move a neutral killer 62 towards good; 400 XP gives a 100 kill share
+        // Alignment -1000 moves a neutral killer 62 towards good; 400 XP gives a 100 kill share
         var mobDefinition = new MobDefinition(
             100, "rat", "a rat", "A rat is here.", "Desc", 5, "Animal", "None",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
@@ -80,7 +83,11 @@ public sealed class CastDamageTests : IDisposable
             _world,
             connections,
             new ActMessageService(),
-            new CombatExperience(new PlayerProgression(experience, rules), experience));
+            new CombatDamage(
+                new CombatCalculator(new DodgeSkill(skillMetadata, formulas), new ParrySkill(skillMetadata, formulas)),
+                new CombatExperience(new PlayerProgression(experience, rules), experience),
+                _world),
+            new SkillMessageSender(new ActMessageService(), connections));
     }
 
     public void Dispose()
@@ -94,7 +101,7 @@ public sealed class CastDamageTests : IDisposable
     private PlayerState Victim => _victim.Context.Player;
 
     [Fact]
-    public async Task KillingAMob_EndsTheFight_LeavesACorpse_GivesKillExperience()
+    public async Task KillingAMob_EndsTheFight_MovesAlignment_LeavesACorpse_GivesKillExperience()
     {
         await Cast("'magic missile' rat");
 
@@ -102,12 +109,12 @@ public sealed class CastDamageTests : IDisposable
         Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
         Assert.Null(Caster.FightingConnectionId);
-        Assert.Equal(0, Caster.Alignment); // spells don't move alignment today
+        Assert.Equal(62, Caster.Alignment);
         Assert.Equal(
-            new[] { "Your magic missile hits a rat! [6]", "a rat is DEAD!!", "You receive 100 experience points." },
+            new[] { "Your magic missile hits a rat! [6]", "A rat is DEAD!!", "You receive 100 experience points." },
             CasterLines());
         Assert.Equal(
-            new[] { "Caster casts magic missile at a rat! [6]", "A rat is dead! R.I.P." },
+            new[] { "Caster casts magic missile at a rat! [6]", "A rat is dead!  R.I.P." },
             _observer.Lines());
     }
 
@@ -131,6 +138,7 @@ public sealed class CastDamageTests : IDisposable
     [Fact]
     public async Task KillingAPlayer_LeavesThemDeadInTheRoom()
     {
+        Caster.Level = 30; // 16 damage: 3 hp - 16 is below -10, dead rather than incapacitated
         Victim.HitPoints = 3;
 
         await Cast("'magic missile' victim");
@@ -139,8 +147,11 @@ public sealed class CastDamageTests : IDisposable
         Assert.Equal(Room, Victim.RoomId);
         Assert.Equal(5000, Victim.Experience);
         Assert.DoesNotContain(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
-        Assert.Equal(new[] { "Your magic missile hits Victim! [6]", "Victim is DEAD!!" }, CasterLines());
-        Assert.Equal(new[] { "Caster casts magic missile at you! [6]", "Victim is dead! R.I.P." }, _victim.Lines());
+        Assert.Equal(new[] { "Your magic missile hits Victim! [16]", "Victim is DEAD!!" }, CasterLines());
+        Assert.Equal(new[] { "Caster casts magic missile at you! [16]", "You are dead!  Sorry..." }, _victim.Lines());
+        Assert.Equal(
+            new[] { "Caster casts magic missile at Victim! [16]", "Victim is dead!  R.I.P." },
+            _observer.Lines());
     }
 
     private async Task Cast(string argument) =>
