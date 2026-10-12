@@ -74,9 +74,8 @@ public class DamagePathTests
 
         fixture.AssertMobKilled();
         var lines = Lines(result);
-        Assert.Equal("A:#GYou feel more virtuous.#N (+62)", lines[0]);
-        Assert.StartsWith("A:you backstab $N", lines[1], StringComparison.OrdinalIgnoreCase);
-        Assert.Equal(new[] { "A:$N is DEAD!!", "O:$N is dead! R.I.P.", "A:You receive 100 experience points." },
+        Assert.StartsWith("A:you backstab $N! [", lines[0]);
+        Assert.Equal(new[] { "A:$N is DEAD!!", "O:$N is dead!  R.I.P.", "A:You receive 100 experience points." },
             lines[^3..]);
     }
 
@@ -208,7 +207,8 @@ public class DamagePathTests
 
         public KickSkillExecutor Kick() => new(_skills, new CombatDamage(_calculator, _experience, World));
         public BashSkillExecutor Bash() => new(_skills, new CombatDamage(_calculator, _experience, World));
-        public BackstabSkillExecutor Backstab() => new(_skills, _calculator, World, _experience);
+        public BackstabSkillExecutor Backstab() =>
+            new(_skills, _calculator, World, new CombatDamage(_calculator, _experience, World));
 
         public MeleeAttackExecutor Kill() =>
             new(_calculator, World, new MobAiService(new MockScriptEngine(), new PathfindingService()), _experience);
