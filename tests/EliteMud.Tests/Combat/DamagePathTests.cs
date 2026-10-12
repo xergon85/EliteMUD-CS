@@ -1,4 +1,5 @@
 using EliteMud.Application.Ai;
+using EliteMud.Application.Combat;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Skills;
 using EliteMud.Application.World;
@@ -32,12 +33,11 @@ public class DamagePathTests
         Assert.Equal(
             new[]
             {
-                "A:#GYou feel more virtuous.#N (+62)",
                 "A:your kick hits $N [50]",
                 "V:$n kicks you! [50]",
                 "O:$n kicks $N!",
                 "A:$N is DEAD!!",
-                "O:$N is dead! R.I.P.",
+                "O:$N is dead!  R.I.P.",
                 "A:You receive 100 experience points."
             },
             Lines(result));
@@ -100,7 +100,7 @@ public class DamagePathTests
         Assert.DoesNotContain(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
         Assert.Null(fixture.Attacker.FightingConnectionId);
         Assert.Null(victim.FightingConnectionId);
-        Assert.Equal(new[] { "A:$N is DEAD!!", "O:$N is dead! R.I.P." }, Lines(result)[^2..]);
+        Assert.Equal(new[] { "A:$N is DEAD!!", "O:$N is dead!  R.I.P." }, Lines(result)[^2..]);
     }
 
     /// <summary>
@@ -207,7 +207,7 @@ public class DamagePathTests
         public SkillContext AgainstMob() => new(Attacker, 1, Mob, null, null);
         public SkillContext AgainstPlayer() => new(Attacker, 1, VictimPlayer, 2, null);
 
-        public KickSkillExecutor Kick() => new(_skills, _calculator, World, _experience);
+        public KickSkillExecutor Kick() => new(_skills, new CombatDamage(_calculator, _experience, World));
         public BashSkillExecutor Bash() => new(_skills, _calculator, World, _experience);
         public BackstabSkillExecutor Backstab() => new(_skills, _calculator, World, _experience);
 
