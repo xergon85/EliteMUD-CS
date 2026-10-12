@@ -1,5 +1,6 @@
 using System.Net;
 using EliteMud.Application.Ai;
+using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Session;
@@ -134,6 +135,7 @@ internal static class ServerBootstrap
             .AddSingleton<ExperienceService>()
             .AddSingleton<PlayerProgression>()
             .AddSingleton<CombatExperience>()
+            .AddSingleton<CombatDamage>()
 
             // Database
             .AddDbContext<EliteMudDbContext>(options =>

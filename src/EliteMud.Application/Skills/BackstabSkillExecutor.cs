@@ -1,5 +1,5 @@
+using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -27,7 +27,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
     private readonly BackstabSkill _backstabSkill;
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
-    private readonly CombatExperience _combatExperience;
+    private readonly CombatDamage _combatDamage;
 
     public SkillType SkillType => SkillType.Backstab;
     public TargetingMode Targeting => TargetingMode.RequiredInRoom; // Must specify target
@@ -36,9 +36,9 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         SkillRegistry skillRegistry,
         CombatCalculator combatCalculator,
         IWorldState worldState,
-        CombatExperience combatExperience)
+        CombatDamage combatDamage)
     {
-        _combatExperience = combatExperience;
+        _combatDamage = combatDamage;
         _backstabSkill = (BackstabSkill)skillRegistry.GetActiveSkill(SkillType.Backstab);
         _combatCalculator = combatCalculator;
         _worldState = worldState;
@@ -46,7 +46,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
 
     /// <summary>
     /// Execute backstab against a target (player or mob).
-    /// Handles combat initiation, damage calculation, death, and skill improvement.
+    /// Rolls hit and damage; the shared damage path handles combat, death and experience.
     /// </summary>
     public SkillResult Execute(SkillContext context)
     {
@@ -100,25 +100,8 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
 
         if (!hit)
         {
-            // Miss - deal 0 damage but still start combat
-            // Start combat if not already fighting
-            if (attacker.FightingConnectionId == null)
-            {
-                if (context.VictimConnectionId != null)
-                {
-                    // PvP - both players fight each other
-                    var victimPlayer = (PlayerState)victim;
-                    _combatCalculator.SetFighting(attacker, context.VictimConnectionId.Value);
-                    _combatCalculator.SetFighting(victimPlayer, context.ActorConnectionId);
-                }
-                else
-                {
-                    // PvE - player fights mob
-                    var mobInstance = (MobInstance)victim;
-                    _combatCalculator.SetFighting(attacker, -mobInstance.InstanceId);
-                    mobInstance.FightingConnectionId = context.ActorConnectionId;
-                }
-            }
+            // Legacy: damage(ch, victim, 0, SKILL_BACKSTAB) - a miss still starts the fight
+            _combatDamage.Apply(attacker, context.ActorConnectionId, victim, context.VictimConnectionId, 0);
 
             // Apply wait state even on miss
             attacker.WaitState = CombatConstants.WaitStates.Backstab;
@@ -156,111 +139,21 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         }
         
         int multiplier = _backstabSkill.CalculateDamageMultiplier(attacker);
-        int damage = baseDamage * multiplier;
 
-        // Apply damage
-        var victimDied = false;
-        var messages = new List<SkillMessage>();
-        ProgressionResult? killReward = null;
+        var outcome = _combatDamage.Apply(
+            attacker,
+            context.ActorConnectionId,
+            victim,
+            context.VictimConnectionId,
+            baseDamage * multiplier);
 
-        // Start combat if not already fighting
-        if (attacker.FightingConnectionId == null)
+        var messages = new List<SkillMessage>
         {
-            if (context.VictimConnectionId != null)
-            {
-                // PvP - both players fight each other
-                var victimPlayer = (PlayerState)victim;
-                _combatCalculator.SetFighting(attacker, context.VictimConnectionId.Value);
-                _combatCalculator.SetFighting(victimPlayer, context.ActorConnectionId);
-            }
-            else
-            {
-                // PvE - player fights mob
-                var mobInstance = (MobInstance)victim;
-                _combatCalculator.SetFighting(attacker, -mobInstance.InstanceId);
-                mobInstance.FightingConnectionId = context.ActorConnectionId;
-            }
-        }
-
-        if (context.VictimConnectionId != null)
-        {
-            // Player victim - use CombatCalculator for dodge support
-            var victimPlayer = (PlayerState)victim;
-            var damageResult = _combatCalculator.ApplyDamage(victimPlayer, damage);
-
-            damage = damageResult.Damage;
-            _combatExperience.DamageDealt(attacker, victimPlayer, damage); // none between players; shared path
-
-            // Show dodge message if dodged (though unlikely with backstab multiplier)
-            if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
-            {
-                messages.Add(new SkillMessage(SkillMessageTarget.Victim, damageResult.Message));
-            }
-
-            victimDied = victimPlayer.Position == Position.Dead;
-
-            // Stop fighting if victim died
-            if (victimDied)
-            {
-                _combatCalculator.StopFighting(attacker);
-                _combatCalculator.StopFighting(victimPlayer);
-            }
-        }
-        else
-        {
-            // Mob victim - direct damage application
-            var mobInstance = (MobInstance)victim;
-            mobInstance.HitPoints -= (short)damage;
-            _combatExperience.DamageDealt(attacker, mobInstance, damage);
-
-            if (mobInstance.HitPoints <= 0)
-            {
-                mobInstance.Position = Position.Dead;
-                victimDied = true;
-
-                // Stop fighting and clean up mob
-                _combatCalculator.StopFighting(attacker);
-                mobInstance.FightingConnectionId = null;
-
-                // Calculate and apply alignment shift
-                int alignmentShift = _combatCalculator.CalculateAlignmentShift(attacker, mobInstance, isPvP: false);
-                if (alignmentShift != 0)
-                {
-                    _combatCalculator.ApplyAlignmentShift(attacker, alignmentShift);
-                    
-                    // Add alignment shift message if significant
-                    if (Math.Abs(alignmentShift) >= 50)
-                    {
-                        string alignmentMsg = alignmentShift > 0 
-                            ? $"#GYou feel more virtuous.#N ({alignmentShift:+0})"
-                            : $"#RYou feel more sinister.#N ({alignmentShift})";
-                        messages.Add(new SkillMessage(SkillMessageTarget.Actor, alignmentMsg));
-                    }
-                }
-
-                killReward = _combatExperience.Killed(attacker, mobInstance);
-                _worldState.CreateMobCorpse(mobInstance, attacker.RoomId);
-                _worldState.RemoveMob(mobInstance.InstanceId, attacker.RoomId);
-            }
-        }
-
-        // Add hit messages
-        messages.Add(new SkillMessage(SkillMessageTarget.Actor, $"you backstab $N! [{damage}]", victim));
-        messages.Add(new SkillMessage(SkillMessageTarget.Victim, $"$n backstabs you! [{damage}]"));
-        messages.Add(new SkillMessage(SkillMessageTarget.Others, "$n backstabs $N!", victim));
-
-        // Add death messages if victim died
-        if (victimDied)
-        {
-            messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
-            messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead! R.I.P.", victim));
-        }
-
-        // Kill XP messages come after the death messages, as in legacy
-        foreach (var line in killReward?.Messages ?? Array.Empty<string>())
-        {
-            messages.Add(new SkillMessage(SkillMessageTarget.Actor, line));
-        }
+            new(SkillMessageTarget.Actor, $"you backstab $N! [{outcome.Damage}]", victim),
+            new(SkillMessageTarget.Victim, $"$n backstabs you! [{outcome.Damage}]"),
+            new(SkillMessageTarget.Others, "$n backstabs $N!", victim)
+        };
+        messages.AddRange(outcome.Messages);
 
         // Improve skill on successful hit
         // Legacy: improve_skill(ch, SKILL_BACKSTAB) only on successful hit

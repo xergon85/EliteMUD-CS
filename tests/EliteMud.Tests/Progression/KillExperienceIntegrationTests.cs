@@ -1,3 +1,4 @@
+using EliteMud.Application.Combat;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Skills;
 using EliteMud.Application.World;
@@ -48,11 +49,10 @@ public class KillExperienceIntegrationTests
             new List<ZoneDefinition>());
 
         var experience = new ExperienceService(rules, formulas, new Random(1));
+        var combatExperience = new CombatExperience(new PlayerProgression(experience, rules), experience);
         var executor = new KickSkillExecutor(
             new SkillRegistry(metadata, formulas),
-            calculator,
-            world,
-            new CombatExperience(new PlayerProgression(experience, rules), experience));
+            new CombatDamage(calculator, combatExperience, world));
 
         var player = new PlayerState(1, "Tester", 3001, level: 1, "warrior", "human", sex: 1)
         {
