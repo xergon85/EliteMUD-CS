@@ -119,6 +119,22 @@ public class DamagePathTests
         Assert.DoesNotContain(Lines(result), line => line.Contains("DEAD"));
     }
 
+    [Fact]
+    public void AMiss_DoesNotKillAMobAlreadyAtZeroHitPoints()
+    {
+        var fixture = new Fixture();
+        fixture.Mob.HitPoints = 0; // e.g. left behind by the first hit of kill
+        var experience = fixture.Attacker.Experience;
+
+        var outcome = fixture.Damage().Apply(fixture.Attacker, 1, fixture.Mob, null, 0);
+
+        Assert.False(outcome.VictimDied);
+        Assert.Empty(outcome.Messages);
+        Assert.Contains(fixture.Mob, fixture.World.GetMobsInRoom(Room));
+        Assert.Equal(experience, fixture.Attacker.Experience);
+        Assert.Equal(0, fixture.Attacker.Alignment);
+    }
+
     /// <summary>Messages as "A:"/"V:"/"O:"/"R:" + template, without skill-improvement lines (random).</summary>
     private static List<string> Lines(SkillResult result) =>
         result.Messages
@@ -204,6 +220,8 @@ public class DamagePathTests
 
         public SkillContext AgainstMob() => new(Attacker, 1, Mob, null, null);
         public SkillContext AgainstPlayer() => new(Attacker, 1, VictimPlayer, 2, null);
+
+        public CombatDamage Damage() => new(_calculator, _experience, World);
 
         public KickSkillExecutor Kick() => new(_skills, new CombatDamage(_calculator, _experience, World));
         public BashSkillExecutor Bash() => new(_skills, new CombatDamage(_calculator, _experience, World));

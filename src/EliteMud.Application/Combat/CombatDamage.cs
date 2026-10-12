@@ -104,8 +104,9 @@ public sealed class CombatDamage
         mob.HitPoints -= (short)damage;
         _combatExperience.DamageDealt(attacker, mob, damage);
 
+        // A miss never kills, even a mob already at 0 hp or below
         var messages = new List<SkillMessage>();
-        if (mob.HitPoints > 0)
+        if (damage == 0 || mob.HitPoints > 0)
         {
             return new DamageOutcome(damage, false, messages);
         }
