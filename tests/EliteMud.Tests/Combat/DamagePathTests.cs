@@ -54,12 +54,11 @@ public class DamagePathTests
         Assert.Equal(
             new[]
             {
-                "A:#GYou feel more virtuous.#N (+62)",
                 "A:You easily bash $N. [50]",
                 "V:$n easily bashes you! [50]",
                 "O:$n easily bashes $N!",
                 "A:$N is DEAD!!",
-                "O:$N is dead! R.I.P.",
+                "O:$N is dead!  R.I.P.",
                 "A:You receive 100 experience points."
             },
             Lines(result));
@@ -208,7 +207,7 @@ public class DamagePathTests
         public SkillContext AgainstPlayer() => new(Attacker, 1, VictimPlayer, 2, null);
 
         public KickSkillExecutor Kick() => new(_skills, new CombatDamage(_calculator, _experience, World));
-        public BashSkillExecutor Bash() => new(_skills, _calculator, World, _experience);
+        public BashSkillExecutor Bash() => new(_skills, new CombatDamage(_calculator, _experience, World));
         public BackstabSkillExecutor Backstab() => new(_skills, _calculator, World, _experience);
 
         public MeleeAttackExecutor Kill() =>
