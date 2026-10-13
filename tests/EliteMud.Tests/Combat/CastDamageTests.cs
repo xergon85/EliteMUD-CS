@@ -175,6 +175,24 @@ public sealed class CastDamageTests : IDisposable
     }
 
     /// <summary>
+    /// The extra damage against a victim who isn't on their feet is part of the melee hit (fight.c hit()), not
+    /// damage(). Only a victim already fighting can be hit sitting: one who isn't is set fighting (and on their
+    /// feet) before the damage, in legacy set_fighting too.
+    /// </summary>
+    [Fact]
+    public async Task HittingASittingPlayerInAFight_DoesNoExtraDamage()
+    {
+        Victim.FightingConnectionId = 3; // e.g. bashed while fighting the observer
+        Victim.Position = Position.Sitting;
+        Assert.Equal(8, _calculator.CalculateDamageWithPositionMultiplier(6, Position.Sitting)); // melee: 4/3
+
+        await Cast("'magic missile' victim");
+
+        Assert.Equal(94, Victim.HitPoints);
+        Assert.Equal(new[] { "Caster casts magic missile at you! [6]" }, _victim.Lines());
+    }
+
+    /// <summary>
     /// Legacy update_pos (fight.c): below 0 hp a player is stunned, incapacitated or mortally wounded; dead only
     /// below -10. The old cast path made every player at 0 hp or below dead.
     /// </summary>
