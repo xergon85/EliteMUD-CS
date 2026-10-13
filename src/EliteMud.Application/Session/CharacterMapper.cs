@@ -1,7 +1,8 @@
+using System.Text.Json;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Data.Entities;
 using EliteMud.Game;
-using System.Text.Json;
 
 namespace EliteMud.Application.Session;
 
@@ -35,9 +36,7 @@ public static class CharacterMapper
         if (validatedRoomId < 0 || !worldState.World.Rooms.ContainsKey(validatedRoomId))
         {
             // If saved room is invalid (NOWHERE/-1 or doesn't exist), use mortal start room
-            // Legacy: mortal_start_room = 3001 (Temple of Midgaard)
-            const int MortalStartRoom = 3001;
-            validatedRoomId = MortalStartRoom;
+            validatedRoomId = CharacterStart.StartRoom;
         }
 
         // Create PlayerState with mapped values

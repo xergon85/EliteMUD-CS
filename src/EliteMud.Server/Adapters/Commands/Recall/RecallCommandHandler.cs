@@ -1,4 +1,5 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Look;
@@ -13,9 +14,8 @@ internal sealed class RecallCommandHandler : ICommandHandler
     private readonly LookCommandHandler _lookHandler;
     private readonly ConnectionRegistry _connectionRegistry;
     
-    // Legacy: mortal_start_room = 3001 (Temple of Midgaard)
-    // Legacy: max_recall_level = 10 (level 10 and below can recall)
-    private const int RecallRoomId = 3001;
+    // Legacy: recall goes to mortal_start_room; max_recall_level = 10 (level 10 and below can recall)
+    private const int RecallRoomId = CharacterStart.StartRoom;
     private const int MaxRecallLevel = 10;
 
     public RecallCommandHandler(

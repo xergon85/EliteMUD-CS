@@ -38,10 +38,6 @@ internal sealed class GameTickService
     private readonly TimeSpan _regenInterval = TimeSpan.FromSeconds(75); // SECS_PER_MUD_HOUR - apply regeneration (legacy: 75 seconds)
     private readonly TimeSpan _autoSaveInterval = TimeSpan.FromMinutes(5); // Auto-save every 5 minutes
     
-    // Legacy: mortal_start_room = 3001 (Temple of Midgaard)
-    // Players respawn here after death
-    private const int MortalStartRoom = 3001;
-    
     private int _tickCount;
     private DateTime _lastGain = DateTime.UtcNow;
     private DateTime _lastRegen = DateTime.UtcNow;
@@ -684,7 +680,7 @@ internal sealed class GameTickService
         victim.Player.Mana = _worldState.GetTotalEffectiveMaxMana(victim.Player);
         victim.Player.Movement = _worldState.GetTotalEffectiveMaxMovement(victim.Player);
         victim.Player.Position = Position.Standing;
-        victim.Player.RoomId = MortalStartRoom;
+        victim.Player.RoomId = CharacterStart.StartRoom;
         
         await SendProgressionAsync(victim, penalty, cancellationToken);
         await victim.Session.SendLineAsync("You have been resurrected...", cancellationToken);
@@ -728,7 +724,7 @@ internal sealed class GameTickService
         victim.Player.Mana = _worldState.GetTotalEffectiveMaxMana(victim.Player);
         victim.Player.Movement = _worldState.GetTotalEffectiveMaxMovement(victim.Player);
         victim.Player.Position = Position.Standing;
-        victim.Player.RoomId = MortalStartRoom;
+        victim.Player.RoomId = CharacterStart.StartRoom;
         
         await SendProgressionAsync(victim, penalty, cancellationToken);
         await victim.Session.SendLineAsync("You have been resurrected...", cancellationToken);

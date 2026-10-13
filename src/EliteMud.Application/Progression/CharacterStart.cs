@@ -6,6 +6,9 @@ namespace EliteMud.Application.Progression;
 /// </summary>
 public static class CharacterStart
 {
+    /// <summary>Legacy mortal_start_room, the Temple of Midgaard: start, recall, respawn and fallback room.</summary>
+    public const int StartRoom = 3001;
+
     /// <summary>Every stat starts here; stat rolling is deferred (see the levelling plan).</summary>
     public const int Stat = 11;
 
