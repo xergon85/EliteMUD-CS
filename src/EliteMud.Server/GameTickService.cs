@@ -997,17 +997,37 @@ internal sealed class GameTickService
             var player = connection.Player;
             var saved = _saveQueue.QueueSaveAndWaitAsync(connection.CharacterId, player, cancellationToken);
 
-            // Don't block the tick on the database; if the save fails, ask again so the next tick retries
-            _ = saved.ContinueWith(
-                task =>
-                {
-                    if (!task.IsCompletedSuccessfully || !task.Result)
-                    {
-                        Console.WriteLine($"[Save] Requested save of {player.Name} failed; retrying next tick");
-                        player.SaveRequested = true;
-                    }
-                },
-                TaskScheduler.Default);
+            // Don't block the tick on the database (the save worker needs the gate this tick holds)
+            _ = RetryIfFailedAsync(saved, player, _gate);
+        }
+    }
+
+    /// <summary>
+    /// If a requested save fails, ask again so a later tick retries. The flag is part of the player, so it is set
+    /// under the game state gate like any other change (#61).
+    /// </summary>
+    internal static async Task RetryIfFailedAsync(Task<bool> saved, PlayerState player, GameStateGate gate)
+    {
+        bool succeeded;
+        try
+        {
+            succeeded = await saved;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Save] Requested save of {player.Name} threw: {ex.Message}");
+            succeeded = false;
+        }
+
+        if (succeeded)
+        {
+            return;
+        }
+
+        Console.WriteLine($"[Save] Requested save of {player.Name} failed; retrying next tick");
+        using (await gate.EnterAsync(CancellationToken.None))
+        {
+            player.SaveRequested = true;
         }
     }
 
