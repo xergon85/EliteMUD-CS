@@ -119,6 +119,32 @@ public class DamagePathTests
     }
 
     /// <summary>
+    /// Legacy damage() gives kill experience and moves alignment only when ch != victim (fight.c:1034). A player
+    /// who kills themselves still dies (corpse, penalty, respawn), with no reward and no killer's line.
+    /// </summary>
+    [Fact]
+    public void KillingYourself_DiesWithoutAKillReward()
+    {
+        var fixture = new Fixture();
+        var player = fixture.Attacker;
+        player.HitPoints = 5;
+        player.Experience = 100_000;
+
+        var outcome = fixture.Damage().Apply(player, 1, player, 1, 50);
+
+        Assert.True(outcome.VictimDied);
+        Assert.Equal(Temple, player.RoomId);
+        Assert.Contains(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+        Assert.True(player.Experience < 100_000); // the penalty, and no kill share
+        Assert.Equal(0, player.Alignment);
+        var lines = outcome.Messages.Select(message => $"{message.Target.ToString()[0]}:{message.Template}").ToList();
+        Assert.Equal("O:$N is dead!  R.I.P.", lines[0]);
+        Assert.Equal("V:You are dead!  Sorry...", lines[1]);
+        Assert.StartsWith("V:You lose ", lines[2]);
+        Assert.Equal("V:You have been resurrected...", lines[^1]);
+    }
+
+    /// <summary>
     /// Today's bug (#42): the first hit of kill has no death handling, so a mob it kills stays in the room at
     /// ≤0 hp. Changes when kill joins the shared path.
     /// </summary>

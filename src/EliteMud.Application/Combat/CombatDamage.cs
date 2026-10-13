@@ -121,16 +121,23 @@ public sealed class CombatDamage
 
     /// <summary>
     /// The killer's side of a death (legacy damage() at POS_DEAD): alignment (silent, change_alignment()), kill
-    /// experience from the victim's experience before any death penalty, and the death messages.
+    /// experience from the victim's experience before any death penalty, and the death messages. Killing yourself
+    /// earns nothing: legacy only rewards when ch != victim (fight.c:1034).
     /// </summary>
     private void Kill(PlayerState killer, ICombatant victim, List<SkillMessage> messages)
     {
-        var alignmentShift = _combatCalculator.CalculateAlignmentShift(killer, victim, isPvP: victim is PlayerState);
-        _combatCalculator.ApplyAlignmentShift(killer, alignmentShift);
-        var killReward = _combatExperience.Killed(killer, victim);
-        killer.SaveRequested = true; // legacy PLR_SAVECHR (fight.c:1047)
+        var selfInflicted = ReferenceEquals(killer, victim);
+        var killReward = Array.Empty<string>() as IReadOnlyList<string>;
+        if (!selfInflicted)
+        {
+            var alignmentShift = _combatCalculator.CalculateAlignmentShift(killer, victim, isPvP: victim is PlayerState);
+            _combatCalculator.ApplyAlignmentShift(killer, alignmentShift);
+            killReward = _combatExperience.Killed(killer, victim).Messages;
+            killer.SaveRequested = true; // legacy PLR_SAVECHR (fight.c:1047)
 
-        messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
+            messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
+        }
+
         messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead!  R.I.P.", victim)); // fight.c:967
         if (victim is PlayerState)
         {
@@ -138,7 +145,7 @@ public sealed class CombatDamage
         }
 
         // Kill XP messages come after the death messages, as in legacy
-        foreach (var line in killReward.Messages)
+        foreach (var line in killReward)
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, line));
         }
