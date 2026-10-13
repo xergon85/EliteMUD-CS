@@ -30,7 +30,7 @@ internal sealed partial class TestConnection : IDisposable
 
     public ConnectionContext Context { get; }
 
-    /// <summary>Everything received since the last call, one entry per line.</summary>
+    /// <summary>Everything received since the last call, one entry per line, empty lines included.</summary>
     public IReadOnlyList<string> Lines()
     {
         var stream = _client.GetStream();
@@ -44,7 +44,9 @@ internal sealed partial class TestConnection : IDisposable
 
         var text = Ansi().Replace(_received.ToString(), string.Empty);
         _received.Clear();
-        return text.Split("\r\n", StringSplitOptions.RemoveEmptyEntries);
+        // Keep empty lines (a stray blank line is a bug); only the final line ending ends nothing
+        var lines = text.Split("\r\n");
+        return lines[^1].Length == 0 ? lines[..^1] : lines;
     }
 
     public void Dispose()

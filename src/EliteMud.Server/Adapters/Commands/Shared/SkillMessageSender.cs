@@ -5,8 +5,8 @@ using EliteMud.Game;
 namespace EliteMud.Server.Adapters.Commands.Shared;
 
 /// <summary>
-/// Sends <see cref="SkillMessage"/>s (act templates) to the actor, the victim, or the others in the room.
-/// Used for everything an Application-layer combat result reports: skills, spells and the damage path.
+/// Sends <see cref="SkillMessage"/>s, the act messages an Application-layer combat result reports (skills, spells,
+/// the damage path), through the act() helpers in <see cref="ActMessageExtensions"/>.
 /// </summary>
 internal sealed class SkillMessageSender
 {
@@ -29,106 +29,28 @@ internal sealed class SkillMessageSender
     {
         foreach (var message in messages)
         {
-            await SendMessageAsync(message, context, cancellationToken);
+            await SendAsync(message, context, cancellationToken);
         }
     }
 
-    /// <summary>
-    /// Send a single skill message to appropriate target(s).
-    /// </summary>
-    private async Task SendMessageAsync(
-        SkillMessage message,
-        ConnectionContext context,
-        CancellationToken cancellationToken)
-    {
-        var actor = context.Player;
-
-        switch (message.Target)
+    private Task SendAsync(SkillMessage message, ConnectionContext context, CancellationToken cancellationToken) =>
+        message.Target switch
         {
-            case SkillMessageTarget.Actor:
-                await SendToActorAsync(message.Template, actor, message.Victim, context, cancellationToken);
-                break;
+            SkillMessageTarget.Actor => context.ActToCharAsync(
+                _actService, message.Template, message.Victim, cancellationToken: cancellationToken),
 
-            case SkillMessageTarget.Victim:
-                await SendToVictimAsync(message.Template, actor, message.Victim, cancellationToken);
-                break;
+            // Only a player victim has anyone to read it
+            SkillMessageTarget.Victim when message.Victim is PlayerState victim => context.ActToVictAsync(
+                _actService, _connectionRegistry, message.Template, victim, cancellationToken: cancellationToken),
 
-            case SkillMessageTarget.Room:
-                await SendToRoomAsync(message.Template, actor, message.Victim, cancellationToken);
-                break;
+            SkillMessageTarget.Room => context.ActToRoomAsync(
+                _actService, _connectionRegistry, message.Template, message.Victim,
+                cancellationToken: cancellationToken),
 
-            case SkillMessageTarget.Others:
-                await SendToOthersAsync(message.Template, actor, message.Victim, context, cancellationToken);
-                break;
-        }
-    }
+            SkillMessageTarget.Others => context.ActToNotVictAsync(
+                _actService, _connectionRegistry, message.Template, message.Victim,
+                cancellationToken: cancellationToken),
 
-    private async Task SendToActorAsync(
-        string template,
-        PlayerState actor,
-        object? victim,
-        ConnectionContext actorConnection,
-        CancellationToken cancellationToken)
-    {
-        var formatted = _actService.FormatMessage(template, actor, actor, victim);
-        await actorConnection.Session.SendLineAsync(formatted, cancellationToken);
-    }
-
-    private async Task SendToVictimAsync(
-        string template,
-        PlayerState actor,
-        object? victim,
-        CancellationToken cancellationToken)
-    {
-        if (victim is PlayerState victimPlayer)
-        {
-            var victimConnection = _connectionRegistry.GetConnections()
-                .FirstOrDefault(c => c.Player.Id == victimPlayer.Id);
-
-            if (victimConnection != null)
-            {
-                var formatted = _actService.FormatMessage(template, victimPlayer, actor, victimPlayer);
-                await victimConnection.Session.SendLineAsync(formatted, cancellationToken);
-            }
-        }
-    }
-
-    private async Task SendToRoomAsync(
-        string template,
-        PlayerState actor,
-        object? victim,
-        CancellationToken cancellationToken)
-    {
-        var roomPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == actor.RoomId);
-
-        foreach (var observer in roomPlayers)
-        {
-            var formatted = _actService.FormatMessage(template, observer.Player, actor, victim);
-            await observer.Session.SendLineAsync(formatted, cancellationToken);
-        }
-    }
-
-    private async Task SendToOthersAsync(
-        string template,
-        PlayerState actor,
-        object? victim,
-        ConnectionContext actorConnection,
-        CancellationToken cancellationToken)
-    {
-        var victimConnectionId = victim is PlayerState victimPlayer
-            ? _connectionRegistry.GetConnections().FirstOrDefault(c => c.Player.Id == victimPlayer.Id)?.Id
-            : null;
-
-        var observers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == actor.RoomId
-                        && c.Id != actorConnection.Id
-                        && (victimConnectionId == null || c.Id != victimConnectionId));
-
-        foreach (var observer in observers)
-        {
-            var formatted = _actService.FormatMessage(template, observer.Player, actor, victim);
-            await observer.Session.SendLineAsync(formatted, cancellationToken);
-        }
-    }
+            _ => Task.CompletedTask
+        };
 }
