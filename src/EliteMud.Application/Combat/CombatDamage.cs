@@ -16,12 +16,18 @@ public sealed class CombatDamage
     private readonly CombatCalculator _combatCalculator;
     private readonly CombatExperience _combatExperience;
     private readonly IWorldState _worldState;
+    private readonly IReadOnlyList<ICombatListener> _listeners;
 
-    public CombatDamage(CombatCalculator combatCalculator, CombatExperience combatExperience, IWorldState worldState)
+    public CombatDamage(
+        CombatCalculator combatCalculator,
+        CombatExperience combatExperience,
+        IWorldState worldState,
+        IEnumerable<ICombatListener> listeners)
     {
         _combatCalculator = combatCalculator;
         _combatExperience = combatExperience;
         _worldState = worldState;
+        _listeners = listeners.ToList();
     }
 
     /// <summary>
@@ -35,9 +41,21 @@ public sealed class CombatDamage
         int? victimConnectionId,
         int damage)
     {
+        // Legacy damage(): "Attempt to damage a corpse" (fight.c:787). A victim already dead is still being
+        // handled elsewhere (e.g. the combat tick); damaging it again would give a second death.
+        if (victim.Position == Position.Dead)
+        {
+            Console.WriteLine($"[CombatDamage] Attempt to damage a corpse: {attacker.Name} -> {victim.Name}");
+            return new DamageOutcome(0, false, Array.Empty<SkillMessage>());
+        }
+
         if (!ReferenceEquals(attacker, victim))
         {
             StartFighting(attacker, attackerConnectionId, victim, victimConnectionId);
+            foreach (var listener in _listeners)
+            {
+                listener.Hurt(attacker, victim);
+            }
         }
 
         return victimConnectionId != null
@@ -137,6 +155,11 @@ public sealed class CombatDamage
             killer.SaveRequested = true; // legacy PLR_SAVECHR (fight.c:1047)
 
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
+        }
+
+        foreach (var listener in _listeners)
+        {
+            listener.Killed(killer, victim);
         }
 
         messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead!  R.I.P.", victim)); // fight.c:967

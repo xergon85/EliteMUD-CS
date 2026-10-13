@@ -51,16 +51,19 @@ public class CombatCalculator
 {
     private readonly IPassiveSkillHandler _dodgeSkill;
     private readonly IPassiveSkillHandler _parrySkill;
+    private readonly Random _random;
 
     /// <summary>
     /// Constructor for dependency injection.
     /// </summary>
     /// <param name="dodgeSkill">Dodge skill handler (injected from SkillRegistry)</param>
     /// <param name="parrySkill">Parry skill handler (injected from SkillRegistry)</param>
-    public CombatCalculator(IPassiveSkillHandler dodgeSkill, IPassiveSkillHandler parrySkill)
+    /// <param name="random">Dice for hit and damage rolls; tests pass fixed ones (default: shared)</param>
+    public CombatCalculator(IPassiveSkillHandler dodgeSkill, IPassiveSkillHandler parrySkill, Random? random = null)
     {
         _dodgeSkill = dodgeSkill;
         _parrySkill = parrySkill;
+        _random = random ?? Random.Shared;
     }
     /// <summary>
     /// Set a player to fighting another player.
@@ -110,7 +113,7 @@ public class CombatCalculator
         int total = 0;
         for (int i = 0; i < number; i++)
         {
-            total += Random.Shared.Next(1, size + 1);
+            total += _random.Next(1, size + 1);
         }
         return total;
     }
@@ -143,7 +146,7 @@ public class CombatCalculator
         {
             // Bare hands: str_todam + damroll + number(0, 2)
             // Legacy: fight.c:1458
-            baseDamage = Random.Shared.Next(0, 3); // 0-2 damage (legacy: number(0, 2))
+            baseDamage = _random.Next(0, 3); // 0-2 damage (legacy: number(0, 2))
         }
         
         return Math.Max(0, strBonus + attacker.Damroll + baseDamage);
@@ -377,10 +380,22 @@ public class CombatCalculator
     }
 
     /// <summary>
-    /// Apply damage to a player and update their position.
-    /// Legacy: damage() function
+    /// Apply melee damage to a player and update their position: <see cref="DefendAgainstMelee"/>, then the hit
+    /// points. Used by the combat tick until it goes through the shared damage path.
     /// </summary>
     public DamageResult ApplyDamage(PlayerState victim, int damage)
+    {
+        var result = DefendAgainstMelee(victim, damage);
+        victim.HitPoints -= (short)result.Damage;
+        UpdatePosition(victim);
+        return result;
+    }
+
+    /// <summary>
+    /// The victim's side of a melee hit (legacy hit(), before damage()): more damage against a victim who isn't
+    /// on their feet, then dodge or parry. Changes no hit points; the result is the damage to deal.
+    /// </summary>
+    public DamageResult DefendAgainstMelee(PlayerState victim, int damage)
     {
         // Apply position multiplier before capping damage
         damage = CalculateDamageWithPositionMultiplier(damage, victim.Position);
@@ -417,12 +432,6 @@ public class CombatCalculator
         // Cap damage
         damage = Math.Min(damage, 500);
         damage = Math.Max(damage, 0);
-
-        // Apply damage
-        victim.HitPoints -= (short)damage;
-
-        // Update position based on HP
-        UpdatePosition(victim);
 
         return new DamageResult(damage, dodged, defenseMessage);
     }
@@ -505,6 +514,37 @@ public class CombatCalculator
         sbyte victimEffectiveDexterity,
         ObjectWeapon? weaponDetails = null)
     {
+        var result = ResolveAttack(
+            attacker,
+            attackerEffectiveStrength,
+            attackerEffectiveIntelligence,
+            attackerEffectiveWisdom,
+            victim,
+            victimEffectiveDexterity,
+            weaponDetails);
+
+        if (result.Hit)
+        {
+            victim.HitPoints -= (short)result.Damage;
+            UpdatePosition(victim);
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// A melee attack on a player without dealing the damage (legacy hit(), up to its damage() call): the hit
+    /// roll, the damage, and the victim's defense. The caller deals <see cref="AttackResult.Damage"/>.
+    /// </summary>
+    public AttackResult ResolveAttack(
+        PlayerState attacker,
+        sbyte attackerEffectiveStrength,
+        sbyte attackerEffectiveIntelligence,
+        sbyte attackerEffectiveWisdom,
+        PlayerState victim,
+        sbyte victimEffectiveDexterity,
+        ObjectWeapon? weaponDetails = null)
+    {
         // Check if out of moves (too tired to fight)
         if (attacker.Movement < 1)
         {
@@ -512,22 +552,26 @@ public class CombatCalculator
         }
 
         // Check if attack hits (using effective stats)
-        bool hits = AttackHits(attacker, attackerEffectiveStrength, attackerEffectiveIntelligence, attackerEffectiveWisdom, victim, victimEffectiveDexterity);
+        bool hits = AttackHits(
+            attacker,
+            attackerEffectiveStrength,
+            attackerEffectiveIntelligence,
+            attackerEffectiveWisdom,
+            victim,
+            victimEffectiveDexterity);
         if (!hits)
         {
             return new AttackResult(false, 0, "You miss!");
         }
 
-        // Calculate damage (with weapon if equipped, using effective STR)
+        // Calculate damage (with weapon if equipped, using effective STR), then the victim's defense
         int damage = CalculateDamage(attacker, attackerEffectiveStrength, weaponDetails);
-        
-        // Apply damage (includes passive defensive skills)
-        var damageResult = ApplyDamage(victim, damage);
+        var defended = DefendAgainstMelee(victim, damage);
 
         // Consume 1 movement point per attack
         attacker.Movement = (short)Math.Max(0, attacker.Movement - 1);
 
-        return new AttackResult(true, damageResult.Damage, damageResult.Message);
+        return new AttackResult(true, defended.Damage, defended.Message);
     }
 
     /// <summary>

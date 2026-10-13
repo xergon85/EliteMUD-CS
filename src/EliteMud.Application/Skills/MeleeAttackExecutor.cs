@@ -1,7 +1,6 @@
 using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -22,7 +21,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
     private readonly CombatCalculator _combatCalculator;
     private readonly IWorldState _worldState;
     private readonly MobAiService _mobAiService;
-    private readonly CombatExperience _combatExperience;
+    private readonly CombatDamage _combatDamage;
 
     public SkillType SkillType => SkillType.Kick; // Not actually a skill, just needs a value
     public TargetingMode Targeting => TargetingMode.RequiredInRoom;
@@ -31,17 +30,17 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
         CombatCalculator combatCalculator,
         IWorldState worldState,
         MobAiService mobAiService,
-        CombatExperience combatExperience)
+        CombatDamage combatDamage)
     {
-        _combatExperience = combatExperience;
         _combatCalculator = combatCalculator;
         _worldState = worldState;
         _mobAiService = mobAiService;
+        _combatDamage = combatDamage;
     }
 
     /// <summary>
     /// Execute melee attack to initiate combat.
-    /// Handles combat initiation, initial attack, and experience gain.
+    /// Resolves the first hit (legacy hit()); the shared damage path starts the fight and handles death.
     /// </summary>
     public SkillResult Execute(SkillContext context)
     {
@@ -60,151 +59,119 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             return SkillResult.Failed("You can't attack while sitting down!");
         }
 
-        var messages = new List<SkillMessage>();
-
-        // Initiate combat
-        if (context.VictimConnectionId != null)
+        // Get wielded weapon for damage calculation
+        ObjectInstance? weapon = null;
+        if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
         {
-            // PvP combat
-            var victimPlayer = (PlayerState)victim;
-            _combatCalculator.SetFighting(attacker, context.VictimConnectionId.Value);
-            _combatCalculator.SetFighting(victimPlayer, context.ActorConnectionId);
-
-            // Attack messages
-            messages.Add(new SkillMessage(SkillMessageTarget.Actor, "You attack $N!", victim));
-            messages.Add(new SkillMessage(SkillMessageTarget.Victim, "$n attacks you!"));
-            messages.Add(new SkillMessage(SkillMessageTarget.Others, "$n attacks $N!", victim));
-
-            // Get wielded weapon for damage calculation
-            ObjectWeapon? weaponDetails = null;
-            if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
-            {
-                var weapon = _worldState.GetObjectInstance(weaponInstanceId);
-                weaponDetails = weapon?.Definition.Details?.Weapon;
-            }
-
-            // Calculate effective stats (base + equipment + spell bonuses)
-            var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
-            var attackerEffectiveInt = _worldState.GetTotalEffectiveIntelligence(attacker);
-            var attackerEffectiveWis = _worldState.GetTotalEffectiveWisdom(attacker);
-            var victimEffectiveDex = _worldState.GetTotalEffectiveDexterity(victimPlayer);
-
-            // Perform initial attack (using effective stats)
-            var result = _combatCalculator.PerformAttack(
-                attacker,
-                attackerEffectiveStr,
-                attackerEffectiveInt,
-                attackerEffectiveWis,
-                victimPlayer,
-                victimEffectiveDex,
-                weaponDetails);
-
-            // Format combat messages (legacy format with damage/health)
-            var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victimPlayer);
-            var attackerCombatMsg = CombatMessageFormatter.FormatCombatMessage(
-                attacker.Name,
-                victimPlayer.Name,
-                result.Damage,
-                victimEffectiveMaxHp,
-                MessagePerspective.ToChar);
-
-            var victimCombatMsg = CombatMessageFormatter.FormatCombatMessage(
-                attacker.Name,
-                victimPlayer.Name,
-                result.Damage,
-                victimEffectiveMaxHp,
-                MessagePerspective.ToVict);
-
-            messages.Add(new SkillMessage(SkillMessageTarget.Actor, attackerCombatMsg));
-            messages.Add(new SkillMessage(SkillMessageTarget.Victim, victimCombatMsg));
-
-            if (result.Hit)
-            {
-                var roomCombatMsg = CombatMessageFormatter.FormatCombatMessage(
-                    attacker.Name,
-                    victimPlayer.Name,
-                    result.Damage,
-                    victimEffectiveMaxHp,
-                    MessagePerspective.ToRoom);
-
-                messages.Add(new SkillMessage(SkillMessageTarget.Others, roomCombatMsg));
-
-                // No damage XP between players (legacy); kept on the shared path
-                _combatExperience.DamageDealt(attacker, victimPlayer, result.Damage);
-            }
+            weapon = _worldState.GetObjectInstance(weaponInstanceId);
         }
-        else
-        {
-            // PvE combat (mob)
-            var mobInstance = (MobInstance)victim;
-            _combatCalculator.SetFighting(attacker, -mobInstance.InstanceId);
-            mobInstance.FightingConnectionId = context.ActorConnectionId;
-            mobInstance.Position = Position.Fighting;
 
-            // Trigger MOB_HELPER mobs to assist this mob
-            // Legacy: fight.c:1575-1600 - called from hit() when combat starts
+        var weaponDetails = weapon?.Definition.Details?.Weapon;
+
+        // Calculate effective stats (base + equipment + spell bonuses)
+        var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
+
+        return context.VictimConnectionId != null
+            ? AttackPlayer(context, (PlayerState)victim, attackerEffectiveStr, weaponDetails)
+            : AttackMob(context, (MobInstance)victim, attackerEffectiveStr, weapon, weaponDetails);
+    }
+
+    private SkillResult AttackPlayer(
+        SkillContext context,
+        PlayerState victimPlayer,
+        sbyte attackerEffectiveStr,
+        ObjectWeapon? weaponDetails)
+    {
+        var attacker = context.Actor;
+        var messages = new List<SkillMessage>
+        {
+            new(SkillMessageTarget.Actor, "You attack $N!", victimPlayer),
+            new(SkillMessageTarget.Victim, "$n attacks you!"),
+            new(SkillMessageTarget.Others, "$n attacks $N!", victimPlayer)
+        };
+
+        // Hit roll, damage and the victim's dodge/parry, before the fight starts (legacy hit(), then damage())
+        var result = _combatCalculator.ResolveAttack(
+            attacker,
+            attackerEffectiveStr,
+            _worldState.GetTotalEffectiveIntelligence(attacker),
+            _worldState.GetTotalEffectiveWisdom(attacker),
+            victimPlayer,
+            _worldState.GetTotalEffectiveDexterity(victimPlayer),
+            weaponDetails);
+
+        var outcome = _combatDamage.Apply(
+            attacker,
+            context.ActorConnectionId,
+            victimPlayer,
+            context.VictimConnectionId,
+            result.Hit ? result.Damage : 0);
+
+        // Format combat messages (legacy format with damage/health)
+        var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victimPlayer);
+        messages.Add(new SkillMessage(SkillMessageTarget.Actor, CombatMessageFormatter.FormatCombatMessage(
+            attacker.Name, victimPlayer.Name, outcome.Damage, victimEffectiveMaxHp, MessagePerspective.ToChar)));
+        messages.Add(new SkillMessage(SkillMessageTarget.Victim, CombatMessageFormatter.FormatCombatMessage(
+            attacker.Name, victimPlayer.Name, outcome.Damage, victimEffectiveMaxHp, MessagePerspective.ToVict)));
+
+        if (result.Hit)
+        {
+            messages.Add(new SkillMessage(SkillMessageTarget.Others, CombatMessageFormatter.FormatCombatMessage(
+                attacker.Name, victimPlayer.Name, outcome.Damage, victimEffectiveMaxHp, MessagePerspective.ToRoom)));
+        }
+
+        messages.AddRange(outcome.Messages);
+        return new SkillResult(Success: true, Messages: messages.ToArray());
+    }
+
+    /// <summary>The first hit on a mob always lands for now (#48).</summary>
+    private SkillResult AttackMob(
+        SkillContext context,
+        MobInstance mobInstance,
+        sbyte attackerEffectiveStr,
+        ObjectInstance? weapon,
+        ObjectWeapon? weaponDetails)
+    {
+        var attacker = context.Actor;
+        var mobDesc = mobInstance.Definition.ShortDescription?.Trim() ?? "something";
+        var messages = new List<SkillMessage>
+        {
+            new(SkillMessageTarget.Actor, $"You attack {mobDesc}!"),
+            new(SkillMessageTarget.Others, $"$n attacks {mobDesc}!")
+        };
+
+        int damage = _combatCalculator.CalculateDamage(attacker, attackerEffectiveStr, weaponDetails);
+
+        // Apply weapon special effects (bless/evil/flame)
+        if (weapon != null)
+        {
+            damage += _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, mobInstance);
+        }
+
+        mobInstance.Position = Position.Fighting;
+        var outcome = _combatDamage.Apply(
+            attacker,
+            context.ActorConnectionId,
+            mobInstance,
+            context.VictimConnectionId,
+            damage);
+
+        // Trigger MOB_HELPER mobs to assist this mob, after the hit (legacy autoassist(), fight.c:1725);
+        // a mob that just died has no fight left to join
+        if (!outcome.VictimDied)
+        {
             var emptyConnections = new Dictionary<int, PlayerConnection>();
             _mobAiService.ProcessAssist(mobInstance, attacker.RoomId, _worldState, emptyConnections);
-
-            var mobDesc = mobInstance.Definition.ShortDescription?.Trim() ?? "something";
-
-            // Attack messages
-            messages.Add(new SkillMessage(SkillMessageTarget.Actor, $"You attack {mobDesc}!"));
-            messages.Add(new SkillMessage(SkillMessageTarget.Others, $"$n attacks {mobDesc}!"));
-
-            // Get wielded weapon for damage calculation
-            ObjectWeapon? weaponDetails = null;
-            ObjectInstance? weapon = null;
-            if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
-            {
-                weapon = _worldState.GetObjectInstance(weaponInstanceId);
-                weaponDetails = weapon?.Definition.Details?.Weapon;
-            }
-
-            // Calculate effective stats (base + equipment + spell bonuses)
-            var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
-
-            // Perform initial attack (using effective STR for damage)
-            int mobMaxHp = mobInstance.Definition.MaxHitPoints;
-            int damage = _combatCalculator.CalculateDamage(attacker, attackerEffectiveStr, weaponDetails);
-            
-            // Apply weapon special effects (bless/evil/flame)
-            if (weapon != null)
-            {
-                int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, mobInstance);
-                damage += weaponEffectDamage;
-            }
-            
-            mobInstance.HitPoints -= (short)damage;
-
-            // MOB_MEMORY: mob remembers this attacker
-            // Legacy: fight.c:824-827 - remember_attack() called when hit
-            if (mobInstance.Definition.ParsedFlags.HasFlag(MobFlags.Memory))
-            {
-                mobInstance.RememberPlayer(attacker.Id);
-            }
-
-            // Format combat messages
-            var attackerCombatMsg = CombatMessageFormatter.FormatCombatMessage(
-                attacker.Name,
-                mobDesc,
-                damage,
-                mobMaxHp,
-                MessagePerspective.ToChar);
-
-            var roomCombatMsg = CombatMessageFormatter.FormatCombatMessage(
-                attacker.Name,
-                mobDesc,
-                damage,
-                mobMaxHp,
-                MessagePerspective.ToRoom);
-
-            messages.Add(new SkillMessage(SkillMessageTarget.Actor, attackerCombatMsg));
-            messages.Add(new SkillMessage(SkillMessageTarget.Others, roomCombatMsg));
-
-            _combatExperience.DamageDealt(attacker, mobInstance, damage);
         }
 
+        // Format combat messages
+        int mobMaxHp = mobInstance.Definition.MaxHitPoints;
+        messages.Add(new SkillMessage(SkillMessageTarget.Actor, CombatMessageFormatter.FormatCombatMessage(
+            attacker.Name, mobDesc, outcome.Damage, mobMaxHp, MessagePerspective.ToChar)));
+        messages.Add(new SkillMessage(SkillMessageTarget.Others, CombatMessageFormatter.FormatCombatMessage(
+            attacker.Name, mobDesc, outcome.Damage, mobMaxHp, MessagePerspective.ToRoom)));
+
+        messages.AddRange(outcome.Messages);
         return new SkillResult(Success: true, Messages: messages.ToArray());
     }
 }

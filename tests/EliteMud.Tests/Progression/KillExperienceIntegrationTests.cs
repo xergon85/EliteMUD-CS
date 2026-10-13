@@ -52,7 +52,7 @@ public class KillExperienceIntegrationTests
         var combatExperience = new CombatExperience(new PlayerProgression(experience, rules), experience);
         var executor = new KickSkillExecutor(
             new SkillRegistry(metadata, formulas),
-            new CombatDamage(calculator, combatExperience, world));
+            new CombatDamage(calculator, combatExperience, world, Array.Empty<ICombatListener>()));
 
         var player = new PlayerState(1, "Tester", 3001, level: 1, "warrior", "human", sex: 1)
         {

@@ -120,11 +120,19 @@ Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob ne
 - PR 3: step 4 done. `CombatDamage` handles player death: `Kill` (alignment, kill XP, death lines; shared with mob
   death) then `Die` (corpse, `Died` penalty, respawn at `CharacterStart.StartRoom` on effective max points). Both
   sides request a save. The start room 3001 now has one constant, `CharacterStart.StartRoom`. Closes #40.
-- Next: step 5 (`kill` first hit). `MeleeAttackExecutor` keeps its hit roll (#48) and, for player victims,
-  `PerformAttack` with dodge/parry; the damage then goes through `CombatDamage`. `DamagePathTests` has the
-  pinned bug (`KillFirstHitKillingAMob_LeavesItInTheRoom`).
+- PR 4: step 5 done. `kill` resolves its hit with `CombatCalculator.ResolveAttack` / `DefendAgainstMelee`
+  (legacy `hit()` up to `damage()`) and deals it through `CombatDamage`. `PerformAttack` / `ApplyDamage` are now
+  "resolve, then subtract" and only the tick uses them. `CombatDamage` tells `ICombatListener`s that someone
+  was hurt or killed; `MobMemory` (Application/Ai) owns mob memory (remember on hurt, forget on kill). The tick's own
+  `RememberPlayer` call goes in step 6.
+- Before step 6: #61 (serialize game state), then #62 (fight target as a reference, not a connection id).
+- Then step 6 (the tick). Mob attackers: `CombatDamage.Apply` takes a `PlayerState` attacker today; the tick needs
+  mob → player (and mob counterattack). Move the position messages and wimpy into `CombatDamage` / its outcome, and
+  give mobs dodge/parry in melee (decision 1). Then remove `HandleMobDeath` / `HandlePlayerDeath*`.
+  Split `CombatDamage` into an ordered list of small steps (`IDamageStep` over a `DamageContext`) as part of this:
+  plan in the #42 comments.
 - More side findings: #49 (bash doesn't knock a player down: `UpdatePosition` stands them up), #51 (player
-  victims never see a skill's victim message).
+  victims never see a skill's victim message), #55 (player killing rules), #59 (affects design).
 
 ## Other open cards (for orientation)
 

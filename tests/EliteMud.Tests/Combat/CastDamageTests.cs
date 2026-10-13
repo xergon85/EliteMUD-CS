@@ -106,7 +106,8 @@ public sealed class CastDamageTests : IDisposable
             new CombatDamage(
                 _calculator,
                 new CombatExperience(new PlayerProgression(experience, rules), experience),
-                _world),
+                _world,
+                Array.Empty<ICombatListener>()),
             new SkillMessageSender(new ActMessageService(), connections));
     }
 

@@ -144,22 +144,95 @@ public class DamagePathTests
         Assert.Equal("V:You have been resurrected...", lines[^1]);
     }
 
-    /// <summary>
-    /// Today's bug (#42): the first hit of kill has no death handling, so a mob it kills stays in the room at
-    /// ≤0 hp. Changes when kill joins the shared path.
-    /// </summary>
     [Fact]
-    public void KillFirstHitKillingAMob_LeavesItInTheRoom()
+    public void KillFirstHitKillingAMob_EndsTheFight_MovesAlignment_LeavesACorpse_GivesKillExperience()
     {
         var fixture = new Fixture();
 
         var result = fixture.Kill().Execute(fixture.AgainstMob());
 
-        Assert.True(result.Success);
-        Assert.True(fixture.Mob.HitPoints <= 0);
-        Assert.Contains(fixture.Mob, fixture.World.GetMobsInRoom(Room));
+        fixture.AssertMobKilled();
+        Assert.Equal(
+            new[] { "A:$N is DEAD!!", "O:$N is dead!  R.I.P.", "A:You receive 100 experience points." },
+            Lines(result)[^3..]);
+    }
+
+    /// <summary>
+    /// kill on a player: the resolved hit goes through the same death as every other source (#40). Fixed dice of
+    /// 20 make the roll a natural 20, which always hits.
+    /// </summary>
+    [Fact]
+    public void KillFirstHitKillingAPlayer_LeavesACorpse_AndRespawnsThemAtTheTemple()
+    {
+        var fixture = new Fixture(new FixedRandom(20));
+        var victim = fixture.VictimPlayer;
+        fixture.Attacker.Movement = 100;
+        var killerExperience = fixture.Attacker.Experience;
+
+        var result = fixture.Kill().Execute(fixture.AgainstPlayer());
+
+        Assert.Contains(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+        Assert.Equal(Temple, victim.RoomId);
+        Assert.True(victim.SaveRequested);
+        Assert.Equal(Position.Standing, victim.Position);
+        Assert.Equal(fixture.World.GetTotalEffectiveMaxHitPoints(victim), victim.HitPoints);
+        Assert.Equal(5000 - 3333, victim.Experience);
+        Assert.True(fixture.Attacker.Experience >= killerExperience + 1250);
+        Assert.Null(fixture.Attacker.FightingConnectionId);
+        Assert.Null(victim.FightingConnectionId);
+
+        var lines = Lines(result);
+        Assert.Equal(new[] { "A:You attack $N!", "V:$n attacks you!", "O:$n attacks $N!" }, lines[..3]);
+        Assert.Equal(
+            new[]
+            {
+                "A:$N is DEAD!!",
+                "O:$N is dead!  R.I.P.",
+                "V:You are dead!  Sorry...",
+                "A:You receive 1250 experience points.",
+                "V:You lose 3333 experience points.",
+                "V:You have been resurrected..."
+            },
+            lines[^6..]);
+    }
+
+    /// <summary>A MOB_MEMORY mob remembers whoever hurts it, whatever the source (legacy damage()).</summary>
+    [Fact]
+    public void AMemoryMob_RemembersWhoKicksIt()
+    {
+        var fixture = new Fixture();
+        var definition = fixture.Mob.Definition with { ParsedFlags = MobFlags.Memory };
+        var mob = new MobInstance(2, definition) { HitPoints = 1000 };
+
+        fixture.Kick().Execute(new SkillContext(fixture.Attacker, 1, mob, null, null));
+
+        Assert.Contains(fixture.Attacker.Id, mob.Memory);
+    }
+
+    /// <summary>
+    /// A player already dead (e.g. the combat tick is still handling their death) can't be damaged or die again:
+    /// no second corpse, penalty or kill reward. Legacy damage(): "Attempt to damage a corpse" (fight.c:787).
+    /// </summary>
+    [Fact]
+    public void DamagingAPlayerAlreadyDead_DoesNothing()
+    {
+        var fixture = new Fixture();
+        var victim = fixture.VictimPlayer;
+        victim.HitPoints = -15;
+        victim.Position = Position.Dead;
+        var killerExperience = fixture.Attacker.Experience;
+
+        var outcome = fixture.Damage().Apply(fixture.Attacker, 1, victim, 2, 50);
+
+        Assert.False(outcome.VictimDied);
+        Assert.Equal(0, outcome.Damage);
+        Assert.Empty(outcome.Messages);
+        Assert.Equal(-15, victim.HitPoints);
+        Assert.Equal(Room, victim.RoomId);
+        Assert.Equal(5000, victim.Experience);
+        Assert.Equal(killerExperience, fixture.Attacker.Experience);
+        Assert.Null(fixture.Attacker.FightingConnectionId);
         Assert.DoesNotContain(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
-        Assert.DoesNotContain(Lines(result), line => line.Contains("DEAD"));
     }
 
     [Fact]
@@ -191,7 +264,8 @@ public class DamagePathTests
         private readonly CombatCalculator _calculator;
         private readonly CombatExperience _experience;
 
-        public Fixture()
+        /// <param name="combatRandom">Dice for melee hit and damage rolls (default: shared)</param>
+        public Fixture(Random? combatRandom = null)
         {
             var rules = RulesContentLoader.Load(Content).Rules;
             var formulas = new FormulaEvaluator(new Random(1));
@@ -215,7 +289,8 @@ public class DamagePathTests
 
             var metadata = new SkillMetadataRegistry(skills);
             _skills = new SkillRegistry(metadata, formulas);
-            _calculator = new CombatCalculator(new DodgeSkill(metadata, formulas), new ParrySkill(metadata, formulas));
+            _calculator = new CombatCalculator(
+                new DodgeSkill(metadata, formulas), new ParrySkill(metadata, formulas), combatRandom);
             var experienceService = new ExperienceService(rules, formulas, new Random(1));
             _experience = new CombatExperience(new PlayerProgression(experienceService, rules), experienceService);
 
@@ -265,15 +340,15 @@ public class DamagePathTests
         public SkillContext AgainstMob() => new(Attacker, 1, Mob, null, null);
         public SkillContext AgainstPlayer() => new(Attacker, 1, VictimPlayer, 2, null);
 
-        public CombatDamage Damage() => new(_calculator, _experience, World);
+        public CombatDamage Damage() => new(_calculator, _experience, World, new[] { new MobMemory() });
 
-        public KickSkillExecutor Kick() => new(_skills, new CombatDamage(_calculator, _experience, World));
-        public BashSkillExecutor Bash() => new(_skills, new CombatDamage(_calculator, _experience, World));
+        public KickSkillExecutor Kick() => new(_skills, Damage());
+        public BashSkillExecutor Bash() => new(_skills, Damage());
         public BackstabSkillExecutor Backstab() =>
-            new(_skills, _calculator, World, new CombatDamage(_calculator, _experience, World));
+            new(_skills, _calculator, World, Damage());
 
         public MeleeAttackExecutor Kill() =>
-            new(_calculator, World, new MobAiService(new MockScriptEngine(), new PathfindingService()), _experience);
+            new(_calculator, World, new MobAiService(new MockScriptEngine(), new PathfindingService()), Damage());
 
         public void AssertMobKilled()
         {
