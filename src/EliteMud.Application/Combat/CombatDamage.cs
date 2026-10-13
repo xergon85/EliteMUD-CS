@@ -41,6 +41,14 @@ public sealed class CombatDamage
         int? victimConnectionId,
         int damage)
     {
+        // Legacy damage(): "Attempt to damage a corpse" (fight.c:787). A victim already dead is still being
+        // handled elsewhere (e.g. the combat tick); damaging it again would give a second death.
+        if (victim.Position == Position.Dead)
+        {
+            Console.WriteLine($"[CombatDamage] Attempt to damage a corpse: {attacker.Name} -> {victim.Name}");
+            return new DamageOutcome(0, false, Array.Empty<SkillMessage>());
+        }
+
         if (!ReferenceEquals(attacker, victim))
         {
             StartFighting(attacker, attackerConnectionId, victim, victimConnectionId);

@@ -209,6 +209,32 @@ public class DamagePathTests
         Assert.Contains(fixture.Attacker.Id, mob.Memory);
     }
 
+    /// <summary>
+    /// A player already dead (e.g. the combat tick is still handling their death) can't be damaged or die again:
+    /// no second corpse, penalty or kill reward. Legacy damage(): "Attempt to damage a corpse" (fight.c:787).
+    /// </summary>
+    [Fact]
+    public void DamagingAPlayerAlreadyDead_DoesNothing()
+    {
+        var fixture = new Fixture();
+        var victim = fixture.VictimPlayer;
+        victim.HitPoints = -15;
+        victim.Position = Position.Dead;
+        var killerExperience = fixture.Attacker.Experience;
+
+        var outcome = fixture.Damage().Apply(fixture.Attacker, 1, victim, 2, 50);
+
+        Assert.False(outcome.VictimDied);
+        Assert.Equal(0, outcome.Damage);
+        Assert.Empty(outcome.Messages);
+        Assert.Equal(-15, victim.HitPoints);
+        Assert.Equal(Room, victim.RoomId);
+        Assert.Equal(5000, victim.Experience);
+        Assert.Equal(killerExperience, fixture.Attacker.Experience);
+        Assert.Null(fixture.Attacker.FightingConnectionId);
+        Assert.DoesNotContain(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+    }
+
     [Fact]
     public void AMiss_DoesNotKillAMobAlreadyAtZeroHitPoints()
     {
