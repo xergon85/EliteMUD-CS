@@ -70,7 +70,6 @@ public sealed class CombatDamage
 
     /// <summary>
     /// A player victim. No dodge/parry here: legacy only has them in the melee hit, before damage().
-    /// Death is still only noticed, not handled (#42 step 4, #40).
     /// </summary>
     private DamageOutcome DamagePlayer(PlayerState attacker, PlayerState victim, int damage)
     {
@@ -81,15 +80,17 @@ public sealed class CombatDamage
 
         // A miss never kills, as for mobs
         var messages = new List<SkillMessage>();
-        var died = damage > 0 && victim.Position == Position.Dead;
-        if (died)
+        if (damage == 0 || victim.Position != Position.Dead)
         {
-            _combatCalculator.StopFighting(attacker);
-            _combatCalculator.StopFighting(victim);
-            AddDeathMessages(messages, victim);
+            return new DamageOutcome(damage, false, messages);
         }
 
-        return new DamageOutcome(damage, died, messages);
+        _combatCalculator.StopFighting(attacker);
+        _combatCalculator.StopFighting(victim);
+        Kill(attacker, victim, messages);
+        Die(victim, messages);
+
+        return new DamageOutcome(damage, true, messages);
     }
 
     private DamageOutcome DamageMob(PlayerState attacker, MobInstance mob, int damage)
@@ -109,32 +110,61 @@ public sealed class CombatDamage
         _combatCalculator.StopFighting(attacker);
         mob.FightingConnectionId = null;
 
-        // Legacy change_alignment() is silent
-        var alignmentShift = _combatCalculator.CalculateAlignmentShift(attacker, mob, isPvP: false);
-        _combatCalculator.ApplyAlignmentShift(attacker, alignmentShift);
-        var killReward = _combatExperience.Killed(attacker, mob);
+        Kill(attacker, mob, messages);
 
-        AddDeathMessages(messages, mob);
-
-        // Kill XP messages come after the death messages, as in legacy
-        foreach (var line in killReward.Messages)
-        {
-            messages.Add(new SkillMessage(SkillMessageTarget.Actor, line));
-        }
-
+        // Legacy die() for a mob: the corpse takes its things, the mob leaves the world
         _worldState.CreateMobCorpse(mob, attacker.RoomId);
         _worldState.RemoveMob(mob.InstanceId, attacker.RoomId);
 
         return new DamageOutcome(damage, true, messages);
     }
 
-    private static void AddDeathMessages(List<SkillMessage> messages, ICombatant victim)
+    /// <summary>
+    /// The killer's side of a death (legacy damage() at POS_DEAD): alignment (silent, change_alignment()), kill
+    /// experience from the victim's experience before any death penalty, and the death messages.
+    /// </summary>
+    private void Kill(PlayerState killer, ICombatant victim, List<SkillMessage> messages)
     {
+        var alignmentShift = _combatCalculator.CalculateAlignmentShift(killer, victim, isPvP: victim is PlayerState);
+        _combatCalculator.ApplyAlignmentShift(killer, alignmentShift);
+        var killReward = _combatExperience.Killed(killer, victim);
+        killer.SaveRequested = true; // legacy PLR_SAVECHR (fight.c:1047)
+
         messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
         messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead!  R.I.P.", victim)); // fight.c:967
         if (victim is PlayerState)
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Victim, "You are dead!  Sorry...", victim)); // fight.c:968
         }
+
+        // Kill XP messages come after the death messages, as in legacy
+        foreach (var line in killReward.Messages)
+        {
+            messages.Add(new SkillMessage(SkillMessageTarget.Actor, line));
+        }
+    }
+
+    /// <summary>
+    /// Legacy die() for a player: a corpse with their things where they fell, the death penalty, and back to the
+    /// temple with full hit points, mana and movement.
+    /// </summary>
+    private void Die(PlayerState victim, List<SkillMessage> messages)
+    {
+        _worldState.CreatePlayerCorpse(victim, victim.RoomId);
+        var penalty = _combatExperience.Died(victim);
+
+        victim.HitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim);
+        victim.Mana = _worldState.GetTotalEffectiveMaxMana(victim);
+        victim.Movement = _worldState.GetTotalEffectiveMaxMovement(victim);
+        victim.Position = Position.Standing;
+        victim.RoomId = CharacterStart.StartRoom;
+        victim.SaveRequested = true;
+
+        foreach (var line in penalty.Messages)
+        {
+            messages.Add(new SkillMessage(SkillMessageTarget.Victim, line, victim));
+        }
+
+        messages.Add(new SkillMessage(SkillMessageTarget.Victim, "You have been resurrected...", victim));
     }
 }

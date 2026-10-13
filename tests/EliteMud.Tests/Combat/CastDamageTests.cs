@@ -19,7 +19,8 @@ namespace EliteMud.Tests.Combat;
 /// </summary>
 public sealed class CastDamageTests : IDisposable
 {
-    private const int Room = 3001;
+    private const int Room = 3002; // not the temple, so a respawn shows
+    private const int Temple = CharacterStart.StartRoom;
     private const string Improved = "has improved";
 
     private static readonly string Content = Path.Combine(RealWorld.RepositoryRoot, "content");
@@ -68,12 +69,13 @@ public sealed class CastDamageTests : IDisposable
         _world = new WorldState(
             new WorldDefinition(new Dictionary<int, RoomDefinition>
             {
-                [Room] = new(Room, "Temple", "Desc", new List<ExitDefinition>())
+                [Temple] = new(Temple, "Temple", "Desc", new List<ExitDefinition>()),
+                [Room] = new(Room, "Arena", "Desc", new List<ExitDefinition>())
             }),
             new Dictionary<int, MobDefinition> { [100] = mobDefinition },
             new Dictionary<int, ObjectDefinition>(),
-            new Dictionary<int, List<MobInstance>> { [Room] = new() { _mob } },
-            new Dictionary<int, List<ObjectInstance>> { [Room] = new() },
+            new Dictionary<int, List<MobInstance>> { [Temple] = new(), [Room] = new() { _mob } },
+            new Dictionary<int, List<ObjectInstance>> { [Temple] = new(), [Room] = new() },
             new List<ZoneDefinition>());
 
         var caster = new PlayerState(1, "Caster", Room, level: 10, "magic-user", "human", sex: 1)
@@ -213,23 +215,34 @@ public sealed class CastDamageTests : IDisposable
     }
 
     /// <summary>
-    /// Today's bug (#40): a player killed by a spell is left dead where they fell, with no corpse, no respawn,
-    /// no penalty and no kill experience. Changes when player death joins the shared path.
+    /// A player killed by a spell (#40): kill experience for the caster, then legacy die(): a corpse where they
+    /// fell, the death penalty, and back to the temple on full hit points.
     /// </summary>
     [Fact]
-    public async Task KillingAPlayer_LeavesThemDeadInTheRoom()
+    public async Task KillingAPlayer_LeavesACorpse_AndRespawnsThemAtTheTemple()
     {
         Caster.Level = 30; // 16 damage: 3 hp - 16 is below -10, dead rather than incapacitated
         Victim.HitPoints = 3;
 
         await Cast("'magic missile' victim");
 
-        Assert.Equal(Position.Dead, Victim.Position);
-        Assert.Equal(Room, Victim.RoomId);
-        Assert.Equal(5000, Victim.Experience);
-        Assert.DoesNotContain(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
-        Assert.Equal(new[] { "Your magic missile hits Victim! [16]", "Victim is DEAD!!" }, CasterLines());
-        Assert.Equal(new[] { "Caster casts magic missile at you! [16]", "You are dead!  Sorry..." }, _victim.Lines());
+        Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+        Assert.Equal(Temple, Victim.RoomId);
+        Assert.True(Victim.SaveRequested);
+        Assert.Equal(Position.Standing, Victim.Position);
+        Assert.Equal(5000 - 3333, Victim.Experience);
+        Assert.Equal(
+            new[] { "Your magic missile hits Victim! [16]", "Victim is DEAD!!", "You receive 1250 experience points." },
+            CasterLines());
+        Assert.Equal(
+            new[]
+            {
+                "Caster casts magic missile at you! [16]",
+                "You are dead!  Sorry...",
+                "You lose 3333 experience points.",
+                "You have been resurrected..."
+            },
+            _victim.Lines());
         Assert.Equal(
             new[] { "Caster casts magic missile at Victim! [16]", "Victim is dead!  R.I.P." },
             _observer.Lines());
