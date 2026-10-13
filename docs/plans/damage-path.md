@@ -125,7 +125,8 @@ Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob ne
   "resolve, then subtract" and only the tick uses them. `CombatDamage` tells `ICombatListener`s that someone
   was hurt or killed; `MobMemory` (Application/Ai) owns mob memory (remember on hurt, forget on kill). The tick's own
   `RememberPlayer` call goes in step 6.
-- Next: step 6 (the tick). Mob attackers: `CombatDamage.Apply` takes a `PlayerState` attacker today; the tick needs
+- Before step 6: #61 (serialize game state), then #62 (fight target as a reference, not a connection id).
+- Then step 6 (the tick). Mob attackers: `CombatDamage.Apply` takes a `PlayerState` attacker today; the tick needs
   mob → player (and mob counterattack). Move the position messages and wimpy into `CombatDamage` / its outcome, and
   give mobs dodge/parry in melee (decision 1). Then remove `HandleMobDeath` / `HandlePlayerDeath*`.
   Split `CombatDamage` into an ordered list of small steps (`IDamageStep` over a `DamageContext`) as part of this:
