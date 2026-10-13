@@ -13,31 +13,28 @@ internal sealed class SaveCommandHandler : ICommandHandler
         _saveQueue = saveQueue;
     }
     
-    public async ValueTask<CommandOutcome> HandleAsync(CommandRequest request, ConnectionContext context, CancellationToken cancellationToken)
+    /// <summary>
+    /// Queue the save and report when it's done. Commands hold the game state gate, and the save worker needs it
+    /// to read the player, so waiting here would deadlock (#61).
+    /// </summary>
+    public ValueTask<CommandOutcome> HandleAsync(
+        CommandRequest request,
+        ConnectionContext context,
+        CancellationToken cancellationToken)
     {
-        try
-        {
-            // Queue the save and wait for completion
-            var success = await _saveQueue.QueueSaveAndWaitAsync(
-                context.CharacterId, 
-                context.Player, 
-                cancellationToken);
-            
-            if (success)
+        var session = context.Session;
+        var saved = _saveQueue.QueueSaveAndWaitAsync(context.CharacterId, context.Player, cancellationToken);
+
+        _ = saved.ContinueWith(
+            task =>
             {
-                await context.Session.SendLineAsync("Character saved.", cancellationToken);
-            }
-            else
-            {
-                await context.Session.SendLineAsync("Error: Character not found.", cancellationToken);
-            }
-            
-            return CommandOutcome.Continue;
-        }
-        catch (Exception ex)
-        {
-            await context.Session.SendLineAsync($"Error saving character: {ex.Message}", cancellationToken);
-            return CommandOutcome.Continue;
-        }
+                var message = task.IsCompletedSuccessfully
+                    ? task.Result ? "Character saved." : "Error: Character not found."
+                    : $"Error saving character: {task.Exception?.GetBaseException().Message}";
+                return session.SendLineAsync(message, CancellationToken.None);
+            },
+            TaskScheduler.Default);
+
+        return ValueTask.FromResult(CommandOutcome.Continue);
     }
 }

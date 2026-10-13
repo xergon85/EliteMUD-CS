@@ -42,6 +42,7 @@ internal sealed class GameTickService
     private DateTime _lastGain = DateTime.UtcNow;
     private DateTime _lastRegen = DateTime.UtcNow;
     private DateTime _lastAutoSave = DateTime.UtcNow;
+    private readonly GameStateGate _gate;
 
     public GameTickService(
         ConnectionRegistry connectionRegistry,
@@ -53,8 +54,10 @@ internal sealed class GameTickService
         CombatCalculator combatCalculator,
         CharacterSaveQueue saveQueue,
         MobAiService mobAiService,
-        CombatExperience combatExperience)
+        CombatExperience combatExperience,
+        GameStateGate gate)
     {
+        _gate = gate;
         _combatExperience = combatExperience;
         _connectionRegistry = connectionRegistry;
         _serviceProvider = serviceProvider;
@@ -74,7 +77,9 @@ internal sealed class GameTickService
         while (!stoppingToken.IsCancellationRequested)
         {
             await Task.Delay(_combatInterval, stoppingToken);
-            
+
+            // One tick pass at a time with commands, joins and saves (#61)
+            using var gate = await _gate.EnterAsync(stoppingToken);
             try
             {
                 _tickCount++;

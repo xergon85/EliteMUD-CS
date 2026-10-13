@@ -77,6 +77,8 @@ This file guides agentic coding assistants working in this repository.
 - Use `async`/`await` for I/O.
 - Prefer `CancellationToken` parameters in async loops.
 - Avoid blocking calls in the Telnet session loop.
+- Game state changes one thing at a time: commands, tick passes, joins/leaves and save reads hold `GameStateGate`.
+  Sending output inside it is fine (sessions queue it); database work is not, and the gate isn't re-entrant.
 
 ### Networking / Telnet
 - Keep Telnet parsing minimal and robust.

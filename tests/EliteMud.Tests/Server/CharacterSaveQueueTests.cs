@@ -1,9 +1,11 @@
+using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Data;
 using EliteMud.Data.Entities;
 using EliteMud.Data.Repositories;
 using EliteMud.Game;
 using EliteMud.Server;
+using EliteMud.Server.Adapters.Commands.Save;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +20,7 @@ public sealed class CharacterSaveQueueTests : IDisposable
     private readonly SqliteConnection _connection = new("DataSource=:memory:");
     private readonly ServiceProvider _services;
     private readonly CharacterSaveQueue _queue;
+    private readonly GameStateGate _gate = new();
     private readonly int _characterId;
 
     public CharacterSaveQueueTests()
@@ -51,7 +54,7 @@ public sealed class CharacterSaveQueueTests : IDisposable
             new Dictionary<int, List<MobInstance>>(),
             new Dictionary<int, List<ObjectInstance>>(),
             new List<ZoneDefinition>());
-        _queue = new CharacterSaveQueue(_services, world);
+        _queue = new CharacterSaveQueue(_services, world, _gate);
     }
 
     public void Dispose()
@@ -72,6 +75,53 @@ public sealed class CharacterSaveQueueTests : IDisposable
         Assert.True(await _queue.QueueSaveAndWaitAsync(_characterId, player));
 
         Assert.Equal(2, StoredLevel());
+    }
+
+    /// <summary>A save reads the player under the game state gate, so the game can't change them mid-copy (#61).</summary>
+    [Fact]
+    public async Task ASave_WaitsWhileTheGameHoldsTheGate()
+    {
+        var player = new PlayerState(_characterId, "Tester", 3001, level: 1, "warrior", "human", sex: 1);
+        Task<bool> saved;
+
+        using (await _gate.EnterAsync(CancellationToken.None))
+        {
+            saved = _queue.QueueSaveAndWaitAsync(_characterId, player);
+            await Task.Delay(200);
+            Assert.False(saved.IsCompleted);
+            player.Level = 3; // still the game's turn: this change is part of the save
+        }
+
+        Assert.True(await saved.WaitAsync(TimeSpan.FromSeconds(5)));
+        Assert.Equal(3, StoredLevel());
+    }
+
+    /// <summary>
+    /// The save command runs under the gate (like every command) and the save needs the gate, so the command
+    /// can't wait for it: it reports when the save is done instead of deadlocking (#61).
+    /// </summary>
+    [Fact]
+    public async Task TheSaveCommand_ReportsWhenDone_WithoutHoldingUpTheGame()
+    {
+        var player = new PlayerState(_characterId, "Tester", 3001, level: 1, "warrior", "human", sex: 1);
+        using var connection = new TestConnection(1, player);
+        var context = new ConnectionContext(1, connection.Context.Session, player, _characterId, "test");
+        var save = new SaveCommandHandler(_queue);
+
+        using (await _gate.EnterAsync(CancellationToken.None))
+        {
+            var outcome = save.HandleAsync(new CommandRequest("save", null, null), context, CancellationToken.None);
+            Assert.True(outcome.IsCompleted);
+        }
+
+        var lines = new List<string>();
+        var deadline = DateTime.UtcNow + TimeSpan.FromSeconds(5);
+        while (!lines.Contains("Character saved.") && DateTime.UtcNow < deadline)
+        {
+            lines.AddRange(connection.Lines());
+        }
+
+        Assert.Contains("Character saved.", lines);
     }
 
     private int StoredLevel()
