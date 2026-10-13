@@ -16,12 +16,18 @@ public sealed class CombatDamage
     private readonly CombatCalculator _combatCalculator;
     private readonly CombatExperience _combatExperience;
     private readonly IWorldState _worldState;
+    private readonly IReadOnlyList<ICombatListener> _listeners;
 
-    public CombatDamage(CombatCalculator combatCalculator, CombatExperience combatExperience, IWorldState worldState)
+    public CombatDamage(
+        CombatCalculator combatCalculator,
+        CombatExperience combatExperience,
+        IWorldState worldState,
+        IEnumerable<ICombatListener> listeners)
     {
         _combatCalculator = combatCalculator;
         _combatExperience = combatExperience;
         _worldState = worldState;
+        _listeners = listeners.ToList();
     }
 
     /// <summary>
@@ -38,7 +44,10 @@ public sealed class CombatDamage
         if (!ReferenceEquals(attacker, victim))
         {
             StartFighting(attacker, attackerConnectionId, victim, victimConnectionId);
-            Remember(attacker, victim);
+            foreach (var listener in _listeners)
+            {
+                listener.Hurt(attacker, victim);
+            }
         }
 
         return victimConnectionId != null
@@ -66,20 +75,6 @@ public sealed class CombatDamage
         else if (victim is MobInstance { FightingConnectionId: null } mob)
         {
             mob.FightingConnectionId = attackerConnectionId;
-        }
-    }
-
-    /// <summary>
-    /// A MOB_MEMORY mob remembers a mortal who hurts it, to attack them on sight later (legacy damage(),
-    /// fight.c:824).
-    /// </summary>
-    private static void Remember(PlayerState attacker, ICombatant victim)
-    {
-        if (victim is MobInstance mob
-            && mob.Definition.ParsedFlags.HasFlag(MobFlags.Memory)
-            && attacker.Level <= ExperienceService.MaxMortalLevel)
-        {
-            mob.RememberPlayer(attacker.Id);
         }
     }
 
@@ -152,6 +147,11 @@ public sealed class CombatDamage
             killer.SaveRequested = true; // legacy PLR_SAVECHR (fight.c:1047)
 
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
+        }
+
+        foreach (var listener in _listeners)
+        {
+            listener.Killed(killer, victim);
         }
 
         messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N is dead!  R.I.P.", victim)); // fight.c:967

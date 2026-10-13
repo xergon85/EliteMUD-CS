@@ -314,12 +314,12 @@ public class DamagePathTests
         public SkillContext AgainstMob() => new(Attacker, 1, Mob, null, null);
         public SkillContext AgainstPlayer() => new(Attacker, 1, VictimPlayer, 2, null);
 
-        public CombatDamage Damage() => new(_calculator, _experience, World);
+        public CombatDamage Damage() => new(_calculator, _experience, World, new[] { new MobMemory() });
 
-        public KickSkillExecutor Kick() => new(_skills, new CombatDamage(_calculator, _experience, World));
-        public BashSkillExecutor Bash() => new(_skills, new CombatDamage(_calculator, _experience, World));
+        public KickSkillExecutor Kick() => new(_skills, Damage());
+        public BashSkillExecutor Bash() => new(_skills, Damage());
         public BackstabSkillExecutor Backstab() =>
-            new(_skills, _calculator, World, new CombatDamage(_calculator, _experience, World));
+            new(_skills, _calculator, World, Damage());
 
         public MeleeAttackExecutor Kill() =>
             new(_calculator, World, new MobAiService(new MockScriptEngine(), new PathfindingService()), Damage());

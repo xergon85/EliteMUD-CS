@@ -136,6 +136,7 @@ internal static class ServerBootstrap
             .AddSingleton<PlayerProgression>()
             .AddSingleton<CombatExperience>()
             .AddSingleton<CombatDamage>()
+            .AddSingleton<ICombatListener, MobMemory>()
 
             // Database
             .AddDbContext<EliteMudDbContext>(options =>

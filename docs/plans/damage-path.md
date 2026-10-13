@@ -122,7 +122,9 @@ Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob ne
   sides request a save. The start room 3001 now has one constant, `CharacterStart.StartRoom`. Closes #40.
 - PR 4: step 5 done. `kill` resolves its hit with `CombatCalculator.ResolveAttack` / `DefendAgainstMelee`
   (legacy `hit()` up to `damage()`) and deals it through `CombatDamage`. `PerformAttack` / `ApplyDamage` are now
-  "resolve, then subtract" and only the tick uses them. MOB_MEMORY (`Remember`) is in `CombatDamage`.
+  "resolve, then subtract" and only the tick uses them. `CombatDamage` tells `ICombatListener`s that someone
+  was hurt or killed; `MobMemory` (Application/Ai) owns mob memory (remember on hurt, forget on kill). The tick's own
+  `RememberPlayer` call goes in step 6.
 - Next: step 6 (the tick). Mob attackers: `CombatDamage.Apply` takes a `PlayerState` attacker today; the tick needs
   mob → player (and mob counterattack). Move the position messages and wimpy into `CombatDamage` / its outcome, and
   give mobs dodge/parry in melee (decision 1). Then remove `HandleMobDeath` / `HandlePlayerDeath*`.
