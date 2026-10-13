@@ -1,3 +1,4 @@
+using EliteMud.Application.Progression;
 using EliteMud.Application.World.Validation;
 using EliteMud.Game;
 using EliteMud.Server;
@@ -6,7 +7,7 @@ namespace EliteMud.Tests.Server;
 
 public class ContentValidatorTests
 {
-    private const int Temple = ContentValidator.StartRoomId;
+    private const int Temple = CharacterStart.StartRoom;
 
     [Fact]
     public void Validate_ExitToMissingRoom_IsAnError()

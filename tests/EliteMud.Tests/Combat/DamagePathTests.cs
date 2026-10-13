@@ -17,7 +17,8 @@ namespace EliteMud.Tests.Combat;
 /// </summary>
 public class DamagePathTests
 {
-    private const int Room = 3001;
+    private const int Room = 3002; // not the temple, so a respawn shows
+    private const int Temple = CharacterStart.StartRoom;
     private const string Improved = "just improved";
 
     private static readonly string Content = Path.Combine(RealWorld.RepositoryRoot, "content");
@@ -80,27 +81,67 @@ public class DamagePathTests
     }
 
     /// <summary>
-    /// Today's bug (#40): a player killed by a skill is left dead where they fell, with no corpse, no respawn,
-    /// no penalty and no kill experience. Changes when player death joins the shared path.
+    /// A player killed by a skill (#40): kill experience for the killer, then legacy die(): a corpse where they
+    /// fell, the death penalty, and back to the temple on full hit points.
     /// </summary>
     [Fact]
-    public void KickKillingAPlayer_LeavesThemDeadInTheRoom()
+    public void KickKillingAPlayer_LeavesACorpse_AndRespawnsThemAtTheTemple()
     {
         var fixture = new Fixture();
         var victim = fixture.VictimPlayer;
-        var victimExperience = victim.Experience;
+        var killerExperience = fixture.Attacker.Experience;
 
         var result = fixture.Kick().Execute(fixture.AgainstPlayer());
 
-        Assert.Equal(Position.Dead, victim.Position);
-        Assert.Equal(Room, victim.RoomId);
-        Assert.Equal(victimExperience, victim.Experience);
-        Assert.DoesNotContain(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+        Assert.Contains(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+        Assert.Equal(Temple, victim.RoomId);
+        Assert.True(victim.SaveRequested);
+        Assert.Equal(Position.Standing, victim.Position);
+        Assert.Equal(fixture.World.GetTotalEffectiveMaxHitPoints(victim), victim.HitPoints);
+        Assert.Equal(5000 - 3333, victim.Experience);
+        Assert.True(fixture.Attacker.Experience >= killerExperience + 1250);
         Assert.Null(fixture.Attacker.FightingConnectionId);
         Assert.Null(victim.FightingConnectionId);
         Assert.Equal(
-            new[] { "A:$N is DEAD!!", "O:$N is dead!  R.I.P.", "V:You are dead!  Sorry..." },
-            Lines(result)[^3..]);
+            new[]
+            {
+                "A:your kick hits $N [50]",
+                "V:$n kicks you! [50]",
+                "O:$n kicks $N!",
+                "A:$N is DEAD!!",
+                "O:$N is dead!  R.I.P.",
+                "V:You are dead!  Sorry...",
+                "A:You receive 1250 experience points.",
+                "V:You lose 3333 experience points.",
+                "V:You have been resurrected..."
+            },
+            Lines(result));
+    }
+
+    /// <summary>
+    /// Legacy damage() gives kill experience and moves alignment only when ch != victim (fight.c:1034). A player
+    /// who kills themselves still dies (corpse, penalty, respawn), with no reward and no killer's line.
+    /// </summary>
+    [Fact]
+    public void KillingYourself_DiesWithoutAKillReward()
+    {
+        var fixture = new Fixture();
+        var player = fixture.Attacker;
+        player.HitPoints = 5;
+        player.Experience = 100_000;
+
+        var outcome = fixture.Damage().Apply(player, 1, player, 1, 50);
+
+        Assert.True(outcome.VictimDied);
+        Assert.Equal(Temple, player.RoomId);
+        Assert.Contains(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+        Assert.True(player.Experience < 100_000); // the penalty, and no kill share
+        Assert.Equal(0, player.Alignment);
+        var lines = outcome.Messages.Select(message => $"{message.Target.ToString()[0]}:{message.Template}").ToList();
+        Assert.Equal("O:$N is dead!  R.I.P.", lines[0]);
+        Assert.Equal("V:You are dead!  Sorry...", lines[1]);
+        Assert.StartsWith("V:You lose ", lines[2]);
+        Assert.Equal("V:You have been resurrected...", lines[^1]);
     }
 
     /// <summary>
@@ -189,12 +230,13 @@ public class DamagePathTests
             World = new WorldState(
                 new WorldDefinition(new Dictionary<int, RoomDefinition>
                 {
-                    [Room] = new(Room, "Temple", "Desc", new List<ExitDefinition>())
+                    [Temple] = new(Temple, "Temple", "Desc", new List<ExitDefinition>()),
+                    [Room] = new(Room, "Arena", "Desc", new List<ExitDefinition>())
                 }),
                 new Dictionary<int, MobDefinition> { [100] = mobDefinition },
                 new Dictionary<int, ObjectDefinition>(),
-                new Dictionary<int, List<MobInstance>> { [Room] = new() { Mob } },
-                new Dictionary<int, List<ObjectInstance>> { [Room] = new() },
+                new Dictionary<int, List<MobInstance>> { [Temple] = new(), [Room] = new() { Mob } },
+                new Dictionary<int, List<ObjectInstance>> { [Temple] = new(), [Room] = new() },
                 new List<ZoneDefinition>());
 
             Attacker = new PlayerState(1, "Tester", Room, level: 10, "thief", "human", sex: 1)

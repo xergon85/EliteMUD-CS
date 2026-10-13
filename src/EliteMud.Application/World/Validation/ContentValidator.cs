@@ -1,3 +1,4 @@
+using EliteMud.Application.Progression;
 using EliteMud.Game;
 
 namespace EliteMud.Application.World.Validation;
@@ -8,8 +9,6 @@ namespace EliteMud.Application.World.Validation;
 /// </summary>
 public static class ContentValidator
 {
-    // Legacy: mortal_start_room (Temple of Midgaard), the start point for reachability
-    public const int StartRoomId = 3001;
 
     private const int NoRoom = -1;
 
@@ -263,9 +262,9 @@ public static class ContentValidator
         Func<int, string> zoneOfRoom,
         List<ContentFinding> findings)
     {
-        if (!world.Rooms.ContainsKey(StartRoomId))
+        if (!world.Rooms.ContainsKey(CharacterStart.StartRoom))
         {
-            findings.Add(new(ContentSeverity.Error, "Start room missing", $"room {StartRoomId}", "the Temple of Midgaard doesn't exist"));
+            findings.Add(new(ContentSeverity.Error, "Start room missing", $"room {CharacterStart.StartRoom}", "the Temple of Midgaard doesn't exist"));
             return;
         }
 
@@ -274,7 +273,7 @@ public static class ContentValidator
             .Where(reset => reset.Type == "LoadPortal" && reset.RoomId.HasValue && reset.PortalDestination.HasValue)
             .ToLookup(reset => reset.RoomId!.Value, reset => reset.PortalDestination!.Value);
 
-        var reached = new HashSet<int> { StartRoomId };
+        var reached = new HashSet<int> { CharacterStart.StartRoom };
         var queue = new Queue<int>(reached);
         while (queue.Count > 0)
         {
@@ -296,7 +295,7 @@ public static class ContentValidator
             if (zoneRooms.Count > 0 && reachable == 0)
             {
                 findings.Add(new(ContentSeverity.Warning, "Zone unreachable", $"zone {zone.Id} {zone.Name}",
-                    $"none of its {zoneRooms.Count} rooms can be reached from room {StartRoomId} by exits or portals"));
+                    $"none of its {zoneRooms.Count} rooms can be reached from room {CharacterStart.StartRoom} by exits or portals"));
             }
             else if (reachable < zoneRooms.Count)
             {

@@ -117,8 +117,12 @@ Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob ne
   from `SkillCommandHandler` so the tick can use it too. `CombatDamage` no longer applies dodge/parry or the
   position multiplier (decision 1; melee keeps them through `ApplyDamage`). A dying player gets "You are dead!
   Sorry...". Handler tests can use `TestConnection` (loopback telnet session): `CastDamageTests`.
-- Next: step 4 (player death in `CombatDamage`, from `HandlePlayerDeath*` in the tick: corpse, `Died` penalty,
-  respawn at 3001 with effective max hp/mana/move from `IWorldState`).
+- PR 3: step 4 done. `CombatDamage` handles player death: `Kill` (alignment, kill XP, death lines; shared with mob
+  death) then `Die` (corpse, `Died` penalty, respawn at `CharacterStart.StartRoom` on effective max points). Both
+  sides request a save. The start room 3001 now has one constant, `CharacterStart.StartRoom`. Closes #40.
+- Next: step 5 (`kill` first hit). `MeleeAttackExecutor` keeps its hit roll (#48) and, for player victims,
+  `PerformAttack` with dodge/parry; the damage then goes through `CombatDamage`. `DamagePathTests` has the
+  pinned bug (`KillFirstHitKillingAMob_LeavesItInTheRoom`).
 - More side findings: #49 (bash doesn't knock a player down: `UpdatePosition` stands them up), #51 (player
   victims never see a skill's victim message).
 
