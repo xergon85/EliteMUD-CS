@@ -130,7 +130,8 @@ public sealed class CombatDamage
         var killReward = Array.Empty<string>() as IReadOnlyList<string>;
         if (!selfInflicted)
         {
-            var alignmentShift = _combatCalculator.CalculateAlignmentShift(killer, victim, isPvP: victim is PlayerState);
+            var alignmentShift = _combatCalculator.CalculateAlignmentShift(
+                killer, victim, isPvP: victim is PlayerState);
             _combatCalculator.ApplyAlignmentShift(killer, alignmentShift);
             killReward = _combatExperience.Killed(killer, victim).Messages;
             killer.SaveRequested = true; // legacy PLR_SAVECHR (fight.c:1047)
