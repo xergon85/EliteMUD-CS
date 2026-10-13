@@ -49,7 +49,8 @@ public sealed class TelnetSessionOutputTests : IDisposable
     [Fact]
     public async Task AClientThatStopsReading_IsDisconnected_WithoutBlockingTheSender()
     {
-        var (session, _) = await ConnectAsync(); // the client never reads
+        // The client never reads; small buffers on both ends, so the kernel can't absorb what we send
+        var (session, _) = await ConnectAsync(smallBuffers: true);
         var line = new string('x', 1000);
 
         var stopwatch = Stopwatch.StartNew();
@@ -62,11 +63,40 @@ public sealed class TelnetSessionOutputTests : IDisposable
         Assert.True(stopwatch.Elapsed < TimeSpan.FromSeconds(5), $"sending took {stopwatch.Elapsed}");
     }
 
-    private async Task<(TelnetSession Session, NetworkStream ClientStream)> ConnectAsync()
+    /// <summary>
+    /// When writing fails but the client is still connected (it could keep sending commands), the session drops
+    /// the connection, so the read loop ends and the player leaves instead of playing on with every reply lost.
+    /// </summary>
+    [Fact]
+    public async Task AFailedWrite_EndsTheReadLoop()
     {
+        var (session, _) = await ConnectAsync();
+        var reading = session.ReadLineAsync(CancellationToken.None).AsTask();
+
+        _server!.Client.Shutdown(SocketShutdown.Send); // writes fail from now on; reading still works
+        await session.SendLineAsync("anyone there?", CancellationToken.None);
+
+        var ended = await Task.WhenAny(reading, Task.Delay(TimeSpan.FromSeconds(5)));
+        Assert.Same(reading, ended);
+        Assert.Null(await reading); // ends like a disconnect, not an error
+        Assert.True(session.IsClosed);
+    }
+
+    private async Task<(TelnetSession Session, NetworkStream ClientStream)> ConnectAsync(bool smallBuffers = false)
+    {
+        if (smallBuffers)
+        {
+            _client.ReceiveBufferSize = 4096; // before connecting, so the advertised window stays small
+        }
+
         _listener.Start();
         await _client.ConnectAsync(IPAddress.Loopback, ((IPEndPoint)_listener.LocalEndpoint).Port);
         _server = await _listener.AcceptTcpClientAsync();
+        if (smallBuffers)
+        {
+            _server.SendBufferSize = 4096;
+        }
+
         return (new TelnetSession(_server.GetStream()), _client.GetStream());
     }
 

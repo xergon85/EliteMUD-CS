@@ -48,7 +48,16 @@ internal sealed class TelnetSession
             var builder = new StringBuilder();
             while (true)
             {
-                var bytesRead = await _stream.ReadAsync(buffer, cancellationToken);
+                int bytesRead;
+                try
+                {
+                    bytesRead = await _stream.ReadAsync(buffer, cancellationToken);
+                }
+                catch (Exception ex) when (_closed && ex is IOException or ObjectDisposedException or SocketException)
+                {
+                    return null; // we dropped the connection ourselves (Abort): a disconnect, not an error
+                }
+
                 if (bytesRead == 0)
                 {
                     return null;
@@ -164,8 +173,9 @@ internal sealed class TelnetSession
         }
         catch (Exception ex) when (ex is IOException or ObjectDisposedException or SocketException)
         {
-            // The client went away; the read loop notices and ends the session
-            _closed = true;
+            // The client can't receive any more. Drop the connection, so the read loop ends and the player leaves
+            // the game, instead of running commands whose replies go nowhere
+            Abort();
         }
     }
 
