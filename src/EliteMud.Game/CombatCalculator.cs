@@ -51,16 +51,19 @@ public class CombatCalculator
 {
     private readonly IPassiveSkillHandler _dodgeSkill;
     private readonly IPassiveSkillHandler _parrySkill;
+    private readonly Random _random;
 
     /// <summary>
     /// Constructor for dependency injection.
     /// </summary>
     /// <param name="dodgeSkill">Dodge skill handler (injected from SkillRegistry)</param>
     /// <param name="parrySkill">Parry skill handler (injected from SkillRegistry)</param>
-    public CombatCalculator(IPassiveSkillHandler dodgeSkill, IPassiveSkillHandler parrySkill)
+    /// <param name="random">Dice for hit and damage rolls; tests pass fixed ones (default: shared)</param>
+    public CombatCalculator(IPassiveSkillHandler dodgeSkill, IPassiveSkillHandler parrySkill, Random? random = null)
     {
         _dodgeSkill = dodgeSkill;
         _parrySkill = parrySkill;
+        _random = random ?? Random.Shared;
     }
     /// <summary>
     /// Set a player to fighting another player.
@@ -110,7 +113,7 @@ public class CombatCalculator
         int total = 0;
         for (int i = 0; i < number; i++)
         {
-            total += Random.Shared.Next(1, size + 1);
+            total += _random.Next(1, size + 1);
         }
         return total;
     }
@@ -143,7 +146,7 @@ public class CombatCalculator
         {
             // Bare hands: str_todam + damroll + number(0, 2)
             // Legacy: fight.c:1458
-            baseDamage = Random.Shared.Next(0, 3); // 0-2 damage (legacy: number(0, 2))
+            baseDamage = _random.Next(0, 3); // 0-2 damage (legacy: number(0, 2))
         }
         
         return Math.Max(0, strBonus + attacker.Damroll + baseDamage);
@@ -549,7 +552,13 @@ public class CombatCalculator
         }
 
         // Check if attack hits (using effective stats)
-        bool hits = AttackHits(attacker, attackerEffectiveStrength, attackerEffectiveIntelligence, attackerEffectiveWisdom, victim, victimEffectiveDexterity);
+        bool hits = AttackHits(
+            attacker,
+            attackerEffectiveStrength,
+            attackerEffectiveIntelligence,
+            attackerEffectiveWisdom,
+            victim,
+            victimEffectiveDexterity);
         if (!hits)
         {
             return new AttackResult(false, 0, "You miss!");

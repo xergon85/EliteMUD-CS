@@ -157,6 +157,45 @@ public class DamagePathTests
             Lines(result)[^3..]);
     }
 
+    /// <summary>
+    /// kill on a player: the resolved hit goes through the same death as every other source (#40). Fixed dice of
+    /// 20 make the roll a natural 20, which always hits.
+    /// </summary>
+    [Fact]
+    public void KillFirstHitKillingAPlayer_LeavesACorpse_AndRespawnsThemAtTheTemple()
+    {
+        var fixture = new Fixture(new FixedRandom(20));
+        var victim = fixture.VictimPlayer;
+        fixture.Attacker.Movement = 100;
+        var killerExperience = fixture.Attacker.Experience;
+
+        var result = fixture.Kill().Execute(fixture.AgainstPlayer());
+
+        Assert.Contains(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+        Assert.Equal(Temple, victim.RoomId);
+        Assert.True(victim.SaveRequested);
+        Assert.Equal(Position.Standing, victim.Position);
+        Assert.Equal(fixture.World.GetTotalEffectiveMaxHitPoints(victim), victim.HitPoints);
+        Assert.Equal(5000 - 3333, victim.Experience);
+        Assert.True(fixture.Attacker.Experience >= killerExperience + 1250);
+        Assert.Null(fixture.Attacker.FightingConnectionId);
+        Assert.Null(victim.FightingConnectionId);
+
+        var lines = Lines(result);
+        Assert.Equal(new[] { "A:You attack $N!", "V:$n attacks you!", "O:$n attacks $N!" }, lines[..3]);
+        Assert.Equal(
+            new[]
+            {
+                "A:$N is DEAD!!",
+                "O:$N is dead!  R.I.P.",
+                "V:You are dead!  Sorry...",
+                "A:You receive 1250 experience points.",
+                "V:You lose 3333 experience points.",
+                "V:You have been resurrected..."
+            },
+            lines[^6..]);
+    }
+
     /// <summary>A MOB_MEMORY mob remembers whoever hurts it, whatever the source (legacy damage()).</summary>
     [Fact]
     public void AMemoryMob_RemembersWhoKicksIt()
@@ -199,7 +238,8 @@ public class DamagePathTests
         private readonly CombatCalculator _calculator;
         private readonly CombatExperience _experience;
 
-        public Fixture()
+        /// <param name="combatRandom">Dice for melee hit and damage rolls (default: shared)</param>
+        public Fixture(Random? combatRandom = null)
         {
             var rules = RulesContentLoader.Load(Content).Rules;
             var formulas = new FormulaEvaluator(new Random(1));
@@ -223,7 +263,8 @@ public class DamagePathTests
 
             var metadata = new SkillMetadataRegistry(skills);
             _skills = new SkillRegistry(metadata, formulas);
-            _calculator = new CombatCalculator(new DodgeSkill(metadata, formulas), new ParrySkill(metadata, formulas));
+            _calculator = new CombatCalculator(
+                new DodgeSkill(metadata, formulas), new ParrySkill(metadata, formulas), combatRandom);
             var experienceService = new ExperienceService(rules, formulas, new Random(1));
             _experience = new CombatExperience(new PlayerProgression(experienceService, rules), experienceService);
 
