@@ -38,6 +38,7 @@ public sealed class CombatDamage
         if (!ReferenceEquals(attacker, victim))
         {
             StartFighting(attacker, attackerConnectionId, victim, victimConnectionId);
+            Remember(attacker, victim);
         }
 
         return victimConnectionId != null
@@ -65,6 +66,20 @@ public sealed class CombatDamage
         else if (victim is MobInstance { FightingConnectionId: null } mob)
         {
             mob.FightingConnectionId = attackerConnectionId;
+        }
+    }
+
+    /// <summary>
+    /// A MOB_MEMORY mob remembers a mortal who hurts it, to attack them on sight later (legacy damage(),
+    /// fight.c:824).
+    /// </summary>
+    private static void Remember(PlayerState attacker, ICombatant victim)
+    {
+        if (victim is MobInstance mob
+            && mob.Definition.ParsedFlags.HasFlag(MobFlags.Memory)
+            && attacker.Level <= ExperienceService.MaxMortalLevel)
+        {
+            mob.RememberPlayer(attacker.Id);
         }
     }
 

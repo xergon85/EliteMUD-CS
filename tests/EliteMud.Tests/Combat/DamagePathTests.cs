@@ -144,22 +144,30 @@ public class DamagePathTests
         Assert.Equal("V:You have been resurrected...", lines[^1]);
     }
 
-    /// <summary>
-    /// Today's bug (#42): the first hit of kill has no death handling, so a mob it kills stays in the room at
-    /// ≤0 hp. Changes when kill joins the shared path.
-    /// </summary>
     [Fact]
-    public void KillFirstHitKillingAMob_LeavesItInTheRoom()
+    public void KillFirstHitKillingAMob_EndsTheFight_MovesAlignment_LeavesACorpse_GivesKillExperience()
     {
         var fixture = new Fixture();
 
         var result = fixture.Kill().Execute(fixture.AgainstMob());
 
-        Assert.True(result.Success);
-        Assert.True(fixture.Mob.HitPoints <= 0);
-        Assert.Contains(fixture.Mob, fixture.World.GetMobsInRoom(Room));
-        Assert.DoesNotContain(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
-        Assert.DoesNotContain(Lines(result), line => line.Contains("DEAD"));
+        fixture.AssertMobKilled();
+        Assert.Equal(
+            new[] { "A:$N is DEAD!!", "O:$N is dead!  R.I.P.", "A:You receive 100 experience points." },
+            Lines(result)[^3..]);
+    }
+
+    /// <summary>A MOB_MEMORY mob remembers whoever hurts it, whatever the source (legacy damage()).</summary>
+    [Fact]
+    public void AMemoryMob_RemembersWhoKicksIt()
+    {
+        var fixture = new Fixture();
+        var definition = fixture.Mob.Definition with { ParsedFlags = MobFlags.Memory };
+        var mob = new MobInstance(2, definition) { HitPoints = 1000 };
+
+        fixture.Kick().Execute(new SkillContext(fixture.Attacker, 1, mob, null, null));
+
+        Assert.Contains(fixture.Attacker.Id, mob.Memory);
     }
 
     [Fact]
@@ -273,7 +281,7 @@ public class DamagePathTests
             new(_skills, _calculator, World, new CombatDamage(_calculator, _experience, World));
 
         public MeleeAttackExecutor Kill() =>
-            new(_calculator, World, new MobAiService(new MockScriptEngine(), new PathfindingService()), _experience);
+            new(_calculator, World, new MobAiService(new MockScriptEngine(), new PathfindingService()), Damage());
 
         public void AssertMobKilled()
         {
