@@ -277,6 +277,8 @@ internal sealed class TelnetServer
                 _connections.TryRemove(context.Id, out _);
             }
 
+            // Last words (goodbye, ban message) are still queued; send them before the socket closes
+            await session.CloseAsync();
             client.Close();
         }
     }
