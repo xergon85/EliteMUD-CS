@@ -124,6 +124,27 @@ public sealed class CharacterSaveQueueTests : IDisposable
         Assert.Contains("Character saved.", lines);
     }
 
+    [Fact]
+    public async Task ACancelledSave_SaysSo()
+    {
+        var player = new PlayerState(_characterId, "Tester", 3001, level: 1, "warrior", "human", sex: 1);
+        using var connection = new TestConnection(1, player);
+        var context = new ConnectionContext(1, connection.Context.Session, player, _characterId, "test");
+        using var shutdown = new CancellationTokenSource();
+        shutdown.Cancel();
+
+        await new SaveCommandHandler(_queue).HandleAsync(new CommandRequest("save", null, null), context, shutdown.Token);
+
+        var lines = new List<string>();
+        var deadline = DateTime.UtcNow + TimeSpan.FromSeconds(5);
+        while (lines.Count == 0 && DateTime.UtcNow < deadline)
+        {
+            lines.AddRange(connection.Lines());
+        }
+
+        Assert.Equal(new[] { "Your character wasn't saved: the server is shutting down." }, lines);
+    }
+
     private int StoredLevel()
     {
         using var scope = _services.CreateScope();

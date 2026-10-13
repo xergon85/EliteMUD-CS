@@ -28,9 +28,12 @@ internal sealed class SaveCommandHandler : ICommandHandler
         _ = saved.ContinueWith(
             task =>
             {
-                var message = task.IsCompletedSuccessfully
-                    ? task.Result ? "Character saved." : "Error: Character not found."
-                    : $"Error saving character: {task.Exception?.GetBaseException().Message}";
+                var message = task.Status switch
+                {
+                    TaskStatus.RanToCompletion => task.Result ? "Character saved." : "Error: Character not found.",
+                    TaskStatus.Canceled => "Your character wasn't saved: the server is shutting down.",
+                    _ => $"Error saving character: {task.Exception?.GetBaseException().Message}"
+                };
                 return session.SendLineAsync(message, CancellationToken.None);
             },
             TaskScheduler.Default);
