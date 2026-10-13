@@ -88,6 +88,9 @@ Each step is its own commit, ideally its own PR if it gets large.
 
 - **Message wording and order** are legacy act messages; keep them. Kill XP lines come after "is DEAD!!".
 - **Wimpy/auto-flee** lives in `CheckPlayerPositionAsync` (tick). Keep it working when the tick switches over.
+- **Position messages** ("You are stunned...", "$n is mortally wounded...", "That Really did HURT!") are part of
+  legacy `damage()` for every source (fight.c:987–1003), but only the tick sends them (`CheckPlayerPositionAsync`).
+  A player stunned by a skill or spell gets no message today. Move them into `CombatDamage` in step 6.
 - **`Killed` before `Died`:** the killer's share comes from the victim's XP before the penalty.
 - **Mob memory / helpers:** `RememberPlayer` on hit (`MOB_MEMORY`) and `MobAiService.ProcessAssist` on combat start
   happen in some copies only; decide where they belong.
@@ -110,9 +113,14 @@ Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob ne
 - PR 1: steps 0–2 done. `CombatDamage` (Application/Combat) handles fighting state, damage XP and mob death;
   kick, bash and backstab use it. Characterization tests: `tests/EliteMud.Tests/Combat/DamagePathTests.cs`
   (the player-victim and `kill` tests pin today's bugs and change in steps 4 and 5).
-- Next: step 3 (damage spells). `cast` sends messages directly, so it needs to render `DamageOutcome.Messages`
-  (act templates with `$N`) the way `SkillCommandHandler` does.
-- More side findings: #49 (bash doesn't knock a player down: `UpdatePosition` stands them up).
+- PR 2: step 3 done. `cast` uses `CombatDamage`; its messages go through `SkillMessageSender` (Server), extracted
+  from `SkillCommandHandler` so the tick can use it too. `CombatDamage` no longer applies dodge/parry or the
+  position multiplier (decision 1; melee keeps them through `ApplyDamage`). A dying player gets "You are dead!
+  Sorry...". Handler tests can use `TestConnection` (loopback telnet session): `CastDamageTests`.
+- Next: step 4 (player death in `CombatDamage`, from `HandlePlayerDeath*` in the tick: corpse, `Died` penalty,
+  respawn at 3001 with effective max hp/mana/move from `IWorldState`).
+- More side findings: #49 (bash doesn't knock a player down: `UpdatePosition` stands them up), #51 (player
+  victims never see a skill's victim message).
 
 ## Other open cards (for orientation)
 

@@ -6,7 +6,7 @@ namespace EliteMud.Server.Adapters.Commands.Shared;
 
 /// <summary>
 /// Extension methods for ConnectionContext to support act() style messaging.
-/// Provides easy broadcasting to rooms with substitution codes.
+/// Provides easy broadcasting to rooms with substitution codes. A victim ($N) can be a player or a mob.
 /// </summary>
 internal static class ActMessageExtensions
 {
@@ -17,7 +17,7 @@ internal static class ActMessageExtensions
         this ConnectionContext context,
         ActMessageService actService,
         string message,
-        PlayerState? victim = null,
+        object? victim = null,
         ObjectDefinition? obj = null,
         string? textArg = null,
         CancellationToken cancellationToken = default)
@@ -41,7 +41,7 @@ internal static class ActMessageExtensions
         ActMessageService actService,
         ConnectionRegistry connectionRegistry,
         string message,
-        PlayerState? victim = null,
+        object? victim = null,
         ObjectDefinition? obj = null,
         string? textArg = null,
         CancellationToken cancellationToken = default)
@@ -73,7 +73,7 @@ internal static class ActMessageExtensions
         ActMessageService actService,
         ConnectionRegistry connectionRegistry,
         string message,
-        PlayerState? victim = null,
+        object? victim = null,
         ObjectDefinition? obj = null,
         string? textArg = null,
         CancellationToken cancellationToken = default)
@@ -136,7 +136,7 @@ internal static class ActMessageExtensions
         ActMessageService actService,
         ConnectionRegistry connectionRegistry,
         string message,
-        PlayerState? victim = null,
+        object? victim = null,
         ObjectDefinition? obj = null,
         string? textArg = null,
         CancellationToken cancellationToken = default)
@@ -145,7 +145,7 @@ internal static class ActMessageExtensions
         var playersInRoom = connectionRegistry.GetConnections()
             .Where(c => c.Player.RoomId == roomId 
                      && c.Player.Id != context.Player.Id 
-                     && (victim == null || c.Player.Id != victim.Id))
+                     && (victim is not PlayerState victimPlayer || c.Player.Id != victimPlayer.Id))
             .ToList();
 
         foreach (var playerConnection in playersInRoom)

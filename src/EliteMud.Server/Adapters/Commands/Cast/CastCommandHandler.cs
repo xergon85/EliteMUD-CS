@@ -1,5 +1,5 @@
+using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.Progression;
 using EliteMud.Application.Spells;
 using EliteMud.Application.World;
 using EliteMud.Game;
@@ -24,7 +24,8 @@ internal sealed class CastCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly ConnectionRegistry _connectionRegistry;
     private readonly ActMessageService _actService;
-    private readonly CombatExperience _combatExperience;
+    private readonly CombatDamage _combatDamage;
+    private readonly SkillMessageSender _messageSender;
 
     public CastCommandHandler(
         SpellRegistry spellRegistry,
@@ -32,9 +33,11 @@ internal sealed class CastCommandHandler : ICommandHandler
         IWorldState worldState,
         ConnectionRegistry connectionRegistry,
         ActMessageService actService,
-        CombatExperience combatExperience)
+        CombatDamage combatDamage,
+        SkillMessageSender messageSender)
     {
-        _combatExperience = combatExperience;
+        _combatDamage = combatDamage;
+        _messageSender = messageSender;
         _spellRegistry = spellRegistry;
         _metadataRegistry = metadataRegistry;
         _worldState = worldState;
@@ -307,7 +310,11 @@ internal sealed class CastCommandHandler : ICommandHandler
         if (!success)
         {
             await context.Session.SendLineAsync($"You try to cast {metadata.Name}, but fail!", cancellationToken);
-            await BroadcastToRoomAsync(context, "$n tries to cast a spell, but fails!", cancellationToken);
+            await context.ActToNotCharAsync(
+                _actService,
+                _connectionRegistry,
+                "$n tries to cast a spell, but fails!",
+                cancellationToken: cancellationToken);
             return;
         }
 
@@ -333,7 +340,11 @@ internal sealed class CastCommandHandler : ICommandHandler
         {
             // Unknown spell type (no damage, healing, or affects)
             await context.Session.SendLineAsync($"You cast {metadata.Name}.", cancellationToken);
-            await BroadcastToRoomAsync(context, $"$n casts {metadata.Name}.", cancellationToken);
+            await context.ActToNotCharAsync(
+                _actService,
+                _connectionRegistry,
+                $"$n casts {metadata.Name}.",
+                cancellationToken: cancellationToken);
         }
 
         // Try to improve spell proficiency
@@ -357,69 +368,10 @@ internal sealed class CastCommandHandler : ICommandHandler
         int? targetConnectionId,
         CancellationToken cancellationToken)
     {
-        // Start combat if not already fighting
-        if (caster.FightingConnectionId == null && target != caster)
-        {
-            if (targetConnectionId != null)
-            {
-                // PvP
-                var targetPlayer = (PlayerState)target;
-                caster.FightingConnectionId = targetConnectionId.Value;
-                targetPlayer.FightingConnectionId = (int?)context.Id;
-            }
-            else
-            {
-                // PvE
-                var mobInstance = (MobInstance)target;
-                caster.FightingConnectionId = -mobInstance.InstanceId;
-                mobInstance.FightingConnectionId = (int?)context.Id;
-            }
-        }
+        var outcome = _combatDamage.Apply(caster, context.Id, target, targetConnectionId, damage);
 
-        // Apply damage
-        var victimDied = false;
-        ProgressionResult? killReward = null;
-
-        if (targetConnectionId != null)
-        {
-            // Player victim
-            var targetPlayer = (PlayerState)target;
-            targetPlayer.HitPoints -= (short)damage;
-            _combatExperience.DamageDealt(caster, targetPlayer, damage); // none between players; shared path
-
-            if (targetPlayer.HitPoints <= 0)
-            {
-                targetPlayer.Position = Position.Dead;
-                targetPlayer.HitPoints = 0;
-                victimDied = true;
-                caster.FightingConnectionId = null;
-                targetPlayer.FightingConnectionId = null;
-            }
-        }
-        else
-        {
-            // Mob victim
-            var mobInstance = (MobInstance)target;
-            mobInstance.HitPoints -= (short)damage;
-            _combatExperience.DamageDealt(caster, mobInstance, damage);
-
-            if (mobInstance.HitPoints <= 0)
-            {
-                mobInstance.Position = Position.Dead;
-                victimDied = true;
-                caster.FightingConnectionId = null;
-                mobInstance.FightingConnectionId = null;
-
-                killReward = _combatExperience.Killed(caster, mobInstance);
-
-                _worldState.CreateMobCorpse(mobInstance, caster.RoomId);
-                _worldState.RemoveMob(mobInstance.InstanceId, caster.RoomId);
-            }
-        }
-
-        // Send messages
         await context.Session.SendLineAsync(
-            $"Your {metadata.Name} hits {target.Name}! [{damage}]",
+            $"Your {metadata.Name} hits {target.Name}! [{outcome.Damage}]",
             cancellationToken);
 
         if (targetConnectionId != null)
@@ -428,28 +380,20 @@ internal sealed class CastCommandHandler : ICommandHandler
             if (targetConnection != null)
             {
                 await targetConnection.Session.SendLineAsync(
-                    $"{caster.Name} casts {metadata.Name} at you! [{damage}]",
+                    $"{caster.Name} casts {metadata.Name} at you! [{outcome.Damage}]",
                     cancellationToken);
             }
         }
 
-        await BroadcastToRoomExceptAsync(
-            context,
-            targetConnectionId,
-            $"$n casts {metadata.Name} at {target.Name}! [{damage}]",
-            cancellationToken);
+        await context.ActToNotVictAsync(
+            _actService,
+            _connectionRegistry,
+            $"$n casts {metadata.Name} at {target.Name}! [{outcome.Damage}]",
+            target,
+            cancellationToken: cancellationToken);
 
-        if (victimDied)
-        {
-            await context.Session.SendLineAsync($"{target.Name} is DEAD!!", cancellationToken);
-            await BroadcastToRoomAsync(context, $"{target.Name} is dead! R.I.P.", cancellationToken);
-        }
-
-        // Kill XP messages come after the death messages, as in legacy
-        foreach (var line in killReward?.Messages ?? Array.Empty<string>())
-        {
-            await context.Session.SendLineAsync(line, cancellationToken);
-        }
+        // Death and kill XP follow the hit, as in legacy
+        await _messageSender.SendAsync(outcome.Messages, context, cancellationToken);
     }
 
     /// <summary>
@@ -478,7 +422,11 @@ internal sealed class CastCommandHandler : ICommandHandler
                 await context.Session.SendLineAsync(
                     $"You cast {metadata.Name} and heal yourself for {actualHealing} hit points.",
                     cancellationToken);
-                await BroadcastToRoomAsync(context, $"$n casts {metadata.Name} on $mself.", cancellationToken);
+                await context.ActToNotCharAsync(
+                    _actService,
+                    _connectionRegistry,
+                    $"$n casts {metadata.Name} on $mself.",
+                    cancellationToken: cancellationToken);
             }
             else
             {
@@ -497,11 +445,12 @@ internal sealed class CastCommandHandler : ICommandHandler
                     }
                 }
 
-                await BroadcastToRoomExceptAsync(
-                    context,
-                    targetConnectionId,
+                await context.ActToNotVictAsync(
+                    _actService,
+                    _connectionRegistry,
                     $"$n casts {metadata.Name} on {target.Name}.",
-                    cancellationToken);
+                    target,
+                    cancellationToken: cancellationToken);
             }
         }
     }
@@ -535,7 +484,11 @@ internal sealed class CastCommandHandler : ICommandHandler
 
                 if (affect.ToRoomMessage != null)
                 {
-                    await BroadcastToRoomAsync(context, affect.ToRoomMessage, cancellationToken);
+                    await context.ActToNotCharAsync(
+                        _actService,
+                        _connectionRegistry,
+                        affect.ToRoomMessage,
+                        cancellationToken: cancellationToken);
                 }
             }
             else
@@ -559,7 +512,12 @@ internal sealed class CastCommandHandler : ICommandHandler
 
                 if (affect.ToRoomMessage != null)
                 {
-                    await BroadcastToRoomExceptAsync(context, targetConnectionId, affect.ToRoomMessage, cancellationToken);
+                    await context.ActToNotVictAsync(
+                        _actService,
+                        _connectionRegistry,
+                        affect.ToRoomMessage,
+                        target,
+                        cancellationToken: cancellationToken);
                 }
             }
 
@@ -573,7 +531,11 @@ internal sealed class CastCommandHandler : ICommandHandler
             if (target == caster)
             {
                 await context.Session.SendLineAsync($"You cast {metadata.Name} on yourself.", cancellationToken);
-                await BroadcastToRoomAsync(context, $"$n casts {metadata.Name}.", cancellationToken);
+                await context.ActToNotCharAsync(
+                    _actService,
+                    _connectionRegistry,
+                    $"$n casts {metadata.Name}.",
+                    cancellationToken: cancellationToken);
             }
             else
             {
@@ -588,47 +550,13 @@ internal sealed class CastCommandHandler : ICommandHandler
                     }
                 }
 
-                await BroadcastToRoomExceptAsync(context, targetConnectionId, $"$n casts {metadata.Name} on {target.Name}.", cancellationToken);
+                await context.ActToNotVictAsync(
+                    _actService,
+                    _connectionRegistry,
+                    $"$n casts {metadata.Name} on {target.Name}.",
+                    target,
+                    cancellationToken: cancellationToken);
             }
-        }
-    }
-
-    /// <summary>
-    /// Broadcast message to all players in room except the caster.
-    /// </summary>
-    private async Task BroadcastToRoomAsync(
-        ConnectionContext caster,
-        string message,
-        CancellationToken cancellationToken)
-    {
-        var roomPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == caster.Player.RoomId && c.Id != caster.Id);
-
-        foreach (var player in roomPlayers)
-        {
-            var formatted = _actService.FormatMessage(message, player.Player, caster.Player, null);
-            await player.Session.SendLineAsync(formatted, cancellationToken);
-        }
-    }
-
-    /// <summary>
-    /// Broadcast message to all players in room except the caster and optionally the target.
-    /// </summary>
-    private async Task BroadcastToRoomExceptAsync(
-        ConnectionContext caster,
-        int? targetConnectionId,
-        string message,
-        CancellationToken cancellationToken)
-    {
-        var roomPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == caster.Player.RoomId
-                        && c.Id != caster.Id
-                        && (targetConnectionId == null || c.Id != targetConnectionId.Value));
-
-        foreach (var player in roomPlayers)
-        {
-            var formatted = _actService.FormatMessage(message, player.Player, caster.Player, null);
-            await player.Session.SendLineAsync(formatted, cancellationToken);
         }
     }
 }

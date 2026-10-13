@@ -98,7 +98,9 @@ public class DamagePathTests
         Assert.DoesNotContain(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
         Assert.Null(fixture.Attacker.FightingConnectionId);
         Assert.Null(victim.FightingConnectionId);
-        Assert.Equal(new[] { "A:$N is DEAD!!", "O:$N is dead!  R.I.P." }, Lines(result)[^2..]);
+        Assert.Equal(
+            new[] { "A:$N is DEAD!!", "O:$N is dead!  R.I.P.", "V:You are dead!  Sorry..." },
+            Lines(result)[^3..]);
     }
 
     /// <summary>
