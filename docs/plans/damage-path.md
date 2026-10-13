@@ -126,6 +126,8 @@ Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob ne
 - Next: step 6 (the tick). Mob attackers: `CombatDamage.Apply` takes a `PlayerState` attacker today; the tick needs
   mob → player (and mob counterattack). Move the position messages and wimpy into `CombatDamage` / its outcome, and
   give mobs dodge/parry in melee (decision 1). Then remove `HandleMobDeath` / `HandlePlayerDeath*`.
+  Split `CombatDamage` into an ordered list of small steps (`IDamageStep` over a `DamageContext`) as part of this:
+  plan in the #42 comments.
 - More side findings: #49 (bash doesn't knock a player down: `UpdatePosition` stands them up), #51 (player
   victims never see a skill's victim message), #55 (player killing rules), #59 (affects design).
 
