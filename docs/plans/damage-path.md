@@ -88,6 +88,9 @@ Each step is its own commit, ideally its own PR if it gets large.
 
 - **Message wording and order** are legacy act messages; keep them. Kill XP lines come after "is DEAD!!".
 - **Wimpy/auto-flee** lives in `CheckPlayerPositionAsync` (tick). Keep it working when the tick switches over.
+- **Position messages** ("You are stunned...", "$n is mortally wounded...", "That Really did HURT!") are part of
+  legacy `damage()` for every source (fight.c:987–1003), but only the tick sends them (`CheckPlayerPositionAsync`).
+  A player stunned by a skill or spell gets no message today. Move them into `CombatDamage` in step 6.
 - **`Killed` before `Died`:** the killer's share comes from the victim's XP before the penalty.
 - **Mob memory / helpers:** `RememberPlayer` on hit (`MOB_MEMORY`) and `MobAiService.ProcessAssist` on combat start
   happen in some copies only; decide where they belong.
