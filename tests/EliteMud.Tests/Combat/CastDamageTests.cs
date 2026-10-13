@@ -30,13 +30,31 @@ public sealed class CastDamageTests : IDisposable
     private readonly TestConnection _victim;
     private readonly TestConnection _observer;
     private readonly CastCommandHandler _cast;
+    private readonly CombatCalculator _calculator;
 
     public CastDamageTests()
     {
         var rules = RulesContentLoader.Load(Content).Rules;
         var formulas = new FormulaEvaluator(new Random(1));
         var spellMetadata = new SpellMetadataRegistry(ContentLoader.LoadSpells(Content));
-        var skillMetadata = new SkillMetadataRegistry(ContentLoader.LoadSkills(Content));
+        // Dodge and parry always activate here, so a test can tell whether a hit goes through them
+        var skills = ContentLoader.LoadSkills(Content).ToDictionary(pair => pair.Key, pair => pair.Value);
+        foreach (var type in new[] { SkillType.Dodge, SkillType.Parry })
+        {
+            var skill = skills[(int)type];
+            skills[(int)type] = skill with
+            {
+                Mechanics = new SkillMechanics
+                {
+                    ActivationFormula = "return true",
+                    EffectFormula = skill.Mechanics?.EffectFormula,
+                    Requirements = skill.Mechanics?.Requirements
+                }
+            };
+        }
+
+        var skillMetadata = new SkillMetadataRegistry(skills);
+        _calculator = new CombatCalculator(new DodgeSkill(skillMetadata, formulas), new ParrySkill(skillMetadata, formulas));
         var experience = new ExperienceService(rules, formulas, new Random(1));
 
         // Alignment -1000 moves a neutral killer 62 towards good; 400 XP gives a 100 kill share
@@ -84,7 +102,7 @@ public sealed class CastDamageTests : IDisposable
             connections,
             new ActMessageService(),
             new CombatDamage(
-                new CombatCalculator(new DodgeSkill(skillMetadata, formulas), new ParrySkill(skillMetadata, formulas)),
+                _calculator,
                 new CombatExperience(new PlayerProgression(experience, rules), experience),
                 _world),
             new SkillMessageSender(new ActMessageService(), connections));
@@ -119,7 +137,7 @@ public sealed class CastDamageTests : IDisposable
     }
 
     [Fact]
-    public async Task HittingAPlayer_StartsTheFight_WithoutDodge()
+    public async Task HittingAPlayer_StartsTheFight()
     {
         await Cast("'magic missile' victim");
 
@@ -129,6 +147,51 @@ public sealed class CastDamageTests : IDisposable
         Assert.Equal(new[] { "Your magic missile hits Victim! [6]" }, CasterLines());
         Assert.Equal(new[] { "Caster casts magic missile at you! [6]" }, _victim.Lines());
         Assert.Equal(new[] { "Caster casts magic missile at Victim! [6]" }, _observer.Lines());
+    }
+
+    /// <summary>
+    /// Legacy has dodge and parry in the melee hit only (fight.c hit()), not in damage(): spells can't be avoided.
+    /// </summary>
+    [Fact]
+    public async Task HittingAPlayer_CannotBeDodgedOrParried()
+    {
+        Victim.Level = 30;
+        Victim.SetSkill(SkillType.Dodge, 100);
+        Victim.SetSkill(SkillType.Parry, 100);
+
+        // The same victim dodges melee damage: the test setup really activates dodge
+        var meleeVictim = new PlayerState(9, "Melee", Room, level: 30, "warrior", "human", sex: 1)
+        {
+            HitPoints = 100,
+            Position = Position.Standing
+        };
+        meleeVictim.SetSkill(SkillType.Dodge, 100);
+        Assert.True(_calculator.ApplyDamage(meleeVictim, 6).Dodged);
+
+        await Cast("'magic missile' victim");
+
+        Assert.Equal(94, Victim.HitPoints);
+        Assert.Equal(new[] { "Caster casts magic missile at you! [6]" }, _victim.Lines());
+    }
+
+    /// <summary>
+    /// Legacy update_pos (fight.c): below 0 hp a player is stunned, incapacitated or mortally wounded; dead only
+    /// below -10. The old cast path made every player at 0 hp or below dead.
+    /// </summary>
+    [Theory]
+    [InlineData(6, 0, Position.Stunned)]
+    [InlineData(3, -3, Position.Incapacitated)]
+    [InlineData(0, -6, Position.MortallyWounded)]
+    public async Task HittingAPlayerToZeroOrBelow_FollowsLegacyPositions(int hitPoints, int left, Position position)
+    {
+        Victim.HitPoints = (short)hitPoints;
+
+        await Cast("'magic missile' victim");
+
+        Assert.Equal(left, Victim.HitPoints);
+        Assert.Equal(position, Victim.Position);
+        Assert.Equal(new[] { "Your magic missile hits Victim! [6]" }, CasterLines());
+        Assert.Equal(new[] { "Caster casts magic missile at you! [6]" }, _victim.Lines());
     }
 
     /// <summary>
