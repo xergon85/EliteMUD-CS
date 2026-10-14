@@ -22,6 +22,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
     private readonly IWorldState _worldState;
     private readonly MobAiService _mobAiService;
     private readonly CombatDamage _combatDamage;
+    private readonly MeleeRoll _meleeRoll;
 
     public SkillType SkillType => SkillType.Kick; // Not actually a skill, just needs a value
     public TargetingMode Targeting => TargetingMode.RequiredInRoom;
@@ -30,8 +31,10 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
         CombatCalculator combatCalculator,
         IWorldState worldState,
         MobAiService mobAiService,
-        CombatDamage combatDamage)
+        CombatDamage combatDamage,
+        MeleeRoll meleeRoll)
     {
+        _meleeRoll = meleeRoll;
         _combatCalculator = combatCalculator;
         _worldState = worldState;
         _mobAiService = mobAiService;
@@ -59,28 +62,12 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             return SkillResult.Failed("You can't attack while sitting down!");
         }
 
-        // Get wielded weapon for damage calculation
-        ObjectInstance? weapon = null;
-        if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
-        {
-            weapon = _worldState.GetObjectInstance(weaponInstanceId);
-        }
-
-        var weaponDetails = weapon?.Definition.Details?.Weapon;
-
-        // Calculate effective stats (base + equipment + spell bonuses)
-        var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
-
         return victim is PlayerState victimPlayer
-            ? AttackPlayer(context, victimPlayer, attackerEffectiveStr, weaponDetails)
-            : AttackMob(context, (MobInstance)victim, attackerEffectiveStr, weapon, weaponDetails);
+            ? AttackPlayer(context, victimPlayer)
+            : AttackMob(context, (MobInstance)victim);
     }
 
-    private SkillResult AttackPlayer(
-        SkillContext context,
-        PlayerState victimPlayer,
-        sbyte attackerEffectiveStr,
-        ObjectWeapon? weaponDetails)
+    private SkillResult AttackPlayer(SkillContext context, PlayerState victimPlayer)
     {
         var attacker = context.Actor;
         var messages = new List<SkillMessage>
@@ -91,28 +78,22 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
         };
 
         // Hit roll, damage and the victim's dodge/parry, before the fight starts (legacy hit(), then damage())
-        var result = _combatCalculator.ResolveAttack(
-            attacker,
-            attackerEffectiveStr,
-            _worldState.GetTotalEffectiveIntelligence(attacker),
-            _worldState.GetTotalEffectiveWisdom(attacker),
-            victimPlayer,
-            _worldState.GetTotalEffectiveDexterity(victimPlayer),
-            weaponDetails);
+        var hit = _meleeRoll.Hits(attacker, victimPlayer);
+        var damage = hit
+            ? _combatCalculator.DefendAgainstMelee(victimPlayer, _meleeRoll.Damage(attacker, victimPlayer)).Damage
+            : 0;
 
-        var outcome = _combatDamage.Apply(
-            attacker,
-            victimPlayer,
-            result.Hit ? result.Damage : 0);
+        // Before the hit: a death moves the victim's gear, and its bonuses, into the corpse
+        var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victimPlayer);
+        var outcome = _combatDamage.Apply(attacker, victimPlayer, damage);
 
         // Format combat messages (legacy format with damage/health)
-        var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victimPlayer);
         messages.Add(new SkillMessage(SkillMessageTarget.Actor, CombatMessageFormatter.FormatCombatMessage(
             attacker.Name, victimPlayer.Name, outcome.Damage, victimEffectiveMaxHp, MessagePerspective.ToChar)));
         messages.Add(new SkillMessage(SkillMessageTarget.Victim, CombatMessageFormatter.FormatCombatMessage(
             attacker.Name, victimPlayer.Name, outcome.Damage, victimEffectiveMaxHp, MessagePerspective.ToVict)));
 
-        if (result.Hit)
+        if (hit)
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Others, CombatMessageFormatter.FormatCombatMessage(
                 attacker.Name, victimPlayer.Name, outcome.Damage, victimEffectiveMaxHp, MessagePerspective.ToRoom)));
@@ -123,12 +104,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
     }
 
     /// <summary>The first hit on a mob always lands for now (#48).</summary>
-    private SkillResult AttackMob(
-        SkillContext context,
-        MobInstance mobInstance,
-        sbyte attackerEffectiveStr,
-        ObjectInstance? weapon,
-        ObjectWeapon? weaponDetails)
+    private SkillResult AttackMob(SkillContext context, MobInstance mobInstance)
     {
         var attacker = context.Actor;
         var mobDesc = mobInstance.Definition.ShortDescription?.Trim() ?? "something";
@@ -138,13 +114,8 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             new(SkillMessageTarget.Others, $"$n attacks {mobDesc}!")
         };
 
-        int damage = _combatCalculator.CalculateDamage(attacker, attackerEffectiveStr, weaponDetails);
-
-        // Apply weapon special effects (bless/evil/flame)
-        if (weapon != null)
-        {
-            damage += _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, mobInstance);
-        }
+        // The victim's defense as for any melee hit, e.g. more damage against a sleeping mob
+        var damage = _combatCalculator.DefendAgainstMelee(mobInstance, _meleeRoll.Damage(attacker, mobInstance)).Damage;
 
         var outcome = _combatDamage.Apply(
             attacker,

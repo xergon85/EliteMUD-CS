@@ -23,6 +23,7 @@ internal sealed class GameTickService
     private readonly IServiceProvider _serviceProvider;
     private readonly IWorldState _worldState;
     private readonly CombatDamage _combatDamage;
+    private readonly MeleeRoll _meleeRoll;
     private readonly SkillMessageSender _messageSender;
     private readonly CombatCalculator _combatCalculator;
     private readonly CharacterSaveQueue _saveQueue;
@@ -44,6 +45,7 @@ internal sealed class GameTickService
         IServiceProvider serviceProvider,
         IWorldState worldState,
         CombatDamage combatDamage,
+        MeleeRoll meleeRoll,
         SkillMessageSender messageSender,
         CombatCalculator combatCalculator,
         CharacterSaveQueue saveQueue,
@@ -55,6 +57,7 @@ internal sealed class GameTickService
         _serviceProvider = serviceProvider;
         _worldState = worldState;
         _combatDamage = combatDamage;
+        _meleeRoll = meleeRoll;
         _messageSender = messageSender;
         _combatCalculator = combatCalculator;
         _saveQueue = saveQueue;
@@ -289,82 +292,19 @@ internal sealed class GameTickService
 
     /// <summary>
     /// The damage of a melee hit after the victim's defense, and the victim's dodge or parry line if any. Players
-    /// roll to hit only against players for now (#48); weapon effects come on top (step 7 of #42 unifies the roll).
+    /// roll to hit only against players for now (#48).
     /// </summary>
     private (int Damage, string? Defense) RollMelee(ICombatant attacker, ICombatant victim)
     {
-        var weapon = Wielded(attacker);
-        var weaponDetails = weapon?.Definition.Details?.Weapon;
-
-        if (attacker is PlayerState player && victim is PlayerState victimPlayer)
+        if (attacker is PlayerState player && victim is PlayerState victimPlayer
+            && !_meleeRoll.Hits(player, victimPlayer))
         {
-            var result = _combatCalculator.ResolveAttack(
-                player,
-                _worldState.GetTotalEffectiveStrength(player),
-                _worldState.GetTotalEffectiveIntelligence(player),
-                _worldState.GetTotalEffectiveWisdom(player),
-                victimPlayer,
-                _worldState.GetTotalEffectiveDexterity(victimPlayer),
-                weaponDetails);
-            if (!result.Hit)
-            {
-                return (0, null);
-            }
-
-            var effects = weapon != null ? _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim) : 0;
-            return (result.Damage + effects, result.Message);
+            return (0, null);
         }
 
-        var damage = attacker switch
-        {
-            PlayerState attackingPlayer => _combatCalculator.CalculateDamage(
-                attackingPlayer, _worldState.GetTotalEffectiveStrength(attackingPlayer), weaponDetails),
-            MobInstance mob => MobDamage(mob, weaponDetails),
-            _ => 0
-        };
-        if (weapon != null)
-        {
-            damage += _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim);
-        }
-
-        var defended = _combatCalculator.DefendAgainstMelee(victim, damage);
+        var defended = _combatCalculator.DefendAgainstMelee(victim, _meleeRoll.Damage(attacker, victim));
         return (defended.Damage, defended.Message);
     }
-
-    /// <summary>
-    /// A mob's melee damage before weapon effects (legacy hit(), fight.c:1440-1473): damroll, plus the weapon's dice
-    /// and its natural attack dice when it wields one, or only the natural attack without.
-    /// </summary>
-    private int MobDamage(MobInstance mob, ObjectWeapon? weaponDetails)
-    {
-        int damage = WorldStateExtensions.GetMobEffectiveDamroll(mob);
-        if (weaponDetails != null)
-        {
-            damage += _combatCalculator.RollDice(weaponDetails.DiceCount, weaponDetails.DiceSides);
-        }
-
-        if (mob.Definition.Attacks.Count > 0)
-        {
-            var primaryAttack = mob.Definition.Attacks[0];
-            damage += _combatCalculator.RollDice(primaryAttack.DamageDiceCount, primaryAttack.DamageDiceSides);
-            damage += primaryAttack.DamageBonus;
-        }
-        else if (weaponDetails == null)
-        {
-            // Fallback for mobs with no attack data
-            damage += mob.Definition.Level + _combatCalculator.RollDice(1, 4);
-        }
-
-        return damage;
-    }
-
-    private ObjectInstance? Wielded(ICombatant combatant) => combatant switch
-    {
-        PlayerState player when player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var id) =>
-            _worldState.GetObjectInstance(id),
-        MobInstance mob when mob.Equipment.TryGetValue(EquipmentSlot.Wield, out var weapon) => weapon,
-        _ => null
-    };
 
     private int MaxHitPoints(ICombatant combatant) =>
         combatant is PlayerState player

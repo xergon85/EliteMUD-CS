@@ -82,6 +82,22 @@ public class DamagePathTests
     }
 
     /// <summary>
+    /// Backstab multiplies the melee roll, which already counts the victim's position (legacy hit(): x2 against a
+    /// sleeping victim, then the backstab multiplier, x2 at level 10).
+    /// </summary>
+    [Fact]
+    public void BackstabbingASleepingMob_DoublesTheRollBeforeItsMultiplier()
+    {
+        var fixture = new Fixture(new FixedRandom(1)); // bare hands roll 0
+        fixture.Mob.Position = Position.Sleeping;
+        var roll = StrengthApply.ToDamage(fixture.Attacker.Strength) + fixture.Attacker.Damroll;
+
+        var result = fixture.Backstab().Execute(fixture.AgainstMob());
+
+        Assert.Equal($"A:you backstab $N! [{roll * 2 * 2}]", Lines(result)[0]);
+    }
+
+    /// <summary>
     /// A player killed by a skill (#40): kill experience for the killer, then legacy die(): a corpse where they
     /// fell, the death penalty, and back to the temple on full hit points.
     /// </summary>
@@ -411,11 +427,14 @@ public class DamagePathTests
 
         public KickSkillExecutor Kick() => new(_skills, Damage());
         public BashSkillExecutor Bash() => new(_skills, Damage());
-        public BackstabSkillExecutor Backstab() =>
-            new(_skills, _calculator, World, Damage());
+        public BackstabSkillExecutor Backstab() => new(_skills, new MeleeRoll(_calculator, World), Damage());
 
-        public MeleeAttackExecutor Kill() =>
-            new(_calculator, World, new MobAiService(new MockScriptEngine(), new PathfindingService()), Damage());
+        public MeleeAttackExecutor Kill() => new(
+            _calculator,
+            World,
+            new MobAiService(new MockScriptEngine(), new PathfindingService()),
+            Damage(),
+            new MeleeRoll(_calculator, World));
 
         public void AssertMobKilled()
         {

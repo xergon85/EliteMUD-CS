@@ -125,40 +125,6 @@ public class CombatCalculator
     }
 
     /// <summary>
-    /// Calculate base damage for an attack (armed or unarmed).
-    /// Legacy: fight.c:1439-1476
-    /// Formula (bare hands): str_todam + damroll + random(0,2)
-    /// Formula (with weapon): str_todam + damroll + dice(weapon.DiceCount, weapon.DiceSides)
-    /// 
-    /// IMPORTANT: effectiveStrength should include base + equipment + spell bonuses.
-    /// Use IWorldState.GetTotalEffectiveStrength() to calculate this before calling.
-    /// </summary>
-    /// <param name="attacker">The attacking player</param>
-    /// <param name="effectiveStrength">Total effective strength (base + equipment + spell)</param>
-    /// <param name="weaponDetails">The wielded weapon details (null for bare hands)</param>
-    /// <returns>Base damage before modifiers</returns>
-    public int CalculateDamage(PlayerState attacker, sbyte effectiveStrength, ObjectWeapon? weaponDetails = null)
-    {
-        int strBonus = GetStrengthDamageBonus(effectiveStrength);
-        int baseDamage;
-        
-        if (weaponDetails != null)
-        {
-            // Armed: str_todam + damroll + dice(weapon->value[1], weapon->value[2])
-            // Legacy: fight.c:1464
-            baseDamage = RollDice(weaponDetails.DiceCount, weaponDetails.DiceSides);
-        }
-        else
-        {
-            // Bare hands: str_todam + damroll + number(0, 2)
-            // Legacy: fight.c:1458
-            baseDamage = _random.Next(0, 3); // 0-2 damage (legacy: number(0, 2))
-        }
-        
-        return Math.Max(0, strBonus + attacker.Damroll + baseDamage);
-    }
-    
-    /// <summary>
     /// Apply weapon special effects (blessed, evil, flaming).
     /// Legacy: fight.c:1461-1468
     /// BLESS: +3d6 damage vs evil targets
@@ -257,47 +223,6 @@ public class CombatCalculator
     }
     
     /// <summary>
-    /// Calculate base damage for an unarmed attack.
-    /// Legacy: fight.c:1439-1458
-    /// Formula: str_todam + damroll + random(0,2)
-    /// </summary>
-    [Obsolete("Use CalculateDamage(attacker, effectiveStrength, weaponDetails) instead")]
-    public int CalculateBareDamage(PlayerState attacker)
-    {
-        return CalculateDamage(attacker, attacker.Strength, null);
-    }
-
-    /// <summary>
-    /// Get damage bonus from strength.
-    /// Legacy: str_app[str].todam
-    /// </summary>
-    private int GetStrengthDamageBonus(sbyte strength)
-    {
-        // Simplified strength to-damage table
-        if (strength <= 5) return -2;
-        if (strength <= 10) return -1;
-        if (strength <= 15) return 0;
-        if (strength <= 17) return 1;
-        if (strength == 18) return 2;
-        return 3; // 19+
-    }
-
-    /// <summary>
-    /// Get to-hit bonus from strength.
-    /// Legacy: str_app[str].tohit
-    /// </summary>
-    private int GetStrengthHitBonus(sbyte strength)
-    {
-        // Simplified strength to-hit table
-        if (strength <= 5) return -2;
-        if (strength <= 10) return -1;
-        if (strength <= 15) return 0;
-        if (strength <= 17) return 1;
-        if (strength == 18) return 2;
-        return 3; // 19+
-    }
-
-    /// <summary>
     /// Calculate THAC0 (To Hit Armor Class 0) for a player.
     /// Legacy uses class and level tables.
     /// Lower is better (easier to hit).
@@ -314,27 +239,28 @@ public class CombatCalculator
     /// Determine if an attack hits.
     /// Legacy: calculates based on THAC0, AC, dexterity, hitroll (fight.c:1380-1418)
     /// 
-    /// IMPORTANT: Effective stats should include base + equipment + spell bonuses.
-    /// Use IWorldState.GetTotalEffective*() methods to calculate these before calling.
+    /// Every stat is the effective one (base + spells + equipment); the caller looks them up.
     /// </summary>
     public bool AttackHits(
         PlayerState attacker,
-        sbyte attackerEffectiveStrength,
-        sbyte attackerEffectiveIntelligence,
-        sbyte attackerEffectiveWisdom,
-        PlayerState victim,
-        sbyte victimEffectiveDexterity)
+        int attackerEffectiveHitroll,
+        int attackerEffectiveStrength,
+        int attackerStrengthAdd,
+        int attackerEffectiveIntelligence,
+        int attackerEffectiveWisdom,
+        int victimEffectiveArmorClass,
+        int victimEffectiveDexterity)
     {
         // Calculate base THAC0
         int calcThac0 = CalculateThac0(attacker);
         
         // Apply bonuses (subtract from THAC0 - lower is better)
         // Legacy: calc_thaco -= (str_tohit + hitroll + int_bonus + wis_bonus + skillbonus - drunk)
-        int strBonus = GetStrengthHitBonus(attackerEffectiveStrength);
+        int strBonus = StrengthApply.ToHit(attackerEffectiveStrength, attackerStrengthAdd);
         int intBonus = (attackerEffectiveIntelligence - 13) / 3;
         int wisBonus = (attackerEffectiveWisdom - 13) / 3;
         
-        calcThac0 -= (strBonus + attacker.Hitroll + intBonus + wisBonus);
+        calcThac0 -= (strBonus + attackerEffectiveHitroll + intBonus + wisBonus);
         
         // Roll d20
         int diceRoll = RollDice(1, 20);
@@ -344,7 +270,7 @@ public class CombatCalculator
         if (diceRoll == 20) return true;
 
         // Calculate victim AC (legacy: fight.c:1395-1415)
-        int victimAc = victim.ArmorClass;
+        int victimAc = victimEffectiveArmorClass;
         
         // Dexterity bonus (if awake) - uses EFFECTIVE dex (base + equipment + spell)
         // Legacy: victim_ac -= (GET_DEX(victim)) * 10 / 6
@@ -371,30 +297,23 @@ public class CombatCalculator
         // Legacy formula: dam *= (3 + POS_FIGHTING - GET_POS(victim)) / 3
         if (victimPosition < Position.Fighting)
         {
-            // Calculate multiplier: (3 + 7 - position) / 3
-            // POS_SITTING (6): 1.33x
-            // POS_RESTING (5): 1.66x
-            // POS_SLEEPING (4): 2.00x
-            // POS_STUNNED (3): 2.33x
-            // POS_INCAP (2): 2.66x
-            // POS_MORTALLYW (1): 3.00x
-            int multiplierNumerator = 3 + (int)Position.Fighting - (int)victimPosition;
-            baseDamage = baseDamage * multiplierNumerator / 3;
+            // Integer division, as the C code computes it (its comments say x1.33, x1.66 and so on):
+            // sitting and resting x1; sleeping, stunned, incapacitated and mortally wounded x2
+            int multiplier = (3 + (int)Position.Fighting - (int)victimPosition) / 3;
+            baseDamage *= multiplier;
         }
         
         return baseDamage;
     }
 
     /// <summary>
-    /// The victim's side of a melee hit (legacy hit(), before damage()): more damage against a victim who isn't
-    /// on their feet, then dodge or parry. Changes no hit points; the result is the damage to deal. A player or a
-    /// mob: a mob dodges and parries with its skills like anyone (decision 1 of #42; mobs have none yet, #72).
+    /// The victim's side of a melee hit (legacy hit(), before damage()): dodge or parry. The damage comes from the
+    /// melee roll, the position multiplier included. Changes no hit points; the result is the damage to deal. A
+    /// player or a mob: a mob dodges and parries with its skills like anyone (decision 1 of #42; mobs have none yet,
+    /// #72).
     /// </summary>
     public DamageResult DefendAgainstMelee(ICombatant victim, int damage)
     {
-        // Apply position multiplier before capping damage
-        damage = CalculateDamageWithPositionMultiplier(damage, victim.Position);
-        
         // Check for passive defensive skills (dodge, then parry)
         // Legacy: fight.c:1543-1551 (dodge), fight.c:1523-1535 (parry)
         var dodgeResult = _dodgeSkill.TryActivate(victim, damage);
@@ -485,48 +404,6 @@ public class CombatCalculator
     }
 
     /// <summary>
-    /// A melee attack on a player without dealing the damage (legacy hit(), up to its damage() call): the hit
-    /// roll, the damage, and the victim's defense. The caller deals <see cref="AttackResult.Damage"/>.
-    /// </summary>
-    public AttackResult ResolveAttack(
-        PlayerState attacker,
-        sbyte attackerEffectiveStrength,
-        sbyte attackerEffectiveIntelligence,
-        sbyte attackerEffectiveWisdom,
-        PlayerState victim,
-        sbyte victimEffectiveDexterity,
-        ObjectWeapon? weaponDetails = null)
-    {
-        // Check if out of moves (too tired to fight)
-        if (attacker.Movement < 1)
-        {
-            return new AttackResult(false, 0, "You are too exhausted to attack!");
-        }
-
-        // Check if attack hits (using effective stats)
-        bool hits = AttackHits(
-            attacker,
-            attackerEffectiveStrength,
-            attackerEffectiveIntelligence,
-            attackerEffectiveWisdom,
-            victim,
-            victimEffectiveDexterity);
-        if (!hits)
-        {
-            return new AttackResult(false, 0, "You miss!");
-        }
-
-        // Calculate damage (with weapon if equipped, using effective STR), then the victim's defense
-        int damage = CalculateDamage(attacker, attackerEffectiveStrength, weaponDetails);
-        var defended = DefendAgainstMelee(victim, damage);
-
-        // Consume 1 movement point per attack
-        attacker.Movement = (short)Math.Max(0, attacker.Movement - 1);
-
-        return new AttackResult(true, defended.Damage, defended.Message);
-    }
-
-    /// <summary>
     /// Calculate alignment shift from killing a combatant.
     /// Legacy: change_alignment() in fight.c:445-460
     /// 
@@ -579,11 +456,6 @@ public class CombatCalculator
         player.Alignment = (short)Math.Clamp(player.Alignment + shift, -1000, 1000);
     }
 }
-
-/// <summary>
-/// Result of an attack.
-/// </summary>
-public sealed record AttackResult(bool Hit, int Damage, string? Message);
 
 /// <summary>
 /// Result of applying damage (includes dodge check).
