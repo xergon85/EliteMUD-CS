@@ -126,7 +126,7 @@ internal sealed class GameTickService
     /// Process one round of combat for all fighting characters.
     /// Legacy: perform_violence()
     /// </summary>
-    private async Task ProcessCombatRoundAsync(CancellationToken cancellationToken)
+    internal async Task ProcessCombatRoundAsync(CancellationToken cancellationToken)
     {
         var connections = _connectionRegistry.GetConnections().ToList();
         

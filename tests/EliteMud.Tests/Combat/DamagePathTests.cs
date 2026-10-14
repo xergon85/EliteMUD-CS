@@ -144,6 +144,38 @@ public class DamagePathTests
         Assert.Equal("V:You have been resurrected...", lines[^1]);
     }
 
+    /// <summary>
+    /// A mob killer (the combat tick): it takes a quarter of the victim's experience before the death penalty, and
+    /// the player dies as to any other killer. "$N is DEAD!!" goes to the mob, where nobody reads it.
+    /// </summary>
+    [Fact]
+    public void AMobKillingAPlayer_TakesItsShare_LeavesACorpse_AndRespawnsThemAtTheTemple()
+    {
+        var fixture = new Fixture();
+        var mob = fixture.Mob;
+        var victim = fixture.VictimPlayer;
+
+        var outcome = fixture.Damage().Apply(mob, victim, 50);
+
+        Assert.True(outcome.VictimDied);
+        Assert.Contains(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
+        Assert.Equal(Temple, victim.RoomId);
+        Assert.Equal(5000 - 3333, victim.Experience);
+        Assert.True(mob.Experience > 400 + 125); // damage experience (5 × 50 / 2), then a kill share capped by level
+        Assert.Null(mob.Fighting);
+        Assert.Null(victim.Fighting);
+        Assert.Equal(
+            new[]
+            {
+                "A:$N is DEAD!!",
+                "O:$N is dead!  R.I.P.",
+                "V:You are dead!  Sorry...",
+                "V:You lose 3333 experience points.",
+                "V:You have been resurrected..."
+            },
+            outcome.Messages.Select(message => $"{message.Target.ToString()[0]}:{message.Template}"));
+    }
+
     [Fact]
     public void KillFirstHitKillingAMob_EndsTheFight_MovesAlignment_LeavesACorpse_GivesKillExperience()
     {
