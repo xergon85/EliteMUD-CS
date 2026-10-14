@@ -26,6 +26,7 @@ internal sealed class CastCommandHandler : ICommandHandler
     private readonly ActMessageService _actService;
     private readonly CombatDamage _combatDamage;
     private readonly SkillMessageSender _messageSender;
+    private readonly EffectiveStats _stats;
 
     public CastCommandHandler(
         SpellRegistry spellRegistry,
@@ -34,8 +35,10 @@ internal sealed class CastCommandHandler : ICommandHandler
         ConnectionRegistry connectionRegistry,
         ActMessageService actService,
         CombatDamage combatDamage,
-        SkillMessageSender messageSender)
+        SkillMessageSender messageSender,
+        EffectiveStats stats)
     {
+        _stats = stats;
         _combatDamage = combatDamage;
         _messageSender = messageSender;
         _spellRegistry = spellRegistry;
@@ -405,7 +408,7 @@ internal sealed class CastCommandHandler : ICommandHandler
         // Apply healing (only players can be healed for now)
         if (target is PlayerState targetPlayer)
         {
-            var effectiveMaxHP = _worldState.GetTotalEffectiveMaxHitPoints(targetPlayer);
+            var effectiveMaxHP = _stats.Get(targetPlayer, AffectLocation.MaxHit);
             var oldHp = targetPlayer.HitPoints;
             targetPlayer.HitPoints = (short)Math.Min(targetPlayer.HitPoints + healing, effectiveMaxHP);
             var actualHealing = targetPlayer.HitPoints - oldHp;

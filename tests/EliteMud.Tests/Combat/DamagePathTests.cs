@@ -114,7 +114,7 @@ public class DamagePathTests
         Assert.Equal(Temple, victim.RoomId);
         Assert.True(victim.SaveRequested);
         Assert.Equal(Position.Standing, victim.Position);
-        Assert.Equal(fixture.World.GetTotalEffectiveMaxHitPoints(victim), victim.HitPoints);
+        Assert.Equal(fixture.Stats.Get(victim, AffectLocation.MaxHit), victim.HitPoints);
         Assert.Equal(5000 - 3333, victim.Experience);
         Assert.True(fixture.Attacker.Experience >= killerExperience + 1250);
         Assert.Null(fixture.Attacker.Fighting);
@@ -225,7 +225,7 @@ public class DamagePathTests
         Assert.Equal(Temple, victim.RoomId);
         Assert.True(victim.SaveRequested);
         Assert.Equal(Position.Standing, victim.Position);
-        Assert.Equal(fixture.World.GetTotalEffectiveMaxHitPoints(victim), victim.HitPoints);
+        Assert.Equal(fixture.Stats.Get(victim, AffectLocation.MaxHit), victim.HitPoints);
         Assert.Equal(5000 - 3333, victim.Experience);
         Assert.True(fixture.Attacker.Experience >= killerExperience + 1250);
         Assert.Null(fixture.Attacker.Fighting);
@@ -444,6 +444,7 @@ public class DamagePathTests
         }
 
         public WorldState World { get; }
+        public EffectiveStats Stats => new(World, _rules);
         public MobInstance Mob { get; }
         public PlayerState Attacker { get; }
         public PlayerState VictimPlayer { get; }
@@ -457,18 +458,20 @@ public class DamagePathTests
             World,
             new[] { new MobMemory() },
             new FleeHandler(World, _calculator, _progression),
-            () => new[] { Attacker, VictimPlayer });
+            () => new[] { Attacker, VictimPlayer },
+            Stats);
 
         public KickSkillExecutor Kick() => new(_skills, Damage());
         public BashSkillExecutor Bash() => new(_skills, Damage());
-        public BackstabSkillExecutor Backstab() => new(_skills, new MeleeRoll(_calculator, World, _rules), Damage());
+        public BackstabSkillExecutor Backstab() => new(_skills, new MeleeRoll(_calculator, World, Stats), Damage());
 
         public MeleeAttackExecutor Kill() => new(
             _calculator,
             World,
             new MobAiService(new MockScriptEngine(), new PathfindingService()),
             Damage(),
-            new MeleeRoll(_calculator, World, _rules));
+            new MeleeRoll(_calculator, World, Stats),
+            Stats);
 
         public void AssertMobKilled()
         {

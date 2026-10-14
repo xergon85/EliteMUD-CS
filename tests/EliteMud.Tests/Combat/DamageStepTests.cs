@@ -24,6 +24,7 @@ public class DamageStepTests
 
     private readonly CombatCalculator _calculator;
     private readonly CombatExperience _experience;
+    private readonly RulesContent _rules;
     private readonly PlayerProgression _progression;
     private readonly WorldState _world;
     private readonly MobInstance _mob;
@@ -33,6 +34,7 @@ public class DamageStepTests
     public DamageStepTests()
     {
         var rules = RulesContentLoader.Load(Content).Rules;
+        _rules = rules;
         var formulas = new FormulaEvaluator(new Random(1));
         var skills = new SkillMetadataRegistry(ContentLoader.LoadSkills(Content));
         _calculator = new CombatCalculator(new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas));
@@ -84,7 +86,8 @@ public class DamageStepTests
             _world,
             Array.Empty<ICombatListener>(),
             new FleeHandler(_world, _calculator, _progression),
-            () => new[] { _player, _victim });
+            () => new[] { _player, _victim },
+            Stats);
 
         Assert.Equal(
             new[]
@@ -239,7 +242,7 @@ public class DamageStepTests
         _victim.Position = Position.Incapacitated;
         var context = Hit(_player, _victim, 10);
 
-        new PositionMessages(_world).Apply(context);
+        new PositionMessages(Stats).Apply(context);
 
         Assert.Equal(
             new[]
@@ -257,7 +260,7 @@ public class DamageStepTests
         _victim.Position = Position.Stunned;
         var context = Hit(_victim, _victim, 10);
 
-        new PositionMessages(_world).Apply(context);
+        new PositionMessages(Stats).Apply(context);
 
         Assert.Equal(
             new[]
@@ -274,7 +277,7 @@ public class DamageStepTests
         _victim.HitPoints = 10;
         var context = Hit(_player, _victim, 0);
 
-        new PositionMessages(_world).Apply(context);
+        new PositionMessages(Stats).Apply(context);
 
         Assert.Equal(new[] { "V:You wish that your wounds would stop BLEEDING so much!" }, Lines(context));
     }
@@ -285,7 +288,7 @@ public class DamageStepTests
         _mob.HitPoints = 1;
         var context = Hit(_player, _mob, 99);
 
-        new PositionMessages(_world).Apply(context);
+        new PositionMessages(Stats).Apply(context);
 
         Assert.Empty(context.Messages);
     }
@@ -427,7 +430,7 @@ public class DamageStepTests
         _victim.Position = Position.Dead;
         var context = Died(Hit(_player, _victim, 10));
 
-        new PlayerDeath(_experience, _world).Apply(context);
+        new PlayerDeath(_experience, _world, Stats).Apply(context);
 
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
         Assert.Equal(Temple, _victim.RoomId);
@@ -441,7 +444,7 @@ public class DamageStepTests
     [Fact]
     public void PlayerDeath_IsOnlyForPlayers()
     {
-        new PlayerDeath(_experience, _world).Apply(Died(Hit(_player, _mob, 10)));
+        new PlayerDeath(_experience, _world, Stats).Apply(Died(Hit(_player, _mob, 10)));
 
         Assert.Empty(_world.GetObjectsInRoom(Room));
     }
@@ -465,6 +468,8 @@ public class DamageStepTests
         Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
     }
+
+    private EffectiveStats Stats => new(_world, _rules);
 
     private static DamageContext Hit(ICombatant attacker, ICombatant victim, int damage) =>
         new(attacker, victim, damage);

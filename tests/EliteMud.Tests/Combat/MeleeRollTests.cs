@@ -121,14 +121,19 @@ public class MeleeRollTests
         Assert.Equal(5, Roll(1).Damage(_attacker, _victim)); // bare hands roll 0
     }
 
-    /// <summary>Legacy str_app: 19 adds 7 to damage, and 18/xx counts its bonus (on a damroll of 5).</summary>
+    /// <summary>
+    /// Legacy str_app: 19 adds 7 to damage, and 18/xx counts its bonus (on a damroll of 5). Strength stops at the
+    /// race's maximum (legacy stat_check, #88): 18 for a human, 20 for a troll.
+    /// </summary>
     [Theory]
-    [InlineData(10, 0, 5)]
-    [InlineData(18, 0, 7)]
-    [InlineData(18, 60, 8)]
-    [InlineData(19, 0, 12)]
-    public void Strength_AddsDamage(int strength, int strengthAdd, int damage)
+    [InlineData("human", 10, 0, 5)]
+    [InlineData("human", 18, 0, 7)]
+    [InlineData("human", 18, 60, 8)]
+    [InlineData("human", 19, 0, 7)] // counts as 18
+    [InlineData("troll", 19, 0, 12)]
+    public void Strength_AddsDamage(string race, int strength, int strengthAdd, int damage)
     {
+        _attacker.Race = race;
         _attacker.Damroll = 5;
         _attacker.Strength = (sbyte)strength;
         _attacker.StrengthAdd = (sbyte)strengthAdd;
@@ -378,7 +383,7 @@ public class MeleeRollTests
             DurationHours = 10
         });
 
-        Assert.Equal(effective, WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Intelligence));
+        Assert.Equal(effective, new EffectiveStats(_world, Rules).Get(mob, AffectLocation.Intelligence));
     }
 
     private MeleeRoll Roll(int dice) => Roll(new FixedRandom(dice));
@@ -390,7 +395,7 @@ public class MeleeRollTests
         return new MeleeRoll(
             new CombatCalculator(new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas), dice),
             _world,
-            Rules);
+            new EffectiveStats(_world, Rules));
     }
 
     private void Wear(PlayerState player, int objectId, EquipmentSlot slot)
