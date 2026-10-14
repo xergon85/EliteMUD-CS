@@ -28,6 +28,13 @@ public sealed class CombatTickTests : IDisposable
 {
     private const int Room = 3002; // not the temple, so a respawn shows
     private const int Escape = 3003;
+    private const int Ring = 200;
+
+    /// <summary>+50 max hit points while worn.</summary>
+    private static readonly ObjectDefinition RingOfLife = new(
+        Ring, "ring", "a ring of life", "A ring lies here.", "Desc", "Worn",
+        new List<string>(), new List<string>(), null, new List<int>(), 1, 100,
+        new List<ObjectAffect> { new(AffectLocation.MaxHit, 50) });
     private const int Temple = CharacterStart.StartRoom;
 
     private static readonly string Content = Path.Combine(RealWorld.RepositoryRoot, "content");
@@ -70,7 +77,7 @@ public sealed class CombatTickTests : IDisposable
                 [Escape] = new(Escape, "Alley", "A narrow alley.", new List<ExitDefinition>())
             }),
             new Dictionary<int, MobDefinition> { [100] = mobDefinition },
-            new Dictionary<int, ObjectDefinition>(),
+            new Dictionary<int, ObjectDefinition> { [Ring] = RingOfLife },
             new Dictionary<int, List<MobInstance>> { [Temple] = new(), [Room] = new() { _mob, _secondMob }, [Escape] = new() },
             new Dictionary<int, List<ObjectInstance>> { [Temple] = new(), [Room] = new(), [Escape] = new() },
             new List<ZoneDefinition>());
@@ -227,6 +234,24 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(
             new[] { "A rat hits Victim extremely hard.", "Victim is dead!  R.I.P." },
             _observer.Lines());
+    }
+
+    /// <summary>
+    /// The killing hit is worded and shown against the max hit points the victim had when it landed, not after
+    /// their gear went into the corpse.
+    /// </summary>
+    [Fact]
+    public async Task MobKillingAPlayer_ShowsTheHitAgainstTheirMaxHitPointsWithGear()
+    {
+        var ring = _world.CreateObjectInstance(Ring)!;
+        Victim.EquipToSlot((int)EquipmentSlot.FingerRight, ring.InstanceId);
+        Fight(_mob, Victim);
+        Victim.HitPoints = -5;
+
+        await Round();
+
+        Assert.Equal(Temple, Victim.RoomId);
+        Assert.Equal("a rat hits you very hard. [-14/150 HP]", _victim.Lines()[0]);
     }
 
     /// <summary>The stunned fight on; only below stunned does the fight stop (legacy damage(), fight.c:1026).</summary>

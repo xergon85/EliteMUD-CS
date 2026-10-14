@@ -229,6 +229,31 @@ public class DamagePathTests
             lines[^6..]);
     }
 
+    /// <summary>
+    /// A miss still goes through damage(), so a victim below their wimpy level tries to flee, and the skill's result
+    /// carries those lines after its own miss lines.
+    /// </summary>
+    [Fact]
+    public void KickMissingAPlayerBelowTheirWimpy_StillShowsTheirAttemptToFlee()
+    {
+        var fixture = new Fixture(skillsHit: false);
+        fixture.VictimPlayer.WimpyLevel = 20;
+        fixture.VictimPlayer.HitPoints = 10;
+
+        var result = fixture.Kick().Execute(fixture.AgainstPlayer());
+
+        Assert.Equal(
+            new[]
+            {
+                "A:you try to kick $N, but miss!",
+                "V:$n tries to kick you, but misses!",
+                "O:$n tries to kick $N, but misses!",
+                "V:You wimp out, and attempt to flee!",
+                "V:PANIC!  You couldn't escape!" // the arena has no exits
+            },
+            Lines(result));
+    }
+
     /// <summary>A MOB_MEMORY mob remembers whoever hurts it, whatever the source (legacy damage()).</summary>
     [Fact]
     public void AMemoryMob_RemembersWhoKicksIt()
@@ -299,7 +324,8 @@ public class DamagePathTests
         private readonly PlayerProgression _progression;
 
         /// <param name="combatRandom">Dice for melee hit and damage rolls (default: shared)</param>
-        public Fixture(Random? combatRandom = null)
+        /// <param name="skillsHit">Whether kick, bash and backstab hit (default) or always miss</param>
+        public Fixture(Random? combatRandom = null, bool skillsHit = true)
         {
             var rules = RulesContentLoader.Load(Content).Rules;
             var formulas = new FormulaEvaluator(new Random(1));
@@ -313,7 +339,7 @@ public class DamagePathTests
                 {
                     Mechanics = new SkillMechanics
                     {
-                        HitFormula = "return true",
+                        HitFormula = skillsHit ? "return true" : "return false",
                         DamageFormula = "return 50",
                         DamageMultiplierFormula = skill.Mechanics?.DamageMultiplierFormula,
                         Requirements = skill.Mechanics?.Requirements
