@@ -1,0 +1,12 @@
+# CodeRabbit configuration: https://docs.coderabbit.ai/reference/configuration
+reviews:
+  profile: chill
+  # Hide the "Review skipped" / review status message on PRs
+  review_status: false
+  auto_review:
+    enabled: true
+    drafts: false
+    # Review PRs into main explicitly, and any other base (e.g. a PR stacked on a feature branch)
+    base_branches:
+      - "main"
+      - ".*"
