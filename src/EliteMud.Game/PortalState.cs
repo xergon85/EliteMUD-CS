@@ -1,4 +1,4 @@
-namespace EliteMud.Application.World;
+namespace EliteMud.Game;
 
 /// <summary>
 /// Runtime state of a portal object.
