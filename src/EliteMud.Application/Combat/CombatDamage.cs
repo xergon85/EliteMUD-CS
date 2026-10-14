@@ -34,12 +34,7 @@ public sealed class CombatDamage
     /// Deal damage from a player to a player or mob. A miss is damage 0: it still starts the fight.
     /// The messages cover what follows the source's own hit message (death, kill experience), in order.
     /// </summary>
-    public DamageOutcome Apply(
-        PlayerState attacker,
-        int attackerConnectionId,
-        ICombatant victim,
-        int? victimConnectionId,
-        int damage)
+    public DamageOutcome Apply(PlayerState attacker, ICombatant victim, int damage)
     {
         // Legacy damage(): "Attempt to damage a corpse" (fight.c:787). A victim already dead is still being
         // handled elsewhere (e.g. the combat tick); damaging it again would give a second death.
@@ -51,38 +46,29 @@ public sealed class CombatDamage
 
         if (!ReferenceEquals(attacker, victim))
         {
-            StartFighting(attacker, attackerConnectionId, victim, victimConnectionId);
+            StartFighting(attacker, victim);
             foreach (var listener in _listeners)
             {
                 listener.Hurt(attacker, victim);
             }
         }
 
-        return victimConnectionId != null
-            ? DamagePlayer(attacker, (PlayerState)victim, damage)
+        return victim is PlayerState victimPlayer
+            ? DamagePlayer(attacker, victimPlayer, damage)
             : DamageMob(attacker, (MobInstance)victim, damage);
     }
 
     /// <summary>Legacy set_fighting: each side that isn't fighting yet starts fighting the other.</summary>
-    private void StartFighting(
-        PlayerState attacker,
-        int attackerConnectionId,
-        ICombatant victim,
-        int? victimConnectionId)
+    private void StartFighting(PlayerState attacker, ICombatant victim)
     {
-        if (attacker.FightingConnectionId == null)
+        if (attacker.Fighting == null)
         {
-            var target = victimConnectionId ?? -((MobInstance)victim).InstanceId;
-            _combatCalculator.SetFighting(attacker, target);
+            _combatCalculator.SetFighting(attacker, victim);
         }
 
-        if (victim is PlayerState { FightingConnectionId: null } victimPlayer)
+        if (victim.Fighting == null)
         {
-            _combatCalculator.SetFighting(victimPlayer, attackerConnectionId);
-        }
-        else if (victim is MobInstance { FightingConnectionId: null } mob)
-        {
-            mob.FightingConnectionId = attackerConnectionId;
+            _combatCalculator.SetFighting(victim, attacker);
         }
     }
 
@@ -126,7 +112,7 @@ public sealed class CombatDamage
 
         mob.Position = Position.Dead;
         _combatCalculator.StopFighting(attacker);
-        mob.FightingConnectionId = null;
+        mob.Fighting = null;
 
         Kill(attacker, mob, messages);
 

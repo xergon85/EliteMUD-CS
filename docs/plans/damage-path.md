@@ -94,7 +94,8 @@ Each step is its own commit, ideally its own PR if it gets large.
 - **`Killed` before `Died`:** the killer's share comes from the victim's XP before the penalty.
 - **Mob memory / helpers:** `RememberPlayer` on hit (`MOB_MEMORY`) and `MobAiService.ProcessAssist` on combat start
   happen in some copies only; decide where they belong.
-- **Fighting ids:** `FightingConnectionId` is a connection id for players and `-InstanceId` for mobs.
+- **Fighting:** `ICombatant.Fighting` is a reference to the opponent, player or mob (#62). Start and stop fights
+  with `CombatCalculator.SetFighting` / `StopFighting`.
 - **`ApplyDamage(PlayerState, …)`** includes dodge/parry and position; mobs only get `HitPoints -=`.
 
 ## Decisions (Oct 12, 2026)
@@ -125,7 +126,9 @@ Side findings: #47 (alignment shift rounds toward zero), #48 (`kill` on a mob ne
   "resolve, then subtract" and only the tick uses them. `CombatDamage` tells `ICombatListener`s that someone
   was hurt or killed; `MobMemory` (Application/Ai) owns mob memory (remember on hurt, forget on kill). The tick's own
   `RememberPlayer` call goes in step 6.
-- Before step 6: #61 (serialize game state), then #62 (fight target as a reference, not a connection id).
+- Before step 6: #61 (serialize game state, done in #63), then #62 (fight target as a reference, not a connection
+  id). `CombatDamage.Apply(attacker, victim, amount)` and `SkillContext(actor, victim, argument)` no longer carry
+  connection ids.
 - Then step 6 (the tick). Mob attackers: `CombatDamage.Apply` takes a `PlayerState` attacker today; the tick needs
   mob → player (and mob counterattack). Move the position messages and wimpy into `CombatDamage` / its outcome, and
   give mobs dodge/parry in melee (decision 1). Then remove `HandleMobDeath` / `HandlePlayerDeath*`.

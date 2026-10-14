@@ -61,7 +61,7 @@ public class KillExperienceIntegrationTests
         };
         player.SetSkill(SkillType.Kick, 100);
 
-        var result = executor.Execute(new SkillContext(player, 1, mob, null, null));
+        var result = executor.Execute(new SkillContext(player, mob, null));
 
         Assert.True(result.Success);
         Assert.Equal(Position.Dead, mob.Position);

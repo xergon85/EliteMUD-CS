@@ -60,7 +60,7 @@ public class MobAiService
 
         // Only process AI if awake and not fighting
         // Legacy: mobact.c:144
-        if (!IsAwake(mob) || mob.FightingConnectionId != null || mob.FightingMobInstanceId != null)
+        if (!IsAwake(mob) || mob.Fighting != null)
         {
             return;
         }
@@ -130,7 +130,7 @@ public class MobAiService
             }
 
             // Already fighting - can't assist
-            if (helper.FightingConnectionId != null || helper.FightingMobInstanceId != null)
+            if (helper.Fighting != null)
             {
                 continue;
             }
@@ -147,17 +147,12 @@ public class MobAiService
             int alignmentDifference = Math.Abs(aggressor.Definition.Alignment - helper.Definition.Alignment);
             if (alignmentDifference <= 750)
             {
-                // Helper should attack the aggressor's target
-                if (aggressor.FightingConnectionId != null)
+                // Helper should attack the aggressor's target, player or mob
+                if (aggressor.Fighting != null)
                 {
-                    helper.FightingConnectionId = aggressor.FightingConnectionId;
+                    helper.Fighting = aggressor.Fighting;
                     helper.Position = Position.Fighting;
                     // TODO: Send message to room about helper joining combat
-                }
-                else if (aggressor.FightingMobInstanceId != null)
-                {
-                    helper.FightingMobInstanceId = aggressor.FightingMobInstanceId;
-                    helper.Position = Position.Fighting;
                 }
             }
         }
@@ -360,7 +355,7 @@ public class MobAiService
             return; // Already home or no hometown set
         }
 
-        if (mob.FightingConnectionId != null || mob.FightingMobInstanceId != null)
+        if (mob.Fighting != null)
         {
             return; // Don't return home while fighting
         }
@@ -442,14 +437,12 @@ public class MobAiService
             {
                 // Attack this player - initiate combat
                 // Legacy: hit(ch, tmp_ch, 0) -> set_fighting(ch, victim) + set_fighting(victim, ch)
-                var connectionId = connections.First(kvp => kvp.Value.Player == player).Key;
-                
                 // Set mob to fight player
-                mob.FightingConnectionId = connectionId;
+                mob.Fighting = player;
                 mob.Position = Position.Fighting;
                 
                 // Set player to fight mob (victim fights back automatically)
-                player.FightingConnectionId = -mob.InstanceId; // Negative for mobs
+                player.Fighting = mob;
                 if (player.Position > Position.Fighting)
                 {
                     player.Position = Position.Fighting;
@@ -504,14 +497,12 @@ public class MobAiService
                     // Attack the remembered enemy
                     // Legacy: hit(ch, vict, 0) -> set_fighting(ch, victim) + set_fighting(victim, ch)
                     // TODO: Send act() message: "'Hey! You're the fiend that attacked me!!!', exclaims $n."
-                    var connectionId = connections.First(kvp => kvp.Value.Player == connection.Player).Key;
-                    
                     // Set mob to fight player
-                    mob.FightingConnectionId = connectionId;
+                    mob.Fighting = victim;
                     mob.Position = Position.Fighting;
                     
                     // Set player to fight mob
-                    victim.FightingConnectionId = -mob.InstanceId;
+                    victim.Fighting = mob;
                     if (victim.Position > Position.Fighting)
                     {
                         victim.Position = Position.Fighting;

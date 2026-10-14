@@ -129,7 +129,7 @@ public sealed class CastDamageTests : IDisposable
         Assert.Equal(Position.Dead, _mob.Position);
         Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
-        Assert.Null(Caster.FightingConnectionId);
+        Assert.Null(Caster.Fighting);
         Assert.Equal(62, Caster.Alignment);
         Assert.Equal(
             new[] { "Your magic missile hits a rat! [6]", "A rat is DEAD!!", "You receive 100 experience points." },
@@ -145,8 +145,8 @@ public sealed class CastDamageTests : IDisposable
         await Cast("'magic missile' victim");
 
         Assert.Equal(94, Victim.HitPoints);
-        Assert.Equal(2, Caster.FightingConnectionId);
-        Assert.Equal(1, Victim.FightingConnectionId);
+        Assert.Same(Victim, Caster.Fighting);
+        Assert.Same(Caster, Victim.Fighting);
         Assert.Equal(new[] { "Your magic missile hits Victim! [6]" }, CasterLines());
         Assert.Equal(new[] { "Caster casts magic missile at you! [6]" }, _victim.Lines());
         Assert.Equal(new[] { "Caster casts magic missile at Victim! [6]" }, _observer.Lines());
@@ -185,7 +185,7 @@ public sealed class CastDamageTests : IDisposable
     [Fact]
     public async Task HittingASittingPlayerInAFight_DoesNoExtraDamage()
     {
-        Victim.FightingConnectionId = 3; // e.g. bashed while fighting the observer
+        Victim.Fighting = _observer.Context.Player; // e.g. bashed while fighting the observer
         Victim.Position = Position.Sitting;
         Assert.Equal(8, _calculator.CalculateDamageWithPositionMultiplier(6, Position.Sitting)); // melee: 4/3
 

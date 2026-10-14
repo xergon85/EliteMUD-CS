@@ -96,7 +96,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
                 ResolveSelf(context),
 
             TargetingMode.None =>
-                new SkillContext(context.Player, context.Id, null, null, argument),
+                new SkillContext(context.Player, null, argument),
 
             _ => null
         };
@@ -117,72 +117,30 @@ internal sealed class SkillCommandHandler : ICommandHandler
         // Case 1: No target specified - use current fighting target
         if (string.IsNullOrWhiteSpace(targetName))
         {
-            if (player.FightingConnectionId == null)
+            if (player.Fighting == null)
             {
                 await context.Session.SendLineAsync("You aren't fighting anyone!", cancellationToken);
                 return null;
             }
 
-            // Find current fighting target
-            if (player.FightingConnectionId.Value > 0)
+            if (!IsHere(player.Fighting, player))
             {
-                // Fighting a player
-                var currentTarget = _connectionRegistry.GetConnections()
-                    .FirstOrDefault(c => c.Id == player.FightingConnectionId.Value);
-
-                if (currentTarget != null)
-                {
-                    return new SkillContext(player, context.Id, currentTarget.Player, currentTarget.Id, null);
-                }
-
                 await context.Session.SendLineAsync("They aren't here.", cancellationToken);
                 return null;
             }
-            else
-            {
-                // Fighting a mob
-                var mobInstanceId = -player.FightingConnectionId.Value;
-                var currentMob = _worldState.GetMobsInRoom(player.RoomId)
-                    .FirstOrDefault(m => m.InstanceId == mobInstanceId);
 
-                if (currentMob == null)
-                {
-                    await context.Session.SendLineAsync("They aren't here.", cancellationToken);
-                    return null;
-                }
-
-                return new SkillContext(player, context.Id, currentMob, null, null);
-            }
+            return new SkillContext(player, player.Fighting, null);
         }
 
         // Case 2: Target specified
 
-        // If already fighting, check if targeting current opponent
-        if (player.FightingConnectionId != null)
+        // If already fighting, the name has to be the current opponent
+        if (player.Fighting != null)
         {
-            if (player.FightingConnectionId.Value > 0)
+            if (IsHere(player.Fighting, player)
+                && player.Fighting.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase))
             {
-                var currentTarget = _connectionRegistry.GetConnections()
-                    .FirstOrDefault(c => c.Id == player.FightingConnectionId.Value);
-
-                if (currentTarget != null &&
-                    currentTarget.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase))
-                {
-                    return new SkillContext(player, context.Id, currentTarget.Player, currentTarget.Id, targetName);
-                }
-            }
-            else
-            {
-                var mobInstanceId = -player.FightingConnectionId.Value;
-                var currentMob = _worldState.GetMobsInRoom(player.RoomId)
-                    .FirstOrDefault(m => m.InstanceId == mobInstanceId
-                                         && m.Definition.ShortDescription.Contains(targetName,
-                                             StringComparison.OrdinalIgnoreCase));
-
-                if (currentMob != null)
-                {
-                    return new SkillContext(player, context.Id, currentMob, null, targetName);
-                }
+                return new SkillContext(player, player.Fighting, targetName);
             }
 
             // Trying to switch targets mid-combat
@@ -198,7 +156,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
 
         if (targetPlayer != null)
         {
-            return new SkillContext(player, context.Id, targetPlayer.Player, targetPlayer.Id, targetName);
+            return new SkillContext(player, targetPlayer.Player, targetName);
         }
 
         var targetMob = _worldState.GetMobsInRoom(player.RoomId)
@@ -207,12 +165,21 @@ internal sealed class SkillCommandHandler : ICommandHandler
 
         if (targetMob != null)
         {
-            return new SkillContext(player, context.Id, targetMob, null, targetName);
+            return new SkillContext(player, targetMob, targetName);
         }
 
         await context.Session.SendLineAsync($"You don't see '{targetName}' here.", cancellationToken);
         return null;
     }
+
+    /// <summary>An opponent the player can still reach: in the same room, and for a player, still connected.</summary>
+    private bool IsHere(ICombatant opponent, PlayerState player) => opponent switch
+    {
+        PlayerState other => other.RoomId == player.RoomId
+                             && _connectionRegistry.GetConnections().Any(c => c.Player == other),
+        MobInstance mob => _worldState.GetMobsInRoom(player.RoomId).Contains(mob),
+        _ => false
+    };
 
     /// <summary>
     /// Resolve target for RequiredInRoom mode.
@@ -239,7 +206,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
 
         if (targetPlayer != null)
         {
-            return new SkillContext(player, context.Id, targetPlayer.Player, targetPlayer.Id, targetName);
+            return new SkillContext(player, targetPlayer.Player, targetName);
         }
 
         // Find mob target
@@ -249,7 +216,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
 
         if (targetMob != null)
         {
-            return new SkillContext(player, context.Id, targetMob, null, targetName);
+            return new SkillContext(player, targetMob, targetName);
         }
 
         await context.Session.SendLineAsync($"You don't see '{targetName}' here.", cancellationToken);
@@ -281,7 +248,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
             return null;
         }
 
-        return new SkillContext(player, context.Id, null, null, direction);
+        return new SkillContext(player, null, direction);
     }
 
     /// <summary>
@@ -290,6 +257,6 @@ internal sealed class SkillCommandHandler : ICommandHandler
     private SkillContext ResolveSelf(ConnectionContext context)
     {
         var player = context.Player;
-        return new SkillContext(player, context.Id, player, context.Id, null);
+        return new SkillContext(player, player, null);
     }
 }

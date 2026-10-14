@@ -65,8 +65,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         var lossMessages = _fleeHandler.ApplyFleeResult(
             player,
             result,
-            () => _connectionRegistry.GetConnections().Select(c => c.Player),
-            context.Id);
+            () => _connectionRegistry.GetConnections().Select(c => c.Player));
 
         foreach (var line in lossMessages)
         {

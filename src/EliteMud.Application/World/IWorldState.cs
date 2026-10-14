@@ -52,8 +52,7 @@ public sealed class MobInstance : ICombatant
     public MobDefinition Definition { get; }
     
     // ===== Combat state =====
-    public int? FightingConnectionId { get; set; } // The player connection ID this mob is fighting
-    public int? FightingMobInstanceId { get; set; } // The mob instance ID this mob is fighting (for mob-vs-mob combat)
+    public ICombatant? Fighting { get; set; } // Who this mob is fighting: a player or another mob
     public Position Position { get; set; } = Position.Standing;
     
     // ===== Mob AI state (legacy mobact.c) =====

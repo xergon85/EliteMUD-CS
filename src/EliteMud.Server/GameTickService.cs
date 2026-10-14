@@ -137,7 +137,7 @@ internal sealed class GameTickService
         }
         
         // Find all players in combat
-        var fightingPlayers = connections.Where(c => c.Player.FightingConnectionId != null).ToList();
+        var fightingPlayers = connections.Where(c => c.Player.Fighting != null).ToList();
         
         // Process player attacks
         // Legacy: perform_violence() in fight.c:1664-1729
@@ -158,17 +158,13 @@ internal sealed class GameTickService
                     continue;
                 }
 
-                var targetConnectionId = attacker.Player.FightingConnectionId;
-                if (targetConnectionId == null)
-                {
-                    continue; // No longer fighting
-                }
 
                 // Process up to 5 attacks per round
                 for (int attackNum = 1; attackNum <= 5; attackNum++)
                 {
                     // Check if target is still valid before each attack
-                    if (attacker.Player.FightingConnectionId == null)
+                    var opponent = attacker.Player.Fighting;
+                    if (opponent == null)
                     {
                         break; // Combat ended (target died or fled)
                     }
@@ -187,16 +183,14 @@ internal sealed class GameTickService
                     }
 
                     // Execute the attack
-                    if (targetConnectionId.Value < 0)
+                    if (opponent is MobInstance mob)
                     {
-                        // Fighting a mob
-                        var mobInstanceId = -targetConnectionId.Value;
-                        await ProcessPlayerVsMobAttack(attacker, mobInstanceId, cancellationToken);
+                        await ProcessPlayerVsMobAttack(attacker, mob, cancellationToken);
                     }
                     else
                     {
-                        // Fighting another player
-                        var victim = connections.FirstOrDefault(c => c.Id == targetConnectionId.Value);
+                        // Fighting another player, who must still be connected
+                        var victim = connections.FirstOrDefault(c => c.Player == opponent);
                         if (victim == null || victim.Player.RoomId != attacker.Player.RoomId)
                         {
                             // Target left room or disconnected
@@ -232,17 +226,17 @@ internal sealed class GameTickService
             var mobs = _worldState.GetMobsInRoom(roomId);
             foreach (var mob in mobs)
             {
-                if (mob.FightingConnectionId == null || mob.HitPoints <= 0)
+                if (mob.Fighting is not PlayerState opponent || mob.HitPoints <= 0)
                 {
-                    continue; // Not fighting or dead
+                    continue; // Not fighting a player, or dead (mob against mob doesn't attack yet)
                 }
 
                 // Find the player this mob is fighting
-                var victim = connections.FirstOrDefault(c => c.Id == mob.FightingConnectionId.Value);
+                var victim = connections.FirstOrDefault(c => c.Player == opponent);
                 if (victim == null || victim.Player.RoomId != roomId)
                 {
                     // Player left or disconnected
-                    mob.FightingConnectionId = null;
+                    mob.Fighting = null;
                     mob.Position = Position.Standing;
                     continue;
                 }
@@ -379,7 +373,7 @@ internal sealed class GameTickService
     {
         // Double-check that both players are still in fighting state
         // (guards against race conditions with kick/kill commands)
-        if (attacker.Player.Position < Position.Fighting || attacker.Player.FightingConnectionId == null)
+        if (attacker.Player.Position < Position.Fighting || attacker.Player.Fighting == null)
         {
             return;
         }
@@ -497,21 +491,18 @@ internal sealed class GameTickService
 
     private async Task ProcessPlayerVsMobAttack(
         ConnectionContext attacker,
-        int mobInstanceId,
+        MobInstance mob,
         CancellationToken cancellationToken)
     {
         // Double-check that player is still in fighting state
         // (guards against race conditions with commands)
-        if (attacker.Player.Position < Position.Fighting || attacker.Player.FightingConnectionId == null)
+        if (attacker.Player.Position < Position.Fighting || attacker.Player.Fighting == null)
         {
             return;
         }
         
-        // Find the mob in the player's room
-        var mobs = _worldState.GetMobsInRoom(attacker.Player.RoomId);
-        var mob = mobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
-
-        if (mob == null)
+        // The mob must still be in the player's room
+        if (!_worldState.GetMobsInRoom(attacker.Player.RoomId).Contains(mob))
         {
             // Mob is gone (killed by someone else, or despawned)
             _combatCalculator.StopFighting(attacker.Player);
@@ -698,7 +689,7 @@ internal sealed class GameTickService
     {
         // Stop combat
         _combatCalculator.StopFighting(victim.Player);
-        mob.FightingConnectionId = null;
+        mob.Fighting = null;
         mob.Position = Position.Standing;
 
         // The mob takes its share of the victim's XP before the death penalty (legacy damage() then die())
@@ -829,8 +820,7 @@ internal sealed class GameTickService
         var lossMessages = _fleeService.ApplyFleeResult(
             player.Player,
             result,
-            () => _connectionRegistry.GetConnections().Select(c => c.Player),
-            player.Id);
+            () => _connectionRegistry.GetConnections().Select(c => c.Player));
 
         foreach (var line in lossMessages)
         {
@@ -854,7 +844,7 @@ internal sealed class GameTickService
     {
         // Stop combat
         _combatCalculator.StopFighting(killer.Player);
-        mob.FightingConnectionId = null;
+        mob.Fighting = null;
 
         var killReward = _combatExperience.Killed(killer.Player, mob);
 

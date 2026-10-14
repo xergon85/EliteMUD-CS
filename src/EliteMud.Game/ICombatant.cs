@@ -33,6 +33,12 @@ public interface ICombatant
     /// Affects ability to attack and damage taken.
     /// </summary>
     Position Position { get; set; }
+
+    /// <summary>
+    /// Who this combatant is fighting, or null (legacy ch->specials.fighting). Start and stop fights through
+    /// <see cref="CombatCalculator.SetFighting"/> and <see cref="CombatCalculator.StopFighting"/>.
+    /// </summary>
+    ICombatant? Fighting { get; set; }
     
     /// <summary>
     /// Level of the combatant. Affects skill availability and damage calculations.

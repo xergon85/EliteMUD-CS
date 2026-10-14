@@ -28,7 +28,7 @@ public static class PositionChangeValidator
         }
 
         // Check if fighting (can't change position while in combat)
-        if (player.FightingConnectionId != null)
+        if (player.Fighting != null)
         {
             return ValidationResult.Fail($"You can't {GetActionVerb(targetPosition)} while fighting!");
         }

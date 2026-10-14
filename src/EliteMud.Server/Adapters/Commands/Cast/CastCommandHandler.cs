@@ -203,32 +203,25 @@ internal sealed class CastCommandHandler : ICommandHandler
         // If no target specified, use current fighting opponent
         if (string.IsNullOrWhiteSpace(targetName))
         {
-            if (caster.FightingConnectionId == null)
+            if (caster.Fighting == null)
             {
                 await context.Session.SendLineAsync("Cast this spell on whom?", cancellationToken);
                 return (null, null);
             }
 
-            // Find current fighting target
-            if (caster.FightingConnectionId.Value > 0)
+            // The current opponent, if still here
+            if (caster.Fighting is PlayerState opponent)
             {
-                // Fighting a player
                 var targetConnection = _connectionRegistry.GetConnections()
-                    .FirstOrDefault(c => c.Id == caster.FightingConnectionId.Value);
+                    .FirstOrDefault(c => c.Player == opponent && opponent.RoomId == caster.RoomId);
                 if (targetConnection != null)
                 {
-                    return (targetConnection.Player, (int?)targetConnection.Id);
+                    return (opponent, (int?)targetConnection.Id);
                 }
             }
-            else
+            else if (caster.Fighting is MobInstance mob && _worldState.GetMobsInRoom(caster.RoomId).Contains(mob))
             {
-                // Fighting a mob
-                var mobInstanceId = -caster.FightingConnectionId.Value;
-                var mob = _worldState.GetMobsInRoom(caster.RoomId).FirstOrDefault(m => m.InstanceId == mobInstanceId);
-                if (mob != null)
-                {
-                    return (mob, null);
-                }
+                return (mob, null);
             }
 
             await context.Session.SendLineAsync("They aren't here.", cancellationToken);
@@ -368,7 +361,7 @@ internal sealed class CastCommandHandler : ICommandHandler
         int? targetConnectionId,
         CancellationToken cancellationToken)
     {
-        var outcome = _combatDamage.Apply(caster, context.Id, target, targetConnectionId, damage);
+        var outcome = _combatDamage.Apply(caster, target, damage);
 
         await context.Session.SendLineAsync(
             $"Your {metadata.Name} hits {target.Name}! [{outcome.Damage}]",

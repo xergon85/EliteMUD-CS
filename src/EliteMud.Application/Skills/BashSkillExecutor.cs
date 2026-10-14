@@ -56,7 +56,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
         if (!hit)
         {
             // Legacy: damage(ch, victim, 0, SKILL_BASH), then the attacker falls down
-            _combatDamage.Apply(attacker, context.ActorConnectionId, victim, context.VictimConnectionId, 0);
+            _combatDamage.Apply(attacker, victim, 0);
             attacker.Position = Position.Sitting;
 
             // Attacker gets 2 rounds WAIT_STATE
@@ -77,9 +77,7 @@ public sealed class BashSkillExecutor : ISkillExecutor
 
         var outcome = _combatDamage.Apply(
             attacker,
-            context.ActorConnectionId,
             victim,
-            context.VictimConnectionId,
             _bashSkill.CalculateDamage());
 
         var messages = new List<SkillMessage>

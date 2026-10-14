@@ -73,17 +73,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
 
         // Legacy check: Can't backstab a fighting person (too alert)
         // Reference: act.offensive.c:241-244
-        bool victimFighting = false;
-        if (context.VictimConnectionId != null)
-        {
-            victimFighting = ((PlayerState)victim).FightingConnectionId != null;
-        }
-        else
-        {
-            victimFighting = ((MobInstance)victim).FightingConnectionId != null;
-        }
-        
-        if (victimFighting)
+        if (victim.Fighting != null)
         {
             return SkillResult.Failed("You can't backstab a fighting person, too alert!");
         }
@@ -101,7 +91,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         if (!hit)
         {
             // Legacy: damage(ch, victim, 0, SKILL_BACKSTAB) - a miss still starts the fight
-            _combatDamage.Apply(attacker, context.ActorConnectionId, victim, context.VictimConnectionId, 0);
+            _combatDamage.Apply(attacker, victim, 0);
 
             // Apply wait state even on miss
             attacker.WaitState = CombatConstants.WaitStates.Backstab;
@@ -142,9 +132,7 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
 
         var outcome = _combatDamage.Apply(
             attacker,
-            context.ActorConnectionId,
             victim,
-            context.VictimConnectionId,
             baseDamage * multiplier);
 
         var messages = new List<SkillMessage>
