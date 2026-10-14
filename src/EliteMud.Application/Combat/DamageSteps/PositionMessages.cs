@@ -12,11 +12,11 @@ namespace EliteMud.Application.Combat.DamageSteps;
 /// </summary>
 public sealed class PositionMessages : IDamageStep
 {
-    private readonly IWorldState _worldState;
+    private readonly EffectiveStats _stats;
 
-    public PositionMessages(IWorldState worldState)
+    public PositionMessages(EffectiveStats stats)
     {
-        _worldState = worldState;
+        _stats = stats;
     }
 
     public void Apply(DamageContext context)
@@ -49,7 +49,7 @@ public sealed class PositionMessages : IDamageStep
     /// <summary>Both lines can come with one hit; legacy checks them separately, a miss included.</summary>
     private void Wounds(DamageContext context, PlayerState victim)
     {
-        var maxHitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim);
+        var maxHitPoints = _stats.Get(victim, AffectLocation.MaxHit);
         if (context.Damage > maxHitPoints / 5)
         {
             context.Messages.Add(new SkillMessage(SkillMessageTarget.Victim, "That Really did HURT!", victim));

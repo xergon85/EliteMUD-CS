@@ -23,6 +23,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
     private readonly MobAiService _mobAiService;
     private readonly CombatDamage _combatDamage;
     private readonly MeleeRoll _meleeRoll;
+    private readonly EffectiveStats _stats;
 
     public SkillType SkillType => SkillType.Kick; // Not actually a skill, just needs a value
     public TargetingMode Targeting => TargetingMode.RequiredInRoom;
@@ -32,8 +33,10 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
         IWorldState worldState,
         MobAiService mobAiService,
         CombatDamage combatDamage,
-        MeleeRoll meleeRoll)
+        MeleeRoll meleeRoll,
+        EffectiveStats stats)
     {
+        _stats = stats;
         _meleeRoll = meleeRoll;
         _combatCalculator = combatCalculator;
         _worldState = worldState;
@@ -90,7 +93,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             : 0;
 
         // Before the hit: a death moves the victim's gear, and its bonuses, into the corpse
-        var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victimPlayer);
+        var victimEffectiveMaxHp = _stats.Get(victimPlayer, AffectLocation.MaxHit);
         var outcome = _combatDamage.Apply(attacker, victimPlayer, damage);
 
         // Format combat messages (legacy format with damage/health)

@@ -13,13 +13,13 @@ public sealed class MeleeRoll
 {
     private readonly CombatCalculator _calculator;
     private readonly IWorldState _worldState;
-    private readonly RulesContent _rules;
+    private readonly EffectiveStats _stats;
 
-    public MeleeRoll(CombatCalculator calculator, IWorldState worldState, RulesContent rules)
+    public MeleeRoll(CombatCalculator calculator, IWorldState worldState, EffectiveStats stats)
     {
+        _stats = stats;
         _calculator = calculator;
         _worldState = worldState;
-        _rules = rules;
     }
 
     /// <summary>
@@ -56,10 +56,10 @@ public sealed class MeleeRoll
         }
 
         return _calculator.AttackHits(
-            Thac0(attacker),
+            _stats.Thac0(attacker),
             ToHit(attacker),
-            ArmorClass(victim),
-            Dexterity(victim),
+            _stats.Get(victim, AffectLocation.ArmorClass),
+            _stats.Get(victim, AffectLocation.Dexterity),
             victimAwake: victim.Position > Position.Sleeping,
             victimOutOfMovement: victim is PlayerState { Movement: < 1 });
     }
@@ -73,7 +73,7 @@ public sealed class MeleeRoll
     /// <param name="offHand">The dual-wield attack, which swings the held weapon</param>
     public int Damage(ICombatant attacker, ICombatant victim, bool offHand = false)
     {
-        var damage = StrengthDamage(attacker) + Damroll(attacker);
+        var damage = StrengthDamage(attacker) + _stats.Get(attacker, AffectLocation.Damroll);
 
         var weapon = Weapon(attacker, offHand);
         var weaponDetails = weapon?.Definition.Details?.Weapon;
@@ -108,57 +108,16 @@ public sealed class MeleeRoll
         return _calculator.RollDice(attack.DamageDiceCount, attack.DamageDiceSides) + attack.DamageBonus;
     }
 
-    /// <summary>Legacy get_thaco(): a mob's is 20, a player's comes from their class (20 if it's unknown).</summary>
-    private int Thac0(ICombatant combatant) =>
-        combatant is PlayerState player && _rules.Classes.TryGetValue(player.CharacterClass, out var playerClass)
-            ? playerClass.Thac0(player.Level)
-            : 20;
-
     /// <summary>Legacy: str_app tohit + hitroll + (int − 13) / 3 + (wis − 13) / 3.</summary>
-    private int ToHit(ICombatant combatant) => combatant switch
-    {
-        PlayerState player =>
-            StrengthApply.ToHit(_worldState.GetTotalEffectiveStrength(player), player.StrengthAdd)
-            + _worldState.GetTotalEffectiveHitroll(player)
-            + (_worldState.GetTotalEffectiveIntelligence(player) - 13) / 3
-            + (_worldState.GetTotalEffectiveWisdom(player) - 13) / 3,
-        MobInstance mob =>
-            StrengthApply.ToHit(WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Strength))
-            + WorldStateExtensions.GetMobEffectiveHitroll(mob)
-            + (WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Intelligence) - 13) / 3
-            + (WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Wisdom) - 13) / 3,
-        _ => 0
-    };
+    private int ToHit(ICombatant combatant) =>
+        StrengthApply.ToHit(_stats.Get(combatant, AffectLocation.Strength), _stats.StrengthAdd(combatant))
+        + _stats.Get(combatant, AffectLocation.Hitroll)
+        + (_stats.Get(combatant, AffectLocation.Intelligence) - 13) / 3
+        + (_stats.Get(combatant, AffectLocation.Wisdom) - 13) / 3;
 
-    private int ArmorClass(ICombatant combatant) => combatant switch
-    {
-        PlayerState player => _worldState.GetTotalEffectiveArmorClass(player),
-        MobInstance mob => WorldStateExtensions.GetMobEffectiveArmorClass(mob),
-        _ => combatant.ArmorClass
-    };
-
-    private int Dexterity(ICombatant combatant) => combatant switch
-    {
-        PlayerState player => _worldState.GetTotalEffectiveDexterity(player),
-        MobInstance mob => WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Dexterity),
-        _ => 0
-    };
-
-    /// <summary>Legacy str_app[STRENGTH_APPLY_INDEX(ch)].todam; mobs have no 18/xx bonus.</summary>
-    private int StrengthDamage(ICombatant combatant) => combatant switch
-    {
-        PlayerState player => StrengthApply.ToDamage(_worldState.GetTotalEffectiveStrength(player), player.StrengthAdd),
-        MobInstance mob =>
-            StrengthApply.ToDamage(WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Strength)),
-        _ => 0
-    };
-
-    private int Damroll(ICombatant combatant) => combatant switch
-    {
-        PlayerState player => _worldState.GetTotalEffectiveDamroll(player),
-        MobInstance mob => WorldStateExtensions.GetMobEffectiveDamroll(mob),
-        _ => 0
-    };
+    /// <summary>Legacy str_app[STRENGTH_APPLY_INDEX(ch)].todam.</summary>
+    private int StrengthDamage(ICombatant combatant) =>
+        StrengthApply.ToDamage(_stats.Get(combatant, AffectLocation.Strength), _stats.StrengthAdd(combatant));
 
     /// <summary>
     /// The weapon an attack swings (legacy hit(), fight.c:1244): for the dual-wield attack the held item if it's a

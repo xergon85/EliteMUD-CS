@@ -8,18 +8,18 @@ namespace EliteMud.Server.Adapters.Commands.Score;
 [Command("score", Aliases = new[] { "sc" })]
 internal sealed class ScoreCommandHandler : ICommandHandler
 {
-    private readonly IWorldState _worldState;
+    private readonly EffectiveStats _stats;
     private readonly EliteMud.Application.Commands.Score.ScoreHandler _scoreHandler;
 
-    public ScoreCommandHandler(IWorldState worldState, RulesContent rules)
+    public ScoreCommandHandler(EffectiveStats stats, RulesContent rules)
     {
-        _worldState = worldState;
+        _stats = stats;
         _scoreHandler = new EliteMud.Application.Commands.Score.ScoreHandler(rules);
     }
     
     public async ValueTask<CommandOutcome> HandleAsync(CommandRequest request, ConnectionContext context, CancellationToken cancellationToken)
     {
-        var result = _scoreHandler.Handle(context.Player, _worldState);
+        var result = _scoreHandler.Handle(context.Player, _stats);
         
         await context.Session.SendLineAsync(result.Message, cancellationToken);
         

@@ -142,9 +142,11 @@ internal static class ServerBootstrap
                 provider.GetRequiredService<IWorldState>(),
                 provider.GetServices<ICombatListener>(),
                 provider.GetRequiredService<FleeHandler>(),
-                () => provider.GetRequiredService<ConnectionRegistry>().GetConnections().Select(c => c.Player)))
+                () => provider.GetRequiredService<ConnectionRegistry>().GetConnections().Select(c => c.Player),
+                provider.GetRequiredService<EffectiveStats>()))
             .AddSingleton<ICombatListener, MobMemory>()
             .AddSingleton<MeleeRoll>()
+            .AddSingleton<EffectiveStats>()
 
             // Database
             .AddDbContext<EliteMudDbContext>(options =>

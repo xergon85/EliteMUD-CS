@@ -116,6 +116,7 @@ public sealed class CombatTickTests : IDisposable
 
         var services = new ServiceCollection().BuildServiceProvider();
         var gate = new GameStateGate();
+        var stats = new EffectiveStats(_world, rules);
         var look = new LookCommandHandler(_world, new MockScriptEngine(), connections, RulesContent.Empty);
         var damage = new CombatDamage(
             calculator,
@@ -123,13 +124,15 @@ public sealed class CombatTickTests : IDisposable
             _world,
             new ICombatListener[] { new MobMemory() },
             new FleeHandler(_world, calculator, progression),
-            () => connections.GetConnections().Select(c => c.Player));
+            () => connections.GetConnections().Select(c => c.Player),
+            stats);
         _tick = new GameTickService(
             connections,
             services,
             _world,
             damage,
-            new MeleeRoll(calculator, _world, rules),
+            new MeleeRoll(calculator, _world, stats),
+            stats,
             new SkillMessageSender(new ActMessageService(), connections, look),
             calculator,
             new CharacterSaveQueue(services, _world, gate),

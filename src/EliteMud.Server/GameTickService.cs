@@ -24,6 +24,7 @@ internal sealed class GameTickService
     private readonly IWorldState _worldState;
     private readonly CombatDamage _combatDamage;
     private readonly MeleeRoll _meleeRoll;
+    private readonly EffectiveStats _stats;
     private readonly SkillMessageSender _messageSender;
     private readonly CombatCalculator _combatCalculator;
     private readonly CharacterSaveQueue _saveQueue;
@@ -46,6 +47,7 @@ internal sealed class GameTickService
         IWorldState worldState,
         CombatDamage combatDamage,
         MeleeRoll meleeRoll,
+        EffectiveStats stats,
         SkillMessageSender messageSender,
         CombatCalculator combatCalculator,
         CharacterSaveQueue saveQueue,
@@ -58,6 +60,7 @@ internal sealed class GameTickService
         _worldState = worldState;
         _combatDamage = combatDamage;
         _meleeRoll = meleeRoll;
+        _stats = stats;
         _messageSender = messageSender;
         _combatCalculator = combatCalculator;
         _saveQueue = saveQueue;
@@ -277,7 +280,7 @@ internal sealed class GameTickService
 
         var (damage, defense) = RollMelee(attacker, victim, offHand);
         var hitPointsBefore = victim.HitPoints;
-        var victimMaxHp = MaxHitPoints(victim); // before a death moves their gear into the corpse
+        var victimMaxHp = _stats.Get(victim, AffectLocation.MaxHit); // before a death moves their gear into the corpse
         var outcome = _combatDamage.Apply(attacker, victim, damage);
 
         var messages = new List<SkillMessage>();
@@ -316,10 +319,6 @@ internal sealed class GameTickService
         return (defended.Damage, defended.Message);
     }
 
-    private int MaxHitPoints(ICombatant combatant) =>
-        combatant is PlayerState player
-            ? _worldState.GetTotalEffectiveMaxHitPoints(player)
-            : ((MobInstance)combatant).Definition.MaxHitPoints;
 
     /// <summary>
     /// Increment gain_count for all players based on their position.
@@ -359,9 +358,9 @@ internal sealed class GameTickService
             try
             {
                 // Apply regeneration
-                var effectiveMaxHP = _worldState.GetTotalEffectiveMaxHitPoints(connection.Player);
-                var effectiveMaxMana = _worldState.GetTotalEffectiveMaxMana(connection.Player);
-                var effectiveMaxMove = _worldState.GetTotalEffectiveMaxMovement(connection.Player);
+                var effectiveMaxHP = _stats.Get(connection.Player, AffectLocation.MaxHit);
+                var effectiveMaxMana = _stats.Get(connection.Player, AffectLocation.MaxMana);
+                var effectiveMaxMove = _stats.Get(connection.Player, AffectLocation.MaxMovement);
                 bool didRegen = RegenerationService.RegeneratePlayer(connection.Player, effectiveMaxHP, effectiveMaxMana, effectiveMaxMove);
                 
                 if (didRegen)

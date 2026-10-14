@@ -682,60 +682,9 @@ public sealed class PlayerState : ICombatant
         return expired;
     }
     
-    /// <summary>
-    /// Get effective armor class including all affect modifiers.
-    /// Lower is better (negative AC is good).
-    /// </summary>
-    public short GetEffectiveArmorClass()
-    {
-        short effectiveAC = ArmorClass;
-        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.ArmorClass))
-        {
-            effectiveAC += (short)affect.Modifier;
-        }
-        return effectiveAC;
-    }
     
-    /// <summary>
-    /// Get effective hitroll including all affect modifiers.
-    /// Higher is better (bonus to hit).
-    /// </summary>
-    public sbyte GetEffectiveHitroll()
-    {
-        int effectiveHitroll = Hitroll;
-        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.Hitroll))
-        {
-            effectiveHitroll += affect.Modifier;
-        }
-        return (sbyte)Math.Clamp(effectiveHitroll, sbyte.MinValue, sbyte.MaxValue);
-    }
     
-    /// <summary>
-    /// Get effective damroll including all affect modifiers.
-    /// Higher is better (bonus to damage).
-    /// </summary>
-    public sbyte GetEffectiveDamroll()
-    {
-        int effectiveDamroll = Damroll;
-        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.Damroll))
-        {
-            effectiveDamroll += affect.Modifier;
-        }
-        return (sbyte)Math.Clamp(effectiveDamroll, sbyte.MinValue, sbyte.MaxValue);
-    }
     
-    /// <summary>
-    /// Get effective strength including all affect modifiers.
-    /// </summary>
-    public sbyte GetEffectiveStrength()
-    {
-        int effectiveStr = Strength;
-        foreach (var affect in _affects.Where(a => a.Location == AffectLocation.Strength))
-        {
-            effectiveStr += affect.Modifier;
-        }
-        return (sbyte)Math.Clamp(effectiveStr, sbyte.MinValue, sbyte.MaxValue);
-    }
     
     // ===== Combat Lag (WAIT_STATE) =====
     

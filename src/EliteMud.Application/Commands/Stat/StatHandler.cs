@@ -24,13 +24,13 @@ namespace EliteMud.Application.Commands.Stat;
 /// </summary>
 public sealed class StatHandler
 {
-    private readonly IWorldState _worldState;
     private readonly RulesContent _rules;
+    private readonly EffectiveStats _stats;
 
-    public StatHandler(IWorldState worldState, RulesContent rules)
+    public StatHandler(RulesContent rules, EffectiveStats stats)
     {
-        _worldState = worldState;
         _rules = rules;
+        _stats = stats;
     }
 
     public CommandResult Handle(PlayerState player)
@@ -54,64 +54,54 @@ public sealed class StatHandler
         output.AppendLine($"#G{age} year old {sex} {raceClass} player#N");
 
         // Line 3: Stats - values in cyan
-        var strSpellMod = GetSpellModifier(player, AffectLocation.Strength);
-        var strEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Strength);
-        var strTotalMod = strSpellMod + strEquipMod;
+        var strSpellMod = _stats.AffectBonus(player, AffectLocation.Strength);
+        var strEquipMod = _stats.GearBonus(player, AffectLocation.Strength);
         
-        var intSpellMod = GetSpellModifier(player, AffectLocation.Intelligence);
-        var intEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Intelligence);
-        var intTotalMod = intSpellMod + intEquipMod;
+        var intSpellMod = _stats.AffectBonus(player, AffectLocation.Intelligence);
+        var intEquipMod = _stats.GearBonus(player, AffectLocation.Intelligence);
         
-        var wisSpellMod = GetSpellModifier(player, AffectLocation.Wisdom);
-        var wisEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Wisdom);
-        var wisTotalMod = wisSpellMod + wisEquipMod;
+        var wisSpellMod = _stats.AffectBonus(player, AffectLocation.Wisdom);
+        var wisEquipMod = _stats.GearBonus(player, AffectLocation.Wisdom);
         
-        var dexSpellMod = GetSpellModifier(player, AffectLocation.Dexterity);
-        var dexEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Dexterity);
-        var dexTotalMod = dexSpellMod + dexEquipMod;
+        var dexSpellMod = _stats.AffectBonus(player, AffectLocation.Dexterity);
+        var dexEquipMod = _stats.GearBonus(player, AffectLocation.Dexterity);
         
-        var conSpellMod = GetSpellModifier(player, AffectLocation.Constitution);
-        var conEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Constitution);
-        var conTotalMod = conSpellMod + conEquipMod;
+        var conSpellMod = _stats.AffectBonus(player, AffectLocation.Constitution);
+        var conEquipMod = _stats.GearBonus(player, AffectLocation.Constitution);
         
-        var chaSpellMod = GetSpellModifier(player, AffectLocation.Charisma);
-        var chaEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Charisma);
-        var chaTotalMod = chaSpellMod + chaEquipMod;
+        var chaSpellMod = _stats.AffectBonus(player, AffectLocation.Charisma);
+        var chaEquipMod = _stats.GearBonus(player, AffectLocation.Charisma);
 
-        var strDisplay = FormatStatWithModifier(player.Strength, strTotalMod, strEquipMod, strSpellMod);
-        var intDisplay = FormatStatWithModifier(player.Intelligence, intTotalMod, intEquipMod, intSpellMod);
-        var wisDisplay = FormatStatWithModifier(player.Wisdom, wisTotalMod, wisEquipMod, wisSpellMod);
-        var dexDisplay = FormatStatWithModifier(player.Dexterity, dexTotalMod, dexEquipMod, dexSpellMod);
-        var conDisplay = FormatStatWithModifier(player.Constitution, conTotalMod, conEquipMod, conSpellMod);
-        var chaDisplay = FormatStatWithModifier(player.Charisma, chaTotalMod, chaEquipMod, chaSpellMod);
+        var strDisplay = FormatStatWithModifier(player.Strength, _stats.Get(player, AffectLocation.Strength), strEquipMod, strSpellMod);
+        var intDisplay = FormatStatWithModifier(player.Intelligence, _stats.Get(player, AffectLocation.Intelligence), intEquipMod, intSpellMod);
+        var wisDisplay = FormatStatWithModifier(player.Wisdom, _stats.Get(player, AffectLocation.Wisdom), wisEquipMod, wisSpellMod);
+        var dexDisplay = FormatStatWithModifier(player.Dexterity, _stats.Get(player, AffectLocation.Dexterity), dexEquipMod, dexSpellMod);
+        var conDisplay = FormatStatWithModifier(player.Constitution, _stats.Get(player, AffectLocation.Constitution), conEquipMod, conSpellMod);
+        var chaDisplay = FormatStatWithModifier(player.Charisma, _stats.Get(player, AffectLocation.Charisma), chaEquipMod, chaSpellMod);
 
         output.AppendLine($"Str: {strDisplay}  Int: {intDisplay}  Wis: {wisDisplay}  Dex: {dexDisplay}  Con: {conDisplay}  Cha: {chaDisplay}");
 
         // Line 4: AC, Hitroll, Damroll, THAC0 - all values in red
         var baseAC = player.ArmorClass;
-        var acSpellModArmor = GetSpellModifier(player, AffectLocation.Armor);
-        var acSpellModArmorClass = GetSpellModifier(player, AffectLocation.ArmorClass);
-        var acEquipModArmor = _worldState.GetEquipmentBonus(player, AffectLocation.Armor);
-        var acEquipModArmorClass = _worldState.GetEquipmentBonus(player, AffectLocation.ArmorClass);
-        var acSpellMod = acSpellModArmor + acSpellModArmorClass;
-        var acEquipMod = acEquipModArmor + acEquipModArmorClass;
+        var acSpellMod = _stats.AffectBonus(player, AffectLocation.ArmorClass); // Armor and ArmorClass both
+        var acEquipMod = _stats.GearBonus(player, AffectLocation.ArmorClass);
         var acTotalMod = acSpellMod + acEquipMod;
-        var effectiveAC = _worldState.GetTotalEffectiveArmorClass(player);
+        var effectiveAC = _stats.Get(player, AffectLocation.ArmorClass);
         
         var baseHitroll = player.Hitroll;
-        var hitrollSpellMod = GetSpellModifier(player, AffectLocation.Hitroll);
-        var hitrollEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Hitroll);
+        var hitrollSpellMod = _stats.AffectBonus(player, AffectLocation.Hitroll);
+        var hitrollEquipMod = _stats.GearBonus(player, AffectLocation.Hitroll);
         var hitrollTotalMod = hitrollSpellMod + hitrollEquipMod;
-        var effectiveHitroll = _worldState.GetTotalEffectiveHitroll(player);
+        var effectiveHitroll = _stats.Get(player, AffectLocation.Hitroll);
         
         var baseDamroll = player.Damroll;
-        var damrollSpellMod = GetSpellModifier(player, AffectLocation.Damroll);
-        var damrollEquipMod = _worldState.GetEquipmentBonus(player, AffectLocation.Damroll);
+        var damrollSpellMod = _stats.AffectBonus(player, AffectLocation.Damroll);
+        var damrollEquipMod = _stats.GearBonus(player, AffectLocation.Damroll);
         var damrollTotalMod = damrollSpellMod + damrollEquipMod;
-        var effectiveDamroll = _worldState.GetTotalEffectiveDamroll(player);
+        var effectiveDamroll = _stats.Get(player, AffectLocation.Damroll);
 
-        // THAC0 calculation (legacy DikuMUD formula)
-        var thac0 = CalculateTHAC0(player.Level, effectiveHitroll);
+        // Legacy do_stat shows get_thaco(): the class's THAC0, the same one combat uses
+        var thac0 = _stats.Thac0(player);
 
         // Format displays with breakdown of equipment and spell modifiers
         string acDisplay;
@@ -184,11 +174,11 @@ public sealed class StatHandler
 
         // Line 5: Saving throws and magic resistance - all values in red
         // TODO: Implement saving throw fields in PlayerState
-        var savingPhysical = GetSpellModifier(player, AffectLocation.SavingPhysical) + _worldState.GetEquipmentBonus(player, AffectLocation.SavingPhysical);
-        var savingMental = GetSpellModifier(player, AffectLocation.SavingMental) + _worldState.GetEquipmentBonus(player, AffectLocation.SavingMental);
-        var savingMagic = GetSpellModifier(player, AffectLocation.SavingMagic) + _worldState.GetEquipmentBonus(player, AffectLocation.SavingMagic);
-        var savingPoison = GetSpellModifier(player, AffectLocation.SavingPoison) + _worldState.GetEquipmentBonus(player, AffectLocation.SavingPoison);
-        var magicResist = GetSpellModifier(player, AffectLocation.MagicResistance) + _worldState.GetEquipmentBonus(player, AffectLocation.MagicResistance);
+        var savingPhysical = _stats.Get(player, AffectLocation.SavingPhysical);
+        var savingMental = _stats.Get(player, AffectLocation.SavingMental);
+        var savingMagic = _stats.Get(player, AffectLocation.SavingMagic);
+        var savingPoison = _stats.Get(player, AffectLocation.SavingPoison);
+        var magicResist = _stats.Get(player, AffectLocation.MagicResistance);
 
         output.AppendLine($"Saves[Physical: #R{savingPhysical}#N / Mental: #R{savingMental}#N / Magic: #R{savingMagic}#N / Poison: #R{savingPoison}#N] Magic Resistance[#R{magicResist}#N]");
 
@@ -246,29 +236,19 @@ public sealed class StatHandler
     }
 
     /// <summary>
-    /// Get total modifier from spell/timed affects for a specific location.
-    /// Does not include equipment bonuses - use GetEquipmentBonus for those.
-    /// </summary>
-    private static int GetSpellModifier(PlayerState player, AffectLocation location)
-    {
-        return player.Affects
-            .Where(a => a.Location == location)
-            .Sum(a => a.Modifier);
-    }
-
-    /// <summary>
-    /// Format a stat value with optional modifier display.
+    /// Format a stat value with optional modifier display: the effective value (kept within the race's limits),
+    /// then the base and what changed it.
     /// Examples: "[20]" or "[22 (20+2)]" or "[18 (20-2)]" or "[23 (20+3 Eq:+2 Spell:+1)]"
     /// Legacy format: stat values in cyan (#C)
     /// </summary>
-    private static string FormatStatWithModifier(sbyte baseValue, int totalModifier, int equipModifier, int spellModifier)
+    private static string FormatStatWithModifier(sbyte baseValue, int effectiveValue, int equipModifier, int spellModifier)
     {
-        if (totalModifier == 0)
+        var totalModifier = equipModifier + spellModifier;
+        if (totalModifier == 0 && effectiveValue == baseValue)
         {
             return $"[#C{baseValue}#N]";
         }
 
-        var effectiveValue = baseValue + totalModifier;
         
         // If both equipment and spell modifiers exist, show breakdown
         if (equipModifier != 0 && spellModifier != 0)
@@ -278,17 +258,6 @@ public sealed class StatHandler
         
         // Otherwise just show simple modifier
         return $"[#C{effectiveValue}#N (#C{baseValue}#N{totalModifier:+0;-#})]";
-    }
-
-    /// <summary>
-    /// Calculate THAC0 (To Hit Armor Class 0).
-    /// Legacy DikuMUD formula: 20 - level - hitroll
-    /// Lower is better (easier to hit).
-    /// </summary>
-    private static int CalculateTHAC0(byte level, sbyte hitroll)
-    {
-        // Legacy formula from DikuMUD
-        return 20 - level - hitroll;
     }
 
     /// <summary>

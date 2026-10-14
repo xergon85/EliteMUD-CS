@@ -15,9 +15,9 @@ internal sealed class StatCommandHandler : ICommandHandler
 {
     private readonly EliteMud.Application.Commands.Stat.StatHandler _statHandler;
 
-    public StatCommandHandler(IWorldState worldState, RulesContent rules)
+    public StatCommandHandler(RulesContent rules, EffectiveStats stats)
     {
-        _statHandler = new EliteMud.Application.Commands.Stat.StatHandler(worldState, rules);
+        _statHandler = new EliteMud.Application.Commands.Stat.StatHandler(rules, stats);
     }
     
     public async ValueTask<CommandOutcome> HandleAsync(CommandRequest request, ConnectionContext context, CancellationToken cancellationToken)

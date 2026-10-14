@@ -13,9 +13,11 @@ public sealed class PlayerDeath : IDamageStep
 {
     private readonly CombatExperience _combatExperience;
     private readonly IWorldState _worldState;
+    private readonly EffectiveStats _stats;
 
-    public PlayerDeath(CombatExperience combatExperience, IWorldState worldState)
+    public PlayerDeath(CombatExperience combatExperience, IWorldState worldState, EffectiveStats stats)
     {
+        _stats = stats;
         _combatExperience = combatExperience;
         _worldState = worldState;
     }
@@ -30,9 +32,9 @@ public sealed class PlayerDeath : IDamageStep
         _worldState.CreatePlayerCorpse(victim, victim.RoomId);
         var penalty = _combatExperience.Died(victim);
 
-        victim.HitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim);
-        victim.Mana = _worldState.GetTotalEffectiveMaxMana(victim);
-        victim.Movement = _worldState.GetTotalEffectiveMaxMovement(victim);
+        victim.HitPoints = (short)_stats.Get(victim, AffectLocation.MaxHit);
+        victim.Mana = (short)_stats.Get(victim, AffectLocation.MaxMana);
+        victim.Movement = (short)_stats.Get(victim, AffectLocation.MaxMovement);
         victim.Position = Position.Standing;
         victim.RoomId = CharacterStart.StartRoom;
         victim.SaveRequested = true;

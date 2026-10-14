@@ -15,7 +15,7 @@ public sealed class ScoreHandler
         _rules = rules;
     }
 
-    public CommandResult Handle(PlayerState player, IWorldState worldState)
+    public CommandResult Handle(PlayerState player, EffectiveStats stats)
     {
         var output = new StringBuilder();
         
@@ -37,9 +37,9 @@ public sealed class ScoreHandler
         //   output.AppendLine($"You are the devout worshipper of {player.Deity}.");
         
         // Line 3: HP, Mana, Movement
-        var effectiveMaxHP = worldState.GetTotalEffectiveMaxHitPoints(player);
-        var effectiveMaxMana = worldState.GetTotalEffectiveMaxMana(player);
-        var effectiveMaxMove = worldState.GetTotalEffectiveMaxMovement(player);
+        var effectiveMaxHP = stats.Get(player, AffectLocation.MaxHit);
+        var effectiveMaxMana = stats.Get(player, AffectLocation.MaxMana);
+        var effectiveMaxMove = stats.Get(player, AffectLocation.MaxMovement);
         output.AppendLine($"You have #R{player.HitPoints}#N(#G{effectiveMaxHP}#N) hp, #C{player.Mana}#N(#B{effectiveMaxMana}#N) mana and #Y{player.Movement}#N(#G{effectiveMaxMove}#N) movement points.");
         
         // Line 4: Alignment

@@ -99,22 +99,4 @@ public interface ICombatant
     /// Returns list of affects that expired.
     /// </summary>
     List<Affect> TickAffects();
-    
-    /// <summary>
-    /// Get effective armor class including all affect modifiers.
-    /// Lower is better (negative AC is good).
-    /// </summary>
-    short GetEffectiveArmorClass();
-    
-    /// <summary>
-    /// Get effective hitroll including all affect modifiers.
-    /// Higher is better (bonus to hit).
-    /// </summary>
-    sbyte GetEffectiveHitroll();
-    
-    /// <summary>
-    /// Get effective damroll including all affect modifiers.
-    /// Higher is better (bonus to damage).
-    /// </summary>
-    sbyte GetEffectiveDamroll();
 }

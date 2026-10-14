@@ -1,5 +1,6 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
+using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Wimpy;
@@ -8,11 +9,11 @@ namespace EliteMud.Server.Adapters.Commands.Wimpy;
 // ReSharper disable once UnusedMember.Global
 internal sealed class WimpyCommandHandler : ICommandHandler
 {
-    private readonly IWorldState _worldState;
+    private readonly EffectiveStats _stats;
 
-    public WimpyCommandHandler(IWorldState worldState)
+    public WimpyCommandHandler(EffectiveStats stats)
     {
-        _worldState = worldState;
+        _stats = stats;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -70,7 +71,7 @@ internal sealed class WimpyCommandHandler : ICommandHandler
         }
 
         // Max wimpy is 25% of effective max HP (legacy: act.other.c:901-905)
-        var effectiveMaxHP = _worldState.GetTotalEffectiveMaxHitPoints(player);
+        var effectiveMaxHP = _stats.Get(player, AffectLocation.MaxHit);
         var maxWimpy = effectiveMaxHP / 4;
         if (wimpyLevel > maxWimpy)
         {
