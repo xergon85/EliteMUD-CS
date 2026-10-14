@@ -146,7 +146,6 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             damage += _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, mobInstance);
         }
 
-        mobInstance.Position = Position.Fighting;
         var outcome = _combatDamage.Apply(
             attacker,
             mobInstance,

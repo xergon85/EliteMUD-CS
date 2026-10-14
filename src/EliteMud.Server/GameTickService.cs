@@ -142,15 +142,31 @@ internal sealed class GameTickService
         {
             try
             {
-                // Skip if attacker can't fight (stunned, incapacitated, mortally wounded, or dead)
-                // Players in these positions can't attack but can still be attacked
-                if (attacker.Player.Position < Position.Fighting)
+                // A player knocked down in a fight gets up instead of their first attack (legacy
+                // perform_violence, fight.c:1701); the extra attacks still roll
+                var firstAttack = 1;
+                if (attacker.Player.Position == Position.Sitting)
                 {
+                    attacker.Player.Position = Position.Fighting;
+                    await _messageSender.SendAsync(
+                        new[]
+                        {
+                            new SkillMessage(
+                                SkillMessageTarget.Actor, "You regain your senses and scramble to your feet."),
+                            new SkillMessage(SkillMessageTarget.Others, "$n scrambles to $s feet!")
+                        },
+                        attacker.Player,
+                        cancellationToken);
+                    firstAttack = 2;
+                }
+                else if (attacker.Player.Position < Position.Fighting)
+                {
+                    // Can't fight (resting, sleeping, stunned or worse), but can still be attacked
                     continue;
                 }
 
                 // Process up to 5 attacks per round
-                for (int attackNum = 1; attackNum <= 5; attackNum++)
+                for (int attackNum = firstAttack; attackNum <= 5; attackNum++)
                 {
                     // Check if target is still valid before each attack
                     var opponent = attacker.Player.Fighting;
@@ -188,7 +204,7 @@ internal sealed class GameTickService
 
     /// <summary>
     /// Every mob fighting a player hits it once, on its own turn (legacy perform_violence), whether or not the player
-    /// can fight back.
+    /// can fight back. A mob not yet in the fighting position gets into it instead.
     /// </summary>
     private async Task ProcessMobAttacksAsync(CancellationToken cancellationToken)
     {
@@ -209,6 +225,22 @@ internal sealed class GameTickService
             {
                 // Player left or disconnected
                 _combatCalculator.StopFighting(mob);
+                continue;
+            }
+
+            // A mob joins a fight in whatever position it was in (legacy set_fighting); it spends its turn getting
+            // into the fighting position, scrambling up if it was down (legacy perform_violence, fight.c:1690)
+            if (mob.Position != Position.Fighting)
+            {
+                if (mob.Position < Position.Standing)
+                {
+                    await _messageSender.SendAsync(
+                        new[] { new SkillMessage(SkillMessageTarget.Others, "$n scrambles to $s feet!") },
+                        mob,
+                        cancellationToken);
+                }
+
+                mob.Position = Position.Fighting;
                 continue;
             }
 

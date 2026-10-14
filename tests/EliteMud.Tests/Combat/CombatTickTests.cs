@@ -78,7 +78,10 @@ public sealed class CombatTickTests : IDisposable
             }),
             new Dictionary<int, MobDefinition> { [100] = mobDefinition },
             new Dictionary<int, ObjectDefinition> { [Ring] = RingOfLife },
-            new Dictionary<int, List<MobInstance>> { [Temple] = new(), [Room] = new() { _mob, _secondMob }, [Escape] = new() },
+            new Dictionary<int, List<MobInstance>>
+            {
+                [Temple] = new(), [Room] = new() { _mob, _secondMob }, [Escape] = new()
+            },
             new Dictionary<int, List<ObjectInstance>> { [Temple] = new(), [Room] = new(), [Escape] = new() },
             new List<ZoneDefinition>());
 
@@ -152,6 +155,62 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(
             new[] { "Fighter hits a rat extremely hard.", "A rat hits Fighter extremely hard." },
             _observer.Lines());
+    }
+
+    /// <summary>
+    /// A mob joins a fight in whatever position it was in (legacy set_fighting) and spends its first turn getting
+    /// into the fighting position (legacy perform_violence, fight.c:1690). From standing that's silent.
+    /// </summary>
+    [Fact]
+    public async Task AMobJustDrawnIntoAFight_SpendsItsTurnGettingReady()
+    {
+        Fight(Fighter, _mob);
+        _mob.Fighting = Fighter;
+        _mob.Position = Position.Standing;
+
+        await Round();
+
+        Assert.Equal(Position.Fighting, _mob.Position);
+        Assert.Equal(100, Fighter.HitPoints);
+        Assert.Equal(new[] { "You hit a rat extremely hard." }, _fighter.Lines());
+    }
+
+    /// <summary>A mob knocked down (e.g. bashed) or asleep scrambles up instead of attacking.</summary>
+    [Fact]
+    public async Task AKnockedDownMob_ScramblesToItsFeet_InsteadOfAttacking()
+    {
+        Fight(Fighter, _mob);
+        _mob.Fighting = Fighter;
+        _mob.Position = Position.Sitting;
+
+        await Round();
+
+        Assert.Equal(Position.Fighting, _mob.Position);
+        Assert.Equal(100, Fighter.HitPoints);
+        Assert.Equal(
+            new[] { "You massacre a rat to small fragments with your hit.", "A rat scrambles to its feet!" }, // 14: 4/3
+            _fighter.Lines());
+        Assert.Equal(
+            new[] { "Fighter massacres a rat to small fragments with their hit.", "A rat scrambles to its feet!" },
+            _observer.Lines());
+    }
+
+    /// <summary>
+    /// A player sitting in a fight (e.g. after a failed bash) gets up instead of their first attack (legacy
+    /// perform_violence, fight.c:1701).
+    /// </summary>
+    [Fact]
+    public async Task ASittingPlayer_ScramblesToTheirFeet_InsteadOfTheirFirstAttack()
+    {
+        Fight(Fighter, _mob);
+        Fighter.Position = Position.Sitting;
+
+        await Round();
+
+        Assert.Equal(Position.Fighting, Fighter.Position);
+        Assert.Equal(100, _mob.HitPoints);
+        Assert.Equal(new[] { "You regain your senses and scramble to your feet." }, _fighter.Lines());
+        Assert.Equal(new[] { "Fighter scrambles to his feet!" }, _observer.Lines());
     }
 
     [Fact]
@@ -259,9 +318,9 @@ public sealed class CombatTickTests : IDisposable
     public async Task MobStunningAPlayer_TellsThemAndTheRoom_AndBothFightOn()
     {
         Fight(_mob, Victim);
-        Victim.Fighting = _mob; // fighting back, but this test is about the mob's hit, so not standing
-        Victim.Position = Position.Sitting;
-        Victim.HitPoints = 11; // the bite does 12 against a sitting victim (9 × 4/3), leaving -1: stunned
+        Victim.Fighting = _mob; // fighting back, but resting, so this round is only about the mob's hit
+        Victim.Position = Position.Resting;
+        Victim.HitPoints = 14; // the bite does 15 against a resting victim (9 × 5/3), leaving -1: stunned
 
         await Round();
 
@@ -271,14 +330,14 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(
             new[]
             {
-                "a rat hits you extremely hard. [-1/100 HP]",
+                "a rat massacres you to small fragments with their hit. [-1/100 HP]",
                 "You're stunned, but will probably regain consciousness again."
             },
             _victim.Lines());
         Assert.Equal(
             new[]
             {
-                "A rat hits Victim extremely hard.",
+                "A rat massacres Victim to small fragments with their hit.",
                 "Victim is stunned, but will probably regain consciousness again."
             },
             _observer.Lines());
@@ -313,7 +372,9 @@ public sealed class CombatTickTests : IDisposable
             _observer.Lines());
     }
 
-    /// <summary>An opponent who left the room ends the fight on both sides, without a hit (legacy perform_violence).</summary>
+    /// <summary>
+    /// An opponent who left the room ends the fight on both sides, without a hit (legacy perform_violence).
+    /// </summary>
     [Fact]
     public async Task AnOpponentWhoLeft_EndsTheFight()
     {
