@@ -31,10 +31,10 @@ public sealed class CombatDamage
     }
 
     /// <summary>
-    /// Deal damage from a player to a player or mob. A miss is damage 0: it still starts the fight.
+    /// Deal damage from a player or mob to a player or mob. A miss is damage 0: it still starts the fight.
     /// The messages cover what follows the source's own hit message (death, kill experience), in order.
     /// </summary>
-    public DamageOutcome Apply(PlayerState attacker, ICombatant victim, int damage)
+    public DamageOutcome Apply(ICombatant attacker, ICombatant victim, int damage)
     {
         // Legacy damage(): "Attempt to damage a corpse" (fight.c:787). A victim already dead is still being
         // handled elsewhere (e.g. the combat tick); damaging it again would give a second death.
@@ -59,7 +59,7 @@ public sealed class CombatDamage
     }
 
     /// <summary>Legacy set_fighting: each side that isn't fighting yet starts fighting the other.</summary>
-    private void StartFighting(PlayerState attacker, ICombatant victim)
+    private void StartFighting(ICombatant attacker, ICombatant victim)
     {
         if (attacker.Fighting == null)
         {
@@ -75,7 +75,7 @@ public sealed class CombatDamage
     /// <summary>
     /// A player victim. No dodge/parry here: legacy only has them in the melee hit, before damage().
     /// </summary>
-    private DamageOutcome DamagePlayer(PlayerState attacker, PlayerState victim, int damage)
+    private DamageOutcome DamagePlayer(ICombatant attacker, PlayerState victim, int damage)
     {
         damage = Math.Clamp(damage, 0, MaxDamage);
         victim.HitPoints -= (short)damage;
@@ -97,7 +97,7 @@ public sealed class CombatDamage
         return new DamageOutcome(damage, true, messages);
     }
 
-    private DamageOutcome DamageMob(PlayerState attacker, MobInstance mob, int damage)
+    private DamageOutcome DamageMob(ICombatant attacker, MobInstance mob, int damage)
     {
         damage = Math.Clamp(damage, 0, MaxDamage);
         mob.HitPoints -= (short)damage;
@@ -117,8 +117,9 @@ public sealed class CombatDamage
         Kill(attacker, mob, messages);
 
         // Legacy die() for a mob: the corpse takes its things, the mob leaves the world
-        _worldState.CreateMobCorpse(mob, attacker.RoomId);
-        _worldState.RemoveMob(mob.InstanceId, attacker.RoomId);
+        var roomId = RoomOf(attacker, mob);
+        _worldState.CreateMobCorpse(mob, roomId);
+        _worldState.RemoveMob(mob.InstanceId, roomId);
 
         return new DamageOutcome(damage, true, messages);
     }
@@ -126,19 +127,24 @@ public sealed class CombatDamage
     /// <summary>
     /// The killer's side of a death (legacy damage() at POS_DEAD): alignment (silent, change_alignment()), kill
     /// experience from the victim's experience before any death penalty, and the death messages. Killing yourself
-    /// earns nothing: legacy only rewards when ch != victim (fight.c:1034).
+    /// earns nothing: legacy only rewards when ch != victim (fight.c:1034). A mob killer takes its share of
+    /// experience; mob alignment doesn't change here.
     /// </summary>
-    private void Kill(PlayerState killer, ICombatant victim, List<SkillMessage> messages)
+    private void Kill(ICombatant killer, ICombatant victim, List<SkillMessage> messages)
     {
         var selfInflicted = ReferenceEquals(killer, victim);
         var killReward = Array.Empty<string>() as IReadOnlyList<string>;
         if (!selfInflicted)
         {
-            var alignmentShift = _combatCalculator.CalculateAlignmentShift(
-                killer, victim, isPvP: victim is PlayerState);
-            _combatCalculator.ApplyAlignmentShift(killer, alignmentShift);
+            if (killer is PlayerState player)
+            {
+                var alignmentShift = _combatCalculator.CalculateAlignmentShift(
+                    player, victim, isPvP: victim is PlayerState);
+                _combatCalculator.ApplyAlignmentShift(player, alignmentShift);
+                player.SaveRequested = true; // legacy PLR_SAVECHR (fight.c:1047)
+            }
+
             killReward = _combatExperience.Killed(killer, victim).Messages;
-            killer.SaveRequested = true; // legacy PLR_SAVECHR (fight.c:1047)
 
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N is DEAD!!", victim));
         }
@@ -160,6 +166,16 @@ public sealed class CombatDamage
             messages.Add(new SkillMessage(SkillMessageTarget.Actor, line));
         }
     }
+
+    /// <summary>
+    /// The room a mob died in. A mob doesn't know its room, so it comes from the player in the fight; nothing deals
+    /// damage between mobs yet.
+    /// </summary>
+    private static int RoomOf(ICombatant attacker, MobInstance victim) =>
+        attacker is PlayerState player
+            ? player.RoomId
+            : throw new NotSupportedException(
+                $"Damage from {attacker.Name} to {victim.Name}: a mob dying to a mob needs the mob's room");
 
     /// <summary>
     /// Legacy die() for a player: a corpse with their things where they fell, the death penalty, and back to the
