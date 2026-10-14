@@ -1,6 +1,7 @@
 using System.Net;
 using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Session;
@@ -135,7 +136,13 @@ internal static class ServerBootstrap
             .AddSingleton<ExperienceService>()
             .AddSingleton<PlayerProgression>()
             .AddSingleton<CombatExperience>()
-            .AddSingleton<CombatDamage>()
+            .AddSingleton(provider => new CombatDamage(
+                provider.GetRequiredService<CombatCalculator>(),
+                provider.GetRequiredService<CombatExperience>(),
+                provider.GetRequiredService<IWorldState>(),
+                provider.GetServices<ICombatListener>(),
+                provider.GetRequiredService<FleeHandler>(),
+                () => provider.GetRequiredService<ConnectionRegistry>().GetConnections().Select(c => c.Player)))
             .AddSingleton<ICombatListener, MobMemory>()
 
             // Database

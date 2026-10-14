@@ -1,4 +1,5 @@
 using EliteMud.Application.Combat.DamageSteps;
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
@@ -16,7 +17,9 @@ public sealed class CombatDamage
         CombatCalculator combatCalculator,
         CombatExperience combatExperience,
         IWorldState worldState,
-        IEnumerable<ICombatListener> listeners)
+        IEnumerable<ICombatListener> listeners,
+        FleeHandler fleeHandler,
+        Func<IEnumerable<PlayerState>> onlinePlayers)
     {
         var listenerList = listeners.ToList();
 
@@ -31,6 +34,7 @@ public sealed class CombatDamage
             new LoseHitPoints(combatExperience),
             new UpdatePosition(combatCalculator),
             new PositionMessages(worldState),
+            new Wimpy(fleeHandler, worldState, onlinePlayers),
             new StopFightingBelowStunned(combatCalculator),
             new Kill(combatCalculator, combatExperience, listenerList),
             new PlayerDeath(combatExperience, worldState),

@@ -1,5 +1,6 @@
 using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Skills;
 using EliteMud.Application.World;
@@ -295,6 +296,7 @@ public class DamagePathTests
         private readonly SkillRegistry _skills;
         private readonly CombatCalculator _calculator;
         private readonly CombatExperience _experience;
+        private readonly PlayerProgression _progression;
 
         /// <param name="combatRandom">Dice for melee hit and damage rolls (default: shared)</param>
         public Fixture(Random? combatRandom = null)
@@ -324,7 +326,8 @@ public class DamagePathTests
             _calculator = new CombatCalculator(
                 new DodgeSkill(metadata, formulas), new ParrySkill(metadata, formulas), combatRandom);
             var experienceService = new ExperienceService(rules, formulas, new Random(1));
-            _experience = new CombatExperience(new PlayerProgression(experienceService, rules), experienceService);
+            _progression = new PlayerProgression(experienceService, rules);
+            _experience = new CombatExperience(_progression, experienceService);
 
             // Alignment -1000 moves a neutral killer 62 towards good; 400 XP gives a 100 kill share
             var mobDefinition = new MobDefinition(
@@ -372,7 +375,13 @@ public class DamagePathTests
         public SkillContext AgainstMob() => new(Attacker, Mob, null);
         public SkillContext AgainstPlayer() => new(Attacker, VictimPlayer, null);
 
-        public CombatDamage Damage() => new(_calculator, _experience, World, new[] { new MobMemory() });
+        public CombatDamage Damage() => new(
+            _calculator,
+            _experience,
+            World,
+            new[] { new MobMemory() },
+            new FleeHandler(World, _calculator, _progression),
+            () => new[] { Attacker, VictimPlayer });
 
         public KickSkillExecutor Kick() => new(_skills, Damage());
         public BashSkillExecutor Bash() => new(_skills, Damage());

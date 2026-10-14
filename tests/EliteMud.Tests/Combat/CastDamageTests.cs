@@ -1,4 +1,5 @@
 using EliteMud.Application.Combat;
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Skills;
@@ -99,6 +100,7 @@ public sealed class CastDamageTests : IDisposable
 
         var connections = new ConnectionRegistry();
         connections.SetProvider(() => new[] { _caster.Context, _victim.Context, _observer.Context });
+        var progression = new PlayerProgression(experience, rules);
 
         _cast = new CastCommandHandler(
             new SpellRegistry(spellMetadata, formulas),
@@ -108,9 +110,11 @@ public sealed class CastDamageTests : IDisposable
             new ActMessageService(),
             new CombatDamage(
                 _calculator,
-                new CombatExperience(new PlayerProgression(experience, rules), experience),
+                new CombatExperience(progression, experience),
                 _world,
-                Array.Empty<ICombatListener>()),
+                Array.Empty<ICombatListener>(),
+                new FleeHandler(_world, _calculator, progression),
+                () => connections.GetConnections().Select(c => c.Player)),
             new SkillMessageSender(
                 new ActMessageService(),
                 connections,
