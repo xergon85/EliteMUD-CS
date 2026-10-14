@@ -9,10 +9,17 @@ namespace EliteMud.Tests.Commands;
 /// <summary>Legacy do_quit (act.other.c): you can't quit in the middle of a fight.</summary>
 public class QuitCommandTests
 {
-    [Fact]
-    public async Task QuittingWhileFighting_IsRefused()
+    /// <summary>Any fight counts, also one where the player was knocked down (legacy only checks the position).</summary>
+    [Theory]
+    [InlineData(Position.Fighting)]
+    [InlineData(Position.Sitting)]
+    public async Task QuittingWhileFighting_IsRefused(Position position)
     {
-        var player = new PlayerState(1, "Tester", 3001) { Position = Position.Fighting };
+        var player = new PlayerState(1, "Tester", 3001)
+        {
+            Position = position,
+            Fighting = new PlayerState(2, "Opponent", 3001)
+        };
         using var connection = new TestConnection(1, player);
 
         var outcome = await new QuitCommandHandler()

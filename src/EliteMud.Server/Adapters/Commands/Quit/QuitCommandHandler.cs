@@ -1,5 +1,4 @@
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Quit;
@@ -13,8 +12,9 @@ internal sealed class QuitCommandHandler : ICommandHandler
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
-        // Legacy do_quit (act.other.c): no quitting in the middle of a fight
-        if (context.Player.Position == Position.Fighting)
+        // Legacy do_quit (act.other.c): no quitting in the middle of a fight. Legacy checks the fighting position,
+        // which lets a player knocked to the ground mid-fight quit and escape; here any fight counts
+        if (context.Player.Fighting != null)
         {
             await context.Session.SendLineAsync("No way!  You're fighting for your life!", cancellationToken);
             return CommandOutcome.Continue;
