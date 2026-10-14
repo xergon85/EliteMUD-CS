@@ -63,14 +63,17 @@ public sealed class MeleeRoll
         {
             damage += _calculator.RollDice(weaponDetails.DiceCount, weaponDetails.DiceSides);
             damage += _calculator.ApplyWeaponEffects(weapon.Definition.Flags, victim);
-            if (attacker is MobInstance armedMob)
+            if (attacker is MobInstance armedMob && armedMob.Definition.Attacks.Count > 0)
             {
-                damage += MobAttack(armedMob, withoutAttackData: 0);
+                damage += MobAttack(armedMob);
             }
         }
         else if (attacker is MobInstance mob)
         {
-            damage += MobAttack(mob, withoutAttackData: mob.Definition.Level + _calculator.RollDice(1, 4));
+            // A mob without attack data (legacy always has it) hits for its level + 1d4
+            damage += mob.Definition.Attacks.Count > 0
+                ? MobAttack(mob)
+                : mob.Definition.Level + _calculator.RollDice(1, 4);
         }
         else
         {
@@ -80,17 +83,9 @@ public sealed class MeleeRoll
         return Math.Max(1, _calculator.CalculateDamageWithPositionMultiplier(damage, victim.Position));
     }
 
-    /// <summary>
-    /// A mob's natural attack dice. A mob without attack data (legacy always has it) does nothing extra with a
-    /// weapon, and its level + 1d4 bare-handed.
-    /// </summary>
-    private int MobAttack(MobInstance mob, int withoutAttackData)
+    /// <summary>A mob's natural attack dice, with or without a weapon (legacy hit()).</summary>
+    private int MobAttack(MobInstance mob)
     {
-        if (mob.Definition.Attacks.Count == 0)
-        {
-            return withoutAttackData;
-        }
-
         var attack = mob.Definition.Attacks[0];
         return _calculator.RollDice(attack.DamageDiceCount, attack.DamageDiceSides) + attack.DamageBonus;
     }

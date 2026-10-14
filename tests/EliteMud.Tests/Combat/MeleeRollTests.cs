@@ -130,6 +130,18 @@ public class MeleeRollTests
         Assert.Equal(2 + 1, Roll(1).Damage(_mob, _victim)); // 2d4 rolling ones, + 1
     }
 
+    /// <summary>
+    /// The dice a mob's hit rolls are its attack dice, in order: nothing else is rolled first (the fallback for a mob
+    /// without attack data is only rolled when used).
+    /// </summary>
+    [Fact]
+    public void AMobsHit_RollsOnlyItsAttackDice()
+    {
+        var roll = Roll(new SequenceRandom(1, 2, 4));
+
+        Assert.Equal(1 + 2 + 1, roll.Damage(_mob, _victim)); // 2d4 rolling 1 and 2, + 1
+    }
+
     /// <summary>A mob's strength counts with its affects and gear (legacy GET_STR).</summary>
     [Fact]
     public void AMobsStrengthAffect_AddsDamage()
@@ -172,12 +184,14 @@ public class MeleeRollTests
         Assert.Equal(1, Roll(1).Damage(_attacker, _mob));
     }
 
-    private MeleeRoll Roll(int dice)
+    private MeleeRoll Roll(int dice) => Roll(new FixedRandom(dice));
+
+    private MeleeRoll Roll(Random dice)
     {
         var skills = new SkillMetadataRegistry(ContentLoader.LoadSkills(Content));
         var formulas = new FormulaEvaluator(new Random(1));
         return new MeleeRoll(
-            new CombatCalculator(new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas), new FixedRandom(dice)),
+            new CombatCalculator(new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas), dice),
             _world);
     }
 
@@ -201,4 +215,22 @@ public class MeleeRollTests
     private static ObjectDefinition Worn(int id, string name, ObjectAffect affect) =>
         new(id, name, name, $"A {name} lies here.", "Desc", "Worn",
             new List<string>(), new List<string>(), null, new List<int>(), 1, 100, new List<ObjectAffect> { affect });
+}
+
+/// <summary>Dice that roll the given values in order, then repeat the last one.</summary>
+internal sealed class SequenceRandom : Random
+{
+    private readonly Queue<int> _values;
+    private int _last;
+
+    public SequenceRandom(params int[] values)
+    {
+        _values = new Queue<int>(values);
+    }
+
+    public override int Next(int minValue, int maxValue) => Math.Clamp(Take(), minValue, maxValue - 1);
+
+    public override int Next(int maxValue) => Math.Clamp(Take(), 0, maxValue - 1);
+
+    private int Take() => _last = _values.Count > 0 ? _values.Dequeue() : _last;
 }
