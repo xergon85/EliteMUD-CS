@@ -1,8 +1,7 @@
 # One damage path for all combat (#42)
 
-Handover, updated Oct 14, 2026 after steps 0–5, the two prerequisite cards (#61, #62) and step 6a. Start here in a
-new session, then read card #42 on GitHub (its comments hold the step 6 pipeline plan). Next up: **step 6b, the
-combat tick onto the shared path**, on a branch stacked on `feat/damage-path-tick` (PR 6a).
+Handover, updated Oct 14, 2026 after steps 0–6 and the two prerequisite cards (#61, #62). Start here in a new
+session, then read card #42 on GitHub. Next up: **step 7, `DamageRoll`**.
 
 ## How we work (short version)
 
@@ -32,7 +31,8 @@ hit or miss and how much, then calls `damage(ch, victim, dam, type)`, which owns
 ## Where it stands
 
 `CombatDamage.Apply(attacker, victim, amount)` (Application/Combat) is the shared `damage()`. Kick, bash, backstab,
-damage spells and `kill`'s first hit use it; the attacker can be a player or a mob. It runs a fixed list of
+damage spells, `kill`'s first hit and every hit of the combat tick use it; the attacker can be a player or a mob.
+It runs a fixed list of
 `IDamageStep`s (Combat/DamageSteps) over a `DamageContext`, in `CombatDamage.Steps`; a step can stop the hit, and
 steps don't call each other. In order:
 
@@ -42,64 +42,61 @@ steps don't call each other. In order:
 - `NotifyHurt`: `ICombatListener`s (`Hurt`, `Killed`); `MobMemory` (Application/Ai) remembers attackers and forgets
   the dead
 - `CapDamage` (0–500), `LoseHitPoints` (with damage XP), `UpdatePosition`
+- `PositionMessages` (player victims: stunned, incapacitated, mortally wounded to them and the room; "That Really
+  did HURT!" and BLEEDING each on its own), `Wimpy` (flees inside the hit; its lines, then a `VictimLooks` message),
+  `StopFightingBelowStunned` (the stunned fight on)
 - on death, `Kill` (fight ends, alignment silently, kill XP, death lines; nothing when you kill yourself) then
   `PlayerDeath` (corpse, penalty, respawn at `CharacterStart.StartRoom`, saves on both sides) or `MobDeath` (corpse
-  and removal; the room comes from the player in the fight, as nothing deals damage between mobs yet)
+  and removal, in the mob's own room)
 
-Melee hits are resolved first with `CombatCalculator.ResolveAttack` / `DefendAgainstMelee` (legacy `hit()`: roll,
-damage, position multiplier, dodge, parry), then dealt through `CombatDamage`. Messages are `SkillMessage`s (act
-templates), sent by `SkillMessageSender` through `ActMessageExtensions`.
+Every combatant knows its room (`ICombatant.RoomId`; a mob's is kept by `WorldState`, `MobInstance.Nowhere` when out
+of the world). Melee hits are resolved first with `CombatCalculator.ResolveAttack` / `DefendAgainstMelee` (legacy
+`hit()`: roll, damage, position multiplier, dodge, parry; any victim), then dealt through `CombatDamage`. Messages
+are `SkillMessage`s (act templates), sent by `SkillMessageSender` from any actor, player or mob, in its room.
+
+The combat tick (`GameTickService.ProcessCombatRoundAsync`): each fighting player hits their target (up to 5
+attacks), then each mob fighting a player hits once; one `HitAsync` for all of them. An opponent who left ends the
+fight. `CombatTickTests` cover each path.
 
 Around it: game state is changed one thing at a time under `GameStateGate` (#61, see AGENTS.md); output is queued
 per session; fights end when a player flees, quits or disconnects; quit refuses during a fight; characters enter
 the game standing.
 
-## Step 6: the combat tick
+## Next: step 7, `DamageRoll`
 
-**6a (done, PR 6a):** `CombatTickTests` pin what one round of the tick does today, path by path, with notes where
-it differs from legacy; `CombatDamage` takes a mob attacker; the pipeline split with `DamageStepTests`.
+One "wielded weapon + effective strength (+ weapon effects) → damage" helper for backstab, `kill` and the tick;
+executors drop `IWorldState`. Today the tick's `RollMelee`/`MobDamage`, `MeleeAttackExecutor` and backstab each roll
+their own, and weapon effects come after the defense for player against player but before it otherwise. Likely
+together with #48 (to-hit rolls between players and mobs), which rewrites the other half of the same hit.
 
-**6b (next):** position messages, wimpy (decision 9) and stop fighting below stunned as steps; the four tick paths
-through `DefendAgainstMelee` + `CombatDamage`; no counterattack (decision 10); removals. `CombatTickTests`'
-expected lines change on purpose as each part lands.
+## Left open after step 6
 
-What's left in `src/EliteMud.Server/GameTickService.cs` (1140 lines; line numbers drift):
-
-| Path | Damage | Death |
-|---|---|---|
-| mob → player, `ProcessMobAttackOnPlayerAsync` :260 | `ApplyDamage` :317 | `CheckPlayerPositionAsync` :734 → `HandlePlayerDeathFromMob` :685 |
-| player → player, `ProcessPlayerVsPlayerAttack` :369 | `PerformAttack` :403 + weapon effects `HitPoints -=` :421 | `HandlePlayerDeath` :634 ("You have slain", "Your soul darkens") |
-| player → mob, `ProcessPlayerVsMobAttack` :492 | `HitPoints -=` :538, own `RememberPlayer` :544 | `HandleMobDeath` :840 ("You have slain … You feel more virtuous") |
-| mob counterattack, same method | `ApplyDamage` :584 | `CheckPlayerPositionAsync` :630 |
-
-Plan (details in the #42 comments):
-
-1. **Mob attackers:** `CombatDamage.Apply` takes a `PlayerState` attacker today. Generalize to `ICombatant`
-   (kill XP for a mob killer goes through `CombatExperience.Killed`, which already handles mobs).
-2. **Pipeline:** split `CombatDamage` into an ordered list of small steps (`IDamageStep` over a `DamageContext`;
-   corpse check, start fight, listeners, cap, hit points, position, position messages, wimpy, kill, death). One
-   explicit list; each step tested alone plus one test pinning the order. `DamagePathTests` and `CastDamageTests`
-   must pass unchanged through the split. No event bus, no priorities, steps don't call each other.
-3. **Position messages and wimpy** move from `CheckPlayerPositionAsync` into steps, so every source gets them
-   (legacy `damage()` fight.c:987–1003; today only the tick sends them).
-4. **Melee for all four tick paths:** `ResolveAttack` / `DefendAgainstMelee`, then `CombatDamage`. Mobs get dodge
-   and parry in melee when they have the skill (decision 1).
-5. **Remove** `HandleMobDeath`, `HandlePlayerDeath`, `HandlePlayerDeathFromMob`, the tick's `RememberPlayer`, and
-   the old lines ("You have slain …", "Your soul darkens …", "You feel more virtuous/sinister").
-6. **Tests:** the tick needs connections; use `TestConnection` (loopback telnet session) and fixed dice
-   (`CombatCalculator` takes an optional `Random`). Characterize each tick path first, as in step 0.
-
-Then **step 7, `DamageRoll`**: one "wielded weapon + effective strength (+ weapon effects) → damage" helper for
-backstab, `kill` and the tick; executors drop `IWorldState`.
+Not done in step 6; worth a card each if wanted:
+- **Mob wimpy** (legacy `MOB_WIMPY` flees when bleeding, fight.c:983): the `Wimpy` step only does players, and
+  `FleeHandler` only moves players.
+- **Autoassist in the tick:** helpers join only on `kill`'s first hit; legacy `perform_violence` runs `autoassist`
+  every round.
+- **Mobs fighting mobs** don't attack in the tick (only mobs fighting players).
+- **Sleep and berserk:** "You wake up a little groggy" and berserk's wimpy exemption need affects (#59).
+- **Flee message order:** legacy shows the new room before "You flee head over heels." (do_simple_move looks
+  first); the flee command and wimpy send the look last. #70 is about flee too.
+- **Room of "Others" lines:** `SkillMessageSender` uses the actor's room when it sends, after the hit. Someone who
+  kills themselves has already respawned at the temple, so the temple hears "is dead!  R.I.P.".
+- **Duplication:** `SkillMessageSender` routes by room and victim itself, like `ActMessageExtensions` (#53).
+  `FleeHandler`, `LookHandler` and `CombatDamage` take the online players as a `Func`; world and AI methods still
+  pass a mob's room next to the mob (`MoveMob(from, …)`, `RemoveMob(id, roomId)`), which `MobInstance.RoomId` now
+  makes unnecessary.
 
 ## Watch out for
 
 - **Message wording and order** are legacy act messages; keep them. Kill XP lines come after "is DEAD!!".
-- **Wimpy/auto-flee** lives in `CheckPlayerPositionAsync` today; keep it working when it moves.
+- **Wimpy** happens inside the hit, so anything after `CombatDamage.Apply` must expect the victim gone.
 - **`Killed` before `Died`:** the killer's share comes from the victim's XP before the penalty.
 - **The gate:** the tick pass already holds `GameStateGate`; never wait for a save or the gate inside it.
 - **`PlayerState.Id` is the connection id** (#66): anything stored by player id is forgotten on reconnect.
-- **Helpers:** `MobAiService.ProcessAssist` runs after the hit (legacy `autoassist` in `perform_violence`).
+- **Helpers:** `MobAiService.ProcessAssist` runs after `kill`'s first hit (legacy `autoassist` in
+  `perform_violence`); not yet in the tick.
+- **A victim's hit line** starts with a color code, so it isn't capitalized ("a rat hits you"), as in legacy.
 
 ## Decisions
 
@@ -139,11 +136,14 @@ Oct 14 (step 6; options compared in the "Combat Tick Options" page, claude.ai/ar
 - #60: step 5 (`kill`'s first hit), `ResolveAttack`, `ICombatListener` / `MobMemory`, dead-victim guard.
 - #63: game state gate and queued telnet output (closes #61).
 - #65: fight target as a reference (closes #62), fights end on leaving, quit refuses mid-fight, enter standing.
+- #73: step 6a (tick characterization tests, mob attackers, `CombatDamage` as damage steps).
+- Step 6b (this branch): mobs know their room, the sender for any actor, position/wimpy/stop steps, mob melee
+  defense, the tick on the shared path.
 
 ## Related cards
 
 - Combat behavior: #47 alignment rounding, #48 no to-hit roll between players and mobs, #72 mobs have no skills,
-  #49 bash doesn't knock a player down, #51 player victims miss skill victim lines, #55 player killing rules, #70 flee
+  #74 mob switching, #49 bash doesn't knock a player down, #51 player victims miss skill victim lines, #55 player killing rules, #70 flee
   escape skill and death traps.
 - Architecture: #59 affects design, #31 spells as composed effects, #71 skills as composed building blocks (design
   #31 and #71 together, after this card), #53 one broadcast helper.
