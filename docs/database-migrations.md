@@ -35,9 +35,12 @@ protected override void Up(MigrationBuilder migrationBuilder)
 ```
 
 **Early development exception:**
-- During early development (no production data), direct schema changes are acceptable
+- During early development, a direct schema change that loses data is acceptable only when no database it will run
+  against holds data worth keeping. The server applies pending migrations at startup (`ServerBootstrap`), so a local
+  development database with characters in it counts.
 - Document in commit message when data loss occurs
-- Example: Commit 77cc072 dropped `CharacterInventory` without migration (acceptable for dev)
+- Example: Commit 77cc072 dropped `CharacterInventory` without migration; use this pattern only with a disposable
+  database.
 
 **Production rule:**
 - Always preserve existing data through migration scripts
