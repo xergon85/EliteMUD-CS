@@ -122,7 +122,7 @@ public sealed class FleeHandler
         var opponent = player.Fighting;
         var stillHere = opponent switch
         {
-            PlayerState other => getOtherPlayers().Contains(other),
+            PlayerState other => other.RoomId == currentRoomId && getOtherPlayers().Contains(other),
             MobInstance mob => getMobsInRoom().Contains(mob),
             _ => false
         };

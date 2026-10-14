@@ -26,7 +26,9 @@ public class FleeExperienceTests
         _world = new WorldState(
             new WorldDefinition(new Dictionary<int, RoomDefinition>
             {
-                [1] = new(1, "From", "Desc", new List<ExitDefinition>()),
+                // Exits every way, so a flee always gets out
+                [1] = new(
+                    1, "From", "Desc", Enum.GetValues<Direction>().Select(d => new ExitDefinition(d, 2)).ToList()),
                 [2] = new(2, "To", "Desc", new List<ExitDefinition>())
             }),
             new Dictionary<int, MobDefinition>(),
@@ -38,6 +40,27 @@ public class FleeExperienceTests
             _world,
             new CombatCalculator(new DodgeSkill(metadata, formulas), new ParrySkill(metadata, formulas)),
             new PlayerProgression(new ExperienceService(rules, formulas), rules));
+    }
+
+    /// <summary>
+    /// Fleeing costs damage done × the opponent's level, but only for an opponent still in the room: one who left
+    /// costs nothing (legacy fights always end when the two part).
+    /// </summary>
+    [Theory]
+    [InlineData(1, 300)] // opponent here: 30 damage × level 10
+    [InlineData(2, 0)]   // opponent already gone
+    public void FleeExperienceLoss_CountsOnlyAnOpponentStillHere(int opponentRoom, int expectedLoss)
+    {
+        var player = Player(level: 10, experience: 5000);
+        var opponent = new PlayerState(2, "Other", opponentRoom, level: 10, "warrior", "human", sex: 1);
+        opponent.MaxHitPoints = 100;
+        opponent.HitPoints = 70;
+        player.Fighting = opponent;
+
+        var result = _flee.AttemptFlee(player, 1, () => new[] { opponent }, () => _mobsInRoomOne);
+
+        Assert.True(result.Success);
+        Assert.Equal(expectedLoss, result.ExperienceLoss);
     }
 
     /// <summary>Whoever was fighting the player in the room they fled from stops; other fights go on.</summary>
