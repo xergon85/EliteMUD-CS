@@ -56,7 +56,8 @@ are `SkillMessage`s (act templates), sent by `SkillMessageSender` from any actor
 
 The combat tick (`GameTickService.ProcessCombatRoundAsync`): each fighting player hits their target (up to 5
 attacks), then each mob fighting a player hits once; one `HitAsync` for all of them. An opponent who left ends the
-fight. `CombatTickTests` cover each path.
+fight. A fighter not in the fighting position spends its turn getting there (a mob drawn into a fight, a bashed mob,
+a player sitting after a failed bash), as legacy. `CombatTickTests` cover each path.
 
 Around it: game state is changed one thing at a time under `GameStateGate` (#61, see AGENTS.md); output is queued
 per session; fights end when a player flees, quits or disconnects; quit refuses during a fight; characters enter
@@ -71,11 +72,10 @@ together with #48 (to-hit rolls between players and mobs), which rewrites the ot
 
 ## Left open after step 6
 
-Not done in step 6; worth a card each if wanted:
-- **Mob wimpy** (legacy `MOB_WIMPY` flees when bleeding, fight.c:983): the `Wimpy` step only does players, and
-  `FleeHandler` only moves players.
+Not done in step 6; the rest are worth a card each if wanted:
+- **Mob wimpy** (legacy `MOB_WIMPY` flees when bleeding, fight.c:983): #76.
 - **Autoassist in the tick:** helpers join only on `kill`'s first hit; legacy `perform_violence` runs `autoassist`
-  every round.
+  every round: #77.
 - **Mobs fighting mobs** don't attack in the tick (only mobs fighting players).
 - **Sleep and berserk:** "You wake up a little groggy" and berserk's wimpy exemption need affects (#59).
 - **Flee message order:** legacy shows the new room before "You flee head over heels." (do_simple_move looks
@@ -143,7 +143,7 @@ Oct 14 (step 6; options compared in the "Combat Tick Options" page, claude.ai/ar
 ## Related cards
 
 - Combat behavior: #47 alignment rounding, #48 no to-hit roll between players and mobs, #72 mobs have no skills,
-  #74 mob switching, #49 bash doesn't knock a player down, #51 player victims miss skill victim lines, #55 player
+  #74 mob switching, #76 mob wimpy, #77 autoassist, #49 bash doesn't knock a player down, #51 player victims miss skill victim lines, #55 player
   killing rules, #70 flee escape skill and death traps.
 - Architecture: #59 affects design, #31 spells as composed effects, #71 skills as composed building blocks (design
   #31 and #71 together, after this card), #53 one broadcast helper.
