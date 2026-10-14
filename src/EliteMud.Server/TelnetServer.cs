@@ -19,6 +19,7 @@ internal sealed class TelnetServer
     private readonly CommandCatalog _catalog;
     private readonly PromptCatalog _promptCatalog;
     private readonly CommandRouter _commandRouter;
+    private readonly GameStateGate _gate;
     private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
     private readonly ConnectionRegistry _connectionRegistry;
@@ -39,8 +40,10 @@ internal sealed class TelnetServer
         IServiceProvider serviceProvider,
         IpBanService ipBanService,
         IWorldState worldState,
-        CharacterSaveQueue saveQueue)
+        CharacterSaveQueue saveQueue,
+        GameStateGate gate)
     {
+        _gate = gate;
         _listener = new TcpListener(address, port);
         _catalog = catalog;
         _promptCatalog = promptCatalog;
@@ -223,16 +226,20 @@ internal sealed class TelnetServer
                 return;
             }
 
-            var player = CharacterMapper.ToPlayerState(character, connectionId, _worldState);
+            // Entering the game changes game state: one thing at a time (#61)
+            using (await _gate.EnterAsync(cancellationToken))
+            {
+                var player = CharacterMapper.ToPlayerState(character, connectionId, _worldState);
 
-            context = new ConnectionContext(
-                connectionId, session, player, sessionData.SelectedCharacterId.Value, sessionData.AccountUsername!);
-            _connections[context.Id] = context;
-            _connectionRegistry.SetProvider(() => _connections.Values);
+                context = new ConnectionContext(
+                    connectionId, session, player, sessionData.SelectedCharacterId.Value, sessionData.AccountUsername!);
+                _connections[context.Id] = context;
+                _connectionRegistry.SetProvider(() => _connections.Values);
 
-            // Auto-execute look command on entry
-            var entryCommand = new CommandRequest("look", null, null);
-            await _commandRouter.HandleAsync(entryCommand, context, cancellationToken);
+                // Auto-execute look command on entry
+                var entryCommand = new CommandRequest("look", null, null);
+                await _commandRouter.HandleAsync(entryCommand, context, cancellationToken);
+            }
 
             // Main game loop
             var dispatcher = new CommandParser();
@@ -245,7 +252,12 @@ internal sealed class TelnetServer
                 }
 
                 var command = dispatcher.Parse(gameLine);
-                var outcome = await _commandRouter.HandleAsync(command, context, cancellationToken);
+                CommandOutcome outcome;
+                using (await _gate.EnterAsync(cancellationToken))
+                {
+                    outcome = await _commandRouter.HandleAsync(command, context, cancellationToken);
+                }
+
                 if (outcome == CommandOutcome.Disconnect)
                 {
                     return;
@@ -264,19 +276,25 @@ internal sealed class TelnetServer
         }
         finally
         {
-            // Save character state to database using the save queue
-            // The queue automatically deduplicates saves within 2 seconds
-            if (context?.Player is not null && sessionData.SelectedCharacterId.HasValue)
-            {
-                // Queue the save (fire-and-forget, don't wait)
-                await _saveQueue.QueueSaveAsync(sessionData.SelectedCharacterId.Value, context.Player, cancellationToken);
-            }
-            
             if (context is not null)
             {
-                _connections.TryRemove(context.Id, out _);
+                // Leaving changes game state too; not cancellable, so a shutdown still saves and removes (#61)
+                using (await _gate.EnterAsync(CancellationToken.None))
+                {
+                    // Save character state to database using the save queue (fire-and-forget, don't wait);
+                    // the queue deduplicates saves
+                    if (sessionData.SelectedCharacterId.HasValue)
+                    {
+                        await _saveQueue.QueueSaveAsync(
+                            sessionData.SelectedCharacterId.Value, context.Player, CancellationToken.None);
+                    }
+
+                    _connections.TryRemove(context.Id, out _);
+                }
             }
 
+            // Last words (goodbye, ban message) are still queued; send them before the socket closes
+            await session.CloseAsync();
             client.Close();
         }
     }

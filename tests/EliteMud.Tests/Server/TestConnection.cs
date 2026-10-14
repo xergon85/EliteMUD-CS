@@ -33,6 +33,9 @@ internal sealed partial class TestConnection : IDisposable
     /// <summary>Everything received since the last call, one entry per line, empty lines included.</summary>
     public IReadOnlyList<string> Lines()
     {
+        // Output is written by the session's own writer (#61); let it catch up first
+        Context.Session.WaitUntilSentAsync().GetAwaiter().GetResult();
+
         var stream = _client.GetStream();
         var buffer = new byte[4096];
         // Writes are awaited before this is called; allow the loopback a moment to deliver them

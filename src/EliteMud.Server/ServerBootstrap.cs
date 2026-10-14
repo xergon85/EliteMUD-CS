@@ -154,6 +154,7 @@ internal static class ServerBootstrap
             .AddSingleton<PathfindingService>()
             .AddSingleton<MobAiService>()
             .AddSingleton<GameTickService>()
+            .AddSingleton<GameStateGate>()
             .AddSingleton<CharacterSaveQueue>()
 
             // Commands and other services
@@ -178,7 +179,7 @@ internal static class ServerBootstrap
         var saveQueue = services.GetRequiredService<CharacterSaveQueue>();
 
         var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry,
-            authHandler, services, ipBanService, worldState, saveQueue);
+            authHandler, services, ipBanService, worldState, saveQueue, services.GetRequiredService<GameStateGate>());
         return (server, tickService);
     }
 

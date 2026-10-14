@@ -18,9 +18,11 @@ internal sealed class CharacterSaveQueue : IDisposable
     private readonly IWorldState _worldState;
     private readonly Task _processingTask;
     private readonly CancellationTokenSource _cts;
+    private readonly GameStateGate _gate;
 
-    public CharacterSaveQueue(IServiceProvider serviceProvider, IWorldState worldState)
+    public CharacterSaveQueue(IServiceProvider serviceProvider, IWorldState worldState, GameStateGate gate)
     {
+        _gate = gate;
         _serviceProvider = serviceProvider;
         _worldState = worldState;
         _channel = Channel.CreateUnbounded<SaveRequest>(new UnboundedChannelOptions
@@ -72,8 +74,6 @@ internal sealed class CharacterSaveQueue : IDisposable
                     continue;
                 }
 
-                var saveStart = DateTime.UtcNow;
-
                 // Process the save in a new scope
                 using var scope = _serviceProvider.CreateScope();
                 var repository = scope.ServiceProvider.GetRequiredService<ICharacterRepository>();
@@ -83,7 +83,15 @@ internal sealed class CharacterSaveQueue : IDisposable
                     var character = await repository.GetByIdAsync(request.CharacterId, cancellationToken);
                     if (character != null)
                     {
-                        CharacterMapper.UpdateCharacterFromPlayerState(character, request.PlayerState, _worldState);
+                        // Read the live player under the gate (#61), so the game isn't changing it mid-copy;
+                        // the database work stays outside
+                        DateTime saveStart;
+                        using (await _gate.EnterAsync(cancellationToken))
+                        {
+                            saveStart = DateTime.UtcNow;
+                            CharacterMapper.UpdateCharacterFromPlayerState(character, request.PlayerState, _worldState);
+                        }
+
                         await repository.UpdateAsync(character, cancellationToken);
                         
                         lastSaveStart[request.CharacterId] = saveStart;
