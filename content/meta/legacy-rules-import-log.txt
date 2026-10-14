@@ -83,6 +83,10 @@ Info	Race availability	race half-orc	not in the creation menu and not in legacy-
 Info	Race availability	race half-troll	not in the creation menu and not in legacy-import.json: unknown
 Info	Race availability	race vampire	granted: given by immortals after an RP quest (source: project owner, from playing the live game (Oct 11, 2026))
 Info	Race availability	race werewolf	granted: given by immortals after an RP quest (source: project owner, from playing the live game (Oct 11, 2026))
+Info	THAC0	fight.c:1075 get_thaco()	illusionist, wizard, magic-user, psionicist: 20 - level / 4
+Info	THAC0	fight.c:1075 get_thaco()	druid, thief, cleric, bard, ninja: 20 - level / 4
+Info	THAC0	fight.c:1075 get_thaco()	paladin, mariner, monk, assassin: 20 - level / 4
+Info	THAC0	fight.c:1075 get_thaco()	cavalier, warrior, knight, ranger: 20 - level / 3
 Info	XP curve	limits.c exp_needed()	mage: magic-user, psionicist, wizard, illusionist (level 1 needs 3333, level 109 needs 40000000)
 Info	XP curve	limits.c exp_needed()	priest: cleric, monk, druid (level 1 needs 2000, level 109 needs 40000000)
 Info	XP curve	limits.c exp_needed()	rogue: thief, ninja (level 1 needs 2000, level 109 needs 40000000)

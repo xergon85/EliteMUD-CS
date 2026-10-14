@@ -1,3 +1,4 @@
+using EliteMud.Application.Skills;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -12,39 +13,55 @@ public sealed class MeleeRoll
 {
     private readonly CombatCalculator _calculator;
     private readonly IWorldState _worldState;
+    private readonly RulesContent _rules;
 
-    public MeleeRoll(CombatCalculator calculator, IWorldState worldState)
+    public MeleeRoll(CombatCalculator calculator, IWorldState worldState, RulesContent rules)
     {
         _calculator = calculator;
         _worldState = worldState;
+        _rules = rules;
     }
 
     /// <summary>
-    /// The to-hit roll, for now only between players (#48). Out of movement, an attack misses; one that lands
-    /// costs a movement point.
+    /// Whether the attacker is too winded to attack (legacy hit(), fight.c:1162): out of movement, the attack doesn't
+    /// happen at all, not even as a miss, and one time in four they pant for breath. Null when they can attack;
+    /// otherwise the messages to show, often none. Only players have movement.
     /// </summary>
-    public bool Hits(PlayerState attacker, PlayerState victim)
+    public IReadOnlyList<SkillMessage>? Winded(ICombatant attacker)
     {
-        if (attacker.Movement < 1)
+        if (attacker is not PlayerState { Movement: < 1 })
         {
-            return false;
+            return null;
         }
 
-        var hits = _calculator.AttackHits(
-            attacker,
-            _worldState.GetTotalEffectiveHitroll(attacker),
-            _worldState.GetTotalEffectiveStrength(attacker),
-            attacker.StrengthAdd,
-            _worldState.GetTotalEffectiveIntelligence(attacker),
-            _worldState.GetTotalEffectiveWisdom(attacker),
-            _worldState.GetTotalEffectiveArmorClass(victim),
-            _worldState.GetTotalEffectiveDexterity(victim));
-        if (hits)
+        return _calculator.RollDice(1, 4) == 1 // legacy !number(0, 3)
+            ? new[]
+            {
+                new SkillMessage(SkillMessageTarget.Actor, "You pant for breath..."),
+                new SkillMessage(SkillMessageTarget.Others, "$n pants for breath.")
+            }
+            : Array.Empty<SkillMessage>();
+    }
+
+    /// <summary>
+    /// The to-hit roll (legacy hit(), fight.c:1380–1420), for any attacker and victim (#48). A player swinging a
+    /// weapon spends weight / 8 movement on it, hit or miss.
+    /// </summary>
+    /// <param name="offHand">The dual-wield attack, which swings the held weapon</param>
+    public bool Hits(ICombatant attacker, ICombatant victim, bool offHand = false)
+    {
+        if (attacker is PlayerState player && Weapon(player, offHand) is { } weapon)
         {
-            attacker.Movement = (short)Math.Max(0, attacker.Movement - 1);
+            player.Movement = (short)Math.Max(0, player.Movement - weapon.Definition.Weight / 8);
         }
 
-        return hits;
+        return _calculator.AttackHits(
+            Thac0(attacker),
+            ToHit(attacker),
+            ArmorClass(victim),
+            Dexterity(victim),
+            victimAwake: victim.Position > Position.Sleeping,
+            victimOutOfMovement: victim is PlayerState { Movement: < 1 });
     }
 
     /// <summary>
@@ -53,11 +70,12 @@ public sealed class MeleeRoll
     /// Then more against a victim who isn't on their feet, and at least 1 (legacy MAX(1, dam)). Backstab multiplies
     /// this; other hits go on to the victim's dodge or parry.
     /// </summary>
-    public int Damage(ICombatant attacker, ICombatant victim)
+    /// <param name="offHand">The dual-wield attack, which swings the held weapon</param>
+    public int Damage(ICombatant attacker, ICombatant victim, bool offHand = false)
     {
         var damage = StrengthDamage(attacker) + Damroll(attacker);
 
-        var weapon = Wielded(attacker);
+        var weapon = Weapon(attacker, offHand);
         var weaponDetails = weapon?.Definition.Details?.Weapon;
         if (weapon != null && weaponDetails != null)
         {
@@ -90,11 +108,48 @@ public sealed class MeleeRoll
         return _calculator.RollDice(attack.DamageDiceCount, attack.DamageDiceSides) + attack.DamageBonus;
     }
 
+    /// <summary>Legacy get_thaco(): a mob's is 20, a player's comes from their class (20 if it's unknown).</summary>
+    private int Thac0(ICombatant combatant) =>
+        combatant is PlayerState player && _rules.Classes.TryGetValue(player.CharacterClass, out var playerClass)
+            ? playerClass.Thac0(player.Level)
+            : 20;
+
+    /// <summary>Legacy: str_app tohit + hitroll + (int − 13) / 3 + (wis − 13) / 3.</summary>
+    private int ToHit(ICombatant combatant) => combatant switch
+    {
+        PlayerState player =>
+            StrengthApply.ToHit(_worldState.GetTotalEffectiveStrength(player), player.StrengthAdd)
+            + _worldState.GetTotalEffectiveHitroll(player)
+            + (_worldState.GetTotalEffectiveIntelligence(player) - 13) / 3
+            + (_worldState.GetTotalEffectiveWisdom(player) - 13) / 3,
+        MobInstance mob =>
+            StrengthApply.ToHit(WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Strength))
+            + WorldStateExtensions.GetMobEffectiveHitroll(mob)
+            + (WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Intelligence) - 13) / 3
+            + (WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Wisdom) - 13) / 3,
+        _ => 0
+    };
+
+    private int ArmorClass(ICombatant combatant) => combatant switch
+    {
+        PlayerState player => _worldState.GetTotalEffectiveArmorClass(player),
+        MobInstance mob => WorldStateExtensions.GetMobEffectiveArmorClass(mob),
+        _ => combatant.ArmorClass
+    };
+
+    private int Dexterity(ICombatant combatant) => combatant switch
+    {
+        PlayerState player => _worldState.GetTotalEffectiveDexterity(player),
+        MobInstance mob => WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Dexterity),
+        _ => 0
+    };
+
     /// <summary>Legacy str_app[STRENGTH_APPLY_INDEX(ch)].todam; mobs have no 18/xx bonus.</summary>
     private int StrengthDamage(ICombatant combatant) => combatant switch
     {
         PlayerState player => StrengthApply.ToDamage(_worldState.GetTotalEffectiveStrength(player), player.StrengthAdd),
-        MobInstance mob => StrengthApply.ToDamage(WorldStateExtensions.GetMobEffectiveStrength(mob)),
+        MobInstance mob =>
+            StrengthApply.ToDamage(WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Strength)),
         _ => 0
     };
 
@@ -105,11 +160,29 @@ public sealed class MeleeRoll
         _ => 0
     };
 
-    private ObjectInstance? Wielded(ICombatant combatant) => combatant switch
+    /// <summary>
+    /// The weapon an attack swings (legacy hit(), fight.c:1244): for the dual-wield attack the held item if it's a
+    /// weapon, otherwise the wielded one, in one hand or both. Null bare-handed, or when the item isn't a weapon.
+    /// </summary>
+    private ObjectInstance? Weapon(ICombatant attacker, bool offHand)
     {
-        PlayerState player when player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var id) =>
+        if (offHand && Equipped(attacker, EquipmentSlot.Hold) is { } held && IsWeapon(held))
+        {
+            return held;
+        }
+
+        var wielded = Equipped(attacker, EquipmentSlot.Wield) ?? Equipped(attacker, EquipmentSlot.BothHands);
+        return wielded != null && IsWeapon(wielded) ? wielded : null;
+    }
+
+    /// <summary>Legacy ITEM_WEAPON or ITEM_FIREWEAPON.</summary>
+    private static bool IsWeapon(ObjectInstance item) => item.Definition.Type is "Weapon" or "FireWeapon";
+
+    private ObjectInstance? Equipped(ICombatant combatant, EquipmentSlot slot) => combatant switch
+    {
+        PlayerState player when player.EquipmentSlotToObjectId.TryGetValue((int)slot, out var id) =>
             _worldState.GetObjectInstance(id),
-        MobInstance mob when mob.Equipment.TryGetValue(EquipmentSlot.Wield, out var weapon) => weapon,
+        MobInstance mob when mob.Equipment.TryGetValue(slot, out var item) => item,
         _ => null
     };
 }

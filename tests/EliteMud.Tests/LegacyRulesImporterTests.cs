@@ -44,6 +44,7 @@ public sealed class LegacyRulesImporterTests : IDisposable
         Assert.Equal("mage", mage.GetProperty("levelUpProfile").GetString());
         Assert.Equal(new[] { "int", "wis" }, Strings(mage.GetProperty("primeStats")));
         Assert.False(mage.GetProperty("strengthBonus").GetBoolean());
+        Assert.Equal(4, mage.GetProperty("thac0LevelDivisor").GetInt32());
         Assert.Equal(40, mage.GetProperty("titles").GetArrayLength());
         Assert.Equal("Mage 1ess", mage.GetProperty("titles")[1].GetProperty("female").GetString());
 
@@ -52,6 +53,7 @@ public sealed class LegacyRulesImporterTests : IDisposable
         Assert.Equal("fighter", warrior.GetProperty("xpCurve").GetString());
         Assert.Equal(new[] { "str", "con" }, Strings(warrior.GetProperty("primeStats")));
         Assert.True(warrior.GetProperty("strengthBonus").GetBoolean());
+        Assert.Equal(3, warrior.GetProperty("thac0LevelDivisor").GetInt32());
 
         // The DO_NOT_USE slot and the dual-class aren't written
         Assert.Equal(

@@ -192,7 +192,7 @@ internal sealed class GameTickService
                         break;
                     }
 
-                    await HitAsync(attacker.Player, opponent, cancellationToken);
+                    await HitAsync(attacker.Player, opponent, cancellationToken, offHand: attackNum == 5);
                 }
             }
             catch (Exception ex)
@@ -262,9 +262,20 @@ internal sealed class GameTickService
     /// One melee hit (legacy hit(), then damage()): the attacker's damage roll, the victim's defense, then the
     /// shared damage path. Everyone in the room sees the hit, then whatever followed it (position, wimpy, death).
     /// </summary>
-    private async Task HitAsync(ICombatant attacker, ICombatant victim, CancellationToken cancellationToken)
+    /// <param name="offHand">The dual-wield attack (the fifth), which swings the held weapon</param>
+    private async Task HitAsync(
+        ICombatant attacker,
+        ICombatant victim,
+        CancellationToken cancellationToken,
+        bool offHand = false)
     {
-        var (damage, defense) = RollMelee(attacker, victim);
+        if (_meleeRoll.Winded(attacker) is { } panting)
+        {
+            await _messageSender.SendAsync(panting, attacker, cancellationToken);
+            return;
+        }
+
+        var (damage, defense) = RollMelee(attacker, victim, offHand);
         var hitPointsBefore = victim.HitPoints;
         var victimMaxHp = MaxHitPoints(victim); // before a death moves their gear into the corpse
         var outcome = _combatDamage.Apply(attacker, victim, damage);
@@ -291,18 +302,17 @@ internal sealed class GameTickService
     }
 
     /// <summary>
-    /// The damage of a melee hit after the victim's defense, and the victim's dodge or parry line if any. Players
-    /// roll to hit only against players for now (#48).
+    /// The damage of a melee hit after the victim's defense, and the victim's dodge or parry line if any; 0 for a
+    /// miss.
     /// </summary>
-    private (int Damage, string? Defense) RollMelee(ICombatant attacker, ICombatant victim)
+    private (int Damage, string? Defense) RollMelee(ICombatant attacker, ICombatant victim, bool offHand)
     {
-        if (attacker is PlayerState player && victim is PlayerState victimPlayer
-            && !_meleeRoll.Hits(player, victimPlayer))
+        if (!_meleeRoll.Hits(attacker, victim, offHand))
         {
             return (0, null);
         }
 
-        var defended = _combatCalculator.DefendAgainstMelee(victim, _meleeRoll.Damage(attacker, victim));
+        var defended = _combatCalculator.DefendAgainstMelee(victim, _meleeRoll.Damage(attacker, victim, offHand));
         return (defended.Damage, defended.Message);
     }
 
@@ -552,7 +562,7 @@ internal sealed class GameTickService
         
         // Legacy skill check: number(1, difficulty) < skill_percent
         // Example: 95% skill vs difficulty 120 → random(1,120) < 95 → ~79% chance
-        int roll = Random.Shared.Next(1, difficulty + 1);
+        int roll = _combatCalculator.RollDice(1, difficulty);
         return roll < skillPercent;
     }
 }

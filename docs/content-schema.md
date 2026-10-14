@@ -442,6 +442,7 @@ is listed by `--validate`.
 | `levelUpProfile` | string | id of a level-up profile; must exist |
 | `primeStats` | string[] | `str`, `int`, `wis`, `dex`, `con`, `cha` |
 | `strengthBonus` | bool | gets exceptional strength (18/xx) |
+| `thac0LevelDivisor` | int | THAC0 is 20 − level / this (legacy `get_thaco()`: 3 for fighters, 4 for the rest); at least 1 |
 | `titles` | `{male, female}`[] | exactly 40 rows, one per 3 levels as in legacy `titles[][]` |
 
 ### Race (`content/races/<id>.json`)
