@@ -12,6 +12,7 @@ internal sealed record ClassRulesContent(
     string LevelUpProfile,
     IReadOnlyList<string> PrimeStats,
     bool StrengthBonus,
+    int Thac0LevelDivisor,
     IReadOnlyList<TitleContent> Titles);
 
 internal sealed record TitleContent(string Male, string Female);

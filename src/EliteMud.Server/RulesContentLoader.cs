@@ -64,6 +64,11 @@ internal static class RulesContentLoader
                 errors.Add($"{path}: primeStats '{stat}' isn't one of {string.Join(", ", StatIds)}");
             }
 
+            if (data.Thac0LevelDivisor < 1)
+            {
+                errors.Add($"{path}: thac0LevelDivisor must be at least 1");
+            }
+
             if (data.Titles.Count != TitleRows)
             {
                 errors.Add($"{path}: {data.Titles.Count} titles, expected {TitleRows}");
@@ -73,7 +78,8 @@ internal static class RulesContentLoader
             {
                 classes[data.Id] = new ClassDefinition(
                     data.Id, data.Name, data.Abbreviation, data.LegacyNumber, data.MenuKey, curve, profile, data.PrimeStats,
-                    data.StrengthBonus, data.Titles.Select(t => new ClassTitle(t.Male, t.Female)).ToList());
+                    data.StrengthBonus, data.Thac0LevelDivisor,
+                    data.Titles.Select(t => new ClassTitle(t.Male, t.Female)).ToList());
             }
         }
 
@@ -284,6 +290,7 @@ internal static class RulesContentLoader
         public string LevelUpProfile { get; set; } = "";
         public List<string> PrimeStats { get; set; } = new();
         public bool StrengthBonus { get; set; }
+        public int Thac0LevelDivisor { get; set; }
         public List<TitleFile> Titles { get; set; } = new();
     }
 

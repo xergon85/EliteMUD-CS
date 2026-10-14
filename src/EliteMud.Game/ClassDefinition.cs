@@ -19,6 +19,11 @@ public sealed record ClassDefinition(
     LevelUpProfileDefinition LevelUpProfile,
     IReadOnlyList<string> PrimeStats,
     bool StrengthBonus,
-    IReadOnlyList<ClassTitle> Titles);
+    int Thac0LevelDivisor,
+    IReadOnlyList<ClassTitle> Titles)
+{
+    /// <summary>Legacy get_thaco(): 20 - level / divisor (fight.c:1075). Lower hits more often.</summary>
+    public int Thac0(int level) => 20 - level / Thac0LevelDivisor;
+}
 
 public sealed record ClassTitle(string Male, string Female);

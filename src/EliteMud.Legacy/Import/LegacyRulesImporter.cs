@@ -76,6 +76,7 @@ public sealed partial class LegacyRulesImporter
         var xpCurves = BuildXpCurves(classes, maxMortalLevel, log);
         var profiles = ReadLevelUpProfiles(source, defines, classNames, log);
         var primeStats = ReadPrimeStats(source, defines, classNames, log);
+        var thac0 = ReadThac0Divisors(source, defines, classNames, log);
         var races = ReadRaces(source, defines, classNames, classes, config, log);
 
         var classContents = classes.Values
@@ -92,6 +93,9 @@ public sealed partial class LegacyRulesImporter
                     ?? throw new InvalidDataException($"class {c.Id} is in no advance_level() case"),
                 primeStats.TryGetValue(c.Id, out var prime) ? prime.Stats : Array.Empty<string>(),
                 prime?.StrengthBonus ?? false,
+                thac0.TryGetValue(c.Id, out var divisor)
+                    ? divisor
+                    : throw new InvalidDataException($"class {c.Id} is in no get_thaco() case"),
                 c.Titles))
             .ToList();
 
@@ -251,6 +255,35 @@ public sealed partial class LegacyRulesImporter
 
             log.Info("Favored stats", $"limits.c:{functionLine} improve_abilities()",
                 $"{string.Join(", ", members)}: {string.Join(", ", stats)}{(strengthBonus ? " + strength bonus" : "")}");
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// How fast each class's THAC0 improves, from get_thaco() in fight.c: thaco = 20 - level / divisor (3 for
+    /// fighters, 4 for the rest).
+    /// </summary>
+    private static Dictionary<string, int> ReadThac0Divisors(
+        LegacySource source, Dictionary<string, int> defines, IReadOnlyList<string> classNames, LegacyImportLog log)
+    {
+        var (function, functionLine) = source.Function("fight.c", "get_thaco");
+        var result = new Dictionary<string, int>(StringComparer.Ordinal);
+        foreach (var (members, body) in CaseGroups(Switch(function, "class[i]"), defines, classNames))
+        {
+            var divisor = Thac0Divisor().Match(body);
+            if (!divisor.Success)
+            {
+                throw new InvalidDataException($"fight.c:{functionLine} get_thaco(): no 'level / n' for {string.Join(", ", members)}");
+            }
+
+            foreach (var member in members)
+            {
+                result[member] = int.Parse(divisor.Groups[1].Value);
+            }
+
+            log.Info("THAC0", $"fight.c:{functionLine} get_thaco()",
+                $"{string.Join(", ", members)}: 20 - level / {divisor.Groups[1].Value}");
         }
 
         return result;
@@ -593,6 +626,9 @@ public sealed partial class LegacyRulesImporter
 
     [GeneratedRegex(@"add_hp\s*\+=\s*GET_CON\(ch\)\s*/\s*(\d+)")]
     private static partial Regex ConDivisor();
+
+    [GeneratedRegex(@"thaco\[i\]\s*=\s*\(\s*20\s*-\s*level\[i\]\s*/\s*(\d+)\s*\)")]
+    private static partial Regex Thac0Divisor();
 
     [GeneratedRegex(@"add_mana\s*=\s*(\d+)")]
     private static partial Regex ManaGain();
