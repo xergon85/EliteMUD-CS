@@ -29,10 +29,16 @@ public class MeleeDefenseTests
             new List<string>(), new List<string>(), 10, 10, 0, new List<MobAttack>(), null));
     }
 
+    /// <summary>
+    /// Legacy dam *= (3 + POS_FIGHTING - pos) / 3 in integer math, as the C code computes it (its comments say
+    /// x1.33 and x1.66 for sitting and resting).
+    /// </summary>
     [Theory]
     [InlineData(Position.Standing, 9)]
-    [InlineData(Position.Sitting, 12)] // 4/3
-    [InlineData(Position.Sleeping, 18)] // 2
+    [InlineData(Position.Sitting, 9)] // 4 / 3 = 1
+    [InlineData(Position.Resting, 9)] // 5 / 3 = 1
+    [InlineData(Position.Sleeping, 18)] // 6 / 3 = 2
+    [InlineData(Position.Stunned, 18)] // 7 / 3 = 2
     public void AMobNotOnItsFeet_TakesMoreDamage(Position position, int damage)
     {
         _mob.Position = position;
@@ -41,5 +47,14 @@ public class MeleeDefenseTests
 
         Assert.Equal(damage, result.Damage);
         Assert.False(result.Dodged); // mobs have no skills yet (#72)
+    }
+
+    /// <summary>A melee hit that lands does at least 1 (legacy MAX(1, dam)), e.g. a weak attacker's bare hands.</summary>
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-3)]
+    public void AHitThatLands_DoesAtLeastOne(int damage)
+    {
+        Assert.Equal(1, _calculator.DefendAgainstMelee(_mob, damage).Damage);
     }
 }

@@ -121,6 +121,7 @@ public sealed class CombatTickTests : IDisposable
             services,
             _world,
             damage,
+            new MeleeRoll(calculator, _world),
             new SkillMessageSender(new ActMessageService(), connections, look),
             calculator,
             new CharacterSaveQueue(services, _world, gate),
@@ -188,10 +189,10 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(Position.Fighting, _mob.Position);
         Assert.Equal(100, Fighter.HitPoints);
         Assert.Equal(
-            new[] { "You massacre a rat to small fragments with your hit.", "A rat scrambles to its feet!" }, // 14: 4/3
+            new[] { "You hit a rat extremely hard.", "A rat scrambles to its feet!" }, // sitting: no extra damage
             _fighter.Lines());
         Assert.Equal(
-            new[] { "Fighter massacres a rat to small fragments with their hit.", "A rat scrambles to its feet!" },
+            new[] { "Fighter hits a rat extremely hard.", "A rat scrambles to its feet!" },
             _observer.Lines());
     }
 
@@ -320,7 +321,7 @@ public sealed class CombatTickTests : IDisposable
         Fight(_mob, Victim);
         Victim.Fighting = _mob; // fighting back, but resting, so this round is only about the mob's hit
         Victim.Position = Position.Resting;
-        Victim.HitPoints = 14; // the bite does 15 against a resting victim (9 × 5/3), leaving -1: stunned
+        Victim.HitPoints = 8; // the 9 of the bite (no extra against a resting victim) leaves -1: stunned
 
         await Round();
 
@@ -330,14 +331,14 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(
             new[]
             {
-                "a rat massacres you to small fragments with their hit. [-1/100 HP]",
+                "a rat hits you extremely hard. [-1/100 HP]",
                 "You're stunned, but will probably regain consciousness again."
             },
             _victim.Lines());
         Assert.Equal(
             new[]
             {
-                "A rat massacres Victim to small fragments with their hit.",
+                "A rat hits Victim extremely hard.",
                 "Victim is stunned, but will probably regain consciousness again."
             },
             _observer.Lines());

@@ -193,11 +193,11 @@ public sealed class CastDamageTests : IDisposable
     /// feet) before the damage, in legacy set_fighting too.
     /// </summary>
     [Fact]
-    public async Task HittingASittingPlayerInAFight_DoesNoExtraDamage()
+    public async Task HittingASleepingPlayerInAFight_DoesNoExtraDamage()
     {
-        Victim.Fighting = _observer.Context.Player; // e.g. bashed while fighting the observer
-        Victim.Position = Position.Sitting;
-        Assert.Equal(8, _calculator.CalculateDamageWithPositionMultiplier(6, Position.Sitting)); // melee: 4/3
+        Victim.Fighting = _observer.Context.Player; // e.g. put to sleep while fighting the observer
+        Victim.Position = Position.Sleeping;
+        Assert.Equal(12, _calculator.CalculateDamageWithPositionMultiplier(6, Position.Sleeping)); // melee: x2
 
         await Cast("'magic missile' victim");
 

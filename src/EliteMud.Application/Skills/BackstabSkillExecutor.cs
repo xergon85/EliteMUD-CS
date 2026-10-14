@@ -1,6 +1,5 @@
 using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.World;
 using EliteMud.Game;
 
 namespace EliteMud.Application.Skills;
@@ -25,8 +24,7 @@ namespace EliteMud.Application.Skills;
 public sealed class BackstabSkillExecutor : ISkillExecutor
 {
     private readonly BackstabSkill _backstabSkill;
-    private readonly CombatCalculator _combatCalculator;
-    private readonly IWorldState _worldState;
+    private readonly MeleeRoll _meleeRoll;
     private readonly CombatDamage _combatDamage;
 
     public SkillType SkillType => SkillType.Backstab;
@@ -34,14 +32,12 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
 
     public BackstabSkillExecutor(
         SkillRegistry skillRegistry,
-        CombatCalculator combatCalculator,
-        IWorldState worldState,
+        MeleeRoll meleeRoll,
         CombatDamage combatDamage)
     {
         _combatDamage = combatDamage;
         _backstabSkill = (BackstabSkill)skillRegistry.GetActiveSkill(SkillType.Backstab);
-        _combatCalculator = combatCalculator;
-        _worldState = worldState;
+        _meleeRoll = meleeRoll;
     }
 
     /// <summary>
@@ -104,31 +100,9 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
             }.Concat(miss.Messages).ToArray());
         }
 
-        // Calculate backstab damage
-        // Legacy: dam = strength_bonus + damroll + weapon_dice
-        // Then: dam *= MIN(level/10 + 1, 5)
-        
-        // Get wielded weapon for damage calculation
-        ObjectWeapon? weaponDetails = null;
-        ObjectInstance? weapon = null;
-        if (attacker.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
-        {
-            weapon = _worldState.GetObjectInstance(weaponInstanceId);
-            weaponDetails = weapon?.Definition.Details?.Weapon;
-        }
-        
-        // Calculate effective STR (base + equipment + spell bonuses)
-        var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
-        
-        int baseDamage = _combatCalculator.CalculateDamage(attacker, attackerEffectiveStr, weaponDetails);
-        
-        // Apply weapon special effects (bless/evil/flame) BEFORE multiplier
-        if (weapon != null)
-        {
-            int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim);
-            baseDamage += weaponEffectDamage;
-        }
-        
+        // Legacy: the melee damage roll (strength, damroll, weapon dice and effects), times the backstab multiplier
+        int baseDamage = _meleeRoll.Damage(attacker, victim);
+
         int multiplier = _backstabSkill.CalculateDamageMultiplier(attacker);
 
         var outcome = _combatDamage.Apply(

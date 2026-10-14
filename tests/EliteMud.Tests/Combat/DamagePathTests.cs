@@ -411,11 +411,14 @@ public class DamagePathTests
 
         public KickSkillExecutor Kick() => new(_skills, Damage());
         public BashSkillExecutor Bash() => new(_skills, Damage());
-        public BackstabSkillExecutor Backstab() =>
-            new(_skills, _calculator, World, Damage());
+        public BackstabSkillExecutor Backstab() => new(_skills, new MeleeRoll(_calculator, World), Damage());
 
-        public MeleeAttackExecutor Kill() =>
-            new(_calculator, World, new MobAiService(new MockScriptEngine(), new PathfindingService()), Damage());
+        public MeleeAttackExecutor Kill() => new(
+            _calculator,
+            World,
+            new MobAiService(new MockScriptEngine(), new PathfindingService()),
+            Damage(),
+            new MeleeRoll(_calculator, World));
 
         public void AssertMobKilled()
         {
