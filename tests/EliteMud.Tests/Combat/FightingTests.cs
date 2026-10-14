@@ -67,4 +67,30 @@ public class FightingTests
         Assert.Null(_player.Fighting);
         Assert.Equal(Position.Standing, _player.Position);
     }
+
+    /// <summary>Legacy stop_fighting stands everyone up: someone bashed down gets up when the fight ends.</summary>
+    [Fact]
+    public void StoppingAFight_StandsUpAMobThatWasKnockedDown()
+    {
+        _calculator.SetFighting(_mob, _player);
+        _mob.Position = Position.Sitting;
+
+        _calculator.StopFighting(_mob);
+
+        Assert.Equal(Position.Standing, _mob.Position);
+    }
+
+    [Theory]
+    [InlineData(Position.Stunned)]
+    [InlineData(Position.Incapacitated)]
+    [InlineData(Position.MortallyWounded)]
+    public void StoppingAFight_LeavesTheDyingDown(Position position)
+    {
+        _calculator.SetFighting(_player, _mob);
+        _player.Position = position;
+
+        _calculator.StopFighting(_player);
+
+        Assert.Equal(position, _player.Position);
+    }
 }

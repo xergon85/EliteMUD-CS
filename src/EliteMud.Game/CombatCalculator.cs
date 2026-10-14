@@ -84,12 +84,13 @@ public class CombatCalculator
     }
 
     /// <summary>
-    /// Stop fighting (legacy stop_fighting); someone in the fighting position stands.
+    /// Stop fighting (legacy stop_fighting): anyone conscious stands up, e.g. someone bashed to the ground. Unlike
+    /// legacy, the stunned, incapacitated and dying stay down (legacy stands them up too, with no update_pos after).
     /// </summary>
     public void StopFighting(ICombatant combatant)
     {
         combatant.Fighting = null;
-        if (combatant.Position == Position.Fighting)
+        if (combatant.Position > Position.Stunned)
         {
             combatant.Position = Position.Standing;
         }
