@@ -1,4 +1,5 @@
 using EliteMud.Application.Combat;
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Skills;
@@ -8,7 +9,9 @@ using EliteMud.Game;
 using EliteMud.Scripting;
 using EliteMud.Server;
 using EliteMud.Server.Adapters.Commands.Cast;
+using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
+using EliteMud.Tests.Ai;
 using EliteMud.Tests.Server;
 
 namespace EliteMud.Tests.Combat;
@@ -89,6 +92,7 @@ public sealed class CastDamageTests : IDisposable
         _victim = new TestConnection(2, new PlayerState(2, "Victim", Room, level: 5, "warrior", "human", sex: 1)
         {
             HitPoints = 100,
+            MaxHitPoints = 100,
             Experience = 5000,
             Position = Position.Standing
         });
@@ -96,6 +100,7 @@ public sealed class CastDamageTests : IDisposable
 
         var connections = new ConnectionRegistry();
         connections.SetProvider(() => new[] { _caster.Context, _victim.Context, _observer.Context });
+        var progression = new PlayerProgression(experience, rules);
 
         _cast = new CastCommandHandler(
             new SpellRegistry(spellMetadata, formulas),
@@ -105,10 +110,15 @@ public sealed class CastDamageTests : IDisposable
             new ActMessageService(),
             new CombatDamage(
                 _calculator,
-                new CombatExperience(new PlayerProgression(experience, rules), experience),
+                new CombatExperience(progression, experience),
                 _world,
-                Array.Empty<ICombatListener>()),
-            new SkillMessageSender(new ActMessageService(), connections));
+                Array.Empty<ICombatListener>(),
+                new FleeHandler(_world, _calculator, progression),
+                () => connections.GetConnections().Select(c => c.Player)),
+            new SkillMessageSender(
+                new ActMessageService(),
+                connections,
+                new LookCommandHandler(_world, new MockScriptEngine(), connections, RulesContent.Empty)));
     }
 
     public void Dispose()
@@ -169,7 +179,7 @@ public sealed class CastDamageTests : IDisposable
             Position = Position.Standing
         };
         meleeVictim.SetSkill(SkillType.Dodge, 100);
-        Assert.True(_calculator.ApplyDamage(meleeVictim, 6).Dodged);
+        Assert.True(_calculator.DefendAgainstMelee(meleeVictim, 6).Dodged);
 
         await Cast("'magic missile' victim");
 
@@ -197,13 +207,21 @@ public sealed class CastDamageTests : IDisposable
 
     /// <summary>
     /// Legacy update_pos (fight.c): below 0 hp a player is stunned, incapacitated or mortally wounded; dead only
-    /// below -10. The old cast path made every player at 0 hp or below dead.
+    /// below -10. The old cast path made every player at 0 hp or below dead. Legacy damage() tells the victim and
+    /// the room how they are (fight.c:953–979).
     /// </summary>
     [Theory]
-    [InlineData(6, 0, Position.Stunned)]
-    [InlineData(3, -3, Position.Incapacitated)]
-    [InlineData(0, -6, Position.MortallyWounded)]
-    public async Task HittingAPlayerToZeroOrBelow_FollowsLegacyPositions(int hitPoints, int left, Position position)
+    [InlineData(6, 0, Position.Stunned,
+        "Victim is stunned, but will probably regain consciousness again.",
+        "You're stunned, but will probably regain consciousness again.")]
+    [InlineData(3, -3, Position.Incapacitated,
+        "Victim is incapacitated and will slowly die, if not aided.",
+        "You are incapacitated and will slowly die, if not aided.")]
+    [InlineData(0, -6, Position.MortallyWounded,
+        "Victim is mortally wounded, and will die soon, if not aided.",
+        "You are mortally wounded, and will die soon, if not aided.")]
+    public async Task HittingAPlayerToZeroOrBelow_FollowsLegacyPositions(
+        int hitPoints, int left, Position position, string toRoom, string toVictim)
     {
         Victim.HitPoints = (short)hitPoints;
 
@@ -211,8 +229,31 @@ public sealed class CastDamageTests : IDisposable
 
         Assert.Equal(left, Victim.HitPoints);
         Assert.Equal(position, Victim.Position);
-        Assert.Equal(new[] { "Your magic missile hits Victim! [6]" }, CasterLines());
-        Assert.Equal(new[] { "Caster casts magic missile at you! [6]" }, _victim.Lines());
+        Assert.Equal(new[] { "Your magic missile hits Victim! [6]", toRoom }, CasterLines());
+        Assert.Equal(new[] { "Caster casts magic missile at you! [6]", toVictim }, _victim.Lines());
+        Assert.Equal(new[] { "Caster casts magic missile at Victim! [6]", toRoom }, _observer.Lines());
+    }
+
+    /// <summary>
+    /// A heavy hit and low hit points each get their line (legacy checks them separately; the combat tick used to
+    /// send only one of them).
+    /// </summary>
+    [Fact]
+    public async Task AHeavyHitThatLeavesThemLow_HurtsAndBleeds()
+    {
+        Victim.MaxHitPoints = 25;
+        Victim.HitPoints = 10; // 6 is more than a fifth of 25, and leaves 4, less than a fifth
+
+        await Cast("'magic missile' victim");
+
+        Assert.Equal(
+            new[]
+            {
+                "Caster casts magic missile at you! [6]",
+                "That Really did HURT!",
+                "You wish that your wounds would stop BLEEDING so much!"
+            },
+            _victim.Lines());
     }
 
     /// <summary>

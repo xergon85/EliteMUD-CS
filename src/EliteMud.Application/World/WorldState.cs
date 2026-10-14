@@ -45,6 +45,14 @@ public sealed class WorldState : IWorldState
         _roomMobs = roomMobs;
         _roomObjects = roomObjects;
         _zones = zones;
+
+        foreach (var (roomId, mobs) in roomMobs)
+        {
+            foreach (var mob in mobs)
+            {
+                mob.RoomId = roomId;
+            }
+        }
         
         // Register all room objects in _objectInstances for lookup
         foreach (var (roomId, objects) in roomObjects)
@@ -440,6 +448,11 @@ public sealed class WorldState : IWorldState
                 continue;
             }
 
+            foreach (var mob in _roomMobs[roomId])
+            {
+                mob.RoomId = MobInstance.Nowhere;
+            }
+
             _roomMobs[roomId].Clear();
         }
 
@@ -568,7 +581,7 @@ public sealed class WorldState : IWorldState
             return null;
         }
 
-        var mob = new MobInstance(_nextMobInstanceId++, mobDefinition);
+        var mob = new MobInstance(_nextMobInstanceId++, mobDefinition) { RoomId = reset.RoomId.Value };
         list.Add(mob);
         return mob;
     }
@@ -1016,6 +1029,7 @@ public sealed class WorldState : IWorldState
         }
 
         mobs.Remove(mob);
+        mob.RoomId = MobInstance.Nowhere;
         return true;
     }
 
@@ -1053,6 +1067,7 @@ public sealed class WorldState : IWorldState
         }
 
         toMobs.Add(mob);
+        mob.RoomId = toRoomId;
         return true;
     }
 

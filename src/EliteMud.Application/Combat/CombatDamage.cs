@@ -1,4 +1,5 @@
 using EliteMud.Application.Combat.DamageSteps;
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Progression;
 using EliteMud.Application.World;
 using EliteMud.Game;
@@ -16,11 +17,14 @@ public sealed class CombatDamage
         CombatCalculator combatCalculator,
         CombatExperience combatExperience,
         IWorldState worldState,
-        IEnumerable<ICombatListener> listeners)
+        IEnumerable<ICombatListener> listeners,
+        FleeHandler fleeHandler,
+        Func<IEnumerable<PlayerState>> onlinePlayers)
     {
         var listenerList = listeners.ToList();
 
-        // Legacy damage() order: memory before death, kill experience before the death penalty
+        // Legacy damage() order: memory before death, the victim's state before the kill, kill experience before the
+        // death penalty
         Steps = new IDamageStep[]
         {
             new IgnoreCorpse(),
@@ -29,6 +33,9 @@ public sealed class CombatDamage
             new CapDamage(),
             new LoseHitPoints(combatExperience),
             new UpdatePosition(combatCalculator),
+            new PositionMessages(worldState),
+            new Wimpy(fleeHandler, worldState, onlinePlayers),
+            new StopFightingBelowStunned(combatCalculator),
             new Kill(combatCalculator, combatExperience, listenerList),
             new PlayerDeath(combatExperience, worldState),
             new MobDeath(worldState)

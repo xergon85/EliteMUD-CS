@@ -1,5 +1,6 @@
 using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Skills;
 using EliteMud.Application.World;
@@ -228,6 +229,31 @@ public class DamagePathTests
             lines[^6..]);
     }
 
+    /// <summary>
+    /// A miss still goes through damage(), so a victim below their wimpy level tries to flee, and the skill's result
+    /// carries those lines after its own miss lines.
+    /// </summary>
+    [Fact]
+    public void KickMissingAPlayerBelowTheirWimpy_StillShowsTheirAttemptToFlee()
+    {
+        var fixture = new Fixture(skillsHit: false);
+        fixture.VictimPlayer.WimpyLevel = 20;
+        fixture.VictimPlayer.HitPoints = 10;
+
+        var result = fixture.Kick().Execute(fixture.AgainstPlayer());
+
+        Assert.Equal(
+            new[]
+            {
+                "A:you try to kick $N, but miss!",
+                "V:$n tries to kick you, but misses!",
+                "O:$n tries to kick $N, but misses!",
+                "V:You wimp out, and attempt to flee!",
+                "V:PANIC!  You couldn't escape!" // the arena has no exits
+            },
+            Lines(result));
+    }
+
     /// <summary>A MOB_MEMORY mob remembers whoever hurts it, whatever the source (legacy damage()).</summary>
     [Fact]
     public void AMemoryMob_RemembersWhoKicksIt()
@@ -295,9 +321,11 @@ public class DamagePathTests
         private readonly SkillRegistry _skills;
         private readonly CombatCalculator _calculator;
         private readonly CombatExperience _experience;
+        private readonly PlayerProgression _progression;
 
         /// <param name="combatRandom">Dice for melee hit and damage rolls (default: shared)</param>
-        public Fixture(Random? combatRandom = null)
+        /// <param name="skillsHit">Whether kick, bash and backstab hit (default) or always miss</param>
+        public Fixture(Random? combatRandom = null, bool skillsHit = true)
         {
             var rules = RulesContentLoader.Load(Content).Rules;
             var formulas = new FormulaEvaluator(new Random(1));
@@ -311,7 +339,7 @@ public class DamagePathTests
                 {
                     Mechanics = new SkillMechanics
                     {
-                        HitFormula = "return true",
+                        HitFormula = skillsHit ? "return true" : "return false",
                         DamageFormula = "return 50",
                         DamageMultiplierFormula = skill.Mechanics?.DamageMultiplierFormula,
                         Requirements = skill.Mechanics?.Requirements
@@ -324,7 +352,8 @@ public class DamagePathTests
             _calculator = new CombatCalculator(
                 new DodgeSkill(metadata, formulas), new ParrySkill(metadata, formulas), combatRandom);
             var experienceService = new ExperienceService(rules, formulas, new Random(1));
-            _experience = new CombatExperience(new PlayerProgression(experienceService, rules), experienceService);
+            _progression = new PlayerProgression(experienceService, rules);
+            _experience = new CombatExperience(_progression, experienceService);
 
             // Alignment -1000 moves a neutral killer 62 towards good; 400 XP gives a 100 kill share
             var mobDefinition = new MobDefinition(
@@ -372,7 +401,13 @@ public class DamagePathTests
         public SkillContext AgainstMob() => new(Attacker, Mob, null);
         public SkillContext AgainstPlayer() => new(Attacker, VictimPlayer, null);
 
-        public CombatDamage Damage() => new(_calculator, _experience, World, new[] { new MobMemory() });
+        public CombatDamage Damage() => new(
+            _calculator,
+            _experience,
+            World,
+            new[] { new MobMemory() },
+            new FleeHandler(World, _calculator, _progression),
+            () => new[] { Attacker, VictimPlayer });
 
         public KickSkillExecutor Kick() => new(_skills, Damage());
         public BashSkillExecutor Bash() => new(_skills, Damage());

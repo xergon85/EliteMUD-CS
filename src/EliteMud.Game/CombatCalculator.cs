@@ -386,22 +386,11 @@ public class CombatCalculator
     }
 
     /// <summary>
-    /// Apply melee damage to a player and update their position: <see cref="DefendAgainstMelee"/>, then the hit
-    /// points. Used by the combat tick until it goes through the shared damage path.
-    /// </summary>
-    public DamageResult ApplyDamage(PlayerState victim, int damage)
-    {
-        var result = DefendAgainstMelee(victim, damage);
-        victim.HitPoints -= (short)result.Damage;
-        UpdatePosition(victim);
-        return result;
-    }
-
-    /// <summary>
     /// The victim's side of a melee hit (legacy hit(), before damage()): more damage against a victim who isn't
-    /// on their feet, then dodge or parry. Changes no hit points; the result is the damage to deal.
+    /// on their feet, then dodge or parry. Changes no hit points; the result is the damage to deal. A player or a
+    /// mob: a mob dodges and parries with its skills like anyone (decision 1 of #42; mobs have none yet, #72).
     /// </summary>
-    public DamageResult DefendAgainstMelee(PlayerState victim, int damage)
+    public DamageResult DefendAgainstMelee(ICombatant victim, int damage)
     {
         // Apply position multiplier before capping damage
         damage = CalculateDamageWithPositionMultiplier(damage, victim.Position);
@@ -417,7 +406,7 @@ public class CombatCalculator
             damage = dodgeResult.ModifiedValue;
             
             // Improve skill on successful dodge
-            victim.TryImproveSkill(SkillType.Dodge);
+            (victim as PlayerState)?.TryImproveSkill(SkillType.Dodge);
         }
         else
         {
@@ -431,7 +420,7 @@ public class CombatCalculator
                 defenseMessage = parryResult.Message;
                 
                 // Improve skill on successful parry
-                victim.TryImproveSkill(SkillType.Parry);
+                (victim as PlayerState)?.TryImproveSkill(SkillType.Parry);
             }
         }
         
@@ -493,49 +482,6 @@ public class CombatCalculator
         {
             character.Position = Position.Dead;
         }
-    }
-
-    /// <summary>
-    /// Perform a full attack from attacker to victim.
-    /// Returns damage dealt.
-    /// Legacy: hit() function
-    /// 
-    /// IMPORTANT: Effective stats should include base + equipment + spell bonuses.
-    /// Use IWorldState.GetTotalEffective*() methods to calculate these before calling.
-    /// </summary>
-    /// <param name="attacker">The attacking player</param>
-    /// <param name="attackerEffectiveStrength">Total effective strength (base + equipment + spell)</param>
-    /// <param name="attackerEffectiveIntelligence">Total effective intelligence</param>
-    /// <param name="attackerEffectiveWisdom">Total effective wisdom</param>
-    /// <param name="victim">The target player</param>
-    /// <param name="victimEffectiveDexterity">Total effective dexterity</param>
-    /// <param name="weaponDetails">The wielded weapon details (null for bare hands)</param>
-    /// <returns>Attack result including hit/miss and damage</returns>
-    public AttackResult PerformAttack(
-        PlayerState attacker,
-        sbyte attackerEffectiveStrength,
-        sbyte attackerEffectiveIntelligence,
-        sbyte attackerEffectiveWisdom,
-        PlayerState victim,
-        sbyte victimEffectiveDexterity,
-        ObjectWeapon? weaponDetails = null)
-    {
-        var result = ResolveAttack(
-            attacker,
-            attackerEffectiveStrength,
-            attackerEffectiveIntelligence,
-            attackerEffectiveWisdom,
-            victim,
-            victimEffectiveDexterity,
-            weaponDetails);
-
-        if (result.Hit)
-        {
-            victim.HitPoints -= (short)result.Damage;
-            UpdatePosition(victim);
-        }
-
-        return result;
     }
 
     /// <summary>

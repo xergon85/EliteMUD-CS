@@ -50,6 +50,15 @@ public sealed class MobInstance : ICombatant
     public int InstanceId { get; }
     
     public MobDefinition Definition { get; }
+
+    /// <summary>
+    /// The room the mob is in (legacy ch->in_room), or <see cref="Nowhere"/> before it enters the world and after it
+    /// leaves. Only <see cref="WorldState"/> sets it, as it moves the mob between rooms.
+    /// </summary>
+    public int RoomId { get; internal set; } = Nowhere;
+
+    /// <summary>Legacy NOWHERE: not in any room.</summary>
+    public const int Nowhere = -1;
     
     // ===== Combat state =====
     public ICombatant? Fighting { get; set; } // Who this mob is fighting: a player or another mob

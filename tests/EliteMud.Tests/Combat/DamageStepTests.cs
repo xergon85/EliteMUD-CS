@@ -1,4 +1,5 @@
 using EliteMud.Application.Combat;
+using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Combat.DamageSteps;
 using EliteMud.Application.Progression;
 using EliteMud.Application.Skills;
@@ -23,6 +24,7 @@ public class DamageStepTests
 
     private readonly CombatCalculator _calculator;
     private readonly CombatExperience _experience;
+    private readonly PlayerProgression _progression;
     private readonly WorldState _world;
     private readonly MobInstance _mob;
     private readonly PlayerState _player;
@@ -35,7 +37,8 @@ public class DamageStepTests
         var skills = new SkillMetadataRegistry(ContentLoader.LoadSkills(Content));
         _calculator = new CombatCalculator(new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas));
         var experienceService = new ExperienceService(rules, formulas, new Random(1));
-        _experience = new CombatExperience(new PlayerProgression(experienceService, rules), experienceService);
+        _progression = new PlayerProgression(experienceService, rules);
+        _experience = new CombatExperience(_progression, experienceService);
 
         // Level 5, alignment -1000, 400 XP: a neutral killer moves 62 towards good and takes 100
         var mobDefinition = new MobDefinition(
@@ -49,7 +52,9 @@ public class DamageStepTests
             new WorldDefinition(new Dictionary<int, RoomDefinition>
             {
                 [Temple] = new(Temple, "Temple", "Desc", new List<ExitDefinition>()),
-                [Room] = new(Room, "Arena", "Desc", new List<ExitDefinition>())
+                // Every way out of the arena leads to the temple, so a flee never depends on the direction rolled
+                [Room] = new(Room, "Arena", "Desc",
+                    Enum.GetValues<Direction>().Select(direction => new ExitDefinition(direction, Temple)).ToList())
             }),
             new Dictionary<int, MobDefinition> { [100] = mobDefinition },
             new Dictionary<int, ObjectDefinition>(),
@@ -73,7 +78,13 @@ public class DamageStepTests
     [Fact]
     public void TheStepsRunInLegacyOrder()
     {
-        var damage = new CombatDamage(_calculator, _experience, _world, Array.Empty<ICombatListener>());
+        var damage = new CombatDamage(
+            _calculator,
+            _experience,
+            _world,
+            Array.Empty<ICombatListener>(),
+            new FleeHandler(_world, _calculator, _progression),
+            () => new[] { _player, _victim });
 
         Assert.Equal(
             new[]
@@ -84,6 +95,9 @@ public class DamageStepTests
                 typeof(CapDamage),
                 typeof(LoseHitPoints),
                 typeof(UpdatePosition),
+                typeof(PositionMessages),
+                typeof(Wimpy),
+                typeof(StopFightingBelowStunned),
                 typeof(Kill),
                 typeof(PlayerDeath),
                 typeof(MobDeath)
@@ -220,6 +234,147 @@ public class DamageStepTests
     }
 
     [Fact]
+    public void PositionMessages_TellTheVictimAndTheRoom()
+    {
+        _victim.Position = Position.Incapacitated;
+        var context = Hit(_player, _victim, 10);
+
+        new PositionMessages(_world).Apply(context);
+
+        Assert.Equal(
+            new[]
+            {
+                "A:$N is incapacitated and will slowly die, if not aided.",
+                "O:$N is incapacitated and will slowly die, if not aided.",
+                "V:You are incapacitated and will slowly die, if not aided."
+            },
+            Lines(context));
+    }
+
+    [Fact]
+    public void PositionMessages_HurtingYourself_TellsTheRoomButNotYouTwice()
+    {
+        _victim.Position = Position.Stunned;
+        var context = Hit(_victim, _victim, 10);
+
+        new PositionMessages(_world).Apply(context);
+
+        Assert.Equal(
+            new[]
+            {
+                "O:$N is stunned, but will probably regain consciousness again.",
+                "V:You're stunned, but will probably regain consciousness again."
+            },
+            Lines(context));
+    }
+
+    [Fact]
+    public void PositionMessages_ABleedingPlayerIsToldEvenOnAMiss()
+    {
+        _victim.HitPoints = 10;
+        var context = Hit(_player, _victim, 0);
+
+        new PositionMessages(_world).Apply(context);
+
+        Assert.Equal(new[] { "V:You wish that your wounds would stop BLEEDING so much!" }, Lines(context));
+    }
+
+    [Fact]
+    public void PositionMessages_NoneForAMob()
+    {
+        _mob.HitPoints = 1;
+        var context = Hit(_player, _mob, 99);
+
+        new PositionMessages(_world).Apply(context);
+
+        Assert.Empty(context.Messages);
+    }
+
+    [Fact]
+    public void StopFightingBelowStunned_TheIncapacitatedStop_TheirAttackerFightsOn()
+    {
+        _calculator.SetFighting(_player, _victim);
+        _calculator.SetFighting(_victim, _player);
+        _victim.Position = Position.Incapacitated;
+
+        new StopFightingBelowStunned(_calculator).Apply(Hit(_player, _victim, 10));
+
+        Assert.Null(_victim.Fighting);
+        Assert.Same(_victim, _player.Fighting);
+    }
+
+    [Fact]
+    public void StopFightingBelowStunned_TheStunnedFightOn()
+    {
+        _calculator.SetFighting(_victim, _player);
+        _victim.Position = Position.Stunned;
+
+        new StopFightingBelowStunned(_calculator).Apply(Hit(_player, _victim, 10));
+
+        Assert.Same(_player, _victim.Fighting);
+    }
+
+    [Fact]
+    public void Wimpy_BelowTheirWimpy_APlayerFleesInsideTheHit_AndSeesWhereTheyWent()
+    {
+        _calculator.SetFighting(_player, _victim);
+        _calculator.SetFighting(_victim, _player);
+        _victim.WimpyLevel = 20;
+        _victim.HitPoints = 19;
+
+        var context = Hit(_player, _victim, 10);
+        Wimpy().Apply(context);
+
+        Assert.Equal(Temple, _victim.RoomId);
+        Assert.Null(_victim.Fighting);
+        Assert.Null(_player.Fighting); // the attacker's next attack finds no one
+        Assert.Equal(
+            new[]
+            {
+                "V:You wimp out, and attempt to flee!",
+                "A:$N panics, and attempts to flee.",
+                "O:$N panics, and attempts to flee.",
+                "V:You flee head over heels.",
+                "V:"
+            },
+            Lines(context));
+        Assert.Equal(SkillMessageTarget.VictimLooks, context.Messages[^1].Target);
+    }
+
+    [Fact]
+    public void Wimpy_WithNoWayOut_Panics()
+    {
+        _victim.RoomId = Temple; // no exits
+        _victim.WimpyLevel = 20;
+        _victim.HitPoints = 19;
+
+        var context = Hit(_player, _victim, 10);
+        Wimpy().Apply(context);
+
+        Assert.Equal(Temple, _victim.RoomId);
+        Assert.Equal(
+            new[] { "V:You wimp out, and attempt to flee!", "V:PANIC!  You couldn't escape!" },
+            Lines(context));
+    }
+
+    [Theory]
+    [InlineData(20, Position.Fighting, false)] // at their wimpy level, not below it
+    [InlineData(19, Position.Stunned, false)] // too hurt to flee
+    [InlineData(19, Position.Fighting, true)] // hurting yourself
+    public void Wimpy_StaysPut(int hitPoints, Position position, bool selfInflicted)
+    {
+        _victim.WimpyLevel = 20;
+        _victim.HitPoints = (short)hitPoints;
+        _victim.Position = position;
+
+        var context = Hit(selfInflicted ? _victim : _player, _victim, 10);
+        Wimpy().Apply(context);
+
+        Assert.Equal(Room, _victim.RoomId);
+        Assert.Empty(context.Messages);
+    }
+
+    [Fact]
     public void Kill_DoesNothingWhileTheVictimLives()
     {
         _calculator.SetFighting(_player, _mob);
@@ -301,11 +456,14 @@ public class DamageStepTests
     }
 
     [Fact]
-    public void MobDeath_ByAnotherMob_IsNotSupportedYet()
+    public void MobDeath_LeavesTheCorpseWhereTheMobWas_WhoeverKilledIt()
     {
-        var other = new MobInstance(2, _mob.Definition);
+        var killer = new MobInstance(2, _mob.Definition); // in no room at all
 
-        Assert.Throws<NotSupportedException>(() => new MobDeath(_world).Apply(Died(Hit(other, _mob, 10))));
+        new MobDeath(_world).Apply(Died(Hit(killer, _mob, 10)));
+
+        Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
+        Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
     }
 
     private static DamageContext Hit(ICombatant attacker, ICombatant victim, int damage) =>
@@ -316,6 +474,9 @@ public class DamageStepTests
         context.VictimDied = true;
         return context;
     }
+
+    private Wimpy Wimpy() =>
+        new(new FleeHandler(_world, _calculator, _progression), _world, () => new[] { _player, _victim });
 
     private Kill Kill(ICombatListener listener) => new(_calculator, _experience, new[] { listener });
 

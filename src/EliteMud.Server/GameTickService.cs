@@ -1,14 +1,11 @@
 using EliteMud.Application.Ai;
 using EliteMud.Application.Combat;
-using EliteMud.Application.Commands.Flee;
-using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.Progression;
 using EliteMud.Application.Session;
+using EliteMud.Application.Skills;
 using EliteMud.Application.World;
 using EliteMud.Data;
 using EliteMud.Data.Repositories;
 using EliteMud.Game;
-using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,13 +22,11 @@ internal sealed class GameTickService
     private readonly ConnectionRegistry _connectionRegistry;
     private readonly IServiceProvider _serviceProvider;
     private readonly IWorldState _worldState;
-    private readonly ActMessageService _actService;
-    private readonly Application.Commands.Flee.FleeHandler _fleeService;
-    private readonly LookCommandHandler _lookHandler;
+    private readonly CombatDamage _combatDamage;
+    private readonly SkillMessageSender _messageSender;
     private readonly CombatCalculator _combatCalculator;
     private readonly CharacterSaveQueue _saveQueue;
     private readonly MobAiService _mobAiService;
-    private readonly CombatExperience _combatExperience;
     
     private readonly TimeSpan _combatInterval = TimeSpan.FromSeconds(2); // PULSE_VIOLENCE
     private readonly TimeSpan _gainInterval = TimeSpan.FromSeconds(6); // PULSE_GAIN - increment gain_count based on position (legacy: 6 seconds)
@@ -48,23 +43,19 @@ internal sealed class GameTickService
         ConnectionRegistry connectionRegistry,
         IServiceProvider serviceProvider,
         IWorldState worldState,
-        ActMessageService actService,
-        Application.Commands.Flee.FleeHandler fleeService,
-        LookCommandHandler lookHandler,
+        CombatDamage combatDamage,
+        SkillMessageSender messageSender,
         CombatCalculator combatCalculator,
         CharacterSaveQueue saveQueue,
         MobAiService mobAiService,
-        CombatExperience combatExperience,
         GameStateGate gate)
     {
         _gate = gate;
-        _combatExperience = combatExperience;
         _connectionRegistry = connectionRegistry;
         _serviceProvider = serviceProvider;
         _worldState = worldState;
-        _actService = actService;
-        _fleeService = fleeService;
-        _lookHandler = lookHandler;
+        _combatDamage = combatDamage;
+        _messageSender = messageSender;
         _combatCalculator = combatCalculator;
         _saveQueue = saveQueue;
         _mobAiService = mobAiService;
@@ -151,16 +142,31 @@ internal sealed class GameTickService
         {
             try
             {
-                // Skip if attacker can't fight (stunned, incapacitated, mortally wounded, or dead)
-                // Players in these positions can't attack but can still be attacked
-                if (attacker.Player.Position < Position.Fighting)
+                // A player knocked down in a fight gets up instead of their first attack (legacy
+                // perform_violence, fight.c:1701); the extra attacks still roll
+                var firstAttack = 1;
+                if (attacker.Player.Position == Position.Sitting)
                 {
+                    attacker.Player.Position = Position.Fighting;
+                    await _messageSender.SendAsync(
+                        new[]
+                        {
+                            new SkillMessage(
+                                SkillMessageTarget.Actor, "You regain your senses and scramble to your feet."),
+                            new SkillMessage(SkillMessageTarget.Others, "$n scrambles to $s feet!")
+                        },
+                        attacker.Player,
+                        cancellationToken);
+                    firstAttack = 2;
+                }
+                else if (attacker.Player.Position < Position.Fighting)
+                {
+                    // Can't fight (resting, sleeping, stunned or worse), but can still be attacked
                     continue;
                 }
 
-
                 // Process up to 5 attacks per round
-                for (int attackNum = 1; attackNum <= 5; attackNum++)
+                for (int attackNum = firstAttack; attackNum <= 5; attackNum++)
                 {
                     // Check if target is still valid before each attack
                     var opponent = attacker.Player.Fighting;
@@ -170,37 +176,20 @@ internal sealed class GameTickService
                     }
 
                     // First attack always happens, subsequent attacks require skill checks
-                    bool canAttack = true;
-                    
-                    if (attackNum > 1)
-                    {
-                        canAttack = CanPerformExtraAttack(attacker.Player, attackNum);
-                    }
-
-                    if (!canAttack)
+                    if (attackNum > 1 && !CanPerformExtraAttack(attacker.Player, attackNum))
                     {
                         continue; // Skip this attack, but continue loop to check remaining attacks
                     }
 
-                    // Execute the attack
-                    if (opponent is MobInstance mob)
+                    // The opponent must still be here: a mob that died or left is in another room or nowhere
+                    if (opponent.RoomId != attacker.Player.RoomId)
                     {
-                        await ProcessPlayerVsMobAttack(attacker, mob, cancellationToken);
+                        _combatCalculator.StopFighting(attacker.Player);
+                        await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
+                        break;
                     }
-                    else
-                    {
-                        // Fighting another player, who must still be connected
-                        var victim = connections.FirstOrDefault(c => c.Player == opponent);
-                        if (victim == null || victim.Player.RoomId != attacker.Player.RoomId)
-                        {
-                            // Target left room or disconnected
-                            _combatCalculator.StopFighting(attacker.Player);
-                            await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
-                            break;
-                        }
 
-                        await ProcessPlayerVsPlayerAttack(attacker, victim, cancellationToken);
-                    }
+                    await HitAsync(attacker.Player, opponent, cancellationToken);
                 }
             }
             catch (Exception ex)
@@ -209,680 +198,178 @@ internal sealed class GameTickService
             }
         }
         
-        // Process mob attacks (mobs attacking players who can't fight back)
-        await ProcessMobAttacksAsync(connections, cancellationToken);
+        // Process mob attacks
+        await ProcessMobAttacksAsync(cancellationToken);
     }
 
     /// <summary>
-    /// Process mobs attacking players (including helpless ones).
+    /// Every mob fighting a player hits it once, on its own turn (legacy perform_violence), whether or not the player
+    /// can fight back. A mob not yet in the fighting position gets into it instead.
     /// </summary>
-    private async Task ProcessMobAttacksAsync(
-        List<ConnectionContext> connections,
-        CancellationToken cancellationToken)
+    private async Task ProcessMobAttacksAsync(CancellationToken cancellationToken)
     {
-        // Find all mobs that are fighting
-        foreach (var roomId in _worldState.World.Rooms.Keys)
+        var fightingMobs = _worldState.World.Rooms.Keys
+            .SelectMany(roomId => _worldState.GetMobsInRoom(roomId))
+            .Where(mob => mob.Fighting is PlayerState) // mob against mob doesn't attack yet
+            .ToList();
+
+        foreach (var mob in fightingMobs)
         {
-            var mobs = _worldState.GetMobsInRoom(roomId);
-            foreach (var mob in mobs)
+            var opponent = mob.Fighting;
+            if (opponent == null)
             {
-                if (mob.Fighting is not PlayerState opponent || mob.HitPoints <= 0)
+                continue; // the fight ended earlier this round, e.g. the player fled
+            }
+
+            if (opponent.RoomId != mob.RoomId)
+            {
+                // Player left or disconnected
+                _combatCalculator.StopFighting(mob);
+                continue;
+            }
+
+            // A mob joins a fight in whatever position it was in (legacy set_fighting); it spends its turn getting
+            // into the fighting position, scrambling up if it was down (legacy perform_violence, fight.c:1690)
+            if (mob.Position != Position.Fighting)
+            {
+                if (mob.Position < Position.Standing)
                 {
-                    continue; // Not fighting a player, or dead (mob against mob doesn't attack yet)
+                    await _messageSender.SendAsync(
+                        new[] { new SkillMessage(SkillMessageTarget.Others, "$n scrambles to $s feet!") },
+                        mob,
+                        cancellationToken);
                 }
 
-                // Find the player this mob is fighting
-                var victim = connections.FirstOrDefault(c => c.Player == opponent);
-                if (victim == null || victim.Player.RoomId != roomId)
-                {
-                    // Player left or disconnected
-                    mob.Fighting = null;
-                    mob.Position = Position.Standing;
-                    continue;
-                }
+                mob.Position = Position.Fighting;
+                continue;
+            }
 
-                // Mob attacks the player (even if player is helpless)
-                try
-                {
-                    await ProcessMobAttackOnPlayerAsync(mob, victim, cancellationToken);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"[Combat] Error processing mob attack: {ex.Message}");
-                }
+            try
+            {
+                await HitAsync(mob, opponent, cancellationToken);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Combat] Error processing mob attack: {ex.Message}");
             }
         }
     }
 
     /// <summary>
-    /// Handle a mob attacking a player (used when player is helpless/stunned).
+    /// One melee hit (legacy hit(), then damage()): the attacker's damage roll, the victim's defense, then the
+    /// shared damage path. Everyone in the room sees the hit, then whatever followed it (position, wimpy, death).
     /// </summary>
-    private async Task ProcessMobAttackOnPlayerAsync(
-        MobInstance mob,
-        ConnectionContext victim,
-        CancellationToken cancellationToken)
+    private async Task HitAsync(ICombatant attacker, ICombatant victim, CancellationToken cancellationToken)
     {
-        // Calculate mob damage (legacy: fight.c:1440-1473)
-        // Base: str_todam + damroll
-        int damage = 0;
-        
-        // Get mob's effective damroll (base + equipment + affects)
-        int mobDamroll = WorldStateExtensions.GetMobEffectiveDamroll(mob);
-        damage += mobDamroll;
-        
-        // Get wielded weapon
-        ObjectWeapon? weaponDetails = null;
-        ObjectInstance? weapon = null;
-        if (mob.Equipment.TryGetValue(EquipmentSlot.Wield, out weapon))
+        var (damage, defense) = RollMelee(attacker, victim);
+        var hitPointsBefore = victim.HitPoints;
+        var victimMaxHp = MaxHitPoints(victim); // before a death moves their gear into the corpse
+        var outcome = _combatDamage.Apply(attacker, victim, damage);
+
+        var messages = new List<SkillMessage>();
+        if (defense != null)
         {
-            weaponDetails = weapon.Definition.Details?.Weapon;
-        }
-        
-        if (weaponDetails != null)
-        {
-            // Wielded weapon: dam += dice(weapon.DiceCount, weapon.DiceSides)
-            damage += _combatCalculator.RollDice(weaponDetails.DiceCount, weaponDetails.DiceSides);
-            
-            // Mobs ALSO add their natural attack dice when wielding weapons (legacy: fight.c:1471)
-            if (mob.Definition.Attacks.Count > 0)
-            {
-                var primaryAttack = mob.Definition.Attacks[0]; // Use first attack
-                damage += _combatCalculator.RollDice(primaryAttack.DamageDiceCount, primaryAttack.DamageDiceSides);
-                damage += primaryAttack.DamageBonus;
-            }
-            
-            // Apply weapon special effects (bless/evil/flame) for mobs too!
-            if (weapon != null)
-            {
-                int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim.Player);
-                damage += weaponEffectDamage;
-            }
-        }
-        else
-        {
-            // No weapon: use natural attacks (legacy: fight.c:1443-1444)
-            if (mob.Definition.Attacks.Count > 0)
-            {
-                var primaryAttack = mob.Definition.Attacks[0]; // Use first attack
-                damage += _combatCalculator.RollDice(primaryAttack.DamageDiceCount, primaryAttack.DamageDiceSides);
-                damage += primaryAttack.DamageBonus;
-            }
-            else
-            {
-                // Fallback for mobs with no attack data
-                damage += mob.Definition.Level + Random.Shared.Next(1, 5);
-            }
-        }
-        
-        var damageResult = _combatCalculator.ApplyDamage(victim.Player, damage);
-        _combatExperience.DamageDealt(mob, victim.Player, damageResult.Damage);
-        
-        // Show dodge message if dodged
-        if (damageResult.Dodged && !string.IsNullOrEmpty(damageResult.Message))
-        {
-            await victim.Session.SendLineAsync(damageResult.Message, cancellationToken);
-        }
-        
-        // Format legacy combat messages
-        var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
-        var victimMsg = CombatMessageFormatter.FormatCombatMessage(
-            mob.Definition.ShortDescription,
-            victim.Player.Name,
-            damageResult.Damage,
-            victimEffectiveMaxHp,
-            MessagePerspective.ToVict);
-        
-        await victim.Session.SendLineAsync(
-            $"{victimMsg} [{victim.Player.HitPoints}/{victimEffectiveMaxHp} HP]",
-            cancellationToken);
-        
-        // Show damage feedback (HURT/bleeding messages)
-        var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
-            victimEffectiveMaxHp, 
-            victim.Player.HitPoints, 
-            damageResult.Damage);
-        if (feedbackMsg != null)
-        {
-            await victim.Session.SendLineAsync(feedbackMsg, cancellationToken);
-        }
-            
-        // Broadcast to room
-        var roomMsg = CombatMessageFormatter.FormatCombatMessage(
-            mob.Definition.ShortDescription,
-            victim.Player.Name,
-            damageResult.Damage,
-            victimEffectiveMaxHp,
-            MessagePerspective.ToRoom);
-            
-        var otherPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == victim.Player.RoomId && c.Id != victim.Id);
-        
-        foreach (var observer in otherPlayers)
-        {
-            await observer.Session.SendLineAsync(roomMsg, cancellationToken);
+            messages.Add(new SkillMessage(SkillMessageTarget.Victim, defense, victim));
         }
 
-        // Check player position after mob attack
-        await CheckPlayerPositionAsync(victim, mob, cancellationToken);
+        // The hit as it landed, before any death or respawn changed the victim's hit points
+        var hitPointsAfterHit = hitPointsBefore - outcome.Damage;
+        var victimLine = CombatMessageFormatter.FormatCombatMessage(
+            attacker.Name, victim.Name, outcome.Damage, victimMaxHp, MessagePerspective.ToVict);
+        messages.Add(new SkillMessage(SkillMessageTarget.Actor, CombatMessageFormatter.FormatCombatMessage(
+            attacker.Name, victim.Name, outcome.Damage, victimMaxHp, MessagePerspective.ToChar)));
+        messages.Add(new SkillMessage(
+            SkillMessageTarget.Victim, $"{victimLine} [{hitPointsAfterHit}/{victimMaxHp} HP]", victim));
+        messages.Add(new SkillMessage(SkillMessageTarget.Others, CombatMessageFormatter.FormatCombatMessage(
+            attacker.Name, victim.Name, outcome.Damage, victimMaxHp, MessagePerspective.ToRoom), victim));
+        messages.AddRange(outcome.Messages);
+
+        await _messageSender.SendAsync(messages, attacker, cancellationToken);
     }
 
-    private async Task ProcessPlayerVsPlayerAttack(
-        ConnectionContext attacker,
-        ConnectionContext victim,
-        CancellationToken cancellationToken)
+    /// <summary>
+    /// The damage of a melee hit after the victim's defense, and the victim's dodge or parry line if any. Players
+    /// roll to hit only against players for now (#48); weapon effects come on top (step 7 of #42 unifies the roll).
+    /// </summary>
+    private (int Damage, string? Defense) RollMelee(ICombatant attacker, ICombatant victim)
     {
-        // Double-check that both players are still in fighting state
-        // (guards against race conditions with kick/kill commands)
-        if (attacker.Player.Position < Position.Fighting || attacker.Player.Fighting == null)
-        {
-            return;
-        }
-        
-        if (victim.Player.Position == Position.Dead)
-        {
-            // Victim died (possibly from concurrent kick command)
-            _combatCalculator.StopFighting(attacker.Player);
-            return;
-        }
-        
-        // Get wielded weapon for damage calculation
-        ObjectWeapon? weaponDetails = null;
-        ObjectInstance? weapon = null;
-        if (attacker.Player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
-        {
-            weapon = _worldState.GetObjectInstance(weaponInstanceId);
-            weaponDetails = weapon?.Definition.Details?.Weapon;
-        }
-        
-        // Calculate effective stats (base + equipment + spell bonuses)
-        var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker.Player);
-        var attackerEffectiveInt = _worldState.GetTotalEffectiveIntelligence(attacker.Player);
-        var attackerEffectiveWis = _worldState.GetTotalEffectiveWisdom(attacker.Player);
-        var victimEffectiveDex = _worldState.GetTotalEffectiveDexterity(victim.Player);
-        
-        var result = _combatCalculator.PerformAttack(
-            attacker.Player,
-            attackerEffectiveStr,
-            attackerEffectiveInt,
-            attackerEffectiveWis,
-            victim.Player,
-            victimEffectiveDex,
-            weaponDetails);
-        
-        // Apply weapon special effects (bless/evil/flame) to damage
-        int totalDamage = result.Damage;
-        if (weapon != null && result.Hit)
-        {
-            int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim.Player);
-            totalDamage += weaponEffectDamage;
-            // Apply additional damage to victim
-            if (weaponEffectDamage > 0)
-            {
-                victim.Player.HitPoints -= (short)weaponEffectDamage;
-                _combatCalculator.UpdatePosition(victim.Player);
-            }
-        }
-        
-        // Format legacy combat messages
-        var victimEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
-        var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
-            attacker.Player.Name,
-            victim.Player.Name,
-            totalDamage,
-            victimEffectiveMaxHp,
-            MessagePerspective.ToChar);
-            
-        var victimMsg = CombatMessageFormatter.FormatCombatMessage(
-            attacker.Player.Name,
-            victim.Player.Name,
-            totalDamage,
-            victimEffectiveMaxHp,
-            MessagePerspective.ToVict);
-        
-        // Send messages
-        await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
-        await victim.Session.SendLineAsync(
-            $"{victimMsg} [{victim.Player.HitPoints}/{victimEffectiveMaxHp} HP]", 
-            cancellationToken);
-        
-        // Show damage feedback to victim (HURT/bleeding messages)
-        if (result.Hit && totalDamage > 0)
-        {
-            var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
-                victimEffectiveMaxHp,
-                victim.Player.HitPoints,
-                totalDamage);
-            if (feedbackMsg != null)
-            {
-                await victim.Session.SendLineAsync(feedbackMsg, cancellationToken);
-            }
-        }
+        var weapon = Wielded(attacker);
+        var weaponDetails = weapon?.Definition.Details?.Weapon;
 
-        // Broadcast to room if hit
-        if (result.Hit)
+        if (attacker is PlayerState player && victim is PlayerState victimPlayer)
         {
-            var roomMsg = CombatMessageFormatter.FormatCombatMessage(
-                attacker.Player.Name,
-                victim.Player.Name,
-                totalDamage,
-                victimEffectiveMaxHp,
-                MessagePerspective.ToRoom);
-                
-            var otherPlayers = _connectionRegistry.GetConnections()
-                .Where(c => c.Player.RoomId == attacker.Player.RoomId 
-                         && c.Id != attacker.Id 
-                         && c.Id != victim.Id);
-            
-            foreach (var observer in otherPlayers)
+            var result = _combatCalculator.ResolveAttack(
+                player,
+                _worldState.GetTotalEffectiveStrength(player),
+                _worldState.GetTotalEffectiveIntelligence(player),
+                _worldState.GetTotalEffectiveWisdom(player),
+                victimPlayer,
+                _worldState.GetTotalEffectiveDexterity(victimPlayer),
+                weaponDetails);
+            if (!result.Hit)
             {
-                await observer.Session.SendLineAsync(roomMsg, cancellationToken);
+                return (0, null);
             }
 
-            // No damage XP between players (legacy); kept on the shared path so every source goes through it
-            _combatExperience.DamageDealt(attacker.Player, victim.Player, totalDamage);
-
-            // Check if victim died
-            if (victim.Player.Position == Position.Dead)
-            {
-                await HandlePlayerDeath(attacker, victim, cancellationToken);
-            }
-        }
-    }
-
-    private async Task ProcessPlayerVsMobAttack(
-        ConnectionContext attacker,
-        MobInstance mob,
-        CancellationToken cancellationToken)
-    {
-        // Double-check that player is still in fighting state
-        // (guards against race conditions with commands)
-        if (attacker.Player.Position < Position.Fighting || attacker.Player.Fighting == null)
-        {
-            return;
-        }
-        
-        // The mob must still be in the player's room
-        if (!_worldState.GetMobsInRoom(attacker.Player.RoomId).Contains(mob))
-        {
-            // Mob is gone (killed by someone else, or despawned)
-            _combatCalculator.StopFighting(attacker.Player);
-            await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
-            return;
+            var effects = weapon != null ? _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim) : 0;
+            return (result.Damage + effects, result.Message);
         }
 
-        // Get mob's max HP from definition
-        int mobMaxHp = mob.Definition.MaxHitPoints;
-        
-        // Get wielded weapon for damage calculation
-        ObjectWeapon? weaponDetails = null;
-        ObjectInstance? weapon = null;
-        if (attacker.Player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var weaponInstanceId))
+        var damage = attacker switch
         {
-            weapon = _worldState.GetObjectInstance(weaponInstanceId);
-            weaponDetails = weapon?.Definition.Details?.Weapon;
-        }
-        
-        // Calculate effective STR (base + equipment + spell bonuses)
-        var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker.Player);
-        
-        // Player attacks mob (using effective STR for damage)
-        int damage = _combatCalculator.CalculateDamage(attacker.Player, attackerEffectiveStr, weaponDetails);
-        
-        // Apply weapon special effects (bless/evil/flame)
+            PlayerState attackingPlayer => _combatCalculator.CalculateDamage(
+                attackingPlayer, _worldState.GetTotalEffectiveStrength(attackingPlayer), weaponDetails),
+            MobInstance mob => MobDamage(mob, weaponDetails),
+            _ => 0
+        };
         if (weapon != null)
         {
-            int weaponEffectDamage = _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, mob);
-            damage += weaponEffectDamage;
-        }
-        
-        mob.HitPoints -= (short)damage;
-        
-        // MOB_MEMORY: mob remembers this attacker
-        // Legacy: fight.c:824-827 - remember_attack() called when hit
-        if (mob.Definition.ParsedFlags.HasFlag(MobFlags.Memory))
-        {
-            mob.RememberPlayer(attacker.Player.Id);
-        }
-        
-        // Format legacy combat messages for player hitting mob
-        var attackerMsg = CombatMessageFormatter.FormatCombatMessage(
-            attacker.Player.Name,
-            mob.Definition.ShortDescription,
-            damage,
-            mobMaxHp,
-            MessagePerspective.ToChar);
-            
-        await attacker.Session.SendLineAsync(attackerMsg, cancellationToken);
-        
-        // Broadcast to room
-        var roomMsg = CombatMessageFormatter.FormatCombatMessage(
-            attacker.Player.Name,
-            mob.Definition.ShortDescription,
-            damage,
-            mobMaxHp,
-            MessagePerspective.ToRoom);
-            
-        var otherPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == attacker.Player.RoomId && c.Id != attacker.Id);
-        
-        foreach (var observer in otherPlayers)
-        {
-            await observer.Session.SendLineAsync(roomMsg, cancellationToken);
+            damage += _combatCalculator.ApplyWeaponEffects(weapon.Definition.Flags, victim);
         }
 
-        _combatExperience.DamageDealt(attacker.Player, mob, damage);
-
-        // Check if mob died
-        if (mob.HitPoints <= 0)
-        {
-            await HandleMobDeath(attacker, mob, cancellationToken);
-        }
-        else
-        {
-            // Mob fights back
-            var mobDamage = mob.Definition.Level + Random.Shared.Next(1, 5);
-            var mobDamageResult = _combatCalculator.ApplyDamage(attacker.Player, mobDamage);
-            _combatExperience.DamageDealt(mob, attacker.Player, mobDamageResult.Damage);
-            
-            // Show dodge message if dodged
-            if (mobDamageResult.Dodged && !string.IsNullOrEmpty(mobDamageResult.Message))
-            {
-                await attacker.Session.SendLineAsync(mobDamageResult.Message, cancellationToken);
-            }
-            
-            // Format legacy combat messages for mob hitting player
-            var attackerEffectiveMaxHp = _worldState.GetTotalEffectiveMaxHitPoints(attacker.Player);
-            var mobAttackMsg = CombatMessageFormatter.FormatCombatMessage(
-                mob.Definition.ShortDescription,
-                attacker.Player.Name,
-                mobDamageResult.Damage,
-                attackerEffectiveMaxHp,
-                MessagePerspective.ToVict);
-            
-            await attacker.Session.SendLineAsync(
-                $"{mobAttackMsg} [{attacker.Player.HitPoints}/{attackerEffectiveMaxHp} HP]",
-                cancellationToken);
-            
-            // Show damage feedback (HURT/bleeding messages)
-            var feedbackMsg = CombatMessageFormatter.GetDamageFeedbackMessage(
-                attackerEffectiveMaxHp,
-                attacker.Player.HitPoints,
-                mobDamageResult.Damage);
-            if (feedbackMsg != null)
-            {
-                await attacker.Session.SendLineAsync(feedbackMsg, cancellationToken);
-            }
-                
-            // Broadcast mob attack to room
-            var mobRoomMsg = CombatMessageFormatter.FormatCombatMessage(
-                mob.Definition.ShortDescription,
-                attacker.Player.Name,
-                mobDamageResult.Damage,
-                attackerEffectiveMaxHp,
-                MessagePerspective.ToRoom);
-                
-            foreach (var observer in otherPlayers)
-            {
-                await observer.Session.SendLineAsync(mobRoomMsg, cancellationToken);
-            }
-
-            // Check player position after mob attack
-            await CheckPlayerPositionAsync(attacker, mob, cancellationToken);
-        }
-    }
-
-    private async Task HandlePlayerDeath(
-        ConnectionContext killer,
-        ConnectionContext victim,
-        CancellationToken cancellationToken)
-    {
-        // Stop combat
-        _combatCalculator.StopFighting(killer.Player);
-        _combatCalculator.StopFighting(victim.Player);
-
-        // Kill XP comes from the victim's XP before the death penalty (legacy damage() then die())
-        var killReward = _combatExperience.Killed(killer.Player, victim.Player);
-
-        // PvP kills always shift killer toward evil
-        int alignmentShift = _combatCalculator.CalculateAlignmentShift(killer.Player, victim.Player, isPvP: true);
-        _combatCalculator.ApplyAlignmentShift(killer.Player, alignmentShift);
-
-        // Messages
-        await killer.Session.SendLineAsync($"You have slain {victim.Player.Name}!", cancellationToken);
-        await SendProgressionAsync(killer, killReward, cancellationToken);
-        await killer.Session.SendLineAsync(
-            $"#rYour soul darkens from the murder.#N ({alignmentShift})", cancellationToken);
-        await victim.Session.SendLineAsync(
-            "You are dead!  Sorry...", cancellationToken);
-
-        // Broadcast to room
-        var roomMessage = $"{victim.Player.Name} is dead! R.I.P.";
-        var otherPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == victim.Player.RoomId && c.Id != killer.Id && c.Id != victim.Id);
-        
-        foreach (var observer in otherPlayers)
-        {
-            await observer.Session.SendLineAsync(roomMessage, cancellationToken);
-        }
-
-        // Create corpse (fight.c:530)
-        _worldState.CreatePlayerCorpse(victim.Player, victim.Player.RoomId);
-
-        // Death penalty: half the XP needed for the next level (fight.c:541 die())
-        var penalty = _combatExperience.Died(victim.Player);
-
-        // Respawn the player at Temple of Midgaard
-        victim.Player.HitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
-        victim.Player.Mana = _worldState.GetTotalEffectiveMaxMana(victim.Player);
-        victim.Player.Movement = _worldState.GetTotalEffectiveMaxMovement(victim.Player);
-        victim.Player.Position = Position.Standing;
-        victim.Player.RoomId = CharacterStart.StartRoom;
-        
-        await SendProgressionAsync(victim, penalty, cancellationToken);
-        await victim.Session.SendLineAsync("You have been resurrected...", cancellationToken);
-    }
-
-    private async Task HandlePlayerDeathFromMob(
-        ConnectionContext victim,
-        MobInstance mob,
-        CancellationToken cancellationToken)
-    {
-        // Stop combat
-        _combatCalculator.StopFighting(victim.Player);
-        mob.Fighting = null;
-        mob.Position = Position.Standing;
-
-        // The mob takes its share of the victim's XP before the death penalty (legacy damage() then die())
-        _combatExperience.Killed(mob, victim.Player);
-
-        // Messages (fight.c:966-969)
-        await victim.Session.SendLineAsync(
-            "You are dead!  Sorry...", cancellationToken);
-
-        // Broadcast to room (fight.c:967)
-        var roomMessage = $"{victim.Player.Name} is dead! R.I.P.";
-        var otherPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == victim.Player.RoomId && c.Id != victim.Id);
-        
-        foreach (var observer in otherPlayers)
-        {
-            await observer.Session.SendLineAsync(roomMessage, cancellationToken);
-        }
-
-        // Create corpse (fight.c:530)
-        _worldState.CreatePlayerCorpse(victim.Player, victim.Player.RoomId);
-
-        // Death penalty: half the XP needed for the next level (fight.c:541 die())
-        var penalty = _combatExperience.Died(victim.Player);
-
-        // Respawn the player at Temple of Midgaard
-        victim.Player.HitPoints = _worldState.GetTotalEffectiveMaxHitPoints(victim.Player);
-        victim.Player.Mana = _worldState.GetTotalEffectiveMaxMana(victim.Player);
-        victim.Player.Movement = _worldState.GetTotalEffectiveMaxMovement(victim.Player);
-        victim.Player.Position = Position.Standing;
-        victim.Player.RoomId = CharacterStart.StartRoom;
-        
-        await SendProgressionAsync(victim, penalty, cancellationToken);
-        await victim.Session.SendLineAsync("You have been resurrected...", cancellationToken);
+        var defended = _combatCalculator.DefendAgainstMelee(victim, damage);
+        return (defended.Damage, defended.Message);
     }
 
     /// <summary>
-    /// Check player's position after taking damage and send appropriate messages.
-    /// Also handle auto-flee (wimpy) if HP drops below player's wimpy threshold.
-    /// Legacy: update_pos() with position-based messages, fight.c:987-992
+    /// A mob's melee damage before weapon effects (legacy hit(), fight.c:1440-1473): damroll, plus the weapon's dice
+    /// and its natural attack dice when it wields one, or only the natural attack without.
     /// </summary>
-    private async Task CheckPlayerPositionAsync(
-        ConnectionContext player,
-        MobInstance mob,
-        CancellationToken cancellationToken)
+    private int MobDamage(MobInstance mob, ObjectWeapon? weaponDetails)
     {
-        var position = player.Player.Position;
-        
-        // Auto-flee if HP drops below wimpy level - Legacy: fight.c:987-992
-        // Only flee if wimpy is set and not already incapacitated/mortally wounded/stunned
-        if (position >= Position.Fighting && 
-            player.Player.WimpyLevel > 0 &&
-            player.Player.HitPoints > 0 &&
-            player.Player.HitPoints < player.Player.WimpyLevel)
+        int damage = WorldStateExtensions.GetMobEffectiveDamroll(mob);
+        if (weaponDetails != null)
         {
-            await player.Session.SendLineAsync(
-                "You wimp out, and attempt to flee!", 
-                cancellationToken);
-            
-            // Attempt to flee
-            await AttemptAutoFleeAsync(player, cancellationToken);
-            return; // Don't process other messages if fleeing
+            damage += _combatCalculator.RollDice(weaponDetails.DiceCount, weaponDetails.DiceSides);
         }
-        
-        if (position == Position.Dead)
+
+        if (mob.Definition.Attacks.Count > 0)
         {
-            // Player is dead
-            await HandlePlayerDeathFromMob(player, mob, cancellationToken);
+            var primaryAttack = mob.Definition.Attacks[0];
+            damage += _combatCalculator.RollDice(primaryAttack.DamageDiceCount, primaryAttack.DamageDiceSides);
+            damage += primaryAttack.DamageBonus;
         }
-        else if (position == Position.MortallyWounded)
+        else if (weaponDetails == null)
         {
-            // Mortally wounded (-6 to -10 HP)
-            await player.Session.SendLineAsync(
-                "You are mortally wounded, and will die soon, if not aided.", 
-                cancellationToken);
-            
-            // Stop player from fighting, but mob keeps attacking
-            _combatCalculator.StopFighting(player.Player);
+            // Fallback for mobs with no attack data
+            damage += mob.Definition.Level + _combatCalculator.RollDice(1, 4);
         }
-        else if (position == Position.Incapacitated)
-        {
-            // Incapacitated (-3 to -5 HP)
-            await player.Session.SendLineAsync(
-                "You are incapacitated and will slowly die, if not aided.", 
-                cancellationToken);
-            
-            // Stop player from fighting, but mob keeps attacking
-            _combatCalculator.StopFighting(player.Player);
-        }
-        else if (position == Position.Stunned)
-        {
-            // Stunned (0 to -2 HP)
-            await player.Session.SendLineAsync(
-                "You are stunned, but will probably regain consciousness again.", 
-                cancellationToken);
-            
-            // Stop player from fighting, but mob keeps attacking
-            _combatCalculator.StopFighting(player.Player);
-        }
-        // else: player is still conscious and fighting
+
+        return damage;
     }
 
-    /// <summary>
-    /// Attempt to auto-flee (wimpy).
-    /// Legacy: fight.c:987-992 calls do_flee()
-    /// </summary>
-    private async Task AttemptAutoFleeAsync(
-        ConnectionContext player,
-        CancellationToken cancellationToken)
+    private ObjectInstance? Wielded(ICombatant combatant) => combatant switch
     {
-        var currentRoomId = player.Player.RoomId;
+        PlayerState player when player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var id) =>
+            _worldState.GetObjectInstance(id),
+        MobInstance mob when mob.Equipment.TryGetValue(EquipmentSlot.Wield, out var weapon) => weapon,
+        _ => null
+    };
 
-        // Attempt to flee using FleeHandler
-        var result = _fleeService.AttemptFlee(
-            player.Player,
-            currentRoomId,
-            () => _connectionRegistry.GetConnections().Select(c => c.Player),
-            () => _worldState.GetMobsInRoom(currentRoomId));
-
-        if (!result.Success)
-        {
-            // No valid exits found
-            await player.Session.SendLineAsync("PANIC!  You couldn't escape!", cancellationToken);
-            return;
-        }
-
-        // Apply the flee result (moves player, stops combat, applies XP loss)
-        var lossMessages = _fleeService.ApplyFleeResult(
-            player.Player,
-            result,
-            () => _connectionRegistry.GetConnections().Select(c => c.Player));
-
-        foreach (var line in lossMessages)
-        {
-            await player.Session.SendLineAsync(line, cancellationToken);
-        }
-
-        // Send success message
-        await player.Session.SendLineAsync("You flee head over heels.", cancellationToken);
-
-        // Show new room using LookCommandHandler (same as manual flee and move)
-        await _lookHandler.HandleAsync(
-            new CommandRequest("look", null, null),
-            player,
-            cancellationToken);
-    }
-
-    private async Task HandleMobDeath(
-        ConnectionContext killer,
-        MobInstance mob,
-        CancellationToken cancellationToken)
-    {
-        // Stop combat
-        _combatCalculator.StopFighting(killer.Player);
-        mob.Fighting = null;
-
-        var killReward = _combatExperience.Killed(killer.Player, mob);
-
-        // Calculate and apply alignment shift
-        int alignmentShift = _combatCalculator.CalculateAlignmentShift(killer.Player, mob, isPvP: false);
-        if (alignmentShift != 0)
-        {
-            _combatCalculator.ApplyAlignmentShift(killer.Player, alignmentShift);
-        }
-
-        // Messages
-        var mobDesc = mob.Definition.ShortDescription?.Trim() ?? "something";
-        string alignmentMsg = alignmentShift switch
-        {
-            >= 50 => $" #GYou feel more virtuous.#N ({alignmentShift:+0})",
-            <= -50 => $" #RYou feel more sinister.#N ({alignmentShift})",
-            _ => ""
-        };
-        
-        await killer.Session.SendLineAsync($"You have slain {mobDesc}!{alignmentMsg}", cancellationToken);
-        await SendProgressionAsync(killer, killReward, cancellationToken);
-
-        // Broadcast to room (fight.c:967)
-        var roomMessage = $"{mobDesc} is dead!";
-        var otherPlayers = _connectionRegistry.GetConnections()
-            .Where(c => c.Player.RoomId == killer.Player.RoomId && c.Id != killer.Id);
-        
-        foreach (var observer in otherPlayers)
-        {
-            await observer.Session.SendLineAsync(roomMessage, cancellationToken);
-        }
-
-        // Create corpse (fight.c:501)
-        _worldState.CreateMobCorpse(mob, killer.Player.RoomId);
-
-        // Remove mob from world (fight.c:502 - extract_char)
-        _worldState.RemoveMob(mob.InstanceId, killer.Player.RoomId);
-    }
+    private int MaxHitPoints(ICombatant combatant) =>
+        combatant is PlayerState player
+            ? _worldState.GetTotalEffectiveMaxHitPoints(player)
+            : ((MobInstance)combatant).Definition.MaxHitPoints;
 
     /// <summary>
     /// Increment gain_count for all players based on their position.
@@ -1018,15 +505,6 @@ internal sealed class GameTickService
         using (await gate.EnterAsync(CancellationToken.None))
         {
             player.SaveRequested = true;
-        }
-    }
-
-    private async Task SendProgressionAsync(
-        ConnectionContext connection, ProgressionResult result, CancellationToken cancellationToken)
-    {
-        foreach (var message in result.Messages)
-        {
-            await connection.Session.SendLineAsync(message, cancellationToken);
         }
     }
 
