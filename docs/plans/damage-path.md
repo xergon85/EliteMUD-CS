@@ -1,8 +1,8 @@
 # One damage path for all combat (#42)
 
-Handover, updated Oct 14, 2026 after steps 0–5 and the two prerequisite cards (#61, #62). Start here in a new
-session, then read card #42 on GitHub (its comments hold the step 6 pipeline plan). Next up: **step 6, the combat
-tick**, on branch `feat/damage-path-tick`.
+Handover, updated Oct 14, 2026 after steps 0–5, the two prerequisite cards (#61, #62) and step 6a. Start here in a
+new session, then read card #42 on GitHub (its comments hold the step 6 pipeline plan). Next up: **step 6b, the
+combat tick onto the shared path**, on a branch stacked on `feat/damage-path-tick` (PR 6a).
 
 ## How we work (short version)
 
@@ -32,15 +32,19 @@ hit or miss and how much, then calls `damage(ch, victim, dam, type)`, which owns
 ## Where it stands
 
 `CombatDamage.Apply(attacker, victim, amount)` (Application/Combat) is the shared `damage()`. Kick, bash, backstab,
-damage spells and `kill`'s first hit use it. It owns:
+damage spells and `kill`'s first hit use it; the attacker can be a player or a mob. It runs a fixed list of
+`IDamageStep`s (Combat/DamageSteps) over a `DamageContext`, in `CombatDamage.Steps`; a step can stop the hit, and
+steps don't call each other. In order:
 
-- "attempt to damage a corpse": a victim already dead is left alone (fight.c:787)
-- starting the fight both ways (`CombatCalculator.SetFighting`; `ICombatant.Fighting` is a reference to the
+- `IgnoreCorpse`: a victim already dead is left alone (fight.c:787)
+- `StartFighting` both ways (`CombatCalculator.SetFighting`; `ICombatant.Fighting` is a reference to the
   opponent, #62)
-- `ICombatListener`s (`Hurt`, `Killed`): `MobMemory` (Application/Ai) remembers attackers and forgets the dead
-- damage 0–500, hit points, position (`UpdatePosition`), damage XP
-- on death, `Kill` (alignment silently, kill XP, death lines; nothing when you kill yourself) then, for a player,
-  `Die` (corpse, penalty, respawn at `CharacterStart.StartRoom`, saves on both sides); for a mob, corpse and removal
+- `NotifyHurt`: `ICombatListener`s (`Hurt`, `Killed`); `MobMemory` (Application/Ai) remembers attackers and forgets
+  the dead
+- `CapDamage` (0–500), `LoseHitPoints` (with damage XP), `UpdatePosition`
+- on death, `Kill` (fight ends, alignment silently, kill XP, death lines; nothing when you kill yourself) then
+  `PlayerDeath` (corpse, penalty, respawn at `CharacterStart.StartRoom`, saves on both sides) or `MobDeath` (corpse
+  and removal; the room comes from the player in the fight, as nothing deals damage between mobs yet)
 
 Melee hits are resolved first with `CombatCalculator.ResolveAttack` / `DefendAgainstMelee` (legacy `hit()`: roll,
 damage, position multiplier, dodge, parry), then dealt through `CombatDamage`. Messages are `SkillMessage`s (act
@@ -51,6 +55,13 @@ per session; fights end when a player flees, quits or disconnects; quit refuses 
 the game standing.
 
 ## Step 6: the combat tick
+
+**6a (done, PR 6a):** `CombatTickTests` pin what one round of the tick does today, path by path, with notes where
+it differs from legacy; `CombatDamage` takes a mob attacker; the pipeline split with `DamageStepTests`.
+
+**6b (next):** position messages, wimpy (decision 9) and stop fighting below stunned as steps; the four tick paths
+through `DefendAgainstMelee` + `CombatDamage`; no counterattack (decision 10); removals. `CombatTickTests`'
+expected lines change on purpose as each part lands.
 
 What's left in `src/EliteMud.Server/GameTickService.cs` (1140 lines; line numbers drift):
 
