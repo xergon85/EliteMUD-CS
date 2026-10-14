@@ -46,6 +46,7 @@ public sealed class CombatTickTests : IDisposable
     private readonly TestConnection _victim;
     private readonly TestConnection _observer;
     private readonly GameTickService _tick;
+    private readonly SettableRandom _dice = new(20);
 
     public CombatTickTests()
     {
@@ -53,7 +54,7 @@ public sealed class CombatTickTests : IDisposable
         var formulas = new FormulaEvaluator(new Random(1));
         var skills = new SkillMetadataRegistry(ContentLoader.LoadSkills(Content));
         var calculator = new CombatCalculator(
-            new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas), new FixedRandom(20));
+            new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas), _dice);
         var experienceService = new ExperienceService(rules, formulas, new Random(1));
         var progression = new PlayerProgression(experienceService, rules);
 
@@ -121,7 +122,7 @@ public sealed class CombatTickTests : IDisposable
             services,
             _world,
             damage,
-            new MeleeRoll(calculator, _world),
+            new MeleeRoll(calculator, _world, rules),
             new SkillMessageSender(new ActMessageService(), connections, look),
             calculator,
             new CharacterSaveQueue(services, _world, gate),
@@ -212,6 +213,26 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(100, _mob.HitPoints);
         Assert.Equal(new[] { "You regain your senses and scramble to your feet." }, _fighter.Lines());
         Assert.Equal(new[] { "Fighter scrambles to his feet!" }, _observer.Lines());
+    }
+
+    /// <summary>Both sides roll to hit (#48): on a natural 1 the player and the mob both miss.</summary>
+    [Fact]
+    public async Task APlayerAndAMob_BothMissOnANaturalOne()
+    {
+        Fight(Fighter, _mob);
+        Fight(_mob, Fighter);
+        _dice.Value = 1;
+
+        await Round();
+
+        Assert.Equal(100, _mob.HitPoints);
+        Assert.Equal(100, Fighter.HitPoints);
+        Assert.Equal(
+            new[] { "You miss a rat with your hit.", "a rat misses you with their hit. [100/100 HP]" },
+            _fighter.Lines());
+        Assert.Equal(
+            new[] { "Fighter misses a rat with their hit.", "A rat misses Fighter with their hit." },
+            _observer.Lines());
     }
 
     [Fact]
@@ -443,4 +464,19 @@ public sealed class CombatTickTests : IDisposable
     }
 
     private Task Round() => _tick.ProcessCombatRoundAsync(CancellationToken.None);
+}
+
+/// <summary>Dice that roll one value, which a test can change.</summary>
+internal sealed class SettableRandom : Random
+{
+    public SettableRandom(int value)
+    {
+        Value = value;
+    }
+
+    public int Value { get; set; }
+
+    public override int Next(int minValue, int maxValue) => Math.Clamp(Value, minValue, maxValue - 1);
+
+    public override int Next(int maxValue) => Math.Clamp(Value, 0, maxValue - 1);
 }

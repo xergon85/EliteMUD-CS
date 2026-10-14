@@ -103,7 +103,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
         return new SkillResult(Success: true, Messages: messages.ToArray());
     }
 
-    /// <summary>The first hit on a mob always lands for now (#48).</summary>
+    /// <summary>The first hit on a mob, rolled to hit as any melee hit (#48).</summary>
     private SkillResult AttackMob(SkillContext context, MobInstance mobInstance)
     {
         var attacker = context.Actor;
@@ -114,8 +114,10 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             new(SkillMessageTarget.Others, $"$n attacks {mobDesc}!")
         };
 
-        // The victim's defense as for any melee hit, e.g. more damage against a sleeping mob
-        var damage = _combatCalculator.DefendAgainstMelee(mobInstance, _meleeRoll.Damage(attacker, mobInstance)).Damage;
+        // Hit roll, damage and the mob's defense, as for any melee hit
+        var damage = _meleeRoll.Hits(attacker, mobInstance)
+            ? _combatCalculator.DefendAgainstMelee(mobInstance, _meleeRoll.Damage(attacker, mobInstance)).Damage
+            : 0;
 
         var outcome = _combatDamage.Apply(
             attacker,

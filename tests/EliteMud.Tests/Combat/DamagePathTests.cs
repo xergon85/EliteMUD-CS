@@ -193,10 +193,11 @@ public class DamagePathTests
             outcome.Messages.Select(message => $"{message.Target.ToString()[0]}:{message.Template}"));
     }
 
+    /// <summary>kill rolls to hit a mob too (#48); fixed dice of 20 roll a natural 20, which always hits.</summary>
     [Fact]
     public void KillFirstHitKillingAMob_EndsTheFight_MovesAlignment_LeavesACorpse_GivesKillExperience()
     {
-        var fixture = new Fixture();
+        var fixture = new Fixture(new FixedRandom(20));
 
         var result = fixture.Kill().Execute(fixture.AgainstMob());
 
@@ -243,6 +244,22 @@ public class DamagePathTests
                 "V:You have been resurrected..."
             },
             lines[^6..]);
+    }
+
+    /// <summary>kill can miss a mob now (#48): no damage, the "misses" lines, and the fight still starts.</summary>
+    [Fact]
+    public void KillMissingAMob_StartsTheFightWithoutDamage()
+    {
+        var fixture = new Fixture(new FixedRandom(1)); // a natural 1 misses anyone awake
+
+        var result = fixture.Kill().Execute(fixture.AgainstMob());
+
+        Assert.Equal(10, fixture.Mob.HitPoints);
+        Assert.Same(fixture.Mob, fixture.Attacker.Fighting);
+        Assert.Same(fixture.Attacker, fixture.Mob.Fighting);
+        Assert.Equal(
+            new[] { "A:#gYou miss a rat with your hit.#N", "O:Tester misses a rat with their hit." },
+            Lines(result)[2..]);
     }
 
     /// <summary>
@@ -338,12 +355,14 @@ public class DamagePathTests
         private readonly CombatCalculator _calculator;
         private readonly CombatExperience _experience;
         private readonly PlayerProgression _progression;
+        private readonly RulesContent _rules;
 
         /// <param name="combatRandom">Dice for melee hit and damage rolls (default: shared)</param>
         /// <param name="skillsHit">Whether kick, bash and backstab hit (default) or always miss</param>
         public Fixture(Random? combatRandom = null, bool skillsHit = true)
         {
             var rules = RulesContentLoader.Load(Content).Rules;
+            _rules = rules;
             var formulas = new FormulaEvaluator(new Random(1));
 
             // Every skill hits for 50; these tests are about what happens after the hit, not the rolls
@@ -427,14 +446,14 @@ public class DamagePathTests
 
         public KickSkillExecutor Kick() => new(_skills, Damage());
         public BashSkillExecutor Bash() => new(_skills, Damage());
-        public BackstabSkillExecutor Backstab() => new(_skills, new MeleeRoll(_calculator, World), Damage());
+        public BackstabSkillExecutor Backstab() => new(_skills, new MeleeRoll(_calculator, World, _rules), Damage());
 
         public MeleeAttackExecutor Kill() => new(
             _calculator,
             World,
             new MobAiService(new MockScriptEngine(), new PathfindingService()),
             Damage(),
-            new MeleeRoll(_calculator, World));
+            new MeleeRoll(_calculator, World, _rules));
 
         public void AssertMobKilled()
         {

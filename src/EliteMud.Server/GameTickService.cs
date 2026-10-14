@@ -291,13 +291,12 @@ internal sealed class GameTickService
     }
 
     /// <summary>
-    /// The damage of a melee hit after the victim's defense, and the victim's dodge or parry line if any. Players
-    /// roll to hit only against players for now (#48).
+    /// The damage of a melee hit after the victim's defense, and the victim's dodge or parry line if any; 0 for a
+    /// miss.
     /// </summary>
     private (int Damage, string? Defense) RollMelee(ICombatant attacker, ICombatant victim)
     {
-        if (attacker is PlayerState player && victim is PlayerState victimPlayer
-            && !_meleeRoll.Hits(player, victimPlayer))
+        if (!_meleeRoll.Hits(attacker, victim))
         {
             return (0, null);
         }

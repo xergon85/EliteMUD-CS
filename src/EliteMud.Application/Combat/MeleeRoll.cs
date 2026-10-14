@@ -12,39 +12,33 @@ public sealed class MeleeRoll
 {
     private readonly CombatCalculator _calculator;
     private readonly IWorldState _worldState;
+    private readonly RulesContent _rules;
 
-    public MeleeRoll(CombatCalculator calculator, IWorldState worldState)
+    public MeleeRoll(CombatCalculator calculator, IWorldState worldState, RulesContent rules)
     {
         _calculator = calculator;
         _worldState = worldState;
+        _rules = rules;
     }
 
     /// <summary>
-    /// The to-hit roll, for now only between players (#48). Out of movement, an attack misses; one that lands
-    /// costs a movement point.
+    /// The to-hit roll (legacy hit(), fight.c:1380–1420), for any attacker and victim (#48). A player swinging a
+    /// weapon spends weight / 8 movement on it, hit or miss.
     /// </summary>
-    public bool Hits(PlayerState attacker, PlayerState victim)
+    public bool Hits(ICombatant attacker, ICombatant victim)
     {
-        if (attacker.Movement < 1)
+        if (attacker is PlayerState player && Wielded(player) is { } weapon)
         {
-            return false;
+            player.Movement = (short)Math.Max(0, player.Movement - weapon.Definition.Weight / 8);
         }
 
-        var hits = _calculator.AttackHits(
-            attacker,
-            _worldState.GetTotalEffectiveHitroll(attacker),
-            _worldState.GetTotalEffectiveStrength(attacker),
-            attacker.StrengthAdd,
-            _worldState.GetTotalEffectiveIntelligence(attacker),
-            _worldState.GetTotalEffectiveWisdom(attacker),
-            _worldState.GetTotalEffectiveArmorClass(victim),
-            _worldState.GetTotalEffectiveDexterity(victim));
-        if (hits)
-        {
-            attacker.Movement = (short)Math.Max(0, attacker.Movement - 1);
-        }
-
-        return hits;
+        return _calculator.AttackHits(
+            Thac0(attacker),
+            ToHit(attacker),
+            ArmorClass(victim),
+            Dexterity(victim),
+            victimAwake: victim.Position > Position.Sleeping,
+            victimOutOfMovement: victim is PlayerState { Movement: < 1 });
     }
 
     /// <summary>
@@ -89,6 +83,42 @@ public sealed class MeleeRoll
         var attack = mob.Definition.Attacks[0];
         return _calculator.RollDice(attack.DamageDiceCount, attack.DamageDiceSides) + attack.DamageBonus;
     }
+
+    /// <summary>Legacy get_thaco(): a mob's is 20, a player's comes from their class (20 if it's unknown).</summary>
+    private int Thac0(ICombatant combatant) =>
+        combatant is PlayerState player && _rules.Classes.TryGetValue(player.CharacterClass, out var playerClass)
+            ? playerClass.Thac0(player.Level)
+            : 20;
+
+    /// <summary>Legacy: str_app tohit + hitroll + (int − 13) / 3 + (wis − 13) / 3.</summary>
+    private int ToHit(ICombatant combatant) => combatant switch
+    {
+        PlayerState player =>
+            StrengthApply.ToHit(_worldState.GetTotalEffectiveStrength(player), player.StrengthAdd)
+            + _worldState.GetTotalEffectiveHitroll(player)
+            + (_worldState.GetTotalEffectiveIntelligence(player) - 13) / 3
+            + (_worldState.GetTotalEffectiveWisdom(player) - 13) / 3,
+        MobInstance mob =>
+            StrengthApply.ToHit(WorldStateExtensions.GetMobEffectiveStrength(mob))
+            + WorldStateExtensions.GetMobEffectiveHitroll(mob)
+            + (mob.Definition.Stats.Intelligence - 13) / 3
+            + (mob.Definition.Stats.Wisdom - 13) / 3,
+        _ => 0
+    };
+
+    private int ArmorClass(ICombatant combatant) => combatant switch
+    {
+        PlayerState player => _worldState.GetTotalEffectiveArmorClass(player),
+        MobInstance mob => WorldStateExtensions.GetMobEffectiveArmorClass(mob),
+        _ => combatant.ArmorClass
+    };
+
+    private int Dexterity(ICombatant combatant) => combatant switch
+    {
+        PlayerState player => _worldState.GetTotalEffectiveDexterity(player),
+        MobInstance mob => mob.Definition.Stats.Dexterity,
+        _ => 0
+    };
 
     /// <summary>Legacy str_app[STRENGTH_APPLY_INDEX(ch)].todam; mobs have no 18/xx bonus.</summary>
     private int StrengthDamage(ICombatant combatant) => combatant switch

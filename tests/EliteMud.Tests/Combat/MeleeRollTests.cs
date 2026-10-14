@@ -12,8 +12,8 @@ namespace EliteMud.Tests.Combat;
 /// <summary>
 /// Legacy hit() up to damage(): whether a melee attack lands and how much it does, with every stat the effective one
 /// (base + spells + gear; #78).
-/// The to-hit numbers: a level 1 attacker with 13 in every stat needs THAC0 19 − victim AC / 10. A victim with AC 100
-/// and dexterity 12 is at (100 − 20) / 10 = 8, so a roll of 11 or more hits.
+/// The to-hit numbers: a level 1 warrior with 13 in every stat has THAC0 20 (20 − 1 / 3) and no to-hit bonus. A victim
+/// with AC 100 and dexterity 12 is at (100 − 20) / 10 = 8, so a roll of 12 or more hits.
 /// </summary>
 public class MeleeRollTests
 {
@@ -21,7 +21,10 @@ public class MeleeRollTests
     private const int Plate = 201;
     private const int RingOfDamage = 202;
 
+    private const int Sword = 203;
+
     private static readonly string Content = Path.Combine(RealWorld.RepositoryRoot, "content");
+    private static readonly RulesContent Rules = RulesContentLoader.Load(Content).Rules;
 
     private readonly WorldState _world;
     private readonly PlayerState _attacker;
@@ -46,7 +49,8 @@ public class MeleeRollTests
             new Dictionary<int, ObjectDefinition>
             {
                 [Plate] = Worn(Plate, "plate", new ObjectAffect(AffectLocation.ArmorClass, -100)),
-                [RingOfDamage] = Worn(RingOfDamage, "ring", new ObjectAffect(AffectLocation.Damroll, 5))
+                [RingOfDamage] = Worn(RingOfDamage, "ring", new ObjectAffect(AffectLocation.Damroll, 5)),
+                [Sword] = Worn(Sword, "sword", new ObjectAffect(AffectLocation.Hitroll, 0)) with { Weight = 40 }
             },
             new Dictionary<int, List<MobInstance>> { [Room] = new() { _mob } },
             new Dictionary<int, List<ObjectInstance>> { [Room] = new() },
@@ -92,7 +96,7 @@ public class MeleeRollTests
         {
             Type = AffectType.Bless,
             Location = AffectLocation.Hitroll,
-            Modifier = 5, // THAC0 14: 6 or more hits
+            Modifier = 5, // THAC0 15: 7 or more hits
             DurationHours = 10
         });
 
@@ -184,6 +188,74 @@ public class MeleeRollTests
         Assert.Equal(1, Roll(1).Damage(_attacker, _mob));
     }
 
+    /// <summary>Legacy get_thaco(): 20 − level / 3 for fighters, 20 − level / 4 for the rest (class content).</summary>
+    [Theory]
+    [InlineData("warrior", 30, 10)]
+    [InlineData("magic-user", 30, 13)]
+    public void APlayersThac0_ComesFromTheirClass(string characterClass, int level, int thac0)
+    {
+        var attacker = new PlayerState(4, "Veteran", Room, (byte)level, characterClass, "human", sex: 1)
+        {
+            Strength = 13, Intelligence = 13, Wisdom = 13, Movement = 100
+        };
+
+        // A roll of thac0 − 8 is the lowest that hits the victim at 8
+        Assert.True(Roll(thac0 - 8).Hits(attacker, _victim));
+        Assert.False(Roll(thac0 - 9).Hits(attacker, _victim));
+    }
+
+    /// <summary>A mob attacks with THAC0 20, less its to-hit bonus; a mob victim defends with its AC and dexterity.</summary>
+    [Fact]
+    public void MobsRollToHit_AndAreRolledAgainst()
+    {
+        // The rat: AC 10, dexterity 10, so (10 − 16) / 10 = 0; strength, int and wis 10 give −1 to hit (int and wis)
+        Assert.True(Roll(20).Hits(_mob, _victim));
+        Assert.False(Roll(11).Hits(_mob, _victim)); // THAC0 20 + 2 − 11 = 11 > 8
+        Assert.True(Roll(20).Hits(_attacker, _mob));
+        Assert.False(Roll(19).Hits(_attacker, _mob)); // 20 − 19 = 1 > 0
+    }
+
+    /// <summary>A victim who isn't awake is always hit, even on a natural 1 (legacy AWAKE(victim) in the miss test).</summary>
+    [Fact]
+    public void ASleepingVictim_IsAlwaysHit()
+    {
+        _victim.Position = Position.Sleeping;
+
+        Assert.True(Roll(1).Hits(_attacker, _victim));
+    }
+
+    [Fact]
+    public void ANaturalOne_MissesAnAwakeVictim()
+    {
+        _victim.ArmorClass = 1000;
+
+        Assert.False(Roll(1).Hits(_attacker, _victim));
+    }
+
+    /// <summary>A victim out of movement is easier to hit: AC + 50 (here 13 instead of 8, so 7 hits).</summary>
+    [Fact]
+    public void AVictimOutOfMovement_IsEasierToHit()
+    {
+        Assert.False(Roll(7).Hits(_attacker, _victim));
+
+        _victim.Movement = 0;
+
+        Assert.True(Roll(7).Hits(_attacker, _victim));
+    }
+
+    /// <summary>Swinging a weapon costs its weight / 8 in movement, hit or miss; bare hands cost nothing.</summary>
+    [Fact]
+    public void SwingingAWeapon_CostsMovement()
+    {
+        Roll(1).Hits(_attacker, _victim);
+        Assert.Equal(100, _attacker.Movement);
+
+        Wear(_attacker, Sword, EquipmentSlot.Wield);
+        Roll(1).Hits(_attacker, _victim);
+
+        Assert.Equal(100 - 40 / 8, _attacker.Movement);
+    }
+
     private MeleeRoll Roll(int dice) => Roll(new FixedRandom(dice));
 
     private MeleeRoll Roll(Random dice)
@@ -192,7 +264,8 @@ public class MeleeRollTests
         var formulas = new FormulaEvaluator(new Random(1));
         return new MeleeRoll(
             new CombatCalculator(new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas), dice),
-            _world);
+            _world,
+            Rules);
     }
 
     private void Wear(PlayerState player, int objectId, EquipmentSlot slot)

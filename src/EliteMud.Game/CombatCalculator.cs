@@ -223,65 +223,37 @@ public class CombatCalculator
     }
     
     /// <summary>
-    /// Calculate THAC0 (To Hit Armor Class 0) for a player.
-    /// Legacy uses class and level tables.
-    /// Lower is better (easier to hit).
+    /// The melee to-hit roll (legacy hit(), fight.c:1380–1420): a d20 against the attacker's THAC0 less their to-hit
+    /// bonus, and the victim's armor class less their dexterity bonus, divided by 10. A victim who isn't awake
+    /// (sleeping or worse) is always hit; one out of movement is easier to hit. A natural 1 misses and a natural 20
+    /// hits. The caller passes effective numbers (base + spells + equipment).
     /// </summary>
-    public int CalculateThac0(PlayerState attacker)
-    {
-        // Simplified THAC0: 20 - level
-        // In legacy, warriors have better THAC0 than mages
-        int baseThac0 = 20 - attacker.Level;
-        return baseThac0;
-    }
-
-    /// <summary>
-    /// Determine if an attack hits.
-    /// Legacy: calculates based on THAC0, AC, dexterity, hitroll (fight.c:1380-1418)
-    /// 
-    /// Every stat is the effective one (base + spells + equipment); the caller looks them up.
-    /// </summary>
+    /// <param name="attackerThac0">THAC0: 20 for a mob, the class's for a player; lower hits more often</param>
+    /// <param name="attackerToHit">Strength's to-hit bonus + hitroll + (int − 13) / 3 + (wis − 13) / 3</param>
     public bool AttackHits(
-        PlayerState attacker,
-        int attackerEffectiveHitroll,
-        int attackerEffectiveStrength,
-        int attackerStrengthAdd,
-        int attackerEffectiveIntelligence,
-        int attackerEffectiveWisdom,
-        int victimEffectiveArmorClass,
-        int victimEffectiveDexterity)
+        int attackerThac0,
+        int attackerToHit,
+        int victimArmorClass,
+        int victimDexterity,
+        bool victimAwake,
+        bool victimOutOfMovement)
     {
-        // Calculate base THAC0
-        int calcThac0 = CalculateThac0(attacker);
-        
-        // Apply bonuses (subtract from THAC0 - lower is better)
-        // Legacy: calc_thaco -= (str_tohit + hitroll + int_bonus + wis_bonus + skillbonus - drunk)
-        int strBonus = StrengthApply.ToHit(attackerEffectiveStrength, attackerStrengthAdd);
-        int intBonus = (attackerEffectiveIntelligence - 13) / 3;
-        int wisBonus = (attackerEffectiveWisdom - 13) / 3;
-        
-        calcThac0 -= (strBonus + attackerEffectiveHitroll + intBonus + wisBonus);
-        
-        // Roll d20
+        int calcThac0 = attackerThac0 - attackerToHit;
         int diceRoll = RollDice(1, 20);
-        
-        // Natural 1 always misses, natural 20 always hits
-        if (diceRoll == 1) return false;
-        if (diceRoll == 20) return true;
 
-        // Calculate victim AC (legacy: fight.c:1395-1415)
-        int victimAc = victimEffectiveArmorClass;
-        
-        // Dexterity bonus (if awake) - uses EFFECTIVE dex (base + equipment + spell)
-        // Legacy: victim_ac -= (GET_DEX(victim)) * 10 / 6
-        victimAc -= (victimEffectiveDexterity * 10) / 6;
-        
-        // Divide by 10 (legacy: victim_ac = MAX(-200, victim_ac / 10))
+        // Legacy takes the dexterity bonus only when awake; a victim who isn't awake is always hit anyway
+        int victimAc = victimArmorClass - victimDexterity * 10 / 6;
+
+        if (victimOutOfMovement)
+        {
+            victimAc += 50;
+        }
+
         victimAc = Math.Max(-200, victimAc / 10);
-        
-        // Legacy hit formula: MISS if (calc_thaco - diceroll) > victim_ac
-        // Inverted: HIT if diceroll >= (calc_thaco - victim_ac)
-        return diceRoll >= (calcThac0 - victimAc);
+
+        // Legacy: MISS if (diceroll < 20 && AWAKE(victim)) && (diceroll == 1 || calc_thaco - diceroll > victim_ac)
+        var miss = diceRoll < 20 && victimAwake && (diceRoll == 1 || calcThac0 - diceRoll > victimAc);
+        return !miss;
     }
 
     /// <summary>
