@@ -57,6 +57,28 @@ public class CharacterMapperPersistenceTests : IDisposable
         _dbContext.Dispose();
     }
 
+    /// <summary>
+    /// Entering the game, a character stands, whatever position was saved (legacy reset_char, db.c). A position
+    /// saved mid-fight (e.g. by the autosave) would otherwise come back with no opponent, and quit would refuse.
+    /// </summary>
+    [Theory]
+    [InlineData(Position.Fighting)]
+    [InlineData(Position.Sleeping)]
+    [InlineData(Position.Stunned)]
+    public void Load_AlwaysStands(Position saved)
+    {
+        var account = CreateAccount("testuser");
+        _dbContext.Accounts.Add(account);
+        _dbContext.SaveChanges();
+        var character = CreateCharacter("TestPlayer", account.AccountId);
+        character.Position = saved.ToString();
+
+        var player = CharacterMapper.ToPlayerState(character, 1, _worldState);
+
+        Assert.Equal(Position.Standing, player.Position);
+        Assert.Null(player.Fighting);
+    }
+
     [Fact]
     public void SaveAndLoad_SimpleContainerContents_PersistsCorrectly()
     {
