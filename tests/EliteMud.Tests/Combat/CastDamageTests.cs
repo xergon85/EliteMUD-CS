@@ -8,7 +8,9 @@ using EliteMud.Game;
 using EliteMud.Scripting;
 using EliteMud.Server;
 using EliteMud.Server.Adapters.Commands.Cast;
+using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
+using EliteMud.Tests.Ai;
 using EliteMud.Tests.Server;
 
 namespace EliteMud.Tests.Combat;
@@ -108,7 +110,10 @@ public sealed class CastDamageTests : IDisposable
                 new CombatExperience(new PlayerProgression(experience, rules), experience),
                 _world,
                 Array.Empty<ICombatListener>()),
-            new SkillMessageSender(new ActMessageService(), connections));
+            new SkillMessageSender(
+                new ActMessageService(),
+                connections,
+                new LookCommandHandler(_world, new MockScriptEngine(), connections, RulesContent.Empty)));
     }
 
     public void Dispose()

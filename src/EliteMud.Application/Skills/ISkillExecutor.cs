@@ -63,7 +63,12 @@ public enum SkillMessageTarget
     /// <summary>
     /// Send to everyone in room except actor and victim (ActTarget.ToNotVict)
     /// </summary>
-    Others
+    Others,
+
+    /// <summary>
+    /// The victim, a player, looks at the room they're in now, e.g. after fleeing. No template.
+    /// </summary>
+    VictimLooks
 }
 
 /// <summary>
