@@ -85,6 +85,18 @@ public class EffectiveStatsTests
         Assert.Equal(strength, _stats.Get(_player, AffectLocation.Strength));
     }
 
+    /// <summary>Gear can't take a human past 18 either (#88): 17 with two pairs of +2 gauntlets is 18.</summary>
+    [Fact]
+    public void Gear_CantTakeAHumanPastTheirRacesMaximum()
+    {
+        _player.Strength = 17;
+        Wear(Gauntlets, EquipmentSlot.Hands);
+        Wear(Gauntlets, EquipmentSlot.Arms);
+
+        Assert.Equal(4, _stats.GearBonus(_player, AffectLocation.Strength));
+        Assert.Equal(18, _stats.Get(_player, AffectLocation.Strength));
+    }
+
     [Fact]
     public void AMobsStat_IsItsContentPlusAffectsPlusGear_Within0To25()
     {
