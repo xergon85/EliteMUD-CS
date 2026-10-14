@@ -1,5 +1,4 @@
 using EliteMud.Application.World;
-using EliteMud.Game;
 
 namespace EliteMud.Application.Combat.DamageSteps;
 
@@ -20,17 +19,7 @@ public sealed class MobDeath : IDamageStep
             return;
         }
 
-        var roomId = RoomOf(context.Attacker, mob);
-        _worldState.CreateMobCorpse(mob, roomId);
-        _worldState.RemoveMob(mob.InstanceId, roomId);
+        _worldState.CreateMobCorpse(mob, mob.RoomId);
+        _worldState.RemoveMob(mob.InstanceId, mob.RoomId);
     }
-
-    /// <summary>
-    /// A mob doesn't know its room, so it comes from the player in the fight; nothing deals damage between mobs yet.
-    /// </summary>
-    private static int RoomOf(ICombatant attacker, MobInstance victim) =>
-        attacker is PlayerState player
-            ? player.RoomId
-            : throw new NotSupportedException(
-                $"Damage from {attacker.Name} to {victim.Name}: a mob dying to a mob needs the mob's room");
 }

@@ -13,6 +13,11 @@ public interface ICombatant
     string Name { get; }
     
     /// <summary>
+    /// The room the combatant is in (legacy ch->in_room).
+    /// </summary>
+    int RoomId { get; }
+
+    /// <summary>
     /// Current hit points. When this reaches 0 or below, the combatant dies.
     /// </summary>
     short HitPoints { get; set; }

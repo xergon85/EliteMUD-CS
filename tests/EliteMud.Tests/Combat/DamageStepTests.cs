@@ -301,11 +301,14 @@ public class DamageStepTests
     }
 
     [Fact]
-    public void MobDeath_ByAnotherMob_IsNotSupportedYet()
+    public void MobDeath_LeavesTheCorpseWhereTheMobWas_WhoeverKilledIt()
     {
-        var other = new MobInstance(2, _mob.Definition);
+        var killer = new MobInstance(2, _mob.Definition); // in no room at all
 
-        Assert.Throws<NotSupportedException>(() => new MobDeath(_world).Apply(Died(Hit(other, _mob, 10))));
+        new MobDeath(_world).Apply(Died(Hit(killer, _mob, 10)));
+
+        Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
+        Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
     }
 
     private static DamageContext Hit(ICombatant attacker, ICombatant victim, int damage) =>
