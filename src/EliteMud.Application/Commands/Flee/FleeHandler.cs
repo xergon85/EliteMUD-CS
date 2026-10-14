@@ -105,18 +105,9 @@ public sealed class FleeHandler
             : Array.Empty<string>();
 
         // Stop all mobs/players that were fighting us in the old room
-        foreach (var mob in _worldState.GetMobsInRoom(result.OldRoomId).Where(m => m.Fighting == player))
-        {
-            _combatCalculator.StopFighting(mob);
-        }
-
-        var playersInOldRoom = getOtherPlayers()
-            .Where(p => p.RoomId == result.OldRoomId && p.Fighting == player)
-            .ToList();
-        foreach (var otherPlayer in playersInOldRoom)
-        {
-            _combatCalculator.StopFighting(otherPlayer);
-        }
+        var oldRoom = _worldState.GetMobsInRoom(result.OldRoomId)
+            .Concat<ICombatant>(getOtherPlayers().Where(p => p.RoomId == result.OldRoomId));
+        _combatCalculator.StopEveryoneFighting(player, oldRoom);
 
         return loss;
     }

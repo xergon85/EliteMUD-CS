@@ -97,6 +97,18 @@ public class CombatCalculator
     }
 
     /// <summary>
+    /// Stop everyone among <paramref name="others"/> who is fighting <paramref name="opponent"/>, e.g. when the
+    /// opponent flees or leaves the game (legacy extract_char stops everyone fighting the one who leaves).
+    /// </summary>
+    public void StopEveryoneFighting(ICombatant opponent, IEnumerable<ICombatant> others)
+    {
+        foreach (var combatant in others.Where(other => other.Fighting == opponent).ToList())
+        {
+            StopFighting(combatant);
+        }
+    }
+
+    /// <summary>
     /// Roll dice (e.g., 2d6 = 2 dice of 6 sides each).
     /// Legacy: dice(num, size)
     /// </summary>

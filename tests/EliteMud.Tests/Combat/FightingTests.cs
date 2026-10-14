@@ -93,4 +93,26 @@ public class FightingTests
 
         Assert.Equal(position, _player.Position);
     }
+
+    /// <summary>
+    /// When someone leaves (flees, quits), everyone fighting them stops, players and mobs alike; other fights go on
+    /// (legacy extract_char).
+    /// </summary>
+    [Fact]
+    public void WhenSomeoneLeaves_EveryoneFightingThemStops_AndNoOtherFights()
+    {
+        var other = new PlayerState(2, "Other", 3001, level: 10, "warrior", "human", sex: 1);
+        var bystander = new PlayerState(3, "Bystander", 3001, level: 10, "warrior", "human", sex: 1);
+        var otherMob = new MobInstance(2, _mob.Definition);
+        _calculator.SetFighting(other, _player);
+        _calculator.SetFighting(_mob, _player);
+        _calculator.SetFighting(bystander, otherMob);
+
+        _calculator.StopEveryoneFighting(_player, new ICombatant[] { other, bystander, _mob, otherMob });
+
+        Assert.Null(other.Fighting);
+        Assert.Equal(Position.Standing, other.Position);
+        Assert.Null(_mob.Fighting);
+        Assert.Same(otherMob, bystander.Fighting);
+    }
 }
