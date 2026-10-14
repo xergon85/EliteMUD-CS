@@ -56,16 +56,18 @@ public sealed class BashSkillExecutor : ISkillExecutor
         if (!hit)
         {
             // Legacy: damage(ch, victim, 0, SKILL_BASH), then the attacker falls down
-            _combatDamage.Apply(attacker, victim, 0);
+            var miss = _combatDamage.Apply(attacker, victim, 0); // a miss can still make them wimp out or bleed
             attacker.Position = Position.Sitting;
 
             // Attacker gets 2 rounds WAIT_STATE
             attacker.WaitState = CombatConstants.WaitStates.Bash;
 
-            return SkillResult.Succeeded(
+            return SkillResult.Succeeded(new[]
+            {
                 new SkillMessage(SkillMessageTarget.Actor, "You try to bash $N but kiss the ground instead.", victim),
                 new SkillMessage(SkillMessageTarget.Victim, "$n tries to bash you but fails."),
-                new SkillMessage(SkillMessageTarget.Others, "$n tries to bash $N but ends up eating dirt.", victim));
+                new SkillMessage(SkillMessageTarget.Others, "$n tries to bash $N but ends up eating dirt.", victim)
+            }.Concat(miss.Messages).ToArray());
         }
 
         // Success: victim falls down (and loses a round) before the damage, as legacy

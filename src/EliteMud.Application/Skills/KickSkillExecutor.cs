@@ -54,16 +54,17 @@ public sealed class KickSkillExecutor : ISkillExecutor
         if (!hit)
         {
             // Legacy: damage(ch, victim, 0, SKILL_KICK) - a miss still starts the fight
-            _combatDamage.Apply(attacker, victim, 0);
+            var miss = _combatDamage.Apply(attacker, victim, 0); // a miss can still make them wimp out or bleed
 
             // Apply combat lag even on miss (legacy: WAIT_STATE applied after damage())
             attacker.WaitState = CombatConstants.WaitStates.Kick;
             
-            return SkillResult.Succeeded(
+            return SkillResult.Succeeded(new[]
+            {
                 new SkillMessage(SkillMessageTarget.Actor, "you try to kick $N, but miss!", victim),
                 new SkillMessage(SkillMessageTarget.Victim, "$n tries to kick you, but misses!"),
                 new SkillMessage(SkillMessageTarget.Others, "$n tries to kick $N, but misses!", victim)
-            );
+            }.Concat(miss.Messages).ToArray());
         }
 
         var outcome = _combatDamage.Apply(

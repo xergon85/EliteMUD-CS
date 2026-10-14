@@ -91,16 +91,17 @@ public sealed class BackstabSkillExecutor : ISkillExecutor
         if (!hit)
         {
             // Legacy: damage(ch, victim, 0, SKILL_BACKSTAB) - a miss still starts the fight
-            _combatDamage.Apply(attacker, victim, 0);
+            var miss = _combatDamage.Apply(attacker, victim, 0); // a miss can still make them wimp out or bleed
 
             // Apply wait state even on miss
             attacker.WaitState = CombatConstants.WaitStates.Backstab;
 
-            return SkillResult.Succeeded(
+            return SkillResult.Succeeded(new[]
+            {
                 new SkillMessage(SkillMessageTarget.Actor, "you try to backstab $N, but miss!", victim),
                 new SkillMessage(SkillMessageTarget.Victim, "$n tries to backstab you, but misses!"),
                 new SkillMessage(SkillMessageTarget.Others, "$n tries to backstab $N, but misses!", victim)
-            );
+            }.Concat(miss.Messages).ToArray());
         }
 
         // Calculate backstab damage

@@ -231,6 +231,7 @@ internal sealed class GameTickService
     {
         var (damage, defense) = RollMelee(attacker, victim);
         var hitPointsBefore = victim.HitPoints;
+        var victimMaxHp = MaxHitPoints(victim); // before a death moves their gear into the corpse
         var outcome = _combatDamage.Apply(attacker, victim, damage);
 
         var messages = new List<SkillMessage>();
@@ -240,7 +241,6 @@ internal sealed class GameTickService
         }
 
         // The hit as it landed, before any death or respawn changed the victim's hit points
-        var victimMaxHp = MaxHitPoints(victim);
         var hitPointsAfterHit = hitPointsBefore - outcome.Damage;
         var victimLine = CombatMessageFormatter.FormatCombatMessage(
             attacker.Name, victim.Name, outcome.Damage, victimMaxHp, MessagePerspective.ToVict);
