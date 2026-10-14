@@ -105,6 +105,21 @@ Oct 13–14:
 7. **`StopFighting` stands up anyone conscious** (legacy `stop_fighting`), but never the stunned or dying.
 8. **Quit refuses while you have an opponent**, also when knocked down (stricter than legacy's position check).
 
+Oct 14 (step 6; options compared in the "Combat Tick Options" page, claude.ai/artifact/7E4SAZZ2r3vSz54eFhdqrq):
+9. **Wimpy flees inside the hit.** The wimpy step flees right away through `FleeHandler` and adds its lines plus an
+   ordered "show the room" marker to the outcome's messages; `SkillMessageSender` shows the look at the marker. Every
+   source gets wimpy in the right order with no executor changes. Wimpy also gets legacy's "panics" room line.
+10. **No mob counterattack.** The tick's counterattack after each player attack (level + 1d4) goes; a mob hits once a
+    round on its own turn, as in legacy `perform_violence`. Mob multi-attack stays with #33.
+11. **Every melee victim goes through `DefendAgainstMelee`; to-hit rolls stay with #48.** One call for players and mobs,
+    as in legacy `hit()`, instead of a player-only branch that #48 would remove again. Step 7 rewrites the damage
+    roll, not the defense, so this isn't redone. **Note:** in play this changes almost nothing yet. Mobs have no
+    skills (`MobInstance.GetSkill` always returns 0; #72), so no mob dodges or parries
+    until that's done; the only visible change is the position multiplier on a mob that's sitting, sleeping or
+    stunned. Players still never miss mobs and mobs never miss players until #48.
+12. **At least two PRs:** 6a restructures with no behavior change (tick tests, `ICombatant` attacker, pipeline split);
+    6b changes behavior (position messages, wimpy, stop fighting below stunned, the tick moved over, removals).
+
 ## Done
 
 - #50: steps 0–2 (characterization tests, `CombatDamage` with mob death, kick, bash, backstab).
@@ -116,8 +131,9 @@ Oct 13–14:
 
 ## Related cards
 
-- Combat behavior: #47 alignment rounding, #48 `kill` on a mob never rolls to hit, #49 bash doesn't knock a player
-  down, #51 player victims miss skill victim lines, #55 player killing rules, #70 flee escape skill and death traps.
+- Combat behavior: #47 alignment rounding, #48 no to-hit roll between players and mobs, #72 mobs have no skills,
+  #49 bash doesn't knock a player down, #51 player victims miss skill victim lines, #55 player killing rules, #70 flee
+  escape skill and death traps.
 - Architecture: #59 affects design, #31 spells as composed effects, #71 skills as composed building blocks (design
   #31 and #71 together, after this card), #53 one broadcast helper.
 - Server: #64 shutdown notices, #66 `PlayerState.Id` is the connection id, #69 quit and link loss as legacy.
