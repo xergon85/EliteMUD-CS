@@ -143,8 +143,8 @@ Oct 14 (step 6; options compared in the "Combat Tick Options" page, claude.ai/ar
 ## Related cards
 
 - Combat behavior: #47 alignment rounding, #48 no to-hit roll between players and mobs, #72 mobs have no skills,
-  #74 mob switching, #76 mob wimpy, #77 autoassist, #49 bash doesn't knock a player down, #51 player victims miss skill victim lines, #55 player
-  killing rules, #70 flee escape skill and death traps.
+  #74 mob switching, #76 mob wimpy, #77 autoassist, #49 bash doesn't knock a player down, #51 player victims miss
+  skill victim lines, #55 player killing rules, #70 flee escape skill and death traps.
 - Architecture: #59 affects design, #31 spells as composed effects, #71 skills as composed building blocks (design
   #31 and #71 together, after this card), #53 one broadcast helper.
 - Server: #64 shutdown notices, #66 `PlayerState.Id` is the connection id, #69 quit and link loss as legacy.
