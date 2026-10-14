@@ -66,69 +66,31 @@ public sealed class RescueSkillExecutor : ISkillExecutor
 
         // Can't rescue someone you're fighting
         // Legacy: if (ch->specials.fighting == victim)
-        if (rescuer.FightingConnectionId != null)
+        if (rescuer.Fighting == ally)
         {
-            // Check if rescuer is fighting the ally
-            bool fightingAlly = context.VictimConnectionId != null && 
-                                rescuer.FightingConnectionId == context.VictimConnectionId;
-            
-            if (!fightingAlly && ally is MobInstance allyMob && 
-                rescuer.FightingConnectionId == -allyMob.InstanceId)
-            {
-                fightingAlly = true;
-            }
-
-            if (fightingAlly)
-            {
-                return SkillResult.Failed("How can you rescue someone you are trying to kill?");
-            }
+            return SkillResult.Failed("How can you rescue someone you are trying to kill?");
         }
 
         // Find who is attacking the ally
         // Legacy: for (tmp_ch = world[ch->in_room]->people; tmp_ch && (tmp_ch->specials.fighting != victim); ...)
-        // 
-        // Simplified implementation for now:
-        // - If ally is a player, check their FightingConnectionId to see who they're fighting
-        // - We assume bidirectional combat (if A fights B, then B fights A)
-        // 
+        //
+        // Simplified implementation for now: we assume bidirectional combat (if A fights B, then B fights A),
+        // so the ally's own opponent is the attacker.
         // TODO: Full implementation would enumerate all entities in room to find attacker
-        PlayerState? attackingPlayer = null;
-        MobInstance? attackingMob = null;
-        int? attackingConnectionId = null;
-
-        if (context.VictimConnectionId != null)
+        if (ally is not PlayerState allyPlayer)
         {
-            // Ally is a player - find who is fighting them
-            var allyPlayer = (PlayerState)ally;
-            
-            // Check if ally is currently fighting someone
-            if (allyPlayer.FightingConnectionId != null)
-            {
-                var allyTargetId = allyPlayer.FightingConnectionId.Value;
-                if (allyTargetId > 0)
-                {
-                    // Ally is fighting a player (PvP) - not supported yet
-                    // TODO: Need IWorldState.GetPlayerByConnectionId or ConnectionRegistry
-                    return SkillResult.Failed("You can only rescue from mobs right now.");
-                }
-                else
-                {
-                    // Ally is fighting a mob
-                    var mobId = -allyTargetId;
-                    var mobs = _worldState.GetMobsInRoom(rescuer.RoomId);
-                    attackingMob = mobs.FirstOrDefault(m => m.InstanceId == mobId);
-                }
-            }
-        }
-        else
-        {
-            // Ally is a mob - can't rescue mobs yet
             // TODO: Implement mob rescue support
             return SkillResult.Failed("You can't rescue a mob.");
         }
 
-        // Nobody is fighting the ally
-        if (attackingPlayer == null && attackingMob == null)
+        if (allyPlayer.Fighting is PlayerState)
+        {
+            // Ally is fighting a player (PvP) - not supported yet
+            return SkillResult.Failed("You can only rescue from mobs right now.");
+        }
+
+        var attackingMob = allyPlayer.Fighting as MobInstance;
+        if (attackingMob == null || !_worldState.GetMobsInRoom(rescuer.RoomId).Contains(attackingMob))
         {
             return SkillResult.Failed($"But nobody is fighting {ally.Name}!");
         }
@@ -148,46 +110,17 @@ public sealed class RescueSkillExecutor : ISkillExecutor
 
         // Stop all existing combat relationships
         // Legacy: stop_fighting calls for victim, tmp_ch, and ch
-        if (context.VictimConnectionId != null)
-        {
-            var allyPlayer = (PlayerState)ally;
-            _combatCalculator.StopFighting(allyPlayer);
-        }
-        else
-        {
-            ((MobInstance)ally).FightingConnectionId = null;
-            if (((MobInstance)ally).Position == Position.Fighting)
-                ((MobInstance)ally).Position = Position.Standing;
-        }
-
-        if (attackingPlayer != null)
-        {
-            _combatCalculator.StopFighting(attackingPlayer);
-        }
-        else if (attackingMob != null)
-        {
-            attackingMob.FightingConnectionId = null;
-            if (attackingMob.Position == Position.Fighting)
-                attackingMob.Position = Position.Standing;
-        }
-
-        if (rescuer.FightingConnectionId != null)
+        _combatCalculator.StopFighting(allyPlayer);
+        _combatCalculator.StopFighting(attackingMob);
+        if (rescuer.Fighting != null)
         {
             _combatCalculator.StopFighting(rescuer);
         }
 
         // Set new combat: rescuer <-> attacker
         // Legacy: set_fighting(ch, tmp_ch); set_fighting(tmp_ch, ch);
-        if (attackingPlayer != null && attackingConnectionId != null)
-        {
-            _combatCalculator.SetFighting(rescuer, attackingConnectionId.Value);
-            _combatCalculator.SetFighting(attackingPlayer, context.ActorConnectionId);
-        }
-        else if (attackingMob != null)
-        {
-            _combatCalculator.SetFighting(rescuer, -attackingMob.InstanceId);
-            attackingMob.FightingConnectionId = context.ActorConnectionId;
-        }
+        _combatCalculator.SetFighting(rescuer, attackingMob);
+        _combatCalculator.SetFighting(attackingMob, rescuer);
 
         // Send messages
         messages.Add(new SkillMessage(SkillMessageTarget.Actor, "Banzai!  To the rescue..."));

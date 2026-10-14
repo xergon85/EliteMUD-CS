@@ -119,9 +119,7 @@ public sealed record SkillResult(
 /// </summary>
 public sealed record SkillContext(
     PlayerState Actor,
-    int ActorConnectionId,
     ICombatant? Victim,
-    int? VictimConnectionId,
     string? Argument);
 
 /// <summary>

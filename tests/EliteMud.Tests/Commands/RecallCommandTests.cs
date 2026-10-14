@@ -71,7 +71,7 @@ public class RecallCommandTests : IDisposable
     {
         // Arrange
         var (handler, context) = await CreateTestEnvironment(level: 10, roomId: 100);
-        context.Player.FightingConnectionId = 999; // Set as fighting
+        context.Player.Fighting = new PlayerState(999, "Opponent", context.Player.RoomId); // Set as fighting
         var command = new CommandRequest("recall", null, null);
 
         // Act
@@ -80,7 +80,7 @@ public class RecallCommandTests : IDisposable
         // Assert
         Assert.Equal(CommandOutcome.Continue, result);
         Assert.Equal(100, context.Player.RoomId); // Should stay in original room
-        Assert.Equal(999, context.Player.FightingConnectionId); // Still fighting
+        Assert.NotNull(context.Player.Fighting); // Still fighting
     }
 
     [Fact]
@@ -149,7 +149,7 @@ public class RecallCommandTests : IDisposable
         // Arrange
         var (handler, context) = await CreateTestEnvironment(level: 10, roomId: 100);
         context.Player.Position = Position.Fighting;
-        context.Player.FightingConnectionId = null; // Not actually fighting (edge case)
+        context.Player.Fighting = null; // Not actually fighting (edge case)
         var command = new CommandRequest("recall", null, null);
 
         // Act

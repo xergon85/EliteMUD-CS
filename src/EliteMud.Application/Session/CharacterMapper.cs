@@ -77,7 +77,9 @@ public static class CharacterMapper
             WimpyLevel = (short)character.WimpyLevel,
             
             // Position & Regeneration
-            Position = Enum.TryParse<Position>(character.Position, out var pos) ? pos : Position.Standing,
+            // Entering the game you stand, whatever was saved (legacy reset_char, db.c): a fight isn't saved, so a
+            // saved fighting position would come back with no opponent
+            Position = Position.Standing,
             GainCount = character.GainCount,
             
             // Resources

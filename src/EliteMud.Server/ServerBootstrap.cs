@@ -179,7 +179,8 @@ internal static class ServerBootstrap
         var saveQueue = services.GetRequiredService<CharacterSaveQueue>();
 
         var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry,
-            authHandler, services, ipBanService, worldState, saveQueue, services.GetRequiredService<GameStateGate>());
+            authHandler, services, ipBanService, worldState, saveQueue, services.GetRequiredService<GameStateGate>(),
+            services.GetRequiredService<CombatCalculator>());
         return (server, tickService);
     }
 

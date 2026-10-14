@@ -28,13 +28,13 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should attack player
-        Assert.NotNull(mob.FightingConnectionId);
-        Assert.Equal(1, mob.FightingConnectionId);
+        Assert.NotNull(mob.Fighting);
+        Assert.Same(player, mob.Fighting);
         Assert.Equal(Position.Fighting, mob.Position);
         
         // Player should fight back
-        Assert.NotNull(player.FightingConnectionId);
-        Assert.Equal(-1, player.FightingConnectionId); // Negative for mob instance ID
+        Assert.NotNull(player.Fighting);
+        Assert.Same(mob, player.Fighting);
         Assert.Equal(Position.Fighting, player.Position);
     }
 
@@ -50,7 +50,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should not be fighting
-        Assert.Null(mob.FightingConnectionId);
+        Assert.Null(mob.Fighting);
         Assert.Equal(Position.Standing, mob.Position);
     }
 
@@ -62,7 +62,7 @@ public class MobAiServiceTests
         var mob = CreateMob(1, "wolf", flags: new[] { "AGGRESSIVE" });
         var player1 = CreatePlayer(1, roomId: 100);
         var player2 = CreatePlayer(2, roomId: 100);
-        mob.FightingConnectionId = 1; // Already fighting player 1
+        mob.Fighting = player1; // Already fighting player 1
         mob.Position = Position.Fighting;
         AddMobToWorld(worldState, mob, 100);
         AddPlayerConnection(connections, player1, 1);
@@ -72,7 +72,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should still be fighting player 1, not switch to player 2
-        Assert.Equal(1, mob.FightingConnectionId);
+        Assert.Same(player1, mob.Fighting);
     }
 
     [Fact]
@@ -89,8 +89,8 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should attack evil player
-        Assert.NotNull(mob.FightingConnectionId);
-        Assert.Equal(1, mob.FightingConnectionId);
+        Assert.NotNull(mob.Fighting);
+        Assert.Same(evilPlayer, mob.Fighting);
     }
 
     [Fact]
@@ -107,7 +107,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should NOT attack good player
-        Assert.Null(mob.FightingConnectionId);
+        Assert.Null(mob.Fighting);
     }
 
     [Fact]
@@ -124,8 +124,8 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should attack good player
-        Assert.NotNull(mob.FightingConnectionId);
-        Assert.Equal(1, mob.FightingConnectionId);
+        Assert.NotNull(mob.Fighting);
+        Assert.Same(goodPlayer, mob.Fighting);
     }
 
     [Fact]
@@ -142,8 +142,8 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should attack neutral player
-        Assert.NotNull(mob.FightingConnectionId);
-        Assert.Equal(1, mob.FightingConnectionId);
+        Assert.NotNull(mob.Fighting);
+        Assert.Same(neutralPlayer, mob.Fighting);
     }
 
     [Fact]
@@ -160,7 +160,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Wimpy mob should NOT attack awake player
-        Assert.Null(mob.FightingConnectionId);
+        Assert.Null(mob.Fighting);
     }
 
     // ===== Memory Behavior Tests =====
@@ -180,8 +180,8 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should attack remembered player
-        Assert.NotNull(mob.FightingConnectionId);
-        Assert.Equal(1, mob.FightingConnectionId);
+        Assert.NotNull(mob.Fighting);
+        Assert.Same(player, mob.Fighting);
     }
 
     [Fact]
@@ -199,7 +199,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should NOT attack in lawful room
-        Assert.Null(mob.FightingConnectionId);
+        Assert.Null(mob.Fighting);
     }
 
     [Fact]
@@ -217,7 +217,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should NOT attack unremembered player
-        Assert.Null(mob.FightingConnectionId);
+        Assert.Null(mob.Fighting);
     }
 
     // ===== Wandering Behavior Tests =====
@@ -321,7 +321,7 @@ public class MobAiServiceTests
         var helper = CreateMob(2, "guard2", flags: new[] { "HELPER" }, alignment: 0);
         var player = CreatePlayer(1, roomId: 100);
         
-        aggressor.FightingConnectionId = 1;
+        aggressor.Fighting = player;
         aggressor.Position = Position.Fighting;
         
         AddMobToWorld(worldState, aggressor, 100);
@@ -332,8 +332,8 @@ public class MobAiServiceTests
         service.ProcessAssist(aggressor, 100, worldState, connections);
 
         // Assert - Helper should assist aggressor and fight player
-        Assert.NotNull(helper.FightingConnectionId);
-        Assert.Equal(1, helper.FightingConnectionId);
+        Assert.NotNull(helper.Fighting);
+        Assert.Same(player, helper.Fighting);
         Assert.Equal(Position.Fighting, helper.Position);
     }
 
@@ -346,7 +346,7 @@ public class MobAiServiceTests
         var helper = CreateMob(2, "good guard", flags: new[] { "HELPER" }, alignment: 900); // Good
         var player = CreatePlayer(1, roomId: 100);
         
-        aggressor.FightingConnectionId = 1;
+        aggressor.Fighting = player;
         aggressor.Position = Position.Fighting;
         
         AddMobToWorld(worldState, aggressor, 100);
@@ -357,7 +357,7 @@ public class MobAiServiceTests
         service.ProcessAssist(aggressor, 100, worldState, connections);
 
         // Assert - Helper should NOT assist (alignment difference > 750)
-        Assert.Null(helper.FightingConnectionId);
+        Assert.Null(helper.Fighting);
     }
 
     [Fact]
@@ -370,10 +370,10 @@ public class MobAiServiceTests
         var player1 = CreatePlayer(1, roomId: 100);
         var player2 = CreatePlayer(2, roomId: 100);
         
-        aggressor.FightingConnectionId = 1;
+        aggressor.Fighting = player1;
         aggressor.Position = Position.Fighting;
         
-        helper.FightingConnectionId = 2; // Already fighting player 2
+        helper.Fighting = player2; // Already fighting player 2
         helper.Position = Position.Fighting;
         
         AddMobToWorld(worldState, aggressor, 100);
@@ -385,7 +385,7 @@ public class MobAiServiceTests
         service.ProcessAssist(aggressor, 100, worldState, connections);
 
         // Assert - Helper should still be fighting player 2, not switch
-        Assert.Equal(2, helper.FightingConnectionId);
+        Assert.Same(player2, helper.Fighting);
     }
 
     // ===== Position/State Tests =====
@@ -405,7 +405,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState, connections);
 
         // Assert - Mob should NOT process AI (dead/not awake)
-        Assert.Null(mob.FightingConnectionId);
+        Assert.Null(mob.Fighting);
     }
 
     [Fact]
@@ -421,7 +421,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, -1, worldState, connections);
 
         // Assert - Should not crash or process (invalid room)
-        Assert.Null(mob.FightingConnectionId);
+        Assert.Null(mob.Fighting);
     }
 
     // ===== Scavenger Tests =====

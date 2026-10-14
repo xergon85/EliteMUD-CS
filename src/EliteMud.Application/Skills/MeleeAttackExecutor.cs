@@ -71,8 +71,8 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
         // Calculate effective stats (base + equipment + spell bonuses)
         var attackerEffectiveStr = _worldState.GetTotalEffectiveStrength(attacker);
 
-        return context.VictimConnectionId != null
-            ? AttackPlayer(context, (PlayerState)victim, attackerEffectiveStr, weaponDetails)
+        return victim is PlayerState victimPlayer
+            ? AttackPlayer(context, victimPlayer, attackerEffectiveStr, weaponDetails)
             : AttackMob(context, (MobInstance)victim, attackerEffectiveStr, weapon, weaponDetails);
     }
 
@@ -102,9 +102,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
 
         var outcome = _combatDamage.Apply(
             attacker,
-            context.ActorConnectionId,
             victimPlayer,
-            context.VictimConnectionId,
             result.Hit ? result.Damage : 0);
 
         // Format combat messages (legacy format with damage/health)
@@ -151,9 +149,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
         mobInstance.Position = Position.Fighting;
         var outcome = _combatDamage.Apply(
             attacker,
-            context.ActorConnectionId,
             mobInstance,
-            context.VictimConnectionId,
             damage);
 
         // Trigger MOB_HELPER mobs to assist this mob, after the hit (legacy autoassist(), fight.c:1725);

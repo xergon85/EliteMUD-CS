@@ -86,8 +86,7 @@ public sealed class FleeHandler
     public IReadOnlyList<string> ApplyFleeResult(
         PlayerState player,
         FleeResult result,
-        Func<IEnumerable<PlayerState>> getOtherPlayers,
-        int playerConnectionId)
+        Func<IEnumerable<PlayerState>> getOtherPlayers)
     {
         if (!result.Success)
         {
@@ -106,22 +105,9 @@ public sealed class FleeHandler
             : Array.Empty<string>();
 
         // Stop all mobs/players that were fighting us in the old room
-        var mobsInOldRoom = _worldState.GetMobsInRoom(result.OldRoomId);
-        foreach (var mob in mobsInOldRoom)
-        {
-            if (mob.FightingConnectionId == playerConnectionId)
-            {
-                mob.FightingConnectionId = null;
-                mob.Position = Position.Standing;
-            }
-        }
-
-        var playersInOldRoom = getOtherPlayers()
-            .Where(p => p.RoomId == result.OldRoomId && p.FightingConnectionId == playerConnectionId);
-        foreach (var otherPlayer in playersInOldRoom)
-        {
-            _combatCalculator.StopFighting(otherPlayer);
-        }
+        var oldRoom = _worldState.GetMobsInRoom(result.OldRoomId)
+            .Concat<ICombatant>(getOtherPlayers().Where(p => p.RoomId == result.OldRoomId));
+        _combatCalculator.StopEveryoneFighting(player, oldRoom);
 
         return loss;
     }
@@ -132,32 +118,19 @@ public sealed class FleeHandler
         Func<IEnumerable<PlayerState>> getOtherPlayers,
         Func<IEnumerable<MobInstance>> getMobsInRoom)
     {
-        if (player.FightingConnectionId == null)
+        // Experience loss is damage done to the opponent × its level (legacy do_flee); the opponent must still be here
+        var opponent = player.Fighting;
+        var stillHere = opponent switch
         {
-            return 0;
-        }
+            PlayerState other => other.RoomId == currentRoomId && getOtherPlayers().Contains(other),
+            MobInstance mob => getMobsInRoom().Contains(mob),
+            _ => false
+        };
 
-        var victimId = player.FightingConnectionId.Value;
-        if (victimId > 0)
+        if (stillHere)
         {
-            // Fighting a player
-            var victim = getOtherPlayers().FirstOrDefault(p => p.Id == victimId);
-            if (victim != null)
-            {
-                int damageDone = victim.MaxHitPoints - victim.HitPoints;
-                return damageDone * victim.Level;
-            }
-        }
-        else
-        {
-            // Fighting a mob
-            var mobInstanceId = -victimId;
-            var mob = getMobsInRoom().FirstOrDefault(m => m.InstanceId == mobInstanceId);
-            if (mob != null)
-            {
-                int damageDone = mob.MaxHitPoints - mob.HitPoints;
-                return damageDone * mob.Level;
-            }
+            int damageDone = opponent!.MaxHitPoints - opponent.HitPoints;
+            return damageDone * opponent.Level;
         }
 
         return 0;

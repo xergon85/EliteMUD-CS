@@ -66,39 +66,45 @@ public class CombatCalculator
         _random = random ?? Random.Shared;
     }
     /// <summary>
-    /// Set a player to fighting another player.
-    /// Auto-stands the player if they are sitting/resting/sleeping.
-    /// Legacy: set_fighting(ch, victim)
+    /// Start fighting an opponent (legacy set_fighting). A player gets up and takes the fighting position; a mob
+    /// keeps its position, as in legacy.
     /// </summary>
-    public void SetFighting(PlayerState attacker, int targetConnectionId)
+    public void SetFighting(ICombatant combatant, ICombatant opponent)
     {
-        if (attacker.FightingConnectionId != null)
+        if (combatant.Fighting != null)
         {
-            throw new InvalidOperationException($"{attacker.Name} is already fighting");
+            throw new InvalidOperationException($"{combatant.Name} is already fighting");
         }
 
-        // Auto-stand if player is sitting/resting/sleeping
-        // Legacy does this implicitly by setting position to Fighting
-        // but we'll be explicit about the transition
-        if (attacker.Position < Position.Standing)
+        combatant.Fighting = opponent;
+        if (combatant is PlayerState)
         {
-            attacker.Position = Position.Standing;
+            combatant.Position = Position.Fighting;
         }
-
-        attacker.FightingConnectionId = targetConnectionId;
-        attacker.Position = Position.Fighting;
     }
 
     /// <summary>
-    /// Stop a player from fighting.
-    /// Legacy: stop_fighting(ch)
+    /// Stop fighting (legacy stop_fighting): anyone conscious stands up, e.g. someone bashed to the ground. Unlike
+    /// legacy, the stunned, incapacitated and dying stay down (legacy stands them up too, with no update_pos after).
     /// </summary>
-    public void StopFighting(PlayerState player)
+    public void StopFighting(ICombatant combatant)
     {
-        player.FightingConnectionId = null;
-        if (player.Position == Position.Fighting)
+        combatant.Fighting = null;
+        if (combatant.Position > Position.Stunned)
         {
-            player.Position = Position.Standing;
+            combatant.Position = Position.Standing;
+        }
+    }
+
+    /// <summary>
+    /// Stop everyone among <paramref name="others"/> who is fighting <paramref name="opponent"/>, e.g. when the
+    /// opponent flees or leaves the game (legacy extract_char stops everyone fighting the one who leaves).
+    /// </summary>
+    public void StopEveryoneFighting(ICombatant opponent, IEnumerable<ICombatant> others)
+    {
+        foreach (var combatant in others.Where(other => other.Fighting == opponent).ToList())
+        {
+            StopFighting(combatant);
         }
     }
 

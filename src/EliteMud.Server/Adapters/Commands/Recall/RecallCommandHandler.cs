@@ -57,7 +57,7 @@ internal sealed class RecallCommandHandler : ICommandHandler
         }
         
         // Check if player is fighting
-        if (player.FightingConnectionId != null)
+        if (player.Fighting != null)
         {
             await context.Session.SendLineAsync(
                 "You can't recall while fighting!",

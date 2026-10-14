@@ -24,7 +24,7 @@ public static class KillCommandValidator
         }
 
         // Check if already fighting
-        if (player.FightingConnectionId != null)
+        if (player.Fighting != null)
         {
             return ValidationResult.Fail("You're already fighting!");
         }

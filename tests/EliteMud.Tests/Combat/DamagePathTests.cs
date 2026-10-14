@@ -100,8 +100,8 @@ public class DamagePathTests
         Assert.Equal(fixture.World.GetTotalEffectiveMaxHitPoints(victim), victim.HitPoints);
         Assert.Equal(5000 - 3333, victim.Experience);
         Assert.True(fixture.Attacker.Experience >= killerExperience + 1250);
-        Assert.Null(fixture.Attacker.FightingConnectionId);
-        Assert.Null(victim.FightingConnectionId);
+        Assert.Null(fixture.Attacker.Fighting);
+        Assert.Null(victim.Fighting);
         Assert.Equal(
             new[]
             {
@@ -130,7 +130,7 @@ public class DamagePathTests
         player.HitPoints = 5;
         player.Experience = 100_000;
 
-        var outcome = fixture.Damage().Apply(player, 1, player, 1, 50);
+        var outcome = fixture.Damage().Apply(player, player, 50);
 
         Assert.True(outcome.VictimDied);
         Assert.Equal(Temple, player.RoomId);
@@ -178,8 +178,8 @@ public class DamagePathTests
         Assert.Equal(fixture.World.GetTotalEffectiveMaxHitPoints(victim), victim.HitPoints);
         Assert.Equal(5000 - 3333, victim.Experience);
         Assert.True(fixture.Attacker.Experience >= killerExperience + 1250);
-        Assert.Null(fixture.Attacker.FightingConnectionId);
-        Assert.Null(victim.FightingConnectionId);
+        Assert.Null(fixture.Attacker.Fighting);
+        Assert.Null(victim.Fighting);
 
         var lines = Lines(result);
         Assert.Equal(new[] { "A:You attack $N!", "V:$n attacks you!", "O:$n attacks $N!" }, lines[..3]);
@@ -204,7 +204,7 @@ public class DamagePathTests
         var definition = fixture.Mob.Definition with { ParsedFlags = MobFlags.Memory };
         var mob = new MobInstance(2, definition) { HitPoints = 1000 };
 
-        fixture.Kick().Execute(new SkillContext(fixture.Attacker, 1, mob, null, null));
+        fixture.Kick().Execute(new SkillContext(fixture.Attacker, mob, null));
 
         Assert.Contains(fixture.Attacker.Id, mob.Memory);
     }
@@ -222,7 +222,7 @@ public class DamagePathTests
         victim.Position = Position.Dead;
         var killerExperience = fixture.Attacker.Experience;
 
-        var outcome = fixture.Damage().Apply(fixture.Attacker, 1, victim, 2, 50);
+        var outcome = fixture.Damage().Apply(fixture.Attacker, victim, 50);
 
         Assert.False(outcome.VictimDied);
         Assert.Equal(0, outcome.Damage);
@@ -231,7 +231,7 @@ public class DamagePathTests
         Assert.Equal(Room, victim.RoomId);
         Assert.Equal(5000, victim.Experience);
         Assert.Equal(killerExperience, fixture.Attacker.Experience);
-        Assert.Null(fixture.Attacker.FightingConnectionId);
+        Assert.Null(fixture.Attacker.Fighting);
         Assert.DoesNotContain(fixture.World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
     }
 
@@ -242,7 +242,7 @@ public class DamagePathTests
         fixture.Mob.HitPoints = 0; // e.g. left behind by the first hit of kill
         var experience = fixture.Attacker.Experience;
 
-        var outcome = fixture.Damage().Apply(fixture.Attacker, 1, fixture.Mob, null, 0);
+        var outcome = fixture.Damage().Apply(fixture.Attacker, fixture.Mob, 0);
 
         Assert.False(outcome.VictimDied);
         Assert.Empty(outcome.Messages);
@@ -337,8 +337,8 @@ public class DamagePathTests
         public PlayerState Attacker { get; }
         public PlayerState VictimPlayer { get; }
 
-        public SkillContext AgainstMob() => new(Attacker, 1, Mob, null, null);
-        public SkillContext AgainstPlayer() => new(Attacker, 1, VictimPlayer, 2, null);
+        public SkillContext AgainstMob() => new(Attacker, Mob, null);
+        public SkillContext AgainstPlayer() => new(Attacker, VictimPlayer, null);
 
         public CombatDamage Damage() => new(_calculator, _experience, World, new[] { new MobMemory() });
 
@@ -355,8 +355,8 @@ public class DamagePathTests
             Assert.Equal(Position.Dead, Mob.Position);
             Assert.DoesNotContain(Mob, World.GetMobsInRoom(Room));
             Assert.Contains(World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
-            Assert.Null(Attacker.FightingConnectionId);
-            Assert.Null(Mob.FightingConnectionId);
+            Assert.Null(Attacker.Fighting);
+            Assert.Null(Mob.Fighting);
             Assert.Equal(62, Attacker.Alignment);
             Assert.True(Attacker.Experience > 100); // damage XP + the 100 kill share
         }

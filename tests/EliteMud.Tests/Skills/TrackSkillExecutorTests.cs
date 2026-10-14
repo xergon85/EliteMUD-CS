@@ -18,7 +18,7 @@ public class TrackSkillExecutorTests
     {
         // Arrange
         var (executor, worldState, tracker) = CreateTestEnvironment();
-        var context = new SkillContext(tracker, 1, null, null, "");
+        var context = new SkillContext(tracker, null, "");
 
         // Act
         var result = executor.Execute(context);
@@ -36,7 +36,7 @@ public class TrackSkillExecutorTests
         // Arrange
         var (executor, worldState, tracker) = CreateTestEnvironment();
         tracker.SetSkill(SkillType.Track, 0); // No skill
-        var context = new SkillContext(tracker, 1, null, null, "goblin");
+        var context = new SkillContext(tracker, null, "goblin");
 
         // Act
         var result = executor.Execute(context);
@@ -53,7 +53,7 @@ public class TrackSkillExecutorTests
         // Arrange
         var (executor, worldState, tracker) = CreateTestEnvironment();
         tracker.SetSkill(SkillType.Track, 95);
-        var context = new SkillContext(tracker, 1, null, null, "dragon");
+        var context = new SkillContext(tracker, null, "dragon");
 
         // Act
         var result = executor.Execute(context);
@@ -75,7 +75,7 @@ public class TrackSkillExecutorTests
         var goblin = CreateMob(1, "goblin warrior");
         AddMobToWorld(worldState, goblin, 100);
 
-        var context = new SkillContext(tracker, 1, null, null, "goblin");
+        var context = new SkillContext(tracker, null, "goblin");
 
         // Act
         var result = executor.Execute(context);
@@ -97,7 +97,7 @@ public class TrackSkillExecutorTests
         var goblin = CreateMob(1, "goblin warrior");
         AddMobToWorld(worldState, goblin, 101);
 
-        var context = new SkillContext(tracker, 1, null, null, "goblin");
+        var context = new SkillContext(tracker, null, "goblin");
 
         // Act
         var result = executor.Execute(context);
@@ -125,7 +125,7 @@ public class TrackSkillExecutorTests
         var goblin = CreateMob(1, "goblin");
         AddMobToWorld(worldState, goblin, 101);
 
-        var context = new SkillContext(tracker, 1, null, null, "goblin");
+        var context = new SkillContext(tracker, null, "goblin");
 
         // Act
         executor.Execute(context);
@@ -145,7 +145,7 @@ public class TrackSkillExecutorTests
         var goblin = CreateMob(1, "GOBLIN Warrior");
         AddMobToWorld(worldState, goblin, 101);
 
-        var context = new SkillContext(tracker, 1, null, null, "goblin");
+        var context = new SkillContext(tracker, null, "goblin");
 
         // Act
         var result = executor.Execute(context);
@@ -166,7 +166,7 @@ public class TrackSkillExecutorTests
         var goblin = CreateMob(1, "fierce goblin warrior");
         AddMobToWorld(worldState, goblin, 101);
 
-        var context = new SkillContext(tracker, 1, null, null, "warrior");
+        var context = new SkillContext(tracker, null, "warrior");
 
         // Act
         var result = executor.Execute(context);

@@ -374,11 +374,8 @@ public sealed class PlayerState : ICombatant
     public int BankGold { get; set; }
 
     // ===== Combat State =====
-    /// <summary>
-    /// The connection ID of the player this character is fighting, or null if not in combat.
-    /// Legacy equivalent: ch->specials.fighting
-    /// </summary>
-    public int? FightingConnectionId { get; set; }
+    /// <summary>Who this character is fighting, or null (legacy ch->specials.fighting).</summary>
+    public ICombatant? Fighting { get; set; }
     
     /// <summary>
     /// Position of the character (standing, fighting, sleeping, etc.)

@@ -20,6 +20,7 @@ internal sealed class TelnetServer
     private readonly PromptCatalog _promptCatalog;
     private readonly CommandRouter _commandRouter;
     private readonly GameStateGate _gate;
+    private readonly CombatCalculator _combatCalculator;
     private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
     private readonly ConnectionRegistry _connectionRegistry;
@@ -41,8 +42,10 @@ internal sealed class TelnetServer
         IpBanService ipBanService,
         IWorldState worldState,
         CharacterSaveQueue saveQueue,
-        GameStateGate gate)
+        GameStateGate gate,
+        CombatCalculator combatCalculator)
     {
+        _combatCalculator = combatCalculator;
         _gate = gate;
         _listener = new TcpListener(address, port);
         _catalog = catalog;
@@ -289,6 +292,7 @@ internal sealed class TelnetServer
                             sessionData.SelectedCharacterId.Value, context.Player, CancellationToken.None);
                     }
 
+                    EndFightsOf(context.Player);
                     _connections.TryRemove(context.Id, out _);
                 }
             }
@@ -296,6 +300,21 @@ internal sealed class TelnetServer
             // Last words (goodbye, ban message) are still queued; send them before the socket closes
             await session.CloseAsync();
             client.Close();
+        }
+    }
+
+    /// <summary>
+    /// A player leaving the game stops fighting, and so does everyone fighting them (legacy extract_char), right
+    /// away instead of when the combat tick next notices they're gone.
+    /// </summary>
+    private void EndFightsOf(PlayerState player)
+    {
+        var everyone = _connections.Values.Select(connection => connection.Player)
+            .Concat<ICombatant>(_worldState.World.Rooms.Keys.SelectMany(_worldState.GetMobsInRoom));
+        _combatCalculator.StopEveryoneFighting(player, everyone);
+        if (player.Fighting != null)
+        {
+            _combatCalculator.StopFighting(player);
         }
     }
 
