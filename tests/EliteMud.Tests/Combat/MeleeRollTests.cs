@@ -22,6 +22,9 @@ public class MeleeRollTests
     private const int RingOfDamage = 202;
 
     private const int Sword = 203;
+    private const int Dagger = 204;
+    private const int Wand = 205;
+    private const int Axe = 206;
 
     private static readonly string Content = Path.Combine(RealWorld.RepositoryRoot, "content");
     private static readonly RulesContent Rules = RulesContentLoader.Load(Content).Rules;
@@ -50,7 +53,13 @@ public class MeleeRollTests
             {
                 [Plate] = Worn(Plate, "plate", new ObjectAffect(AffectLocation.ArmorClass, -100)),
                 [RingOfDamage] = Worn(RingOfDamage, "ring", new ObjectAffect(AffectLocation.Damroll, 5)),
-                [Sword] = Worn(Sword, "sword", new ObjectAffect(AffectLocation.Hitroll, 0)) with { Weight = 40 }
+                [Sword] = Weapon(Sword, "sword", weight: 40, diceSides: 4),
+                [Dagger] = Weapon(Dagger, "dagger", weight: 16, diceSides: 6),
+                [Axe] = Weapon(Axe, "axe", weight: 64, diceSides: 8),
+                [Wand] = Worn(Wand, "wand", new ObjectAffect(AffectLocation.Hitroll, 0)) with
+                {
+                    Type = "Wand", Weight = 12
+                }
             },
             new Dictionary<int, List<MobInstance>> { [Room] = new() { _mob } },
             new Dictionary<int, List<ObjectInstance>> { [Room] = new() },
@@ -179,7 +188,9 @@ public class MeleeRollTests
         Assert.Equal(damage, Roll(1).Damage(_attacker, _mob));
     }
 
-    /// <summary>A melee hit that lands does at least 1 (legacy MAX(1, dam)), e.g. a weak attacker's bare hands.</summary>
+    /// <summary>
+    /// A melee hit that lands does at least 1 (legacy MAX(1, dam)), e.g. a weak attacker's bare hands.
+    /// </summary>
     [Fact]
     public void AWeakHit_DoesAtLeastOne()
     {
@@ -204,7 +215,9 @@ public class MeleeRollTests
         Assert.False(Roll(thac0 - 9).Hits(attacker, _victim));
     }
 
-    /// <summary>A mob attacks with THAC0 20, less its to-hit bonus; a mob victim defends with its AC and dexterity.</summary>
+    /// <summary>
+    /// A mob attacks with THAC0 20, less its to-hit bonus; a mob victim defends with its AC and dexterity.
+    /// </summary>
     [Fact]
     public void MobsRollToHit_AndAreRolledAgainst()
     {
@@ -215,7 +228,9 @@ public class MeleeRollTests
         Assert.False(Roll(19).Hits(_attacker, _mob)); // 20 − 19 = 1 > 0
     }
 
-    /// <summary>A victim who isn't awake is always hit, even on a natural 1 (legacy AWAKE(victim) in the miss test).</summary>
+    /// <summary>
+    /// A victim who isn't awake is always hit, even on a natural 1 (legacy AWAKE(victim) in the miss test).
+    /// </summary>
     [Fact]
     public void ASleepingVictim_IsAlwaysHit()
     {
@@ -290,6 +305,82 @@ public class MeleeRollTests
         Assert.True(Roll(19).Hits(_attacker, _mob));
     }
 
+    /// <summary>
+    /// Only a weapon costs movement to swing (legacy ITEM_WEAPON or ITEM_FIREWEAPON): not a wielded wand.
+    /// </summary>
+    [Fact]
+    public void AWieldedNonWeapon_CostsNoMovement_AndHitsBareHanded()
+    {
+        Wear(_attacker, Wand, EquipmentSlot.Wield);
+
+        Roll(1).Hits(_attacker, _victim);
+
+        Assert.Equal(100, _attacker.Movement);
+        Assert.Equal(1, Roll(1).Damage(_attacker, _victim)); // bare hands: 0, at least 1
+    }
+
+    /// <summary>A two-handed weapon is swung like any wielded one.</summary>
+    [Fact]
+    public void ATwoHandedWeapon_CostsMovement_AndRollsItsDice()
+    {
+        Wear(_attacker, Axe, EquipmentSlot.BothHands);
+
+        Roll(8).Hits(_attacker, _victim);
+
+        Assert.Equal(100 - 64 / 8, _attacker.Movement);
+        Assert.Equal(8, Roll(8).Damage(_attacker, _victim));
+    }
+
+    /// <summary>
+    /// The dual-wield attack swings the held weapon (legacy hit(), fight.c:1244), for movement and dice.
+    /// </summary>
+    [Fact]
+    public void TheDualAttack_SwingsTheHeldWeapon()
+    {
+        Wear(_attacker, Sword, EquipmentSlot.Wield);
+        Wear(_attacker, Dagger, EquipmentSlot.Hold);
+
+        Roll(6).Hits(_attacker, _victim, offHand: true);
+
+        Assert.Equal(100 - 16 / 8, _attacker.Movement);
+        Assert.Equal(6, Roll(6).Damage(_attacker, _victim, offHand: true)); // the dagger's 1d6, not the sword's 1d4
+        Assert.Equal(4, Roll(6).Damage(_attacker, _victim));
+    }
+
+    /// <summary>Holding something that isn't a weapon, the dual attack swings the wielded weapon.</summary>
+    [Fact]
+    public void TheDualAttack_WithANonWeaponHeld_SwingsTheWieldedWeapon()
+    {
+        Wear(_attacker, Sword, EquipmentSlot.Wield);
+        Wear(_attacker, Wand, EquipmentSlot.Hold);
+
+        Roll(1).Hits(_attacker, _victim, offHand: true);
+
+        Assert.Equal(100 - 40 / 8, _attacker.Movement);
+    }
+
+    /// <summary>
+    /// A mob's stats stay within 0–25 with affects and gear (legacy stat_check); content can be far outside.
+    /// </summary>
+    [Theory]
+    [InlineData(67108864, 0, 25)]
+    [InlineData(10, -30, 0)]
+    [InlineData(10, 5, 15)]
+    public void AMobsStats_StayWithinLegacysRange(int intelligence, int modifier, int effective)
+    {
+        var stats = _mob.Definition.Stats with { Intelligence = intelligence };
+        var mob = new MobInstance(9, _mob.Definition with { Stats = stats });
+        mob.AddAffect(new Affect
+        {
+            Type = AffectType.Bless,
+            Location = AffectLocation.Intelligence,
+            Modifier = modifier,
+            DurationHours = 10
+        });
+
+        Assert.Equal(effective, WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Intelligence));
+    }
+
     private MeleeRoll Roll(int dice) => Roll(new FixedRandom(dice));
 
     private MeleeRoll Roll(Random dice)
@@ -318,6 +409,13 @@ public class MeleeRollTests
             Movement = 100,
             Position = Position.Standing
         };
+
+    /// <summary>A weapon rolling 1d<paramref name="diceSides"/>.</summary>
+    private static ObjectDefinition Weapon(int id, string name, int weight, int diceSides) =>
+        new(id, name, name, $"A {name} lies here.", "Desc", "Weapon",
+            new List<string>(), new List<string>(),
+            new ObjectDetails { Weapon = new ObjectWeapon(1, diceSides, 0, 0) },
+            new List<int>(), weight, 100, new List<ObjectAffect>());
 
     private static ObjectDefinition Worn(int id, string name, ObjectAffect affect) =>
         new(id, name, name, $"A {name} lies here.", "Desc", "Worn",

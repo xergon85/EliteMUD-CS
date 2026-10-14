@@ -29,6 +29,8 @@ public sealed class CombatTickTests : IDisposable
     private const int Room = 3002; // not the temple, so a respawn shows
     private const int Escape = 3003;
     private const int Ring = 200;
+    private const int Sword = 201;
+    private const int Dagger = 202;
 
     /// <summary>+50 max hit points while worn.</summary>
     private static readonly ObjectDefinition RingOfLife = new(
@@ -78,7 +80,12 @@ public sealed class CombatTickTests : IDisposable
                 [Escape] = new(Escape, "Alley", "A narrow alley.", new List<ExitDefinition>())
             }),
             new Dictionary<int, MobDefinition> { [100] = mobDefinition },
-            new Dictionary<int, ObjectDefinition> { [Ring] = RingOfLife },
+            new Dictionary<int, ObjectDefinition>
+            {
+                [Ring] = RingOfLife,
+                [Sword] = Weapon(Sword, "a sword", weight: 40),
+                [Dagger] = Weapon(Dagger, "a dagger", weight: 16)
+            },
             new Dictionary<int, List<MobInstance>>
             {
                 [Temple] = new(), [Room] = new() { _mob, _secondMob }, [Escape] = new()
@@ -250,6 +257,23 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(100, _mob.HitPoints);
         Assert.Equal(new[] { "You pant for breath..." }, _fighter.Lines());
         Assert.Equal(new[] { "Fighter pants for breath." }, _observer.Lines());
+    }
+
+    /// <summary>
+    /// The dual-wield attack (the fifth) swings the held weapon: a round with the main hand and the off hand costs
+    /// each weapon's weight / 8 (legacy hit(), fight.c:1244).
+    /// </summary>
+    [Fact]
+    public async Task TheDualAttack_SwingsTheHeldWeapon()
+    {
+        Fight(Fighter, _mob);
+        Fighter.SetSkill(SkillType.DualWield, 100); // the dice of 20 are under 100: the dual attack happens
+        Fighter.EquipToSlot((int)EquipmentSlot.Wield, _world.CreateObjectInstance(Sword)!.InstanceId);
+        Fighter.EquipToSlot((int)EquipmentSlot.Hold, _world.CreateObjectInstance(Dagger)!.InstanceId);
+
+        await Round();
+
+        Assert.Equal(100 - 40 / 8 - 16 / 8, Fighter.Movement);
     }
 
     [Fact]
@@ -481,6 +505,12 @@ public sealed class CombatTickTests : IDisposable
     }
 
     private Task Round() => _tick.ProcessCombatRoundAsync(CancellationToken.None);
+
+    private static ObjectDefinition Weapon(int id, string name, int weight) =>
+        new(id, name, name, $"{name} lies here.", "Desc", "Weapon",
+            new List<string>(), new List<string>(),
+            new ObjectDetails { Weapon = new ObjectWeapon(1, 4, 0, 0) },
+            new List<int>(), weight, 100, new List<ObjectAffect>());
 }
 
 /// <summary>Dice that roll one value, which a test can change.</summary>

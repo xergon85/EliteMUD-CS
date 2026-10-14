@@ -47,9 +47,10 @@ public sealed class MeleeRoll
     /// The to-hit roll (legacy hit(), fight.c:1380–1420), for any attacker and victim (#48). A player swinging a
     /// weapon spends weight / 8 movement on it, hit or miss.
     /// </summary>
-    public bool Hits(ICombatant attacker, ICombatant victim)
+    /// <param name="offHand">The dual-wield attack, which swings the held weapon</param>
+    public bool Hits(ICombatant attacker, ICombatant victim, bool offHand = false)
     {
-        if (attacker is PlayerState player && Wielded(player) is { } weapon)
+        if (attacker is PlayerState player && Weapon(player, offHand) is { } weapon)
         {
             player.Movement = (short)Math.Max(0, player.Movement - weapon.Definition.Weight / 8);
         }
@@ -69,11 +70,12 @@ public sealed class MeleeRoll
     /// Then more against a victim who isn't on their feet, and at least 1 (legacy MAX(1, dam)). Backstab multiplies
     /// this; other hits go on to the victim's dodge or parry.
     /// </summary>
-    public int Damage(ICombatant attacker, ICombatant victim)
+    /// <param name="offHand">The dual-wield attack, which swings the held weapon</param>
+    public int Damage(ICombatant attacker, ICombatant victim, bool offHand = false)
     {
         var damage = StrengthDamage(attacker) + Damroll(attacker);
 
-        var weapon = Wielded(attacker);
+        var weapon = Weapon(attacker, offHand);
         var weaponDetails = weapon?.Definition.Details?.Weapon;
         if (weapon != null && weaponDetails != null)
         {
@@ -158,11 +160,29 @@ public sealed class MeleeRoll
         _ => 0
     };
 
-    private ObjectInstance? Wielded(ICombatant combatant) => combatant switch
+    /// <summary>
+    /// The weapon an attack swings (legacy hit(), fight.c:1244): for the dual-wield attack the held item if it's a
+    /// weapon, otherwise the wielded one, in one hand or both. Null bare-handed, or when the item isn't a weapon.
+    /// </summary>
+    private ObjectInstance? Weapon(ICombatant attacker, bool offHand)
     {
-        PlayerState player when player.EquipmentSlotToObjectId.TryGetValue((int)EquipmentSlot.Wield, out var id) =>
+        if (offHand && Equipped(attacker, EquipmentSlot.Hold) is { } held && IsWeapon(held))
+        {
+            return held;
+        }
+
+        var wielded = Equipped(attacker, EquipmentSlot.Wield) ?? Equipped(attacker, EquipmentSlot.BothHands);
+        return wielded != null && IsWeapon(wielded) ? wielded : null;
+    }
+
+    /// <summary>Legacy ITEM_WEAPON or ITEM_FIREWEAPON.</summary>
+    private static bool IsWeapon(ObjectInstance item) => item.Definition.Type is "Weapon" or "FireWeapon";
+
+    private ObjectInstance? Equipped(ICombatant combatant, EquipmentSlot slot) => combatant switch
+    {
+        PlayerState player when player.EquipmentSlotToObjectId.TryGetValue((int)slot, out var id) =>
             _worldState.GetObjectInstance(id),
-        MobInstance mob when mob.Equipment.TryGetValue(EquipmentSlot.Wield, out var weapon) => weapon,
+        MobInstance mob when mob.Equipment.TryGetValue(slot, out var item) => item,
         _ => null
     };
 }

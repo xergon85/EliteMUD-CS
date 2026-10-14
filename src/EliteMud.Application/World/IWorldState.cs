@@ -860,8 +860,9 @@ public static class WorldStateExtensions
     }
     
     /// <summary>
-    /// A mob's effective strength, dexterity, intelligence or wisdom: its content value plus affects and equipment
-    /// (legacy GET_STR, GET_DEX and so on).
+    /// A mob's effective strength, dexterity, intelligence or wisdom: its content value plus affects and equipment,
+    /// kept within 0–25 (legacy GET_STR, GET_DEX and so on; stat_check limits a mob's stats to row 0 of the race
+    /// maximums, handler.c:279). Imported mobs carry values far outside it.
     /// </summary>
     public static int GetMobEffectiveStat(MobInstance mob, AffectLocation stat)
     {
@@ -880,7 +881,7 @@ public static class WorldStateExtensions
             effective += affect.Modifier;
         }
 
-        return effective + GetMobEquipmentBonus(mob, stat);
+        return Math.Clamp(effective + GetMobEquipmentBonus(mob, stat), 0, 25);
     }
 
     /// <summary>
