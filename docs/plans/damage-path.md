@@ -1,7 +1,8 @@
 # One damage path for all combat (#42)
 
-Handover, updated Oct 14, 2026 after steps 0–6 and the two prerequisite cards (#61, #62). Start here in a new
-session, then read card #42 on GitHub. Next up: **step 7, `DamageRoll`**.
+Handover, updated Oct 14, 2026 after steps 0–7 and the two prerequisite cards (#61, #62). **#42 is complete** with
+step 7's PR (which also closes #78). What's left is in "Left open" and the related cards; start a new card from there
+rather than reopening this one.
 
 ## How we work (short version)
 
@@ -32,9 +33,8 @@ hit or miss and how much, then calls `damage(ch, victim, dam, type)`, which owns
 
 `CombatDamage.Apply(attacker, victim, amount)` (Application/Combat) is the shared `damage()`. Kick, bash, backstab,
 damage spells, `kill`'s first hit and every hit of the combat tick use it; the attacker can be a player or a mob.
-It runs a fixed list of
-`IDamageStep`s (Combat/DamageSteps) over a `DamageContext`, in `CombatDamage.Steps`; a step can stop the hit, and
-steps don't call each other. In order:
+It runs a fixed list of `IDamageStep`s (Combat/DamageSteps) over a `DamageContext`, in `CombatDamage.Steps`; a step
+can stop the hit, and steps don't call each other. In order:
 
 - `IgnoreCorpse`: a victim already dead is left alone (fight.c:787)
 - `StartFighting` both ways (`CombatCalculator.SetFighting`; `ICombatant.Fighting` is a reference to the
@@ -50,9 +50,13 @@ steps don't call each other. In order:
   and removal, in the mob's own room)
 
 Every combatant knows its room (`ICombatant.RoomId`; a mob's is kept by `WorldState`, `MobInstance.Nowhere` when out
-of the world). Melee hits are resolved first with `CombatCalculator.ResolveAttack` / `DefendAgainstMelee` (legacy
-`hit()`: roll, damage, position multiplier, dodge, parry; any victim), then dealt through `CombatDamage`. Messages
-are `SkillMessage`s (act templates), sent by `SkillMessageSender` from any actor, player or mob, in its room.
+of the world). Melee hits are rolled by `MeleeRoll` (Application/Combat; legacy `hit()` up to `damage()`): `Hits`
+(to-hit, between players for now, #48) and `Damage` (strength from `StrengthApply`, legacy `str_app` with 18/xx,
+plus damroll, weapon dice and effects, a mob's attack dice, or bare hands 0–2), with every stat the effective one
+(base + spells + gear, #78). Then `CombatCalculator.DefendAgainstMelee` (position multiplier in the C code's integer
+math, at least 1, dodge, parry; any victim), then `CombatDamage`. The tick, `kill` and backstab (times its
+multiplier) all use it. Messages are `SkillMessage`s (act templates), sent by `SkillMessageSender` from any actor,
+player or mob, in its room.
 
 The combat tick (`GameTickService.ProcessCombatRoundAsync`): each fighting player hits their target (up to 5
 attacks), then each mob fighting a player hits once; one `HitAsync` for all of them. An opponent who left ends the
@@ -63,16 +67,9 @@ Around it: game state is changed one thing at a time under `GameStateGate` (#61,
 per session; fights end when a player flees, quits or disconnects; quit refuses during a fight; characters enter
 the game standing.
 
-## Next: step 7, `DamageRoll`
+## Left open
 
-One "wielded weapon + effective strength (+ weapon effects) → damage" helper for backstab, `kill` and the tick;
-executors drop `IWorldState`. Today the tick's `RollMelee`/`MobDamage`, `MeleeAttackExecutor` and backstab each roll
-their own, and weapon effects come after the defense for player against player but before it otherwise. Likely
-together with #48 (to-hit rolls between players and mobs), which rewrites the other half of the same hit.
-
-## Left open after step 6
-
-Not done in step 6; the rest are worth a card each if wanted:
+Not done in #42; the ones without a card are worth one each if wanted:
 - **Mob wimpy** (legacy `MOB_WIMPY` flees when bleeding, fight.c:983): #76.
 - **Autoassist in the tick:** helpers join only on `kill`'s first hit; legacy `perform_violence` runs `autoassist`
   every round: #77.
@@ -82,6 +79,9 @@ Not done in step 6; the rest are worth a card each if wanted:
   first); the flee command and wimpy send the look last. #70 is about flee too.
 - **Room of "Others" lines:** `SkillMessageSender` uses the actor's room when it sends, after the hit. Someone who
   kills themselves has already respawned at the temple, so the temple hears "is dead!  R.I.P.".
+- **Rest of `hit()`:** the flame weapon's saving throw (always applies today), pugilism, ninjitsu and martial arts
+  bare-handed, berserk, and the mob wait state. `BashCommandHandler` keeps its own copy of `str_app`'s bash column;
+  it belongs in `StrengthApply`.
 - **Duplication:** `SkillMessageSender` routes by room and victim itself, like `ActMessageExtensions` (#53).
   `FleeHandler`, `LookHandler` and `CombatDamage` take the online players as a `Func`; world and AI methods still
   pass a mob's room next to the mob (`MoveMob(from, …)`, `RemoveMob(id, roomId)`), which `MobInstance.RoomId` now
@@ -127,6 +127,14 @@ Oct 14 (step 6; options compared in the "Combat Tick Options" page, claude.ai/ar
     stunned. Players still never miss mobs and mobs never miss players until #48.
 12. **At least two PRs:** 6a restructures with no behavior change (tick tests, `ICombatant` attacker, pipeline split);
     6b changes behavior (position messages, wimpy, stop fighting below stunned, the tick moved over, removals).
+13. **Fighters get into position as legacy** (#75 review): a mob drawn into a fight, or knocked down, spends its turn
+    getting into the fighting position; a player sitting in a fight gets up instead of their first attack.
+
+Oct 14 (step 7, with #78):
+14. **Legacy's integer multiplier:** `(3 + POS_FIGHTING - pos) / 3` as the C code computes it, so sitting and resting
+    ×1, sleeping and below ×2 (its comments say ×1.33, ×1.66 and so on).
+15. **A melee hit that lands does at least 1** (legacy `MAX(1, dam)`).
+16. **Strength from legacy's `str_app`**, 18/xx included, for players and mobs alike.
 
 ## Done
 
@@ -137,8 +145,9 @@ Oct 14 (step 6; options compared in the "Combat Tick Options" page, claude.ai/ar
 - #63: game state gate and queued telnet output (closes #61).
 - #65: fight target as a reference (closes #62), fights end on leaving, quit refuses mid-fight, enter standing.
 - #73: step 6a (tick characterization tests, mob attackers, `CombatDamage` as damage steps).
-- Step 6b (this branch): mobs know their room, the sender for any actor, position/wimpy/stop steps, mob melee
-  defense, the tick on the shared path.
+- #75: step 6b (mobs know their room, the sender for any actor, position/wimpy/stop steps, mob melee defense, the
+  tick on the shared path, getting into position).
+- Step 7 (this branch, closes #78): `MeleeRoll` with effective stats, `StrengthApply`, the integer multiplier.
 
 ## Related cards
 
@@ -146,7 +155,9 @@ Oct 14 (step 6; options compared in the "Combat Tick Options" page, claude.ai/ar
   #74 mob switching, #76 mob wimpy, #77 autoassist, #49 bash doesn't knock a player down, #51 player victims miss
   skill victim lines, #55 player killing rules, #70 flee escape skill and death traps.
 - Architecture: #59 affects design, #31 spells as composed effects, #71 skills as composed building blocks (design
-  #31 and #71 together, after this card), #53 one broadcast helper.
+  #31 and #71 together, after this card), #53 one broadcast helper; from an outside review: #79
+  players' rooms in the world, #80 one place for effective stats, #81 shared character parts, #82 split
+  `WorldState`, #83 commands decide in Application.
 - Server: #64 shutdown notices, #66 `PlayerState.Id` is the connection id, #69 quit and link loss as legacy.
 - Tooling: #68 how PRs get reviewed after the CodeRabbit trial.
 - Earlier: #25 race starting points, #27 practices, #46 case-insensitive names, #33/#34 multi-attack and zone mob
