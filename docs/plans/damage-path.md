@@ -17,8 +17,9 @@ The details are in the project memory and AGENTS.md; the essentials:
 - **Before opening a PR:** tests green, a mutation check on each new test (break the code, see the test fail),
   the server starts, and a `/code-review` run on the branch (findings fixed or explained in the PR).
 - **Reviews:** Copilot is out of AI credits for the rest of October; CodeRabbit runs on a 14-day trial (ends about
-  Oct 28; `.coderabbit.yaml` is on main). It re-reviews on every push, so when asked to check feedback, fetch every
-  reviewer's *latest* round: review bodies (outside-diff findings), threads, and PR comments. For each finding, say
+  Oct 28; `.coderabbit.yaml` is on main) and re-reviews on every push; Codex (`chatgpt-codex-connector`) reviews when
+  the user comments `@codex review` on a PR. When asked to check feedback, fetch every reviewer's *latest* round:
+  review bodies (outside-diff findings), threads, and PR comments. For each finding, say
   whether it's valid and why, fix or explain, reply on GitHub, resolve the thread. The long-term choice is #68.
 - **Legacy source:** `~/Dev/elitemud-index` (UTF-8 copy with cscope), e.g. `cd ~/Dev/elitemud-index && cscope -d -L -1 damage`.
 
