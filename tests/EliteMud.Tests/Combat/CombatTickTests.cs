@@ -235,6 +235,23 @@ public sealed class CombatTickTests : IDisposable
             _observer.Lines());
     }
 
+    /// <summary>
+    /// A player out of movement doesn't attack (legacy hit(), fight.c:1162); on a 1 in 4 they pant for breath.
+    /// </summary>
+    [Fact]
+    public async Task APlayerOutOfMovement_PantsInsteadOfAttacking()
+    {
+        Fight(Fighter, _mob);
+        Fighter.Movement = 0;
+        _dice.Value = 1;
+
+        await Round();
+
+        Assert.Equal(100, _mob.HitPoints);
+        Assert.Equal(new[] { "You pant for breath..." }, _fighter.Lines());
+        Assert.Equal(new[] { "Fighter pants for breath." }, _observer.Lines());
+    }
+
     [Fact]
     public async Task PlayerKillingAMob_LeavesACorpse_AndGivesKillExperience()
     {

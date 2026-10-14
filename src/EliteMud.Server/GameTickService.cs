@@ -264,6 +264,12 @@ internal sealed class GameTickService
     /// </summary>
     private async Task HitAsync(ICombatant attacker, ICombatant victim, CancellationToken cancellationToken)
     {
+        if (_meleeRoll.Winded(attacker) is { } panting)
+        {
+            await _messageSender.SendAsync(panting, attacker, cancellationToken);
+            return;
+        }
+
         var (damage, defense) = RollMelee(attacker, victim);
         var hitPointsBefore = victim.HitPoints;
         var victimMaxHp = MaxHitPoints(victim); // before a death moves their gear into the corpse

@@ -246,6 +246,21 @@ public class DamagePathTests
             lines[^6..]);
     }
 
+    /// <summary>Out of movement, kill doesn't attack at all, so no fight starts (legacy hit(), fight.c:1162).</summary>
+    [Fact]
+    public void KillWhenOutOfMovement_StartsNoFight()
+    {
+        var fixture = new Fixture(new FixedRandom(2)); // not the 1 in 4 that pants
+        fixture.Attacker.Movement = 0;
+
+        var result = fixture.Kill().Execute(fixture.AgainstMob());
+
+        Assert.Empty(result.Messages);
+        Assert.Null(fixture.Attacker.Fighting);
+        Assert.Null(fixture.Mob.Fighting);
+        Assert.Equal(10, fixture.Mob.HitPoints);
+    }
+
     /// <summary>kill can miss a mob now (#48): no damage, the "misses" lines, and the fight still starts.</summary>
     [Fact]
     public void KillMissingAMob_StartsTheFightWithoutDamage()

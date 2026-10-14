@@ -62,6 +62,12 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
             return SkillResult.Failed("You can't attack while sitting down!");
         }
 
+        // Out of movement, there's no attack at all, so no fight starts either (legacy hit())
+        if (_meleeRoll.Winded(attacker) is { } panting)
+        {
+            return new SkillResult(Success: true, Messages: panting.ToArray());
+        }
+
         return victim is PlayerState victimPlayer
             ? AttackPlayer(context, victimPlayer)
             : AttackMob(context, (MobInstance)victim);

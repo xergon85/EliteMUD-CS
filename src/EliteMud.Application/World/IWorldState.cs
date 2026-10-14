@@ -860,20 +860,27 @@ public static class WorldStateExtensions
     }
     
     /// <summary>
-    /// Get effective strength for a mob: its content strength plus affects and equipment (legacy GET_STR).
+    /// A mob's effective strength, dexterity, intelligence or wisdom: its content value plus affects and equipment
+    /// (legacy GET_STR, GET_DEX and so on).
     /// </summary>
-    public static int GetMobEffectiveStrength(MobInstance mob)
+    public static int GetMobEffectiveStat(MobInstance mob, AffectLocation stat)
     {
-        int effectiveStrength = mob.Definition.Stats.Strength;
-
-        foreach (var affect in mob.Affects.Where(a => a.Location == AffectLocation.Strength))
+        var stats = mob.Definition.Stats;
+        int effective = stat switch
         {
-            effectiveStrength += affect.Modifier;
+            AffectLocation.Strength => stats.Strength,
+            AffectLocation.Dexterity => stats.Dexterity,
+            AffectLocation.Intelligence => stats.Intelligence,
+            AffectLocation.Wisdom => stats.Wisdom,
+            _ => throw new ArgumentOutOfRangeException(nameof(stat), stat, "not a stat a mob has here")
+        };
+
+        foreach (var affect in mob.Affects.Where(a => a.Location == stat))
+        {
+            effective += affect.Modifier;
         }
 
-        effectiveStrength += GetMobEquipmentBonus(mob, AffectLocation.Strength);
-
-        return effectiveStrength;
+        return effective + GetMobEquipmentBonus(mob, stat);
     }
 
     /// <summary>

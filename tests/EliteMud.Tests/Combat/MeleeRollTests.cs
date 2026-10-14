@@ -256,6 +256,40 @@ public class MeleeRollTests
         Assert.Equal(100 - 40 / 8, _attacker.Movement);
     }
 
+    /// <summary>
+    /// Out of movement, a player doesn't attack at all (legacy hit(), fight.c:1162); one time in four they pant for
+    /// breath. With movement, nothing stops them.
+    /// </summary>
+    [Fact]
+    public void APlayerOutOfMovement_DoesntAttack_AndSometimesPants()
+    {
+        Assert.Null(Roll(1).Winded(_attacker));
+
+        _attacker.Movement = 0;
+
+        Assert.Equal(
+            new[] { "A:You pant for breath...", "O:$n pants for breath." },
+            Roll(1).Winded(_attacker)!.Select(m => $"{m.Target.ToString()[0]}:{m.Template}"));
+        Assert.Empty(Roll(2).Winded(_attacker)!);
+        Assert.Null(Roll(1).Winded(_mob)); // mobs have no movement
+    }
+
+    /// <summary>A mob's dexterity counts with its affects and gear when it defends (legacy GET_DEX).</summary>
+    [Fact]
+    public void AMobsDexterityAffect_ChangesHowEasilyItIsHit()
+    {
+        Assert.False(Roll(19).Hits(_attacker, _mob)); // AC (10 − 16) / 10 = 0: needs 20
+        _mob.AddAffect(new Affect
+        {
+            Type = AffectType.Bless,
+            Location = AffectLocation.Dexterity,
+            Modifier = -10, // dexterity 0: AC 10 / 10 = 1, so 19 hits
+            DurationHours = 10
+        });
+
+        Assert.True(Roll(19).Hits(_attacker, _mob));
+    }
+
     private MeleeRoll Roll(int dice) => Roll(new FixedRandom(dice));
 
     private MeleeRoll Roll(Random dice)

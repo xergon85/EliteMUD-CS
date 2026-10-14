@@ -1,3 +1,4 @@
+using EliteMud.Application.Skills;
 using EliteMud.Application.World;
 using EliteMud.Game;
 
@@ -19,6 +20,27 @@ public sealed class MeleeRoll
         _calculator = calculator;
         _worldState = worldState;
         _rules = rules;
+    }
+
+    /// <summary>
+    /// Whether the attacker is too winded to attack (legacy hit(), fight.c:1162): out of movement, the attack doesn't
+    /// happen at all, not even as a miss, and one time in four they pant for breath. Null when they can attack;
+    /// otherwise the messages to show, often none. Only players have movement.
+    /// </summary>
+    public IReadOnlyList<SkillMessage>? Winded(ICombatant attacker)
+    {
+        if (attacker is not PlayerState { Movement: < 1 })
+        {
+            return null;
+        }
+
+        return _calculator.RollDice(1, 4) == 1 // legacy !number(0, 3)
+            ? new[]
+            {
+                new SkillMessage(SkillMessageTarget.Actor, "You pant for breath..."),
+                new SkillMessage(SkillMessageTarget.Others, "$n pants for breath.")
+            }
+            : Array.Empty<SkillMessage>();
     }
 
     /// <summary>
@@ -99,10 +121,10 @@ public sealed class MeleeRoll
             + (_worldState.GetTotalEffectiveIntelligence(player) - 13) / 3
             + (_worldState.GetTotalEffectiveWisdom(player) - 13) / 3,
         MobInstance mob =>
-            StrengthApply.ToHit(WorldStateExtensions.GetMobEffectiveStrength(mob))
+            StrengthApply.ToHit(WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Strength))
             + WorldStateExtensions.GetMobEffectiveHitroll(mob)
-            + (mob.Definition.Stats.Intelligence - 13) / 3
-            + (mob.Definition.Stats.Wisdom - 13) / 3,
+            + (WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Intelligence) - 13) / 3
+            + (WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Wisdom) - 13) / 3,
         _ => 0
     };
 
@@ -116,7 +138,7 @@ public sealed class MeleeRoll
     private int Dexterity(ICombatant combatant) => combatant switch
     {
         PlayerState player => _worldState.GetTotalEffectiveDexterity(player),
-        MobInstance mob => mob.Definition.Stats.Dexterity,
+        MobInstance mob => WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Dexterity),
         _ => 0
     };
 
@@ -124,7 +146,8 @@ public sealed class MeleeRoll
     private int StrengthDamage(ICombatant combatant) => combatant switch
     {
         PlayerState player => StrengthApply.ToDamage(_worldState.GetTotalEffectiveStrength(player), player.StrengthAdd),
-        MobInstance mob => StrengthApply.ToDamage(WorldStateExtensions.GetMobEffectiveStrength(mob)),
+        MobInstance mob =>
+            StrengthApply.ToDamage(WorldStateExtensions.GetMobEffectiveStat(mob, AffectLocation.Strength)),
         _ => 0
     };
 
