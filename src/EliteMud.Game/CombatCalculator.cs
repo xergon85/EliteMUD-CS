@@ -399,9 +399,10 @@ public class CombatCalculator
 
     /// <summary>
     /// The victim's side of a melee hit (legacy hit(), before damage()): more damage against a victim who isn't
-    /// on their feet, then dodge or parry. Changes no hit points; the result is the damage to deal.
+    /// on their feet, then dodge or parry. Changes no hit points; the result is the damage to deal. A player or a
+    /// mob: a mob dodges and parries with its skills like anyone (decision 1 of #42; mobs have none yet, #72).
     /// </summary>
-    public DamageResult DefendAgainstMelee(PlayerState victim, int damage)
+    public DamageResult DefendAgainstMelee(ICombatant victim, int damage)
     {
         // Apply position multiplier before capping damage
         damage = CalculateDamageWithPositionMultiplier(damage, victim.Position);
@@ -417,7 +418,7 @@ public class CombatCalculator
             damage = dodgeResult.ModifiedValue;
             
             // Improve skill on successful dodge
-            victim.TryImproveSkill(SkillType.Dodge);
+            (victim as PlayerState)?.TryImproveSkill(SkillType.Dodge);
         }
         else
         {
@@ -431,7 +432,7 @@ public class CombatCalculator
                 defenseMessage = parryResult.Message;
                 
                 // Improve skill on successful parry
-                victim.TryImproveSkill(SkillType.Parry);
+                (victim as PlayerState)?.TryImproveSkill(SkillType.Parry);
             }
         }
         
