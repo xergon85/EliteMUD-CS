@@ -20,7 +20,8 @@ public sealed class CombatDamage
     {
         var listenerList = listeners.ToList();
 
-        // Legacy damage() order: memory before death, kill experience before the death penalty
+        // Legacy damage() order: memory before death, the victim's state before the kill, kill experience before the
+        // death penalty
         Steps = new IDamageStep[]
         {
             new IgnoreCorpse(),
@@ -29,6 +30,8 @@ public sealed class CombatDamage
             new CapDamage(),
             new LoseHitPoints(combatExperience),
             new UpdatePosition(combatCalculator),
+            new PositionMessages(worldState),
+            new StopFightingBelowStunned(combatCalculator),
             new Kill(combatCalculator, combatExperience, listenerList),
             new PlayerDeath(combatExperience, worldState),
             new MobDeath(worldState)

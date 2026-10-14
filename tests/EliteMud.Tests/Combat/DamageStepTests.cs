@@ -84,6 +84,8 @@ public class DamageStepTests
                 typeof(CapDamage),
                 typeof(LoseHitPoints),
                 typeof(UpdatePosition),
+                typeof(PositionMessages),
+                typeof(StopFightingBelowStunned),
                 typeof(Kill),
                 typeof(PlayerDeath),
                 typeof(MobDeath)
@@ -217,6 +219,87 @@ public class DamageStepTests
 
         Assert.Equal(Position.Standing, _mob.Position);
         Assert.False(context.VictimDied);
+    }
+
+    [Fact]
+    public void PositionMessages_TellTheVictimAndTheRoom()
+    {
+        _victim.Position = Position.Incapacitated;
+        var context = Hit(_player, _victim, 10);
+
+        new PositionMessages(_world).Apply(context);
+
+        Assert.Equal(
+            new[]
+            {
+                "A:$N is incapacitated and will slowly die, if not aided.",
+                "O:$N is incapacitated and will slowly die, if not aided.",
+                "V:You are incapacitated and will slowly die, if not aided."
+            },
+            Lines(context));
+    }
+
+    [Fact]
+    public void PositionMessages_HurtingYourself_TellsTheRoomButNotYouTwice()
+    {
+        _victim.Position = Position.Stunned;
+        var context = Hit(_victim, _victim, 10);
+
+        new PositionMessages(_world).Apply(context);
+
+        Assert.Equal(
+            new[]
+            {
+                "O:$N is stunned, but will probably regain consciousness again.",
+                "V:You're stunned, but will probably regain consciousness again."
+            },
+            Lines(context));
+    }
+
+    [Fact]
+    public void PositionMessages_ABleedingPlayerIsToldEvenOnAMiss()
+    {
+        _victim.HitPoints = 10;
+        var context = Hit(_player, _victim, 0);
+
+        new PositionMessages(_world).Apply(context);
+
+        Assert.Equal(new[] { "V:You wish that your wounds would stop BLEEDING so much!" }, Lines(context));
+    }
+
+    [Fact]
+    public void PositionMessages_NoneForAMob()
+    {
+        _mob.HitPoints = 1;
+        var context = Hit(_player, _mob, 99);
+
+        new PositionMessages(_world).Apply(context);
+
+        Assert.Empty(context.Messages);
+    }
+
+    [Fact]
+    public void StopFightingBelowStunned_TheIncapacitatedStop_TheirAttackerFightsOn()
+    {
+        _calculator.SetFighting(_player, _victim);
+        _calculator.SetFighting(_victim, _player);
+        _victim.Position = Position.Incapacitated;
+
+        new StopFightingBelowStunned(_calculator).Apply(Hit(_player, _victim, 10));
+
+        Assert.Null(_victim.Fighting);
+        Assert.Same(_victim, _player.Fighting);
+    }
+
+    [Fact]
+    public void StopFightingBelowStunned_TheStunnedFightOn()
+    {
+        _calculator.SetFighting(_victim, _player);
+        _victim.Position = Position.Stunned;
+
+        new StopFightingBelowStunned(_calculator).Apply(Hit(_player, _victim, 10));
+
+        Assert.Same(_player, _victim.Fighting);
     }
 
     [Fact]
