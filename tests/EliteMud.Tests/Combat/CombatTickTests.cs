@@ -17,12 +17,12 @@ using Microsoft.Extensions.DependencyInjection;
 namespace EliteMud.Tests.Combat;
 
 /// <summary>
-/// One combat round of the tick (legacy perform_violence()), as each player in the room sees it (#42 step 6).
-/// These pin what the tick does today, before it moves onto the shared damage path; each later change shows up
-/// as a deliberate change to the expected lines.
-/// Fixed dice of 20: a player's to-hit roll is a natural 20 (always hits), bare hands do damroll + 2, and a mob's
-/// attack dice roll their maximum. The mob's counterattack uses the shared random (level + 1d4), so its lines are
-/// matched loosely.
+/// One combat round of the tick (legacy perform_violence()), as each player in the room sees it (#42 step 6). Every
+/// hit is resolved as a melee hit, then dealt through the shared damage path, as legacy hit() then damage().
+/// Fixed dice of 20: a player's to-hit roll against a player is a natural 20 (always hits), bare hands do
+/// damroll + 2, and a mob's attack dice roll their maximum.
+/// act() capitalizes a line's first letter, but the victim's hit line starts with a color code, so "a rat hits you"
+/// stays lower case, as in legacy (dam_message wraps it in "§1r" before act()).
 /// </summary>
 public sealed class CombatTickTests : IDisposable
 {
@@ -34,6 +34,7 @@ public sealed class CombatTickTests : IDisposable
 
     private readonly WorldState _world;
     private readonly MobInstance _mob;
+    private readonly MobInstance _secondMob;
     private readonly TestConnection _fighter;
     private readonly TestConnection _victim;
     private readonly TestConnection _observer;
@@ -57,6 +58,7 @@ public sealed class CombatTickTests : IDisposable
             new List<MobAttack> { new("bite", 0, 100, 2, 4, 1) }, null,
             Experience: 400);
         _mob = new MobInstance(1, mobDefinition);
+        _secondMob = new MobInstance(2, mobDefinition); // in the arena too, fighting only when a test says so
 
         // Every way out of the arena leads to the same room, so a flee never depends on the direction rolled
         var exits = Enum.GetValues<Direction>().Select(direction => new ExitDefinition(direction, Escape)).ToList();
@@ -69,7 +71,7 @@ public sealed class CombatTickTests : IDisposable
             }),
             new Dictionary<int, MobDefinition> { [100] = mobDefinition },
             new Dictionary<int, ObjectDefinition>(),
-            new Dictionary<int, List<MobInstance>> { [Temple] = new(), [Room] = new() { _mob }, [Escape] = new() },
+            new Dictionary<int, List<MobInstance>> { [Temple] = new(), [Room] = new() { _mob, _secondMob }, [Escape] = new() },
             new Dictionary<int, List<ObjectInstance>> { [Temple] = new(), [Room] = new(), [Escape] = new() },
             new List<ZoneDefinition>());
 
@@ -96,17 +98,23 @@ public sealed class CombatTickTests : IDisposable
 
         var services = new ServiceCollection().BuildServiceProvider();
         var gate = new GameStateGate();
+        var look = new LookCommandHandler(_world, new MockScriptEngine(), connections, RulesContent.Empty);
+        var damage = new CombatDamage(
+            calculator,
+            new CombatExperience(progression, experienceService),
+            _world,
+            new ICombatListener[] { new MobMemory() },
+            new FleeHandler(_world, calculator, progression),
+            () => connections.GetConnections().Select(c => c.Player));
         _tick = new GameTickService(
             connections,
             services,
             _world,
-            new ActMessageService(),
-            new FleeHandler(_world, calculator, progression),
-            new LookCommandHandler(_world, new MockScriptEngine(), connections, RulesContent.Empty),
+            damage,
+            new SkillMessageSender(new ActMessageService(), connections, look),
             calculator,
             new CharacterSaveQueue(services, _world, gate),
             new MobAiService(new MockScriptEngine(), new PathfindingService()),
-            new CombatExperience(progression, experienceService),
             gate);
     }
 
@@ -120,12 +128,9 @@ public sealed class CombatTickTests : IDisposable
     private PlayerState Fighter => _fighter.Context.Player;
     private PlayerState Victim => _victim.Context.Player;
 
-    /// <summary>
-    /// The mob hits back after every player attack (level + 1d4), then again on its own turn with its attack dice.
-    /// Legacy: once a round, on its own turn (decision 10).
-    /// </summary>
+    /// <summary>The mob hits back once a round, on its own turn (legacy perform_violence; decision 10).</summary>
     [Fact]
-    public async Task PlayerHittingAMob_TheMobHitsBackAfterTheHit_AndAgainOnItsOwnTurn()
+    public async Task PlayerHittingAMob_TheMobHitsBackOnItsOwnTurn()
     {
         Fight(Fighter, _mob);
         Fight(_mob, Fighter);
@@ -133,19 +138,15 @@ public sealed class CombatTickTests : IDisposable
         await Round();
 
         Assert.Equal(89, _mob.HitPoints);
-        var fighterLines = _fighter.Lines();
-        Assert.Equal(3, fighterLines.Count);
-        Assert.Equal("You hit a rat extremely hard.", fighterLines[0]);
-        Assert.Matches(@"^a rat hits you (very|extremely) hard\. \[9[1-4]/100 HP\]$", fighterLines[1]); // counterattack
-        Assert.Matches(@"^a rat hits you extremely hard\. \[8[2-5]/100 HP\]$", fighterLines[2]); // its own turn
-        var observerLines = _observer.Lines();
-        Assert.Equal(3, observerLines.Count);
-        Assert.Equal("Fighter hits a rat extremely hard.", observerLines[0]);
-        Assert.Matches(@"^a rat hits Fighter (very|extremely) hard\.$", observerLines[1]);
-        Assert.Equal("a rat hits Fighter extremely hard.", observerLines[2]);
+        Assert.Equal(91, Fighter.HitPoints);
+        Assert.Equal(
+            new[] { "You hit a rat extremely hard.", "a rat hits you extremely hard. [91/100 HP]" },
+            _fighter.Lines());
+        Assert.Equal(
+            new[] { "Fighter hits a rat extremely hard.", "A rat hits Fighter extremely hard." },
+            _observer.Lines());
     }
 
-    /// <summary>Not yet the shared death: "You have slain", an alignment line, and "is dead!" without R.I.P.</summary>
     [Fact]
     public async Task PlayerKillingAMob_LeavesACorpse_AndGivesKillExperience()
     {
@@ -160,50 +161,51 @@ public sealed class CombatTickTests : IDisposable
         Assert.Null(Fighter.Fighting);
         Assert.Equal(62, Fighter.Alignment);
         Assert.Equal(
-            new[]
-            {
-                "You hit a rat extremely hard.",
-                "You have slain a rat! You feel more virtuous. (+62)",
-                "You receive 100 experience points."
-            },
+            new[] { "You hit a rat extremely hard.", "A rat is DEAD!!", "You receive 100 experience points." },
             _fighter.Lines());
         Assert.Equal(
-            new[]
-            {
-                "Fighter hits a rat extremely hard.",
-                "a rat is dead!"
-            },
+            new[] { "Fighter hits a rat extremely hard.", "A rat is dead!  R.I.P." },
             _observer.Lines());
     }
 
+    /// <summary>A player hit by a mob fights back (legacy set_fighting in damage()).</summary>
     [Fact]
-    public async Task MobHittingAPlayer()
+    public async Task MobHittingAPlayer_TheyFightBack()
     {
         Fight(_mob, Victim);
 
         await Round();
 
         Assert.Equal(91, Victim.HitPoints);
-        Assert.Equal(
-            new[]
-            {
-                "a rat hits you extremely hard. [91/100 HP]"
-            },
-            _victim.Lines());
-        Assert.Equal(
-            new[]
-            {
-                "a rat hits Victim extremely hard."
-            },
-            _observer.Lines());
+        Assert.Same(_mob, Victim.Fighting);
+        Assert.Equal(new[] { "a rat hits you extremely hard. [91/100 HP]" }, _victim.Lines());
+        Assert.Equal(new[] { "A rat hits Victim extremely hard." }, _observer.Lines());
     }
 
-    /// <summary>Not yet the shared death: the room line has one space after "dead!" where legacy has two.</summary>
+    /// <summary>
+    /// Once their target is dead, the next mob that hits a player becomes their target (legacy: damage() starts a
+    /// fight for whoever has none).
+    /// </summary>
+    [Fact]
+    public async Task AfterTheirTargetDies_APlayerFightsTheNextMobThatHitsThem()
+    {
+        Fight(Fighter, _mob);
+        Fight(_mob, Fighter);
+        _mob.HitPoints = 5;
+        Fight(_secondMob, Fighter);
+
+        await Round();
+
+        Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
+        Assert.Same(_secondMob, Fighter.Fighting);
+        Assert.Equal(91, Fighter.HitPoints);
+    }
+
     [Fact]
     public async Task MobKillingAPlayer_LeavesACorpse_AndRespawnsThemAtTheTemple()
     {
         Fight(_mob, Victim);
-        Victim.HitPoints = -5; // incapacitated: the 9 of the bite kills
+        Victim.HitPoints = -5; // the 9 of the bite kills
 
         await Round();
 
@@ -223,20 +225,13 @@ public sealed class CombatTickTests : IDisposable
             },
             _victim.Lines());
         Assert.Equal(
-            new[]
-            {
-                "a rat hits Victim extremely hard.",
-                "Victim is dead! R.I.P."
-            },
+            new[] { "A rat hits Victim extremely hard.", "Victim is dead!  R.I.P." },
             _observer.Lines());
     }
 
-    /// <summary>
-    /// "You are stunned" where legacy says "You're stunned", and nothing to the room. Legacy also keeps a stunned
-    /// victim fighting and only stops the fight below stunned.
-    /// </summary>
+    /// <summary>The stunned fight on; only below stunned does the fight stop (legacy damage(), fight.c:1026).</summary>
     [Fact]
-    public async Task MobStunningAPlayer_StopsThemFighting_TheMobFightsOn()
+    public async Task MobStunningAPlayer_TellsThemAndTheRoom_AndBothFightOn()
     {
         Fight(_mob, Victim);
         Victim.Fighting = _mob; // fighting back, but this test is about the mob's hit, so not standing
@@ -246,24 +241,24 @@ public sealed class CombatTickTests : IDisposable
         await Round();
 
         Assert.Equal(Position.Stunned, Victim.Position);
-        Assert.Null(Victim.Fighting);
+        Assert.Same(_mob, Victim.Fighting);
         Assert.Same(Victim, _mob.Fighting);
         Assert.Equal(
             new[]
             {
                 "a rat hits you extremely hard. [-1/100 HP]",
-                "You are stunned, but will probably regain consciousness again."
+                "You're stunned, but will probably regain consciousness again."
             },
             _victim.Lines());
         Assert.Equal(
             new[]
             {
-                "a rat hits Victim extremely hard."
+                "A rat hits Victim extremely hard.",
+                "Victim is stunned, but will probably regain consciousness again."
             },
             _observer.Lines());
     }
 
-    /// <summary>No "panics, and attempts to flee" line to the room, which legacy do_flee sends.</summary>
     [Fact]
     public async Task MobHittingAPlayerBelowTheirWimpy_MakesThemFlee()
     {
@@ -289,50 +284,46 @@ public sealed class CombatTickTests : IDisposable
             },
             _victim.Lines());
         Assert.Equal(
-            new[]
-            {
-                "a rat hits Victim extremely hard."
-            },
+            new[] { "A rat hits Victim extremely hard.", "Victim panics, and attempts to flee." },
             _observer.Lines());
     }
 
+    /// <summary>An opponent who left the room ends the fight on both sides, without a hit (legacy perform_violence).</summary>
     [Fact]
-    public async Task PlayerHittingAPlayer()
+    public async Task AnOpponentWhoLeft_EndsTheFight()
+    {
+        Fight(Fighter, _mob);
+        Fight(_mob, Fighter);
+        _world.MoveMob(_mob.InstanceId, Room, Escape);
+
+        await Round();
+
+        Assert.Null(Fighter.Fighting);
+        Assert.Null(_mob.Fighting);
+        Assert.Equal(100, _mob.HitPoints);
+        Assert.Equal(100, Fighter.HitPoints);
+        Assert.Equal(new[] { "Your opponent has left." }, _fighter.Lines());
+    }
+
+    [Fact]
+    public async Task PlayerHittingAPlayer_TheyFightBack()
     {
         Fight(Fighter, Victim);
 
         await Round();
 
         Assert.Equal(89, Victim.HitPoints);
-        Assert.Equal(
-            new[]
-            {
-                "You hit Victim extremely hard."
-            },
-            _fighter.Lines());
-        Assert.Equal(
-            new[]
-            {
-                "Fighter hits you extremely hard. [89/100 HP]"
-            },
-            _victim.Lines());
-        Assert.Equal(
-            new[]
-            {
-                "Fighter hits Victim extremely hard."
-            },
-            _observer.Lines());
+        Assert.Same(Fighter, Victim.Fighting);
+        Assert.Equal(new[] { "You hit Victim extremely hard." }, _fighter.Lines());
+        Assert.Equal(new[] { "Fighter hits you extremely hard. [89/100 HP]" }, _victim.Lines());
+        Assert.Equal(new[] { "Fighter hits Victim extremely hard." }, _observer.Lines());
     }
 
-    /// <summary>
-    /// Not yet the shared death: "You have slain", "Your soul darkens" and no "is DEAD!!"; the kill experience comes
-    /// before the alignment line.
-    /// </summary>
     [Fact]
     public async Task PlayerKillingAPlayer_LeavesACorpse_AndRespawnsThemAtTheTemple()
     {
         Fight(Fighter, Victim);
-        Victim.HitPoints = -5; // incapacitated: the 11 of the hit kills
+        Victim.HitPoints = -5; // the 11 of the hit kills
 
         await Round();
 
@@ -341,13 +332,7 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(5000 - 3333, Victim.Experience);
         Assert.Null(Fighter.Fighting);
         Assert.Equal(
-            new[]
-            {
-                "You hit Victim extremely hard.",
-                "You have slain Victim!",
-                "You receive 1250 experience points.",
-                "Your soul darkens from the murder. (0)"
-            },
+            new[] { "You hit Victim extremely hard.", "Victim is DEAD!!", "You receive 1250 experience points." },
             _fighter.Lines());
         Assert.Equal(
             new[]
@@ -359,11 +344,7 @@ public sealed class CombatTickTests : IDisposable
             },
             _victim.Lines());
         Assert.Equal(
-            new[]
-            {
-                "Fighter hits Victim extremely hard.",
-                "Victim is dead! R.I.P."
-            },
+            new[] { "Fighter hits Victim extremely hard.", "Victim is dead!  R.I.P." },
             _observer.Lines());
     }
 

@@ -179,7 +179,7 @@ public sealed class CastDamageTests : IDisposable
             Position = Position.Standing
         };
         meleeVictim.SetSkill(SkillType.Dodge, 100);
-        Assert.True(_calculator.ApplyDamage(meleeVictim, 6).Dodged);
+        Assert.True(_calculator.DefendAgainstMelee(meleeVictim, 6).Dodged);
 
         await Cast("'magic missile' victim");
 

@@ -27,14 +27,14 @@ public class DodgeSkillTests
     }
 
     [Fact]
-    public void ApplyDamage_NoDodgeSkill_TakesFullDamage()
+    public void DefendAgainstMelee_NoDodgeSkill_TakesFullDamage()
     {
         // Arrange
         var victim = CreatePlayer(level: 10);
         victim.SetSkill(SkillType.Dodge, 0); // No dodge skill
 
         // Act
-        var result = _combatCalculator.ApplyDamage(victim, 20);
+        var result = _combatCalculator.DefendAgainstMelee(victim, 20);
 
         // Assert
         Assert.Equal(20, result.Damage);
@@ -43,7 +43,7 @@ public class DodgeSkillTests
     }
 
     [Fact]
-    public void ApplyDamage_HighDodgeSkill_CanDodge()
+    public void DefendAgainstMelee_HighDodgeSkill_CanDodge()
     {
         // Arrange
         var victim = CreatePlayer(level: 10);
@@ -58,7 +58,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 100; i++)
         {
             victim.HitPoints = 100; // Reset HP
-            var result = _combatCalculator.ApplyDamage(victim, 1);
+            var result = _combatCalculator.DefendAgainstMelee(victim, 1);
             if (result.Dodged)
             {
                 dodgeCount++;
@@ -74,7 +74,7 @@ public class DodgeSkillTests
     }
 
     [Fact]
-    public void ApplyDamage_DodgeSucceeds_ReducesDamageByTwoTimesLevel()
+    public void DefendAgainstMelee_DodgeSucceeds_ReducesDamageByTwoTimesLevel()
     {
         // Arrange
         var victim = CreatePlayer(level: 10);
@@ -86,7 +86,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 1000; i++)
         {
             victim.HitPoints = 100;
-            var result = _combatCalculator.ApplyDamage(victim, 50);
+            var result = _combatCalculator.DefendAgainstMelee(victim, 50);
             if (result.Dodged)
             {
                 dodgeResult = result;
@@ -103,7 +103,7 @@ public class DodgeSkillTests
     }
 
     [Fact]
-    public void ApplyDamage_DodgeSucceeds_ImprovesDodgeSkill()
+    public void DefendAgainstMelee_DodgeSucceeds_ImprovesDodgeSkill()
     {
         // Arrange
         var victim = CreatePlayer(level: 10);
@@ -117,7 +117,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 10000 && !skillImproved; i++)
         {
             victim.HitPoints = 100;
-            var result = _combatCalculator.ApplyDamage(victim, 10);
+            var result = _combatCalculator.DefendAgainstMelee(victim, 10);
             
             if (result.Dodged && victim.GetSkill(SkillType.Dodge) > skillBefore)
             {
@@ -131,7 +131,7 @@ public class DodgeSkillTests
     }
 
     [Fact]
-    public void ApplyDamage_HighDamage_HarderToDodge()
+    public void DefendAgainstMelee_HighDamage_HarderToDodge()
     {
         // Arrange
         var victim = CreatePlayer(level: 10);
@@ -146,7 +146,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 100; i++)
         {
             victim.HitPoints = 1000;
-            var result = _combatCalculator.ApplyDamage(victim, 200);
+            var result = _combatCalculator.DefendAgainstMelee(victim, 200);
             if (result.Dodged)
             {
                 dodgeCount++;
@@ -158,7 +158,7 @@ public class DodgeSkillTests
     }
 
     [Fact]
-    public void ApplyDamage_CanReduceDamageToZero()
+    public void DefendAgainstMelee_CanReduceDamageToZero()
     {
         // Arrange
         var victim = CreatePlayer(level: 50); // High level
@@ -171,7 +171,7 @@ public class DodgeSkillTests
         for (int i = 0; i < 1000; i++)
         {
             victim.HitPoints = 100;
-            var r = _combatCalculator.ApplyDamage(victim, 50);
+            var r = _combatCalculator.DefendAgainstMelee(victim, 50);
             if (r.Dodged)
             {
                 result = r;
@@ -187,7 +187,7 @@ public class DodgeSkillTests
     }
 
     [Fact]
-    public void ApplyDamage_DamageCapAt500()
+    public void DefendAgainstMelee_DamageCapAt500()
     {
         // Arrange
         var victim = CreatePlayer(level: 1);
@@ -195,27 +195,10 @@ public class DodgeSkillTests
         victim.HitPoints = 1000;
 
         // Act - Try to apply 600 damage
-        var result = _combatCalculator.ApplyDamage(victim, 600);
+        var result = _combatCalculator.DefendAgainstMelee(victim, 600);
 
         // Assert - Should cap at 500
         Assert.Equal(500, result.Damage);
-        Assert.Equal(500, 1000 - victim.HitPoints); // Verify HP changed correctly
-    }
-
-    [Fact]
-    public void ApplyDamage_UpdatesPosition_WhenHPDropsBelowZero()
-    {
-        // Arrange - Player with low HP, no dodge skill
-        var victim = CreatePlayer(level: 10);
-        victim.HitPoints = 10;
-        victim.Position = Position.Fighting;
-
-        // Act - Deal lethal damage (10 - 25 = -15, which is <= -11 for Dead)
-        _combatCalculator.ApplyDamage(victim, 25);
-
-        // Assert - Should update position to Dead
-        Assert.True(victim.HitPoints <= -11);
-        Assert.Equal(Position.Dead, victim.Position);
     }
 
     private static PlayerState CreatePlayer(int level = 10)
