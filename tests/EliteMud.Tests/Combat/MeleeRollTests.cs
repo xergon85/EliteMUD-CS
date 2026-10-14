@@ -108,14 +108,15 @@ public class MeleeRollTests
         Assert.Equal(5, Roll(1).Damage(_attacker, _victim)); // bare hands roll 0
     }
 
-    /// <summary>Legacy str_app: 19 adds 7 to damage, and 18/xx counts its bonus.</summary>
+    /// <summary>Legacy str_app: 19 adds 7 to damage, and 18/xx counts its bonus (on a damroll of 5).</summary>
     [Theory]
-    [InlineData(10, 0, 0)]
-    [InlineData(18, 0, 2)]
-    [InlineData(18, 60, 3)]
-    [InlineData(19, 0, 7)]
+    [InlineData(10, 0, 5)]
+    [InlineData(18, 0, 7)]
+    [InlineData(18, 60, 8)]
+    [InlineData(19, 0, 12)]
     public void Strength_AddsDamage(int strength, int strengthAdd, int damage)
     {
+        _attacker.Damroll = 5;
         _attacker.Strength = (sbyte)strength;
         _attacker.StrengthAdd = (sbyte)strengthAdd;
 
@@ -127,6 +128,48 @@ public class MeleeRollTests
     public void AMob_HitsWithItsAttackDice()
     {
         Assert.Equal(2 + 1, Roll(1).Damage(_mob, _victim)); // 2d4 rolling ones, + 1
+    }
+
+    /// <summary>A mob's strength counts with its affects and gear (legacy GET_STR).</summary>
+    [Fact]
+    public void AMobsStrengthAffect_AddsDamage()
+    {
+        _mob.AddAffect(new Affect
+        {
+            Type = AffectType.Bless,
+            Location = AffectLocation.Strength,
+            Modifier = 9, // 19: +7
+            DurationHours = 10
+        });
+
+        Assert.Equal(2 + 1 + 7, Roll(1).Damage(_mob, _victim));
+    }
+
+    /// <summary>
+    /// Legacy dam *= (3 + POS_FIGHTING - pos) / 3 in integer math, as the C code computes it (its comments say
+    /// x1.33 and x1.66 for sitting and resting), on a damroll of 9.
+    /// </summary>
+    [Theory]
+    [InlineData(Position.Standing, 9)]
+    [InlineData(Position.Sitting, 9)] // 4 / 3 = 1
+    [InlineData(Position.Resting, 9)] // 5 / 3 = 1
+    [InlineData(Position.Sleeping, 18)] // 6 / 3 = 2
+    [InlineData(Position.Stunned, 18)] // 7 / 3 = 2
+    public void AVictimNotOnTheirFeet_TakesMoreDamage(Position position, int damage)
+    {
+        _attacker.Damroll = 9;
+        _mob.Position = position;
+
+        Assert.Equal(damage, Roll(1).Damage(_attacker, _mob));
+    }
+
+    /// <summary>A melee hit that lands does at least 1 (legacy MAX(1, dam)), e.g. a weak attacker's bare hands.</summary>
+    [Fact]
+    public void AWeakHit_DoesAtLeastOne()
+    {
+        _attacker.Strength = 3; // -1, and bare hands roll 0
+
+        Assert.Equal(1, Roll(1).Damage(_attacker, _mob));
     }
 
     private MeleeRoll Roll(int dice)

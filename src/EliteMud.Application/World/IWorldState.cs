@@ -860,6 +860,23 @@ public static class WorldStateExtensions
     }
     
     /// <summary>
+    /// Get effective strength for a mob: its content strength plus affects and equipment (legacy GET_STR).
+    /// </summary>
+    public static int GetMobEffectiveStrength(MobInstance mob)
+    {
+        int effectiveStrength = mob.Definition.Stats.Strength;
+
+        foreach (var affect in mob.Affects.Where(a => a.Location == AffectLocation.Strength))
+        {
+            effectiveStrength += affect.Modifier;
+        }
+
+        effectiveStrength += GetMobEquipmentBonus(mob, AffectLocation.Strength);
+
+        return effectiveStrength;
+    }
+
+    /// <summary>
     /// Get effective damroll for a mob including equipment bonuses.
     /// Combines base damroll from Combat stats with equipment and affects.
     /// </summary>

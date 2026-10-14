@@ -307,15 +307,13 @@ public class CombatCalculator
     }
 
     /// <summary>
-    /// The victim's side of a melee hit (legacy hit(), before damage()): more damage against a victim who isn't
-    /// on their feet, then dodge or parry. Changes no hit points; the result is the damage to deal. A player or a
-    /// mob: a mob dodges and parries with its skills like anyone (decision 1 of #42; mobs have none yet, #72).
+    /// The victim's side of a melee hit (legacy hit(), before damage()): dodge or parry. The damage comes from the
+    /// melee roll, the position multiplier included. Changes no hit points; the result is the damage to deal. A
+    /// player or a mob: a mob dodges and parries with its skills like anyone (decision 1 of #42; mobs have none yet,
+    /// #72).
     /// </summary>
     public DamageResult DefendAgainstMelee(ICombatant victim, int damage)
     {
-        // Apply position multiplier before capping damage; a hit that lands does at least 1 (legacy MAX(1, dam))
-        damage = Math.Max(1, CalculateDamageWithPositionMultiplier(damage, victim.Position));
-        
         // Check for passive defensive skills (dodge, then parry)
         // Legacy: fight.c:1543-1551 (dodge), fight.c:1523-1535 (parry)
         var dodgeResult = _dodgeSkill.TryActivate(victim, damage);

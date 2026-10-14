@@ -52,10 +52,10 @@ can stop the hit, and steps don't call each other. In order:
 Every combatant knows its room (`ICombatant.RoomId`; a mob's is kept by `WorldState`, `MobInstance.Nowhere` when out
 of the world). Melee hits are rolled by `MeleeRoll` (Application/Combat; legacy `hit()` up to `damage()`): `Hits`
 (to-hit, between players for now, #48) and `Damage` (strength from `StrengthApply`, legacy `str_app` with 18/xx,
-plus damroll, weapon dice and effects, a mob's attack dice, or bare hands 0–2), with every stat the effective one
-(base + spells + gear, #78). Then `CombatCalculator.DefendAgainstMelee` (position multiplier in the C code's integer
-math, at least 1, dodge, parry; any victim), then `CombatDamage`. The tick, `kill` and backstab (times its
-multiplier) all use it. Messages are `SkillMessage`s (act templates), sent by `SkillMessageSender` from any actor,
+plus damroll, weapon dice and effects, a mob's attack dice, or bare hands 0–2; then the position multiplier in the C
+code's integer math, and at least 1), with every stat the effective one (base + spells + gear, #78). Backstab
+multiplies that; the tick and `kill` go on to `CombatCalculator.DefendAgainstMelee` (dodge, parry; any victim). Then
+`CombatDamage`. Messages are `SkillMessage`s (act templates), sent by `SkillMessageSender` from any actor,
 player or mob, in its room.
 
 The combat tick (`GameTickService.ProcessCombatRoundAsync`): each fighting player hits their target (up to 5

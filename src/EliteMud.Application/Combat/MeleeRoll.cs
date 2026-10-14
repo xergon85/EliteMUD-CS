@@ -4,8 +4,8 @@ using EliteMud.Game;
 namespace EliteMud.Application.Combat;
 
 /// <summary>
-/// Legacy hit() up to its damage() call (fight.c:1380–1476), for players and mobs alike: whether a melee attack
-/// lands, and how much it does before the victim's defense (<see cref="CombatCalculator.DefendAgainstMelee"/>).
+/// Legacy hit() up to its damage() call (fight.c:1380–1490), for players and mobs alike: whether a melee attack
+/// lands, and how much it does before the victim's dodge or parry (<see cref="CombatCalculator.DefendAgainstMelee"/>).
 /// Every stat is the effective one: base, spells and gear (#78).
 /// </summary>
 public sealed class MeleeRoll
@@ -48,8 +48,10 @@ public sealed class MeleeRoll
     }
 
     /// <summary>
-    /// The damage of a melee hit: strength bonus and damroll, then the wielded weapon's dice and effects (bless,
-    /// evil, flame) and, for a mob, its attack dice too; bare-handed, a mob's attack dice or a player's 0–2.
+    /// The damage of a melee hit that lands: strength bonus and damroll, then the wielded weapon's dice and effects
+    /// (bless, evil, flame) and, for a mob, its attack dice too; bare-handed, a mob's attack dice or a player's 0–2.
+    /// Then more against a victim who isn't on their feet, and at least 1 (legacy MAX(1, dam)). Backstab multiplies
+    /// this; other hits go on to the victim's dodge or parry.
     /// </summary>
     public int Damage(ICombatant attacker, ICombatant victim)
     {
@@ -75,7 +77,7 @@ public sealed class MeleeRoll
             damage += _calculator.RollDice(1, 3) - 1; // legacy number(0, 2)
         }
 
-        return damage;
+        return Math.Max(1, _calculator.CalculateDamageWithPositionMultiplier(damage, victim.Position));
     }
 
     /// <summary>
@@ -97,7 +99,7 @@ public sealed class MeleeRoll
     private int StrengthDamage(ICombatant combatant) => combatant switch
     {
         PlayerState player => StrengthApply.ToDamage(_worldState.GetTotalEffectiveStrength(player), player.StrengthAdd),
-        MobInstance mob => StrengthApply.ToDamage(mob.Definition.Stats.Strength),
+        MobInstance mob => StrengthApply.ToDamage(WorldStateExtensions.GetMobEffectiveStrength(mob)),
         _ => 0
     };
 
