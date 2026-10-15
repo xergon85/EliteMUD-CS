@@ -41,6 +41,7 @@ public sealed class WorldPopulation
             throw new InvalidOperationException($"{player.Name} is already in the game");
         }
 
+        RequireRoom(player, roomId);
         _players.Add(player);
         PutInRoom(player, roomId);
     }
@@ -56,6 +57,7 @@ public sealed class WorldPopulation
             throw new InvalidOperationException($"{player.Name} is not in the game");
         }
 
+        RequireRoom(player, roomId);
         if (player.Fighting != null)
         {
             CombatCalculator.StopFighting(player);
@@ -86,13 +88,17 @@ public sealed class WorldPopulation
         TakeFromRoom(player);
     }
 
-    private void PutInRoom(PlayerState player, int roomId)
+    // Checked before anything changes, so a refused enter or move leaves everything as it was
+    private void RequireRoom(PlayerState player, int roomId)
     {
         if (!_world.Rooms.ContainsKey(roomId))
         {
             throw new ArgumentException($"No room {roomId} for {player.Name}", nameof(roomId));
         }
+    }
 
+    private void PutInRoom(PlayerState player, int roomId)
+    {
         if (!_roomPlayers.TryGetValue(roomId, out var players))
         {
             players = new List<PlayerState>();

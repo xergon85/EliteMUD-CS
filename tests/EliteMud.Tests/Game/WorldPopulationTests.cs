@@ -59,7 +59,26 @@ public class WorldPopulationTests
         Population.Enter(player, Temple);
 
         Assert.Throws<InvalidOperationException>(() => Population.Enter(player, Temple));
-        Assert.Throws<ArgumentException>(() => Population.Enter(Player(2, "Lost"), 999));
+
+        var lost = Player(2, "Lost");
+        Assert.Throws<ArgumentException>(() => Population.Enter(lost, 999));
+        Assert.False(Population.IsInGame(lost));
+        Population.Enter(lost, Temple);
+    }
+
+    /// <summary>A move to no room is refused before anything changes: the player stays put, still fighting.</summary>
+    [Fact]
+    public void Moving_IntoNoRoom_LeavesThePlayerWhereTheyWere()
+    {
+        var player = Player(1, "Tester");
+        Population.Enter(player, Temple);
+        player.Fighting = _mob;
+
+        Assert.Throws<ArgumentException>(() => Population.Move(player, 999));
+
+        Assert.Equal(Temple, player.RoomId);
+        Assert.Equal(new[] { player }, Population.PlayersIn(Temple));
+        Assert.Same(_mob, player.Fighting);
     }
 
     [Fact]
