@@ -1,5 +1,7 @@
 using EliteMud.Application.Commands.Gossip;
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Session;
+using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Gossip;
@@ -7,12 +9,14 @@ namespace EliteMud.Server.Adapters.Commands.Gossip;
 [Command("gossip", Aliases = new[] { "gos" })]
 internal sealed class GossipCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly IWorldState _worldState;
+    private readonly ICharacterOutput _output;
     private readonly GossipHandler _gossipHandler;
 
-    public GossipCommandHandler(ConnectionRegistry connectionRegistry)
+    public GossipCommandHandler(IWorldState worldState, ICharacterOutput output)
     {
-        _connectionRegistry = connectionRegistry;
+        _worldState = worldState;
+        _output = output;
         _gossipHandler = new GossipHandler();
     }
 
@@ -39,23 +43,11 @@ internal sealed class GossipCommandHandler : ICommandHandler
         }
 
         // Broadcast to all connected players (global channel)
-        await BroadcastGlobalAsync(context, result.BroadcastMessage, cancellationToken);
+        foreach (var player in _worldState.Population.Players.Where(player => player != context.Player))
+        {
+            _output.SendLine(player, result.BroadcastMessage);
+        }
 
         return CommandOutcome.Continue;
-    }
-
-    private async ValueTask BroadcastGlobalAsync(ConnectionContext sender, string message,
-        CancellationToken cancellationToken)
-    {
-        foreach (var connection in _connectionRegistry.GetConnections())
-        {
-            // Skip the sender - they already got the message
-            if (connection.Id == sender.Id)
-            {
-                continue;
-            }
-
-            await connection.Session.SendLineAsync(message, cancellationToken);
-        }
     }
 }
