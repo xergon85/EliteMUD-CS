@@ -1,27 +1,19 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Who;
+using EliteMud.Application.World;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Who;
 
 [Command("who")]
-internal sealed class WhoCommandHandler : ICommandHandler, IConnectionDirectory
+internal sealed class WhoCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
     private readonly WhoHandler _whoHandler;
 
-    public WhoCommandHandler(ConnectionRegistry connectionRegistry, RulesContent rules)
+    public WhoCommandHandler(IWorldState worldState, RulesContent rules)
     {
-        _connectionRegistry = connectionRegistry;
-        _whoHandler = new WhoHandler(this, rules);
-    }
-    
-    public IReadOnlyList<PlayerState> GetPlayers()
-    {
-        return _connectionRegistry.GetConnections()
-            .Select(connection => connection.Player)
-            .ToList();
+        _whoHandler = new WhoHandler(worldState, rules);
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(

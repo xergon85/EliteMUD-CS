@@ -100,6 +100,10 @@ public sealed class CastDamageTests : IDisposable
 
         var connections = new ConnectionRegistry();
         connections.SetProvider(() => new[] { _caster.Context, _victim.Context, _observer.Context });
+        foreach (var connection in connections.GetConnections())
+        {
+            _world.Population.Enter(connection.Player, connection.Player.RoomId);
+        }
         var progression = new PlayerProgression(experience, rules);
         var stats = new EffectiveStats(rules);
 
@@ -114,13 +118,12 @@ public sealed class CastDamageTests : IDisposable
                 new CombatExperience(progression, experience),
                 _world,
                 Array.Empty<ICombatListener>(),
-                new FleeHandler(_world, _calculator, progression),
-                () => connections.GetConnections().Select(c => c.Player),
+                new FleeHandler(_world, progression),
                 stats),
             new SkillMessageSender(
                 new ActMessageService(),
                 connections,
-                new LookCommandHandler(_world, new MockScriptEngine(), connections, RulesContent.Empty)),
+                new LookCommandHandler(_world, new MockScriptEngine(), RulesContent.Empty)),
             stats);
     }
 

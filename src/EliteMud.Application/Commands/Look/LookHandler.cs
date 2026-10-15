@@ -9,14 +9,16 @@ public sealed class LookHandler
 {
     private readonly RulesContent _rules;
     private readonly IWorldState _worldState;
-    private readonly Func<IEnumerable<PlayerState>>? _getPlayersInRoom;
 
-    public LookHandler(IWorldState worldState, RulesContent rules, Func<IEnumerable<PlayerState>>? getPlayersInRoom = null)
+    public LookHandler(IWorldState worldState, RulesContent rules)
     {
         _worldState = worldState;
         _rules = rules;
-        _getPlayersInRoom = getPlayersInRoom;
     }
+
+    // Everyone else in the player's room, newest first as legacy lists them
+    private IEnumerable<PlayerState> OthersInRoom(PlayerState player) =>
+        _worldState.Population.PlayersIn(player.RoomId).Where(other => other != player);
 
     public RoomView Handle(PlayerState player)
     {
@@ -59,18 +61,12 @@ public sealed class LookHandler
 
         // Get other players in the room (exclude self)
         var playerLines = new List<string>();
-        if (_getPlayersInRoom != null)
+        foreach (var otherPlayer in OthersInRoom(player))
         {
-            var otherPlayers = _getPlayersInRoom()
-                .Where(p => p.RoomId == player.RoomId && p.Name != player.Name);
-
-            foreach (var otherPlayer in otherPlayers)
-            {
-                // Legacy list_char_to_char: "#CName#N title is standing here." (positions other than standing: not yet)
-                var title = PlayerProgression.DisplayTitle(otherPlayer, _rules);
-                var name = string.IsNullOrEmpty(title) ? $"#C{otherPlayer.Name}#N" : $"#C{otherPlayer.Name}#N {title}";
-                playerLines.Add($"{name} is standing here.");
-            }
+            // Legacy list_char_to_char: "#CName#N title is standing here." (positions other than standing: not yet)
+            var title = PlayerProgression.DisplayTitle(otherPlayer, _rules);
+            var name = string.IsNullOrEmpty(title) ? $"#C{otherPlayer.Name}#N" : $"#C{otherPlayer.Name}#N {title}";
+            playerLines.Add($"{name} is standing here.");
         }
 
         return new RoomView(room.Name, room.Description, mobLines, objectLines, playerLines, BuildExitLine(room, player.RoomId));
@@ -87,17 +83,11 @@ public sealed class LookHandler
 
         // Try to find another player in room first
         // Note: Players don't use indexed targeting in legacy (can't do "look 2.player")
-        if (_getPlayersInRoom != null)
+        foreach (var otherPlayer in OthersInRoom(player))
         {
-            var otherPlayers = _getPlayersInRoom()
-                .Where(p => p.RoomId == player.RoomId && p.Name != player.Name);
-
-            foreach (var otherPlayer in otherPlayers)
+            if (MatchesTarget(otherPlayer, target))
             {
-                if (MatchesTarget(otherPlayer, target))
-                {
-                    return FormatPlayerDescription(otherPlayer);
-                }
+                return FormatPlayerDescription(otherPlayer);
             }
         }
 

@@ -19,7 +19,6 @@ public sealed class CombatDamage
         IWorldState worldState,
         IEnumerable<ICombatListener> listeners,
         FleeHandler fleeHandler,
-        Func<IEnumerable<PlayerState>> onlinePlayers,
         EffectiveStats stats)
     {
         var listenerList = listeners.ToList();
@@ -35,8 +34,8 @@ public sealed class CombatDamage
             new LoseHitPoints(combatExperience),
             new UpdatePosition(combatCalculator),
             new PositionMessages(stats),
-            new Wimpy(fleeHandler, worldState, onlinePlayers),
-            new StopFightingBelowStunned(combatCalculator),
+            new Wimpy(fleeHandler, worldState),
+            new StopFightingBelowStunned(),
             new Kill(combatCalculator, combatExperience, listenerList),
             new PlayerDeath(combatExperience, worldState, stats),
             new MobDeath(worldState)

@@ -36,7 +36,7 @@ public sealed class PlayerDeath : IDamageStep
         victim.Mana = (short)_stats.Get(victim, AffectLocation.MaxMana);
         victim.Movement = (short)_stats.Get(victim, AffectLocation.MaxMovement);
         victim.Position = Position.Standing;
-        victim.RoomId = CharacterStart.StartRoom;
+        _worldState.Population.Move(victim, CharacterStart.StartRoom);
         victim.SaveRequested = true;
 
         foreach (var line in penalty.Messages)

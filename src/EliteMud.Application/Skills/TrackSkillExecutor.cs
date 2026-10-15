@@ -137,7 +137,7 @@ public sealed class TrackSkillExecutor : ISkillExecutor
     {
         // Search for player targets first (case-insensitive partial match)
         // Note: We don't have access to ConnectionRegistry here, so we'll search mobs only
-        // In the future, could inject IConnectionDirectory to search players too
+        // In the future, could search WorldPopulation for players too
 
         // Search all rooms for mobs matching the name
         foreach (var (roomId, room) in _worldState.World.Rooms)

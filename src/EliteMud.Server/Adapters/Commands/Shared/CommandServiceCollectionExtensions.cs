@@ -39,10 +39,6 @@ internal static class CommandServiceCollectionExtensions
 
             // Auto-discover all command handlers with [Command] attribute
             .AddCommandHandlersViaReflection()
-            
-            // Special interface registration
-            .AddSingleton<IConnectionDirectory>(provider =>
-                provider.GetRequiredService<WhoCommandHandler>())
 
             // Command routing
             .AddSingleton<CommandRouter>(provider =>

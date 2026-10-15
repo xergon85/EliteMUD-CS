@@ -129,8 +129,9 @@ public class PortalCommandTests : IDisposable
         var context = new ConnectionContext(1, new TelnetSession(stream), player, characterId: 1, accountName: "test");
         var connectionRegistry = new ConnectionRegistry();
         connectionRegistry.SetProvider(() => new[] { context });
+        worldState.Population.Enter(player, player.RoomId);
 
-        var lookHandler = new LookCommandHandler(worldState, new MockScriptEngine(), connectionRegistry, RulesContent.Empty);
+        var lookHandler = new LookCommandHandler(worldState, new MockScriptEngine(), RulesContent.Empty);
 
         return new TestEnvironment(
             new EnterCommandHandler(worldState, lookHandler, connectionRegistry),

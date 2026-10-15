@@ -14,13 +14,11 @@ public sealed class Wimpy : IDamageStep
 {
     private readonly FleeHandler _fleeHandler;
     private readonly IWorldState _worldState;
-    private readonly Func<IEnumerable<PlayerState>> _onlinePlayers;
 
-    public Wimpy(FleeHandler fleeHandler, IWorldState worldState, Func<IEnumerable<PlayerState>> onlinePlayers)
+    public Wimpy(FleeHandler fleeHandler, IWorldState worldState)
     {
         _fleeHandler = fleeHandler;
         _worldState = worldState;
-        _onlinePlayers = onlinePlayers;
     }
 
     public void Apply(DamageContext context)
@@ -37,8 +35,7 @@ public sealed class Wimpy : IDamageStep
         messages.Add(new SkillMessage(SkillMessageTarget.Victim, "You wimp out, and attempt to flee!", victim));
 
         var roomId = victim.RoomId;
-        var result = _fleeHandler.AttemptFlee(
-            victim, roomId, _onlinePlayers, () => _worldState.GetMobsInRoom(roomId));
+        var result = _fleeHandler.AttemptFlee(victim, roomId, () => _worldState.GetMobsInRoom(roomId));
         if (!result.Success)
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Victim, "PANIC!  You couldn't escape!", victim));
@@ -49,7 +46,7 @@ public sealed class Wimpy : IDamageStep
         messages.Add(new SkillMessage(SkillMessageTarget.Actor, "$N panics, and attempts to flee.", victim));
         messages.Add(new SkillMessage(SkillMessageTarget.Others, "$N panics, and attempts to flee.", victim));
 
-        foreach (var line in _fleeHandler.ApplyFleeResult(victim, result, _onlinePlayers))
+        foreach (var line in _fleeHandler.ApplyFleeResult(victim, result))
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Victim, line, victim));
         }

@@ -75,6 +75,8 @@ public class DamageStepTests
             Experience = 5000,
             Position = Position.Standing
         };
+        _world.Population.Enter(_player, Room);
+        _world.Population.Enter(_victim, Room);
     }
 
     [Fact]
@@ -85,8 +87,7 @@ public class DamageStepTests
             _experience,
             _world,
             Array.Empty<ICombatListener>(),
-            new FleeHandler(_world, _calculator, _progression),
-            () => new[] { _player, _victim },
+            new FleeHandler(_world, _progression),
             Stats);
 
         Assert.Equal(
@@ -300,7 +301,7 @@ public class DamageStepTests
         _calculator.SetFighting(_victim, _player);
         _victim.Position = Position.Incapacitated;
 
-        new StopFightingBelowStunned(_calculator).Apply(Hit(_player, _victim, 10));
+        new StopFightingBelowStunned().Apply(Hit(_player, _victim, 10));
 
         Assert.Null(_victim.Fighting);
         Assert.Same(_victim, _player.Fighting);
@@ -312,7 +313,7 @@ public class DamageStepTests
         _calculator.SetFighting(_victim, _player);
         _victim.Position = Position.Stunned;
 
-        new StopFightingBelowStunned(_calculator).Apply(Hit(_player, _victim, 10));
+        new StopFightingBelowStunned().Apply(Hit(_player, _victim, 10));
 
         Assert.Same(_player, _victim.Fighting);
     }
@@ -347,7 +348,7 @@ public class DamageStepTests
     [Fact]
     public void Wimpy_WithNoWayOut_Panics()
     {
-        _victim.RoomId = Temple; // no exits
+        _world.Population.Move(_victim, Temple); // no exits
         _victim.WimpyLevel = 20;
         _victim.HitPoints = 19;
 
@@ -481,7 +482,7 @@ public class DamageStepTests
     }
 
     private Wimpy Wimpy() =>
-        new(new FleeHandler(_world, _calculator, _progression), _world, () => new[] { _player, _victim });
+        new(new FleeHandler(_world, _progression), _world);
 
     private Kill Kill(ICombatListener listener) => new(_calculator, _experience, new[] { listener });
 

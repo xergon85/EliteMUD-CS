@@ -22,6 +22,7 @@ public sealed class SkillMessageSenderTests : IDisposable
     private readonly TestConnection _observer;
     private readonly TestConnection _elsewhere;
     private readonly SkillMessageSender _sender;
+    private readonly WorldState _world;
 
     public SkillMessageSenderTests()
     {
@@ -30,7 +31,7 @@ public sealed class SkillMessageSenderTests : IDisposable
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
             new List<string>(), new List<string>(), 10, 10, 0, new List<MobAttack>(), null);
         _mob = new MobInstance(1, mobDefinition);
-        var world = new WorldState(
+        _world = new WorldState(
             new WorldDefinition(new Dictionary<int, RoomDefinition>
             {
                 [Arena] = new(Arena, "Arena", "Sand.", new List<ExitDefinition>()),
@@ -48,10 +49,14 @@ public sealed class SkillMessageSenderTests : IDisposable
 
         var connections = new ConnectionRegistry();
         connections.SetProvider(() => new[] { _victim.Context, _observer.Context, _elsewhere.Context });
+        foreach (var player in new[] { _victim, _observer, _elsewhere }.Select(connection => connection.Context.Player))
+        {
+            _world.Population.Enter(player, player.RoomId);
+        }
         _sender = new SkillMessageSender(
             new ActMessageService(),
             connections,
-            new LookCommandHandler(world, new MockScriptEngine(), connections, RulesContent.Empty));
+            new LookCommandHandler(_world, new MockScriptEngine(), RulesContent.Empty));
     }
 
     public void Dispose()
@@ -84,7 +89,7 @@ public sealed class SkillMessageSenderTests : IDisposable
     [Fact]
     public async Task VictimLooks_ShowsTheVictimTheRoomTheyAreInNow()
     {
-        Victim.RoomId = Alley; // fled
+        _world.Population.Move(Victim, Alley); // fled
 
         await _sender.SendAsync(
             new[] { new SkillMessage(SkillMessageTarget.VictimLooks, string.Empty, Victim) },

@@ -1,5 +1,6 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Progression;
+using EliteMud.Application.World;
 using EliteMud.Game;
 using System.Text;
 
@@ -17,18 +18,18 @@ namespace EliteMud.Application.Commands.Who;
 /// </summary>
 public sealed class WhoHandler
 {
-    private readonly IConnectionDirectory _connections;
+    private readonly IWorldState _worldState;
     private readonly RulesContent _rules;
 
-    public WhoHandler(IConnectionDirectory connections, RulesContent rules)
+    public WhoHandler(IWorldState worldState, RulesContent rules)
     {
-        _connections = connections;
+        _worldState = worldState;
         _rules = rules;
     }
 
     public CommandResult Handle()
     {
-        var players = _connections.GetPlayers();
+        var players = _worldState.Population.Players;
         var output = new StringBuilder();
 
         // Header - red "Players" with separator

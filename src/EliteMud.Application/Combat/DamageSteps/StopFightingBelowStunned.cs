@@ -8,18 +8,11 @@ namespace EliteMud.Application.Combat.DamageSteps;
 /// </summary>
 public sealed class StopFightingBelowStunned : IDamageStep
 {
-    private readonly CombatCalculator _combatCalculator;
-
-    public StopFightingBelowStunned(CombatCalculator combatCalculator)
-    {
-        _combatCalculator = combatCalculator;
-    }
-
     public void Apply(DamageContext context)
     {
         if (context.Victim.Position < Position.Stunned && context.Victim.Fighting != null)
         {
-            _combatCalculator.StopFighting(context.Victim);
+            CombatCalculator.StopFighting(context.Victim);
         }
     }
 }
