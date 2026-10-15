@@ -163,6 +163,20 @@ public class MobAiServiceTests
         Assert.Null(mob.Fighting);
     }
 
+    [Fact]
+    public void Aggressive_IgnoresPlayersInOtherRooms()
+    {
+        var (service, worldState) = CreateTestEnvironment();
+        var mob = CreateMob(1, "wolf", flags: new[] { "AGGRESSIVE" });
+        var player = CreatePlayer(1, roomId: 101);
+        AddMobToWorld(worldState, mob, 100);
+        EnterGame(worldState, player);
+
+        service.ProcessMobTick(mob, 100, worldState);
+
+        Assert.Null(mob.Fighting);
+    }
+
     // ===== Memory Behavior Tests =====
 
     [Fact]
@@ -217,6 +231,21 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should NOT attack unremembered player
+        Assert.Null(mob.Fighting);
+    }
+
+    [Fact]
+    public void Memory_RememberingSomeoneElse_LeavesThePlayerHereAlone()
+    {
+        var (service, worldState) = CreateTestEnvironment();
+        var mob = CreateMob(1, "wolf", flags: new[] { "MEMORY" });
+        var player = CreatePlayer(1, roomId: 100);
+        mob.RememberPlayer(2); // someone not in the game
+        AddMobToWorld(worldState, mob, 100);
+        EnterGame(worldState, player);
+
+        service.ProcessMobTick(mob, 100, worldState);
+
         Assert.Null(mob.Fighting);
     }
 
