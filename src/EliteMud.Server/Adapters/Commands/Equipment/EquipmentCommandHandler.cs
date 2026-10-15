@@ -1,6 +1,5 @@
 using EliteMud.Application.Commands.Equipment;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Equipment;
@@ -10,9 +9,9 @@ internal sealed class EquipmentCommandHandler : ICommandHandler
 {
     private readonly EquipmentHandler _equipmentHandler;
 
-    public EquipmentCommandHandler(IWorldState worldState)
+    public EquipmentCommandHandler()
     {
-        _equipmentHandler = new EquipmentHandler(worldState);
+        _equipmentHandler = new EquipmentHandler();
     }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,

@@ -8,16 +8,9 @@ public sealed record InventoryResult(IReadOnlyList<string> Items);
 
 public sealed class InventoryHandler
 {
-    private readonly IWorldState _worldState;
-
-    public InventoryHandler(IWorldState worldState)
-    {
-        _worldState = worldState;
-    }
-
     public InventoryResult Handle(PlayerState player)
     {
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         
         if (inventory.Count == 0)
         {

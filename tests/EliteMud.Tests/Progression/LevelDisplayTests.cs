@@ -44,7 +44,7 @@ public class LevelDisplayTests
         var player = Warrior();
         player.Experience = 100;
 
-        var score = new ScoreHandler(Rules).Handle(player, new EffectiveStats(World, Rules)).Message;
+        var score = new ScoreHandler(Rules).Handle(player, new EffectiveStats(Rules)).Message;
 
         Assert.Contains("You need #R2566#N exp to reach your next level.", score); // 2666 - 100
         Assert.Contains("the #wHuman#N Swordpupil", score); // no stored title yet: the class title
@@ -55,7 +55,7 @@ public class LevelDisplayTests
     [InlineData(110, false)]
     public void Score_ShowsXpToNextLevelForMortalsOnly(int level, bool shown)
     {
-        var score = new ScoreHandler(Rules).Handle(Warrior(level), new EffectiveStats(World, Rules)).Message;
+        var score = new ScoreHandler(Rules).Handle(Warrior(level), new EffectiveStats(Rules)).Message;
 
         Assert.Equal(shown, score.Contains("to reach your next level"));
     }

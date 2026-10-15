@@ -54,7 +54,7 @@ public sealed class CharacterSaveQueueTests : IDisposable
             new Dictionary<int, List<MobInstance>>(),
             new Dictionary<int, List<ObjectInstance>>(),
             new List<ZoneDefinition>());
-        _queue = new CharacterSaveQueue(_services, world, _gate);
+        _queue = new CharacterSaveQueue(_services, _gate);
     }
 
     public void Dispose()

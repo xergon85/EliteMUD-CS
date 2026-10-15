@@ -101,7 +101,7 @@ public sealed class CastDamageTests : IDisposable
         var connections = new ConnectionRegistry();
         connections.SetProvider(() => new[] { _caster.Context, _victim.Context, _observer.Context });
         var progression = new PlayerProgression(experience, rules);
-        var stats = new EffectiveStats(_world, rules);
+        var stats = new EffectiveStats(rules);
 
         _cast = new CastCommandHandler(
             new SpellRegistry(spellMetadata, formulas),

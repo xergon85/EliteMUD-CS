@@ -228,7 +228,7 @@ public static class CharacterMapper
                         var objectInstance = LoadInventoryItemRecursive(itemDto, worldState);
                         if (objectInstance != null)
                         {
-                            player.AddToInventory(objectInstance.InstanceId);
+                            player.AddToInventory(objectInstance);
                         }
                     }
                 }
@@ -272,8 +272,7 @@ public static class CharacterMapper
                 
                 if (objectInstance != null)
                 {
-                    var slotId = (int)slotEnum;
-                    player.EquipToSlot(slotId, objectInstance.InstanceId);
+                    player.Equip(objectInstance, slotEnum);
                 }
             }
         }
@@ -287,8 +286,7 @@ public static class CharacterMapper
     /// </summary>
     /// <param name="character">The character entity to update</param>
     /// <param name="playerState">The current player state</param>
-    /// <param name="worldState">The world state to resolve object instances</param>
-    public static void UpdateCharacterFromPlayerState(Character character, PlayerState playerState, IWorldState worldState)
+    public static void UpdateCharacterFromPlayerState(Character character, PlayerState playerState)
     {
         ArgumentNullException.ThrowIfNull(character);
         ArgumentNullException.ThrowIfNull(playerState);
@@ -429,13 +427,9 @@ public static class CharacterMapper
 
         // Update inventory - serialize to JSON
         var inventoryItems = new List<InventoryItemDto>();
-        foreach (var objectInstanceId in playerState.InventoryObjectIds)
+        foreach (var objectInstance in playerState.Inventory)
         {
-            var objectInstance = worldState.GetObjectInstance(objectInstanceId);
-            if (objectInstance != null)
-            {
-                inventoryItems.Add(SaveInventoryItemRecursive(objectInstance));
-            }
+            inventoryItems.Add(SaveInventoryItemRecursive(objectInstance));
         }
         character.InventoryJson = inventoryItems.Count > 0 
             ? JsonSerializer.Serialize(inventoryItems) 
@@ -444,25 +438,19 @@ public static class CharacterMapper
         // Update equipment
         // Clear existing equipment and rebuild from current state
         character.Equipment.Clear();
-        foreach (var (slotId, objectInstanceId) in playerState.EquipmentSlotToObjectId)
+        foreach (var (slot, objectInstance) in playerState.Equipment)
         {
-            var objectInstance = worldState.GetObjectInstance(objectInstanceId);
-            if (objectInstance != null)
+            // Serialize item data (including container contents and state)
+            var itemDto = SaveInventoryItemRecursive(objectInstance);
+            var itemData = JsonSerializer.Serialize(itemDto);
+            
+            character.Equipment.Add(new CharacterEquipmentItem
             {
-                var slotEnum = (EquipmentSlot)slotId;
-                
-                // Serialize item data (including container contents and state)
-                var itemDto = SaveInventoryItemRecursive(objectInstance);
-                var itemData = JsonSerializer.Serialize(itemDto);
-                
-                character.Equipment.Add(new CharacterEquipmentItem
-                {
-                    CharacterId = character.CharacterId,
-                    Slot = slotEnum.ToString(),
-                    ObjectDefinitionId = objectInstance.Definition.Id,
-                    ItemData = itemData
-                });
-            }
+                CharacterId = character.CharacterId,
+                Slot = slot.ToString(),
+                ObjectDefinitionId = objectInstance.Definition.Id,
+                ItemData = itemData
+            });
         }
     }
 

@@ -22,7 +22,7 @@ public sealed class WieldHandler
             return new WieldResult(false, "Wield what?");
         }
 
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
 
         // Find matching object in inventory using indexed targeting (e.g., "2.sword")
         // Legacy: handler.c:1020-1040 (get_obj_in_list with get_number)
@@ -48,7 +48,7 @@ public sealed class WieldHandler
 
         // Check if slot is already occupied
         // Legacy: act.obj2.c:680-683 shows "You're already wielding $p."
-        var equipment = _worldState.GetPlayerEquipment(player);
+        var equipment = player.Equipment;
         if (equipment.TryGetValue(slot, out var alreadyEquipped))
         {
             return new WieldResult(false, string.Empty, AlreadyEquipped: alreadyEquipped.Definition);

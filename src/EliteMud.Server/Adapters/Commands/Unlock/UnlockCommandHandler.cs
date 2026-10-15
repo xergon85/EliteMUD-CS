@@ -167,7 +167,7 @@ internal sealed class UnlockCommandHandler : ICommandHandler
     {
         if (keyId < 0) return false;
         
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         return inventory.Any(obj => obj.Definition.Id == keyId);
     }
 
@@ -182,7 +182,7 @@ internal sealed class UnlockCommandHandler : ICommandHandler
             return null; // Invalid format
 
         // Check inventory first
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         var inventoryMatch = TargetParser.FindNthMatch(inventory, name, index);
         if (inventoryMatch != null)
             return inventoryMatch;

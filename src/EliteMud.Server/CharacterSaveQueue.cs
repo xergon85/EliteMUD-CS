@@ -1,6 +1,5 @@
 using System.Threading.Channels;
 using EliteMud.Application.Session;
-using EliteMud.Application.World;
 using EliteMud.Data;
 using EliteMud.Game;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,16 +14,14 @@ internal sealed class CharacterSaveQueue : IDisposable
 {
     private readonly Channel<SaveRequest> _channel;
     private readonly IServiceProvider _serviceProvider;
-    private readonly IWorldState _worldState;
     private readonly Task _processingTask;
     private readonly CancellationTokenSource _cts;
     private readonly GameStateGate _gate;
 
-    public CharacterSaveQueue(IServiceProvider serviceProvider, IWorldState worldState, GameStateGate gate)
+    public CharacterSaveQueue(IServiceProvider serviceProvider, GameStateGate gate)
     {
         _gate = gate;
         _serviceProvider = serviceProvider;
-        _worldState = worldState;
         _channel = Channel.CreateUnbounded<SaveRequest>(new UnboundedChannelOptions
         {
             SingleReader = true,
@@ -89,7 +86,7 @@ internal sealed class CharacterSaveQueue : IDisposable
                         using (await _gate.EnterAsync(cancellationToken))
                         {
                             saveStart = DateTime.UtcNow;
-                            CharacterMapper.UpdateCharacterFromPlayerState(character, request.PlayerState, _worldState);
+                            CharacterMapper.UpdateCharacterFromPlayerState(character, request.PlayerState);
                         }
 
                         await repository.UpdateAsync(character, cancellationToken);

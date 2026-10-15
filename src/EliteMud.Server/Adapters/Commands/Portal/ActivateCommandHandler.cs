@@ -79,6 +79,6 @@ internal sealed class ActivateCommandHandler : ICommandHandler
         }
 
         return portal.HasKey
-            && _worldState.GetPlayerInventory(player).Any(item => item.Definition.Id == portal.KeyObjectId);
+            && player.Inventory.Any(item => item.Definition.Id == portal.KeyObjectId);
     }
 }

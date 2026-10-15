@@ -22,7 +22,7 @@ public sealed class DropHandler
             return new DropResult(false, "Drop what?");
         }
 
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
 
         // Handle "drop all" - drop all items from inventory
         if (target.Equals("all", StringComparison.OrdinalIgnoreCase))

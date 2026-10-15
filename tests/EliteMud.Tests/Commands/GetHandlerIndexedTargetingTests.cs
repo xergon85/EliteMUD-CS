@@ -26,7 +26,7 @@ public class GetHandlerIndexedTargetingTests
         Assert.True(result.Success);
         Assert.NotNull(result.Object);
         Assert.Equal("sword", result.Object.Name);
-        Assert.Contains(100, player.InventoryObjectIds);
+        Assert.Contains(100, player.Inventory.Select(item => item.InstanceId));
     }
 
     [Fact]
@@ -51,7 +51,7 @@ public class GetHandlerIndexedTargetingTests
         Assert.True(result.Success);
         Assert.NotNull(result.Object);
         Assert.Equal("sword", result.Object.Name);
-        Assert.Contains(101, player.InventoryObjectIds);
+        Assert.Contains(101, player.Inventory.Select(item => item.InstanceId));
         Assert.Single(corpse1.Contents); // First corpse still has its item
         Assert.Empty(corpse2.Contents);  // Second corpse is now empty
     }
@@ -77,7 +77,7 @@ public class GetHandlerIndexedTargetingTests
         Assert.True(result.Success);
         Assert.NotNull(result.Object);
         Assert.Equal("helmet", result.Object.Name);
-        Assert.Contains(100, player.InventoryObjectIds);
+        Assert.Contains(100, player.Inventory.Select(item => item.InstanceId));
     }
 
     [Fact]
@@ -101,8 +101,8 @@ public class GetHandlerIndexedTargetingTests
         // Assert
         Assert.True(result.Success);
         Assert.Contains("2 items", result.Message);
-        Assert.Contains(100, player.InventoryObjectIds);
-        Assert.Contains(101, player.InventoryObjectIds);
+        Assert.Contains(100, player.Inventory.Select(item => item.InstanceId));
+        Assert.Contains(101, player.Inventory.Select(item => item.InstanceId));
         Assert.Empty(corpse2.Contents);
     }
 

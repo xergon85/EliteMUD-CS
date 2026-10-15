@@ -157,7 +157,7 @@ internal sealed class LookCommandHandler : ICommandHandler
             return null; // Invalid format (e.g., "abc.corpse")
         
         // Check inventory first
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         var inventoryMatch = TargetParser.FindNthMatch(inventory, name, index);
         if (inventoryMatch != null)
             return inventoryMatch;
@@ -170,7 +170,7 @@ internal sealed class LookCommandHandler : ICommandHandler
 
     private bool IsInInventory(PlayerState player, ObjectInstance obj)
     {
-        return player.InventoryObjectIds.Contains(obj.InstanceId);
+        return player.Inventory.Contains(obj);
     }
 
     private static bool MatchesTarget(ObjectDefinition obj, string target)

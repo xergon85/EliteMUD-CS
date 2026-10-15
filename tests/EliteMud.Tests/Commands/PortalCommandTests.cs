@@ -61,7 +61,7 @@ public class PortalCommandTests : IDisposable
         await env.Activate.HandleAsync(new CommandRequest("activate", "entrance", null), env.Context, CancellationToken.None);
 
         Assert.False(env.Portal.IsClosed);
-        Assert.Contains(env.WorldState.GetPlayerInventory(env.Context.Player), item => item.Definition.Id == TicketId);
+        Assert.Contains(env.Context.Player.Inventory, item => item.Definition.Id == TicketId);
     }
 
     [Fact]

@@ -22,7 +22,7 @@ public sealed class RemoveHandler
             return new RemoveResult(false, "Remove what?");
         }
 
-        var equipment = _worldState.GetPlayerEquipment(player);
+        var equipment = player.Equipment;
 
         // Handle "remove all" - remove all equipped items
         if (target.Equals("all", StringComparison.OrdinalIgnoreCase))

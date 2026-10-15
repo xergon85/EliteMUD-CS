@@ -12,14 +12,12 @@ namespace EliteMud.Application.Combat;
 public sealed class MeleeRoll
 {
     private readonly CombatCalculator _calculator;
-    private readonly IWorldState _worldState;
     private readonly EffectiveStats _stats;
 
-    public MeleeRoll(CombatCalculator calculator, IWorldState worldState, EffectiveStats stats)
+    public MeleeRoll(CombatCalculator calculator, EffectiveStats stats)
     {
         _stats = stats;
         _calculator = calculator;
-        _worldState = worldState;
     }
 
     /// <summary>
@@ -123,25 +121,18 @@ public sealed class MeleeRoll
     /// The weapon an attack swings (legacy hit(), fight.c:1244): for the dual-wield attack the held item if it's a
     /// weapon, otherwise the wielded one, in one hand or both. Null bare-handed, or when the item isn't a weapon.
     /// </summary>
-    private ObjectInstance? Weapon(ICombatant attacker, bool offHand)
+    private static ObjectInstance? Weapon(ICombatant attacker, bool offHand)
     {
-        if (offHand && Equipped(attacker, EquipmentSlot.Hold) is { } held && IsWeapon(held))
+        if (offHand && attacker.Equipment.GetValueOrDefault(EquipmentSlot.Hold) is { } held && IsWeapon(held))
         {
             return held;
         }
 
-        var wielded = Equipped(attacker, EquipmentSlot.Wield) ?? Equipped(attacker, EquipmentSlot.BothHands);
+        var wielded = attacker.Equipment.GetValueOrDefault(EquipmentSlot.Wield)
+                      ?? attacker.Equipment.GetValueOrDefault(EquipmentSlot.BothHands);
         return wielded != null && IsWeapon(wielded) ? wielded : null;
     }
 
     /// <summary>Legacy ITEM_WEAPON or ITEM_FIREWEAPON.</summary>
     private static bool IsWeapon(ObjectInstance item) => item.Definition.Type is "Weapon" or "FireWeapon";
-
-    private ObjectInstance? Equipped(ICombatant combatant, EquipmentSlot slot) => combatant switch
-    {
-        PlayerState player when player.EquipmentSlotToObjectId.TryGetValue((int)slot, out var id) =>
-            _worldState.GetObjectInstance(id),
-        MobInstance mob when mob.Equipment.TryGetValue(slot, out var item) => item,
-        _ => null
-    };
 }

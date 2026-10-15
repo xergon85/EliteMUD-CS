@@ -158,7 +158,7 @@ internal sealed class CloseCommandHandler : ICommandHandler
             return null; // Invalid format
 
         // Check inventory first
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         var inventoryMatch = TargetParser.FindNthMatch(inventory, name, index);
         if (inventoryMatch != null)
             return inventoryMatch;

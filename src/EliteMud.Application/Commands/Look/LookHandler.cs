@@ -96,14 +96,14 @@ public sealed class LookHandler
             {
                 if (MatchesTarget(otherPlayer, target))
                 {
-                    return FormatPlayerDescription(otherPlayer, _worldState);
+                    return FormatPlayerDescription(otherPlayer);
                 }
             }
         }
 
         // Try to find object in inventory first (you can examine what you're carrying)
         // Legacy: generic_find() checks inventory before room
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         var inventoryObj = TargetParser.FindObject(inventory, target);
         if (inventoryObj != null)
         {
@@ -203,7 +203,7 @@ public sealed class LookHandler
         return CommandResult.Ok(result);
     }
 
-    private CommandResult FormatPlayerDescription(PlayerState player, IWorldState worldState)
+    private CommandResult FormatPlayerDescription(PlayerState player)
     {
         var result = new System.Text.StringBuilder();
 
@@ -226,25 +226,20 @@ public sealed class LookHandler
         result.Append(healthCondition);
 
         // Show equipped items if any
-        if (player.EquipmentSlotToObjectId.Count > 0)
+        if (player.Equipment.Count > 0)
         {
             result.AppendLine();
             result.AppendLine();
             result.Append(player.Name);
             result.Append(" is using:");
 
-            foreach (var (slotId, objectInstanceId) in player.EquipmentSlotToObjectId.OrderBy(x => x.Key))
+            foreach (var (slot, obj) in player.Equipment.OrderBy(x => x.Key))
             {
-                var obj = worldState.GetObjectInstance(objectInstanceId);
-                if (obj != null)
-                {
-                    var slot = (EquipmentSlot)slotId;
-                    result.AppendLine();
-                    result.Append("  <");
-                    result.Append(FormatSlot(slot));
-                    result.Append("> ");
-                    result.Append(obj.Definition.ShortDescription);
-                }
+                result.AppendLine();
+                result.Append("  <");
+                result.Append(FormatSlot(slot));
+                result.Append("> ");
+                result.Append(obj.Definition.ShortDescription);
             }
         }
 

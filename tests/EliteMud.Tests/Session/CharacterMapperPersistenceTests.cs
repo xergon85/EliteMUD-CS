@@ -101,15 +101,15 @@ public class CharacterMapperPersistenceTests : IDisposable
         var wheat3 = _worldState.CreateObjectInstance(2)!; // wheat
 
         // Add bag to player inventory
-        player.AddToInventory(bag.InstanceId);
+        player.AddToInventory(bag);
         
-        // Put wheat items in bag (items in containers are NOT in player's InventoryObjectIds)
+        // Put wheat items in bag (items in containers are NOT in player's Inventory)
         bag.AddItem(wheat1);
         bag.AddItem(wheat2);
         bag.AddItem(wheat3);
 
         // Act - Save
-        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player);
         _dbContext.SaveChanges();
 
         // Verify database state - JSON should have 1 bag with 3 wheats inside
@@ -128,8 +128,8 @@ public class CharacterMapperPersistenceTests : IDisposable
         var loadedPlayer = CharacterMapper.ToPlayerState(character, 2, _worldState);
 
         // Assert - Check player has bag in inventory
-        Assert.Single(loadedPlayer.InventoryObjectIds);
-        var loadedBag = _worldState.GetObjectInstance(loadedPlayer.InventoryObjectIds.First());
+        Assert.Single(loadedPlayer.Inventory);
+        var loadedBag = loadedPlayer.Inventory.First();
         Assert.NotNull(loadedBag);
         Assert.Equal("bag", loadedBag.Definition.Name);
 
@@ -159,12 +159,12 @@ public class CharacterMapperPersistenceTests : IDisposable
         var sword = _worldState.CreateObjectInstance(3)!; // sword
 
         // Build hierarchy (only outerBag is in player inventory)
-        player.AddToInventory(outerBag.InstanceId);
+        player.AddToInventory(outerBag);
         outerBag.AddItem(innerBag);
         innerBag.AddItem(sword);
 
         // Act - Save
-        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player);
         _dbContext.SaveChanges();
 
         // Verify database hierarchy - JSON should have outerBag containing innerBag containing sword
@@ -182,8 +182,8 @@ public class CharacterMapperPersistenceTests : IDisposable
         var loadedPlayer = CharacterMapper.ToPlayerState(character, 2, _worldState);
 
         // Assert - Check structure
-        Assert.Single(loadedPlayer.InventoryObjectIds);
-        var loadedOuterBag = _worldState.GetObjectInstance(loadedPlayer.InventoryObjectIds.First());
+        Assert.Single(loadedPlayer.Inventory);
+        var loadedOuterBag = loadedPlayer.Inventory.First();
         Assert.NotNull(loadedOuterBag);
         Assert.Single(loadedOuterBag.Contents);
         
@@ -219,11 +219,11 @@ public class CharacterMapperPersistenceTests : IDisposable
         chest.IsLocked = true;
 
         // Add chest to player, sword goes in chest (not in player inventory)
-        player.AddToInventory(chest.InstanceId);
+        player.AddToInventory(chest);
         chest.AddItem(sword);
 
         // Act - Save
-        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player);
         _dbContext.SaveChanges();
 
         // Verify database has state - JSON should contain chest with IsClosed and IsLocked
@@ -243,7 +243,7 @@ public class CharacterMapperPersistenceTests : IDisposable
         var loadedPlayer = CharacterMapper.ToPlayerState(character, 2, _worldState);
 
         // Assert - Check state is restored
-        var loadedChest = _worldState.GetObjectInstance(loadedPlayer.InventoryObjectIds.First());
+        var loadedChest = loadedPlayer.Inventory.First();
         Assert.NotNull(loadedChest);
         Assert.True(loadedChest.IsClosed);
         Assert.True(loadedChest.IsLocked);
@@ -267,10 +267,10 @@ public class CharacterMapperPersistenceTests : IDisposable
         
         // Create empty bag
         var bag = _worldState.CreateObjectInstance(1)!; // bag
-        player.AddToInventory(bag.InstanceId);
+        player.AddToInventory(bag);
 
         // Act - Save
-        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player);
         _dbContext.SaveChanges();
 
         // Verify database has only the bag - JSON should contain empty bag
@@ -287,8 +287,8 @@ public class CharacterMapperPersistenceTests : IDisposable
         var loadedPlayer = CharacterMapper.ToPlayerState(character, 2, _worldState);
 
         // Assert - Check bag is still there and empty
-        Assert.Single(loadedPlayer.InventoryObjectIds);
-        var loadedBag = _worldState.GetObjectInstance(loadedPlayer.InventoryObjectIds.First());
+        Assert.Single(loadedPlayer.Inventory);
+        var loadedBag = loadedPlayer.Inventory.First();
         Assert.NotNull(loadedBag);
         Assert.Empty(loadedBag.Contents);
     }
@@ -315,13 +315,13 @@ public class CharacterMapperPersistenceTests : IDisposable
         var sword = _worldState.CreateObjectInstance(3)!; // sword
 
         // bag1 contains wheat, bag2 contains sword (only bags in player inventory)
-        player.AddToInventory(bag1.InstanceId);
-        player.AddToInventory(bag2.InstanceId);
+        player.AddToInventory(bag1);
+        player.AddToInventory(bag2);
         bag1.AddItem(wheat);
         bag2.AddItem(sword);
 
         // Act - Save
-        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player);
         _dbContext.SaveChanges();
 
         // Verify database structure - JSON should have 2 bags at top level, each with 1 item
@@ -343,9 +343,8 @@ public class CharacterMapperPersistenceTests : IDisposable
         var loadedPlayer = CharacterMapper.ToPlayerState(character, 2, _worldState);
 
         // Assert - Check both bags and contents
-        Assert.Equal(2, loadedPlayer.InventoryObjectIds.Count);
-        var bags = loadedPlayer.InventoryObjectIds
-            .Select(id => _worldState.GetObjectInstance(id))
+        Assert.Equal(2, loadedPlayer.Inventory.Count);
+        var bags = loadedPlayer.Inventory
             .Where(obj => obj?.Definition.Type == "container")
             .ToList();
         Assert.Equal(2, bags.Count);
@@ -378,15 +377,15 @@ public class CharacterMapperPersistenceTests : IDisposable
         var chest = _worldState.CreateObjectInstance(4)!; // chest
         chest.IsClosed = true;
         chest.IsLocked = false;
-        player.AddToInventory(chest.InstanceId);
+        player.AddToInventory(chest);
 
         // Save initial state
-        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player);
         _dbContext.SaveChanges();
 
         // Load and verify initial state
         var loadedPlayer1 = CharacterMapper.ToPlayerState(character, 2, _worldState);
-        var loadedChest1 = _worldState.GetObjectInstance(loadedPlayer1.InventoryObjectIds.First());
+        var loadedChest1 = loadedPlayer1.Inventory.First();
         Assert.True(loadedChest1!.IsClosed);
         Assert.False(loadedChest1.IsLocked);
 
@@ -395,12 +394,12 @@ public class CharacterMapperPersistenceTests : IDisposable
         loadedChest1.IsLocked = true;
 
         // Save modified state
-        CharacterMapper.UpdateCharacterFromPlayerState(character, loadedPlayer1, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, loadedPlayer1);
         _dbContext.SaveChanges();
 
         // Load again and verify modified state
         var loadedPlayer2 = CharacterMapper.ToPlayerState(character, 3, _worldState);
-        var loadedChest2 = _worldState.GetObjectInstance(loadedPlayer2.InventoryObjectIds.First());
+        var loadedChest2 = loadedPlayer2.Inventory.First();
         Assert.False(loadedChest2!.IsClosed);
         Assert.True(loadedChest2.IsLocked);
     }
@@ -426,13 +425,13 @@ public class CharacterMapperPersistenceTests : IDisposable
         var wheat2 = _worldState.CreateObjectInstance(2)!; // wheat
         var wheat3 = _worldState.CreateObjectInstance(2)!; // wheat (newest)
 
-        player.AddToInventory(bag.InstanceId);
+        player.AddToInventory(bag);
         bag.AddItem(wheat1);
         bag.AddItem(wheat2);
         bag.AddItem(wheat3);
 
         // Act - Save
-        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player);
         _dbContext.SaveChanges();
 
         // Verify sequence order in database - JSON array order should be preserved
@@ -450,7 +449,7 @@ public class CharacterMapperPersistenceTests : IDisposable
         var loadedPlayer = CharacterMapper.ToPlayerState(character, 2, _worldState);
 
         // Assert - Items loaded in correct order (preserved by SequenceOrder)
-        var loadedBag = _worldState.GetObjectInstance(loadedPlayer.InventoryObjectIds.First());
+        var loadedBag = loadedPlayer.Inventory.First();
         Assert.Equal(3, loadedBag!.Contents.Count);
     }
 
@@ -477,13 +476,13 @@ public class CharacterMapperPersistenceTests : IDisposable
         // Put items in bag FIRST, then equip the bag
         bag.AddItem(sword);
         bag.AddItem(wheat);
-        player.AddToInventory(bag.InstanceId);
+        player.AddToInventory(bag);
         
         // Equip the bag at waist
-        player.EquipToSlot((int)EquipmentSlot.Waist, bag.InstanceId);
+        player.Equip(bag, EquipmentSlot.Waist);
 
         // Act - Save
-        CharacterMapper.UpdateCharacterFromPlayerState(character, player, _worldState);
+        CharacterMapper.UpdateCharacterFromPlayerState(character, player);
         _dbContext.SaveChanges();
 
         // Verify database has ItemData JSON for equipped item
@@ -507,7 +506,7 @@ public class CharacterMapperPersistenceTests : IDisposable
         var loadedPlayer = CharacterMapper.ToPlayerState(character, 2, _worldState);
 
         // Assert - Check equipped bag still has contents
-        var equipment = _worldState.GetPlayerEquipment(loadedPlayer);
+        var equipment = loadedPlayer.Equipment;
         Assert.Single(equipment); // One equipped item
         
         var loadedBag = equipment[EquipmentSlot.Waist];

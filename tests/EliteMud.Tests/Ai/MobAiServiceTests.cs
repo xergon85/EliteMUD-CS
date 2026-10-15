@@ -447,7 +447,7 @@ public class MobAiServiceTests
         for (int i = 0; i < 200; i++)
         {
             service.ProcessMobTick(mob, 100, worldState, connections);
-            if (mob.InventoryObjectIds.Any())
+            if (mob.Inventory.Any())
             {
                 picked = true;
                 break;
@@ -456,8 +456,8 @@ public class MobAiServiceTests
         
         // Assert - Should pick most valuable (ring)
         Assert.True(picked, "Scavenger should have picked up an item");
-        Assert.Contains(2, mob.InventoryObjectIds); // Ring instance ID
-        Assert.Single(mob.InventoryObjectIds);
+        Assert.Contains(2, mob.Inventory.Select(item => item.InstanceId)); // Ring instance ID
+        Assert.Single(mob.Inventory);
     }
 
     [Fact]
@@ -476,7 +476,7 @@ public class MobAiServiceTests
         for (int i = 0; i < 200; i++)
         {
             service.ProcessMobTick(mob, 100, worldState, connections);
-            if (mob.InventoryObjectIds.Any())
+            if (mob.Inventory.Any())
             {
                 pickedUp = true;
                 break;
@@ -502,7 +502,7 @@ public class MobAiServiceTests
         }
         
         // Assert - Mob inventory should be empty
-        Assert.Empty(mob.InventoryObjectIds);
+        Assert.Empty(mob.Inventory);
     }
 
     [Fact]
@@ -520,14 +520,14 @@ public class MobAiServiceTests
         for (int i = 0; i < 200; i++)
         {
             service.ProcessMobTick(mob, 100, worldState, connections);
-            if (mob.InventoryObjectIds.Any())
+            if (mob.Inventory.Any())
             {
                 break;
             }
         }
         
         // Assert - Object should be in mob inventory
-        Assert.Contains(1, mob.InventoryObjectIds);
+        Assert.Contains(1, mob.Inventory.Select(item => item.InstanceId));
         
         // Object should NOT be in room anymore
         var roomObjects = worldState.GetObjectsInRoom(100);
@@ -689,25 +689,17 @@ public class MobAiServiceTests
 
     private void AddObjectToRoom(WorldState worldState, ObjectInstance obj, int roomId)
     {
-        // Use reflection to access _roomObjects and _objectInstances
+        // Use reflection to access _roomObjects
         var roomObjectsField = typeof(WorldState).GetField("_roomObjects", 
-            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-        var objectInstancesField = typeof(WorldState).GetField("_objectInstances",
-            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!;
+        var roomObjects = (Dictionary<int, List<ObjectInstance>>)roomObjectsField.GetValue(worldState)!;
         
-        if (roomObjectsField != null && objectInstancesField != null)
+        if (!roomObjects.ContainsKey(roomId))
         {
-            var roomObjects = (Dictionary<int, List<ObjectInstance>>)roomObjectsField.GetValue(worldState)!;
-            var objectInstances = (Dictionary<int, ObjectInstance>)objectInstancesField.GetValue(worldState)!;
-            
-            if (!roomObjects.ContainsKey(roomId))
-            {
-                roomObjects[roomId] = new List<ObjectInstance>();
-            }
-            
-            roomObjects[roomId].Add(obj);
-            objectInstances[obj.InstanceId] = obj;
+            roomObjects[roomId] = new List<ObjectInstance>();
         }
+        
+        roomObjects[roomId].Add(obj);
     }
 }
 

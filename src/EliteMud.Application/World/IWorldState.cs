@@ -7,7 +7,7 @@ public sealed class MobInstance : ICombatant
     private readonly Dictionary<EquipmentSlot, ObjectInstance> _equipment = new();
     private readonly List<Affect> _affects = new(); // Mobs can have affects too!
     private readonly List<long> _memory = new(); // Player IDs this mob remembers (for MOB_MEMORY)
-    private readonly List<int> _inventoryObjectIds = new(); // Object instance IDs in mob inventory
+    private readonly List<ObjectInstance> _inventory = new();
 
     public MobInstance(int instanceId, MobDefinition definition)
     {
@@ -184,26 +184,26 @@ public sealed class MobInstance : ICombatant
     public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> Equipment => _equipment;
     
     /// <summary>
-    /// Object instance IDs carried by this mob (for scavenger and GiveMob zone reset).
+    /// What this mob carries (from scavenging and GiveMob zone resets).
     /// Legacy: ch->carrying (linked list)
     /// </summary>
-    public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
+    public IReadOnlyList<ObjectInstance> Inventory => _inventory;
     
     /// <summary>
     /// Add an object to this mob's inventory.
     /// </summary>
-    public void AddToInventory(int objectInstanceId)
+    public void AddToInventory(ObjectInstance item)
     {
-        _inventoryObjectIds.Add(objectInstanceId);
+        _inventory.Add(item);
     }
     
     /// <summary>
     /// Remove an object from this mob's inventory.
     /// Returns true if object was found and removed.
     /// </summary>
-    public bool RemoveFromInventory(int objectInstanceId)
+    public bool RemoveFromInventory(ObjectInstance item)
     {
-        return _inventoryObjectIds.Remove(objectInstanceId);
+        return _inventory.Remove(item);
     }
 
     public bool Equip(ObjectInstance obj, EquipmentSlot slot)
@@ -241,19 +241,6 @@ public interface IWorldState
     /// Returns the portals that closed, with the room they're in.
     /// </summary>
     IReadOnlyList<(int RoomId, ObjectInstance Portal)> TickPortals();
-
-    IReadOnlyList<ObjectInstance> GetPlayerInventory(PlayerState player);
-
-    /// <summary>
-    /// Get all items accessible to the player (including items inside containers).
-    /// This recursively includes container contents for targeting purposes.
-    /// Use this when searching for items/containers that might be nested.
-    /// </summary>
-    IReadOnlyList<ObjectInstance> GetAllPlayerItems(PlayerState player);
-
-    IReadOnlyDictionary<EquipmentSlot, ObjectInstance> GetPlayerEquipment(PlayerState player);
-
-    ObjectInstance? GetObjectInstance(int instanceId);
 
     bool TakeObject(PlayerState player, int objectInstanceId);
 

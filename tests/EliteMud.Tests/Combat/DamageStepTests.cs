@@ -469,7 +469,7 @@ public class DamageStepTests
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
     }
 
-    private EffectiveStats Stats => new(_world, _rules);
+    private EffectiveStats Stats => new(_rules);
 
     private static DamageContext Hit(ICombatant attacker, ICombatant victim, int damage) =>
         new(attacker, victim, damage);

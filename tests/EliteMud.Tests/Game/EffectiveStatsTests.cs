@@ -47,7 +47,7 @@ public class EffectiveStatsTests
             new Dictionary<int, List<MobInstance>> { [Room] = new() { _mob } },
             new Dictionary<int, List<ObjectInstance>> { [Room] = new() },
             new List<ZoneDefinition>());
-        _stats = new EffectiveStats(_world, Rules);
+        _stats = new EffectiveStats(Rules);
 
         _player = new PlayerState(1, "Tester", Room, level: 30, "warrior", "human", sex: 1)
         {
@@ -165,7 +165,7 @@ public class EffectiveStatsTests
     }
 
     private void Wear(int objectId, EquipmentSlot slot) =>
-        _player.EquipToSlot((int)slot, _world.CreateObjectInstance(objectId)!.InstanceId);
+        _player.Equip(_world.CreateObjectInstance(objectId), slot);
 
     private static Affect Affect(AffectLocation location, int modifier, AffectType type = AffectType.Bless) => new()
     {

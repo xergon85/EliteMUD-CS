@@ -44,7 +44,10 @@ public interface ICombatant
     /// <see cref="CombatCalculator.SetFighting"/> and <see cref="CombatCalculator.StopFighting"/>.
     /// </summary>
     ICombatant? Fighting { get; set; }
-    
+
+    /// <summary>What the combatant wears, wields and holds, by slot (legacy ch->equipment).</summary>
+    IReadOnlyDictionary<EquipmentSlot, ObjectInstance> Equipment { get; }
+
     /// <summary>
     /// Level of the combatant. Affects skill availability and damage calculations.
     /// </summary>

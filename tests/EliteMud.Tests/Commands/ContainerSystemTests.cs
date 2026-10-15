@@ -163,7 +163,7 @@ public class ContainerSystemTests
         // Assert
         Assert.True(result.Success);
         Assert.Contains("You put", result.Message);
-        Assert.DoesNotContain(sword.InstanceId, player.InventoryObjectIds);
+        Assert.DoesNotContain(sword, player.Inventory);
         Assert.Contains(sword, bag.Contents);
     }
 
@@ -183,7 +183,7 @@ public class ContainerSystemTests
 
         // Assert
         Assert.True(result.Success);
-        Assert.DoesNotContain(sword.InstanceId, player.InventoryObjectIds);
+        Assert.DoesNotContain(sword, player.Inventory);
         Assert.Contains(sword, chest.Contents);
     }
 
@@ -198,7 +198,7 @@ public class ContainerSystemTests
         worldState.TakeObject(player, bag.InstanceId);
         
         // Put sword in bag manually
-        player.RemoveFromInventory(sword.InstanceId);
+        player.RemoveFromInventory(sword);
         bag.AddItem(sword);
         
         var handler = new GetHandler(worldState);
@@ -222,7 +222,7 @@ public class ContainerSystemTests
         worldState.TakeObject(player, bag.InstanceId);
         
         // Put sword in bag manually
-        player.RemoveFromInventory(sword.InstanceId);
+        player.RemoveFromInventory(sword);
         bag.AddItem(sword);
         
         var handler = new GetHandler(worldState);
@@ -232,7 +232,7 @@ public class ContainerSystemTests
 
         // Assert
         Assert.True(result.Success);
-        Assert.Contains(sword.InstanceId, player.InventoryObjectIds);
+        Assert.Contains(sword, player.Inventory);
         Assert.DoesNotContain(sword, bag.Contents);
     }
 
@@ -246,7 +246,7 @@ public class ContainerSystemTests
         worldState.TakeObject(player, sword.InstanceId);
         
         // Put sword in corpse manually
-        player.RemoveFromInventory(sword.InstanceId);
+        player.RemoveFromInventory(sword);
         corpse.AddItem(sword);
         corpse.IsClosed = true; // Shouldn't matter for corpses
         
@@ -261,7 +261,7 @@ public class ContainerSystemTests
 
         // Assert
         Assert.True(result.Success);
-        Assert.Contains(sword.InstanceId, player.InventoryObjectIds);
+        Assert.Contains(sword, player.Inventory);
     }
 
     [Fact]
