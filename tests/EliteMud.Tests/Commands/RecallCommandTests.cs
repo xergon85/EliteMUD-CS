@@ -190,7 +190,7 @@ public class RecallCommandTests : IDisposable
 
         // Create connection registry
         var connectionRegistry = new ConnectionRegistry();
-        connectionRegistry.SetProvider(() => new[] { context });
+        connectionRegistry.Add(context);
         worldState.Population.Enter(player, player.RoomId);
 
         // Create mock script engine (no-op for tests)

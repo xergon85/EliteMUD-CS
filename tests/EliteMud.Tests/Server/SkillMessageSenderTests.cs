@@ -48,7 +48,9 @@ public sealed class SkillMessageSenderTests : IDisposable
         _elsewhere = new TestConnection(3, new PlayerState(3, "Elsewhere", Alley, level: 5, "warrior", "human", sex: 1));
 
         var connections = new ConnectionRegistry();
-        connections.SetProvider(() => new[] { _victim.Context, _observer.Context, _elsewhere.Context });
+        connections.Add(_victim.Context);
+        connections.Add(_observer.Context);
+        connections.Add(_elsewhere.Context);
         foreach (var player in new[] { _victim, _observer, _elsewhere }.Select(connection => connection.Context.Player))
         {
             _world.Population.Enter(player, player.RoomId);

@@ -1,4 +1,3 @@
-using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
 using EliteMud.Application.Commands.Shared;
@@ -20,7 +19,6 @@ internal sealed class TelnetServer
     private readonly PromptCatalog _promptCatalog;
     private readonly CommandRouter _commandRouter;
     private readonly GameStateGate _gate;
-    private readonly ConcurrentDictionary<int, ConnectionContext> _connections = new();
     private int _nextConnectionId;
     private readonly ConnectionRegistry _connectionRegistry;
     private readonly AuthenticationHandler _authHandler;
@@ -82,13 +80,13 @@ internal sealed class TelnetServer
     private async Task ShutdownGracefullyAsync()
     {
         Console.WriteLine("\n=== Server shutdown initiated ===");
-        Console.WriteLine($"Saving {_connections.Count} connected players...");
+        Console.WriteLine($"Saving {_connectionRegistry.Count} connected players...");
         
         // Notify all connected players
         var disconnectTasks = new List<Task>();
-        foreach (var (connectionId, context) in _connections)
+        foreach (var context in _connectionRegistry.GetConnections())
         {
-            disconnectTasks.Add(NotifyAndDisconnectAsync(connectionId, context));
+            disconnectTasks.Add(NotifyAndDisconnectAsync(context.Id, context));
         }
         
         // Wait for all players to be notified and saved (with timeout)
@@ -101,7 +99,7 @@ internal sealed class TelnetServer
         }
         else
         {
-            Console.WriteLine($"All {_connections.Count} players saved successfully");
+            Console.WriteLine($"All {_connectionRegistry.Count} players saved successfully");
         }
         
         Console.WriteLine("Server shutdown complete");
@@ -234,8 +232,7 @@ internal sealed class TelnetServer
 
                 context = new ConnectionContext(
                     connectionId, session, player, sessionData.SelectedCharacterId.Value, sessionData.AccountUsername!);
-                _connections[context.Id] = context;
-                _connectionRegistry.SetProvider(() => _connections.Values);
+                _connectionRegistry.Add(context);
 
                 // Auto-execute look command on entry
                 var entryCommand = new CommandRequest("look", null, null);
@@ -291,7 +288,7 @@ internal sealed class TelnetServer
                     }
 
                     _worldState.Population.Leave(context.Player);
-                    _connections.TryRemove(context.Id, out _);
+                    _connectionRegistry.Remove(context);
                 }
             }
 

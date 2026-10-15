@@ -32,6 +32,7 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<CommandCatalog>()
             .AddSingleton<PromptCatalog>()
             .AddSingleton<ConnectionRegistry>()
+            .AddSingleton<ICharacterOutput, SessionCharacterOutput>()
             .AddSingleton<SkillMessageSender>()
             
             // Business logic helpers (not command handlers)

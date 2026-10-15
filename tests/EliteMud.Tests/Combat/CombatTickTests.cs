@@ -112,7 +112,9 @@ public sealed class CombatTickTests : IDisposable
         _observer = new TestConnection(3, new PlayerState(3, "Observer", Room, level: 5, "warrior", "human", sex: 1));
 
         var connections = new ConnectionRegistry();
-        connections.SetProvider(() => new[] { _fighter.Context, _victim.Context, _observer.Context });
+        connections.Add(_fighter.Context);
+        connections.Add(_victim.Context);
+        connections.Add(_observer.Context);
         foreach (var connection in connections.GetConnections())
         {
             _world.Population.Enter(connection.Player, connection.Player.RoomId);
