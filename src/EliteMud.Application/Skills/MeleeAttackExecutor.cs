@@ -137,8 +137,7 @@ public sealed class MeleeAttackExecutor : ISkillExecutor
         // a mob that just died has no fight left to join
         if (!outcome.VictimDied)
         {
-            var emptyConnections = new Dictionary<int, PlayerConnection>();
-            _mobAiService.ProcessAssist(mobInstance, attacker.RoomId, _worldState, emptyConnections);
+            _mobAiService.ProcessAssist(mobInstance, attacker.RoomId, _worldState);
         }
 
         // Format combat messages

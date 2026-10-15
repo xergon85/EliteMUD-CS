@@ -41,8 +41,7 @@ public class MobAiService
     public void ProcessMobTick(
         MobInstance mob,
         int roomId,
-        IWorldState worldState,
-        IReadOnlyDictionary<int, PlayerConnection> connections)
+        IWorldState worldState)
     {
         // Legacy: Skip if mob not in valid room or is switched
         if (roomId < 0)
@@ -52,7 +51,7 @@ public class MobAiService
 
         // Lua hook: OnMobTick - allows complete override of mob behavior
         // If script returns true, skip default AI
-        var luaOverride = TryInvokeLuaHook(mob, roomId, worldState, connections);
+        var luaOverride = TryInvokeLuaHook(mob, roomId, worldState);
         if (luaOverride)
         {
             return;
@@ -91,13 +90,13 @@ public class MobAiService
         // 4. Aggressive behavior (attack players on sight)
         if (mob.Definition.ParsedFlags.HasFlag(MobFlags.Aggressive))
         {
-            ProcessAggressive(mob, roomId, worldState, connections);
+            ProcessAggressive(mob, roomId, worldState);
         }
 
         // 5. Memory behavior (hunt down attackers)
         if (mob.Definition.ParsedFlags.HasFlag(MobFlags.Memory) && mob.Memory.Count > 0)
         {
-            ProcessMemory(mob, roomId, worldState, connections);
+            ProcessMemory(mob, roomId, worldState);
         }
     }
 
@@ -109,8 +108,7 @@ public class MobAiService
     public void ProcessAssist(
         MobInstance aggressor,
         int roomId,
-        IWorldState worldState,
-        IReadOnlyDictionary<int, PlayerConnection> connections)
+        IWorldState worldState)
     {
         // Get all mobs in the room
         var mobsInRoom = worldState.GetMobsInRoom(roomId);
@@ -173,8 +171,7 @@ public class MobAiService
     private bool TryInvokeLuaHook(
         MobInstance mob,
         int roomId,
-        IWorldState worldState,
-        IReadOnlyDictionary<int, PlayerConnection> connections)
+        IWorldState worldState)
     {
         // TODO: Implement Lua hook invocation
         // For now, return false (always use default AI)
@@ -379,16 +376,12 @@ public class MobAiService
     private void ProcessAggressive(
         MobInstance mob,
         int roomId,
-        IWorldState worldState,
-        IReadOnlyDictionary<int, PlayerConnection> connections)
+        IWorldState worldState)
     {
         // Legacy: mobact.c:218-242
         
         // Get players in the same room
-        var playersInRoom = connections.Values
-            .Where(c => c.Player?.RoomId == roomId)
-            .Select(c => c.Player!)
-            .ToList();
+        var playersInRoom = worldState.Population.PlayersIn(roomId).ToList();
 
         if (playersInRoom.Count == 0)
         {
@@ -459,30 +452,24 @@ public class MobAiService
     private void ProcessMemory(
         MobInstance mob,
         int roomId,
-        IWorldState worldState,
-        IReadOnlyDictionary<int, PlayerConnection> connections)
+        IWorldState worldState)
     {
         // Legacy: mobact.c:244-270
         
         // Find remembered players
         PlayerState? victim = null;
         
-        foreach (var connection in connections.Values)
+        foreach (var player in worldState.Population.Players)
         {
-            if (connection.Player == null)
-            {
-                continue;
-            }
-
             // Check if this player is in mob's memory
-            if (!mob.Memory.Contains(connection.Player.Id))
+            if (!mob.Memory.Contains(player.Id))
             {
                 continue;
             }
 
             // TODO: Check visibility with CAN_SEE(ch, tmp_ch)
 
-            victim = connection.Player;
+            victim = player;
 
             // If victim is in same room, attack or follow
             if (victim.RoomId == roomId)
@@ -546,14 +533,4 @@ public class MobAiService
             }
         }
     }
-}
-
-/// <summary>
-/// Represents a player connection for mob AI processing.
-/// Temporary struct until we refactor connection management.
-/// </summary>
-public class PlayerConnection
-{
-    public required int ConnectionId { get; init; }
-    public PlayerState? Player { get; set; }
 }

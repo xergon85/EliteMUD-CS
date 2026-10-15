@@ -484,15 +484,6 @@ internal sealed class GameTickService
     /// </summary>
     private void ProcessMobAi()
     {
-        // Build player connection dictionary for aggro/memory checks
-        var connections = _connectionRegistry.GetConnections()
-            .Select(c => new Application.Ai.PlayerConnection 
-            { 
-                ConnectionId = c.Id, 
-                Player = c.Player 
-            })
-            .ToDictionary(pc => pc.ConnectionId);
-        
         // Process each room's mobs
         foreach (var room in _worldState.World.Rooms.Values)
         {
@@ -503,7 +494,7 @@ internal sealed class GameTickService
             {
                 try
                 {
-                    _mobAiService.ProcessMobTick(mob, room.Id, _worldState, connections);
+                    _mobAiService.ProcessMobTick(mob, room.Id, _worldState);
                 }
                 catch (Exception ex)
                 {

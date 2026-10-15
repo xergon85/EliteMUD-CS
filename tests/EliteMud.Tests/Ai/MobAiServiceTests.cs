@@ -18,14 +18,14 @@ public class MobAiServiceTests
     public void Aggressive_AttacksPlayerInRoom()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "wolf", flags: new[] { "AGGRESSIVE" });
         var player = CreatePlayer(1, roomId: 100, alignment: 0);
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, player, 1);
+        EnterGame(worldState, player);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should attack player
         Assert.NotNull(mob.Fighting);
@@ -42,12 +42,12 @@ public class MobAiServiceTests
     public void Aggressive_DoesNotAttackWhenNoPlayers()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "wolf", flags: new[] { "AGGRESSIVE" });
         AddMobToWorld(worldState, mob, 100);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should not be fighting
         Assert.Null(mob.Fighting);
@@ -58,18 +58,18 @@ public class MobAiServiceTests
     public void Aggressive_DoesNotAttackWhenAlreadyFighting()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "wolf", flags: new[] { "AGGRESSIVE" });
         var player1 = CreatePlayer(1, roomId: 100);
         var player2 = CreatePlayer(2, roomId: 100);
         mob.Fighting = player1; // Already fighting player 1
         mob.Position = Position.Fighting;
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, player1, 1);
-        AddPlayerConnection(connections, player2, 2);
+        EnterGame(worldState, player1);
+        EnterGame(worldState, player2);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should still be fighting player 1, not switch to player 2
         Assert.Same(player1, mob.Fighting);
@@ -79,14 +79,14 @@ public class MobAiServiceTests
     public void AggressiveEvil_AttacksEvilPlayers()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "paladin", flags: new[] { "AGGRESSIVE", "AGGRESSIVEEVIL" });
         var evilPlayer = CreatePlayer(1, roomId: 100, alignment: -500); // Evil
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, evilPlayer, 1);
+        EnterGame(worldState, evilPlayer);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should attack evil player
         Assert.NotNull(mob.Fighting);
@@ -97,14 +97,14 @@ public class MobAiServiceTests
     public void AggressiveEvil_DoesNotAttackGoodPlayers()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "paladin", flags: new[] { "AGGRESSIVE", "AGGRESSIVEEVIL" });
         var goodPlayer = CreatePlayer(1, roomId: 100, alignment: 500); // Good
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, goodPlayer, 1);
+        EnterGame(worldState, goodPlayer);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should NOT attack good player
         Assert.Null(mob.Fighting);
@@ -114,14 +114,14 @@ public class MobAiServiceTests
     public void AggressiveGood_AttacksGoodPlayers()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "demon", flags: new[] { "AGGRESSIVE", "AGGRESSIVEGOOD" });
         var goodPlayer = CreatePlayer(1, roomId: 100, alignment: 500); // Good
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, goodPlayer, 1);
+        EnterGame(worldState, goodPlayer);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should attack good player
         Assert.NotNull(mob.Fighting);
@@ -132,14 +132,14 @@ public class MobAiServiceTests
     public void AggressiveNeutral_AttacksNeutralPlayers()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "extremist", flags: new[] { "AGGRESSIVE", "AGGRESSIVENEUTRAL" });
         var neutralPlayer = CreatePlayer(1, roomId: 100, alignment: 0); // Neutral
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, neutralPlayer, 1);
+        EnterGame(worldState, neutralPlayer);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should attack neutral player
         Assert.NotNull(mob.Fighting);
@@ -150,14 +150,14 @@ public class MobAiServiceTests
     public void Wimpy_DoesNotAttackAwakePlayers()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "coward", flags: new[] { "AGGRESSIVE", "WIMPY" });
         var awakePlayer = CreatePlayer(1, roomId: 100, position: Position.Standing);
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, awakePlayer, 1);
+        EnterGame(worldState, awakePlayer);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Wimpy mob should NOT attack awake player
         Assert.Null(mob.Fighting);
@@ -169,15 +169,15 @@ public class MobAiServiceTests
     public void Memory_AttacksRememberedPlayerInSameRoom()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "vengeful wolf", flags: new[] { "MEMORY" });
         var player = CreatePlayer(1, roomId: 100);
         mob.RememberPlayer(player.Id); // Mob remembers this player
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, player, 1);
+        EnterGame(worldState, player);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should attack remembered player
         Assert.NotNull(mob.Fighting);
@@ -188,15 +188,15 @@ public class MobAiServiceTests
     public void Memory_DoesNotAttackInLawfulRoom()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment(lawfulRoom: true);
+        var (service, worldState) = CreateTestEnvironment(lawfulRoom: true);
         var mob = CreateMob(1, "vengeful wolf", flags: new[] { "MEMORY" });
         var player = CreatePlayer(1, roomId: 100);
         mob.RememberPlayer(player.Id);
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, player, 1);
+        EnterGame(worldState, player);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should NOT attack in lawful room
         Assert.Null(mob.Fighting);
@@ -206,15 +206,15 @@ public class MobAiServiceTests
     public void Memory_DoesNotAttackUnrememberedPlayers()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "wolf", flags: new[] { "MEMORY" });
         var player = CreatePlayer(1, roomId: 100);
         // Don't add player to memory
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, player, 1);
+        EnterGame(worldState, player);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should NOT attack unremembered player
         Assert.Null(mob.Fighting);
@@ -226,12 +226,12 @@ public class MobAiServiceTests
     public void Wandering_MobCanMoveToAdjacentRoom()
     {
         // Arrange - a roll of 0 is "north", the only exit from room 100
-        var (service, worldState, connections) = CreateTestEnvironment(roomsWithExits: true, random: new FixedRandom(0));
+        var (service, worldState) = CreateTestEnvironment(roomsWithExits: true, random: new FixedRandom(0));
         var mob = CreateMob(1, "wanderer");
         AddMobToWorld(worldState, mob, 100);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert
         Assert.Contains(worldState.GetMobsInRoom(101), m => m.InstanceId == 1);
@@ -242,13 +242,13 @@ public class MobAiServiceTests
     public void Wandering_DoesNotPassClosedExit()
     {
         // Arrange - same setup as above, but the north exit is closed
-        var (service, worldState, connections) = CreateTestEnvironment(roomsWithExits: true, random: new FixedRandom(0));
+        var (service, worldState) = CreateTestEnvironment(roomsWithExits: true, random: new FixedRandom(0));
         var mob = CreateMob(1, "wanderer");
         AddMobToWorld(worldState, mob, 100);
         CloseExit(worldState, 100, Direction.North);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert
         Assert.Contains(worldState.GetMobsInRoom(100), m => m.InstanceId == 1);
@@ -258,7 +258,7 @@ public class MobAiServiceTests
     public void Wandering_DoesNotMoveWhenNotStanding()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment(roomsWithExits: true);
+        var (service, worldState) = CreateTestEnvironment(roomsWithExits: true);
         var mob = CreateMob(1, "sleeper");
         mob.Position = Position.Sleeping;
         AddMobToWorld(worldState, mob, 100);
@@ -266,7 +266,7 @@ public class MobAiServiceTests
         // Act - Try multiple times
         for (int i = 0; i < 50; i++)
         {
-            service.ProcessMobTick(mob, 100, worldState, connections);
+            service.ProcessMobTick(mob, 100, worldState);
         }
 
         // Assert - Mob should NOT have moved (still in room 100)
@@ -278,14 +278,14 @@ public class MobAiServiceTests
     public void Wandering_DoesNotEnterNoMobRoom()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment(roomsWithExits: true, noMobTarget: true);
+        var (service, worldState) = CreateTestEnvironment(roomsWithExits: true, noMobTarget: true);
         var mob = CreateMob(1, "wanderer");
         AddMobToWorld(worldState, mob, 100);
 
         // Act - Try multiple times
         for (int i = 0; i < 100; i++)
         {
-            service.ProcessMobTick(mob, 100, worldState, connections);
+            service.ProcessMobTick(mob, 100, worldState);
         }
 
         // Assert - Mob should NOT have moved to NO_MOB room
@@ -296,14 +296,14 @@ public class MobAiServiceTests
     public void StayZone_DoesNotLeaveZone()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment(roomsWithExits: true, differentZones: true);
+        var (service, worldState) = CreateTestEnvironment(roomsWithExits: true, differentZones: true);
         var mob = CreateMob(1, "guard", flags: new[] { "STAYZONE" });
         AddMobToWorld(worldState, mob, 100);
 
         // Act - Try multiple times
         for (int i = 0; i < 100; i++)
         {
-            service.ProcessMobTick(mob, 100, worldState, connections);
+            service.ProcessMobTick(mob, 100, worldState);
         }
 
         // Assert - Mob should NOT have left zone (room 101 is different zone)
@@ -316,7 +316,7 @@ public class MobAiServiceTests
     public void Helper_AssistsAllyInCombat()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var aggressor = CreateMob(1, "guard1", flags: Array.Empty<string>(), alignment: 0);
         var helper = CreateMob(2, "guard2", flags: new[] { "HELPER" }, alignment: 0);
         var player = CreatePlayer(1, roomId: 100);
@@ -326,10 +326,10 @@ public class MobAiServiceTests
         
         AddMobToWorld(worldState, aggressor, 100);
         AddMobToWorld(worldState, helper, 100);
-        AddPlayerConnection(connections, player, 1);
+        EnterGame(worldState, player);
 
         // Act
-        service.ProcessAssist(aggressor, 100, worldState, connections);
+        service.ProcessAssist(aggressor, 100, worldState);
 
         // Assert - Helper should assist aggressor and fight player
         Assert.NotNull(helper.Fighting);
@@ -341,7 +341,7 @@ public class MobAiServiceTests
     public void Helper_DoesNotAssistDifferentAlignment()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var aggressor = CreateMob(1, "evil guard", flags: Array.Empty<string>(), alignment: -900); // Evil
         var helper = CreateMob(2, "good guard", flags: new[] { "HELPER" }, alignment: 900); // Good
         var player = CreatePlayer(1, roomId: 100);
@@ -351,10 +351,10 @@ public class MobAiServiceTests
         
         AddMobToWorld(worldState, aggressor, 100);
         AddMobToWorld(worldState, helper, 100);
-        AddPlayerConnection(connections, player, 1);
+        EnterGame(worldState, player);
 
         // Act
-        service.ProcessAssist(aggressor, 100, worldState, connections);
+        service.ProcessAssist(aggressor, 100, worldState);
 
         // Assert - Helper should NOT assist (alignment difference > 750)
         Assert.Null(helper.Fighting);
@@ -364,7 +364,7 @@ public class MobAiServiceTests
     public void Helper_DoesNotAssistWhenAlreadyFighting()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var aggressor = CreateMob(1, "guard1", flags: Array.Empty<string>(), alignment: 0);
         var helper = CreateMob(2, "guard2", flags: new[] { "HELPER" }, alignment: 0);
         var player1 = CreatePlayer(1, roomId: 100);
@@ -378,11 +378,11 @@ public class MobAiServiceTests
         
         AddMobToWorld(worldState, aggressor, 100);
         AddMobToWorld(worldState, helper, 100);
-        AddPlayerConnection(connections, player1, 1);
-        AddPlayerConnection(connections, player2, 2);
+        EnterGame(worldState, player1);
+        EnterGame(worldState, player2);
 
         // Act
-        service.ProcessAssist(aggressor, 100, worldState, connections);
+        service.ProcessAssist(aggressor, 100, worldState);
 
         // Assert - Helper should still be fighting player 2, not switch
         Assert.Same(player2, helper.Fighting);
@@ -394,15 +394,15 @@ public class MobAiServiceTests
     public void ProcessMobTick_SkipsWhenNotAwake()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "sleepy cat", flags: new[] { "AGGRESSIVE" });
         mob.Position = Position.Dead; // Not awake
         var player = CreatePlayer(1, roomId: 100);
         AddMobToWorld(worldState, mob, 100);
-        AddPlayerConnection(connections, player, 1);
+        EnterGame(worldState, player);
 
         // Act
-        service.ProcessMobTick(mob, 100, worldState, connections);
+        service.ProcessMobTick(mob, 100, worldState);
 
         // Assert - Mob should NOT process AI (dead/not awake)
         Assert.Null(mob.Fighting);
@@ -412,13 +412,13 @@ public class MobAiServiceTests
     public void ProcessMobTick_SkipsInvalidRoom()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "cat", flags: new[] { "AGGRESSIVE" });
         var player = CreatePlayer(1, roomId: 100);
-        AddPlayerConnection(connections, player, 1);
+        EnterGame(worldState, player);
 
         // Act
-        service.ProcessMobTick(mob, -1, worldState, connections);
+        service.ProcessMobTick(mob, -1, worldState);
 
         // Assert - Should not crash or process (invalid room)
         Assert.Null(mob.Fighting);
@@ -430,7 +430,7 @@ public class MobAiServiceTests
     public void Scavenger_PicksUpMostValuableItem()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "rat", flags: new[] { "SCAVENGER" });
         AddMobToWorld(worldState, mob, 100);
         
@@ -446,7 +446,7 @@ public class MobAiServiceTests
         bool picked = false;
         for (int i = 0; i < 200; i++)
         {
-            service.ProcessMobTick(mob, 100, worldState, connections);
+            service.ProcessMobTick(mob, 100, worldState);
             if (mob.Inventory.Any())
             {
                 picked = true;
@@ -464,7 +464,7 @@ public class MobAiServiceTests
     public void Scavenger_HasRandomChance()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "rat", flags: new[] { "SCAVENGER" });
         AddMobToWorld(worldState, mob, 100);
         
@@ -475,7 +475,7 @@ public class MobAiServiceTests
         bool pickedUp = false;
         for (int i = 0; i < 200; i++)
         {
-            service.ProcessMobTick(mob, 100, worldState, connections);
+            service.ProcessMobTick(mob, 100, worldState);
             if (mob.Inventory.Any())
             {
                 pickedUp = true;
@@ -491,14 +491,14 @@ public class MobAiServiceTests
     public void Scavenger_IgnoresEmptyRoom()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "rat", flags: new[] { "SCAVENGER" });
         AddMobToWorld(worldState, mob, 100);
         
         // Act - Try multiple times with no objects in room
         for (int i = 0; i < 50; i++)
         {
-            service.ProcessMobTick(mob, 100, worldState, connections);
+            service.ProcessMobTick(mob, 100, worldState);
         }
         
         // Assert - Mob inventory should be empty
@@ -509,7 +509,7 @@ public class MobAiServiceTests
     public void Scavenger_StoresInInventory()
     {
         // Arrange
-        var (service, worldState, connections) = CreateTestEnvironment();
+        var (service, worldState) = CreateTestEnvironment();
         var mob = CreateMob(1, "rat", flags: new[] { "SCAVENGER" });
         AddMobToWorld(worldState, mob, 100);
         
@@ -519,7 +519,7 @@ public class MobAiServiceTests
         // Act - Keep trying until object is picked up (9% chance)
         for (int i = 0; i < 200; i++)
         {
-            service.ProcessMobTick(mob, 100, worldState, connections);
+            service.ProcessMobTick(mob, 100, worldState);
             if (mob.Inventory.Any())
             {
                 break;
@@ -536,7 +536,7 @@ public class MobAiServiceTests
 
     // ===== Helper Methods =====
 
-    private (MobAiService service, WorldState worldState, Dictionary<int, EliteMud.Application.Ai.PlayerConnection> connections) 
+    private (MobAiService service, WorldState worldState)
         CreateTestEnvironment(
             bool roomsWithExits = false, 
             bool lawfulRoom = false,
@@ -575,9 +575,8 @@ public class MobAiServiceTests
         var zones = new List<ZoneDefinition>();
 
         var worldState = new WorldState(worldDef, mobDefs, objDefs, roomMobs, roomObjs, zones);
-        var connections = new Dictionary<int, EliteMud.Application.Ai.PlayerConnection>();
 
-        return (service, worldState, connections);
+        return (service, worldState);
     }
 
     private MobInstance CreateMob(
@@ -654,17 +653,8 @@ public class MobAiServiceTests
         }
     }
 
-    private void AddPlayerConnection(
-        Dictionary<int, EliteMud.Application.Ai.PlayerConnection> connections, 
-        PlayerState player, 
-        int connectionId)
-    {
-        connections[connectionId] = new EliteMud.Application.Ai.PlayerConnection 
-        { 
-            ConnectionId = connectionId,
-            Player = player 
-        };
-    }
+    private static void EnterGame(WorldState worldState, PlayerState player) =>
+        worldState.Population.Enter(player, player.RoomId);
 
     private ObjectInstance CreateTestObject(int instanceId, string name, int cost)
     {
