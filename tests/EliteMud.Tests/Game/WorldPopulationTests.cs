@@ -181,6 +181,27 @@ public class WorldPopulationTests
         Assert.Contains(leaver.Id, _mob.Memory);
     }
 
+    /// <summary>
+    /// A departed player forgets who they'd reply to, so a player still online who once got a tell from them keeps
+    /// only them alive, not everyone they heard from before (#96 review).
+    /// </summary>
+    [Fact]
+    public void Leaving_ForgetsWhoTheyWouldReplyTo_ButOthersStillPointAtThem()
+    {
+        var leaver = Player(1, "Leaver");
+        var earlier = Player(2, "Earlier");
+        var listener = Player(3, "Listener");
+        Population.Enter(leaver, Square);
+        Population.Enter(listener, Square);
+        leaver.LastTellSender = earlier;
+        listener.LastTellSender = leaver;
+
+        Population.Leave(leaver);
+
+        Assert.Null(leaver.LastTellSender);
+        Assert.Same(leaver, listener.LastTellSender);
+    }
+
     [Fact]
     public void Who_ListsThePlayersInTheGame()
     {
