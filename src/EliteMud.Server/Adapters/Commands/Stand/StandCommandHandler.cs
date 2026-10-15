@@ -33,8 +33,7 @@ internal sealed class StandCommandHandler : ICommandHandler
         // Send message to player
         await context.Session.SendLineAsync("You stand up.", cancellationToken);
 
-        // Broadcast to room
-        _act.BroadcastToRoom(context.Player, $"{player.Name} clambers to $s feet.");
+        _act.ToNotChar(player, "$n clambers to $s feet.");
 
         return CommandOutcome.Continue;
     }
