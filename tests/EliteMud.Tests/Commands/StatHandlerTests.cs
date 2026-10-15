@@ -28,7 +28,7 @@ public class StatHandlerTests
             new Dictionary<int, List<MobInstance>> { [Room] = new() },
             new Dictionary<int, List<ObjectInstance>> { [Room] = new() },
             new List<ZoneDefinition>());
-        _stat = new StatHandler(Rules, new EffectiveStats(world, Rules));
+        _stat = new StatHandler(Rules, new EffectiveStats(Rules));
     }
 
     /// <summary>Legacy do_stat shows get_thaco(): a level 30 warrior's 20 − 30 / 3, with no hitroll taken off.</summary>

@@ -383,7 +383,7 @@ public class MeleeRollTests
             DurationHours = 10
         });
 
-        Assert.Equal(effective, new EffectiveStats(_world, Rules).Get(mob, AffectLocation.Intelligence));
+        Assert.Equal(effective, new EffectiveStats(Rules).Get(mob, AffectLocation.Intelligence));
     }
 
     private MeleeRoll Roll(int dice) => Roll(new FixedRandom(dice));
@@ -394,14 +394,13 @@ public class MeleeRollTests
         var formulas = new FormulaEvaluator(new Random(1));
         return new MeleeRoll(
             new CombatCalculator(new DodgeSkill(skills, formulas), new ParrySkill(skills, formulas), dice),
-            _world,
-            new EffectiveStats(_world, Rules));
+            new EffectiveStats(Rules));
     }
 
     private void Wear(PlayerState player, int objectId, EquipmentSlot slot)
     {
         var item = _world.CreateObjectInstance(objectId)!;
-        player.EquipToSlot((int)slot, item.InstanceId);
+        player.Equip(item, slot);
     }
 
     private static PlayerState Player(int id, string name) =>

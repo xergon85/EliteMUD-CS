@@ -22,7 +22,7 @@ public sealed class HoldHandler
             return new HoldResult(false, "Hold what?");
         }
 
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
 
         // Find matching object in inventory using indexed targeting (e.g., "2.torch")
         // Legacy: handler.c:1020-1040 (get_obj_in_list with get_number)
@@ -72,7 +72,7 @@ public sealed class HoldHandler
 
         // Check if slot is already occupied (legacy: act.obj2.c:680-683)
         // If occupied, show "You're already holding $p." or "You're already using $p as light source."
-        var equipment = _worldState.GetPlayerEquipment(player);
+        var equipment = player.Equipment;
         if (equipment.TryGetValue(slot, out var alreadyEquipped))
         {
             // Return the already equipped object so CommandHandler can use ActMessage

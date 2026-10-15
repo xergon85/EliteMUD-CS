@@ -271,8 +271,8 @@ public sealed record ZoneDefinition(
 
 public sealed class PlayerState : ICombatant
 {
-    private readonly List<int> _inventoryObjectIds = new();
-    private readonly Dictionary<int, int> _equipmentSlotToObjectId = new(); // slot -> objectInstanceId
+    private readonly List<ObjectInstance> _inventory = new();
+    private readonly Dictionary<EquipmentSlot, ObjectInstance> _equipment = new();
     private readonly Dictionary<SkillType, byte> _skills = new(); // skill -> proficiency (0-100)
     private readonly Dictionary<SkillType, DateTime> _lastSkillgainTime = new(); // skill -> last improvement time
     private readonly Dictionary<SpellType, byte> _spells = new(); // spell -> proficiency (0-100)
@@ -417,37 +417,54 @@ public sealed class PlayerState : ICombatant
     public int? LastTellSender { get; set; }
 
     // ===== Inventory & Equipment =====
-    public IReadOnlyList<int> InventoryObjectIds => _inventoryObjectIds;
-    public IReadOnlyDictionary<int, int> EquipmentSlotToObjectId => _equipmentSlotToObjectId;
 
-    public void AddToInventory(int objectInstanceId)
-    {
-        _inventoryObjectIds.Add(objectInstanceId);
-    }
+    /// <summary>What the player carries (legacy ch->carrying). Container contents stay inside their container.</summary>
+    public IReadOnlyList<ObjectInstance> Inventory => _inventory;
 
-    public bool RemoveFromInventory(int objectInstanceId)
-    {
-        return _inventoryObjectIds.Remove(objectInstanceId);
-    }
+    /// <summary>What the player wears, wields and holds, by slot (legacy ch->equipment).</summary>
+    public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> Equipment => _equipment;
 
-    public bool EquipToSlot(int slot, int objectInstanceId)
+    /// <summary>The inventory and everything inside its containers, nested ones too, for finding items by name.</summary>
+    public IReadOnlyList<ObjectInstance> InventoryWithContents()
     {
-        if (_equipmentSlotToObjectId.ContainsKey(slot))
+        var items = new List<ObjectInstance>();
+        foreach (var item in _inventory)
         {
-            return false; // Slot occupied
+            items.Add(item);
+            AddContents(item, items);
         }
-        _equipmentSlotToObjectId[slot] = objectInstanceId;
-        return true;
+        return items;
     }
 
-    public bool UnequipFromSlot(int slot, out int objectInstanceId)
+    private static void AddContents(ObjectInstance container, List<ObjectInstance> items)
     {
-        if (_equipmentSlotToObjectId.Remove(slot, out objectInstanceId))
+        foreach (var item in container.Contents)
         {
-            return true;
+            items.Add(item);
+            AddContents(item, items);
         }
-        objectInstanceId = 0;
-        return false;
+    }
+
+    public void AddToInventory(ObjectInstance item)
+    {
+        _inventory.Add(item);
+    }
+
+    public bool RemoveFromInventory(ObjectInstance item)
+    {
+        return _inventory.Remove(item);
+    }
+
+    /// <summary>Puts an item in a free slot; false when the slot is taken.</summary>
+    public bool Equip(ObjectInstance item, EquipmentSlot slot)
+    {
+        return _equipment.TryAdd(slot, item);
+    }
+
+    /// <summary>Takes the item out of a slot; null when the slot is empty.</summary>
+    public ObjectInstance? Unequip(EquipmentSlot slot)
+    {
+        return _equipment.Remove(slot, out var item) ? item : null;
     }
 
     // ===== Skills & Spells =====

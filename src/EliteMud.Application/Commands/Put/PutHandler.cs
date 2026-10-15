@@ -81,7 +81,7 @@ public sealed class PutHandler
         }
 
         // Find specific Nth item in inventory
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         var item = TargetParser.FindNthMatch(inventory, name, index);
         
         if (item is null)
@@ -106,7 +106,7 @@ public sealed class PutHandler
         }
 
         // Remove from player inventory and add to container
-        if (!player.RemoveFromInventory(item.InstanceId))
+        if (!player.RemoveFromInventory(item))
         {
             return new PutResult(false, "You can't put that away.");
         }
@@ -126,7 +126,7 @@ public sealed class PutHandler
     /// <param name="itemFilter">If specified, only put items matching this name. If null, put all items.</param>
     private PutResult PutAllIntoContainer(PlayerState player, ObjectInstance container, string? itemFilter)
     {
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         
         // Get items to put (either all or matching filter)
         var itemsToPut = itemFilter == null 
@@ -162,7 +162,7 @@ public sealed class PutHandler
             }
 
             // Try to put the item
-            if (player.RemoveFromInventory(item.InstanceId))
+            if (player.RemoveFromInventory(item))
             {
                 container.AddItem(item);
                 putObjects.Add(item.Definition);
@@ -191,7 +191,7 @@ public sealed class PutHandler
         if (index == 0)
             return null; // Invalid format
 
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         return TargetParser.FindNthMatch(inventory, name, index);
     }
 
@@ -208,7 +208,7 @@ public sealed class PutHandler
             return null; // Invalid format
 
         // Check inventory first (including items inside containers)
-        var allItems = _worldState.GetAllPlayerItems(player);
+        var allItems = player.InventoryWithContents();
         var inventoryMatch = TargetParser.FindNthMatch(allItems, name, index);
         if (inventoryMatch != null)
             return inventoryMatch;

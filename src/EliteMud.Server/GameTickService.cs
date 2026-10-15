@@ -543,7 +543,7 @@ internal sealed class GameTickService
                 requiredSkill = SkillType.DualWield;
                 difficulty = 160;
                 // Dual-wield also requires a weapon in the HOLD slot
-                if (!player.EquipmentSlotToObjectId.ContainsKey((int)EquipmentSlot.Hold))
+                if (!player.Equipment.ContainsKey(EquipmentSlot.Hold))
                 {
                     return false; // No offhand weapon
                 }

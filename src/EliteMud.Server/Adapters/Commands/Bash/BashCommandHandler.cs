@@ -106,7 +106,7 @@ internal sealed class BashCommandHandler : ICommandHandler
         // TODO: Check for shield equipped when equipment system is complete
         // Legacy: if (!ch->equipment[WEAR_SHIELD])
         // For now, we'll skip this check as mentioned in ParrySkill.cs line 52-54
-        var equipment = _worldState.GetPlayerEquipment(context.Player);
+        var equipment = context.Player.Equipment;
         if (!equipment.ContainsKey(EquipmentSlot.Shield))
         {
             await context.Session.SendLineAsync("You need a shield equipped to bash doors.", cancellationToken);

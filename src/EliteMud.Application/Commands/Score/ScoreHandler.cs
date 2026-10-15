@@ -69,7 +69,7 @@ public sealed class ScoreHandler
         
         // Line 8: Carrying weight
         // TODO: Calculate actual weight from inventory objects (requires WorldState access)
-        var itemCount = player.InventoryObjectIds.Count;
+        var itemCount = player.Inventory.Count;
         var totalWeight = 0; // Placeholder
         if (itemCount > 0)
         {
@@ -82,8 +82,8 @@ public sealed class ScoreHandler
         }
         
         // Line 9: Inventory and equipped counts
-        var inventoryCount = player.InventoryObjectIds.Count;
-        var equippedCount = player.EquipmentSlotToObjectId.Count;
+        var inventoryCount = player.Inventory.Count;
+        var equippedCount = player.Equipment.Count;
         
         if (inventoryCount > 0)
         {

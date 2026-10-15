@@ -158,7 +158,7 @@ internal sealed class GetCommandHandler : ICommandHandler
             return false;
         
         // Find all matching containers in inventory first, then room
-        var inventory = _worldState.GetPlayerInventory(context.Player);
+        var inventory = context.Player.Inventory;
         var room = _worldState.World.GetRoom(context.Player.RoomId);
         var roomObjects = _worldState.GetObjectsInRoom(room.Id);
         
@@ -210,7 +210,7 @@ internal sealed class GetCommandHandler : ICommandHandler
             {
                 if (container.RemoveItem(item))
                 {
-                    context.Player.AddToInventory(item.InstanceId);
+                    context.Player.AddToInventory(item);
                     foundAny = true;
                     
                     // Send message: "You get $p from the corpse."

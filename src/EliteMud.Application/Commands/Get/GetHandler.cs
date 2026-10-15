@@ -163,7 +163,7 @@ public sealed class GetHandler
             {
                 if (container.RemoveItem(matchingItem))
                 {
-                    player.AddToInventory(matchingItem.InstanceId);
+                    player.AddToInventory(matchingItem);
                     takenObjects.Add(matchingItem.Definition);
                 }
             }
@@ -187,7 +187,7 @@ public sealed class GetHandler
         // Remove from container and add to player inventory
         if (container.RemoveItem(targetItem))
         {
-            player.AddToInventory(targetItem.InstanceId);
+            player.AddToInventory(targetItem);
             return new GetResult(true, string.Empty, targetItem.Definition, container.Definition.ShortDescription);
         }
         else
@@ -202,7 +202,7 @@ public sealed class GetHandler
     private GetResult GetFromAllContainers(PlayerState player, string itemName, string containerTargetName)
     {
         // Find all matching containers in inventory and room
-        var allItems = _worldState.GetAllPlayerItems(player);
+        var allItems = player.InventoryWithContents();
         var room = _worldState.World.GetRoom(player.RoomId);
         var roomObjects = _worldState.GetObjectsInRoom(room.Id);
         
@@ -237,7 +237,7 @@ public sealed class GetHandler
                 {
                     if (container.RemoveItem(item))
                     {
-                        player.AddToInventory(item.InstanceId);
+                        player.AddToInventory(item);
                         takenObjects.Add(item.Definition);
                     }
                 }
@@ -255,7 +255,7 @@ public sealed class GetHandler
                     {
                         if (container.RemoveItem(item))
                         {
-                            player.AddToInventory(item.InstanceId);
+                            player.AddToInventory(item);
                             takenObjects.Add(item.Definition);
                         }
                     }
@@ -266,7 +266,7 @@ public sealed class GetHandler
                     var item = TargetParser.FindNthMatch(container.Contents, name, index);
                     if (item != null && container.RemoveItem(item))
                     {
-                        player.AddToInventory(item.InstanceId);
+                        player.AddToInventory(item);
                         takenObjects.Add(item.Definition);
                     }
                 }
@@ -297,7 +297,7 @@ public sealed class GetHandler
         {
             if (container.RemoveItem(item))
             {
-                player.AddToInventory(item.InstanceId);
+                player.AddToInventory(item);
                 takenObjects.Add(item.Definition);
             }
         }
@@ -342,7 +342,7 @@ public sealed class GetHandler
             return null; // Not supported yet
         
         // Check inventory first (including nested items in containers)
-        var allItems = _worldState.GetAllPlayerItems(player);
+        var allItems = player.InventoryWithContents();
         var inventoryMatch = TargetParser.FindNthMatch(allItems, name, index);
         if (inventoryMatch != null)
             return inventoryMatch;

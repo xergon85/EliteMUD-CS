@@ -25,7 +25,6 @@ public sealed class WorldState : IWorldState
     private readonly Dictionary<int, ObjectDefinition> _objectDefinitions;
     private readonly Dictionary<int, List<MobInstance>> _roomMobs;
     private readonly Dictionary<int, List<ObjectInstance>> _roomObjects;
-    private readonly Dictionary<int, ObjectInstance> _objectInstances = new();
     private readonly IReadOnlyList<ZoneDefinition> _zones;
     private readonly Dictionary<(int roomId, Direction direction), DoorState> _doorStates = new();
     private int _nextMobInstanceId;
@@ -54,14 +53,11 @@ public sealed class WorldState : IWorldState
             }
         }
         
-        // Register all room objects in _objectInstances for lookup
+        // Start new instance ids after the room objects', to avoid collisions
         foreach (var (roomId, objects) in roomObjects)
         {
             foreach (var obj in objects)
             {
-                _objectInstances[obj.InstanceId] = obj;
-                
-                // Track next instance ID to avoid collisions
                 if (obj.InstanceId >= _nextObjectInstanceId)
                 {
                     _nextObjectInstanceId = obj.InstanceId + 1;
@@ -128,63 +124,6 @@ public sealed class WorldState : IWorldState
         return closed;
     }
 
-    public IReadOnlyList<ObjectInstance> GetPlayerInventory(PlayerState player)
-    {
-        var inventory = new List<ObjectInstance>();
-        foreach (var objectId in player.InventoryObjectIds)
-        {
-            if (_objectInstances.TryGetValue(objectId, out var obj))
-            {
-                inventory.Add(obj);
-            }
-        }
-        return inventory;
-    }
-
-    public IReadOnlyList<ObjectInstance> GetAllPlayerItems(PlayerState player)
-    {
-        var allItems = new List<ObjectInstance>();
-        foreach (var objectId in player.InventoryObjectIds)
-        {
-            if (_objectInstances.TryGetValue(objectId, out var obj))
-            {
-                allItems.Add(obj);
-                // Recursively add container contents
-                AddContainerContents(obj, allItems);
-            }
-        }
-        return allItems;
-    }
-
-    private static void AddContainerContents(ObjectInstance obj, List<ObjectInstance> list)
-    {
-        foreach (var item in obj.Contents)
-        {
-            list.Add(item);
-            // Recursively add nested container contents
-            AddContainerContents(item, list);
-        }
-    }
-
-    public IReadOnlyDictionary<EquipmentSlot, ObjectInstance> GetPlayerEquipment(PlayerState player)
-    {
-        var equipment = new Dictionary<EquipmentSlot, ObjectInstance>();
-        foreach (var (slotInt, objectId) in player.EquipmentSlotToObjectId)
-        {
-            if (_objectInstances.TryGetValue(objectId, out var obj))
-            {
-                var slot = (EquipmentSlot)slotInt;
-                equipment[slot] = obj;
-            }
-        }
-        return equipment;
-    }
-
-    public ObjectInstance? GetObjectInstance(int instanceId)
-    {
-        return _objectInstances.TryGetValue(instanceId, out var obj) ? obj : null;
-    }
-
     public bool TakeObject(PlayerState player, int objectInstanceId)
     {
         // Find the object in the room
@@ -203,7 +142,7 @@ public sealed class WorldState : IWorldState
         roomObjects.Remove(obj);
 
         // Add to player inventory
-        player.AddToInventory(objectInstanceId);
+        player.AddToInventory(obj);
 
         return true;
     }
@@ -211,19 +150,14 @@ public sealed class WorldState : IWorldState
     public bool DropObject(PlayerState player, int objectInstanceId)
     {
         // Check if player has the object
-        if (!player.InventoryObjectIds.Contains(objectInstanceId))
-        {
-            return false;
-        }
-
-        // Get the object instance
-        if (!_objectInstances.TryGetValue(objectInstanceId, out var obj))
+        var obj = player.Inventory.FirstOrDefault(o => o.InstanceId == objectInstanceId);
+        if (obj is null)
         {
             return false;
         }
 
         // Remove from player inventory
-        player.RemoveFromInventory(objectInstanceId);
+        player.RemoveFromInventory(obj);
 
         // Add to room
         if (!_roomObjects.TryGetValue(player.RoomId, out var roomObjects))
@@ -255,7 +189,7 @@ public sealed class WorldState : IWorldState
         roomObjects.Remove(obj);
 
         // Add to mob inventory
-        mob.AddToInventory(objectInstanceId);
+        mob.AddToInventory(obj);
 
         return true;
     }
@@ -263,19 +197,14 @@ public sealed class WorldState : IWorldState
     public bool DropObjectForMob(MobInstance mob, int objectInstanceId, int roomId)
     {
         // Check if mob has the object
-        if (!mob.InventoryObjectIds.Contains(objectInstanceId))
-        {
-            return false;
-        }
-
-        // Get the object instance
-        if (!_objectInstances.TryGetValue(objectInstanceId, out var obj))
+        var obj = mob.Inventory.FirstOrDefault(o => o.InstanceId == objectInstanceId);
+        if (obj is null)
         {
             return false;
         }
 
         // Remove from mob inventory
-        mob.RemoveFromInventory(objectInstanceId);
+        mob.RemoveFromInventory(obj);
 
         // Add to room
         if (!_roomObjects.TryGetValue(roomId, out var roomObjects))
@@ -292,13 +221,8 @@ public sealed class WorldState : IWorldState
     public bool EquipObject(PlayerState player, int objectInstanceId, EquipmentSlot slot)
     {
         // Check if player has the object in inventory
-        if (!player.InventoryObjectIds.Contains(objectInstanceId))
-        {
-            return false;
-        }
-
-        // Get the object instance
-        if (!_objectInstances.TryGetValue(objectInstanceId, out var obj))
+        var obj = player.Inventory.FirstOrDefault(o => o.InstanceId == objectInstanceId);
+        if (obj is null)
         {
             return false;
         }
@@ -309,13 +233,13 @@ public sealed class WorldState : IWorldState
         // we can't do a simple slot name match here.
 
         // Try to equip to slot
-        if (!player.EquipToSlot((int)slot, objectInstanceId))
+        if (!player.Equip(obj, slot))
         {
             return false; // Slot already occupied
         }
 
         // Remove from inventory
-        player.RemoveFromInventory(objectInstanceId);
+        player.RemoveFromInventory(obj);
 
         return true;
     }
@@ -323,13 +247,13 @@ public sealed class WorldState : IWorldState
     public bool UnequipObject(PlayerState player, EquipmentSlot slot)
     {
         // Try to unequip from slot
-        if (!player.UnequipFromSlot((int)slot, out var objectInstanceId))
+        if (player.Unequip(slot) is not { } obj)
         {
             return false; // Nothing equipped in that slot
         }
 
         // Add back to inventory
-        player.AddToInventory(objectInstanceId);
+        player.AddToInventory(obj);
 
         return true;
     }
@@ -344,10 +268,9 @@ public sealed class WorldState : IWorldState
 
         // Create new object instance
         var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
-        _objectInstances[objectInstance.InstanceId] = objectInstance;
 
         // Add to player inventory
-        player.AddToInventory(objectInstance.InstanceId);
+        player.AddToInventory(objectInstance);
 
         return objectInstance;
     }
@@ -362,7 +285,6 @@ public sealed class WorldState : IWorldState
 
         // Create new object instance
         var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
-        _objectInstances[objectInstance.InstanceId] = objectInstance;
 
         return objectInstance;
     }
@@ -610,7 +532,6 @@ public sealed class WorldState : IWorldState
         }
 
         var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
-        _objectInstances[objectInstance.InstanceId] = objectInstance;
         list.Add(objectInstance);
         return true;
     }
@@ -634,7 +555,6 @@ public sealed class WorldState : IWorldState
 
         var slot = (EquipmentSlot)reset.EquipSlot.Value;
         var objectInstance = new ObjectInstance(_nextObjectInstanceId++, objectDefinition);
-        _objectInstances[objectInstance.InstanceId] = objectInstance;
         mob.Equip(objectInstance, slot);
         return true;
     }
@@ -707,7 +627,6 @@ public sealed class WorldState : IWorldState
                 return false;
             }
 
-            _objectInstances[portal.InstanceId] = portal;
             list.Add(portal);
         }
 
@@ -828,19 +747,13 @@ public sealed class WorldState : IWorldState
 
         // Calculate total weight (player weight + items)
         int totalWeight = 100; // Base player weight
-        foreach (var objectId in player.InventoryObjectIds)
+        foreach (var obj in player.Inventory)
         {
-            if (_objectInstances.TryGetValue(objectId, out var obj))
-            {
-                totalWeight += obj.Definition.Weight;
-            }
+            totalWeight += obj.Definition.Weight;
         }
-        foreach (var objectId in player.EquipmentSlotToObjectId.Values)
+        foreach (var obj in player.Equipment.Values)
         {
-            if (_objectInstances.TryGetValue(objectId, out var obj))
-            {
-                totalWeight += obj.Definition.Weight;
-            }
+            totalWeight += obj.Definition.Weight;
         }
 
         // Create corpse object definition
@@ -862,26 +775,19 @@ public sealed class WorldState : IWorldState
 
         // Create corpse instance
         var corpse = new ObjectInstance(_nextObjectInstanceId++, corpseDefinition);
-        _objectInstances[corpse.InstanceId] = corpse;
 
         // Transfer inventory items to corpse (fight.c:340)
-        foreach (var objectId in player.InventoryObjectIds.ToList())
+        foreach (var obj in player.Inventory)
         {
-            if (_objectInstances.TryGetValue(objectId, out var obj))
-            {
-                corpse.AddItem(obj);
-            }
+            corpse.AddItem(obj);
         }
 
         // Transfer equipment to corpse (fight.c:371-373)
-        foreach (var slotId in player.EquipmentSlotToObjectId.Keys.ToList())
+        foreach (var slot in player.Equipment.Keys.ToList())
         {
-            if (player.UnequipFromSlot(slotId, out var objectId))
+            if (player.Unequip(slot) is { } obj)
             {
-                if (_objectInstances.TryGetValue(objectId, out var obj))
-                {
-                    corpse.AddItem(obj);
-                }
+                corpse.AddItem(obj);
             }
         }
 
@@ -894,9 +800,9 @@ public sealed class WorldState : IWorldState
         }
 
         // Clear player inventory (fight.c:375-377)
-        while (player.InventoryObjectIds.Count > 0)
+        while (player.Inventory.Count > 0)
         {
-            player.RemoveFromInventory(player.InventoryObjectIds[0]);
+            player.RemoveFromInventory(player.Inventory[0]);
         }
 
         // Place corpse in room (fight.c:392)
@@ -948,7 +854,6 @@ public sealed class WorldState : IWorldState
 
         // Create corpse instance
         var corpse = new ObjectInstance(_nextObjectInstanceId++, corpseDefinition);
-        _objectInstances[corpse.InstanceId] = corpse;
 
         // Transfer mob equipment to corpse (fight.c:371-373)
         foreach (var slot in mob.Equipment.Keys.ToList())
@@ -961,12 +866,9 @@ public sealed class WorldState : IWorldState
         }
 
         // Transfer mob inventory to corpse (loot from scavenged items)
-        foreach (var objectId in mob.InventoryObjectIds.ToList())
+        foreach (var obj in mob.Inventory)
         {
-            if (_objectInstances.TryGetValue(objectId, out var obj))
-            {
-                corpse.AddItem(obj);
-            }
+            corpse.AddItem(obj);
         }
 
         // Transfer mob gold as money object (fight.c:341-347)
@@ -1007,7 +909,6 @@ public sealed class WorldState : IWorldState
         );
 
         var money = new ObjectInstance(_nextObjectInstanceId++, moneyDefinition);
-        _objectInstances[money.InstanceId] = money;
         return money;
     }
 

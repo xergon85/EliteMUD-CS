@@ -1,6 +1,5 @@
 using EliteMud.Application.Commands.Inventory;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Inventory;
@@ -10,9 +9,9 @@ internal sealed class InventoryCommandHandler : ICommandHandler
 {
     private readonly InventoryHandler _inventoryHandler;
 
-    public InventoryCommandHandler(IWorldState worldState)
+    public InventoryCommandHandler()
     {
-        _inventoryHandler = new InventoryHandler(worldState);
+        _inventoryHandler = new InventoryHandler();
     }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,

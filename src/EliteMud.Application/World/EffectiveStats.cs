@@ -12,12 +12,10 @@ public sealed class EffectiveStats
 {
     private const int MobAbilityMax = 25;
 
-    private readonly IWorldState _worldState;
     private readonly RulesContent _rules;
 
-    public EffectiveStats(IWorldState worldState, RulesContent rules)
+    public EffectiveStats(RulesContent rules)
     {
-        _worldState = worldState;
         _rules = rules;
     }
 
@@ -61,7 +59,7 @@ public sealed class EffectiveStats
 
     /// <summary>What worn and wielded items add to a stat.</summary>
     public int GearBonus(ICombatant combatant, AffectLocation stat) =>
-        Gear(combatant)
+        combatant.Equipment.Values
             .SelectMany(item => item.Definition.Affects)
             .Where(affect => Counts(affect.Location, stat))
             .Sum(affect => affect.Modifier);
@@ -123,12 +121,4 @@ public sealed class EffectiveStats
             _ => max.Charisma
         };
     }
-
-    /// <summary>A player's items are ids the world resolves; a mob holds its items (#80 follow-up: players too).</summary>
-    private IEnumerable<ObjectInstance> Gear(ICombatant combatant) => combatant switch
-    {
-        PlayerState player => _worldState.GetPlayerEquipment(player).Values,
-        MobInstance mob => mob.Equipment.Values,
-        _ => Enumerable.Empty<ObjectInstance>()
-    };
 }

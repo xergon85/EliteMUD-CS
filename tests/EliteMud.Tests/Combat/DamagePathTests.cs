@@ -444,7 +444,7 @@ public class DamagePathTests
         }
 
         public WorldState World { get; }
-        public EffectiveStats Stats => new(World, _rules);
+        public EffectiveStats Stats => new(_rules);
         public MobInstance Mob { get; }
         public PlayerState Attacker { get; }
         public PlayerState VictimPlayer { get; }
@@ -463,14 +463,14 @@ public class DamagePathTests
 
         public KickSkillExecutor Kick() => new(_skills, Damage());
         public BashSkillExecutor Bash() => new(_skills, Damage());
-        public BackstabSkillExecutor Backstab() => new(_skills, new MeleeRoll(_calculator, World, Stats), Damage());
+        public BackstabSkillExecutor Backstab() => new(_skills, new MeleeRoll(_calculator, Stats), Damage());
 
         public MeleeAttackExecutor Kill() => new(
             _calculator,
             World,
             new MobAiService(new MockScriptEngine(), new PathfindingService()),
             Damage(),
-            new MeleeRoll(_calculator, World, Stats),
+            new MeleeRoll(_calculator, Stats),
             Stats);
 
         public void AssertMobKilled()

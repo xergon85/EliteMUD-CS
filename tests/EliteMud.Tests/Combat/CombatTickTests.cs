@@ -116,7 +116,7 @@ public sealed class CombatTickTests : IDisposable
 
         var services = new ServiceCollection().BuildServiceProvider();
         var gate = new GameStateGate();
-        var stats = new EffectiveStats(_world, rules);
+        var stats = new EffectiveStats(rules);
         var look = new LookCommandHandler(_world, new MockScriptEngine(), connections, RulesContent.Empty);
         var damage = new CombatDamage(
             calculator,
@@ -131,11 +131,11 @@ public sealed class CombatTickTests : IDisposable
             services,
             _world,
             damage,
-            new MeleeRoll(calculator, _world, stats),
+            new MeleeRoll(calculator, stats),
             stats,
             new SkillMessageSender(new ActMessageService(), connections, look),
             calculator,
-            new CharacterSaveQueue(services, _world, gate),
+            new CharacterSaveQueue(services, gate),
             new MobAiService(new MockScriptEngine(), new PathfindingService()),
             gate);
     }
@@ -271,8 +271,8 @@ public sealed class CombatTickTests : IDisposable
     {
         Fight(Fighter, _mob);
         Fighter.SetSkill(SkillType.DualWield, 100); // the dice of 20 are under 100: the dual attack happens
-        Fighter.EquipToSlot((int)EquipmentSlot.Wield, _world.CreateObjectInstance(Sword)!.InstanceId);
-        Fighter.EquipToSlot((int)EquipmentSlot.Hold, _world.CreateObjectInstance(Dagger)!.InstanceId);
+        Fighter.Equip(_world.CreateObjectInstance(Sword), EquipmentSlot.Wield);
+        Fighter.Equip(_world.CreateObjectInstance(Dagger), EquipmentSlot.Hold);
 
         await Round();
 
@@ -369,7 +369,7 @@ public sealed class CombatTickTests : IDisposable
     public async Task MobKillingAPlayer_ShowsTheHitAgainstTheirMaxHitPointsWithGear()
     {
         var ring = _world.CreateObjectInstance(Ring)!;
-        Victim.EquipToSlot((int)EquipmentSlot.FingerRight, ring.InstanceId);
+        Victim.Equip(ring, EquipmentSlot.FingerRight);
         Fight(_mob, Victim);
         Victim.HitPoints = -5;
 

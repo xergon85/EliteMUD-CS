@@ -1,5 +1,4 @@
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.World;
 using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Equipment;
@@ -8,16 +7,9 @@ public sealed record EquipmentResult(IReadOnlyList<string> Lines);
 
 public sealed class EquipmentHandler
 {
-    private readonly IWorldState _worldState;
-
-    public EquipmentHandler(IWorldState worldState)
-    {
-        _worldState = worldState;
-    }
-
     public EquipmentResult Handle(PlayerState player)
     {
-        var equipment = _worldState.GetPlayerEquipment(player);
+        var equipment = player.Equipment;
         
         if (equipment.Count == 0)
         {

@@ -28,7 +28,7 @@ public sealed class WearHandler
             return WearAll(player);
         }
 
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
 
         // Find matching object in inventory using indexed targeting (e.g., "2.helmet")
         // Legacy: handler.c:1020-1040 (get_obj_in_list with get_number)
@@ -47,7 +47,7 @@ public sealed class WearHandler
         }
 
         // Try each potential slot until we find one that works
-        var equipment = _worldState.GetPlayerEquipment(player);
+        var equipment = player.Equipment;
         foreach (var slot in slots)
         {
             // Check if slot is available
@@ -68,9 +68,9 @@ public sealed class WearHandler
 
     private WearResult WearAll(PlayerState player)
     {
-        var inventory = _worldState.GetPlayerInventory(player);
+        var inventory = player.Inventory;
         var wornObjects = new List<ObjectDefinition>();
-        var equipment = _worldState.GetPlayerEquipment(player);
+        var equipment = player.Equipment;
 
         // Try to wear each wearable item in inventory
         foreach (var obj in inventory.ToList())
@@ -94,7 +94,7 @@ public sealed class WearHandler
                     if (_worldState.EquipObject(player, obj.InstanceId, slot))
                     {
                         wornObjects.Add(obj.Definition);
-                        equipment = _worldState.GetPlayerEquipment(player); // Refresh equipment state
+                        equipment = player.Equipment; // Refresh equipment state
                         equipped = true;
                         break;
                     }
