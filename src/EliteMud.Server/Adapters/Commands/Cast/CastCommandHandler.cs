@@ -23,7 +23,7 @@ internal sealed class CastCommandHandler : ICommandHandler
     private readonly SpellMetadataRegistry _metadataRegistry;
     private readonly IWorldState _worldState;
     private readonly ConnectionRegistry _connectionRegistry;
-    private readonly ActMessageService _actService;
+    private readonly ActMessenger _act;
     private readonly CombatDamage _combatDamage;
     private readonly SkillMessageSender _messageSender;
     private readonly EffectiveStats _stats;
@@ -33,7 +33,7 @@ internal sealed class CastCommandHandler : ICommandHandler
         SpellMetadataRegistry metadataRegistry,
         IWorldState worldState,
         ConnectionRegistry connectionRegistry,
-        ActMessageService actService,
+        ActMessenger act,
         CombatDamage combatDamage,
         SkillMessageSender messageSender,
         EffectiveStats stats)
@@ -45,7 +45,7 @@ internal sealed class CastCommandHandler : ICommandHandler
         _metadataRegistry = metadataRegistry;
         _worldState = worldState;
         _connectionRegistry = connectionRegistry;
-        _actService = actService;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -306,11 +306,7 @@ internal sealed class CastCommandHandler : ICommandHandler
         if (!success)
         {
             await context.Session.SendLineAsync($"You try to cast {metadata.Name}, but fail!", cancellationToken);
-            await context.ActToNotCharAsync(
-                _actService,
-                _connectionRegistry,
-                "$n tries to cast a spell, but fails!",
-                cancellationToken: cancellationToken);
+            _act.ToNotChar(context.Player, "$n tries to cast a spell, but fails!");
             return;
         }
 
@@ -336,11 +332,7 @@ internal sealed class CastCommandHandler : ICommandHandler
         {
             // Unknown spell type (no damage, healing, or affects)
             await context.Session.SendLineAsync($"You cast {metadata.Name}.", cancellationToken);
-            await context.ActToNotCharAsync(
-                _actService,
-                _connectionRegistry,
-                $"$n casts {metadata.Name}.",
-                cancellationToken: cancellationToken);
+            _act.ToNotChar(context.Player, $"$n casts {metadata.Name}.");
         }
 
         // Try to improve spell proficiency
@@ -381,15 +373,10 @@ internal sealed class CastCommandHandler : ICommandHandler
             }
         }
 
-        await context.ActToNotVictAsync(
-            _actService,
-            _connectionRegistry,
-            $"$n casts {metadata.Name} at {target.Name}! [{outcome.Damage}]",
-            target,
-            cancellationToken: cancellationToken);
+        _act.ToNotVict(context.Player, $"$n casts {metadata.Name} at {target.Name}! [{outcome.Damage}]", target);
 
         // Death and kill XP follow the hit, as in legacy
-        await _messageSender.SendAsync(outcome.Messages, context, cancellationToken);
+        await _messageSender.SendAsync(outcome.Messages, context.Player, cancellationToken);
     }
 
     /// <summary>
@@ -418,11 +405,7 @@ internal sealed class CastCommandHandler : ICommandHandler
                 await context.Session.SendLineAsync(
                     $"You cast {metadata.Name} and heal yourself for {actualHealing} hit points.",
                     cancellationToken);
-                await context.ActToNotCharAsync(
-                    _actService,
-                    _connectionRegistry,
-                    $"$n casts {metadata.Name} on $mself.",
-                    cancellationToken: cancellationToken);
+                _act.ToNotChar(context.Player, $"$n casts {metadata.Name} on $mself.");
             }
             else
             {
@@ -441,12 +424,7 @@ internal sealed class CastCommandHandler : ICommandHandler
                     }
                 }
 
-                await context.ActToNotVictAsync(
-                    _actService,
-                    _connectionRegistry,
-                    $"$n casts {metadata.Name} on {target.Name}.",
-                    target,
-                    cancellationToken: cancellationToken);
+                _act.ToNotVict(context.Player, $"$n casts {metadata.Name} on {target.Name}.", target);
             }
         }
     }
@@ -480,11 +458,7 @@ internal sealed class CastCommandHandler : ICommandHandler
 
                 if (affect.ToRoomMessage != null)
                 {
-                    await context.ActToNotCharAsync(
-                        _actService,
-                        _connectionRegistry,
-                        affect.ToRoomMessage,
-                        cancellationToken: cancellationToken);
+                    _act.ToNotChar(context.Player, affect.ToRoomMessage);
                 }
             }
             else
@@ -508,12 +482,7 @@ internal sealed class CastCommandHandler : ICommandHandler
 
                 if (affect.ToRoomMessage != null)
                 {
-                    await context.ActToNotVictAsync(
-                        _actService,
-                        _connectionRegistry,
-                        affect.ToRoomMessage,
-                        target,
-                        cancellationToken: cancellationToken);
+                    _act.ToNotVict(context.Player, affect.ToRoomMessage, target);
                 }
             }
 
@@ -527,11 +496,7 @@ internal sealed class CastCommandHandler : ICommandHandler
             if (target == caster)
             {
                 await context.Session.SendLineAsync($"You cast {metadata.Name} on yourself.", cancellationToken);
-                await context.ActToNotCharAsync(
-                    _actService,
-                    _connectionRegistry,
-                    $"$n casts {metadata.Name}.",
-                    cancellationToken: cancellationToken);
+                _act.ToNotChar(context.Player, $"$n casts {metadata.Name}.");
             }
             else
             {
@@ -546,12 +511,7 @@ internal sealed class CastCommandHandler : ICommandHandler
                     }
                 }
 
-                await context.ActToNotVictAsync(
-                    _actService,
-                    _connectionRegistry,
-                    $"$n casts {metadata.Name} on {target.Name}.",
-                    target,
-                    cancellationToken: cancellationToken);
+                _act.ToNotVict(context.Player, $"$n casts {metadata.Name} on {target.Name}.", target);
             }
         }
     }

@@ -138,7 +138,7 @@ public sealed class CombatTickTests : IDisposable
             damage,
             new MeleeRoll(calculator, stats),
             stats,
-            new SkillMessageSender(new ActMessageService(), connections, look),
+            new SkillMessageSender(TestActMessenger.For(_world, connections), connections, look),
             calculator,
             new CharacterSaveQueue(services, gate),
             new MobAiService(new MockScriptEngine(), new PathfindingService()),

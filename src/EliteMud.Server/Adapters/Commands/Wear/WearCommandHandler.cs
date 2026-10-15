@@ -9,17 +9,14 @@ namespace EliteMud.Server.Adapters.Commands.Wear;
 internal sealed class WearCommandHandler : ICommandHandler
 {
     private readonly WearHandler _wearHandler;
-    private readonly ActMessageService _actService;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
     public WearCommandHandler(
         IWorldState worldState,
-        ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        ActMessenger act)
     {
         _wearHandler = new WearHandler(worldState);
-        _actService = actService;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
@@ -33,13 +30,7 @@ internal sealed class WearCommandHandler : ICommandHandler
         {
             foreach (var obj in result.Objects)
             {
-                await context.SendEquipMessageAsync(
-                    _actService,
-                    _connectionRegistry,
-                    "You wear $p.",
-                    "$n wears $p.",
-                    obj,
-                    cancellationToken);
+                context.SendEquipMessage(_act, "You wear $p.", "$n wears $p.", obj);
             }
             return CommandOutcome.Continue;
         }
@@ -47,13 +38,7 @@ internal sealed class WearCommandHandler : ICommandHandler
         // If there's a single object, use ActMessage
         if (result.Object is not null)
         {
-            await context.SendEquipMessageAsync(
-                _actService,
-                _connectionRegistry,
-                "You wear $p.",
-                "$n wears $p.",
-                result.Object,
-                cancellationToken);
+            context.SendEquipMessage(_act, "You wear $p.", "$n wears $p.", result.Object);
             return CommandOutcome.Continue;
         }
         

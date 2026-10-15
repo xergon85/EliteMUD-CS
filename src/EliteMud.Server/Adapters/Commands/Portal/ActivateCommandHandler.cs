@@ -13,12 +13,12 @@ namespace EliteMud.Server.Adapters.Commands.Portal;
 internal sealed class ActivateCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
-    public ActivateCommandHandler(IWorldState worldState, ConnectionRegistry connectionRegistry)
+    public ActivateCommandHandler(IWorldState worldState, ActMessenger act)
     {
         _worldState = worldState;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -60,10 +60,7 @@ internal sealed class ActivateCommandHandler : ICommandHandler
 
         portal.IsClosed = false;
         await context.Session.SendLineAsync($"You activate the {portalName}.", cancellationToken);
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} activates the {portalName}.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} activates the {portalName}.");
 
         return CommandOutcome.Continue;
     }

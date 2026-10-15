@@ -66,7 +66,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
         var result = _executor.Execute(skillContext);
 
         // 3. Format and send messages
-        await _messageSender.SendAsync(result.Messages, context, cancellationToken);
+        await _messageSender.SendAsync(result.Messages, context.Player, cancellationToken);
 
         return CommandOutcome.Continue;
     }

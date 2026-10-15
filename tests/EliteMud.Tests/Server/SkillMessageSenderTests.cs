@@ -56,7 +56,7 @@ public sealed class SkillMessageSenderTests : IDisposable
             _world.Population.Enter(player, player.RoomId);
         }
         _sender = new SkillMessageSender(
-            new ActMessageService(),
+            TestActMessenger.For(_world, connections),
             connections,
             new LookCommandHandler(_world, new MockScriptEngine(), RulesContent.Empty));
     }

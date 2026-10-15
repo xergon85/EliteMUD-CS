@@ -9,17 +9,14 @@ namespace EliteMud.Server.Adapters.Commands.Drop;
 internal sealed class DropCommandHandler : ICommandHandler
 {
     private readonly DropHandler _dropHandler;
-    private readonly ActMessageService _actService;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
     public DropCommandHandler(
         IWorldState worldState,
-        ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        ActMessenger act)
     {
         _dropHandler = new DropHandler(worldState);
-        _actService = actService;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
@@ -39,35 +36,17 @@ internal sealed class DropCommandHandler : ICommandHandler
         {
             foreach (var obj in result.Objects)
             {
-                await context.ActToCharAsync(
-                    _actService,
-                    "you drop $p.",
-                    obj: obj,
-                    cancellationToken: cancellationToken);
+                _act.ToChar(context.Player, "you drop $p.", obj: obj);
 
-                await context.ActToNotCharAsync(
-                    _actService,
-                    _connectionRegistry,
-                    "$n drops $p.",
-                    obj: obj,
-                    cancellationToken: cancellationToken);
+                _act.ToNotChar(context.Player, "$n drops $p.", obj: obj);
             }
             return CommandOutcome.Continue;
         }
 
         // Handle single object
-        await context.ActToCharAsync(
-            _actService,
-            "you drop $p.",
-            obj: result.Object,
-            cancellationToken: cancellationToken);
+        _act.ToChar(context.Player, "you drop $p.", obj: result.Object);
 
-        await context.ActToNotCharAsync(
-            _actService,
-            _connectionRegistry,
-            "$n drops $p.",
-            obj: result.Object,
-            cancellationToken: cancellationToken);
+        _act.ToNotChar(context.Player, "$n drops $p.", obj: result.Object);
 
         return CommandOutcome.Continue;
     }

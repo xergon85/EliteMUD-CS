@@ -9,17 +9,14 @@ namespace EliteMud.Server.Adapters.Commands.Hold;
 internal sealed class HoldCommandHandler : ICommandHandler
 {
     private readonly HoldHandler _holdHandler;
-    private readonly ActMessageService _actService;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
     public HoldCommandHandler(
         IWorldState worldState,
-        ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        ActMessenger act)
     {
         _holdHandler = new HoldHandler(worldState);
-        _actService = actService;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
@@ -31,13 +28,7 @@ internal sealed class HoldCommandHandler : ICommandHandler
         // Success - item equipped
         if (result.Object is not null)
         {
-            await context.SendEquipMessageAsync(
-                _actService,
-                _connectionRegistry,
-                "You grab $p.",
-                "$n grabs $p.",
-                result.Object,
-                cancellationToken);
+            context.SendEquipMessage(_act, "You grab $p.", "$n grabs $p.", result.Object);
             return CommandOutcome.Continue;
         }
         
@@ -50,11 +41,7 @@ internal sealed class HoldCommandHandler : ICommandHandler
                 ? "You're already using $p as light source."
                 : "You're already holding $p.";
                 
-            await context.ActToCharAsync(
-                _actService,
-                message,
-                obj: result.AlreadyEquipped,
-                cancellationToken: cancellationToken);
+            _act.ToChar(context.Player, message, obj: result.AlreadyEquipped);
             return CommandOutcome.Continue;
         }
         

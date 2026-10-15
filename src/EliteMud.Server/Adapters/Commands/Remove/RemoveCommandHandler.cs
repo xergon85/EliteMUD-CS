@@ -9,17 +9,14 @@ namespace EliteMud.Server.Adapters.Commands.Remove;
 internal sealed class RemoveCommandHandler : ICommandHandler
 {
     private readonly RemoveHandler _removeHandler;
-    private readonly ActMessageService _actService;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
     public RemoveCommandHandler(
         IWorldState worldState,
-        ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        ActMessenger act)
     {
         _removeHandler = new RemoveHandler(worldState);
-        _actService = actService;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -34,13 +31,7 @@ internal sealed class RemoveCommandHandler : ICommandHandler
         {
             foreach (var obj in result.Objects)
             {
-                await context.SendEquipMessageAsync(
-                    _actService,
-                    _connectionRegistry,
-                    "You stop using $p.",
-                    "$n stops using $p.",
-                    obj,
-                    cancellationToken);
+                context.SendEquipMessage(_act, "You stop using $p.", "$n stops using $p.", obj);
             }
             return CommandOutcome.Continue;
         }
@@ -48,13 +39,7 @@ internal sealed class RemoveCommandHandler : ICommandHandler
         // Handle single object
         if (result.Object is not null)
         {
-            await context.SendEquipMessageAsync(
-                _actService,
-                _connectionRegistry,
-                "You stop using $p.",
-                "$n stops using $p.",
-                result.Object,
-                cancellationToken);
+            context.SendEquipMessage(_act, "You stop using $p.", "$n stops using $p.", result.Object);
             return CommandOutcome.Continue;
         }
 

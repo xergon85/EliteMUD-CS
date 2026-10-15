@@ -8,11 +8,11 @@ namespace EliteMud.Server.Adapters.Commands.Wake;
 [Command("wake", Aliases = new[] { "wake", "wa" })]
 internal sealed class WakeCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
-    public WakeCommandHandler(ConnectionRegistry connectionRegistry)
+    public WakeCommandHandler(ActMessenger act)
     {
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -34,10 +34,7 @@ internal sealed class WakeCommandHandler : ICommandHandler
         await context.Session.SendLineAsync("You awaken and stand up.", cancellationToken);
 
         // Broadcast to room
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} awakens.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} awakens.");
 
         return CommandOutcome.Continue;
     }

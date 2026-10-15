@@ -114,7 +114,7 @@ public sealed class CastDamageTests : IDisposable
             spellMetadata,
             _world,
             connections,
-            new ActMessageService(),
+            TestActMessenger.For(_world, connections),
             new CombatDamage(
                 _calculator,
                 new CombatExperience(progression, experience),
@@ -123,7 +123,7 @@ public sealed class CastDamageTests : IDisposable
                 new FleeHandler(_world, progression),
                 stats),
             new SkillMessageSender(
-                new ActMessageService(),
+                TestActMessenger.For(_world, connections),
                 connections,
                 new LookCommandHandler(_world, new MockScriptEngine(), RulesContent.Empty)),
             stats);

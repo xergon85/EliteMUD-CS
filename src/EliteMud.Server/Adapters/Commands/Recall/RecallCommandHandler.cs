@@ -12,7 +12,7 @@ internal sealed class RecallCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
     private readonly LookCommandHandler _lookHandler;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
     
     // Legacy: recall goes to mortal_start_room; max_recall_level = 10 (level 10 and below can recall)
     private const int RecallRoomId = CharacterStart.StartRoom;
@@ -21,11 +21,11 @@ internal sealed class RecallCommandHandler : ICommandHandler
     public RecallCommandHandler(
         IWorldState worldState,
         LookCommandHandler lookHandler,
-        ConnectionRegistry connectionRegistry)
+        ActMessenger act)
     {
         _worldState = worldState;
         _lookHandler = lookHandler;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -66,15 +66,9 @@ internal sealed class RecallCommandHandler : ICommandHandler
         }
         
         // Messages to room before leaving
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} seeks deep into prayer.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} seeks deep into prayer.");
         
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"The gods reach down and escort {player.Name} to safety!",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"The gods reach down and escort {player.Name} to safety!");
         
         // Validate recall room exists (safety check)
         if (!_worldState.World.Rooms.ContainsKey(RecallRoomId))
@@ -109,10 +103,7 @@ internal sealed class RecallCommandHandler : ICommandHandler
             cancellationToken);
         
         // Message to new room
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"The gods drop {player.Name} in the middle of the room!",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"The gods drop {player.Name} in the middle of the room!");
         
         // Warning at max level
         if (player.Level == MaxRecallLevel)
