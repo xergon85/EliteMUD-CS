@@ -9,17 +9,11 @@ namespace EliteMud.Server.Adapters.Commands.Put;
 internal sealed class PutCommandHandler : ICommandHandler
 {
     private readonly PutHandler _putHandler;
-    private readonly ActMessageService _actService;
-    private readonly ConnectionRegistry _connectionRegistry;
 
     public PutCommandHandler(
-        IWorldState worldState,
-        ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        IWorldState worldState)
     {
         _putHandler = new PutHandler(worldState);
-        _actService = actService;
-        _connectionRegistry = connectionRegistry;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(

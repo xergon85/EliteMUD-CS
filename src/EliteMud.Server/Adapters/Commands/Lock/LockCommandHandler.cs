@@ -9,17 +9,11 @@ namespace EliteMud.Server.Adapters.Commands.Lock;
 internal sealed class LockCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
-    private readonly ActMessageService _actService;
-    private readonly ConnectionRegistry _connectionRegistry;
 
     public LockCommandHandler(
-        IWorldState worldState,
-        ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        IWorldState worldState)
     {
         _worldState = worldState;
-        _actService = actService;
-        _connectionRegistry = connectionRegistry;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(

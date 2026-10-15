@@ -3,6 +3,7 @@ using EliteMud.Application.Skills;
 using EliteMud.Application.World;
 using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Look;
+using EliteMud.Server;
 using EliteMud.Server.Adapters.Commands.Shared;
 using EliteMud.Server.Adapters.Commands.Skills;
 using EliteMud.Tests.Ai;

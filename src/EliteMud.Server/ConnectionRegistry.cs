@@ -1,9 +1,13 @@
 using System.Collections.Concurrent;
 using EliteMud.Game;
 
-namespace EliteMud.Server.Adapters.Commands.Shared;
+namespace EliteMud.Server;
 
-/// <summary>The connections of the players in the game, by player.</summary>
+/// <summary>
+/// The Telnet connections of the players in the game, by player. Only the server uses it: to send output
+/// (<see cref="SessionCharacterOutput"/>), to show a player a room down their connection, and to save each
+/// character under its id. Game code finds players through the population (#79).
+/// </summary>
 internal sealed class ConnectionRegistry
 {
     private readonly ConcurrentDictionary<PlayerState, ConnectionContext> _connections =

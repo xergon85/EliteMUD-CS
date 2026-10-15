@@ -1,6 +1,7 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.World;
 using EliteMud.Game;
+using EliteMud.Server;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Tests.Server;
