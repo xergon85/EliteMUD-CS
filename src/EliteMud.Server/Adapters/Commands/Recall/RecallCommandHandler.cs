@@ -86,7 +86,7 @@ internal sealed class RecallCommandHandler : ICommandHandler
         }
         
         // Move player to recall room
-        player.RoomId = RecallRoomId;
+        _worldState.Population.Move(player, RecallRoomId);
         
         // If player was fighting, reset position to standing
         if (player.Position == Position.Fighting)

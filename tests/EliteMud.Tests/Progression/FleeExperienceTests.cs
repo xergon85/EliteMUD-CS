@@ -36,10 +36,7 @@ public class FleeExperienceTests
             new Dictionary<int, List<MobInstance>> { [1] = _mobsInRoomOne, [2] = new() },
             new Dictionary<int, List<ObjectInstance>> { [1] = new(), [2] = new() },
             new List<ZoneDefinition>());
-        _flee = new FleeHandler(
-            _world,
-            new CombatCalculator(new DodgeSkill(metadata, formulas), new ParrySkill(metadata, formulas)),
-            new PlayerProgression(new ExperienceService(rules, formulas), rules));
+        _flee = new FleeHandler(_world, new PlayerProgression(new ExperienceService(rules, formulas), rules));
     }
 
     /// <summary>
@@ -55,9 +52,10 @@ public class FleeExperienceTests
         var opponent = new PlayerState(2, "Other", opponentRoom, level: 10, "warrior", "human", sex: 1);
         opponent.MaxHitPoints = 100;
         opponent.HitPoints = 70;
+        _world.Population.Enter(opponent, opponentRoom);
         player.Fighting = opponent;
 
-        var result = _flee.AttemptFlee(player, 1, () => new[] { opponent }, () => _mobsInRoomOne);
+        var result = _flee.AttemptFlee(player, 1, () => _mobsInRoomOne);
 
         Assert.True(result.Success);
         Assert.Equal(expectedLoss, result.ExperienceLoss);
@@ -69,6 +67,7 @@ public class FleeExperienceTests
     {
         var player = Player(level: 10, experience: 5000);
         var someoneElse = new PlayerState(2, "Other", 1, level: 10, "warrior", "human", sex: 1);
+        _world.Population.Enter(someoneElse, 1);
         var definition = new MobDefinition(
             100, "rat", "a rat", "A rat is here.", "Desc", 5, "Animal", "None",
             new List<string>(), new StatBlock(10, 10, 10, 10, 10, 10),
@@ -81,7 +80,7 @@ public class FleeExperienceTests
         fightingThem.Fighting = someoneElse;
         player.Fighting = fightingUs;
 
-        _flee.ApplyFleeResult(player, new FleeResult(true, 2, 0, 1), () => new[] { someoneElse });
+        _flee.ApplyFleeResult(player, new FleeResult(true, 2, 0, 1));
 
         Assert.Null(player.Fighting);
         Assert.Null(fightingUs.Fighting);
@@ -94,7 +93,7 @@ public class FleeExperienceTests
     {
         var player = Player(level: 10, experience: 5000);
 
-        var messages = _flee.ApplyFleeResult(player, new FleeResult(true, 2, 1200, 1), Array.Empty<PlayerState>);
+        var messages = _flee.ApplyFleeResult(player, new FleeResult(true, 2, 1200, 1));
 
         Assert.Equal(3800, player.Experience);
         Assert.Equal("You lose 1200 experience points.", Assert.Single(messages));
@@ -106,7 +105,7 @@ public class FleeExperienceTests
     {
         var player = Player(level: 10, experience: 300);
 
-        var messages = _flee.ApplyFleeResult(player, new FleeResult(true, 2, 1200, 1), Array.Empty<PlayerState>);
+        var messages = _flee.ApplyFleeResult(player, new FleeResult(true, 2, 1200, 1));
 
         Assert.Equal(0, player.Experience);
         Assert.Equal("You lose 300 experience points.", Assert.Single(messages));
@@ -117,12 +116,17 @@ public class FleeExperienceTests
     {
         var player = Player(level: 110, experience: 5000);
 
-        var messages = _flee.ApplyFleeResult(player, new FleeResult(true, 2, 1200, 1), Array.Empty<PlayerState>);
+        var messages = _flee.ApplyFleeResult(player, new FleeResult(true, 2, 1200, 1));
 
         Assert.Equal(5000, player.Experience);
         Assert.Empty(messages);
     }
 
-    private static PlayerState Player(int level, int experience) =>
-        new(1, "Tester", 1, (byte)level, "warrior", "human", sex: 1) { Experience = experience };
+    // A player in the game, in the room they flee from
+    private PlayerState Player(int level, int experience)
+    {
+        var player = new PlayerState(1, "Tester", 1, (byte)level, "warrior", "human", sex: 1) { Experience = experience };
+        _world.Population.Enter(player, 1);
+        return player;
+    }
 }

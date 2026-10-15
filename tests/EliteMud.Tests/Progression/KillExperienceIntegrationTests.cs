@@ -59,8 +59,7 @@ public class KillExperienceIntegrationTests
                 combatExperience,
                 world,
                 Array.Empty<ICombatListener>(),
-                new FleeHandler(world, calculator, progression),
-                Array.Empty<PlayerState>,
+                new FleeHandler(world, progression),
                 new EffectiveStats(rules)));
 
         var player = new PlayerState(1, "Tester", 3001, level: 1, "warrior", "human", sex: 1)

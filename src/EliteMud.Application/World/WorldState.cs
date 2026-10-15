@@ -44,6 +44,7 @@ public sealed class WorldState : IWorldState
         _roomMobs = roomMobs;
         _roomObjects = roomObjects;
         _zones = zones;
+        Population = new WorldPopulation(world, () => _roomMobs.Values.SelectMany(mobs => mobs));
 
         foreach (var (roomId, mobs) in roomMobs)
         {
@@ -88,6 +89,8 @@ public sealed class WorldState : IWorldState
     }
 
     public WorldDefinition World { get; }
+
+    public WorldPopulation Population { get; }
 
     public IReadOnlyDictionary<int, MobDefinition> MobDefinitions => _mobDefinitions;
 

@@ -56,7 +56,7 @@ public sealed class MoveHandler
             return MoveResult.Failed(ClosedExitMessage(exit));
         }
 
-        player.RoomId = targetRoomId;
+        _worldState.Population.Move(player, targetRoomId);
         return MoveResult.Success();
     }
 

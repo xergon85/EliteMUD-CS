@@ -68,7 +68,7 @@ internal sealed class EnterCommandHandler : ICommandHandler
             $"{player.Name} disappears into {portalName}.",
             cancellationToken);
 
-        player.RoomId = portal.Destination;
+        _worldState.Population.Move(player, portal.Destination);
 
         await context.BroadcastToRoomAsync(
             _connectionRegistry,

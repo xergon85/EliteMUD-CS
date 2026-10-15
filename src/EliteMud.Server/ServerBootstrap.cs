@@ -136,14 +136,7 @@ internal static class ServerBootstrap
             .AddSingleton<ExperienceService>()
             .AddSingleton<PlayerProgression>()
             .AddSingleton<CombatExperience>()
-            .AddSingleton(provider => new CombatDamage(
-                provider.GetRequiredService<CombatCalculator>(),
-                provider.GetRequiredService<CombatExperience>(),
-                provider.GetRequiredService<IWorldState>(),
-                provider.GetServices<ICombatListener>(),
-                provider.GetRequiredService<FleeHandler>(),
-                () => provider.GetRequiredService<ConnectionRegistry>().GetConnections().Select(c => c.Player),
-                provider.GetRequiredService<EffectiveStats>()))
+            .AddSingleton<CombatDamage>()
             .AddSingleton<ICombatListener, MobMemory>()
             .AddSingleton<MeleeRoll>()
             .AddSingleton<EffectiveStats>()
@@ -189,8 +182,7 @@ internal static class ServerBootstrap
         var saveQueue = services.GetRequiredService<CharacterSaveQueue>();
 
         var server = new TelnetServer(IPAddress.Any, port, catalog, promptCatalog, commandRouter, connectionRegistry,
-            authHandler, services, ipBanService, worldState, saveQueue, services.GetRequiredService<GameStateGate>(),
-            services.GetRequiredService<CombatCalculator>());
+            authHandler, services, ipBanService, worldState, saveQueue, services.GetRequiredService<GameStateGate>());
         return (server, tickService);
     }
 

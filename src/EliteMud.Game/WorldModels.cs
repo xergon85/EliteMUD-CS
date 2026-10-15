@@ -332,7 +332,8 @@ public sealed class PlayerState : ICombatant
     public byte Sex { get; set; } // 0 = neutral, 1 = male, 2 = female
 
     // ===== Location =====
-    public int RoomId { get; set; }
+    /// <summary>The player's room; only <c>WorldPopulation</c> moves them (#79).</summary>
+    public int RoomId { get; internal set; }
 
     // ===== Class & Level =====
     public string CharacterClass { get; set; }

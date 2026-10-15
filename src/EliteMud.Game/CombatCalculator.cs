@@ -87,7 +87,7 @@ public class CombatCalculator
     /// Stop fighting (legacy stop_fighting): anyone conscious stands up, e.g. someone bashed to the ground. Unlike
     /// legacy, the stunned, incapacitated and dying stay down (legacy stands them up too, with no update_pos after).
     /// </summary>
-    public void StopFighting(ICombatant combatant)
+    public static void StopFighting(ICombatant combatant)
     {
         combatant.Fighting = null;
         if (combatant.Position > Position.Stunned)
@@ -100,7 +100,7 @@ public class CombatCalculator
     /// Stop everyone among <paramref name="others"/> who is fighting <paramref name="opponent"/>, e.g. when the
     /// opponent flees or leaves the game (legacy extract_char stops everyone fighting the one who leaves).
     /// </summary>
-    public void StopEveryoneFighting(ICombatant opponent, IEnumerable<ICombatant> others)
+    public static void StopEveryoneFighting(ICombatant opponent, IEnumerable<ICombatant> others)
     {
         foreach (var combatant in others.Where(other => other.Fighting == opponent).ToList())
         {

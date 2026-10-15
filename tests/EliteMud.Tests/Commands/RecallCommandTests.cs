@@ -191,12 +191,13 @@ public class RecallCommandTests : IDisposable
         // Create connection registry
         var connectionRegistry = new ConnectionRegistry();
         connectionRegistry.SetProvider(() => new[] { context });
+        worldState.Population.Enter(player, player.RoomId);
 
         // Create mock script engine (no-op for tests)
         var scriptEngine = new MockScriptEngine();
         
         // Create look handler (uses same world state)
-        var lookHandler = new LookCommandHandler(worldState, scriptEngine, connectionRegistry, RulesContent.Empty);
+        var lookHandler = new LookCommandHandler(worldState, scriptEngine, RulesContent.Empty);
 
         // Create recall handler
         var handler = new RecallCommandHandler(worldState, lookHandler, connectionRegistry);

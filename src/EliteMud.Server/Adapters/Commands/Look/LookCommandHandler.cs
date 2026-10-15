@@ -13,18 +13,15 @@ internal sealed class LookCommandHandler : ICommandHandler
     private readonly IWorldState _worldState;
     private readonly IScriptEngine _scriptEngine;
     private readonly LookHandler _lookHandler;
-    private readonly ConnectionRegistry _connectionRegistry;
 
     public LookCommandHandler(
         IWorldState worldState,
         IScriptEngine scriptEngine,
-        ConnectionRegistry connectionRegistry,
         RulesContent rules)
     {
         _worldState = worldState;
         _scriptEngine = scriptEngine;
-        _connectionRegistry = connectionRegistry;
-        _lookHandler = new LookHandler(worldState, rules, () => _connectionRegistry.GetConnections().Select(c => c.Player));
+        _lookHandler = new LookHandler(worldState, rules);
     }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,

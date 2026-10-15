@@ -232,6 +232,9 @@ public interface IWorldState
 {
     WorldDefinition World { get; }
 
+    /// <summary>The players in the game and the rooms they're in.</summary>
+    WorldPopulation Population { get; }
+
     IReadOnlyList<MobInstance> GetMobsInRoom(int roomId);
 
     IReadOnlyList<ObjectInstance> GetObjectsInRoom(int roomId);

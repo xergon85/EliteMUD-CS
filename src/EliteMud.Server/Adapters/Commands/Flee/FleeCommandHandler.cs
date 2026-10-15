@@ -51,7 +51,6 @@ internal sealed class FleeCommandHandler : ICommandHandler
         var result = _fleeHandler.AttemptFlee(
             player,
             currentRoomId,
-            () => _connectionRegistry.GetConnections().Select(c => c.Player),
             () => _worldState.GetMobsInRoom(currentRoomId));
 
         if (!result.Success)
@@ -62,10 +61,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         }
 
         // Apply the flee result (moves player, stops combat, applies XP loss)
-        var lossMessages = _fleeHandler.ApplyFleeResult(
-            player,
-            result,
-            () => _connectionRegistry.GetConnections().Select(c => c.Player));
+        var lossMessages = _fleeHandler.ApplyFleeResult(player, result);
 
         foreach (var line in lossMessages)
         {

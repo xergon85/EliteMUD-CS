@@ -113,18 +113,21 @@ public sealed class CombatTickTests : IDisposable
 
         var connections = new ConnectionRegistry();
         connections.SetProvider(() => new[] { _fighter.Context, _victim.Context, _observer.Context });
+        foreach (var connection in connections.GetConnections())
+        {
+            _world.Population.Enter(connection.Player, connection.Player.RoomId);
+        }
 
         var services = new ServiceCollection().BuildServiceProvider();
         var gate = new GameStateGate();
         var stats = new EffectiveStats(rules);
-        var look = new LookCommandHandler(_world, new MockScriptEngine(), connections, RulesContent.Empty);
+        var look = new LookCommandHandler(_world, new MockScriptEngine(), RulesContent.Empty);
         var damage = new CombatDamage(
             calculator,
             new CombatExperience(progression, experienceService),
             _world,
             new ICombatListener[] { new MobMemory() },
-            new FleeHandler(_world, calculator, progression),
-            () => connections.GetConnections().Select(c => c.Player),
+            new FleeHandler(_world, progression),
             stats);
         _tick = new GameTickService(
             connections,

@@ -110,11 +110,11 @@ public sealed class RescueSkillExecutor : ISkillExecutor
 
         // Stop all existing combat relationships
         // Legacy: stop_fighting calls for victim, tmp_ch, and ch
-        _combatCalculator.StopFighting(allyPlayer);
-        _combatCalculator.StopFighting(attackingMob);
+        CombatCalculator.StopFighting(allyPlayer);
+        CombatCalculator.StopFighting(attackingMob);
         if (rescuer.Fighting != null)
         {
-            _combatCalculator.StopFighting(rescuer);
+            CombatCalculator.StopFighting(rescuer);
         }
 
         // Set new combat: rescuer <-> attacker

@@ -13,13 +13,11 @@ namespace EliteMud.Application.Commands.Flee;
 public sealed class FleeHandler
 {
     private readonly IWorldState _worldState;
-    private readonly CombatCalculator _combatCalculator;
     private readonly PlayerProgression _progression;
 
-    public FleeHandler(IWorldState worldState, CombatCalculator combatCalculator, PlayerProgression progression)
+    public FleeHandler(IWorldState worldState, PlayerProgression progression)
     {
         _worldState = worldState;
-        _combatCalculator = combatCalculator;
         _progression = progression;
     }
 
@@ -30,7 +28,6 @@ public sealed class FleeHandler
     public FleeResult AttemptFlee(
         PlayerState player,
         int currentRoomId,
-        Func<IEnumerable<PlayerState>> getOtherPlayers,
         Func<IEnumerable<MobInstance>> getMobsInRoom)
     {
         // Try to flee in 6 random directions (legacy: act.offensive.c:431)
@@ -57,7 +54,7 @@ public sealed class FleeHandler
             }
 
             // Calculate experience loss if fighting (legacy: act.offensive.c:425-427)
-            int experienceLoss = CalculateExperienceLoss(player, currentRoomId, getOtherPlayers, getMobsInRoom);
+            int experienceLoss = CalculateExperienceLoss(player, currentRoomId, getMobsInRoom);
 
             // Move succeeded - return success result
             return new FleeResult(
@@ -83,21 +80,15 @@ public sealed class FleeHandler
     /// Returns the experience messages for the player ("You lose N experience points."), to send before the
     /// flee message as legacy does.
     /// </summary>
-    public IReadOnlyList<string> ApplyFleeResult(
-        PlayerState player,
-        FleeResult result,
-        Func<IEnumerable<PlayerState>> getOtherPlayers)
+    public IReadOnlyList<string> ApplyFleeResult(PlayerState player, FleeResult result)
     {
         if (!result.Success)
         {
             return Array.Empty<string>();
         }
 
-        // Move to new room
-        player.RoomId = result.NewRoomId;
-
-        // Stop fighting
-        _combatCalculator.StopFighting(player);
+        // Leaving the room stops the player's fight
+        _worldState.Population.Move(player, result.NewRoomId);
 
         // Experience loss through the normal rules: never below 0, immortals exempt (legacy gain_exp)
         var loss = result.ExperienceLoss > 0
@@ -106,8 +97,8 @@ public sealed class FleeHandler
 
         // Stop all mobs/players that were fighting us in the old room
         var oldRoom = _worldState.GetMobsInRoom(result.OldRoomId)
-            .Concat<ICombatant>(getOtherPlayers().Where(p => p.RoomId == result.OldRoomId));
-        _combatCalculator.StopEveryoneFighting(player, oldRoom);
+            .Concat<ICombatant>(_worldState.Population.PlayersIn(result.OldRoomId));
+        CombatCalculator.StopEveryoneFighting(player, oldRoom);
 
         return loss;
     }
@@ -115,14 +106,13 @@ public sealed class FleeHandler
     private int CalculateExperienceLoss(
         PlayerState player,
         int currentRoomId,
-        Func<IEnumerable<PlayerState>> getOtherPlayers,
         Func<IEnumerable<MobInstance>> getMobsInRoom)
     {
         // Experience loss is damage done to the opponent × its level (legacy do_flee); the opponent must still be here
         var opponent = player.Fighting;
         var stillHere = opponent switch
         {
-            PlayerState other => other.RoomId == currentRoomId && getOtherPlayers().Contains(other),
+            PlayerState other => _worldState.Population.PlayersIn(currentRoomId).Contains(other),
             MobInstance mob => getMobsInRoom().Contains(mob),
             _ => false
         };

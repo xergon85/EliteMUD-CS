@@ -36,8 +36,8 @@ public sealed class Kill : IDamageStep
         var killer = context.Attacker;
         var victim = context.Victim;
         var messages = context.Messages;
-        _combatCalculator.StopFighting(killer);
-        _combatCalculator.StopFighting(victim);
+        CombatCalculator.StopFighting(killer);
+        CombatCalculator.StopFighting(victim);
 
         IReadOnlyList<string> killReward = Array.Empty<string>();
         if (!context.SelfInflicted)

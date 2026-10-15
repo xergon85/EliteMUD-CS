@@ -62,7 +62,7 @@ public class FightingTests
     {
         _calculator.SetFighting(_player, _mob);
 
-        _calculator.StopFighting(_player);
+        CombatCalculator.StopFighting(_player);
 
         Assert.Null(_player.Fighting);
         Assert.Equal(Position.Standing, _player.Position);
@@ -75,7 +75,7 @@ public class FightingTests
         _calculator.SetFighting(_mob, _player);
         _mob.Position = Position.Sitting;
 
-        _calculator.StopFighting(_mob);
+        CombatCalculator.StopFighting(_mob);
 
         Assert.Equal(Position.Standing, _mob.Position);
     }
@@ -89,7 +89,7 @@ public class FightingTests
         _calculator.SetFighting(_player, _mob);
         _player.Position = position;
 
-        _calculator.StopFighting(_player);
+        CombatCalculator.StopFighting(_player);
 
         Assert.Equal(position, _player.Position);
     }
@@ -108,7 +108,7 @@ public class FightingTests
         _calculator.SetFighting(_mob, _player);
         _calculator.SetFighting(bystander, otherMob);
 
-        _calculator.StopEveryoneFighting(_player, new ICombatant[] { other, bystander, _mob, otherMob });
+        CombatCalculator.StopEveryoneFighting(_player, new ICombatant[] { other, bystander, _mob, otherMob });
 
         Assert.Null(other.Fighting);
         Assert.Equal(Position.Standing, other.Position);

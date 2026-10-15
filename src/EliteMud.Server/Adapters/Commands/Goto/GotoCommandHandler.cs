@@ -53,7 +53,7 @@ internal sealed class GotoCommandHandler : ICommandHandler
 
         // Move player to target room
         var oldRoomId = player.RoomId;
-        player.RoomId = targetRoomId;
+        _worldState.Population.Move(player, targetRoomId);
 
         // Show message
         await context.Session.SendLineAsync($"You teleport to room {targetRoomId}.", cancellationToken);

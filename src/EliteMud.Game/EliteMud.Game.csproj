@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!-- PlayerState.RoomId is set only by WorldPopulation (#79) -->
+    <InternalsVisibleTo Include="EliteMud.Application" />
+  </ItemGroup>
+
 </Project>

@@ -441,6 +441,8 @@ public class DamagePathTests
                 Experience = 5000,
                 Position = Position.Standing
             };
+            World.Population.Enter(Attacker, Room);
+            World.Population.Enter(VictimPlayer, Room);
         }
 
         public WorldState World { get; }
@@ -457,8 +459,7 @@ public class DamagePathTests
             _experience,
             World,
             new[] { new MobMemory() },
-            new FleeHandler(World, _calculator, _progression),
-            () => new[] { Attacker, VictimPlayer },
+            new FleeHandler(World, _progression),
             Stats);
 
         public KickSkillExecutor Kick() => new(_skills, Damage());

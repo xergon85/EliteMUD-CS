@@ -15,7 +15,7 @@ public class LevelDisplayTests
     private static readonly RulesContent Rules =
         RulesContentLoader.Load(Path.Combine(RealWorld.RepositoryRoot, "content")).Rules;
 
-    private static readonly WorldState World = new(
+    private readonly WorldState _world = new(
         new WorldDefinition(new Dictionary<int, RoomDefinition> { [3001] = new(3001, "Temple", "Desc", new List<ExitDefinition>()) }),
         new Dictionary<int, MobDefinition>(),
         new Dictionary<int, ObjectDefinition>(),
@@ -82,7 +82,11 @@ public class LevelDisplayTests
     public void Look_ShowsOtherPlayersWithTheirTitle()
     {
         var other = Warrior(level: 3, id: 2, name: "Xergon");
-        var view = new LookHandler(World, Rules, () => new[] { other }).Handle(Warrior());
+        var player = Warrior();
+        _world.Population.Enter(other, other.RoomId);
+        _world.Population.Enter(player, player.RoomId);
+
+        var view = new LookHandler(_world, Rules).Handle(player);
 
         Assert.Equal("#CXergon#N the #wHuman#N Recruit is standing here.", Assert.Single(view.PlayerLines));
     }

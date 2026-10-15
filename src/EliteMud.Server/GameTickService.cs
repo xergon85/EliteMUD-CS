@@ -190,7 +190,7 @@ internal sealed class GameTickService
                     // The opponent must still be here: a mob that died or left is in another room or nowhere
                     if (opponent.RoomId != attacker.Player.RoomId)
                     {
-                        _combatCalculator.StopFighting(attacker.Player);
+                        CombatCalculator.StopFighting(attacker.Player);
                         await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
                         break;
                     }
@@ -230,7 +230,7 @@ internal sealed class GameTickService
             if (opponent.RoomId != mob.RoomId)
             {
                 // Player left or disconnected
-                _combatCalculator.StopFighting(mob);
+                CombatCalculator.StopFighting(mob);
                 continue;
             }
 
