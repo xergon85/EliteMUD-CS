@@ -1,28 +1,35 @@
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.World;
 using EliteMud.Game;
 
 namespace EliteMud.Application.Commands.Reply;
 
 public sealed class ReplyHandler
 {
-    public ReplyResult Handle(PlayerState sender, int? lastTellSenderConnectionId, string? recipientName, string? message)
+    /// <summary>Answers the last player who sent a tell, if they are still playing (legacy do_reply).</summary>
+    public ReplyResult Handle(PlayerState sender, WorldPopulation population, string? message)
     {
-        // Check if message is provided
+        var recipient = sender.LastTellSender;
+        if (recipient == null)
+        {
+            return ReplyResult.Failed("You have no-one to reply to!");
+        }
+
         if (string.IsNullOrWhiteSpace(message))
         {
             return ReplyResult.Failed("What is your reply?");
         }
 
-        // Check if there's someone to reply to
-        if (!lastTellSenderConnectionId.HasValue)
+        // Someone who logs in again is someone else: legacy compares the character itself
+        if (!population.IsInGame(recipient))
         {
-            return ReplyResult.Failed("You have no-one to reply to!");
+            return ReplyResult.Failed("They are no longer playing.");
         }
 
         var trimmedMessage = message.Trim();
-        var senderMessage = $"#bYou tell {recipientName} '{trimmedMessage}#b'#N";
+        var senderMessage = $"#bYou tell {recipient.Name} '{trimmedMessage}#b'#N";
         var recipientMessage = $"#b{sender.Name} tells you '{trimmedMessage}#b'#N";
 
-        return ReplyResult.Succeeded(senderMessage, recipientMessage, lastTellSenderConnectionId.Value);
+        return ReplyResult.Succeeded(senderMessage, recipientMessage, recipient);
     }
 }

@@ -1,3 +1,5 @@
+using EliteMud.Game;
+
 namespace EliteMud.Application.Commands.Shared;
 
 
@@ -38,22 +40,22 @@ public sealed record RoomView(
 
 public sealed record WhoResult(IReadOnlyList<string> Names);
 
-public sealed record TellResult(bool Success, string Message, string? RecipientMessage, int? RecipientConnectionId, bool IsHistoryRequest)
+public sealed record TellResult(bool Success, string Message, string? RecipientMessage, PlayerState? Recipient, bool IsHistoryRequest)
 {
     public static TellResult Failed(string message) => new(false, message, null, null, false);
 
-    public static TellResult Succeeded(string message, string recipientMessage, int recipientConnectionId) =>
-        new(true, message, recipientMessage, recipientConnectionId, false);
+    public static TellResult Succeeded(string message, string recipientMessage, PlayerState recipient) =>
+        new(true, message, recipientMessage, recipient, false);
     
     public static TellResult ShowHistory() => new(false, string.Empty, null, null, true);
 }
 
-public sealed record ReplyResult(bool Success, string Message, string? RecipientMessage, int? RecipientConnectionId)
+public sealed record ReplyResult(bool Success, string Message, string? RecipientMessage, PlayerState? Recipient)
 {
     public static ReplyResult Failed(string message) => new(false, message, null, null);
 
-    public static ReplyResult Succeeded(string message, string recipientMessage, int recipientConnectionId) =>
-        new(true, message, recipientMessage, recipientConnectionId);
+    public static ReplyResult Succeeded(string message, string recipientMessage, PlayerState recipient) =>
+        new(true, message, recipientMessage, recipient);
 }
 
 public sealed record EmoteResult(bool Success, string Message, string? BroadcastMessage)

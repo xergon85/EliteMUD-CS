@@ -1,5 +1,7 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Tell;
+using EliteMud.Application.Session;
+using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Tell;
@@ -7,12 +9,14 @@ namespace EliteMud.Server.Adapters.Commands.Tell;
 [Command("tell")]
 internal sealed class TellCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly IWorldState _worldState;
+    private readonly ICharacterOutput _output;
     private readonly TellHandler _tellHandler;
 
-    public TellCommandHandler(ConnectionRegistry connectionRegistry)
+    public TellCommandHandler(IWorldState worldState, ICharacterOutput output)
     {
-        _connectionRegistry = connectionRegistry;
+        _worldState = worldState;
+        _output = output;
         _tellHandler = new TellHandler();
     }
 
@@ -28,19 +32,13 @@ internal sealed class TellCommandHandler : ICommandHandler
         var recipientName = parts.Length > 0 ? parts[0] : null;
         var message = parts.Length > 1 ? parts[1] : null;
 
-        // Find recipient connection by name (case-insensitive)
-        ConnectionContext? recipientConnection = null;
-        if (!string.IsNullOrWhiteSpace(recipientName))
-        {
-            recipientConnection = _connectionRegistry.GetConnections()
-                .FirstOrDefault(c => c.Player.Name.Equals(recipientName, StringComparison.OrdinalIgnoreCase));
-        }
+        // Find the recipient by name (case-insensitive)
+        var recipient = string.IsNullOrWhiteSpace(recipientName)
+            ? null
+            : _worldState.Population.Players
+                .FirstOrDefault(p => p.Name.Equals(recipientName, StringComparison.OrdinalIgnoreCase));
 
-        var result = _tellHandler.Handle(
-            context.Player,
-            recipientConnection?.Id,
-            recipientConnection?.Player.Name ?? recipientName,
-            message);
+        var result = _tellHandler.Handle(context.Player, recipient, recipientName, message);
 
         // Handle history request (legacy feature - not implemented yet)
         if (result.IsHistoryRequest)
@@ -58,12 +56,12 @@ internal sealed class TellCommandHandler : ICommandHandler
         }
 
         // Send message to recipient
-        if (result.RecipientConnectionId.HasValue && recipientConnection != null)
+        if (result.Recipient != null)
         {
-            await recipientConnection.Session.SendLineAsync(result.RecipientMessage!, cancellationToken);
-            
+            _output.SendLine(result.Recipient, result.RecipientMessage!);
+
             // Track last tell sender for reply command
-            recipientConnection.Player.LastTellSender = context.Id;
+            result.Recipient.LastTellSender = context.Player;
         }
 
         return CommandOutcome.Continue;
