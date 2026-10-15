@@ -29,18 +29,15 @@ internal sealed class SkillCommandHandler : ICommandHandler
 {
     private readonly ISkillExecutor _executor;
     private readonly IWorldState _worldState;
-    private readonly ConnectionRegistry _connectionRegistry;
     private readonly SkillMessageSender _messageSender;
 
     public SkillCommandHandler(
         ISkillExecutor executor,
         IWorldState worldState,
-        ConnectionRegistry connectionRegistry,
         SkillMessageSender messageSender)
     {
         _executor = executor;
         _worldState = worldState;
-        _connectionRegistry = connectionRegistry;
         _messageSender = messageSender;
     }
 
@@ -149,14 +146,9 @@ internal sealed class SkillCommandHandler : ICommandHandler
         }
 
         // Not fighting - find target in room
-        var targetPlayer = _connectionRegistry.GetConnections()
-            .FirstOrDefault(c => c.Player.RoomId == player.RoomId
-                                 && c.Id != context.Id
-                                 && c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-
-        if (targetPlayer != null)
+        if (OtherPlayerHere(player, targetName) is { } targetPlayer)
         {
-            return new SkillContext(player, targetPlayer.Player, targetName);
+            return new SkillContext(player, targetPlayer, targetName);
         }
 
         var targetMob = _worldState.GetMobsInRoom(player.RoomId)
@@ -172,11 +164,15 @@ internal sealed class SkillCommandHandler : ICommandHandler
         return null;
     }
 
-    /// <summary>An opponent the player can still reach: in the same room, and for a player, still connected.</summary>
+    /// <summary>Another player in the room whose name contains the given text.</summary>
+    private PlayerState? OtherPlayerHere(PlayerState player, string name) =>
+        _worldState.Population.PlayersIn(player.RoomId)
+            .FirstOrDefault(other => other != player && other.Name.Contains(name, StringComparison.OrdinalIgnoreCase));
+
+    /// <summary>An opponent the player can still reach: in the game and in the same room.</summary>
     private bool IsHere(ICombatant opponent, PlayerState player) => opponent switch
     {
-        PlayerState other => other.RoomId == player.RoomId
-                             && _connectionRegistry.GetConnections().Any(c => c.Player == other),
+        PlayerState other => _worldState.Population.PlayersIn(player.RoomId).Contains(other),
         MobInstance mob => _worldState.GetMobsInRoom(player.RoomId).Contains(mob),
         _ => false
     };
@@ -199,14 +195,9 @@ internal sealed class SkillCommandHandler : ICommandHandler
         }
 
         // Find player target
-        var targetPlayer = _connectionRegistry.GetConnections()
-            .FirstOrDefault(c => c.Player.RoomId == player.RoomId
-                                 && c.Id != context.Id
-                                 && c.Player.Name.Contains(targetName, StringComparison.OrdinalIgnoreCase));
-
-        if (targetPlayer != null)
+        if (OtherPlayerHere(player, targetName) is { } targetPlayer)
         {
-            return new SkillContext(player, targetPlayer.Player, targetName);
+            return new SkillContext(player, targetPlayer, targetName);
         }
 
         // Find mob target

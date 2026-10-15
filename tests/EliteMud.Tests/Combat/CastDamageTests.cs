@@ -113,7 +113,7 @@ public sealed class CastDamageTests : IDisposable
             new SpellRegistry(spellMetadata, formulas),
             spellMetadata,
             _world,
-            connections,
+            new SessionCharacterOutput(connections),
             TestActMessenger.For(_world, connections),
             new CombatDamage(
                 _calculator,
