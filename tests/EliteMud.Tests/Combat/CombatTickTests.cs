@@ -133,6 +133,7 @@ public sealed class CombatTickTests : IDisposable
             stats);
         _tick = new GameTickService(
             connections,
+            new SessionCharacterOutput(connections),
             services,
             _world,
             damage,
@@ -460,6 +461,24 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(100, _mob.HitPoints);
         Assert.Equal(100, Fighter.HitPoints);
         Assert.Equal(new[] { "Your opponent has left." }, _fighter.Lines());
+    }
+
+    [Fact]
+    public void ASpellThatWearsOff_TellsOnlyThatPlayer()
+    {
+        Fighter.AddAffect(new Affect
+        {
+            Type = AffectType.Armor,
+            Location = AffectLocation.Armor,
+            Modifier = -20,
+            DurationHours = 1,
+            WearOffMessage = "You feel less protected."
+        });
+
+        _tick.ProcessRegeneration();
+
+        Assert.Equal(new[] { "You feel less protected." }, _fighter.Lines());
+        Assert.Empty(_observer.Lines());
     }
 
     [Fact]
