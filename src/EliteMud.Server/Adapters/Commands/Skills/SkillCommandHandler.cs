@@ -151,7 +151,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
             return new SkillContext(player, targetPlayer, targetName);
         }
 
-        var targetMob = _worldState.GetMobsInRoom(player.RoomId)
+        var targetMob = _worldState.Population.MobsIn(player.RoomId)
             .FirstOrDefault(m =>
                 m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
 
@@ -173,7 +173,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
     private bool IsHere(ICombatant opponent, PlayerState player) => opponent switch
     {
         PlayerState other => _worldState.Population.PlayersIn(player.RoomId).Contains(other),
-        MobInstance mob => _worldState.GetMobsInRoom(player.RoomId).Contains(mob),
+        MobInstance mob => _worldState.Population.MobsIn(player.RoomId).Contains(mob),
         _ => false
     };
 
@@ -201,7 +201,7 @@ internal sealed class SkillCommandHandler : ICommandHandler
         }
 
         // Find mob target
-        var targetMob = _worldState.GetMobsInRoom(player.RoomId)
+        var targetMob = _worldState.Population.MobsIn(player.RoomId)
             .FirstOrDefault(m =>
                 m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
 

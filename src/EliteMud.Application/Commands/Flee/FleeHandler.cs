@@ -25,10 +25,7 @@ public sealed class FleeHandler
     /// Attempts to flee in a random direction.
     /// Returns FleeResult indicating success/failure and any state changes.
     /// </summary>
-    public FleeResult AttemptFlee(
-        PlayerState player,
-        int currentRoomId,
-        Func<IEnumerable<MobInstance>> getMobsInRoom)
+    public FleeResult AttemptFlee(PlayerState player, int currentRoomId)
     {
         // Try to flee in 6 random directions (legacy: act.offensive.c:431)
         var random = new Random();
@@ -54,7 +51,7 @@ public sealed class FleeHandler
             }
 
             // Calculate experience loss if fighting (legacy: act.offensive.c:425-427)
-            int experienceLoss = CalculateExperienceLoss(player, currentRoomId, getMobsInRoom);
+            int experienceLoss = CalculateExperienceLoss(player, currentRoomId);
 
             // Move succeeded - return success result
             return new FleeResult(
@@ -96,24 +93,21 @@ public sealed class FleeHandler
             : Array.Empty<string>();
 
         // Stop all mobs/players that were fighting us in the old room
-        var oldRoom = _worldState.GetMobsInRoom(result.OldRoomId)
+        var oldRoom = _worldState.Population.MobsIn(result.OldRoomId)
             .Concat<ICombatant>(_worldState.Population.PlayersIn(result.OldRoomId));
         CombatCalculator.StopEveryoneFighting(player, oldRoom);
 
         return loss;
     }
 
-    private int CalculateExperienceLoss(
-        PlayerState player,
-        int currentRoomId,
-        Func<IEnumerable<MobInstance>> getMobsInRoom)
+    private int CalculateExperienceLoss(PlayerState player, int currentRoomId)
     {
         // Experience loss is damage done to the opponent × its level (legacy do_flee); the opponent must still be here
         var opponent = player.Fighting;
         var stillHere = opponent switch
         {
             PlayerState other => _worldState.Population.PlayersIn(currentRoomId).Contains(other),
-            MobInstance mob => getMobsInRoom().Contains(mob),
+            MobInstance mob => _worldState.Population.MobsIn(currentRoomId).Contains(mob),
             _ => false
         };
 

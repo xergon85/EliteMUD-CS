@@ -221,7 +221,7 @@ internal sealed class CastCommandHandler : ICommandHandler
                     return opponent;
                 }
             }
-            else if (caster.Fighting is MobInstance mob && _worldState.GetMobsInRoom(caster.RoomId).Contains(mob))
+            else if (caster.Fighting is MobInstance mob && _worldState.Population.MobsIn(caster.RoomId).Contains(mob))
             {
                 return mob;
             }
@@ -275,7 +275,7 @@ internal sealed class CastCommandHandler : ICommandHandler
         }
 
         // Check for mobs in room
-        var targetMob = _worldState.GetMobsInRoom(caster.RoomId)
+        var targetMob = _worldState.Population.MobsIn(caster.RoomId)
             .FirstOrDefault(m => m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
 
         if (targetMob != null)

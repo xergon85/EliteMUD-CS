@@ -16,7 +16,6 @@ public class FleeExperienceTests
 
     private readonly FleeHandler _flee;
     private readonly WorldState _world;
-    private readonly List<MobInstance> _mobsInRoomOne = new();
 
     public FleeExperienceTests()
     {
@@ -33,7 +32,7 @@ public class FleeExperienceTests
             }),
             new Dictionary<int, MobDefinition>(),
             new Dictionary<int, ObjectDefinition>(),
-            new Dictionary<int, List<MobInstance>> { [1] = _mobsInRoomOne, [2] = new() },
+            new Dictionary<int, List<MobInstance>> { [1] = new(), [2] = new() },
             new Dictionary<int, List<ObjectInstance>> { [1] = new(), [2] = new() },
             new List<ZoneDefinition>());
         _flee = new FleeHandler(_world, new PlayerProgression(new ExperienceService(rules, formulas), rules));
@@ -55,7 +54,7 @@ public class FleeExperienceTests
         _world.Population.Enter(opponent, opponentRoom);
         player.Fighting = opponent;
 
-        var result = _flee.AttemptFlee(player, 1, () => _mobsInRoomOne);
+        var result = _flee.AttemptFlee(player, 1);
 
         Assert.True(result.Success);
         Assert.Equal(expectedLoss, result.ExperienceLoss);

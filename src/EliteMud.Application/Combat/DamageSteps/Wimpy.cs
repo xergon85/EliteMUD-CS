@@ -1,6 +1,5 @@
 using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Skills;
-using EliteMud.Application.World;
 using EliteMud.Game;
 
 namespace EliteMud.Application.Combat.DamageSteps;
@@ -13,12 +12,10 @@ namespace EliteMud.Application.Combat.DamageSteps;
 public sealed class Wimpy : IDamageStep
 {
     private readonly FleeHandler _fleeHandler;
-    private readonly IWorldState _worldState;
 
-    public Wimpy(FleeHandler fleeHandler, IWorldState worldState)
+    public Wimpy(FleeHandler fleeHandler)
     {
         _fleeHandler = fleeHandler;
-        _worldState = worldState;
     }
 
     public void Apply(DamageContext context)
@@ -35,7 +32,7 @@ public sealed class Wimpy : IDamageStep
         messages.Add(new SkillMessage(SkillMessageTarget.Victim, "You wimp out, and attempt to flee!", victim));
 
         var roomId = victim.RoomId;
-        var result = _fleeHandler.AttemptFlee(victim, roomId, () => _worldState.GetMobsInRoom(roomId));
+        var result = _fleeHandler.AttemptFlee(victim, roomId);
         if (!result.Success)
         {
             messages.Add(new SkillMessage(SkillMessageTarget.Victim, "PANIC!  You couldn't escape!", victim));

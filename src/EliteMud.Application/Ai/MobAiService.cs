@@ -111,7 +111,7 @@ public class MobAiService
         IWorldState worldState)
     {
         // Get all mobs in the room
-        var mobsInRoom = worldState.GetMobsInRoom(roomId);
+        var mobsInRoom = worldState.Population.MobsIn(roomId);
 
         foreach (var helper in mobsInRoom)
         {
@@ -245,15 +245,8 @@ public class MobAiService
         // TODO: Check if target room has NO_MOB flag
         
         // Move mob to next room
-        if (worldState.MoveMob(mob.InstanceId, roomId, nextRoomId))
-        {
-            // TODO: Send act() message about mob leaving/entering
-        }
-        else
-        {
-            // Movement failed, clear path
-            mob.TrackingPath = null;
-        }
+        worldState.Population.Move(mob, nextRoomId);
+        // TODO: Send act() message about mob leaving/entering
 
         // If path is complete, clear it
         if (mob.TrackingPath != null && mob.TrackingPath.Count == 0)
@@ -335,13 +328,10 @@ public class MobAiService
             }
         }
 
-        // Attempt to move
-        if (worldState.MoveMob(mob.InstanceId, roomId, targetRoomId))
-        {
-            mob.LastDirection = roll;
-            // TODO: Send act() message: mob leaves in direction
-            // TODO: Send act() message to new room: mob arrives from opposite direction
-        }
+        worldState.Population.Move(mob, targetRoomId);
+        mob.LastDirection = roll;
+        // TODO: Send act() message: mob leaves in direction
+        // TODO: Send act() message to new room: mob arrives from opposite direction
     }
 
     private void ProcessSentinelReturnHome(MobInstance mob, int roomId, IWorldState worldState)

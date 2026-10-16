@@ -263,8 +263,8 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState);
 
         // Assert
-        Assert.Contains(worldState.GetMobsInRoom(101), m => m.InstanceId == 1);
-        Assert.DoesNotContain(worldState.GetMobsInRoom(100), m => m.InstanceId == 1);
+        Assert.Contains(worldState.Population.MobsIn(101), m => m.InstanceId == 1);
+        Assert.DoesNotContain(worldState.Population.MobsIn(100), m => m.InstanceId == 1);
     }
 
     [Fact]
@@ -280,7 +280,7 @@ public class MobAiServiceTests
         service.ProcessMobTick(mob, 100, worldState);
 
         // Assert
-        Assert.Contains(worldState.GetMobsInRoom(100), m => m.InstanceId == 1);
+        Assert.Contains(worldState.Population.MobsIn(100), m => m.InstanceId == 1);
     }
 
     [Fact]
@@ -299,8 +299,8 @@ public class MobAiServiceTests
         }
 
         // Assert - Mob should NOT have moved (still in room 100)
-        Assert.NotEmpty(worldState.GetMobsInRoom(100).Where(m => m.InstanceId == 1));
-        Assert.Empty(worldState.GetMobsInRoom(101).Where(m => m.InstanceId == 1));
+        Assert.NotEmpty(worldState.Population.MobsIn(100).Where(m => m.InstanceId == 1));
+        Assert.Empty(worldState.Population.MobsIn(101).Where(m => m.InstanceId == 1));
     }
 
     [Fact]
@@ -318,7 +318,7 @@ public class MobAiServiceTests
         }
 
         // Assert - Mob should NOT have moved to NO_MOB room
-        Assert.Empty(worldState.GetMobsInRoom(101).Where(m => m.InstanceId == 1));
+        Assert.Empty(worldState.Population.MobsIn(101).Where(m => m.InstanceId == 1));
     }
 
     [Fact]
@@ -336,7 +336,7 @@ public class MobAiServiceTests
         }
 
         // Assert - Mob should NOT have left zone (room 101 is different zone)
-        Assert.Empty(worldState.GetMobsInRoom(101).Where(m => m.InstanceId == 1));
+        Assert.Empty(worldState.Population.MobsIn(101).Where(m => m.InstanceId == 1));
     }
 
     // ===== Helper/Assist Behavior Tests =====

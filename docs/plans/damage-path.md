@@ -84,9 +84,9 @@ Not done in #42; the ones without a card are worth one each if wanted:
   bare-handed, berserk, and the mob wait state. `BashCommandHandler` keeps its own copy of `str_app`'s bash column;
   it belongs in `StrengthApply`.
 - **Duplication:** `SkillMessageSender` and the commands share `ActMessenger` since #79; shout and gossip still
-  loop over the players themselves (#53). `FleeHandler`, `LookHandler` and `CombatDamage` take the online players as a `Func`; world and AI methods still
-  pass a mob's room next to the mob (`MoveMob(from, …)`, `RemoveMob(id, roomId)`), which `MobInstance.RoomId` now
-  makes unnecessary.
+  loop over the players themselves (#53). Players and mobs move through `WorldPopulation` since #79, so nothing
+  takes the room's characters as a `Func` any more; the AI still passes a mob's room next to the mob
+  (`ProcessMobTick(mob, roomId, …)`), which `MobInstance.RoomId` makes unnecessary.
 
 ## Watch out for
 

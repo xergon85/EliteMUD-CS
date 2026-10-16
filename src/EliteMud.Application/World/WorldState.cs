@@ -94,8 +94,6 @@ public sealed class WorldState : IWorldState
 
     public IReadOnlyDictionary<int, ObjectDefinition> ObjectDefinitions => _objectDefinitions;
 
-    public IReadOnlyList<MobInstance> GetMobsInRoom(int roomId) => Population.MobsIn(roomId);
-
     public IReadOnlyList<ObjectInstance> GetObjectsInRoom(int roomId)
     {
         return _roomObjects.TryGetValue(roomId, out var objects)
@@ -900,45 +898,6 @@ public sealed class WorldState : IWorldState
         return money;
     }
 
-    /// <summary>
-    /// Remove a mob from the world completely.
-    /// Legacy: extract_char() in handler.c
-    /// </summary>
-    public bool RemoveMob(int mobInstanceId, int roomId)
-    {
-        var mob = GetMobInstance(mobInstanceId, roomId);
-        if (mob is null)
-        {
-            return false;
-        }
-
-        Population.Leave(mob);
-        return true;
-    }
-
-    /// <summary>
-    /// Move a mob from one room to another.
-    /// Legacy: char_from_room() + char_to_room() in handler.c
-    /// </summary>
-    public bool MoveMob(int mobInstanceId, int fromRoomId, int toRoomId)
-    {
-        var mob = GetMobInstance(mobInstanceId, fromRoomId);
-        if (mob is null || !World.Rooms.ContainsKey(toRoomId))
-        {
-            return false;
-        }
-
-        Population.Move(mob, toRoomId);
-        return true;
-    }
-
-    /// <summary>
-    /// Get a mob instance by its instance ID and room ID.
-    /// Returns null if not found.
-    /// </summary>
-    public MobInstance? GetMobInstance(int mobInstanceId, int roomId) =>
-        Population.MobsIn(roomId).FirstOrDefault(m => m.InstanceId == mobInstanceId);
-    
     // ===== Door State Management =====
     
     /// <summary>

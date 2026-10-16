@@ -352,7 +352,7 @@ public class DamagePathTests
 
         Assert.False(outcome.VictimDied);
         Assert.Empty(outcome.Messages);
-        Assert.Contains(fixture.Mob, fixture.World.GetMobsInRoom(Room));
+        Assert.Contains(fixture.Mob, fixture.World.Population.MobsIn(Room));
         Assert.Equal(experience, fixture.Attacker.Experience);
         Assert.Equal(0, fixture.Attacker.Alignment);
     }
@@ -477,7 +477,7 @@ public class DamagePathTests
         public void AssertMobKilled()
         {
             Assert.Equal(Position.Dead, Mob.Position);
-            Assert.DoesNotContain(Mob, World.GetMobsInRoom(Room));
+            Assert.DoesNotContain(Mob, World.Population.MobsIn(Room));
             Assert.Contains(World.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
             Assert.Null(Attacker.Fighting);
             Assert.Null(Mob.Fighting);

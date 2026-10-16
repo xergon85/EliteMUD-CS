@@ -34,7 +34,7 @@ public sealed class CombatDamage
             new LoseHitPoints(combatExperience),
             new UpdatePosition(combatCalculator),
             new PositionMessages(stats),
-            new Wimpy(fleeHandler, worldState),
+            new Wimpy(fleeHandler),
             new StopFightingBelowStunned(),
             new Kill(combatCalculator, combatExperience, listenerList),
             new PlayerDeath(combatExperience, worldState, stats),

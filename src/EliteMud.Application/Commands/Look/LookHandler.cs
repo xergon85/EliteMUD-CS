@@ -23,7 +23,7 @@ public sealed class LookHandler
     public RoomView Handle(PlayerState player)
     {
         var room = _worldState.World.GetRoom(player.RoomId);
-        var mobs = _worldState.GetMobsInRoom(room.Id);
+        var mobs = _worldState.Population.MobsIn(room.Id);
         var mobLines = new List<string>();
         foreach (var mob in mobs)
         {
@@ -111,7 +111,7 @@ public sealed class LookHandler
 
         // Try to find mob in room using indexed targeting (e.g., "look 2.guard")
         // Legacy: handler.c:1481-1501 (get_char_room_vis with get_number)
-        var mobs = _worldState.GetMobsInRoom(room.Id);
+        var mobs = _worldState.Population.MobsIn(room.Id);
         var mob = TargetParser.FindMob(mobs, target);
         if (mob != null)
         {

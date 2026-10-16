@@ -145,7 +145,7 @@ public sealed class CastDamageTests : IDisposable
         await Cast("'magic missile' rat");
 
         Assert.Equal(Position.Dead, _mob.Position);
-        Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
+        Assert.DoesNotContain(_mob, _world.Population.MobsIn(Room));
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
         Assert.Null(Caster.Fighting);
         Assert.Equal(62, Caster.Alignment);
