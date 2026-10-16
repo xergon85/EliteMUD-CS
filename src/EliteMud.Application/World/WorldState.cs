@@ -23,7 +23,6 @@ public sealed class WorldState : IWorldState
 {
     private readonly Dictionary<int, MobDefinition> _mobDefinitions;
     private readonly Dictionary<int, ObjectDefinition> _objectDefinitions;
-    private readonly Dictionary<int, List<MobInstance>> _roomMobs;
     private readonly Dictionary<int, List<ObjectInstance>> _roomObjects;
     private readonly IReadOnlyList<ZoneDefinition> _zones;
     private readonly Dictionary<(int roomId, Direction direction), DoorState> _doorStates = new();
@@ -41,16 +40,15 @@ public sealed class WorldState : IWorldState
         World = world;
         _mobDefinitions = mobDefinitions;
         _objectDefinitions = objectDefinitions;
-        _roomMobs = roomMobs;
         _roomObjects = roomObjects;
         _zones = zones;
-        Population = new WorldPopulation(world, () => _roomMobs.Values.SelectMany(mobs => mobs));
+        Population = new WorldPopulation(world);
 
         foreach (var (roomId, mobs) in roomMobs)
         {
             foreach (var mob in mobs)
             {
-                mob.RoomId = roomId;
+                Population.Place(mob, roomId);
             }
         }
         
@@ -96,12 +94,7 @@ public sealed class WorldState : IWorldState
 
     public IReadOnlyDictionary<int, ObjectDefinition> ObjectDefinitions => _objectDefinitions;
 
-    public IReadOnlyList<MobInstance> GetMobsInRoom(int roomId)
-    {
-        return _roomMobs.TryGetValue(roomId, out var mobs)
-            ? mobs
-            : Array.Empty<MobInstance>();
-    }
+    public IReadOnlyList<MobInstance> GetMobsInRoom(int roomId) => Population.MobsIn(roomId);
 
     public IReadOnlyList<ObjectInstance> GetObjectsInRoom(int roomId)
     {
@@ -366,19 +359,12 @@ public sealed class WorldState : IWorldState
 
     private void ClearZoneRooms(ZoneDefinition zone)
     {
-        foreach (var roomId in _roomMobs.Keys)
+        var zoneMobs = Population.Mobs
+            .Where(mob => mob.RoomId >= zone.RoomRange.Min && mob.RoomId <= zone.RoomRange.Max)
+            .ToList();
+        foreach (var mob in zoneMobs)
         {
-            if (roomId < zone.RoomRange.Min || roomId > zone.RoomRange.Max)
-            {
-                continue;
-            }
-
-            foreach (var mob in _roomMobs[roomId])
-            {
-                mob.RoomId = MobInstance.Nowhere;
-            }
-
-            _roomMobs[roomId].Clear();
+            Population.Leave(mob);
         }
 
         var objectDefsWithMaxLimit = new HashSet<int>();
@@ -485,15 +471,14 @@ public sealed class WorldState : IWorldState
             return null;
         }
 
-        if (!_roomMobs.TryGetValue(reset.RoomId.Value, out var list))
+        if (!World.Rooms.ContainsKey(reset.RoomId.Value))
         {
-            list = new List<MobInstance>();
-            _roomMobs[reset.RoomId.Value] = list;
+            return null;
         }
 
         var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
         var existing = 0;
-        foreach (var instance in list)
+        foreach (var instance in Population.MobsIn(reset.RoomId.Value))
         {
             if (instance.Definition.Id == mobDefinition.Id)
             {
@@ -506,8 +491,8 @@ public sealed class WorldState : IWorldState
             return null;
         }
 
-        var mob = new MobInstance(_nextMobInstanceId++, mobDefinition) { RoomId = reset.RoomId.Value };
-        list.Add(mob);
+        var mob = new MobInstance(_nextMobInstanceId++, mobDefinition);
+        Population.Enter(mob, reset.RoomId.Value);
         return mob;
     }
 
@@ -921,19 +906,13 @@ public sealed class WorldState : IWorldState
     /// </summary>
     public bool RemoveMob(int mobInstanceId, int roomId)
     {
-        if (!_roomMobs.TryGetValue(roomId, out var mobs))
-        {
-            return false;
-        }
-
-        var mob = mobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
+        var mob = GetMobInstance(mobInstanceId, roomId);
         if (mob is null)
         {
             return false;
         }
 
-        mobs.Remove(mob);
-        mob.RoomId = MobInstance.Nowhere;
+        Population.Leave(mob);
         return true;
     }
 
@@ -943,35 +922,13 @@ public sealed class WorldState : IWorldState
     /// </summary>
     public bool MoveMob(int mobInstanceId, int fromRoomId, int toRoomId)
     {
-        // Validate rooms exist
-        if (!World.Rooms.ContainsKey(fromRoomId) || !World.Rooms.ContainsKey(toRoomId))
+        var mob = GetMobInstance(mobInstanceId, fromRoomId);
+        if (mob is null || !World.Rooms.ContainsKey(toRoomId))
         {
             return false;
         }
 
-        // Find and remove mob from source room
-        if (!_roomMobs.TryGetValue(fromRoomId, out var fromMobs))
-        {
-            return false;
-        }
-
-        var mob = fromMobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
-        if (mob is null)
-        {
-            return false;
-        }
-
-        fromMobs.Remove(mob);
-
-        // Add mob to destination room
-        if (!_roomMobs.TryGetValue(toRoomId, out var toMobs))
-        {
-            toMobs = new List<MobInstance>();
-            _roomMobs[toRoomId] = toMobs;
-        }
-
-        toMobs.Add(mob);
-        mob.RoomId = toRoomId;
+        Population.Move(mob, toRoomId);
         return true;
     }
 
@@ -979,15 +936,8 @@ public sealed class WorldState : IWorldState
     /// Get a mob instance by its instance ID and room ID.
     /// Returns null if not found.
     /// </summary>
-    public MobInstance? GetMobInstance(int mobInstanceId, int roomId)
-    {
-        if (!_roomMobs.TryGetValue(roomId, out var mobs))
-        {
-            return null;
-        }
-
-        return mobs.FirstOrDefault(m => m.InstanceId == mobInstanceId);
-    }
+    public MobInstance? GetMobInstance(int mobInstanceId, int roomId) =>
+        Population.MobsIn(roomId).FirstOrDefault(m => m.InstanceId == mobInstanceId);
     
     // ===== Door State Management =====
     

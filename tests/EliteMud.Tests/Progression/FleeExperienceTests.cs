@@ -74,7 +74,8 @@ public class FleeExperienceTests
             new List<string>(), new List<string>(), 10, 10, 0, new List<MobAttack>(), null);
         var fightingUs = new MobInstance(1, definition);
         var fightingThem = new MobInstance(2, definition);
-        _mobsInRoomOne.AddRange(new[] { fightingUs, fightingThem });
+        _world.Population.Enter(fightingUs, 1);
+        _world.Population.Enter(fightingThem, 1);
         fightingUs.Fighting = player;
         fightingUs.Position = Position.Fighting;
         fightingThem.Fighting = someoneElse;
