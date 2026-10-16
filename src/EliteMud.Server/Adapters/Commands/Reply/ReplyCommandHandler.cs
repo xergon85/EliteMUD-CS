@@ -1,5 +1,7 @@
 using EliteMud.Application.Commands.Reply;
 using EliteMud.Application.Commands.Shared;
+using EliteMud.Application.Session;
+using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Reply;
@@ -7,12 +9,14 @@ namespace EliteMud.Server.Adapters.Commands.Reply;
 [Command("reply")]
 internal sealed class ReplyCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly IWorldState _worldState;
+    private readonly ICharacterOutput _output;
     private readonly ReplyHandler _replyHandler;
 
-    public ReplyCommandHandler(ConnectionRegistry connectionRegistry)
+    public ReplyCommandHandler(IWorldState worldState, ICharacterOutput output)
     {
-        _connectionRegistry = connectionRegistry;
+        _worldState = worldState;
+        _output = output;
         _replyHandler = new ReplyHandler();
     }
 
@@ -21,21 +25,7 @@ internal sealed class ReplyCommandHandler : ICommandHandler
         ConnectionContext context,
         CancellationToken cancellationToken)
     {
-        var message = command.Argument;
-
-        // Find recipient connection by last tell sender ID
-        ConnectionContext? recipientConnection = null;
-        if (context.Player.LastTellSender.HasValue)
-        {
-            recipientConnection = _connectionRegistry.GetConnections()
-                .FirstOrDefault(c => c.Id == context.Player.LastTellSender.Value);
-        }
-
-        var result = _replyHandler.Handle(
-            context.Player,
-            context.Player.LastTellSender,
-            recipientConnection?.Player.Name,
-            message);
+        var result = _replyHandler.Handle(context.Player, _worldState.Population, command.Argument);
 
         // Send message to sender
         await context.Session.SendLineAsync(result.Message, cancellationToken);
@@ -46,12 +36,12 @@ internal sealed class ReplyCommandHandler : ICommandHandler
         }
 
         // Send message to recipient
-        if (result.RecipientConnectionId.HasValue && recipientConnection != null)
+        if (result.Recipient != null)
         {
-            await recipientConnection.Session.SendLineAsync(result.RecipientMessage!, cancellationToken);
-            
+            _output.SendLine(result.Recipient, result.RecipientMessage!);
+
             // Track last tell sender for subsequent replies
-            recipientConnection.Player.LastTellSender = context.Id;
+            result.Recipient.LastTellSender = context.Player;
         }
 
         return CommandOutcome.Continue;

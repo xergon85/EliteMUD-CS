@@ -112,7 +112,9 @@ public sealed class CombatTickTests : IDisposable
         _observer = new TestConnection(3, new PlayerState(3, "Observer", Room, level: 5, "warrior", "human", sex: 1));
 
         var connections = new ConnectionRegistry();
-        connections.SetProvider(() => new[] { _fighter.Context, _victim.Context, _observer.Context });
+        connections.Add(_fighter.Context);
+        connections.Add(_victim.Context);
+        connections.Add(_observer.Context);
         foreach (var connection in connections.GetConnections())
         {
             _world.Population.Enter(connection.Player, connection.Player.RoomId);
@@ -131,12 +133,13 @@ public sealed class CombatTickTests : IDisposable
             stats);
         _tick = new GameTickService(
             connections,
+            new SessionCharacterOutput(connections),
             services,
             _world,
             damage,
             new MeleeRoll(calculator, stats),
             stats,
-            new SkillMessageSender(new ActMessageService(), connections, look),
+            new SkillMessageSender(TestActMessenger.For(_world, connections), connections, look),
             calculator,
             new CharacterSaveQueue(services, gate),
             new MobAiService(new MockScriptEngine(), new PathfindingService()),
@@ -458,6 +461,24 @@ public sealed class CombatTickTests : IDisposable
         Assert.Equal(100, _mob.HitPoints);
         Assert.Equal(100, Fighter.HitPoints);
         Assert.Equal(new[] { "Your opponent has left." }, _fighter.Lines());
+    }
+
+    [Fact]
+    public void ASpellThatWearsOff_TellsOnlyThatPlayer()
+    {
+        Fighter.AddAffect(new Affect
+        {
+            Type = AffectType.Armor,
+            Location = AffectLocation.Armor,
+            Modifier = -20,
+            DurationHours = 1,
+            WearOffMessage = "You feel less protected."
+        });
+
+        _tick.ProcessRegeneration();
+
+        Assert.Equal(new[] { "You feel less protected." }, _fighter.Lines());
+        Assert.Empty(_observer.Lines());
     }
 
     [Fact]

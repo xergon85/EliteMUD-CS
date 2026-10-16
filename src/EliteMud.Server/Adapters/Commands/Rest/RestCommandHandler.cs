@@ -8,11 +8,11 @@ namespace EliteMud.Server.Adapters.Commands.Rest;
 [Command("rest")]
 internal sealed class RestCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
-    public RestCommandHandler(ConnectionRegistry connectionRegistry)
+    public RestCommandHandler(ActMessenger act)
     {
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -34,10 +34,7 @@ internal sealed class RestCommandHandler : ICommandHandler
         await context.Session.SendLineAsync("You sit down and rest your tired bones.", cancellationToken);
 
         // Broadcast to room
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} sits down and rests.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} sits down and rests.");
 
         return CommandOutcome.Continue;
     }

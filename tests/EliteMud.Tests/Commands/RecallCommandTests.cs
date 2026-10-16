@@ -8,6 +8,7 @@ using EliteMud.Server;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
 using EliteMud.Scripting;
+using EliteMud.Tests.Server;
 
 namespace EliteMud.Tests.Commands;
 
@@ -190,7 +191,7 @@ public class RecallCommandTests : IDisposable
 
         // Create connection registry
         var connectionRegistry = new ConnectionRegistry();
-        connectionRegistry.SetProvider(() => new[] { context });
+        connectionRegistry.Add(context);
         worldState.Population.Enter(player, player.RoomId);
 
         // Create mock script engine (no-op for tests)
@@ -200,7 +201,7 @@ public class RecallCommandTests : IDisposable
         var lookHandler = new LookCommandHandler(worldState, scriptEngine, RulesContent.Empty);
 
         // Create recall handler
-        var handler = new RecallCommandHandler(worldState, lookHandler, connectionRegistry);
+        var handler = new RecallCommandHandler(worldState, lookHandler, TestActMessenger.For(worldState, connectionRegistry));
 
         return (handler, context);
     }

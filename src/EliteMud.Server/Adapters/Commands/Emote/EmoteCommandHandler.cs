@@ -7,12 +7,12 @@ namespace EliteMud.Server.Adapters.Commands.Emote;
 [Command("emote", Aliases = new[] { "me" })]
 internal sealed class EmoteCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
     private readonly EmoteHandler _emoteHandler;
 
-    public EmoteCommandHandler(ConnectionRegistry connectionRegistry)
+    public EmoteCommandHandler(ActMessenger act)
     {
-        _connectionRegistry = connectionRegistry;
+        _act = act;
         _emoteHandler = new EmoteHandler();
     }
 
@@ -31,29 +31,9 @@ internal sealed class EmoteCommandHandler : ICommandHandler
             return CommandOutcome.Continue;
         }
 
-        // Broadcast to everyone in the room (including the emote executor)
-        await BroadcastRoomAsync(context, result.BroadcastMessage, cancellationToken);
+        // The rest of the room sees it too
+        _act.BroadcastToRoom(context.Player, result.BroadcastMessage);
 
         return CommandOutcome.Continue;
-    }
-
-    private async ValueTask BroadcastRoomAsync(ConnectionContext actor, string message,
-        CancellationToken cancellationToken)
-    {
-        foreach (var connection in _connectionRegistry.GetConnections())
-        {
-            // Skip the actor - they already got the message
-            if (connection.Id == actor.Id)
-            {
-                continue;
-            }
-
-            if (connection.Player.RoomId != actor.Player.RoomId)
-            {
-                continue;
-            }
-
-            await connection.Session.SendLineAsync(message, cancellationToken);
-        }
     }
 }

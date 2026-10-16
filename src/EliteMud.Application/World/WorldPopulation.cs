@@ -70,7 +70,8 @@ public sealed class WorldPopulation
     /// <summary>
     /// A player leaves the game, e.g. quitting or losing their link. Their fight stops, and so does everyone's
     /// fighting them (legacy extract_char). Mobs still remember them: legacy forgets only on a kill. The player
-    /// keeps their <see cref="PlayerState.RoomId"/> so a save after leaving still has it.
+    /// keeps their <see cref="PlayerState.RoomId"/> so a save after leaving still has it. Who they'd reply to is
+    /// forgotten, so departed players don't keep each other alive in a chain (legacy frees the character).
     /// </summary>
     public void Leave(PlayerState player)
     {
@@ -85,6 +86,7 @@ public sealed class WorldPopulation
             CombatCalculator.StopFighting(player);
         }
 
+        player.LastTellSender = null;
         TakeFromRoom(player);
     }
 

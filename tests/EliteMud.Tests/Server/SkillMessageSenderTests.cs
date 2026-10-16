@@ -2,6 +2,7 @@ using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Skills;
 using EliteMud.Application.World;
 using EliteMud.Game;
+using EliteMud.Server;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
 using EliteMud.Tests.Ai;
@@ -48,13 +49,15 @@ public sealed class SkillMessageSenderTests : IDisposable
         _elsewhere = new TestConnection(3, new PlayerState(3, "Elsewhere", Alley, level: 5, "warrior", "human", sex: 1));
 
         var connections = new ConnectionRegistry();
-        connections.SetProvider(() => new[] { _victim.Context, _observer.Context, _elsewhere.Context });
+        connections.Add(_victim.Context);
+        connections.Add(_observer.Context);
+        connections.Add(_elsewhere.Context);
         foreach (var player in new[] { _victim, _observer, _elsewhere }.Select(connection => connection.Context.Player))
         {
             _world.Population.Enter(player, player.RoomId);
         }
         _sender = new SkillMessageSender(
-            new ActMessageService(),
+            TestActMessenger.For(_world, connections),
             connections,
             new LookCommandHandler(_world, new MockScriptEngine(), RulesContent.Empty));
     }

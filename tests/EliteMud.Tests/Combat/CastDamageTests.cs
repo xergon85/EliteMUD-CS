@@ -99,7 +99,9 @@ public sealed class CastDamageTests : IDisposable
         _observer = new TestConnection(3, new PlayerState(3, "Observer", Room, level: 5, "warrior", "human", sex: 1));
 
         var connections = new ConnectionRegistry();
-        connections.SetProvider(() => new[] { _caster.Context, _victim.Context, _observer.Context });
+        connections.Add(_caster.Context);
+        connections.Add(_victim.Context);
+        connections.Add(_observer.Context);
         foreach (var connection in connections.GetConnections())
         {
             _world.Population.Enter(connection.Player, connection.Player.RoomId);
@@ -111,8 +113,8 @@ public sealed class CastDamageTests : IDisposable
             new SpellRegistry(spellMetadata, formulas),
             spellMetadata,
             _world,
-            connections,
-            new ActMessageService(),
+            new SessionCharacterOutput(connections),
+            TestActMessenger.For(_world, connections),
             new CombatDamage(
                 _calculator,
                 new CombatExperience(progression, experience),
@@ -121,7 +123,7 @@ public sealed class CastDamageTests : IDisposable
                 new FleeHandler(_world, progression),
                 stats),
             new SkillMessageSender(
-                new ActMessageService(),
+                TestActMessenger.For(_world, connections),
                 connections,
                 new LookCommandHandler(_world, new MockScriptEngine(), RulesContent.Empty)),
             stats);

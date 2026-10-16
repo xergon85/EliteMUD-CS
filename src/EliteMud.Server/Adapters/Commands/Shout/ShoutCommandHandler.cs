@@ -1,6 +1,8 @@
 using EliteMud.Application.Commands.Shared;
 using EliteMud.Application.Commands.Shout;
+using EliteMud.Application.Session;
 using EliteMud.Application.World;
+using EliteMud.Game;
 using EliteMud.Server.Adapters.Commands.Shared;
 
 namespace EliteMud.Server.Adapters.Commands.Shout;
@@ -8,13 +10,13 @@ namespace EliteMud.Server.Adapters.Commands.Shout;
 [Command("shout", Aliases = new[] { "yell" })]
 internal sealed class ShoutCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ICharacterOutput _output;
     private readonly IWorldState _worldState;
     private readonly ShoutHandler _shoutHandler;
 
-    public ShoutCommandHandler(ConnectionRegistry connectionRegistry, IWorldState worldState)
+    public ShoutCommandHandler(ICharacterOutput output, IWorldState worldState)
     {
-        _connectionRegistry = connectionRegistry;
+        _output = output;
         _worldState = worldState;
         _shoutHandler = new ShoutHandler();
     }
@@ -51,24 +53,23 @@ internal sealed class ShoutCommandHandler : ICommandHandler
         var senderZoneId = senderRoom.ZoneId;
 
         // Broadcast to all players in the same zone
-        await BroadcastZoneAsync(context, result.BroadcastMessage, senderZoneId, cancellationToken);
+        BroadcastZone(context.Player, result.BroadcastMessage, senderZoneId);
 
         return CommandOutcome.Continue;
     }
 
-    private async ValueTask BroadcastZoneAsync(ConnectionContext sender, string message, int? senderZoneId,
-        CancellationToken cancellationToken)
+    private void BroadcastZone(PlayerState sender, string message, int? senderZoneId)
     {
-        foreach (var connection in _connectionRegistry.GetConnections())
+        foreach (var player in _worldState.Population.Players)
         {
             // Skip the sender - they already got the message
-            if (connection.Id == sender.Id)
+            if (player == sender)
             {
                 continue;
             }
 
             // Get recipient's zone ID
-            var recipientRoom = _worldState.World.Rooms.GetValueOrDefault(connection.Player.RoomId);
+            var recipientRoom = _worldState.World.Rooms.GetValueOrDefault(player.RoomId);
             if (recipientRoom == null)
             {
                 continue;
@@ -80,7 +81,7 @@ internal sealed class ShoutCommandHandler : ICommandHandler
                 continue;
             }
 
-            await connection.Session.SendLineAsync(message, cancellationToken);
+            _output.SendLine(player, message);
         }
     }
 }

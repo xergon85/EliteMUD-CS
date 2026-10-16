@@ -91,10 +91,16 @@ internal sealed class TelnetSession
 
     public ValueTask SendLineAsync(string message, CancellationToken cancellationToken)
     {
+        SendLine(message);
+        return ValueTask.CompletedTask;
+    }
+
+    /// <summary>Queues a line for the session's writer; never blocks.</summary>
+    public void SendLine(string message)
+    {
         // Translate color codes (#X format) to ANSI escape sequences
         var translatedMessage = ColorTranslator.TranslateColors(ToTelnetLineEndings(message));
         Queue(_encoding.GetBytes(translatedMessage + "\r\n"));
-        return ValueTask.CompletedTask;
     }
 
     /// <summary>
@@ -106,10 +112,16 @@ internal sealed class TelnetSession
 
     public ValueTask SendAsync(string message, CancellationToken cancellationToken)
     {
+        Send(message);
+        return ValueTask.CompletedTask;
+    }
+
+    /// <summary>Queues text for the session's writer; never blocks.</summary>
+    public void Send(string message)
+    {
         // Translate color codes (#X format) to ANSI escape sequences
         var translatedMessage = ColorTranslator.TranslateColors(ToTelnetLineEndings(message));
         Queue(_encoding.GetBytes(translatedMessage));
-        return ValueTask.CompletedTask;
     }
 
     /// <summary>

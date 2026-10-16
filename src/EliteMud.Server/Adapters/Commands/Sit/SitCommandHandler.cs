@@ -8,11 +8,11 @@ namespace EliteMud.Server.Adapters.Commands.Sit;
 [Command("sit")]
 internal sealed class SitCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
-    public SitCommandHandler(ConnectionRegistry connectionRegistry)
+    public SitCommandHandler(ActMessenger act)
     {
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -34,10 +34,7 @@ internal sealed class SitCommandHandler : ICommandHandler
         await context.Session.SendLineAsync("You sit down.", cancellationToken);
 
         // Broadcast to room
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} sits down.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} sits down.");
 
         return CommandOutcome.Continue;
     }

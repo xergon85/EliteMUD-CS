@@ -11,105 +11,61 @@ namespace EliteMud.Server.Adapters.Commands.Shared;
 /// </summary>
 internal sealed class SkillMessageSender
 {
-    private readonly ActMessageService _actService;
+    private readonly ActMessenger _act;
     private readonly ConnectionRegistry _connectionRegistry;
     private readonly LookCommandHandler _lookHandler;
 
     public SkillMessageSender(
-        ActMessageService actService,
+        ActMessenger act,
         ConnectionRegistry connectionRegistry,
         LookCommandHandler lookHandler)
     {
-        _actService = actService;
+        _act = act;
         _connectionRegistry = connectionRegistry;
         _lookHandler = lookHandler;
     }
 
     /// <summary>
-    /// Send messages from a connected player's action, in order.
+    /// Send messages from any actor's action, e.g. a player's skill or a mob's hit in the combat tick, in order.
     /// </summary>
-    public Task SendAsync(
-        IEnumerable<SkillMessage> messages,
-        ConnectionContext context,
-        CancellationToken cancellationToken) =>
-        SendAsync(messages, context.Player, context, cancellationToken);
-
-    /// <summary>
-    /// Send messages from any actor's action, e.g. a mob's hit in the combat tick, in order.
-    /// </summary>
-    public Task SendAsync(
+    public async Task SendAsync(
         IEnumerable<SkillMessage> messages,
         ICombatant actor,
-        CancellationToken cancellationToken) =>
-        SendAsync(messages, actor, ConnectionOf(actor), cancellationToken);
-
-    private async Task SendAsync(
-        IEnumerable<SkillMessage> messages,
-        ICombatant actor,
-        ConnectionContext? actorConnection,
         CancellationToken cancellationToken)
     {
         foreach (var message in messages)
         {
-            await SendAsync(message, actor, actorConnection, cancellationToken);
+            await SendAsync(message, actor, cancellationToken);
         }
     }
 
-    private async Task SendAsync(
-        SkillMessage message,
-        ICombatant actor,
-        ConnectionContext? actorConnection,
-        CancellationToken cancellationToken)
+    private async Task SendAsync(SkillMessage message, ICombatant actor, CancellationToken cancellationToken)
     {
         switch (message.Target)
         {
-            case SkillMessageTarget.Actor when actorConnection != null:
-                await SendToAsync(actorConnection, message, actor, cancellationToken);
+            case SkillMessageTarget.Actor:
+                _act.ToChar(actor, message.Template, message.Victim);
                 break;
 
             // Only a player victim has anyone to read it
-            case SkillMessageTarget.Victim when ConnectionOf(message.Victim) is { } victimConnection:
-                await SendToAsync(victimConnection, message, actor, cancellationToken);
+            case SkillMessageTarget.Victim when message.Victim is ICombatant victim:
+                _act.ToVict(actor, message.Template, victim);
                 break;
 
             case SkillMessageTarget.Room:
-                foreach (var connection in InRoomOf(actor))
-                {
-                    await SendToAsync(connection, message, actor, cancellationToken);
-                }
-
+                _act.ToRoom(actor, message.Template, message.Victim);
                 break;
 
             case SkillMessageTarget.Others:
-                foreach (var connection in InRoomOf(actor)
-                             .Where(c => c.Player != actor && c.Player != message.Victim))
-                {
-                    await SendToAsync(connection, message, actor, cancellationToken);
-                }
-
+                _act.ToNotVict(actor, message.Template, message.Victim);
                 break;
 
-            case SkillMessageTarget.VictimLooks when ConnectionOf(message.Victim) is { } victimConnection:
+            // Looking needs the victim's connection: the look command replies down it
+            case SkillMessageTarget.VictimLooks
+                when message.Victim is ICombatant victim && _connectionRegistry.Find(victim) is { } victimConnection:
                 await _lookHandler.HandleAsync(new CommandRequest("look", null, null), victimConnection,
                     cancellationToken);
                 break;
         }
     }
-
-    private ValueTask SendToAsync(
-        ConnectionContext viewer,
-        SkillMessage message,
-        ICombatant actor,
-        CancellationToken cancellationToken) =>
-        viewer.Session.SendAsync(
-            _actService.FormatMessage(message.Template, viewer.Player, actor, message.Victim),
-            cancellationToken);
-
-    private ConnectionContext? ConnectionOf(object? combatant) =>
-        combatant is PlayerState player
-            ? _connectionRegistry.GetConnections().FirstOrDefault(c => c.Player == player)
-            : null;
-
-    private IEnumerable<ConnectionContext> InRoomOf(ICombatant actor) =>
-        _connectionRegistry.GetConnections().Where(c => c.Player.RoomId == actor.RoomId).ToList();
 }

@@ -5,7 +5,7 @@ namespace EliteMud.Application.Commands.Tell;
 
 public sealed class TellHandler
 {
-    public TellResult Handle(PlayerState sender, int? recipientConnectionId, string? recipientName, string? message)
+    public TellResult Handle(PlayerState sender, PlayerState? recipient, string? recipientName, string? message)
     {
         // Check if both recipient and message are provided
         if (string.IsNullOrWhiteSpace(recipientName) || string.IsNullOrWhiteSpace(message))
@@ -14,15 +14,15 @@ public sealed class TellHandler
         }
 
         // Check if recipient was found
-        if (!recipientConnectionId.HasValue)
+        if (recipient == null)
         {
             return TellResult.Failed("No such player around.");
         }
 
         var trimmedMessage = message.Trim();
-        var senderMessage = $"#bYou tell {recipientName} '{trimmedMessage}#b'#N";
+        var senderMessage = $"#bYou tell {recipient.Name} '{trimmedMessage}#b'#N";
         var recipientMessage = $"#b{sender.Name} tells you '{trimmedMessage}#b'#N";
 
-        return TellResult.Succeeded(senderMessage, recipientMessage, recipientConnectionId.Value);
+        return TellResult.Succeeded(senderMessage, recipientMessage, recipient);
     }
 }

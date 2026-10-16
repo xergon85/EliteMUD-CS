@@ -19,14 +19,14 @@ internal sealed record PositionChangeConfig(
 /// </summary>
 internal sealed class PositionChangeCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
     private readonly PositionChangeConfig _config;
 
     public PositionChangeCommandHandler(
-        ConnectionRegistry connectionRegistry,
+        ActMessenger act,
         PositionChangeConfig config)
     {
-        _connectionRegistry = connectionRegistry;
+        _act = act;
         _config = config;
     }
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -51,10 +51,7 @@ internal sealed class PositionChangeCommandHandler : ICommandHandler
         await context.Session.SendLineAsync(_config.PlayerMessage, cancellationToken);
 
         // Broadcast to room
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            string.Format(_config.RoomMessage, player.Name),
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, string.Format(_config.RoomMessage, player.Name));
 
         return CommandOutcome.Continue;
     }

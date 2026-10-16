@@ -20,6 +20,7 @@ namespace EliteMud.Server;
 internal sealed class GameTickService
 {
     private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ICharacterOutput _output;
     private readonly IServiceProvider _serviceProvider;
     private readonly IWorldState _worldState;
     private readonly CombatDamage _combatDamage;
@@ -43,6 +44,7 @@ internal sealed class GameTickService
 
     public GameTickService(
         ConnectionRegistry connectionRegistry,
+        ICharacterOutput output,
         IServiceProvider serviceProvider,
         IWorldState worldState,
         CombatDamage combatDamage,
@@ -56,6 +58,7 @@ internal sealed class GameTickService
     {
         _gate = gate;
         _connectionRegistry = connectionRegistry;
+        _output = output;
         _serviceProvider = serviceProvider;
         _worldState = worldState;
         _combatDamage = combatDamage;
@@ -125,16 +128,16 @@ internal sealed class GameTickService
     /// </summary>
     internal async Task ProcessCombatRoundAsync(CancellationToken cancellationToken)
     {
-        var connections = _connectionRegistry.GetConnections().ToList();
+        var players = _worldState.Population.Players.ToList();
         
         // Decrement wait states for all players (happens every combat tick)
-        foreach (var connection in connections)
+        foreach (var player in players)
         {
-            connection.Player.DecrementWaitState();
+            player.DecrementWaitState();
         }
         
         // Find all players in combat
-        var fightingPlayers = connections.Where(c => c.Player.Fighting != null).ToList();
+        var fightingPlayers = players.Where(p => p.Fighting != null).ToList();
         
         // Process player attacks
         // Legacy: perform_violence() in fight.c:1664-1729
@@ -151,9 +154,9 @@ internal sealed class GameTickService
                 // A player knocked down in a fight gets up instead of their first attack (legacy
                 // perform_violence, fight.c:1701); the extra attacks still roll
                 var firstAttack = 1;
-                if (attacker.Player.Position == Position.Sitting)
+                if (attacker.Position == Position.Sitting)
                 {
-                    attacker.Player.Position = Position.Fighting;
+                    attacker.Position = Position.Fighting;
                     await _messageSender.SendAsync(
                         new[]
                         {
@@ -161,11 +164,11 @@ internal sealed class GameTickService
                                 SkillMessageTarget.Actor, "You regain your senses and scramble to your feet."),
                             new SkillMessage(SkillMessageTarget.Others, "$n scrambles to $s feet!")
                         },
-                        attacker.Player,
+                        attacker,
                         cancellationToken);
                     firstAttack = 2;
                 }
-                else if (attacker.Player.Position < Position.Fighting)
+                else if (attacker.Position < Position.Fighting)
                 {
                     // Can't fight (resting, sleeping, stunned or worse), but can still be attacked
                     continue;
@@ -175,32 +178,32 @@ internal sealed class GameTickService
                 for (int attackNum = firstAttack; attackNum <= 5; attackNum++)
                 {
                     // Check if target is still valid before each attack
-                    var opponent = attacker.Player.Fighting;
+                    var opponent = attacker.Fighting;
                     if (opponent == null)
                     {
                         break; // Combat ended (target died or fled)
                     }
 
                     // First attack always happens, subsequent attacks require skill checks
-                    if (attackNum > 1 && !CanPerformExtraAttack(attacker.Player, attackNum))
+                    if (attackNum > 1 && !CanPerformExtraAttack(attacker, attackNum))
                     {
                         continue; // Skip this attack, but continue loop to check remaining attacks
                     }
 
                     // The opponent must still be here: a mob that died or left is in another room or nowhere
-                    if (opponent.RoomId != attacker.Player.RoomId)
+                    if (opponent.RoomId != attacker.RoomId)
                     {
-                        CombatCalculator.StopFighting(attacker.Player);
-                        await attacker.Session.SendLineAsync("Your opponent has left.", cancellationToken);
+                        CombatCalculator.StopFighting(attacker);
+                        _output.SendLine(attacker, "Your opponent has left.");
                         break;
                     }
 
-                    await HitAsync(attacker.Player, opponent, cancellationToken, offHand: attackNum == 5);
+                    await HitAsync(attacker, opponent, cancellationToken, offHand: attackNum == 5);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[Combat] Error processing combat for {attacker.Player.Name}: {ex.Message}");
+                Console.WriteLine($"[Combat] Error processing combat for {attacker.Name}: {ex.Message}");
             }
         }
         
@@ -327,41 +330,39 @@ internal sealed class GameTickService
     /// </summary>
     private void ProcessGainIncrement()
     {
-        var connections = _connectionRegistry.GetConnections().ToList();
-        
-        foreach (var connection in connections)
+        foreach (var player in _worldState.Population.Players.ToList())
         {
             try
             {
-                RegenerationService.IncrementGainCount(connection.Player);
+                RegenerationService.IncrementGainCount(player);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[Gain] Error incrementing gain for player {connection.Player.Name}: {ex.Message}");
+                Console.WriteLine($"[Gain] Error incrementing gain for player {player.Name}: {ex.Message}");
             }
         }
     }
 
-    private void ProcessRegeneration()
+    internal void ProcessRegeneration()
     {
-        var connections = _connectionRegistry.GetConnections().ToList();
+        var players = _worldState.Population.Players.ToList();
         
-        if (connections.Count == 0)
+        if (players.Count == 0)
         {
             return; // No players online, skip
         }
 
         int playersRegenerated = 0;
         
-        foreach (var connection in connections)
+        foreach (var player in players)
         {
             try
             {
                 // Apply regeneration
-                var effectiveMaxHP = _stats.Get(connection.Player, AffectLocation.MaxHit);
-                var effectiveMaxMana = _stats.Get(connection.Player, AffectLocation.MaxMana);
-                var effectiveMaxMove = _stats.Get(connection.Player, AffectLocation.MaxMovement);
-                bool didRegen = RegenerationService.RegeneratePlayer(connection.Player, effectiveMaxHP, effectiveMaxMana, effectiveMaxMove);
+                var effectiveMaxHP = _stats.Get(player, AffectLocation.MaxHit);
+                var effectiveMaxMana = _stats.Get(player, AffectLocation.MaxMana);
+                var effectiveMaxMove = _stats.Get(player, AffectLocation.MaxMovement);
+                bool didRegen = RegenerationService.RegeneratePlayer(player, effectiveMaxHP, effectiveMaxMana, effectiveMaxMove);
                 
                 if (didRegen)
                 {
@@ -369,26 +370,26 @@ internal sealed class GameTickService
                 }
                 
                 // Tick affects (decrement duration and remove expired)
-                var expiredAffects = connection.Player.TickAffects();
+                var expiredAffects = player.TickAffects();
                 if (expiredAffects.Count > 0)
                 {
                     foreach (var affect in expiredAffects)
                     {
                         // Use custom wear-off message if available, otherwise use generic message
                         var message = affect.WearOffMessage ?? $"The {affect.Type.ToString().ToLowerInvariant()} spell wears off.";
-                        _ = connection.Session.SendLineAsync(message, CancellationToken.None);
+                        _output.SendLine(player, message);
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[Regen] Error regenerating player {connection.Player.Name}: {ex.Message}");
+                Console.WriteLine($"[Regen] Error regenerating player {player.Name}: {ex.Message}");
             }
         }
         
         if (playersRegenerated > 0)
         {
-            Console.WriteLine($"[Regen] Tick #{_tickCount}: {playersRegenerated}/{connections.Count} players regenerated");
+            Console.WriteLine($"[Regen] Tick #{_tickCount}: {playersRegenerated}/{players.Count} players regenerated");
         }
     }
 
@@ -404,13 +405,12 @@ internal sealed class GameTickService
             return;
         }
 
-        var connections = _connectionRegistry.GetConnections().ToList();
         foreach (var (roomId, portal) in closedPortals)
         {
             var message = $"The {portal.Definition.ShortDescription} closes mysteriously.";
-            foreach (var connection in connections.Where(c => c.Player.RoomId == roomId))
+            foreach (var player in _worldState.Population.PlayersIn(roomId))
             {
-                _ = connection.Session.SendLineAsync(message, CancellationToken.None);
+                _output.SendLine(player, message);
             }
         }
     }
@@ -484,15 +484,6 @@ internal sealed class GameTickService
     /// </summary>
     private void ProcessMobAi()
     {
-        // Build player connection dictionary for aggro/memory checks
-        var connections = _connectionRegistry.GetConnections()
-            .Select(c => new Application.Ai.PlayerConnection 
-            { 
-                ConnectionId = c.Id, 
-                Player = c.Player 
-            })
-            .ToDictionary(pc => pc.ConnectionId);
-        
         // Process each room's mobs
         foreach (var room in _worldState.World.Rooms.Values)
         {
@@ -503,7 +494,7 @@ internal sealed class GameTickService
             {
                 try
                 {
-                    _mobAiService.ProcessMobTick(mob, room.Id, _worldState, connections);
+                    _mobAiService.ProcessMobTick(mob, room.Id, _worldState);
                 }
                 catch (Exception ex)
                 {

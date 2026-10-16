@@ -32,6 +32,7 @@ internal static class CommandServiceCollectionExtensions
             .AddSingleton<CommandCatalog>()
             .AddSingleton<PromptCatalog>()
             .AddSingleton<ConnectionRegistry>()
+            .AddSingleton<ICharacterOutput, SessionCharacterOutput>()
             .AddSingleton<SkillMessageSender>()
             
             // Business logic helpers (not command handlers)
@@ -68,10 +69,9 @@ internal static class CommandServiceCollectionExtensions
             {
                 var executor = (ISkillExecutor)provider.GetRequiredService(type);
                 var worldState = provider.GetRequiredService<IWorldState>();
-                var connectionRegistry = provider.GetRequiredService<ConnectionRegistry>();
                 var messageSender = provider.GetRequiredService<SkillMessageSender>();
 
-                return new SkillCommandHandler(executor, worldState, connectionRegistry, messageSender);
+                return new SkillCommandHandler(executor, worldState, messageSender);
             });
         }
 

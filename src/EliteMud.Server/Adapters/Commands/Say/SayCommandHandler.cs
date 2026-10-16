@@ -10,13 +10,13 @@ namespace EliteMud.Server.Adapters.Commands.Say;
 internal sealed class SayCommandHandler : ICommandHandler
 {
     private readonly IScriptEngine _scriptEngine;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
     private readonly SayHandler _sayHandler;
 
-    public SayCommandHandler(IScriptEngine scriptEngine, ConnectionRegistry connectionRegistry)
+    public SayCommandHandler(IScriptEngine scriptEngine, ActMessenger act)
     {
         _scriptEngine = scriptEngine;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
         _sayHandler = new SayHandler();
     }
     
@@ -40,26 +40,7 @@ internal sealed class SayCommandHandler : ICommandHandler
             Array.Empty<ExitDefinition>());
         
         await context.ExecuteScriptHookAsync(_scriptEngine, ScriptHook.OnSay, dummyRoom, command.Argument, cancellationToken);
-        await BroadcastRoomAsync(context, result.BroadcastMessage, cancellationToken);
+        _act.BroadcastToRoom(context.Player, result.BroadcastMessage);
         return CommandOutcome.Continue;
-    }
-
-    private async ValueTask BroadcastRoomAsync(ConnectionContext speaker, string message,
-        CancellationToken cancellationToken)
-    {
-        foreach (var connection in _connectionRegistry.GetConnections())
-        {
-            if (connection.Id == speaker.Id)
-            {
-                continue;
-            }
-
-            if (connection.Player.RoomId != speaker.Player.RoomId)
-            {
-                continue;
-            }
-
-            await connection.Session.SendLineAsync(message, cancellationToken);
-        }
     }
 }

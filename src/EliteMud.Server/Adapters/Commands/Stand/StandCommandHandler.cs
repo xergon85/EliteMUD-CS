@@ -8,11 +8,11 @@ namespace EliteMud.Server.Adapters.Commands.Stand;
 [Command("stand")]
 internal sealed class StandCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
-    public StandCommandHandler(ConnectionRegistry connectionRegistry)
+    public StandCommandHandler(ActMessenger act)
     {
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -34,10 +34,7 @@ internal sealed class StandCommandHandler : ICommandHandler
         await context.Session.SendLineAsync("You stand up.", cancellationToken);
 
         // Broadcast to room
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} clambers to $s feet.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} clambers to $s feet.");
 
         return CommandOutcome.Continue;
     }

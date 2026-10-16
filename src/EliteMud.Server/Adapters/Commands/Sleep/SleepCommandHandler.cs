@@ -8,11 +8,11 @@ namespace EliteMud.Server.Adapters.Commands.Sleep;
 [Command("sleep", Aliases = new[] { "sleep", "sl" })]
 internal sealed class SleepCommandHandler : ICommandHandler
 {
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
-    public SleepCommandHandler(ConnectionRegistry connectionRegistry)
+    public SleepCommandHandler(ActMessenger act)
     {
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -34,10 +34,7 @@ internal sealed class SleepCommandHandler : ICommandHandler
         await context.Session.SendLineAsync("You go to sleep.", cancellationToken);
 
         // Broadcast to room
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} lies down and falls asleep.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} lies down and falls asleep.");
 
         return CommandOutcome.Continue;
     }

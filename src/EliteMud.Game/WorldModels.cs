@@ -411,11 +411,10 @@ public sealed class PlayerState : ICombatant
     // ===== Communication State =====
     
     /// <summary>
-    /// Connection ID of the last player who sent this character a tell.
-    /// Used by the 'reply' command to respond to the last tell sender.
+    /// The last player who sent this character a tell, whom 'reply' answers. They may have left the game since.
     /// Legacy: GET_LAST_TELL(ch)
     /// </summary>
-    public int? LastTellSender { get; set; }
+    public PlayerState? LastTellSender { get; set; }
 
     // ===== Inventory & Equipment =====
 

@@ -7,6 +7,7 @@ using EliteMud.Server;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Portal;
 using EliteMud.Server.Adapters.Commands.Shared;
+using EliteMud.Tests.Server;
 
 namespace EliteMud.Tests.Commands;
 
@@ -128,14 +129,14 @@ public class PortalCommandTests : IDisposable
         var (_, stream) = await CreateRealTcpConnection();
         var context = new ConnectionContext(1, new TelnetSession(stream), player, characterId: 1, accountName: "test");
         var connectionRegistry = new ConnectionRegistry();
-        connectionRegistry.SetProvider(() => new[] { context });
+        connectionRegistry.Add(context);
         worldState.Population.Enter(player, player.RoomId);
 
         var lookHandler = new LookCommandHandler(worldState, new MockScriptEngine(), RulesContent.Empty);
 
         return new TestEnvironment(
-            new EnterCommandHandler(worldState, lookHandler, connectionRegistry),
-            new ActivateCommandHandler(worldState, connectionRegistry),
+            new EnterCommandHandler(worldState, lookHandler, TestActMessenger.For(worldState, connectionRegistry)),
+            new ActivateCommandHandler(worldState, TestActMessenger.For(worldState, connectionRegistry)),
             context,
             worldState,
             portal.Portal!);

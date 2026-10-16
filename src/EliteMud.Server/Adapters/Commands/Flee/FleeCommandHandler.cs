@@ -11,18 +11,18 @@ namespace EliteMud.Server.Adapters.Commands.Flee;
 internal sealed class FleeCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
     private readonly LookCommandHandler _lookHandler;
     private readonly FleeHandler _fleeHandler;
 
     public FleeCommandHandler(
         IWorldState worldState,
-        ConnectionRegistry connectionRegistry,
+        ActMessenger act,
         LookCommandHandler lookHandler,
         FleeHandler fleeHandler)
     {
         _worldState = worldState;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
         _lookHandler = lookHandler;
         _fleeHandler = fleeHandler;
     }
@@ -42,10 +42,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         var currentRoomId = player.RoomId;
 
         // Broadcast flee attempt to room (legacy: act.offensive.c:443)
-        await BroadcastToRoomExceptAsync(
-            context,
-            $"{player.Name} panics, and attempts to flee.",
-            cancellationToken);
+        _act.BroadcastToRoom(player, $"{player.Name} panics, and attempts to flee.");
 
         // Attempt to flee using FleeService
         var result = _fleeHandler.AttemptFlee(
@@ -78,26 +75,5 @@ internal sealed class FleeCommandHandler : ICommandHandler
             cancellationToken);
 
         return CommandOutcome.Continue;
-    }
-
-    private async ValueTask BroadcastToRoomExceptAsync(
-        ConnectionContext speaker,
-        string message,
-        CancellationToken cancellationToken)
-    {
-        foreach (var connection in _connectionRegistry.GetConnections())
-        {
-            if (connection.Id == speaker.Id)
-            {
-                continue;
-            }
-
-            if (connection.Player.RoomId != speaker.Player.RoomId)
-            {
-                continue;
-            }
-
-            await connection.Session.SendLineAsync(message, cancellationToken);
-        }
     }
 }

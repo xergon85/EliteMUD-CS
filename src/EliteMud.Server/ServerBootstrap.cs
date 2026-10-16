@@ -154,6 +154,7 @@ internal static class ServerBootstrap
             .AddSingleton<IpBanService>(new IpBanService(banDurationMinutes: 15, maxFailedAttempts: 3))
             .AddSingleton<AuthenticationHandler>()
             .AddSingleton<ActMessageService>()
+            .AddSingleton<ActMessenger>()
             .AddSingleton<PathfindingService>()
             .AddSingleton<MobAiService>()
             .AddSingleton<GameTickService>()

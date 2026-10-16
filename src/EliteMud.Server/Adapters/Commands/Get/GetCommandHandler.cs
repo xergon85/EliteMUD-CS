@@ -11,18 +11,15 @@ internal sealed class GetCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
     private readonly GetHandler _getHandler;
-    private readonly ActMessageService _actService;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
     public GetCommandHandler(
         IWorldState worldState,
-        ActMessageService actService,
-        ConnectionRegistry connectionRegistry)
+        ActMessenger act)
     {
         _worldState = worldState;
         _getHandler = new GetHandler(worldState);
-        _actService = actService;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
     public async ValueTask<CommandOutcome> HandleAsync(
         CommandRequest command,
@@ -54,34 +51,16 @@ internal sealed class GetCommandHandler : ICommandHandler
                 if (result.ContainerName is not null)
                 {
                     // Getting from container: "You get $p from the corpse."
-                    await context.ActToCharAsync(
-                        _actService,
-                        $"You get $p from the {result.ContainerName}.",
-                        obj: obj,
-                        cancellationToken: cancellationToken);
+                    _act.ToChar(context.Player, $"You get $p from the {result.ContainerName}.", obj: obj);
 
-                    await context.ActToNotCharAsync(
-                        _actService,
-                        _connectionRegistry,
-                        $"$n gets $p from the {result.ContainerName}.",
-                        obj: obj,
-                        cancellationToken: cancellationToken);
+                    _act.ToNotChar(context.Player, $"$n gets $p from the {result.ContainerName}.", obj: obj);
                 }
                 else
                 {
                     // Getting from room: "You get $p."
-                    await context.ActToCharAsync(
-                        _actService,
-                        "You get $p.",
-                        obj: obj,
-                        cancellationToken: cancellationToken);
+                    _act.ToChar(context.Player, "You get $p.", obj: obj);
 
-                    await context.ActToNotCharAsync(
-                        _actService,
-                        _connectionRegistry,
-                        "$n gets $p.",
-                        obj: obj,
-                        cancellationToken: cancellationToken);
+                    _act.ToNotChar(context.Player, "$n gets $p.", obj: obj);
                 }
             }
             return CommandOutcome.Continue;
@@ -100,34 +79,16 @@ internal sealed class GetCommandHandler : ICommandHandler
             if (result.ContainerName is not null)
             {
                 // Getting from container: "You get $p from the corpse."
-                await context.ActToCharAsync(
-                    _actService,
-                    $"You get $p from the {result.ContainerName}.",
-                    obj: result.Object,
-                    cancellationToken: cancellationToken);
+                _act.ToChar(context.Player, $"You get $p from the {result.ContainerName}.", obj: result.Object);
 
-                await context.ActToNotCharAsync(
-                    _actService,
-                    _connectionRegistry,
-                    $"$n gets $p from the {result.ContainerName}.",
-                    obj: result.Object,
-                    cancellationToken: cancellationToken);
+                _act.ToNotChar(context.Player, $"$n gets $p from the {result.ContainerName}.", obj: result.Object);
             }
             else
             {
                 // Getting from room: "You get $p."
-                await context.ActToCharAsync(
-                    _actService,
-                    "You get $p.",
-                    obj: result.Object,
-                    cancellationToken: cancellationToken);
+                _act.ToChar(context.Player, "You get $p.", obj: result.Object);
 
-                await context.ActToNotCharAsync(
-                    _actService,
-                    _connectionRegistry,
-                    "$n gets $p.",
-                    obj: result.Object,
-                    cancellationToken: cancellationToken);
+                _act.ToNotChar(context.Player, "$n gets $p.", obj: result.Object);
             }
         }
 
@@ -214,18 +175,15 @@ internal sealed class GetCommandHandler : ICommandHandler
                     foundAny = true;
                     
                     // Send message: "You get $p from the corpse."
-                    await context.ActToCharAsync(
-                        _actService,
+                    _act.ToChar(
+                        context.Player,
                         $"You get $p from the {container.Definition.ShortDescription}.",
-                        obj: item.Definition,
-                        cancellationToken: cancellationToken);
+                        obj: item.Definition);
 
-                    await context.ActToNotCharAsync(
-                        _actService,
-                        _connectionRegistry,
+                    _act.ToNotChar(
+                        context.Player,
                         $"$n gets $p from the {container.Definition.ShortDescription}.",
-                        obj: item.Definition,
-                        cancellationToken: cancellationToken);
+                        obj: item.Definition);
                 }
             }
             

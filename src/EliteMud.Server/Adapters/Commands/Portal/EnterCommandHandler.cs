@@ -15,16 +15,16 @@ internal sealed class EnterCommandHandler : ICommandHandler
 {
     private readonly IWorldState _worldState;
     private readonly LookCommandHandler _lookHandler;
-    private readonly ConnectionRegistry _connectionRegistry;
+    private readonly ActMessenger _act;
 
     public EnterCommandHandler(
         IWorldState worldState,
         LookCommandHandler lookHandler,
-        ConnectionRegistry connectionRegistry)
+        ActMessenger act)
     {
         _worldState = worldState;
         _lookHandler = lookHandler;
-        _connectionRegistry = connectionRegistry;
+        _act = act;
     }
 
     public async ValueTask<CommandOutcome> HandleAsync(
@@ -63,17 +63,11 @@ internal sealed class EnterCommandHandler : ICommandHandler
         }
 
         await context.Session.SendLineAsync($"You disappear into {portalName}.", cancellationToken);
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} disappears into {portalName}.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} disappears into {portalName}.");
 
         _worldState.Population.Move(player, portal.Destination);
 
-        await context.BroadcastToRoomAsync(
-            _connectionRegistry,
-            $"{player.Name} appears from {portalName}.",
-            cancellationToken);
+        _act.BroadcastToRoom(context.Player, $"{player.Name} appears from {portalName}.");
 
         // Legacy: calls do_look after arriving
         await _lookHandler.HandleAsync(new CommandRequest("look", null, null), context, cancellationToken);
