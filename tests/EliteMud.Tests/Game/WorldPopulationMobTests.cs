@@ -1,5 +1,6 @@
 using EliteMud.Application.World;
 using EliteMud.Game;
+using EliteMud.Tests.Server;
 
 namespace EliteMud.Tests.Game;
 
@@ -182,6 +183,18 @@ public class WorldPopulationMobTests
             world.Population.MobsIn(Square).Select(mob => mob.Name));
         var mobs = world.Population.MobsIn(Square);
         Assert.True(mobs[1].InstanceId > mobs[2].InstanceId);
+    }
+
+    /// <summary>
+    /// Room 542's reset loads mobs 511, 511, 520, 520 and 540 in that order; legacy lists the last first and keeps
+    /// the twins together.
+    /// </summary>
+    [Fact]
+    public void TheRealWorld_ListsARoomsMobsInLegacyOrder()
+    {
+        Assert.Equal(
+            new[] { 540, 520, 520, 511, 511 },
+            RealWorld.State.Population.MobsIn(542).Select(mob => mob.Definition.Id));
     }
 
     private static ZoneResetDefinition LoadMob(MobDefinition definition, int roomId) =>
