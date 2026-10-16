@@ -64,11 +64,11 @@ public class WorldPopulationMobTests
 
         Assert.Equal(new[] { plainRat, cat, _firstRat }, Population.MobsIn(Temple));
 
-        var armoredRat = Mob(_rat);
-        armoredRat.AddAffect(Affect(AffectType.Armor));
-        Population.Enter(armoredRat, Temple);
+        var armoredCat = Mob(_cat);
+        armoredCat.AddAffect(Affect(AffectType.Armor));
+        Population.Enter(armoredCat, Temple);
 
-        Assert.Equal(new[] { armoredRat, plainRat, cat, _firstRat }, Population.MobsIn(Temple));
+        Assert.Equal(new[] { plainRat, armoredCat, cat, _firstRat }, Population.MobsIn(Temple));
     }
 
     [Fact]
