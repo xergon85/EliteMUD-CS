@@ -147,6 +147,11 @@ public sealed class WorldPopulation
     /// </summary>
     internal void Place(MobInstance mob, int roomId)
     {
+        if (IsInWorld(mob))
+        {
+            throw new InvalidOperationException($"{mob.Name} is already in the world");
+        }
+
         RequireRoom(mob, roomId);
         RoomMobs(roomId).Add(mob);
         mob.RoomId = roomId;

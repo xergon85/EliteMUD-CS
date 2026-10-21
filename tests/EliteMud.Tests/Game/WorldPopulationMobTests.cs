@@ -92,6 +92,24 @@ public class WorldPopulationMobTests
     }
 
     [Fact]
+    public void AStartingMobListedTwice_Fails()
+    {
+        var rat = Mob(_rat);
+
+        Assert.Throws<InvalidOperationException>(() => new WorldState(
+            new WorldDefinition(new Dictionary<int, RoomDefinition>
+            {
+                [Temple] = new(Temple, "Temple", "Desc", new List<ExitDefinition>()),
+                [Square] = new(Square, "Square", "Desc", new List<ExitDefinition>())
+            }),
+            new Dictionary<int, MobDefinition>(),
+            new Dictionary<int, ObjectDefinition>(),
+            new Dictionary<int, List<MobInstance>> { [Temple] = new() { rat }, [Square] = new() { rat } },
+            new Dictionary<int, List<ObjectInstance>> { [Temple] = new(), [Square] = new() },
+            new List<ZoneDefinition>()));
+    }
+
+    [Fact]
     public void Entering_TwiceOrIntoNoRoom_Fails()
     {
         Assert.Throws<InvalidOperationException>(() => Population.Enter(_firstRat, Square));
