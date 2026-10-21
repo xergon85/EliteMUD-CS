@@ -20,6 +20,6 @@ public sealed class MobDeath : IDamageStep
         }
 
         _worldState.CreateMobCorpse(mob, mob.RoomId);
-        _worldState.RemoveMob(mob.InstanceId, mob.RoomId);
+        _worldState.Population.Leave(mob);
     }
 }

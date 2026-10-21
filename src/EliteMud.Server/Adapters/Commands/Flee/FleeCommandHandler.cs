@@ -1,7 +1,6 @@
 using EliteMud.Application.Combat;
 using EliteMud.Application.Commands.Flee;
 using EliteMud.Application.Commands.Shared;
-using EliteMud.Application.World;
 using EliteMud.Server.Adapters.Commands.Look;
 using EliteMud.Server.Adapters.Commands.Shared;
 
@@ -10,18 +9,15 @@ namespace EliteMud.Server.Adapters.Commands.Flee;
 [Command("flee", Aliases = new[] { "f" })]
 internal sealed class FleeCommandHandler : ICommandHandler
 {
-    private readonly IWorldState _worldState;
     private readonly ActMessenger _act;
     private readonly LookCommandHandler _lookHandler;
     private readonly FleeHandler _fleeHandler;
 
     public FleeCommandHandler(
-        IWorldState worldState,
         ActMessenger act,
         LookCommandHandler lookHandler,
         FleeHandler fleeHandler)
     {
-        _worldState = worldState;
         _act = act;
         _lookHandler = lookHandler;
         _fleeHandler = fleeHandler;
@@ -45,10 +41,7 @@ internal sealed class FleeCommandHandler : ICommandHandler
         _act.BroadcastToRoom(player, $"{player.Name} panics, and attempts to flee.");
 
         // Attempt to flee using FleeService
-        var result = _fleeHandler.AttemptFlee(
-            player,
-            currentRoomId,
-            () => _worldState.GetMobsInRoom(currentRoomId));
+        var result = _fleeHandler.AttemptFlee(player, currentRoomId);
 
         if (!result.Success)
         {

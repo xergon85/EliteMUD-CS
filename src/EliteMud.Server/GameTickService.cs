@@ -218,7 +218,7 @@ internal sealed class GameTickService
     private async Task ProcessMobAttacksAsync(CancellationToken cancellationToken)
     {
         var fightingMobs = _worldState.World.Rooms.Keys
-            .SelectMany(roomId => _worldState.GetMobsInRoom(roomId))
+            .SelectMany(roomId => _worldState.Population.MobsIn(roomId))
             .Where(mob => mob.Fighting is PlayerState) // mob against mob doesn't attack yet
             .ToList();
 
@@ -487,7 +487,7 @@ internal sealed class GameTickService
         // Process each room's mobs
         foreach (var room in _worldState.World.Rooms.Values)
         {
-            var mobs = _worldState.GetMobsInRoom(room.Id);
+            var mobs = _worldState.Population.MobsIn(room.Id);
             
             // ToList to avoid modification during iteration (mobs may move to different rooms)
             foreach (var mob in mobs.ToList())

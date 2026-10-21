@@ -106,6 +106,16 @@ public enum AffectType
     // TODO: Add more as needed
 }
 
+public static class AffectTypeExtensions
+{
+    /// <summary>
+    /// Whether the affect sets a legacy affected_by flag (AFF_*), as most spells do (magic.c mag_affects). Armor and
+    /// bless only change a stat; detect poison is instant and leaves no affect.
+    /// </summary>
+    public static bool SetsAffectedFlag(this AffectType type) =>
+        type is not (AffectType.Armor or AffectType.Bless or AffectType.DetectPoison);
+}
+
 /// <summary>
 /// Location (stat) that an affect modifies.
 /// Based on legacy APPLY_* constants from utils.h

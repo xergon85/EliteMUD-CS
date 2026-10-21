@@ -455,7 +455,7 @@ public class DamageStepTests
     {
         new MobDeath(_world).Apply(Died(Hit(_player, _mob, 10)));
 
-        Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
+        Assert.DoesNotContain(_mob, _world.Population.MobsIn(Room));
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
     }
 
@@ -466,7 +466,7 @@ public class DamageStepTests
 
         new MobDeath(_world).Apply(Died(Hit(killer, _mob, 10)));
 
-        Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
+        Assert.DoesNotContain(_mob, _world.Population.MobsIn(Room));
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
     }
 
@@ -482,7 +482,7 @@ public class DamageStepTests
     }
 
     private Wimpy Wimpy() =>
-        new(new FleeHandler(_world, _progression), _world);
+        new(new FleeHandler(_world, _progression));
 
     private Kill Kill(ICombatListener listener) => new(_calculator, _experience, new[] { listener });
 

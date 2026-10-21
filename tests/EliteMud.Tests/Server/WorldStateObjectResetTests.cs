@@ -177,7 +177,7 @@ public class WorldStateObjectResetTests
         worldState.ResetZone(66);
 
         // Assert
-        var mobs = worldState.GetMobsInRoom(6714);
+        var mobs = worldState.Population.MobsIn(6714);
         Assert.Single(mobs);
         
         var henrietta = mobs[0];
@@ -235,7 +235,7 @@ public class WorldStateObjectResetTests
         worldState.ResetZone(1);
 
         // Assert
-        var mobs = worldState.GetMobsInRoom(1);
+        var mobs = worldState.Population.MobsIn(1);
         Assert.Single(mobs);
         
         var mob = mobs[0];
@@ -277,7 +277,7 @@ public class WorldStateObjectResetTests
         worldState.ResetZone(1);
 
         // Assert - no mobs should exist
-        var mobs = worldState.GetMobsInRoom(1);
+        var mobs = worldState.Population.MobsIn(1);
         Assert.Empty(mobs);
     }
 }

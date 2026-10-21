@@ -142,7 +142,7 @@ public sealed class TrackSkillExecutor : ISkillExecutor
         // Search all rooms for mobs matching the name
         foreach (var (roomId, room) in _worldState.World.Rooms)
         {
-            var mobs = _worldState.GetMobsInRoom(roomId);
+            var mobs = _worldState.Population.MobsIn(roomId);
             var match = mobs.FirstOrDefault(m =>
                 m.Definition.ShortDescription.Contains(targetName, StringComparison.OrdinalIgnoreCase));
 

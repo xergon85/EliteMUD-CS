@@ -39,7 +39,7 @@ public class WorldStateMobRoomTests
 
         world.ResetZone(1);
 
-        var mob = Assert.Single(world.GetMobsInRoom(Second));
+        var mob = Assert.Single(world.Population.MobsIn(Second));
         Assert.Equal(Second, mob.RoomId);
     }
 
@@ -49,7 +49,7 @@ public class WorldStateMobRoomTests
         var mob = new MobInstance(1, _definition);
         var world = CreateWorld(mob);
 
-        Assert.True(world.MoveMob(mob.InstanceId, Second, First));
+        world.Population.Move(mob, First);
 
         Assert.Equal(First, mob.RoomId);
     }
@@ -60,7 +60,7 @@ public class WorldStateMobRoomTests
         var mob = new MobInstance(1, _definition);
         var world = CreateWorld(mob);
 
-        Assert.True(world.RemoveMob(mob.InstanceId, Second));
+        world.Population.Leave(mob);
 
         Assert.Equal(MobInstance.Nowhere, mob.RoomId);
     }
@@ -74,7 +74,7 @@ public class WorldStateMobRoomTests
         world.ResetZone(1);
 
         Assert.Equal(MobInstance.Nowhere, mob.RoomId);
-        Assert.DoesNotContain(mob, world.GetMobsInRoom(Second));
+        Assert.DoesNotContain(mob, world.Population.MobsIn(Second));
     }
 
     /// <summary>Two rooms in zone 1, whose reset loads one rat into the second room.</summary>

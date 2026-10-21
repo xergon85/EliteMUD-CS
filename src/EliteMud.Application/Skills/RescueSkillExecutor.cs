@@ -90,7 +90,7 @@ public sealed class RescueSkillExecutor : ISkillExecutor
         }
 
         var attackingMob = allyPlayer.Fighting as MobInstance;
-        if (attackingMob == null || !_worldState.GetMobsInRoom(rescuer.RoomId).Contains(attackingMob))
+        if (attackingMob == null || !_worldState.Population.MobsIn(rescuer.RoomId).Contains(attackingMob))
         {
             return SkillResult.Failed($"But nobody is fighting {ally.Name}!");
         }

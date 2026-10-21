@@ -294,7 +294,7 @@ public sealed class CombatTickTests : IDisposable
 
         await Round();
 
-        Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
+        Assert.DoesNotContain(_mob, _world.Population.MobsIn(Room));
         Assert.Contains(_world.GetObjectsInRoom(Room), obj => obj.Definition.Name.Contains("corpse"));
         Assert.Null(Fighter.Fighting);
         Assert.Equal(62, Fighter.Alignment);
@@ -334,7 +334,7 @@ public sealed class CombatTickTests : IDisposable
 
         await Round();
 
-        Assert.DoesNotContain(_mob, _world.GetMobsInRoom(Room));
+        Assert.DoesNotContain(_mob, _world.Population.MobsIn(Room));
         Assert.Same(_secondMob, Fighter.Fighting);
         Assert.Equal(91, Fighter.HitPoints);
     }
@@ -452,7 +452,7 @@ public sealed class CombatTickTests : IDisposable
     {
         Fight(Fighter, _mob);
         Fight(_mob, Fighter);
-        _world.MoveMob(_mob.InstanceId, Room, Escape);
+        _world.Population.Move(_mob, Escape);
 
         await Round();
 

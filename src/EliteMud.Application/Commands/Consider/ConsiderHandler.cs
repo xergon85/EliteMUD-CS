@@ -34,7 +34,7 @@ public sealed class ConsiderHandler
 
         // Find target mob in room
         var room = _worldState.World.GetRoom(player.RoomId);
-        var mobs = _worldState.GetMobsInRoom(room.Id);
+        var mobs = _worldState.Population.MobsIn(room.Id);
         
         MobInstance? target = null;
         foreach (var mob in mobs)

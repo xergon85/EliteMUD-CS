@@ -29,7 +29,7 @@ public sealed class MobInstance : ICombatant
 
     /// <summary>
     /// The room the mob is in (legacy ch->in_room), or <see cref="Nowhere"/> before it enters the world and after it
-    /// leaves. Only <see cref="WorldState"/> sets it, as it moves the mob between rooms.
+    /// leaves. Only <see cref="WorldPopulation"/> sets it, as it moves the mob between rooms.
     /// </summary>
     public int RoomId { get; internal set; } = Nowhere;
 
@@ -232,10 +232,8 @@ public interface IWorldState
 {
     WorldDefinition World { get; }
 
-    /// <summary>The players in the game and the rooms they're in.</summary>
+    /// <summary>The characters in the world, players and mobs, and the rooms they're in.</summary>
     WorldPopulation Population { get; }
-
-    IReadOnlyList<MobInstance> GetMobsInRoom(int roomId);
 
     IReadOnlyList<ObjectInstance> GetObjectsInRoom(int roomId);
 
@@ -293,25 +291,6 @@ public interface IWorldState
     /// </summary>
     ObjectInstance CreateMobCorpse(MobInstance mob, int roomId);
 
-    /// <summary>
-    /// Remove a mob from the world completely.
-    /// Legacy: extract_char() in handler.c
-    /// </summary>
-    bool RemoveMob(int mobInstanceId, int roomId);
-
-    /// <summary>
-    /// Move a mob from one room to another.
-    /// Returns true if successful, false if mob not found or invalid rooms.
-    /// Legacy: char_from_room() + char_to_room() in handler.c
-    /// </summary>
-    bool MoveMob(int mobInstanceId, int fromRoomId, int toRoomId);
-
-    /// <summary>
-    /// Get a mob instance by its instance ID and room ID.
-    /// Returns null if not found.
-    /// </summary>
-    MobInstance? GetMobInstance(int mobInstanceId, int roomId);
-    
     /// <summary>
     /// Get the runtime closed/locked state of an exit.
     /// Doors always have one. A closed exit that isn't a door (a barrier) has one too, since legacy keeps
