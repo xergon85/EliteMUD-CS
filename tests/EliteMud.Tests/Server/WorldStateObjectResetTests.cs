@@ -82,19 +82,15 @@ public class WorldStateObjectResetTests
         // Act
         worldState.ResetZone(1);
 
-        // Assert - with 100% spawn chance, one new object should always spawn
-        // Note: existing objects are cleared first (since no MaxExisting), then new one spawns
+        // Assert - the room has no player, so the reset sweeps the old object and loads a new one (legacy clear_eq_zone)
         var objects = worldState.GetObjectsInRoom(1);
         Assert.Single(objects);
         Assert.NotEqual(99, objects[0].InstanceId); // Should be a new object
     }
 
     [Fact]
-    public void ResetZone_ClearsExistingObjects_IfNotLimited()
+    public void ResetZone_SweepsObjects_FromARoomWithoutPlayers()
     {
-        // Note: EliteMUD legacy behavior usually clears rooms on reset unless specific flags/modes prevent it.
-        // Our current implementation in WorldState.ClearZoneRooms clears everything.
-        // This test verifies that behavior.
 
         // Arrange
         var worldDef = new WorldDefinition(new Dictionary<int, RoomDefinition>

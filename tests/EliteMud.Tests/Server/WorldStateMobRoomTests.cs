@@ -66,15 +66,15 @@ public class WorldStateMobRoomTests
     }
 
     [Fact]
-    public void AMobClearedByAZoneReset_IsNowhere()
+    public void AMobInTheZone_StaysInItsRoomThroughAReset()
     {
         var mob = new MobInstance(1, _definition);
         var world = CreateWorld(mob);
 
         world.ResetZone(1);
 
-        Assert.Equal(MobInstance.Nowhere, mob.RoomId);
-        Assert.DoesNotContain(mob, world.Population.MobsIn(Second));
+        Assert.Equal(Second, mob.RoomId);
+        Assert.Equal(new[] { mob }, world.Population.MobsIn(Second));
     }
 
     /// <summary>Two rooms in zone 1, whose reset loads one rat into the second room.</summary>

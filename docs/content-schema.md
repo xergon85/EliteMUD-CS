@@ -229,8 +229,8 @@ Extra fields in the `Zone` block:
   game didn't load are imported as inactive (Clan Zone 1 and 2, the Dark Legion hall, Honeymoon Resort, Wedding
   Chapel). Set it to `true` to switch a zone on.
 - `RoomRange` (`Min`, `Max`): the rooms the zone owns. Used to find a room's zone (e.g. `zreset` without a number)
-  and to clear the zone's rooms on reset. Active zones use the legacy rule: from the previous zone's top room + 1
-  up to their own `TopRoomId`.
+  and to sweep objects from the zone's rooms on reset. Active zones use the legacy rule: from the previous zone's top
+  room + 1 up to their own `TopRoomId`.
 - `SourceFile`: the legacy file the zone was imported from, e.g. `zon/66.zon`.
 
 ### Legacy import decisions (`content/meta/legacy-import.json`)

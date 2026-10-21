@@ -129,5 +129,11 @@ public enum RoomFlags
     /// Faster HP regeneration in this room.
     /// Legacy: REGEN (1 << 19)
     /// </summary>
-    Regen = 1 << 19
+    Regen = 1 << 19,
+
+    /// <summary>
+    /// A zone reset doesn't sweep the objects in this room.
+    /// Legacy: NO_SWEEP (1 << 25)
+    /// </summary>
+    NoSweep = 1 << 25
 }
