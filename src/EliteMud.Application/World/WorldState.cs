@@ -337,7 +337,7 @@ public sealed class WorldState : IWorldState
             return false;
         }
 
-        ClearZoneRooms(zone);
+        SweepZoneObjects(zone);
         ApplyZoneResets(zone);
         return true;
     }
@@ -355,41 +355,30 @@ public sealed class WorldState : IWorldState
         return null;
     }
 
-    private void ClearZoneRooms(ZoneDefinition zone)
+    /// <summary>
+    /// Legacy clear_eq_zone (db.c:2256): before its commands run, a reset removes the objects lying in the zone's
+    /// rooms, room by room, except in NoSweep rooms and NoSweep objects. Mobs stay. A room with a player in it isn't
+    /// swept, and legacy never clears that check, so once a room with objects has a player in it, the zone's later
+    /// rooms aren't swept either. Kept as legacy does it. Legacy also skips the donation room, which we don't have yet.
+    /// </summary>
+    private void SweepZoneObjects(ZoneDefinition zone)
     {
-        var zoneMobs = Population.Mobs
-            .Where(mob => mob.RoomId >= zone.RoomRange.Min && mob.RoomId <= zone.RoomRange.Max)
-            .ToList();
-        foreach (var mob in zoneMobs)
+        var playerSeen = false;
+        foreach (var room in World.Rooms.Values
+                     .Where(room => room.Id >= zone.RoomRange.Min && room.Id <= zone.RoomRange.Max)
+                     .OrderBy(room => room.Id))
         {
-            Population.Leave(mob);
-        }
-
-        var objectDefsWithMaxLimit = new HashSet<int>();
-        foreach (var reset in zone.ResetCommands)
-        {
-            if (string.Equals(reset.Type, "LoadObject", StringComparison.OrdinalIgnoreCase) 
-                && reset.ObjectId.HasValue 
-                && reset.MaxExisting.HasValue)
-            {
-                objectDefsWithMaxLimit.Add(reset.ObjectId.Value);
-            }
-        }
-
-        foreach (var roomId in _roomObjects.Keys)
-        {
-            if (roomId < zone.RoomRange.Min || roomId > zone.RoomRange.Max)
+            if (room.Flags.HasFlag(RoomFlags.NoSweep)
+                || !_roomObjects.TryGetValue(room.Id, out var objects)
+                || objects.Count == 0)
             {
                 continue;
             }
 
-            if (objectDefsWithMaxLimit.Count == 0)
+            playerSeen = playerSeen || Population.PlayersIn(room.Id).Count > 0;
+            if (!playerSeen)
             {
-                _roomObjects[roomId].Clear();
-            }
-            else
-            {
-                _roomObjects[roomId].RemoveAll(obj => !objectDefsWithMaxLimit.Contains(obj.Definition.Id));
+                objects.RemoveAll(obj => !obj.Definition.Flags.Contains("NoSweep", StringComparer.OrdinalIgnoreCase));
             }
         }
     }
@@ -418,7 +407,8 @@ public sealed class WorldState : IWorldState
                     break;
 
                 case "LoadObject":
-                    lastCommandSucceeded = ExecuteLoadObject(reset, random);
+                    // Legacy leaves last_cmd as it was when the object is already in the room
+                    lastCommandSucceeded = ExecuteLoadObject(reset, random) ?? lastCommandSucceeded;
                     break;
 
                 case "EquipMob":
@@ -474,16 +464,9 @@ public sealed class WorldState : IWorldState
             return null;
         }
 
+        // Legacy counts the mob's copies in the whole world (mob_index[].number), wherever they've wandered
         var desiredCount = Math.Max(1, reset.MaxExisting ?? 1);
-        var existing = 0;
-        foreach (var instance in Population.MobsIn(reset.RoomId.Value))
-        {
-            if (instance.Definition.Id == mobDefinition.Id)
-            {
-                existing++;
-            }
-        }
-
+        var existing = Population.Mobs.Count(instance => instance.Definition.Id == mobDefinition.Id);
         if (existing >= desiredCount)
         {
             return null;
@@ -494,11 +477,17 @@ public sealed class WorldState : IWorldState
         return mob;
     }
 
-    private bool ExecuteLoadObject(ZoneResetDefinition reset, Random random)
+    /// <returns>Whether the object loaded, or null if one is already in the room (legacy get_obj_in_list_num).</returns>
+    private bool? ExecuteLoadObject(ZoneResetDefinition reset, Random random)
     {
         if (!reset.ObjectId.HasValue || !reset.RoomId.HasValue)
         {
             return false;
+        }
+
+        if (GetObjectsInRoom(reset.RoomId.Value).Any(obj => obj.Definition.Id == reset.ObjectId.Value))
+        {
+            return null;
         }
 
         if (!CheckSpawnChance(reset.SpawnChance, random))

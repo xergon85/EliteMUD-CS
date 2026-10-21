@@ -88,17 +88,6 @@ The suggested order, aiming at a **playable loop from level 1 upwards**.
   - [ ] Document the zone file format in `docs/content-schema.md`
   - [ ] Decide on one format and retire the other
 
-### 🟡 Zone resets clear rooms, which the original doesn't
-- **What happens:** `ResetZone` empties the zone's rooms (mobs and objects) before reloading. Until Oct 2026 every
-  zone's room range was 0–0, so nothing was cleared and repeated `zreset` piled up objects. Ranges are now correct,
-  so `zreset` really clears the zone.
-- **Legacy:** `reset_zone` never clears rooms. It only loads a mob or object when it's missing (`O` checks the room,
-  `M` checks the max count).
-- **Why it matters:** fine for the admin `zreset`, but timed zone resets (not implemented yet) must not wipe items
-  players dropped or mobs they're fighting.
-- **To do:**
-  - [ ] Port legacy reset semantics before adding timed resets (`O` only if the object isn't already in the room)
-
 ### Needs in-game verification
 - [ ] Container persistence edge cases (nested bags, closed/locked state, equipped containers). Unit tests pass, but this hasn't been play-tested thoroughly.
 - [ ] Communication commands (`tell`, `reply`, `gossip`, `shout`, `emote`) have no automated tests yet.
@@ -119,6 +108,8 @@ The suggested order, aiming at a **playable loop from level 1 upwards**.
 - ✅ All 114 legacy zones loaded, legacy IDs preserved
 - ✅ Room and mob flags parsed
 - ✅ Zone resets: `LoadMob`, `LoadObject`, `EquipMob` with spawn chances
+- ✅ Zone resets as legacy: mobs stay, objects are swept from rooms without players (except `NoSweep` rooms and
+  objects), and a mob or object loads only when it's missing
 - ✅ Lua hooks: `OnEnterRoom`, `OnLook`, `OnSay`
 
 ### Accounts, Characters & Saving
