@@ -1,0 +1,6 @@
+@EliteMud.Api_HostAddress = http://localhost:5198
+
+GET {{EliteMud.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
