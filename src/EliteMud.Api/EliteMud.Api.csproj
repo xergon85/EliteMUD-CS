@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\EliteMud.Application\EliteMud.Application.csproj" />
       <ProjectReference Include="..\EliteMud.Data\EliteMud.Data.csproj" />
     </ItemGroup>
 
