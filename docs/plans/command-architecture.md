@@ -501,6 +501,67 @@ Child cards: step 0 is #123, step 1 #124, step 2 #125, step 3 #126 (with #53) an
 cards: positions #128, communication #129, informative #130, items #131, doors and portals #132, combat and skills
 #133, cast #134, directions and the rest #135, admin #136. Step 6 is #137, step 7 #138 and step 8 #139.
 
+### 7.1 Order of the cards
+
+What each card needs first. An arrow means "must be merged before".
+
+```mermaid
+flowchart LR
+    C123["#123 fixture"] --> C124["#124 interpreter"]
+    C123 --> C53["#53 broadcast"]
+    C124 --> C125["#125 full table"]
+    C124 --> C126["#126 arguments, targets"]
+    C126 --> C127["#127 Movement, Looking"]
+    C125 --> P["ports #128–#136"]
+    C127 --> P
+    C53 --> C129["#129 communication"]
+    C125 --> C138["#138 socials"]
+    C126 --> C138
+    P --> C137["#137 remove the bridge"]
+    C137 --> C139["#139 specials, mob AI"]
+    C124 -.-> C117["#117 input queue"]
+    C125 -.-> C11["#11 permission levels"]
+    C11 -.-> C136["#136 admin"]
+```
+
+One card at a time, in this order. Nearly every card adds or changes rows in `CommandTable.cs`, so two of them
+in flight at once means rebasing one on the other for no gain.
+
+| # | Card | Why here |
+|---|---|---|
+| 1 | #123 Fixture | Pins today's behaviour. Every later card is checked against these tests. |
+| 2 | #124 Interpreter and table | Everything else needs it. The riskiest card: keep it free of behaviour changes apart from `bash`. |
+| 3 | #53 One broadcast | Small and independent, and safe once #123 covers the channels. Out of the way before communication is ported. |
+| 4 | #125 Full table, abbreviations | The change players notice, so make it early: every port after it is tested against the final matching rules, not twice. |
+| | **Checkpoint: play on a live server.** | Walk through section 8's table by hand. Fix what feels wrong before 12 more cards build on it. |
+| 5 | #126 Argument reader, target finder | The last shared part a port needs. |
+| 6 | #127 `Movement`, `Looking`, `look` | Removes the eight dependencies on `LookCommandHandler` that would otherwise tie the ports together. Closes #116. |
+| 7 | #128 Positions (with #101) | The smallest family: five commands, no targets, no arguments. Use it to settle what a ported family looks like, and adjust section 6's recipe if it doesn't fit. |
+| 8 | #138 Socials | 238 commands for one action, and the first heavy use of `TargetFinder` on characters. Needs nothing from the later ports, and shows the table carrying real volume. |
+| 9 | #135 Directions, recall, wimpy, search | Small, and puts `Movement` from #127 to use straight away. |
+| 10 | #129 Communication | Channels as one action with an argument; #53 is already in. |
+| 11 | #130 Informative | Many commands, all read-only, so little can go wrong. |
+| 12 | #132 Doors and portals | First family that lives in Server only (about 740 lines) and the first use of the door scope in `TargetFinder`. |
+| 13 | #131 Items (closes #83) | The hardest matching: `all`, `all.x`, `2.x`, containers. By now `TargetFinder` has been through four families. |
+| 14 | #133 Combat and skills | Changes `SkillContext` to take a character and moves `SkillMessageSender`. `bash`'s door half reuses what #132 settled. |
+| 15 | #134 Cast | Shares the target rule (`TAR_*`) that #133 puts on `TargetFinder`. |
+| 16 | #136 Admin | Six commands with no player impact. If #11 is done by now its rows get real levels; if not, it ports on `ICommandAccess` and #11 follows. |
+| 17 | #137 Remove the bridge | Only possible when all nine ports are in. |
+| 18 | #139 Design: specials, `order`, mob AI | The design can be written any time after #127; building it needs #137. |
+
+Cards outside this list that hang on it:
+
+- **#117 (input queue)** can start after #124, but it also needs the pulse loop of #119. It belongs to that track.
+- **#11 (permission levels)** can start after #125. Best before #136, not required.
+- **#71 and #31 (how skills and spells are built)** come after #133 and #134. Until then, no new skill or spell is
+  ported in the two-class style.
+- **New commands** (`give`, `exits`, `finger`, ...) can be added by the recipe in section 6 any time after #126.
+  Prefer the ones section 8 lists as "not implemented yet" behind a common abbreviation: `give` (`g`), `exits`
+  (`ex`), `finger` (`f`), `fly` (`fl`).
+
+If a second session works in parallel, the cards that don't collide with the main line are #53 (alongside #124),
+#138 (alongside any port) and the #139 design.
+
 ## 8. What players will notice
 
 Step 2 is the visible one. All of it is legacy parity, and the PR should list it:
