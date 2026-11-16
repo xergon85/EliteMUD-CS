@@ -497,7 +497,9 @@ numbering maps to track B of the review's sequence.
 After step 2, new commands can be added the new way while old ones are still being ported, so steps 5 and 7 and
 new-command work can overlap. The input queue (#117, #119 step 4) needs step 1 and nothing later.
 
-Suggested child cards: one per row of the table above, with step 5 as nine.
+Child cards: step 0 is #123, step 1 #124, step 2 #125, step 3 #126 (with #53) and step 4 #127. Step 5 is nine
+cards: positions #128, communication #129, informative #130, items #131, doors and portals #132, combat and skills
+#133, cast #134, directions and the rest #135, admin #136. Step 6 is #137, step 7 #138 and step 8 #139.
 
 ## 8. What players will notice
 
